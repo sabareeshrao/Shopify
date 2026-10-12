@@ -1,0 +1,29 @@
+name: Question Bank Validation
+
+on:
+  push:
+    paths:
+      - "questions/**"
+      - "tracking/**"
+      - "changes/**"
+      - "scripts/validate_roadmap.py"
+      - ".github/workflows/roadmap-validation.yml"
+  pull_request:
+    paths:
+      - "questions/**"
+      - "tracking/**"
+      - "changes/**"
+      - "scripts/validate_roadmap.py"
+      - ".github/workflows/roadmap-validation.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate question bank and progress
+        run: python scripts/validate_roadmap.py
