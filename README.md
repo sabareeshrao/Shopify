@@ -2,6 +2,16 @@
 
 > A hands-on, interview-driven reconstruction of a Shopizer-class e-commerce application. This repository is **not** the Shopify commercial platform; `Shopify` is the user-chosen repository name.
 
+## Jump directly into the course
+
+- **[Master index — all 28 phases and 1,025 questions](questions/MASTER-INDEX.md)**
+- **[Phase 00 — start at Q0001](questions/phase-00.md)**
+- [Live per-question progress register](tracking/PROGRESS.csv) · [Current task](tracking/CURRENT_TASK.md)
+- [Phase progress](tracking/PHASE_STATUS.md) · [Editable execution order](tracking/EXECUTION_ORDER.md)
+- [Add or revise questions](changes/CHANGE-REQUEST-TEMPLATE.md) · [Discovered gaps](changes/DISCOVERED-GAPS.md) · [Change log](changes/CHANGELOG.md)
+- [New question IDs beyond Q1025](questions/extensions/README.md) · [Quality gates](docs/QUALITY-GATES.md)
+- [Reference feature coverage](docs/REFERENCE-COVERAGE.md) · [Roadmap validation workflow](.github/workflows/roadmap-validation.yml)
+
 ## Mission
 
 Build an original, working Java 21 + Spring Boot e-commerce system by finishing sequenced development questions. Each question represents a verifiable implementation/design task, not a trivia question. After reviewing a question, generate diverse MCQs, explain runnable code and expected output, implement it in IntelliJ IDEA, verify it, and commit the result. The aim is functional coverage of **backend, customer storefront, and admin dashboard**, not blind copying.
@@ -44,4 +54,4 @@ The reference code includes older dependencies and configurations. Our build use
 
 Java 21, Spring Boot, Maven, Spring Data JPA, MySQL, Spring Security, REST/JSON, JUnit 5, Mockito, Testcontainers, React storefront, Angular admin, Docker and GitHub Actions. Payment processing is sandbox-only during training. External services and search infrastructure are introduced when justified, not required for the first runnable app.
 
-**Current status:** Question-bank authoring is the first workstream. No application task is marked complete.
+**Current status (2026-10-12):** Initial 28-phase / 1,025-question baseline is committed and indexed. **0/1,025 tasks completed.** Next task: Q0001. The question bank is intentionally editable through change requests; no application code is claimed finished.
