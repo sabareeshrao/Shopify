@@ -1,5 +1,5 @@
 id,phase,status,priority,depends_on,lesson_path,implementation_paths,test_evidence,commit_sha,notes
-Q0001,00,NOT_STARTED,NORMAL,,,,,,
+Q0001,00,IN_PROGRESS,NORMAL,,,,,,Started 2026-10-12; studying pinned reference boundaries; verification pending
 Q0002,00,NOT_STARTED,NORMAL,,,,,,
 Q0003,00,NOT_STARTED,NORMAL,,,,,,
 Q0004,00,NOT_STARTED,NORMAL,,,,,,
