@@ -33,24 +33,26 @@ def main() -> int:
         fail("Unexpected baseline task total")
 
     registry: dict[str, tuple[str, bool]] = {}
-    current = 1
-    for phase, expected_count in enumerate(COUNTS):
+    # Baseline IDs are permanent, but membership and order may change through
+    # an approved change request. Do not enforce the original per-phase counts.
+    for phase in range(len(COUNTS)):
         path = ROOT / "questions" / f"phase-{phase:02d}.md"
         if not path.is_file():
             fail(f"Missing phase file: {path}")
-            current += expected_count
             continue
-        entries = questions(path)
-        expected = [f"Q{k:04d}" for k in range(current, current + expected_count)]
-        actual = [qid for qid, _ in entries]
-        if actual != expected:
-            fail(f"Phase {phase:02d}: expected exactly {len(expected)} sequential IDs "
-                 f"{expected[0]}–{expected[-1]}; found {len(actual)} IDs")
-        for qid, checked in entries:
+        for qid, checked in questions(path):
+            if int(qid[1:]) > 1025:
+                fail(f"New IDs belong in questions/extensions/: {qid}")
             if qid in registry:
                 fail(f"Duplicate question ID: {qid}")
             registry[qid] = (f"{phase:02d}", checked)
-        current += expected_count
+
+    expected_baseline = {f"Q{n:04d}" for n in range(1, 1026)}
+    actual_baseline = {qid for qid in registry if int(qid[1:]) <= 1025}
+    if actual_baseline != expected_baseline:
+        missing = sorted(expected_baseline - actual_baseline)
+        extra = sorted(actual_baseline - expected_baseline)
+        fail(f"Baseline identity mismatch, missing={missing[:12]}, extra={extra[:12]}")
 
     ext_dir = ROOT / "questions" / "extensions"
     extension_ids: list[str] = []
