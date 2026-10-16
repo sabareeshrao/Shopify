@@ -1,0 +1,22 @@
+{
+  "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java",
+  "reference_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+  "source_blob_sha": "dd91c2f7c8d2d04b9ecbb318b450af7359d04493",
+  "lines": [
+    "package com.salesmanager.shop.application;",
+    "",
+    "import org.springframework.boot.SpringApplication;",
+    "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+    "import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;",
+    "",
+    "",
+    "@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })",
+    "public class ShopApplication {",
+    "",
+    "    public static void main(String[] args) {",
+    "        SpringApplication.run(ShopApplication.class, args);",
+    "    }",
+    "",
+    "}"
+  ]
+}
