@@ -15,8 +15,47 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 1 | Start the shop | ShopApplication.main(String[] args) | sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java | 11–13 | 0 mapped | Verified |
 | 2 | Check that the shop has started | `ShopApplicationConfiguration.applicationReadyCode()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 48–52 | 0 mapped | Verified |
 | 3 | Set up request filtering | `ShopApplicationConfiguration.croseSiteFilter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 54–65 | 0 mapped | Verified |
+| 4 | Prepare JSON responses | `ShopApplicationConfiguration.configureMessageConverters()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 67–70 | 0 mapped | Verified |
+| 5 | Set up the shop homepage | `ShopApplicationConfiguration.addViewControllers()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 72–75 | 0 mapped | Verified |
+| 6 | Add request interceptors | `ShopApplicationConfiguration.addInterceptors()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 77–98 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
+
+## Why this sequence? (Learning order, not execution order)
+
+| Company | Why here? | Unique interview question |
+|---|---|---|
+| 1 | Start with the actual Java application entry point. | IQ-1: What happens when `SpringApplication.run()` starts Spring Boot? |
+| 2 | Observe the readiness callback, while acknowledging it fires **after** startup configuration at runtime. | IQ-2: How does `ApplicationReadyEvent` differ from `@PostConstruct`? |
+| 3 | Inspect registering the servlet XSS filter for incoming shop, API and customer requests. | IQ-3: How are servlet filter URL patterns registered, and why isn't a filter sufficient for XSS prevention? |
+| 4 | Understand JSON conversion of MVC requests and responses. | IQ-4: What does overriding `configureMessageConverters()` do to defaults versus `extendMessageConverters()`? |
+| 5 | Connect `/` to a view without a dedicated controller method. | IQ-5: When use `addViewController()` instead of `@Controller`, and how is the view resolved? |
+| 6 | Add MVC interceptors for locale and CORS after basic routing concepts. | IQ-6: How does an MVC `HandlerInterceptor` differ from a servlet `Filter`? |
+
+Each company has the complete unique question and a plain-English sequence reason in `companies.json`, displayed within the HTML explorer. This numbering is an **instructional discovery path**, not a claim that Spring calls the methods in company number order.
+
+### Company 4 connections
+
+- Source: `ShopApplicationConfiguration.java:67–70`
+- Spring MVC calls the WebMvcConfigurer override during configuration.
+- Adds `MappingJackson2HttpMessageConverter` to the converter list at line 69.
+
+### Company 5 connections
+
+- Source: `ShopApplicationConfiguration.java:72–75`
+- Registers `/` with view name `shop` at line 74.
+
+### Company 6 connections
+
+- Source: `ShopApplicationConfiguration.java:77–98`
+- Adds `localeChangeInterceptor()` on line 80.
+- Adds `corsFilter()` at line 92 for `/services/**` (line 94) and `/api/**` (line 96).
+- Lines 82–89 are a commented-out `storeFilter()` block and must not be treated as active configuration.
+
+### Company 1–6 verified source
+
+- All new companies use existing pinned Shopizer commit `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`.
+- Companies 2–6 share source file blob SHA `41f81a6604d64ad9a60829a606f247dd547182c4`.
 
 ### Company 3 connections
 
@@ -57,7 +96,7 @@ Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 3. Keep company numbers stable. Use dotted subsidiary numbers only for confirmed code relationships.
 4. Record exact file path, method, line range, evidence, and caller/supplier distinctions.
 5. Never substitute demonstration code or guessed relationships for source-derived facts.
-6. Update companies.json, index.html, and this tracker together.
+6. Update companies.json, index.html, and this tracker together; include a unique IQ-N question and a clear rationale for the company's place in the learning sequence.
 7. Preserve the existing questions/, tracking/, changes/, and curriculum documentation.
 
 ## GitHub Pages
