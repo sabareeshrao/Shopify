@@ -13,8 +13,16 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | Company ID | Plain-English name | Actual method | File | Lines | Subsidiaries | Status |
 |---|---|---|---|---|---|---|
 | 1 | Start the shop | ShopApplication.main(String[] args) | sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java | 11–13 | 0 mapped | Verified |
+| 2 | Check that the shop has started | `ShopApplicationConfiguration.applicationReadyCode()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 48–52 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
+
+### Company 2 connections
+
+- Triggered by: Spring Boot `ApplicationReadyEvent` at line 48. It is not directly called by Company 1.
+- Uses: `System.getProperty("user.dir")` on line 50; `logger.info(...)` on line 51.
+- Subsidiaries: None assigned yet. Company 2 remains independent from Company 1.
+- Source blob SHA: `41f81a6604d64ad9a60829a606f247dd547182c4`.
 
 ### Company 1 connections
 
