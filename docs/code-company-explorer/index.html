@@ -151,7 +151,10 @@ async function loadRealCode(){
     for(const dep of c.needs)if(!entities[dep.to])throw Error('Missing linked company from '+c.no+' to '+dep.to);
   }
   for(const f of Object.values(files))f.companyIds.sort((x,y)=>entities[x].start-entities[y].start);
-  selected='company-'+manifest.companies.at(-1).id;selectedFile=entities[selected].file;mode='company';activeLine=null;folderPath='shopizer';
+  const link=decodeURIComponent(location.hash.replace(/^#/,'')).match(/^company-(\d+(?:\.\d+)*)$/);
+  const requested=link&&manifest.companies.find(c=>c.id===link[1]);
+  selected='company-'+(requested?.id||manifest.companies.at(-1).id);
+  selectedFile=entities[selected].file;mode='company';activeLine=null;folderPath='shopizer';
   expanded.clear();expanded.add('f:shopizer');
   for(const file of Object.values(files)){let part='shopizer';for(const folder of file.path.split('/').slice(0,-1)){part+='/'+folder;expanded.add('f:'+part)}expanded.add('file:'+selectedFile)}
   document.querySelector('.repo-title span:nth-child(2)').textContent='shopizer-ecommerce / shopizer';
@@ -190,7 +193,15 @@ function renderTree(){const side=$('#tree');side.innerHTML=treeContent();}
 function closeSidebar(){ $('#sidebar').classList.remove('open');$('#backdrop').classList.remove('open');$('#menu').setAttribute('aria-expanded','false'); }
 function openParents(id){const c=entities[id],f=files[c.file];const parts=f.path.split('/');let p='shopizer';expanded.add('f:'+p);for(const part of parts.slice(0,-1)){p+='/'+part;expanded.add('f:'+p);}expanded.add('file:'+c.file);let parent=c.parent;while(parent){expanded.add('co:'+parent);parent=entities[parent].parent;}}
 function navToFile(fid,track=true){if(!files[fid])return;if(track)navStack.push([mode,selectedFile,selected]);selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);renderAll();closeSidebar();}
-function navToCompany(id,track=true){const c=entities[id];if(!c)return;if(track)navStack.push([mode,selectedFile,selected]);selectedFile=c.file;selected=id;mode='company';activeLine=c.parent?c.start:null;openParents(id);$('#search').value='';$('#search-results').hidden=true;renderAll();closeSidebar();}
+function navToCompany(id,track=true){
+  const c=entities[id];if(!c)return false;
+  if(track&&(mode!=='company'||selected!==id))navStack.push([mode,selectedFile,selected]);
+  selectedFile=c.file;selected=id;mode='company';activeLine=c.parent?c.start:null;
+  openParents(id);$('#search').value='';$('#search-results').hidden=true;
+  history.replaceState(null,'','#company-'+encodeURIComponent(c.no));
+  renderAll();closeSidebar();window.scrollTo({top:0,behavior:'auto'});
+  return true;
+}
 function navBack(){if(!navStack.length)return;const [m,f,s]=navStack.pop();mode=m;selectedFile=f;selected=s;renderAll();}
 function navToFolder(path){if(!path)return;const key='f:'+path;expanded.add(key);mode='folder';selected=null;folderPath=path;renderAll();closeSidebar();}
 let folderPath='shopizer';
@@ -299,7 +310,7 @@ function searchResults(q){
   if(numeric!==null){
     const id=companyByNumber(value);
     r.innerHTML=id
-      ?`<button data-company="${id}">${icon('building')}<span><b>Company ${safe(entities[id].no)} · ${safe(entities[id].name)}</b><small>${safe(files[entities[id].file].name)}</small></span></button>`
+      ?`<button type="button" data-company="${id}" aria-label="Open Company ${safe(entities[id].no)}">${icon('building')}<span><b>Company ${safe(entities[id].no)} · ${safe(entities[id].name)}</b><small>${safe(files[entities[id].file].name)} · tap to open</small></span></button>`
       :`<div class="search-unmapped">Company ${safe(numeric)} has not been created yet. Only verified companies are available.</div>`;
     r.hidden=false;return;
   }
@@ -322,6 +333,13 @@ function flash(el,txt){const previous=el.dataset.original||el.innerHTML;if(!el.d
 document.addEventListener('click',e=>{const folder=e.target.closest('[data-folder]');if(folder){const key=folder.dataset.folder;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}const file=e.target.closest('[data-file]');if(file){const id=file.dataset.file,key='file:'+id;if(e.target.closest('.tree-chevron')){if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();}else{expanded.add(key);navToFile(id);}return;}const comp=e.target.closest('[data-company]');if(comp){const id=comp.dataset.company;if(comp.classList.contains('tree-row')&&e.target.closest('.tree-chevron')&&entities[id]?.children?.length){const key='co:'+id;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}const wantLine=comp.dataset.highlight;if(!entities[id])return;navToCompany(id);if(wantLine){ // Where possible, focus the related statement inside the destination.
  const c=entities[id];const l=Number(wantLine);if(l>=c.start&&l<=c.start+(c.code?.length||0)-1)selectLine(l);
  }$('#search-results').hidden=true;return;}const go=e.target.closest('[data-gofile]');if(go){navToFile(go.dataset.gofile);return;}const fo=e.target.closest('[data-openfolder]');if(fo){navToFolder(fo.dataset.openfolder);return;}const line=e.target.closest('#maincontent .code-row[data-line]');if(line){selectLine(Number(line.dataset.line));return;}if(!e.target.closest('.searchwrap'))$('#search-results').hidden=true;});
+$('#search-results').addEventListener('click',e=>{
+  const button=e.target.closest('button[data-company],button[data-gofile]');
+  if(!button)return;
+  e.preventDefault();e.stopPropagation();
+  if(button.dataset.company)navToCompany(button.dataset.company);
+  else if(button.dataset.gofile)navToFile(button.dataset.gofile);
+});
 $('#search').addEventListener('input',e=>searchResults(e.target.value));
 $('#search').addEventListener('keydown',e=>{
   if(e.key==='Enter'){
@@ -346,6 +364,12 @@ document.addEventListener('keydown',e=>{
   if(e.target?.closest?.('input,textarea,select,[contenteditable="true"]'))return;
   e.preventDefault();
   moveCompany(e.key==='ArrowRight'?1:-1);
+});
+window.addEventListener('hashchange',()=>{
+  const match=decodeURIComponent(location.hash.slice(1)).match(/^company-(\d+(?:\.\d+)*)$/);
+  if(!match)return;
+  const id=companyByNumber(match[1]);
+  if(id&&id!==selected)navToCompany(id,false);
 });
 window.addEventListener('resize',()=>requestAnimationFrame(drawWires));window.addEventListener('load',drawWires);
 
