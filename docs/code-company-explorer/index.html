@@ -140,12 +140,16 @@ async function loadRealCode(){
     const fid=seen.get(p),eid='company-'+c.id;
     if(!files[fid].source||files[fid].source.length<c.end_line)throw Error('Wrong source line range: '+c.id);
     entities[eid]={no:c.id,file:fid,name:c.name,method:c.method,desc:c.plain_english,start:c.start_line,end:c.end_line,
-      code:files[fid].source.slice(c.start_line-1,c.end_line),parent:c.parent_id?'company-'+c.parent_id:null,children:[],needs:[],
+      code:files[fid].source.slice(c.start_line-1,c.end_line),parent:c.parent_id?'company-'+c.parent_id:null,children:[],
+      needs:(c.outbound||[]).filter(dep=>dep.company_id).map(dep=>({to:'company-'+dep.company_id,line:dep.code_line,kind:dep.kind})),
       sequenceReason:c.sequence_reason||'',interview:c.interview||null,methodStart:c.method_start_line||c.start_line,
-      externalClients:c.inbound||[],externalSuppliers:c.outbound||[]};
+      externalClients:(c.inbound||[]).filter(dep=>!dep.company_id),externalSuppliers:(c.outbound||[]).filter(dep=>!dep.company_id)};
     if(!c.parent_id)files[fid].companyIds.push(eid);
   }
   for(const [id,c] of Object.entries(entities))if(c.parent&&entities[c.parent])entities[c.parent].children.push(id);
+  for(const [id,c] of Object.entries(entities)){
+    for(const dep of c.needs)if(!entities[dep.to])throw Error('Missing linked company from '+c.no+' to '+dep.to);
+  }
   for(const f of Object.values(files))f.companyIds.sort((x,y)=>entities[x].start-entities[y].start);
   selected='company-'+manifest.companies.at(-1).id;selectedFile=entities[selected].file;mode='company';activeLine=null;folderPath='shopizer';
   expanded.clear();expanded.add('f:shopizer');
