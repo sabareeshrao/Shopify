@@ -5,21 +5,27 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050505">
 <title>Code Company | Shopizer Explorer</title>
-<link rel="stylesheet" href="./assets/styles.css?v=ide-tree-1">
+<link rel="stylesheet" href="./assets/styles.css?v=ide-compact-2">
 </head>
 <body>
 <div class="sidebar-overlay" id="backdrop"></div>
 <div id="app">
   <aside class="side" id="sidebar" aria-label="Repository folders and companies">
-    <div class="side-header"><div class="brandmark">C<span style="color:var(--orange)">/</span>C</div><div><div class="brandname">CODE COMPANY</div><div class="brand-sub">REPOSITORY EXPLORER</div></div><button class="side-close" id="side-close" type="button" aria-label="Close folder menu" title="Close folder menu"><span class="ic" data-icon="close"></span></button></div>
+    <div class="side-header ide-header"><div class="ide-project-title">Project <span class="ic" data-icon="down"></span></div>
+<div class="ide-toolbar" role="toolbar" aria-label="Project controls">
+<button type="button" class="ide-tool" id="project-locate" title="Locate current company" aria-label="Locate current company"><span class="ic" data-icon="locate"></span></button>
+<button type="button" class="ide-tool" id="project-collapse" title="Collapse folders" aria-label="Collapse folders"><span class="ic" data-icon="collapse"></span></button>
+<button type="button" class="ide-tool" id="project-expand" title="Expand folders" aria-label="Expand folders"><span class="ic" data-icon="expand"></span></button>
+<button type="button" class="ide-tool" id="project-reset-width" title="Reset Project panel width" aria-label="Reset Project panel width"><span class="ic" data-icon="reset"></span></button></div>
+<button class="side-close" id="side-close" type="button" aria-label="Close folder menu" title="Close folder menu"><span class="ic" data-icon="close"></span></button></div>
     <div class="side-body">
-      <div class="section-label">GitHub repository</div>
+      <div class="ide-caption">CODE COMPANY <span>· REPOSITORY EXPLORER</span></div>
       <div class="repo-card"><div class="repo-title"><span class="ic" style="color:var(--blue)" data-icon="git"></span><span>shopizer</span></div><div class="repo-meta"><span class="demo-dot"></span>Real Shopizer · loading companies</div></div>
-      <div class="section-label">Folders · Files · Companies</div>
+      <div class="section-label ide-tree-label">Folders · Files · Companies</div>
       <nav id="tree" class="tree-scroll" aria-label="Project file tree"><div class="section-label">Loading source folders…</div></nav>
     </div>
     <div class="side-bottom"><span>JAVA · SPRING BOOT</span><b>SHOPIZER</b></div>
-    <div class="sidebar-resizer" id="sidebar-resizer" role="separator" tabindex="0" aria-label="Resize Project sidebar" aria-orientation="vertical" aria-valuemin="260" aria-valuemax="900" aria-valuenow="318" title="Drag to resize · double-click to reset · arrow keys to adjust"><span class="resizer-grip" aria-hidden="true"></span></div>
+    <div class="sidebar-resizer" id="sidebar-resizer" role="separator" tabindex="0" aria-label="Resize Project sidebar" aria-orientation="vertical" aria-valuemin="228" aria-valuemax="780" aria-valuenow="296" title="Drag to resize · double-click to reset · arrow keys to adjust"><span class="resizer-grip" aria-hidden="true"></span></div>
   </aside>
   <div class="main">
     <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><button id="history-back" class="header-back" type="button" aria-label="Back to previous location" title="Back to previous location" disabled><span class="ic" data-icon="back"></span><span>Back</span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Company # or method…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
@@ -31,15 +37,16 @@
     <main class="content" id="maincontent"><div class="panel" style="padding:24px;color:var(--dim)">Loading verified Java code…</div></main>
   </div>
 </div>
-<script defer src="./assets/js/icons.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/data.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/tree.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/views.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/connections.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/highlight.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/navigation.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/events.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/sidebar-resize.js?v=ide-tree-1"></script>
-<script defer src="./assets/js/app.js?v=ide-tree-1"></script>
+<script defer src="./assets/js/icons.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/data.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/tree.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/views.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/connections.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/highlight.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/navigation.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/events.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/sidebar-resize.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/sidebar-ide.js?v=ide-compact-2"></script>
+<script defer src="./assets/js/app.js?v=ide-compact-2"></script>
 </body>
 </html>

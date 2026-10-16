@@ -4,11 +4,11 @@
  const handle=document.getElementById('sidebar-resizer');
  const sidebar=document.getElementById('sidebar');
  if(!handle||!sidebar)return;
- const STORE_KEY='code-company-explorer.sidebar-width.v1';
- const DEFAULT=318,MIN=260;
+ const STORE_KEY='code-company-explorer.sidebar-width.v2';
+ const DEFAULT=296,MIN=228;
  const mobile=window.matchMedia('(max-width:1100px)');
  let current=DEFAULT,pointer=null,frame=null;
- const maxWidth=()=>Math.max(MIN,Math.min(900,window.innerWidth-410));
+ const maxWidth=()=>Math.max(MIN,Math.min(780,window.innerWidth-410));
  const clamp=v=>Math.min(maxWidth(),Math.max(MIN,Math.round(v)));
  const persist=()=>{try{window.localStorage.setItem(STORE_KEY,String(current))}catch(ignore){}};
  const wireUpdate=()=>{

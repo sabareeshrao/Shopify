@@ -21,3 +21,8 @@ const ICONS={
 function icon(id){return `<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[id]||ICONS.code}</svg></span>`;}
 function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
+
+ICONS.locate='<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/>';
+ICONS.collapse='<path d="m7 9 5-5 5 5M7 15l5 5 5-5"/><path d="M4 12h16"/>';
+ICONS.expand='<path d="m7 9 5 5 5-5M7 15l5-5 5 5"/><path d="M4 4h16M4 20h16"/>';
+ICONS.reset='<path d="M4 7V3m0 4h4M4 7a8 8 0 1 1-1 8"/>';

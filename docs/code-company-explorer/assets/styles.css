@@ -148,3 +148,51 @@ body.sidebar-resizing{cursor:col-resize;user-select:none}
  .side{overflow:hidden}
  .tree-canvas .tree-row .tree-text{overflow:hidden;text-overflow:ellipsis}
 }
+
+/* Independently drawn IDE-like Project panel — main explorer colors and layout untouched. */
+:root{--sidebar-width:296px}
+.side{background:#191a1d;color:#d1d3d8;border-right:1px solid #383a41}
+.ide-header{height:38px;min-height:38px;padding:0 7px 0 11px!important;display:flex;align-items:center;gap:3px;border-bottom:1px solid #363940;background:#242529}
+.ide-project-title{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:650;color:#f3f4f5;white-space:nowrap}
+.ide-project-title .ic{width:12px;height:12px;color:#9ba2aa}
+.ide-toolbar{display:flex;align-items:center;gap:1px;margin-left:auto}
+.ide-tool{width:23px;height:24px;border:0;padding:0;background:transparent;border-radius:4px;color:#9da3ac;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.ide-tool .ic,.ide-tool svg{width:13px;height:13px}
+.ide-tool:hover{background:#373a41;color:#fff}
+.ide-tool:focus-visible{outline:1px solid #92baff;outline-offset:-1px}
+.side-close{margin-left:2px!important;min-width:24px;width:24px;height:24px;border:0;background:transparent;border-radius:4px}
+.side-close .ic{width:14px;height:14px}
+.side-body{background:#191a1d;padding:0 5px 12px!important;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#555961 #191a1d}
+.ide-caption{padding:7px 7px 2px;font-size:9px;font-weight:700;letter-spacing:.5px;color:#aab0b9;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.ide-caption span{font-weight:400;letter-spacing:0;color:#737982}
+.repo-card{background:transparent!important;border:0!important;border-radius:0!important;padding:2px 7px 4px!important;margin:0 0 4px!important}
+.repo-title{font-size:11px!important;font-weight:500!important;gap:5px!important;line-height:1.25;color:#aab4c0;min-width:0}
+.repo-title>.ic{width:12px;height:12px;flex-shrink:0}
+.repo-title span:nth-child(2){display:block;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;overflow-wrap:normal!important}
+.repo-meta{margin:2px 0 0 17px!important;font-size:10px!important;color:#858b94;line-height:1.15}
+.demo-dot{width:5px;height:5px;background:#6bc180}
+.section-label.ide-tree-label{margin:0 0 2px 7px!important;letter-spacing:.6px!important;font-size:9px!important;font-weight:600!important;color:#7e858f!important}
+.tree-scroll{padding:0 3px 10px!important}
+.tree-canvas{width:100%;min-width:0;max-width:100%}
+.tree-canvas .tree-row,.tree-canvas .tree-row.comp{height:23px!important;min-height:23px!important;max-height:23px!important;padding-top:0!important;padding-bottom:0!important;padding-right:4px!important;margin:0!important;border:0!important;border-radius:3px!important;background:none!important;gap:4px!important;font-family:Inter,'Segoe UI',Arial,sans-serif!important;font-size:12px!important;font-weight:400!important;line-height:23px!important;color:#d2d5da!important}
+.tree-canvas .tree-row:hover{background:#2c2f35!important}
+.tree-canvas .tree-row.is-active,.tree-canvas .tree-row.is-active:hover{background:#304a75!important;color:#f4f7fb!important}
+.tree-canvas .tree-row.is-active:before{display:none!important}
+.tree-canvas .tree-row .tree-text,.tree-canvas .tree-row.comp .tree-text{font-size:12px!important;font-weight:400!important;line-height:22px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1 1 auto;color:inherit!important}
+.tree-canvas .tree-row .mini-count{margin-left:auto;padding-left:4px!important;flex-shrink:0;font-size:10px!important;line-height:22px;color:#747d89}
+.tree-canvas .tree-chevron,.tree-canvas .tree-row.comp .tree-chevron{display:inline-flex!important;flex:0 0 11px!important;width:11px!important;min-width:11px!important;align-items:center;justify-content:center;color:#9298a3}
+.tree-canvas .tree-chevron.spacer{visibility:hidden!important}
+.tree-canvas .tree-chevron .ic,.tree-canvas .tree-chevron svg{width:10px!important;height:10px!important}
+.ide-node-icon{width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 16px}
+.ide-node-icon svg{width:16px;height:16px}
+.ide-method-symbol{width:13px;height:13px;border:1px solid #7293c7;background:#29476d;color:#bfd4fb;border-radius:3px;font:800 9px/12px Arial,sans-serif;text-align:center;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.ide-subsidiary-symbol{color:#e2c6fc;border-color:#9a77c1;background:#503a66}
+.tree-canvas .tree-row.comp .company-key{display:inline-flex;gap:3px!important;align-items:center;flex-shrink:0;min-width:0}
+.tree-canvas .tree-row.comp .number,.tree-canvas .tree-row.comp:not(.sub) .number{font-size:11px!important;line-height:20px;font-weight:650!important;min-width:0!important;color:#96baff!important;letter-spacing:0;flex:0 0 auto}
+.tree-canvas .tree-row.comp.sub .number{color:#d4adff!important}
+.tree-canvas .tree-row.comp .tree-chevron.spacer{display:inline-flex!important;visibility:hidden!important}
+.tree-canvas .tree-row.comp:focus-visible{outline:1px solid #8abaff!important;outline-offset:-1px}
+.tree-canvas .tree-row.file,.tree-canvas .tree-row.comp{background-image:none!important}
+.side-bottom{height:21px;min-height:21px;padding:4px 8px!important;background:#242529;border-top:1px solid #353940;font-size:9px!important;color:#89919b}
+.side-bottom b{font-weight:600;color:#84bc8e}
+@media(max-width:1100px){.ide-header{height:39px;min-height:39px}.side-body{padding:0 5px 12px!important}.tree-canvas .tree-row,.tree-canvas .tree-row.comp{height:25px!important;min-height:25px!important;max-height:25px!important}}
