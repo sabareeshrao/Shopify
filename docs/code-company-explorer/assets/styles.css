@@ -91,3 +91,22 @@
 
 /* Incoming caller labels follow blue Used by; outgoing services stay orange Needs. */
 .graph-col.usedby .relation-card[data-external] .rel-num{color:var(--blue)}
+
+/* Stable scrolling, fully-indented hierarchy, always-visible horizontal navigation. */
+html{scroll-behavior:auto}
+.side-body{overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+.tree-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;touch-action:pan-x pan-y;scrollbar-width:thin;scrollbar-color:var(--blue) #151515;padding-bottom:5px}
+.tree-canvas{width:max-content;min-width:100%}
+.tree-canvas .tree-row{width:100%;min-width:max-content;white-space:nowrap}
+.tree-canvas .tree-row .tree-text{overflow:visible;text-overflow:clip;max-width:none;flex:none;white-space:nowrap}
+.tree-canvas .tree-row .mini-count{padding-left:14px;margin-left:auto}
+.tree-canvas .tree-row.file{background-image:linear-gradient(to right,transparent,transparent)}
+.tree-pan{flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:7px 10px;background:#171717;border-top:2px solid #000;color:var(--dim);font-size:10px}
+.tree-pan span{flex:1;text-align:center;white-space:nowrap}
+.tree-pan button{background:#242424;border:1px solid #000;border-radius:7px;color:var(--blue);padding:5px 12px}
+.tree-pan button:disabled{opacity:.25}
+.header-back{display:inline-flex;align-items:center;gap:5px;background:#202020;color:var(--blue);border:2px solid #000;border-radius:8px;padding:9px;font-size:11px;font-weight:750;white-space:nowrap}
+.header-back:disabled{opacity:.25}.header-back .ic{width:15px;height:15px}
+.file-grid .code-row.pending-map:not(.highlight){border-left-color:var(--orange)}
+.file-grid .code-row.pending-map:not(.highlight) .ln{color:var(--orange)}
+@media(max-width:520px){.header-back span:not(.ic){display:none}.tree-pan button{padding:6px 15px}}

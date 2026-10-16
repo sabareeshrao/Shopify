@@ -43,8 +43,12 @@ function selectLine(line,scroll=true,relationKey=null,details=null){
  if(note)note.textContent=info.description;
  if(label)label.textContent='Line '+n+(activeLine===null?' · related file':'');
  if(scroll&&activeLine!==null){
-   const row=$('#current-code .code-row[data-line="'+activeLine+'"]');
-   if(row)row.scrollIntoView({block:'nearest',behavior:'smooth'});
+   const pane=$('#current-code'),row=pane?.querySelector('.code-row[data-line="'+activeLine+'"]');
+   if(pane&&row){
+     const region=pane.getBoundingClientRect(),position=row.getBoundingClientRect();
+     if(position.top<region.top+8)pane.scrollTop+=position.top-region.top-8;
+     else if(position.bottom>region.bottom-8)pane.scrollTop+=position.bottom-region.bottom+8;
+   }
  }
 }
 function selectExternalCard(button){

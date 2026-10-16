@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050505">
 <title>Code Company | Shopizer Explorer</title>
-<link rel="stylesheet" href="./assets/styles.css?v=ux-76-3">
+<link rel="stylesheet" href="./assets/styles.css?v=ux-116-nav-1">
 </head>
 <body>
 <div class="sidebar-overlay" id="backdrop"></div>
@@ -18,10 +18,10 @@
       <div class="section-label">Folders · Files · Companies</div>
       <nav id="tree" class="tree-scroll" aria-label="Project file tree"><div class="section-label">Loading source folders…</div></nav>
     </div>
-    <div class="side-bottom"><span>JAVA · SPRING BOOT</span><b>SHOPIZER</b></div>
+    <div class="tree-pan" aria-label="Folder tree horizontal navigation"><button id="tree-pan-left" type="button" aria-label="Move folder tree left">◀</button><span id="tree-pan-label">Folder tree · scroll sideways</span><button id="tree-pan-right" type="button" aria-label="Move folder tree right">▶</button></div><div class="side-bottom"><span>JAVA · SPRING BOOT</span><b>SHOPIZER</b></div>
   </aside>
   <div class="main">
-    <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Company # or method…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
+    <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><button id="history-back" class="header-back" type="button" aria-label="Back to previous location" title="Back to previous location" disabled><span class="ic" data-icon="back"></span><span>Back</span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Company # or method…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
     <nav class="company-sequence" aria-label="Browse company numbers">
       <button id="prev-company" class="sequence-button" type="button" aria-label="Previous company" title="Previous company · Left arrow" disabled><span class="ic" data-icon="back"></span><span>Previous</span></button>
       <div id="sequence-position" class="sequence-position" aria-live="polite">Loading companies…</div>
@@ -30,14 +30,14 @@
     <main class="content" id="maincontent"><div class="panel" style="padding:24px;color:var(--dim)">Loading verified Java code…</div></main>
   </div>
 </div>
-<script defer src="./assets/js/icons.js?v=ux-76-2"></script>
-<script defer src="./assets/js/data.js?v=ux-76-2"></script>
-<script defer src="./assets/js/tree.js?v=ux-76-2"></script>
-<script defer src="./assets/js/views.js?v=ux-76-2"></script>
-<script defer src="./assets/js/connections.js?v=ux-76-2"></script>
-<script defer src="./assets/js/highlight.js?v=ux-76-2"></script>
-<script defer src="./assets/js/navigation.js?v=ux-76-2"></script>
-<script defer src="./assets/js/events.js?v=ux-76-2"></script>
-<script defer src="./assets/js/app.js?v=ux-76-2"></script>
+<script defer src="./assets/js/icons.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/data.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/tree.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/views.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/connections.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/highlight.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/navigation.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/events.js?v=ux-116-nav-1"></script>
+<script defer src="./assets/js/app.js?v=ux-116-nav-1"></script>
 </body>
 </html>
