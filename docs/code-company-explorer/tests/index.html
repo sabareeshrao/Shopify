@@ -71,10 +71,10 @@ function checkBox(doc,box,n){
 }
 async function audit(){
  state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
- status.textContent='Checking 116 companies and every external connection…';
+ status.textContent='Checking 136 companies and every external connection…';
  const doc=await ready();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Deep link #company-6 did not restore Company 6 on load');
- for(let n=1;n<=116;n++){
+ for(let n=1;n<=136;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
   for(const button of buttons)checkBox(doc,button,n);
@@ -85,9 +85,21 @@ async function audit(){
   codeLine.click();
   assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
   state.companies++;
-  status.textContent='Checked '+n+'/116 companies, '+state.connections+' connection boxes…';
+  status.textContent='Checked '+n+'/136 companies, '+state.connections+' connection boxes…';
  }
 
+ openCompany(doc,116);
+ const before117=doc.querySelector('#maincontent .hero h1')?.textContent;
+ doc.querySelector('#next-company').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 117'),'Sequential next 116 → 117 failed');
+ doc.querySelector('#history-back').click();
+ assert(doc.querySelector('.hero h1')?.textContent===before117,'Back after 116 → 117 failed');
+ openCompany(doc,136);
+ assert(doc.querySelector('#next-company')?.disabled,'Company 136 must be last mapped main company');
+ openCompany(doc,128);
+ assert(doc.querySelector('.relation-card[data-company="company-98"]'),'Company 128 missing Company 98 client link');
+ openCompany(doc,130);
+ assert(doc.querySelector('.relation-card[data-company="company-98"]'),'Company 130 missing Company 98 client link');
  openCompany(doc,6);
  const originalCompany=doc.querySelector('#maincontent .hero h1')?.textContent;
  const graphNode=doc.querySelector('.relation-card[data-company="company-8"]');
@@ -138,7 +150,7 @@ async function audit(){
  assert(parseInt(rootStyle.getPropertyValue('--sidebar-width'),10)===318,'Double-click should reset sidebar to original 318px');
  frame.style.width=prevWidth;frame.style.maxWidth=prevMax;await delay(150);
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('#wires'))?.display==='none','Mobile cables should be hidden in stacked layout');
- log('All 116 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
+ log('All 136 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
  status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
 }
 run.addEventListener('click',async()=>{

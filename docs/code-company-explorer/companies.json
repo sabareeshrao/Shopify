@@ -5,7 +5,7 @@
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 116,
+  "count": 136,
   "companies": [
     {
       "id": "1",
@@ -22,7 +22,8 @@
           "name": "Java runtime",
           "kind": "external_runtime",
           "code_line": null,
-          "company_id": null
+          "company_id": null,
+          "description": "Java invokes the main(String[] args) entry point to start the process."
         }
       ],
       "outbound": [
@@ -30,7 +31,8 @@
           "name": "SpringApplication.run()",
           "kind": "external_framework",
           "code_line": 12,
-          "company_id": null
+          "company_id": null,
+          "description": "SpringApplication.run(ShopApplication.class, args) launches Spring Boot from source line 12."
         }
       ],
       "subsidiary_ids": [],
@@ -4296,16 +4298,16 @@
         {
           "name": "Copy customer email",
           "code_line": 47,
-          "description": "Calls CustomerDetails.setEmail; unindexed method.",
-          "company_id": null,
-          "kind": "external_framework_method"
+          "description": "Calls Company 128 CustomerDetails.setEmail(customer.getEmailAddress()) on line 47.",
+          "company_id": "128",
+          "kind": "internal_method_call"
         },
         {
           "name": "Copy customer ID",
           "code_line": 48,
-          "description": "Calls CustomerDetails.setId; unindexed method.",
-          "company_id": null,
-          "kind": "external_framework_method"
+          "description": "Calls Company 130 CustomerDetails.setId(customer.getId()) on line 48.",
+          "company_id": "130",
+          "kind": "internal_method_call"
         }
       ],
       "parent_id": null,
@@ -5076,6 +5078,706 @@
       "interview": {
         "id": "IQ-116",
         "question": "What happens to revocation if Companies 101 and 102 construct JWTUser with a null lastPasswordResetDate?"
+      }
+    },
+    {
+      "id": "117",
+      "order": 117,
+      "name": "Expose JWT principal customer ID",
+      "method": "getId()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 48,
+      "method_start_line": 49,
+      "end_line": 51,
+      "plain_english": "Returns the identity ID stored in JWTUser; @JsonIgnore prevents Jackson from serializing this getter.",
+      "sequence_reason": "After the password reset timestamp in Company 116, return to the JWTUser object's remaining identity and security-contract methods, beginning with its internal ID.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read JWTUser ID",
+          "code_line": 50,
+          "description": "Returns the final id field.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-117",
+        "question": "Why is JWTUser.getId() marked @JsonIgnore, and how would you safely expose a customer ID in an API DTO instead?"
+      }
+    },
+    {
+      "id": "118",
+      "order": 118,
+      "name": "Expose the JWT login name",
+      "method": "getUsername()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 53,
+      "method_start_line": 54,
+      "end_line": 56,
+      "plain_english": "Implements UserDetails.getUsername() to return the JWTUser principal's username.",
+      "sequence_reason": "Follow ID with the username Spring Security treats as the principal's login identifier; unlike the ID, this accessor has no @JsonIgnore in the source.",
+      "inbound": [
+        {
+          "name": "Spring Security UserDetails username contract",
+          "code_line": 54,
+          "description": "The override supplies the username through the UserDetails interface; a particular runtime callsite is not asserted.",
+          "company_id": null,
+          "kind": "external_framework_contract"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Return stored username",
+          "code_line": 55,
+          "description": "Returns the final username field.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-118",
+        "question": "When a custom UserDetails implements getUsername(), how can username equality differ from a database ID, especially after an account rename?"
+      }
+    },
+    {
+      "id": "119",
+      "order": 119,
+      "name": "Report JWT account as never expired",
+      "method": "isAccountNonExpired()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 58,
+      "method_start_line": 60,
+      "end_line": 62,
+      "plain_english": "Returns true unconditionally for the UserDetails account-expiry check, with @JsonIgnore.",
+      "sequence_reason": "Start reviewing JWTUser's three account-state checks; this first method is a constant true, not a persisted expiry check.",
+      "inbound": [
+        {
+          "name": "UserDetails account expiry contract",
+          "code_line": 60,
+          "description": "Spring Security may consult this UserDetails state; no concrete callsite is claimed.",
+          "company_id": null,
+          "kind": "external_framework_contract"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Allow all account ages",
+          "code_line": 61,
+          "description": "Returns literal true, regardless of account-expiry state.",
+          "company_id": null,
+          "kind": "java_constant_return"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-119",
+        "question": "What security behavior does an unconditional true from UserDetails.isAccountNonExpired() disable, and where should account-expiry policy be enforced?"
+      }
+    },
+    {
+      "id": "120",
+      "order": 120,
+      "name": "Report JWT account as never locked",
+      "method": "isAccountNonLocked()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 64,
+      "method_start_line": 66,
+      "end_line": 68,
+      "plain_english": "Always returns true instead of checking whether the JWTUser account has been locked.",
+      "sequence_reason": "Continue the security-state contract with lock status, separate from expiry; its constant true could conflict with external lockout policy.",
+      "inbound": [
+        {
+          "name": "UserDetails account lock contract",
+          "code_line": 66,
+          "description": "Provides a constant flag through the UserDetails contract; invocation is framework-dependent.",
+          "company_id": null,
+          "kind": "external_framework_contract"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Allow account as unlocked",
+          "code_line": 67,
+          "description": "Returns literal true rather than consulting a lock state.",
+          "company_id": null,
+          "kind": "java_constant_return"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-120",
+        "question": "If isAccountNonLocked() always returns true, how can a system still enforce account lockouts after failed login attempts?"
+      }
+    },
+    {
+      "id": "121",
+      "order": 121,
+      "name": "Report JWT credentials as never expired",
+      "method": "isCredentialsNonExpired()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 70,
+      "method_start_line": 72,
+      "end_line": 74,
+      "plain_english": "Always returns true for credential age, regardless of password expiry rules.",
+      "sequence_reason": "Finish the trio of account-state checks with credential expiry, distinct from account expiry and account locking.",
+      "inbound": [
+        {
+          "name": "UserDetails credential expiry contract",
+          "code_line": 72,
+          "description": "Supplies the credential-expiry flag required by UserDetails.",
+          "company_id": null,
+          "kind": "external_framework_contract"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Treat credentials as current",
+          "code_line": 73,
+          "description": "Returns literal true even when a password may be old.",
+          "company_id": null,
+          "kind": "java_constant_return"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-121",
+        "question": "How could isCredentialsNonExpired() returning true undermine password rotation, and how would you test credential-expiry enforcement?"
+      }
+    },
+    {
+      "id": "122",
+      "order": 122,
+      "name": "Expose JWT profile first name",
+      "method": "getFirstname()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 76,
+      "method_start_line": 76,
+      "end_line": 78,
+      "plain_english": "Returns the first-name field without @JsonIgnore on this method.",
+      "sequence_reason": "After account flags, examine profile properties stored by Company 113, starting with the first name passed by customer/admin principal builders.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read given name",
+          "code_line": 77,
+          "description": "Returns firstname from the principal.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-122",
+        "question": "What are the privacy risks of serializing a JWTUser getter such as getFirstname(), and why should REST responses use explicit DTOs?"
+      }
+    },
+    {
+      "id": "123",
+      "order": 123,
+      "name": "Expose JWT profile last name",
+      "method": "getLastname()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 80,
+      "method_start_line": 80,
+      "end_line": 82,
+      "plain_english": "Returns the last-name field, with no Jackson ignore annotation in the file.",
+      "sequence_reason": "Continue profile-field inspection with family name to distinguish displayed identity from authenticated username.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read family name",
+          "code_line": 81,
+          "description": "Returns lastname from the principal.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-123",
+        "question": "How would you avoid accidentally using an unauthenticated display name as a stable identity key in authorization code?"
+      }
+    },
+    {
+      "id": "124",
+      "order": 124,
+      "name": "Expose JWT profile email",
+      "method": "getEmail()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 84,
+      "method_start_line": 84,
+      "end_line": 86,
+      "plain_english": "Returns the principal's email address, with no @JsonIgnore annotation.",
+      "sequence_reason": "Complete the visible JWT profile attributes with email, which is personally identifying and can change independently of account ID.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read principal email",
+          "code_line": 85,
+          "description": "Returns email from the principal.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-124",
+        "question": "Why should an email address returned from JWTUser.getEmail() not automatically be trusted as a verified or immutable authorization identifier?"
+      }
+    },
+    {
+      "id": "125",
+      "order": 125,
+      "name": "Expose JWT account enabled status",
+      "method": "isEnabled()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 99,
+      "method_start_line": 100,
+      "end_line": 102,
+      "plain_english": "Implements UserDetails.isEnabled() and returns the stored enabled flag; earlier JWT principal builders currently pass true.",
+      "sequence_reason": "Finish JWTUser's security contract with the enabled flag and connect it to Company 113's constructor and Companies 101/102's hard-coded true.",
+      "inbound": [
+        {
+          "name": "UserDetails enabled contract",
+          "code_line": 100,
+          "description": "This override returns the flag held by JWTUser; invocation depends on authentication provider.",
+          "company_id": null,
+          "kind": "external_framework_contract"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Read enabled flag",
+          "code_line": 101,
+          "description": "Returns final enabled field.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-125",
+        "question": "If the JWT principal builders always pass true for enabled, what must happen elsewhere to prevent a disabled customer from authenticating?"
+      }
+    },
+    {
+      "id": "126",
+      "order": 126,
+      "name": "Construct browser principal with default flags",
+      "method": "CustomerDetails(String username, String password, Collection<? extends GrantedAuthority> authorities)",
+      "type": "Verified Shopizer Java constructor",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 31,
+      "method_start_line": 31,
+      "end_line": 36,
+      "plain_english": "Builds Spring Security User using the supplied login, password and authorities while setting enabled, account expiry, credential expiry and lock flags all to true.",
+      "sequence_reason": "After completing the JWTUser contract, compare the simpler browser CustomerDetails constructor with Company 112's full constructor; this overload supplies permissive defaults.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Delegate to Spring Security User constructor",
+          "code_line": 35,
+          "description": "Calls super(username,password,true,true,true,true,authorities), setting every status flag true.",
+          "company_id": null,
+          "kind": "external_framework_constructor"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-126",
+        "question": "What assumptions are hidden in the three-argument CustomerDetails constructor that passes true for all account status flags, and when is that unsafe?"
+      }
+    },
+    {
+      "id": "127",
+      "order": 127,
+      "name": "Read browser customer email",
+      "method": "getEmail()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 38,
+      "method_start_line": 38,
+      "end_line": 40,
+      "plain_english": "Returns the mutable email field carried by CustomerDetails alongside inherited Spring Security account data.",
+      "sequence_reason": "Next examine the extra profile properties present only on browser CustomerDetails, beginning with email before looking at how it is populated.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read browser customer email",
+          "code_line": 39,
+          "description": "Returns email from CustomerDetails.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-127",
+        "question": "Why can the email property on a mutable CustomerDetails principal differ from the authenticated username, and where should identity changes be synchronized?"
+      }
+    },
+    {
+      "id": "128",
+      "order": 128,
+      "name": "Copy email into browser principal",
+      "method": "setEmail(String email)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 42,
+      "method_start_line": 42,
+      "end_line": 44,
+      "plain_english": "Updates the CustomerDetails email field; Company 98 calls this method with the customer's saved email address.",
+      "sequence_reason": "Pair the getter with the setter used by Company 98 at line 47, showing how browser principal profile data is filled after construction.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Write browser customer email",
+          "code_line": 43,
+          "description": "Assigns this.email = email.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-128",
+        "question": "Company 98 copies the customer email into CustomerDetails after construction. What risks arise if a mutable authenticated principal is shared or cached?"
+      }
+    },
+    {
+      "id": "129",
+      "order": 129,
+      "name": "Read browser customer ID",
+      "method": "getId()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 46,
+      "method_start_line": 46,
+      "end_line": 48,
+      "plain_english": "Returns the separately stored customer ID on a browser CustomerDetails principal.",
+      "sequence_reason": "After the email pair, move to the database ID that the browser principal carries in addition to Spring Security's username.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read browser customer ID",
+          "code_line": 47,
+          "description": "Returns this.id.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-129",
+        "question": "Why is a stable numeric customer ID often preferable to username or email for looking up merchant-specific customer records?"
+      }
+    },
+    {
+      "id": "130",
+      "order": 130,
+      "name": "Copy customer ID into browser principal",
+      "method": "setId(Long id)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 50,
+      "method_start_line": 50,
+      "end_line": 52,
+      "plain_english": "Stores the customer database ID; Company 98 calls it using customer.getId() at original line 48.",
+      "sequence_reason": "Pair the browser ID getter with the setter called by Company 98 to connect the source customer record to the authenticated principal.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Write browser customer ID",
+          "code_line": 51,
+          "description": "Assigns this.id = id.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-130",
+        "question": "How would you verify that CustomerDetails.setId() receives the correct customer ID rather than one supplied by an untrusted login request?"
+      }
+    },
+    {
+      "id": "131",
+      "order": 131,
+      "name": "Read browser customer's first name",
+      "method": "getFirstName()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 54,
+      "method_start_line": 54,
+      "end_line": 56,
+      "plain_english": "Returns the firstName attribute of CustomerDetails, which is distinct from UserDetails.getUsername().",
+      "sequence_reason": "After email and ID, inspect the firstName profile accessor so learner can separate display attributes from security identifiers.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read browser first name",
+          "code_line": 55,
+          "description": "Returns the firstName field.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-131",
+        "question": "Why should getFirstName() never determine authorization decisions even when populated from a trusted Customer entity?"
+      }
+    },
+    {
+      "id": "132",
+      "order": 132,
+      "name": "Set browser customer's first name",
+      "method": "setFirstName(String firstName)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 58,
+      "method_start_line": 58,
+      "end_line": 60,
+      "plain_english": "Changes the mutable firstName field in a CustomerDetails object.",
+      "sequence_reason": "Pair the first-name getter with its mutable setter; the inspected Company 98 does not call this setter, so no caller is invented.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Write browser first name",
+          "code_line": 59,
+          "description": "Assigns this.firstName = firstName.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-132",
+        "question": "How could mutating firstName after a principal is placed in a session create inconsistencies between a stored profile and an authenticated session?"
+      }
+    },
+    {
+      "id": "133",
+      "order": 133,
+      "name": "Read browser customer's last name",
+      "method": "getLastName()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 62,
+      "method_start_line": 62,
+      "end_line": 64,
+      "plain_english": "Returns the lastName profile field from CustomerDetails.",
+      "sequence_reason": "Finish browser profile accessors with the family name getter before reviewing its matching setter.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read browser last name",
+          "code_line": 63,
+          "description": "Returns lastName.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-133",
+        "question": "Why is a surname on an authenticated principal only a display attribute, and how should an application handle a customer changing it mid-session?"
+      }
+    },
+    {
+      "id": "134",
+      "order": 134,
+      "name": "Set browser customer's last name",
+      "method": "setLastName(String lastName)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 66,
+      "method_start_line": 66,
+      "end_line": 68,
+      "plain_english": "Updates the mutable lastName field; no verified caller in the mapped code is asserted.",
+      "sequence_reason": "Close the browser CustomerDetails review with the last-name setter and the implications of session-held mutable profile fields.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Write browser last name",
+          "code_line": 67,
+          "description": "Assigns this.lastName = lastName.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-134",
+        "question": "How would you test a cached CustomerDetails object's lastName change without accidentally mutating shared authenticated state?"
+      }
+    },
+    {
+      "id": "135",
+      "order": 135,
+      "name": "Read administrator identity service",
+      "method": "getJwtAdminDetailsService()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java",
+      "source_blob_sha": "47f635083fbcf1351a554fe649b75c69326300c6",
+      "source_data_file": "sources/admin.json",
+      "source_line_count": 71,
+      "start_line": 29,
+      "method_start_line": 29,
+      "end_line": 31,
+      "plain_english": "Returns the locally stored UserDetailsService field injected into JWTAdminAuthenticationProvider.",
+      "sequence_reason": "After finishing customer principal data, return to admin authentication wiring: inspect the identity service read by Company 61's provider logic.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Return injected admin identity loader",
+          "code_line": 30,
+          "description": "Returns jwtAdminDetailsService.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-135",
+        "question": "What happens if getJwtAdminDetailsService() returns null before field injection, and how would constructor injection change the provider's testability?"
+      }
+    },
+    {
+      "id": "136",
+      "order": 136,
+      "name": "Replace administrator identity service",
+      "method": "setJwtAdminDetailsService(UserDetailsService jwtAdminDetailsService)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java",
+      "source_blob_sha": "47f635083fbcf1351a554fe649b75c69326300c6",
+      "source_data_file": "sources/admin.json",
+      "source_line_count": 71,
+      "start_line": 32,
+      "method_start_line": 32,
+      "end_line": 34,
+      "plain_english": "Sets this provider's private jwtAdminDetailsService field; the source does not show this method configuring the inherited DaoAuthenticationProvider service.",
+      "sequence_reason": "Pair the service getter with its setter, distinguishing the subclass field from framework-level authentication-provider wiring.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Set local admin identity loader",
+          "code_line": 33,
+          "description": "Assigns this.jwtAdminDetailsService = jwtAdminDetailsService.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-136",
+        "question": "Why does assigning this.jwtAdminDetailsService not necessarily configure DaoAuthenticationProvider's internal UserDetailsService, and how would you detect mismatched providers?"
       }
     }
   ],

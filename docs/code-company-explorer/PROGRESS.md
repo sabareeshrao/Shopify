@@ -128,6 +128,26 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 114 | Expose stored JWTUser password | `getPassword()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 88–92 | 0 mapped | Verified |
 | 115 | Expose JWTUser granted authorities | `getAuthorities()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 94–97 | 0 mapped | Verified |
 | 116 | Return JWTUser password reset cutoff | `getLastPasswordResetDate()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 104–107 | 0 mapped | Verified |
+| 117 | Expose JWT principal customer ID | `getId()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 48–51 | 0 mapped | Verified |
+| 118 | Expose the JWT login name | `getUsername()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 53–56 | 0 mapped | Verified |
+| 119 | Report JWT account as never expired | `isAccountNonExpired()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 58–62 | 0 mapped | Verified |
+| 120 | Report JWT account as never locked | `isAccountNonLocked()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 64–68 | 0 mapped | Verified |
+| 121 | Report JWT credentials as never expired | `isCredentialsNonExpired()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 70–74 | 0 mapped | Verified |
+| 122 | Expose JWT profile first name | `getFirstname()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 76–78 | 0 mapped | Verified |
+| 123 | Expose JWT profile last name | `getLastname()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 80–82 | 0 mapped | Verified |
+| 124 | Expose JWT profile email | `getEmail()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 84–86 | 0 mapped | Verified |
+| 125 | Expose JWT account enabled status | `isEnabled()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java` | 99–102 | 0 mapped | Verified |
+| 126 | Construct browser principal with default flags | `CustomerDetails(String username, String password, Collection<? extends GrantedAuthority> authorities)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 31–36 | 0 mapped | Verified |
+| 127 | Read browser customer email | `getEmail()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 38–40 | 0 mapped | Verified |
+| 128 | Copy email into browser principal | `setEmail(String email)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 42–44 | 0 mapped | Verified |
+| 129 | Read browser customer ID | `getId()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 46–48 | 0 mapped | Verified |
+| 130 | Copy customer ID into browser principal | `setId(Long id)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 50–52 | 0 mapped | Verified |
+| 131 | Read browser customer's first name | `getFirstName()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 54–56 | 0 mapped | Verified |
+| 132 | Set browser customer's first name | `setFirstName(String firstName)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 58–60 | 0 mapped | Verified |
+| 133 | Read browser customer's last name | `getLastName()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 62–64 | 0 mapped | Verified |
+| 134 | Set browser customer's last name | `setLastName(String lastName)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 66–68 | 0 mapped | Verified |
+| 135 | Read administrator identity service | `getJwtAdminDetailsService()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 29–31 | 0 mapped | Verified |
+| 136 | Replace administrator identity service | `setJwtAdminDetailsService(UserDetailsService jwtAdminDetailsService)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 32–34 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -459,3 +479,37 @@ Company network nodes now use native anchors with target=_blank and rel=noopener
 - Mobile drawer (<=1100 px) retains existing width, overlay, and close behavior; resize handle is hidden.
 - Updated browser regression to test mobile drawer, desktop keyboard resizing, reset and removal of horizontal pan.
 - No company data or pinned Java source snapshots changed.
+
+
+## Companies 117–136 — Verified security-principal contracts and identity-field mappings
+
+Pinned Shopizer commit: `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`. All new companies reference existing, unchanged `jwt-user.json`, `customer-details.json`, and `admin.json` source snapshots.
+Sequence represents the learning path, **not runtime execution order**; no fabricated subsidiaries were introduced.
+
+| Company | Why now? | Interview question |
+|---|---|---|
+| 117 — Expose JWT principal customer ID | After the password reset timestamp in Company 116, return to the JWTUser object's remaining identity and security-contract methods, beginning with its internal ID. | IQ-117: Why is JWTUser.getId() marked @JsonIgnore, and how would you safely expose a customer ID in an API DTO instead? |
+| 118 — Expose the JWT login name | Follow ID with the username Spring Security treats as the principal's login identifier; unlike the ID, this accessor has no @JsonIgnore in the source. | IQ-118: When a custom UserDetails implements getUsername(), how can username equality differ from a database ID, especially after an account rename? |
+| 119 — Report JWT account as never expired | Start reviewing JWTUser's three account-state checks; this first method is a constant true, not a persisted expiry check. | IQ-119: What security behavior does an unconditional true from UserDetails.isAccountNonExpired() disable, and where should account-expiry policy be enforced? |
+| 120 — Report JWT account as never locked | Continue the security-state contract with lock status, separate from expiry; its constant true could conflict with external lockout policy. | IQ-120: If isAccountNonLocked() always returns true, how can a system still enforce account lockouts after failed login attempts? |
+| 121 — Report JWT credentials as never expired | Finish the trio of account-state checks with credential expiry, distinct from account expiry and account locking. | IQ-121: How could isCredentialsNonExpired() returning true undermine password rotation, and how would you test credential-expiry enforcement? |
+| 122 — Expose JWT profile first name | After account flags, examine profile properties stored by Company 113, starting with the first name passed by customer/admin principal builders. | IQ-122: What are the privacy risks of serializing a JWTUser getter such as getFirstname(), and why should REST responses use explicit DTOs? |
+| 123 — Expose JWT profile last name | Continue profile-field inspection with family name to distinguish displayed identity from authenticated username. | IQ-123: How would you avoid accidentally using an unauthenticated display name as a stable identity key in authorization code? |
+| 124 — Expose JWT profile email | Complete the visible JWT profile attributes with email, which is personally identifying and can change independently of account ID. | IQ-124: Why should an email address returned from JWTUser.getEmail() not automatically be trusted as a verified or immutable authorization identifier? |
+| 125 — Expose JWT account enabled status | Finish JWTUser's security contract with the enabled flag and connect it to Company 113's constructor and Companies 101/102's hard-coded true. | IQ-125: If the JWT principal builders always pass true for enabled, what must happen elsewhere to prevent a disabled customer from authenticating? |
+| 126 — Construct browser principal with default flags | After completing the JWTUser contract, compare the simpler browser CustomerDetails constructor with Company 112's full constructor; this overload supplies permissive defaults. | IQ-126: What assumptions are hidden in the three-argument CustomerDetails constructor that passes true for all account status flags, and when is that unsafe? |
+| 127 — Read browser customer email | Next examine the extra profile properties present only on browser CustomerDetails, beginning with email before looking at how it is populated. | IQ-127: Why can the email property on a mutable CustomerDetails principal differ from the authenticated username, and where should identity changes be synchronized? |
+| 128 — Copy email into browser principal | Pair the getter with the setter used by Company 98 at line 47, showing how browser principal profile data is filled after construction. | IQ-128: Company 98 copies the customer email into CustomerDetails after construction. What risks arise if a mutable authenticated principal is shared or cached? |
+| 129 — Read browser customer ID | After the email pair, move to the database ID that the browser principal carries in addition to Spring Security's username. | IQ-129: Why is a stable numeric customer ID often preferable to username or email for looking up merchant-specific customer records? |
+| 130 — Copy customer ID into browser principal | Pair the browser ID getter with the setter called by Company 98 to connect the source customer record to the authenticated principal. | IQ-130: How would you verify that CustomerDetails.setId() receives the correct customer ID rather than one supplied by an untrusted login request? |
+| 131 — Read browser customer's first name | After email and ID, inspect the firstName profile accessor so learner can separate display attributes from security identifiers. | IQ-131: Why should getFirstName() never determine authorization decisions even when populated from a trusted Customer entity? |
+| 132 — Set browser customer's first name | Pair the first-name getter with its mutable setter; the inspected Company 98 does not call this setter, so no caller is invented. | IQ-132: How could mutating firstName after a principal is placed in a session create inconsistencies between a stored profile and an authenticated session? |
+| 133 — Read browser customer's last name | Finish browser profile accessors with the family name getter before reviewing its matching setter. | IQ-133: Why is a surname on an authenticated principal only a display attribute, and how should an application handle a customer changing it mid-session? |
+| 134 — Set browser customer's last name | Close the browser CustomerDetails review with the last-name setter and the implications of session-held mutable profile fields. | IQ-134: How would you test a cached CustomerDetails object's lastName change without accidentally mutating shared authenticated state? |
+| 135 — Read administrator identity service | After finishing customer principal data, return to admin authentication wiring: inspect the identity service read by Company 61's provider logic. | IQ-135: What happens if getJwtAdminDetailsService() returns null before field injection, and how would constructor injection change the provider's testability? |
+| 136 — Replace administrator identity service | Pair the service getter with its setter, distinguishing the subclass field from framework-level authentication-provider wiring. | IQ-136: Why does assigning this.jwtAdminDetailsService not necessarily configure DaoAuthenticationProvider's internal UserDetailsService, and how would you detect mismatched providers? |
+
+Audit before batch: 116/116 source ranges/declarations matched stored snapshots across 29 files; inspected three new target files against original pinned Shopizer SHA and line content; no ID gaps, duplicated questions, or overlapping top-level company spans. Checked 284 previously registered relations (280 in-range callsites and three outside-method references; Company 1 also has a Java runtime relation with no in-file line). Corrected missing descriptions on Company 1 and reclassified Company 98's two existing setEmail/setId calls as verified Company 128/130 internal method calls. No original Shopizer code modified.
+
+### Quality limits
+Browser regression file now targets 136 records, but running it inside GitHub Pages on a physical browser must still be confirmed. No live mobile/desktop pass is claimed based on structural checks alone.
