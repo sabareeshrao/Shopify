@@ -64,6 +64,14 @@ Each company has the complete unique question and a plain-English sequence reaso
 - All five have distinct sequence explanations and questions IQ-12 through IQ-16 in `companies.json`.
 - The original Shopizer reference is pinned to `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`.
 
+### Verified Company 6 rendering failure — corrected
+
+- Root cause: the connection UI mixed **internal company links** and **outside-service links** in one list and used the combined list position to index only the outside-service array.
+- Company 6 contains two internal links (Companies 8 and 9) before one outside-service link; the UI attempted to read a non-existent outside-service entry and threw `Cannot read properties of undefined (reading 'code_line')` while rendering.
+- Fix: `edgeCard()` now derives the external source index from the stable `outside-in-N`/`outside-out-N` relation ID, not from the combined-card index. A missing entry safely produces no card.
+- Separate robustness changes: numeric search result click is handled directly; company pages write `#company-N` permalinks and are restored on refresh; navigation scrolls to the top.
+- A simulated browser test loaded all 16 companies, rendered their interview questions, opened Company 6 through a numeric search click, verified `#company-6`, and moved 6 → 7 → 6 using next/previous.
+- This test validates application behavior in a DOM simulation; live GitHub Pages rendering still requires deployment confirmation.
 ### Search and navigation repair
 
 - Company 6 exists as `addInterceptors()` in `ShopApplicationConfiguration.java` lines 77–98; it is not missing from the source registry.
