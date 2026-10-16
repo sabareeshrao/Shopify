@@ -1,11 +1,11 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 11,
+  "count": 16,
   "companies": [
     {
       "id": "1",
@@ -531,6 +531,225 @@
       "interview": {
         "id": "IQ-11",
         "question": "How does ReloadableResourceBundleMessageSource choose a locale-specific properties file, and why should you define both basenames and UTF-8 encoding?"
+      }
+    },
+    {
+      "id": "12",
+      "order": 12,
+      "name": "Provide message helper tools",
+      "method": "messages()",
+      "type": "Spring bean for message utilities",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "start_line": 146,
+      "method_start_line": 147,
+      "end_line": 149,
+      "plain_english": "Creates a LabelUtils helper as a Spring bean so other parts of Shopizer can use its label and message-related utility methods.",
+      "sequence_reason": "After loading translated message bundles in Company 11, inspect the separate LabelUtils bean factory. These methods sit together in the original configuration file and support message-related work, but they do not directly call each other.",
+      "inbound": [
+        {
+          "name": "Spring creates message helper",
+          "kind": "external_framework_bean",
+          "code_line": 146,
+          "company_id": null,
+          "description": "@Bean marks this method as a provider of a LabelUtils object managed by Spring."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create Shopizer LabelUtils",
+          "kind": "unmapped_internal_class",
+          "code_line": 148,
+          "company_id": null,
+          "description": "The method returns new LabelUtils(); the helper class has not been assigned a company number."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-12",
+        "question": "What happens when a Spring @Bean method returns a helper object such as LabelUtils, and how is the bean's default name chosen?"
+      }
+    },
+    {
+      "id": "13",
+      "order": 13,
+      "name": "Load shop settings from a file",
+      "method": "mapper()",
+      "type": "Spring factory bean for Shopizer properties",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopizerPropertiesConfig.java",
+      "source_blob_sha": "b60a695bae52bc0d9c3e51a33d88bb2dd6032c64",
+      "source_data_file": "sources/shopizer-properties-config.json",
+      "source_line_count": 18,
+      "start_line": 12,
+      "method_start_line": 13,
+      "end_line": 17,
+      "plain_english": "Creates a PropertiesFactoryBean that reads Shopizer's settings from the classpath file shopizer-properties.properties.",
+      "sequence_reason": "Once shared message resources and helper objects are understood, learn how Shopizer supplies application configuration values from a properties file. This step switches to ShopizerPropertiesConfig.java without assuming a direct call from Company 12.",
+      "inbound": [
+        {
+          "name": "Spring bean factory",
+          "kind": "external_framework_bean",
+          "code_line": 12,
+          "company_id": null,
+          "description": "@Bean(name=\"shopizer-properties\") registers the returned PropertiesFactoryBean under an explicit bean name."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create PropertiesFactoryBean",
+          "kind": "external_framework_class",
+          "code_line": 14,
+          "company_id": null,
+          "description": "Creates a Spring PropertiesFactoryBean for a configuration resource."
+        },
+        {
+          "name": "Read settings from classpath",
+          "kind": "external_framework_class",
+          "code_line": 15,
+          "company_id": null,
+          "description": "Loads shopizer-properties.properties with new ClassPathResource()."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-13",
+        "question": "How does PropertiesFactoryBean load classpath properties, and how is the explicit @Bean name 'shopizer-properties' different from the default method name?"
+      }
+    },
+    {
+      "id": "14",
+      "order": 14,
+      "name": "Run work in the background",
+      "method": "getAsyncExecutor()",
+      "type": "Spring AsyncConfigurer executor method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java",
+      "source_blob_sha": "ffe649b1744d8c3331bcf1a9f99890858196bbd5",
+      "source_data_file": "sources/async-config.json",
+      "source_line_count": 28,
+      "start_line": 19,
+      "method_start_line": 20,
+      "end_line": 22,
+      "plain_english": "Creates a fixed thread pool with five worker threads to execute asynchronous tasks.",
+      "sequence_reason": "After basic web settings, look at supporting work that should not block the current request. Shopizer's AsyncConfig introduces a dedicated executor for @Async methods, so this is the first asynchronous configuration company.",
+      "inbound": [
+        {
+          "name": "Spring async configuration",
+          "kind": "external_framework_callback",
+          "code_line": 19,
+          "company_id": null,
+          "description": "Spring queries AsyncConfigurer.getAsyncExecutor() to obtain the executor for asynchronous methods."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create five-thread worker pool",
+          "kind": "java_concurrency_api",
+          "code_line": 21,
+          "company_id": null,
+          "description": "Executors.newFixedThreadPool(EXECUTOR_SERVICE_NUMBER_THREADS) uses a constant of 5 defined at line 17."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-14",
+        "question": "What are the throughput, queue-growth, and shutdown trade-offs of using Executors.newFixedThreadPool(5) as Spring's @Async executor?"
+      }
+    },
+    {
+      "id": "15",
+      "order": 15,
+      "name": "Handle uncaught background errors",
+      "method": "getAsyncUncaughtExceptionHandler()",
+      "type": "Spring AsyncConfigurer exception handler",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java",
+      "source_blob_sha": "ffe649b1744d8c3331bcf1a9f99890858196bbd5",
+      "source_data_file": "sources/async-config.json",
+      "source_line_count": 28,
+      "start_line": 24,
+      "method_start_line": 25,
+      "end_line": 27,
+      "plain_english": "Creates Spring's standard handler to report uncaught exceptions from eligible asynchronous void-returning methods.",
+      "sequence_reason": "Immediately after defining the asynchronous worker pool, handle failures from that background work. Shopizer places this second AsyncConfigurer override next to the executor method because both concern asynchronous operation, not because they call each other.",
+      "inbound": [
+        {
+          "name": "Spring async configuration",
+          "kind": "external_framework_callback",
+          "code_line": 24,
+          "company_id": null,
+          "description": "Spring obtains the AsyncUncaughtExceptionHandler from AsyncConfigurer when setting up asynchronous method support."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create default asynchronous error handler",
+          "kind": "external_framework_class",
+          "code_line": 26,
+          "company_id": null,
+          "description": "Returns a new SimpleAsyncUncaughtExceptionHandler."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-15",
+        "question": "Which @Async exceptions reach AsyncUncaughtExceptionHandler, and how is failure handling different for void methods versus CompletableFuture results?"
+      }
+    },
+    {
+      "id": "16",
+      "order": 16,
+      "name": "Read shop and language details from requests",
+      "method": "addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers)",
+      "type": "Spring MVC custom argument resolver registration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/WebConfig.java",
+      "source_blob_sha": "9cf3b3aa02aad8a893951231be784cac53b8ab41",
+      "source_data_file": "sources/web-config.json",
+      "source_line_count": 29,
+      "start_line": 22,
+      "method_start_line": 23,
+      "end_line": 26,
+      "plain_english": "Registers two custom components that help Spring MVC supply merchant-store and language information to controller method parameters.",
+      "sequence_reason": "After global web settings and asynchronous configuration, move to controller inputs: Shopizer's WebConfig registers store and language argument resolvers. These integrate request context with controllers and build on the locale concepts from Companies 8–11.",
+      "inbound": [
+        {
+          "name": "Spring MVC configuration callback",
+          "kind": "external_framework_callback",
+          "code_line": 22,
+          "company_id": null,
+          "description": "Spring MVC calls WebMvcConfigurer.addArgumentResolvers() while creating its method argument resolver list."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Register merchant-store resolver",
+          "kind": "unmapped_internal_class",
+          "code_line": 24,
+          "company_id": null,
+          "description": "Adds the autowired MerchantStoreArgumentResolver, whose source is not yet mapped as a company."
+        },
+        {
+          "name": "Register language resolver",
+          "kind": "unmapped_internal_class",
+          "code_line": 25,
+          "company_id": null,
+          "description": "Adds the autowired LanguageArgumentResolver, whose source is not yet mapped as a company."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-16",
+        "question": "How does Spring MVC choose a HandlerMethodArgumentResolver for a controller parameter, and why does resolver ordering matter when multiple resolvers report support?"
       }
     }
   ],
