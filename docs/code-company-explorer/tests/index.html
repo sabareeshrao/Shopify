@@ -69,10 +69,10 @@ function checkBox(doc,box,n){
 }
 async function audit(){
  state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
- status.textContent='Checking 36 companies and every external connection…';
+ status.textContent='Checking 56 companies and every external connection…';
  const doc=await ready();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Deep link #company-6 did not restore Company 6 on load');
- for(let n=1;n<=36;n++){
+ for(let n=1;n<=56;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
   for(const button of buttons)checkBox(doc,button,n);
@@ -83,7 +83,7 @@ async function audit(){
   codeLine.click();
   assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
   state.companies++;
-  status.textContent='Checked '+n+'/36 companies, '+state.connections+' connection boxes…';
+  status.textContent='Checked '+n+'/56 companies, '+state.connections+' connection boxes…';
  }
  openCompany(doc,6);
  assert(!doc.querySelector('.relation-card.is-selected'),'Company 6 inherited stale selection');
@@ -101,7 +101,7 @@ async function audit(){
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 7'),'Next button did not go 6 → 7');
  doc.querySelector('#prev-company').click();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Previous button did not go 7 → 6');
- log('All 36 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
+ log('All 56 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
  status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
 }
 run.addEventListener('click',async()=>{

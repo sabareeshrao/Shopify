@@ -1,11 +1,11 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 36,
+  "count": 56,
   "companies": [
     {
       "id": "1",
@@ -1204,6 +1204,13 @@
           "description": "Returns new AuthenticationTokenFilter(); class implementation has not yet been mapped.",
           "company_id": null,
           "kind": "unmapped_internal_class"
+        },
+        {
+          "name": "AuthenticationTokenFilter runtime method",
+          "kind": "internal_class_implementation",
+          "code_line": 47,
+          "company_id": "52",
+          "description": "The factory creates the filter instance whose OncePerRequestFilter callback is Company 52; this is a class link, not a direct call."
         }
       ],
       "parent_id": null,
@@ -1582,11 +1589,11 @@
           "kind": "external_framework_method"
         },
         {
-          "name": "Create shop authentication entry point",
+          "name": "Shop Basic authentication entry point (Company 37)",
           "code_line": 132,
-          "description": "Invokes shopAuthenticationEntryPoint(), currently unmapped.",
-          "company_id": null,
-          "kind": "unmapped_internal_method"
+          "description": "Direct call to Company 37 shopAuthenticationEntryPoint().",
+          "company_id": "37",
+          "kind": "internal_method_call"
         },
         {
           "name": "Configure logout",
@@ -1602,6 +1609,966 @@
       "interview": {
         "id": "IQ-36",
         "question": "The code has antMatchers(\"/shop/**\").permitAll() before antMatchers(\"/shop/customer/**\").hasRole(\"AUTH_CUSTOMER\"). How can matcher ordering undermine the intended protection, and how would you demonstrate it in a security test?"
+      }
+    },
+    {
+      "id": "37",
+      "order": 37,
+      "name": "Provide the shop Basic-auth realm",
+      "method": "shopAuthenticationEntryPoint()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 146,
+      "method_start_line": 147,
+      "end_line": 151,
+      "plain_english": "Creates the entry point whose challenge realm is shop-realm.",
+      "sequence_reason": "Company 36 directly calls this factory; inspect the Basic authentication challenge before other security chains.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 146,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Set Basic realm shop-realm",
+          "kind": "external_framework_method",
+          "code_line": 149,
+          "company_id": null,
+          "description": "Calls entryPoint.setRealmName(\"shop-realm\")."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-37",
+        "question": "What does BasicAuthenticationEntryPoint do on an unauthenticated request, and how does shop-realm affect the challenge?"
+      }
+    },
+    {
+      "id": "38",
+      "order": 38,
+      "name": "Register legacy service user details",
+      "method": "configure(AuthenticationManagerBuilder auth)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 176,
+      "method_start_line": 177,
+      "end_line": 179,
+      "plain_english": "Sets the legacy /services adapter's UserDetailsService.",
+      "sequence_reason": "After the shop Basic realm, enter the active @Order(2) services adapter and find how its user identities are loaded.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 176,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Register WebUserServices",
+          "kind": "external_framework_method",
+          "code_line": 178,
+          "company_id": null,
+          "description": "Binds userDetailsService to the services authentication builder."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-38",
+        "question": "How does a chain-specific AuthenticationManagerBuilder.userDetailsService() affect authentication of service requests?"
+      }
+    },
+    {
+      "id": "39",
+      "order": 39,
+      "name": "Secure legacy service endpoints",
+      "method": "configure(HttpSecurity http)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 181,
+      "method_start_line": 182,
+      "end_line": 194,
+      "plain_english": "Configures /services/** URL access, HTTP Basic, form login and a service success handler.",
+      "sequence_reason": "After binding service identities, examine public versus private service route rules and authentication entry points.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 181,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Match services URLs",
+          "kind": "external_framework_method",
+          "code_line": 184,
+          "company_id": null,
+          "description": "Applies /services/**."
+        },
+        {
+          "name": "Apply public/private service rules",
+          "kind": "external_framework_method",
+          "code_line": 187,
+          "company_id": null,
+          "description": "Allows public routes and requires AUTH on /services/private/**."
+        },
+        {
+          "name": "Create services Basic entry point",
+          "kind": "internal_method_call",
+          "code_line": 190,
+          "company_id": "40",
+          "description": "Calls Company 40 servicesAuthenticationEntryPoint()."
+        },
+        {
+          "name": "Use services success handler bean",
+          "kind": "internal_bean_use",
+          "code_line": 192,
+          "company_id": "31",
+          "description": "Uses the services handler object supplied by Company 31."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-39",
+        "question": "Why might disabling CSRF be dangerous when an HttpSecurity chain also enables formLogin(), and how do the service URL matchers interact?"
+      }
+    },
+    {
+      "id": "40",
+      "order": 40,
+      "name": "Set the service Basic-auth realm",
+      "method": "servicesAuthenticationEntryPoint()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 196,
+      "method_start_line": 197,
+      "end_line": 201,
+      "plain_english": "Returns a BasicAuthenticationEntryPoint with rest-customer-realm.",
+      "sequence_reason": "Company 39 directly calls this entry-point factory, so examine the challenge response after its security rules.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 196,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Set realm rest-customer-realm",
+          "kind": "external_framework_method",
+          "code_line": 199,
+          "company_id": null,
+          "description": "Uses the rest-customer-realm for the Basic challenge."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-40",
+        "question": "Does the Basic-auth realm name restrict which users authenticate, or only describe the HTTP challenge?"
+      }
+    },
+    {
+      "id": "41",
+      "order": 41,
+      "name": "Expose the JWT admin authentication manager",
+      "method": "authenticationManagerBean()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 295,
+      "method_start_line": 297,
+      "end_line": 300,
+      "plain_english": "Publishes the inherited AuthenticationManager as jwtAdminAuthenticationManager.",
+      "sequence_reason": "The source's AdminConfigurationAdapter is commented out; skip it and start the active @Order(5) JWT admin adapter with its named manager.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 295,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Get inherited AuthenticationManager",
+          "kind": "external_framework_method",
+          "code_line": 298,
+          "company_id": null,
+          "description": "Calls super.authenticationManagerBean()."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-41",
+        "question": "How do named AuthenticationManager beans avoid ambiguity when Spring Security has multiple filter chains?"
+      }
+    },
+    {
+      "id": "42",
+      "order": 42,
+      "name": "Register JWT admin provider",
+      "method": "configure(AuthenticationManagerBuilder auth)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 308,
+      "method_start_line": 309,
+      "end_line": 313,
+      "plain_english": "Wires jwtUserDetailsService and calls authenticationProvider().",
+      "sequence_reason": "Once the JWT admin manager exists, inspect its user-details source and provider factory before its route rules.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 308,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Register JWT admin identity service",
+          "kind": "external_framework_method",
+          "code_line": 310,
+          "company_id": null,
+          "description": "Adds jwtUserDetailsService."
+        },
+        {
+          "name": "Create admin authentication provider",
+          "kind": "internal_method_call",
+          "code_line": 312,
+          "company_id": "45",
+          "description": "Calls Company 45 authenticationProvider()."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-42",
+        "question": "How does AuthenticationManagerBuilder select from a configured UserDetailsService and AuthenticationProvider?"
+      }
+    },
+    {
+      "id": "43",
+      "order": 43,
+      "name": "Exclude Swagger UI from web security",
+      "method": "configure(WebSecurity web)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 315,
+      "method_start_line": 316,
+      "end_line": 318,
+      "plain_english": "Bypasses the security filter chain for /swagger-ui.html.",
+      "sequence_reason": "Before private admin API rules, identify the path intentionally excluded from security filtering.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 315,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Ignore /swagger-ui.html",
+          "kind": "external_framework_method",
+          "code_line": 317,
+          "company_id": null,
+          "description": "Excludes Swagger UI from the Spring Security filter chain."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-43",
+        "question": "Why does web.ignoring('/swagger-ui.html') differ from permitAll() for filters, security headers and audit logging?"
+      }
+    },
+    {
+      "id": "44",
+      "order": 44,
+      "name": "Protect private JWT admin routes",
+      "method": "configure(HttpSecurity http)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 324,
+      "method_start_line": 325,
+      "end_line": 340,
+      "plain_english": "Configures /api/v*/private/** rules, admin roles, authentication entry point, token filter, and disabled CSRF.",
+      "sequence_reason": "After configuring admin credentials and Swagger exclusions, study the protected endpoints and shared token-filter placement.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 324,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Match private API",
+          "kind": "external_framework_method",
+          "code_line": 327,
+          "company_id": null,
+          "description": "Matches /api/v*/private/**."
+        },
+        {
+          "name": "Configure private API rules",
+          "kind": "external_framework_method",
+          "code_line": 329,
+          "company_id": null,
+          "description": "Permits login, refresh and OPTIONS, and requires AUTH elsewhere."
+        },
+        {
+          "name": "Admin Basic entry point",
+          "kind": "internal_method_call",
+          "code_line": 335,
+          "company_id": "46",
+          "description": "Calls Company 46 apiAdminAuthenticationEntryPoint()."
+        },
+        {
+          "name": "Install AuthenticationTokenFilter bean",
+          "kind": "internal_bean_use",
+          "code_line": 337,
+          "company_id": "27",
+          "description": "Uses a filter object supplied by Company 27; not a direct call to the factory method."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-44",
+        "question": "Why are login, refresh and OPTIONS routes public here, and how does addFilterAfter(authenticationTokenFilter, BasicAuthenticationFilter.class) affect token authentication?"
+      }
+    },
+    {
+      "id": "45",
+      "order": 45,
+      "name": "Build JWT admin authentication provider",
+      "method": "authenticationProvider()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 342,
+      "method_start_line": 343,
+      "end_line": 347,
+      "plain_english": "Creates JWTAdminAuthenticationProvider and sets jwtUserDetailsService.",
+      "sequence_reason": "Company 42 invokes this provider factory; follow its instantiated class to the authentication behavior mapped as Company 54.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 342,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Instantiate admin JWT provider",
+          "kind": "internal_class_implementation",
+          "code_line": 344,
+          "company_id": "54",
+          "description": "Creates the provider whose runtime authenticate method is Company 54."
+        },
+        {
+          "name": "Set admin details service",
+          "kind": "external_framework_method",
+          "code_line": 345,
+          "company_id": null,
+          "description": "Provides jwtUserDetailsService to the provider."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-45",
+        "question": "What must a custom AuthenticationProvider receive to safely validate admin credentials?"
+      }
+    },
+    {
+      "id": "46",
+      "order": 46,
+      "name": "Set admin API Basic realm",
+      "method": "apiAdminAuthenticationEntryPoint()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 349,
+      "method_start_line": 350,
+      "end_line": 354,
+      "plain_english": "Creates an entry point with realm name api-admin-realm.",
+      "sequence_reason": "Company 44 directly calls this method when configuring HTTP Basic authentication failures.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 349,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Set api-admin-realm",
+          "kind": "external_framework_method",
+          "code_line": 352,
+          "company_id": null,
+          "description": "Sets the Basic challenge realm."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-46",
+        "question": "How does a Spring Security AuthenticationEntryPoint distinguish a 401 challenge from an authorization-denied response?"
+      }
+    },
+    {
+      "id": "47",
+      "order": 47,
+      "name": "Expose customer JWT authentication manager",
+      "method": "authenticationManagerBean()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 380,
+      "method_start_line": 382,
+      "end_line": 384,
+      "plain_english": "Publishes jwtCustomerAuthenticationManager from the nested customer API security adapter.",
+      "sequence_reason": "After completing admin API security, enter active @Order(6) customer API configuration at its named manager.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 380,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Get customer AuthenticationManager",
+          "kind": "external_framework_method",
+          "code_line": 383,
+          "company_id": null,
+          "description": "Calls inherited authenticationManagerBean()."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-47",
+        "question": "Why keep a customer AuthenticationManager separate from an admin manager, and how do bean names affect wiring?"
+      }
+    },
+    {
+      "id": "48",
+      "order": 48,
+      "name": "Register JWT customer user details",
+      "method": "configure(AuthenticationManagerBuilder auth)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 386,
+      "method_start_line": 387,
+      "end_line": 389,
+      "plain_english": "Configures auth.userDetailsService(jwtCustomerDetailsService).",
+      "sequence_reason": "After exposing the customer manager, inspect which customer identity source it uses.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 386,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Register JWT customer identity service",
+          "kind": "external_framework_method",
+          "code_line": 388,
+          "company_id": null,
+          "description": "Adds jwtCustomerDetailsService."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-48",
+        "question": "How would you test that the JWT customer chain does not authenticate users through the admin UserDetailsService?"
+      }
+    },
+    {
+      "id": "49",
+      "order": 49,
+      "name": "Secure customer auth API endpoints",
+      "method": "configure(HttpSecurity http)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 391,
+      "method_start_line": 392,
+      "end_line": 408,
+      "plain_english": "Permits customer login, refresh, register and OPTIONS; requires AUTH_CUSTOMER elsewhere; adds authentication token filter.",
+      "sequence_reason": "With customer identity resolution in place, inspect authorization rules and token-filter order for /api/v*/auth/**.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 391,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Match customer auth API",
+          "kind": "external_framework_method",
+          "code_line": 395,
+          "company_id": null,
+          "description": "Matches /api/v*/auth/**."
+        },
+        {
+          "name": "Permit public auth operations",
+          "kind": "external_framework_method",
+          "code_line": 397,
+          "company_id": null,
+          "description": "Allows refresh, login, register and OPTIONS before customer role matcher."
+        },
+        {
+          "name": "Require customer role",
+          "kind": "external_framework_method",
+          "code_line": 401,
+          "company_id": null,
+          "description": "Requires AUTH_CUSTOMER for remaining auth paths."
+        },
+        {
+          "name": "Customer Basic entry point",
+          "kind": "internal_method_call",
+          "code_line": 405,
+          "company_id": "51",
+          "description": "Calls Company 51 apiCustomerAuthenticationEntryPoint()."
+        },
+        {
+          "name": "Install token filter bean",
+          "kind": "internal_bean_use",
+          "code_line": 406,
+          "company_id": "27",
+          "description": "Uses the filter produced by Company 27; not a direct factory method call."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-49",
+        "question": "Why must public auth paths precede the AUTH_CUSTOMER matcher, and which preflight and token-security tests belong in this chain?"
+      }
+    },
+    {
+      "id": "50",
+      "order": 50,
+      "name": "Build JWT customer authentication provider",
+      "method": "authenticationProvider()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 410,
+      "method_start_line": 411,
+      "end_line": 415,
+      "plain_english": "Instantiates JWTCustomerAuthenticationProvider and sets customer user details.",
+      "sequence_reason": "After configuring customer endpoints, examine the provider factory that supplies customer-specific authentication logic.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 410,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create customer JWT provider",
+          "kind": "external_framework_method",
+          "code_line": 412,
+          "company_id": null,
+          "description": "Instantiates JWTCustomerAuthenticationProvider (not yet mapped)."
+        },
+        {
+          "name": "Set customer details service",
+          "kind": "external_framework_method",
+          "code_line": 413,
+          "company_id": null,
+          "description": "Supplies jwtCustomerDetailsService."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-50",
+        "question": "What changes when JWTCustomerAuthenticationProvider is wired with customer rather than admin UserDetailsService?"
+      }
+    },
+    {
+      "id": "51",
+      "order": 51,
+      "name": "Set customer API Basic realm",
+      "method": "apiCustomerAuthenticationEntryPoint()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 417,
+      "method_start_line": 418,
+      "end_line": 422,
+      "plain_english": "Creates a BasicAuthenticationEntryPoint with api-customer-realm.",
+      "sequence_reason": "Company 49 directly references this factory for its HTTP Basic authentication entry point.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 417,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Set api-customer-realm",
+          "kind": "external_framework_method",
+          "code_line": 420,
+          "company_id": null,
+          "description": "Sets customer Basic challenge realm."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-51",
+        "question": "What HTTP response and WWW-Authenticate challenge should this entry point send for an unauthenticated customer API call?"
+      }
+    },
+    {
+      "id": "52",
+      "order": 52,
+      "name": "Process request authentication tokens",
+      "method": "doFilterInternal()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationTokenFilter.java",
+      "source_blob_sha": "075c670c69fb7aa6ce555742cf37989d7fb89663",
+      "source_data_file": "sources/token.json",
+      "source_line_count": 145,
+      "start_line": 49,
+      "method_start_line": 50,
+      "end_line": 126,
+      "plain_english": "Writes CORS headers, creates request user context, authenticates bearer tokens for matching API paths, continues the filter chain, then cleans up.",
+      "sequence_reason": "Now inspect the actual OncePerRequestFilter instance registered in earlier security chains and created by Company 27.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 49,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Set CORS response headers",
+          "kind": "external_framework_method",
+          "code_line": 58,
+          "company_id": null,
+          "description": "Sets Access-Control-Allow headers; echoing arbitrary Origin with credentials is security-sensitive."
+        },
+        {
+          "name": "Authenticate customer bearer",
+          "kind": "external_framework_method",
+          "code_line": 84,
+          "company_id": null,
+          "description": "Calls customer CustomAuthenticationManager.authenticateRequest()."
+        },
+        {
+          "name": "Authenticate admin bearer",
+          "kind": "external_framework_method",
+          "code_line": 113,
+          "company_id": null,
+          "description": "Calls admin CustomAuthenticationManager.authenticateRequest()."
+        },
+        {
+          "name": "Continue filter chain",
+          "kind": "external_framework_method",
+          "code_line": 124,
+          "company_id": null,
+          "description": "Invokes chain.doFilter."
+        },
+        {
+          "name": "Cleanup request context",
+          "kind": "internal_method_call",
+          "code_line": 125,
+          "company_id": "53",
+          "description": "Calls Company 53 postFilter() after chain.doFilter, without finally."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-52",
+        "question": "Why is reflecting an arbitrary request Origin together with Access-Control-Allow-Credentials:true unsafe, and what should a secure CORS policy validate?"
+      }
+    },
+    {
+      "id": "53",
+      "order": 53,
+      "name": "Clean per-request user context",
+      "method": "postFilter()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationTokenFilter.java",
+      "source_blob_sha": "075c670c69fb7aa6ce555742cf37989d7fb89663",
+      "source_data_file": "sources/token.json",
+      "source_line_count": 145,
+      "start_line": 129,
+      "method_start_line": 129,
+      "end_line": 142,
+      "plain_english": "Closes the current UserContext after the filter chain, logging cleanup exceptions.",
+      "sequence_reason": "Company 52 directly calls this helper; inspect cleanup ordering and error paths immediately after the filter body.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 129,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Load UserContext",
+          "kind": "external_framework_method",
+          "code_line": 133,
+          "company_id": null,
+          "description": "Gets the thread-local user context."
+        },
+        {
+          "name": "Close UserContext",
+          "kind": "external_framework_method",
+          "code_line": 135,
+          "company_id": null,
+          "description": "Closes context when present."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-53",
+        "question": "Why should UserContext cleanup be in a finally block around chain.doFilter(), instead of running only after it returns normally?"
+      }
+    },
+    {
+      "id": "54",
+      "order": 54,
+      "name": "Authenticate JWT admin credentials",
+      "method": "authenticate(Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java",
+      "source_blob_sha": "47f635083fbcf1351a554fe649b75c69326300c6",
+      "source_data_file": "sources/admin.json",
+      "source_line_count": 71,
+      "start_line": 35,
+      "method_start_line": 36,
+      "end_line": 59,
+      "plain_english": "Loads admin user details, calls passwordMatch(), and returns an authenticated token with authorities.",
+      "sequence_reason": "Company 45 instantiates this provider class; inspect its authenticate() behavior after token-filter processing.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 35,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Lookup admin user",
+          "kind": "external_framework_method",
+          "code_line": 40,
+          "company_id": null,
+          "description": "Calls jwtAdminDetailsService.loadUserByUsername()."
+        },
+        {
+          "name": "Compare credentials",
+          "kind": "internal_method_call",
+          "code_line": 48,
+          "company_id": "55",
+          "description": "Calls Company 55 passwordMatch(pass, usr), with usr assigned from username."
+        },
+        {
+          "name": "Create authenticated token",
+          "kind": "external_framework_method",
+          "code_line": 58,
+          "company_id": null,
+          "description": "Returns UsernamePasswordAuthenticationToken with user authorities."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-54",
+        "question": "What is wrong with comparing the supplied password to a username rather than an encoded stored password, and how would you test this bug?"
+      }
+    },
+    {
+      "id": "55",
+      "order": 55,
+      "name": "Audit admin password comparison",
+      "method": "passwordMatch(String rawPassword, String user)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java",
+      "source_blob_sha": "47f635083fbcf1351a554fe649b75c69326300c6",
+      "source_data_file": "sources/admin.json",
+      "source_line_count": 71,
+      "start_line": 62,
+      "method_start_line": 62,
+      "end_line": 64,
+      "plain_english": "Calls passwordEncoder.matches(rawPassword, user), but the caller passes username as the second argument.",
+      "sequence_reason": "Company 54 directly calls this helper, exposing a source-level password-verification bug.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 62,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "PasswordEncoder.matches",
+          "kind": "external_framework_method",
+          "code_line": 63,
+          "company_id": null,
+          "description": "Compares rawPassword with argument user, which Company 54 passes as username."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-55",
+        "question": "Why does passwordEncoder.matches(rawPassword, username) fail to verify the stored password hash, and what should be passed instead?"
+      }
+    },
+    {
+      "id": "56",
+      "order": 56,
+      "name": "Audit supported authentication types",
+      "method": "supports(Class<?> authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java",
+      "source_blob_sha": "47f635083fbcf1351a554fe649b75c69326300c6",
+      "source_data_file": "sources/admin.json",
+      "source_line_count": 71,
+      "start_line": 66,
+      "method_start_line": 67,
+      "end_line": 69,
+      "plain_english": "Returns true for any authentication class without checking its type.",
+      "sequence_reason": "Conclude the provider review by examining the supports(Class<?>) selection contract and its unconditional return value.",
+      "inbound": [
+        {
+          "name": "Spring framework callback / registered method",
+          "kind": "external_framework_callback",
+          "code_line": 66,
+          "company_id": null,
+          "description": "Invoked through Spring Security or application code as specified by this Java method's contract."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Claim every token type",
+          "kind": "external_framework_method",
+          "code_line": 68,
+          "company_id": null,
+          "description": "Unconditionally returns true from supports()."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-56",
+        "question": "What issues arise when AuthenticationProvider.supports() unconditionally returns true, and how should it restrict acceptable token classes?"
       }
     }
   ],
