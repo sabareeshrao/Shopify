@@ -112,7 +112,7 @@ async function audit(){
  all.click();
  assert(!frame.contentWindow.location.hash,'File view should clear the company URL hash');
  const coverage=doc.querySelector('.code-divider')?.textContent||'';
- assert(coverage.includes('unindexed nonblank lines'),'File view must display source coverage');
+ assert(coverage.includes('pending code lines'),'File view must display source coverage');
  assert(doc.querySelector('.file-grid .code-row.pending-map'),'Unindexed Java source must be visually marked');
  const mapped=doc.querySelector('.file-grid .code-row[data-line="105"][data-source-company]');
  assert(mapped,'Company 7 line 105 missing from the full source');

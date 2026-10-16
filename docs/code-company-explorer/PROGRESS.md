@@ -437,3 +437,12 @@ Pre-batch audit PASSED before mapping: 96/96 pinned Java method signatures/sourc
 - **Company 116 / IQ-116:** Return JWTUser password reset cutoff. Finish with the field consumed by Company 80's JWT password-reset invalidation check. Interview: What happens to revocation if Companies 101 and 102 construct JWTUser with a null lastPasswordResetDate?
 
 Original source findings: Companies 105, 106, 108, 109 are empty TODO overrides; Company 111 returns null; Companies 101 and 102 pass null last-reset dates into Company 113. Superclass polymorphic hooks are distinguished from direct calls. No Shopizer behavior was altered.
+
+## Stable navigation and source-coverage UX correction
+- Confirmed the original jump causes: forced top scroll in company/file/folder navigation and native scrollIntoView on code lines.
+- Navigation now preserves window and sidebar scroll, while selecting dependency code only scrolls the code pane.
+- Sticky Back button is available after local navigation, restoring view and saved scroll; graph connections open separate tabs without replacing the current view (browser may focus the new tab).
+- Sidebar indent now reflects actual depth without clipping, with visible left/right horizontal scrolling controls.
+- Java file viewers distinguish already indexed method spans from candidate unindexed source statements; package/imports, annotations and comments are not marked as missing companies.
+- Previous company IDs remain unchanged at 116. A subsequent source review is needed before assigning new permanent IDs to missing functional blocks.
+- Regression tests updated for same-tab preservation, graph-tab launch, history and source coverage; live mobile-browser interaction testing is still pending.
