@@ -26,10 +26,14 @@ async function ensureSourceLoaded(fid){
   return pending;
 }
 async function loadRealCode(){
-  const [manifest,tree]=await Promise.all([
+  const [manifest,tree,mentors]=await Promise.all([
     fetch('./companies.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load companies.json');return r.json()}),
-    fetch('./repository-tree.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load complete repository tree');return r.json()})
+    fetch('./repository-tree.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load complete repository tree');return r.json()}),
+    fetch('./mentor-lessons.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load mentor company lessons');return r.json()})
   ]);
+  if(mentors.reference_commit!==manifest.reference.ref)throw Error('Mentor explanations do not match the pinned source');
+  const missingLessons=manifest.companies.filter(c=>!mentors.lessons?.[c.id]);
+  if(missingLessons.length)throw Error('Missing company mentor lessons: '+missingLessons.map(c=>c.id).join(', '));
   if(!tree.complete_tree||tree.reference_commit!==manifest.reference.ref)throw Error('Repository tree does not match the pinned source commit');
   if(tree.file_count!==tree.files.length)throw Error('Repository tree count mismatch');
   PINNED_SHOPIZER_REF=manifest.reference.ref;
@@ -65,7 +69,7 @@ async function loadRealCode(){
     entities[eid]={no:c.id,file:fid,name:c.name,method:c.method,desc:c.plain_english,start:c.start_line,end:c.end_line,
       code:f.source.slice(c.start_line-1,c.end_line),parent:c.parent_id?'company-'+c.parent_id:null,children:[],
       needs:(c.outbound||[]).filter(dep=>dep.company_id).map(dep=>({to:'company-'+dep.company_id,line:dep.code_line,kind:dep.kind})),
-      sequenceReason:c.sequence_reason||'',interview:c.interview||null,methodStart:c.method_start_line||c.start_line,
+      sequenceReason:c.sequence_reason||'',mentorWhy:mentors.lessons[c.id],interview:c.interview||null,methodStart:c.method_start_line||c.start_line,
       externalClients:(c.inbound||[]).filter(dep=>!dep.company_id),externalSuppliers:(c.outbound||[]).filter(dep=>!dep.company_id)};
     if(!c.parent_id)f.companyIds.push(eid);
   }

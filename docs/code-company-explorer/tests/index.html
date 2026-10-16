@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=inline-source-2#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=mentor-blue-v1#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -50,6 +50,11 @@ function openCompany(doc,n){
  assert(frame.contentWindow.location.hash==='#company-'+n,'Company '+n+' URL fragment is wrong');
  assert(doc.querySelector('.learning-card.question')?.textContent.includes('IQ-'+n),'Interview question missing for Company '+n);
  assert(doc.querySelector('.learning-card.sequence')?.textContent.includes('Why Company '+n),'Sequence explanation missing for Company '+n);
+  const lesson=doc.querySelector('.learning-card.sequence p')?.textContent.trim();
+  assert(lesson&&lesson.length>190,'Company '+n+' mentor lesson is missing or too short');
+  assert(!mentorLessonsSeen.has(lesson),'Repeated mentor explanation at Company '+n+' (first seen at '+mentorLessonsSeen.get(lesson)+')');
+  mentorLessonsSeen.set(lesson,n);
+  assert(!lesson.startsWith('First, find the real application'),'Company '+n+' still uses the old technical documentation prose');
 }
 function checkBox(doc,box,n){
  const side=box.dataset.external,index=box.dataset.externalIndex;
@@ -83,6 +88,7 @@ async function audit(){
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('.side-body')).scrollbarWidth==='thin','Project scrollbar must be thin');
  assert(doc.querySelectorAll('[title]').length===0,'Native hover tooltip attributes must be absent from the explorer');
 
+ const mentorLessonsSeen=new Map();
  for(let n=1;n<=136;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
@@ -104,18 +110,26 @@ async function audit(){
  fullSourceButton.click();
  assert(!doc.querySelector('.source-structure'),'Removed redundant source-structure panel must not be rendered');
  assert(doc.querySelector('#source-line-info'),'Source explanation must occupy the existing code footer');
+ assert(frame.contentWindow.getComputedStyle(doc.documentElement).getPropertyValue('--source-learning-blue').trim()==='#a9ceff','Unnumbered source highlight must be the approved light blue');
+ assert(doc.querySelector('.code-header .line-mark')?.textContent.includes('blue'),'Source legend must identify blue lines');
  const sourceRows=doc.querySelectorAll('.file-grid .code-row.source-unmapped');
- assert(sourceRows.length>0,'Unnumbered nonblank source lines should be highlighted pink');
- const pinkLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="1"]');
+ assert(sourceRows.length>0,'Unnumbered nonblank source lines should be highlighted blue');
+ const blueLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="1"]');
  assert(pinkLine,'Package declaration on line 1 must be selectable as non-company source');
  pinkLine.click();
- assert(pinkLine.classList.contains('source-inspected'),'Selected package line should show distinct pink selection');
+ assert(pinkLine.classList.contains('source-inspected'),'Selected package line should show distinct blue selection');
  assert(doc.querySelector('#source-line-info')?.textContent.includes('Package / address'),'Package info missing below code');
  assert(doc.querySelector('#source-line-info')?.textContent.includes('com.salesmanager.shop.store.security.admin'),'Package explanation not grounded in source');
  const importLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="6"]');
  assert(importLine,'BadCredentialsException import line must be available');
  importLine.click();
  assert(doc.querySelector('#source-line-info')?.textContent.includes('BadCredentialsException'),'Source import explanation must name the imported type');
+ const importLesson=doc.querySelector('#source-line-info')?.textContent;
+ const nextImport=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="7"]');
+ assert(nextImport,'Next distinct imported type must be present');
+ nextImport.click();
+ const otherLesson=doc.querySelector('#source-line-info')?.textContent;
+ assert(otherLesson?.includes('UsernamePasswordAuthenticationToken')&&importLesson!==otherLesson,'Different imports must teach different purposes');
  const commentLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="16"]');
  assert(commentLine,'JavaDoc comment line 16 must be clickable');
  commentLine.click();
@@ -127,9 +141,9 @@ async function audit(){
  const injected=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="23"]');
  assert(injected,'@Autowired source line missing');
  injected.click();
- assert(doc.querySelector('#source-line-info')?.textContent.includes('Spring injects a dependency'),'@Autowired explanation missing');
+ assert(doc.querySelector('#source-line-info')?.textContent.includes('asks Spring to supply'),'@Autowired mentor explanation missing');
  const field=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="24"]');
- assert(field,'Dependency field line must be pink');
+ assert(field,'Dependency field line must be blue');
  field.click();
  assert(doc.querySelector('#source-line-info')?.textContent.includes('UserDetailsService'),'Field explanation should identify source field');
  assert(!doc.querySelector('[title]'),'Source explanation must not reintroduce tooltip boxes');

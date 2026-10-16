@@ -170,3 +170,194 @@ function renderPendingFileView(f){
     f.loadError?'Source preview unavailable: '+safe(f.loadError):'Preparing source preview…';
   return '<div class="hero"><div class="eyebrow">ORIGINAL REPOSITORY FILE · '+(f.name.endsWith('.java')?'JAVA':'SOURCE')+'</div><h1>'+safe(f.name)+'</h1><p class="description">'+safe(f.path)+'</p></div><section class="panel source-pending"><h2>'+status+'</h2><p>No company number has been assigned to this file. Original code is never invented.</p>'+link+'</section>';
 }
+
+
+/* YouTube-mentor source explanations: grounded in real symbols, usage and neighbors. */
+const MENTOR_SYMBOL_PURPOSE={
+ ArrayList:'the growable Java list used for collecting items',Collection:'the generic group-of-values interface',List:'the ordered Java collection interface',Arrays:'helpers for working with Java arrays',Locale:'language and regional settings',CollectionUtils:'Apache Commons collection helpers',
+ Logger:'the interface used for diagnostic logs',LoggerFactory:'the factory that supplies class loggers',Log:'the Apache Commons logging interface',LogFactory:'the Apache Commons logger factory',
+ DataAccessException:'the Spring data-access failure abstraction',GrantedAuthority:'a Spring Security permission or role contract',SimpleGrantedAuthority:'a concrete authority containing a permission or role name',
+ UserDetails:'the Spring Security representation of account details',UserDetailsService:'the contract for loading a user by username',UsernameNotFoundException:'the exception signalling an absent username',
+ BadCredentialsException:'an authentication error for rejected credentials',Authentication:'a Spring Security authentication result or request object',AuthenticationException:'the base kind of authentication error',
+ UsernamePasswordAuthenticationToken:'the username/password authentication token type',DaoAuthenticationProvider:'a Spring Security username/password authentication provider',PasswordEncoder:'the password hashing and verification contract',
+ Inject:'a standard dependency-injection annotation',Autowired:'Spring dependency wiring metadata',Bean:'the Spring bean registration annotation',
+ ApplicationReadyEvent:'the Spring Boot application-ready event',FilterRegistrationBean:'a servlet filter registration with chosen URL patterns',XssFilter:'Shopizer’s custom XSS-related filter (whose implementation needs separate review)',
+ CorsFilter:'a Shopizer CORS-related component (inspect its actual interface before judging it)',MappingJackson2HttpMessageConverter:'Spring MVC’s JSON converter backed by Jackson',
+ ByteArrayHttpMessageConverter:'Spring’s HTTP byte-array converter',HttpMessageConverter:'the Spring MVC HTTP-body conversion contract',ViewControllerRegistry:'the registry binding URLs to simple views',InterceptorRegistry:'the MVC interceptor registration point',
+ LocaleChangeInterceptor:'the interceptor that reacts to locale-change parameters',SessionLocaleResolver:'a session-backed resolver for the visitor’s language',
+ CustomerService:'a service for customer records',GroupService:'a service for user groups',PermissionService:'a service for permissions',Customer:'a shop customer domain entity',Group:'a model representing a group',Permission:'a model representing permission',
+ IOException:'an input/output failure',ServiceException:'a service-layer error whose specific meaning needs its declaration',Constants:'common constants shared inside Shopizer'
+};
+const MENTOR_ANNOTATION_PURPOSE={
+ Autowired:'asks Spring to supply the dependency attached to the following declaration',Inject:'requests injection of the neighboring collaborator',
+ Override:'asks the Java compiler to verify an inherited method contract',Bean:'registers the following factory method’s result in Spring',
+ Configuration:'marks a configuration class',ComponentScan:'chooses packages for scanning Spring components',
+ EventListener:'connects a method to a Spring application event',JsonIgnore:'tells Jackson to ignore the annotated property where applicable',
+ EnableWebSecurity:'enables Spring Security’s web configuration',Transactional:'configures transaction handling in a framework-managed call',
+ GetMapping:'maps an HTTP GET handler',PostMapping:'maps an HTTP POST handler',RequestMapping:'configures an HTTP route',
+ Import:'includes another configuration class',Value:'injects a configured value',SuppressWarnings:'suppresses selected compiler warnings'
+};
+function mentorContextFor(f,n){
+ if(!f._mentorContext){
+  let scope=f.name.replace(/\.java$/,''),method='',arr=[];
+  for(let i=0;i<f.source.length;i++){
+   const line=String(f.source[i]).trim();
+   const cls=line.match(/\b(?:class|interface|enum|record)\s+([A-Za-z_$][\w$]*)/);
+   if(cls)scope=cls[1];
+   const signature=line.match(/^(?:(?:public|private|protected|static|final|abstract|synchronized)\s+)+[\w<>, ?\[\].]*\s([A-Za-z_$][\w$]*)\s*\(/);
+   if(signature)method=signature[1]+'()';
+   arr.push({scope,method});
+  }
+  for(let i=0;i<arr.length;i++){
+   for(let j=i-1;j>=0;j--){const x=String(f.source[j]).trim();if(x&&!/^(?:\*|\/\*|\*\/)$/.test(x)){arr[i].before=x;break}}
+   for(let j=i+1;j<f.source.length;j++){const x=String(f.source[j]).trim();if(x&&!/^(?:\*|\/\*|\*\/)$/.test(x)){arr[i].after=x;break}}
+  }
+  f._mentorContext=arr;
+ }
+ return f._mentorContext[n-1]||{};
+}
+function mentorShort(x){const s=String(x||'').trim().replace(/\s+/g,' ');return s.length>115?s.slice(0,112)+'…':s||'(no nearby statement)'}
+function mentorUsage(f,name,exclude){
+ if(!/^[A-Za-z_$][\w$]*$/.test(name))return null;
+ const re=new RegExp('\\b'+name+'\\b');
+ for(let k=0;k<f.source.length;k++){
+  const s=String(f.source[k]);if(k!==exclude-1&&!/^\s*import\b/.test(s)&&!s.trim().startsWith('//')&&re.test(s))return mentorShort(s);
+ }
+ return null;
+}
+const oldLineFacts=sourceLineFacts;
+sourceLineFacts=function(f,n){
+ const old=oldLineFacts(f,n),line=String(f.source?.[n-1]||'').trim();
+ if(!line)return old;
+ const cx=mentorContextFor(f,n),after=mentorShort(cx.after),before=mentorShort(cx.before),scope=cx.scope||f.name;
+ const output=explanation=>({...old,explanation});
+ const quoted=x=>'“'+mentorShort(x)+'”';
+ const pack=line.match(/^package\s+([\w.]+)\s*;/);
+ if(pack)return output('Before any Shopizer method runs, Java needs the class address. '+quoted(pack[1])+' puts this source under the '+pack[1].split('.').at(-1)+' package. Think of a labeled aisle in the project: this line organizes code; it does not perform a request.');
+ const importMatch=line.match(/^import\s+(static\s+)?([\w.*]+)\s*;/);
+ if(importMatch){
+  const name=importMatch[2].split('.').at(-1),meaning=MENTOR_SYMBOL_PURPOSE[name],use=mentorUsage(f,name,n);
+  return output('Look at '+name+' here. '+(meaning?'It means '+meaning+'.':'It names a '+(importMatch[1]?'static member':'type')+' from '+importMatch[2]+'.')+
+   (importMatch[1]?' This static import lets the code mention it without its parent class.':' Importing makes its short name available in this file.')+
+   (use?' Now find its actual use: '+quoted(use)+'.':' The name is not visibly used outside the import in this source snapshot.')+
+   ' Merely importing '+name+' does not mean any request has invoked its behavior.');
+ }
+ const annotation=line.match(/^@([\w.]+)/);
+ if(annotation){
+  const name=annotation[1].split('.').at(-1),meaning=MENTOR_ANNOTATION_PURPOSE[name]||'adds metadata for the compiler or an associated framework';
+  return output('Notice @'+name+' sitting just above '+quoted(after)+'. It '+meaning+'. This is our clue about how '+scope+' is configured; the annotation is metadata, not a direct call to the code beneath it.');
+ }
+ const type=line.match(/\b(class|interface|record|enum)\s+([A-Za-z_$][\w$]*)/);
+ if(type){
+  const parent=line.match(/\bextends\s+([\w.$]+)/),contracts=line.match(/\bimplements\s+([\w.,\s]+)/);
+  return output('Meet '+type[2]+', the '+type[1]+' declared in this file. '+(parent?'It inherits from '+parent[1]+', which is why the parent contract matters.':contracts?'It promises the '+contracts[1].trim()+' interface contract.':'Its members will define what this type can do.')+' We are reading its blueprint, not invoking a method.');
+ }
+ const doc=/^(?:\/\*|\/\/|\*|\*\/)/.test(line);
+ if(doc){
+  const words=line.replace(/^\/\*+|^\/\/|^\*+|\*\/$/g,'').trim();
+  if(words)return output('The developer wrote '+quoted(words)+' near '+scope+'. What does it suggest about the next source, '+quoted(after)+'? Treat this as a helpful author note, but always check the executable Java before trusting it.');
+  return output('This documentation marker sits between '+quoted(before)+' and '+quoted(after)+'. It separates or closes source commentary; Java never executes the marker itself. Read the neighboring words to identify what is being documented.');
+ }
+ const field=line.match(/^(?:public|protected|private)\s+(?:(?:static|final|volatile|transient)\s+)*([\w<>?,.\[\]]+)\s+([A-Za-z_$][\w$]*)\s*(?:[=;])/);
+ if(field)return output('Here '+scope+' declares '+field[2]+', a field of type '+field[1]+'. '+(MENTOR_SYMBOL_PURPOSE[field[1]]?'That type is '+MENTOR_SYMBOL_PURPOSE[field[1]]+'. ':'')+'Think of fields as the data or collaborators a class keeps around. The declaration itself is not a separate company.');
+ if(old.kind==='Unnumbered Java method')return output('Here’s the doorway to a method or constructor: '+quoted(line)+'. It sits in '+scope+'. Before assigning this code a company number, we would read its complete body, beginning near '+quoted(after)+', and verify real callers.');
+ if(/^\}\s*[,;]?$/.test(line))return output('That closing brace ends the block after '+quoted(before)+'. The following source is '+quoted(after)+'. We are closing a Java scope, not launching a new operation. Check the enclosing method to know what finished.');
+ if(line==='{')return output('The opening brace starts a block just after '+quoted(before)+'. Its first nearby statement is '+quoted(after)+'. Think of braces as the fence around the work; the statements inside decide the behavior.');
+ if(/^return\b/.test(line))return output('The method now hands '+quoted(line.replace(/^return\s*/,'').replace(/;$/,''))+' back to its caller. Notice that this follows '+quoted(before)+'. A return value becomes useful only when we see what the caller does with it.');
+ if(/^(?:if|else\s+if)\s*\(/.test(line))return output('Stop at this decision: '+quoted(line)+'. If its condition passes, the following branch near '+quoted(after)+' is reachable. Trace both sides before concluding which customers or requests are affected.');
+ if(/^else\b/.test(line))return output('This is the alternate branch after '+quoted(before)+'. It leads toward '+quoted(after)+'. It can run only when the earlier condition selects that path; the keyword alone does not tell us which case reaches it.');
+ if(/^(?:for|while|do)\b/.test(line))return output('A loop begins with '+quoted(line)+'. What changes every pass, and what stops it? Watch the next statement '+quoted(after)+' to see the repeated work; loops can hide expensive shop operations.');
+ if(/^try\b/.test(line))return output('The developer is about to attempt work that could fail. The first nearby statement is '+quoted(after)+'. A try block is not an error itself; search for its matching catch or finally to see how failure is handled.');
+ if(/^catch\b/.test(line))return output('This branch catches '+quoted(line)+'. The response starts near '+quoted(after)+'. That might report, recover, or rethrow an error—we have to read the actual body rather than guessing.');
+ if(/^finally\b/.test(line))return output('This finally block is where cleanup can happen after the try/catch flow. Its first source statement is '+quoted(after)+'. The block body tells us which resource or state is actually cleaned up.');
+ if(/^throw\b/.test(line))return output('This line raises an exception: '+quoted(line)+'. It follows '+quoted(before)+'. Java transfers control to a matching handler or framework error path instead of returning normally.');
+ if(/\b(?:LOGGER|logger|log)\.(?:info|debug|warn|error|trace)\s*\(/.test(line))return output('This records a diagnostic message: '+quoted(line)+'. It helps explain what happened inside '+scope+', but writing a log is not the business action itself. Check whether sensitive values might be exposed.');
+ const assign=line.match(/^(?:this\.)?([A-Za-z_$][\w$]*(?:\.[\w$]+)*)\s*=(?!=)\s*(.+)$/);
+ if(assign)return output('Notice '+assign[1]+'. Here the code stores the result of '+quoted(assign[2].replace(/;$/,''))+'. The next statement is '+quoted(after)+', which may consume that stored value. Think about the actual data flow, not just the equals sign.');
+ const call=line.match(/([A-Za-z_$][\w$]*(?:\.[\w$]+)*)\s*\(/);
+ if(call)return output('This expression mentions a call to '+call[1]+'(): '+quoted(line)+'. Inside '+scope+' it is part of a larger action. We should follow the real callee before claiming it belongs to any numbered Shopizer company.');
+ return output('Let’s read this exact piece of '+scope+': '+quoted(line)+'. It comes after '+quoted(before)+' and before '+quoted(after)+'. Look at the surrounding block to decide whether it is a declaration, expression or continuation; one isolated line cannot tell the whole story.');
+};
+
+
+/* Teach repeated syntax by its ACTUAL use: owner method, next declaration,
+   neighboring operation, and where an identical source statement also occurs. */
+function mentorFollowingMember(f,n){
+ for(let i=n;i<Math.min(f.source.length,n+10);i++){
+  const t=String(f.source[i]).trim();
+  if(!t||t.startsWith('@')||t.startsWith('*')||t.startsWith('//'))continue;
+  const m=t.match(/\b([A-Za-z_$][\w$]*)\s*\(/);
+  if(m)return m[1]+'()';
+  const field=t.match(/\b([A-Za-z_$][\w$]*)\s*(?:[;=])/);
+  if(field)return field[1]+' field';
+  return mentorShort(t);
+ }
+ return 'the following declaration';
+}
+const groundedMentorFacts=sourceLineFacts;
+sourceLineFacts=function(f,n){
+ const r=groundedMentorFacts(f,n),line=String(f.source?.[n-1]||'').trim();
+ if(!line)return r;
+ const ctx=mentorContextFor(f,n);
+ let explanation=r.explanation;
+ if(/^@/.test(line)){
+  const member=mentorFollowingMember(f,n);
+  explanation+=' For this particular occurrence, the nearby target is '+member+'.';
+ }
+ if(/^\}\s*[,;]?$/.test(line))
+  explanation+=' You are still tracing '+(ctx.method||ctx.scope)+' in '+f.name+'.';
+ if(/^return\b/.test(line))explanation+=' This return belongs near '+(ctx.method||ctx.scope)+' of '+f.name+'.';
+ if(/(?:\.\w+\s*\(|^\w+\s*\()/.test(line)&&!/^@/.test(line))
+  explanation+=' To follow this call in context, compare the next source statement '+JSON.stringify(mentorShort(ctx.after))+'.';
+ if(/^package\b/.test(line))explanation+=' The specific file at this address is '+f.name+'.';
+ if(/^import\b/.test(line))explanation+=' We are using this import specifically inside '+f.name+'; compare its references with those of other Java classes.';
+ if(/^(?:if|else|try|catch|finally)\b/.test(line))
+  explanation+=' This control-flow boundary belongs to '+(ctx.method||ctx.scope)+' in '+f.name+'; its exact branch is specific to that file.';
+ if(/^(?:this\.)?[A-Za-z_$][\w$]*(?:\.[\w$]+)*\s*=(?!=)/.test(line))
+  explanation+=' In '+f.name+' this assignment supports '+(ctx.method||ctx.scope)+', so check which identity or customer object owns the value.';
+ // A source file can literally repeat the same Java statement in several branches.
+ // Explain where the repetitions occur instead of pretending one generic note
+ // describes different occurrences.
+ if(!f._mentorRepeated){
+  const byCode=new Map();
+  for(let i=0;i<f.source.length;i++){
+   const code=String(f.source[i]).trim();
+   if(!code)continue;
+   const list=byCode.get(code)||[];list.push(i+1);byCode.set(code,list);
+  }
+  f._mentorRepeated=byCode;
+ }
+ const occurrences=f._mentorRepeated.get(line)||[];
+ if(occurrences.length>1){
+  const ordinal=occurrences.indexOf(n)+1,other=occurrences.find(x=>x!==n),before=mentorShort(ctx.before),after=mentorShort(ctx.after);
+  explanation+=' You will encounter the same written source statement '+occurrences.length+' times in '+f.name+'. This is occurrence '+ordinal+
+   ': it follows '+JSON.stringify(before)+' and leads to '+JSON.stringify(after)+'. Compare it with the matching occurrence at line '+other+' to see why repeated code may serve different branches or steps.';
+ }
+ return {...r,explanation};
+};
+
+
+/* Strict per-file uniqueness guard. Only used if distinct source positions
+   unexpectedly produce the same explanatory prose. The added text compares
+   the actual nearby statements and other occurrence, not a fake company ID. */
+const mentorFactBeforeDedup=sourceLineFacts;
+sourceLineFacts=function(f,n){
+ if(!f._mentorDistinctFacts){
+  const facts=new Map(),groups=new Map();
+  for(let i=1;i<=f.source.length;i++){
+   if(!String(f.source[i-1]).trim())continue;
+   const result=mentorFactBeforeDedup(f,i);facts.set(i,result);
+   const key=result.explanation,list=groups.get(key)||[];list.push(i);groups.set(key,list);
+  }
+  for(const positions of groups.values()){
+   if(positions.length<2)continue;
+   positions.forEach((line,i)=>{
+    const fact=facts.get(line),cx=mentorContextFor(f,line),other=positions.find(k=>k!==line);
+    const comparison=' In this file, the same explanation would otherwise apply to '+positions.length+' positions. This occurrence is beside '+mentorShort(cx.before)+' and '+mentorShort(cx.after)+'. Compare the corresponding code near line '+other+': the source repeats a pattern, but its placement can matter. This is the '+(i+1)+' of those occurrences.';
+    facts.set(line,{...fact,explanation:fact.explanation+comparison});
+   });
+  }
+  f._mentorDistinctFacts=facts;
+ }
+ return f._mentorDistinctFacts.get(n)||mentorFactBeforeDedup(f,n);
+};

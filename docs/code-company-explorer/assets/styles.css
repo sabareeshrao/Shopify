@@ -213,18 +213,19 @@ html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb,#app *::-webkit-scro
 html::-webkit-scrollbar-thumb:hover,body::-webkit-scrollbar-thumb:hover,#app *::-webkit-scrollbar-thumb:hover{background:#494949!important}
 html::-webkit-scrollbar-corner,body::-webkit-scrollbar-corner,#app *::-webkit-scrollbar-corner{background:transparent!important}
 
-/* In-place source education: unnumbered nonblank Java lines are pink; indexed companies keep their existing green behavior. */
-:root{--source-pink:#ffc2d8}
-.file-grid .code-row.source-unmapped:not(.highlight){background:rgba(255,194,216,.155);border-left-color:rgba(255,194,216,.62)}
-.file-grid .code-row.source-unmapped:not(.highlight) .ln{color:var(--source-pink)}
-.file-grid .code-row.source-unmapped:hover{background:rgba(255,194,216,.22)!important}
-.file-grid .code-row.source-unmapped.source-inspected{background:rgba(255,194,216,.28)!important;border-left-color:var(--source-pink)!important}
+/* In-place source teaching: softly highlighted BLUE means non-company code.
+   Green numbered-company lines and the user’s IntelliJ sidebar remain unchanged. */
+:root{--source-learning-blue:#a9ceff}
+.file-grid .code-row.source-unmapped:not(.highlight){background:rgba(107,173,255,.145);border-left-color:rgba(107,173,255,.76)}
+.file-grid .code-row.source-unmapped:not(.highlight) .ln{color:var(--source-learning-blue)}
+.file-grid .code-row.source-unmapped:hover{background:rgba(107,173,255,.225)!important}
+.file-grid .code-row.source-unmapped.source-inspected{background:rgba(107,173,255,.29)!important;border-left-color:var(--source-learning-blue)!important}
 .file-grid .code-row.source-unmapped.source-inspected .ln{color:var(--white)}
-.file-grid .code-row.source-unmapped:focus-visible{outline:2px solid var(--source-pink);outline-offset:-2px}
-.file-grid .code-row.source-unmapped .src{color:#f5edf0}
-.file-info.source-info-box{background:#171217;border-top:2px solid var(--border);min-height:84px;padding:13px 16px 15px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:12px;line-height:1.65}
-.source-info-title{color:var(--source-pink);font-size:12px;font-weight:800}
+.file-grid .code-row.source-unmapped:focus-visible{outline:2px solid var(--source-learning-blue);outline-offset:-2px}
+.file-grid .code-row.source-unmapped .src{color:#eaf3ff}
+.file-info.source-info-box{background:#101a27;border-top:2px solid var(--border);min-height:84px;padding:13px 16px 15px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:12px;line-height:1.65}
+.source-info-title{color:var(--source-learning-blue);font-size:12px;font-weight:800}
 .source-info-explanation{display:block;color:var(--white);overflow-wrap:anywhere}
-.source-info-open{background:#252025;border:1px solid #624658;color:var(--source-pink);padding:7px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:750;margin-top:3px}
-.source-info-open:hover{color:var(--white);background:#352831}
+.source-info-open{background:#142238;border:1px solid #335c91;color:var(--source-learning-blue);padding:7px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:750;margin-top:3px}
+.source-info-open:hover{color:var(--white);background:#1c3454}
 @media(max-width:760px){.file-info.source-info-box{padding:12px 13px;min-height:95px}}
