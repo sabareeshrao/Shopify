@@ -1,11 +1,11 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 96,
+  "count": 116,
   "companies": [
     {
       "id": "1",
@@ -3521,6 +3521,13 @@
           "description": "Calls Company 70 isCreatedBeforeLastPasswordReset.",
           "company_id": "70",
           "kind": "internal_method_call"
+        },
+        {
+          "name": "Read JWTUser last reset date",
+          "code_line": 181,
+          "description": "Calls Company 116 on JWTUser during token validation.",
+          "company_id": "116",
+          "kind": "internal_method_call"
         }
       ],
       "parent_id": null,
@@ -4197,6 +4204,20 @@
           "description": "Calls abstract userDetails() implemented by subclasses; method not yet mapped.",
           "company_id": null,
           "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Polymorphic browser customer principal",
+          "code_line": 92,
+          "description": "Abstract userDetails dispatch selects Company 98 for browser service; not a direct static call.",
+          "company_id": "98",
+          "kind": "internal_polymorphic_dispatch"
+        },
+        {
+          "name": "Polymorphic JWT customer principal",
+          "code_line": 92,
+          "description": "Abstract userDetails dispatch selects Company 101 for JWT customer service; not a direct static call.",
+          "company_id": "101",
+          "kind": "internal_polymorphic_dispatch"
         }
       ],
       "parent_id": null,
@@ -4205,6 +4226,856 @@
       "interview": {
         "id": "IQ-96",
         "question": "How are customer group permissions mapped to GrantedAuthority, and what happens when the customer is missing or persistence throws ServiceException?"
+      }
+    },
+    {
+      "id": "97",
+      "order": 97,
+      "name": "Inject services for browser customer login",
+      "method": "CustomerServicesImpl(CustomerService customerService, PermissionService permissionService, GroupService groupService)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/CustomerServicesImpl.java",
+      "source_blob_sha": "2b3c35e109c755b937c9ae2630bb797ae72d10ab",
+      "source_data_file": "sources/customer-services.json",
+      "source_line_count": 57,
+      "start_line": 33,
+      "method_start_line": 34,
+      "end_line": 39,
+      "plain_english": "CustomerServicesImpl constructor calls AbstractCustomerServices super and stores CustomerService, PermissionService and GroupService.",
+      "sequence_reason": "After Company 96, inspect its browser-login subclass constructor and inherited dependencies.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Initialize abstract customer services",
+          "code_line": 35,
+          "description": "Direct super() constructor call to Company 95.",
+          "company_id": "95",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-97",
+        "question": "Why call super(...) and then assign the same dependencies again in CustomerServicesImpl?"
+      }
+    },
+    {
+      "id": "98",
+      "order": 98,
+      "name": "Build browser CustomerDetails principal",
+      "method": "userDetails(String userName, Customer customer, Collection<GrantedAuthority> authorities)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/CustomerServicesImpl.java",
+      "source_blob_sha": "2b3c35e109c755b937c9ae2630bb797ae72d10ab",
+      "source_data_file": "sources/customer-services.json",
+      "source_line_count": 57,
+      "start_line": 41,
+      "method_start_line": 42,
+      "end_line": 51,
+      "plain_english": "Constructs CustomerDetails with username, stored password and authorities; copies email and customer ID.",
+      "sequence_reason": "Company 96 delegates principal creation to this concrete browser customer subclass.",
+      "inbound": [
+        {
+          "name": "Abstract customer lookup override",
+          "code_line": 42,
+          "description": "Polymorphic override of Company 96's abstract userDetails hook.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Construct CustomerDetails principal",
+          "code_line": 44,
+          "description": "Calls Company 112 CustomerDetails full constructor.",
+          "company_id": "112",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Copy customer email",
+          "code_line": 47,
+          "description": "Calls CustomerDetails.setEmail; unindexed method.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Copy customer ID",
+          "code_line": 48,
+          "description": "Calls CustomerDetails.setId; unindexed method.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-98",
+        "question": "Why do the stored password, account authorities, email and ID need different handling inside a Spring Security principal?"
+      }
+    },
+    {
+      "id": "99",
+      "order": 99,
+      "name": "Delegate social customer identity lookup",
+      "method": "loadUserByUsername(String username)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/SocialCustomerServicesImpl.java",
+      "source_blob_sha": "58950fa5e9f35fb5807966d1fbd294c759de34d2",
+      "source_data_file": "sources/social-services.json",
+      "source_line_count": 28,
+      "start_line": 17,
+      "method_start_line": 18,
+      "end_line": 26,
+      "plain_english": "Calls injected customerDetailsService.loadUserByUsername(username), returning the user or null.",
+      "sequence_reason": "Next inspect the social-login identity facade which delegates to the existing customer service.",
+      "inbound": [
+        {
+          "name": "Spring social UserDetailsService callback",
+          "code_line": 18,
+          "description": "Called for social customer identity loading.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Delegate customer lookup",
+          "code_line": 20,
+          "description": "Injected customerDetailsService uses Company 96 inherited lookup in its browser implementation.",
+          "company_id": "96",
+          "kind": "internal_bean_dispatch"
+        },
+        {
+          "name": "Return null for absent delegate result",
+          "code_line": 22,
+          "description": "Returns null when the injected delegate returns null.",
+          "company_id": null,
+          "kind": "java_return_statement"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-99",
+        "question": "How should UserDetailsService respond when an account is absent, and why is returning null different from throwing UsernameNotFoundException?"
+      }
+    },
+    {
+      "id": "100",
+      "order": 100,
+      "name": "Initialize JWT customer identity service",
+      "method": "JWTCustomerServicesImpl(CustomerService customerService, PermissionService permissionService, GroupService groupService)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerServicesImpl.java",
+      "source_blob_sha": "79636808a8a2a901d185af7c6df7ed456bc0e600",
+      "source_data_file": "sources/jwt-customer-services.json",
+      "source_line_count": 56,
+      "start_line": 25,
+      "method_start_line": 26,
+      "end_line": 31,
+      "plain_english": "Constructor injects CustomerService, PermissionService and GroupService and calls AbstractCustomerServices super.",
+      "sequence_reason": "After browser/social login, inspect JWT-specific customer lookup wiring built on Company 95.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Initialize common customer lookup",
+          "code_line": 27,
+          "description": "Direct super(...) to Company 95.",
+          "company_id": "95",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-100",
+        "question": "How can sharing the abstract customer service between browser and JWT logins simplify testing without merging their security contexts?"
+      }
+    },
+    {
+      "id": "101",
+      "order": 101,
+      "name": "Create JWT customer user principal",
+      "method": "userDetails(String userName, Customer customer, Collection<GrantedAuthority> authorities)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerServicesImpl.java",
+      "source_blob_sha": "79636808a8a2a901d185af7c6df7ed456bc0e600",
+      "source_data_file": "sources/jwt-customer-services.json",
+      "source_line_count": 56,
+      "start_line": 33,
+      "method_start_line": 34,
+      "end_line": 54,
+      "plain_english": "Creates JWTUser from customer ID, billing names, email, stored password and authorities; last reset time remains null because its audit-handling code is commented.",
+      "sequence_reason": "The inherited Company 96 lookup now dispatches to its JWT customer override rather than the browser implementation.",
+      "inbound": [
+        {
+          "name": "JWT subclass of customer principal builder",
+          "code_line": 34,
+          "description": "Concrete override selected by Company 96 userDetails dispatch.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Read customer attributes",
+          "code_line": 43,
+          "description": "Uses customer.billing names, email, password and authorities.",
+          "company_id": null,
+          "kind": "unmapped_internal_data_model"
+        },
+        {
+          "name": "Construct JWTUser",
+          "code_line": 43,
+          "description": "Calls Company 113 JWTUser constructor.",
+          "company_id": "113",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-101",
+        "question": "What token-revocation behavior results if JWTUser.lastPasswordResetDate is always null?"
+      }
+    },
+    {
+      "id": "102",
+      "order": 102,
+      "name": "Build JWT administrator principal",
+      "method": "userDetails(String userName, User user, Collection<GrantedAuthority> authorities)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminServicesImpl.java",
+      "source_blob_sha": "5e536b4446f0114395a906d42a44c0f94d5a70fb",
+      "source_data_file": "sources/jwt-admin-services.json",
+      "source_line_count": 114,
+      "start_line": 49,
+      "method_start_line": 49,
+      "end_line": 69,
+      "plain_english": "Creates JWTUser from admin ID, name, admin email, stored admin password and authorities; lastModified remains null.",
+      "sequence_reason": "Compare customer JWT principal construction with administrator JWT principal construction before looking at admin identity lookup.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Construct administrator JWTUser",
+          "code_line": 58,
+          "description": "Calls Company 113 JWTUser constructor.",
+          "company_id": "113",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read admin profile and password",
+          "code_line": 59,
+          "description": "Reads User account properties, lines 59–64.",
+          "company_id": null,
+          "kind": "unmapped_internal_data_model"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-102",
+        "question": "How do you prevent confusing admin and customer roles when both services instantiate JWTUser?"
+      }
+    },
+    {
+      "id": "103",
+      "order": 103,
+      "name": "Load administrator with group permissions",
+      "method": "loadUserByUsername(String userName)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminServicesImpl.java",
+      "source_blob_sha": "5e536b4446f0114395a906d42a44c0f94d5a70fb",
+      "source_data_file": "sources/jwt-admin-services.json",
+      "source_line_count": 114,
+      "start_line": 71,
+      "method_start_line": 72,
+      "end_line": 112,
+      "plain_english": "Looks up admin username, collects ROLE_AUTH and permissions from groups, then builds JWTUser through Company 102.",
+      "sequence_reason": "Follow admin principal construction to its source lookup and permission aggregation.",
+      "inbound": [
+        {
+          "name": "Admin JWT UserDetailsService callback",
+          "code_line": 72,
+          "description": "Invoked by admin authentication components.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Look up administrator",
+          "code_line": 80,
+          "description": "userService.getByUserName(userName), not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Add authenticated admin role",
+          "code_line": 87,
+          "description": "Builds ROLE_ plus Constants.PERMISSION_AUTHENTICATED.",
+          "company_id": null,
+          "kind": "external_framework_class"
+        },
+        {
+          "name": "Fetch permissions for user groups",
+          "code_line": 98,
+          "description": "Calls permissionService.getPermissions(groupsId).",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Create admin principal",
+          "code_line": 111,
+          "description": "Direct call to Company 102 userDetails().",
+          "company_id": "102",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-103",
+        "question": "How does UserDetailsService prevent a missing admin from authenticating, and what permissions can group membership confer?"
+      }
+    },
+    {
+      "id": "104",
+      "order": 104,
+      "name": "Authenticate a customer bearer JWT",
+      "method": "attemptAuthentication(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationManager.java",
+      "source_blob_sha": "97a48d0966d250e626ac8277f51c5285d3d7aaad",
+      "source_data_file": "sources/jwt-customer-manager.json",
+      "source_line_count": 92,
+      "start_line": 35,
+      "method_start_line": 36,
+      "end_line": 76,
+      "plain_english": "Parses strict Bearer prefix, resolves subject, loads customer details, validates token, and returns UsernamePasswordAuthenticationToken on success.",
+      "sequence_reason": "After defining customer JWT identities, examine the manager's concrete Company 84 attemptAuthentication hook.",
+      "inbound": [
+        {
+          "name": "Abstract manager authenticate hook",
+          "code_line": 36,
+          "description": "Company 84 invokes this override dynamically.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Get configured token header",
+          "code_line": 39,
+          "description": "Calls Company 82 inherited accessor.",
+          "company_id": "82",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read JWT username",
+          "code_line": 45,
+          "description": "Calls Company 62.",
+          "company_id": "62",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Load customer identity",
+          "code_line": 63,
+          "description": "Calls injected customer details service inheriting Company 96 lookup.",
+          "company_id": "96",
+          "kind": "internal_bean_dispatch"
+        },
+        {
+          "name": "Validate token and principal",
+          "code_line": 67,
+          "description": "Calls Company 80.validateToken.",
+          "company_id": "80",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read principal authorities",
+          "code_line": 68,
+          "description": "Calls UserDetails.getAuthorities supplied by Company 115.",
+          "company_id": "115",
+          "kind": "internal_interface_dispatch"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-104",
+        "question": "Which bearer-header parsing, signature, expiry, missing-user and authorization cases must customer token authentication handle?"
+      }
+    },
+    {
+      "id": "105",
+      "order": 105,
+      "name": "Review empty customer JWT success callback",
+      "method": "successfullAuthentication(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationManager.java",
+      "source_blob_sha": "97a48d0966d250e626ac8277f51c5285d3d7aaad",
+      "source_data_file": "sources/jwt-customer-manager.json",
+      "source_line_count": 92,
+      "start_line": 78,
+      "method_start_line": 79,
+      "end_line": 83,
+      "plain_english": "Override contains only TODO comment and performs no custom success action.",
+      "sequence_reason": "After the customer authentication attempt, inspect the callback used by Company 85 and label its actual absence of logic.",
+      "inbound": [
+        {
+          "name": "Polymorphic success callback",
+          "code_line": 79,
+          "description": "Called after Company 85 stores authentication in SecurityContextHolder.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-105",
+        "question": "Where does CustomAuthenticationManager store a successful principal when this override is empty?"
+      }
+    },
+    {
+      "id": "106",
+      "order": 106,
+      "name": "Review empty customer JWT failure callback",
+      "method": "unSuccessfullAuthentication(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationManager.java",
+      "source_blob_sha": "97a48d0966d250e626ac8277f51c5285d3d7aaad",
+      "source_data_file": "sources/jwt-customer-manager.json",
+      "source_line_count": 92,
+      "start_line": 85,
+      "method_start_line": 86,
+      "end_line": 90,
+      "plain_english": "Override is a TODO-only method; it does not send an HTTP 401 itself.",
+      "sequence_reason": "Pair the customer success hook with failure path triggered by Company 86.",
+      "inbound": [
+        {
+          "name": "Polymorphic failure callback",
+          "code_line": 86,
+          "description": "Called after Company 86 clears SecurityContextHolder.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-106",
+        "question": "If this failure callback is empty, which integration test should confirm a correct 401 response is produced?"
+      }
+    },
+    {
+      "id": "107",
+      "order": 107,
+      "name": "Authenticate an administrator bearer JWT",
+      "method": "attemptAuthentication(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationManager.java",
+      "source_blob_sha": "90d7b06801dbae5dd371d048714ea9841db22484",
+      "source_data_file": "sources/jwt-admin-manager.json",
+      "source_line_count": 94,
+      "start_line": 35,
+      "method_start_line": 36,
+      "end_line": 78,
+      "plain_english": "Trims Bearer prefix with removeStart, loads administrator UserDetails, validates token and constructs authenticated principal.",
+      "sequence_reason": "Compare the admin token manager with Company 104 customer parsing, identity service and authorities.",
+      "inbound": [
+        {
+          "name": "Abstract admin authentication hook",
+          "code_line": 36,
+          "description": "Company 84 invokes this override dynamically.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Read configured header",
+          "code_line": 39,
+          "description": "Calls Company 82.",
+          "company_id": "82",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Extract token username",
+          "code_line": 47,
+          "description": "Calls Company 62.",
+          "company_id": "62",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Load administrator",
+          "code_line": 63,
+          "description": "Calls Company 103.loadUserByUsername.",
+          "company_id": "103",
+          "kind": "internal_bean_dispatch"
+        },
+        {
+          "name": "Validate token",
+          "code_line": 68,
+          "description": "Calls Company 80.",
+          "company_id": "80",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Load authorities",
+          "code_line": 70,
+          "description": "Calls UserDetails.getAuthorities implemented by Company 115.",
+          "company_id": "115",
+          "kind": "internal_interface_dispatch"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-107",
+        "question": "How does removeStart(\"Bearer\") behave differently from startsWith(\"Bearer \"), and which malformed headers could pass parsing?"
+      }
+    },
+    {
+      "id": "108",
+      "order": 108,
+      "name": "Review empty admin JWT success callback",
+      "method": "successfullAuthentication(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationManager.java",
+      "source_blob_sha": "90d7b06801dbae5dd371d048714ea9841db22484",
+      "source_data_file": "sources/jwt-admin-manager.json",
+      "source_line_count": 94,
+      "start_line": 80,
+      "method_start_line": 81,
+      "end_line": 85,
+      "plain_english": "Contains only TODO and no custom login-success logic.",
+      "sequence_reason": "After administrator bearer validation, inspect the inherited manager's success hook implementation.",
+      "inbound": [
+        {
+          "name": "Polymorphic admin success callback",
+          "code_line": 81,
+          "description": "Company 85 triggers this no-op override.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-108",
+        "question": "How can an empty callback still be correct if Company 85 updates SecurityContextHolder beforehand?"
+      }
+    },
+    {
+      "id": "109",
+      "order": 109,
+      "name": "Review empty admin JWT failure callback",
+      "method": "unSuccessfullAuthentication(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationManager.java",
+      "source_blob_sha": "90d7b06801dbae5dd371d048714ea9841db22484",
+      "source_data_file": "sources/jwt-admin-manager.json",
+      "source_line_count": 94,
+      "start_line": 87,
+      "method_start_line": 88,
+      "end_line": 92,
+      "plain_english": "Contains only TODO, without explicitly writing an authentication failure response.",
+      "sequence_reason": "Finish admin manager review by examining the Company 86 failure dispatch.",
+      "inbound": [
+        {
+          "name": "Polymorphic admin failure callback",
+          "code_line": 88,
+          "description": "Company 86 triggers this no-op override.",
+          "company_id": null,
+          "kind": "internal_polymorphic_override"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-109",
+        "question": "What prevents clients from receiving misleading success status when an AuthenticationException reaches this empty callback?"
+      }
+    },
+    {
+      "id": "110",
+      "order": 110,
+      "name": "Validate merchant password and confirmation",
+      "method": "validateCredentials(String password, String repeatPassword, MerchantStore store, Language language)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/services/CredentialsServiceImpl.java",
+      "source_blob_sha": "0a06df61fc711034ce83925c2e86730b626338da",
+      "source_data_file": "sources/credentials.json",
+      "source_line_count": 58,
+      "start_line": 21,
+      "method_start_line": 22,
+      "end_line": 50,
+      "plain_english": "Rejects blank or unequal passwords and enforces Passay Digit 1+, Special 1+, length 8–12.",
+      "sequence_reason": "Move from token authentication to the credentials service registered by Company 28.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Check password emptiness",
+          "code_line": 25,
+          "description": "StringUtils.isBlank rejects missing input.",
+          "company_id": null,
+          "kind": "external_library_method"
+        },
+        {
+          "name": "Compare confirmation",
+          "code_line": 32,
+          "description": "Rejects unequal password and repeatPassword.",
+          "company_id": null,
+          "kind": "java_comparison"
+        },
+        {
+          "name": "Enforce Passay password policy",
+          "code_line": 37,
+          "description": "Digit and Special rules plus LengthRule(8,12); validated at line 44.",
+          "company_id": null,
+          "kind": "external_library_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-110",
+        "question": "How should you verify Passay digit, special-character, and length rules as well as blank/mismatched passwords?"
+      }
+    },
+    {
+      "id": "111",
+      "order": 111,
+      "name": "Review unimplemented password generator",
+      "method": "generatePassword(MerchantStore store, Language language)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/services/CredentialsServiceImpl.java",
+      "source_blob_sha": "0a06df61fc711034ce83925c2e86730b626338da",
+      "source_data_file": "sources/credentials.json",
+      "source_line_count": 58,
+      "start_line": 52,
+      "method_start_line": 53,
+      "end_line": 56,
+      "plain_english": "The TODO method simply returns null and never generates a password.",
+      "sequence_reason": "After credential validation, inspect the incomplete generation method rather than treating it as functional.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Return null placeholder",
+          "code_line": 55,
+          "description": "TODO-only implementation returns null.",
+          "company_id": null,
+          "kind": "java_return_statement"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-111",
+        "question": "What caller failures arise from returning null, and what randomness and policy requirements should a production password generator satisfy?"
+      }
+    },
+    {
+      "id": "112",
+      "order": 112,
+      "name": "Construct a full browser CustomerDetails principal",
+      "method": "CustomerDetails(String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java",
+      "source_blob_sha": "21dd1958f200b102f0427f46ff3fa18fcf46de0d",
+      "source_data_file": "sources/customer-details.json",
+      "source_line_count": 70,
+      "start_line": 20,
+      "method_start_line": 20,
+      "end_line": 29,
+      "plain_english": "Calls Spring Security User superclass constructor with username, password, enabled and other account-state flags and authorities.",
+      "sequence_reason": "Company 98 constructs this concrete principal; follow its constructor to the Spring Security account flags.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Initialize Spring Security User",
+          "code_line": 28,
+          "description": "Calls super(username,password,enabled,accountNonExpired,credentialsNonExpired,accountNonLocked,authorities).",
+          "company_id": null,
+          "kind": "external_framework_constructor"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-112",
+        "question": "What is the parameter order of Spring Security User constructor, and how do accountNonExpired and credentialsNonExpired change login eligibility?"
+      }
+    },
+    {
+      "id": "113",
+      "order": 113,
+      "name": "Construct shared JWTUser identity object",
+      "method": "JWTUser(Long id, String username, String firstname, String lastname, String email, String password, Collection<? extends GrantedAuthority> authorities, boolean enabled, Date lastPasswordResetDate)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 27,
+      "method_start_line": 27,
+      "end_line": 46,
+      "plain_english": "Stores final ID, username, names, email, password, authorities, enabled and last-password-reset date.",
+      "sequence_reason": "Companies 101/102 construct this class; inspect its fields before the security accessors.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Assign JWTUser fields",
+          "code_line": 37,
+          "description": "Stores immutable fields on lines 37–45.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-113",
+        "question": "Why is immutable storage useful for a UserDetails principal, and how is a null reset date interpreted?"
+      }
+    },
+    {
+      "id": "114",
+      "order": 114,
+      "name": "Expose stored JWTUser password",
+      "method": "getPassword()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 88,
+      "method_start_line": 90,
+      "end_line": 92,
+      "plain_english": "Returns password; annotated JsonIgnore so this accessor is suppressed during Jackson serialization.",
+      "sequence_reason": "After constructing JWTUser, inspect the password accessor required by Spring Security.",
+      "inbound": [
+        {
+          "name": "Spring Security UserDetails password accessor",
+          "code_line": 90,
+          "description": "UserDetails.getPassword() contract.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Return stored password field",
+          "code_line": 91,
+          "description": "Returns password.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-114",
+        "question": "How does @JsonIgnore reduce accidental password-hash exposure, and what other API serialization safeguards are needed?"
+      }
+    },
+    {
+      "id": "115",
+      "order": 115,
+      "name": "Expose JWTUser granted authorities",
+      "method": "getAuthorities()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 94,
+      "method_start_line": 95,
+      "end_line": 97,
+      "plain_english": "Returns the GrantedAuthority collection attached to this principal.",
+      "sequence_reason": "Review the authorities later used by Companies 104 and 107 when constructing authenticated tokens.",
+      "inbound": [
+        {
+          "name": "UserDetails authorities accessor",
+          "code_line": 95,
+          "description": "Authentication managers ask UserDetails for granted authorities.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Return granted authorities field",
+          "code_line": 96,
+          "description": "Returns authorities.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-115",
+        "question": "How would mutable GrantedAuthority collections affect the integrity of an authenticated principal?"
+      }
+    },
+    {
+      "id": "116",
+      "order": 116,
+      "name": "Return JWTUser password reset cutoff",
+      "method": "getLastPasswordResetDate()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/user/JWTUser.java",
+      "source_blob_sha": "eb1f7055defb4f6b675eaac8cff55cd44889d3e7",
+      "source_data_file": "sources/jwt-user.json",
+      "source_line_count": 109,
+      "start_line": 104,
+      "method_start_line": 105,
+      "end_line": 107,
+      "plain_english": "Returns lastPasswordResetDate; JsonIgnore prevents this accessor being serialized.",
+      "sequence_reason": "Finish with the field consumed by Company 80's JWT password-reset invalidation check.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Return last password-reset date",
+          "code_line": 106,
+          "description": "Returns lastPasswordResetDate; null in current principal builders.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-116",
+        "question": "What happens to revocation if Companies 101 and 102 construct JWTUser with a null lastPasswordResetDate?"
       }
     }
   ],
