@@ -527,3 +527,15 @@ Browser regression file now targets 136 records, but running it inside GitHub Pa
 - Made all browser-supported scrollbars (main, sidebar, code, search) 5px wide with transparent tracks and unobtrusive dark thumbs; native vertical/horizontal scrolling remains fully functional.
 - Removed all native title hover tooltips in index shell and dynamic company tree/code views; replaced meaningful details with screen-reader aria-labels. Previous/Next update accessible labels rather than title attributes.
 - QA now checks dark-theme colors, thin scrollbars and absence of native title hover tooltips through all company navigation views. Browser/OS may choose native overlay scrollbars independently.
+
+
+## Full original-source coverage without artificial company numbering
+
+- Preserved the latest user-created black IntelliJ-style Project sidebar, compact package folding, keyboard navigation, Project toolbar, draggable width, and no-native-hover-tooltip settings.
+- Indexed the **complete pinned Shopizer Git tree** at `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`: 1,340 tracked files (1,210 Java files, including tests and Maven tooling). This includes resources and other tracked files, not only `src/main/java`.
+- The sidebar now lists every tracked folder/file. **136 existing numbered companies stay unchanged**. Unmapped files are explicitly shown with no companies; they are not automatically assigned IDs.
+- Mapped Java source remains loaded from existing verified `sources/*.json`. Other text files are requested lazily from the **pinned** original GitHub raw URL when clicked; binary/oversized files or failed network previews show a link to the original file rather than invented code. Live preview depends on browser access to raw.githubusercontent.com.
+- Added a separate `assets/js/source-outline.js` module: packages, imports (with resolvable internal source links), types/inheritance, annotations, fields/injected dependencies, methods/constructors, initializers, and original comments/JavaDoc. Every section references exact original line numbers. The outline is a **heuristic source navigator**, not a full compiler AST or a guarantee all functional code has been classified.
+- Clicking a structural entry highlights the exact row and scrolls **only the code pane**, never the browser window. Users can continue to open verified companies from mapped source lines.
+- Updated the live browser regression source to check all 136 existing companies, the 1,340-file root, source outline and Back navigation, while retaining newest dark-theme and resizable-sidebar assertions. Source/structural checks are not a claim that the live regression was executed on a mobile device.
+- All source reference and permanent interview/question IDs are preserved; no Shopizer source code or UI icons were rewritten.

@@ -212,3 +212,35 @@ html::-webkit-scrollbar-track,body::-webkit-scrollbar-track,#app *::-webkit-scro
 html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb,#app *::-webkit-scrollbar-thumb{background:#303030!important;border-radius:999px!important;border:0!important}
 html::-webkit-scrollbar-thumb:hover,body::-webkit-scrollbar-thumb:hover,#app *::-webkit-scrollbar-thumb:hover{background:#494949!important}
 html::-webkit-scrollbar-corner,body::-webkit-scrollbar-corner,#app *::-webkit-scrollbar-corner{background:transparent!important}
+
+/* Source context panel: only affects the main file view, never the IDE Project sidebar. */
+.source-structure{margin-top:17px}
+.source-structure-body{padding:14px 16px 18px}
+.source-counts{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px}
+.source-count{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);border-radius:7px;background:var(--surface2);padding:5px 8px;font-size:11px;color:var(--dim)}
+.source-count b{color:var(--white);font-variant-numeric:tabular-nums}
+.source-outline-note{font-size:12px;line-height:1.6;color:var(--dim);margin:2px 0 15px}
+.source-outline-group{border-top:1px solid #070707}
+.source-outline-group summary{cursor:pointer;list-style-position:inside;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 7px;color:var(--white);font-size:12px;font-weight:750}
+.source-outline-group summary:hover{background:var(--surface2)}
+.source-outline-group summary span{color:var(--dim);font-size:11px}
+.source-outline-items{padding:0 5px 12px}
+.source-outline-entry{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:3px 0;padding:2px;border:1px solid transparent;border-radius:6px}
+.source-outline-entry:hover{background:var(--surface2)}
+.source-line-link{display:flex;align-items:center;gap:10px;min-width:0;flex:1 1 180px;padding:7px 5px;border:0;border-radius:5px;background:transparent;text-align:left;color:var(--white);font-size:12px}
+.source-line-link:hover{color:var(--blue)}
+.source-line-number{font-family:ui-monospace,Consolas,monospace;color:var(--orange);min-width:47px;flex-shrink:0}
+.source-label{overflow-wrap:anywhere;min-width:0}
+.source-mapped{font-size:10px;color:var(--green);white-space:nowrap}
+.source-open-file{font-size:10px;color:var(--blue);border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:5px 7px;cursor:pointer}
+.source-open-file:hover{color:var(--white);background:var(--surface3)}
+.source-none{color:var(--dim);font-size:12px;padding:11px 6px}
+.source-detail{border:1px solid var(--border);border-radius:8px;background:var(--surface2);padding:11px 13px;font-size:12px;color:var(--green);margin-top:13px;overflow-wrap:anywhere}
+.source-original-link{margin:11px 0 0;text-align:right;font-size:12px}
+.source-original-link a,.source-github-link{color:var(--blue);font-weight:700}
+.source-original-link a:hover,.source-github-link:hover{color:var(--white)}
+.source-pending{padding:21px;margin-top:18px}
+.source-pending h2{margin:0 0 10px;font-size:16px}
+.source-pending p{color:var(--dim);font-size:12px;margin-bottom:14px}
+.code-row.outline-active{background:rgba(83,170,255,.16);border-left-color:var(--blue)}
+@media(max-width:760px){.source-structure-body{padding:12px}.source-line-link{flex-basis:100%}.source-original-link{text-align:left}}

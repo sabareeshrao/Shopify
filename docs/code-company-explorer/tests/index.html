@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=deepblack-1#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=full-source-1#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -73,6 +73,10 @@ async function audit(){
  state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
  status.textContent='Checking 136 companies and every external connection…';
  const doc=await ready();
+ const allRoot=doc.querySelector('.tree-row.folder .mini-count');
+ assert(allRoot?.textContent.includes('1340'),'Complete pinned repository manifest must include 1,340 tracked files');
+ assert(doc.querySelector('.tree-row.folder[data-folder="f:shopizer"]'),'Original repository root is absent');
+
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Deep link #company-6 did not restore Company 6 on load');
  const sidebar=doc.querySelector('.side'),mainBody=doc.body;
  assert(frame.contentWindow.getComputedStyle(sidebar).backgroundColor===frame.contentWindow.getComputedStyle(mainBody).backgroundColor,'Project sidebar must match the black main background');
@@ -93,6 +97,27 @@ async function audit(){
   state.companies++;
   status.textContent='Checked '+n+'/136 companies, '+state.connections+' connection boxes…';
  }
+
+ openCompany(doc,54);
+ const fullSourceButton=doc.querySelector('.hero-actions [data-gofile]');
+ assert(fullSourceButton,'Company 54 must offer full Java file view');
+ fullSourceButton.click();
+ assert(doc.querySelector('.source-structure'),'Original Java file structure panel missing');
+ const outlines=[...doc.querySelectorAll('.source-outline-group')];
+ assert(outlines.length===8,'Expected all eight Java source structure categories');
+ const summary=doc.querySelector('.source-structure')?.textContent||'';
+ for(const text of ['Package / address','Imports / dependencies','Types / inheritance','Annotations / framework metadata','Fields / injected dependencies','JavaDoc / comments'])
+  assert(summary.includes(text),'Missing source context group: '+text);
+ assert(summary.includes('DaoAuthenticationProvider'),'Type inheritance must be displayed from source');
+ assert(summary.includes('@Autowired')&&summary.includes('@Inject'),'Dependency injection annotations not visible');
+ assert(summary.includes('BadCredentialsException'),'Individual original imports are missing');
+ const packageLink=doc.querySelector('button[data-outline-line="1"]');
+ assert(packageLink,'Package declaration line link missing');
+ packageLink.click();
+ assert(doc.querySelector('.file-grid .code-row.outline-active[data-line="1"]'),'Package entry must highlight original line 1 inside the source pane');
+ assert(doc.querySelector('#maincontent')?.textContent.includes('No company number has been assigned')===false,'Mapped file should remain mapped');
+ doc.querySelector('#history-back').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 54'),'Back from full Java file must restore Company 54');
 
  openCompany(doc,116);
  const before117=doc.querySelector('#maincontent .hero h1')?.textContent;
