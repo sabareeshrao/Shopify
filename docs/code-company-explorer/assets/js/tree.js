@@ -2,28 +2,21 @@ function renderNodeIcon(kind,opened){return icon(kind==='folder'?(opened?'folder
 function treeContent(){
  const rows=[];
  function addFolder(node,path,depth){const full=path?path+'/'+node.name:node.name,key='f:'+full,opened=expanded.has(key);const count=node.children?.length||0;
- rows.push(`<button class="tree-row folder" data-folder="${safe(key)}" style="padding-left:${8+depth*20}px" title="${safe(full)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${renderNodeIcon('folder',opened)}<span class="tree-text">${safe(node.name)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
+ rows.push(`<button class="tree-row folder" data-folder="${safe(key)}" style="padding-left:${8+depth*16}px" title="${safe(full)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${renderNodeIcon('folder',opened)}<span class="tree-text">${safe(node.name)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
  if(!opened)return;
- for(const child of node.children||[]){if(child.file)addFile(child.file,depth+1);else if(child.isResource)rows.push(`<div class="tree-row file" style="padding-left:${8+Math.min(depth+1,5)*10}px;opacity:.6"><span class="tree-chevron spacer"></span>${icon('file')}<span class="tree-text">${safe(child.name)}</span></div>`);else addFolder(child,full,depth+1);}
+ for(const child of node.children||[]){if(child.file)addFile(child.file,depth+1);else if(child.isResource)rows.push(`<div class="tree-row file" style="padding-left:${8+(depth+1)*16}px;opacity:.6"><span class="tree-chevron spacer"></span>${icon('file')}<span class="tree-text">${safe(child.name)}</span></div>`);else addFolder(child,full,depth+1);}
  }
  function addFile(fid,depth){const f=files[fid],key='file:'+fid,opened=expanded.has(key),act=selectedFile===fid;
- rows.push(`<button class="tree-row file ${act?'is-active':''}" data-file="${fid}" style="padding-left:${8+depth*20}px" title="${safe(f.path)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${icon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
+ rows.push(`<button class="tree-row file ${act?'is-active':''}" data-file="${fid}" style="padding-left:${8+depth*16}px" title="${safe(f.path)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${icon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
  if(opened){for(const id of f.companyIds)addEntity(id,depth+1);}
  }
  function addEntity(id,depth){const c=entities[id],isSub=!!c.parent,opened=expanded.has('co:'+id),hasKids=!!c.children?.length;
- rows.push(`<button class="tree-row comp ${isSub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" style="padding-left:${8+depth*20}px" title="Company ${safe(c.no)} — ${safe(c.desc)}" ${hasKids?`aria-expanded="${opened}"`:''}><span class="tree-chevron ${hasKids?'':'spacer'}">${hasKids?icon(opened?'down':'chevron'):icon('chevron')}</span><span class="company-key">${renderNodeIcon(isSub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
+ rows.push(`<button class="tree-row comp ${isSub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" style="padding-left:${8+depth*16}px" title="Company ${safe(c.no)} — ${safe(c.desc)}" ${hasKids?`aria-expanded="${opened}"`:''}><span class="tree-chevron ${hasKids?'':'spacer'}">${hasKids?icon(opened?'down':'chevron'):icon('chevron')}</span><span class="company-key">${renderNodeIcon(isSub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
  if(opened)for(const sub of c.children||[])addEntity(sub,depth+1);
  }
  addFolder(folderData,'',0);return rows.join('');
 }
-function renderTree(){const side=$('#tree'),before=side.scrollLeft;side.innerHTML='<div class="tree-canvas">'+treeContent()+'</div>';side.scrollLeft=before;updateTreePan();}
-function updateTreePan(){
- const tree=$('#tree'),prev=$('#tree-pan-left'),next=$('#tree-pan-right'),label=$('#tree-pan-label');
- if(!tree)return;const max=Math.max(0,tree.scrollWidth-tree.clientWidth);
- if(prev)prev.disabled=tree.scrollLeft<=1;
- if(next)next.disabled=tree.scrollLeft>=max-1;
- if(label)label.textContent=max>0?'Folder tree · scroll sideways':'Folder tree · all visible';
-}
+function renderTree(){const side=$('#tree');side.innerHTML='<div class="tree-canvas">'+treeContent()+'</div>';}
 function captureScroll(){
  const tree=$('#tree'),side=$('.side-body'),code=$('#current-code')||$('.file-grid .code-body');
  return {x:window.scrollX||0,y:window.scrollY||0,treeX:tree?.scrollLeft||0,sideY:side?.scrollTop||0,codeX:code?.scrollLeft||0,codeY:code?.scrollTop||0};
@@ -35,7 +28,6 @@ function restoreScroll(value,includeCode=false){
    if(tree)tree.scrollLeft=value.treeX||0;if(side)side.scrollTop=value.sideY||0;
    if(includeCode&&code){code.scrollLeft=value.codeX||0;code.scrollTop=value.codeY||0;}
    if(typeof window.scrollTo==='function')window.scrollTo({left:value.x||0,top:value.y||0,behavior:'instant'});
-   updateTreePan();
  });
 }
 function updateBackButton(){const b=$('#history-back');if(b)b.disabled=!navStack.length;}

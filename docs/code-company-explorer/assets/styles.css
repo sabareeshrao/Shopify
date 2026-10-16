@@ -115,3 +115,36 @@ html{scroll-behavior:auto}
 .relation-card[href]{display:block;text-decoration:none;color:var(--white)}
 .relation-card[href]:visited{color:var(--white)}
 .relation-card[href]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* IntelliJ-style Project tool window: drag its vertical border rather than the tree horizontally.
+   All existing labels, file icons, company icons and approved colors remain unchanged. */
+:root{--sidebar-width:318px}
+#app{grid-template-columns:var(--sidebar-width) minmax(0,1fr)}
+.side{overflow:visible}
+.sidebar-resizer{position:absolute;right:-5px;top:0;bottom:0;width:11px;z-index:23;
+ display:flex;align-items:center;justify-content:center;cursor:col-resize;touch-action:none;
+ outline:none;background:transparent}
+.resizer-grip{display:block;width:3px;height:55px;border-radius:3px;background:var(--blue);
+ opacity:0;transition:opacity .15s ease}
+.sidebar-resizer:hover .resizer-grip,.sidebar-resizer:focus-visible .resizer-grip,
+body.sidebar-resizing .resizer-grip{opacity:1}
+.sidebar-resizer:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+body.sidebar-resizing{cursor:col-resize;user-select:none}
+.side-body{overflow-x:hidden;overflow-y:auto}
+.tree-scroll{width:100%;max-width:100%;overflow:visible;padding-bottom:0;touch-action:auto;scrollbar-width:auto}
+.tree-canvas{width:100%;min-width:0;max-width:100%}
+.tree-canvas .tree-row{width:100%;min-width:0;max-width:100%;overflow:hidden;white-space:nowrap}
+.tree-canvas .tree-row .tree-text{flex:1 1 0%;min-width:0;max-width:none;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tree-canvas .tree-row .mini-count{flex:0 0 auto;padding-left:7px;margin-left:auto}
+.tree-row .tree-chevron,.tree-row .company-key,.tree-row>.ic{flex-shrink:0}
+.tree-pan{display:none!important}
+@media(max-width:1280px) and (min-width:1101px){
+ #app{grid-template-columns:var(--sidebar-width) minmax(0,1fr)}
+}
+@media(max-width:1100px){
+ #app{display:block}
+ .sidebar-resizer{display:none!important}
+ .side{overflow:hidden}
+ .tree-canvas .tree-row .tree-text{overflow:hidden;text-overflow:ellipsis}
+}

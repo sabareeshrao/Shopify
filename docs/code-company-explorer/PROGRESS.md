@@ -448,3 +448,14 @@ Original source findings: Companies 105, 106, 108, 109 are empty TODO overrides;
 - Regression tests updated for same-tab preservation, graph-tab launch, history and source coverage; live mobile-browser interaction testing is still pending.
 
 Company network nodes now use native anchors with target=_blank and rel=noopener noreferrer. This allows long-press Open in background tab on supported Chrome mobile browsers and Ctrl+click / middle-click on desktop. Browser foreground-tab behavior is controlled by the browser, not JavaScript. All 116 company IDs and source line ranges are unchanged.
+
+
+## IntelliJ-style resizeable repository sidebar
+- Replaced the bottom ◀ ▶ horizontal tree scroller with a draggable vertical separator on the right edge of the Project sidebar.
+- Desktop width is resizable from 260 px to the lesser of 900 px or viewport width minus 410 px; saved locally per browser and clamped on resize.
+- Added keyboard arrows, Home/End and double-click reset, with ARIA separator metadata and focus treatment.
+- Preserved all existing folder, Java file, company, and subsidiary text/icon names, existing tree structure and selection/navigation behavior.
+- Sidebar items now stay in fixed hierarchical rows with text truncation; widening the sidebar reveals more of the original filename instead of introducing bottom horizontal pan.
+- Mobile drawer (<=1100 px) retains existing width, overlay, and close behavior; resize handle is hidden.
+- Updated browser regression to test mobile drawer, desktop keyboard resizing, reset and removal of horizontal pan.
+- No company data or pinned Java source snapshots changed.
