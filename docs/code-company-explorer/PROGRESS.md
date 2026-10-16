@@ -18,6 +18,11 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 4 | Prepare JSON responses | `ShopApplicationConfiguration.configureMessageConverters()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 67–70 | 0 mapped | Verified |
 | 5 | Set up the shop homepage | `ShopApplicationConfiguration.addViewControllers()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 72–75 | 0 mapped | Verified |
 | 6 | Add request interceptors | `ShopApplicationConfiguration.addInterceptors()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 77–98 | 0 mapped | Verified |
+| 7 | Handle images and binary downloads | `ShopApplicationConfiguration.byteArrayHttpMessageConverter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 100–108 | 0 mapped | Verified |
+| 8 | Create the language-change interceptor | `ShopApplicationConfiguration.localeChangeInterceptor()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 110–113 | 0 mapped | Verified |
+| 9 | Create the CORS interceptor | `ShopApplicationConfiguration.corsFilter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 119–122 | 0 mapped | Verified |
+| 10 | Choose the default language | `ShopApplicationConfiguration.localeResolver()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 125–130 | 0 mapped | Verified |
+| 11 | Load translated messages | `ShopApplicationConfiguration.messageSource()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 132–144 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -31,9 +36,25 @@ Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 | 4 | Understand JSON conversion of MVC requests and responses. | IQ-4: What does overriding `configureMessageConverters()` do to defaults versus `extendMessageConverters()`? |
 | 5 | Connect `/` to a view without a dedicated controller method. | IQ-5: When use `addViewController()` instead of `@Controller`, and how is the view resolved? |
 | 6 | Add MVC interceptors for locale and CORS after basic routing concepts. | IQ-6: How does an MVC `HandlerInterceptor` differ from a servlet `Filter`? |
+| 7 | Add binary and image media types after JSON response conversion. | IQ-7: `ByteArrayHttpMessageConverter` vs JSON, supported media types and negotiation |
+| 8 | Open the actual locale-change interceptor created for Company 6. | IQ-8: `LocaleChangeInterceptor` with `LocaleResolver` |
+| 9 | Open the actual Shopizer `CorsFilter` method called by Company 6. | IQ-9: Why Shopizer's `corsFilter()` is registered with `addInterceptor()` |
+| 10 | Configure session-based language resolution to support locale changes. | IQ-10: `SessionLocaleResolver` vs `AcceptHeaderLocaleResolver` |
+| 11 | Finish internationalization with UTF-8 resource bundles for translated messages. | IQ-11: Resource-bundle resolution and reloadable message sources |
 
 Each company has the complete unique question and a plain-English sequence reason in `companies.json`, displayed within the HTML explorer. This numbering is an **instructional discovery path**, not a claim that Spring calls the methods in company number order.
 
+### Companies 7–11: verified source and connections
+
+- **7** `byteArrayHttpMessageConverter()` lines 100–108 — supported response types: JPEG, GIF, PNG, and octet-stream; creates `ByteArrayHttpMessageConverter`.
+- **8** `localeChangeInterceptor()` lines 110–113 — Spring bean producing `LocaleChangeInterceptor`; Company 6 calls it at line 80.
+- **9** `corsFilter()` lines 119–122 — Spring bean producing Shopizer `CorsFilter`; Company 6 calls it at line 92. The commented `storeFilter()` method on lines 115–117 is not active.
+- **10** `localeResolver()` lines 125–130 — provides `SessionLocaleResolver` with default `Locale.getDefault()`.
+- **11** `messageSource()` lines 132–144 — supplies shopizer, messages, shipping, payment resource-bundle basenames and UTF-8 encoding.
+- Company 6 has real, direct code connections to Company 8 at source line 80 and Company 9 at source line 92. Those now appear as clickable clients/suppliers in the HTML rather than unnumbered external dependencies.
+- All five are separate top-level companies in learning order; they have no subsidiary numbers assigned yet.
+- Source commit: `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`; blob SHA: `41f81a6604d64ad9a60829a606f247dd547182c4`.
+- Complete sequence reasons and unique questions IQ-7 through IQ-11 are stored in `companies.json` and shown on each company page.
 ### Company 4 connections
 
 - Source: `ShopApplicationConfiguration.java:67–70`
@@ -52,7 +73,7 @@ Each company has the complete unique question and a plain-English sequence reaso
 - Adds `corsFilter()` at line 92 for `/services/**` (line 94) and `/api/**` (line 96).
 - Lines 82–89 are a commented-out `storeFilter()` block and must not be treated as active configuration.
 
-### Company 1–6 verified source
+### Company 1–11 verified source
 
 - All new companies use existing pinned Shopizer commit `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`.
 - Companies 2–6 share source file blob SHA `41f81a6604d64ad9a60829a606f247dd547182c4`.
