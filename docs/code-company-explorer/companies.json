@@ -1,11 +1,11 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 6,
+  "count": 11,
   "companies": [
     {
       "id": "1",
@@ -259,18 +259,18 @@
       ],
       "outbound": [
         {
-          "name": "Create locale-change interceptor",
-          "kind": "unmapped_internal_method",
-          "company_id": null,
+          "name": "Company 8 — Create language-change interceptor",
+          "kind": "internal_method_call",
+          "company_id": "8",
           "code_line": 80,
-          "description": "The method localeChangeInterceptor() is defined later in this file; it has not yet been assigned a company number."
+          "description": "Calls localeChangeInterceptor() at line 80; opens Company 8."
         },
         {
-          "name": "Create CORS interceptor",
-          "kind": "unmapped_internal_method",
-          "company_id": null,
+          "name": "Company 9 — Create CORS interceptor",
+          "kind": "internal_method_call",
+          "company_id": "9",
           "code_line": 92,
-          "description": "The method corsFilter() is defined later in this file; it has not yet been assigned a company number."
+          "description": "Calls corsFilter() at line 92; opens Company 9."
         },
         {
           "name": "Set interceptor URL patterns",
@@ -284,6 +284,253 @@
       "interview": {
         "id": "IQ-6",
         "question": "How is a Spring MVC HandlerInterceptor different from a servlet Filter, and what happens when you register one without addPathPatterns()?"
+      }
+    },
+    {
+      "type": "Spring MVC and Spring Boot web configuration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "7",
+      "order": 7,
+      "name": "Handle images and binary downloads",
+      "method": "byteArrayHttpMessageConverter()",
+      "start_line": 100,
+      "method_start_line": 101,
+      "end_line": 108,
+      "plain_english": "Creates a byte-array HTTP converter that supports JPEG, GIF, PNG, and general binary downloads.",
+      "inbound": [
+        {
+          "name": "Spring creates the binary converter",
+          "kind": "external_framework_bean",
+          "code_line": 100,
+          "company_id": null,
+          "description": "Spring calls this @Bean method to create a converter during configuration."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "List accepted media types",
+          "kind": "external_java_api",
+          "code_line": 102,
+          "company_id": null,
+          "description": "Uses Arrays.asList with IMAGE_JPEG, IMAGE_GIF, IMAGE_PNG, APPLICATION_OCTET_STREAM."
+        },
+        {
+          "name": "Build byte-array converter",
+          "kind": "external_framework_class",
+          "code_line": 105,
+          "company_id": null,
+          "description": "Constructs ByteArrayHttpMessageConverter and sets its supported media types at line 106."
+        }
+      ],
+      "sequence_reason": "Seventh, extend Company 4's HTTP response lesson beyond JSON: images and downloaded files use bytes and media types instead of structured JSON. The source places this factory after MVC interceptor registration; numbering is for learning, not runtime execution.",
+      "interview": {
+        "id": "IQ-7",
+        "question": "When would you return byte[] through ByteArrayHttpMessageConverter instead of a Jackson JSON converter, and how do supported media types affect content negotiation?"
+      }
+    },
+    {
+      "type": "Spring MVC and Spring Boot web configuration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "8",
+      "order": 8,
+      "name": "Create the language-change interceptor",
+      "method": "localeChangeInterceptor()",
+      "start_line": 110,
+      "method_start_line": 111,
+      "end_line": 113,
+      "plain_english": "Creates the interceptor that can change a visitor's language using the request's locale parameter.",
+      "inbound": [
+        {
+          "name": "Company 6 — Register request interceptors",
+          "kind": "internal_method_call",
+          "code_line": 80,
+          "company_id": "6",
+          "description": "Company 6 calls localeChangeInterceptor() inside addInterceptors() at line 80."
+        },
+        {
+          "name": "Spring creates the interceptor bean",
+          "kind": "external_framework_bean",
+          "code_line": 110,
+          "company_id": null,
+          "description": "Spring can also obtain this instance through the @Bean factory method."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create LocaleChangeInterceptor",
+          "kind": "external_framework_class",
+          "code_line": 112,
+          "company_id": null,
+          "description": "Returns a new Spring LocaleChangeInterceptor."
+        }
+      ],
+      "sequence_reason": "Eighth, open the concrete factory behind Company 6's localeChangeInterceptor() call. You have already seen where this interceptor is registered; now you can inspect where its actual object is created.",
+      "interview": {
+        "id": "IQ-8",
+        "question": "How does LocaleChangeInterceptor work together with a LocaleResolver, and why does changing a locale parameter require an appropriate resolver?"
+      }
+    },
+    {
+      "type": "Spring MVC and Spring Boot web configuration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "9",
+      "order": 9,
+      "name": "Create the CORS interceptor",
+      "method": "corsFilter()",
+      "start_line": 119,
+      "method_start_line": 120,
+      "end_line": 122,
+      "plain_english": "Creates Shopizer's CorsFilter object, which Company 6 registers for service and API request paths.",
+      "inbound": [
+        {
+          "name": "Company 6 — Register request interceptors",
+          "kind": "internal_method_call",
+          "code_line": 92,
+          "company_id": "6",
+          "description": "Company 6 invokes corsFilter() at line 92 to add the object as an MVC interceptor."
+        },
+        {
+          "name": "Spring creates the CORS bean",
+          "kind": "external_framework_bean",
+          "code_line": 119,
+          "company_id": null,
+          "description": "The @Bean method makes this Shopizer object available as a Spring bean."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build Shopizer CorsFilter",
+          "kind": "unmapped_internal_class",
+          "code_line": 121,
+          "company_id": null,
+          "description": "Creates a real com.salesmanager.shop.filter.CorsFilter instance; the class implementation is not yet separately mapped."
+        }
+      ],
+      "sequence_reason": "Ninth, inspect the second real factory called by Company 6. After the language interceptor, this method supplies the CORS component used for API and service paths. Although named CorsFilter, it is passed to Spring's addInterceptor() in Company 6.",
+      "interview": {
+        "id": "IQ-9",
+        "question": "Shopizer names this bean corsFilter() but registers it through InterceptorRegistry.addInterceptor(). What must its Java type support, and how would you verify whether it is an MVC interceptor rather than a servlet Filter?"
+      }
+    },
+    {
+      "type": "Spring MVC and Spring Boot web configuration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "10",
+      "order": 10,
+      "name": "Choose the default language",
+      "method": "localeResolver()",
+      "start_line": 125,
+      "method_start_line": 126,
+      "end_line": 130,
+      "plain_english": "Creates a session-based language resolver and sets its starting language to the server's default locale.",
+      "inbound": [
+        {
+          "name": "Spring creates the locale resolver",
+          "kind": "external_framework_bean",
+          "code_line": 125,
+          "company_id": null,
+          "description": "The @Bean method provides a SessionLocaleResolver for Spring MVC."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create session-based locale resolver",
+          "kind": "external_framework_class",
+          "code_line": 127,
+          "company_id": null,
+          "description": "Instantiates SessionLocaleResolver."
+        },
+        {
+          "name": "Read default JVM locale",
+          "kind": "java_locale_api",
+          "code_line": 128,
+          "company_id": null,
+          "description": "Sets its default locale to Locale.getDefault()."
+        }
+      ],
+      "sequence_reason": "Tenth, return to Company 8's language feature and learn where Spring stores and resolves a visitor's locale. The interceptor can request changes; the SessionLocaleResolver provides the locale-resolution mechanism.",
+      "interview": {
+        "id": "IQ-10",
+        "question": "Why would you choose SessionLocaleResolver instead of AcceptHeaderLocaleResolver in Spring MVC, and what happens when the browser session is lost?"
+      }
+    },
+    {
+      "type": "Spring MVC and Spring Boot web configuration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "11",
+      "order": 11,
+      "name": "Load translated messages",
+      "method": "messageSource()",
+      "start_line": 132,
+      "method_start_line": 133,
+      "end_line": 144,
+      "plain_english": "Creates a UTF-8 message source using Shopizer's shopizer, messages, shipping, and payment resource bundles.",
+      "inbound": [
+        {
+          "name": "Spring creates the message source",
+          "kind": "external_framework_bean",
+          "code_line": 132,
+          "company_id": null,
+          "description": "Spring registers the returned ReloadableResourceBundleMessageSource as a bean."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build message source",
+          "kind": "external_framework_class",
+          "code_line": 135,
+          "company_id": null,
+          "description": "Creates ReloadableResourceBundleMessageSource."
+        },
+        {
+          "name": "Select four translation bundles",
+          "kind": "resource_bundle_configuration",
+          "code_line": 136,
+          "company_id": null,
+          "description": "Adds classpath bundle basenames for shopizer, messages, shipping, and payment at lines 136–140."
+        },
+        {
+          "name": "Use UTF-8 messages",
+          "kind": "external_framework_method",
+          "code_line": 142,
+          "company_id": null,
+          "description": "Calls messageSource.setDefaultEncoding(\"UTF-8\")."
+        }
+      ],
+      "sequence_reason": "Eleventh, finish the locale flow: Company 8 responds to a language request, Company 10 resolves the active locale, and this company supplies translated text from the application's message bundles.",
+      "interview": {
+        "id": "IQ-11",
+        "question": "How does ReloadableResourceBundleMessageSource choose a locale-specific properties file, and why should you define both basenames and UTF-8 encoding?"
       }
     }
   ],
