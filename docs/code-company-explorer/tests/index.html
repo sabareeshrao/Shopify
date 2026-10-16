@@ -88,6 +88,12 @@ async function audit(){
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('.side-body')).scrollbarWidth==='thin','Project scrollbar must be thin');
  assert(doc.querySelectorAll('[title]').length===0,'Native hover tooltip attributes must be absent from the explorer');
 
+ // Rendering contract: original Java uses tabs. GitHub-like indentation
+ // must use four-column stops in both the full-file and company code panes.
+ const checkedCode=doc.querySelector('#current-code .code-row .src');
+ assert(checkedCode,'Current-company code content missing');
+ assert(frame.contentWindow.getComputedStyle(checkedCode).tabSize==='4','Company code indent must use four-column tabs');
+
  const mentorLessonsSeen=new Map();
  for(let n=1;n<=136;n++){
   openCompany(doc,n);
@@ -110,14 +116,17 @@ async function audit(){
  fullSourceButton.click();
  assert(!doc.querySelector('.source-structure'),'Removed redundant source-structure panel must not be rendered');
  assert(doc.querySelector('#source-line-info'),'Source explanation must occupy the existing code footer');
+ const fullFileCode=doc.querySelector('.file-grid .code-row .src');
+ assert(fullFileCode&&frame.contentWindow.getComputedStyle(fullFileCode).tabSize==='4','Full Java file must use the same four-column tabs');
+
  assert(frame.contentWindow.getComputedStyle(doc.documentElement).getPropertyValue('--source-learning-blue').trim()==='#a9ceff','Unnumbered source highlight must be the approved light blue');
  assert(doc.querySelector('.code-header .line-mark')?.textContent.includes('blue'),'Source legend must identify blue lines');
  const sourceRows=doc.querySelectorAll('.file-grid .code-row.source-unmapped');
  assert(sourceRows.length>0,'Unnumbered nonblank source lines should be highlighted blue');
  const blueLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="1"]');
- assert(pinkLine,'Package declaration on line 1 must be selectable as non-company source');
- pinkLine.click();
- assert(pinkLine.classList.contains('source-inspected'),'Selected package line should show distinct blue selection');
+ assert(blueLine,'Package declaration on line 1 must be selectable as non-company source');
+ blueLine.click();
+ assert(blueLine.classList.contains('source-inspected'),'Selected package line should show distinct blue selection');
  assert(doc.querySelector('#source-line-info')?.textContent.includes('Package / address'),'Package info missing below code');
  assert(doc.querySelector('#source-line-info')?.textContent.includes('com.salesmanager.shop.store.security.admin'),'Package explanation not grounded in source');
  const importLine=doc.querySelector('.file-grid .code-row.source-unmapped[data-line="6"]');
@@ -150,6 +159,40 @@ async function audit(){
  assert(doc.querySelector('#maincontent')?.textContent.includes('No company number has been assigned')===false,'Mapped file should remain mapped');
  doc.querySelector('#history-back').click();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 54'),'Back from full Java file must restore Company 54');
+
+ // Selection and scroll remain synchronized for a deep company.
+ // Open the mobile Project drawer before measuring visible row coordinates.
+ frame.contentWindow.scrollTo(0,450);
+ await delay(40);
+ openCompany(doc,44);
+ await delay(120);
+ assert(frame.contentWindow.scrollY<4,'Opening Company 44 must show the top of its new right-hand page');
+ const java326=doc.querySelector('#current-code .code-row[data-line="326"] .src')?.textContent||'';
+ const java328=doc.querySelector('#current-code .code-row[data-line="328"] .src')?.textContent||'';
+ assert(/^\t{3}http\s*$/.test(java326),'Security configuration line 326 must preserve its three original tabs');
+ assert(/^\t{5}\.authorizeRequests\(\)/.test(java328),'Security chain line 328 must preserve five original tabs');
+ assert(frame.contentWindow.getComputedStyle(doc.querySelector('#current-code .code-row[data-line="328"] .src')).tabSize==='4','Security configuration chains must match four-column GitHub-style tab alignment');
+
+ assert(doc.querySelector('#tree .tree-row.comp.is-active[data-company="company-44"]'),'Company 44 must be selected in Project tree');
+ assert(doc.querySelector('#tree [data-company="company-44"]')?.getAttribute('aria-current')==='location','Accessible active Project row must match Company 44');
+ doc.querySelector('#menu').click();
+ await delay(300);
+ const projectViewport=doc.querySelector('.side-body').getBoundingClientRect();
+ const activeNode=doc.querySelector('#tree [data-company="company-44"]').getBoundingClientRect();
+ assert(activeNode.top>=projectViewport.top-2&&activeNode.bottom<=projectViewport.bottom+2,'Company 44 selected row is hidden outside the sidebar viewport');
+ doc.querySelector('#side-close').click();
+ frame.contentWindow.scrollTo(0,240);
+ await delay(30);
+ const previousReadingOffset=frame.contentWindow.scrollY;
+ doc.querySelector('#next-company').click();
+ await delay(100);
+ assert(frame.contentWindow.scrollY<4,'Switching companies must reset right-pane scroll to the company heading');
+ assert(doc.querySelector('#tree .tree-row.comp.is-active[data-company="company-45"]'),'Next company must update Project highlight to Company 45');
+ assert(!doc.querySelector('#tree .tree-row.comp.is-active[data-company="company-44"]'),'Previous Project highlight must clear after navigation');
+ doc.querySelector('#history-back').click();
+ await delay(100);
+ assert(Math.abs(frame.contentWindow.scrollY-previousReadingOffset)<8,'Back must restore the previous company reading position');
+ assert(doc.querySelector('#tree .tree-row.comp.is-active[data-company="company-44"]'),'Back must restore Company 44 Project highlight');
 
  openCompany(doc,116);
  const before117=doc.querySelector('#maincontent .hero h1')?.textContent;
@@ -186,8 +229,8 @@ async function audit(){
  all.click();
  assert(!frame.contentWindow.location.hash,'File view should clear the company URL hash');
  const coverage=doc.querySelector('.code-divider')?.textContent||'';
- assert(coverage.includes('pending code lines'),'File view must display source coverage');
- assert(doc.querySelector('.file-grid .code-row.pending-map'),'Unindexed Java source must be visually marked');
+ assert(coverage.includes('review candidates'),'File view must display real source review candidates');
+ assert(doc.querySelector('.file-grid .code-row.source-unmapped'),'Unnumbered Java source must be visually marked');
  const mapped=doc.querySelector('.file-grid .code-row[data-line="105"][data-source-company]');
  assert(mapped,'Company 7 line 105 missing from the full source');
  mapped.click();

@@ -32,12 +32,45 @@ function treeContent(){
  }
  function addEntity(id,depth){
    const c=entities[id],sub=!!c.parent,open=expanded.has('co:'+id),children=!!c.children?.length;
-   rows.push(`<button type="button" class="tree-row comp ${sub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" data-depth="${depth}" aria-level="${depth+1}" style="padding-left:${pad(depth)}px" aria-label="Company ${safe(c.no)} — ${safe(c.name)}" ${children?`aria-expanded="${open}"`:''}><span class="tree-chevron ${children?'':'spacer'}">${children?icon(open?'down':'chevron'):''}</span><span class="company-key">${renderNodeIcon(sub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
+   rows.push(`<button type="button" class="tree-row comp ${sub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" ${selected===id&&mode==='company'?'aria-current="location"':''} data-depth="${depth}" aria-level="${depth+1}" style="padding-left:${pad(depth)}px" aria-label="Company ${safe(c.no)} — ${safe(c.name)}" ${children?`aria-expanded="${open}"`:''}><span class="tree-chevron ${children?'':'spacer'}">${children?icon(open?'down':'chevron'):''}</span><span class="company-key">${renderNodeIcon(sub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
    if(open)for(const child of c.children||[])addEntity(child,depth+1);
  }
  addFolder(folderData,'',0);return rows.join('');
 }
 function renderTree(){const side=$('#tree');side.innerHTML='<div class="tree-canvas">'+treeContent()+'</div>';}
+/* The visible Project selection follows the company shown in the right pane.
+   Scroll ONLY the sidebar's .side-body; never scroll the document or the source pane.
+   Called after route/render/scroll restoration, not on ordinary user scrolling. */
+function revealCurrentTreeRow(){
+ if(mode!=='company'&&mode!=='file')return false;
+ const sidebar=$('.side-body'),tree=$('#tree');
+ if(!sidebar||!tree)return false;
+ const selector=mode==='company'?'[data-company]':'[data-file]';
+ const value=mode==='company'?selected:selectedFile;
+ let row=[...tree.querySelectorAll('button.tree-row'+selector)].find(el=>
+   (mode==='company'?el.dataset.company:el.dataset.file)===value);
+ if(!row && mode==='company' && entities[selected]){
+   openParents(selected);renderTree();
+   row=[...tree.querySelectorAll('button.tree-row[data-company]')].find(el=>el.dataset.company===selected);
+ }
+ if(!row && mode==='file' && files[selectedFile]){
+   openFileParents(selectedFile);renderTree();
+   row=[...tree.querySelectorAll('button.tree-row[data-file]')].find(el=>el.dataset.file===selectedFile);
+ }
+ if(!row)return false;
+ const viewport=sidebar.getBoundingClientRect(),item=row.getBoundingClientRect();
+ const margin=Math.min(24,Math.max(4,viewport.height/8));
+ if(item.top<viewport.top+margin||item.bottom>viewport.bottom-margin){
+   // Center the selected row, accounting for existing Project header/caption.
+   sidebar.scrollTop+=item.top-viewport.top-(viewport.height-item.height)/2;
+ }
+ return true;
+}
+function queueRevealCurrentTreeRow(){
+ // Restore-scroll runs in a requestAnimationFrame; queue after it so it
+ // cannot move the selected company back outside the sidebar viewport.
+ requestAnimationFrame(revealCurrentTreeRow);
+}
 function captureScroll(){
  const tree=$('#tree'),side=$('.side-body'),code=$('#current-code')||$('.file-grid .code-body');
  return {x:window.scrollX||0,y:window.scrollY||0,treeX:tree?.scrollLeft||0,sideY:side?.scrollTop||0,codeX:code?.scrollLeft||0,codeY:code?.scrollTop||0};
@@ -57,17 +90,27 @@ function saveLocation(){
  return [mode,selectedFile,selected,folderPath,captureScroll(),activeLine,activeRelationKey,title?{head:title.textContent,description:note?.textContent||''}:null];
 }
 function closeSidebar(){ $('#sidebar').classList.remove('open');$('#backdrop').classList.remove('open');$('#menu').setAttribute('aria-expanded','false'); }
-function openParents(id){const c=entities[id],f=files[c.file];const parts=f.path.split('/');let p='shopizer';expanded.add('f:'+p);for(const part of parts.slice(0,-1)){p+='/'+part;expanded.add('f:'+p);}expanded.add('file:'+c.file);let parent=c.parent;while(parent){expanded.add('co:'+parent);parent=entities[parent].parent;}}
+function openFileParents(fid){
+ const f=files[fid];if(!f)return;
+ let path='shopizer';expanded.add('f:'+path);
+ for(const part of f.path.split('/').slice(0,-1)){path+='/'+part;expanded.add('f:'+path);}
+ expanded.add('file:'+fid);
+}
+function openParents(id){
+ const c=entities[id];if(!c)return;
+ openFileParents(c.file);
+ let parent=c.parent;while(parent){expanded.add('co:'+parent);parent=entities[parent].parent;}
+}
 function syncNavigationUrl(){const target=mode==='company'&&entities[selected]?'#company-'+encodeURIComponent(entities[selected].no):(location.pathname||'')+(location.search||'');history.replaceState(null,'',target);}
-function navToFile(fid,track=true){if(!files[fid])return false;if(mode==='file'&&selectedFile===fid)return true;const before=captureScroll();if(track)navStack.push(saveLocation());resetSelection();selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);syncNavigationUrl();renderAll();closeSidebar();restoreScroll(before);return true;}
+function navToFile(fid,track=true){if(!files[fid])return false;if(mode==='file'&&selectedFile===fid)return true;const before=captureScroll();if(track)navStack.push(saveLocation());resetSelection();selectedFile=fid;selected=null;mode='file';openFileParents(fid);syncNavigationUrl();renderAll();closeSidebar();restoreScroll({...before,x:0,y:0},false);queueRevealCurrentTreeRow();return true;}
 function navToCompany(id,track=true){
   const c=entities[id];if(!c)return false;
-  if(mode==='company'&&selected===id){resetSelection();renderAll();return true;}
+  if(mode==='company'&&selected===id){resetSelection();openParents(id);renderAll();window.scrollTo({left:0,top:0,behavior:'instant'});queueRevealCurrentTreeRow();return true;}
   const before=captureScroll();if(track)navStack.push(saveLocation());
   selectedFile=c.file;selected=id;mode='company';resetSelection();
   openParents(id);$('#search').value='';$('#search-results').hidden=true;
   syncNavigationUrl();
-  renderAll();closeSidebar();restoreScroll(before);
+  renderAll();closeSidebar();restoreScroll({...before,x:0,y:0},false);queueRevealCurrentTreeRow();
   return true;
 }
 function navBack(){
@@ -75,11 +118,12 @@ function navBack(){
  const [m,f,s,p,where,line,relation,details]=navStack.pop();
  resetSelection();mode=m;selectedFile=f;selected=s;if(p)folderPath=p;
  if(mode==='company'&&entities[selected])openParents(selected);
+ if(mode==='file'&&files[selectedFile])openFileParents(selectedFile);
  syncNavigationUrl();renderAll();closeSidebar();
  if(mode==='company'&&line!==null&&Number.isFinite(line))
    requestAnimationFrame(()=>selectLine(line,false,relation,details));
- restoreScroll(where,true);updateBackButton();return true;
+ restoreScroll(where,true);queueRevealCurrentTreeRow();updateBackButton();return true;
 }
-function navToFolder(path){if(!path)return false;if(mode==='folder'&&folderPath===path)return true;const before=captureScroll();navStack.push(saveLocation());resetSelection();expanded.add('f:'+path);mode='folder';selected=null;folderPath=path;syncNavigationUrl();renderAll();closeSidebar();restoreScroll(before);return true;}
+function navToFolder(path){if(!path)return false;if(mode==='folder'&&folderPath===path)return true;const before=captureScroll();navStack.push(saveLocation());resetSelection();expanded.add('f:'+path);mode='folder';selected=null;folderPath=path;syncNavigationUrl();renderAll();closeSidebar();restoreScroll({...before,x:0,y:0},false);return true;}
 let folderPath='shopizer';
 function collectFolder(node,full,match){if(full===match)return node;for(const ch of node.children||[]){if(ch.file||ch.isResource)continue;const res=collectFolder(ch,full+'/'+ch.name,match);if(res)return res;}return null;}

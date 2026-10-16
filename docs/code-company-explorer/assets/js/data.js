@@ -88,6 +88,7 @@ async function loadRealCode(){
   document.querySelector('.side-bottom').innerHTML='<span>JAVA · SPRING BOOT</span><b>PINNED SHOPIZER</b>';
   document.title='Code Company | Shopizer · '+manifest.count+' Companies · '+tree.file_count+' Files';
   renderAll();
+  queueRevealCurrentTreeRow();
 }
 // Initial tree state: the real GitHub directory hierarchy stays intact.
 const expanded=new Set();

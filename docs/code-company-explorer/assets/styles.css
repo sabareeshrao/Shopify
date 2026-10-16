@@ -229,3 +229,13 @@ html::-webkit-scrollbar-corner,body::-webkit-scrollbar-corner,#app *::-webkit-sc
 .source-info-open{background:#142238;border:1px solid #335c91;color:var(--source-learning-blue);padding:7px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:750;margin-top:3px}
 .source-info-open:hover{color:var(--white);background:#1c3454}
 @media(max-width:760px){.file-info.source-info-box{padding:12px 13px;min-height:95px}}
+
+
+/* SOURCE-TAB-4-COLUMN ALIGNMENT
+   Shopizer Java uses literal tab characters. Render them as four columns,
+   like the reference GitHub code view, rather than browser-default 8.
+   Affects both full-file code and numbered-company code. Never rewrite source. */
+.code-body .code-row .src {
+  tab-size: 4;
+  -moz-tab-size: 4;
+}
