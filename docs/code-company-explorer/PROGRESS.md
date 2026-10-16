@@ -155,6 +155,33 @@ Each company has the complete unique question and a plain-English sequence reaso
 6. Update companies.json, index.html, and this tracker together; include a unique IQ-N question and a clear rationale for the company's place in the learning sequence.
 7. Preserve the existing questions/, tracking/, changes/, and curriculum documentation.
 
+## Modular UI and highlighting upgrade (16 companies)
+
+- **Approved visual design preserved.** Original CSS moved to `assets/styles.css`, with additional persistent tap-selection rules using existing black, blue, orange, green and white palette.
+- `index.html` is now a small static shell; JavaScript is split into nine ordered deferred scripts: `icons`, `data`, `tree`, `views`, `connections`, `highlight`, `navigation`, `events`, `app` under `assets/js/`.
+- Deliberately uses ordinary deferred JavaScript files sharing existing top-level state; no framework, npm build step, or GitHub Pages configuration change is necessary.
+- Removed earlier duplicate implementations of `getRelations()` and `edgeCard()`.
+- Connection-box selection, highlighted code row, and detail explanation now all update through `selectLine()` / `selectExternalCard()` using a single `activeRelationKey` and `activeLine`.
+- Outside-service boxes carry a stable relation key (`uses:outside-out-N` / `usedby:outside-in-N`), rather than treating mixed internal/external card positions as source indices.
+- Tapping a new box clears the old border and line; tapping a code line clears the box selection; opening another company resets stale selection.
+- `findLineInfo()` now considers mapped company calls, external suppliers, and external clients rather than accidentally carrying unrelated text forward.
+- Clicking internal company cards navigates to the target company; a related callsite outside its method range is described rather than pretending it belongs to the new method.
+- Numeric search, permanent `#company-N` URLs, previous/next, and mobile sidebar remain in place.
+
+### Verification
+
+- Simulated DOM integration audit (current pinned data): 16 of 16 companies render, all 41 external cards highlight the corresponding source line, update their explanation, and become the only selected card.
+- Verified no selected card or code-line highlight persists after switching companies; Company 7 switches from line 102 to line 105 with matching card details.
+- Company 6 retains valid internal navigations to Companies 8 and 9; numeric search and previous/next mapping remain available.
+- Independent browser test runner at `tests/index.html` opens the explorer in a responsive same-origin iframe and can rerun the full 16-company + external-card audit, including touch/click behavior in an actual browser.
+- **Limit:** The assistant verified GitHub commits and simulated DOM interactions; actual deployment/browser behavior must be checked using the browser test runner after GitHub Pages publishes the updated files.
+
+### Rules for future additions
+
+- Add new records only in `companies.json`, storing original source ranges, sequence reasons, and unique IQ interview questions.
+- Add snapshots under `sources/` as needed; the page loads all declared sources. Plan lazy source loading and paginated folder browsing as the repository scales to hundreds/thousands of files.
+- For each change run both source-range validation and the `tests/` browser interaction audit; never conflate learning order with runtime call order.
+
 ## GitHub Pages
 
 Set Settings → Pages → Build and deployment → Deploy from a branch; Branch = main, Folder = /docs.
