@@ -23,6 +23,11 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 9 | Create the CORS interceptor | `ShopApplicationConfiguration.corsFilter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 119–122 | 0 mapped | Verified |
 | 10 | Choose the default language | `ShopApplicationConfiguration.localeResolver()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 125–130 | 0 mapped | Verified |
 | 11 | Load translated messages | `ShopApplicationConfiguration.messageSource()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 132–144 | 0 mapped | Verified |
+| 12 | Provide message helper tools | `ShopApplicationConfiguration.messages()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 146–149 | 0 mapped | Verified |
+| 13 | Load shop settings from a file | `ShopizerPropertiesConfig.mapper()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopizerPropertiesConfig.java` | 12–17 | 0 mapped | Verified |
+| 14 | Run work in the background | `AsyncConfig.getAsyncExecutor()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java` | 19–22 | 0 mapped | Verified |
+| 15 | Handle uncaught background errors | `AsyncConfig.getAsyncUncaughtExceptionHandler()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java` | 24–27 | 0 mapped | Verified |
+| 16 | Read shop and language details from requests | `WebConfig.addArgumentResolvers()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/WebConfig.java` | 22–26 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -41,9 +46,31 @@ Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 | 9 | Open the actual Shopizer `CorsFilter` method called by Company 6. | IQ-9: Why Shopizer's `corsFilter()` is registered with `addInterceptor()` |
 | 10 | Configure session-based language resolution to support locale changes. | IQ-10: `SessionLocaleResolver` vs `AcceptHeaderLocaleResolver` |
 | 11 | Finish internationalization with UTF-8 resource bundles for translated messages. | IQ-11: Resource-bundle resolution and reloadable message sources |
+| 12 | Complete message infrastructure by creating the LabelUtils bean. | IQ-12: Spring @Bean names and utility beans |
+| 13 | Move from language resources to general configuration properties. | IQ-13: PropertiesFactoryBean and classpath resource loading |
+| 14 | Introduce asynchronous work after web configuration. | IQ-14: Fixed thread-pool capacity, queuing, and lifecycle |
+| 15 | Add background failure handling after executor setup. | IQ-15: Exception handling for void versus future-returning @Async methods |
+| 16 | Connect MVC requests to shop/language argument resolvers. | IQ-16: Custom argument resolver selection and precedence |
 
 Each company has the complete unique question and a plain-English sequence reason in `companies.json`, displayed within the HTML explorer. This numbering is an **instructional discovery path**, not a claim that Spring calls the methods in company number order.
 
+### Companies 12–16: verified source
+
+- **12:** `ShopApplicationConfiguration.messages()` (lines 146–149) returns a `LabelUtils` Spring bean; sequence follows the message source.
+- **13:** `ShopizerPropertiesConfig.mapper()` (lines 12–17) registers `shopizer-properties`, backed by `shopizer-properties.properties`.
+- **14:** `AsyncConfig.getAsyncExecutor()` (lines 19–22) creates a fixed pool of five worker threads.
+- **15:** `AsyncConfig.getAsyncUncaughtExceptionHandler()` (lines 24–27) returns `SimpleAsyncUncaughtExceptionHandler`.
+- **16:** `WebConfig.addArgumentResolvers()` (lines 22–26) registers Shopizer's merchant-store and language argument resolvers.
+- All five have distinct sequence explanations and questions IQ-12 through IQ-16 in `companies.json`.
+- The original Shopizer reference is pinned to `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`.
+
+### Search and navigation repair
+
+- Company 6 exists as `addInterceptors()` in `ShopApplicationConfiguration.java` lines 77–98; it is not missing from the source registry.
+- Numeric search results now have a dedicated click handler instead of relying only on the general document click listener.
+- Opening a company updates the address fragment to `#company-6` (or the appropriate company number), enabling direct links and preserving selection on refresh.
+- A `hashchange` listener responds to manually changed links; the search still handles Enter and keyboard arrows.
+- Navigating to a company scrolls to the top rather than leaving the user at the prior company’s scroll position.
 ### Companies 7–11: verified source and connections
 
 - **7** `byteArrayHttpMessageConverter()` lines 100–108 — supported response types: JPEG, GIF, PNG, and octet-stream; creates `ByteArrayHttpMessageConverter`.
@@ -112,7 +139,7 @@ Each company has the complete unique question and a plain-English sequence reaso
 
 ## Incremental-build rules
 
-1. Add only one new company or verified subsidiary per prompt.
+1. Add the number of verified companies requested by the user, ordinarily one at a time unless they explicitly request a batch.
 2. Before assigning an ID, inspect the actual Java source at the pinned commit.
 3. Keep company numbers stable. Use dotted subsidiary numbers only for confirmed code relationships.
 4. Record exact file path, method, line range, evidence, and caller/supplier distinctions.
