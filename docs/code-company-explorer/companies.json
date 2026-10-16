@@ -5,7 +5,7 @@
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 2,
+  "count": 3,
   "companies": [
     {
       "id": "1",
@@ -83,6 +83,56 @@
       "subsidiary_ids": [],
       "status": "verified_source",
       "order": 2
+    },
+    {
+      "id": "3",
+      "name": "Set up request filtering",
+      "method": "croseSiteFilter()",
+      "type": "Spring Boot bean for XSS servlet filter registration",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "start_line": 54,
+      "method_start_line": 55,
+      "end_line": 65,
+      "source_line_count": 151,
+      "plain_english": "Registers a request filter for the shop, API, and customer URLs. It creates an XssFilter and tells Spring Boot which web requests should pass through it.",
+      "inbound": [
+        {
+          "name": "Spring creates the filter bean",
+          "kind": "external_framework_bean",
+          "code_line": 54,
+          "company_id": null,
+          "description": "The @Bean annotation lets Spring call this method while configuring the application."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build filter registration",
+          "kind": "external_framework_class",
+          "code_line": 57,
+          "company_id": null,
+          "description": "Creates a FilterRegistrationBean to connect the filter to web requests."
+        },
+        {
+          "name": "Shopizer XssFilter",
+          "kind": "unmapped_internal_class",
+          "code_line": 59,
+          "company_id": null,
+          "description": "Creates a real Shopizer XssFilter; its implementation has not been assigned a company number yet."
+        },
+        {
+          "name": "Choose protected URL patterns",
+          "kind": "external_framework_method",
+          "code_line": 60,
+          "company_id": null,
+          "description": "Registers /shop/**, /api/**, and /customer/** across source lines 60–62."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "order": 3
     }
   ],
   "numbering_policy": "IDs are permanent. Assign dotted subsidiary numbers only to verified parent/child methods; event-driven steps and external APIs are links, not automatic subsidiaries."
