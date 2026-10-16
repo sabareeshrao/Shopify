@@ -270,3 +270,16 @@ Before this batch, verified Companies 1–36 against the pinned source: 36/36 va
 ### Previous-company review correction after Batch 37–56
 
 Company 24 previously duplicated its verified Company 23 caller as an external card pointing to source line 69, outside Company 24's method (87–95). The inbound record is now classified as an internal company link to Company 23, and the graph derives that caller from Company 23's verified outbound edge. No source line or permanent company ID changed. The browser regression runner now distinguishes outside-method callsites from highlightable in-method lines.
+
+## Mandatory pre-batch audit (standing rule)
+
+Before **every future batch**, inspect every previously registered company and block the new batch if any audit fails:
+
+1. Check permanent company IDs and interview IDs for uniqueness and gaps.
+2. Match each existing company's Java file, pinned blob SHA, method and line range to its source snapshot.
+3. Validate internal client/supplier links; distinguish direct method calls, Spring bean wiring, and framework callbacks. Do not misrepresent a registration as a method invocation.
+4. Run the existing batch's company-page, numeric search, previous/next, detail-panel, and connection-card highlighting regression tests. Check stale-selection resets.
+5. Correct and document any previous-company defect **before** publishing new company IDs.
+6. After adding the requested batch, rerun all audits against the full updated registry; commit source snapshots, registry, progress and test updates atomically.
+
+This audit gate was explicitly requested after Companies 1–36 and applies to Company 57 onward.
