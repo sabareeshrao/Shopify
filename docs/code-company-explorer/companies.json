@@ -5728,7 +5728,7 @@
       "method_start_line": 29,
       "end_line": 31,
       "plain_english": "Returns the locally stored UserDetailsService field injected into JWTAdminAuthenticationProvider.",
-      "sequence_reason": "After finishing customer principal data, return to admin authentication wiring: inspect the identity service read by Company 61's provider logic.",
+      "sequence_reason": "After finishing customer principal data, return to admin authentication wiring: inspect the identity service read by Company 54's administrator authentication logic.",
       "inbound": [],
       "outbound": [
         {
