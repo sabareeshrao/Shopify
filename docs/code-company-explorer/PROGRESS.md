@@ -513,3 +513,10 @@ Audit before batch: 116/116 source ranges/declarations matched stored snapshots 
 
 ### Quality limits
 Browser regression file now targets 136 records, but running it inside GitHub Pages on a physical browser must still be confirmed. No live mobile/desktop pass is claimed based on structural checks alone.
+
+## IntelliJ-inspired dense Project panel
+- User chose aggressive near-clone. Retained all 136 company IDs, real Java paths, interview questions, graph and main explorer UI.
+- Replaced large sidebar header and rounded repository card with Project toolbar; reduced hierarchy row height to 23px (25px on mobile), typography to regular 12px, indentation to 14px, and flat blue selection.
+- Original vector folder, Java file and method icons (not copied JetBrains assets). Compact Middle Packages groups unary package chains below src/main/java while preserving their actual source paths and folder IDs.
+- Toolbar reveals selected company, collapses/expands tree, resets divider. Keyboard tree arrows and Home/End supported. Resizable default 296px and separate v2 persistence key.
+- Expanded browser test checks new Project controls and 296px reset. Live screenshots on deployment remain to be verified.

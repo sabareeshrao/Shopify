@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ide-tree-1#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ide-compact-2#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -133,6 +133,9 @@ async function audit(){
  const gutter=doc.querySelector('#current-code .code-row .ln');
  assert(frame.contentWindow.getComputedStyle(gutter)?.position==='sticky','Code gutter should be sticky');
  assert(!doc.querySelector('#tree-pan-left')&&!doc.querySelector('#tree-pan-right'),'Old horizontal pan controls must be removed');
+ assert(doc.querySelector('.ide-project-title')?.textContent.includes('Project'),'Compact Project header missing');
+ assert(doc.querySelector('#project-locate')&&doc.querySelector('#project-collapse')&&doc.querySelector('#project-expand')&&doc.querySelector('#project-reset-width'),'Functional toolbar controls missing');
+ assert(doc.querySelector('.tree-canvas .ide-node-icon'),'Folder and Java vector icons missing');
  const resizer=doc.getElementById('sidebar-resizer');
  assert(resizer&&resizer.getAttribute('role')==='separator','Accessible IDE sidebar resize separator missing');
  assert(frame.contentWindow.getComputedStyle(resizer).display==='none','Resizable separator should be hidden in mobile drawer');
@@ -147,7 +150,7 @@ async function audit(){
  assert(wider>oldPanel,'ArrowRight must widen the sidebar, not navigate companies');
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 7'),'Resizing must not change the selected company');
  resizer.dispatchEvent(new frame.contentWindow.MouseEvent('dblclick',{bubbles:true}));
- assert(parseInt(rootStyle.getPropertyValue('--sidebar-width'),10)===318,'Double-click should reset sidebar to original 318px');
+ assert(parseInt(rootStyle.getPropertyValue('--sidebar-width'),10)===296,'Double-click should reset sidebar to compact 296px');
  frame.style.width=prevWidth;frame.style.maxWidth=prevMax;await delay(150);
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('#wires'))?.display==='none','Mobile cables should be hidden in stacked layout');
  log('All 136 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');

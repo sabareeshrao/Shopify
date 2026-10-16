@@ -1,18 +1,39 @@
-function renderNodeIcon(kind,opened){return icon(kind==='folder'?(opened?'folderOpen':'folder'):kind==='file'?'file':kind==='branch'?'branch':'building');}
+function renderNodeIcon(kind){
+ if(kind==='folder'||kind==='package')return '<span class="ide-node-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5.5c0-.8.6-1.5 1.5-1.5H8l1.7 2h6.8c.9 0 1.5.7 1.5 1.5v8c0 .9-.6 1.5-1.5 1.5h-13c-.9 0-1.5-.6-1.5-1.5z" fill="#9aa3b0" opacity=".85"/><path d="M3 7.5H17" stroke="#dae0e7" stroke-width=".8"/></svg></span>';
+ if(kind==='file')return '<span class="ide-node-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h7.5l3.2 3.3v11.4H5z" stroke="#abb2c0" stroke-width="1.2" fill="#292e35"/><path d="M12.4 2.9v3h3" stroke="#abb2c0" fill="none"/><text x="7.1" y="14" font-size="8.5" font-weight="700" fill="#ed9c74">J</text></svg></span>';
+ return '<span class="ide-method-symbol '+(kind==='branch'?'ide-subsidiary-symbol':'')+'" aria-hidden="true">m</span>';
+}
+function ideFolder(node,path){
+ let current=node,label=node.name,full=path?path+'/'+node.name:node.name;
+ const isPackage=full.includes('/src/main/java/');
+ while(isPackage&&current.children?.length===1){
+   const c=current.children[0];
+   if(c.file||c.isResource||!Array.isArray(c.children))break;
+   full+='/'+c.name;label+='.'+c.name;current=c;
+ }
+ return {current,label,full,isPackage};
+}
 function treeContent(){
- const rows=[];
- function addFolder(node,path,depth){const full=path?path+'/'+node.name:node.name,key='f:'+full,opened=expanded.has(key);const count=node.children?.length||0;
- rows.push(`<button class="tree-row folder" data-folder="${safe(key)}" style="padding-left:${8+depth*16}px" title="${safe(full)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${renderNodeIcon('folder',opened)}<span class="tree-text">${safe(node.name)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
- if(!opened)return;
- for(const child of node.children||[]){if(child.file)addFile(child.file,depth+1);else if(child.isResource)rows.push(`<div class="tree-row file" style="padding-left:${8+(depth+1)*16}px;opacity:.6"><span class="tree-chevron spacer"></span>${icon('file')}<span class="tree-text">${safe(child.name)}</span></div>`);else addFolder(child,full,depth+1);}
+ const rows=[],pad=d=>4+d*14;
+ function addFolder(node,path,depth){
+   const f=ideFolder(node,path),key='f:'+f.full,open=expanded.has(key);
+   rows.push(`<button type="button" class="tree-row folder${f.isPackage?' ide-package':''}" data-folder="${safe(key)}" data-depth="${depth}" style="padding-left:${pad(depth)}px" title="${safe(f.full)}" aria-level="${depth+1}" aria-expanded="${open}"><span class="tree-chevron">${icon(open?'down':'chevron')}</span>${renderNodeIcon(f.isPackage?'package':'folder')}<span class="tree-text">${safe(f.label)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
+   if(!open)return;
+   for(const ch of f.current.children||[]){
+     if(ch.file)addFile(ch.file,depth+1);
+     else if(ch.isResource)rows.push(`<div class="tree-row file" style="padding-left:${pad(depth+1)}px"><span class="tree-chevron spacer"></span>${renderNodeIcon('file')}<span class="tree-text">${safe(ch.name)}</span></div>`);
+     else addFolder(ch,f.full,depth+1);
+   }
  }
- function addFile(fid,depth){const f=files[fid],key='file:'+fid,opened=expanded.has(key),act=selectedFile===fid;
- rows.push(`<button class="tree-row file ${act?'is-active':''}" data-file="${fid}" style="padding-left:${8+depth*16}px" title="${safe(f.path)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${icon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
- if(opened){for(const id of f.companyIds)addEntity(id,depth+1);}
+ function addFile(fid,depth){
+   const f=files[fid],key='file:'+fid,open=expanded.has(key),active=mode==='file'&&selectedFile===fid;
+   rows.push(`<button type="button" class="tree-row file ${active?'is-active':''}" data-file="${fid}" data-depth="${depth}" aria-level="${depth+1}" style="padding-left:${pad(depth)}px" title="${safe(f.path)}" aria-expanded="${open}"><span class="tree-chevron">${icon(open?'down':'chevron')}</span>${renderNodeIcon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
+   if(open)for(const id of f.companyIds)addEntity(id,depth+1);
  }
- function addEntity(id,depth){const c=entities[id],isSub=!!c.parent,opened=expanded.has('co:'+id),hasKids=!!c.children?.length;
- rows.push(`<button class="tree-row comp ${isSub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" style="padding-left:${8+depth*16}px" title="Company ${safe(c.no)} — ${safe(c.desc)}" ${hasKids?`aria-expanded="${opened}"`:''}><span class="tree-chevron ${hasKids?'':'spacer'}">${hasKids?icon(opened?'down':'chevron'):icon('chevron')}</span><span class="company-key">${renderNodeIcon(isSub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
- if(opened)for(const sub of c.children||[])addEntity(sub,depth+1);
+ function addEntity(id,depth){
+   const c=entities[id],sub=!!c.parent,open=expanded.has('co:'+id),children=!!c.children?.length;
+   rows.push(`<button type="button" class="tree-row comp ${sub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" data-depth="${depth}" aria-level="${depth+1}" style="padding-left:${pad(depth)}px" title="Company ${safe(c.no)} — ${safe(c.name)}" ${children?`aria-expanded="${open}"`:''}><span class="tree-chevron ${children?'':'spacer'}">${children?icon(open?'down':'chevron'):''}</span><span class="company-key">${renderNodeIcon(sub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
+   if(open)for(const child of c.children||[])addEntity(child,depth+1);
  }
  addFolder(folderData,'',0);return rows.join('');
 }
