@@ -49,7 +49,7 @@ function syncNavigationUrl(){const target=mode==='company'&&entities[selected]?'
 function navToFile(fid,track=true){if(!files[fid])return false;if(mode==='file'&&selectedFile===fid)return true;const before=captureScroll();if(track)navStack.push(saveLocation());resetSelection();selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);syncNavigationUrl();renderAll();closeSidebar();restoreScroll(before);return true;}
 function navToCompany(id,track=true){
   const c=entities[id];if(!c)return false;
-  if(mode==='company'&&selected===id)return true;
+  if(mode==='company'&&selected===id){resetSelection();renderAll();return true;}
   const before=captureScroll();if(track)navStack.push(saveLocation());
   selectedFile=c.file;selected=id;mode='company';resetSelection();
   openParents(id);$('#search').value='';$('#search-results').hidden=true;
