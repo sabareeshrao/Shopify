@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06090d">
+<title>Code Company | Shopizer</title>
+<style>
+:root{color-scheme:dark;--black:#000;--bg:#06090d;--nav:#0d131b;--panel:#121b26;--panel2:#182431;--white:#fff;--blue:#57a4ff;--orange:#ff9c45;--green:#35d58b;--muted:rgba(255,255,255,.57)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font:14px/1.52 system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer;color:inherit}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}#app{display:grid;grid-template-columns:310px minmax(0,1fr);min-height:100vh}
+.sidebar{background:var(--nav);border-right:3px solid var(--black);position:sticky;top:0;height:100vh;overflow-y:auto;padding:20px 13px 25px;scrollbar-color:var(--panel2) var(--nav)}
+.brand{display:flex;align-items:center;gap:11px;padding:4px 9px 20px;border-bottom:2px solid var(--black)}.logo{background:var(--blue);color:var(--black);font-weight:900;border:2px solid var(--black);width:40px;height:40px;display:grid;place-items:center;border-radius:10px;font-size:17px}.brand strong{display:block;letter-spacing:.6px}.brand small{color:var(--muted);font-size:10px;letter-spacing:1.2px}
+.side-label{font-size:10px;letter-spacing:1.4px;color:var(--muted);font-weight:800;text-transform:uppercase;margin:20px 8px 9px}.repo{border:2px solid var(--black);border-radius:12px;background:var(--panel);padding:13px}.repo strong{font-size:14px}.sub{display:block;color:var(--muted);font-size:11px;margin-top:4px}.green{color:var(--green)}.blue{color:var(--blue)}.orange{color:var(--orange)}
+.search{background:var(--bg);border:2px solid var(--black);width:100%;border-radius:9px;color:var(--white);padding:11px 12px;outline:none}.results{margin-top:5px}.results:empty{display:none}.hit{display:block;width:100%;background:var(--panel);border:1px solid var(--black);border-radius:7px;text-align:left;padding:9px 11px;margin-top:5px;font-size:12px}.hit:hover{background:var(--panel2)}
+.tree{padding:2px 0 5px;font-size:12px}.tree details{margin:0}.tree summary,.tree .file,.tree .company-link,.tree .unindexed{min-height:35px;display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 7px;border-radius:8px;word-break:break-word}.tree summary:hover,.tree .file:hover,.tree .company-link:hover{background:var(--panel)}.tree summary{list-style:none}.tree summary::-webkit-details-marker{display:none}.tree summary:before{content:"▸";color:var(--muted);font-size:10px}.tree details[open]>summary:before{content:"▾"}.tree .children{border-left:1px solid var(--black);margin-left:15px;padding-left:8px}.tree .ico{color:var(--blue);font-size:15px;flex-shrink:0}.tree .file{border:0;background:transparent;width:100%;text-align:left}.tree .file.active,.tree .company-link.active{background:var(--panel2);color:var(--white);box-shadow:inset 3px 0 var(--green)}.tree .company-link{border:0;width:100%;background:transparent;text-align:left}.tree .num{display:grid;place-items:center;background:var(--green);color:var(--black);border:1px solid var(--black);font-size:11px;font-weight:900;min-width:24px;height:24px;border-radius:6px}.tree .unindexed{color:var(--muted)}.tree .unindexed .ico{color:var(--muted)}.tree a.unindexed:hover{text-decoration:none;background:var(--panel)}.tree .meta{font-size:10px;margin-left:auto;color:var(--muted)}
+.stage{min-width:0}.topbar{background:var(--bg);border-bottom:2px solid var(--black);display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:11px 28px;position:sticky;top:0;z-index:5}.crumbs{font-size:12px;color:var(--muted);overflow-wrap:anywhere}.crumbs strong{color:var(--white)}.toolbar{display:flex;align-items:center;gap:8px;flex-shrink:0}.linkbtn{background:var(--panel);border:2px solid var(--black);padding:8px 11px;border-radius:8px;font-size:11px;font-weight:700}.linkbtn:hover{background:var(--panel2);text-decoration:none}.hamburger{display:none}.content{padding:28px clamp(15px,3vw,38px) 55px;max-width:1600px;margin:0 auto}.eyebrow{font-size:11px;letter-spacing:1.3px;font-weight:800;color:var(--blue);text-transform:uppercase}.title{font-size:clamp(27px,3.2vw,40px);letter-spacing:-1.1px;line-height:1.15;margin:7px 0 12px}.lead{font-size:14px;color:var(--muted);max-width:800px;margin:0}.marks{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.mark{border:1px solid var(--black);border-radius:8px;background:var(--panel);padding:6px 9px;font-size:11px;font-weight:700}.mark span{color:var(--orange)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0}.metric{border:2px solid var(--black);background:var(--panel);padding:15px;border-radius:12px}.metric b{font-size:27px;line-height:1}.metric small{display:block;color:var(--muted);margin-top:6px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:25px 0 12px}.section-head h2{font-size:16px;margin:0}.section-head small{color:var(--muted);font-size:11px}.map{border:2px solid var(--black);background:var(--nav);border-radius:16px;padding:22px 18px;position:relative;overflow:hidden}.gridmap{position:relative;display:grid;grid-template-columns:minmax(130px,1fr) minmax(280px,1.65fr) minmax(130px,1fr);align-items:center;gap:32px;z-index:1}.wire-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.map-unit{width:100%;border:2px solid var(--black);background:var(--panel);border-radius:14px;padding:15px;position:relative;z-index:1;text-align:left}.map-unit button{width:100%;background:transparent;border:0;text-align:left;padding:0}.map-unit .top{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);font-weight:800}.map-unit h3{margin:8px 0 6px;font-size:15px;overflow-wrap:anywhere}.map-unit p{margin:0;font-size:12px;color:var(--muted)}.map-unit small{display:block;color:var(--orange);margin-top:12px;font-size:11px}.map-unit.middle{border:2px solid var(--green);background:var(--panel2);padding:22px}.map-unit.middle .top{color:var(--green)}.map-unit.middle h3{font-size:clamp(19px,2.2vw,26px)}.map-unit.outside{cursor:pointer}.map-unit.outside:hover,.map-unit.outside.chosen{box-shadow:0 0 0 2px var(--blue);background:var(--panel2)}.map-unit.right:hover,.map-unit.right.chosen{box-shadow:0 0 0 2px var(--orange)}.map-unit .method{color:var(--white);font-size:11px;font-family:ui-monospace,Consolas,monospace;word-break:break-all}
+.info{margin-top:13px;border:2px solid var(--black);border-radius:12px;padding:13px 15px;background:var(--panel);color:var(--muted);font-size:12px;min-height:65px}.info b{color:var(--white)}.code-card{border:2px solid var(--black);border-radius:13px;background:var(--nav);overflow:hidden}.code-head{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:13px 15px;background:var(--panel);border-bottom:2px solid var(--black)}.code-head b{font-size:12px}.code-head span{font-size:11px;color:var(--muted);overflow-wrap:anywhere;text-align:right}.code-scroll{overflow-x:auto;overflow-y:auto;max-height:460px}.code-inner{padding:13px 0;min-width:max-content;font:12px/1.95 ui-monospace,SFMono-Regular,Consolas,monospace}.code-line{display:flex;white-space:pre;padding:0 16px 0 0;border-left:3px solid transparent;cursor:pointer}.code-line:hover{background:var(--panel)}.code-line.company-range{background:rgba(53,213,139,.10)}.code-line.related{background:rgba(255,156,69,.13);border-left-color:var(--orange)}.code-line.line-picked{outline:1px solid var(--blue);outline-offset:-1px}.ln{min-width:53px;text-align:right;padding-right:15px;margin-right:14px;border-right:1px solid var(--black);color:var(--muted);user-select:none}.code-line.related .ln{color:var(--orange)}.code-line.company-range .ln{color:var(--green)}.code-line .code-text{color:var(--white)}.comment{color:var(--green)}.source-foot{border-top:2px solid var(--black);padding:12px 15px;display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;color:var(--muted);font-size:11px}.source-foot a{color:var(--blue)}.file-directory{border:2px solid var(--black);border-radius:14px;background:var(--nav);overflow:hidden;margin:24px 0}.file-row{display:flex;align-items:center;gap:14px;background:var(--panel);border:0;border-bottom:2px solid var(--black);text-align:left;width:100%;padding:17px 19px}.file-row:hover{background:var(--panel2)}.file-row b{font-size:13px}.file-row small{color:var(--muted);display:block;margin-top:3px}.big-number{font-size:18px;font-weight:900;color:var(--black);background:var(--green);border:2px solid var(--black);border-radius:9px;min-width:42px;height:42px;display:grid;place-items:center}.file-foot{padding:12px 17px;color:var(--muted);font-size:11px}
+.page-footer{color:var(--muted);font-size:11px;margin-top:22px}.page-footer a{color:var(--blue)}
+.screen{display:none}.screen.shown{display:block}.backdrop{display:none}
+@media(max-width:1100px){#app{grid-template-columns:255px minmax(0,1fr)}.gridmap{gap:15px;grid-template-columns:minmax(110px,1fr) minmax(220px,1.7fr) minmax(110px,1fr)}.map{padding:18px 12px}.map-unit{padding:12px}.content{padding:24px 19px 40px}}
+@media(max-width:850px){#app{display:block}.sidebar{position:fixed;width:min(315px,87vw);top:0;bottom:0;left:0;height:100dvh;z-index:20;transform:translateX(-105%);transition:transform .2s ease;box-shadow:6px 0 25px var(--black)}body.sidebar-open .sidebar{transform:translateX(0)}body.sidebar-open .backdrop{display:block;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:19}.hamburger{display:block}.topbar{padding:10px 14px;min-height:58px}.content{padding:22px 15px 40px}.gridmap{display:flex;flex-direction:column;gap:15px}.gridmap .middle{order:0}.gridmap .outside.left{order:1}.gridmap .outside.right{order:2}.map-unit{width:100%}.wire-layer{display:none}.map{padding:13px}.crumbs{font-size:11px}.toolbar .desktop{display:none}}
+@media(max-width:430px){.title{font-size:27px}.metric{padding:12px}.metric b{font-size:22px}.map-unit.middle{padding:17px}.code-head{flex-wrap:wrap}.code-head span{text-align:left}}
+</style>
+</head>
+<body>
+<div id="app">
+<aside class="sidebar" id="sidebar" aria-label="Shopizer file tree">
+  <div class="brand"><span class="logo">C/C</span><div><strong>CODE COMPANY</strong><small>SHOPIZER SOURCE EXPLORER</small></div></div>
+  <div class="side-label">Repository</div>
+  <div class="repo"><strong>◈ shopizer-ecommerce / shopizer</strong><span class="sub"><span class="green">●</span> Source snapshot: 6a4a0a6</span><span class="sub">Real Java files · 1 company mapped</span></div>
+  <div class="side-label">Find a file or company</div>
+  <input class="search" id="search" type="search" autocomplete="off" placeholder="Search…" aria-label="Find file or company"><div id="results" class="results"></div>
+  <div class="side-label">Repository folders</div>
+  <nav class="tree" aria-label="Source hierarchy">
+  <details open><summary><span class="ico">▣</span><strong>shopizer/</strong></summary><div class="children">
+    <a class="unindexed" href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-core-model" target="_blank" rel="noopener"><span class="ico">▸</span>sm-core-model/ <span class="meta">not mapped</span></a>
+    <a class="unindexed" href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-core-modules" target="_blank" rel="noopener"><span class="ico">▸</span>sm-core-modules/ <span class="meta">not mapped</span></a>
+    <a class="unindexed" href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-core" target="_blank" rel="noopener"><span class="ico">▸</span>sm-core/ <span class="meta">not mapped</span></a>
+    <a class="unindexed" href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-shop-model" target="_blank" rel="noopener"><span class="ico">▸</span>sm-shop-model/ <span class="meta">not mapped</span></a>
+    <details open><summary><span class="ico">▣</span><strong>sm-shop/</strong></summary><div class="children">
+    <details open><summary><span class="ico">▣</span>src/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>main/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>java/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>com/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>salesmanager/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>shop/</summary><div class="children">
+    <details open><summary><span class="ico">▣</span>application/</summary><div class="children">
+       <button class="file active" type="button" data-view="file"><span class="ico">◇</span>ShopApplication.java</button>
+       <div class="children"><button class="company-link" type="button" data-view="company"><span class="num">1</span><span>Company 1 · main()</span></button></div>
+       <a class="unindexed" href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-shop/src/main/java/com/salesmanager/shop/application/config" target="_blank" rel="noopener"><span class="ico">▸</span>config/ <span class="meta">not mapped</span></a>
+    </div></details>
+    </div></details></div></details></div></details></div></details></div></details></div></details></div></details>
+  </div></details>
+  </nav>
+  <div class="side-label">Progress</div>
+  <div class="repo"><strong>01 <span class="green">company completed</span></strong><span class="sub">Subsidiaries: 0</span><span class="sub">Remaining code: not yet analyzed</span></div>
+</aside>
+<div class="backdrop" id="backdrop"></div>
+<main class="stage">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:10px;min-width:0">
+      <button id="mobile-menu" class="linkbtn hamburger" type="button" aria-label="Open file tree" aria-expanded="false">☰</button>
+      <div class="crumbs"><span class="blue">shopizer</span> / sm-shop / application / <strong id="breadcrumb">ShopApplication.java</strong></div>
+    </div>
+    <div class="toolbar"><a class="linkbtn desktop" href="https://github.com/sabareeshrao/Shopify" target="_blank" rel="noopener">Our GitHub ↗</a><a class="linkbtn" id="github-source" target="_blank" rel="noopener" href="https://github.com/shopizer-ecommerce/shopizer/blob/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java#L11-L13">Source ↗</a></div>
+  </header>
+  <div class="content">
+    <section id="file-screen" class="screen shown" aria-label="File companies">
+      <div class="eyebrow">Java file · 1 company found</div>
+      <h1 class="title">ShopApplication.java</h1>
+      <p class="lead">The file that starts the Shopizer application. One working company is mapped so far.</p>
+      <div class="marks"><span class="mark">Module: <span>sm-shop</span></span><span class="mark">Methods mapped: <span>1</span></span><span class="mark">Subsidiaries mapped: <span>0</span></span></div>
+      <section class="file-directory" aria-label="Companies in this Java file">
+        <button type="button" class="file-row" data-view="company"><span class="big-number">1</span><span><b>Company 1 — Start the shop</b><small>main(String[] args) · lines 11–13</small></span><span style="margin-left:auto;color:var(--green)">↗</span></button>
+        <div class="file-foot">Only companies confirmed from this file are numbered. The rest of the repository is still being mapped.</div>
+      </section>
+      <div class="section-head"><h2>File contents</h2><small>15 source lines</small></div>
+      <section class="code-card" aria-label="Java source file"><div class="code-head"><b>◇ ShopApplication.java</b><span>sm-shop / src / main / java / … / application</span></div><div id="file-code" class="code-scroll"></div><div class="source-foot"><span>Complete source of this file, pinned to a Shopizer commit.</span><a href="https://github.com/shopizer-ecommerce/shopizer/blob/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java" target="_blank" rel="noopener">See original ↗</a></div></section>
+    </section>
+    <section id="company-screen" class="screen" aria-label="Company details">
+      <div class="eyebrow">Company 1 · Shopizer startup</div>
+      <h1 class="title">Start the shop</h1>
+      <p class="lead">This small Java method switches on the application and asks Spring Boot to start everything.</p>
+      <div class="marks"><span class="mark">Company: <span>1</span></span><span class="mark">Real method: <span>main(String[] args)</span></span><span class="mark">File: <span>ShopApplication.java</span></span><span class="mark">Lines: <span>11–13</span></span></div>
+      <div class="cards"><div class="metric"><b class="green">1</b><small>Company being explored</small></div><div class="metric"><b class="blue">1</b><small>Outside starter (Java launcher)</small></div><div class="metric"><b class="orange">1</b><small>Outside service used (Spring Boot)</small></div></div>
+      <div class="section-head"><h2>Company relationships</h2><small>Real code; external systems are not numbered companies</small></div>
+      <section class="map" id="map" aria-label="Company relationship chart">
+        <svg class="wire-layer" id="wires" aria-hidden="true"></svg>
+        <div class="gridmap">
+          <div class="map-unit outside left" id="incoming" tabindex="0" role="button" aria-label="Inspect Java launcher"><div class="top blue">Who starts it?</div><h3>Java launcher</h3><p>Java calls this method when the program starts.</p><small>Outside this repository</small></div>
+          <div class="map-unit middle" id="center"><div class="top">Current company · 1</div><h3>main(String[] args)</h3><p>Starts the Shopizer application</p><small class="method">ShopApplication.java · 11–13</small></div>
+          <div class="map-unit outside right" id="outgoing" tabindex="0" role="button" aria-label="Inspect Spring Boot startup"><div class="top orange">What does it use?</div><h3>Spring Boot startup</h3><p>Starts the application framework.</p><small class="method">SpringApplication.run() · line 12</small></div>
+        </div>
+      </section>
+      <div class="info" id="connection-note" aria-live="polite"><b>Company 1:</b> the Java launcher starts this company, which calls Spring Boot on line 12.</div>
+      <div class="section-head"><h2>Actual Java code</h2><small>Company 1 spans lines 11–13</small></div>
+      <section class="code-card" aria-label="Source code with numbered lines">
+        <div class="code-head"><b>◇ ShopApplication.java</b><span>sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java</span></div>
+        <div id="company-code" class="code-scroll"></div>
+        <div class="source-foot"><span>Green = company lines · Orange = the Spring Boot call</span><a href="https://github.com/shopizer-ecommerce/shopizer/blob/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java#L11-L13" target="_blank" rel="noopener">Open lines 11–13 on GitHub ↗</a></div>
+      </section>
+      <div class="section-head"><h2>Subsidiaries</h2><small>0 mapped</small></div>
+      <div class="info">No subsidiary has been assigned a number yet. Future subsidiaries will appear as Company 1.1, 1.2, and so on only when their real code relationships are verified.</div>
+    </section>
+    <footer class="page-footer">Source: <a href="https://github.com/shopizer-ecommerce/shopizer/tree/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee" target="_blank" rel="noopener">shopizer-ecommerce/shopizer</a> · pinned commit 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee · 1 real company mapped</footer>
+  </div>
+</main>
+</div>
+<script>
+"use strict";
+const filePath="sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java";
+const sourceLines=[
+"package com.salesmanager.shop.application;",
+"",
+"import org.springframework.boot.SpringApplication;",
+"import org.springframework.boot.autoconfigure.SpringBootApplication;",
+"import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;",
+"",
+"",
+"@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })",
+"public class ShopApplication {",
+"",
+"    public static void main(String[] args) {",
+"        SpringApplication.run(ShopApplication.class, args);",
+"    }",
+"",
+"}"
+];
+let view="file";
+function createCode(target){
+  const container=document.getElementById(target);
+  const inner=document.createElement("div");inner.className="code-inner";
+  sourceLines.forEach(function(line,i){
+    const no=i+1;
+    const row=document.createElement("div");row.className="code-line";
+    if(no>=11&&no<=13)row.classList.add("company-range");
+    if(no===12)row.classList.add("related");
+    row.dataset.line=String(no);
+    const number=document.createElement("span");number.className="ln";number.textContent=String(no);
+    const contents=document.createElement("span");contents.className="code-text";contents.textContent=line||" ";
+    row.append(number,contents);
+    row.addEventListener("click",function(){
+      document.querySelectorAll(".line-picked").forEach(function(x){x.classList.remove("line-picked")});
+      document.querySelectorAll('.code-line[data-line="'+no+'"]').forEach(function(x){x.classList.add("line-picked")});
+      const note=document.getElementById("connection-note");
+      if(view==="company"){note.textContent="Line "+no+": "+(line.trim()||"(blank line)")};
+    });
+    inner.appendChild(row);
+  });
+  container.appendChild(inner);
+}
+createCode("file-code");createCode("company-code");
+function closeSidebar(){document.body.classList.remove("sidebar-open");document.getElementById("mobile-menu").setAttribute("aria-expanded","false")}
+function changeView(next){
+  view=next==="company"?"company":"file";
+  document.getElementById("file-screen").classList.toggle("shown",view==="file");
+  document.getElementById("company-screen").classList.toggle("shown",view==="company");
+  document.querySelectorAll("[data-view]").forEach(function(b){b.classList.toggle("active",b.dataset.view===view)});
+  document.getElementById("breadcrumb").textContent=view==="file"?"ShopApplication.java":"Company 1 / main()";
+  document.getElementById("github-source").href="https://github.com/shopizer-ecommerce/shopizer/blob/6a4a0a65a3408ee8f62597b51d1b3aac24b77dee/"+filePath+(view==="company"?"#L11-L13":"");
+  history.replaceState(null,"","#"+view);
+  closeSidebar(); window.scrollTo({top:0,behavior:"instant"});
+  if(view==="company")requestAnimationFrame(drawWires);
+}
+document.querySelectorAll("[data-view]").forEach(function(el){el.addEventListener("click",function(){changeView(el.dataset.view)})});
+const search=document.getElementById("search");
+search.addEventListener("input",function(){
+  const q=search.value.trim().toLowerCase(),out=document.getElementById("results");out.replaceChildren();
+  if(!q)return;
+  [["file","ShopApplication.java","Java file"],["company","Company 1 · main()","Start the shop"]].filter(function(a){return a.join(" ").toLowerCase().includes(q)||"shopizer application startup".includes(q)}).forEach(function(a){
+    const b=document.createElement("button");b.type="button";b.className="hit";b.textContent=a[1]+" · "+a[2];b.addEventListener("click",function(){changeView(a[0]);search.value="";out.replaceChildren()});out.append(b);
+  });
+});
+function inspect(which){
+  const incoming=which==="incoming",src=document.getElementById("incoming"),dst=document.getElementById("outgoing");
+  src.classList.toggle("chosen",incoming);dst.classList.toggle("chosen",!incoming);
+  const note=document.getElementById("connection-note");
+  note.textContent=incoming?"Java launcher → Company 1: the Java runtime invokes main(String[] args). This is an external entry point, not another method in Shopizer.":"Company 1 → Spring Boot: on line 12, SpringApplication.run(ShopApplication.class, args) starts the Spring application.";
+  document.querySelectorAll(".line-picked").forEach(function(x){x.classList.remove("line-picked")});
+  if(!incoming){const row=document.querySelector('#company-code [data-line="12"]');row.classList.add("line-picked");row.scrollIntoView({block:"nearest"})}
+  drawWires();
+}
+["incoming","outgoing"].forEach(function(id){const el=document.getElementById(id);el.addEventListener("click",function(){inspect(id)});el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();inspect(id)}})});
+function drawWires(){
+  const map=document.getElementById("map"),svg=document.getElementById("wires");
+  if(view!=="company"||window.innerWidth<=850){svg.replaceChildren();return}
+  const bounds=map.getBoundingClientRect();svg.setAttribute("viewBox","0 0 "+bounds.width+" "+bounds.height);svg.replaceChildren();
+  function connect(a,b,color){
+    const x=document.getElementById(a).getBoundingClientRect(),y=document.getElementById(b).getBoundingClientRect();
+    const x1=x.right-bounds.left, x2=y.left-bounds.left,y1=x.top+x.height/2-bounds.top,y2=y.top+y.height/2-bounds.top;
+    const path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute("d","M "+x1+" "+y1+" C "+(x1+28)+" "+y1+", "+(x2-28)+" "+y2+", "+x2+" "+y2);
+    path.setAttribute("stroke",color);path.setAttribute("fill","none");path.setAttribute("stroke-width","3");
+    svg.appendChild(path);
+    [x1,x2].forEach(function(px,i){const c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("cx",px);c.setAttribute("cy",i?y2:y1);c.setAttribute("r","4");c.setAttribute("fill",color);svg.appendChild(c)});
+  }
+  connect("incoming","center","#57a4ff");connect("center","outgoing","#ff9c45");
+}
+document.getElementById("mobile-menu").addEventListener("click",function(){const now=document.body.classList.toggle("sidebar-open");this.setAttribute("aria-expanded",String(now))});
+document.getElementById("backdrop").addEventListener("click",closeSidebar);
+window.addEventListener("resize",drawWires);
+window.addEventListener("keydown",function(e){if(e.key==="Escape")closeSidebar()});
+const initial=location.hash==="#company"?"company":"file";changeView(initial);
+</script>
+</body>
+</html>
