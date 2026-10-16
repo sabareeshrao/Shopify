@@ -539,3 +539,15 @@ Browser regression file now targets 136 records, but running it inside GitHub Pa
 - Clicking a structural entry highlights the exact row and scrolls **only the code pane**, never the browser window. Users can continue to open verified companies from mapped source lines.
 - Updated the live browser regression source to check all 136 existing companies, the 1,340-file root, source outline and Back navigation, while retaining newest dark-theme and resizable-sidebar assertions. Source/structural checks are not a claim that the live regression was executed on a mobile device.
 - All source reference and permanent interview/question IDs are preserved; no Shopizer source code or UI icons were rewritten.
+
+
+## Inline non-company line explanations (pink source highlighting)
+
+- The Java file page no longer renders a second source-structure panel below the file view. The original `file-info` area **immediately beneath the code pane** is now a live explanation for the selected source line.
+- Every **nonblank, unnumbered** source line gets a light-pink background and matching line number. Blank separator lines remain visually neutral. Pink is a user-requested exception to the previous base palette; the latest black IntelliJ Project sidebar, icons, tools, resizer, and existing green mapped-company interaction are unchanged.
+- Click or keyboard-activate a pink line (`Enter`/`Space`) to see its exact line number, grounded category and contextual explanation in that same existing footer. Selection stays within the code pane; no full-page scrolling or extra panel is introduced.
+- Explanations distinguish packages, static/ordinary imports, annotations (including `@Autowired`/`@Inject`), class declarations and inheritance, field references, JavaDoc/comments, method declarations, statements, branches, returns, and other known syntax. They describe **what the source line is**, not fabricated callers or Company IDs.
+- Where an imported type resolves uniquely to a Shopizer file, the inline footer provides **Open imported Shopizer file** navigation. External imports do not become companies.
+- Mapped company lines continue opening their verified company pages. No company records, source snapshots, or interview question IDs were changed; count remains **136**.
+- Refreshed the regression audit for direct source-line clicks and the inline footer on `JWTAdminAuthenticationProvider.java`, preserving the original 136-company navigation and latest compact black sidebar checks.
+- Source syntax descriptions are heuristic navigational help, not full Java compiler analysis. Visual mobile-browser rendering must still be verified in GitHub Pages after deployment.
