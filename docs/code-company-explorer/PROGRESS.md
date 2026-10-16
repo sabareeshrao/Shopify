@@ -28,6 +28,26 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 14 | Run work in the background | `AsyncConfig.getAsyncExecutor()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java` | 19–22 | 0 mapped | Verified |
 | 15 | Handle uncaught background errors | `AsyncConfig.getAsyncUncaughtExceptionHandler()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/AsyncConfig.java` | 24–27 | 0 mapped | Verified |
 | 16 | Read shop and language details from requests | `WebConfig.addArgumentResolvers()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/WebConfig.java` | 22–26 | 0 mapped | Verified |
+| 17 | Identify merchant-store arguments | `supportsParameter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MerchantStoreArgumentResolver.java` | 37–40 | 0 mapped | Verified |
+| 18 | Find and authorize the selected store | `resolveArgument()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MerchantStoreArgumentResolver.java` | 42–61 | 0 mapped | Verified |
+| 19 | Identify language arguments | `supportsParameter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/LanguageArgumentResolver.java` | 23–26 | 0 mapped | Verified |
+| 20 | Find the current request language | `resolveArgument()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/LanguageArgumentResolver.java` | 28–35 | 0 mapped | Verified |
+| 21 | Log servlet startup information | `contextInitialized()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopServletContextListener.java` | 14–24 | 0 mapped | Verified |
+| 22 | Stop the cache at shutdown | `contextDestroyed()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopServletContextListener.java` | 26–31 | 0 mapped | Verified |
+| 23 | Build Swagger API documentation | `api()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java` | 51–85 | 0 mapped | Verified |
+| 24 | Choose documented API packages | `requestHandlers()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java` | 87–95 | 0 mapped | Verified |
+| 25 | Describe REST API metadata | `apiInfo()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java` | 97–104 | 0 mapped | Verified |
+| 26 | Choose cloud or local image paths | `img()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/LocationImageConfig.java` | 25–44 | 0 mapped | Verified |
+| 27 | Provide the token authentication filter | `authenticationTokenFilter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 45–48 | 0 mapped | Verified |
+| 28 | Provide credential service | `credentialsService()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 50–53 | 0 mapped | Verified |
+| 29 | Create the BCrypt password encoder | `passwordEncoder()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 55–58 | 0 mapped | Verified |
+| 30 | Handle successful user authentication | `userAuthenticationSuccessHandler()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 60–63 | 0 mapped | Verified |
+| 31 | Handle successful service authentication | `servicesAuthenticationSuccessHandler()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 65–68 | 0 mapped | Verified |
+| 32 | Provide a customer facade | `customerFacade()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 70–73 | 0 mapped | Verified |
+| 33 | Expose customer authentication manager | `authenticationManagerBean()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 87–91 | 0 mapped | Verified |
+| 34 | Exclude selected routes from security filters | `configure(WebSecurity web)` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 100–107 | 0 mapped | Verified |
+| 35 | Register customer identity lookup | `configure(AuthenticationManagerBuilder auth)` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 110–113 | 0 mapped | Verified |
+| 36 | Define shop authorization and logout rules | `configure(HttpSecurity http)` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java` | 115–144 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -181,6 +201,16 @@ Each company has the complete unique question and a plain-English sequence reaso
 - Add new records only in `companies.json`, storing original source ranges, sequence reasons, and unique IQ interview questions.
 - Add snapshots under `sources/` as needed; the page loads all declared sources. Plan lazy source loading and paginated folder browsing as the repository scales to hundreds/thousands of files.
 - For each change run both source-range validation and the `tests/` browser interaction audit; never conflate learning order with runtime call order.
+
+## Companies 17–36: source-verified learning batch
+
+- Pinned Shopizer commit: `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`; six new complete Java source snapshots in `sources/`.
+- Company 16 registers the two argument-resolver classes. Its links to Companies 17 and 19 represent **registration**, not direct invocation.
+- Company 23 invokes Company 24 at source line 69; the Company 25 `apiInfo()` helper is present but not called by `api()` in the pinned file.
+- Companies 33–36 belong to the nested `CustomerConfigurationAdapter` inside `MultipleEntryPointsSecurityConfig.java`.
+- Security review: Company 36 has a broad `/shop/**` `permitAll()` matcher before the more specific customer role matcher. The interview question explicitly tests this potential access-control ordering issue.
+- Every company retains a unique permanent `IQ-N` and a specific source-based learning rationale.
+- Pre-commit QA: 20 pinned method-range checks; 36 UI render checks; numeric search 36; navigation 35↔36; verified 16→17 and 23→24 links. Changes prepared only after passing checks.
 
 ## GitHub Pages
 

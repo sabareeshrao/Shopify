@@ -1,11 +1,11 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 16,
+  "count": 36,
   "companies": [
     {
       "id": "1",
@@ -730,18 +730,18 @@
       ],
       "outbound": [
         {
-          "name": "Register merchant-store resolver",
-          "kind": "unmapped_internal_class",
+          "name": "Register MerchantStore resolver (Company 17)",
+          "kind": "internal_registration",
           "code_line": 24,
-          "company_id": null,
-          "description": "Adds the autowired MerchantStoreArgumentResolver, whose source is not yet mapped as a company."
+          "company_id": "17",
+          "description": "Company 16 registers this resolver class; Spring later invokes supportsParameter(). It is a class registration, not a direct call to that method."
         },
         {
-          "name": "Register language resolver",
-          "kind": "unmapped_internal_class",
+          "name": "Register Language resolver (Company 19)",
+          "kind": "internal_registration",
           "code_line": 25,
-          "company_id": null,
-          "description": "Adds the autowired LanguageArgumentResolver, whose source is not yet mapped as a company."
+          "company_id": "19",
+          "description": "Company 16 registers this resolver class; Spring later invokes supportsParameter(). It is a class registration, not a direct call to that method."
         }
       ],
       "parent_id": null,
@@ -750,6 +750,858 @@
       "interview": {
         "id": "IQ-16",
         "question": "How does Spring MVC choose a HandlerMethodArgumentResolver for a controller parameter, and why does resolver ordering matter when multiple resolvers report support?"
+      }
+    },
+    {
+      "id": "17",
+      "order": 17,
+      "name": "Identify merchant-store arguments",
+      "method": "supportsParameter()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MerchantStoreArgumentResolver.java",
+      "source_blob_sha": "c4a593ad07e7f7e18db6fcf96bb37747d01404c0",
+      "source_data_file": "sources/merchant.json",
+      "source_line_count": 62,
+      "start_line": 37,
+      "method_start_line": 38,
+      "end_line": 40,
+      "plain_english": "Checks whether a controller parameter is exactly a MerchantStore.",
+      "sequence_reason": "Company 16 registers this resolver. First see how it declares which controller parameters it can handle before exploring the actual store lookup.",
+      "inbound": [
+        {
+          "name": "Spring MVC argument resolver selection",
+          "code_line": 38,
+          "description": "Spring MVC invokes this method when choosing a resolver.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-17",
+        "question": "How does supportsParameter() decide whether MerchantStoreArgumentResolver applies, and why might comparing parameter types with equals() matter?"
+      }
+    },
+    {
+      "id": "18",
+      "order": 18,
+      "name": "Find and authorize the selected store",
+      "method": "resolveArgument()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MerchantStoreArgumentResolver.java",
+      "source_blob_sha": "c4a593ad07e7f7e18db6fcf96bb37747d01404c0",
+      "source_data_file": "sources/merchant.json",
+      "source_line_count": 62,
+      "start_line": 42,
+      "method_start_line": 43,
+      "end_line": 61,
+      "plain_english": "Reads the store parameter or the default store, fetches a MerchantStore, then authorizes the request URI; unauthorized requests raise UnauthorizedException.",
+      "sequence_reason": "After Company 17 accepts a MerchantStore parameter, inspect its actual resolution and authorization path. Do not confuse parameter selection with access control.",
+      "inbound": [
+        {
+          "name": "Spring MVC selected store resolver",
+          "code_line": 43,
+          "description": "Called to produce the MerchantStore argument after support is established.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Read selected store",
+          "code_line": 48,
+          "description": "storeFacade.get(storeValue) fetches the store model.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Authorize selected store",
+          "code_line": 54,
+          "description": "userFacade.authorizeStore(storeModel, request URI) decides whether to throw UnauthorizedException.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-18",
+        "question": "If the 'store' parameter is blank, what is the fallback, and how would you test StoreFacade lookup and UserFacade.authorizeStore denial?"
+      }
+    },
+    {
+      "id": "19",
+      "order": 19,
+      "name": "Identify language arguments",
+      "method": "supportsParameter()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/LanguageArgumentResolver.java",
+      "source_blob_sha": "5496a7fa6d66f084b25a17c690b1e0a644e987d0",
+      "source_data_file": "sources/language.json",
+      "source_line_count": 37,
+      "start_line": 23,
+      "method_start_line": 24,
+      "end_line": 26,
+      "plain_english": "Checks whether a Spring MVC controller argument's Java type is Language.",
+      "sequence_reason": "After merchant-store argument detection, see the second custom resolver registered in Company 16, which recognizes Language parameters.",
+      "inbound": [
+        {
+          "name": "Spring MVC argument resolver selection",
+          "code_line": 24,
+          "description": "Spring MVC tests whether this resolver supports a Language parameter.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-19",
+        "question": "How does LanguageArgumentResolver.supportsParameter() distinguish Language parameters from all other controller method parameters?"
+      }
+    },
+    {
+      "id": "20",
+      "order": 20,
+      "name": "Find the current request language",
+      "method": "resolveArgument()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/LanguageArgumentResolver.java",
+      "source_blob_sha": "5496a7fa6d66f084b25a17c690b1e0a644e987d0",
+      "source_data_file": "sources/language.json",
+      "source_line_count": 37,
+      "start_line": 28,
+      "method_start_line": 29,
+      "end_line": 35,
+      "plain_english": "Obtains the HttpServletRequest and asks LanguageUtils.getRESTLanguage() to resolve the Language value.",
+      "sequence_reason": "After detecting a Language parameter in Company 19, follow the resolver's real method call to the language utility.",
+      "inbound": [
+        {
+          "name": "Spring MVC selected language resolver",
+          "code_line": 29,
+          "description": "Spring MVC calls this method for a supported Language argument.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Resolve REST language",
+          "code_line": 34,
+          "description": "Calls languageUtils.getRESTLanguage(request, webRequest); the utility implementation remains unmapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-20",
+        "question": "Where should a REST language resolver read language preferences, and how would you verify fallback behavior when request language data is missing?"
+      }
+    },
+    {
+      "id": "21",
+      "order": 21,
+      "name": "Log servlet startup information",
+      "method": "contextInitialized()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopServletContextListener.java",
+      "source_blob_sha": "c4aec382bf857b83f4029fb9ab26452e4465820b",
+      "source_data_file": "sources/listener.json",
+      "source_line_count": 32,
+      "start_line": 14,
+      "method_start_line": 15,
+      "end_line": 24,
+      "plain_english": "Logs context initialization, environment variables, and JVM system properties at debug level.",
+      "sequence_reason": "After request-argument handling, inspect the servlet container lifecycle to contrast context initialization with the Spring Boot ready event in Company 2.",
+      "inbound": [
+        {
+          "name": "Servlet container startup",
+          "code_line": 15,
+          "description": "The container invokes contextInitialized when starting its servlet context.",
+          "company_id": null,
+          "kind": "external_servlet_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Inspect environment variables",
+          "code_line": 17,
+          "description": "System.getenv().forEach logs environment key/value pairs.",
+          "company_id": null,
+          "kind": "java_system_api"
+        },
+        {
+          "name": "Inspect JVM system properties",
+          "code_line": 20,
+          "description": "System.getProperties() is iterated and logged.",
+          "company_id": null,
+          "kind": "java_system_api"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-21",
+        "question": "What differs between ServletContextListener.contextInitialized() and ApplicationReadyEvent, and what sensitive information could logging environment variables expose?"
+      }
+    },
+    {
+      "id": "22",
+      "order": 22,
+      "name": "Stop the cache at shutdown",
+      "method": "contextDestroyed()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopServletContextListener.java",
+      "source_blob_sha": "c4aec382bf857b83f4029fb9ab26452e4465820b",
+      "source_data_file": "sources/listener.json",
+      "source_line_count": 32,
+      "start_line": 26,
+      "method_start_line": 27,
+      "end_line": 31,
+      "plain_english": "Logs context destruction and stops the VendorCacheManager's backing manager.",
+      "sequence_reason": "Pair servlet startup with shutdown to establish resource lifecycle and cleanup before exploring service documentation.",
+      "inbound": [
+        {
+          "name": "Servlet container shutdown",
+          "code_line": 27,
+          "description": "The container invokes contextDestroyed when stopping the context.",
+          "company_id": null,
+          "kind": "external_servlet_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Obtain VendorCacheManager",
+          "code_line": 29,
+          "description": "Calls VendorCacheManager.getInstance(); implementation is not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Stop underlying cache manager",
+          "code_line": 30,
+          "description": "Calls cacheManager.getManager().stop() to release resources.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-22",
+        "question": "What shutdown failures should you anticipate when a ServletContextListener stops a shared cache manager, and how would you make the cleanup robust?"
+      }
+    },
+    {
+      "id": "23",
+      "order": 23,
+      "name": "Build Swagger API documentation",
+      "method": "api()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java",
+      "source_blob_sha": "66da938c687962f90556a32a2b8c5f32d8f13554",
+      "source_data_file": "sources/documentation.json",
+      "source_line_count": 111,
+      "start_line": 51,
+      "method_start_line": 52,
+      "end_line": 85,
+      "plain_english": "Creates a Springfox Swagger 2 Docket, defines response codes and JSON types, selects API handlers, and describes a JWT header.",
+      "sequence_reason": "After application lifecycle and request handling, study how Shopizer documents its REST endpoints. Swagger's JWT header description does not enforce authentication.",
+      "inbound": [
+        {
+          "name": "Spring creates API documentation bean",
+          "code_line": 51,
+          "description": "@Bean creates the Springfox Docket.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Choose documented API handlers",
+          "code_line": 69,
+          "description": "Calls requestHandlers() defined in Company 24.",
+          "company_id": "24",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Describe JWT header",
+          "code_line": 70,
+          "description": "Adds an ApiKey labeled JWT with the Authorization header; this is documentation.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-23",
+        "question": "Does Swagger's ApiKey configuration enforce JWT authorization, and what actually protects the endpoint in Spring Security?"
+      }
+    },
+    {
+      "id": "24",
+      "order": 24,
+      "name": "Choose documented API packages",
+      "method": "requestHandlers()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java",
+      "source_blob_sha": "66da938c687962f90556a32a2b8c5f32d8f13554",
+      "source_data_file": "sources/documentation.json",
+      "source_line_count": 111,
+      "start_line": 87,
+      "method_start_line": 87,
+      "end_line": 95,
+      "plain_english": "Creates package selectors for Shopizer's API v1 and v2 and combines them with a logical OR predicate.",
+      "sequence_reason": "Company 23 calls this helper directly when building the Swagger Docket. This is a verified method dependency, not just a nearby source declaration.",
+      "inbound": [
+        {
+          "name": "Company 23 Swagger Docket",
+          "code_line": 69,
+          "description": "api() calls requestHandlers() at line 69.",
+          "company_id": null,
+          "kind": "internal_method_call"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Match API v1 and v2 packages",
+          "code_line": 90,
+          "description": "Adds selectors on lines 90–91 and combines them with Predicates.or().",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-24",
+        "question": "How does combining RequestHandlerSelectors.basePackage for API v1 and v2 with Predicates.or() determine which controllers enter Swagger docs?"
+      }
+    },
+    {
+      "id": "25",
+      "order": 25,
+      "name": "Describe REST API metadata",
+      "method": "apiInfo()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/DocumentationConfiguration.java",
+      "source_blob_sha": "66da938c687962f90556a32a2b8c5f32d8f13554",
+      "source_data_file": "sources/documentation.json",
+      "source_line_count": 111,
+      "start_line": 97,
+      "method_start_line": 98,
+      "end_line": 104,
+      "plain_english": "Creates an ApiInfo object containing the Shopizer title, description, version, contact, and license.",
+      "sequence_reason": "Next inspect the metadata helper declared in this file. In the pinned source, Company 23 does not call apiInfo(), so it must not be shown as a confirmed supplier of the Docket.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Build Swagger ApiInfo",
+          "code_line": 99,
+          "description": "Returns ApiInfo metadata; the helper is not called from api() in the pinned source.",
+          "company_id": null,
+          "kind": "external_framework_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-25",
+        "question": "This private apiInfo() method is not called by the Docket's api() method. What would be missing from the Swagger description unless it is explicitly wired in?"
+      }
+    },
+    {
+      "id": "26",
+      "order": 26,
+      "name": "Choose cloud or local image paths",
+      "method": "img()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/LocationImageConfig.java",
+      "source_blob_sha": "98a6338a311d9a3f44501e091ce25a195e16a91b",
+      "source_data_file": "sources/image.json",
+      "source_line_count": 47,
+      "start_line": 25,
+      "method_start_line": 26,
+      "end_line": 44,
+      "plain_english": "Chooses CloudFilePathUtils for a nonempty, non-default method or LocalImageFilePathUtils otherwise, configuring each path with the supplied settings.",
+      "sequence_reason": "After learning how APIs are exposed and described, inspect how Shopizer chooses media asset paths from environment configuration.",
+      "inbound": [
+        {
+          "name": "Spring creates ImageFilePath bean",
+          "code_line": 25,
+          "description": "@Bean produces the ImageFilePath strategy.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create cloud file path utility",
+          "code_line": 29,
+          "description": "Returns CloudFilePathUtils with base and URL paths set to contentUrl.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        },
+        {
+          "name": "Create local file path utility",
+          "code_line": 37,
+          "description": "Returns LocalImageFilePathUtils with staticPath and contentUrl.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-26",
+        "question": "Which settings make LocationImageConfig.img() choose cloud versus local paths, and how would you test both branches?"
+      }
+    },
+    {
+      "id": "27",
+      "order": 27,
+      "name": "Provide the token authentication filter",
+      "method": "authenticationTokenFilter()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 45,
+      "method_start_line": 46,
+      "end_line": 48,
+      "plain_english": "Exposes a new AuthenticationTokenFilter through a Spring bean.",
+      "sequence_reason": "Begin Shopizer's multiple-security-entry-point configuration with the token filter used by authentication workflows.",
+      "inbound": [
+        {
+          "name": "Spring creates token filter bean",
+          "code_line": 45,
+          "description": "@Bean supplies the AuthenticationTokenFilter.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Instantiate Shopizer token filter",
+          "code_line": 47,
+          "description": "Returns new AuthenticationTokenFilter(); class implementation has not yet been mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-27",
+        "question": "Where should an AuthenticationTokenFilter be placed within Spring Security's filter chain, and how would you test it without weakening other authentication paths?"
+      }
+    },
+    {
+      "id": "28",
+      "order": 28,
+      "name": "Provide credential service",
+      "method": "credentialsService()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 50,
+      "method_start_line": 51,
+      "end_line": 53,
+      "plain_english": "Returns CredentialsServiceImpl through the CredentialsService interface.",
+      "sequence_reason": "After the token filter, examine the credential-service abstraction that other security components can obtain from Spring.",
+      "inbound": [
+        {
+          "name": "Spring creates credentials bean",
+          "code_line": 50,
+          "description": "@Bean provides CredentialsService.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Instantiate credentials implementation",
+          "code_line": 52,
+          "description": "Creates Shopizer's CredentialsServiceImpl.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-28",
+        "question": "Why expose CredentialsService as a bean interface backed by CredentialsServiceImpl, and how does it improve dependency isolation in tests?"
+      }
+    },
+    {
+      "id": "29",
+      "order": 29,
+      "name": "Create the BCrypt password encoder",
+      "method": "passwordEncoder()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 55,
+      "method_start_line": 56,
+      "end_line": 58,
+      "plain_english": "Exposes BCryptPasswordEncoder as Spring's PasswordEncoder bean.",
+      "sequence_reason": "Credentials must be verified against password hashes; follow the service with the hashing bean used in authentication configuration.",
+      "inbound": [
+        {
+          "name": "Spring creates PasswordEncoder",
+          "code_line": 55,
+          "description": "Spring creates the password encoder bean.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Construct BCrypt encoder",
+          "code_line": 57,
+          "description": "Returns new BCryptPasswordEncoder().",
+          "company_id": null,
+          "kind": "external_framework_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-29",
+        "question": "What makes BCryptPasswordEncoder suitable for password storage, and why should two encoded hashes of one password usually differ?"
+      }
+    },
+    {
+      "id": "30",
+      "order": 30,
+      "name": "Handle successful user authentication",
+      "method": "userAuthenticationSuccessHandler()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 60,
+      "method_start_line": 61,
+      "end_line": 63,
+      "plain_english": "Provides Shopizer's UserAuthenticationSuccessHandler as a Spring bean.",
+      "sequence_reason": "After authentication dependencies, inspect the handler that responds after a user has successfully authenticated.",
+      "inbound": [
+        {
+          "name": "Spring creates user success handler",
+          "code_line": 60,
+          "description": "The handler is exposed as a Spring bean.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build user success handler",
+          "code_line": 62,
+          "description": "Creates UserAuthenticationSuccessHandler; implementation not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-30",
+        "question": "What should AuthenticationSuccessHandler do after successful login, and which security checks must already have happened before it runs?"
+      }
+    },
+    {
+      "id": "31",
+      "order": 31,
+      "name": "Handle successful service authentication",
+      "method": "servicesAuthenticationSuccessHandler()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 65,
+      "method_start_line": 66,
+      "end_line": 68,
+      "plain_english": "Creates a separate ServicesAuthenticationSuccessHandler bean for service authentication flows.",
+      "sequence_reason": "Shopizer separates the user and service success handlers, so inspect and compare these factories in code order.",
+      "inbound": [
+        {
+          "name": "Spring creates service success handler",
+          "code_line": 65,
+          "description": "The handler is exposed as a Spring bean.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build services success handler",
+          "code_line": 67,
+          "description": "Creates ServicesAuthenticationSuccessHandler; implementation not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-31",
+        "question": "How would you design different authentication-success behavior for service clients and browser users without confusing it with authorization?"
+      }
+    },
+    {
+      "id": "32",
+      "order": 32,
+      "name": "Provide a customer facade",
+      "method": "customerFacade()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 70,
+      "method_start_line": 71,
+      "end_line": 73,
+      "plain_english": "Creates a CustomerFacadeImpl object and exposes it through the CustomerFacade interface.",
+      "sequence_reason": "The final outer factory before the nested customer security adapter supplies a facade for customer operations.",
+      "inbound": [
+        {
+          "name": "Spring creates CustomerFacade bean",
+          "code_line": 70,
+          "description": "@Bean provides CustomerFacade.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Build CustomerFacade implementation",
+          "code_line": 72,
+          "description": "Instantiates Shopizer CustomerFacadeImpl.",
+          "company_id": null,
+          "kind": "unmapped_internal_class"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-32",
+        "question": "What are the design trade-offs of constructing CustomerFacadeImpl directly in a security @Bean factory instead of injecting a previously defined facade?"
+      }
+    },
+    {
+      "id": "33",
+      "order": 33,
+      "name": "Expose customer authentication manager",
+      "method": "authenticationManagerBean()",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 87,
+      "method_start_line": 89,
+      "end_line": 91,
+      "plain_english": "Uses the inherited authenticationManagerBean() and exposes it as the named customerAuthenticationManager bean.",
+      "sequence_reason": "Start the nested @Order(1) CustomerConfigurationAdapter by examining its explicitly named authentication manager.",
+      "inbound": [
+        {
+          "name": "Spring creates named customer manager",
+          "code_line": 87,
+          "description": "@Bean(customerAuthenticationManager) is declared on a nested adapter.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Delegate to inherited manager factory",
+          "code_line": 90,
+          "description": "Calls super.authenticationManagerBean() in the framework.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-33",
+        "question": "How do multiple WebSecurityConfigurerAdapter implementations distinguish their AuthenticationManager beans, and what does super.authenticationManagerBean() return?"
+      }
+    },
+    {
+      "id": "34",
+      "order": 34,
+      "name": "Exclude selected routes from security filters",
+      "method": "configure(WebSecurity web)",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 100,
+      "method_start_line": 101,
+      "end_line": 107,
+      "plain_english": "Configures WebSecurity to ignore the root, error page, resources, static assets, and public services URLs.",
+      "sequence_reason": "After seeing the customer authentication manager, inspect routes deliberately excluded from Spring Security filtering.",
+      "inbound": [
+        {
+          "name": "Spring configures WebSecurity",
+          "code_line": 100,
+          "description": "Invokes the nested adapter's WebSecurity override.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Ignore public routes",
+          "code_line": 102,
+          "description": "Adds /, /error, /resources/**, /static/**, /services/public/** on lines 102–106.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-34",
+        "question": "What is the difference between web.ignoring() and permitAll(), and why does it matter when public service URLs bypass the security filter chain?"
+      }
+    },
+    {
+      "id": "35",
+      "order": 35,
+      "name": "Register customer identity lookup",
+      "method": "configure(AuthenticationManagerBuilder auth)",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 110,
+      "method_start_line": 111,
+      "end_line": 113,
+      "plain_english": "Registers the injected customerDetailsService with AuthenticationManagerBuilder.",
+      "sequence_reason": "With bypassed paths understood, inspect the customer identity provider used for authentication.",
+      "inbound": [
+        {
+          "name": "Spring configures customer authentication",
+          "code_line": 110,
+          "description": "Invokes AuthenticationManagerBuilder override.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Use customer UserDetailsService",
+          "code_line": 112,
+          "description": "Passes customerDetailsService into auth.userDetailsService().",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-35",
+        "question": "How does AuthenticationManagerBuilder.userDetailsService() work with PasswordEncoder, and what does it mean if no matching password encoder is configured?"
+      }
+    },
+    {
+      "id": "36",
+      "order": 36,
+      "name": "Define shop authorization and logout rules",
+      "method": "configure(HttpSecurity http)",
+      "type": "Verified Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/MultipleEntryPointsSecurityConfig.java",
+      "source_blob_sha": "cc793956acdecdda8b1ccf636d82c942de140762",
+      "source_data_file": "sources/security.json",
+      "source_line_count": 428,
+      "start_line": 115,
+      "method_start_line": 116,
+      "end_line": 144,
+      "plain_english": "Configures /shop/** security rules, disables CSRF, adds HTTP Basic and logout, and has a broad permitAll rule before a narrower customer-role rule.",
+      "sequence_reason": "Complete the customer adapter with the actual request-authorization chain. The broad permitAll match appears before the narrower role check and deserves explicit security scrutiny.",
+      "inbound": [
+        {
+          "name": "Spring builds customer HttpSecurity chain",
+          "code_line": 115,
+          "description": "The nested adapter configures the /shop/** security chain.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Match /shop URLs",
+          "code_line": 118,
+          "description": "Selects the /shop/** filter chain.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Broad allow rule precedes role rule",
+          "code_line": 122,
+          "description": "The /shop/** permitAll line precedes hasRole for /shop/customer/** on line 128.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Create shop authentication entry point",
+          "code_line": 132,
+          "description": "Invokes shopAuthenticationEntryPoint(), currently unmapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Configure logout",
+          "code_line": 135,
+          "description": "Configures logout and session handling; the chain includes true and false session-invalidation calls.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-36",
+        "question": "The code has antMatchers(\"/shop/**\").permitAll() before antMatchers(\"/shop/customer/**\").hasRole(\"AUTH_CUSTOMER\"). How can matcher ordering undermine the intended protection, and how would you demonstrate it in a security test?"
       }
     }
   ],
