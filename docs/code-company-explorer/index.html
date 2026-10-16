@@ -19,20 +19,46 @@
 @media(max-width:1100px){#app{display:block}.side{position:fixed;left:0;top:0;bottom:0;width:min(88vw,332px);height:100dvh;transform:translateX(-105%);transition:transform .22s ease;box-shadow:16px 0 50px #000;z-index:32}.side.open{transform:translateX(0)}.sidebar-overlay.open{display:block;position:fixed;inset:0;z-index:30;background:#000b}.mobile-menu{display:flex}.topbar{padding:10px 12px;min-height:57px}.breadcrumbs{font-size:11px}.top-actions{gap:5px}.circle-btn .btn-text{display:none}.circle-btn{padding:9px}.searchbox{width:38vw;min-width:100px}.content{padding:20px 12px 45px}.hero{gap:8px}.hero h1{font-size:25px}.hero-actions{align-self:flex-start}.stats{gap:7px}.stat{padding:12px}.stat b{font-size:23px}.stat label{font-size:10px}.network-layout{grid-template-columns:1fr}.graph-col.usedby{grid-column:1;grid-row:2}.graph-col.uses{grid-column:1;grid-row:3}.nodes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.code-body.graph-code{max-height:340px}.network-head .labels{display:none}.company-summary{padding:14px 15px}.relation-card{min-height:80px}}
 @media(max-width:410px){.searchbox{min-width:83px;width:30vw}.searchbox input{font-size:11px}.hero-actions .plain-button{font-size:0;gap:0}.hero-actions .plain-button .ic{width:17px;height:17px}.topbar .breadcrumbs{max-width:140px}.nodes{grid-template-columns:1fr 1fr}.stat b{font-size:20px}.code-body.graph-code{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-.repo-meta .demo-dot{background:var(--green)}.relation-card[data-external] .rel-num{color:var(--orange)}.relation-card[data-external] .rel-file{font-size:11px;line-height:1.5}.relation-card[data-external]{cursor:pointer}</style>
+.repo-meta .demo-dot{background:var(--green)}.relation-card[data-external] .rel-num{color:var(--orange)}.relation-card[data-external] .rel-file{font-size:11px;line-height:1.5}.relation-card[data-external]{cursor:pointer}
+/* Compact company rows: icon, ID and company title travel together. */
+.tree-row.comp{gap:5px;min-height:37px}
+.tree-row.comp .tree-chevron.spacer{display:none}
+.tree-row.comp .tree-chevron:not(.spacer){flex:0 0 12px}
+.tree-row.comp .company-key{display:inline-flex;align-items:center;gap:5px;flex:none;min-width:0;white-space:nowrap}
+.tree-row.comp .company-key>.ic{width:17px;height:17px;flex:none}
+.tree-row.comp .number{min-width:0;flex:none;line-height:1;font-size:12px;font-variant-numeric:tabular-nums}
+.tree-row.comp .tree-text{font-size:12px;flex:1 1 auto;min-width:0}
+.tree-row.file .tree-text{flex:1 1 auto;min-width:0}
+.tree-row .mini-count{flex:0 0 auto}
+.tree-row.comp.is-active{background:#1c1c1c}
+.tree-row.comp:focus-visible,.tree-row.folder:focus-visible,.tree-row.file:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.side-header{position:relative;flex-shrink:0}
+.side-close{display:none;align-items:center;justify-content:center;width:36px;height:36px;min-width:36px;border:2px solid var(--border);border-radius:9px;background:var(--surface2);margin-left:auto;color:var(--white);cursor:pointer}
+.side-close .ic{width:18px;height:18px}
+.side-close:hover{background:var(--surface3)}
+@media(max-width:1100px){
+.side-header{padding:15px 13px;gap:9px}
+.side-close{display:flex}
+.side-body{padding:15px 10px 25px}
+.tree-row{min-height:38px}
+.tree-row.comp{min-height:40px}
+.tree-row.comp .tree-text{font-size:12px}
+.tree-row.folder,.tree-row.file{font-size:12px}
+}
+</style>
 </head>
 <body>
 <div class="sidebar-overlay" id="backdrop"></div>
 <div id="app">
   <aside class="side" id="sidebar" aria-label="Repository folders and companies">
-    <div class="side-header"><div class="brandmark">C<span style="color:var(--orange)">/</span>C</div><div><div class="brandname">CODE COMPANY</div><div class="brand-sub">REPOSITORY EXPLORER</div></div></div>
+    <div class="side-header"><div class="brandmark">C<span style="color:var(--orange)">/</span>C</div><div><div class="brandname">CODE COMPANY</div><div class="brand-sub">REPOSITORY EXPLORER</div></div><button class="side-close" id="side-close" type="button" aria-label="Close folder menu" title="Close folder menu"><span class="ic" data-icon="close"></span></button></div>
     <div class="side-body">
       <div class="section-label">GitHub repository</div>
       <div class="repo-card"><div class="repo-title"><span class="ic" style="color:var(--blue)" data-icon="git"></span><span>shopizer</span></div><div class="repo-meta"><span class="demo-dot"></span>Real Shopizer · loading companies</div></div>
       <div class="section-label">Folders · Files · Companies</div>
       <nav id="tree" class="tree-scroll" aria-label="Project file tree"><div class="section-label">Loading source folders…</div></nav>
     </div>
-    <div class="side-bottom"><span>JAVA 21 · SPRING BOOT</span><b>DEMO DATA</b></div>
+    <div class="side-bottom"><span>JAVA · SPRING BOOT</span><b>SHOPIZER</b></div>
   </aside>
   <div class="main">
     <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Search code…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
@@ -111,16 +137,16 @@ function renderNodeIcon(kind,opened){return icon(kind==='folder'?(opened?'folder
 function treeContent(){
  const rows=[];
  function addFolder(node,path,depth){const full=path?path+'/'+node.name:node.name,key='f:'+full,opened=expanded.has(key);const count=node.children?.length||0;
- rows.push(`<button class="tree-row folder" data-folder="${safe(key)}" style="padding-left:${8+Math.min(depth,6)*12}px" title="${safe(full)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${renderNodeIcon('folder',opened)}<span class="tree-text">${safe(node.name)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
+ rows.push(`<button class="tree-row folder" data-folder="${safe(key)}" style="padding-left:${8+Math.min(depth,5)*10}px" title="${safe(full)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${renderNodeIcon('folder',opened)}<span class="tree-text">${safe(node.name)}</span>${depth===0?`<span class="mini-count">${Object.keys(files).length} files</span>`:''}</button>`);
  if(!opened)return;
- for(const child of node.children||[]){if(child.file)addFile(child.file,depth+1);else if(child.isResource)rows.push(`<div class="tree-row file" style="padding-left:${8+Math.min(depth+1,6)*12}px;opacity:.6"><span class="tree-chevron spacer"></span>${icon('file')}<span class="tree-text">${safe(child.name)}</span></div>`);else addFolder(child,full,depth+1);}
+ for(const child of node.children||[]){if(child.file)addFile(child.file,depth+1);else if(child.isResource)rows.push(`<div class="tree-row file" style="padding-left:${8+Math.min(depth+1,5)*10}px;opacity:.6"><span class="tree-chevron spacer"></span>${icon('file')}<span class="tree-text">${safe(child.name)}</span></div>`);else addFolder(child,full,depth+1);}
  }
  function addFile(fid,depth){const f=files[fid],key='file:'+fid,opened=expanded.has(key),act=selectedFile===fid;
- rows.push(`<button class="tree-row file ${act?'is-active':''}" data-file="${fid}" style="padding-left:${8+Math.min(depth,6)*12}px" title="${safe(f.path)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${icon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
+ rows.push(`<button class="tree-row file ${act?'is-active':''}" data-file="${fid}" style="padding-left:${8+Math.min(depth,5)*10}px" title="${safe(f.path)}" aria-expanded="${opened}"><span class="tree-chevron">${icon(opened?'down':'chevron')}</span>${icon('file')}<span class="tree-text">${safe(f.name)}</span><span class="mini-count">${f.companyIds.length}</span></button>`);
  if(opened){for(const id of f.companyIds)addEntity(id,depth+1);}
  }
  function addEntity(id,depth){const c=entities[id],isSub=!!c.parent,opened=expanded.has('co:'+id),hasKids=!!c.children?.length;
- rows.push(`<button class="tree-row comp ${isSub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" style="padding-left:${8+Math.min(depth,7)*12}px" title="Company ${safe(c.no)} — ${safe(c.desc)}" ${hasKids?`aria-expanded="${opened}"`:''}><span class="tree-chevron ${hasKids?'':'spacer'}">${hasKids?icon(opened?'down':'chevron'):icon('chevron')}</span>${renderNodeIcon(isSub?'branch':'company')}<span class="number">${safe(c.no)}</span><span class="tree-text">${safe(c.name)}</span></button>`);
+ rows.push(`<button class="tree-row comp ${isSub?'sub':''} ${selected===id&&mode==='company'?'is-active':''}" data-company="${id}" style="padding-left:${8+Math.min(depth,5)*10}px" title="Company ${safe(c.no)} — ${safe(c.desc)}" ${hasKids?`aria-expanded="${opened}"`:''}><span class="tree-chevron ${hasKids?'':'spacer'}">${hasKids?icon(opened?'down':'chevron'):icon('chevron')}</span><span class="company-key">${renderNodeIcon(isSub?'branch':'company')}<span class="number">${safe(c.no)}</span></span><span class="tree-text">${safe(c.name)}</span></button>`);
  if(opened)for(const sub of c.children||[])addEntity(sub,depth+1);
  }
  addFolder(folderData,'',0);return rows.join('');
@@ -177,6 +203,7 @@ document.addEventListener('click',e=>{const folder=e.target.closest('[data-folde
 $('#search').addEventListener('input',e=>searchResults(e.target.value));$('#search').addEventListener('keydown',e=>{if(e.key==='Enter'){const first=$('#search-results button');if(first)first.click();}else if(e.key==='Escape')$('#search-results').hidden=true;});
 $('#copy').addEventListener('click',e=>copyText(getLocation(),e.currentTarget));
 $('#maincontent').addEventListener('click',e=>{const btn=e.target.closest('#copy-method');if(btn){const c=getCode(selected);copyText(c.lines.join('\n'),btn);}});
+$('#side-close').addEventListener('click',closeSidebar);
 $('#menu').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#backdrop').classList.toggle('open',open);$('#menu').setAttribute('aria-expanded',String(open));});$('#backdrop').addEventListener('click',closeSidebar);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('#sidebar').classList.contains('open'))closeSidebar();else if(document.activeElement?.tagName!=='INPUT')navBack();}});
 window.addEventListener('resize',()=>requestAnimationFrame(drawWires));window.addEventListener('load',drawWires);
