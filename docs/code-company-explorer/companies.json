@@ -1,11 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 1,
+  "count": 2,
   "companies": [
     {
       "id": "1",
@@ -34,8 +34,56 @@
         }
       ],
       "subsidiary_ids": [],
-      "status": "verified_source"
+      "status": "verified_source",
+      "source_data_file": "sources/shop-application.json",
+      "parent_id": null,
+      "method_start_line": 11,
+      "source_line_count": 15,
+      "order": 1
+    },
+    {
+      "id": "2",
+      "name": "Check that the shop has started",
+      "method": "applicationReadyCode()",
+      "type": "Spring Boot application-ready event listener",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "start_line": 48,
+      "method_start_line": 49,
+      "end_line": 52,
+      "source_line_count": 151,
+      "plain_english": "When Spring Boot says the shop is ready, this method finds the current working folder and writes it to the application log.",
+      "inbound": [
+        {
+          "name": "Spring Boot ready event",
+          "kind": "external_framework_event",
+          "code_line": 48,
+          "company_id": null,
+          "description": "Spring invokes this method for ApplicationReadyEvent; Company 1 does not call it directly."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Read working folder",
+          "kind": "java_system_property",
+          "code_line": 50,
+          "company_id": null,
+          "description": "System.getProperty(\"user.dir\") reads the current working directory."
+        },
+        {
+          "name": "Write startup log",
+          "kind": "external_logging_library",
+          "code_line": 51,
+          "company_id": null,
+          "description": "logger.info writes a message containing the working directory."
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "order": 2
     }
   ],
-  "numbering_policy": "Company IDs are stable. Only assign N.M subsidiary numbers to verified code relationships; runtime and external framework references are not companies."
+  "numbering_policy": "IDs are permanent. Assign dotted subsidiary numbers only to verified parent/child methods; event-driven steps and external APIs are links, not automatic subsidiaries."
 }
