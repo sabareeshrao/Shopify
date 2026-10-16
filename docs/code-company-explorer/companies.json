@@ -1,11 +1,11 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 3,
+  "count": 6,
   "companies": [
     {
       "id": "1",
@@ -39,7 +39,12 @@
       "parent_id": null,
       "method_start_line": 11,
       "source_line_count": 15,
-      "order": 1
+      "order": 1,
+      "sequence_reason": "First, find the real application's entry point. This is where Java hands control to Spring Boot; every later company makes more sense once you see how Shopizer starts.",
+      "interview": {
+        "id": "IQ-1",
+        "question": "What happens after Java calls ShopApplication.main(), and how does SpringApplication.run() start a Spring Boot application?"
+      }
     },
     {
       "id": "2",
@@ -82,7 +87,12 @@
       "parent_id": null,
       "subsidiary_ids": [],
       "status": "verified_source",
-      "order": 2
+      "order": 2,
+      "sequence_reason": "Second, observe startup completion before exploring individual web features. This method shows how the app logs its working directory when Spring announces readiness. Learning order only: Spring's ApplicationReadyEvent actually fires after startup configuration, not before Companies 3–6.",
+      "interview": {
+        "id": "IQ-2",
+        "question": "How does @EventListener(ApplicationReadyEvent.class) differ from @PostConstruct, and why might it be too late for essential startup configuration?"
+      }
     },
     {
       "id": "3",
@@ -132,8 +142,152 @@
       "parent_id": null,
       "subsidiary_ids": [],
       "status": "verified_source",
-      "order": 3
+      "order": 3,
+      "sequence_reason": "Third, introduce incoming-request protection before teaching responses and routes. This factory method registers a Shopizer XssFilter for shop, API and customer URL patterns.",
+      "interview": {
+        "id": "IQ-3",
+        "question": "How does FilterRegistrationBean control which URLs a servlet filter applies to, and why is an XSS filter not a replacement for output encoding?"
+      }
+    },
+    {
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "4",
+      "name": "Prepare JSON responses",
+      "method": "configureMessageConverters(List<HttpMessageConverter<?>> converters)",
+      "type": "Spring MVC message converter configuration",
+      "start_line": 67,
+      "method_start_line": 68,
+      "end_line": 70,
+      "order": 4,
+      "plain_english": "Adds Jackson's JSON converter so Spring MVC can read and write JSON in web requests and responses.",
+      "inbound": [
+        {
+          "name": "Spring MVC configuration",
+          "kind": "external_framework_callback",
+          "company_id": null,
+          "code_line": 67,
+          "description": "Spring MVC calls this WebMvcConfigurer override while setting up message converters."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create Jackson JSON converter",
+          "kind": "external_framework_class",
+          "company_id": null,
+          "code_line": 69,
+          "description": "Adds a MappingJackson2HttpMessageConverter to the converter list."
+        }
+      ],
+      "sequence_reason": "Fourth, learn how data travels between clients and the Java backend after seeing basic request filtering. This method shows the JSON conversion mechanism before you study routes and controller behavior.",
+      "interview": {
+        "id": "IQ-4",
+        "question": "What happens to Spring MVC's default HttpMessageConverters when you override configureMessageConverters(), and when should you use extendMessageConverters() instead?"
+      }
+    },
+    {
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "5",
+      "name": "Set up the shop homepage",
+      "method": "addViewControllers(ViewControllerRegistry registry)",
+      "type": "Spring MVC view controller configuration",
+      "start_line": 72,
+      "method_start_line": 73,
+      "end_line": 75,
+      "order": 5,
+      "plain_english": "Maps a visit to the website's root address (/) to a view named shop, without requiring a separate controller method.",
+      "inbound": [
+        {
+          "name": "Spring MVC configuration",
+          "kind": "external_framework_callback",
+          "company_id": null,
+          "code_line": 72,
+          "description": "Spring MVC calls this WebMvcConfigurer hook to register simple view routes."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Map homepage to shop view",
+          "kind": "external_framework_method",
+          "company_id": null,
+          "code_line": 74,
+          "description": "registry.addViewController(\"/\").setViewName(\"shop\") establishes the mapping."
+        }
+      ],
+      "sequence_reason": "Fifth, after learning how HTTP data is handled, see how the application attaches a URL to a page. The single root mapping makes routing concrete before introducing request interceptors.",
+      "interview": {
+        "id": "IQ-5",
+        "question": "When would you use ViewControllerRegistry.addViewController() instead of writing a @Controller method, and what does setViewName(\"shop\") actually resolve?"
+      }
+    },
+    {
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java",
+      "source_blob_sha": "41f81a6604d64ad9a60829a606f247dd547182c4",
+      "source_data_file": "sources/shop-application-configuration.json",
+      "source_line_count": 151,
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "id": "6",
+      "name": "Add request interceptors",
+      "method": "addInterceptors(InterceptorRegistry registry)",
+      "type": "Spring MVC interceptor registration",
+      "start_line": 77,
+      "method_start_line": 78,
+      "end_line": 98,
+      "order": 6,
+      "plain_english": "Adds a locale-change interceptor and a CORS interceptor; the active CORS registration targets /services/** and /api/**.",
+      "inbound": [
+        {
+          "name": "Spring MVC configuration",
+          "kind": "external_framework_callback",
+          "company_id": null,
+          "code_line": 77,
+          "description": "Spring MVC invokes this WebMvcConfigurer override to install request interceptors."
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Create locale-change interceptor",
+          "kind": "unmapped_internal_method",
+          "company_id": null,
+          "code_line": 80,
+          "description": "The method localeChangeInterceptor() is defined later in this file; it has not yet been assigned a company number."
+        },
+        {
+          "name": "Create CORS interceptor",
+          "kind": "unmapped_internal_method",
+          "company_id": null,
+          "code_line": 92,
+          "description": "The method corsFilter() is defined later in this file; it has not yet been assigned a company number."
+        },
+        {
+          "name": "Set interceptor URL patterns",
+          "kind": "external_framework_method",
+          "company_id": null,
+          "code_line": 94,
+          "description": "Adds /services/** and /api/** to the active CORS interceptor registration (lines 94–96)."
+        }
+      ],
+      "sequence_reason": "Sixth, after establishing the homepage route, introduce cross-cutting work performed around MVC requests. This method registers locale and CORS interceptors. Its commented-out storeFilter block is not active code.",
+      "interview": {
+        "id": "IQ-6",
+        "question": "How is a Spring MVC HandlerInterceptor different from a servlet Filter, and what happens when you register one without addPathPatterns()?"
+      }
     }
   ],
-  "numbering_policy": "IDs are permanent. Assign dotted subsidiary numbers only to verified parent/child methods; event-driven steps and external APIs are links, not automatic subsidiaries."
+  "numbering_policy": "IDs are permanent. Assign dotted subsidiary numbers only to verified parent/child methods; event-driven steps and external APIs are links, not automatic subsidiaries.",
+  "sequence_policy": "Company numbers indicate a developer's learning path, NOT execution order. Java/Spring runtime lifecycle can differ: the readiness event occurs after startup configuration. Keep parent/subsidiary IDs based on genuine nesting/dependency evidence.",
+  "education_policy": "Every company requires a unique stable interview.id, interview.question and a plain-English sequence_reason grounded in actual source. No duplicate questions."
 }
