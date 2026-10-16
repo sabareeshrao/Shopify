@@ -61,7 +61,9 @@ function checkBox(doc,box,n){
  const active=[...doc.querySelectorAll('.relation-card.is-selected')];
  assert(active.length===1&&active[0]===box,'Company '+n+' relation '+side+'/'+index+' did not become the only selected box');
  assert(box.getAttribute('aria-pressed')==='true','Company '+n+' selected box aria-pressed is incorrect');
- assert(highlighted.length===1&&highlighted[0]===expected,'Company '+n+' '+name+' should highlight line '+expected+', got '+highlighted.join(','));
+ const sourceContainsLine=[...doc.querySelectorAll('#current-code .code-row[data-line]')].some(row=>Number(row.dataset.line)===expected);
+ if(sourceContainsLine)assert(highlighted.length===1&&highlighted[0]===expected,'Company '+n+' '+name+' should highlight line '+expected+', got '+highlighted.join(','));
+ else assert(highlighted.length===0,'Company '+n+' '+name+' has an outside-method callsite, which must not highlight an unrelated line');
  assert(doc.querySelector('#detail-title')?.textContent.trim()===name,'Company '+n+' '+name+' displayed a stale explanation title');
  const detail=doc.querySelector('#detail-note')?.textContent.trim();
  assert(detail?.length>0,'Company '+n+' '+name+' explanation is empty');

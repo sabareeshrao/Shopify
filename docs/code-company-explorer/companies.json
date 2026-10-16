@@ -1070,8 +1070,8 @@
         {
           "name": "Company 23 Swagger Docket",
           "code_line": 69,
-          "description": "api() calls requestHandlers() at line 69.",
-          "company_id": null,
+          "description": "Company 23 calls Company 24 at line 69. The graph derives the client from Company 23's outbound link; this is not an external client.",
+          "company_id": "23",
           "kind": "internal_method_call"
         }
       ],

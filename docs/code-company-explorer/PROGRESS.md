@@ -266,3 +266,7 @@ This static site displays source code; GitHub Pages does not execute the Spring 
 - **Company 56 / IQ-56:** Audit supported authentication types. Conclude the provider review by examining the supports(Class<?>) selection contract and its unconditional return value. Interview: What issues arise when AuthenticationProvider.supports() unconditionally returns true, and how should it restrict acceptable token classes?
 
 Before this batch, verified Companies 1–36 against the pinned source: 36/36 valid ranges; zero missing company references; unique IDs; simulated UI audit 36/36 company pages, 83/83 external cards, 82 correct in-range highlights, 36/36 stale selections cleared. New active security source methods checked on the pinned reference; commented AdminConfigurationAdapter lines 211–277 intentionally excluded. IQ-55 and IQ-56 highlight potential security bugs in the source without modifying Shopizer.
+
+### Previous-company review correction after Batch 37–56
+
+Company 24 previously duplicated its verified Company 23 caller as an external card pointing to source line 69, outside Company 24's method (87–95). The inbound record is now classified as an internal company link to Company 23, and the graph derives that caller from Company 23's verified outbound edge. No source line or permanent company ID changed. The browser regression runner now distinguishes outside-method callsites from highlightable in-method lines.
