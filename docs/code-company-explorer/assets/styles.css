@@ -70,3 +70,21 @@
 .relation-card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .graph-col.uses .relation-card:focus-visible{outline-color:var(--orange)}
 .code-row.highlight{background:#152b20!important;border-left-color:var(--green)!important}
+
+/* 76-company UX audit: mapped source selection, stable code gutter and mobile cables. */
+.code-body .code-row .ln{position:sticky;left:0;z-index:1;background:#0c0c0c}
+.code-body .code-row:hover .ln{background:#191919}
+.code-body .code-row.highlight .ln{background:#152b20;color:var(--green);font-weight:750}
+.file-grid .code-row:not([data-source-company]){cursor:default}
+.file-grid .code-row:not([data-source-company]):hover{background:transparent}
+.file-grid .code-row[data-source-company]{cursor:pointer}
+.file-grid .code-row[data-source-company]:hover{background:#18271e}
+.file-grid .code-row[data-source-company]:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+.detail-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.back-company{border:1px solid var(--black);background:#252525;border-radius:8px;color:var(--blue);padding:9px 12px;font-size:11px;font-weight:800;cursor:pointer}
+.back-company:hover{background:#303030;color:var(--white)}
+.back-company:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wires .wire-path.is-selected{stroke-width:4;opacity:1}
+.wires .wire-path.is-muted{opacity:.2}
+@media(max-width:1100px){.wires{display:none!important}}
+@media(max-width:520px){.nodes{grid-template-columns:minmax(0,1fr)}.code-body.graph-code{font-size:11px;line-height:1.78}.relation-card{min-height:0}}

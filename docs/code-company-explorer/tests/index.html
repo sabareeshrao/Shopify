@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=mod-16-1#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ux-76-2#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -103,6 +103,24 @@ async function audit(){
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 7'),'Next button did not go 6 → 7');
  doc.querySelector('#prev-company').click();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Previous button did not go 7 → 6');
+ openCompany(doc,6);
+ const dep=doc.querySelector('.relation-card[data-company="company-8"]');
+ assert(dep,'Missing Company 6 → 8 link');dep.click();
+ assert(doc.querySelector('#maincontent .hero h1')?.textContent.includes('Company 8'),'Supplier must open Company 8');
+ assert(Number(doc.querySelector('#current-code .code-row.highlight')?.dataset.line)===111,'Supplier must highlight declaration line 111, not caller line 80');
+ assert(doc.querySelector('#detail-note')?.textContent.includes('line 80'),'Callsite line must remain visible as context');
+ const back=doc.querySelector('#back-company');assert(back,'Back button missing');back.click();
+ assert(doc.querySelector('#maincontent .hero h1')?.textContent.includes('Company 6'),'Back must return to Company 6');
+ assert(frame.contentWindow.location.hash==='#company-6','Back URL mismatch');
+ openCompany(doc,7);
+ const all=doc.querySelector('#maincontent button[data-gofile]');assert(all,'File button absent');all.click();
+ assert(!frame.contentWindow.location.hash,'File view must clear company hash');
+ const mapped=doc.querySelector('.file-grid .code-row[data-line="105"][data-source-company]');assert(mapped,'Company 7 source line 105 not mapped');mapped.click();
+ assert(doc.querySelector('#maincontent .hero h1')?.textContent.includes('Company 7'),'Mapped code line must open Company 7');
+ assert(Number(doc.querySelector('#current-code .code-row.highlight')?.dataset.line)===105,'Mapped source line must remain 105');
+ const gutter=doc.querySelector('#current-code .code-row .ln');
+ assert(frame.contentWindow.getComputedStyle(gutter).position==='sticky','Code gutter should be sticky horizontally');
+ assert(frame.contentWindow.getComputedStyle(doc.querySelector('#wires')).display==='none','Cables must not appear in stacked mobile layout');
  log('All 76 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
  status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
 }

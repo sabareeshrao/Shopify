@@ -330,3 +330,16 @@ Previous-company gate: 56 verified company sources and interview IDs, 151 relati
 - **76 (IQ-76) — Sign JWT with HS512:** Conclude with the signed-token builder that Company 75 directly invokes. Interview: What is the correct way to handle signing-key storage, rotation and expiration for HS512 JWTs?
 
 Security issues evidenced in the original source: customer-provider password comparison against username (57–58), supports() always true (59), grace-window behavior (69 and 71), audience-based expiration exception (74), and symmetric HS512 key management (76). These are discussed, not silently changed.
+
+## UX and code-line audit — Companies 1–76
+
+- Reverified all 76 method signatures and exact line spans in 15 pinned Java snapshots before changing the UI. No source-line drift was found.
+- Fixed false internal supplier highlighting: the actual caller line belongs to the previous company, while the destination highlights its method declaration; inbound caller links highlight their genuine callsite.
+- Full-file Java code now lets users click or keyboard-activate mapped source lines to open the corresponding company at the same original line. Unmapped lines are read-only.
+- Added an in-page Back button and synchronized URL fragments when entering/exiting companies, files, folders and history.
+- Made source line numbers sticky during horizontal code scrolling and emphasized the corresponding connection cable on selection.
+- Aligned SVG wire breakpoint to the stacked layout at 1100px and reduced dependency cards to one column on narrow phones.
+- Corrected stale browser tab title and versioned static assets to avoid old cached scripts.
+- Extended the browser regression to check Company 6→8 declaration highlighting, caller context, Back, file→Company 7 line 105, sticky gutter and mobile cables.
+- Source/DOM unit checks are performed in model-side tooling; a full real-browser deployment check remains separate.
+

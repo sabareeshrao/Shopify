@@ -31,6 +31,7 @@ function selectLine(line,scroll=true,relationKey=null,details=null){
    el.classList.toggle('is-selected',on);
    el.setAttribute('aria-pressed',String(on));
  });
+ $$('#wires .wire-path').forEach(el=>{el.classList.toggle('is-selected',!!relationKey&&el.dataset.relationKey===relationKey);el.classList.toggle('is-muted',!!relationKey&&el.dataset.relationKey!==relationKey);});
  $$('#current-code .code-row').forEach(el=>{
    const row=Number(el.dataset.line);
    el.classList.toggle('highlight',(activeLine!==null&&row===activeLine)||

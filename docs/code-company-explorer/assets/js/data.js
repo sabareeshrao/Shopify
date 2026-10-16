@@ -40,6 +40,7 @@ async function loadRealCode(){
   document.querySelector('.repo-title span:nth-child(2)').textContent='shopizer-ecommerce / shopizer';
   document.querySelector('.repo-meta').innerHTML='<span class="demo-dot"></span> Real source · '+manifest.count+' verified companies';
   document.querySelector('.side-bottom').innerHTML='<span>JAVA · SPRING BOOT</span><b>REAL SOURCE</b>';
+  document.title='Code Company | Shopizer · '+manifest.count+' Companies';
   renderAll();
 }
 // Initial tree state: the real GitHub directory hierarchy stays intact.

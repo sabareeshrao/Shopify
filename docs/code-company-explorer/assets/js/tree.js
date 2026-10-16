@@ -19,17 +19,18 @@ function treeContent(){
 function renderTree(){const side=$('#tree');side.innerHTML=treeContent();}
 function closeSidebar(){ $('#sidebar').classList.remove('open');$('#backdrop').classList.remove('open');$('#menu').setAttribute('aria-expanded','false'); }
 function openParents(id){const c=entities[id],f=files[c.file];const parts=f.path.split('/');let p='shopizer';expanded.add('f:'+p);for(const part of parts.slice(0,-1)){p+='/'+part;expanded.add('f:'+p);}expanded.add('file:'+c.file);let parent=c.parent;while(parent){expanded.add('co:'+parent);parent=entities[parent].parent;}}
-function navToFile(fid,track=true){if(!files[fid])return;resetSelection();if(track)navStack.push([mode,selectedFile,selected]);selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);renderAll();closeSidebar();}
+function syncNavigationUrl(){const target=mode==='company'&&entities[selected]?'#company-'+encodeURIComponent(entities[selected].no):(location.pathname||'')+(location.search||'');history.replaceState(null,'',target);}
+function navToFile(fid,track=true){if(!files[fid])return;resetSelection();if(track)navStack.push([mode,selectedFile,selected,folderPath]);selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);syncNavigationUrl();renderAll();closeSidebar();window.scrollTo({top:0,behavior:'auto'});}
 function navToCompany(id,track=true){
   const c=entities[id];if(!c)return false;
-  if(track&&(mode!=='company'||selected!==id))navStack.push([mode,selectedFile,selected]);
+  if(track&&(mode!=='company'||selected!==id))navStack.push([mode,selectedFile,selected,folderPath]);
   selectedFile=c.file;selected=id;mode='company';resetSelection();
   openParents(id);$('#search').value='';$('#search-results').hidden=true;
-  history.replaceState(null,'','#company-'+encodeURIComponent(c.no));
+  syncNavigationUrl();
   renderAll();closeSidebar();window.scrollTo({top:0,behavior:'auto'});
   return true;
 }
-function navBack(){if(!navStack.length)return;resetSelection();const [m,f,s]=navStack.pop();mode=m;selectedFile=f;selected=s;renderAll();}
-function navToFolder(path){if(!path)return;resetSelection();const key='f:'+path;expanded.add(key);mode='folder';selected=null;folderPath=path;renderAll();closeSidebar();}
+function navBack(){if(!navStack.length)return;resetSelection();const [m,f,s,p]=navStack.pop();mode=m;selectedFile=f;selected=s;if(p)folderPath=p;syncNavigationUrl();renderAll();closeSidebar();window.scrollTo({top:0,behavior:'auto'});}
+function navToFolder(path){if(!path)return;resetSelection();if(mode!=='folder'||folderPath!==path)navStack.push([mode,selectedFile,selected,folderPath]);const key='f:'+path;expanded.add(key);mode='folder';selected=null;folderPath=path;syncNavigationUrl();renderAll();closeSidebar();window.scrollTo({top:0,behavior:'auto'});}
 let folderPath='shopizer';
 function collectFolder(node,full,match){if(full===match)return node;for(const ch of node.children||[]){if(ch.file||ch.isResource)continue;const res=collectFolder(ch,full+'/'+ch.name,match);if(res)return res;}return null;}
