@@ -68,6 +68,26 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 54 | Authenticate JWT admin credentials | `authenticate(Authentication authentication)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 35–59 | 0 mapped | Verified |
 | 55 | Audit admin password comparison | `passwordMatch(String rawPassword, String user)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 62–64 | 0 mapped | Verified |
 | 56 | Audit supported authentication types | `supports(Class<?> authentication)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 66–69 | 0 mapped | Verified |
+| 57 | Authenticate customer credentials | `authenticate(Authentication authentication)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java` | 28–52 | 0 mapped | Verified |
+| 58 | Compare customer password | `passwordMatch(String rawPassword, String user)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java` | 55–57 | 0 mapped | Verified |
+| 59 | Declare supported authentication tokens | `supports(Class<?> authentication)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java` | 59–62 | 0 mapped | Verified |
+| 60 | Expose customer identity lookup dependency | `getJwtCustomerDetailsService()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java` | 65–67 | 0 mapped | Verified |
+| 61 | Assign customer identity lookup dependency | `setJwtCustomerDetailsService(UserDetailsService jwtCustomerDetailsService)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java` | 70–72 | 0 mapped | Verified |
+| 62 | Read JWT username | `getUsernameFromToken(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 56–58 | 0 mapped | Verified |
+| 63 | Read JWT issuance time | `getIssuedAtDateFromToken(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 60–62 | 0 mapped | Verified |
+| 64 | Read JWT expiry timestamp | `getExpirationDateFromToken(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 64–66 | 0 mapped | Verified |
+| 65 | Read intended JWT audience | `getAudienceFromToken(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 68–70 | 0 mapped | Verified |
+| 66 | Resolve any supported JWT claim | `getClaimFromToken(String token, Function<Claims, T> claimsResolver)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 72–75 | 0 mapped | Verified |
+| 67 | Parse and verify signed JWT | `getAllClaimsFromToken(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 77–82 | 0 mapped | Verified |
+| 68 | Check strict JWT expiration | `isTokenExpired(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 84–87 | 0 mapped | Verified |
+| 69 | Check expiration with 200-second allowance | `isTokenExpiredWithGrace(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 89–93 | 0 mapped | Verified |
+| 70 | Invalidate tokens preceding password reset | `isCreatedBeforeLastPasswordReset(Date created, Date lastPasswordReset)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 95–97 | 0 mapped | Verified |
+| 71 | Adjust reset cutoff by 200 seconds | `isCreatedBeforeLastPasswordResetWithGrace(Date created, Date lastPasswordReset)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 99–101 | 0 mapped | Verified |
+| 72 | Add seconds to a Date | `addSeconds(Date date, Integer seconds)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 103–108 | 0 mapped | Verified |
+| 73 | Choose API token audience | `generateAudience()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 110–112 | 0 mapped | Verified |
+| 74 | Recognize mobile/tablet expiry exception | `ignoreTokenExpiration(String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 114–117 | 0 mapped | Verified |
+| 75 | Generate user JWT | `generateToken(UserDetails userDetails)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 119–122 | 0 mapped | Verified |
+| 76 | Sign JWT with HS512 | `doGenerateToken(Map<String, Object> claims, String subject, String audience)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java` | 124–138 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -283,3 +303,30 @@ Before **every future batch**, inspect every previously registered company and b
 6. After adding the requested batch, rerun all audits against the full updated registry; commit source snapshots, registry, progress and test updates atomically.
 
 This audit gate was explicitly requested after Companies 1–36 and applies to Company 57 onward.
+
+## Companies 57–76 — JWT provider and token utility
+
+Previous-company gate: 56 verified company sources and interview IDs, 151 relationships; 56 rendered pages, 131 external selected cards, 131 correct code-line highlights, and 56 stale-selection resets—all passed before starting this batch.
+
+- **57 (IQ-57) — Authenticate customer credentials:** Company 50 constructs this customer authentication provider; start with its actual authentication method. Interview: Why does passing a username rather than an encoded password to passwordMatch make the customer authentication flow incorrect?
+- **58 (IQ-58) — Compare customer password:** Immediately inspect the helper directly invoked by Company 57 to reveal the incorrect comparison. Interview: What must the second argument to BCrypt PasswordEncoder.matches be, and why is username unsuitable?
+- **59 (IQ-59) — Declare supported authentication tokens:** Review the AuthenticationProvider selection contract after the credential check. Interview: Why might supports() always returning true disrupt a chain of multiple Spring Security providers?
+- **60 (IQ-60) — Expose customer identity lookup dependency:** Inspect the provider's accessor after its authentication and selection behavior. Interview: What are the tradeoffs of exposing a mutable UserDetailsService dependency through a getter?
+- **61 (IQ-61) — Assign customer identity lookup dependency:** Complete the provider's setter/getter pair before moving to JWT utility methods. Interview: Why might constructor injection be safer than a mutable setter in a singleton AuthenticationProvider?
+- **62 (IQ-62) — Read JWT username:** Begin JWTTokenUtil with user identity encoded in the signed token. Interview: Why must a JWT subject be signature-verified before it is trusted as the user identity?
+- **63 (IQ-63) — Read JWT issuance time:** After subject identity, read issue time needed for password-reset checks. Interview: What does the iat claim prove, and can it replace signature or expiration verification?
+- **64 (IQ-64) — Read JWT expiry timestamp:** Learn exp extraction before assessing strict and grace-based expiry. Interview: How should JWT signature and expiration verification behave for expired tokens and clock skew?
+- **65 (IQ-65) — Read intended JWT audience:** Learn audience before special mobile/tablet expiration behavior. Interview: Why should a JWT consumer validate aud against its own intended audience?
+- **66 (IQ-66) — Resolve any supported JWT claim:** Companies 62–65 share this helper; now inspect its generic extraction mechanism. Interview: How does Function<Claims,T> support type-safe reuse when reading different JWT claims?
+- **67 (IQ-67) — Parse and verify signed JWT:** Continue from the generic claim helper into the actual signed-token parser. Interview: What errors should parseClaimsJws raise for forged, malformed or expired JWTs?
+- **68 (IQ-68) — Check strict JWT expiration:** After parsing the exp claim, learn strict expiration enforcement. Interview: How would you test exact expiration boundaries without depending on the system clock?
+- **69 (IQ-69) — Check expiration with 200-second allowance:** Contrast strict expiration with the source's 200-second grace variant. Interview: What security risk results from adding 200 seconds to a token's expiry before checking it?
+- **70 (IQ-70) — Invalidate tokens preceding password reset:** After expiry, address revocation due to password changes. Interview: Why should JWTs issued before a password reset become invalid even if their exp is still valid?
+- **71 (IQ-71) — Adjust reset cutoff by 200 seconds:** Compare with Company 70 and examine how shifting the cutoff changes the result. Interview: Why might adding grace seconds to the reset date reject MORE tokens despite the method's name?
+- **72 (IQ-72) — Add seconds to a Date:** The grace checks use this common date helper; inspect its exact arithmetic next. Interview: When is Instant.plusSeconds more predictable and testable than Calendar.add for security timestamps?
+- **73 (IQ-73) — Choose API token audience:** Transition from claims and validation helpers into JWT generation. Interview: What are the limits of always issuing tokens with a single 'api' audience?
+- **74 (IQ-74) — Recognize mobile/tablet expiry exception:** After audience generation, examine special-case expiration handling. Interview: Why is using a mobile/tablet audience as a reason to bypass expiration risky?
+- **75 (IQ-75) — Generate user JWT:** Inspect the public entry point for JWT creation after learning its audience helper. Interview: What claims should be placed in a new JWT, and why should subject, expiry and audience be verified by recipients?
+- **76 (IQ-76) — Sign JWT with HS512:** Conclude with the signed-token builder that Company 75 directly invokes. Interview: What is the correct way to handle signing-key storage, rotation and expiration for HS512 JWTs?
+
+Security issues evidenced in the original source: customer-provider password comparison against username (57–58), supports() always true (59), grace-window behavior (69 and 71), audience-based expiration exception (74), and symmetric HS512 key management (76). These are discussed, not silently changed.

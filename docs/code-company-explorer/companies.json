@@ -1,11 +1,11 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 56,
+  "count": 76,
   "companies": [
     {
       "id": "1",
@@ -2266,6 +2266,13 @@
           "code_line": 413,
           "company_id": null,
           "description": "Supplies jwtCustomerDetailsService."
+        },
+        {
+          "name": "JWTCustomerAuthenticationProvider runtime implementation",
+          "code_line": 412,
+          "description": "Company 50 constructs the customer provider whose authenticate() behavior is mapped as Company 57; not a direct method call.",
+          "company_id": "57",
+          "kind": "internal_class_implementation"
         }
       ],
       "parent_id": null,
@@ -2569,6 +2576,729 @@
       "interview": {
         "id": "IQ-56",
         "question": "What issues arise when AuthenticationProvider.supports() unconditionally returns true, and how should it restrict acceptable token classes?"
+      }
+    },
+    {
+      "id": "57",
+      "order": 57,
+      "name": "Authenticate customer credentials",
+      "method": "authenticate(Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java",
+      "source_blob_sha": "432ab8b9a11b4db45718536c1a62b4c2036248f7",
+      "source_data_file": "sources/customer-provider.json",
+      "source_line_count": 74,
+      "start_line": 28,
+      "method_start_line": 29,
+      "end_line": 52,
+      "plain_english": "Loads a customer, invokes passwordMatch, then creates an authenticated token; the caller passes username to the password check.",
+      "sequence_reason": "Company 50 constructs this customer authentication provider; start with its actual authentication method.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Look up customer",
+          "code_line": 33,
+          "description": "jwtCustomerDetailsService.loadUserByUsername(name).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Compare credentials",
+          "code_line": 41,
+          "description": "Calls Company 58 passwordMatch(pass, usr), where usr is username.",
+          "company_id": "58",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Create authenticated token",
+          "code_line": 51,
+          "description": "Returns UsernamePasswordAuthenticationToken with customer authorities.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-57",
+        "question": "Why does passing a username rather than an encoded password to passwordMatch make the customer authentication flow incorrect?"
+      }
+    },
+    {
+      "id": "58",
+      "order": 58,
+      "name": "Compare customer password",
+      "method": "passwordMatch(String rawPassword, String user)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java",
+      "source_blob_sha": "432ab8b9a11b4db45718536c1a62b4c2036248f7",
+      "source_data_file": "sources/customer-provider.json",
+      "source_line_count": 74,
+      "start_line": 55,
+      "method_start_line": 55,
+      "end_line": 57,
+      "plain_english": "Calls passwordEncoder.matches(rawPassword,user), but the caller supplies username, not a password hash.",
+      "sequence_reason": "Immediately inspect the helper directly invoked by Company 57 to reveal the incorrect comparison.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Compare through PasswordEncoder",
+          "code_line": 56,
+          "description": "Uses passwordEncoder.matches(rawPassword,user).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-58",
+        "question": "What must the second argument to BCrypt PasswordEncoder.matches be, and why is username unsuitable?"
+      }
+    },
+    {
+      "id": "59",
+      "order": 59,
+      "name": "Declare supported authentication tokens",
+      "method": "supports(Class<?> authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java",
+      "source_blob_sha": "432ab8b9a11b4db45718536c1a62b4c2036248f7",
+      "source_data_file": "sources/customer-provider.json",
+      "source_line_count": 74,
+      "start_line": 59,
+      "method_start_line": 60,
+      "end_line": 62,
+      "plain_english": "Always returns true, claiming to support any Authentication class.",
+      "sequence_reason": "Review the AuthenticationProvider selection contract after the credential check.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Accept every token type",
+          "code_line": 61,
+          "description": "Unconditionally returns true.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-59",
+        "question": "Why might supports() always returning true disrupt a chain of multiple Spring Security providers?"
+      }
+    },
+    {
+      "id": "60",
+      "order": 60,
+      "name": "Expose customer identity lookup dependency",
+      "method": "getJwtCustomerDetailsService()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java",
+      "source_blob_sha": "432ab8b9a11b4db45718536c1a62b4c2036248f7",
+      "source_data_file": "sources/customer-provider.json",
+      "source_line_count": 74,
+      "start_line": 65,
+      "method_start_line": 65,
+      "end_line": 67,
+      "plain_english": "Returns the configured jwtCustomerDetailsService reference.",
+      "sequence_reason": "Inspect the provider's accessor after its authentication and selection behavior.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Return customer details service",
+          "code_line": 66,
+          "description": "Returns jwtCustomerDetailsService.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-60",
+        "question": "What are the tradeoffs of exposing a mutable UserDetailsService dependency through a getter?"
+      }
+    },
+    {
+      "id": "61",
+      "order": 61,
+      "name": "Assign customer identity lookup dependency",
+      "method": "setJwtCustomerDetailsService(UserDetailsService jwtCustomerDetailsService)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/customer/JWTCustomerAuthenticationProvider.java",
+      "source_blob_sha": "432ab8b9a11b4db45718536c1a62b4c2036248f7",
+      "source_data_file": "sources/customer-provider.json",
+      "source_line_count": 74,
+      "start_line": 70,
+      "method_start_line": 70,
+      "end_line": 72,
+      "plain_english": "Assigns the provided UserDetailsService into the provider field.",
+      "sequence_reason": "Complete the provider's setter/getter pair before moving to JWT utility methods.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Assign details service",
+          "code_line": 71,
+          "description": "Stores this.jwtCustomerDetailsService.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-61",
+        "question": "Why might constructor injection be safer than a mutable setter in a singleton AuthenticationProvider?"
+      }
+    },
+    {
+      "id": "62",
+      "order": 62,
+      "name": "Read JWT username",
+      "method": "getUsernameFromToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 56,
+      "method_start_line": 56,
+      "end_line": 58,
+      "plain_english": "Reads the JWT subject claim via the generic claims helper.",
+      "sequence_reason": "Begin JWTTokenUtil with user identity encoded in the signed token.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read subject claim",
+          "code_line": 57,
+          "description": "Calls getClaimFromToken(token,Claims::getSubject).",
+          "company_id": "66",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-62",
+        "question": "Why must a JWT subject be signature-verified before it is trusted as the user identity?"
+      }
+    },
+    {
+      "id": "63",
+      "order": 63,
+      "name": "Read JWT issuance time",
+      "method": "getIssuedAtDateFromToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 60,
+      "method_start_line": 60,
+      "end_line": 62,
+      "plain_english": "Retrieves the iat claim through getClaimFromToken.",
+      "sequence_reason": "After subject identity, read issue time needed for password-reset checks.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read iat claim",
+          "code_line": 61,
+          "description": "Calls getClaimFromToken with Claims::getIssuedAt.",
+          "company_id": "66",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-63",
+        "question": "What does the iat claim prove, and can it replace signature or expiration verification?"
+      }
+    },
+    {
+      "id": "64",
+      "order": 64,
+      "name": "Read JWT expiry timestamp",
+      "method": "getExpirationDateFromToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 64,
+      "method_start_line": 64,
+      "end_line": 66,
+      "plain_english": "Retrieves the exp claim through getClaimFromToken.",
+      "sequence_reason": "Learn exp extraction before assessing strict and grace-based expiry.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read exp claim",
+          "code_line": 65,
+          "description": "Calls getClaimFromToken with Claims::getExpiration.",
+          "company_id": "66",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-64",
+        "question": "How should JWT signature and expiration verification behave for expired tokens and clock skew?"
+      }
+    },
+    {
+      "id": "65",
+      "order": 65,
+      "name": "Read intended JWT audience",
+      "method": "getAudienceFromToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 68,
+      "method_start_line": 68,
+      "end_line": 70,
+      "plain_english": "Reads aud through the generic claims helper.",
+      "sequence_reason": "Learn audience before special mobile/tablet expiration behavior.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read audience claim",
+          "code_line": 69,
+          "description": "Calls getClaimFromToken with Claims::getAudience.",
+          "company_id": "66",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-65",
+        "question": "Why should a JWT consumer validate aud against its own intended audience?"
+      }
+    },
+    {
+      "id": "66",
+      "order": 66,
+      "name": "Resolve any supported JWT claim",
+      "method": "getClaimFromToken(String token, Function<Claims, T> claimsResolver)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 72,
+      "method_start_line": 72,
+      "end_line": 75,
+      "plain_english": "Parses all signed claims, then applies a Function to extract the requested value.",
+      "sequence_reason": "Companies 62–65 share this helper; now inspect its generic extraction mechanism.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Parse signed claims",
+          "code_line": 73,
+          "description": "Calls getAllClaimsFromToken.",
+          "company_id": "67",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Apply claim function",
+          "code_line": 74,
+          "description": "Returns claimsResolver.apply(claims).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-66",
+        "question": "How does Function<Claims,T> support type-safe reuse when reading different JWT claims?"
+      }
+    },
+    {
+      "id": "67",
+      "order": 67,
+      "name": "Parse and verify signed JWT",
+      "method": "getAllClaimsFromToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 77,
+      "method_start_line": 77,
+      "end_line": 82,
+      "plain_english": "Uses JJWT's signing-key parser to decode a signed JWS claims body.",
+      "sequence_reason": "Continue from the generic claim helper into the actual signed-token parser.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Verify JWT signature",
+          "code_line": 78,
+          "description": "Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-67",
+        "question": "What errors should parseClaimsJws raise for forged, malformed or expired JWTs?"
+      }
+    },
+    {
+      "id": "68",
+      "order": 68,
+      "name": "Check strict JWT expiration",
+      "method": "isTokenExpired(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 84,
+      "method_start_line": 84,
+      "end_line": 87,
+      "plain_english": "Compares exp to the current date with Date.before.",
+      "sequence_reason": "After parsing the exp claim, learn strict expiration enforcement.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Get expiry",
+          "code_line": 85,
+          "description": "Calls Company 64 getExpirationDateFromToken.",
+          "company_id": "64",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Compare with now",
+          "code_line": 86,
+          "description": "Checks expiration.before(DateUtil.getDate()).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-68",
+        "question": "How would you test exact expiration boundaries without depending on the system clock?"
+      }
+    },
+    {
+      "id": "69",
+      "order": 69,
+      "name": "Check expiration with 200-second allowance",
+      "method": "isTokenExpiredWithGrace(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 89,
+      "method_start_line": 89,
+      "end_line": 93,
+      "plain_english": "Shifts exp forward by GRACE_PERIOD and then checks whether the token is expired.",
+      "sequence_reason": "Contrast strict expiration with the source's 200-second grace variant.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read exp timestamp",
+          "code_line": 90,
+          "description": "Calls Company 64.",
+          "company_id": "64",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Add grace period",
+          "code_line": 91,
+          "description": "Calls Company 72 addSeconds.",
+          "company_id": "72",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Compare adjusted expiry",
+          "code_line": 92,
+          "description": "Compares adjusted exp to current time.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-69",
+        "question": "What security risk results from adding 200 seconds to a token's expiry before checking it?"
+      }
+    },
+    {
+      "id": "70",
+      "order": 70,
+      "name": "Invalidate tokens preceding password reset",
+      "method": "isCreatedBeforeLastPasswordReset(Date created, Date lastPasswordReset)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 95,
+      "method_start_line": 95,
+      "end_line": 97,
+      "plain_english": "Checks whether JWT issuance predates a nonnull password-reset timestamp.",
+      "sequence_reason": "After expiry, address revocation due to password changes.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Compare issuance against reset",
+          "code_line": 96,
+          "description": "Checks created.before(lastPasswordReset).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-70",
+        "question": "Why should JWTs issued before a password reset become invalid even if their exp is still valid?"
+      }
+    },
+    {
+      "id": "71",
+      "order": 71,
+      "name": "Adjust reset cutoff by 200 seconds",
+      "method": "isCreatedBeforeLastPasswordResetWithGrace(Date created, Date lastPasswordReset)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 99,
+      "method_start_line": 99,
+      "end_line": 101,
+      "plain_english": "Checks issuance against password-reset time plus GRACE_PERIOD seconds.",
+      "sequence_reason": "Compare with Company 70 and examine how shifting the cutoff changes the result.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Add seconds to reset time",
+          "code_line": 100,
+          "description": "Calls Company 72 addSeconds.",
+          "company_id": "72",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-71",
+        "question": "Why might adding grace seconds to the reset date reject MORE tokens despite the method's name?"
+      }
+    },
+    {
+      "id": "72",
+      "order": 72,
+      "name": "Add seconds to a Date",
+      "method": "addSeconds(Date date, Integer seconds)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 103,
+      "method_start_line": 103,
+      "end_line": 108,
+      "plain_english": "Uses Calendar.setTime and Calendar.add to return an adjusted date.",
+      "sequence_reason": "The grace checks use this common date helper; inspect its exact arithmetic next.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Advance seconds in Calendar",
+          "code_line": 106,
+          "description": "Calls cal.add(Calendar.SECOND,seconds).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-72",
+        "question": "When is Instant.plusSeconds more predictable and testable than Calendar.add for security timestamps?"
+      }
+    },
+    {
+      "id": "73",
+      "order": 73,
+      "name": "Choose API token audience",
+      "method": "generateAudience()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 110,
+      "method_start_line": 110,
+      "end_line": 112,
+      "plain_english": "Returns the constant AUDIENCE_API, whose value is api.",
+      "sequence_reason": "Transition from claims and validation helpers into JWT generation.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Return AUDIENCE_API",
+          "code_line": 111,
+          "description": "Returns the predefined API audience.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-73",
+        "question": "What are the limits of always issuing tokens with a single 'api' audience?"
+      }
+    },
+    {
+      "id": "74",
+      "order": 74,
+      "name": "Recognize mobile/tablet expiry exception",
+      "method": "ignoreTokenExpiration(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 114,
+      "method_start_line": 114,
+      "end_line": 117,
+      "plain_english": "Returns true for audiences tablet or mobile, used by later refresh logic.",
+      "sequence_reason": "After audience generation, examine special-case expiration handling.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read token audience",
+          "code_line": 115,
+          "description": "Calls Company 65 getAudienceFromToken.",
+          "company_id": "65",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Compare allowed special audiences",
+          "code_line": 116,
+          "description": "Returns true when audience is tablet or mobile.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-74",
+        "question": "Why is using a mobile/tablet audience as a reason to bypass expiration risky?"
+      }
+    },
+    {
+      "id": "75",
+      "order": 75,
+      "name": "Generate user JWT",
+      "method": "generateToken(UserDetails userDetails)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 119,
+      "method_start_line": 119,
+      "end_line": 122,
+      "plain_english": "Builds empty custom claims and delegates signing with username and selected audience.",
+      "sequence_reason": "Inspect the public entry point for JWT creation after learning its audience helper.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Generate audience",
+          "code_line": 121,
+          "description": "Calls Company 73.",
+          "company_id": "73",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Sign token",
+          "code_line": 121,
+          "description": "Calls Company 76 doGenerateToken.",
+          "company_id": "76",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-75",
+        "question": "What claims should be placed in a new JWT, and why should subject, expiry and audience be verified by recipients?"
+      }
+    },
+    {
+      "id": "76",
+      "order": 76,
+      "name": "Sign JWT with HS512",
+      "method": "doGenerateToken(Map<String, Object> claims, String subject, String audience)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 124,
+      "method_start_line": 124,
+      "end_line": 138,
+      "plain_english": "Builds a compact JWS with subject, audience, iat, exp and an HS512 signature.",
+      "sequence_reason": "Conclude with the signed-token builder that Company 75 directly invokes.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Calculate expiration",
+          "code_line": 126,
+          "description": "Calls calculateExpirationDate(), an unmapped method in this same Java file.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Create signed compact JWT",
+          "code_line": 130,
+          "description": "Builds JWS with claims and SignatureAlgorithm.HS512.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-76",
+        "question": "What is the correct way to handle signing-key storage, rotation and expiration for HS512 JWTs?"
       }
     }
   ],
