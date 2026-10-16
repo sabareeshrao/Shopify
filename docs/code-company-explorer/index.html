@@ -382,8 +382,12 @@ function getRelations(id){
 }
 function edgeCard(id,line,side,index){
   if(String(id).startsWith('outside-')){
-    const data=(side==='usedby'?entities[selected].externalClients:entities[selected].externalSuppliers)[index];
-    return `<button class="relation-card" data-external="${side}" data-external-index="${index}" data-line="${data.code_line??entities[selected].start}">
+    // Relation cards may interleave internal companies and external APIs. The
+    // array position is not the external source index (e.g. Company 6 has two internal calls).
+    const sourceIndex=Number(String(id).split('-').at(-1));
+    const data=(side==='usedby'?entities[selected].externalClients:entities[selected].externalSuppliers)[sourceIndex];
+    if(!data)return '';
+    return `<button class="relation-card" data-external="${side}" data-external-index="${sourceIndex}" data-line="${data.code_line??entities[selected].start}">
     <span class="rel-num">${side==='usedby'?'WHO STARTS IT':'OUTSIDE SERVICE'} <span class="rel-arrow">↗</span></span>
     <span class="rel-name">${safe(data.name)}</span>
     <span class="rel-file">${safe(data.description||'Outside this Java file')}</span>
