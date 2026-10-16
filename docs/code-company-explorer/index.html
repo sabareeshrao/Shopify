@@ -57,7 +57,20 @@
 .search-results .search-unmapped{padding:12px;color:var(--orange);font-size:12px;line-height:1.5}
 @media(max-width:1100px){.company-sequence{padding:8px 11px;gap:5px}.sequence-button{min-width:74px;padding:8px 7px;gap:4px}.sequence-position{font-size:11px}}
 @media(max-width:380px){.sequence-button{min-width:65px;font-size:11px}.sequence-position{font-size:10px}}
-</style>
+/* Company order explanation + interview cards, matching approved palette. */
+.company-learning{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:17px 0 21px}
+.learning-card{background:var(--surface2);border:2px solid var(--border);border-radius:12px;padding:17px 18px;min-width:0}
+.learning-card h2{display:flex;align-items:center;gap:8px;margin:0 0 11px;font-size:14px;font-weight:850;line-height:1.35}
+.learning-card h2 .ic{width:17px;height:17px;flex-shrink:0}
+.learning-card.sequence h2{color:var(--blue)}.learning-card.question h2{color:var(--orange)}
+.learning-card p{margin:0;color:var(--white);font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.learning-card .learning-overline{display:block;font-weight:800;font-size:10px;letter-spacing:1.25px;text-transform:uppercase;color:var(--dim);margin-bottom:7px}
+.learning-card .learning-id{display:inline-flex;align-items:center;color:var(--orange);border:1px solid var(--border);background:var(--surface3);border-radius:6px;padding:2px 6px;font-size:10px;font-weight:800;letter-spacing:.5px;margin-left:auto}
+.learning-card .learning-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:8px;flex-wrap:wrap}
+.learning-card .question-copy{color:var(--blue);font-size:11px;border:1px solid var(--border);background:var(--surface3);border-radius:7px;padding:6px 9px;cursor:pointer;font-weight:750}
+.learning-card .question-copy:hover{background:var(--surface);color:var(--white)}
+.learning-card .learning-footnote{font-size:10px;color:var(--dim);line-height:1.5}
+@media(max-width:820px){.company-learning{grid-template-columns:1fr;gap:9px}.learning-card{padding:14px 15px}}</style>
 </head>
 <body>
 <div class="sidebar-overlay" id="backdrop"></div>
@@ -128,6 +141,7 @@ async function loadRealCode(){
     if(!files[fid].source||files[fid].source.length<c.end_line)throw Error('Wrong source line range: '+c.id);
     entities[eid]={no:c.id,file:fid,name:c.name,method:c.method,desc:c.plain_english,start:c.start_line,end:c.end_line,
       code:files[fid].source.slice(c.start_line-1,c.end_line),parent:c.parent_id?'company-'+c.parent_id:null,children:[],needs:[],
+      sequenceReason:c.sequence_reason||'',interview:c.interview||null,methodStart:c.method_start_line||c.start_line,
       externalClients:c.inbound||[],externalSuppliers:c.outbound||[]};
     if(!c.parent_id)files[fid].companyIds.push(eid);
   }
@@ -193,6 +207,19 @@ function renderCompanyView(){const c=entities[selected],f=files[c.file],chain=ge
  const header=`<div class="hero"><div><div class="eyebrow">${icon(c.parent?'branch':'building')} ${type}</div><h1>Company ${safe(c.no)} <span style="color:var(--dim)">·</span> ${safe(c.name)}</h1><p class="description">${safe(c.desc)}</p><div class="small-meta"><span class="meta-chip"><b>${safe(f.name)}</b></span><span class="meta-chip accent">Lines ${c.start}–${c.end||c.start+(c.code?.length||1)-1}</span><span class="linepath">${safe(f.path)}</span></div></div><div class="hero-actions"><button class="plain-button" data-gofile="${c.file}" title="View every company in this file">${icon('layers')} All companies</button></div></div>`;
  const strip=`<div class="path-strip"><button data-gofile="${c.file}">${safe(f.name)}</button>${chain.map((ent,i)=>`${icon('chevron')}${i===chain.length-1?`<b>Company ${safe(ent.no)}</b>`:`<button data-company="${Object.keys(entities).find(k=>entities[k]===ent)}">Company ${safe(ent.no)}</button>`}`).join('')}</div>`;
  const summary=`<div class="company-summary"><div><small>${safe(type)}</small><h2>${safe(c.name)}</h2><p>${safe(c.desc)}</p></div><div class="summary-num">${safe(c.no)}</div></div>`;
+ const learning=`<section class="company-learning" aria-label="Sequence explanation and interview question">
+   <article class="learning-card sequence">
+     <span class="learning-overline">Why this number?</span>
+     <h2>${icon('layers')} Why Company ${safe(c.no)} comes here</h2>
+     <p>${safe(c.sequenceReason||'Sequence explanation has not been added yet.')}</p>
+   </article>
+   <article class="learning-card question">
+     <span class="learning-overline">Interview practice</span>
+     <h2>${icon('code')} Unique interview question <span class="learning-id">${safe(c.interview?.id||'PENDING')}</span></h2>
+     <p>${safe(c.interview?.question||'The interview question for this company has not been added yet.')}</p>
+     ${c.interview?.question?`<div class="learning-footer"><span class="learning-footnote">Based on ${safe(f.name)} · ${safe(c.method)}</span><button class="question-copy" type="button" id="copy-interview">Copy question</button></div>`:''}
+   </article>
+ </section>`;
  const used=links.usedBy.map((e,i)=>edgeCard(e.id,e.line,'usedby',i)).join('')||'<div class="empty-rel">No direct company caller is mapped yet.</div>';
  const needs=links.needs.map((e,i)=>edgeCard(e.to,e.line,'uses',i)).join('')||'<div class="empty-rel">No outside service is required here.</div>';
  const focus=`<div class="focus-card" id="focus-card"><div class="focus-title"><div class="focus-overline">COMPANY ${safe(c.no)} · ${c.parent?'CODE SECTION':'JAVA METHOD'}</div><h3>${safe(c.name)}</h3><p>${safe(c.desc)}</p><div class="loc">${safe(f.name)} : ${c.start}–${c.end||c.start+(c.code?.length||1)-1}</div></div><div class="code-header"><span class="file-name">${icon('code')} ${safe(f.name)}</span><span class="line-mark">JAVA</span></div><div class="code-body graph-code" id="current-code">${renderCodeRows(code.lines,code.start,code.highlight)}</div><div class="focus-footer"><span>${c.parent?'Highlighted lines belong to its parent method':c.note||'Source code · line numbers'}</span><button class="line-button" id="copy-method" title="Copy this code">Copy code ${icon('copy')}</button></div></div>`;
@@ -202,7 +229,7 @@ function renderCompanyView(){const c=entities[selected],f=files[c.file],chain=ge
  const children=(c.children||[]).map(id=>{const sub=entities[id];return `<button class="subs-card" data-company="${id}"><span class="subs-num">COMPANY ${safe(sub.no)}</span><b>${safe(sub.name)}</b><small>${safe(sub.desc)}</small></button>`;}).join('');
  const subs=children?`<div class="section-head"><h2>Subsidiary companies</h2><span>${c.children.length} code sections inside ${safe(c.name)}</span></div><div class="subs-grid">${children}</div>`:'';
  const parent=c.parent?`<div class="section-head"><h2>Parent company</h2></div><button class="folder-card" data-company="${c.parent}">${icon('building')}<span><strong>Company ${safe(entities[c.parent].no)} · ${safe(entities[c.parent].name)}</strong><small>${safe(entities[c.parent].desc)}</small></span>${icon('chevron')}</button>`:'';
- return header+strip+summary+network+detailed+parent+subs;
+ return header+strip+summary+learning+network+detailed+parent+subs;
 }
 function findLineInfo(id,line){const c=entities[id],root=topEntity(id);for(const [eid,ent] of Object.entries(entities)){if(ent.parent&&topEntity(eid)===root&&line>=ent.start&&line<=ent.end)return {head:`Company ${ent.no} · ${ent.name}`,description:ent.desc};}const req=(root.needs||[]).find(dep=>dep.line===line);if(req&&entities[req.to])return {head:`Uses ${entities[req.to].name}`,description:entities[req.to].desc};return {head:`${files[c.file].name} · line ${line}`,description:c.desc};}
 function renderFolderView(){const node=collectFolder(folderData,'shopizer',folderPath);const children=node?.children||[];return `<div class="hero"><div><div class="eyebrow">${icon('folder')} REPOSITORY FOLDER</div><h1>${safe(node?.name||'Repository')}</h1><p class="description">${safe(folderPath)}</p></div></div><div class="section-head"><h2>Inside this folder</h2><span>${children.length} items</span></div>${children.map(ch=>ch.file?`<button class="folder-card" data-gofile="${ch.file}">${icon('file')}<span><strong>${safe(files[ch.file].name)}</strong><small>${safe(files[ch.file].about)}</small></span>${icon('chevron')}</button>`:ch.isResource?`<div class="folder-card" style="opacity:.55">${icon('file')}<span><strong>${safe(ch.name)}</strong><small>Configuration file</small></span></div>`:`<button class="folder-card" data-openfolder="${safe(folderPath+'/'+ch.name)}">${icon('folder')}<span><strong>${safe(ch.name)}/</strong><small>${ch.children?.length||0} items</small></span>${icon('chevron')}</button>`).join('')}`;}
@@ -305,7 +332,7 @@ $('#search').addEventListener('keydown',e=>{
 $('#prev-company').addEventListener('click',()=>moveCompany(-1));
 $('#next-company').addEventListener('click',()=>moveCompany(1));
 $('#copy').addEventListener('click',e=>copyText(getLocation(),e.currentTarget));
-$('#maincontent').addEventListener('click',e=>{const btn=e.target.closest('#copy-method');if(btn){const c=getCode(selected);copyText(c.lines.join('\n'),btn);}});
+$('#maincontent').addEventListener('click',e=>{const btn=e.target.closest('#copy-method');if(btn){const c=getCode(selected);copyText(c.lines.join('\n'),btn);}const interview=e.target.closest('#copy-interview');if(interview&&entities[selected]?.interview){const c=entities[selected];copyText(c.interview.id+' — '+c.interview.question,interview);}});
 $('#side-close').addEventListener('click',closeSidebar);
 $('#menu').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#backdrop').classList.toggle('open',open);$('#menu').setAttribute('aria-expanded',String(open));});$('#backdrop').addEventListener('click',closeSidebar);
 document.addEventListener('keydown',e=>{
