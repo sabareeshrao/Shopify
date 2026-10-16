@@ -1,11 +1,11 @@
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "reference": {
     "repository": "shopizer-ecommerce/shopizer",
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 76,
+  "count": 96,
   "companies": [
     {
       "id": "1",
@@ -1375,6 +1375,13 @@
           "description": "Creates ServicesAuthenticationSuccessHandler; implementation not yet mapped.",
           "company_id": null,
           "kind": "unmapped_internal_class"
+        },
+        {
+          "name": "Service success handler implementation",
+          "code_line": 67,
+          "description": "Company 31 creates ServicesAuthenticationSuccessHandler; Spring later invokes its Company 93 callback. Not a direct method call.",
+          "company_id": "93",
+          "kind": "internal_class_implementation"
         }
       ],
       "parent_id": null,
@@ -3279,11 +3286,11 @@
       "inbound": [],
       "outbound": [
         {
-          "name": "Calculate expiration",
+          "name": "Calculate JWT expiry (Company 81)",
           "code_line": 126,
-          "description": "Calls calculateExpirationDate(), an unmapped method in this same Java file.",
-          "company_id": null,
-          "kind": "unmapped_internal_method"
+          "description": "Company 76 calls calculateExpirationDate() at line 126; implemented by Company 81.",
+          "company_id": "81",
+          "kind": "internal_method_call"
         },
         {
           "name": "Create signed compact JWT",
@@ -3299,6 +3306,905 @@
       "interview": {
         "id": "IQ-76",
         "question": "What is the correct way to handle signing-key storage, rotation and expiration for HS512 JWTs?"
+      }
+    },
+    {
+      "id": "77",
+      "order": 77,
+      "name": "Audit grace-period token refresh",
+      "method": "canTokenBeRefreshedWithGrace(String token, Date lastPasswordReset)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 140,
+      "method_start_line": 140,
+      "end_line": 151,
+      "plain_english": "Prints intermediate checks but unconditionally returns true, so its return value does not enforce the checks.",
+      "sequence_reason": "After Company 76 signs tokens, inspect the first refresh eligibility gate. Its unconditional true result is a source-level security concern.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read token issue time",
+          "code_line": 141,
+          "description": "Calls Company 63 getIssuedAtDateFromToken.",
+          "company_id": "63",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Evaluate reset cutoff",
+          "code_line": 142,
+          "description": "Calls Company 71 grace reset check.",
+          "company_id": "71",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check expiration grace",
+          "code_line": 143,
+          "description": "Calls Company 69 grace expiration check.",
+          "company_id": "69",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check audience exception",
+          "code_line": 144,
+          "description": "Calls Company 74 ignoreTokenExpiration.",
+          "company_id": "74",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Return true unconditionally",
+          "code_line": 150,
+          "description": "Ignores calculated booleans and returns true.",
+          "company_id": null,
+          "kind": "java_return_statement"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-77",
+        "question": "Why is returning true regardless of token expiry and password-reset checks unsafe, and how would you test this behavior?"
+      }
+    },
+    {
+      "id": "78",
+      "order": 78,
+      "name": "Evaluate standard token refresh eligibility",
+      "method": "canTokenBeRefreshed(String token, Date lastPasswordReset)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 153,
+      "method_start_line": 153,
+      "end_line": 157,
+      "plain_english": "Checks password-reset timing and expiry, allowing the audience-based expiration exception.",
+      "sequence_reason": "Compare the functioning boolean expression with Company 77's unconditional true, then follow every direct dependency.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Load token issue time",
+          "code_line": 154,
+          "description": "Company 63 obtains iat.",
+          "company_id": "63",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check password-reset cutoff",
+          "code_line": 155,
+          "description": "Company 70 isCreatedBeforeLastPasswordReset.",
+          "company_id": "70",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check strict expiration",
+          "code_line": 156,
+          "description": "Company 68 isTokenExpired.",
+          "company_id": "68",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Apply audience exception",
+          "code_line": 156,
+          "description": "Company 74 ignoreTokenExpiration.",
+          "company_id": "74",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-78",
+        "question": "How does an audience-specific exception affect expired-token refresh rules, and how would you test each boolean branch?"
+      }
+    },
+    {
+      "id": "79",
+      "order": 79,
+      "name": "Reissue JWT using existing claims",
+      "method": "refreshToken(String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 159,
+      "method_start_line": 159,
+      "end_line": 171,
+      "plain_english": "Parses an existing token, updates issued-at and expiry, then signs it again with HS512.",
+      "sequence_reason": "After deciding whether refresh is allowed, study actual token reissuance and whether claims are copied unchanged.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Calculate new expiry",
+          "code_line": 161,
+          "description": "Calls Company 81 calculateExpirationDate.",
+          "company_id": "81",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Parse existing claims",
+          "code_line": 163,
+          "description": "Calls Company 67 getAllClaimsFromToken.",
+          "company_id": "67",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Update JWT timestamps",
+          "code_line": 164,
+          "description": "Mutates claims issued-at and expiration at lines 164–165.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Sign refreshed token",
+          "code_line": 167,
+          "description": "Signs the updated claims with HS512 in lines 167–170.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-79",
+        "question": "What are the risks of reusing all existing JWT claims during refresh, and how should a new expiry and signature be validated?"
+      }
+    },
+    {
+      "id": "80",
+      "order": 80,
+      "name": "Validate JWT against current user",
+      "method": "validateToken(String token, UserDetails userDetails)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 173,
+      "method_start_line": 173,
+      "end_line": 187,
+      "plain_english": "Compares subject to username, verifies strict expiry, and rejects tokens issued before the last password reset.",
+      "sequence_reason": "After generation and refresh, inspect the final validation decision that combines independent user and time checks.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read signed subject",
+          "code_line": 175,
+          "description": "Calls Company 62 getUsernameFromToken.",
+          "company_id": "62",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read issue time",
+          "code_line": 176,
+          "description": "Calls Company 63 getIssuedAtDateFromToken.",
+          "company_id": "63",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check strict expiration",
+          "code_line": 180,
+          "description": "Calls Company 68 isTokenExpired.",
+          "company_id": "68",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check password-reset cutoff",
+          "code_line": 181,
+          "description": "Calls Company 70 isCreatedBeforeLastPasswordReset.",
+          "company_id": "70",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-80",
+        "question": "Why must JWT validation check signature, subject, expiry, and password-reset cutoff, and what can go wrong with an unchecked cast to JWTUser?"
+      }
+    },
+    {
+      "id": "81",
+      "order": 81,
+      "name": "Calculate JWT expiry timestamp",
+      "method": "calculateExpirationDate(Date createdDate)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/JWTTokenUtil.java",
+      "source_blob_sha": "7770c250bace1239aecf285b65ba4f2f6a28028c",
+      "source_data_file": "sources/jwt-util.json",
+      "source_line_count": 193,
+      "start_line": 189,
+      "method_start_line": 189,
+      "end_line": 191,
+      "plain_english": "Adds configured expiration seconds to the supplied issue date in milliseconds.",
+      "sequence_reason": "Finish JWTTokenUtil by inspecting its small expiry-calculation helper used by signing and refresh.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Add configured lifetime",
+          "code_line": 190,
+          "description": "Computes new Date(createdDate.getTime() + expiration * 1000).",
+          "company_id": null,
+          "kind": "java_date_api"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-81",
+        "question": "What happens if configured expiry seconds overflow, are zero, or are negative, and how would you test the boundary?"
+      }
+    },
+    {
+      "id": "82",
+      "order": 82,
+      "name": "Read configured authentication header",
+      "method": "getTokenHeader()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/common/CustomAuthenticationManager.java",
+      "source_blob_sha": "b0bab028d310f4daaac7198b20ad2354d6c2cd2f",
+      "source_data_file": "sources/custom-auth.json",
+      "source_line_count": 93,
+      "start_line": 27,
+      "method_start_line": 27,
+      "end_line": 29,
+      "plain_english": "Returns the token-header name stored by the authentication manager.",
+      "sequence_reason": "Transition from token utilities to the manager that reads authentication requests; begin with its configured header name.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read configured token header",
+          "code_line": 28,
+          "description": "Returns the injected tokenHeader field.",
+          "company_id": null,
+          "kind": "java_field_access"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-82",
+        "question": "How does the @Value authToken.header property affect a token manager, and what happens if it is missing?"
+      }
+    },
+    {
+      "id": "83",
+      "order": 83,
+      "name": "Configure authentication header name",
+      "method": "setTokenHeader(String tokenHeader)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/common/CustomAuthenticationManager.java",
+      "source_blob_sha": "b0bab028d310f4daaac7198b20ad2354d6c2cd2f",
+      "source_data_file": "sources/custom-auth.json",
+      "source_line_count": 93,
+      "start_line": 31,
+      "method_start_line": 31,
+      "end_line": 33,
+      "plain_english": "Replaces the token header field with a caller-provided name.",
+      "sequence_reason": "Pair Company 82's getter with the setter to understand the manager's mutable configuration.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Assign header name",
+          "code_line": 32,
+          "description": "Stores the supplied tokenHeader in the field.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-83",
+        "question": "Why might a mutable token-header setter be a risk on a singleton authentication manager?"
+      }
+    },
+    {
+      "id": "84",
+      "order": 84,
+      "name": "Coordinate request authentication",
+      "method": "authenticateRequest(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/common/CustomAuthenticationManager.java",
+      "source_blob_sha": "b0bab028d310f4daaac7198b20ad2354d6c2cd2f",
+      "source_data_file": "sources/custom-auth.json",
+      "source_line_count": 93,
+      "start_line": 35,
+      "method_start_line": 35,
+      "end_line": 60,
+      "plain_english": "Calls a subclass authentication hook, handles null and authentication exceptions, then invokes success or failure handlers.",
+      "sequence_reason": "After configuring the token header, inspect the manager's central workflow and its template-method pattern.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Attempt authentication via subclass hook",
+          "code_line": 45,
+          "description": "Invokes abstract attemptAuthentication(), implemented by subclasses not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Handle authentication failure",
+          "code_line": 53,
+          "description": "Calls Company 86 unsuccess().",
+          "company_id": "86",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Handle authentication success",
+          "code_line": 57,
+          "description": "Calls Company 85 success().",
+          "company_id": "85",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-84",
+        "question": "How should a custom authentication manager distinguish null results, AuthenticationException, and unexpected exceptions?"
+      }
+    },
+    {
+      "id": "85",
+      "order": 85,
+      "name": "Store successful authentication in Spring context",
+      "method": "success(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/common/CustomAuthenticationManager.java",
+      "source_blob_sha": "b0bab028d310f4daaac7198b20ad2354d6c2cd2f",
+      "source_data_file": "sources/custom-auth.json",
+      "source_line_count": 93,
+      "start_line": 62,
+      "method_start_line": 62,
+      "end_line": 72,
+      "plain_english": "Stores the authenticated user in SecurityContextHolder and invokes the subclass success callback.",
+      "sequence_reason": "Company 84 invokes this helper only after authentication produces a non-null result; examine the security context update.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Store authentication in thread context",
+          "code_line": 64,
+          "description": "Calls SecurityContextHolder.getContext().setAuthentication(authentication).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Invoke subclass success hook",
+          "code_line": 71,
+          "description": "Calls abstract successfullAuthentication().",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-85",
+        "question": "Why should SecurityContextHolder only receive a successfully validated Authentication, and when must context be cleared?"
+      }
+    },
+    {
+      "id": "86",
+      "order": 86,
+      "name": "Clear Spring context after failed authentication",
+      "method": "unsuccess(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/common/CustomAuthenticationManager.java",
+      "source_blob_sha": "b0bab028d310f4daaac7198b20ad2354d6c2cd2f",
+      "source_data_file": "sources/custom-auth.json",
+      "source_line_count": 93,
+      "start_line": 74,
+      "method_start_line": 74,
+      "end_line": 84,
+      "plain_english": "Clears SecurityContextHolder and invokes the subclass failure callback.",
+      "sequence_reason": "After successful context population in Company 85, inspect how the same manager handles a rejected request.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Clear authentication context",
+          "code_line": 76,
+          "description": "Calls SecurityContextHolder.clearContext().",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Invoke subclass failure hook",
+          "code_line": 83,
+          "description": "Calls abstract unSuccessfullAuthentication().",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-86",
+        "question": "Why is SecurityContextHolder.clearContext() necessary after failed authentication on reused server threads?"
+      }
+    },
+    {
+      "id": "87",
+      "order": 87,
+      "name": "Return 401 for unauthorized REST calls",
+      "method": "commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/RestAuthenticationEntryPoint.java",
+      "source_blob_sha": "40a664e4909fb73ed19f27389214509368c6cdc9",
+      "source_data_file": "sources/rest-entry.json",
+      "source_line_count": 41,
+      "start_line": 20,
+      "method_start_line": 21,
+      "end_line": 27,
+      "plain_english": "Sends an HTTP 401 Unauthorized response when REST authentication cannot be established.",
+      "sequence_reason": "After the authentication manager's success/failure path, study the REST authentication entry point for unauthenticated requests.",
+      "inbound": [
+        {
+          "name": "Spring invokes REST entry point on authentication failure",
+          "code_line": 21,
+          "description": "AuthenticationEntryPoint.commence() is a framework callback.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Send HTTP 401",
+          "code_line": 25,
+          "description": "Calls response.sendError(HttpServletResponse.SC_UNAUTHORIZED, \"Unauthorized\").",
+          "company_id": null,
+          "kind": "external_servlet_api"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-87",
+        "question": "What distinguishes an AuthenticationEntryPoint 401 response from an AccessDeniedHandler 403 response?"
+      }
+    },
+    {
+      "id": "88",
+      "order": 88,
+      "name": "Set REST entry point priority",
+      "method": "getOrder()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/RestAuthenticationEntryPoint.java",
+      "source_blob_sha": "40a664e4909fb73ed19f27389214509368c6cdc9",
+      "source_data_file": "sources/rest-entry.json",
+      "source_line_count": 41,
+      "start_line": 29,
+      "method_start_line": 30,
+      "end_line": 32,
+      "plain_english": "Returns ordering value 1 from Spring Ordered.",
+      "sequence_reason": "Inspect how the REST entry point declares its ordering when multiple ordered components exist.",
+      "inbound": [
+        {
+          "name": "Spring reads entry-point order",
+          "code_line": 30,
+          "description": "Implements Ordered.getOrder().",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Return priority value",
+          "code_line": 31,
+          "description": "Returns integer 1.",
+          "company_id": null,
+          "kind": "java_return_statement"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-88",
+        "question": "What does Ordered.getOrder() mean in Spring, and when does an order value affect a component's selection?"
+      }
+    },
+    {
+      "id": "89",
+      "order": 89,
+      "name": "Validate REST entry-point realm",
+      "method": "afterPropertiesSet()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/RestAuthenticationEntryPoint.java",
+      "source_blob_sha": "40a664e4909fb73ed19f27389214509368c6cdc9",
+      "source_data_file": "sources/rest-entry.json",
+      "source_line_count": 41,
+      "start_line": 34,
+      "method_start_line": 35,
+      "end_line": 39,
+      "plain_english": "Throws an IllegalArgumentException when the configured realm name is null or empty.",
+      "sequence_reason": "After seeing REST response and ordering, review startup-time validation through InitializingBean.",
+      "inbound": [
+        {
+          "name": "Spring initializes REST entry point",
+          "code_line": 35,
+          "description": "InitializingBean callback after property assignment.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Reject absent realm",
+          "code_line": 36,
+          "description": "Checks null or empty realmName and throws IllegalArgumentException.",
+          "company_id": null,
+          "kind": "java_validation"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-89",
+        "question": "When is InitializingBean.afterPropertiesSet() invoked, and how should missing realm configuration fail?"
+      }
+    },
+    {
+      "id": "90",
+      "order": 90,
+      "name": "Return 401 for unauthorized service calls",
+      "method": "commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ServicesAuthenticationEntryPoint.java",
+      "source_blob_sha": "bc77e3a0f87656500c2832b54ed2de26026d7df6",
+      "source_data_file": "sources/services-entry.json",
+      "source_line_count": 36,
+      "start_line": 17,
+      "method_start_line": 18,
+      "end_line": 21,
+      "plain_english": "Sends HTTP 401 Unauthorized from the services-specific authentication entry point.",
+      "sequence_reason": "Compare the REST entry point with the analogous services entry-point implementation.",
+      "inbound": [
+        {
+          "name": "Spring invokes service entry point",
+          "code_line": 18,
+          "description": "AuthenticationEntryPoint callback.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Send HTTP 401",
+          "code_line": 20,
+          "description": "Sends Unauthorized response via sendError().",
+          "company_id": null,
+          "kind": "external_servlet_api"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-90",
+        "question": "How should clients distinguish a missing service credential from a forbidden operation after authentication?"
+      }
+    },
+    {
+      "id": "91",
+      "order": 91,
+      "name": "Set service entry-point priority",
+      "method": "getOrder()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ServicesAuthenticationEntryPoint.java",
+      "source_blob_sha": "bc77e3a0f87656500c2832b54ed2de26026d7df6",
+      "source_data_file": "sources/services-entry.json",
+      "source_line_count": 36,
+      "start_line": 23,
+      "method_start_line": 24,
+      "end_line": 26,
+      "plain_english": "Returns Spring Ordered value 0.",
+      "sequence_reason": "Compare the service entry point's priority 0 with REST entry point's priority 1.",
+      "inbound": [
+        {
+          "name": "Spring reads services entry-point order",
+          "code_line": 24,
+          "description": "Ordered.getOrder() implementation.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Return service priority",
+          "code_line": 25,
+          "description": "Returns integer 0.",
+          "company_id": null,
+          "kind": "java_return_statement"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-91",
+        "question": "Which Ordered value has higher precedence, 0 or 1, and does that guarantee both entry points are registered in the same collection?"
+      }
+    },
+    {
+      "id": "92",
+      "order": 92,
+      "name": "Validate services entry-point realm",
+      "method": "afterPropertiesSet()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ServicesAuthenticationEntryPoint.java",
+      "source_blob_sha": "bc77e3a0f87656500c2832b54ed2de26026d7df6",
+      "source_data_file": "sources/services-entry.json",
+      "source_line_count": 36,
+      "start_line": 28,
+      "method_start_line": 29,
+      "end_line": 34,
+      "plain_english": "Throws IllegalArgumentException when realmName is absent.",
+      "sequence_reason": "Complete service authentication entry-point startup validation before looking at login success handling.",
+      "inbound": [
+        {
+          "name": "Spring initializes service entry point",
+          "code_line": 29,
+          "description": "InitializingBean.afterPropertiesSet() callback.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Reject empty service realm",
+          "code_line": 30,
+          "description": "Checks realmName and throws IllegalArgumentException on missing value.",
+          "company_id": null,
+          "kind": "java_validation"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-92",
+        "question": "Why is failing fast during bean initialization preferable to waiting for the first unauthorized request?"
+      }
+    },
+    {
+      "id": "93",
+      "order": 93,
+      "name": "Clear service login state after successful authentication",
+      "method": "onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ServicesAuthenticationSuccessHandler.java",
+      "source_blob_sha": "100e8036e60bf850e633a323837ad9dc27e99122",
+      "source_data_file": "sources/services-success.json",
+      "source_line_count": 42,
+      "start_line": 20,
+      "method_start_line": 21,
+      "end_line": 36,
+      "plain_english": "Checks a saved request, clears authentication attributes, and conditionally removes the saved request; it does not explicitly redirect in this override.",
+      "sequence_reason": "After failure entry points, inspect the services success handler created by Company 31 and used by the services security chain.",
+      "inbound": [
+        {
+          "name": "Spring success handler callback",
+          "code_line": 21,
+          "description": "Spring Security calls onAuthenticationSuccess() after successful login.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Load cached original request",
+          "code_line": 22,
+          "description": "Calls requestCache.getRequest(request,response).",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Clear authentication attributes",
+          "code_line": 25,
+          "description": "Clears stored authentication attributes in success branches.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        },
+        {
+          "name": "Remove saved request",
+          "code_line": 30,
+          "description": "Calls requestCache.removeRequest() when explicit target handling is selected.",
+          "company_id": null,
+          "kind": "external_framework_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-93",
+        "question": "How should a SimpleUrlAuthenticationSuccessHandler handle SavedRequest, target URLs, and redirects, and what behavior is absent from this override?"
+      }
+    },
+    {
+      "id": "94",
+      "order": 94,
+      "name": "Replace saved-request cache for service logins",
+      "method": "setRequestCache(RequestCache requestCache)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ServicesAuthenticationSuccessHandler.java",
+      "source_blob_sha": "100e8036e60bf850e633a323837ad9dc27e99122",
+      "source_data_file": "sources/services-success.json",
+      "source_line_count": 42,
+      "start_line": 38,
+      "method_start_line": 38,
+      "end_line": 40,
+      "plain_english": "Assigns a supplied RequestCache to the success handler.",
+      "sequence_reason": "Pair Company 93's saved-request logic with the setter that supplies its cache.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Assign request cache",
+          "code_line": 39,
+          "description": "Sets this.requestCache to the supplied object.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-94",
+        "question": "Why might an injected RequestCache help testing saved-request behavior, and should a singleton handler expose a public mutable setter?"
+      }
+    },
+    {
+      "id": "95",
+      "order": 95,
+      "name": "Inject customer, group, and permission services",
+      "method": "AbstractCustomerServices(CustomerService customerService, PermissionService permissionService, GroupService groupService)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AbstractCustomerServices.java",
+      "source_blob_sha": "ad6c97d9f1a2647ee271858e8351f83dfd2a0e78",
+      "source_data_file": "sources/abstract-customer.json",
+      "source_line_count": 96,
+      "start_line": 37,
+      "method_start_line": 37,
+      "end_line": 45,
+      "plain_english": "Stores CustomerService, PermissionService and GroupService in the abstract customer's authentication service.",
+      "sequence_reason": "After successful request handling, begin the customer identity lookup dependency chain required by Spring Security.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Store customer service",
+          "code_line": 42,
+          "description": "Assigns customerService to a protected field.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        },
+        {
+          "name": "Store permissions service",
+          "code_line": 43,
+          "description": "Assigns permissionService to a protected field.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        },
+        {
+          "name": "Store group service",
+          "code_line": 44,
+          "description": "Assigns groupService to a protected field.",
+          "company_id": null,
+          "kind": "java_field_assignment"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-95",
+        "question": "Why does the AbstractCustomerServices constructor accept CustomerService, PermissionService, and GroupService, and how does that affect subclass testing?"
+      }
+    },
+    {
+      "id": "96",
+      "order": 96,
+      "name": "Load customer identity with roles and group permissions",
+      "method": "loadUserByUsername(String userName)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AbstractCustomerServices.java",
+      "source_blob_sha": "ad6c97d9f1a2647ee271858e8351f83dfd2a0e78",
+      "source_data_file": "sources/abstract-customer.json",
+      "source_line_count": 96,
+      "start_line": 50,
+      "method_start_line": 50,
+      "end_line": 94,
+      "plain_english": "Finds a customer by nickname, builds ROLE_ authority, loads group permissions, translates service exceptions, and delegates construction of UserDetails.",
+      "sequence_reason": "After injecting customer services in Company 95, trace the full UserDetailsService lookup used during customer login.",
+      "inbound": [
+        {
+          "name": "Spring Security UserDetailsService callback",
+          "code_line": 50,
+          "description": "Called when customer authentication requests lookup by username.",
+          "company_id": null,
+          "kind": "external_framework_callback"
+        }
+      ],
+      "outbound": [
+        {
+          "name": "Find customer by nickname",
+          "code_line": 59,
+          "description": "Calls customerService.getByNick(userName).",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Build baseline customer authority",
+          "code_line": 68,
+          "description": "Creates ROLE_ prefixed customer authority.",
+          "company_id": null,
+          "kind": "external_framework_class"
+        },
+        {
+          "name": "Retrieve group permissions",
+          "code_line": 79,
+          "description": "Calls permissionService.getPermissions(groupsId).",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        },
+        {
+          "name": "Translate persistence failure",
+          "code_line": 89,
+          "description": "Throws SecurityDataAccessException wrapping ServiceException.",
+          "company_id": null,
+          "kind": "java_exception_translation"
+        },
+        {
+          "name": "Convert to concrete UserDetails",
+          "code_line": 92,
+          "description": "Calls abstract userDetails() implemented by subclasses; method not yet mapped.",
+          "company_id": null,
+          "kind": "unmapped_internal_method"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-96",
+        "question": "How are customer group permissions mapped to GrantedAuthority, and what happens when the customer is missing or persistence throws ServiceException?"
       }
     }
   ],
