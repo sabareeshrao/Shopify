@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Code Company — Browser Regression Audit</title>
+<style>
+:root{color-scheme:dark;--white:#fff;--blue:#53aaff;--orange:#ffa445;--green:#39db8b}
+*{box-sizing:border-box}body{margin:0;padding:22px;font:14px/1.55 system-ui,Arial,sans-serif;color:var(--white);background:#050505}
+main{max-width:900px;margin:auto}h1{font-size:23px;margin:0 0 8px}p{color:#ccc}button{color:#000;background:var(--green);border:2px solid #000;border-radius:9px;padding:10px 16px;font-weight:800;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}#status{font-weight:800;margin:15px 0;color:var(--blue)}.panel{border:2px solid #000;background:#151515;padding:14px;border-radius:12px;margin:12px 0}
+#results{white-space:pre-wrap;word-break:break-word;font:12px/1.7 ui-monospace,Consolas,monospace;max-height:280px;overflow:auto;color:var(--white)}
+#preview{width:100%;max-width:425px;height:440px;border:2px solid #000;background:#050505;border-radius:11px}
+small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{display:flex;flex-wrap:wrap;gap:12px}.view>div{flex:1;min-width:220px}
+</style>
+</head>
+<body><main>
+<h1>Code Company — Browser Regression Audit</h1>
+<p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
+<button id="run" type="button">Run complete interaction audit</button>
+<div id="status" aria-live="polite">Waiting to run</div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=mod-16-1#company-6"></iframe></div></div>
+</main>
+<script>
+'use strict';
+const run=document.getElementById('run'),results=document.getElementById('results'),status=document.getElementById('status'),frame=document.getElementById('preview');
+const state={companies:0,connections:0,assertions:0};
+function log(text,fail=false){const node=document.createElement('div');node.textContent=(fail?'FAIL ':'PASS ')+text;node.className=fail?'fail':'pass';results.appendChild(node);if(fail)throw Error(text)}
+function assert(cond,text){state.assertions++;if(!cond)log(text,true)}
+function delay(ms){return new Promise(resolve=>setTimeout(resolve,ms))}
+async function ready(){
+ const started=Date.now();
+ while(Date.now()-started<25000){
+  const doc=frame.contentDocument;
+  if(doc&&doc.querySelector('.company-summary')&&doc.querySelector('#search-results'))return doc;
+  await delay(150);
+ }
+ throw Error('Explorer did not load within 25 seconds. Check network requests and the console.');
+}
+function openCompany(doc,n){
+ const search=doc.querySelector('#search');
+ assert(search,'Search input missing');
+ search.value=String(n);
+ search.dispatchEvent(new Event('input',{bubbles:true}));
+ const card=doc.querySelector('#search-results button[data-company="company-'+n+'"]');
+ assert(card,'Numeric search did not offer Company '+n);
+ card.click();
+ const title=doc.querySelector('#maincontent .hero h1');
+ assert(title?.textContent.includes('Company '+n),'Opened the wrong company: '+n);
+ assert(frame.contentWindow.location.hash==='#company-'+n,'Company '+n+' URL fragment is wrong');
+ assert(doc.querySelector('.learning-card.question')?.textContent.includes('IQ-'+n),'Interview question missing for Company '+n);
+ assert(doc.querySelector('.learning-card.sequence')?.textContent.includes('Why Company '+n),'Sequence explanation missing for Company '+n);
+}
+function checkBox(doc,box,n){
+ const side=box.dataset.external,index=box.dataset.externalIndex;
+ const name=box.querySelector('.rel-name')?.textContent.trim();
+ const expected=Number(box.dataset.line);
+ assert(name&&Number.isInteger(expected),'Company '+n+' has invalid relation metadata');
+ box.click();
+ const highlighted=[...doc.querySelectorAll('#current-code .code-row.highlight')].map(x=>Number(x.dataset.line));
+ const active=[...doc.querySelectorAll('.relation-card.is-selected')];
+ assert(active.length===1&&active[0]===box,'Company '+n+' relation '+side+'/'+index+' did not become the only selected box');
+ assert(box.getAttribute('aria-pressed')==='true','Company '+n+' selected box aria-pressed is incorrect');
+ assert(highlighted.length===1&&highlighted[0]===expected,'Company '+n+' '+name+' should highlight line '+expected+', got '+highlighted.join(','));
+ assert(doc.querySelector('#detail-title')?.textContent.trim()===name,'Company '+n+' '+name+' displayed a stale explanation title');
+ const detail=doc.querySelector('#detail-note')?.textContent.trim();
+ assert(detail?.length>0,'Company '+n+' '+name+' explanation is empty');
+ state.connections++;
+}
+async function audit(){
+ state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
+ status.textContent='Checking 16 companies and every external connection…';
+ const doc=await ready();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Deep link #company-6 did not restore Company 6 on load');
+ for(let n=1;n<=16;n++){
+  openCompany(doc,n);
+  const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
+  for(const button of buttons)checkBox(doc,button,n);
+  const total=doc.querySelectorAll('.relation-card.is-selected').length;
+  if(buttons.length)assert(total===1,'Company '+n+' selected-card count changed unexpectedly');
+  const codeLine=doc.querySelector('#current-code .code-row[data-line]');
+  assert(codeLine,'Company '+n+' has no original Java code lines');
+  codeLine.click();
+  assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
+  state.companies++;
+  status.textContent='Checked '+n+'/16 companies, '+state.connections+' connection boxes…';
+ }
+ openCompany(doc,6);
+ assert(!doc.querySelector('.relation-card.is-selected'),'Company 6 inherited stale selection');
+ const internal=doc.querySelector('.relation-card[data-company="company-8"]');
+ assert(internal,'Company 6 → Company 8 link missing');
+ internal.click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 8'),'Company 6 → Company 8 link did not navigate');
+ openCompany(doc,6);
+ const internal9=doc.querySelector('.relation-card[data-company="company-9"]');
+ assert(internal9,'Company 6 → Company 9 link missing');
+ internal9.click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 9'),'Company 6 → Company 9 link did not navigate');
+ openCompany(doc,6);
+ doc.querySelector('#next-company').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 7'),'Next button did not go 6 → 7');
+ doc.querySelector('#prev-company').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Previous button did not go 7 → 6');
+ log('All 16 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
+ status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
+}
+run.addEventListener('click',async()=>{
+ run.disabled=true;status.className='';try{await audit()}catch(e){status.className='fail';status.textContent='FAILED — '+e.message;console.error(e)}finally{run.disabled=false}
+});
+</script>
+</body></html>
