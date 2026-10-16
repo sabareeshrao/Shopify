@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ide-compact-2#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=deepblack-1#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -74,6 +74,11 @@ async function audit(){
  status.textContent='Checking 136 companies and every external connection…';
  const doc=await ready();
  assert(doc.querySelector('.hero h1')?.textContent.includes('Company 6'),'Deep link #company-6 did not restore Company 6 on load');
+ const sidebar=doc.querySelector('.side'),mainBody=doc.body;
+ assert(frame.contentWindow.getComputedStyle(sidebar).backgroundColor===frame.contentWindow.getComputedStyle(mainBody).backgroundColor,'Project sidebar must match the black main background');
+ assert(frame.contentWindow.getComputedStyle(doc.querySelector('.side-body')).scrollbarWidth==='thin','Project scrollbar must be thin');
+ assert(doc.querySelectorAll('[title]').length===0,'Native hover tooltip attributes must be absent from the explorer');
+
  for(let n=1;n<=136;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
@@ -84,6 +89,7 @@ async function audit(){
   assert(codeLine,'Company '+n+' has no original Java code lines');
   codeLine.click();
   assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
+  assert(doc.querySelectorAll('[title]').length===0,'Company '+n+' produced a hover tooltip');
   state.companies++;
   status.textContent='Checked '+n+'/136 companies, '+state.connections+' connection boxes…';
  }

@@ -520,3 +520,10 @@ Browser regression file now targets 136 records, but running it inside GitHub Pa
 - Original vector folder, Java file and method icons (not copied JetBrains assets). Compact Middle Packages groups unary package chains below src/main/java while preserving their actual source paths and folder IDs.
 - Toolbar reveals selected company, collapses/expands tree, resets divider. Keyboard tree arrows and Home/End supported. Resizable default 296px and separate v2 persistence key.
 - Expanded browser test checks new Project controls and 296px reset. Live screenshots on deployment remain to be verified.
+
+## Visual polish: black Project panel, thin scrollbars and zero hover bubbles
+- Matched Project sidebar and tree background to the right-side #050505 black while keeping IDE-style 23px density, tree indent, icons and blue selection unchanged.
+- Matched Project header/footer to right-side near-black #090909. Hover rows use subtle #151515 rather than grey.
+- Made all browser-supported scrollbars (main, sidebar, code, search) 5px wide with transparent tracks and unobtrusive dark thumbs; native vertical/horizontal scrolling remains fully functional.
+- Removed all native title hover tooltips in index shell and dynamic company tree/code views; replaced meaningful details with screen-reader aria-labels. Previous/Next update accessible labels rather than title attributes.
+- QA now checks dark-theme colors, thin scrollbars and absence of native title hover tooltips through all company navigation views. Browser/OS may choose native overlay scrollbars independently.

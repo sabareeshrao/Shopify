@@ -36,8 +36,8 @@ function updateCompanySequence(){
   prev.disabled=index===0;
   next.disabled=index===items.length-1;
   position.textContent='Company '+entities[selected].no+' · '+(index+1)+' / '+items.length;
-  prev.title=index>0?'Company '+entities[items[index-1]].no+' · Left arrow':'First company';
-  next.title=index<items.length-1?'Company '+entities[items[index+1]].no+' · Right arrow':'Last mapped company';
+  prev.setAttribute('aria-label',index>0?'Previous: Company '+entities[items[index-1]].no:'First company');
+  next.setAttribute('aria-label',index<items.length-1?'Next: Company '+entities[items[index+1]].no:'Last mapped company');
 }
 function moveCompany(direction){
   const items=companySequence();
