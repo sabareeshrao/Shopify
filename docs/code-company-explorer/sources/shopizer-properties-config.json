@@ -1,0 +1,25 @@
+{
+  "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopizerPropertiesConfig.java",
+  "reference_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+  "source_blob_sha": "b60a695bae52bc0d9c3e51a33d88bb2dd6032c64",
+  "lines": [
+    "package com.salesmanager.shop.application.config;",
+    "",
+    "",
+    "import org.springframework.beans.factory.config.PropertiesFactoryBean;",
+    "import org.springframework.context.annotation.Bean;",
+    "import org.springframework.context.annotation.Configuration;",
+    "import org.springframework.core.io.ClassPathResource;",
+    "",
+    "@Configuration",
+    "public class ShopizerPropertiesConfig {",
+    "",
+    "  @Bean(name = \"shopizer-properties\")",
+    "  public PropertiesFactoryBean mapper() {",
+    "    PropertiesFactoryBean bean = new PropertiesFactoryBean();",
+    "    bean.setLocation(new ClassPathResource(\"shopizer-properties.properties\"));",
+    "    return bean;",
+    "  }",
+    "}"
+  ]
+}
