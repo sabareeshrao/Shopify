@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "reference": {
+    "repository": "shopizer-ecommerce/shopizer",
+    "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+    "read_only": true
+  },
+  "count": 1,
+  "companies": [
+    {
+      "id": "1",
+      "name": "Start the shop",
+      "method": "main(String[] args)",
+      "type": "Java application entry point",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java",
+      "source_blob_sha": "dd91c2f7c8d2d04b9ecbb318b450af7359d04493",
+      "start_line": 11,
+      "end_line": 13,
+      "plain_english": "Java calls this method to start the Shopizer application. It hands startup over to Spring Boot.",
+      "inbound": [
+        {
+          "name": "Java runtime",
+          "kind": "external_runtime",
+          "code_line": null,
+          "company_id": null
+        }
+      ],
+      "outbound": [
+        {
+          "name": "SpringApplication.run()",
+          "kind": "external_framework",
+          "code_line": 12,
+          "company_id": null
+        }
+      ],
+      "subsidiary_ids": [],
+      "status": "verified_source"
+    }
+  ],
+  "numbering_policy": "Company IDs are stable. Only assign N.M subsidiary numbers to verified code relationships; runtime and external framework references are not companies."
+}
