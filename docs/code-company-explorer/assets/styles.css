@@ -110,3 +110,8 @@ html{scroll-behavior:auto}
 .file-grid .code-row.pending-map:not(.highlight){border-left-color:var(--orange)}
 .file-grid .code-row.pending-map:not(.highlight) .ln{color:var(--orange)}
 @media(max-width:520px){.header-back span:not(.ic){display:none}.tree-pan button{padding:6px 15px}}
+
+/* Native links permit opening a related company in a background browser tab. */
+.relation-card[href]{display:block;text-decoration:none;color:var(--white)}
+.relation-card[href]:visited{color:var(--white)}
+.relation-card[href]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}

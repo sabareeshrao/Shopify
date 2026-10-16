@@ -23,8 +23,8 @@ function edgeCard(id,line,side,index){
   }
   const c=entities[id];
   const relationKey=side+':'+id;
-  return `<button type="button" class="relation-card${activeRelationKey===relationKey?' is-selected':''}" data-relation-key="${safe(relationKey)}" aria-pressed="${activeRelationKey===relationKey}" data-company="${id}" data-highlight="${line??''}" data-side="${side}" data-index="${index}">
+  return `<a class="relation-card${activeRelationKey===relationKey?' is-selected':''}" href="${safe(location.pathname+location.search+'#company-'+encodeURIComponent(c.no))}" target="_blank" rel="noopener noreferrer" aria-label="Open Company ${safe(c.no)} in another tab" data-relation-key="${safe(relationKey)}" data-company="${id}" data-highlight="${line??''}" data-side="${side}" data-index="${index}">
   <span class="rel-num">COMPANY ${safe(c.no)} <span class="rel-arrow">↗</span></span>
   <span class="rel-name">${safe(c.name)}</span><span class="rel-file">${safe(files[c.file].name)}</span>
-  ${line!=null?`<span class="rel-line">Connected at line ${line}</span>`:''}</button>`;
+  ${line!=null?`<span class="rel-line">Connected at line ${line}</span>`:''}</a>`;
 }

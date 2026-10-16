@@ -2,7 +2,8 @@ document.addEventListener('click',e=>{
  const external=e.target.closest('.relation-card[data-external]');
  if(external){selectExternalCard(external);return;}
  const folder=e.target.closest('[data-folder]');if(folder){const key=folder.dataset.folder;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}const file=e.target.closest('[data-file]');if(file){const id=file.dataset.file,key='file:'+id;if(e.target.closest('.tree-chevron')){if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();}else{expanded.add(key);navToFile(id);}return;}const comp=e.target.closest('[data-company]');if(comp){const id=comp.dataset.company;if(comp.classList.contains('tree-row')&&e.target.closest('.tree-chevron')&&entities[id]?.children?.length){const key='co:'+id;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}if(!entities[id])return;
-if(comp.classList.contains('relation-card')||comp.classList.contains('subs-card')){
+if(comp.classList.contains('relation-card')&&comp.tagName==='A')return;
+if(comp.classList.contains('subs-card')){
  const url=new URL(location.href);url.hash='company-'+encodeURIComponent(entities[id].no);
  window.open(url.href,'_blank','noopener,noreferrer');
  try{window.focus();}catch(ignore){}

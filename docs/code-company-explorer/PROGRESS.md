@@ -446,3 +446,5 @@ Original source findings: Companies 105, 106, 108, 109 are empty TODO overrides;
 - Java file viewers distinguish already indexed method spans from candidate unindexed source statements; package/imports, annotations and comments are not marked as missing companies.
 - Previous company IDs remain unchanged at 116. A subsequent source review is needed before assigning new permanent IDs to missing functional blocks.
 - Regression tests updated for same-tab preservation, graph-tab launch, history and source coverage; live mobile-browser interaction testing is still pending.
+
+Company network nodes now use native anchors with target=_blank and rel=noopener noreferrer. This allows long-press Open in background tab on supported Chrome mobile browsers and Ctrl+click / middle-click on desktop. Browser foreground-tab behavior is controlled by the browser, not JavaScript. All 116 company IDs and source line ranges are unchanged.

@@ -19,7 +19,7 @@ small{color:#aaa}.pass{color:var(--green)}.fail{color:var(--orange)}.view{displa
 <p>This is a separate automated QA page, not part of the main explorer. It runs against the explorer in an embedded same-origin window. No repository files are modified.</p>
 <button id="run" type="button">Run complete interaction audit</button>
 <div id="status" aria-live="polite">Waiting to run</div>
-<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ux-116-nav-1#company-6"></iframe></div></div>
+<div class="view"><div class="panel"><strong>Audit log</strong><pre id="results"></pre></div><div class="panel"><strong>Mobile preview</strong><p><small>Responsive embedded explorer, 425px wide.</small></p><iframe id="preview" title="Code Company Explorer mobile regression preview" loading="eager" src="../index.html?qa=ux-116-nav-2#company-6"></iframe></div></div>
 </main>
 <script>
 'use strict';
@@ -92,11 +92,10 @@ async function audit(){
  const originalCompany=doc.querySelector('#maincontent .hero h1')?.textContent;
  const graphNode=doc.querySelector('.relation-card[data-company="company-8"]');
  assert(graphNode,'Company 6 → 8 node missing');
- const previousOpen=frame.contentWindow.open,requested=[];
- frame.contentWindow.open=(url,target,options)=>{requested.push({url,target,options});return null;};
- try{graphNode.click();}
- finally{frame.contentWindow.open=previousOpen;}
- assert(requested.length===1&&requested[0].target==='_blank'&&requested[0].url.includes('#company-8'),'Graph node should request Company 8 in a new tab');
+ assert(graphNode.tagName==='A','Internal node must be a real browser link');
+ assert(graphNode.target==='_blank','Company node must open a separate tab');
+ assert(graphNode.rel.includes('noopener'),'Company node requires safe new-tab behavior');
+ assert(graphNode.href.includes('#company-8'),'Company link must target Company 8');
  assert(doc.querySelector('#maincontent .hero h1')?.textContent===originalCompany,'Opening a node must not replace the current company');
  assert(frame.contentWindow.location.hash==='#company-6','Graph node changed the original tab URL');
  assert(doc.querySelector('#history-back'),'Sticky Back button missing');
