@@ -45,6 +45,18 @@
 .tree-row.comp .tree-text{font-size:12px}
 .tree-row.folder,.tree-row.file{font-size:12px}
 }
+
+/* Company number navigation: one row, also accessible on narrow phone screens. */
+.company-sequence{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);border-bottom:2px solid var(--border);padding:7px clamp(12px,2.6vw,40px)}
+.sequence-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:8px 12px;min-width:90px;border:2px solid var(--border);background:var(--surface2);border-radius:9px;color:var(--white);font-size:12px;font-weight:700;cursor:pointer}
+.sequence-button:hover:not(:disabled){background:var(--surface3);color:var(--blue)}
+.sequence-button:disabled{opacity:.32;cursor:not-allowed}
+.sequence-button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.sequence-button .ic{width:15px;height:15px}
+.sequence-position{min-width:0;text-align:center;color:var(--green);font-size:12px;font-weight:800;white-space:nowrap}
+.search-results .search-unmapped{padding:12px;color:var(--orange);font-size:12px;line-height:1.5}
+@media(max-width:1100px){.company-sequence{padding:8px 11px;gap:5px}.sequence-button{min-width:74px;padding:8px 7px;gap:4px}.sequence-position{font-size:11px}}
+@media(max-width:380px){.sequence-button{min-width:65px;font-size:11px}.sequence-position{font-size:10px}}
 </style>
 </head>
 <body>
@@ -61,7 +73,12 @@
     <div class="side-bottom"><span>JAVA · SPRING BOOT</span><b>SHOPIZER</b></div>
   </aside>
   <div class="main">
-    <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Search code…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
+    <div class="topbar"><div class="top-left"><button id="menu" class="mobile-menu" title="Open file tree" aria-label="Open file tree" aria-expanded="false"><span class="ic" data-icon="menu"></span></button><div class="breadcrumbs" id="breadcrumbs"></div></div><div class="top-actions"><div class="searchwrap"><div class="searchbox"><span class="ic" data-icon="search"></span><input id="search" placeholder="Company # or method…" type="search" autocomplete="off" aria-label="Search files and companies"></div><div class="search-results" id="search-results" hidden></div></div><button class="circle-btn" id="copy" title="Copy file and line numbers"><span class="ic" data-icon="copy"></span><span class="btn-text">Copy location</span></button></div></div>
+    <nav class="company-sequence" aria-label="Browse company numbers">
+      <button id="prev-company" class="sequence-button" type="button" aria-label="Previous company" title="Previous company · Left arrow" disabled><span class="ic" data-icon="back"></span><span>Previous</span></button>
+      <div id="sequence-position" class="sequence-position" aria-live="polite">Loading companies…</div>
+      <button id="next-company" class="sequence-button" type="button" aria-label="Next company" title="Next company · Right arrow" disabled><span>Next</span><span class="ic" data-icon="arrow"></span></button>
+    </nav>
     <main class="content" id="maincontent"><div class="panel" style="padding:24px;color:var(--dim)">Loading verified Java code…</div></main>
   </div>
 </div>
@@ -155,7 +172,7 @@ function renderTree(){const side=$('#tree');side.innerHTML=treeContent();}
 function closeSidebar(){ $('#sidebar').classList.remove('open');$('#backdrop').classList.remove('open');$('#menu').setAttribute('aria-expanded','false'); }
 function openParents(id){const c=entities[id],f=files[c.file];const parts=f.path.split('/');let p='shopizer';expanded.add('f:'+p);for(const part of parts.slice(0,-1)){p+='/'+part;expanded.add('f:'+p);}expanded.add('file:'+c.file);let parent=c.parent;while(parent){expanded.add('co:'+parent);parent=entities[parent].parent;}}
 function navToFile(fid,track=true){if(!files[fid])return;if(track)navStack.push([mode,selectedFile,selected]);selectedFile=fid;selected=null;mode='file';expanded.add('file:'+fid);renderAll();closeSidebar();}
-function navToCompany(id,track=true){const c=entities[id];if(!c)return;if(track)navStack.push([mode,selectedFile,selected]);selectedFile=c.file;selected=id;mode='company';activeLine=c.parent?c.start:null;openParents(id);renderAll();closeSidebar();}
+function navToCompany(id,track=true){const c=entities[id];if(!c)return;if(track)navStack.push([mode,selectedFile,selected]);selectedFile=c.file;selected=id;mode='company';activeLine=c.parent?c.start:null;openParents(id);$('#search').value='';$('#search-results').hidden=true;renderAll();closeSidebar();}
 function navBack(){if(!navStack.length)return;const [m,f,s]=navStack.pop();mode=m;selectedFile=f;selected=s;renderAll();}
 function navToFolder(path){if(!path)return;const key='f:'+path;expanded.add(key);mode='folder';selected=null;folderPath=path;renderAll();closeSidebar();}
 let folderPath='shopizer';
@@ -189,23 +206,116 @@ function renderCompanyView(){const c=entities[selected],f=files[c.file],chain=ge
 }
 function findLineInfo(id,line){const c=entities[id],root=topEntity(id);for(const [eid,ent] of Object.entries(entities)){if(ent.parent&&topEntity(eid)===root&&line>=ent.start&&line<=ent.end)return {head:`Company ${ent.no} · ${ent.name}`,description:ent.desc};}const req=(root.needs||[]).find(dep=>dep.line===line);if(req&&entities[req.to])return {head:`Uses ${entities[req.to].name}`,description:entities[req.to].desc};return {head:`${files[c.file].name} · line ${line}`,description:c.desc};}
 function renderFolderView(){const node=collectFolder(folderData,'shopizer',folderPath);const children=node?.children||[];return `<div class="hero"><div><div class="eyebrow">${icon('folder')} REPOSITORY FOLDER</div><h1>${safe(node?.name||'Repository')}</h1><p class="description">${safe(folderPath)}</p></div></div><div class="section-head"><h2>Inside this folder</h2><span>${children.length} items</span></div>${children.map(ch=>ch.file?`<button class="folder-card" data-gofile="${ch.file}">${icon('file')}<span><strong>${safe(files[ch.file].name)}</strong><small>${safe(files[ch.file].about)}</small></span>${icon('chevron')}</button>`:ch.isResource?`<div class="folder-card" style="opacity:.55">${icon('file')}<span><strong>${safe(ch.name)}</strong><small>Configuration file</small></span></div>`:`<button class="folder-card" data-openfolder="${safe(folderPath+'/'+ch.name)}">${icon('folder')}<span><strong>${safe(ch.name)}/</strong><small>${ch.children?.length||0} items</small></span>${icon('chevron')}</button>`).join('')}`;}
-function renderAll(){renderBreadcrumb();renderTree();$('#maincontent').innerHTML=mode==='company'?renderCompanyView():mode==='file'?renderFileView():renderFolderView();if(mode==='company'){requestAnimationFrame(()=>{drawWires();if(activeLine!=null)selectLine(activeLine,false);});}}
+function renderAll(){renderBreadcrumb();renderTree();$('#maincontent').innerHTML=mode==='company'?renderCompanyView():mode==='file'?renderFileView():renderFolderView();if(mode==='company'){requestAnimationFrame(()=>{drawWires();if(activeLine!=null)selectLine(activeLine,false);});}updateCompanySequence();}
 function drawWires(){if(mode!=='company')return;const net=$('#network'),svg=$('#wires'),center=$('#focus-card');if(!net||!svg||!center)return;const B=net.getBoundingClientRect(),C=center.getBoundingClientRect();if(window.matchMedia('(max-width:1040px)').matches){svg.innerHTML='';return;}svg.setAttribute('viewBox',`0 0 ${B.width} ${B.height}`);let paths='';for(const side of ['usedby','uses']){const cards=$$('.graph-col.'+side+' .relation-card');const total=cards.length;cards.forEach((el,i)=>{const A=el.getBoundingClientRect(),left=side==='usedby',dir=left?1:-1;const x1=(left?A.right:A.left)-B.left,y1=A.top+A.height/2-B.top,x2=(left?C.left:C.right)-B.left,y2=C.top+Math.max(38,Math.min(C.height-30,100+(i-(total-1)/2)*25))-B.top;const stroke=left?'#53aaff':'#ffa445';paths+=`<path d="M${x1},${y1} C${x1+dir*32},${y1} ${x2-dir*28},${y2} ${x2},${y2}" stroke="${stroke}" stroke-width="2" fill="none" opacity=".84"/><circle cx="${x2}" cy="${y2}" r="3.6" fill="${stroke}"/><circle cx="${x1}" cy="${y1}" r="2.5" fill="${stroke}"/>`;});}svg.innerHTML=paths;}
 function $$(selector){return Array.from(document.querySelectorAll(selector));}
 function selectLine(line,scroll=true){if(mode!=='company')return;activeLine=line;$$('#current-code .code-row').forEach(el=>el.classList.toggle('highlight',Number(el.dataset.line)===line||(entities[selected].parent&&Number(el.dataset.line)>=entities[selected].start&&Number(el.dataset.line)<=entities[selected].end)));const info=findLineInfo(selected,line);if($('#detail-title')){$('#detail-title').textContent=info.head;$('#detail-note').textContent=info.description;$('#detail-line').textContent='Line '+line;}if(scroll){const row=$(`#current-code .code-row[data-line="${line}"]`);row?.scrollIntoView({block:'nearest',behavior:'smooth'});}}
-function searchResults(q){q=q.toLowerCase().trim();const r=$('#search-results');if(!q){r.hidden=true;return;}const items=[];for(const [id,f] of Object.entries(files)){if((f.name+' '+f.path+' '+f.about).toLowerCase().includes(q))items.push({type:'file',id,label:f.name,sub:f.path});}for(const [id,c] of Object.entries(entities)){if((c.no+' '+c.name+' '+c.desc+' '+files[c.file].name+' '+files[c.file].path).toLowerCase().includes(q))items.push({type:'company',id,label:`Company ${c.no} · ${c.name}`,sub:files[c.file].name+' — '+c.desc});}r.innerHTML=items.slice(0,18).map(it=>`<button data-${it.type==='file'?'gofile':'company'}="${it.id}">${icon(it.type==='file'?'file':'building')}<span><b>${safe(it.label)}</b><small>${safe(it.sub)}</small></span></button>`).join('')||'<div style="padding:12px;color:var(--dim);font-size:12px">No matching file or company.</div>';r.hidden=false;}
+
+function orderedCompanies(){
+  const compare=(a,b)=>{
+    const aa=entities[a].no.split('.').map(Number), bb=entities[b].no.split('.').map(Number);
+    for(let i=0;i<Math.max(aa.length,bb.length);i++){
+      if(i===aa.length)return -1;
+      if(i===bb.length)return 1;
+      if(aa[i]!==bb[i])return aa[i]-bb[i];
+    }
+    return 0;
+  };
+  return Object.keys(entities).sort(compare);
+}
+function companyNumberQuery(q){
+  const match=String(q).trim().match(/^(?:company\s*#?\s*)?(\d+(?:\.\d+)*)$/i);
+  return match ? match[1].split('.').map(Number).join('.') : null;
+}
+function companyByNumber(q){
+  const num=companyNumberQuery(q);
+  return num===null?null:orderedCompanies().find(id=>entities[id].no.split('.').map(Number).join('.')===num)||null;
+}
+function companySequence(){
+  const selectedNo=mode==='company'&&entities[selected]?entities[selected].no:null;
+  // Top-level companies navigate 1 → 2 → 3; subsidiaries navigate siblings, e.g. 2.1 → 2.2.
+  if(!selectedNo||!selectedNo.includes('.'))return orderedCompanies().filter(id=>!entities[id].no.includes('.'));
+  const bits=selectedNo.split('.'),parent=bits.slice(0,-1).join('.')+'.';
+  return orderedCompanies().filter(id=>{
+    const n=entities[id].no;return n.startsWith(parent)&&n.split('.').length===bits.length;
+  });
+}
+function updateCompanySequence(){
+  const items=companySequence(),index=mode==='company'?items.indexOf(selected):-1;
+  const prev=$('#prev-company'),next=$('#next-company'),position=$('#sequence-position');
+  prev.disabled=index<=0&&index!==-1 || !items.length;
+  next.disabled=index>=items.length-1&&index!==-1 || !items.length;
+  if(index===-1){prev.disabled=next.disabled=!items.length;position.textContent=items.length+' companies mapped';return;}
+  prev.disabled=index===0;
+  next.disabled=index===items.length-1;
+  position.textContent='Company '+entities[selected].no+' · '+(index+1)+' / '+items.length;
+  prev.title=index>0?'Company '+entities[items[index-1]].no+' · Left arrow':'First company';
+  next.title=index<items.length-1?'Company '+entities[items[index+1]].no+' · Right arrow':'Last mapped company';
+}
+function moveCompany(direction){
+  const items=companySequence();
+  if(!items.length)return;
+  const index=mode==='company'?items.indexOf(selected):-1;
+  const nextIndex=index<0?(direction>0?0:items.length-1):index+direction;
+  if(nextIndex<0||nextIndex>=items.length)return;
+  navToCompany(items[nextIndex]);
+}
+
+function searchResults(q){
+  const r=$('#search-results'),value=String(q).trim();
+  if(!value){r.hidden=true;r.innerHTML='';return;}
+  const numeric=companyNumberQuery(value);
+  if(numeric!==null){
+    const id=companyByNumber(value);
+    r.innerHTML=id
+      ?`<button data-company="${id}">${icon('building')}<span><b>Company ${safe(entities[id].no)} · ${safe(entities[id].name)}</b><small>${safe(files[entities[id].file].name)}</small></span></button>`
+      :`<div class="search-unmapped">Company ${safe(numeric)} has not been created yet. Only verified companies are available.</div>`;
+    r.hidden=false;return;
+  }
+  const needle=value.toLowerCase(),hits=[];
+  for(const id of orderedCompanies()){
+    const c=entities[id],file=files[c.file];
+    if((c.no+' '+c.name+' '+c.method+' '+c.desc+' '+file.name+' '+file.path).toLowerCase().includes(needle)){
+      hits.push({type:'company',id,label:'Company '+c.no+' · '+c.name,sub:c.method+' · '+file.name});
+    }
+  }
+  for(const [id,f] of Object.entries(files)){
+    if((f.name+' '+f.path+' '+f.about).toLowerCase().includes(needle))hits.push({type:'file',id,label:f.name,sub:f.path});
+  }
+  r.innerHTML=hits.slice(0,18).map(it=>`<button data-${it.type==='file'?'gofile':'company'}="${it.id}">${icon(it.type==='file'?'file':'building')}<span><b>${safe(it.label)}</b><small>${safe(it.sub)}</small></span></button>`).join('')||'<div class="search-unmapped">No matching company or file yet.</div>';
+  r.hidden=false;
+}
 function getLocation(){if(mode==='company'){const c=entities[selected];return `${files[c.file].path}:${c.start}-${c.end||c.start+(c.code?.length||1)-1} (Company ${c.no})`;}return mode==='file'?files[selectedFile].path:folderPath;}
 async function copyText(text,button){try{await navigator.clipboard.writeText(text);flash(button,'Copied');}catch(e){const box=document.createElement('textarea');box.value=text;box.style.position='fixed';box.style.opacity='0';document.body.appendChild(box);box.select();try{document.execCommand('copy');flash(button,'Copied');}catch(err){flash(button,'Copy unavailable');}box.remove();}}
 function flash(el,txt){const previous=el.dataset.original||el.innerHTML;if(!el.dataset.original)el.dataset.original=previous;el.textContent=txt;setTimeout(()=>{if(el.isConnected)el.innerHTML=previous;},1200);}
 document.addEventListener('click',e=>{const folder=e.target.closest('[data-folder]');if(folder){const key=folder.dataset.folder;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}const file=e.target.closest('[data-file]');if(file){const id=file.dataset.file,key='file:'+id;if(e.target.closest('.tree-chevron')){if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();}else{expanded.add(key);navToFile(id);}return;}const comp=e.target.closest('[data-company]');if(comp){const id=comp.dataset.company;if(comp.classList.contains('tree-row')&&e.target.closest('.tree-chevron')&&entities[id]?.children?.length){const key='co:'+id;if(expanded.has(key))expanded.delete(key);else expanded.add(key);renderTree();return;}const wantLine=comp.dataset.highlight;if(!entities[id])return;navToCompany(id);if(wantLine){ // Where possible, focus the related statement inside the destination.
  const c=entities[id];const l=Number(wantLine);if(l>=c.start&&l<=c.start+(c.code?.length||0)-1)selectLine(l);
  }$('#search-results').hidden=true;return;}const go=e.target.closest('[data-gofile]');if(go){navToFile(go.dataset.gofile);return;}const fo=e.target.closest('[data-openfolder]');if(fo){navToFolder(fo.dataset.openfolder);return;}const line=e.target.closest('#maincontent .code-row[data-line]');if(line){selectLine(Number(line.dataset.line));return;}if(!e.target.closest('.searchwrap'))$('#search-results').hidden=true;});
-$('#search').addEventListener('input',e=>searchResults(e.target.value));$('#search').addEventListener('keydown',e=>{if(e.key==='Enter'){const first=$('#search-results button');if(first)first.click();}else if(e.key==='Escape')$('#search-results').hidden=true;});
+$('#search').addEventListener('input',e=>searchResults(e.target.value));
+$('#search').addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+    e.preventDefault();
+    const typed=e.currentTarget.value;
+    const exact=companyByNumber(typed);
+    if(exact){navToCompany(exact);e.currentTarget.blur();}
+    else if(companyNumberQuery(typed)!==null){searchResults(typed);}
+    else {const first=$('#search-results button');if(first){first.click();e.currentTarget.blur();}}
+  }else if(e.key==='Escape'){$('#search-results').hidden=true;}
+});
+$('#prev-company').addEventListener('click',()=>moveCompany(-1));
+$('#next-company').addEventListener('click',()=>moveCompany(1));
 $('#copy').addEventListener('click',e=>copyText(getLocation(),e.currentTarget));
 $('#maincontent').addEventListener('click',e=>{const btn=e.target.closest('#copy-method');if(btn){const c=getCode(selected);copyText(c.lines.join('\n'),btn);}});
 $('#side-close').addEventListener('click',closeSidebar);
 $('#menu').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#backdrop').classList.toggle('open',open);$('#menu').setAttribute('aria-expanded',String(open));});$('#backdrop').addEventListener('click',closeSidebar);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('#sidebar').classList.contains('open'))closeSidebar();else if(document.activeElement?.tagName!=='INPUT')navBack();}});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if($('#sidebar').classList.contains('open'))closeSidebar();else if(document.activeElement?.tagName!=='INPUT')navBack();return;}
+  if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;
+  if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)return;
+  if(e.target?.closest?.('input,textarea,select,[contenteditable="true"]'))return;
+  e.preventDefault();
+  moveCompany(e.key==='ArrowRight'?1:-1);
+});
 window.addEventListener('resize',()=>requestAnimationFrame(drawWires));window.addEventListener('load',drawWires);
 
 function getRelations(id){
