@@ -14,8 +14,28 @@ This folder contains the incremental company explorer, separate from Shopify's e
 |---|---|---|---|---|---|---|
 | 1 | Start the shop | ShopApplication.main(String[] args) | sm-shop/src/main/java/com/salesmanager/shop/application/ShopApplication.java | 11–13 | 0 mapped | Verified |
 | 2 | Check that the shop has started | `ShopApplicationConfiguration.applicationReadyCode()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 48–52 | 0 mapped | Verified |
+| 3 | Set up request filtering | `ShopApplicationConfiguration.croseSiteFilter()` | `sm-shop/src/main/java/com/salesmanager/shop/application/config/ShopApplicationConfiguration.java` | 54–65 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
+
+### Company 3 connections
+
+- Spring invokes the `@Bean` method in `ShopApplicationConfiguration.java` (line 54) when configuring the application.
+- `croseSiteFilter()` builds a Spring `FilterRegistrationBean<XssFilter>` (lines 55–57).
+- It instantiates Shopizer's real `XssFilter` (line 59) and adds URL patterns `/shop/**`, `/api/**`, `/customer/**` (lines 60–62).
+- The actual `XssFilter` implementation is **not yet mapped as a numbered company**; external APIs are not subsidiaries.
+- It is a **separate top-level company** from 1 and 2. Numeric learning sequence does not imply Spring's runtime call order.
+- Source blob SHA: `41f81a6604d64ad9a60829a606f247dd547182c4` (same file as Company 2).
+
+## Navigation behavior
+
+- Search by exact number (e.g. `3`, `21`, `21.1`, or `Company 21`) and press Enter or select a result.
+- If a number isn't mapped yet, the explorer says it hasn't been created instead of jumping to another company.
+- `←` and `→` move backward and forward through the current numerical company level, with visible Previous / Next buttons for phones.
+- Top-level company 21 advances to top-level company 22 when available, without forcing a detour through subsidiary 21.1.
+- Subsidiaries such as 21.1 and 21.2 navigate among their siblings at the same depth.
+- Arrow shortcuts do not intercept typing inside search fields or other text inputs.
+- Company IDs stay permanent; the UI derives navigation from `companies.json` automatically.
 
 ### Company 2 connections
 
