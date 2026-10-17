@@ -46,7 +46,7 @@ $('#copy').addEventListener('click',e=>copyText(getLocation(),e.currentTarget));
 $('#maincontent').addEventListener('click',e=>{const back=e.target.closest('#back-company');if(back){navBack();return;}const btn=e.target.closest('#copy-method');if(btn){const c=getCode(selected);copyText(c.lines.join('\n'),btn);}const interview=e.target.closest('#copy-interview');if(interview&&entities[selected]?.interview){const c=entities[selected];copyText(c.interview.id+' — '+c.interview.question,interview);}});
 $('#history-back').addEventListener('click',navBack);
 $('#side-close').addEventListener('click',closeSidebar);
-$('#menu').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#backdrop').classList.toggle('open',open);$('#menu').setAttribute('aria-expanded',String(open));});$('#backdrop').addEventListener('click',closeSidebar);
+$('#menu').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#backdrop').classList.toggle('open',open);$('#menu').setAttribute('aria-expanded',String(open));if(open)queueRevealCurrentTreeRow();});$('#backdrop').addEventListener('click',closeSidebar);
 document.addEventListener('keydown',e=>{
   if((e.key==='Enter'||e.key===' ')&&e.target?.closest?.('#maincontent .code-row[data-source-company],#maincontent .code-row[data-source-context]')){e.preventDefault();e.target.closest('.code-row').click();return;}
   if(e.key==='Escape'){if($('#sidebar').classList.contains('open'))closeSidebar();else if(document.activeElement?.tagName!=='INPUT')navBack();return;}
