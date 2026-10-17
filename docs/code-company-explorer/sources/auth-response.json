@@ -1,0 +1,31 @@
+{
+  "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java",
+  "source_blob_sha": "14dcbecafc95525546659876bf33a642987a238f",
+  "reference_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+  "lines": [
+    "package com.salesmanager.shop.store.security;",
+    "",
+    "import java.io.Serializable;",
+    "import com.salesmanager.shop.model.entity.Entity;",
+    "",
+    "public class AuthenticationResponse extends Entity implements Serializable {",
+    "  public AuthenticationResponse() {}",
+    "",
+    "  /**",
+    "   *",
+    "   */",
+    "  private static final long serialVersionUID = 1L;",
+    "  private String token;",
+    "",
+    "  public AuthenticationResponse(Long userId, String token) {",
+    "    this.token = token;",
+    "    super.setId(userId);",
+    "  }",
+    "",
+    "  public String getToken() {",
+    "    return token;",
+    "  }",
+    "",
+    "}"
+  ]
+}
