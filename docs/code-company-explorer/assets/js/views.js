@@ -26,26 +26,29 @@ function renderCodeRows(lines,start,highlights,owners=null){
  }).join('');
 }
 function getParentChain(id){const ret=[];let c=entities[id];while(c){ret.unshift(c);c=c.parent?entities[c.parent]:null;}return ret;}
-function renderCompanyView(){const c=entities[selected],f=files[c.file],chain=getParentChain(selected),code=getCode(selected),links=getRelations(selected);const type=c.parent?'SUBSIDIARY COMPANY':'MAIN COMPANY';
+function renderCompanyView(){const c=entities[selected],f=files[c.file],chain=getParentChain(selected),code=getCode(selected),links=getRelations(selected);const type=c.pending?'SOURCE INDEXED · TEACHING PENDING':c.parent?'SUBSIDIARY COMPANY':'MAIN COMPANY';
  const header=`<div class="hero"><div><div class="eyebrow">${icon(c.parent?'branch':'building')} ${type}</div><h1>Company ${safe(c.no)} <span style="color:var(--dim)">·</span> ${safe(c.name)}</h1><p class="description">${safe(c.desc)}</p><div class="small-meta"><span class="meta-chip"><b>${safe(f.name)}</b></span><span class="meta-chip accent">Lines ${c.start}–${c.end||c.start+(c.code?.length||1)-1}</span><span class="linepath">${safe(f.path)}</span></div></div><div class="hero-actions"><button class="plain-button" data-gofile="${c.file}" aria-label="View every company in this file">${icon('layers')} All companies</button></div></div>`;
  const strip=`<div class="path-strip"><button data-gofile="${c.file}">${safe(f.name)}</button>${chain.map((ent,i)=>`${icon('chevron')}${i===chain.length-1?`<b>Company ${safe(ent.no)}</b>`:`<button data-company="${Object.keys(entities).find(k=>entities[k]===ent)}">Company ${safe(ent.no)}</button>`}`).join('')}</div>`;
  const summary=`<div class="company-summary"><div><small>${safe(type)}</small><h2>${safe(c.name)}</h2><p>${safe(c.desc)}</p></div><div class="summary-num">${safe(c.no)}</div></div>`;
  const learning=`<section class="company-learning" aria-label="Sequence explanation and interview question">
    <article class="learning-card sequence">
      <span class="learning-overline">Why this number?</span>
-     <h2>${icon('layers')} Why Company ${safe(c.no)} comes here</h2>
-     <p>${safe(c.mentorWhy||c.sequenceReason||'Sequence explanation has not been added yet.')}</p>
+     <h2>${icon('layers')} ${c.pending?'YouTube-style explanation pending':'Why Company '+safe(c.no)+' comes here'}</h2>
+     <p>${c.pending?'Not written yet. This company is mapped to original Java source, but teaching content will be added in a future batch.':safe(c.mentorWhy||c.sequenceReason||'Sequence explanation has not been added yet.')}</p>
    </article>
    <article class="learning-card question">
      <span class="learning-overline">Interview practice</span>
-     <h2>${icon('code')} Unique interview question <span class="learning-id">${safe(c.interview?.id||'PENDING')}</span></h2>
-     <p>${safe(c.interview?.question||'The interview question for this company has not been added yet.')}</p>
+     <h2>${icon('code')} ${c.pending?'Interview question pending':'Unique interview question'} <span class="learning-id">${safe(c.interview?.id||'NOT WRITTEN')}</span></h2>
+     <p>${c.pending?'Not populated yet — this placeholder is intentionally empty.':safe(c.interview?.question||'The interview question for this company has not been added yet.')}</p>
      ${c.interview?.question?`<div class="learning-footer"><span class="learning-footnote">Based on ${safe(f.name)} · ${safe(c.method)}</span><button class="question-copy" type="button" id="copy-interview">Copy question</button></div>`:''}
    </article>
  </section>`;
- const used=links.usedBy.map((e,i)=>edgeCard(e.id,e.line,'usedby',i)).join('')||'<div class="empty-rel">No direct company caller is mapped yet.</div>';
- const needs=links.needs.map((e,i)=>edgeCard(e.to,e.line,'uses',i)).join('')||'<div class="empty-rel">No outside service is required here.</div>';
- const focus=`<div class="focus-card" id="focus-card"><div class="focus-title"><div class="focus-overline">COMPANY ${safe(c.no)} · ${c.parent?'CODE SECTION':'JAVA METHOD'}</div><h3>${safe(c.name)}</h3><p>${safe(c.desc)}</p><div class="loc">${safe(f.name)} : ${c.start}–${c.end||c.start+(c.code?.length||1)-1}</div></div><div class="code-header"><span class="file-name">${icon('code')} ${safe(f.name)}</span><span class="line-mark">JAVA</span></div><div class="code-body graph-code" id="current-code">${renderCodeRows(code.lines,code.start,code.highlight)}</div><div class="focus-footer"><span>${c.parent?'Highlighted lines belong to its parent method':c.note||'Source code · line numbers'}</span><button class="line-button" id="copy-method" aria-label="Copy this code">Copy code ${icon('copy')}</button></div></div>`;
+ const used=links.usedBy.map((e,i)=>edgeCard(e.id,e.line,'usedby',i)).join('')||(c.pending?'<div class="empty-rel">Connections have not been mapped yet.</div>':'<div class="empty-rel">No direct company caller is mapped yet.</div>');
+ const needs=links.needs.map((e,i)=>edgeCard(e.to,e.line,'uses',i)).join('')||(c.pending?'<div class="empty-rel">Dependencies not reviewed yet.</div>':'<div class="empty-rel">No outside service is required here.</div>');
+ const sourcePlaceholder=c.pending&&!code.lines.length
+   ?'<div class="source-none">'+safe(f.loadError?'Original source unavailable: '+f.loadError:'Loading original Shopizer Java source from the pinned commit…')+'</div>'
+   :'';
+ const focus=`<div class="focus-card" id="focus-card"><div class="focus-title"><div class="focus-overline">COMPANY ${safe(c.no)} · ${c.parent?'CODE SECTION':'JAVA METHOD'}</div><h3>${safe(c.name)}</h3><p>${safe(c.desc)}</p><div class="loc">${safe(f.name)} : ${c.start}–${c.end||c.start+(c.code?.length||1)-1}</div></div><div class="code-header"><span class="file-name">${icon('code')} ${safe(f.name)}</span><span class="line-mark">JAVA</span></div><div class="code-body graph-code" id="current-code">${code.lines.length?renderCodeRows(code.lines,code.start,code.highlight):sourcePlaceholder}</div><div class="focus-footer"><span>${c.parent?'Highlighted lines belong to its parent method':c.note||'Source code · line numbers'}</span><button class="line-button" id="copy-method" aria-label="Copy this code">Copy code ${icon('copy')}</button></div></div>`;
  const network=`<div class="network-head"><h2>Company connections</h2><div class="labels"><span><i class="key" style="background:var(--blue)"></i>Used by</span><span><i class="key" style="background:var(--green)"></i>Selected</span><span><i class="key" style="background:var(--orange)"></i>Needs</span></div></div><section class="network" id="network"><svg class="wires" id="wires" aria-hidden="true"></svg><div class="network-layout"><div class="graph-col usedby"><div class="graph-title"><span><span class="label-square"></span>Who uses this?</span><strong>${links.usedBy.length}</strong></div><div class="nodes" id="used-nodes">${used}</div></div><div class="graph-col current"><div class="graph-title"><span><span class="label-square"></span>This company</span><strong>${safe(c.no)}</strong></div>${focus}</div><div class="graph-col uses"><div class="graph-title"><span><span class="label-square"></span>What it needs</span><strong>${links.needs.length}</strong></div><div class="nodes" id="needs-nodes">${needs}</div></div></div></section>`;
  const keyInfo=activeLine!=null?findLineInfo(selected,activeLine):null;
  const detailed=`<section class="detail-strip" id="detail-strip"><div><div class="detail-title" id="detail-title">${keyInfo?safe(keyInfo.head):'What this code does'}</div><div class="detail-note" id="detail-note">${keyInfo?safe(keyInfo.description):safe(c.desc)}</div></div><div class="detail-actions"><div class="detail-line" id="detail-line">${activeLine!=null?'Line '+activeLine:''}</div>${navStack.length?'<button class="back-company" id="back-company" type="button">← Back</button>':''}</div></section>`;
@@ -63,6 +66,13 @@ function renderAll(){
  if(file&&!file.source&&!file.loadingState){
    const fid=selectedFile;
    ensureSourceLoaded(fid).then(()=>{if(mode==='file'&&selectedFile===fid)renderAll();});
+ }
+ if(mode==='company'&&entities[selected]?.pending){
+   const c=entities[selected],f=files[c.file];
+   if(!f.source&&!f.loadingState){
+     const id=selected;
+     ensureSourceLoaded(c.file).then(()=>{if(mode==='company'&&selected===id)renderAll();});
+   }
  }
  updateCompanySequence();updateBackButton();
 }
