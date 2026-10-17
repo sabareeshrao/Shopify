@@ -19,6 +19,11 @@ async function ensureSourceLoaded(fid){
       const lines=raw.split('\n');
       if(lines.at(-1)==='')lines.pop();
       f.source=lines;f.loadingState='ready';f.loadError=null;
+      // Inventory-only companies fetch original lines on demand, not at startup.
+      for(const id of f.companyIds){
+        const mapped=entities[id];
+        if(mapped?.pending)mapped.code=lines.slice(mapped.start-1,mapped.end);
+      }
     }catch(error){f.loadError=String(error.message||error);f.loadingState='error';}
     finally{loadingFiles.delete(fid);}
   })();
@@ -26,10 +31,11 @@ async function ensureSourceLoaded(fid){
   return pending;
 }
 async function loadRealCode(){
-  const [manifest,tree,mentors]=await Promise.all([
+  const [manifest,tree,mentors,inventory]=await Promise.all([
     fetch('./companies.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load companies.json');return r.json()}),
     fetch('./repository-tree.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load complete repository tree');return r.json()}),
-    fetch('./mentor-lessons.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load mentor company lessons');return r.json()})
+    fetch('./mentor-lessons.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load mentor company lessons');return r.json()}),
+    fetch('./company-inventory.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Cannot load complete company inventory');return r.json()})
   ]);
   if(mentors.reference_commit!==manifest.reference.ref)throw Error('Mentor explanations do not match the pinned source');
   const missingLessons=manifest.companies.filter(c=>!mentors.lessons?.[c.id]);
@@ -73,20 +79,45 @@ async function loadRealCode(){
       externalClients:(c.inbound||[]).filter(dep=>!dep.company_id),externalSuppliers:(c.outbound||[]).filter(dep=>!dep.company_id)};
     if(!c.parent_id)f.companyIds.push(eid);
   }
+  // The inventory is deliberately separate: preserve the 176 hand-reviewed
+  // company/lesson/question records, and show all other declarations as TODOs.
+  if(inventory.reference_commit!==manifest.reference.ref)throw Error('Inventory source commit mismatch');
+  if(inventory.mapped_taught_count!==manifest.count)throw Error('Published lesson count and inventory disagree');
+  if(inventory.pending_count!==inventory.pending.length)throw Error('Incomplete pending company inventory');
+  if(inventory.total_inventory_count!==manifest.count+inventory.pending_count)throw Error('Company inventory total mismatch');
+  for(const draft of inventory.pending){
+    const fid=filePathIndex.get(draft.source_path);
+    if(!fid)throw Error('Inventory method absent from pinned tree: '+draft.source_path);
+    const f=files[fid], eid='company-'+draft.id;
+    if(entities[eid])throw Error('Duplicate company ID '+draft.id);
+    if(draft.source_blob_sha!==f.blobSha)throw Error('Inventory source hash mismatch for Company '+draft.id);
+    if(!Number.isInteger(draft.start_line)||!Number.isInteger(draft.end_line)||draft.start_line>draft.end_line)
+      throw Error('Bad source range for Company '+draft.id);
+    entities[eid]={
+      no:draft.id,file:fid,name:draft.method,method:draft.method,
+      desc:'Original '+draft.kind.replace('_',' ')+' indexed; mentor explanation and interview question not written yet.',
+      start:draft.start_line,end:draft.end_line,methodStart:draft.method_start_line,
+      code:f.source?f.source.slice(draft.start_line-1,draft.end_line):[],
+      parent:null,children:[],needs:[],externalClients:[],externalSuppliers:[],
+      sequenceReason:'',mentorWhy:null,interview:null,
+      pending:true,kind:draft.kind,sourceScope:draft.source_scope
+    };
+    f.companyIds.push(eid);
+  }
   for(const [id,c] of Object.entries(entities))if(c.parent&&entities[c.parent])entities[c.parent].children.push(id);
   for(const [id,c] of Object.entries(entities))for(const dep of c.needs)
     if(!entities[dep.to])throw Error('Missing linked company from '+c.no+' to '+dep.to);
   for(const f of Object.values(files))f.companyIds.sort((x,y)=>entities[x].start-entities[y].start);
   const link=decodeURIComponent(location.hash.replace(/^#/,'')).match(/^company-(\d+(?:\.\d+)*)$/);
-  const requested=link&&manifest.companies.find(c=>c.id===link[1]);
-  selected='company-'+(requested?.id||manifest.companies.at(-1).id);
+  const requested=link&&entities['company-'+link[1]];
+  selected='company-'+(requested?.no||manifest.companies.at(-1).id);
   selectedFile=entities[selected].file;mode='company';activeLine=null;folderPath='shopizer';
   expanded.clear();
   openParents(selected);
   document.querySelector('.repo-title span:nth-child(2)').textContent='shopizer-ecommerce / shopizer';
-  document.querySelector('.repo-meta').innerHTML='<span class="demo-dot"></span> '+tree.file_count+' original files · '+manifest.count+' companies mapped';
+  document.querySelector('.repo-meta').innerHTML='<span class="demo-dot"></span> '+tree.file_count+' original files · '+inventory.total_inventory_count+' companies indexed · '+manifest.count+' taught';
   document.querySelector('.side-bottom').innerHTML='<span>JAVA · SPRING BOOT</span><b>PINNED SHOPIZER</b>';
-  document.title='Code Company | Shopizer · '+manifest.count+' Companies · '+tree.file_count+' Files';
+  document.title='Code Company | Shopizer · '+inventory.total_inventory_count+' Indexed · '+manifest.count+' Taught';
   renderAll();
   queueRevealCurrentTreeRow();
 }
