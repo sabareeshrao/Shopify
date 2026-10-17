@@ -5,9 +5,9 @@ Pinned Shopizer source commit: `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`
 
 ## What is shipped
 
-- **Company tutorials:** 156 out of 156 covered, with a different conversational narration for each “Why this number?” card.
-- **Length:** the previous approximately 7,860 words plus 1,323 new words, totaling approximately 9,183 words across 156 lessons.
-- **Uniqueness:** zero identical full tutorials and zero repeated opening sentences among the 156.
+- **Company tutorials:** 176 out of 176 covered, with a different conversational narration for each “Why this number?” card.
+- **Length:** the 156 previously published explanations plus approximately 1,448 additional words across Companies 157–176.
+- **Uniqueness:** zero identical full tutorials and zero repeated opening sentences among all 176.
 - **Source-line notes:** specific explanation based on the original identifier, type, declaration, nearby statements, real Java source usage and file/method context.
 - **Style:** beginner-friendly mentor dialogue with e-commerce examples, explanatory questions, consequences and warnings. Original company sequence metadata retained for source-of-truth purposes.
 - **Color:** non-company nonblank lines and their detail footer now use light blue `#a9ceff`, not pink. Indexed company actions stay green. The customized IDE Project sidebar is untouched.
@@ -57,3 +57,18 @@ Early quality checks uncovered repetitions for identical statements in different
 | New callsite lines and mapped-company targets checked | All new links |
 
 This is a source-verification audit. The previous **1,864-line** unique contextual-explanation check covered 29 earlier cached source files. The five new snapshots were verified for source mapping and method boundaries, but an equally deep per-line runtime explanation audit for them remains to be run in the browser. The new mentor stories name real methods and identify actual caveats instead of asserting flawless production security.
+
+
+## Batch 157–176: checked source mappings and teaching quality
+
+| Test | Result |
+|---|---:|
+| New exact pinned Java source files | 8 |
+| Total Java lines in these 8 files | 459 |
+| Nonblank Java lines in these files | 320 |
+| New verified main company method spans | 20 / 20 |
+| New unique company IDs and interview questions | 20 / 20 |
+| Total unique full mentor narratives and opening sentences | 176 / 176 |
+| Source-to-company callsite ranges and target IDs valid | All new edges |
+
+Verified the 8 snapshots against the pinned Shopizer commit, distinct method declarations and inclusive line ranges, and the inter-company links. This source-level check is **not** the same as exhaustively hand-reviewing all 320 individual nonblank line explanations or running a browser. The earlier 1,864-line full explanatory audit retains its historical scope. High-risk teaching points include incomplete `getPermissions`, null-returning permission populators, known administrator bootstrap password, the login success handler swallowing exceptions, and redirect-target configuration.
