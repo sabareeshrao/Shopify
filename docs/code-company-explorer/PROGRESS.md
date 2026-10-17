@@ -168,6 +168,26 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 154 | List permissions for a security group | `listPermissions(String group)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 54–80 | 0 mapped | Verified |
 | 155 | List the available security permissions | `permissions()` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 87–98 | 0 mapped | Verified |
 | 156 | List security groups and types | `groups()` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 105–117 | 0 mapped | Verified |
+| 157 | Inspect unfinished permission lookup in the security facade | `getPermissions(List<String> groups)` | `sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java` | 38–61 | 0 mapped | Verified |
+| 158 | Check password format with a regex | `validateUserPassword(String password)` | `sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java` | 63–68 | 0 mapped | Verified |
+| 159 | Encode a password through Spring Security | `encodePassword(String password)` | `sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java` | 70–73 | 0 mapped | Verified |
+| 160 | Verify raw input against an encoded password | `matchPassword(String modelPassword, String newPassword)` | `sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java` | 75–82 | 0 mapped | Verified |
+| 161 | Compare two raw password inputs | `matchRawPasswords(String password, String repeatPassword)` | `sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java` | 84–89 | 0 mapped | Verified |
+| 162 | Redirect administrators after access is denied | `handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java` | 14–21 | 0 mapped | Verified |
+| 163 | Read the admin access-denied destination | `getAccessDeniedUrl()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java` | 23–25 | 0 mapped | Verified |
+| 164 | Configure the admin access-denied destination | `setAccessDeniedUrl(String accessDeniedUrl)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java` | 27–29 | 0 mapped | Verified |
+| 165 | Record a successful admin login and update access history | `onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/AbstractAuthenticatinSuccessHandler.java` | 30–63 | 0 mapped | Verified |
+| 166 | Replace the admin login redirect strategy | `setRedirectStrategy(RedirectStrategy redirectStrategy)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java` | 18–20 | 0 mapped | Verified |
+| 167 | Read the admin redirect strategy | `getRedirectStrategy()` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java` | 21–23 | 0 mapped | Verified |
+| 168 | Send a successful admin to the home page | `redirectAfterSuccess(HttpServletRequest request, HttpServletResponse response)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java` | 25–29 | 0 mapped | Verified |
+| 169 | Load an administrator and derive granted authorities | `loadUserByUsername(String userName)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserServicesImpl.java` | 67–113 | 0 mapped | Verified |
+| 170 | Seed a default administrator account | `createDefaultAdmin()` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserServicesImpl.java` | 116–139 | 0 mapped | Verified |
+| 171 | Build a security data exception from a message | `SecurityDataAccessException(String msg)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/SecurityDataAccessException.java` | 12–14 | 0 mapped | Verified |
+| 172 | Preserve the cause of a security data exception | `SecurityDataAccessException(String msg, Exception e)` | `sm-shop/src/main/java/com/salesmanager/shop/admin/security/SecurityDataAccessException.java` | 16–18 | 0 mapped | Verified |
+| 173 | Identify an unfinished permission-to-response conversion | `populate(Permission source, ReadablePermission target, MerchantStore store, Language language)` | `sm-shop/src/main/java/com/salesmanager/shop/populator/security/ReadablePermissionPopulator.java` | 12–17 | 0 mapped | Verified |
+| 174 | Identify the unfinished permission DTO factory | `createTarget()` | `sm-shop/src/main/java/com/salesmanager/shop/populator/security/ReadablePermissionPopulator.java` | 19–23 | 0 mapped | Verified |
+| 175 | Create an empty password-reset request | `ResetPasswordRequest()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/ResetPasswordRequest.java` | 25–27 | 0 mapped | Verified |
+| 176 | Initialize a reset request with a username | `ResetPasswordRequest(String username)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/ResetPasswordRequest.java` | 29–31 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -604,3 +624,13 @@ Browser regression file now targets 136 records, but running it inside GitHub Pa
 - Training includes honest caveats about exception-to-HTTP-status handling, token refresh, current-password checks, returned error messages, and permission access controls.
 - Preserved IntelliJ-style black sidebar, slim scrollbars, blue unmapped source lines, four-column original Java tabs and navigation/scroll synchronization. Updated the regression test source to cover Company 137 and the new APIs.
 - Source-data and structure validation passed. Live browser/phone interaction testing remains unconfirmed.
+
+
+## Batch 157–176 — Admin browser security and password-reset entry (2026-10-16)
+
+- Added **20** permanent verified companies (157–176) and permanent unique interview questions IQ-157 through IQ-176. No previous numbering, source cache, Java lines, or published mentor narrative was rewritten.
+- New source snapshots: 8 pinned original Shopizer Java files covering the security facade, denial handler, shared admin login-success handler, redirect handler, admin account service, typed exception, permission populator, and password-reset request.
+- Original snapshots contain **459** lines, of which **320** are nonblank. All new method declaration anchors, inclusive method ranges, source commit and blob links, and company-edge callsite line numbers were cross-checked. Every one of the 176 lesson scripts has unique full content and opening sentence.
+- Explicitly labeled broken or unfinished behavior: `SecurityFacadeImpl.getPermissions()` throws *Not implemented*, `ReadablePermissionPopulator.populate()` and `createTarget()` return `null`, and `createDefaultAdmin()` still contains hardcoded bootstrap credentials. These have not been represented as completed features.
+- Preserved black IntelliJ-like Project tree, blue non-company source highlighting, four-column Java tab alignment, thin scrollbar, synced navigation and the no-tooltip UX.
+- Updated browser regression source for 176-company coverage, original code fragments, links, company-boundary navigation and last-company selection. Full live mobile/desktop browser interaction audit remains unconfirmed.
