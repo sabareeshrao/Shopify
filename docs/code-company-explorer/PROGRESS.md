@@ -148,6 +148,26 @@ This folder contains the incremental company explorer, separate from Shopify's e
 | 134 | Set browser customer's last name | `setLastName(String lastName)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/user/CustomerDetails.java` | 66–68 | 0 mapped | Verified |
 | 135 | Read administrator identity service | `getJwtAdminDetailsService()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 29–31 | 0 mapped | Verified |
 | 136 | Replace administrator identity service | `setJwtAdminDetailsService(UserDetailsService jwtAdminDetailsService)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/JWTAdminAuthenticationProvider.java` | 32–34 | 0 mapped | Verified |
+| 137 | Create an empty customer login request | `AuthenticationRequest()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 25–27 | 0 mapped | Verified |
+| 138 | Initialize a login request with credentials | `AuthenticationRequest(String username, String password)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 29–32 | 0 mapped | Verified |
+| 139 | Read the login username | `getUsername()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 34–36 | 0 mapped | Verified |
+| 140 | Store the login username | `setUsername(String username)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 38–40 | 0 mapped | Verified |
+| 141 | Read the submitted login password | `getPassword()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 42–44 | 0 mapped | Verified |
+| 142 | Store the submitted login password | `setPassword(String password)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java` | 46–48 | 0 mapped | Verified |
+| 143 | Create an empty authentication response | `AuthenticationResponse()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java` | 7–7 | 0 mapped | Verified |
+| 144 | Package customer ID and JWT | `AuthenticationResponse(Long userId, String token)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java` | 15–18 | 0 mapped | Verified |
+| 145 | Expose JWT from the login response | `getToken()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java` | 20–22 | 0 mapped | Verified |
+| 146 | Register a customer and return a JWT | `register(PersistableCustomer customer, MerchantStore merchantStore, Language language)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java` | 94–148 | 0 mapped | Verified |
+| 147 | Authenticate a returning customer | `authenticate(AuthenticationRequest authenticationRequest)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java` | 157–196 | 0 mapped | Verified |
+| 148 | Refresh an eligible customer JWT | `refreshToken(HttpServletRequest request)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java` | 198–211 | 0 mapped | Verified |
+| 149 | Read the existing password for a change | `getCurrent()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java` | 18–20 | 0 mapped | Verified |
+| 150 | Store the existing password input | `setCurrent(String current)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java` | 22–24 | 0 mapped | Verified |
+| 151 | Read confirmation of the new password | `getRepeatPassword()` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java` | 26–28 | 0 mapped | Verified |
+| 152 | Store the repeated new password | `setRepeatPassword(String repeatPassword)` | `sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java` | 30–32 | 0 mapped | Verified |
+| 153 | Change a customer's password | `changePassword(PasswordRequest passwordRequest, HttpServletRequest request)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java` | 215–245 | 0 mapped | Verified |
+| 154 | List permissions for a security group | `listPermissions(String group)` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 54–80 | 0 mapped | Verified |
+| 155 | List the available security permissions | `permissions()` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 87–98 | 0 mapped | Verified |
+| 156 | List security groups and types | `groups()` | `sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java` | 105–117 | 0 mapped | Verified |
 
 Source blob SHA: dd91c2f7c8d2d04b9ecbb318b450af7359d04493.
 
@@ -574,3 +594,13 @@ Browser regression file now targets 136 records, but running it inside GitHub Pa
 - Preserves the latest IntelliJ-like black sidebar, project tools, icons, resizable panel, all existing company IDs, source links, interview tutorials, and blue unnumbered-code highlighting.
 - Extended the browser regression test file for code tab stops, sidebar current-row visibility, right-page scroll resetting and Back position restoration. Fixed obsolete assertions referring to `pinkLine`, `pending-map`, and `pending code lines` that no longer match the blue-source UI.
 - Headless code-tab alignment and sidebar visibility simulation were executed. **Live full-app mobile/desktop browser regression remains to be run after deployment.**
+
+
+## Batch 137–156 — Customer authentication and permissions (2026-10-16)
+
+- **20 new main companies** added: login request fields and constructors (137–142), login response (143–145), customer registration/login/JWT refresh (146–148), password change (149–153), and security group/permission API (154–156).
+- Every source span was cross-checked against five Java snapshots at pinned Shopizer commit `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`. New snapshots cover 474 original code lines, including 372 nonblank lines; mapped methods have verified exact line numbers and callsites.
+- The 20 new IQ interview questions are unique, and all 156 mentor lessons have distinct full text and opening sentences. No prior IDs were renumbered, and no historical company text was overwritten.
+- Training includes honest caveats about exception-to-HTTP-status handling, token refresh, current-password checks, returned error messages, and permission access controls.
+- Preserved IntelliJ-style black sidebar, slim scrollbars, blue unmapped source lines, four-column original Java tabs and navigation/scroll synchronization. Updated the regression test source to cover Company 137 and the new APIs.
+- Source-data and structure validation passed. Live browser/phone interaction testing remains unconfirmed.
