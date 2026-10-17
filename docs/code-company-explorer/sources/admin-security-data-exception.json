@@ -1,0 +1,27 @@
+{
+  "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/SecurityDataAccessException.java",
+  "source_blob_sha": "9c095a5f9a3cbd2fa38e2c740bcddee1be371c2a",
+  "reference_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+  "lines": [
+    "package com.salesmanager.shop.admin.security;",
+    "",
+    "import org.springframework.dao.DataAccessException;",
+    "",
+    "public class SecurityDataAccessException extends DataAccessException {",
+    "",
+    "\t/**",
+    "\t * ",
+    "\t */",
+    "\tprivate static final long serialVersionUID = 1L;",
+    "",
+    "\tpublic SecurityDataAccessException(String msg) {",
+    "\t\tsuper(msg);",
+    "\t}",
+    "\t",
+    "\tpublic SecurityDataAccessException(String msg, Exception e) {",
+    "\t\tsuper(msg,e);",
+    "\t}",
+    "",
+    "}"
+  ]
+}
