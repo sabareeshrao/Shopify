@@ -37,6 +37,7 @@ async function ready(){
  }
  throw Error('Explorer did not load within 25 seconds. Check network requests and the console.');
 }
+const mentorLessonsSeen=new Map();
 function openCompany(doc,n){
  const search=doc.querySelector('#search');
  assert(search,'Search input missing');
@@ -76,7 +77,7 @@ function checkBox(doc,box,n){
 }
 async function audit(){
  state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
- status.textContent='Checking 136 companies and every external connection…';
+ status.textContent='Checking 156 companies and every external connection…';
  const doc=await ready();
  const allRoot=doc.querySelector('.tree-row.folder .mini-count');
  assert(allRoot?.textContent.includes('1340'),'Complete pinned repository manifest must include 1,340 tracked files');
@@ -94,8 +95,8 @@ async function audit(){
  assert(checkedCode,'Current-company code content missing');
  assert(frame.contentWindow.getComputedStyle(checkedCode).tabSize==='4','Company code indent must use four-column tabs');
 
- const mentorLessonsSeen=new Map();
- for(let n=1;n<=136;n++){
+ mentorLessonsSeen.clear();
+ for(let n=1;n<=156;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
   for(const button of buttons)checkBox(doc,button,n);
@@ -107,7 +108,7 @@ async function audit(){
   assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
   assert(doc.querySelectorAll('[title]').length===0,'Company '+n+' produced a hover tooltip');
   state.companies++;
-  status.textContent='Checked '+n+'/136 companies, '+state.connections+' connection boxes…';
+  status.textContent='Checked '+n+'/156 companies, '+state.connections+' connection boxes…';
  }
 
  openCompany(doc,54);
@@ -201,7 +202,21 @@ async function audit(){
  doc.querySelector('#history-back').click();
  assert(doc.querySelector('.hero h1')?.textContent===before117,'Back after 116 → 117 failed');
  openCompany(doc,136);
- assert(doc.querySelector('#next-company')?.disabled,'Company 136 must be last mapped main company');
+ doc.querySelector('#next-company').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 137'),'Next 136 → 137 failed');
+ assert(doc.querySelector('.learning-card.sequence')?.textContent.includes('AuthenticationRequest'),'Company 137 narration must reference original login request');
+ openCompany(doc,144);
+ assert(doc.querySelector('#current-code')?.textContent.includes('super.setId(userId)'),'Company 144 original response must assign inherited ID');
+ openCompany(doc,147);
+ assert(doc.querySelector('#current-code')?.textContent.includes('jwtCustomerAuthenticationManager.authenticate'),'Company 147 must show real manager call');
+ assert(doc.querySelector('.relation-card[data-company="company-139"]'),'Company 147 must link submitted username');
+ assert(doc.querySelector('.relation-card[data-company="company-75"]'),'Company 147 must link JWT generation');
+ openCompany(doc,153);
+ assert(doc.querySelector('#current-code')?.textContent.includes('customerFacade.changePassword'),'Company 153 must contain password change service call');
+ openCompany(doc,154);
+ assert(doc.querySelector('#current-code')?.textContent.includes('groupService.findByName'),'Company 154 must show group lookup');
+ openCompany(doc,156);
+ assert(doc.querySelector('#next-company')?.disabled,'Company 156 must be last mapped main company');
  openCompany(doc,128);
  assert(doc.querySelector('.relation-card[data-company="company-98"]'),'Company 128 missing Company 98 client link');
  openCompany(doc,130);
@@ -259,7 +274,7 @@ async function audit(){
  assert(parseInt(rootStyle.getPropertyValue('--sidebar-width'),10)===296,'Double-click should reset sidebar to compact 296px');
  frame.style.width=prevWidth;frame.style.maxWidth=prevMax;await delay(150);
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('#wires'))?.display==='none','Mobile cables should be hidden in stacked layout');
- log('All 136 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
+ log('All 156 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
  status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
 }
 run.addEventListener('click',async()=>{
