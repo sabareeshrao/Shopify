@@ -1,0 +1,44 @@
+name: Full Company Explorer browser smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/code-company-explorer/tests/inventory-smoke.mjs'
+      - '.github/workflows/company-explorer-smoke.yml'
+      - 'docs/code-company-explorer/assets/js/data.js'
+      - 'docs/code-company-explorer/assets/js/views.js'
+      - 'docs/code-company-explorer/index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate plain JavaScript
+        run: |
+          node --check docs/code-company-explorer/assets/js/data.js
+          node --check docs/code-company-explorer/assets/js/views.js
+      - name: Install headless browser
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Launch static code explorer
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 --directory docs >/tmp/shopizer-explorer-server.log 2>&1 &
+      - name: Run pinned Java catalog and mobile navigation smoke
+        run: node docs/code-company-explorer/tests/inventory-smoke.mjs
+      - name: Upload mobile screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: company-inventory-mobile-screenshot
+          path: /tmp/inventory-mobile.png
+          if-no-files-found: ignore
