@@ -72,3 +72,13 @@ This is a source-verification audit. The previous **1,864-line** unique contextu
 | Source-to-company callsite ranges and target IDs valid | All new edges |
 
 Verified the 8 snapshots against the pinned Shopizer commit, distinct method declarations and inclusive line ranges, and the inter-company links. This source-level check is **not** the same as exhaustively hand-reviewing all 320 individual nonblank line explanations or running a browser. The earlier 1,864-line full explanatory audit retains its historical scope. High-risk teaching points include incomplete `getPermissions`, null-returning permission populators, known administrator bootstrap password, the login success handler swallowing exceptions, and redirect-target configuration.
+
+
+## Entire pinned source inventory vs. authored teaching coverage
+
+- The previous teaching quality claims continue to apply only to **Companies 1–176**. The latest overall numbered inventory is **7,720**.
+- **7,544** entries are `INDEXED_AWAITING_LESSON_AND_QUESTION`; they have exact source paths, blob hashes, names, signatures and line spans, but **no mentor explanation or interview question has been written**.
+- The complete source enumeration covered **1,210 Java files**, including test/integration and tooling code. The tree-sitter extraction reported **zero** syntax warnings and **zero** unmatched legacy company IDs. That does **not** certify semantic correctness, true call relationships, or interactive browser reliability.
+- Source code for inventory-only entries is fetched lazily from the read-only pinned source; it is **not** pre-cached as 7,544 Java excerpts.
+- The 378 batch records and their pending checklist are generated in `BATCH-CHECKLIST.md` and show independent future work for explanation, questions and manual review.
+- No previously reviewed narrative or interview content was overwritten. Source-only entries are visibly labeled pending; the UI must not silently substitute generated explanations.
