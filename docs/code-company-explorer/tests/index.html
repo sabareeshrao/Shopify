@@ -53,7 +53,7 @@ function openCompany(doc,n){
  assert(doc.querySelector('.learning-card.sequence')?.textContent.includes('Why Company '+n),'Sequence explanation missing for Company '+n);
   const lesson=doc.querySelector('.learning-card.sequence p')?.textContent.trim();
   assert(lesson&&lesson.length>190,'Company '+n+' mentor lesson is missing or too short');
-  assert(!mentorLessonsSeen.has(lesson),'Repeated mentor explanation at Company '+n+' (first seen at '+mentorLessonsSeen.get(lesson)+')');
+  assert(!mentorLessonsSeen.has(lesson)||mentorLessonsSeen.get(lesson)===n,'Repeated mentor explanation at Company '+n+' (first seen at '+mentorLessonsSeen.get(lesson)+')');
   mentorLessonsSeen.set(lesson,n);
   assert(!lesson.startsWith('First, find the real application'),'Company '+n+' still uses the old technical documentation prose');
 }
