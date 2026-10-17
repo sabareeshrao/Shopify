@@ -82,3 +82,13 @@ Verified the 8 snapshots against the pinned Shopizer commit, distinct method dec
 - Source code for inventory-only entries is fetched lazily from the read-only pinned source; it is **not** pre-cached as 7,544 Java excerpts.
 - The 378 batch records and their pending checklist are generated in `BATCH-CHECKLIST.md` and show independent future work for explanation, questions and manual review.
 - No previously reviewed narrative or interview content was overwritten. Source-only entries are visibly labeled pending; the UI must not silently substitute generated explanations.
+
+
+## Chromium inventory smoke — verified (2026-10-16)
+
+- **PASS:** [GitHub Actions browser smoke run](https://github.com/sabareeshrao/Shopify/actions/runs/38995711843) executed headless Chromium after the index integration.
+- Verified Company 176 retains its existing interview lesson; Next opens source-only Company 177.
+- Verified Company 177 shows **no invented** YouTube-style explanation or interview question, and lazily loads its pinned original Java lines.
+- Verified numeric search opens Company **7720**, identifies it as teaching-pending, and disables Next at the final ID.
+- Verified mobile sidebar keeps the active deep company row in view after opening its Project drawer. The first run exposed a sidebar-sync regression, which was corrected before the passing rerun.
+- **Scope:** representative automated smoke checks, not an exhaustive browser click-through, performance test, or semantic review of all 7,720 companies.
