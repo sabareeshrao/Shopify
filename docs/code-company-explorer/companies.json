@@ -5,7 +5,7 @@
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 156,
+  "count": 176,
   "companies": [
     {
       "id": "1",
@@ -6483,6 +6483,684 @@
       "interview": {
         "id": "IQ-156",
         "question": "How is ReadableGroup.type populated, and where must endpoint authorization be enforced?"
+      }
+    },
+    {
+      "id": "157",
+      "order": 157,
+      "name": "Inspect unfinished permission lookup in the security facade",
+      "method": "getPermissions(List<String> groups)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java",
+      "source_blob_sha": "c73e2c851dd997fdff73af45b72702cdff15a3b2",
+      "source_data_file": "sources/security-facade-impl.json",
+      "source_line_count": 93,
+      "start_line": 38,
+      "method_start_line": 40,
+      "end_line": 61,
+      "plain_english": "Looks up groups and permission criteria, then explicitly throws Not implemented or returns null; it does not produce a permission list.",
+      "sequence_reason": "After listing groups and permissions in the API, trace the separate facade implementation and its incomplete contract.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Find groups by names",
+          "code_line": 44,
+          "description": "Delegates to GroupService.listGroupByNames.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Query permission criteria",
+          "code_line": 54,
+          "description": "Calls PermissionService.listByCriteria.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Throw unfinished-feature exception",
+          "code_line": 55,
+          "description": "Throws ServiceRuntimeException rather than returning mapped permissions.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-157",
+        "question": "What exactly prevents SecurityFacadeImpl.getPermissions() from returning permission DTOs, and how should callers handle its current behavior?"
+      }
+    },
+    {
+      "id": "158",
+      "order": 158,
+      "name": "Check password format with a regex",
+      "method": "validateUserPassword(String password)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java",
+      "source_blob_sha": "c73e2c851dd997fdff73af45b72702cdff15a3b2",
+      "source_data_file": "sources/security-facade-impl.json",
+      "source_line_count": 93,
+      "start_line": 63,
+      "method_start_line": 64,
+      "end_line": 68,
+      "plain_english": "Uses USER_PASSWORD_PATTERN with lowercase, uppercase, digit and 6–12 total-character requirements; no breach/password-hash check.",
+      "sequence_reason": "Inspect how the facade enforces a particular password format before hashing.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Execute compiled password pattern",
+          "code_line": 66,
+          "description": "Calls Matcher.matches() on the incoming password.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-158",
+        "question": "What precise constraints does USER_PASSWORD_PATTERN enforce, and why is matching a regex not sufficient password security?"
+      }
+    },
+    {
+      "id": "159",
+      "order": 159,
+      "name": "Encode a password through Spring Security",
+      "method": "encodePassword(String password)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java",
+      "source_blob_sha": "c73e2c851dd997fdff73af45b72702cdff15a3b2",
+      "source_data_file": "sources/security-facade-impl.json",
+      "source_line_count": 93,
+      "start_line": 70,
+      "method_start_line": 71,
+      "end_line": 73,
+      "plain_english": "Delegates to an injected PasswordEncoder and returns its encoded form.",
+      "sequence_reason": "Having seen password format checks, identify where irreversible storage encoding is delegated.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Encode submitted password",
+          "code_line": 72,
+          "description": "Delegates to injected PasswordEncoder.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-159",
+        "question": "Why is PasswordEncoder.encode() different from encryption, and where is the actual encoding algorithm configured?"
+      }
+    },
+    {
+      "id": "160",
+      "order": 160,
+      "name": "Verify raw input against an encoded password",
+      "method": "matchPassword(String modelPassword, String newPassword)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java",
+      "source_blob_sha": "c73e2c851dd997fdff73af45b72702cdff15a3b2",
+      "source_data_file": "sources/security-facade-impl.json",
+      "source_line_count": 93,
+      "start_line": 75,
+      "method_start_line": 80,
+      "end_line": 82,
+      "plain_english": "Calls passwordEncoder.matches(raw, encoded) with newPassword as raw and modelPassword as stored encoded value.",
+      "sequence_reason": "Pair encoding with its correct credential-verification operation.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Compare raw and encoded password",
+          "code_line": 81,
+          "description": "Calls PasswordEncoder.matches(newPassword, modelPassword).",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-160",
+        "question": "In which order does PasswordEncoder.matches(raw, encoded) expect its arguments, and how do you verify the method passes them correctly?"
+      }
+    },
+    {
+      "id": "161",
+      "order": 161,
+      "name": "Compare two raw password inputs",
+      "method": "matchRawPasswords(String password, String repeatPassword)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/controller/security/facade/SecurityFacadeImpl.java",
+      "source_blob_sha": "c73e2c851dd997fdff73af45b72702cdff15a3b2",
+      "source_data_file": "sources/security-facade-impl.json",
+      "source_line_count": 93,
+      "start_line": 84,
+      "method_start_line": 85,
+      "end_line": 89,
+      "plain_english": "Checks both Strings are non-null, then compares them with equals; it does not authenticate or hash.",
+      "sequence_reason": "Differentiate form-confirmation equality from verification against a stored hash.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Reject null inputs",
+          "code_line": 86,
+          "description": "Calls Validate.notNull for both values.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Compare confirmation fields",
+          "code_line": 88,
+          "description": "Calls String.equals on raw password inputs.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-161",
+        "question": "Why are raw-password confirmation and PasswordEncoder.matches() two different operations?"
+      }
+    },
+    {
+      "id": "162",
+      "order": 162,
+      "name": "Redirect administrators after access is denied",
+      "method": "handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java",
+      "source_blob_sha": "48d04879760cb9aa6e2673df7cbfea7c30ea95d8",
+      "source_data_file": "sources/admin-access-denied.json",
+      "source_line_count": 33,
+      "start_line": 14,
+      "method_start_line": 15,
+      "end_line": 21,
+      "plain_english": "Builds a redirect using request context path plus a configurable access-denied URL; it does not directly write 403.",
+      "sequence_reason": "Move from password rules to the experience of a signed-in user who lacks permission.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Resolve configured denial URL",
+          "code_line": 19,
+          "description": "Calls the local getAccessDeniedUrl method.",
+          "company_id": "163",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Redirect to denial destination",
+          "code_line": 19,
+          "description": "Uses HttpServletResponse.sendRedirect.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-162",
+        "question": "What is the behavioral difference between sendRedirect() and returning HTTP 403 directly in an AccessDeniedHandler?"
+      }
+    },
+    {
+      "id": "163",
+      "order": 163,
+      "name": "Read the admin access-denied destination",
+      "method": "getAccessDeniedUrl()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java",
+      "source_blob_sha": "48d04879760cb9aa6e2673df7cbfea7c30ea95d8",
+      "source_data_file": "sources/admin-access-denied.json",
+      "source_line_count": 33,
+      "start_line": 23,
+      "method_start_line": 23,
+      "end_line": 25,
+      "plain_english": "Returns configurable accessDeniedUrl field, which defaults to null in this class.",
+      "sequence_reason": "Inspect the URL source used by the previous redirect method.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-163",
+        "question": "Why must the access-denied URL be configured before handle() uses this getter?"
+      }
+    },
+    {
+      "id": "164",
+      "order": 164,
+      "name": "Configure the admin access-denied destination",
+      "method": "setAccessDeniedUrl(String accessDeniedUrl)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/admin/AdminAccessDeniedHandler.java",
+      "source_blob_sha": "48d04879760cb9aa6e2673df7cbfea7c30ea95d8",
+      "source_data_file": "sources/admin-access-denied.json",
+      "source_line_count": 33,
+      "start_line": 27,
+      "method_start_line": 27,
+      "end_line": 29,
+      "plain_english": "Assigns the URL string to the handler; it does not validate or normalize redirect targets.",
+      "sequence_reason": "Complete the access-denied redirect pair by looking at configuration-time assignment.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-164",
+        "question": "What validations should surround a configurable access-denied redirect target even when the setter only assigns a String?"
+      }
+    },
+    {
+      "id": "165",
+      "order": 165,
+      "name": "Record a successful admin login and update access history",
+      "method": "onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/AbstractAuthenticatinSuccessHandler.java",
+      "source_blob_sha": "735f736b785ad0d2d5603f46bc8f8050fb56457d",
+      "source_data_file": "sources/admin-abstract-success.json",
+      "source_line_count": 65,
+      "start_line": 30,
+      "method_start_line": 31,
+      "end_line": 63,
+      "plain_english": "Stores the security context in session, looks up the admin, updates last access and login time, saves user and calls redirect hook; errors are logged and swallowed.",
+      "sequence_reason": "After understanding denial, follow the successful browser login callback.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Extract authenticated name",
+          "code_line": 33,
+          "description": "Calls Authentication.getName.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Store session security context",
+          "code_line": 41,
+          "description": "Sets SPRING_SECURITY_CONTEXT session attribute.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Read admin record",
+          "code_line": 44,
+          "description": "Calls injected UserService.getByUserName.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Save login timestamps",
+          "code_line": 53,
+          "description": "Calls UserService.saveOrUpdate.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Redirect after success",
+          "code_line": 55,
+          "description": "Dispatches to concrete subclass redirectAfterSuccess.",
+          "company_id": "168",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-165",
+        "question": "How does onAuthenticationSuccess() use the HTTP session and audit timestamps, and what happens when its catch block swallows exceptions?"
+      }
+    },
+    {
+      "id": "166",
+      "order": 166,
+      "name": "Replace the admin login redirect strategy",
+      "method": "setRedirectStrategy(RedirectStrategy redirectStrategy)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java",
+      "source_blob_sha": "e925c421c56ca681a647650d5e4de54b1ff0ca8c",
+      "source_data_file": "sources/admin-user-success.json",
+      "source_line_count": 31,
+      "start_line": 18,
+      "method_start_line": 18,
+      "end_line": 20,
+      "plain_english": "Replaces the redirectStrategy field used when a signed-in admin is redirected.",
+      "sequence_reason": "Once the shared login handler delegates redirection, see how the concrete handler gets its redirect implementation.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-166",
+        "question": "How does injecting a RedirectStrategy make the admin login redirect easier to unit-test?"
+      }
+    },
+    {
+      "id": "167",
+      "order": 167,
+      "name": "Read the admin redirect strategy",
+      "method": "getRedirectStrategy()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java",
+      "source_blob_sha": "e925c421c56ca681a647650d5e4de54b1ff0ca8c",
+      "source_data_file": "sources/admin-user-success.json",
+      "source_line_count": 31,
+      "start_line": 21,
+      "method_start_line": 21,
+      "end_line": 23,
+      "plain_english": "Returns the current RedirectStrategy instance, which defaults to DefaultRedirectStrategy.",
+      "sequence_reason": "Complete the configurable redirect strategy pair with its accessor.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-167",
+        "question": "What distinction exists between a RedirectStrategy and the destination passed to sendRedirect()?"
+      }
+    },
+    {
+      "id": "168",
+      "order": 168,
+      "name": "Send a successful admin to the home page",
+      "method": "redirectAfterSuccess(HttpServletRequest request, HttpServletResponse response)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserAuthenticationSuccessHandler.java",
+      "source_blob_sha": "e925c421c56ca681a647650d5e4de54b1ff0ca8c",
+      "source_data_file": "sources/admin-user-success.json",
+      "source_line_count": 31,
+      "start_line": 25,
+      "method_start_line": 26,
+      "end_line": 29,
+      "plain_english": "Sends a redirect to /admin/home.html using the stored strategy after the shared success handler finishes.",
+      "sequence_reason": "Finish the login-success chain with the concrete destination.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Issue administrator home redirect",
+          "code_line": 27,
+          "description": "Delegates /admin/home.html to RedirectStrategy.sendRedirect.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-168",
+        "question": "Which component chooses /admin/home.html, and what is the difference between sending a redirect and rendering a view?"
+      }
+    },
+    {
+      "id": "169",
+      "order": 169,
+      "name": "Load an administrator and derive granted authorities",
+      "method": "loadUserByUsername(String userName)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserServicesImpl.java",
+      "source_blob_sha": "89480431ad1d10b131d7352109e13dd8c6fe804e",
+      "source_data_file": "sources/admin-user-services.json",
+      "source_line_count": 143,
+      "start_line": 67,
+      "method_start_line": 67,
+      "end_line": 113,
+      "plain_english": "Loads admin user, converts assigned group permissions to ROLE_ authorities and builds Spring Security User; returns null for missing user and wraps lookup errors.",
+      "sequence_reason": "After the login success callback, inspect the backend identity-loading contract it relies on.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Look up admin user",
+          "code_line": 75,
+          "description": "Calls UserService.getByUserName.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Get group permissions",
+          "code_line": 95,
+          "description": "Calls PermissionService.getPermissions.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Translate permissions to authorities",
+          "code_line": 97,
+          "description": "Constructs ROLE_ prefixed GrantedAuthority.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Wrap backend access failure",
+          "code_line": 103,
+          "description": "Creates SecurityDataAccessException with cause.",
+          "company_id": "172",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-169",
+        "question": "What authorities does UserServicesImpl derive from groups, and why is returning null for an unknown username risky?"
+      }
+    },
+    {
+      "id": "170",
+      "order": 170,
+      "name": "Seed a default administrator account",
+      "method": "createDefaultAdmin()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/UserServicesImpl.java",
+      "source_blob_sha": "89480431ad1d10b131d7352109e13dd8c6fe804e",
+      "source_data_file": "sources/admin-user-services.json",
+      "source_line_count": 143,
+      "start_line": 116,
+      "method_start_line": 116,
+      "end_line": 139,
+      "plain_english": "Creates admin@shopizer.com with an encoded hard-coded default password, attaches admin groups and persists it; do not expose in production.",
+      "sequence_reason": "After learning how admins are loaded, inspect how an initial admin record is created.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Load default merchant",
+          "code_line": 118,
+          "description": "Gets default MerchantStore.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Encode known bootstrap password",
+          "code_line": 120,
+          "description": "Invokes PasswordEncoder.encode on DEFAULT_INITIAL_PASSWORD.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Load administrator groups",
+          "code_line": 122,
+          "description": "Calls GroupService.listGroup.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Persist bootstrap admin",
+          "code_line": 136,
+          "description": "Calls UserService.create.",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-170",
+        "question": "Why is a hard-coded default administrator password unsafe, even when it is encoded before storage?"
+      }
+    },
+    {
+      "id": "171",
+      "order": 171,
+      "name": "Build a security data exception from a message",
+      "method": "SecurityDataAccessException(String msg)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/SecurityDataAccessException.java",
+      "source_blob_sha": "9c095a5f9a3cbd2fa38e2c740bcddee1be371c2a",
+      "source_data_file": "sources/admin-security-data-exception.json",
+      "source_line_count": 20,
+      "start_line": 12,
+      "method_start_line": 12,
+      "end_line": 14,
+      "plain_english": "Delegates error message to Spring DataAccessException superclass constructor.",
+      "sequence_reason": "Explain how the admin identity layer reports database-related failures.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-171",
+        "question": "What does extending DataAccessException communicate, and does this constructor retry a failed lookup?"
+      }
+    },
+    {
+      "id": "172",
+      "order": 172,
+      "name": "Preserve the cause of a security data exception",
+      "method": "SecurityDataAccessException(String msg, Exception e)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/admin/security/SecurityDataAccessException.java",
+      "source_blob_sha": "9c095a5f9a3cbd2fa38e2c740bcddee1be371c2a",
+      "source_data_file": "sources/admin-security-data-exception.json",
+      "source_line_count": 20,
+      "start_line": 16,
+      "method_start_line": 16,
+      "end_line": 18,
+      "plain_english": "Delegates both message and cause to superclass; used when admin user lookup fails.",
+      "sequence_reason": "Pair the basic exception with the cause-preserving constructor called by Company 169.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-172",
+        "question": "How does preserving the original Exception cause improve troubleshooting without exposing internal details to clients?"
+      }
+    },
+    {
+      "id": "173",
+      "order": 173,
+      "name": "Identify an unfinished permission-to-response conversion",
+      "method": "populate(Permission source, ReadablePermission target, MerchantStore store, Language language)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/populator/security/ReadablePermissionPopulator.java",
+      "source_blob_sha": "3d4b405f265637b54d42c02fa169f22e418c6d04",
+      "source_data_file": "sources/readable-permission-populator.json",
+      "source_line_count": 25,
+      "start_line": 12,
+      "method_start_line": 13,
+      "end_line": 17,
+      "plain_english": "Overridden populator method contains TODO and returns null; it does not map a Permission to ReadablePermission.",
+      "sequence_reason": "After security permissions are fetched, inspect the intended conversion helper without assuming the stub is implemented.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-173",
+        "question": "What should populate() return on successful conversion, and why is its current null return not a completed mapper?"
+      }
+    },
+    {
+      "id": "174",
+      "order": 174,
+      "name": "Identify the unfinished permission DTO factory",
+      "method": "createTarget()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/populator/security/ReadablePermissionPopulator.java",
+      "source_blob_sha": "3d4b405f265637b54d42c02fa169f22e418c6d04",
+      "source_data_file": "sources/readable-permission-populator.json",
+      "source_line_count": 25,
+      "start_line": 19,
+      "method_start_line": 20,
+      "end_line": 23,
+      "plain_english": "Overridden target-creation hook returns null and contains TODO; no response DTO is constructed.",
+      "sequence_reason": "Review the corresponding factory hook before extending the mapping implementation.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-174",
+        "question": "How can a null-returning createTarget() break a caller expecting a constructed ReadablePermission?"
+      }
+    },
+    {
+      "id": "175",
+      "order": 175,
+      "name": "Create an empty password-reset request",
+      "method": "ResetPasswordRequest()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ResetPasswordRequest.java",
+      "source_blob_sha": "e4f3daa91898785536147bc6ac47f6433e843da1",
+      "source_data_file": "sources/reset-password-request.json",
+      "source_line_count": 49,
+      "start_line": 25,
+      "method_start_line": 25,
+      "end_line": 27,
+      "plain_english": "No-argument reset DTO constructor calls super(); username and return URL can be populated later.",
+      "sequence_reason": "Transition from successful sign-in and permissions to a customer who forgot their login password.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-175",
+        "question": "Why must creating ResetPasswordRequest never itself reset credentials or confirm an account exists?"
+      }
+    },
+    {
+      "id": "176",
+      "order": 176,
+      "name": "Initialize a reset request with a username",
+      "method": "ResetPasswordRequest(String username)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/ResetPasswordRequest.java",
+      "source_blob_sha": "e4f3daa91898785536147bc6ac47f6433e843da1",
+      "source_data_file": "sources/reset-password-request.json",
+      "source_line_count": 49,
+      "start_line": 29,
+      "method_start_line": 29,
+      "end_line": 31,
+      "plain_english": "Calls setUsername(username) on ResetPasswordRequest; prepares input but does not deliver or validate reset token.",
+      "sequence_reason": "Pair the empty password-reset request with its username-accepting constructor.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-176",
+        "question": "Does providing a username to ResetPasswordRequest trigger token generation or account recovery?"
       }
     }
   ],
