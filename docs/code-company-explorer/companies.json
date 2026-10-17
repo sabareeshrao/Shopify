@@ -5,7 +5,7 @@
     "ref": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
     "read_only": true
   },
-  "count": 136,
+  "count": 156,
   "companies": [
     {
       "id": "1",
@@ -5778,6 +5778,711 @@
       "interview": {
         "id": "IQ-136",
         "question": "Why does assigning this.jwtAdminDetailsService not necessarily configure DaoAuthenticationProvider's internal UserDetailsService, and how would you detect mismatched providers?"
+      }
+    },
+    {
+      "id": "137",
+      "order": 137,
+      "name": "Create an empty customer login request",
+      "method": "AuthenticationRequest()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 25,
+      "method_start_line": 25,
+      "end_line": 27,
+      "plain_english": "No-argument constructor creates a DTO ready for credential fields; it does not authenticate.",
+      "sequence_reason": "After authenticated principal models, inspect how untrusted login data first reaches Java.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-137",
+        "question": "Why doesn't the no-argument AuthenticationRequest constructor prove identity?"
+      }
+    },
+    {
+      "id": "138",
+      "order": 138,
+      "name": "Initialize a login request with credentials",
+      "method": "AuthenticationRequest(String username, String password)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 29,
+      "method_start_line": 29,
+      "end_line": 32,
+      "plain_english": "Constructor populates username and password by calling local setters.",
+      "sequence_reason": "Compare JSON-friendly construction with direct setup useful in tests.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Set request username",
+          "code_line": 30,
+          "description": "Set request username; see Company 140",
+          "company_id": "140",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Set request password",
+          "code_line": 31,
+          "description": "Set request password; see Company 142",
+          "company_id": "142",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-138",
+        "question": "Why is creating AuthenticationRequest(username,password) not a credential check?"
+      }
+    },
+    {
+      "id": "139",
+      "order": 139,
+      "name": "Read the login username",
+      "method": "getUsername()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 34,
+      "method_start_line": 34,
+      "end_line": 36,
+      "plain_english": "Returns unverified request username for downstream authentication.",
+      "sequence_reason": "Find where login controller obtains the submitted account name.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-139",
+        "question": "How does a submitted username differ from an authenticated username?"
+      }
+    },
+    {
+      "id": "140",
+      "order": 140,
+      "name": "Store the login username",
+      "method": "setUsername(String username)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 38,
+      "method_start_line": 38,
+      "end_line": 40,
+      "plain_english": "Assigns inbound username; @NotEmpty validation is declared separately.",
+      "sequence_reason": "Trace how JSON binding supplies the username read by Company 139.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-140",
+        "question": "What do the setter, @NotEmpty validation and authentication each establish?"
+      }
+    },
+    {
+      "id": "141",
+      "order": 141,
+      "name": "Read the submitted login password",
+      "method": "getPassword()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 42,
+      "method_start_line": 42,
+      "end_line": 44,
+      "plain_english": "Returns raw request password without hashing or verification.",
+      "sequence_reason": "Complete the pair of user-submitted credential getters.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-141",
+        "question": "Why must submitted passwords stay out of logs, and who verifies them?"
+      }
+    },
+    {
+      "id": "142",
+      "order": 142,
+      "name": "Store the submitted login password",
+      "method": "setPassword(String password)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationRequest.java",
+      "source_blob_sha": "7d2b85ebb2377a86a851932fde827e9ed1dc2530",
+      "source_data_file": "sources/auth-request.json",
+      "source_line_count": 51,
+      "start_line": 46,
+      "method_start_line": 46,
+      "end_line": 48,
+      "plain_english": "Assigns the raw incoming password to request data; it is not persistence.",
+      "sequence_reason": "Finish the login input DTO before inspecting what is sent back.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-142",
+        "question": "Why doesn't calling setPassword() mean a password is correct or securely stored?"
+      }
+    },
+    {
+      "id": "143",
+      "order": 143,
+      "name": "Create an empty authentication response",
+      "method": "AuthenticationResponse()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java",
+      "source_blob_sha": "14dcbecafc95525546659876bf33a642987a238f",
+      "source_data_file": "sources/auth-response.json",
+      "source_line_count": 24,
+      "start_line": 7,
+      "method_start_line": 7,
+      "end_line": 7,
+      "plain_english": "No-argument response constructor does not mint or validate a JWT.",
+      "sequence_reason": "Move from incoming credential DTOs to the outgoing response DTO.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-143",
+        "question": "Does constructing AuthenticationResponse() generate a signed JWT?"
+      }
+    },
+    {
+      "id": "144",
+      "order": 144,
+      "name": "Package customer ID and JWT",
+      "method": "AuthenticationResponse(Long userId, String token)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java",
+      "source_blob_sha": "14dcbecafc95525546659876bf33a642987a238f",
+      "source_data_file": "sources/auth-response.json",
+      "source_line_count": 24,
+      "start_line": 15,
+      "method_start_line": 15,
+      "end_line": 18,
+      "plain_english": "Stores token locally and calls inherited Entity.setId(userId).",
+      "sequence_reason": "Show how successfully authenticated account data becomes an API response.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Store already-issued token",
+          "code_line": 16,
+          "description": "Store already-issued token; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Set inherited Entity ID",
+          "code_line": 17,
+          "description": "Set inherited Entity ID; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-144",
+        "question": "Where does the response's ID live, and which component signs the JWT?"
+      }
+    },
+    {
+      "id": "145",
+      "order": 145,
+      "name": "Expose JWT from the login response",
+      "method": "getToken()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/AuthenticationResponse.java",
+      "source_blob_sha": "14dcbecafc95525546659876bf33a642987a238f",
+      "source_data_file": "sources/auth-response.json",
+      "source_line_count": 24,
+      "start_line": 20,
+      "method_start_line": 20,
+      "end_line": 22,
+      "plain_english": "Returns previously stored token unchanged.",
+      "sequence_reason": "Pair the response constructor with the accessor used in JSON output.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-145",
+        "question": "Which JWT security operations do not happen in AuthenticationResponse.getToken()?"
+      }
+    },
+    {
+      "id": "146",
+      "order": 146,
+      "name": "Register a customer and return a JWT",
+      "method": "register(PersistableCustomer customer, MerchantStore merchantStore, Language language)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+      "source_blob_sha": "42cb2f525915e765e1f00bc68f42fd52bbe28a23",
+      "source_data_file": "sources/authenticate-customer-api.json",
+      "source_line_count": 246,
+      "start_line": 94,
+      "method_start_line": 100,
+      "end_line": 148,
+      "plain_english": "Registers a merchant-scoped customer, authenticates, creates token and returns response; auth exceptions yield 404.",
+      "sequence_reason": "Trace the first-time shopper onboarding endpoint from validation to a login token.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Register customer through facade",
+          "code_line": 117,
+          "description": "Register customer through facade; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Load customer JWT principal",
+          "code_line": 141,
+          "description": "Load customer JWT principal; see Company 96",
+          "company_id": "96",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Issue JWT",
+          "code_line": 142,
+          "description": "Issue JWT; see Company 75",
+          "company_id": "75",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Build JWT response",
+          "code_line": 145,
+          "description": "Build JWT response; see Company 144",
+          "company_id": "144",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-146",
+        "question": "Why should account creation, authentication and token issuance be treated as distinct steps?"
+      }
+    },
+    {
+      "id": "147",
+      "order": 147,
+      "name": "Authenticate a returning customer",
+      "method": "authenticate(AuthenticationRequest authenticationRequest)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+      "source_blob_sha": "42cb2f525915e765e1f00bc68f42fd52bbe28a23",
+      "source_data_file": "sources/authenticate-customer-api.json",
+      "source_line_count": 246,
+      "start_line": 157,
+      "method_start_line": 160,
+      "end_line": 196,
+      "plain_english": "POST /customer/login authenticates credentials and returns a JWT; wrong credentials yield 401.",
+      "sequence_reason": "Contrast subsequent login with the registration-only path.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read request username",
+          "code_line": 171,
+          "description": "Read request username; see Company 139",
+          "company_id": "139",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read request password",
+          "code_line": 172,
+          "description": "Read request password; see Company 141",
+          "company_id": "141",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Load customer principal",
+          "code_line": 190,
+          "description": "Load customer principal; see Company 96",
+          "company_id": "96",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Generate JWT",
+          "code_line": 192,
+          "description": "Generate JWT; see Company 75",
+          "company_id": "75",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Construct response",
+          "code_line": 195,
+          "description": "Construct response; see Company 144",
+          "company_id": "144",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read JWTUser ID",
+          "code_line": 195,
+          "description": "Read JWTUser ID; see Company 117",
+          "company_id": "117",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-147",
+        "question": "When does submitted login data become authenticated identity, and how is the JWT produced?"
+      }
+    },
+    {
+      "id": "148",
+      "order": 148,
+      "name": "Refresh an eligible customer JWT",
+      "method": "refreshToken(HttpServletRequest request)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+      "source_blob_sha": "42cb2f525915e765e1f00bc68f42fd52bbe28a23",
+      "source_data_file": "sources/authenticate-customer-api.json",
+      "source_line_count": 246,
+      "start_line": 198,
+      "method_start_line": 199,
+      "end_line": 211,
+      "plain_english": "Reads JWT header, principal and reset date, checks eligibility, refreshes token or returns 400.",
+      "sequence_reason": "Explain how token renewal differs from checking a password again.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Extract token username",
+          "code_line": 202,
+          "description": "Extract token username; see Company 62",
+          "company_id": "62",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read password-reset date",
+          "code_line": 205,
+          "description": "Read password-reset date; see Company 116",
+          "company_id": "116",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Check refresh eligibility",
+          "code_line": 205,
+          "description": "Check refresh eligibility; see Company 78",
+          "company_id": "78",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Refresh token",
+          "code_line": 206,
+          "description": "Refresh token; see Company 79",
+          "company_id": "79",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Wrap refreshed JWT",
+          "code_line": 207,
+          "description": "Wrap refreshed JWT; see Company 144",
+          "company_id": "144",
+          "kind": "internal_method_call"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-148",
+        "question": "Why does JWT refresh consult a password-reset cutoff instead of blindly issuing a new token?"
+      }
+    },
+    {
+      "id": "149",
+      "order": 149,
+      "name": "Read the existing password for a change",
+      "method": "getCurrent()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java",
+      "source_blob_sha": "2c1f929caa7978af9a422bd9411da1fa3bcea370",
+      "source_data_file": "sources/password-request.json",
+      "source_line_count": 34,
+      "start_line": 18,
+      "method_start_line": 18,
+      "end_line": 20,
+      "plain_english": "Returns PasswordRequest.current for verification before updating account password.",
+      "sequence_reason": "Start password changes by identifying the proof of the old secret.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-149",
+        "question": "Why does a password-change request need the current password as well as the replacement?"
+      }
+    },
+    {
+      "id": "150",
+      "order": 150,
+      "name": "Store the existing password input",
+      "method": "setCurrent(String current)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java",
+      "source_blob_sha": "2c1f929caa7978af9a422bd9411da1fa3bcea370",
+      "source_data_file": "sources/password-request.json",
+      "source_line_count": 34,
+      "start_line": 22,
+      "method_start_line": 22,
+      "end_line": 24,
+      "plain_english": "Assigns current-password field; actual credential validation happens later.",
+      "sequence_reason": "Pair the old-password getter with its input setter.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-150",
+        "question": "Does @NotEmpty or setCurrent() establish that the old password is correct?"
+      }
+    },
+    {
+      "id": "151",
+      "order": 151,
+      "name": "Read confirmation of the new password",
+      "method": "getRepeatPassword()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java",
+      "source_blob_sha": "2c1f929caa7978af9a422bd9411da1fa3bcea370",
+      "source_data_file": "sources/password-request.json",
+      "source_line_count": 34,
+      "start_line": 26,
+      "method_start_line": 26,
+      "end_line": 28,
+      "plain_english": "Returns repeatPassword so endpoint can compare with inherited new-password field.",
+      "sequence_reason": "Distinguish verification of current password from checking new-password consistency.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-151",
+        "question": "Why do matching new passwords not eliminate the need to validate the old password or strength?"
+      }
+    },
+    {
+      "id": "152",
+      "order": 152,
+      "name": "Store the repeated new password",
+      "method": "setRepeatPassword(String repeatPassword)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/security/PasswordRequest.java",
+      "source_blob_sha": "2c1f929caa7978af9a422bd9411da1fa3bcea370",
+      "source_data_file": "sources/password-request.json",
+      "source_line_count": 34,
+      "start_line": 30,
+      "method_start_line": 30,
+      "end_line": 32,
+      "plain_english": "Copies repeatPassword into the request; no equality check occurs in the setter.",
+      "sequence_reason": "Finish modeling input before stepping into the actual password-change endpoint.",
+      "inbound": [],
+      "outbound": [],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-152",
+        "question": "Where does the project compare the new and repeated passwords if not in this setter?"
+      }
+    },
+    {
+      "id": "153",
+      "order": 153,
+      "name": "Change a customer's password",
+      "method": "changePassword(PasswordRequest passwordRequest, HttpServletRequest request)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+      "source_blob_sha": "42cb2f525915e765e1f00bc68f42fd52bbe28a23",
+      "source_data_file": "sources/authenticate-customer-api.json",
+      "source_line_count": 246,
+      "start_line": 215,
+      "method_start_line": 217,
+      "end_line": 245,
+      "plain_english": "Resolves store/customer, verifies current password, compares replacements and delegates update; catches expose messages.",
+      "sequence_reason": "Bring the DTO fields together in the real password-change controller.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Read submitted username",
+          "code_line": 224,
+          "description": "Read submitted username; see Company 139",
+          "company_id": "139",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read current password",
+          "code_line": 231,
+          "description": "Read current password; see Company 149",
+          "company_id": "149",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read proposed new password",
+          "code_line": 235,
+          "description": "Read proposed new password; see Company 141",
+          "company_id": "141",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Read confirmation",
+          "code_line": 235,
+          "description": "Read confirmation; see Company 151",
+          "company_id": "151",
+          "kind": "internal_method_call"
+        },
+        {
+          "name": "Persist password through facade",
+          "code_line": 239,
+          "description": "Persist password through facade; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-153",
+        "question": "What validations precede CustomerFacade.changePassword(), and what are the error disclosure and authorization risks?"
+      }
+    },
+    {
+      "id": "154",
+      "order": 154,
+      "name": "List permissions for a security group",
+      "method": "listPermissions(String group)",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+      "source_blob_sha": "18bd9646576dfe61672cde0306283f135669e7d4",
+      "source_data_file": "sources/security-api.json",
+      "source_line_count": 119,
+      "start_line": 54,
+      "method_start_line": 57,
+      "end_line": 80,
+      "plain_english": "Looks up group and maps permissions; broad Exception catch also catches not-found error.",
+      "sequence_reason": "After authenticating customers, introduce the permissions that define access.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Look up named group",
+          "code_line": 61,
+          "description": "Look up named group; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        },
+        {
+          "name": "Map attached permissions",
+          "code_line": 71,
+          "description": "Map attached permissions; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-154",
+        "question": "How can a catch-all transform an intended 404-style group-not-found error into a generic failure?"
+      }
+    },
+    {
+      "id": "155",
+      "order": 155,
+      "name": "List the available security permissions",
+      "method": "permissions()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+      "source_blob_sha": "18bd9646576dfe61672cde0306283f135669e7d4",
+      "source_data_file": "sources/security-api.json",
+      "source_line_count": 119,
+      "start_line": 87,
+      "method_start_line": 88,
+      "end_line": 98,
+      "plain_english": "Returns all permissions as readable ID/name DTOs; no pagination is implemented here.",
+      "sequence_reason": "Compare group-specific permission lookup with the full permission catalog.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "List all service permissions",
+          "code_line": 89,
+          "description": "List all service permissions; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-155",
+        "question": "How does listing all permissions differ from listing a group's permissions, and what enforces access control?"
+      }
+    },
+    {
+      "id": "156",
+      "order": 156,
+      "name": "List security groups and types",
+      "method": "groups()",
+      "type": "Verified Shopizer Java method",
+      "source_path": "sm-shop/src/main/java/com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+      "source_blob_sha": "18bd9646576dfe61672cde0306283f135669e7d4",
+      "source_data_file": "sources/security-api.json",
+      "source_line_count": 119,
+      "start_line": 105,
+      "method_start_line": 106,
+      "end_line": 117,
+      "plain_english": "Returns readable group names, numeric IDs and getGroupType().name() values.",
+      "sequence_reason": "Close the batch with the group catalog used to organize permissions.",
+      "inbound": [],
+      "outbound": [
+        {
+          "name": "Load all groups",
+          "code_line": 107,
+          "description": "Load all groups; external service or field operation",
+          "company_id": null,
+          "kind": "external_framework_or_service"
+        }
+      ],
+      "parent_id": null,
+      "subsidiary_ids": [],
+      "status": "verified_source",
+      "interview": {
+        "id": "IQ-156",
+        "question": "How is ReadableGroup.type populated, and where must endpoint authorization be enforced?"
       }
     }
   ],
