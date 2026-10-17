@@ -77,7 +77,7 @@ function checkBox(doc,box,n){
 }
 async function audit(){
  state.companies=0;state.connections=0;state.assertions=0;results.replaceChildren();
- status.textContent='Checking 156 companies and every external connection…';
+ status.textContent='Checking 176 companies and every external connection…';
  const doc=await ready();
  const allRoot=doc.querySelector('.tree-row.folder .mini-count');
  assert(allRoot?.textContent.includes('1340'),'Complete pinned repository manifest must include 1,340 tracked files');
@@ -96,7 +96,7 @@ async function audit(){
  assert(frame.contentWindow.getComputedStyle(checkedCode).tabSize==='4','Company code indent must use four-column tabs');
 
  mentorLessonsSeen.clear();
- for(let n=1;n<=156;n++){
+ for(let n=1;n<=176;n++){
   openCompany(doc,n);
   const buttons=[...doc.querySelectorAll('.relation-card[data-external]')];
   for(const button of buttons)checkBox(doc,button,n);
@@ -108,7 +108,7 @@ async function audit(){
   assert(doc.querySelectorAll('.relation-card.is-selected').length===0,'Company '+n+' did not clear the selected card when a code line was tapped');
   assert(doc.querySelectorAll('[title]').length===0,'Company '+n+' produced a hover tooltip');
   state.companies++;
-  status.textContent='Checked '+n+'/156 companies, '+state.connections+' connection boxes…';
+  status.textContent='Checked '+n+'/176 companies, '+state.connections+' connection boxes…';
  }
 
  openCompany(doc,54);
@@ -215,8 +215,35 @@ async function audit(){
  assert(doc.querySelector('#current-code')?.textContent.includes('customerFacade.changePassword'),'Company 153 must contain password change service call');
  openCompany(doc,154);
  assert(doc.querySelector('#current-code')?.textContent.includes('groupService.findByName'),'Company 154 must show group lookup');
+ 
  openCompany(doc,156);
- assert(doc.querySelector('#next-company')?.disabled,'Company 156 must be last mapped main company');
+ doc.querySelector('#next-company').click();
+ assert(doc.querySelector('.hero h1')?.textContent.includes('Company 157'),'Next 156 → 157 must open the incomplete permissions facade');
+ assert(doc.querySelector('#current-code')?.textContent.includes('Not implemented'),'Company 157 must visibly show the real unfinished permission lookup');
+ openCompany(doc,158);
+ assert(doc.querySelector('#current-code')?.textContent.includes('userPasswordPattern.matcher'),'Company 158 must show real regex validation');
+ openCompany(doc,160);
+ assert(doc.querySelector('#current-code')?.textContent.includes('passwordEncoder.matches(newPassword, modelPassword)'),'Company 160 must preserve raw/encoded argument order');
+ openCompany(doc,162);
+ assert(doc.querySelector('#current-code')?.textContent.includes('response.sendRedirect'),'Company 162 must show actual denied redirect');
+ assert(doc.querySelector('.relation-card[data-company="company-163"]'),'Company 162 must link denied redirect target accessor');
+ openCompany(doc,165);
+ assert(doc.querySelector('#current-code')?.textContent.includes('SPRING_SECURITY_CONTEXT'),'Company 165 must show security session update');
+ assert(doc.querySelector('.relation-card[data-company="company-168"]'),'Company 165 must link the concrete successful-login redirect');
+ openCompany(doc,168);
+ assert(doc.querySelector('#current-code')?.textContent.includes('/admin/home.html'),'Company 168 must show actual admin home path');
+ openCompany(doc,169);
+ assert(doc.querySelector('#current-code')?.textContent.includes('new SecurityDataAccessException'),'Company 169 must show wrapped user lookup exception');
+ assert(doc.querySelector('.relation-card[data-company="company-172"]'),'Company 169 must link cause-preserving exception constructor');
+ openCompany(doc,170);
+ assert(doc.querySelector('#current-code')?.textContent.includes('DEFAULT_INITIAL_PASSWORD'),'Company 170 must surface original bootstrap password constant usage');
+ openCompany(doc,173);
+ assert(doc.querySelector('#current-code')?.textContent.includes('return null'),'Company 173 must transparently show the unfinished permission converter');
+ openCompany(doc,174);
+ assert(doc.querySelector('#current-code')?.textContent.includes('return null'),'Company 174 must transparently show the unfinished permission DTO factory');
+ openCompany(doc,176);
+ assert(doc.querySelector('#current-code')?.textContent.includes('this.setUsername(username)'),'Company 176 must show reset DTO initialization');
+ assert(doc.querySelector('#next-company')?.disabled,'Company 176 must be last mapped main company');
  openCompany(doc,128);
  assert(doc.querySelector('.relation-card[data-company="company-98"]'),'Company 128 missing Company 98 client link');
  openCompany(doc,130);
@@ -274,7 +301,7 @@ async function audit(){
  assert(parseInt(rootStyle.getPropertyValue('--sidebar-width'),10)===296,'Double-click should reset sidebar to compact 296px');
  frame.style.width=prevWidth;frame.style.maxWidth=prevMax;await delay(150);
  assert(frame.contentWindow.getComputedStyle(doc.querySelector('#wires'))?.display==='none','Mobile cables should be hidden in stacked layout');
- log('All 156 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
+ log('All 176 companies, '+state.connections+' connection boxes and '+state.assertions+' assertions passed');
  status.className='pass';status.textContent='PASS — '+state.companies+' companies · '+state.connections+' selected boxes · '+state.assertions+' assertions';
 }
 run.addEventListener('click',async()=>{
