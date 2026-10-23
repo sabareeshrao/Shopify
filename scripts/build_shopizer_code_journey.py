@@ -95,6 +95,24 @@ def describe(lines: list[bytes], path: str, start: int, end: int) -> str:
     method = re.search(r'\b(?:public|protected|private|static|final|synchronized|abstract|default|native|override|void|[A-Za-z_][\w<>?,.\[\]]*)[ \t]+(?:[\w<>?,.\[\]]+[ \t]+){0,7}([a-zA-Z_]\w*)[ \t]*\(', sample)
     if not method:
         method = re.search(r'^\s*(?:function\s+|def\s+)([A-Za-z_]\w*)\s*\(', sample, re.M)
+    # Shell, batch and CI configuration have no Java method semantics.
+    # Detect them *before* parsing parentheses as possible functions.
+    if Path(path).name in {'mvnw', 'mvnw.cmd'}:
+        if re.search(r'JAVA_HOME|JAVACMD|java -version', piece, re.I):
+            return 'configure-java-home-and-select-java-runtime-for-maven-wrapper-launch'
+        if re.search(r'MAVEN|mvn|wrapper', piece, re.I):
+            return 'resolve-maven-wrapper-settings-and-launch-the-requested-build-command'
+        if re.search(r'if|errorlevel|exit|goto|case|while', piece, re.I):
+            return 'handle-platform-environment-conditions-and-exit-status-in-maven-launcher'
+        return 'prepare-executable-shell-arguments-and-environment-for-maven-build'
+    if path.endswith(('.yml', '.yaml')):
+        key = next((split_words(x.split(':')[0]) for x in plain if ':' in x and not x.startswith('#')), 'configuration')
+        return f'configure-{key}-and-define-the-corresponding-workflow-or-application-settings'
+    if path.endswith(('.sql', '.drl')):
+        verb = next((x.split()[0] for x in plain if x and not x.startswith(('--','//','/*','#'))), 'statements')
+        return f'execute-{split_words(verb)}-and-related-database-or-rule-definition-statements'
+    if path.endswith('.cmd'):
+        return 'set-windows-environment-variables-and-control-command-script-execution'
     if method and method.group(1) not in {'if', 'while', 'for', 'switch', 'catch', 'return', 'throw', 'new'}:
         m = split_words(method.group(1))
         what = ('validate-conditions-and-handle-failures' if re.search(r'\b(if|throw|catch)\b', piece) else
@@ -113,7 +131,7 @@ def describe(lines: list[bytes], path: str, start: int, end: int) -> str:
         return f'declare-package-and-import-required-dependencies-for-{cls}'
     if any(s.startswith('import ') for s in plain):
         target = split_words(re.sub(r'.*\.', '', next(s for s in plain if s.startswith('import ')).rstrip(';')))
-        return f'import-{target}-and-related-dependencies-required-by-{cls}'
+        return f'import-{target if target else "required-static-members"}-and-related-dependencies-required-by-{cls}'
     if Path(path).name == 'pom.xml':
         if '<dependency>' in piece or '<dependencies>' in piece:
             return 'configure-maven-dependencies-and-their-versions-for-shopizer-build'
@@ -150,7 +168,23 @@ def describe(lines: list[bytes], path: str, start: int, end: int) -> str:
             return f'declare-fields-methods-or-accessors-used-by-{cls}'
         if any(x in sample for x in ('//', '/*', '* ')):
             return f'preserve-original-code-comments-and-context-for-{cls}'
-        return f'implement-the-next-application-statements-and-control-flow-in-{cls}'
+        meaningful = next((x for x in plain if x not in {'}', '{', '};', ';'}), '')
+        if meaningful.startswith('@'):
+            annotation = split_words(meaningful.split('(')[0].lstrip('@'))
+            return f'apply-{annotation}-annotation-to-declare-behavior-or-dependency-in-{cls}'
+        call = re.search(r'(?:\.|\b)([a-zA-Z_]\w*)\s*\(', meaningful)
+        if call:
+            return f'invoke-{split_words(call.group(1))}-to-run-the-related-operation-in-{cls}'
+        if re.search(r'\bnew\s+([A-Za-z_]\w*)', meaningful):
+            item = re.search(r'\bnew\s+([A-Za-z_]\w*)', meaningful).group(1)
+            return f'construct-{split_words(item)}-object-as-part-of-{cls}'
+        if meaningful and len(meaningful) >= 4:
+            keys = re.findall(r'[A-Za-z_][A-Za-z0-9_]{3,}', meaningful)
+            if keys:
+                return f'handle-{split_words(keys[0])}-statement-and-its-surrounding-context-in-{cls}'
+        if not plain or all(x in {'}', '{', '};', ';'} for x in plain):
+            return f'finish-the-enclosing-java-code-block-and-preserve-spacing-in-{cls}'
+        return f'continue-processing-the-remaining-java-logic-in-{cls}'
     if not plain:
         return f'preserve-empty-or-whitespace-only-source-content-for-{cls}'
     return f'define-the-next-settings-statements-or-content-used-by-{cls}'
@@ -182,6 +216,23 @@ def boundaries(lines: list[bytes], path: str) -> list[tuple[int,int]]:
             pieces.append((start + 1, i + 1))
             start = i + 1
     assert start == n
+    # Don't turn blank lines or isolated closing braces into meaningless tasks.
+    # Attach such source lines to an adjacent code block instead. No bytes move.
+    merged = []
+    pending_start = None
+    for a, z in pieces:
+        trivial = all(lines[i].strip() in {b'', b'}', b'};', b'{'} for i in range(a-1,z))
+        if trivial and merged:
+            merged[-1] = (merged[-1][0], z)
+        elif trivial:
+            pending_start = a if pending_start is None else pending_start
+        else:
+            merged.append((pending_start if pending_start is not None else a, z))
+            pending_start = None
+    if pending_start is not None:
+        if merged: merged[-1] = (merged[-1][0], n)
+        else: merged = [(1,n)]
+    pieces = merged
     assert sum(e-s+1 for s,e in pieces) == n
     return pieces
 
