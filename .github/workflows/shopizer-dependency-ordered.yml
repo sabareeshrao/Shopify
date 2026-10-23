@@ -1,0 +1,151 @@
+name: Publish Shopizer dependency-ordered learning steps
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/reorder_shopizer_learning.py'
+      - '.github/workflows/shopizer-dependency-ordered.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: shopizer-dependency-ordered
+  cancel-in-progress: false
+jobs:
+  reorder-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out user's learning repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check out pinned original Shopizer source
+        uses: actions/checkout@v4
+        with:
+          repository: shopizer-ecommerce/shopizer
+          ref: 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+          path: .shopizer-source
+          persist-credentials: false
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pure Python dependency graph library
+        run: python -m pip install 'networkx>=3.2,<4'
+      - name: Generate reorganized parent and child TXT archive
+        shell: bash
+        run: |
+          python scripts/reorder_shopizer_learning.py \
+            --zip code-journey/Shopizer-Code-Journey.zip \
+            --source-root .shopizer-source \
+            --index code-journey/MASTER_INDEX.csv \
+            --output-zip "$RUNNER_TEMP/Shopizer-Reordered-TXT-Only.zip" \
+            --outdir "$RUNNER_TEMP/reordered-index"
+          cat "$RUNNER_TEMP/reordered-index/REORDER_AUDIT.json"
+      - name: Replace GitHub browse folders and publish numeric-order README indexes
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv,collections,json,os,shutil,zipfile
+          from pathlib import Path
+          repo=Path('code-journey');idx=Path(os.environ['RUNNER_TEMP'])/'reordered-index'
+          archive=Path(os.environ['RUNNER_TEMP'])/'Shopizer-Reordered-TXT-Only.zip'
+          audit=json.loads((idx/'REORDER_AUDIT.json').read_text())
+          assert audit['total_txt']==24055 and audit['child_max_lines']==11
+          assert audit['import_forward_references_after_reordering']<=19
+          assert audit['generic_phrases_remaining']==0
+          steps=repo/'steps'
+          if steps.exists():shutil.rmtree(steps)
+          steps.mkdir(parents=True)
+          with zipfile.ZipFile(archive) as z:
+            names=z.namelist()
+            assert len(names)==24055 and z.testzip() is None
+            assert all(n.endswith('.txt') and '..' not in Path(n).parts for n in names)
+            for name in names:
+              dst=steps/name;dst.parent.mkdir(parents=True,exist_ok=True)
+              dst.write_bytes(z.read(name))
+          browse=collections.defaultdict(list)
+          with (idx/'MASTER_INDEX.csv').open(encoding='utf-8',newline='') as f:
+            rows=list(csv.DictReader(f))
+          assert len(rows)==10044
+          with (repo/'BROWSE_INDEX.csv').open('w',encoding='utf-8',newline='') as f:
+            writer=csv.writer(f)
+            writer.writerow(['sequence','old_sequence','source_path','parent_file','children','folder'])
+            for row in rows:
+              children=row['children'].split('|') if row['children'] else []
+              p=row['parent_filename']; folder=p.split('/',1)[0]
+              writer.writerow([row['sequence'],row['old_sequence'],row['original_path'],p,row['children'],folder])
+              browse[folder].append((int(row['sequence']),row['original_path'],p,children))
+          for folder,entries in browse.items():
+            doc=[f'# Tasks {folder} — numeric order','',
+                 'Follow the links below; GitHub sorts directory filenames lexicographically, not numerically.','',
+                 'A parent `.0` is the full code block. Study its children `.1`, `.2`, etc. **instead** of the parent.','']
+            for number,original,parent,children in sorted(entries):
+              parentname=Path(parent).name
+              doc.append(f'### {number} · `{original}`')
+              doc.append(f'- Parent: [{number}.0]({parentname}) — complete original block')
+              for i,c in enumerate(children,1):
+                doc.append(f'  - Child: [{number}.{i}]({Path(c).name})')
+              doc.append('')
+            (steps/folder/'README.md').write_text('\n'.join(doc)+'\n',encoding='utf-8')
+          shutil.copy2(idx/'MASTER_INDEX.csv',repo/'MASTER_INDEX.csv')
+          shutil.copy2(idx/'OLD_TO_NEW.csv',repo/'OLD_TO_NEW.csv')
+          shutil.copy2(idx/'REORDER_AUDIT.json',repo/'REORDER_AUDIT.json')
+          shutil.copy2(idx/'README.md',repo/'README.md')
+          shutil.copy2(archive,repo/'Shopizer-Code-Journey.zip')
+          (repo/'AUDIT.json').write_text(json.dumps(audit,indent=2)+'\n')
+          (repo/'BROWSE_AUDIT.json').write_text(json.dumps({
+             'status':'PASS','folders':len(browse),'numbered_parent_tasks':len(rows),
+             'txt_files':len(names),'child_max_lines':11,'zip_only_txt':True,
+             'file_contents_identical_to_zip':True,'numeric_navigation_readmes':len(browse)
+          },indent=2)+'\n')
+          # Old audits described previous numbering; do not misrepresent them as current.
+          for stale in ['BOUNDARY_AUDIT.json','CHILD_LINE_AUDIT.json','LOGICAL_AUDIT.json']:
+            (repo/stale).unlink(missing_ok=True)
+          print('PASS: published',len(names),'TXT files in',len(browse),'folders')
+          PY
+      - name: Rebuild all original text files and audit every checksum
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv,collections,hashlib,json,zipfile
+          from pathlib import Path
+          j=Path('code-journey');source=Path('.shopizer-source')
+          with (j/'MASTER_INDEX.csv').open(encoding='utf-8',newline='') as f:
+            rows=list(csv.DictReader(f))
+          bysource=collections.defaultdict(list)
+          with zipfile.ZipFile(j/'Shopizer-Code-Journey.zip') as z:
+            assert z.testzip() is None and len(z.namelist())==24055
+            for row in rows:
+              data=z.read(row['parent_filename'])
+              assert hashlib.sha256(data).hexdigest()==row['parent_sha256']
+              children=row['children'].split('|') if row['children'] else []
+              if children:assert data==b''.join(z.read(c) for c in children)
+              for c in children: assert len(z.read(c).splitlines(keepends=True))<=11
+              bysource[row['original_path']].append((int(row['source_start']),int(row['source_end']),data))
+          assert len(bysource)==1325
+          lines=0
+          for path,segments in bysource.items():
+            segments.sort();n=1;parts=[]
+            for a,b,data in segments:
+              if a==b==0:continue
+              assert a==n,(path,n,a)
+              n=b+1;parts.append(data)
+            assembled=b''.join(parts)
+            expected=(source/path).read_bytes()
+            assert assembled==expected,('source mismatch',path)
+            lines+=len(expected.splitlines(keepends=True))
+          assert lines==132076,lines
+          print('PASS: 1325 originals, 132076 lines, every child <=11, all parents reconstructed')
+          PY
+      - name: Commit corrected learning order and files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- code-journey
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(journey): reorder 24055 TXT blocks by Java dependencies and replace generic labels"
+            git push origin HEAD:main
+          fi
