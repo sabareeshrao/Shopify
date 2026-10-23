@@ -1,0 +1,9 @@
+	private CustomerOptinRepository customerOptinRepository;
+	
+	
+	@Inject
+	public CustomerOptinServiceImpl(CustomerOptinRepository customerOptinRepository) {
+		super(customerOptinRepository);
+		this.customerOptinRepository = customerOptinRepository;
+	}
+

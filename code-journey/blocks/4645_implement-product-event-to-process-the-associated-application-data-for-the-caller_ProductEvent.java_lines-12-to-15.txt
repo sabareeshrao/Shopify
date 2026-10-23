@@ -1,4 +1,0 @@
-	public ProductEvent(Object source, Product product) {
-		super(source);
-		this.product = product;
-	}

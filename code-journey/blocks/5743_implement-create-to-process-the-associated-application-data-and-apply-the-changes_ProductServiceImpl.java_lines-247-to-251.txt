@@ -1,0 +1,5 @@
+	@Override
+	public void create(Product product) throws ServiceException {
+		saveOrUpdate(product);
+	}
+

@@ -1,0 +1,7 @@
+	@Override
+	public CustomIntegrationConfiguration getCustomModuleConfiguration(
+			MerchantStore store) throws IntegrationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+

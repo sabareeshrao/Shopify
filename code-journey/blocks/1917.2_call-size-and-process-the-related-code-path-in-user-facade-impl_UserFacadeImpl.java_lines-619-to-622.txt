@@ -1,0 +1,4 @@
+		return roles.size() > 0;
+
+	}
+

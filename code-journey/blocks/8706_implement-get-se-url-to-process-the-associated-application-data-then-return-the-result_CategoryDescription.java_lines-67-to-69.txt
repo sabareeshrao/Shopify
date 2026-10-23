@@ -1,3 +1,0 @@
-	public String getSeUrl() {
-		return seUrl;
-	}

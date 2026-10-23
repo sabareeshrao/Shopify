@@ -1,3 +1,0 @@
-	public FinalPrice getFinalPrice() {
-		return finalPrice;
-	}

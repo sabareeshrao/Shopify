@@ -1,0 +1,4 @@
+	public Set<OrderTotal> getOrderTotal() {
+		return orderTotal;
+	}
+

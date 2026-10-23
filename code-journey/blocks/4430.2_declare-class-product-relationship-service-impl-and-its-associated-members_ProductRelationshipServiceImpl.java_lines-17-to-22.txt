@@ -1,6 +1,0 @@
-
-@Service("productRelationshipService")
-public class ProductRelationshipServiceImpl extends
-		SalesManagerEntityServiceImpl<Long, ProductRelationship> implements
-		ProductRelationshipService {
-

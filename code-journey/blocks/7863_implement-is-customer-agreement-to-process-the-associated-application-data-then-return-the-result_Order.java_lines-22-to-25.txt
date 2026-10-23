@@ -1,0 +1,4 @@
+	public boolean isCustomerAgreement() {
+		return customerAgreement;
+	}
+

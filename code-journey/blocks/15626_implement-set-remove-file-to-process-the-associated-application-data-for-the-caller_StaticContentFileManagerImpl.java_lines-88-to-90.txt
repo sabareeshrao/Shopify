@@ -1,3 +1,0 @@
-	public void setRemoveFile(FileRemove removeFile) {
-		this.removeFile = removeFile;
-	}

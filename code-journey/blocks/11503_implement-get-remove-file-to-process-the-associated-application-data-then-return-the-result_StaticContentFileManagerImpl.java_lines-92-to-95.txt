@@ -1,0 +1,4 @@
+	public FileRemove getRemoveFile() {
+		return removeFile;
+	}
+

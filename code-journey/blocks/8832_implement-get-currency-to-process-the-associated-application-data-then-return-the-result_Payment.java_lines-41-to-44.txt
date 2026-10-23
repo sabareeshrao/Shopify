@@ -1,0 +1,4 @@
+	public Currency getCurrency() {
+		return currency;
+	}
+

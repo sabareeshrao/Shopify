@@ -1,5 +1,0 @@
-	@Override
-	public ProductVariant convert(PersistableProductVariant source, MerchantStore store, Language language) {
-		ProductVariant productVariantModel = new ProductVariant();
-		return this.merge(source, productVariantModel, store, language);
-	}

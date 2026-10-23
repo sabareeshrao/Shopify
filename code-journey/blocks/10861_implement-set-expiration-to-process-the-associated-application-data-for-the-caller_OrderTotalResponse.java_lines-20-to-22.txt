@@ -1,3 +1,0 @@
-	public void setExpiration(String expiration) {
-		this.expiration = expiration;
-	}

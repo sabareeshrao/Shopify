@@ -1,3 +1,0 @@
-	public void setOrderHistory(Set<OrderStatusHistory> orderHistory) {
-		this.orderHistory = orderHistory;
-	}

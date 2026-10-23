@@ -1,0 +1,7 @@
+	public List<ProductOptionValueDescription> getDescriptionsSettoList() {
+		if(descriptionsList==null || descriptionsList.size()==0) {
+			descriptionsList = new ArrayList<ProductOptionValueDescription>(this.getDescriptions());
+		} 
+		return descriptionsList;
+	}
+

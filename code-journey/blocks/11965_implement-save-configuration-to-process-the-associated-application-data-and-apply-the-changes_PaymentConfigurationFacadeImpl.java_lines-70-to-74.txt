@@ -1,5 +1,0 @@
-	@Override
-	public void saveConfiguration(PersistableConfiguration configuration, MerchantStore store) {
-		// TODO Auto-generated method stub
-
-	}

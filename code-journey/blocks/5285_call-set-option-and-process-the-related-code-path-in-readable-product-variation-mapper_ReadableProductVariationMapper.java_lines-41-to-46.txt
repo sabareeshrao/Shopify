@@ -1,6 +1,0 @@
-		
-		destination.setOption(this.option(source.getProductOption(), language));
-		destination.setOptionValue(this.optionValue(source.getProductOptionValue(), store, language));
-
-		return destination;
-	}

@@ -1,0 +1,5 @@
+  public void setEmailConfig(EmailConfig emailConfig) {
+    this.emailConfig = emailConfig;
+  }
+
+}

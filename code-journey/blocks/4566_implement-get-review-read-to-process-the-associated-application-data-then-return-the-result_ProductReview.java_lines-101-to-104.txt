@@ -1,0 +1,4 @@
+	public Long getReviewRead() {
+		return reviewRead;
+	}
+

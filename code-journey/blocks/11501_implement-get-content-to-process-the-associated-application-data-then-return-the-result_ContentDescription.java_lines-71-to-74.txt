@@ -1,0 +1,4 @@
+	public Content getContent() {
+		return content;
+	}
+

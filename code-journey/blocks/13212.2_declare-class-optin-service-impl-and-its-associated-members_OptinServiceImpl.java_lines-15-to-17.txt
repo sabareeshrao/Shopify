@@ -1,0 +1,3 @@
+public class OptinServiceImpl extends SalesManagerEntityServiceImpl<Long, Optin> implements OptinService {
+	
+	

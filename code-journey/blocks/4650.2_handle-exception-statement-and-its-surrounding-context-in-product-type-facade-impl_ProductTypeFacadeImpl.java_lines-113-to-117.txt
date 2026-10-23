@@ -1,0 +1,5 @@
+					"An exception occured while saving product type",e);
+		}
+
+	}
+

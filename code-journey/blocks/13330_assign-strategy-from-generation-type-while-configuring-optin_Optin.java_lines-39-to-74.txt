@@ -1,0 +1,36 @@
+	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "OPTIN_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "OPTIN_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="START_DATE")
+	private Date startDate;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="END_DATE")
+	private Date endDate;
+	
+	@Column(name="TYPE", nullable=false)
+	@Enumerated(value = EnumType.STRING)
+	private OptinType optinType;
+	
+	@ManyToOne(targetEntity = MerchantStore.class)
+	@JoinColumn(name="MERCHANT_ID")
+	private MerchantStore merchant;
+	
+	@Column(name="CODE", nullable=false)
+	private String code;
+	
+	@Column(name="DESCRIPTION")
+	private String description;
+
+

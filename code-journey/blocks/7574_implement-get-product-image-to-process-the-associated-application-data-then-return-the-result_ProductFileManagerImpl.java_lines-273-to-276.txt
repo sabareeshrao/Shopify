@@ -1,4 +1,0 @@
-  public OutputContentFile getProductImage(ProductImage productImage) throws ServiceException {
-    // will return original
-    return getImage.getProductImage(productImage);
-  }

@@ -1,2 +1,0 @@
-		uploadFile.addFiles(merchantStoreCode, path, inputStaticContentDataList);
-	}

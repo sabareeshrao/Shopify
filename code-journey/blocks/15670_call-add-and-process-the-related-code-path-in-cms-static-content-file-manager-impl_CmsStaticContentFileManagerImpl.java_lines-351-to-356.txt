@@ -1,6 +1,0 @@
-							}
-							// fileNames.add(fileName);
-
-						} else {
-							fileNames.add(fileName);
-						}

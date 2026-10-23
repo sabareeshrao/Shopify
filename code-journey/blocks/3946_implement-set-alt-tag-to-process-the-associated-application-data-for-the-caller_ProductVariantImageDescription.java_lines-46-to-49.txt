@@ -1,0 +1,4 @@
+	public void setAltTag(String altTag) {
+		this.altTag = altTag;
+	}
+

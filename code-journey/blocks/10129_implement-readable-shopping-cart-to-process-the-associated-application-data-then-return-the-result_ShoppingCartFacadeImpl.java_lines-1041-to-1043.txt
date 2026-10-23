@@ -1,3 +1,0 @@
-
-		return readableShoppingCart(cartModel, item, store, language);
-	}

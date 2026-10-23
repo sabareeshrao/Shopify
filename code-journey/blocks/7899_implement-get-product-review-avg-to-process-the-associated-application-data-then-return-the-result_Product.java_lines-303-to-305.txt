@@ -1,3 +1,0 @@
-	public BigDecimal getProductReviewAvg() {
-		return productReviewAvg;
-	}

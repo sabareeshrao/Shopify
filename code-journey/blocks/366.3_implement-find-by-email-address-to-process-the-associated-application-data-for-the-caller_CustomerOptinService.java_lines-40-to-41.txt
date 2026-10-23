@@ -1,2 +1,0 @@
-	CustomerOptin findByEmailAddress(MerchantStore store, String emailAddress, String code) throws ServiceException;
-	

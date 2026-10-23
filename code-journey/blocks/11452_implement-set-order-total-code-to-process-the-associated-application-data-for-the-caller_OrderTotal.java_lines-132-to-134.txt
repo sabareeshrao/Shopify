@@ -1,3 +1,0 @@
-	public void setOrderTotalCode(String orderTotalCode) {
-		this.orderTotalCode = orderTotalCode;
-	}

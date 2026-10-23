@@ -1,3 +1,0 @@
-	public String getContinueshoppingurl() {
-		return continueshoppingurl;
-	}

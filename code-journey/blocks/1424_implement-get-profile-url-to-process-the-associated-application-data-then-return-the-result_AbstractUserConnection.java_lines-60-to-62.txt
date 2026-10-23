@@ -1,3 +1,0 @@
-	public String getProfileUrl() {
-		return profileUrl;
-	}

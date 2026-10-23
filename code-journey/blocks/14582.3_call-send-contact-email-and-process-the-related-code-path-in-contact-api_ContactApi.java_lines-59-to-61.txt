@@ -1,3 +1,0 @@
-    emailTemplatesUtils.sendContactEmail(contact, merchantStore, locale, request.getContextPath());
-    return new ResponseEntity<Void>(HttpStatus.OK);
-  }

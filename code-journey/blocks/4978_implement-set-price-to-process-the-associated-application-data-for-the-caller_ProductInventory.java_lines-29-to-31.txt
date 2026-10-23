@@ -1,3 +1,0 @@
-	public void setPrice(FinalPrice price) {
-		this.price = price;
-	}

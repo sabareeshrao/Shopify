@@ -1,0 +1,4 @@
+	public Optin getOptin() {
+		return optin;
+	}
+

@@ -1,4 +1,0 @@
-			return this.findOne(id.longValue(), merchant);
-		} catch (Exception e) {
-			throw new ServiceException("Cannot get product with sku [" + productCode + "]", e);
-		}

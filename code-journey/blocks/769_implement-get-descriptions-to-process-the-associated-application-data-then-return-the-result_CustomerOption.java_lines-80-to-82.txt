@@ -1,3 +1,0 @@
-	public Set<CustomerOptionDescription> getDescriptions() {
-		return descriptions;
-	}

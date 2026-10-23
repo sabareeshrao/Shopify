@@ -1,6 +1,0 @@
-		public boolean isPreventRetry() {
-			return preventRetry;
-		}
-		public void setPreventRetry(boolean preventRetry) {
-			this.preventRetry = preventRetry;
-		}

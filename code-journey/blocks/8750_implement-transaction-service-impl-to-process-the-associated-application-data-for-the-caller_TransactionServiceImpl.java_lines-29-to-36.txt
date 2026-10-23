@@ -1,0 +1,8 @@
+	private TransactionRepository transactionRepository;
+	
+	@Inject
+	public TransactionServiceImpl(TransactionRepository transactionRepository) {
+		super(transactionRepository);
+		this.transactionRepository = transactionRepository;
+	}
+	

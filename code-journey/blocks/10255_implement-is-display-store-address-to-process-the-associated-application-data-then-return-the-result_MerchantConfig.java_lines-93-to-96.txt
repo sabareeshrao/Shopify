@@ -1,0 +1,4 @@
+	public boolean isDisplayStoreAddress() {
+		return displayStoreAddress;
+	}
+

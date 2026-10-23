@@ -1,0 +1,6 @@
+	@Override
+	public List<ReadablePermission> findPermissionsByGroups(List<Integer> ids) {
+		return getPermissionsByIds(ids).stream().map(permission -> convertPermissionToReadablePermission(permission))
+				.collect(Collectors.toList());
+	}
+

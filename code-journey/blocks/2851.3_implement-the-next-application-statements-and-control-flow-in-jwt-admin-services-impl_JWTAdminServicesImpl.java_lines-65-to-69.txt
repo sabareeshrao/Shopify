@@ -1,5 +1,0 @@
-                authorities,
-                true,
-                lastModified
-        );
-	}

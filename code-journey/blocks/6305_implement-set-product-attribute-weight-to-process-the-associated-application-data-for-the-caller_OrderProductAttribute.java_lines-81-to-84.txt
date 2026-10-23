@@ -1,4 +1,0 @@
-	public void setProductAttributeWeight(
-			java.math.BigDecimal productAttributeWeight) {
-		this.productAttributeWeight = productAttributeWeight;
-	}

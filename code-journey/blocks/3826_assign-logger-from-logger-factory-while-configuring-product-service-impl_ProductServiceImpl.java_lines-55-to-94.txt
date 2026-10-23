@@ -1,0 +1,40 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductServiceImpl.class);
+
+	ProductRepository productRepository;
+
+	@Inject
+	CategoryService categoryService;
+
+	@Inject
+	ProductAvailabilityService productAvailabilityService;
+
+	@Inject
+	ProductPriceService productPriceService;
+
+	@Inject
+	ProductOptionService productOptionService;
+
+	@Inject
+	ProductOptionValueService productOptionValueService;
+
+	@Inject
+	ProductAttributeService productAttributeService;
+
+	@Inject
+	ProductRelationshipService productRelationshipService;
+
+	@Inject
+	ProductImageService productImageService;
+
+	@Inject
+	CoreConfiguration configuration;
+
+	@Inject
+	ProductReviewService productReviewService;
+
+	@Inject
+	public ProductServiceImpl(ProductRepository productRepository) {
+		super(productRepository);
+		this.productRepository = productRepository;
+	}
+

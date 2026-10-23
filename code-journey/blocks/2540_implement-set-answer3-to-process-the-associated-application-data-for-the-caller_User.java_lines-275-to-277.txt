@@ -1,3 +1,0 @@
-	public void setAnswer3(String answer3) {
-		this.answer3 = answer3;
-	}

@@ -1,3 +1,0 @@
-	public Set<Category> getCategories() {
-		return categories;
-	}

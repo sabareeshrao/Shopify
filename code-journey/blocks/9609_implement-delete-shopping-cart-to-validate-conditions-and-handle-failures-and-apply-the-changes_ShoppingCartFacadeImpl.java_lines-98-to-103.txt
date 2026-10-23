@@ -1,6 +1,0 @@
-	public void deleteShoppingCart(final Long id, final MerchantStore store) throws Exception {
-		ShoppingCart cart = shoppingCartService.getById(id, store);
-		if (cart != null) {
-			shoppingCartService.deleteCart(cart);
-		}
-	}

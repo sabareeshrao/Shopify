@@ -1,5 +1,0 @@
-  @Override
-  public int count(MerchantStore store) {
-    Validate.notNull(store, "Merchant must not be null");
-    return manufacturerRepository.count(store.getId());
-  }

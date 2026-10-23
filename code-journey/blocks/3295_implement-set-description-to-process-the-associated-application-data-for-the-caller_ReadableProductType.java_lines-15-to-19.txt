@@ -1,0 +1,5 @@
+	public void setDescription(ProductTypeDescription description) {
+		this.description = description;
+	}
+
+}

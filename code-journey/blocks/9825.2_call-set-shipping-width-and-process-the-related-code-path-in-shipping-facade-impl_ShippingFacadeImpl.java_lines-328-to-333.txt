@@ -1,0 +1,6 @@
+		details.setShippingWidth(pack.getBoxWidth());
+		details.setTreshold(pack.getTreshold());
+		details.setType(pack.getShipPackageType().name());
+		return details;
+	}
+	

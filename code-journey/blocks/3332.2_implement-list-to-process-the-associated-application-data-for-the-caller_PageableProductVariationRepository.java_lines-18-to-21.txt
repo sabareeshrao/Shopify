@@ -1,0 +1,4 @@
+	Page<ProductVariation> list(int merchantStoreId, String code, Pageable pageable);
+
+
+}

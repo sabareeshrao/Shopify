@@ -1,3 +1,0 @@
-	public void setFilesize(Integer filesize) {
-		this.filesize = filesize;
-	}

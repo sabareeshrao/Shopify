@@ -1,4 +1,0 @@
-		} while (w != targetWidth || h != targetHeight);
-
-		return ret;
-	}

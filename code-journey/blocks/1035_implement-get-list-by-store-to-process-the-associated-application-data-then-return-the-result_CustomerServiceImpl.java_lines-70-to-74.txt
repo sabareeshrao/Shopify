@@ -1,0 +1,5 @@
+	@Override
+	public CustomerList getListByStore(MerchantStore store, CustomerCriteria criteria) {
+		return customerRepository.listByStore(store,criteria);
+	}
+	

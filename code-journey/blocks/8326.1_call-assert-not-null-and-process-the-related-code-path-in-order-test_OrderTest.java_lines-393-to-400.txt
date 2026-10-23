@@ -1,0 +1,8 @@
+		
+		Assert.assertNotNull(ordserList);
+		Assert.assertNotNull("Merchant Orders are null.", ordserList.getOrders());
+		Assert.assertTrue("Merchant Orders count is not one." , (ordserList.getOrders() != null && ordserList.getOrders().size() == 1) );
+	}
+	
+
+

@@ -1,2 +1,0 @@
-			this.endDate = new Date(dt.getTime());
-		}

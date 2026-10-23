@@ -1,0 +1,8 @@
+
+			productAttributeService.delete(attr);
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while deleting ProductAttribute [" + attributeId + "]", e);
+		}
+

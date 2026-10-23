@@ -1,3 +1,0 @@
-	public List<T> getItems() {
-		return items;
-	}

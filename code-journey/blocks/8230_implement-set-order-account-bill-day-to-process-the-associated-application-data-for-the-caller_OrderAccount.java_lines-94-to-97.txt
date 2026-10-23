@@ -1,0 +1,4 @@
+	public void setOrderAccountBillDay(Integer orderAccountBillDay) {
+		this.orderAccountBillDay = orderAccountBillDay;
+	}
+

@@ -1,3 +1,0 @@
-
-		return readableMapper.convert(option, store, language);
-	}

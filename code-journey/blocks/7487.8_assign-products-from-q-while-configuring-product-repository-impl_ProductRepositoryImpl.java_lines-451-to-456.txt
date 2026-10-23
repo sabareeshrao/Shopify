@@ -1,6 +1,0 @@
-		@SuppressWarnings("unchecked")
-		List<Product> products = q.getResultList();
-
-		return products;
-
-	}

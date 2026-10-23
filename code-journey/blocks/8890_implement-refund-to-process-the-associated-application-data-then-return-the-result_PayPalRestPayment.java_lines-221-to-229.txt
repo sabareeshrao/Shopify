@@ -1,0 +1,9 @@
+	@Override
+	public Transaction refund(boolean partial, MerchantStore store,
+			Transaction transaction, Order order, BigDecimal amount,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	

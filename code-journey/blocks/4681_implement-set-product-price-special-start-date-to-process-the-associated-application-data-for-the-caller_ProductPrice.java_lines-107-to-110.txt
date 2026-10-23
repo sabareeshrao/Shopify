@@ -1,0 +1,4 @@
+	public void setProductPriceSpecialStartDate(Date productPriceSpecialStartDate) {
+		this.productPriceSpecialStartDate = CloneUtils.clone(productPriceSpecialStartDate);
+	}
+

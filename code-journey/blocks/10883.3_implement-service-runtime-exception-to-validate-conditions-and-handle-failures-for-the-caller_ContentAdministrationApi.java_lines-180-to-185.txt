@@ -1,0 +1,6 @@
+			LOGGER.error("Error when renaming file",e);
+			throw new ServiceRuntimeException("Error while downloading file [" + fileName + "]");
+		}
+
+	}
+	

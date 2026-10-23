@@ -1,0 +1,30 @@
+        frdescription.setName("Divan");
+        frdescription.setFriendlyUrl("divan");
+        frdescription.setTitle("Divan");
+
+        descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+
+        lounge.setDescriptions(descriptions);
+        living.getChildren().add(lounge);
+
+        final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        final String json = writer.writeValueAsString(dining);
+
+        //System.out.println(json);
+
+        final HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
+
+        final int sizeBefore = testRestTemplate.exchange(String.format("/api/v1/category"), HttpMethod.GET,
+                new HttpEntity<>(getHeader()), ReadableCategoryList.class).getBody().getCategories().size();
+
+        final ResponseEntity response = testRestTemplate.postForEntity("/api/v1/private/category", entity, PersistableCategory.class);
+
+        final PersistableCategory cat = (PersistableCategory) response.getBody();
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertNotNull(cat.getId());
+
+
+
+    }

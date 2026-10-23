@@ -1,0 +1,6 @@
+	public IntegrationException(int code, String message) {
+		
+		super(message);
+		this.errorCode = code;
+	}
+	

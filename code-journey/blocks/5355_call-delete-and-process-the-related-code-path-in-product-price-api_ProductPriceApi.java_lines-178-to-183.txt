@@ -1,0 +1,6 @@
+		
+		productPriceFacade.delete(priceId, sku, merchantStore);
+		
+	}
+
+}

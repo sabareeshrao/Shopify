@@ -1,3 +1,0 @@
-	public ManufacturerDescription getDescription() {
-		return description;
-	}

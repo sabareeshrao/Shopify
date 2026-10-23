@@ -1,6 +1,0 @@
-  private Optional<MerchantConfiguration> getMerchantConfiguration(String key, MerchantStore merchantStore) {
-    try{
-      return Optional.ofNullable(merchantConfigurationService.getMerchantConfiguration(key, merchantStore));
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException(e);
-    }

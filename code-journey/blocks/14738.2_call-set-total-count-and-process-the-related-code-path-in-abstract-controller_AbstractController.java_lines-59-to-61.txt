@@ -1,3 +1,0 @@
-    	paginationData.setTotalCount( resultCount );
-        return paginationData;
-    }

@@ -1,0 +1,7 @@
+            //System.out.println(l.getCountry() + "   " + c.getSymbol() + "  " + c.getSymbol(l));
+            } catch (IllegalArgumentException e) {
+            	LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            }
+        }  
+	}
+

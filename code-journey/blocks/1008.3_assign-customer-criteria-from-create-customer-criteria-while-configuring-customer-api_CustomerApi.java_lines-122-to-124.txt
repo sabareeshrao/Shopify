@@ -1,3 +1,0 @@
-		CustomerCriteria customerCriteria = createCustomerCriteria(page, count);
-		return customerFacade.getListByStore(merchantStore, customerCriteria, language);
-	}

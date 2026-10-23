@@ -1,5 +1,0 @@
-  public Zone(Country country, String name, String code) {
-    this.setCode(code);
-    this.setCountry(country);
-    this.setCode(name);
-  }

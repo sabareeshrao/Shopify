@@ -1,4 +1,0 @@
-	@Override
-	public Category getBySeUrl(MerchantStore store, String seUrl, Language language) {
-		return categoryRepository.findByFriendlyUrl(store.getId(), seUrl, language.getId());
-	}

@@ -1,0 +1,4 @@
+	public Long count() {
+		return repository.count();
+	}
+	

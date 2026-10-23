@@ -1,0 +1,7 @@
+  @Override
+  public OutputContentFile getProductImage(ProductImage productImage) throws ServiceException {
+
+    return null;
+    
+  }
+

@@ -1,0 +1,11 @@
+		}
+		metaData.setPostProcessors(postProcessorKeys);
+		
+		
+		return metaData;
+		
+		} catch(Exception e) {
+			throw new ServiceException("Exception while getting shipping metadata ",e);
+		}
+	}
+

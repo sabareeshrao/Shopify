@@ -1,0 +1,4 @@
+	public ProductPrice getProductPrice() {
+		return productPrice;
+	}
+

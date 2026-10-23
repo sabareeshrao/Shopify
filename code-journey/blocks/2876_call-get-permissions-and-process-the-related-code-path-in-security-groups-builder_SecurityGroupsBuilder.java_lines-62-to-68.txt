@@ -1,7 +1,0 @@
-		}
-		
-
-		lastGroup.getPermissions().add(permission);
-		
-		return this;
-	}

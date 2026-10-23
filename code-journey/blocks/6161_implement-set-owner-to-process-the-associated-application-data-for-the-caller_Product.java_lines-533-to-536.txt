@@ -1,0 +1,4 @@
+	public void setOwner(Customer owner) {
+		this.owner = owner;
+	}
+

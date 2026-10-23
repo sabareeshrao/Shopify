@@ -1,4 +1,0 @@
-	@Override
-	public ProductType getProductType(String productTypeCode) {
-		return productTypeRepository.findByCode(productTypeCode);
-	}

@@ -1,3 +1,0 @@
-		
-		successfullAuthentication(request, response, authentication);
-	}

@@ -1,3 +1,0 @@
-	public int getMaxCount() {
-		return maxCount;
-	}

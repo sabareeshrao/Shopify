@@ -1,0 +1,4 @@
+	public List<PersistableProductPrice> getPrices() {
+		return prices;
+	}
+

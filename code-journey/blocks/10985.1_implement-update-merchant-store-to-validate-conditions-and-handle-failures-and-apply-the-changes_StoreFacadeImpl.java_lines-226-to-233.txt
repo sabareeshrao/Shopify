@@ -1,0 +1,8 @@
+	private void updateMerchantStore(MerchantStore mStore) {
+		try {
+			merchantStoreService.update(mStore);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

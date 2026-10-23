@@ -1,3 +1,0 @@
-	public void setContentPosition(ContentPosition contentPosition) {
-		this.contentPosition = contentPosition;
-	}

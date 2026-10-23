@@ -1,0 +1,5 @@
+	@Override
+	public List<ProductReview> getByCustomer(Customer customer) {
+		return productReviewRepository.findByCustomer(customer.getId());
+	}
+

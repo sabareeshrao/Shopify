@@ -1,3 +1,0 @@
-	public List<ContentDescription> getDescriptions() {
-		return descriptions;
-	}

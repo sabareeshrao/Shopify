@@ -1,4 +1,0 @@
-	public CartModificationException(final String msg, final Throwable cause)
-	  {
-	      super(msg, cause);
-	  }

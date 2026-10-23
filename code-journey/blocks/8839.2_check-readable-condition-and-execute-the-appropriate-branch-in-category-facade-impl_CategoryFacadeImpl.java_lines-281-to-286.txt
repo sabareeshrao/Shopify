@@ -1,6 +1,0 @@
-			if (readable.getParent() != null) {
-
-				ReadableCategory rc = categoryMap.get(readable.getParent().getId());
-				if (rc != null) {
-					rc.getChildren().add(readable);
-				}

@@ -1,3 +1,0 @@
-  public void setDescriptions(List<ProductDescription> descriptions) {
-    this.descriptions = descriptions;
-  }

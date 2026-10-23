@@ -1,3 +1,0 @@
-	public void setLastModified(Date lastModified) {
-		this.lastModified = CloneUtils.clone(lastModified);
-	}

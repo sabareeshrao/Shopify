@@ -1,3 +1,0 @@
-	public void setProductOptionSortOrder(Integer productOptionSortOrder) {
-		this.productOptionSortOrder = productOptionSortOrder;
-	}

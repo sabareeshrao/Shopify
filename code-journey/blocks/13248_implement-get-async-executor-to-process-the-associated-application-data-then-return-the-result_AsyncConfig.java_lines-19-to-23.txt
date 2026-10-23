@@ -1,0 +1,5 @@
+  @Override
+  public Executor getAsyncExecutor() {
+    return Executors.newFixedThreadPool(EXECUTOR_SERVICE_NUMBER_THREADS);
+  }
+

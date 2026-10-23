@@ -1,0 +1,5 @@
+		target.setProduct(product);
+		
+		return target;
+	}
+

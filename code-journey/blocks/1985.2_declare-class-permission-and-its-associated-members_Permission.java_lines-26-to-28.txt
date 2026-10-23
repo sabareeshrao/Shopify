@@ -1,3 +1,0 @@
-@Table(name = "PERMISSION")
-public class Permission extends SalesManagerEntity<Integer, Permission> implements Auditable {
-

@@ -1,0 +1,4 @@
+	public CustomerOptionValue getCustomerOptionValue() {
+		return customerOptionValue;
+	}
+

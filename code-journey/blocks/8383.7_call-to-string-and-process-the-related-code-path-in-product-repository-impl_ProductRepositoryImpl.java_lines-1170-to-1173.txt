@@ -1,4 +1,0 @@
-		//end variants
-		
-		return qs.toString();
-	}

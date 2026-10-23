@@ -1,0 +1,13 @@
+					
+			ReadableProductType readableType = readableProductTypeMapper.convert(type, store, language);
+
+
+			return readableType;
+
+		} catch(Exception e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while getting product type [" + id + "] not found for store [" + store.getCode() + "]", e);
+		}
+
+	}
+

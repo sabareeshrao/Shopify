@@ -1,6 +1,0 @@
-
-		shoppingCartService.save(cart);
-
-		return readableShoppingCartMapper.convert(cart, store, language);
-
-	}

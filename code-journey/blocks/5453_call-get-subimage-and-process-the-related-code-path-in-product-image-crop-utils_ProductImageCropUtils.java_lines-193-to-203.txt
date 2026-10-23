@@ -1,0 +1,11 @@
+
+		return originalFile.getSubimage(clip.x, clip.y, clip.width, clip.height);
+
+		
+		
+		
+	}
+	
+
+
+	

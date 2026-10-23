@@ -1,0 +1,4 @@
+	public ProductVariantGroup getProductVariantGroup() {
+		return productVariantGroup;
+	}
+

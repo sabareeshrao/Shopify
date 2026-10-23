@@ -1,6 +1,0 @@
-		if (isFound)
-			return user;
-
-		return null;
-
-	}

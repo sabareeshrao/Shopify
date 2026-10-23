@@ -1,0 +1,5 @@
+	public void setModule(String module) {
+		this.module = module;
+	}
+
+

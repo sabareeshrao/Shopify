@@ -1,0 +1,8 @@
+			contentFolder.getContent().addAll(contentImages);
+			return contentFolder;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while getting folder " + e.getMessage(), e);
+		}
+	}
+

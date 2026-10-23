@@ -1,9 +1,0 @@
-		
-		com.salesmanager.core.model.shipping.Package pack = toPackage(packaging);
-		
-		
-		//need to check if code exists
-		config.getPackages().add(pack);
-		this.saveShippingConfiguration(config, store);
-	
-	}

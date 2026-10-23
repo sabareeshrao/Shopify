@@ -1,6 +1,0 @@
-		
-		@Bean("jwtCustomerAuthenticationManager")
-		@Override
-		public AuthenticationManager authenticationManagerBean() throws Exception {
-			return super.authenticationManagerBean();
-		}

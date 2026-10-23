@@ -1,3 +1,0 @@
-		
-		unSuccessfullAuthentication(request, response);
-	}

@@ -1,4 +1,0 @@
-
-		descriptions.add(zoneDescription);
-
-	}

@@ -1,0 +1,14 @@
+	@Override
+	public void deleteGroup(String group, MerchantStore store) {
+		
+		Validate.notNull(group, "Group cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		
+		try {
+			productRelationshipService.deleteGroup(store, group);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannor delete product group",e);
+		}
+		
+	}
+

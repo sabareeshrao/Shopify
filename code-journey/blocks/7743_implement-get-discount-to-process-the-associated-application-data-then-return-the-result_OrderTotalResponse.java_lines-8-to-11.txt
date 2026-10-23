@@ -1,0 +1,4 @@
+	public Double getDiscount() {
+		return discount;
+	}
+

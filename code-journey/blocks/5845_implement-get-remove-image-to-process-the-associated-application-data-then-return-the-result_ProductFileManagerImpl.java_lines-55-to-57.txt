@@ -1,3 +1,0 @@
-  public ProductImageRemove getRemoveImage() {
-    return removeImage;
-  }

@@ -1,7 +1,0 @@
-
-		if (!(authentication instanceof AnonymousAuthenticationToken)) {
-			String currentUserName = authentication.getName();
-			return currentUserName;
-		}
-		return null;
-	}

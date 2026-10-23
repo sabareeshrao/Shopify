@@ -1,6 +1,0 @@
-	@Override
-	public void delete(User user) throws ServiceException {
-		User u = this.getById(user.getId());
-		super.delete(u);
-
-	}

@@ -1,2 +1,0 @@
-					"An exception occured while getting product type [" + id + "] not found for store [" + store.getCode() + "]", e);
-		}

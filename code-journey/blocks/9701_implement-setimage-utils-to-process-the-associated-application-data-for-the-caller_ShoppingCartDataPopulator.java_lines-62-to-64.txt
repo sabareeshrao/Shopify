@@ -1,3 +1,0 @@
-			public void setimageUtils(ImageFilePath imageUtils) {
-				this.imageUtils = imageUtils;
-			}

@@ -1,4 +1,0 @@
-        catalogService.saveOrUpdate(catalogToSave, store);
-        Catalog savedCatalog = catalogService.getByCode(catalogToSave.getCode(), store).get();
-        return readableCatalogMapper.convert(savedCatalog, store, language);
-    }

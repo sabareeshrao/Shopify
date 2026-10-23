@@ -1,3 +1,0 @@
-
-		return pageableMerchantRepository.listByGroup(code, id.get(), name, pageRequest);
-		

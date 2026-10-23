@@ -1,0 +1,7 @@
+	private Customer customer(PersistableCustomer customer, MerchantStore store, Language language) throws Exception {
+
+		Customer cust = customerPopulator.populate(customer, new Customer(), store, language);
+		return cust;
+
+	}
+

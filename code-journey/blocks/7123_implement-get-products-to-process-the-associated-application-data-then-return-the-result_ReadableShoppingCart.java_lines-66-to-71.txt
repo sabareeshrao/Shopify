@@ -1,0 +1,6 @@
+	public List<ReadableShoppingCartItem> getProducts() {
+		return products;
+	}
+
+
+

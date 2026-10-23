@@ -1,3 +1,0 @@
-	public BigDecimal getHandlingFees() {
-		return handlingFees;
-	}

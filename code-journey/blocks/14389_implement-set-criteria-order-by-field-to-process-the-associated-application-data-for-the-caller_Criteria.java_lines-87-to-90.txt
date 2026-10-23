@@ -1,0 +1,4 @@
+	public void setCriteriaOrderByField(String criteriaOrderByField) {
+		this.criteriaOrderByField = criteriaOrderByField;
+	}
+

@@ -1,5 +1,0 @@
-  @Override
-  public Manufacturer getByCode(com.salesmanager.core.model.merchant.MerchantStore store,
-      String code) {
-    return manufacturerRepository.findByCodeAndMerchandStore(code, store.getId());
-  }

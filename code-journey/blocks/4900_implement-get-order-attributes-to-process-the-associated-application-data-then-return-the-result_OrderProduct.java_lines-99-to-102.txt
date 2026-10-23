@@ -1,0 +1,4 @@
+	public Set<OrderProductAttribute> getOrderAttributes() {
+		return orderAttributes;
+	}
+

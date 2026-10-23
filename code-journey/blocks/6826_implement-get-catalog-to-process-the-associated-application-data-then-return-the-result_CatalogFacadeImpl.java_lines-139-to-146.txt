@@ -1,0 +1,8 @@
+    @Override
+    public Catalog getCatalog(String code, MerchantStore store) {
+        Validate.notNull(code, "Catalog code cannot be null");
+        Validate.notNull(store, "MerchantStore cannot be null");
+
+        return catalogService.getByCode(code, store).get();
+    }
+

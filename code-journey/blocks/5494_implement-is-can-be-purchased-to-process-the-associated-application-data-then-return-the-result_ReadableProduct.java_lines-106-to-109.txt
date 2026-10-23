@@ -1,0 +1,4 @@
+	public boolean isCanBePurchased() {
+		return canBePurchased;
+	}
+

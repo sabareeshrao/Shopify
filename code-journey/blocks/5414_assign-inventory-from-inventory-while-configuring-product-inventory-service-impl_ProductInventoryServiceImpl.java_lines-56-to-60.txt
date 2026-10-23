@@ -1,5 +1,0 @@
-		
-		ProductInventory inventory = inventory(availability, finalPrice);
-		inventory.setSku(variant.getSku());
-		return inventory;
-	}

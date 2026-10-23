@@ -1,3 +1,0 @@
-	public void setStoreIds(List<Integer> storeIds) {
-		this.storeIds = storeIds;
-	}

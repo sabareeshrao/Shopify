@@ -1,9 +1,0 @@
-	public void setDelivery(final Address delivery) {
-		this.delivery = delivery;
-	}
-	public void setGender(final String gender) {
-		this.gender = gender;
-	}
-	public String getGender() {
-		return gender;
-	}

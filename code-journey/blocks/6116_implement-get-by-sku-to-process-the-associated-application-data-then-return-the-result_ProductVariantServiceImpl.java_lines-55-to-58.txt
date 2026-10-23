@@ -1,4 +1,0 @@
-	@Override
-	public Optional<ProductVariant> getBySku(String sku, Long productId, MerchantStore store, Language language) {
-		return productVariantRepository.findBySku(sku, productId, store.getId(), language.getId());
-	}

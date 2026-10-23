@@ -1,4 +1,0 @@
-	private Category getOne(Long categoryId, int storeId) {
-		return Optional.ofNullable(categoryService.getById(categoryId)).orElseThrow(
-				() -> new ResourceNotFoundException(String.format("No Category found for ID : %s", categoryId)));
-	}

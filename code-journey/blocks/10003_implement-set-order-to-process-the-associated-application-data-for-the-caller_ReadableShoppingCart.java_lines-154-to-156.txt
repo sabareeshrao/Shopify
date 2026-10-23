@@ -1,3 +1,0 @@
-	public void setOrder(Long order) {
-		this.order = order;
-	}

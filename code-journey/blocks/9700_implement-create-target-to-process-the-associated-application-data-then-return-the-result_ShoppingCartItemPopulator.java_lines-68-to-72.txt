@@ -1,5 +1,0 @@
-	@Override
-	protected ShoppingCartItem createTarget() {
-		// TODO Auto-generated method stub
-		return null;
-	}

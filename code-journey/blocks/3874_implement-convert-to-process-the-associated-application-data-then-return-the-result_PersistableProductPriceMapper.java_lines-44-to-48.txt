@@ -1,0 +1,5 @@
+	@Override
+	public ProductPrice convert(PersistableProductPrice source, MerchantStore store, Language language) {
+		return merge(source, new ProductPrice(), store, language);
+	}
+

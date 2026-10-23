@@ -1,0 +1,6 @@
+		}
+		contentFileManager.addFolder(store.getCode(), folderName, path);
+
+
+	}
+

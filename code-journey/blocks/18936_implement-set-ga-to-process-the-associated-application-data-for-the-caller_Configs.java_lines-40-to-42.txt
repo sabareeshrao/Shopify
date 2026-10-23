@@ -1,3 +1,0 @@
-	public void setGa(String ga) {
-		this.ga = ga;
-	}

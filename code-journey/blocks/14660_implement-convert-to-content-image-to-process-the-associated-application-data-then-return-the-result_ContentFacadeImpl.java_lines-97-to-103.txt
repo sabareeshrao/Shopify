@@ -1,7 +1,0 @@
-	private ContentImage convertToContentImage(String name, MerchantStore store) {
-		String path = absolutePath(store, null);
-		ContentImage contentImage = new ContentImage();
-		contentImage.setName(name);
-		contentImage.setPath(path);
-		return contentImage;
-	}

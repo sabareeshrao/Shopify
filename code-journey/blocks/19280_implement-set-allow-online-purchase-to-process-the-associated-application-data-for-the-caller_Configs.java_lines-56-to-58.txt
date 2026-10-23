@@ -1,3 +1,0 @@
-	public void setAllowOnlinePurchase(boolean allowOnlinePurchase) {
-		this.allowOnlinePurchase = allowOnlinePurchase;
-	}

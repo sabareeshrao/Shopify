@@ -1,0 +1,9 @@
+	public void setLocale(Locale locale) {
+		this.locale = locale;
+	}
+	public Locale getLocale() {
+		return locale;
+	}
+	
+
+

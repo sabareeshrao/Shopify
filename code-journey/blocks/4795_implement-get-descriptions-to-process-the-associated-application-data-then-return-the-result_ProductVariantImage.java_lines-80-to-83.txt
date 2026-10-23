@@ -1,0 +1,4 @@
+	public Set<ProductVariantImageDescription> getDescriptions() {
+		return descriptions;
+	}
+

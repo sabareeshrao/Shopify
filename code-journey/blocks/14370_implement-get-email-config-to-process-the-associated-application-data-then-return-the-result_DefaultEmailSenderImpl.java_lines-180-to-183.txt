@@ -1,0 +1,4 @@
+  public EmailConfig getEmailConfig() {
+    return emailConfig;
+  }
+

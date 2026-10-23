@@ -1,7 +1,0 @@
-	public ReadableCustomerList fetchCustomers() {
-		final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
-		return testRestTemplate
-				.exchange("/api/v1/private/customers", HttpMethod.GET, httpEntity, ReadableCustomerList.class)
-				.getBody();
-
-	}

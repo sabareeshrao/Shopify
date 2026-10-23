@@ -1,0 +1,4 @@
+	public void setLoginTime(Date loginTime) {
+		this.loginTime = loginTime;
+	}
+

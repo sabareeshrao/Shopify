@@ -1,0 +1,8 @@
+		
+		customerList.setCustomers(objectQ.getResultList());
+
+		return customerList;
+		
+		
+	}
+

@@ -1,9 +1,0 @@
-	public void setDescriptions(List<ContentDescriptionEntity> descriptions) {
-		this.descriptions = descriptions;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}

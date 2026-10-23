@@ -1,3 +1,0 @@
-	public void setAllowedZonesCodes(List<String> allowedZonesCodes) {
-		this.allowedZonesCodes = allowedZonesCodes;
-	}

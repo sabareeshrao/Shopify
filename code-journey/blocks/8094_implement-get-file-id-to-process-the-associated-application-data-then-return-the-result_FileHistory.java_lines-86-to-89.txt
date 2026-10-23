@@ -1,0 +1,4 @@
+	public Long getFileId() {
+		return fileId;
+	}
+

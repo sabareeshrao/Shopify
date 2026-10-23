@@ -1,0 +1,4 @@
+	public ProductPriceDescription getDescription() {
+		return description;
+	}
+

@@ -1,0 +1,4 @@
+	public void setTaxTotal(String taxTotal) {
+		this.taxTotal = taxTotal;
+	}
+

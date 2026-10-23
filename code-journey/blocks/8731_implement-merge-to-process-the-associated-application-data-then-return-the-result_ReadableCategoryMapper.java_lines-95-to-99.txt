@@ -1,5 +1,0 @@
-	@Override
-	public ReadableCategory merge(Category source, ReadableCategory destination, MerchantStore store,
-			Language language) {
-		return destination;
-	}

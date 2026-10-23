@@ -1,3 +1,0 @@
-	public void setTotals(List<OrderTotal> totals) {
-		this.totals = totals;
-	}

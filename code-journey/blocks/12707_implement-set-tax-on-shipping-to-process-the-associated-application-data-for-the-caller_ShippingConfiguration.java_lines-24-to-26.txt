@@ -1,3 +1,0 @@
-	public void setTaxOnShipping(boolean taxOnShipping) {
-		this.taxOnShipping = taxOnShipping;
-	}

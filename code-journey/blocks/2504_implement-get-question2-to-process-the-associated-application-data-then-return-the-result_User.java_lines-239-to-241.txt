@@ -1,3 +1,0 @@
-	public String getQuestion2() {
-		return question2;
-	}

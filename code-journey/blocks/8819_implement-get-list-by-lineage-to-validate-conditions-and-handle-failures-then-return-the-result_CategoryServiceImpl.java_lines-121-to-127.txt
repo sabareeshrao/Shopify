@@ -1,7 +1,0 @@
-	@Override
-	public List<Category> getListByLineage(String storeCode, String lineage) throws ServiceException {
-		try {
-			return categoryRepository.findByLineage(storeCode, lineage);
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}

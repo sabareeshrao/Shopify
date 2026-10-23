@@ -1,7 +1,0 @@
-	    
-	    Assert.assertNull(retrievedCart);
-
-		// Clean up for other tests
-	    categoryService.delete(shirts);
-	    
-	}

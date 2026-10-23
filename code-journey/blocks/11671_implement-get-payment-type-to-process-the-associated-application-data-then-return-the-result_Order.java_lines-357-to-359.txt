@@ -1,3 +1,0 @@
-	public PaymentType getPaymentType() {
-		return paymentType;
-	}

@@ -1,3 +1,0 @@
-  public void setPageContent(String pageContent) {
-      this.pageContent = pageContent;
-  }

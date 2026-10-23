@@ -1,0 +1,4 @@
+	public String getPaymentType() {
+		return paymentType;
+	}
+

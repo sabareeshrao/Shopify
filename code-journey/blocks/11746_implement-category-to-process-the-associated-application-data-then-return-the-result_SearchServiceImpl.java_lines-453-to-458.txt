@@ -1,0 +1,6 @@
+	private String category(Category category, String language) {
+		CategoryDescription description = category.getDescriptions().stream()
+				.filter(d -> d.getLanguage().getCode().equals(language)).findFirst().get();
+		return description.getName();
+	}
+

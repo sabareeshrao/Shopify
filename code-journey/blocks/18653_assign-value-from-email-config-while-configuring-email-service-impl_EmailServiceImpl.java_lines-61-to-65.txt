@@ -1,5 +1,0 @@
-		
-		String value = emailConfig.toJSONString();
-		configuration.setValue(value);
-		merchantConfigurationService.saveOrUpdate(configuration);
-	}

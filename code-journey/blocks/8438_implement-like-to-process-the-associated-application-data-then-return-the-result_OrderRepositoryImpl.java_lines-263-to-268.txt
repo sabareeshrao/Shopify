@@ -1,0 +1,6 @@
+	private String like(String q) {
+		return '%' + q + '%';
+	}
+
+
+}

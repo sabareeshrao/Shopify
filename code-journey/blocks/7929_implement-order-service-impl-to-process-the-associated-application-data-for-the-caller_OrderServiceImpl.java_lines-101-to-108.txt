@@ -1,0 +1,8 @@
+    private final OrderRepository orderRepository;
+
+    @Inject
+    public OrderServiceImpl(OrderRepository orderRepository) {
+        super(orderRepository);
+        this.orderRepository = orderRepository;
+    }
+

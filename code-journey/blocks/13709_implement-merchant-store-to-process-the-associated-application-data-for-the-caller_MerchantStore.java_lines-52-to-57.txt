@@ -1,6 +1,0 @@
-  public MerchantStore(Integer id, String code, String name) {
-	  this.id = id;
-	  this.code = code;
-	  this.storename = name;
-	  
-  }

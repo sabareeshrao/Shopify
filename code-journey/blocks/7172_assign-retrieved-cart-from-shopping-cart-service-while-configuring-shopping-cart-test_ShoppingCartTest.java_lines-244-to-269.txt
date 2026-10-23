@@ -1,0 +1,26 @@
+	    
+	    //create cart
+	    shoppingCartService.create(shoppingCart);
+
+	    
+	    /** Retrieve cart **/
+
+	    ShoppingCart retrievedCart = shoppingCartService.getByCode(cartCode.toString(), store);
+	    
+	    Assert.assertNotNull(retrievedCart);
+	    
+	    /** Delete cart **/
+	    shoppingCartService.delete(retrievedCart);
+	    
+	    /** Check if cart has been deleted **/
+	    retrievedCart = shoppingCartService.getByCode(cartCode.toString(), store);
+	    
+	    Assert.assertNull(retrievedCart);
+
+		// Clean up for other tests
+	    categoryService.delete(shirts);
+	    
+	}
+	
+
+}

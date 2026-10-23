@@ -1,0 +1,4 @@
+	public Set<ProductAttribute> getAttributes() {
+		return attributes;
+	}
+

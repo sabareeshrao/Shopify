@@ -1,3 +1,0 @@
-	public void setProductAttributeName(String productAttributeName) {
-		this.productAttributeName = productAttributeName;
-	}

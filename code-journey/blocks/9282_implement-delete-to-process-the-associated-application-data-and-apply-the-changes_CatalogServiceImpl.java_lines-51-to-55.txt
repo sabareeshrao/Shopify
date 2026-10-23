@@ -1,5 +1,0 @@
-	@Override
-	public void delete(Catalog catalog) throws ServiceException {
-		Validate.notNull(catalog,"Catalog must not be null");
-		catalogRepository.delete(catalog);
-	}

@@ -1,0 +1,21 @@
+			}
+
+
+			if (!CollectionUtils.isEmpty(stores.getContent())) {
+				for (MerchantStore store : stores)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}
+			readableList.setData(readableStores);
+			readableList.setRecordsTotal(stores.getTotalElements());
+			readableList.setTotalPages(stores.getTotalPages());
+			readableList.setNumber(stores.getSize());
+			readableList.setRecordsFiltered(stores.getSize());
+						return readableList;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while finding all merchant", e);
+		}
+
+
+	}
+	

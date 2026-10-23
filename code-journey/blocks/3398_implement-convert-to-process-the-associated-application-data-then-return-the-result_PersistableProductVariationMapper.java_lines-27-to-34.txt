@@ -1,0 +1,8 @@
+	@Override
+	public ProductVariation convert(PersistableProductVariation source, MerchantStore store, Language language) {
+		
+		ProductVariation variation = new ProductVariation();
+		return this.merge(source, variation, store, language);
+
+	}
+

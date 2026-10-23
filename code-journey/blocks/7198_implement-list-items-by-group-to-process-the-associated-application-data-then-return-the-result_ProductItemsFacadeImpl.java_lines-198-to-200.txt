@@ -1,3 +1,0 @@
-
-		return listItemsByGroup(group,store,language);
-	}

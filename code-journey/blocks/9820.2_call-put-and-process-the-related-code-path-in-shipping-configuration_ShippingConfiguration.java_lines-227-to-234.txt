@@ -1,0 +1,8 @@
+		data.put("maxWeight", p.getMaxWeight());
+		data.put("treshold", p.getTreshold());
+		data.put("code", p.getCode());
+		data.put("shipPackageType", p.getShipPackageType().name());
+		data.put("defaultPackaging", p.isDefaultPackaging());
+		return data;
+	}
+

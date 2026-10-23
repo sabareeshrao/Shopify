@@ -1,0 +1,4 @@
+	public void setProductHighlight(String productHighlight) {
+		this.productHighlight = productHighlight;
+	}
+

@@ -1,0 +1,6 @@
+	@Override
+	public ReadableInventory convert(ProductAvailability source, MerchantStore store, Language language) {
+		ReadableInventory availability = new ReadableInventory();
+		return merge(source, availability, store, language);
+	}
+

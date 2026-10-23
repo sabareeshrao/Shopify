@@ -1,0 +1,4 @@
+	public ProductImage getProductImage() {
+		return productImage;
+	}
+

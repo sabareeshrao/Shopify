@@ -1,3 +1,0 @@
-  public void setCustomer(PersistableCustomer customer) {
-    this.customer = customer;
-  }

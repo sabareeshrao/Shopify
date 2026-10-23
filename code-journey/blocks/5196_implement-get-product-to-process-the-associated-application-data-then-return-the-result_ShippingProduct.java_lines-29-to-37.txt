@@ -1,9 +1,0 @@
-	public Product getProduct() {
-		return product;
-	}
-	public FinalPrice getFinalPrice() {
-		return finalPrice;
-	}
-	public void setFinalPrice(FinalPrice finalPrice) {
-		this.finalPrice = finalPrice;
-	}

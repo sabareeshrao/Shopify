@@ -1,3 +1,0 @@
-	public Set<ShoppingCartItem> getLineItems() {
-		return lineItems;
-	}

@@ -1,5 +1,0 @@
-	    ShippingQuote shippingQuote = shippingService.getShippingQuote(dummyCartId, store, delivery, shippingProducts, en);
-
-	    Assert.notNull(shippingQuote);
-	    
-	}

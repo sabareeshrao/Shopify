@@ -1,0 +1,6 @@
+	
+/*	public KnowledgeBase getKbase() {
+		return kbase;
+	}
+
+

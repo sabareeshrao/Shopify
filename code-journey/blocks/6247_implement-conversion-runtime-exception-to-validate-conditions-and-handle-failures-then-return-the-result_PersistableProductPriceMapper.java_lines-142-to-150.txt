@@ -1,9 +1,0 @@
-			
-			destination.setDefaultPrice(source.isDefaultPrice());
-
-		} catch (Exception e) {
-
-			throw new ConversionRuntimeException(e);
-		}
-		return destination;
-	}

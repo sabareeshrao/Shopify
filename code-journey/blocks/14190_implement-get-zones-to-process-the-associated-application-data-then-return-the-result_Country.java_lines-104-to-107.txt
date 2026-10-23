@@ -1,0 +1,4 @@
+	public Set<Zone> getZones() {
+		return zones;
+	}
+

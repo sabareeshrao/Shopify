@@ -1,3 +1,0 @@
-	public ProductDescription getDescription() {
-		return description;
-	}

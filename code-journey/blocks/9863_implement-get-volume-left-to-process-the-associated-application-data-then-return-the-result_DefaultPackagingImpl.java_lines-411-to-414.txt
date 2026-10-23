@@ -1,0 +1,4 @@
+	public double getVolumeLeft() {
+		return volumeLeft;
+	}
+

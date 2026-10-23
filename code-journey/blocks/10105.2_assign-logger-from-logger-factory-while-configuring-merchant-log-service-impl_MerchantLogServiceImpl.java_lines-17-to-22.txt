@@ -1,0 +1,6 @@
+	
+	@SuppressWarnings("unused")
+	private static final Logger LOGGER = LoggerFactory.getLogger(MerchantLogServiceImpl.class);
+
+
+	

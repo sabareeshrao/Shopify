@@ -1,3 +1,0 @@
-	public OrderProduct getOrderProduct() {
-		return orderProduct;
-	}

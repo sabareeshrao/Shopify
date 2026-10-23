@@ -1,3 +1,0 @@
-	public IntegrationException(Exception e) {
-		super(e);
-	}

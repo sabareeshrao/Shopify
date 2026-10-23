@@ -1,6 +1,0 @@
-			return new ArrayList<String>(objectNode.getKeys());
-
-		} catch (final Exception e) {
-			LOGGER.error("Error while fetching file for {} merchant ", merchantStoreCode);
-			throw new ServiceException(e);
-		}

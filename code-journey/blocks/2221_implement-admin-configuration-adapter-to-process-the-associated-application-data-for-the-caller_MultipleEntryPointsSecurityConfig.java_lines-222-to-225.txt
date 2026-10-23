@@ -1,0 +1,4 @@
+		public AdminConfigurationAdapter() {
+			super();
+		}
+

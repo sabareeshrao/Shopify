@@ -1,0 +1,6 @@
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while listing ProductOptionSet", e);
+		}
+
+	}
+

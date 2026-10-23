@@ -1,0 +1,39 @@
+
+	/**
+	 * Method responsible for adding content file for given merchant store in
+	 * underlying Infinispan tree cache. It will take {@link InputContentFile}
+	 * and will store file for given merchant store according to its type. it
+	 * can save an image or any type of file (pdf, css, js ...)
+	 * 
+	 * @param merchantStoreCode
+	 *            Merchant store
+	 * @param contentFile
+	 *            {@link InputContentFile} being stored
+	 * @throws ServiceException
+	 *             service exception
+	 */
+	@Override
+	public void addContentFile(String merchantStoreCode, InputContentFile contentFile) throws ServiceException {
+		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");
+		Assert.notNull(contentFile, "InputContentFile image can not be null");
+		Assert.notNull(contentFile.getFileName(), "InputContentFile.fileName can not be null");
+		Assert.notNull(contentFile.getFileContentType(), "InputContentFile.fileContentType can not be null");
+
+		String mimeType = URLConnection.guessContentTypeFromName(contentFile.getFileName());
+		contentFile.setMimeType(mimeType);
+
+		if (contentFile.getFileContentType().name().equals(FileContentType.IMAGE.name())
+				|| contentFile.getFileContentType().name().equals(FileContentType.STATIC_FILE.name())) {
+			addFile(merchantStoreCode, contentFile);
+		} else if(contentFile.getFileContentType().name().equals(FileContentType.API_IMAGE.name())) {
+			contentFile.setFileContentType(FileContentType.IMAGE);
+			addImage(merchantStoreCode, contentFile);
+		} else if(contentFile.getFileContentType().name().equals(FileContentType.API_FILE.name())) {
+			contentFile.setFileContentType(FileContentType.STATIC_FILE);
+			addFile(merchantStoreCode, contentFile);
+		} else {
+			addImage(merchantStoreCode, contentFile);
+		}
+
+	}
+

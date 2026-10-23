@@ -1,0 +1,4 @@
+	public void setOptionPrice(BigDecimal optionPrice) {
+		this.optionPrice = optionPrice;
+	}
+

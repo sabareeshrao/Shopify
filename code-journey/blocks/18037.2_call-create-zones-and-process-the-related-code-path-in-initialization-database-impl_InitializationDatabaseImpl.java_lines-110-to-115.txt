@@ -1,6 +1,0 @@
-		createZones();
-		createCurrencies();
-		createSubReferences();
-		createModules();
-		createMerchant();
-

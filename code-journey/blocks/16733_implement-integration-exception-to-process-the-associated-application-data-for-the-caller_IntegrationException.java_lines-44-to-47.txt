@@ -1,4 +1,0 @@
-	public IntegrationException(int code) {
-		
-		this.errorCode = code;
-	}

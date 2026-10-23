@@ -1,0 +1,4 @@
+	public int getSortOrder() {
+		return sortOrder;
+	}
+

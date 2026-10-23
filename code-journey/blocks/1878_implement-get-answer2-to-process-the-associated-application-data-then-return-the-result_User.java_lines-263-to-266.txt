@@ -1,0 +1,4 @@
+	public String getAnswer2() {
+		return answer2;
+	}
+

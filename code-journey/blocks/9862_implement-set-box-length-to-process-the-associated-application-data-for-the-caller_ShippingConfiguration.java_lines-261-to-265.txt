@@ -1,0 +1,5 @@
+	public void setBoxLength(int boxLength) {
+		this.boxLength = boxLength;
+	}
+
+

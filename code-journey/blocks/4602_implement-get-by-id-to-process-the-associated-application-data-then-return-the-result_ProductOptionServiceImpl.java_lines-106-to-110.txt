@@ -1,0 +1,5 @@
+	@Override
+	public ProductOption getById(MerchantStore store, Long optionId) {
+		return productOptionRepository.findOne(store.getId(), optionId);
+	}
+

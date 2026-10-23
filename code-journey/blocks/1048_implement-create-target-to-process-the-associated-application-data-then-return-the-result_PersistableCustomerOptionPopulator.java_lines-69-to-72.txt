@@ -1,4 +1,0 @@
-	@Override
-	protected CustomerOption createTarget() {
-		return null;
-	}

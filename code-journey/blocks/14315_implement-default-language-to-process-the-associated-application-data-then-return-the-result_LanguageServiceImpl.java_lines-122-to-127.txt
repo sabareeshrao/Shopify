@@ -1,0 +1,6 @@
+	@Override
+	public Language defaultLanguage() {
+		return toLanguage(Locale.ENGLISH);
+	}
+
+}

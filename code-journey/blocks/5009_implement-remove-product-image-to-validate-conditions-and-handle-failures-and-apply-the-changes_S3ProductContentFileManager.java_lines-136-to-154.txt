@@ -1,0 +1,19 @@
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+    try {
+      // get buckets
+      String bucketName = bucketName();
+
+      final AmazonS3 s3 = s3Client();
+      s3.deleteObject(bucketName, nodePath(productImage.getProduct().getMerchantStore().getCode(),
+          productImage.getProduct().getSku()) + productImage.getProductImage());
+
+      LOGGER.info("Remove file");
+    } catch (final Exception e) {
+      LOGGER.error("Error while removing file", e);
+      throw new ServiceException(e);
+
+    }
+
+  }
+

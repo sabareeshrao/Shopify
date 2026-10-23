@@ -1,4 +1,0 @@
-    };
-
-    mailSender.send(preparator);
-  }

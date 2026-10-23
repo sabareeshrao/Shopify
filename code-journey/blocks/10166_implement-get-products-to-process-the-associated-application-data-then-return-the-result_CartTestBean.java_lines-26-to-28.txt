@@ -1,3 +1,0 @@
-    public List<ReadableProduct> getProducts() {
-        return products;
-    }

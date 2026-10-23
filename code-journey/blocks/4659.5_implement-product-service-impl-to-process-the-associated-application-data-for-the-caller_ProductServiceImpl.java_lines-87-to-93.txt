@@ -1,7 +1,0 @@
-	ProductReviewService productReviewService;
-
-	@Inject
-	public ProductServiceImpl(ProductRepository productRepository) {
-		super(productRepository);
-		this.productRepository = productRepository;
-	}

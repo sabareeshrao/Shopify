@@ -1,2 +1,0 @@
-	private Zone zone;
-

@@ -1,2 +1,0 @@
-    return Lists.newArrayList(relationMap.values());
-  }

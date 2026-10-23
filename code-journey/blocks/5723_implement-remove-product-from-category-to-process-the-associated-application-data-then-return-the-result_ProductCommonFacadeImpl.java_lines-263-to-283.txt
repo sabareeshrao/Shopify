@@ -1,0 +1,21 @@
+	@Override
+	public ReadableProduct removeProductFromCategory(Category category, Product product, Language language)
+			throws Exception {
+
+		Validate.notNull(category, "Category cannot be null");
+		Validate.notNull(product, "Product cannot be null");
+
+		product.getCategories().remove(category);
+		productService.saveProduct(product);
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		populator.populate(product, readableProduct, product.getMerchantStore(), language);
+
+		return readableProduct;
+	}
+

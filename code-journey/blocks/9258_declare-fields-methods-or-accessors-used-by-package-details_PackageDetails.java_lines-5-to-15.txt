@@ -1,0 +1,11 @@
+	private String code;
+	private double shippingWeight;
+	private double shippingMaxWeight;
+	private double shippingLength;
+	private double shippingHeight;
+	private double shippingWidth;
+	private int shippingQuantity;
+	private int treshold;
+	private String type; //BOX, ITEM
+	
+	

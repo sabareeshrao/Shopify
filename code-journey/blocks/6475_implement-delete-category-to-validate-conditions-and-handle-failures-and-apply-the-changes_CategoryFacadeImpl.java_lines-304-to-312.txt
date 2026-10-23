@@ -1,0 +1,9 @@
+	@Override
+	public void deleteCategory(Category category) {
+		try {
+			categoryService.delete(category);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while deleting category", e);
+		}
+	}
+

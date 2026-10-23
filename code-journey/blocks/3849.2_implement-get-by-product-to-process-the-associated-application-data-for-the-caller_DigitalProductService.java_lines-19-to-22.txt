@@ -1,4 +1,0 @@
-
-	DigitalProduct getByProduct(MerchantStore store, Product product)
-			throws ServiceException;
-

@@ -1,3 +1,0 @@
-	public void setBoxHeight(int boxHeight) {
-		this.boxHeight = boxHeight;
-	}

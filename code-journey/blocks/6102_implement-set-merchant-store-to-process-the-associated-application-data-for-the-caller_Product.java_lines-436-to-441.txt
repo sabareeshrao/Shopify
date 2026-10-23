@@ -1,0 +1,6 @@
+	public void setMerchantStore(MerchantStore merchantStore) {
+		this.merchantStore = merchantStore;
+	}
+
+
+

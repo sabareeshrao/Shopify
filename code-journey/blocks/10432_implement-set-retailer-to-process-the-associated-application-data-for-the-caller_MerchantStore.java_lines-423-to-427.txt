@@ -1,0 +1,5 @@
+	public void setRetailer(Boolean retailer) {
+		this.retailer = retailer;
+	}
+
+}

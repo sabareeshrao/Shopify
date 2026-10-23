@@ -1,3 +1,0 @@
-	public List<GeoZoneDescription> getDescriptions() {
-		return descriptions;
-	}

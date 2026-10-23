@@ -1,0 +1,5 @@
+			throw new ServiceRuntimeException("Product [" + id + "] cannot be edited");
+		}
+	}
+
+}

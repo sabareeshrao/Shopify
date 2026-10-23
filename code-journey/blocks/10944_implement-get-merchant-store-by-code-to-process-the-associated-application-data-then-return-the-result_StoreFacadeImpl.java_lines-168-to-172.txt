@@ -1,0 +1,5 @@
+	private MerchantStore getMerchantStoreByCode(String code) {
+		return Optional.ofNullable(get(code))
+				.orElseThrow(() -> new ResourceNotFoundException("Merchant store code [" + code + "] not found"));
+	}
+

@@ -1,7 +1,0 @@
-  private void deleteCustomerReview(CustomerReview review) {
-    try{
-      customerReviewService.delete(review);
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException(e);
-    }
-  }

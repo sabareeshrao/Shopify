@@ -1,0 +1,4 @@
+	public CustomerReview getCustomerReview() {
+		return customerReview;
+	}
+

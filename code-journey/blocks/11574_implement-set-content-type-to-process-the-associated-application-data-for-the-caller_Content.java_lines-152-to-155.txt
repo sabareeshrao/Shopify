@@ -1,0 +1,4 @@
+	public void setContentType(ContentType contentType) {
+		this.contentType = contentType;
+	}
+

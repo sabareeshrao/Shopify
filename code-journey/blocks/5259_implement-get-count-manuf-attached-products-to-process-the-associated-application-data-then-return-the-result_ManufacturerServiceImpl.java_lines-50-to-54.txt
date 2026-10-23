@@ -1,5 +1,0 @@
-  @Override
-  public Long getCountManufAttachedProducts(Manufacturer manufacturer) throws ServiceException {
-    return manufacturerRepository.countByProduct(manufacturer.getId());
-    // .getCountManufAttachedProducts( manufacturer );
-  }

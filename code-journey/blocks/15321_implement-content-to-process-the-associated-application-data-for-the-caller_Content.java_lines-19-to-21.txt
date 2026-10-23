@@ -1,3 +1,0 @@
-  public Content(String name) {
-    this.name = name;
-  }

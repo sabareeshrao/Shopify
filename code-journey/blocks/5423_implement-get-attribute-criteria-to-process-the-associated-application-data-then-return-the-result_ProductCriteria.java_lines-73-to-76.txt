@@ -1,0 +1,4 @@
+	public List<AttributeCriteria> getAttributeCriteria() {
+		return attributeCriteria;
+	}
+

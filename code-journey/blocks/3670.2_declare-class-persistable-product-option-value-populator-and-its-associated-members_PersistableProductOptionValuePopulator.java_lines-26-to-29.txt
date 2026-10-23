@@ -1,0 +1,4 @@
+public class PersistableProductOptionValuePopulator extends
+		AbstractDataPopulator<PersistableProductOptionValue, ProductOptionValue> {
+
+	

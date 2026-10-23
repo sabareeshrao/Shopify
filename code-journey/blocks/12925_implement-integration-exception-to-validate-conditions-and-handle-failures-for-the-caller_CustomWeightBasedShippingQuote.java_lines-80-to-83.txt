@@ -1,4 +1,0 @@
-		
-		} catch (Exception e) {
-			throw new IntegrationException(e);
-		}

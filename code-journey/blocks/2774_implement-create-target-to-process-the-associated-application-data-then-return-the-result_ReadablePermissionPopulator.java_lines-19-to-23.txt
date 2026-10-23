@@ -1,5 +1,0 @@
-  @Override
-  protected ReadablePermission createTarget() {
-    // TODO Auto-generated method stub
-    return null;
-  }

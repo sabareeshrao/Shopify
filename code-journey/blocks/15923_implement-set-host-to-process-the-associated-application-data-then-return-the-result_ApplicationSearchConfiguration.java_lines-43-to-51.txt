@@ -1,9 +1,0 @@
-	public void setHost(List<SearchHost> host) {
-		this.host = host;
-	}
-	public List<String> getSearchLanguages() {
-		return searchLanguages;
-	}
-	public void setSearchLanguages(List<String> searchLanguages) {
-		this.searchLanguages = searchLanguages;
-	}

@@ -1,0 +1,7 @@
+	@Override
+	public Permission getById(Integer permissionId) {
+		return permissionRepository.findOne(permissionId);
+
+	}
+
+

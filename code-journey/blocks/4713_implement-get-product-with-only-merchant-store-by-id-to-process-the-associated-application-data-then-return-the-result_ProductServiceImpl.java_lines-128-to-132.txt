@@ -1,0 +1,5 @@
+	@Override
+	public Product getProductWithOnlyMerchantStoreById(Long productId) {
+		return productRepository.getProductWithOnlyMerchantStoreById(productId);
+	}
+

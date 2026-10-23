@@ -1,4 +1,0 @@
-  private Optional<String> catalogEntryFilter(HttpServletRequest request) {
-
-	    return Optional.ofNullable((String)request.getAttribute("name"));
-}

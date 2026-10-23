@@ -1,3 +1,0 @@
-	public void setMaxWeight(double maxWeight) {
-		this.maxWeight = maxWeight;
-	}

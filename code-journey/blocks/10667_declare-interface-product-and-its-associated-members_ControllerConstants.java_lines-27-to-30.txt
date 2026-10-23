@@ -1,0 +1,4 @@
+        interface Product{
+            final static String product="product";
+        }
+        

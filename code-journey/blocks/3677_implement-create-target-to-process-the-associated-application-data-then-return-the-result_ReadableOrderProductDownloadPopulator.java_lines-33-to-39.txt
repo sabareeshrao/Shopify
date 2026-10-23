@@ -1,0 +1,7 @@
+	@Override
+	protected ReadableOrderProductDownload createTarget() {
+		return new ReadableOrderProductDownload();
+	}
+	
+
+}

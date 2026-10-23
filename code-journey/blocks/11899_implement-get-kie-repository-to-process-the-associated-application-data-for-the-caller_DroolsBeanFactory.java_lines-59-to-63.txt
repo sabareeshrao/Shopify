@@ -1,0 +1,5 @@
+    private void getKieRepository() {
+        final KieRepository kieRepository = kieServices.getRepository();
+        kieRepository.addKieModule(kieRepository::getDefaultReleaseId);
+    }
+

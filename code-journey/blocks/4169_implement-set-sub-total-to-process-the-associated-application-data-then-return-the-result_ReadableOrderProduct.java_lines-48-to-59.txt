@@ -1,0 +1,12 @@
+	public void setSubTotal(String subTotal) {
+		this.subTotal = subTotal;
+	}
+	public List<ReadableOrderProductAttribute> getAttributes() {
+		return attributes;
+	}
+	public void setAttributes(List<ReadableOrderProductAttribute> attributes) {
+		this.attributes = attributes;
+	}
+
+
+}

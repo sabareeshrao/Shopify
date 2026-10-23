@@ -1,0 +1,9 @@
+
+			return this.convertUserToReadableUser(user.getDefaultLanguage(), user);
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while getting user [" + userName + "]", e);
+		}
+
+	}
+

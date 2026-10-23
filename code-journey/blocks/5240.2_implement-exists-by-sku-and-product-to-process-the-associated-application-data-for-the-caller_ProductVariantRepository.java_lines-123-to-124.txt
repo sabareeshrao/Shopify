@@ -1,2 +1,0 @@
-	ProductVariant existsBySkuAndProduct(String sku, Long productId);
-	

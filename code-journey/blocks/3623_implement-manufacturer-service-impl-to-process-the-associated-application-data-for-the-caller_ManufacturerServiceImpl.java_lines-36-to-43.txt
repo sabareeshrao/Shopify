@@ -1,0 +1,8 @@
+  private ManufacturerRepository manufacturerRepository;
+
+  @Inject
+  public ManufacturerServiceImpl(ManufacturerRepository manufacturerRepository) {
+    super(manufacturerRepository);
+    this.manufacturerRepository = manufacturerRepository;
+  }
+

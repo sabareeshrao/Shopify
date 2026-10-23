@@ -1,3 +1,0 @@
-	public Long getProductAvailabilityId() {
-		return productAvailabilityId;
-	}

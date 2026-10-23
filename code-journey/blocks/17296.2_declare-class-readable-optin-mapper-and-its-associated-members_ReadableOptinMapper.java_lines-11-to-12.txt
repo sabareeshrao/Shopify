@@ -1,2 +1,0 @@
-public class ReadableOptinMapper implements Mapper<Optin, ReadableOptin> {
-

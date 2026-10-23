@@ -1,0 +1,4 @@
+	public void setDisplayAddToCartOnFeaturedItems(boolean displayAddToCartOnFeaturedItems) {
+		this.displayAddToCartOnFeaturedItems = displayAddToCartOnFeaturedItems;
+	}
+

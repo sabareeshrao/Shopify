@@ -1,0 +1,8 @@
+		
+		ProductOptionValue option = getById(entity.getId());
+		
+		//remove option
+		super.delete(option);
+		
+	}
+	

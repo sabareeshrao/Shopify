@@ -1,3 +1,0 @@
-  public void setDateCreated(Date dateCreated) {
-    this.dateCreated = CloneUtils.clone(dateCreated);
-  }

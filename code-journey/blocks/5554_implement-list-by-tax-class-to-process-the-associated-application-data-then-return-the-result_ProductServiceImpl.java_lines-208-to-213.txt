@@ -1,0 +1,6 @@
+	@Override
+	public List<Product> listByTaxClass(TaxClass taxClass) {
+		return productRepository.listByTaxClass(taxClass);
+	}
+
+

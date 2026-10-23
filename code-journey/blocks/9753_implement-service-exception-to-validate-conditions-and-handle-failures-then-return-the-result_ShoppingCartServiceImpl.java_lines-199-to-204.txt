@@ -1,6 +1,0 @@
-
-		} catch (javax.persistence.NoResultException nre) {
-			return null;
-		} catch (Throwable e) {
-			throw new ServiceException(e);
-		}

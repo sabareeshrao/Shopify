@@ -1,3 +1,0 @@
-	public Boolean getDefaultPrice() {
-		return defaultPrice;
-	}

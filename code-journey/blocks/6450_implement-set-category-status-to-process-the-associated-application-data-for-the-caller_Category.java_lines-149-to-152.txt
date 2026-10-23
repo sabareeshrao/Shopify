@@ -1,0 +1,4 @@
+    public void setCategoryStatus(boolean categoryStatus) {
+        this.categoryStatus = categoryStatus;
+    }
+

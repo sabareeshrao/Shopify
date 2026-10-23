@@ -1,5 +1,0 @@
-			return attrList;
-
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while getting attributes", e);
-		}

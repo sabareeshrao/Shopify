@@ -1,0 +1,18 @@
+	public String getModuleCode() {
+		return MODULE_CODE;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

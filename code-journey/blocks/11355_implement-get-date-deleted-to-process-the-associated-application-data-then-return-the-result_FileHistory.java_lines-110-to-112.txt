@@ -1,3 +1,0 @@
-	public Date getDateDeleted() {
-		return CloneUtils.clone(dateDeleted);
-	}

@@ -1,5 +1,0 @@
-
-		super.delete(product);
-		//searchService.deleteIndex(product.getMerchantStore(), product);
-
-	}

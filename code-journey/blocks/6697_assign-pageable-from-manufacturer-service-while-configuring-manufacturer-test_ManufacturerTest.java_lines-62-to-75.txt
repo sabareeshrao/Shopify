@@ -1,0 +1,14 @@
+
+		//query pageable category
+	    Page<Manufacturer> pageable = manufacturerService.listByStore(store, en, 0, 5);
+	    Assert.isTrue(pageable.getSize()>0, "4 manufacturers");
+	    
+	}
+
+
+	
+
+
+
+
+}

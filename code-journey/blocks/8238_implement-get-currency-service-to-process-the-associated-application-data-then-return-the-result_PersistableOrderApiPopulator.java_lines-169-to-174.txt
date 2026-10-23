@@ -1,0 +1,6 @@
+
+
+/*	public CurrencyService getCurrencyService() {
+		return currencyService;
+	}
+

@@ -1,5 +1,0 @@
-			"type": "keyword"
-		},
-		"image": {
-			"type": "keyword"
-		}

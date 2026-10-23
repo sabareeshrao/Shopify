@@ -1,0 +1,4 @@
+	public List<OrderAttribute> getAttributes() {
+		return attributes;
+	}
+

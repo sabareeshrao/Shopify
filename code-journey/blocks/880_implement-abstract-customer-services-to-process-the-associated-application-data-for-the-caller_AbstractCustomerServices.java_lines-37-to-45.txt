@@ -1,9 +1,0 @@
-	public AbstractCustomerServices(
-			CustomerService customerService, 
-			PermissionService permissionService, 
-			GroupService groupService) {
-		
-		this.customerService = customerService;
-		this.permissionService = permissionService;
-		this.groupService = groupService;
-	}

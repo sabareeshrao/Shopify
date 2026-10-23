@@ -1,0 +1,7 @@
+	@Override
+	public List<ProductAttribute> getProductAttributesByCategoryLineage(MerchantStore store, String lineage,
+			Language language) throws Exception {
+		return productAttributeRepository.findOptionsByCategoryLineage(store.getId(), lineage, language.getId());
+	}
+
+}

@@ -1,0 +1,8 @@
+  private String emailAddress;
+  private String defaultLanguage;
+  private String userName;
+  private boolean active;
+
+
+
+

@@ -1,0 +1,4 @@
+	public Double getReviewRating() {
+		return reviewRating;
+	}
+

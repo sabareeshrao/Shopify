@@ -1,0 +1,4 @@
+	public List<ContentDescriptionEntity> getDescriptions() {
+		return descriptions;
+	}
+

@@ -1,0 +1,5 @@
+  private boolean userExist(String userName) {
+    return Optional.ofNullable(customerService.getByNick(userName))
+        .isPresent();
+  }
+

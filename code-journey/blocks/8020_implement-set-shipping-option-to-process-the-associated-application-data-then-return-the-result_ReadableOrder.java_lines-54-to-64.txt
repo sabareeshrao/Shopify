@@ -1,0 +1,11 @@
+	public void setShippingOption(ShippingOption shippingOption) {
+		this.shippingOption = shippingOption;
+	}
+	public ReadableBilling getBilling() {
+		return billing;
+	}
+	public void setBilling(ReadableBilling billing) {
+		this.billing = billing;
+	}
+
+}

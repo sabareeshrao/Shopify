@@ -1,0 +1,7 @@
+	@Override
+	public CustomIntegrationConfiguration getCustomModuleConfiguration(
+			MerchantStore store) throws IntegrationException {
+		// Not used
+		return null;
+	}
+

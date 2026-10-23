@@ -1,5 +1,0 @@
-	@Override
-	protected ReadableDelivery createTarget() {
-		// TODO Auto-generated method stub
-		return null;
-	}

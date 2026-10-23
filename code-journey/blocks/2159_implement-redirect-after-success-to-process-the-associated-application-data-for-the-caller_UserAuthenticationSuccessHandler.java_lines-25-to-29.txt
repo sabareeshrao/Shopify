@@ -1,5 +1,0 @@
-		@Override
-		protected void redirectAfterSuccess(HttpServletRequest request, HttpServletResponse response) throws Exception {
-			redirectStrategy.sendRedirect(request, response, "/admin/home.html");
-			
-		}

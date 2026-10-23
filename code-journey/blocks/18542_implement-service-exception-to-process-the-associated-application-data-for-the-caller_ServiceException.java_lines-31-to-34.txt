@@ -1,4 +1,0 @@
-	public ServiceException(String messageCode) {
-		super();
-		this.messageCode = messageCode;
-	}

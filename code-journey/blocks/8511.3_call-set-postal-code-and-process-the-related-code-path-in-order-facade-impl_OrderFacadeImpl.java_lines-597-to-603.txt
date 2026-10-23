@@ -1,0 +1,7 @@
+		/** empty postal code for initial quote **/
+		// delivery.setPostalCode(store.getStorepostalcode());
+		customer.setDelivery(delivery);
+
+		return customer;
+	}
+

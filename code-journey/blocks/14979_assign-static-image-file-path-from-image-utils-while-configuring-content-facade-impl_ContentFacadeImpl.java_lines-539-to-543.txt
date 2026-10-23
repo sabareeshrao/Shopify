@@ -1,5 +1,0 @@
-		// TODO revise this
-		// String staticImageFilePath = imageUtils.buildStaticImageUtils(store,
-		// content.getCode() + ".jpg");
-		// box.setImage(staticImageFilePath);
-	}

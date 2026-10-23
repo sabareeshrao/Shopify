@@ -1,7 +1,0 @@
-	public void deleteRelationship(ProductRelationship relationship)  throws ServiceException {
-		
-		//throws detached exception so need to query first
-		relationship = this.getById(relationship.getId());
-		if(relationship != null) {
-			delete(relationship);
-		}

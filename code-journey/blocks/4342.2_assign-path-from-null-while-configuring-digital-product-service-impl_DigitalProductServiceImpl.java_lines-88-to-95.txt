@@ -1,0 +1,8 @@
+		
+		String path = null;
+
+		productDownloadsFileManager.removeFile(digitalProduct.getProduct().getMerchantStore().getCode(), FileContentType.PRODUCT, digitalProduct.getProductFileName(), Optional.of(path));
+		digitalProduct.getProduct().setProductVirtual(false);
+		productService.update(digitalProduct.getProduct());
+	}
+	

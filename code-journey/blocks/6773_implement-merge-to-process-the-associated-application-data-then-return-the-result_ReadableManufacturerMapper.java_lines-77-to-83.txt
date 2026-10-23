@@ -1,0 +1,7 @@
+  @Override
+  public ReadableManufacturer merge(Manufacturer source, ReadableManufacturer destination,
+                                    MerchantStore store, Language language) {
+    return destination;
+  }
+
+}

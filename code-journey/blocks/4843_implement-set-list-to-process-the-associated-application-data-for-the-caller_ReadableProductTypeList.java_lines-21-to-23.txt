@@ -1,3 +1,0 @@
-	public void setList(List<ReadableProductType> list) {
-		this.list = list;
-	}

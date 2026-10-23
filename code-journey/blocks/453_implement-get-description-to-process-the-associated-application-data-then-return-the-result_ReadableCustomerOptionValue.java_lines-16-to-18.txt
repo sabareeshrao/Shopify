@@ -1,3 +1,0 @@
-	public CustomerOptionValueDescription getDescription() {
-		return description;
-	}

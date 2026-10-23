@@ -1,5 +1,0 @@
-	@Override
-	public List<Quote> findByOrder(Order order) throws ServiceException {
-		Validate.notNull(order,"Order cannot be null");
-		return this.shippingQuoteRepository.findByOrder(order.getId());
-	}

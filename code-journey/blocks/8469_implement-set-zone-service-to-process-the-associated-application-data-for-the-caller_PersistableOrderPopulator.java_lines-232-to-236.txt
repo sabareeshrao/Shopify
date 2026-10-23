@@ -1,0 +1,5 @@
+	public void setZoneService(ZoneService zoneService) {
+		this.zoneService = zoneService;
+	}
+
+}

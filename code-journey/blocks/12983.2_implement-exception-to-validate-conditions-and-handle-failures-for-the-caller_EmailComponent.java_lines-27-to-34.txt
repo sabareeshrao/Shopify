@@ -1,0 +1,8 @@
+          sesEmailSender.send(email);
+            break; 
+        default: 
+            throw new Exception("No email implementation for " + emailSender); 
+    }
+    
+  }
+

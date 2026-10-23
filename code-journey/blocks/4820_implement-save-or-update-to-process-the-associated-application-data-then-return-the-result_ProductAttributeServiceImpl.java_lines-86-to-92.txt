@@ -1,0 +1,7 @@
+	@Override
+	public ProductAttribute saveOrUpdate(ProductAttribute productAttribute) throws ServiceException {
+		productAttribute = productAttributeRepository.save(productAttribute);
+		return productAttribute;
+
+	}
+

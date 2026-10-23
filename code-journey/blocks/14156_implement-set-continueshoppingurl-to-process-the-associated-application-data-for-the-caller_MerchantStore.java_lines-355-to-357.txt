@@ -1,3 +1,0 @@
-	public void setContinueshoppingurl(String continueshoppingurl) {
-		this.continueshoppingurl = continueshoppingurl;
-	}

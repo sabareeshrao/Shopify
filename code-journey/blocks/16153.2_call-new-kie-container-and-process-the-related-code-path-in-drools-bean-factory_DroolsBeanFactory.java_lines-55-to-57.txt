@@ -1,3 +1,0 @@
-        return kieServices.newKieContainer(kieModule.getReleaseId());
-
-    }

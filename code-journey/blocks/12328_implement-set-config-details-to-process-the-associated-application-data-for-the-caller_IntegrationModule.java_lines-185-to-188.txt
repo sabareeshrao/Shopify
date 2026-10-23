@@ -1,0 +1,4 @@
+	public void setConfigDetails(String configDetails) {
+		this.configDetails = configDetails;
+	}
+

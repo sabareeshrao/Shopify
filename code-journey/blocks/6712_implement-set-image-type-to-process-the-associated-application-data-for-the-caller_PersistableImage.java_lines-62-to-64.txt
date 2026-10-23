@@ -1,3 +1,0 @@
-	public void setImageType(int imageType) {
-		this.imageType = imageType;
-	}

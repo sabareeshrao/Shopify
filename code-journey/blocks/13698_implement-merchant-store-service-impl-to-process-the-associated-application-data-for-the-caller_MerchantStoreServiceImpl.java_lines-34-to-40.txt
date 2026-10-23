@@ -1,7 +1,0 @@
-	private MerchantRepository merchantRepository;
-
-	@Inject
-	public MerchantStoreServiceImpl(MerchantRepository merchantRepository) {
-		super(merchantRepository);
-		this.merchantRepository = merchantRepository;
-	}

@@ -1,0 +1,4 @@
+	public LanguageService getLanguageService() {
+		return languageService;
+	}
+

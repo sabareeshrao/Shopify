@@ -1,5 +1,0 @@
-	@Override
-	public Optional<ProductVariantGroup> getByProductVariant(Long productVariantId, MerchantStore store,
-			Language language) {
-		return productVariantGroupRepository.finByProductVariant(productVariantId, store.getCode());
-	}

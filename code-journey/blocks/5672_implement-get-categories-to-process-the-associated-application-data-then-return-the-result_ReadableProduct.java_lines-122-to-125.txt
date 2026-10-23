@@ -1,0 +1,4 @@
+	public List<ReadableCategory> getCategories() {
+		return categories;
+	}
+

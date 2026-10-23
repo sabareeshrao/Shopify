@@ -1,0 +1,6 @@
+	public TaxRate getTaxRate() {
+		return taxRate;
+	}
+
+
+}

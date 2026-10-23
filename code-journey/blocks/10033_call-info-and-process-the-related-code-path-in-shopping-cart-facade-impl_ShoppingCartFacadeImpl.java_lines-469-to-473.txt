@@ -1,5 +1,0 @@
-			}
-		}
-		LOG.info("Unable to find any entry for given Id: " + entryId);
-		return null;
-	}

@@ -1,4 +1,0 @@
-  public ConversionException(final String msg)
-  {
-      super(msg);
-  }

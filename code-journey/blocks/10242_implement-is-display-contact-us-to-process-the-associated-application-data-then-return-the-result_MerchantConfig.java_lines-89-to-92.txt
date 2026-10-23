@@ -1,0 +1,4 @@
+	public boolean isDisplayContactUs() {
+		return displayContactUs;
+	}
+

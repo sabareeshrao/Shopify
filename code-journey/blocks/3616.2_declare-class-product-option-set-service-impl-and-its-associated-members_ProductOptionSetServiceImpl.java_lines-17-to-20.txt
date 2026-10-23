@@ -1,0 +1,4 @@
+public class ProductOptionSetServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, ProductOptionSet> implements ProductOptionSetService {
+
+	

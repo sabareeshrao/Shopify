@@ -1,4 +1,0 @@
-	@Override
-	public List<Permission> listPermission() throws ServiceException {
-		return permissionRepository.findAll();
-	}

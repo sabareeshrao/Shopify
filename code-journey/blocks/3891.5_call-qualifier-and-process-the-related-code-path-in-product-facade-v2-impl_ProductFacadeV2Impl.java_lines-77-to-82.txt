@@ -1,0 +1,6 @@
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+

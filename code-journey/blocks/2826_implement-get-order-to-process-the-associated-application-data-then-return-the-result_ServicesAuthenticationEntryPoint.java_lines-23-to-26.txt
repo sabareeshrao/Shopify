@@ -1,4 +1,0 @@
-	@Override
-	public int getOrder() {
-		return 0;
-	}

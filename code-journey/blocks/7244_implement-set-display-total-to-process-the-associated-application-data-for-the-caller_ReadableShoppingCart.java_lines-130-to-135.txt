@@ -1,0 +1,6 @@
+	public void setDisplayTotal(String displayTotal) {
+		this.displayTotal = displayTotal;
+	}
+
+
+

@@ -1,0 +1,17 @@
+
+
+
+  @DeleteMapping(value = "/private/catalog/{id}")
+  @ApiOperation(httpMethod = "DELETE", value = "Deletes a catalog", notes = "",
+  response = Void.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")})
+  public void deleteCatalog(
+      @PathVariable Long id,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language) {
+
+	  catalogFacade.deleteCatalog(id, merchantStore, language);
+  }
+

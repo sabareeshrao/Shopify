@@ -1,7 +1,0 @@
-		customer.setCustomerReviewCount(count);
-		super.save(review);
-		
-		customerService.update(customer);
-		
-		review.setReviewedCustomer(customer);
-

@@ -1,3 +1,0 @@
-	public void setRegionVariant(String regionVariant) {
-		this.regionVariant = regionVariant;
-	}

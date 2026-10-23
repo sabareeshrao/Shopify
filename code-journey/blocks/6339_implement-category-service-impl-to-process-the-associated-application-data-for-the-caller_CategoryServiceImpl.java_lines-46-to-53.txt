@@ -1,0 +1,8 @@
+
+
+  @Inject
+  public CategoryServiceImpl(CategoryRepository categoryRepository) {
+    super(categoryRepository);
+    this.categoryRepository = categoryRepository;
+  }
+

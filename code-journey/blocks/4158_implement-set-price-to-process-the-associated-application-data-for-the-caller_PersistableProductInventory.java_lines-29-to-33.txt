@@ -1,0 +1,5 @@
+	public void setPrice(PersistableProductPrice price) {
+		this.price = price;
+	}
+
+}

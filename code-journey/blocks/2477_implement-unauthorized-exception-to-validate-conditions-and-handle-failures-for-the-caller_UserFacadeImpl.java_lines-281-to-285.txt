@@ -1,5 +1,0 @@
-		}
-
-		throw new UnauthorizedException("User " + userName + " not authorized");
-
-	}

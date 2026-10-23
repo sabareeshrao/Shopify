@@ -1,4 +1,0 @@
-					} else {
-						if (!newImageIds.contains(image.getId())) {
-							productImageService.delete(image);
-						}

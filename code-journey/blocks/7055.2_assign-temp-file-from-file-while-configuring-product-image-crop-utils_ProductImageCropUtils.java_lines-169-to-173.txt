@@ -1,5 +1,0 @@
-		File tempFile = File.createTempFile("temp", "." + extension );
-		tempFile.deleteOnExit();
-		ImageIO.write(out, extension, tempFile);
-		return tempFile;
-	}

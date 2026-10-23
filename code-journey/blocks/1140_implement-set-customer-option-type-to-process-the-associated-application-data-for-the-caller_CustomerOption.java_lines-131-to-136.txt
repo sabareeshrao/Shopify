@@ -1,0 +1,6 @@
+	public void setCustomerOptionType(String customerOptionType) {
+		this.customerOptionType = customerOptionType;
+	}
+
+
+

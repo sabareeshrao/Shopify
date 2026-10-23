@@ -1,0 +1,4 @@
+	public void setShowCustomerStateList(String showCustomerStateList) {
+		this.showCustomerStateList = showCustomerStateList;
+	}
+

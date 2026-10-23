@@ -1,0 +1,4 @@
+	public BigDecimal getProductWidth() {
+		return productWidth;
+	}
+

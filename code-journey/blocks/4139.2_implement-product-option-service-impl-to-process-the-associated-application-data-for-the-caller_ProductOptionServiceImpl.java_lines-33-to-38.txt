@@ -1,6 +1,0 @@
-	@Inject
-	public ProductOptionServiceImpl(
-			ProductOptionRepository productOptionRepository) {
-			super(productOptionRepository);
-			this.productOptionRepository = productOptionRepository;
-	}

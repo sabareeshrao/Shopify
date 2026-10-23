@@ -1,0 +1,4 @@
+	public PersistablePayment getPayment() {
+		return payment;
+	}
+

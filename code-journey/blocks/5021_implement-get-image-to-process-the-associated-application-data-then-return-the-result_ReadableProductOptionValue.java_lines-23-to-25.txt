@@ -1,3 +1,0 @@
-	public String getImage() {
-		return image;
-	}

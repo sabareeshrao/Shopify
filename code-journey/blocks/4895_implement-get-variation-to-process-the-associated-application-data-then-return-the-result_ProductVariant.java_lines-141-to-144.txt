@@ -1,0 +1,4 @@
+	public ProductVariation getVariation() {
+		return variation;
+	}
+

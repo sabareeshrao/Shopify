@@ -1,4 +1,0 @@
-	indexes = @Index(columnList = "LINEAGE"),
-	uniqueConstraints=
-    @UniqueConstraint(columnNames = {"MERCHANT_ID", "CODE"}) )
-

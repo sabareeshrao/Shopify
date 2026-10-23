@@ -1,4 +1,0 @@
-  public GenericRuntimeException(String errorCode, String errorMessage) {
-    this.setErrorCode(errorCode);
-    this.setErrorMessage(errorMessage);
-  }

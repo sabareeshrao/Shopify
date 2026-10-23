@@ -1,3 +1,0 @@
-	public void setPiggyback(boolean piggyback) {
-		this.piggyback = piggyback;
-	}

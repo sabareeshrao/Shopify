@@ -1,7 +1,0 @@
-
-			modelUser.setActive(user.isActive());
-			userService.saveOrUpdate(modelUser);
-
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while updating user enable flag", e);
-		}

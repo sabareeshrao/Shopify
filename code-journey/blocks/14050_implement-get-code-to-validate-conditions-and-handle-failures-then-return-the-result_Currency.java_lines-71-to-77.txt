@@ -1,0 +1,7 @@
+	public String getCode() {
+		if (currency.getCurrencyCode() != code) {
+			return currency.getCurrencyCode();
+		}
+		return code;
+	}
+	

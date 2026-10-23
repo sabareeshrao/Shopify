@@ -1,9 +1,0 @@
-	public void setDescriptions(List<TaxRateDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-	public String getTaxClass() {
-		return taxClass;
-	}
-	public void setTaxClass(String taxClass) {
-		this.taxClass = taxClass;
-	}

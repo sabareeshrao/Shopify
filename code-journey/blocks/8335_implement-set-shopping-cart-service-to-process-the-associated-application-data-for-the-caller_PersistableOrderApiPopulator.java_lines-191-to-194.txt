@@ -1,0 +1,4 @@
+	public void setShoppingCartService(ShoppingCartService shoppingCartService) {
+		this.shoppingCartService = shoppingCartService;
+	}
+

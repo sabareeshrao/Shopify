@@ -1,5 +1,0 @@
-	@Override
-	protected Transaction createTarget() {
-		// TODO Auto-generated method stub
-		return null;
-	}

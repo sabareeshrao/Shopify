@@ -1,0 +1,4 @@
+	public Set<CatalogCategoryEntry> getEntry() {
+		return entry;
+	}
+

@@ -1,3 +1,0 @@
-	public void setImages(List<ProductVariantImage> images) {
-		this.images = images;
-	}

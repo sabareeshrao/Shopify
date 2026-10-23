@@ -1,0 +1,4 @@
+	public boolean isDisplayPagesMenu() {
+		return displayPagesMenu;
+	}
+

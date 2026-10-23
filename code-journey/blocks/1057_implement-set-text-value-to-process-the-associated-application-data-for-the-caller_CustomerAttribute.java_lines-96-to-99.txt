@@ -1,0 +1,4 @@
+	public void setTextValue(String textValue) {
+		this.textValue = textValue;
+	}
+

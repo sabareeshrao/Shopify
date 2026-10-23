@@ -1,3 +1,0 @@
-	public void setProductQuantityOrderMin(Integer productQuantityOrderMin) {
-		this.productQuantityOrderMin = productQuantityOrderMin;
-	}

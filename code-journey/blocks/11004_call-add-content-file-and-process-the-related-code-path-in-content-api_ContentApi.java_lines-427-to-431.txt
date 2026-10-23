@@ -1,0 +1,5 @@
+
+		contentFacade.addContentFile(f, merchantStore.getCode());
+
+	}
+

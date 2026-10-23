@@ -1,3 +1,0 @@
-	    public String getUsernameFromToken(String token) {
-	        return getClaimFromToken(token, Claims::getSubject);
-	    }

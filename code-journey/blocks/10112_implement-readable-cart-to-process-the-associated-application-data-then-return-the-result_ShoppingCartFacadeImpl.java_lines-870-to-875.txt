@@ -1,6 +1,0 @@
-	@Override
-	// KEEP
-	public ReadableShoppingCart readableCart(ShoppingCart cart, MerchantStore store, Language language) {
-		return readableShoppingCartMapper.convert(cart, store, language);
-
-	}

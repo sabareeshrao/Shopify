@@ -1,3 +1,0 @@
-  public void setMerchantConfigurationType(MerchantConfigurationType merchantConfigurationType) {
-    this.merchantConfigurationType = merchantConfigurationType;
-  }

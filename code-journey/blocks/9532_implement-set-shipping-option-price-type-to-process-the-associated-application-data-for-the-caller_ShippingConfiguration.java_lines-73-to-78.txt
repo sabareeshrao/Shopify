@@ -1,0 +1,6 @@
+	public void setShippingOptionPriceType(ShippingOptionPriceType shippingOptionPriceType) {
+		this.shippingOptionPriceType = shippingOptionPriceType;
+		this.shipOptionPriceType = this.shippingOptionPriceType.name();
+	}
+
+

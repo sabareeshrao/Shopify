@@ -1,3 +1,0 @@
-	public void setCcNumber(String ccNumber) {
-		this.ccNumber = ccNumber;
-	}

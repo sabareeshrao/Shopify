@@ -1,0 +1,4 @@
+		public UserApiConfigurationAdapter() {
+			super();
+		}
+

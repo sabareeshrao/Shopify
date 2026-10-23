@@ -1,3 +1,0 @@
-	public Date getProductDateAvailable() {
-		return CloneUtils.clone(productDateAvailable);
-	}

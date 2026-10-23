@@ -1,3 +1,0 @@
-			+ "where ppp.id = ?1 and p.merchantStore.code = ?2")
-	List<ProductVariantGroup> finByProduct(Long productId, String storeCode);
-	

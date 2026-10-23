@@ -1,0 +1,9 @@
+  @Override
+  public OutputContentFile getProductImage(String merchantStoreCode, String productCode,
+      String imageName, ProductImageSize size) throws ServiceException {
+    return getImage.getProductImage(merchantStoreCode, productCode, imageName, size);
+  }
+
+
+
+}

@@ -1,7 +1,0 @@
-		target.setStore(source.getMerchantStore().getCode());
-		target.setCode(source.getCode());
-		target.setId(source.getId());
-		target.setSortOrder(source.getSortOrder());
-		target.setVisible(source.isVisible());
-		target.setFeatured(source.isFeatured());
-	}

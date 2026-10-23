@@ -1,0 +1,12 @@
+            
+            return modules;
+
+  		} catch (Exception e) {
+  			throw new ServiceException(e);
+  		}
+  		
+
+	
+	}
+
+}

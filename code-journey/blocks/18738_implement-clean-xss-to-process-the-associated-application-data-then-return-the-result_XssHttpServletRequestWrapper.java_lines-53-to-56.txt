@@ -1,4 +1,0 @@
-	    private String cleanXSS(String value) {
-	        // You'll need to remove the spaces from the html entities below
-	    	return SanitizeUtils.getSafeString(value);
-	    }

@@ -1,3 +1,0 @@
-	public void setRefSku(String refSku) {
-		this.refSku = refSku;
-	}

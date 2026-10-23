@@ -1,7 +1,0 @@
-	@Override
-	public void delete(TaxClass taxClass) throws ServiceException {
-		
-		TaxClass t = getById(taxClass.getId());
-		super.delete(t);
-		
-	}

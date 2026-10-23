@@ -1,4 +1,0 @@
-	public static Date getDate(String date) throws Exception {
-		DateFormat myDateFormat = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
-		return myDateFormat.parse(date);
-	}

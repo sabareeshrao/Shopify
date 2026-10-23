@@ -1,3 +1,0 @@
-  public LocalCacheManagerImpl(String rootName) {
-    this.rootName = rootName;
-  }

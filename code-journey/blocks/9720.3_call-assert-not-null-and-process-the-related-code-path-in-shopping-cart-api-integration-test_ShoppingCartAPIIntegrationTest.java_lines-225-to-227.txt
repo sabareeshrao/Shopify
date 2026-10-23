@@ -1,3 +1,0 @@
-        assertNotNull(response);
-        assertThat(response.getStatusCode(), is(OK));
-    }

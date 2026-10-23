@@ -1,5 +1,0 @@
-	
-	@Cacheable("countrByCode")
-	public Country getByCode(String code) throws ServiceException {
-		return countryRepository.findByIsoCode(code);
-	}

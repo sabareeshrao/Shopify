@@ -1,4 +1,0 @@
-        interface Checkout{
-            final static String checkout="checkout";
-            final static String confirmation="confirmation";
-        }

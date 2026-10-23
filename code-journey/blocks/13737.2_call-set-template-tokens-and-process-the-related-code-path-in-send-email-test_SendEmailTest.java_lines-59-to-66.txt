@@ -1,0 +1,8 @@
+      email.setTemplateTokens(templateTokens);
+
+      emailService.sendHtmlEmail(merchant, email);
+
+    
+  }
+
+

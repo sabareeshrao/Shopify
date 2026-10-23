@@ -1,5 +1,0 @@
-	@Override
-	public List<Product> listByStore(MerchantStore store) {
-
-		return productRepository.listByStore(store);
-	}

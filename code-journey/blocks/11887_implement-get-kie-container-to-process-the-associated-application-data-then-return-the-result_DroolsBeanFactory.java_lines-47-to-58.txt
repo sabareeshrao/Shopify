@@ -1,0 +1,12 @@
+    public KieContainer getKieContainer() throws IOException {
+        getKieRepository();
+
+        KieBuilder kb = kieServices.newKieBuilder(getKieFileSystem());
+        kb.buildAll();
+
+        KieModule kieModule = kb.getKieModule();
+
+        return kieServices.newKieContainer(kieModule.getReleaseId());
+
+    }
+

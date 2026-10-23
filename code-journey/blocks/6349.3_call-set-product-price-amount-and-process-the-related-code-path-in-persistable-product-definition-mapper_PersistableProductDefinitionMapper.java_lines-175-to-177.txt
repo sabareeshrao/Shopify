@@ -1,3 +1,0 @@
-			              p.setProductPriceAmount(source.getPrice());
-			              break;
-			            }

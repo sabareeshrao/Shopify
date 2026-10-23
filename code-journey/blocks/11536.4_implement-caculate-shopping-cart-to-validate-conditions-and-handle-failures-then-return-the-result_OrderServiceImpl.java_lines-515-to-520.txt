@@ -1,6 +1,0 @@
-        try {
-            return caculateShoppingCart(shoppingCart, null, store, language);
-        } catch (Exception e) {
-            LOGGER.error( "Error while calculating shopping cart total" +e );
-            throw new ServiceException(e);
-        }

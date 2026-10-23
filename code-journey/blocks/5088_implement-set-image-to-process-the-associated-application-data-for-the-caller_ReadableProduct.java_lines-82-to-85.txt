@@ -1,0 +1,4 @@
+	public void setImage(ReadableImage image) {
+		this.image = image;
+	}
+

@@ -1,5 +1,0 @@
-	@Override
-	public void update(String code, MerchantStore store, ProductType type) throws ServiceException {
-		productTypeRepository.save(type);
-
-	}

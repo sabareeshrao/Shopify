@@ -1,0 +1,4 @@
+	public ShippingType getShippingType() {
+		return shippingType;
+	}
+	

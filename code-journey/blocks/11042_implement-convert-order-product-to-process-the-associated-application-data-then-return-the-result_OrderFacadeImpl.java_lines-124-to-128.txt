@@ -1,5 +1,0 @@
-	private ReadableOrderProduct convertOrderProduct(OrderProduct product, MerchantStore store, Language language) {
-		
-		return readableOrderProductMapper.convert(product, store, language);
-		
-	}

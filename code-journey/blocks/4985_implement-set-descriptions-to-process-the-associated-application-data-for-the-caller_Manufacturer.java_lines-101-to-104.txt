@@ -1,0 +1,4 @@
+	public void setDescriptions(Set<ManufacturerDescription> descriptions) {
+		this.descriptions = descriptions;
+	}
+

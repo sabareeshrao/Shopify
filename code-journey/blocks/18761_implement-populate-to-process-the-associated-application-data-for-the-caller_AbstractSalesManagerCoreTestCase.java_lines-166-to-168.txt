@@ -1,3 +1,0 @@
-	private void populate() throws ServiceException {
-		initializationDatabase.populate(CONTEXT_LOAD_NAME);
-	}

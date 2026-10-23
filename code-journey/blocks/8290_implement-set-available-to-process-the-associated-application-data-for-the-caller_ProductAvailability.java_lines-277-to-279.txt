@@ -1,3 +1,0 @@
-	public void setAvailable(Boolean available) {
-		this.available = available;
-	}

@@ -1,4 +1,0 @@
-	@Override
-	public FinalPrice calculateProductPrice(Product product, List<ProductAttribute> attributes) throws ServiceException {
-		return priceUtil.getFinalPrice(product, attributes);
-	}

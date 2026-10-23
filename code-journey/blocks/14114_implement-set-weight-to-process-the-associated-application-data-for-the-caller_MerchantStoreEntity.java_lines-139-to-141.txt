@@ -1,3 +1,0 @@
-	public void setWeight(WeightUnit weight) {
-		this.weight = weight;
-	}

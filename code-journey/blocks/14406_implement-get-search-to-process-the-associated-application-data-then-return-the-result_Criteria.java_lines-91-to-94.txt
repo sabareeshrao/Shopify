@@ -1,0 +1,4 @@
+	public String getSearch() {
+		return search;
+	}
+

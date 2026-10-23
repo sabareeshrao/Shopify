@@ -1,6 +1,0 @@
-	@Resource(name="orderTotalsPostProcessors")
-	List<OrderTotalPostProcessorModule> orderTotalPostProcessors;
-	
-	@Inject
-	private ProductService productService;
-

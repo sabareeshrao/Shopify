@@ -1,0 +1,5 @@
+	@Override
+	public ProductType getByCode(String code, MerchantStore store, Language language) throws ServiceException {
+		return productTypeRepository.findByCode(code, store.getId());
+	}
+

@@ -1,0 +1,4 @@
+	public ProductOption getProductOption() {
+		return productOption;
+	}
+

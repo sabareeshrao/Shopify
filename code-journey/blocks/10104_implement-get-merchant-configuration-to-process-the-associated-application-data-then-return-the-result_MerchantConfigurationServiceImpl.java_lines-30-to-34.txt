@@ -1,0 +1,5 @@
+	@Override
+	public MerchantConfiguration getMerchantConfiguration(String key, MerchantStore store) throws ServiceException {
+		return merchantConfigurationRepository.findByMerchantStoreAndKey(store.getId(), key);
+	}
+	

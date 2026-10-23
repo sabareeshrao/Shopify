@@ -1,0 +1,7 @@
+	@Inject
+	public UserServiceImpl(UserRepository userRepository) {
+		super(userRepository);
+		this.userRepository = userRepository;
+
+	}
+

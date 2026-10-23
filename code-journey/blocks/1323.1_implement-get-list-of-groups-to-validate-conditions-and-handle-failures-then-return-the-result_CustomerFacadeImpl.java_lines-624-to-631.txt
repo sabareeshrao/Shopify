@@ -1,0 +1,8 @@
+  private List<Group> getListOfGroups(GroupType groupType) {
+    try{
+      return groupService.listGroup(groupType);
+    } catch (ServiceException e) {
+      throw new ServiceRuntimeException(e);
+    }
+
+  }

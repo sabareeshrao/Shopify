@@ -1,9 +1,0 @@
-	private void createSubReferences() throws ServiceException {
-		
-		LOGGER.info(String.format("%s : Loading catalog sub references ", name));
-		
-		
-		ProductType productType = new ProductType();
-		productType.setCode(ProductType.GENERAL_TYPE);
-		productTypeService.create(productType);
-

@@ -1,3 +1,0 @@
-	public void setCountByPage(int countByPage) {
-		this.countByPage = countByPage;
-	}

@@ -1,3 +1,0 @@
-	
-		return merchantRepository.getById(storeModel.getParent().getId());
-	}

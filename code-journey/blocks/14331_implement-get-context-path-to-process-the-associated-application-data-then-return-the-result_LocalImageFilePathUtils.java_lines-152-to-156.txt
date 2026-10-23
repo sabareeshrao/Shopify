@@ -1,0 +1,5 @@
+	@Override
+	public String getContextPath() {
+		return super.getProperties().getProperty(CONTEXT_PATH);
+	}
+	

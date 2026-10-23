@@ -1,0 +1,5 @@
+		categoryPopulator.populate(category, readableCategory, store, language);
+
+		return readableCategory;
+	}
+

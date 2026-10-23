@@ -1,0 +1,8 @@
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("An exception occured while creating a ProductPrice");
+		}
+		return productPrice.getId();
+	}
+
+

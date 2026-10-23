@@ -1,0 +1,5 @@
+	public void setDescription(ContentDescriptionEntity description) {
+		this.description = description;
+	}
+
+}

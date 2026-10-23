@@ -1,7 +1,0 @@
-
-			return trx;
-
-		} catch(Exception e) {
-			LOGGER.error("Error while getting transactions for order [" + orderId + "] and store code [" + store.getCode() + "]");
-			throw new ServiceRuntimeException("Error while getting transactions for order [" + orderId + "] and store code [" + store.getCode() + "]");
-		}

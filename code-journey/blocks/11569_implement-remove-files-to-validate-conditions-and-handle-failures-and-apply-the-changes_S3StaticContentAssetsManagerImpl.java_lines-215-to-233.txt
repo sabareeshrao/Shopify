@@ -1,0 +1,19 @@
+	@Override
+	public void removeFiles(String merchantStoreCode, Optional<String> folderPath) throws ServiceException {
+
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			final AmazonS3 s3 = s3Client();
+			s3.deleteObject(bucketName, nodePath(merchantStoreCode));
+
+			LOGGER.info("Remove folder");
+		} catch (final Exception e) {
+			LOGGER.error("Error while removing folder", e);
+			throw new ServiceException(e);
+
+		}
+
+	}
+

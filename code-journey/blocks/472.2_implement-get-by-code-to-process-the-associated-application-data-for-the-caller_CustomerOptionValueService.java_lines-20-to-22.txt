@@ -1,3 +1,0 @@
-
-	CustomerOptionValue getByCode(MerchantStore store, String optionValueCode);
-

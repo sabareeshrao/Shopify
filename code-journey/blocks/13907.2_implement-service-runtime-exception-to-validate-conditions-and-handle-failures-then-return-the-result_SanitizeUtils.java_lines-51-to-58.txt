@@ -1,0 +1,8 @@
+	        CleanResults cr = as.scan(value, policy);
+	        
+	        return cr.getCleanHTML();
+	        
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(e);
+		}
+

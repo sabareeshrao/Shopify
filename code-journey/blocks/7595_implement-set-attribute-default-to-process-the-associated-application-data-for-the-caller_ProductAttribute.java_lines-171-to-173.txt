@@ -1,3 +1,0 @@
-	public void setAttributeDefault(boolean attributeDefault) {
-		this.attributeDefault = attributeDefault;
-	}

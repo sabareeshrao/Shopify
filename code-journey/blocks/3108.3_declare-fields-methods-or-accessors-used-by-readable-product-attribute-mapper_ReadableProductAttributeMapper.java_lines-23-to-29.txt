@@ -1,0 +1,7 @@
+	@Autowired
+	private ReadableProductOptionValueMapper readableProductOptionValueMapper;
+
+	@Autowired
+	private PricingService pricingService;
+	
+

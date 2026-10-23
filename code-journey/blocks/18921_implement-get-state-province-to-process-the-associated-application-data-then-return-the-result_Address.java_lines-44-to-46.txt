@@ -1,3 +1,0 @@
-	public String getStateProvince() {
-		return stateProvince;
-	}

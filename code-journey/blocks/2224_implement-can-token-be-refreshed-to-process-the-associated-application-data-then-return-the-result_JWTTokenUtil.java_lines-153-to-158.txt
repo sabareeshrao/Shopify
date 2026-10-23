@@ -1,0 +1,6 @@
+	    public Boolean canTokenBeRefreshed(String token, Date lastPasswordReset) {
+	        final Date created = getIssuedAtDateFromToken(token);
+	        return !isCreatedBeforeLastPasswordReset(created, lastPasswordReset)
+	                && (!isTokenExpired(token) || ignoreTokenExpiration(token));
+	    }
+

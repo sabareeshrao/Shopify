@@ -1,6 +1,0 @@
-	@Override
-	public Page<ProductAvailability> getBySku(String sku, MerchantStore store, int page, int count) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Pageable pageRequest = PageRequest.of(page, count);
-		return pageableProductAvailabilityRepository.getBySku(sku, store.getCode(), pageRequest);
-	}

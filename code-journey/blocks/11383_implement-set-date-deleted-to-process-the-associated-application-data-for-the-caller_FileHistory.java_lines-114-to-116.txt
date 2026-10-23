@@ -1,3 +1,0 @@
-	public void setDateDeleted(Date dateDeleted) {
-		this.dateDeleted = CloneUtils.clone(dateDeleted);
-	}

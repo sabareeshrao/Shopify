@@ -1,3 +1,0 @@
-	@NotEmpty
-	private String comment;
-

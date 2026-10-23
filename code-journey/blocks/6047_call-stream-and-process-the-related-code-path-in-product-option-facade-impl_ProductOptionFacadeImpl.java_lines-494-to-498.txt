@@ -1,0 +1,5 @@
+		
+		return modelAttributes.stream().map(e -> codeEntity(e)).collect(Collectors.toList());
+
+	}
+	

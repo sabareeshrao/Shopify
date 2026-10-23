@@ -1,3 +1,0 @@
-	public void setCatalogs(List<ReadableCatalog> catalogs) {
-		this.catalogs = catalogs;
-	}

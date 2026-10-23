@@ -1,0 +1,4 @@
+    private SanitizeUtils() {
+        //Utility class
+    }
+    

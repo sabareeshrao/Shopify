@@ -1,0 +1,5 @@
+@Aspect
+@Configuration
+public class PersistableAuditAspect {
+	
+	

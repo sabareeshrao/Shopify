@@ -1,0 +1,8 @@
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		if ((realmName == null) || "".equals(realmName)) {
+			throw new IllegalArgumentException("realmName must be specified");
+		}
+		
+	}
+

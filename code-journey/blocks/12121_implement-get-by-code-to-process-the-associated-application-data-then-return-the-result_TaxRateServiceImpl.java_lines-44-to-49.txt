@@ -1,0 +1,6 @@
+	@Override
+	public TaxRate getByCode(String code, MerchantStore store)
+			throws ServiceException {
+		return taxRateRepository.findByStoreAndCode(store.getId(), code);
+	}
+	

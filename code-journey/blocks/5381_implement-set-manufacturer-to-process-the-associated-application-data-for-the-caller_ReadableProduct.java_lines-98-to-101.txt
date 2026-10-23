@@ -1,0 +1,4 @@
+	public void setManufacturer(ReadableManufacturer manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+

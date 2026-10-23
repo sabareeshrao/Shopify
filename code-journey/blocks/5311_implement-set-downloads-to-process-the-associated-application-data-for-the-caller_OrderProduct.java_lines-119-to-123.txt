@@ -1,0 +1,5 @@
+	public void setDownloads(Set<OrderProductDownload> downloads) {
+		this.downloads = downloads;
+	}
+
+

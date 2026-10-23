@@ -1,4 +1,0 @@
-		} catch(Exception e) {
-			throw new ServiceRuntimeException(
-					"An exception occured while saving product type",e);
-		}

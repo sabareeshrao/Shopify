@@ -1,0 +1,9 @@
+	@Override
+	public List<Product> getProductsForLocale(MerchantStore store, Set<Long> categoryIds, Language language,
+			Locale locale) {
+
+		ProductList products = this.getProductsListForLocale(store, categoryIds, language, locale, 0, -1);
+
+		return products.getProducts();
+	}
+

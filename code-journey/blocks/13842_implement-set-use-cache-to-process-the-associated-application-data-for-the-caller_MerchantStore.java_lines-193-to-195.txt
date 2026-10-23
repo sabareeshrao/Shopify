@@ -1,3 +1,0 @@
-	public void setUseCache(boolean useCache) {
-		this.useCache = useCache;
-	}

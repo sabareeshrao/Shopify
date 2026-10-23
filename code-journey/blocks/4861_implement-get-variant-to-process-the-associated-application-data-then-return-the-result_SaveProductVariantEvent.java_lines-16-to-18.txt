@@ -1,3 +1,0 @@
-	public ProductVariant getVariant() {
-		return variant;
-	}

@@ -1,3 +1,0 @@
-	public void addEntry(String key, String value) {
-		dataMap.put(key, value);
-	}

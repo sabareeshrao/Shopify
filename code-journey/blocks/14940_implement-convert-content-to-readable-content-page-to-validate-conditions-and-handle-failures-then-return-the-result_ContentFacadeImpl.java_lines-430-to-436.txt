@@ -1,7 +1,0 @@
-
-			return convertContentToReadableContentPage(store, language, content);
-
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while getting page " + e.getMessage(), e);
-		}
-	}

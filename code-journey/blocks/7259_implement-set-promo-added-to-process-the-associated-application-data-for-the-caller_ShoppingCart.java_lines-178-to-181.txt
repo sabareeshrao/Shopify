@@ -1,0 +1,4 @@
+	public void setPromoAdded(Date promoAdded) {
+		this.promoAdded = promoAdded;
+	}
+	

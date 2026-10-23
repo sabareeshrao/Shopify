@@ -1,3 +1,0 @@
-	public List<CustomerOptionValueDescription> getDescriptions() {
-		return descriptions;
-	}

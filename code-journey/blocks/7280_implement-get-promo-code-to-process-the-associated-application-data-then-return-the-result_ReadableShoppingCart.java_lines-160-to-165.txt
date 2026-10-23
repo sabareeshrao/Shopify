@@ -1,0 +1,6 @@
+	public String getPromoCode() {
+		return promoCode;
+	}
+
+
+

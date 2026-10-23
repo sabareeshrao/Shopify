@@ -1,0 +1,5 @@
+	private Category getCategoryById(Long id, Language language) {
+		return Optional.ofNullable(categoryService.getOneByLanguage(id, language))
+				.orElseThrow(() -> new ResourceNotFoundException("Category id [" + id + "] not found"));
+	}
+

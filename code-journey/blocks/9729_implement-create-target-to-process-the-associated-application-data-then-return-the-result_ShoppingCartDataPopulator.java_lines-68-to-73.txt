@@ -1,6 +1,0 @@
-    @Override
-    public ShoppingCartData createTarget()
-    {
-
-        return new ShoppingCartData();
-    }

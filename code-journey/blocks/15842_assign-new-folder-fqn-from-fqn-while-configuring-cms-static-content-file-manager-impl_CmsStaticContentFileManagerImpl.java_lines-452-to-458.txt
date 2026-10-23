@@ -1,7 +1,0 @@
-		
-		appender.append(Constants.SLASH).append(folderName);
-		
-		Fqn newFolderFqn = Fqn.fromString(appender.toString());
-		cacheManager.getTreeCache().getRoot().addChild(newFolderFqn);
-
-	}

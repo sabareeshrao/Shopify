@@ -1,0 +1,4 @@
+	public String getStorepostalcode() {
+		return storepostalcode;
+	}
+

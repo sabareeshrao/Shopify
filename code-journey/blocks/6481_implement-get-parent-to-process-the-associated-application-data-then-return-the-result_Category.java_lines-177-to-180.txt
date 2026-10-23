@@ -1,0 +1,4 @@
+    public Category getParent() {
+        return parent;
+    }
+

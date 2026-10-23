@@ -1,0 +1,14 @@
+	private ReadableTaxRateDescription convertDescription(TaxRateDescription desc) {
+		ReadableTaxRateDescription d = new ReadableTaxRateDescription();
+		d.setDescription(desc.getDescription());
+		d.setName(desc.getName());
+		d.setLanguage(desc.getLanguage().getCode());
+		d.setDescription(desc.getDescription());
+		d.setId(desc.getId());
+		d.setTitle(desc.getTitle());
+		return d;
+	}
+
+
+
+}

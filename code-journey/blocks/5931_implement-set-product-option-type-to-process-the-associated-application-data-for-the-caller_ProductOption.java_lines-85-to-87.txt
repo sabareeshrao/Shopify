@@ -1,3 +1,0 @@
-	public void setProductOptionType(String productOptionType) {
-		this.productOptionType = productOptionType;
-	}

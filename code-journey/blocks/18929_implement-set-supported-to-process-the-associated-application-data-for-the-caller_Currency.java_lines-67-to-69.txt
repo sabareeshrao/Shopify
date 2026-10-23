@@ -1,3 +1,0 @@
-	public void setSupported(Boolean supported) {
-		this.supported = supported;
-	}

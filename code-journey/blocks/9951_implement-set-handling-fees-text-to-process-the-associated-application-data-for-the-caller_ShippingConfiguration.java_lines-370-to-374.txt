@@ -1,0 +1,5 @@
+	public void setHandlingFeesText(String handlingFeesText) {
+		this.handlingFeesText = handlingFeesText;
+	}
+
+

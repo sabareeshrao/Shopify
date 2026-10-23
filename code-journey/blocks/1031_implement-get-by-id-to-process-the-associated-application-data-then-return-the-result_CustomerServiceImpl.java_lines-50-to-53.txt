@@ -1,4 +1,0 @@
-	@Override
-	public Customer getById(Long id) {
-			return customerRepository.findOne(id);		
-	}

@@ -1,0 +1,8 @@
+	@Override
+	public String getModuleCode() {
+		// TODO Auto-generated method stub
+		return MODULE_CODE;
+	}
+
+
+

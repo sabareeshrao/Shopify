@@ -1,3 +1,0 @@
-	public ReadableProductType getType() {
-		return type;
-	}

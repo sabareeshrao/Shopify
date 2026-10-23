@@ -1,0 +1,9 @@
+	@Override
+	public void optinCumtomer(CustomerOptin optin) throws ServiceException {
+		Validate.notNull(optin,"CustomerOptin must not be null");
+		
+		customerOptinRepository.save(optin);
+		
+
+	}
+

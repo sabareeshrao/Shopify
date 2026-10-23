@@ -1,3 +1,0 @@
-		contentModel.setId(content.getId());
-		return contentModel;
-	}

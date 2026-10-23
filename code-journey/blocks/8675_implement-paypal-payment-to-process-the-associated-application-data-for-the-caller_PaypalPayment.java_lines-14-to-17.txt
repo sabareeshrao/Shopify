@@ -1,0 +1,4 @@
+	public PaypalPayment() {
+		super.setPaymentType(PaymentType.PAYPAL);
+	}
+	

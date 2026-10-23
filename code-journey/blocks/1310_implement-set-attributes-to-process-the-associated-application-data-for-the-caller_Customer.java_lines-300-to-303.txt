@@ -1,0 +1,4 @@
+	public void setAttributes(Set<CustomerAttribute> attributes) {
+		this.attributes = attributes;
+	}
+

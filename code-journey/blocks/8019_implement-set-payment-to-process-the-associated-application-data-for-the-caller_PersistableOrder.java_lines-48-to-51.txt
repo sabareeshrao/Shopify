@@ -1,0 +1,4 @@
+	public void setPayment(PersistablePayment payment) {
+		this.payment = payment;
+	}
+

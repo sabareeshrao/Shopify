@@ -1,0 +1,4 @@
+	public void setFinalPrice(FinalPrice finalPrice) {
+		this.finalPrice = finalPrice;
+	}
+

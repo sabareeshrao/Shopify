@@ -1,5 +1,0 @@
-	public ServiceException(int exceptionType, String message, String messageCode) {
-		super(message);
-		this.messageCode = messageCode;
-		this.exceptionType = exceptionType;
-	}

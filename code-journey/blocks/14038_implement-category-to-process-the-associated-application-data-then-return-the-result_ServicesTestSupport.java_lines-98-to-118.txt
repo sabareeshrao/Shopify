@@ -1,0 +1,21 @@
+	protected PersistableCategory category(String code) {
+
+		PersistableCategory newCategory = new PersistableCategory();
+		newCategory.setCode(code);
+		newCategory.setSortOrder(1);
+		newCategory.setVisible(true);
+		newCategory.setDepth(1);
+
+		CategoryDescription description = new CategoryDescription();
+		description.setLanguage("en");
+		description.setName(code);
+
+		List<CategoryDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);
+
+		newCategory.setDescriptions(descriptions);
+
+		return newCategory;
+
+	}
+	

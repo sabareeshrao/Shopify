@@ -1,9 +1,0 @@
-
-		option.setLang(language.getCode());
-		option.setName(description.getName());
-		option.setCode(productAttribute.getProductOption().getCode());
-
-
-		return option;
-
-	}

@@ -1,3 +1,0 @@
-        interface Category{
-            final static String category="category";
-        }

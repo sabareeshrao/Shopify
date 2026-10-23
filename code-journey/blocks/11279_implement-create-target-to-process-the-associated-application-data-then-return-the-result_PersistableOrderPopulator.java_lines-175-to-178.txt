@@ -1,4 +1,0 @@
-	@Override
-	protected Order createTarget() {
-		return null;
-	}

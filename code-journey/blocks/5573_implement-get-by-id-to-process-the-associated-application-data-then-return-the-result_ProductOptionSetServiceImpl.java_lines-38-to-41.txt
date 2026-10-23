@@ -1,4 +1,0 @@
-	@Override
-	public ProductOptionSet getById(MerchantStore store, Long optionSetId, Language lang) {
-		return productOptionSetRepository.findOne(store.getId(), optionSetId, lang.getId());
-	}

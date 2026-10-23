@@ -1,6 +1,0 @@
-
-        try {
-            catalogEntryService.delete(entry);
-        } catch (ServiceException e) {
-            throw new ServiceRuntimeException("Exception while deleting catalogEntry", e);
-        }

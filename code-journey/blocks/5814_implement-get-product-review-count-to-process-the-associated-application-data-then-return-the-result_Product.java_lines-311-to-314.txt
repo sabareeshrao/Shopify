@@ -1,0 +1,4 @@
+	public Integer getProductReviewCount() {
+		return productReviewCount;
+	}
+

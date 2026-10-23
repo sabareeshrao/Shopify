@@ -1,0 +1,9 @@
+		
+		try {
+			productVariantService.delete(instanceModel.get());
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot delete product instance [" + productVariant + "]  for store [" + store.getCode() + "] and productId [" + productId + "]", e);
+		}
+
+	}
+

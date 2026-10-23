@@ -1,0 +1,5 @@
+	@Override
+	public void removeFiles(String merchantStoreCode, Optional<String> path) throws ServiceException {
+		removeFile.removeFiles(merchantStoreCode, path);
+	}
+

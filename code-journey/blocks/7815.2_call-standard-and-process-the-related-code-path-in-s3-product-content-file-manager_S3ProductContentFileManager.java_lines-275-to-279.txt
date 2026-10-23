@@ -1,5 +1,0 @@
-    return AmazonS3ClientBuilder.standard().withRegion(regionName()) // The first region to
-                                                                            // try your request
-                                                                            // against
-        .build();
-  }

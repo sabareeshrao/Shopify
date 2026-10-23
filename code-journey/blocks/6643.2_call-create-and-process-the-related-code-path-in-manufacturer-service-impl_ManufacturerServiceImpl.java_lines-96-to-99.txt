@@ -1,4 +1,0 @@
-    } else {
-      super.create(manufacturer);
-
-    }

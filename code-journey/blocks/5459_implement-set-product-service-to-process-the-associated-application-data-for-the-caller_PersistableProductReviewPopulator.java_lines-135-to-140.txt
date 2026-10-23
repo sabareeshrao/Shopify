@@ -1,0 +1,6 @@
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
+	}
+
+
+}

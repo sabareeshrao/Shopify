@@ -1,0 +1,9 @@
+  public static VendorCacheManager getInstance() {
+    if (vendorCacheManager == null) {
+      vendorCacheManager = new VendorCacheManager();
+
+    }
+    return vendorCacheManager;
+  }
+
+

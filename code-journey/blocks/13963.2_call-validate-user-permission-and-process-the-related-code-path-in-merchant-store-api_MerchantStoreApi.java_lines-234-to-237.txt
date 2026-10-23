@@ -1,4 +1,0 @@
-		validateUserPermission(userName, code);
-		store.setCode(code);
-		storeFacade.update(store);
-	}

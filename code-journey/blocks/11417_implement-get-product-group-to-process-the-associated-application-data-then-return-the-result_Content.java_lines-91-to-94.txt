@@ -1,0 +1,4 @@
+	public String getProductGroup() {
+		return productGroup;
+	}
+

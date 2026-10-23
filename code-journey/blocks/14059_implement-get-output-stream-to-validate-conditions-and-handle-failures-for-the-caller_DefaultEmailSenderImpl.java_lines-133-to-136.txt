@@ -1,0 +1,4 @@
+          public OutputStream getOutputStream() throws IOException {
+            throw new IOException("Read-only data");
+          }
+

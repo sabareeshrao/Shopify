@@ -1,0 +1,6 @@
+	@Override
+	public String getCode() {
+		// TODO Auto-generated method stub
+		return code;
+	}
+

@@ -1,3 +1,0 @@
-	public void setStore(MerchantStore store) {
-		this.store = store;
-	}

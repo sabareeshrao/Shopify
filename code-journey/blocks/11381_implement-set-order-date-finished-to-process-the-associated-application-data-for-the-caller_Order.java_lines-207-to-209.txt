@@ -1,3 +1,0 @@
-	public void setOrderDateFinished(Date orderDateFinished) {
-		this.orderDateFinished = CloneUtils.clone(orderDateFinished);
-	}

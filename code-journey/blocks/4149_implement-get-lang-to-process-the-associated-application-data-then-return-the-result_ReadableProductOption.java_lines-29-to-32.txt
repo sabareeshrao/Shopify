@@ -1,0 +1,4 @@
+	public String getLang() {
+		return lang;
+	}
+

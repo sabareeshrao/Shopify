@@ -1,5 +1,0 @@
-	/**
-	 * Flushe la session.
-	 */
-	void flush();
-	

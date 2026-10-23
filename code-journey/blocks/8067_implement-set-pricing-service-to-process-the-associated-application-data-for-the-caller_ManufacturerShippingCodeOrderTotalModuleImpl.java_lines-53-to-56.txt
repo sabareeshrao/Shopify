@@ -1,0 +1,4 @@
+	public void setPricingService(PricingService pricingService) {
+		this.pricingService = pricingService;
+	}
+

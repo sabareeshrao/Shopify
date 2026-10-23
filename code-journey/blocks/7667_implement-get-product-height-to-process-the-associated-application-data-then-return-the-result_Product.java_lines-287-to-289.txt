@@ -1,3 +1,0 @@
-	public BigDecimal getProductHeight() {
-		return productHeight;
-	}

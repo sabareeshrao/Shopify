@@ -1,4 +1,0 @@
-	@Override
-	public Category getById(MerchantStore store, Long id) throws ServiceException {
-		return categoryRepository.findById(id, store.getCode());
-	}

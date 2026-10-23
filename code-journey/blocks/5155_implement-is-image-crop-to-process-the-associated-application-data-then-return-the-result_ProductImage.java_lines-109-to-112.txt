@@ -1,0 +1,4 @@
+	public boolean isImageCrop() {
+		return imageCrop;
+	}
+

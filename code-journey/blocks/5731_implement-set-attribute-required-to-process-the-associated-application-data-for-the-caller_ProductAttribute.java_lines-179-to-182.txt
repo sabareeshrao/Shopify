@@ -1,0 +1,4 @@
+	public void setAttributeRequired(boolean attributeRequired) {
+		this.attributeRequired = attributeRequired;
+	}
+

@@ -1,3 +1,0 @@
-
-		return named_bucket;
-	}

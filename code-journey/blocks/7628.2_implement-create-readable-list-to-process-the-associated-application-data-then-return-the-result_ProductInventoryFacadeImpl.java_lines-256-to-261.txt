@@ -1,6 +1,0 @@
-		List<ReadableInventory> returnList = availabilities.getContent().stream().map(i -> this.readableInventoryMapper.convert(i, store, language))
-				.collect(Collectors.toList());
-
-		return createReadableList(availabilities, returnList);
-
-	}

@@ -1,3 +1,0 @@
-	public List<BoxConfiguration> getBoxConfigurations() {
-		return boxConfigurations;
-	}

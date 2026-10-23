@@ -1,4 +1,0 @@
-	@Override
-	public List<Category> getListByDepth(MerchantStore store, int depth) {
-		return categoryRepository.findByDepth(store.getId(), depth);
-	}

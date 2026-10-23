@@ -1,0 +1,4 @@
+	public void setCondition(ProductCondition condition) {
+		this.condition = condition;
+	}
+

@@ -1,3 +1,0 @@
-	public void setImages(Set<ProductImage> images) {
-		this.images = images;
-	}

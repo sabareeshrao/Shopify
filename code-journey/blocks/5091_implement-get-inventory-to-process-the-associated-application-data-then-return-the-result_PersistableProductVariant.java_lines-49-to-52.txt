@@ -1,0 +1,4 @@
+	public PersistableProductInventory getInventory() {
+		return inventory;
+	}
+

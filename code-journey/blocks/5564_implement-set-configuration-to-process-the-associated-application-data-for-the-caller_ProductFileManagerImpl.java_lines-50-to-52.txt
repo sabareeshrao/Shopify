@@ -1,3 +1,0 @@
-  public void setConfiguration(CoreConfiguration configuration) {
-    this.configuration = configuration;
-  }

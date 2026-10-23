@@ -1,3 +1,0 @@
-	public void setFileContentType(FileContentType fileContentType) {
-		this.fileContentType = fileContentType;
-	}

@@ -1,4 +1,0 @@
-			return category;
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while updating category", e);
-		}

@@ -1,6 +1,0 @@
-			configuration.setValue(configurationValue);
-			merchantConfigurationService.saveOrUpdate(configuration);
-		
-		} catch (Exception e) {
-			throw new IntegrationException(e);
-		}

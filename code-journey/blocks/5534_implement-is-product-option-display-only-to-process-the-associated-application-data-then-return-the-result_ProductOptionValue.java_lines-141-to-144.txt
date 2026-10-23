@@ -1,0 +1,4 @@
+	public boolean isProductOptionDisplayOnly() {
+		return productOptionDisplayOnly;
+	}
+

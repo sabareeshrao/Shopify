@@ -1,9 +1,0 @@
-	private com.salesmanager.shop.model.order.total.OrderTotal createTotal(OrderTotal t) {
-		com.salesmanager.shop.model.order.total.OrderTotal totalTotal = new com.salesmanager.shop.model.order.total.OrderTotal();
-		totalTotal.setCode(t.getOrderTotalCode());
-		totalTotal.setId(t.getId());
-		totalTotal.setModule(t.getModule());
-		totalTotal.setOrder(t.getSortOrder());
-		totalTotal.setValue(t.getValue());
-		return totalTotal;
-	}

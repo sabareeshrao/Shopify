@@ -1,0 +1,7 @@
+	private ReadablePermission convertPermissionToReadablePermission(Permission permission) {
+		ReadablePermission readablePermission = new ReadablePermission();
+		readablePermission.setId(permission.getId());
+		readablePermission.setName(permission.getPermissionName());
+		return readablePermission;
+	}
+

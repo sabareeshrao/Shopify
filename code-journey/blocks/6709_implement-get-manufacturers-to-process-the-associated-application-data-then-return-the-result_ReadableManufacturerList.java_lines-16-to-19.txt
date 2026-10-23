@@ -1,0 +1,4 @@
+  public List<ReadableManufacturer> getManufacturers() {
+    return manufacturers;
+  }
+

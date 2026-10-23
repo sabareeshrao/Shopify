@@ -1,0 +1,4 @@
+	public void setSeizeunitcode(String seizeunitcode) {
+		this.seizeunitcode = seizeunitcode;
+	}
+

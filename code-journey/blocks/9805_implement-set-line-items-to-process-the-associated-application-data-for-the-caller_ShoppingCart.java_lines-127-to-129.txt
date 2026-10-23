@@ -1,3 +1,0 @@
-	public void setLineItems(Set<ShoppingCartItem> lineItems) {
-		this.lineItems = lineItems;
-	}

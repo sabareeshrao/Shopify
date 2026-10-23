@@ -1,0 +1,5 @@
+	@Override
+	public List<Category> getListByDepthFilterByFeatured(MerchantStore store, int depth, Language language) {
+		return categoryRepository.findByDepthFilterByFeatured(store.getId(), depth, language.getId());
+	}
+

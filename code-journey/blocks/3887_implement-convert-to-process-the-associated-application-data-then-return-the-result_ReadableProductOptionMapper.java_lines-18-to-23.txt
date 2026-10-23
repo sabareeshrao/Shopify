@@ -1,6 +1,0 @@
-  @Override
-  public ReadableProductOptionEntity convert(ProductOption source, MerchantStore store,
-      Language language) {
-    ReadableProductOptionEntity destination = new ReadableProductOptionEntity();
-    return merge(source, destination, store, language);
-  }

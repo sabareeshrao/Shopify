@@ -1,0 +1,5 @@
+	public String buildAdminUri(MerchantStore store, HttpServletRequest request) {
+		String baseUrl = buildBaseUrl(request, store);
+		return baseUrl + ADMIN_URI;
+	}
+

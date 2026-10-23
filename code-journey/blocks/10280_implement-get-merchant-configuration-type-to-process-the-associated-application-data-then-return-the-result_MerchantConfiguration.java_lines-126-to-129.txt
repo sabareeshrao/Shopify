@@ -1,0 +1,4 @@
+  public MerchantConfigurationType getMerchantConfigurationType() {
+    return merchantConfigurationType;
+  }
+

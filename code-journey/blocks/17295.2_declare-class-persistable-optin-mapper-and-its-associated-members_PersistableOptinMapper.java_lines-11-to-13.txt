@@ -1,3 +1,0 @@
-@Component
-public class PersistableOptinMapper implements Mapper<PersistableOptin, Optin> {
-

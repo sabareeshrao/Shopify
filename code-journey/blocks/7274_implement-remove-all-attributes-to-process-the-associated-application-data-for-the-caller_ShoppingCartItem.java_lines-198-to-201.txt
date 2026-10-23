@@ -1,0 +1,4 @@
+	public void removeAllAttributes(){
+		this.attributes.removeAll(Collections.EMPTY_SET);
+	}
+

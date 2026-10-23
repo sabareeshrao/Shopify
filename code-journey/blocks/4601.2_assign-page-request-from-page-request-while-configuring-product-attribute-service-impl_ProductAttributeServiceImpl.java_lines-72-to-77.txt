@@ -1,0 +1,6 @@
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableProductAttributeRepository.findByProductId(store.getId(), product.getId(), language.getId(),
+				pageRequest);
+
+	}
+

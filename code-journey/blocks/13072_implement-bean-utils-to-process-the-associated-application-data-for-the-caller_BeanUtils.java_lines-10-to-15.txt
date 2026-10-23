@@ -1,0 +1,6 @@
+public class BeanUtils
+{
+ private BeanUtils(){
+        
+    }
+    

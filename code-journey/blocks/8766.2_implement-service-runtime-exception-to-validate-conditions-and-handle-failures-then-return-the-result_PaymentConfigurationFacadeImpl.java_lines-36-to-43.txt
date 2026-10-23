@@ -1,0 +1,8 @@
+					.map(m -> configuration(m.getInformations(), store)).collect(Collectors.toList());
+			return configurations;
+			
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while getting payment configurations",e);
+		}
+
+	}

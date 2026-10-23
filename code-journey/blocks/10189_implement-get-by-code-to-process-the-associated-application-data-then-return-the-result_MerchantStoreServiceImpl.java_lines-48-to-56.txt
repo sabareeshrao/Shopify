@@ -1,0 +1,9 @@
+	@Override
+	/**
+	 * cache moved in facades
+	 */
+	//@Cacheable(value = "store")
+	public MerchantStore getByCode(String code) throws ServiceException {
+		return merchantRepository.findByCode(code);
+	}
+

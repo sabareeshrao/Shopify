@@ -1,3 +1,0 @@
-  public List<CategoryDescription> getDescriptions() {
-    return descriptions;
-  }

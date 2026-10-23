@@ -1,0 +1,4 @@
+  public void setDescriptons(List<ZoneDescription> descriptions) {
+    this.descriptions = descriptions;
+  }
+

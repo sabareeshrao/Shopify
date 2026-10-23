@@ -1,3 +1,0 @@
-	public void setValue(Long value) {
-		this.value = value;
-	}

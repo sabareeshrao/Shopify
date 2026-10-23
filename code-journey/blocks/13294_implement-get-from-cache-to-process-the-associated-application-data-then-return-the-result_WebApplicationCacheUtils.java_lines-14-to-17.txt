@@ -1,0 +1,4 @@
+	public Object getFromCache(String key) throws Exception {
+		return cache.getFromCache(key);
+	}
+	

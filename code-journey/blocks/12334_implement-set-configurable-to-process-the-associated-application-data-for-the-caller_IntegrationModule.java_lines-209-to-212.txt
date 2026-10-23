@@ -1,0 +1,4 @@
+	public void setConfigurable(String configurable) {
+		this.configurable = configurable;
+	}
+

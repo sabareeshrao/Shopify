@@ -1,3 +1,0 @@
-							productImageService.save(image);
-							newImageIds.add(image.getId());
-						}

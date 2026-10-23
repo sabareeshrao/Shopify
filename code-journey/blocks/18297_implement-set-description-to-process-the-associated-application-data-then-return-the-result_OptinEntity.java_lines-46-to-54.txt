@@ -1,9 +1,0 @@
-	public void setDescription(String description) {
-		this.description = description;
-	}
-  public String getOptinType() {
-    return optinType;
-  }
-  public void setOptinType(String optinType) {
-    this.optinType = optinType;
-  }

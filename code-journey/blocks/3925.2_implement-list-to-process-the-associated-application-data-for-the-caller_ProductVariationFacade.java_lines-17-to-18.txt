@@ -1,2 +1,0 @@
-	ReadableEntityList<ReadableProductVariation> list(MerchantStore store, Language language, int page, int count);
-	

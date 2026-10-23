@@ -1,0 +1,8 @@
+
+		try {
+			return shoppingCartService.populateShoppingCartItem(product, store);
+		} catch (ServiceException e) {
+			throw new ConversionException(e);
+		}
+
+	}

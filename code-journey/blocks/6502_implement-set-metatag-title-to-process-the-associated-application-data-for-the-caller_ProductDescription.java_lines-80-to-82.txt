@@ -1,3 +1,0 @@
-	public void setMetatagTitle(String metatagTitle) {
-		this.metatagTitle = metatagTitle;
-	}

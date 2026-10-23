@@ -1,0 +1,4 @@
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
+	}
+

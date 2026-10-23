@@ -1,0 +1,4 @@
+	public String getZone() {
+		return zone;
+	}
+

@@ -1,9 +1,0 @@
-  }
-
-  @PostConstruct
-  void init() {
-
-    this.rootName = cacheManager.getRootName();
-    LOGGER.info("init " + getClass().getName() + " setting root" + this.rootName);
-
-  }

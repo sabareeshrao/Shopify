@@ -1,5 +1,0 @@
-		destination.setMerchantStore(store);
-		destination.setTitle(source.getName());
-		
-		return destination;
-	}

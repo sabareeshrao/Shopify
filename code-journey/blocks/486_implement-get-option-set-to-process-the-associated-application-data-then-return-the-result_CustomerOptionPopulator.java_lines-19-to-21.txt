@@ -1,3 +1,0 @@
-	public CustomerOptionSet getOptionSet() {
-		return optionSet;
-	}

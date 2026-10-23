@@ -1,3 +1,0 @@
-  public ConversionRuntimeException(Throwable exception) {
-    super(exception);
-  }

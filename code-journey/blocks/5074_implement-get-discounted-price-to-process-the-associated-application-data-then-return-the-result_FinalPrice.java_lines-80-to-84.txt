@@ -1,0 +1,5 @@
+	public BigDecimal getDiscountedPrice() {
+		return discountedPrice;
+	}
+
+

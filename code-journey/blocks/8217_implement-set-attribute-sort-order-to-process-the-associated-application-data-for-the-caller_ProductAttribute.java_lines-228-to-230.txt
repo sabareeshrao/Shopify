@@ -1,3 +1,0 @@
-	public void setAttributeSortOrder(String attributeSortOrder) {
-		this.attributeSortOrder = attributeSortOrder;
-	}

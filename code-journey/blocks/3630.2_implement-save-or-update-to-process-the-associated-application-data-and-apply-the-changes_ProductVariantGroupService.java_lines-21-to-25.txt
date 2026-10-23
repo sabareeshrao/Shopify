@@ -1,0 +1,5 @@
+
+	ProductVariantGroup saveOrUpdate(ProductVariantGroup entity) throws ServiceException;
+	
+	
+}

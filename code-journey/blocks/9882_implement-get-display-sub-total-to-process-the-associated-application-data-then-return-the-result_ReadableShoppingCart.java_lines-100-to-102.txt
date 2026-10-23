@@ -1,3 +1,0 @@
-	public String getDisplaySubTotal() {
-		return displaySubTotal;
-	}

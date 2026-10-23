@@ -1,5 +1,0 @@
-
-			userService.delete(user);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Cannot find user [" + id + "]", e);
-		}

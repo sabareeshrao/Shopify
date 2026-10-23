@@ -1,0 +1,13 @@
+	private ReadableMerchantStore store(MerchantStore store, Language language) throws ConversionException {
+		if (language == null) {
+			language = store.getDefaultLanguage();
+		}
+		/*
+		 * ReadableMerchantStorePopulator populator = new
+		 * ReadableMerchantStorePopulator();
+		 * populator.setCountryService(countryService);
+		 * populator.setZoneService(zoneService);
+		 */
+		return readableMerchantStorePopulator.populate(store, new ReadableMerchantStore(), store, language);
+	}
+

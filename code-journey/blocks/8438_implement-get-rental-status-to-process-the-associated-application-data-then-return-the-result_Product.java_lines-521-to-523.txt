@@ -1,3 +1,0 @@
-	public RentalStatus getRentalStatus() {
-		return rentalStatus;
-	}

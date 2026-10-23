@@ -1,0 +1,8 @@
+			quote.setShippingOption(q.getOptionName());
+			quote.setShippingOptionCode(q.getOptionCode());
+			quote.setHandling(q.getHandling());
+			
+			if(shippingService.hasTaxOnShipping(store)) {
+				quote.setTaxOnShipping(true);
+			}
+			

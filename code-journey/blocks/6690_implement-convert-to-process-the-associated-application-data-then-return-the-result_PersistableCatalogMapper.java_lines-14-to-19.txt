@@ -1,0 +1,6 @@
+	@Override
+	public Catalog convert(PersistableCatalog source, MerchantStore store, Language language) {
+		Catalog c = new Catalog();
+		return this.merge(source, c, store, language);
+	}
+

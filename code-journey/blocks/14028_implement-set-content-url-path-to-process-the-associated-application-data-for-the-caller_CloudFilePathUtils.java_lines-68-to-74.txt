@@ -1,0 +1,7 @@
+	@Override
+	public void setContentUrlPath(String contentUrl) {
+		this.contentUrl = contentUrl;
+		
+	}
+
+}

@@ -1,3 +1,0 @@
-	public void setShippingPriceRule(StatelessKnowledgeSession shippingPriceRule) {
-		this.shippingPriceRule = shippingPriceRule;
-	}

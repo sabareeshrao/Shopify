@@ -1,3 +1,0 @@
-  public Map<String, List<String>> getIntegrationOptions() {
-    return integrationOptions;
-  }

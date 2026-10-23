@@ -1,0 +1,8 @@
+        interface Error {
+        	final static String accessDenied = "accessDenied";
+        	final static String error = "error";
+        }
+        
+
+        
+    }

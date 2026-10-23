@@ -1,3 +1,0 @@
-	public void update(E entity) throws ServiceException {
-		save(entity);
-	}

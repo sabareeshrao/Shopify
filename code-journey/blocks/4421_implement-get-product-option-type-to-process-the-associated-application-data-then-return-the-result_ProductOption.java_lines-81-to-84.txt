@@ -1,0 +1,4 @@
+	public String getProductOptionType() {
+		return productOptionType;
+	}
+

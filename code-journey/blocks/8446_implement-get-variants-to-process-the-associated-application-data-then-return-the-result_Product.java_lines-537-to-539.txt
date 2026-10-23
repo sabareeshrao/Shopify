@@ -1,3 +1,0 @@
-	public Set<ProductVariant> getVariants() {
-		return variants;
-	}

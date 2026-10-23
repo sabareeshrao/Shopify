@@ -1,9 +1,0 @@
-	public void setComments(String comments) {
-		this.comments = comments;
-	}
-	public List<OrderAttribute> getAttributes() {
-		return attributes;
-	}
-	public void setAttributes(List<OrderAttribute> attributes) {
-		this.attributes = attributes;
-	}

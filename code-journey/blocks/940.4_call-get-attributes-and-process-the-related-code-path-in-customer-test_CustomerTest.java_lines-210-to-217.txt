@@ -1,0 +1,8 @@
+		
+		customer.getAttributes().add(customerAttributeMailingList);
+		
+		customerService.save(customer);
+		
+		customerService.delete(customer);
+		
+

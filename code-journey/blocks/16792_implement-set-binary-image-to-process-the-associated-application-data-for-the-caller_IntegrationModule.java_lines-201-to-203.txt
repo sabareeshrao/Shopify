@@ -1,3 +1,0 @@
-	public void setBinaryImage(String binaryImage) {
-		this.binaryImage = binaryImage;
-	}

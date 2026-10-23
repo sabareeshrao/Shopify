@@ -1,0 +1,6 @@
+	public void setCurrencyService(CurrencyService currencyService) {
+		this.currencyService = currencyService;
+	}
+
+
+}

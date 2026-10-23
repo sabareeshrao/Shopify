@@ -1,0 +1,4 @@
+	public void setCustomModule(boolean customModule) {
+		this.customModule = customModule;
+	}
+

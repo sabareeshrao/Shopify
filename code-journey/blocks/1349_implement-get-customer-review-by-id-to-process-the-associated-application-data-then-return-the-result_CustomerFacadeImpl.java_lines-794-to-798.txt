@@ -1,0 +1,5 @@
+  private CustomerReview getCustomerReviewById(Long reviewId) {
+    return Optional.ofNullable(customerReviewService.getById(reviewId))
+        .orElseThrow(() -> new ResourceNotFoundException("Customer review with id " + reviewId + " does not exist"));
+  }
+

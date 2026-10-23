@@ -1,0 +1,8 @@
+
+		Customer customer = customer(order.getCustomer(), store, language);
+
+		OrderTotalSummary summary = this.calculateOrderTotal(store, customer, order, language);
+
+		return summary;
+	}
+

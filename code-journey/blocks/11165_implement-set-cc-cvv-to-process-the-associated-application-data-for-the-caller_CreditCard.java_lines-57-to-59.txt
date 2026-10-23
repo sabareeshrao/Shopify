@@ -1,3 +1,0 @@
-	public void setCcCvv(String ccCvv) {
-		this.ccCvv = ccCvv;
-	}

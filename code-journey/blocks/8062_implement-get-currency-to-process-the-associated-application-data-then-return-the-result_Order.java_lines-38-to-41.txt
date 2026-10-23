@@ -1,0 +1,4 @@
+	public String getCurrency() {
+		return currency;
+	}
+

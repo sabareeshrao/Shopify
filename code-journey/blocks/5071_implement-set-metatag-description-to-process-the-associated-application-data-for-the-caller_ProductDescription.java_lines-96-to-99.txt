@@ -1,0 +1,4 @@
+	public void setMetatagDescription(String metatagDescription) {
+		this.metatagDescription = metatagDescription;
+	}
+

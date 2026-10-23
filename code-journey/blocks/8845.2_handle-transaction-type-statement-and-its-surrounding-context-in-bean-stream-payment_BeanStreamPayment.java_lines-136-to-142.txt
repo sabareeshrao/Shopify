@@ -1,0 +1,7 @@
+				TransactionType.AUTHORIZECAPTURE,
+				amount,
+				payment,
+				configuration,
+				module);
+	}
+

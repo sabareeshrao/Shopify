@@ -1,0 +1,8 @@
+			orderService.addOrderStatusHistory(order, history);
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("An error occured while converting orderstatushistory", e);
+		}
+
+	}
+

@@ -1,0 +1,5 @@
+    public Category(MerchantStore store) {
+        this.merchantStore = store;
+        this.id = 0L;
+    }
+    

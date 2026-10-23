@@ -1,0 +1,4 @@
+	public Date getOrderDateFinished() {
+		return CloneUtils.clone(orderDateFinished);
+	}
+

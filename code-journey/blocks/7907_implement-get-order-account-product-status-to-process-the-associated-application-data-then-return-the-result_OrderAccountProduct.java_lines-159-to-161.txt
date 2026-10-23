@@ -1,3 +1,0 @@
-	public Integer getOrderAccountProductStatus() {
-		return orderAccountProductStatus;
-	}

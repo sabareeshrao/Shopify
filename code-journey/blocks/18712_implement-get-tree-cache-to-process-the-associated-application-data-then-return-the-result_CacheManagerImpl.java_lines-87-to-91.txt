@@ -1,5 +1,0 @@
-
-  @SuppressWarnings("rawtypes")
-  public TreeCache getTreeCache() {
-    return treeCache;
-  }

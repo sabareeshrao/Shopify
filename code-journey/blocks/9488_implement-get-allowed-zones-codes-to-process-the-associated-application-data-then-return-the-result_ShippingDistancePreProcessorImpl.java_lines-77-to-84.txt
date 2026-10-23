@@ -1,0 +1,8 @@
+	public List<String> getAllowedZonesCodes() {
+		return allowedZonesCodes;
+	}
+
+
+
+
+

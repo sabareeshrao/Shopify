@@ -1,3 +1,0 @@
-	public Long getProductAttributeId() {
-		return productAttributeId;
-	}

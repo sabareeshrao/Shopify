@@ -1,0 +1,8 @@
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		boolean exists = contentFacade.codeExist(code, BOX, merchantStore);
+		EntityExists entity = new EntityExists(exists);
+		return entity;
+	}
+	

@@ -1,0 +1,9 @@
+	private List<MerchantConfiguration> getMergeConfigurationsByStore(MerchantConfigurationType configurationType,
+			MerchantStore mStore) {
+		try {
+			return merchantConfigurationService.listByType(configurationType, mStore);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error wile getting merchantConfigurations " + e.getMessage());
+		}
+	}
+

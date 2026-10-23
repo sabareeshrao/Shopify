@@ -1,0 +1,6 @@
+	public void setRelatedProduct(Product relatedProduct) {
+		this.relatedProduct = relatedProduct;
+	}
+
+
+

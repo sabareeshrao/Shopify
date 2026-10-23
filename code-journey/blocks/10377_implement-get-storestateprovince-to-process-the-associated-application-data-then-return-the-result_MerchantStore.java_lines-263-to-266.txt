@@ -1,0 +1,4 @@
+	public String getStorestateprovince() {
+		return storestateprovince;
+	}
+

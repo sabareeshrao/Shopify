@@ -1,6 +1,0 @@
-  private ReadableMarketPlace createReadableMarketPlace(ReadableMerchantStore readableStore) {
-    //TODO add info from Entity
-    ReadableMarketPlace marketPlace = new ReadableMarketPlace();
-    marketPlace.setStore(readableStore);
-    return marketPlace;
-  }

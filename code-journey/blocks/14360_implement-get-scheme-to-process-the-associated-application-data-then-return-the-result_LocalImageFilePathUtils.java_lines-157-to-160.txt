@@ -1,0 +1,4 @@
+	private String getScheme(MerchantStore store, String derivedHost) {
+		return store.getDomainName() != null ? store.getDomainName():derivedHost;
+	}
+

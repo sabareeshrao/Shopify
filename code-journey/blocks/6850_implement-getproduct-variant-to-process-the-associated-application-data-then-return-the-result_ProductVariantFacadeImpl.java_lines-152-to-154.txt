@@ -1,3 +1,0 @@
-	private Optional<ProductVariant> getproductVariant(Long id, Long productId, MerchantStore store) {
-		return productVariantService.getById(id, productId, store);
-	}

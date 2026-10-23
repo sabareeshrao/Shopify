@@ -1,0 +1,4 @@
+	public long getRecordsTotal() {
+		return recordsTotal;
+	}
+

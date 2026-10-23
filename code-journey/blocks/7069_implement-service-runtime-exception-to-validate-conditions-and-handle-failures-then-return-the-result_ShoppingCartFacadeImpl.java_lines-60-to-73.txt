@@ -1,0 +1,14 @@
+			
+		   ReadableShoppingCart readableCart = shoppingCartFacade.readableCart(cartModel, store, language);
+		   
+		   return readableCart;
+
+		} catch (Exception e) {
+			
+			throw new ServiceRuntimeException(e);
+
+		}
+
+	}
+
+}

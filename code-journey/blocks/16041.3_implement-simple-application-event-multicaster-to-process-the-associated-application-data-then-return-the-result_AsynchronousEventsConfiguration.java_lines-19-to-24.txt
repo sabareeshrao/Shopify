@@ -1,6 +1,0 @@
-	       SimpleApplicationEventMulticaster eventMulticaster
-	         = new SimpleApplicationEventMulticaster();
-	        
-	       eventMulticaster.setTaskExecutor(new SimpleAsyncTaskExecutor());
-	       return eventMulticaster;
-	   }

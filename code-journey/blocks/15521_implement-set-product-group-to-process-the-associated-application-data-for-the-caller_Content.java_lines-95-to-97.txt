@@ -1,3 +1,0 @@
-	public void setProductGroup(String productGroup) {
-		this.productGroup = productGroup;
-	}

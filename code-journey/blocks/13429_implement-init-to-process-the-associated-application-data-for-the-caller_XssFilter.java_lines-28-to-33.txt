@@ -1,0 +1,6 @@
+	 @Override
+	 public void init(FilterConfig filterConfig) throws ServletException {
+	  LOGGER.debug("(XssFilter) initialize");
+	 }
+
+	 

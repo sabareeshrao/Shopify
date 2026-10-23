@@ -1,3 +1,0 @@
-			super(customerOptionValueRepository);
-			this.customerOptionValueRepository = customerOptionValueRepository;
-	}

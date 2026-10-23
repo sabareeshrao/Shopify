@@ -1,7 +1,0 @@
-		final byte[] fileBytes = new byte[(int) imgPath.length()];
-		inputStream.read(fileBytes);
-		inputStream.close();
-
-		return fileBytes;
-
-	}

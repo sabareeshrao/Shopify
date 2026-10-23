@@ -1,0 +1,4 @@
+	public void setOrder(Integer order) {
+		this.order = order;
+	}
+

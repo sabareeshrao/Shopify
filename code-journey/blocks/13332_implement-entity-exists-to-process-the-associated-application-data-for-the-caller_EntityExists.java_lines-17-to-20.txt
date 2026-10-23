@@ -1,0 +1,4 @@
+	public EntityExists(boolean exists) {
+		this.exists = exists;
+	}
+

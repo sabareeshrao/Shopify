@@ -1,0 +1,4 @@
+	public void setShowBillingStateList(String showBillingStateList) {
+		this.showBillingStateList = showBillingStateList;
+	}
+

@@ -1,5 +1,0 @@
-	@Override
-	public List<CustomerAttribute> getByOptionId(MerchantStore store,
-			Long id) {
-		return customerAttributeRepository.findByOptionId(store.getId(), id);
-	}

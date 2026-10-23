@@ -1,0 +1,4 @@
+
+		return id.equals(entity.getId());
+	}
+

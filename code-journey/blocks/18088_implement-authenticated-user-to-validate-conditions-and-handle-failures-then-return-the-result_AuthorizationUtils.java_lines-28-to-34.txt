@@ -1,7 +1,0 @@
-	public String authenticatedUser() {
-		String authenticatedUser = userFacade.authenticatedUser();
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();
-		}
-		return authenticatedUser;
-	}

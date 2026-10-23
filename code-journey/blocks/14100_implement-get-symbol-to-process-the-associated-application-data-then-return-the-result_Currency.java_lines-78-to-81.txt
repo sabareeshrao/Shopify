@@ -1,0 +1,4 @@
+	public String getSymbol() {
+		return currency.getSymbol();
+	}
+

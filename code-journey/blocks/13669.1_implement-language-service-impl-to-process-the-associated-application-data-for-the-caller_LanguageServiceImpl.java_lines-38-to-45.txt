@@ -1,0 +1,8 @@
+	private LanguageRepository languageRepository;
+	
+	@Inject
+	public LanguageServiceImpl(LanguageRepository languageRepository) {
+		super(languageRepository);
+		this.languageRepository = languageRepository;
+	}
+	

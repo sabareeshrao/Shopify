@@ -1,3 +1,0 @@
-	public void setProductSpecifications(ProductSpecification productSpecifications) {
-		this.productSpecifications = productSpecifications;
-	}

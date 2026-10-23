@@ -1,0 +1,4 @@
+	public void setAttributeDiscounted(boolean attributeDiscounted) {
+		this.attributeDiscounted = attributeDiscounted;
+	}
+

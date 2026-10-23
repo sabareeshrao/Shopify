@@ -1,9 +1,0 @@
-	public void setValues(List<ReadableProductOptionValue> values) {
-		this.values = values;
-	}
-	public List<ReadableProductType> getProductTypes() {
-		return productTypes;
-	}
-	public void setProductTypes(List<ReadableProductType> productTypes) {
-		this.productTypes = productTypes;
-	}

@@ -1,7 +1,0 @@
-
-	@Inject
-	public ContentServiceImpl(ContentRepository contentRepository) {
-		super(contentRepository);
-
-		this.contentRepository = contentRepository;
-	}

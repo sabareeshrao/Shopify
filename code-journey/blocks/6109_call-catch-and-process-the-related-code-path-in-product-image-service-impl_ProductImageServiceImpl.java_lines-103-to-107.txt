@@ -1,5 +1,0 @@
-
-			} catch (Exception ignore) {
-
-			}
-		}

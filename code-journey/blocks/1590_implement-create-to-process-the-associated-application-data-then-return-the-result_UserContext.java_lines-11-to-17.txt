@@ -1,0 +1,7 @@
+    public static UserContext create() {
+    	UserContext context = new UserContext();
+        instance.set(context);
+        return context;
+    }
+
+

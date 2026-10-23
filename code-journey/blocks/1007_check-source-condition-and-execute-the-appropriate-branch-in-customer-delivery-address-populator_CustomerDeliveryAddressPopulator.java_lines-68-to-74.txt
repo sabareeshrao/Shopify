@@ -1,0 +1,7 @@
+        if(source.getDelivery().getZone()!=null) {
+            target.setZone(source.getDelivery().getZone().getCode());
+        }
+        }
+        return target;
+    }
+

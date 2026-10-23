@@ -1,3 +1,0 @@
-  public void setData(List<ReadableMerchantStore> data) {
-    this.data = data;
-  }

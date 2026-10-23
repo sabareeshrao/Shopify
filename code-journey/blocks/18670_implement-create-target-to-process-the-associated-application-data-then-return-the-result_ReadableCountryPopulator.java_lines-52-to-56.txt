@@ -1,5 +1,0 @@
-	@Override
-	protected ReadableCountry createTarget() {
-		// TODO Auto-generated method stub
-		return null;
-	}

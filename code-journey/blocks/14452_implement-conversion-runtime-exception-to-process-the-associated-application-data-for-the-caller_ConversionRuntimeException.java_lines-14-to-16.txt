@@ -1,3 +1,0 @@
-  public ConversionRuntimeException(String message) {
-    super(message);
-  }

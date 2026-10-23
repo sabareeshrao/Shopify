@@ -1,3 +1,0 @@
-	public void setVariant(boolean variant) {
-		this.variant = variant;
-	}

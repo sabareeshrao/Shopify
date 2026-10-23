@@ -1,0 +1,4 @@
+	public Integer getProductQuantity() {
+		return productQuantity;
+	}
+

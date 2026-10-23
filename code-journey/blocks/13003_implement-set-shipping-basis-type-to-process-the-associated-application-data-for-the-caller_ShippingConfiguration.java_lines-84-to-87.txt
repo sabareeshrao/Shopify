@@ -1,4 +1,0 @@
-	public void setShippingBasisType(ShippingBasisType shippingBasisType) {
-		this.shippingBasisType = shippingBasisType;
-		this.shipBaseType = this.shippingBasisType.name();
-	}

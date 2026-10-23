@@ -1,7 +1,0 @@
-	
-				
-				emailService.sendHtmlEmail(merchantStore, email);
-
-	       } catch (Exception e) {
-	           LOGGER.error("Error occured while sending change password email ",e);
-	       }

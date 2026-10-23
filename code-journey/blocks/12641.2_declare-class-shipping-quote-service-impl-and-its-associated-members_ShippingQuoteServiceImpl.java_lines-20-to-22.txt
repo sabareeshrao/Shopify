@@ -1,3 +1,0 @@
-@Service("shippingQuoteService")
-public class ShippingQuoteServiceImpl extends SalesManagerEntityServiceImpl<Long, Quote> implements ShippingQuoteService {
-

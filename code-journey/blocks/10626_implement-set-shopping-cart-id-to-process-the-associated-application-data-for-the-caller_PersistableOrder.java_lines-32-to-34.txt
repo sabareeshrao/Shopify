@@ -1,3 +1,0 @@
-	public void setShoppingCartId(Long shoppingCartId) {
-		this.shoppingCartId = shoppingCartId;
-	}

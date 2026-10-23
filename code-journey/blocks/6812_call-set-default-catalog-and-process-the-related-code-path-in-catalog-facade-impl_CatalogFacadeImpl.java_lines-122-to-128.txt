@@ -1,0 +1,7 @@
+
+        c.setDefaultCatalog(catalog.isDefaultCatalog());
+        c.setVisible(catalog.isVisible());
+
+        catalogService.saveOrUpdate(c, store);
+    }
+

@@ -1,3 +1,0 @@
-	
-	Page<ProductOption> getByMerchant(MerchantStore store, Language language, String name, int page, int count);
-	

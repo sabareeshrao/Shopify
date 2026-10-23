@@ -1,3 +1,0 @@
-	public Date getOrderAccountProductStartDate() {
-		return CloneUtils.clone(orderAccountProductStartDate);
-	}

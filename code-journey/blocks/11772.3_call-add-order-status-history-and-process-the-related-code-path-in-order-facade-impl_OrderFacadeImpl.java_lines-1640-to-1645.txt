@@ -1,6 +1,0 @@
-
-		try {
-			orderService.addOrderStatusHistory(order, history);
-		} catch (ServiceException e) {
-			e.printStackTrace();
-		}

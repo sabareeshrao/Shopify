@@ -1,0 +1,4 @@
+	public Date getTransactionDate() {
+		return transactionDate;
+	}
+

@@ -1,0 +1,4 @@
+	public int getQuantityOrderMaximum() {
+		return quantityOrderMaximum;
+	}
+

@@ -1,0 +1,4 @@
+public Boolean getVisible() {
+	return visible;
+}
+

@@ -1,5 +1,0 @@
-      for(ReadableProductVariantValue v : variants) {
-        if(v.getOption().longValue() == option.longValue()
-            && v.getValue().longValue() == optionValue.longValue()) {
-          attributes.add(attribute);
-        }

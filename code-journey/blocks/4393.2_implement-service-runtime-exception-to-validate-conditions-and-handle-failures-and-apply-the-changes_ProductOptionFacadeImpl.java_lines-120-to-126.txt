@@ -1,0 +1,7 @@
+			productOptionService.delete(optionModel);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("An exception occured while deleting ProductOption [" + optionId + "]",
+					e);
+		}
+	}
+

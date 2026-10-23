@@ -1,3 +1,0 @@
-	public LabelUtils getMessages() {
-		return messages;
-	}

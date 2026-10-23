@@ -1,3 +1,0 @@
-        interface Search{
-            final static String search="search";
-        }

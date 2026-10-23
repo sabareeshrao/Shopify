@@ -1,0 +1,4 @@
+	public void setProductPrice(ReadableProductPrice productPrice) {
+		this.productPrice = productPrice;
+	}
+

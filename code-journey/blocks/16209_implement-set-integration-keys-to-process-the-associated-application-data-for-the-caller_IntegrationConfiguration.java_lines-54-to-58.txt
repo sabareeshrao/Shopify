@@ -1,5 +1,0 @@
-
-  @JsonProperty("integrationKeys")
-  public void setIntegrationKeys(Map<String, String> integrationKeys) {
-    this.integrationKeys = integrationKeys;
-  }

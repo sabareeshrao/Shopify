@@ -1,0 +1,4 @@
+	public void setDescription(ProductPriceDescription description) {
+		this.description = description;
+	}
+

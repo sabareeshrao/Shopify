@@ -1,4 +1,0 @@
-	@Override
-	public List<ProductReview> getByProduct(Product product, Language language) {
-		return productReviewRepository.findByProduct(product.getId(), language.getId());
-	}

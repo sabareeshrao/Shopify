@@ -1,0 +1,4 @@
+	    public String getAudienceFromToken(String token) {
+	        return getClaimFromToken(token, Claims::getAudience);
+	    }
+

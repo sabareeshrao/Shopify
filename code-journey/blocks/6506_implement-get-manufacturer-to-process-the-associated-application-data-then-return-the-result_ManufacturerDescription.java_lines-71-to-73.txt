@@ -1,3 +1,0 @@
-	public Manufacturer getManufacturer() {
-		return manufacturer;
-	}

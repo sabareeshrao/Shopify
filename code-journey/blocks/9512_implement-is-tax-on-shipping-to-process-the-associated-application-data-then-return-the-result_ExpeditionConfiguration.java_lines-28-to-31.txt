@@ -1,0 +1,4 @@
+	public boolean isTaxOnShipping() {
+		return taxOnShipping;
+	}
+

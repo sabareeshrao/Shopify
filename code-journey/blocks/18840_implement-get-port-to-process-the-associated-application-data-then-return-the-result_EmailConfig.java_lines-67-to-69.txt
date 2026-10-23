@@ -1,3 +1,0 @@
-	public String getPort() {
-		return port;
-	}

@@ -1,0 +1,17 @@
+		
+		BigDecimal totalRating = averageRating.multiply(new BigDecimal(count));
+		totalRating = totalRating.add(new BigDecimal(review.getReviewRating()));
+		
+		count = count + 1;
+		double avg = totalRating.doubleValue() / count;
+		
+		product.setProductReviewAvg(new BigDecimal(avg));
+		product.setProductReviewCount(count);
+		super.save(review);
+		
+		productService.update(product);
+		
+		review.setProduct(product);
+		
+	}
+	

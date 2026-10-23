@@ -1,0 +1,17 @@
+public interface ProductReviewService extends
+		SalesManagerEntityService<Long, ProductReview> {
+	
+	
+	List<ProductReview> getByCustomer(Customer customer);
+	List<ProductReview> getByProduct(Product product);
+	List<ProductReview> getByProduct(Product product, Language language);
+	ProductReview getByProductAndCustomer(Long productId, Long customerId);
+	/**
+	 * @param product
+	 * @return
+	 */
+	List<ProductReview> getByProductNoCustomers(Product product);
+
+
+
+}

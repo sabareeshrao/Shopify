@@ -1,0 +1,12 @@
+	private void addOptionValue(ReadableProductOption option, ReadableProductOptionValue optionValue) {
+		
+		ReadableProductOptionValue find = option.getOptionValues().stream()
+				  .filter(optValue -> optValue.getCode()==optionValue.getCode())
+				  .findAny()
+				  .orElse(null);
+		
+		if(find == null) {
+			option.getOptionValues().add(optionValue);
+		}
+	}
+	

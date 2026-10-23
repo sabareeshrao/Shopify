@@ -1,4 +1,0 @@
-	@Override
-	public TaxClass getByCode(String code, MerchantStore store) throws ServiceException {
-		return taxClassRepository.findByStoreAndCode(store.getId(), code);
-	}

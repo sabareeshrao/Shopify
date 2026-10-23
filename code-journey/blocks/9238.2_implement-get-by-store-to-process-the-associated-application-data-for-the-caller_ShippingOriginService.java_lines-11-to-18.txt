@@ -1,0 +1,8 @@
+ *
+ */
+public interface ShippingOriginService  extends SalesManagerEntityService<Long, ShippingOrigin> {
+
+	ShippingOrigin getByStore(MerchantStore store);
+
+
+

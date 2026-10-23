@@ -1,3 +1,0 @@
-	public Boolean getConfirmedAddress() {
-		return confirmedAddress;
-	}

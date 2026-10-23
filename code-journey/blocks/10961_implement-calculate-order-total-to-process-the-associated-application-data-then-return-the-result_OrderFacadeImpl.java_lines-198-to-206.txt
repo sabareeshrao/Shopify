@@ -1,9 +1,0 @@
-	@Override
-	public OrderTotalSummary calculateOrderTotal(MerchantStore store, ShopOrder order, Language language)
-			throws Exception {
-
-		Customer customer = customerFacade.getCustomerModel(order.getCustomer(), store, language);
-		OrderTotalSummary summary = calculateOrderTotal(store, customer, order, language);
-		this.setOrderTotals(order, summary);
-		return summary;
-	}

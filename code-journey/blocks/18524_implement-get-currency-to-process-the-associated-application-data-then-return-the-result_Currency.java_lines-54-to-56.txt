@@ -1,3 +1,0 @@
-	public java.util.Currency getCurrency() {
-		return currency;
-	}

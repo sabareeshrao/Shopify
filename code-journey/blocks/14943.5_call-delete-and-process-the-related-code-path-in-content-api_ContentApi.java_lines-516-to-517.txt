@@ -1,2 +1,0 @@
-		contentFacade.delete(merchantStore, name.getName(), name.getContentType());
-	}

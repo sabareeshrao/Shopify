@@ -1,0 +1,27 @@
+	@Override
+	public ShippingSummary getShippingSummary(Long quoteId, MerchantStore store) throws ServiceException {
+		
+		Validate.notNull(quoteId,"quoteId must not be null");
+		
+		Quote q = shippingQuoteRepository.getOne(quoteId);
+
+		
+		ShippingSummary quote = null;
+		
+		if(q != null) {
+			
+			quote = new ShippingSummary();
+			quote.setDeliveryAddress(q.getDelivery());
+			quote.setShipping(q.getPrice());
+			quote.setShippingModule(q.getModule());
+			quote.setShippingOption(q.getOptionName());
+			quote.setShippingOptionCode(q.getOptionCode());
+			quote.setHandling(q.getHandling());
+			
+			if(shippingService.hasTaxOnShipping(store)) {
+				quote.setTaxOnShipping(true);
+			}
+			
+			
+			
+		}

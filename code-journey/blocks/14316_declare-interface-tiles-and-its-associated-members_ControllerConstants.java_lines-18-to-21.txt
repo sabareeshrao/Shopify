@@ -1,4 +1,0 @@
-    interface Tiles{
-        interface ShoppingCart{
-            final static String shoppingCart="maincart";
-        }

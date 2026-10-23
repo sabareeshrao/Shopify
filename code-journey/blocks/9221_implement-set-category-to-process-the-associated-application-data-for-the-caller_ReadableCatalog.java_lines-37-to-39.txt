@@ -1,3 +1,0 @@
-	public void setCategory(List<ReadableCategory> category) {
-		this.category = category;
-	}

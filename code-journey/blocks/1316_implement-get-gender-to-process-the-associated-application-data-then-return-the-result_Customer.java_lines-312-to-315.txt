@@ -1,0 +1,4 @@
+	public CustomerGender getGender() {
+		return gender;
+	}
+

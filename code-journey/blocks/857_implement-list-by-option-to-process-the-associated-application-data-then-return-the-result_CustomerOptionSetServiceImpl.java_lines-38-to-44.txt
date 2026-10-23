@@ -1,7 +1,0 @@
-	@Override
-	public List<CustomerOptionSet> listByOption(CustomerOption option, MerchantStore store) throws ServiceException {
-		Validate.notNull(store,"merchant store cannot be null");
-		Validate.notNull(option,"option cannot be null");
-		
-		return customerOptionSetRepository.findByOptionId(store.getId(), option.getId());
-	}

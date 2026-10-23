@@ -1,0 +1,6 @@
+	@Override
+	public List<CustomerAttribute> getByCustomerOptionValueId(MerchantStore store,
+			Long id) {
+		return customerAttributeRepository.findByOptionValueId(store.getId(), id);
+	}
+	

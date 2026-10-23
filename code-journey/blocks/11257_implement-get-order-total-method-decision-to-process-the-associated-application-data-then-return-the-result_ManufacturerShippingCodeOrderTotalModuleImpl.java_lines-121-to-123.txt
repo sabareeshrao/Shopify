@@ -1,3 +1,0 @@
-	public StatelessKnowledgeSession getOrderTotalMethodDecision() {
-		return orderTotalMethodDecision;
-	}

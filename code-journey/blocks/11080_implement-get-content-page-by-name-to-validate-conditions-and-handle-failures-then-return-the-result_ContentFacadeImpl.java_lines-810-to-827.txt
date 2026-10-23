@@ -1,0 +1,18 @@
+	@Override
+	public ReadableContentPage getContentPageByName(String name, MerchantStore store, Language language) {
+		Validate.notNull(name, "Content name cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+
+		try {
+
+			ContentDescription contentDescription = Optional.ofNullable(contentService.getBySeUrl(store, name))
+					.orElseThrow(() -> new ResourceNotFoundException("No page found : " + name));
+
+			return this.contentDescriptionToReadableContent(store, contentDescription.getContent(), contentDescription);
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Error while getting page " + e.getMessage(), e);
+		}
+	}
+

@@ -1,0 +1,4 @@
+	public void setCatalog(Catalog catalog) {
+		this.catalog = catalog;
+	}
+

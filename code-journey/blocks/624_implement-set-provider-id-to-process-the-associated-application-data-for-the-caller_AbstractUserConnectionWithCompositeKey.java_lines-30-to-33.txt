@@ -1,4 +1,0 @@
-	@Override
-	public void setProviderId(String providerId) {
-		primaryKey.setProviderId(providerId);
-	}

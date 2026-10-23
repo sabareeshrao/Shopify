@@ -1,3 +1,0 @@
-	public String getRelationShipType() {
-		return relationShipType;
-	}

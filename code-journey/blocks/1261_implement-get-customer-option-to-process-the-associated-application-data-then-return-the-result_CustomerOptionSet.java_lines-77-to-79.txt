@@ -1,3 +1,0 @@
-	public CustomerOption getCustomerOption() {
-		return customerOption;
-	}

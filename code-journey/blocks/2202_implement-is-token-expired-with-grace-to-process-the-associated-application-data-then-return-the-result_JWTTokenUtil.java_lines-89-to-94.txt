@@ -1,0 +1,6 @@
+	    private Boolean isTokenExpiredWithGrace(String token) {
+	            Date expiration = getExpirationDateFromToken(token);
+	            expiration = addSeconds(expiration,GRACE_PERIOD);
+	            return expiration.before(DateUtil.getDate());
+	    }
+

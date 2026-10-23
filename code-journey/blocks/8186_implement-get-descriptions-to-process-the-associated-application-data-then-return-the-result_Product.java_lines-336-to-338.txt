@@ -1,3 +1,0 @@
-	public Set<ProductDescription> getDescriptions() {
-		return descriptions;
-	}

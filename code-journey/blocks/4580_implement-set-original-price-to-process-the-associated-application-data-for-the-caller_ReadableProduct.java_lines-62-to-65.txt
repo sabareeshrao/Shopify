@@ -1,0 +1,4 @@
+	public void setOriginalPrice(String originalPrice) {
+		this.originalPrice = originalPrice;
+	}
+

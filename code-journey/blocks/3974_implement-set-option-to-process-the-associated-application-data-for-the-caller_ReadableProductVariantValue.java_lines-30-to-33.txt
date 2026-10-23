@@ -1,0 +1,4 @@
+	public void setOption(Long option) {
+		this.option = option;
+	}
+

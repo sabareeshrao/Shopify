@@ -1,6 +1,0 @@
-	
-	@Inject
-	public CustomerServiceImpl(CustomerRepository customerRepository) {
-		super(customerRepository);
-		this.customerRepository = customerRepository;
-	}

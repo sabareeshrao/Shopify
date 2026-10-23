@@ -1,3 +1,0 @@
-    public RestApiException(Throwable exception) {
-        super(exception);
-    }

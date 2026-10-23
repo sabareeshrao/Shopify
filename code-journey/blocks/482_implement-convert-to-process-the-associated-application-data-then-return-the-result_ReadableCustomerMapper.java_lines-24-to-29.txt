@@ -1,6 +1,0 @@
-	@Override
-	public ReadableCustomer convert(Customer source, MerchantStore store, Language language) {
-
-		ReadableCustomer destination = new ReadableCustomer();
-		return this.merge(source, destination, store, language);
-	}

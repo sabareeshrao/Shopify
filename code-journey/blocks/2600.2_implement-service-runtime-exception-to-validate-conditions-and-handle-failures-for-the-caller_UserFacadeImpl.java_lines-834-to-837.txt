@@ -1,4 +1,0 @@
-
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("Error while executing resetPassword request", e);
-		}

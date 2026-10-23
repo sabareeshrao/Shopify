@@ -1,0 +1,4 @@
+  public CMSManager getCmsManager() {
+    return cmsManager;
+  }
+

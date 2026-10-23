@@ -1,0 +1,6 @@
+		} catch(Exception e) {
+			throw new Exception("An error occured while parameter bindding", e);
+		}
+		
+		
+	}

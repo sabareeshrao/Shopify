@@ -1,0 +1,4 @@
+	public List<Long> getCategoryIds() {
+		return categoryIds;
+	}
+

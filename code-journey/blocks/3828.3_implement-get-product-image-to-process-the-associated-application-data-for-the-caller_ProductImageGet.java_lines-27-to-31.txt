@@ -1,5 +1,0 @@
-
-  OutputContentFile getProductImage(ProductImage productImage) throws ServiceException;
-
-  List<OutputContentFile> getImages(Product product) throws ServiceException;
-

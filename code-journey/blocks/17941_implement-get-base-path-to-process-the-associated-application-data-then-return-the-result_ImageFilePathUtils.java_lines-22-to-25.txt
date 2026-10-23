@@ -1,4 +1,0 @@
-	@Override
-	public String getBasePath(MerchantStore store) {
-		return basePath;
-	}

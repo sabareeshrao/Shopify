@@ -1,7 +1,0 @@
-		trxPopulator.setPricingService(pricingService);
-
-		trxPopulator.populate(transactionModel, transaction, store, language);
-
-		return transaction;
-
-	}

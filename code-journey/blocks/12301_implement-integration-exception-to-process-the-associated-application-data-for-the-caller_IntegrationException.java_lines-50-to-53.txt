@@ -1,0 +1,4 @@
+	public IntegrationException(String message) {
+		super(message);
+	}
+

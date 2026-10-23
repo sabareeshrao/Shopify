@@ -1,0 +1,4 @@
+    public String getCategoryImage() {
+        return categoryImage;
+    }
+

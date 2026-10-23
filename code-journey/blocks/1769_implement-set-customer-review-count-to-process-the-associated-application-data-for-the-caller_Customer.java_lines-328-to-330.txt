@@ -1,3 +1,0 @@
-	public void setCustomerReviewCount(Integer customerReviewCount) {
-		this.customerReviewCount = customerReviewCount;
-	}

@@ -1,0 +1,5 @@
+		 */
+
+		return contentRepository.findByTypes(contentType, store.getId(), language.getId());
+	}
+

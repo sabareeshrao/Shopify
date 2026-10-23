@@ -1,3 +1,0 @@
-	public void setInventory(List<ReadableInventory> inventory) {
-		this.inventory = inventory;
-	}

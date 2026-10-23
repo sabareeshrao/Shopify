@@ -1,4 +1,0 @@
-	@Override
-	public Product getBySeUrl(MerchantStore store, String seUrl, Locale locale) {
-		return productRepository.getByFriendlyUrl(store, seUrl, locale);
-	}

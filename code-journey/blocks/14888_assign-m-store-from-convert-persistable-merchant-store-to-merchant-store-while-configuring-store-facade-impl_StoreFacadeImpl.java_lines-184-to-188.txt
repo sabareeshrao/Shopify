@@ -1,5 +1,0 @@
-
-		MerchantStore mStore = convertPersistableMerchantStoreToMerchantStore(store, languageService.defaultLanguage());
-		createMerchantStore(mStore);
-
-	}

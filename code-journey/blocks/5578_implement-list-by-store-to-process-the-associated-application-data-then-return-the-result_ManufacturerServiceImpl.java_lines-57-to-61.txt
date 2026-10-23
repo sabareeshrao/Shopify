@@ -1,5 +1,0 @@
-  @Override
-  public List<Manufacturer> listByStore(MerchantStore store, Language language)
-      throws ServiceException {
-    return manufacturerRepository.findByStoreAndLanguage(store.getId(), language.getId());
-  }

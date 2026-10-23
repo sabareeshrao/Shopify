@@ -1,0 +1,8 @@
+	/**
+	 * @param product
+	 * @return
+	 */
+	List<ProductReview> getByProductNoCustomers(Product product);
+
+
+

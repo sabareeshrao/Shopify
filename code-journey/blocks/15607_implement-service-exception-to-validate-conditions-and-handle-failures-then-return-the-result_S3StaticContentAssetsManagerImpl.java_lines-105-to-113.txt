@@ -1,9 +1,0 @@
-
-			LOGGER.info("Content get file names");
-			return fileNames;
-		} catch (final Exception e) {
-			LOGGER.error("Error while getting file names", e);
-			throw new ServiceException(e);
-
-		}
-	}

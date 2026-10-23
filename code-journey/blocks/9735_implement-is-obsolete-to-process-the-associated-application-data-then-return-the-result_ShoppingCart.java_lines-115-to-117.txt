@@ -1,3 +1,0 @@
-	public boolean isObsolete() {
-		return obsolete;
-	}

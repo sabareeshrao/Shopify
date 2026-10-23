@@ -1,0 +1,4 @@
+  public BigDecimal getWidth() {
+    return width;
+  }
+

@@ -1,0 +1,13 @@
+  private ReadableCustomerList convertCustomerListToReadableCustomerList(
+      CustomerList customerList, MerchantStore store, Language language) {
+    List<ReadableCustomer> readableCustomers = customerList.getCustomers()
+        .stream()
+        .map(customer -> convertCustomerToReadableCustomer(customer, store, language))
+        .collect(Collectors.toList());
+
+    ReadableCustomerList readableCustomerList = new ReadableCustomerList();
+    readableCustomerList.setCustomers(readableCustomers);
+    readableCustomerList.setTotalPages(Math.toIntExact(customerList.getTotalCount()));
+    return readableCustomerList;
+  }
+

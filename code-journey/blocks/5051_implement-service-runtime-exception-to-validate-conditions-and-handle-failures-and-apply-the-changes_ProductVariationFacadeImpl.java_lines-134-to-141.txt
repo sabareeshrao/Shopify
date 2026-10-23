@@ -1,0 +1,8 @@
+		try {
+			productVariationService.delete(opt);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while deleting ProductVariation", e);
+		}
+
+	}
+

@@ -1,0 +1,4 @@
+	public ShoppingCartItem getShoppingCartItem() {
+		return shoppingCartItem;
+	}
+

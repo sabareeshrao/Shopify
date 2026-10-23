@@ -1,0 +1,29 @@
+
+	/**
+	 * Get property set by store
+	 * filter by product type
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/property/set" }, method = RequestMethod.GET)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody List<ReadableProductOptionSet> list(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			@RequestParam(value = "productType", required = false) String type) {
+
+		if(!StringUtils.isBlank(type)) {
+			return productOptionSetFacade.list(merchantStore, language, type);
+		} else {
+			return productOptionSetFacade.list(merchantStore, language);
+		}
+		
+		
+	}
+	
+
+}

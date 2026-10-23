@@ -1,5 +1,0 @@
-
-		CatalogServiceHelper.setToAvailability(product, locale);
-		CatalogServiceHelper.setToLanguage(product, language.getId());
-		return product;
-	}

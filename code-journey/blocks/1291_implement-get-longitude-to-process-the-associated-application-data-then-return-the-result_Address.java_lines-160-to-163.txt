@@ -1,0 +1,4 @@
+	public String getLongitude() {
+		return longitude;
+	}
+

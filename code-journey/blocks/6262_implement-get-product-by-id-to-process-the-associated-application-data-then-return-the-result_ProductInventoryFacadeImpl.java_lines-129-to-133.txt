@@ -1,5 +1,0 @@
-	private Product getProductById(Long productId, MerchantStore store) {
-		return productService
-				.retrieveById(productId, store)
-				.orElseThrow(() -> new ResourceNotFoundException("Product with id [" + productId + "] not found"));
-	}

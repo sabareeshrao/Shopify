@@ -1,5 +1,0 @@
-		contentEntity.setVisible(content.isVisible());
-
-		return contentEntity;
-
-	}

@@ -1,3 +1,0 @@
-	private ReadableProductOptionSet convert(ProductOptionSet optionSet, MerchantStore store, Language language) {
-		return readableProductOptionSetMapper.convert(optionSet, store, language);
-	}

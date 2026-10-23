@@ -1,0 +1,6 @@
+	@Override
+	public List<String> getFileNames(String merchantStoreCode, Optional<String> path, FileContentType fileContentType)
+			throws ServiceException {
+		return getFile.getFileNames(merchantStoreCode, path, fileContentType);
+	}
+

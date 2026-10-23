@@ -1,3 +1,0 @@
-	public Customer getOwner() {
-		return owner;
-	}

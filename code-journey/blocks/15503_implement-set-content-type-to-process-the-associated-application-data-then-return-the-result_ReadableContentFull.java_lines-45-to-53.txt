@@ -1,9 +1,0 @@
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
-	public boolean isDisplayedInMenu() {
-		return isDisplayedInMenu;
-	}
-	public void setDisplayedInMenu(boolean isDisplayedInMenu) {
-		this.isDisplayedInMenu = isDisplayedInMenu;
-	}

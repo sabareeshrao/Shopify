@@ -1,6 +1,0 @@
-
-				} catch (Exception e) {
-					LOGGER.equals("key " + key + " cannot be converted to a String or parsed");
-				}  
-		  }
-	}

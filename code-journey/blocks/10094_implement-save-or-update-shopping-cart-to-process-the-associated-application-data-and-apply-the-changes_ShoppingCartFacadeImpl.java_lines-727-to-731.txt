@@ -1,5 +1,0 @@
-	@Override
-	public void saveOrUpdateShoppingCart(ShoppingCart cart) throws Exception {
-		shoppingCartService.saveOrUpdate(cart);
-
-	}

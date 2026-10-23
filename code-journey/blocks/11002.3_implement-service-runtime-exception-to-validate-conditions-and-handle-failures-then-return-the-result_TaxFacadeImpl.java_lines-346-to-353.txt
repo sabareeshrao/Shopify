@@ -1,0 +1,8 @@
+			return returnRates;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxRates for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxRates for store [" + store.getCode() + "]", e);
+		}
+
+	}
+

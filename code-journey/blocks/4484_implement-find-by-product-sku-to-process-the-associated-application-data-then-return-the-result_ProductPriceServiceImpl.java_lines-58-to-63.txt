@@ -1,0 +1,6 @@
+	@Override
+	public List<ProductPrice> findByProductSku(String sku, MerchantStore store) {
+
+		return productPriceRepository.findByProduct(sku, store.getCode());
+	}
+

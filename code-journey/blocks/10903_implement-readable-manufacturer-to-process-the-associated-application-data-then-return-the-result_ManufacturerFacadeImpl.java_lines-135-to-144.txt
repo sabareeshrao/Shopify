@@ -1,0 +1,10 @@
+
+    ReadableManufacturer readableManufacturer = new ReadableManufacturer();
+
+    ReadableManufacturerPopulator populator = new ReadableManufacturerPopulator();
+    readableManufacturer = populator.populate(manufacturer, readableManufacturer, store, language);
+
+
+    return readableManufacturer;
+  }
+

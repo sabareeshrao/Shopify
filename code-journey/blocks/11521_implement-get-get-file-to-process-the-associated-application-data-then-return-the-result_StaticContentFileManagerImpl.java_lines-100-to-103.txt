@@ -1,0 +1,4 @@
+	public FileGet getGetFile() {
+		return getFile;
+	}
+

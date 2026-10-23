@@ -1,3 +1,0 @@
-	public ReadableImage getLogo() {
-		return logo;
-	}

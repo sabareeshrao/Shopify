@@ -1,4 +1,0 @@
-      throw new Exception(resp.toString());
-    } else {
-      assertTrue(true);
-    }

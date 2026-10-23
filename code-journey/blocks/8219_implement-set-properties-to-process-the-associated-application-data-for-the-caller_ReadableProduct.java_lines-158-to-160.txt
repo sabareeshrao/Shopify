@@ -1,3 +1,0 @@
-	public void setProperties(List<ReadableProductProperty> properties) {
-		this.properties = properties;
-	}

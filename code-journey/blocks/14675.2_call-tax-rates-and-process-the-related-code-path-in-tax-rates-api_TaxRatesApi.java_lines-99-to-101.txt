@@ -1,3 +1,0 @@
-		return taxFacade.taxRates(merchantStore, language);
-
-	}

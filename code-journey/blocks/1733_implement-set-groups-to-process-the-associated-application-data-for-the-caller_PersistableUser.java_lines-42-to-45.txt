@@ -1,0 +1,4 @@
+	public void setGroups(List<PersistableGroup> groups) {
+		this.groups = groups;
+	}
+

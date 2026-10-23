@@ -1,3 +1,0 @@
-	public boolean isTestMode() {
-		return testMode;
-	}

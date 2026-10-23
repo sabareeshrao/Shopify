@@ -1,6 +1,0 @@
-  public List<ReadableProductVariantValue> getOptions() {
-    return options;
-  }
-  public void setOptions(List<ReadableProductVariantValue> options) {
-    this.options = options;
-  }

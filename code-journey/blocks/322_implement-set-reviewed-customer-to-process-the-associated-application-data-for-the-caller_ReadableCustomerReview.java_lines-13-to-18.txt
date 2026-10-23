@@ -1,0 +1,6 @@
+	public void setReviewedCustomer(ReadableCustomer reviewedCustomer) {
+		this.reviewedCustomer = reviewedCustomer;
+	}
+
+
+}

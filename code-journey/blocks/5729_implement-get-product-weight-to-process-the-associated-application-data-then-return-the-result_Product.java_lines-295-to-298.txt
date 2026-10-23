@@ -1,0 +1,4 @@
+	public BigDecimal getProductWeight() {
+		return productWeight;
+	}
+

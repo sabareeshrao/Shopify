@@ -1,6 +1,0 @@
-      @PathVariable final Long id,
-      @Valid @RequestBody PersistableCustomerReview review,
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language) {
-    return customerFacade.createCustomerReview(id, review, merchantStore, language);
-  }

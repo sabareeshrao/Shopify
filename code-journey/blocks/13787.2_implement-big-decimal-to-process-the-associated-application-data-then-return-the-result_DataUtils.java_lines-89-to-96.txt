@@ -1,0 +1,8 @@
+				BigDecimal w = new BigDecimal(answer);
+				return w.setScale(2, RoundingMode.HALF_UP).doubleValue();
+
+			}
+		}
+
+	}
+

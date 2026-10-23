@@ -1,0 +1,6 @@
+	public Long getCustomer() {
+		return customer;
+	}
+
+
+

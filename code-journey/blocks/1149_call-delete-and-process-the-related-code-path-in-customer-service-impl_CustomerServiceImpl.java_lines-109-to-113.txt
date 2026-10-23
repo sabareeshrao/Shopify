@@ -1,0 +1,5 @@
+		}
+		customerRepository.delete(customer);
+
+	}
+

@@ -1,2 +1,0 @@
-	ReadableTaxRate taxRate(Long id, MerchantStore store, Language language);
-	

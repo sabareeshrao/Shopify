@@ -1,0 +1,7 @@
+	public boolean isDefaultPrice() {
+		return defaultPrice;
+	}
+	public void setDefaultPrice(boolean defaultPrice) {
+		this.defaultPrice = defaultPrice;
+	}
+

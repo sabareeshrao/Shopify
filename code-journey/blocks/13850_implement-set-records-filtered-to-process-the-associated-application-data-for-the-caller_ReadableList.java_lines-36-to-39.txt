@@ -1,0 +1,4 @@
+	public void setRecordsFiltered(int recordsFiltered) {
+		this.recordsFiltered = recordsFiltered;
+	}
+

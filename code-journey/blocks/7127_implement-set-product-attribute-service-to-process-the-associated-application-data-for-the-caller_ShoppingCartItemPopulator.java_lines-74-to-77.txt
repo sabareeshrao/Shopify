@@ -1,0 +1,4 @@
+	public void setProductAttributeService(ProductAttributeService productAttributeService) {
+		this.productAttributeService = productAttributeService;
+	}
+

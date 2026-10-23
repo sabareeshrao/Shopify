@@ -1,0 +1,4 @@
+		return quoteModule.getCustomModuleConfiguration(store);
+		
+	}
+	

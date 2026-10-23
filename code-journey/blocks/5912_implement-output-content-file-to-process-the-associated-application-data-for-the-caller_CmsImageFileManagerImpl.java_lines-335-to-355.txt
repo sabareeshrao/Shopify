@@ -1,0 +1,21 @@
+
+          byte[] imageBytes = (byte[]) merchantNode.get(key);
+
+          OutputContentFile contentImage = new OutputContentFile();
+
+          InputStream input = new ByteArrayInputStream(imageBytes);
+          ByteArrayOutputStream output = new ByteArrayOutputStream();
+          IOUtils.copy(input, output);
+
+          String contentType = fileNameMap.getContentTypeFor(key);
+
+          contentImage.setFile(output);
+          contentImage.setMimeType(contentType);
+          contentImage.setFileName(key);
+
+          images.add(contentImage);
+
+
+        }
+
+      }

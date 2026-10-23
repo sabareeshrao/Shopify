@@ -1,0 +1,9 @@
+	@Override
+	public Category getByCode(String code, MerchantStore store) {
+		try {
+			return categoryService.getByCode(store, code);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while reading category code [" + code + "]",e);
+		}
+	}
+

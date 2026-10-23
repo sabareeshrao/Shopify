@@ -1,0 +1,8 @@
+  private String regionName() {
+    String regionName = getCmsManager().getLocation();
+    if (StringUtils.isBlank(regionName)) {
+      regionName = DEFAULT_REGION_NAME;
+    }
+    return regionName;
+  }
+

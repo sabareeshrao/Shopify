@@ -1,0 +1,9 @@
+
+        if(source.getZone()!=null) {
+            target.setZone(zoneService.getByCode(source.getZone()));
+        }
+        target.setState(source.getBilstateOther());
+
+        return target;
+	}
+

@@ -1,3 +1,0 @@
-	private Language getLanguage(String lang) {
-		return languageUtils.getServiceLanguage(lang);
-	}

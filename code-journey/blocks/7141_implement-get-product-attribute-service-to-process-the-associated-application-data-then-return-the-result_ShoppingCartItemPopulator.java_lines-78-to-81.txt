@@ -1,0 +1,4 @@
+	public ProductAttributeService getProductAttributeService() {
+		return productAttributeService;
+	}
+

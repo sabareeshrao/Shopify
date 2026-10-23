@@ -1,0 +1,8 @@
+  private OutputContentFile getProductImage(String merchantStoreCode, String productCode,
+      String imageName, String size) throws ServiceException {
+
+    return null;
+
+  }
+
+

@@ -1,5 +1,0 @@
-	@Override
-	public List<ProductVariantImage> listByProductVariantGroup(Long productVariantGroupId, MerchantStore store) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		return productVariantImageRepository.finByProductVariantGroup(productVariantGroupId, store.getCode());
-	}

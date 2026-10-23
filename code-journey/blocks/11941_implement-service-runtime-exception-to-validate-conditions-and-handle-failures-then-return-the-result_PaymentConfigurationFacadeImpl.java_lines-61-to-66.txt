@@ -1,6 +1,0 @@
-			
-			return config;
-		
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while getting payment configuration [" + module + "]",e);
-		}

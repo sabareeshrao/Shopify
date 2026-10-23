@@ -1,0 +1,4 @@
+	public void setObsolete(boolean obsolete) {
+		this.obsolete = obsolete;
+	}
+

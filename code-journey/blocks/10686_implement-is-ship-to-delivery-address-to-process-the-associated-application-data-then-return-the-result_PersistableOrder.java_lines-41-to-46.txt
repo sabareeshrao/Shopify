@@ -1,6 +1,0 @@
-	public boolean isShipToDeliveryAddress() {
-		return shipToDeliveryAddress;
-	}
-	public void setShipToDeliveryAddress(boolean shipToDeliveryAddress) {
-		this.shipToDeliveryAddress = shipToDeliveryAddress;
-	}

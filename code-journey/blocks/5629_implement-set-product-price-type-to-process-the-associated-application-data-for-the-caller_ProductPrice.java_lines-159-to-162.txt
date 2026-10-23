@@ -1,0 +1,4 @@
+	public void setProductPriceType(ProductPriceType productPriceType) {
+		this.productPriceType = productPriceType;
+	}
+

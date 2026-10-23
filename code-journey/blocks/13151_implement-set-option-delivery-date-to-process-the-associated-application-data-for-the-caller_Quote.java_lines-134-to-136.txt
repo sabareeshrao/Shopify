@@ -1,3 +1,0 @@
-	public void setOptionDeliveryDate(Date optionDeliveryDate) {
-		this.optionDeliveryDate = optionDeliveryDate;
-	}

@@ -1,0 +1,4 @@
+	public void setAdditionalPrices(List<FinalPrice> additionalPrices) {
+		this.additionalPrices = additionalPrices;
+	}
+

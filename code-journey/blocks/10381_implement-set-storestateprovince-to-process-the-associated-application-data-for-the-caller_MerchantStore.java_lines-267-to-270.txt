@@ -1,0 +1,4 @@
+	public void setStorestateprovince(String storestateprovince) {
+		this.storestateprovince = storestateprovince;
+	}
+

@@ -1,7 +1,0 @@
-			transaction.getTransactionDetails().put("MESSAGETEXT", null);
-
-			return transaction;
-
-		} catch (Exception e) {
-			throw buildException(e);
-		}

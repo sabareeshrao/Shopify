@@ -1,3 +1,0 @@
-  public void setGetImage(ProductImageGet getImage) {
-    this.getImage = getImage;
-  }

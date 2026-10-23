@@ -1,3 +1,0 @@
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("Error while getting category [" + category.getId() + "]",e);
-		}

@@ -1,6 +1,0 @@
-
-		try {
-			return (Product)q.getSingleResult();
-		} catch (NoResultException ignored) {
-			return null;
-		}

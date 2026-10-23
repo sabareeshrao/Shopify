@@ -1,0 +1,4 @@
+	public BigDecimal getProductAttributePrice() {
+		return productAttributePrice;
+	}
+

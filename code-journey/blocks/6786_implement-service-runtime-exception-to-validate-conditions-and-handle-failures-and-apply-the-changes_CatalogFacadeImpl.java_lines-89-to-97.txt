@@ -1,0 +1,9 @@
+
+        try {
+            catalogService.delete(c);
+        } catch (ServiceException e) {
+            throw new ServiceRuntimeException("Error while deleting catalog id [" + catalogId + "]", e);
+        }
+
+    }
+

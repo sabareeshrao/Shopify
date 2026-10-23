@@ -1,0 +1,4 @@
+	public MerchantStore getParent() {
+		return parent;
+	}
+

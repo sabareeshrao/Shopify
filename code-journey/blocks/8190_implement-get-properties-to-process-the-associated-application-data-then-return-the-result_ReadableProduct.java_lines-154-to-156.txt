@@ -1,3 +1,0 @@
-	public List<ReadableProductProperty> getProperties() {
-		return properties;
-	}

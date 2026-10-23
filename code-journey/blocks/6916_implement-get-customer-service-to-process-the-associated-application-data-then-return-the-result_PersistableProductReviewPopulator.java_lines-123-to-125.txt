@@ -1,3 +1,0 @@
-	public CustomerService getCustomerService() {
-		return customerService;
-	}

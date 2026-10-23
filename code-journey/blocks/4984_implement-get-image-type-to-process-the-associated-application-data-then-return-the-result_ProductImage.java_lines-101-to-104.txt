@@ -1,0 +1,4 @@
+	public int getImageType() {
+		return imageType;
+	}
+

@@ -1,0 +1,4 @@
+	public boolean getProductAttributeIsFree() {
+		return productAttributeIsFree;
+	}
+

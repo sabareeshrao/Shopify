@@ -1,7 +1,0 @@
-		}
-
-		if (StringUtils.isNotEmpty(source.getTemplate()))
-			target.setStoreTemplate(source.getTemplate());
-		
-		return target;
-	}

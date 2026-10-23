@@ -1,2 +1,0 @@
-						saveCategory(store, sub, parent);
-					}

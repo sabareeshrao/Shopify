@@ -1,6 +1,0 @@
-	public List<ProductDescription> getDescriptions() {
-		return descriptions;
-	}
-	public void setDescriptions(List<ProductDescription> descriptions) {
-		this.descriptions = descriptions;
-	}

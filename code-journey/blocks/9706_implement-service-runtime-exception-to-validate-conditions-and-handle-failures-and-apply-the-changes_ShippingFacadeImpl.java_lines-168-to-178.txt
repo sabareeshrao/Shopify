@@ -1,0 +1,11 @@
+			
+			shippingOriginService.save(o);
+			
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting shipping origin for country [" + address.getCountry() + "]",e);
+			throw new ServiceRuntimeException("Error while getting shipping origin for country [" + address.getCountry() + "]",e);
+		}
+
+
+	}
+

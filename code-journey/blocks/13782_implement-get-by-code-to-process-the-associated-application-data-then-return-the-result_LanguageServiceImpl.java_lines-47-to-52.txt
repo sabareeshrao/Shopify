@@ -1,0 +1,6 @@
+	@Override
+	@Cacheable("languageByCode")
+	public Language getByCode(String code) throws ServiceException {
+		return languageRepository.findByCode(code);
+	}
+	

@@ -1,7 +1,0 @@
-
-		try {
-			return searchModule.searchKeywords(search);
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}
-	}

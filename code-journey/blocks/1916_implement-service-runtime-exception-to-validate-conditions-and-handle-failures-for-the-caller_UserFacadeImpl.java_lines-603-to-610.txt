@@ -1,0 +1,8 @@
+			}
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while looking for authorization", e);
+		}
+
+	}
+

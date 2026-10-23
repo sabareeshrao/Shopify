@@ -1,0 +1,9 @@
+  private ReadableZone convertToReadableZone(Zone zone, Language language, MerchantStore merchantStore) {
+    try{
+      ReadableZonePopulator populator = new ReadableZonePopulator();
+      return populator.populate(zone, new ReadableZone(), merchantStore, language);
+    } catch (ConversionException e){
+      throw new ConversionRuntimeException(e);
+    }
+  }
+

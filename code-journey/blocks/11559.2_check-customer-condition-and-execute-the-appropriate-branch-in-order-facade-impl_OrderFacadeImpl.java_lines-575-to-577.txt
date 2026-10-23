@@ -1,3 +1,0 @@
-		if(! customer.isAnonymous() && !StringUtils.isBlank(customer.getPassword())) {
-			customer.setNick(customer.getEmailAddress());
-		}

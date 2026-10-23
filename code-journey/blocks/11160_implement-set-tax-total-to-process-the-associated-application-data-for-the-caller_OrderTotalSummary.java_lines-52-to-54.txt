@@ -1,3 +1,0 @@
-	public void setTaxTotal(BigDecimal taxTotal) {
-		this.taxTotal = taxTotal;
-	}

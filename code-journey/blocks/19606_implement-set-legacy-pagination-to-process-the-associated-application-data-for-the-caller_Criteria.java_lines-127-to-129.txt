@@ -1,3 +1,0 @@
-	public void setLegacyPagination(boolean legacyPagination) {
-		this.legacyPagination = legacyPagination;
-	}

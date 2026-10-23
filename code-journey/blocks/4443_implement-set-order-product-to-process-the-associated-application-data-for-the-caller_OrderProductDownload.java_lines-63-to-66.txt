@@ -1,0 +1,4 @@
+	public void setOrderProduct(OrderProduct orderProduct) {
+		this.orderProduct = orderProduct;
+	}
+

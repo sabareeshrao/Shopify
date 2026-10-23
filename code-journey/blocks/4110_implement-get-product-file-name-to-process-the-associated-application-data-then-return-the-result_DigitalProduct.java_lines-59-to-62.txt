@@ -1,0 +1,4 @@
+	public String getProductFileName() {
+		return productFileName;
+	}
+

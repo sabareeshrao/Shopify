@@ -1,3 +1,0 @@
-	public ShippingOptionPriceType getShippingOptionPriceType() {
-		return shippingOptionPriceType;
-	}

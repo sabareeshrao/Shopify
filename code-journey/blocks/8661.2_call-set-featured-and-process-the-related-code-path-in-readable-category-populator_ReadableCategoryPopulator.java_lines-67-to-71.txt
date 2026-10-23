@@ -1,5 +1,0 @@
-        target.setFeatured(source.isFeatured());
-
-        return target;
-
-    }

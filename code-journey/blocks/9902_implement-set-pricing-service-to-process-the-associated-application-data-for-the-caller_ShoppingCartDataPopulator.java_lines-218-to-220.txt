@@ -1,3 +1,0 @@
-    public void setPricingService(final PricingService pricingService) {
-        this.pricingService = pricingService;
-    }

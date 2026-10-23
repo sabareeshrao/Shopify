@@ -1,0 +1,4 @@
+	public void setProductOptionValueImage(String productOptionValueImage) {
+		this.productOptionValueImage = productOptionValueImage;
+	}
+

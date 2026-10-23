@@ -1,0 +1,9 @@
+	@Override
+	public ProductOptionSet convert(PersistableProductOptionSet source, MerchantStore store, Language language) {
+		
+		
+		ProductOptionSet optionSet = new ProductOptionSet();
+		return this.merge(source, optionSet, store, language);
+
+	}
+

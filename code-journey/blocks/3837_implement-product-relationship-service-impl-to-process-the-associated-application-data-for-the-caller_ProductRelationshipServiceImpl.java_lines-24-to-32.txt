@@ -1,0 +1,9 @@
+	private ProductRelationshipRepository productRelationshipRepository;
+	
+	@Inject
+	public ProductRelationshipServiceImpl(
+			ProductRelationshipRepository productRelationshipRepository) {
+			super(productRelationshipRepository);
+			this.productRelationshipRepository = productRelationshipRepository;
+	}
+	

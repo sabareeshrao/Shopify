@@ -1,7 +1,0 @@
-
-	@Inject
-	public CustomerOptionSetServiceImpl(
-			CustomerOptionSetRepository customerOptionSetRepository) {
-			super(customerOptionSetRepository);
-			this.customerOptionSetRepository = customerOptionSetRepository;
-	}
