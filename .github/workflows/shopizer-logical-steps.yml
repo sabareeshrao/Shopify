@@ -1,0 +1,124 @@
+name: Publish corrected Shopizer logical TXT steps
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/semantic_support_repo.py'
+      - 'scripts/build_shopizer_logical_txt_repo.py'
+      - 'scripts/rebuild_logical_txt_repo.py'
+      - '.github/workflows/shopizer-logical-steps.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shopizer-logical-txt-steps
+  cancel-in-progress: false
+
+jobs:
+  build-check-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        with:
+          repository: shopizer-ecommerce/shopizer
+          ref: 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+          path: .shopizer-source
+          persist-credentials: false
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rebuild original complete source index for repeatable generation
+        run: |
+          python scripts/build_shopizer_code_journey.py \
+            --checkout .shopizer-source \
+            --output code-journey \
+            --zip code-journey/Shopizer-Code-Journey.zip
+          python scripts/refine_shopizer_code_journey_names.py \
+            --zip code-journey/Shopizer-Code-Journey.zip \
+            --output code-journey/Shopizer-Code-Journey-refined.zip \
+            --folder code-journey
+      - name: Compute safe Java XML JSON CSS shell and text boundaries
+        run: python scripts/build_shopizer_logical_txt_repo.py
+      - name: Replace old Github steps with ZIP-exact numbered TXT files
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, shutil, zipfile
+          from pathlib import Path
+          folder=Path('code-journey')
+          zippath=folder/'Shopizer-Code-Journey-Logical-Fixed.zip'
+          steps=folder/'steps'
+          if steps.exists():
+              shutil.rmtree(steps)
+          steps.mkdir(parents=True)
+          with zipfile.ZipFile(zippath) as z:
+              names=z.namelist()
+              assert len(names)==17909 and all(x.endswith('.txt') for x in names)
+              assert len(set(n.lower() for n in names))==len(names)
+              assert z.testzip() is None
+              for name in names:
+                  rel=Path(name)
+                  assert not rel.is_absolute() and '..' not in rel.parts
+                  output=steps/rel
+                  output.parent.mkdir(parents=True,exist_ok=True)
+                  output.write_bytes(z.read(name))
+          os.replace(zippath,folder/'Shopizer-Code-Journey.zip')
+          if (folder/'blocks').exists():shutil.rmtree(folder/'blocks')
+          shutil.copyfile('scripts/rebuild_logical_txt_repo.py',folder/'rebuild.py')
+          audit=json.loads((folder/'LOGICAL_AUDIT.json').read_text())
+          (folder/'AUDIT.json').write_text(json.dumps(audit,indent=2)+'\n')
+          browse=dict(status='PASS',folders=len([x for x in steps.iterdir() if x.is_dir()]),individual_txt_files=len(names),zip_only_txt=True,files_match_zip=True,source_rebuild='PASS')
+          (folder/'BROWSE_AUDIT.json').write_text(json.dumps(browse,indent=2)+'\n')
+          (folder/'README.md').write_text(
+              '# Shopizer logical code journey\n\n'
+              'Browse **steps/** folders in ascending task order. '
+              'Parent 1.0 contains the full code block; children 1.1, 1.2 etc. '
+              'contain sequential original line slices. '
+              'Use children instead of their parent, not both. '
+              'Blocks may exceed eight lines to preserve complete statements, '
+              'methods and markup structures.\n\n'
+              'The ZIP contains only .txt files. The root MASTER_INDEX.csv '
+              'maps each parent to its original repository path and line range. '
+              'Descriptions and sequencing are inferred learning aids, not '
+              'historical developer activity.\n'
+          )
+          print(json.dumps(browse,indent=2))
+          PY
+      - name: Reconstruct original code and compare every text file
+        shell: bash
+        run: |
+          python scripts/rebuild_logical_txt_repo.py \
+            --journey code-journey \
+            --output "$RUNNER_TEMP/shopizer-rebuilt"
+          python - <<'PY'
+          import csv,hashlib,os
+          from pathlib import Path
+          orig=Path('.shopizer-source')
+          rebuilt=Path(os.environ['RUNNER_TEMP'])/'shopizer-rebuilt'
+          with open('code-journey/MASTER_INDEX.csv',newline='',encoding='utf-8') as fh:
+              paths={row['original_path'] for row in csv.DictReader(fh)}
+          assert len(paths)==1325,len(paths)
+          for path in paths:
+              a=(orig/path).read_bytes()
+              b=(rebuilt/path).read_bytes()
+              assert a==b,('source mismatch',path)
+          assert sum(len((orig/p).read_bytes().splitlines(keepends=True)) for p in paths)==132076
+          print('PASS: 1325 original text files and 132076 lines match byte for byte.')
+          PY
+      - name: Commit corrected browsable TXT files and TXT-only ZIP
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- code-journey
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(journey): replace fragmentary steps with 17,909 semantically grouped TXT blocks"
+            git push origin HEAD:main
+          fi
