@@ -100,7 +100,19 @@ def java_action(code:str,full:str,begin:int,path:str):
         m=declaration.group(1); slug=snip(m,7)
         tokens=significant(m)
         if m.startswith('get') and len(m)>3:
-            return f'return-current-{snip(m[3:])}-field-value-through-{slug}-getter'
+            # A getter-shaped name does NOT guarantee a field-accessor method.
+            # Only describe a field getter when the method body is the trivial
+            # return of a local field (without service calls or conditionals).
+            body=code[declaration.end():]
+            meaningful=[line.strip() for line in body.splitlines() if line.strip() and not line.strip().startswith(('//','*','/*','@'))]
+            is_trivial=(len(meaningful)<=3 and bool(re.search(r'\breturn\s+(?:this\.)?[A-Za-z_]\w*\s*;',body))
+                        and not re.search(r'\b(if|for|while|new|throw)\b|\w+\s*\(',body))
+            if is_trivial:
+                return f'return-current-{snip(m[3:])}-field-value-through-{slug}-getter'
+            calls=re.findall(r'\.([A-Za-z_]\w*)\s*\(',body)
+            if calls:
+                return f'build-or-retrieve-{snip(m[3:])}-by-invoking-{snip(calls[0])}' + (f'-and-{snip(calls[1])}' if len(calls)>1 else '')+f'-in-{slug}-method'
+            return f'implement-{slug}-to-build-or-retrieve-{snip(m[3:])}-from-inputs'
         if m.startswith('is') and len(m)>2:
             return f'report-whether-{snip(m[2:])}-flag-is-enabled-through-{slug}'
         if m.startswith('set') and len(m)>3:
@@ -111,7 +123,15 @@ def java_action(code:str,full:str,begin:int,path:str):
         if m.startswith(('find','get','load','read','fetch','search')):
             return f'look-up-{snip("-".join(tokens[1:]) or base)}-and-provide-the-result-from-{slug}'
         if m.startswith(('create','build','make','new','save','add','insert','update','remove','delete')):
-            return f'{snip(tokens[0])}-{snip("-".join(tokens[1:]) or base)}-using-{slug}-and-update-related-state'
+            # Do not claim a write succeeded when this snippet only performs
+            # authentication or validation before reaching the write.
+            has_security=re.search(r'authenticatedUser|UnauthorizedException|@(?:Put|Post|Delete)Mapping',code)
+            if has_security:
+                return f'accept-{snip(m)}-request-and-verify-authentication-before-changing-{base_slug}'
+            methods=re.findall(r'\.([A-Za-z_]\w*)\s*\(',code[declaration.end():])
+            if methods:
+                return f'implement-{snip(m)}-by-invoking-{snip(methods[0])}-for-{base_slug}'
+            return f'declare-{snip(m)}-operation-and-prepare-{snip("-".join(tokens[1:]) or base)}-data-in-{base_slug}'
         if m.startswith(('validate','verify','check','is','has','can','supports','authenticate','authorize')):
             return f'check-{snip("-".join(tokens[1:]) or base)}-conditions-and-control-result-in-{slug}'
         if m.startswith(('calculate','compute','sum','total','price','convert')):
@@ -128,6 +148,14 @@ def java_action(code:str,full:str,begin:int,path:str):
     # Handle meaningful statements that are fragments within larger methods.
     context=function_context(full,begin)
     cx=f'-inside-{snip(context)}' if context else f'-in-{base_slug}'
+    method_check=re.search(r'\bif\s*\(\s*(!?)\s*([\w.]+)\s*\(\s*([^\n()]*(?:\([^)]*\)[^()]*)?)\)\s*\)',code)
+    if method_check:
+        neg,callee,args=method_check.groups()
+        operation=snip(callee.split('.')[-1])
+        target=snip(args.split(',')[0],7) if args.strip() else 'current-input'
+        following=re.search(r'\.((?:set|save|add|remove|delete|throw|update)[A-Z]\w*)\s*\(',code)
+        effect=f'-then-call-{snip(following.group(1))}' if following else ''
+        return f'check-{target}-using-{operation}-condition'+('-with-inverted-result' if neg else '')+effect+cx
     eq=re.search(r'\bif\s*\(\s*(!?)([\w.]+)\s*(==|!=|>=|<=|>|<)?\s*(null|true|false|\d+)?',code)
     if eq:
         a=eq.group(2).replace('this.',''); relation=eq.group(3) or ('is-not' if eq.group(1) else 'is');b=eq.group(4)
@@ -147,7 +175,12 @@ def java_action(code:str,full:str,begin:int,path:str):
         if len(constructs)>1:
             return f'create-{snip(constructs[0][1])}-and-{snip(constructs[1][1])}-objects-and-initialize-their-fields{cx}'
         return f'create-{snip(constructs[0][1])}-instance-for-{snip(constructs[0][0])}-variable{cx}'
-    assign=re.findall(r'(?:this\.)?([a-zA-Z_]\w*)\s*=\s*(?![=])\s*([\w.]+)',code)
+    fields=re.findall(r'\b(?:private|protected|public)\s+(?:(?:static|final|volatile|transient)\s+)*([\w<>?,.\[\]]+)\s+([a-zA-Z_]\w*)\s*[;=]',code)
+    if fields:
+        column=re.search(r'@Column\s*\([^)]*\bname\s*=\s*"([^"]+)"',code)
+        detail_col=f'-mapped-to-{snip(column.group(1))}-database-column' if column else ''
+        return f'declare-{snip(fields[0][0])}-typed-{snip(fields[0][1])}-member'+(f'-and-{snip(fields[1][1])}-member' if len(fields)>1 else '')+detail_col+cx
+    assign=re.findall(r'(?m)^(?!\s*@)(?!\s*//)(?!\s*\*)(?!\s*#)(?!\s*\b(?:private|public|protected)\b).*?(?:this\.)?([a-zA-Z_]\w*)\s*=\s*(?![=])\s*([\w.]+)',code)
     if assign:
         fields=[(a,b) for a,b in assign if a not in KEYWORDS]
         if fields:
@@ -265,6 +298,18 @@ def other_action(code,path,full,start):
         tokens=[x for x in plain if x and not x.startswith(('[',']'))]
         if tokens:return f'document-{snip(tokens[0],12)}-in-{base}-instructions'
     if ext in {'.cmd','.sh'} or Path(path).name in {'mvnw','mvnw.cmd'}:
+        comments=[line.strip().lstrip('#').removeprefix('@REM').strip() for line in code.splitlines() if line.strip().startswith(('#','@REM','REM '))]
+        active=[line.strip() for line in code.splitlines() if line.strip() and not line.strip().startswith(('#','@REM','REM '))]
+        if len(comments)>len(active)*2 and not active:
+            joined=' '.join(comments).lower()
+            if 'apache' in joined or 'licensed' in joined:
+                return f'document-apache-license-and-disclaimer-for-{base}-launcher-script'
+            env=re.findall(r'(?m)^(?:@REM|#|REM)\s*([A-Z][A-Z0-9_]{3,})\s+[-:]\s+([^\r\n]+)',code)
+            if env:
+                return f'document-{snip(env[0][0])}-and-{snip(env[-1][0])}-environment-requirements-for-{base}-launcher'
+            if 'maven' in joined or 'java' in joined:
+                return f'document-java-and-maven-startup-prerequisites-for-{base}-launcher'
+            return f'document-{snip("-".join(significant(joined)[:7]) or base)}-for-{base}-launcher'
         vars=re.findall(r'\b(?:export\s+|set\s+)?([A-Z][A-Z0-9_]{2,})=',code)
         if vars:return f'configure-{snip(vars[0])}-environment-variable'+(f'-and-{snip(vars[-1])}-value' if len(vars)>1 else '')+f'-in-{base}-startup-script'
         patterns=re.findall(r'\b(?:if|case|while|for|exit|exec|goto|shift|printf|echo|call)\b',code)
