@@ -1,0 +1,7 @@
+        target.setSortOrder(source.getSortOrder());
+        target.setVisible(source.isVisible());
+        target.setFeatured(source.isFeatured());
+
+        return target;
+
+    }

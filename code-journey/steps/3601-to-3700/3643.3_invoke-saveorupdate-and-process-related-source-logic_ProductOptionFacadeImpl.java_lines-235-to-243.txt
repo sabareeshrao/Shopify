@@ -1,0 +1,9 @@
+
+
+		try {
+			productOptionValueService.saveOrUpdate(value);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while saving option value", e);
+		}
+
+		ProductOptionValue optValue = productOptionValueService.getById(store, value.getId());

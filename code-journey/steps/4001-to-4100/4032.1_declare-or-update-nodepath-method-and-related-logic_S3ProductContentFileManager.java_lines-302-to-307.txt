@@ -1,0 +1,6 @@
+  private String nodePath(String store, String product) {
+
+    StringBuilder sb = new StringBuilder();
+    // node path
+    String nodePath = nodePath(store);
+    sb.append(nodePath);

@@ -1,0 +1,9 @@
+        
+        interface Checkout{
+            final static String checkout="checkout";
+            final static String confirmation="confirmation";
+        }
+        
+        interface Search{
+            final static String search="search";
+        }

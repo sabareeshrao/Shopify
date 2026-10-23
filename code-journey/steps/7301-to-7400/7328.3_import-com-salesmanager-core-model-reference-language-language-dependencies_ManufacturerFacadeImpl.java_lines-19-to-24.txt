@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.model.catalog.manufacturer.PersistableManufacturer;
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturerList;
+import com.salesmanager.shop.model.entity.ListCriteria;

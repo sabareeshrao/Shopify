@@ -1,0 +1,6 @@
+	
+	@Override
+	public ReadableEntityList<ReadableInventory> get(Long productId, MerchantStore store, Language language, int page, int count) {
+		
+		Validate.notNull(productId, "Product id cannot be null");
+		Validate.notNull(store, "MerchantStore code cannot be null");

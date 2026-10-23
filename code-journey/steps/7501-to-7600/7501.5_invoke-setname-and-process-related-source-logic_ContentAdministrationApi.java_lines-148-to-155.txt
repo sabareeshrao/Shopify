@@ -1,0 +1,8 @@
+			cf.setName(qqfilename);
+			try {
+				cf.setFile(qqfile.getBytes());
+				contentFacade.addContentFile(cf, merchantStore.getCode());
+				return new FileStatus();
+			} catch (IOException e) {
+				//throw new ServiceRuntimeException("Error while getting file bytes");
+				LOGGER.error("Error when uploadging file",e);

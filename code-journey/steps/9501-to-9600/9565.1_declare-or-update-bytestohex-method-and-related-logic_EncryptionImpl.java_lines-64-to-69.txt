@@ -1,0 +1,6 @@
+	private String bytesToHex(byte[] data) {
+		if (data == null) {
+			return null;
+		} else {
+			int len = data.length;
+			String str = "";

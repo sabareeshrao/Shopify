@@ -1,0 +1,7 @@
+
+		optionModel = persistableeMapper.merge(option, optionModel, store, language);
+		try {
+			productOptionService.saveOrUpdate(optionModel);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("An exception occured while saving ProductOption", e);
+		}

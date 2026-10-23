@@ -1,0 +1,8 @@
+	@SuppressWarnings("unchecked")
+	@Override
+	public String toJSONString() {
+		JSONObject data = new JSONObject();
+		data.put("displayCustomerSection", this.isDisplayCustomerSection());
+		data.put("displayContactUs", this.isDisplayContactUs());
+		data.put("displayStoreAddress", this.isDisplayStoreAddress());
+		data.put("displayAddToCartOnFeaturedItems", this.isDisplayAddToCartOnFeaturedItems());

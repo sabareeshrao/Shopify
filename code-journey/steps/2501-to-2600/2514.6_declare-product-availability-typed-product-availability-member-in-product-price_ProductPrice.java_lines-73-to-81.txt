@@ -1,0 +1,9 @@
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = ProductAvailability.class)
+	@JoinColumn(name = "PRODUCT_AVAIL_ID", nullable = false)
+	private ProductAvailability productAvailability;
+
+	@Column(name = "PRODUCT_IDENTIFIER_ID", nullable = true)
+	private Long productIdentifierId;
+

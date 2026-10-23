@@ -1,0 +1,8 @@
+	 *            input static content file list which will get
+	 *            {@link InputContentImage} stored
+	 * @throws ServiceException
+	 *             if content file storing process fail.
+	 * @see InputStaticContentData
+	 * @see StaticContentCacheAttribute
+	 */
+	@Override

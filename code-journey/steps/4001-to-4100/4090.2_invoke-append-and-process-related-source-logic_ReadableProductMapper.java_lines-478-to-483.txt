@@ -1,0 +1,6 @@
+		imgPath.append(imageUtils.getContextPath())
+				.append(imageUtils.buildProductImageUtils(store, product.getSku(), image.getProductImage()));
+
+		prdImage.setImageUrl(imgPath.toString());
+		prdImage.setId(image.getId());
+		prdImage.setImageType(image.getImageType());

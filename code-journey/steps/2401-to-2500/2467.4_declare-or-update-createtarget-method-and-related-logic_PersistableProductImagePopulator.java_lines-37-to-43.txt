@@ -1,0 +1,7 @@
+
+	@Override
+	protected ProductImage createTarget() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+

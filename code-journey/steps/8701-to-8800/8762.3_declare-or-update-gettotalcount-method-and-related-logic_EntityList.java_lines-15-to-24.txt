@@ -1,0 +1,10 @@
+	
+/*	public int getTotalCount() {
+		return totalCount;
+	}*/
+/*	public void setTotalCount(int totalCount) {
+		this.totalCount = totalCount;
+	}*/
+	public int getTotalPages() {
+		return totalPages == 0 ? totalPages+1:totalPages;
+	}

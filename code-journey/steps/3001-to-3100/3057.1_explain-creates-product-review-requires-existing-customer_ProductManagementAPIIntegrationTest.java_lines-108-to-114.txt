@@ -1,7 +1,0 @@
-
-	/**
-	 * Creates a ProductReview requires an existing Customer and an existing
-	 * Product
-	 *
-	 * @throws Exception
-	 */

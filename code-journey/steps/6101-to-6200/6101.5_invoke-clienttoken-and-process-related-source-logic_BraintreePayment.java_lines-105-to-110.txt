@@ -1,0 +1,6 @@
+		
+		String clientToken = gateway.clientToken().generate();
+
+		Transaction transaction = new Transaction();
+		transaction.setAmount(amount);
+		transaction.setDetails(clientToken);

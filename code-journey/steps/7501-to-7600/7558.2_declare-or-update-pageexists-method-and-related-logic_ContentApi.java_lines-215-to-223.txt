@@ -1,0 +1,9 @@
+	public EntityExists pageExists(
+			@PathVariable String code, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		boolean exists = contentFacade.codeExist(code, PAGE, merchantStore);
+		EntityExists entity = new EntityExists(exists);
+		return entity;
+	}

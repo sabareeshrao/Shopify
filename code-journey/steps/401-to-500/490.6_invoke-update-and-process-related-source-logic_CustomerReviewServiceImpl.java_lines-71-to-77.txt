@@ -1,0 +1,7 @@
+		
+		customerService.update(customer);
+		
+		review.setReviewedCustomer(customer);
+
+		
+	}

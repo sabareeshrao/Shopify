@@ -1,0 +1,9 @@
+		
+		List<Product> products = modelProductList.getContent();
+		
+		List<Product> prds = products.stream().sorted(Comparator.comparing(Product::getSortOrder)).collect(Collectors.toList());
+		products = prds;
+		
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);

@@ -1,0 +1,8 @@
+				if (itemModel.getProduct().getId().longValue() == anItem.getProduct().getId()) {
+					if (item.getQuantity() == 0) {
+						// left aside item to be removed
+						// don't add it to new list of item
+						removeItems.add(anItem);
+					} else {
+						// new quantity
+						anItem.setQuantity(item.getQuantity());

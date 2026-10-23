@@ -1,0 +1,7 @@
+
+#GCP Cloud Storage configuration
+#Name of the bucket file
+#If the bucket does not exists it will be created
+#export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json"
+config.cms.gcp.bucket=
+

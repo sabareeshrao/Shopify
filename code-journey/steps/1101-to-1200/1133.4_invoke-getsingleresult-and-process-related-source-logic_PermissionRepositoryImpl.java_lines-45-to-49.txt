@@ -1,0 +1,5 @@
+		
+
+		Number count = (Number) countQ.getSingleResult ();
+
+		permissionList.setTotalCount(count.intValue());

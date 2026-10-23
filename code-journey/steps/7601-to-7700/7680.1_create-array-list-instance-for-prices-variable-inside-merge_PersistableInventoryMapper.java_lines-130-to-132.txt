@@ -1,3 +1,0 @@
-			
-			//merge with existing or replace
-			List<ProductPrice> prices = new ArrayList<ProductPrice>();

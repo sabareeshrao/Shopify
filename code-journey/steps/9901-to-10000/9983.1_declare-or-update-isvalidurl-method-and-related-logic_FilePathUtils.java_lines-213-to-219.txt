@@ -1,0 +1,7 @@
+	
+	public boolean isValidURL(String urlString)
+	{
+	    try
+	    {
+	        URL url = new URL(urlString);
+	        url.toURI();

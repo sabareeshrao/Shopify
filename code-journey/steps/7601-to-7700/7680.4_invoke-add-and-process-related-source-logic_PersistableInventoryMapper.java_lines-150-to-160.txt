@@ -1,0 +1,11 @@
+							prices.add(pp);
+						} else if (pp.isDefaultPrice() && priceEntity.isDefaultPrice()) {
+							if(price == null) {
+								price = pp;
+							}
+							else {
+								prices.add(pp);
+							}
+						} else {
+							prices.add(pp);
+						}

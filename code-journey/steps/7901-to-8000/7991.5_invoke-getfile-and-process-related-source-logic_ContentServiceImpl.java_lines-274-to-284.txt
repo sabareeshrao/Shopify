@@ -1,0 +1,11 @@
+		try {
+			for (InputContentFile file : contentFilesList) {
+				if (file.getFile() != null) {
+					file.getFile().close();
+				}
+			}
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

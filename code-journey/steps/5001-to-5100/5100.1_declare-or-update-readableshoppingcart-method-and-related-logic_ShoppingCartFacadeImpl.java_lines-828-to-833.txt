@@ -1,0 +1,6 @@
+
+	// KEEP
+	private ReadableShoppingCart readableShoppingCart(ShoppingCart cartModel, PersistableShoppingCartItem item,
+			MerchantStore store, Language language) throws Exception {
+
+		com.salesmanager.core.model.shoppingcart.ShoppingCartItem itemModel = createCartItem(cartModel, item, store);

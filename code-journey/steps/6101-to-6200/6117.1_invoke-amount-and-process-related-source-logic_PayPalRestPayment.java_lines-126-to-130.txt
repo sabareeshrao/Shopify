@@ -1,0 +1,5 @@
+			
+			Amount amnt = new Amount();
+			amnt.setCurrency(store.getCurrency().getCode());
+			amnt.setTotal(sAmount);
+			//amnt.setDetails(details);

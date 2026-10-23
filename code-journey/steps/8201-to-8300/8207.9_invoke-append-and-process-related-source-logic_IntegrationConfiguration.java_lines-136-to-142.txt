@@ -1,0 +1,7 @@
+
+        optionDataEntries.append("\"").append(key).append("\":").append(optionsEntries.toString());
+
+        if (countOptions < keySize - 1) {
+          optionDataEntries.append(",");
+        }
+        countOptions++;

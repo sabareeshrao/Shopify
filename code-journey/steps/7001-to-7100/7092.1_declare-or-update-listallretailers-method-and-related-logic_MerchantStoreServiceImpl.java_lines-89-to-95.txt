@@ -1,0 +1,7 @@
+	@Override
+	public Page<MerchantStore> listAllRetailers(Optional<String> storeName, int page, int count)
+			throws ServiceException {
+		String store = null;
+		if (storeName != null && storeName.isPresent()) {
+			store = storeName.get();
+		}

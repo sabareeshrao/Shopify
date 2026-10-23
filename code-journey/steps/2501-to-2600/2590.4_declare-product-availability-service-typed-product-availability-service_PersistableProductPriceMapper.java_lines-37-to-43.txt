@@ -1,0 +1,7 @@
+
+	@Autowired
+	private ProductService productService;
+
+	@Autowired
+	private ProductAvailabilityService productAvailabilityService;
+

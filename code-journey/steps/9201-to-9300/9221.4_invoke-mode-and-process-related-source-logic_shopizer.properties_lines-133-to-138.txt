@@ -1,0 +1,6 @@
+
+label.store.displaycontactussection=Display contact us page
+label.store.displaystoreaddress=Display store address
+label.store.displaysearchbox=Display search box
+label.store.displaypagesmenu=Display 'Page' menu
+label.store.testmode=Test mode (hide category and product details)

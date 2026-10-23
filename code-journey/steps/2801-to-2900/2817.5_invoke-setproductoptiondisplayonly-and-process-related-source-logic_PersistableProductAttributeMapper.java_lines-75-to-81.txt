@@ -1,0 +1,7 @@
+			productOptionValue.setProductOptionDisplayOnly(true);
+			productOptionValue.setCode(UUID.randomUUID().toString());
+			productOptionValue.setMerchantStore(store);
+		}
+		
+		if(!CollectionUtils.isEmpty((source.getOptionValue().getDescriptions()))) {
+			productOptionValue =  persistableProductOptionValueMapper.merge(source.getOptionValue(),productOptionValue, store, language);

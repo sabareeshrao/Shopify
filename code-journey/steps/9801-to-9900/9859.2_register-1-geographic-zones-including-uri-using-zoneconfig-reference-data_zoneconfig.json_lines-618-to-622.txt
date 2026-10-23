@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "UR",
-		"zoneName": "Uri",
-		"countryCode": "CH"
-	},

@@ -1,0 +1,7 @@
+        if(source.getZone()!=null) {
+            target.setZone(source.getZone().getCode());
+            
+            //resolve zone name
+            try {
+				Map<String,Zone> zones = zoneService.getZones(language);
+				Zone z = zones.get(source.getZone().getCode());

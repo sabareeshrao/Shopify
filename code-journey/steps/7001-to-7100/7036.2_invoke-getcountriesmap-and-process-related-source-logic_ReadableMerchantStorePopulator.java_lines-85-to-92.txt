@@ -1,0 +1,8 @@
+				Country c =countryService.getCountriesMap(language).get(source.getCountry().getIsoCode());
+				if(c!=null) {
+					address.setCountry(c.getIsoCode());
+				}
+			} catch (ServiceException e) {
+				logger.error("Cannot get Country", e);
+			}
+		}

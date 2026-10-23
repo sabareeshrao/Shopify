@@ -1,0 +1,8 @@
+
+    	} catch(Exception e) {
+    		if(e instanceof BadCredentialsException) {
+    			return new ResponseEntity<>("{\"message\":\"Bad credentials\"}",HttpStatus.UNAUTHORIZED);
+    		}
+    		LOGGER.error("Error during authentication " + e.getMessage());
+    		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    	}

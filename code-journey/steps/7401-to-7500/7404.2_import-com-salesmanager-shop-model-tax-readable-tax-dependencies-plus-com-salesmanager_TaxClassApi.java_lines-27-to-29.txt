@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.tax.ReadableTaxClass;
-import com.salesmanager.shop.store.controller.tax.facade.TaxFacade;
-

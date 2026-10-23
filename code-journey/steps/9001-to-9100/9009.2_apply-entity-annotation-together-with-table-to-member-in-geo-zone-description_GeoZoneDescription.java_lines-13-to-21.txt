@@ -1,9 +1,0 @@
-
-@Entity
-@Table(name="GEOZONE_DESCRIPTION", uniqueConstraints={
-		@UniqueConstraint(columnNames={
-			"GEOZONE_ID",
-			"LANGUAGE_ID"
-		})
-	}
-)

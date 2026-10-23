@@ -1,0 +1,9 @@
+	public void delete(
+			@PathVariable Long productId, 
+			@PathVariable Long id, 
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		productInventoryFacade.delete(productId, id, merchantStore);
+
+	}

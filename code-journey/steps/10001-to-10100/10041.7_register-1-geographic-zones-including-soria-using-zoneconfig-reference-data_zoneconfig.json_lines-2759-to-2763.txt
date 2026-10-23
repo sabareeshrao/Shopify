@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Soria",
-			"zoneName": "Soria",
-			"countryCode": "ES"
-		},

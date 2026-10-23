@@ -1,0 +1,8 @@
+
+		try {
+			searchService.index(store, product);
+		} catch (ServiceException e) {
+			throw new RuntimeException(e);
+		}
+
+	}

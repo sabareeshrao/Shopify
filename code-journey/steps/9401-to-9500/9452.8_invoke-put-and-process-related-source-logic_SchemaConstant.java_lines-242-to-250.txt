@@ -1,0 +1,9 @@
+		CURRENCY_MAP.put("SEK", "Swedish Krona");
+		//CURRENCY_MAP.put("CHE", "WIR Euro");
+		CURRENCY_MAP.put("CHF", "Swiss Franc");
+		//CURRENCY_MAP.put("CHW", "WIR Franc");
+		CURRENCY_MAP.put("SYP", "Syrian Pound");
+		CURRENCY_MAP.put("TWD", "New Taiwan Dollar");
+		CURRENCY_MAP.put("TJS", "Somoni");
+		CURRENCY_MAP.put("TZS", "Tanzanian Shilling");
+		CURRENCY_MAP.put("THB", "Baht");

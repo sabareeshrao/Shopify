@@ -1,0 +1,7 @@
+import com.salesmanager.core.model.catalog.product.Product;
+
+public class SaveProductEvent extends ProductEvent {
+	
+	public SaveProductEvent(Object source, Product product) {
+		super(source, product);
+	}

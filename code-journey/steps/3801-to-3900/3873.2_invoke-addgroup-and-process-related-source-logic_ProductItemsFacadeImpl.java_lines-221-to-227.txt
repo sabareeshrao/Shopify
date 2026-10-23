@@ -1,0 +1,7 @@
+		try {
+			productRelationshipService.addGroup(store, group.getCode());
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannor delete product group",e);
+		}
+		return group;
+	}

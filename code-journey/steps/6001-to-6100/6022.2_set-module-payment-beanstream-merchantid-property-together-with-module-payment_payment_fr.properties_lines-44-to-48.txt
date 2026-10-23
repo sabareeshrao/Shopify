@@ -1,0 +1,5 @@
+#Beanstream
+module.payment.beanstream.merchantid=Identifiant marchand
+module.payment.beanstream.username=Nom d'usager
+module.payment.beanstream.password=Mot de passe
+

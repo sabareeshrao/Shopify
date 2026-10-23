@@ -1,4 +1,0 @@
-if ERRORLEVEL 1 goto error
-goto end
-
-:error

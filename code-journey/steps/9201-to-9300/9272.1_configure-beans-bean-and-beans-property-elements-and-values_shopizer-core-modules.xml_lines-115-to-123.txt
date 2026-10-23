@@ -1,0 +1,9 @@
+
+	<beans:bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+
+		<!-- configured in systems.properties -->
+		<beans:property name="protocol" value="${mailSender.protocol}" />
+		<beans:property name="host" value="${mailSender.host}" />
+		<beans:property name="port" value="${mailSender.port}" />
+

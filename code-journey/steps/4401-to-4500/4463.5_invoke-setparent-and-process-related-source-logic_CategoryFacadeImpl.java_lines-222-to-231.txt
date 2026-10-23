@@ -1,0 +1,10 @@
+
+		/** set parent * */
+		if (parent != null) {
+			category.setParent(parent);
+		}
+
+		categoryService.saveOrUpdate(category);
+
+		if (!CollectionUtils.isEmpty(saveAfter)) {
+			parent = category;

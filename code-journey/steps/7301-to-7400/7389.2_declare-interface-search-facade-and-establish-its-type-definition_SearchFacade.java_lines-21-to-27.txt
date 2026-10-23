@@ -1,0 +1,7 @@
+
+	/**
+	 * This utility method will re-index all products in the catalogue
+	 * @param store
+	 * @throws Exception
+	 */
+	public void indexAllData(MerchantStore store) throws Exception;

@@ -1,3 +1,0 @@
-	  @ApiImplicitParams({
-	      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT")
-	  })

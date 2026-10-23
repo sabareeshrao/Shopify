@@ -1,0 +1,5 @@
+
+	void deleteProduct(DeleteProductEvent event) {
+
+		Product product = event.getProduct();
+		MerchantStore store = product.getMerchantStore();

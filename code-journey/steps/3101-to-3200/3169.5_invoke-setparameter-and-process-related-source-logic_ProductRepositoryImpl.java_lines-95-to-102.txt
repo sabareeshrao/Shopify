@@ -1,0 +1,8 @@
+
+			q.setParameter("pid", productId);
+
+
+			if(merchantId != null) {
+				//q.setParameter("mid", merchant.getId());
+				q.setParameter("mid", ids);
+			}

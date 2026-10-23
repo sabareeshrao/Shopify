@@ -1,0 +1,9 @@
+	
+	/**
+	 * used when filtering on an entity code (example property)
+	 */
+	private String filterCode;
+	/**
+	 * used when filtering on an entity id
+	 */
+	private Long filterId;

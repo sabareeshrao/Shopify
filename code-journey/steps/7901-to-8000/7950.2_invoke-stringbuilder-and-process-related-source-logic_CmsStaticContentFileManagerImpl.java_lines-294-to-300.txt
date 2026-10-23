@@ -1,0 +1,7 @@
+
+		try {
+
+			StringBuilder merchantPath = new StringBuilder();
+			merchantPath.append(buildRootPath()).append(Constants.SLASH).append(merchantStoreCode);
+
+			Path path = Paths.get(merchantPath.toString());

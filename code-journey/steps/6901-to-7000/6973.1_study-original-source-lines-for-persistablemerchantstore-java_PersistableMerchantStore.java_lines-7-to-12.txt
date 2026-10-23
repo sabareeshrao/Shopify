@@ -1,0 +1,6 @@
+public class PersistableMerchantStore extends MerchantStoreEntity {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

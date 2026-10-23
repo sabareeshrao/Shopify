@@ -1,0 +1,6 @@
+	@Override
+	public ExpeditionConfiguration getExpeditionConfiguration(MerchantStore store, Language language) {
+		ExpeditionConfiguration expeditionConfiguration = new ExpeditionConfiguration();
+		try {
+			
+			ShippingConfiguration config = getDbConfig(store);

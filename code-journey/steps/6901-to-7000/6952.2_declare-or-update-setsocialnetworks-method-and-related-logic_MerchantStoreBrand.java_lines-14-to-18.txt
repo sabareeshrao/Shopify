@@ -1,0 +1,5 @@
+  public void setSocialNetworks(List<MerchantConfigEntity> socialNetworks) {
+    this.socialNetworks = socialNetworks;
+  }
+
+}

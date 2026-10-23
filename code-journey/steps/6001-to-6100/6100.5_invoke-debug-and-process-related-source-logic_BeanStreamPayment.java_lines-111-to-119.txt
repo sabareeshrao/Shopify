@@ -1,0 +1,9 @@
+				
+				LOGGER.debug("REQUEST SENT TO BEANSTREAM -> " + messageString.toString());
+
+
+
+				return sendTransaction(null, store, messageString.toString(), "PAC", TransactionType.CAPTURE, PaymentType.CREDITCARD, order.getTotal(), configuration, module);
+				
+			} catch(Exception e) {
+				

@@ -1,0 +1,9 @@
+	private boolean linkToMenu;
+	public boolean isLinkToMenu() {
+		return linkToMenu;
+	}
+	public void setLinkToMenu(boolean linkToMenu) {
+		this.linkToMenu = linkToMenu;
+	}
+
+}

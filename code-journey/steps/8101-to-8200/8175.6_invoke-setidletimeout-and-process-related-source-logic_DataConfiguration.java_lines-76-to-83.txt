@@ -1,0 +1,8 @@
+    	
+    	/** Datasource config **/
+    	dataSource.setIdleTimeout(minPoolSize);
+    	dataSource.setMaximumPoolSize(maxPoolSize);
+    	dataSource.setConnectionTestQuery(testQuery);
+    	
+    	return dataSource;
+    }

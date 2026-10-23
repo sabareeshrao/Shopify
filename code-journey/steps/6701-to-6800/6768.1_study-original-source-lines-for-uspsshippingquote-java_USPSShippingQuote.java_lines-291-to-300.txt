@@ -1,0 +1,10 @@
+
+			String size = "REGULAR";
+		
+			if (totalL + totalG <= 64) {
+				size = "REGULAR";
+			} else if (totalL + totalG <= 108) {
+				size = "LARGE";
+			} else {
+				size = "OVERSIZE";
+			}

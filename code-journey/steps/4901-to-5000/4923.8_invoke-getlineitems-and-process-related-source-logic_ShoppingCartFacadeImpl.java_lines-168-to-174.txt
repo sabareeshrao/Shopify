@@ -1,0 +1,7 @@
+
+		if (!duplicateFound) {
+			cartModel.getLineItems().add(shoppingCartItem);
+		}
+
+		/** Update cart in database with line items **/
+		shoppingCartService.saveOrUpdate(cartModel);

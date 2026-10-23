@@ -1,0 +1,7 @@
+			
+			target.setPrices(prices);
+			
+			//OrderProductAttribute
+			Set<ShoppingCartAttributeItem> attributeItems = source.getAttributes();
+			if(!CollectionUtils.isEmpty(attributeItems)) {
+				Set<OrderProductAttribute> attributes = new HashSet<OrderProductAttribute>();

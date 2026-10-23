@@ -1,0 +1,8 @@
+				if(!CollectionUtils.isEmpty(z.getDescriptions())) {
+					for(ZoneDescription d : z.getDescriptions()) {
+						if(d.getLanguage().getId() == language.getId()) {
+							readableZone.setName(d.getName());
+							continue;
+						}
+					}
+				}

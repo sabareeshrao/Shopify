@@ -1,0 +1,5 @@
+
+						property.setPropertyValue(readableOptionValue);
+						destination.getProperties().add(property);
+
+					} else {// selectable option

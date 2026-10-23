@@ -1,0 +1,6 @@
+
+@Service
+public class OptinServiceImpl extends SalesManagerEntityServiceImpl<Long, Optin> implements OptinService {
+	
+	
+	private OptinRepository optinRepository;

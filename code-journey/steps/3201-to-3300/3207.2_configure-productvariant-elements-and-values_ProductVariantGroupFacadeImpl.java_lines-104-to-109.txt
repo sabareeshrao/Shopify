@@ -1,0 +1,6 @@
+		
+		try {
+		
+			//null all group from instances
+			for(ProductVariant instance : group.getProductVariants()) {
+				Optional<ProductVariant> p = productVariantService.getById(instance.getId(), store);

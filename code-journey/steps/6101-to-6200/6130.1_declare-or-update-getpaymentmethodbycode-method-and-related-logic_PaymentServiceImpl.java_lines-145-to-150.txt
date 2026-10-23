@@ -1,0 +1,6 @@
+	
+	@Override
+	public IntegrationModule getPaymentMethodByCode(MerchantStore store,
+			String code) throws ServiceException {
+		List<IntegrationModule> modules =  getPaymentMethods(store);
+

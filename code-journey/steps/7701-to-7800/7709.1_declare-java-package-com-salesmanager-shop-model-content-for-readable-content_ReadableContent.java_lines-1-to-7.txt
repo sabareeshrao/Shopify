@@ -1,7 +1,0 @@
-package com.salesmanager.shop.model.content;
-
-/**
- * A simple piece of content
- * @author carlsamson
- *
- */

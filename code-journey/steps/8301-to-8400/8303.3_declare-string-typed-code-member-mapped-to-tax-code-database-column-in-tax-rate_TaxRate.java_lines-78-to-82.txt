@@ -1,5 +1,0 @@
-	
-	@NotEmpty
-	@Column(name = "TAX_CODE")
-	private String code;
-	

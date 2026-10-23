@@ -1,0 +1,8 @@
+		
+		if(StringUtils.isBlank(summary.getPromoCode())) {
+			return null;
+		}
+		
+		KieSession kieSession=droolsBeanFactory.getKieSession(ResourceFactory.newClassPathResource("com/salesmanager/drools/rules/PromoCoupon.drl"));
+		
+		OrderTotalResponse resp = new OrderTotalResponse();

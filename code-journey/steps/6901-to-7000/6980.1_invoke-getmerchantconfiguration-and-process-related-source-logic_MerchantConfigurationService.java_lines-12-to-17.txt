@@ -1,0 +1,6 @@
+public interface MerchantConfigurationService extends
+		SalesManagerEntityService<Long, MerchantConfiguration> {
+	
+	MerchantConfiguration getMerchantConfiguration(String key, MerchantStore store) throws ServiceException;
+	
+	void saveOrUpdate(MerchantConfiguration entity) throws ServiceException;

@@ -1,0 +1,9 @@
+			return productRepository.getById(id.longValue(), merchant, language);
+		} catch (Exception e) {
+			throw new ServiceException("Cannot get product with sku [" + productCode + "]", e);
+		}
+		
+
+
+	}
+	

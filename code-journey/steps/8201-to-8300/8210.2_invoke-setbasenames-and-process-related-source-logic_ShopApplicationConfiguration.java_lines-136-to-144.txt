@@ -1,0 +1,9 @@
+    messageSource.setBasenames(
+        "classpath:bundles/shopizer",
+        "classpath:bundles/messages",
+        "classpath:bundles/shipping",
+        "classpath:bundles/payment");
+
+    messageSource.setDefaultEncoding("UTF-8");
+    return messageSource;
+  }

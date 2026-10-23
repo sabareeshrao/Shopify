@@ -1,0 +1,9 @@
+public class ZoneTransient {
+	
+	private String zoneCode;
+	private String zoneName;
+	private String countryCode;
+	
+	public String getZoneCode() {
+		return zoneCode;
+	}

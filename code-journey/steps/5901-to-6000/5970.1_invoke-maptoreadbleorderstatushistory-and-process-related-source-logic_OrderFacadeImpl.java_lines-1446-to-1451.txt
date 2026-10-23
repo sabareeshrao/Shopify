@@ -1,0 +1,6 @@
+
+	ReadableOrderStatusHistory mapToReadbleOrderStatusHistory(OrderStatusHistory source) {
+		ReadableOrderStatusHistory readable = new ReadableOrderStatusHistory();
+		readable.setComments(source.getComments());
+		readable.setDate(DateUtil.formatLongDate(source.getDateAdded()));
+		readable.setId(source.getId());

@@ -1,2 +1,0 @@
-	void savePaymentModuleConfiguration(IntegrationConfiguration configuration,
-			MerchantStore store) throws ServiceException;

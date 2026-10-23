@@ -1,0 +1,7 @@
+  private String code;
+  private String type;
+  private boolean readOnly;
+
+  public String getCode() {
+    return code;
+  }

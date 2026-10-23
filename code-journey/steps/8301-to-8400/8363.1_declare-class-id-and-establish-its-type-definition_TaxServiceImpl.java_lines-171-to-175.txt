@@ -1,5 +1,0 @@
-		
-		Map<Long,TaxClass> taxClasses =  new HashMap<Long,TaxClass>();
-			
-		//put items in a map by tax class id
-		Map<Long,BigDecimal> taxClassAmountMap = new HashMap<Long,BigDecimal>();

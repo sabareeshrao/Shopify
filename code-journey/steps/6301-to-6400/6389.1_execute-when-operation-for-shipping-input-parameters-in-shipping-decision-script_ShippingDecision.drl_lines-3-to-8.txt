@@ -1,0 +1,6 @@
+import com.salesmanager.core.business.modules.integration.shipping.impl.ShippingInputParameters;
+
+global com.salesmanager.core.business.modules.integration.shipping.impl.DecisionResponse decision;
+
+dialect  "mvel"
+

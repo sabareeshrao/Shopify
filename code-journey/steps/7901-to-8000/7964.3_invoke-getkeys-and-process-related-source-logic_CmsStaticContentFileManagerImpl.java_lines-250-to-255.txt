@@ -1,0 +1,6 @@
+
+			for (String key : merchantNode.getKeys()) {
+
+				byte[] imageBytes = (byte[]) merchantNode.get(key);
+
+				OutputContentFile contentImage = new OutputContentFile();

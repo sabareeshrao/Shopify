@@ -1,0 +1,8 @@
+
+	public void setDisplayName(String displayName);
+
+	public String getProfileUrl();
+
+	public void setProfileUrl(String profileUrl);
+
+	public String getImageUrl();

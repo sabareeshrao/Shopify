@@ -1,0 +1,7 @@
+	
+	private String name;
+	private List<ReadableZone> zones = new ArrayList<ReadableZone>();
+
+	public String getName() {
+		return name;
+	}

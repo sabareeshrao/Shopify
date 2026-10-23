@@ -1,0 +1,9 @@
+	
+	
+	/**
+	 * Delete content page
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 */
+	@DeleteMapping(value = "/private/content/page/{id}")

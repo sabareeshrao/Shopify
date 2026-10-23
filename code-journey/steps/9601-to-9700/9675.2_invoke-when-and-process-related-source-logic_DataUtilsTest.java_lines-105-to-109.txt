@@ -1,0 +1,5 @@
+        when(store.getSeizeunitcode()).thenReturn(MeasureUnit.IN.name());
+        double result = DataUtils.getMeasure(100.789, store, MeasureUnit.CM.name());
+        assertEquals(39.31, result, 0);
+    }
+}

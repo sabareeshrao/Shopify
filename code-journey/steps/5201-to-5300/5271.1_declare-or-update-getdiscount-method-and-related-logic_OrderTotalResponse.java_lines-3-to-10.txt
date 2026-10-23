@@ -1,0 +1,8 @@
+public class OrderTotalResponse {
+	
+	private Double discount = null;
+	private String expiration;
+
+	public Double getDiscount() {
+		return discount;
+	}

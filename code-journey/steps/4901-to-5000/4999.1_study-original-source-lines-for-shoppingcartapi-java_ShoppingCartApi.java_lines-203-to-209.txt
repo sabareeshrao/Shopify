@@ -1,0 +1,7 @@
+
+	@Deprecated
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = "/customers/{id}/cart", method = RequestMethod.POST)
+	@ApiOperation(httpMethod = "POST", value = "Add product to a specific customer shopping cart", notes = "", produces = "application/json", response = ReadableShoppingCart.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })

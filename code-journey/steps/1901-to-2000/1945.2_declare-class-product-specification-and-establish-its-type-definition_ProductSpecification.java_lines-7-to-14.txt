@@ -1,8 +1,0 @@
-
-/**
- * Specs weight dimension model and manufacturer
- * @author carlsamson
- *
- */
-public class ProductSpecification implements Serializable {
-

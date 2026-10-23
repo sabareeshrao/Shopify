@@ -1,0 +1,7 @@
+
+	protected ReadableShoppingCart sampleCart() {
+
+		ReadableProduct product = sampleProduct("sampleCart");
+		assertNotNull(product);
+
+		PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();

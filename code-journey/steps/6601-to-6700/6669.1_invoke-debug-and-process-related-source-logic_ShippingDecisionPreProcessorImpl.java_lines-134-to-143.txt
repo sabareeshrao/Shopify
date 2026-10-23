@@ -1,0 +1,10 @@
+		
+		LOGGER.debug("Setting input parameters " + inputParameters.toString());
+		System.out.println(inputParameters.toString());
+		
+		
+		/**
+		 * New code
+		 */
+		
+		KieSession kieSession=droolsBeanFactory.getKieSession(ResourceFactory.newClassPathResource("com/salesmanager/drools/rules/ShippingDecision.drl"));

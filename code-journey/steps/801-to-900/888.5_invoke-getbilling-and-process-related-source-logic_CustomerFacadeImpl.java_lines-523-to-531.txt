@@ -1,0 +1,9 @@
+
+      } else {
+        customerModel.getBilling().setZone(null);
+      }
+
+    } else {
+      LOG.info("updating customer shipping address..");
+      PersistableCustomerShippingAddressPopulator shippingAddressPopulator =
+          new PersistableCustomerShippingAddressPopulator();

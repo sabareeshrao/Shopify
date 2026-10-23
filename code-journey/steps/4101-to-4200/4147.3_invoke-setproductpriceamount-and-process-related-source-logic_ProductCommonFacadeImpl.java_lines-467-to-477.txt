@@ -1,0 +1,11 @@
+						price.setProductPriceAmount(pricingService.getAmount(product.getPrice()));
+					} catch (ServiceException e) {
+						throw new ServiceRuntimeException("Invalid product price format");
+					}
+				}
+			}
+		}
+	}
+
+
+}

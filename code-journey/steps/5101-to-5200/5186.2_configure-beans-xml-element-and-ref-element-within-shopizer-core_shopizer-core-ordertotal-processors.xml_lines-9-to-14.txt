@@ -1,0 +1,6 @@
+
+		<!-- 
+		     Order total calculation post-processors 
+			 Using decision tables to calculate potential
+			 discounts according to items, shipping etc...
+		-->

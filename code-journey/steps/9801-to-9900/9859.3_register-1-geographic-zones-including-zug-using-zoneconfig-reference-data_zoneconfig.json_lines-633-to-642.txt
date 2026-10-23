@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "ZG",
+		"zoneName": "Zug",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "ZH",
+		"zoneName": "Zrich",
+		"countryCode": "CH"
+	},

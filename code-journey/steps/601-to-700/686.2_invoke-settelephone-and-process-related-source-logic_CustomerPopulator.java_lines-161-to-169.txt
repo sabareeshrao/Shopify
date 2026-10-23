@@ -1,0 +1,9 @@
+				delivery.setTelephone(sourceShipping.getPhone());
+				delivery.setPostalCode(sourceShipping.getPostalCode());
+				delivery.setState(sourceShipping.getStateProvince());
+				Country deliveryCountry = null;
+				
+				
+				
+				if(!StringUtils.isBlank(sourceShipping.getCountry())) {
+					deliveryCountry = countries.get(sourceShipping.getCountry());

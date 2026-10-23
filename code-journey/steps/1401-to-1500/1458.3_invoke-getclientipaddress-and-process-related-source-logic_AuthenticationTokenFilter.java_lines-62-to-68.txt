@@ -1,0 +1,7 @@
+
+    	try {
+    		
+    		String ipAddress = GeoLocationUtils.getClientIpAddress(request);
+    		
+    		UserContext userContext = UserContext.create();
+    		userContext.setIpAddress(ipAddress);

@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NDS",
-		"zoneName": "Niedersachsen",
-		"countryCode": "DE"
-	},

@@ -1,0 +1,9 @@
+			orderProductPrice.setProductPriceSpecialStartDate(productPrice.getProductPriceSpecialStartDate());
+			orderProductPrice.setProductPriceSpecialEndDate(productPrice.getProductPriceSpecialEndDate());
+		}
+		
+		return orderProductPrice;
+	}
+
+
+}

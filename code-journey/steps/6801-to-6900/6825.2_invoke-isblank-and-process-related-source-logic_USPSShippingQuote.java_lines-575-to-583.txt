@@ -1,0 +1,9 @@
+			if (rtdetails != null) {
+
+				if (!StringUtils.isBlank(rtdetails.getConfigurationValue1())) {// display
+																				// or
+																				// not
+																				// quotes
+					try {
+						displayQuoteDeliveryTime = Integer.parseInt(rtdetails
+								.getConfigurationValue1());

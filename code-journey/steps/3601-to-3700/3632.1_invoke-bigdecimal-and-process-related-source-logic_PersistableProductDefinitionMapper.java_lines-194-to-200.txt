@@ -1,0 +1,7 @@
+
+
+
+
+			if(defaultPrice == null) {
+				
+				BigDecimal defaultPriceAmount = new BigDecimal(0);

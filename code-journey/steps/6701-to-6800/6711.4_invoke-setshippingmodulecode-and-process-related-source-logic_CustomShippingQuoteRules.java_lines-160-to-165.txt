@@ -1,0 +1,6 @@
+			shippingOption.setShippingModuleCode(MODULE_CODE);
+			shippingOption.setOptionCode(MODULE_CODE);
+			shippingOption.setOptionId(MODULE_CODE);
+
+			options.add(shippingOption);
+		}

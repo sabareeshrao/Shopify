@@ -1,0 +1,7 @@
+
+        PersistableShoppingCartItem cartItem2 = new PersistableShoppingCartItem();
+        cartItem2.setProduct(data.getProducts().get(1).getSku());
+        cartItem2.setQuantity(2);
+
+
+        PersistableShoppingCartItem[] productsQtyUpdates = {cartItem1, cartItem2};

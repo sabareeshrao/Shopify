@@ -1,0 +1,6 @@
+	@ApiOperation(httpMethod = "POST", value = "Calculate product price with variants", notes = "Product price calculation from variants")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Price calculated", response = ReadableProductPrice.class) })
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })

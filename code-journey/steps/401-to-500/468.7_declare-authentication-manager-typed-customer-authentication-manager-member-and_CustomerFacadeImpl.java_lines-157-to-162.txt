@@ -1,0 +1,6 @@
+
+  @Inject
+  private CoreConfiguration coreConfiguration;
+  
+  @Autowired
+  private CustomerPopulator customerPopulator;

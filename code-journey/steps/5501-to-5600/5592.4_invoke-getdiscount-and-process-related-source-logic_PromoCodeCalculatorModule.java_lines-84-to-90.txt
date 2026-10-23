@@ -1,0 +1,7 @@
+
+		if(resp.getDiscount() != null) {
+			
+			OrderTotal orderTotal = null;
+			if(resp.getDiscount() != null) {
+					orderTotal = new OrderTotal();
+					orderTotal.setOrderTotalCode(Constants.OT_DISCOUNT_TITLE);

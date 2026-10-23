@@ -1,9 +1,0 @@
-	
-	/**
-	 * Send download email instructions to customer
-	 * @param customer
-	 * @param order
-	 * @param merchantStore
-	 * @param customerLocale
-	 * @param contextPath
-	 */

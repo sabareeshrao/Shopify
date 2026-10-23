@@ -1,0 +1,6 @@
+	private void testCreateRelationShip(Product product) throws Exception {
+		
+		MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
+		Language en = languageService.getByCode("en");
+		Manufacturer oreilley = manufacturerService.getByCode(store, "oreilley");
+		ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);

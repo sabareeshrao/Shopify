@@ -1,0 +1,7 @@
+	private Long testProductID;
+
+	@Test
+	public void createProductWithCategory() throws Exception {
+
+
+		final PersistableCategory newCategory = new PersistableCategory();

@@ -1,0 +1,7 @@
+ * Each Catalog contains a list of Product. A MarketPlace has also a list of Category that merchant cannot change.
+ * Only the MarketPlace can decide which category are shown and which catalog is part of product offering
+ * @author c.samson
+ *
+ */
+public class MarketPlace extends SalesManagerEntity<Long, MarketPlace> implements Auditable {
+	

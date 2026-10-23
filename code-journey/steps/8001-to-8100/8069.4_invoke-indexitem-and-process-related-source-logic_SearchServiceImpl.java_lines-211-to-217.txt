@@ -1,0 +1,7 @@
+
+			IndexItem item = new IndexItem();
+			item.setId(product.getId());
+			item.setStore(store.getCode().toLowerCase());
+			item.setDescription(description.getDescription());
+			item.setName(description.getName());
+			item.setInventory(itemInventory);

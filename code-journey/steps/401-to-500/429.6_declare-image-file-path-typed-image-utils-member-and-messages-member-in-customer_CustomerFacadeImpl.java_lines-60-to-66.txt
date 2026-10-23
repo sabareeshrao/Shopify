@@ -1,7 +1,0 @@
-
-	@Autowired
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-
-	@Inject
-	private LabelUtils messages;

@@ -1,0 +1,6 @@
+	
+	@Column(name = "CURRENCY_CURRENCY_CODE" ,nullable = false, unique = true)
+	private java.util.Currency currency;
+	
+	@Column(name = "CURRENCY_SUPPORTED")
+	private Boolean supported = true;

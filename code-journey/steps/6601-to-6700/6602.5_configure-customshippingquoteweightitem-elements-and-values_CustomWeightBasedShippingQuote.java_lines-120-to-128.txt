@@ -1,0 +1,9 @@
+						for(PackageDetails packageDetail : packages) {
+							weight = weight + packageDetail.getShippingWeight();
+						}
+						
+						//see the price associated with the width
+						List<CustomShippingQuoteWeightItem> quoteItems = region.getQuoteItems();
+						for(CustomShippingQuoteWeightItem quoteItem : quoteItems) {
+							if(weight<= quoteItem.getMaximumWeight()) {
+								shippingOption = new ShippingOption();

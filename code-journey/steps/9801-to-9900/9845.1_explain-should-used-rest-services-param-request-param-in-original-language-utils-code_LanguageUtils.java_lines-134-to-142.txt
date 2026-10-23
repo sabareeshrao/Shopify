@@ -1,9 +1,0 @@
-
-  /**
-   * Should be used by rest web services
-   * 
-   * @param request
-   * @param store
-   * @return
-   * @throws Exception
-   */

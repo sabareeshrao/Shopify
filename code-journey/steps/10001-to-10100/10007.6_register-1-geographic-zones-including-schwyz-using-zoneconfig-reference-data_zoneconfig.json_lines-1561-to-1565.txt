@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "SZ",
-		"zoneName": "Schwyz",
-		"countryCode": "CH"
-	},

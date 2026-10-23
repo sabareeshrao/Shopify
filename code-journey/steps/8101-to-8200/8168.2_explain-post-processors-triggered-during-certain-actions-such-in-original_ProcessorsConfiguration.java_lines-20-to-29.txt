@@ -1,0 +1,10 @@
+ * 		Triggered during defined simple events - ex add to cart checkout
+ * 
+ * - calculation processors
+ * 		Triggered during shopping cart and order total calculation
+ * 
+ * For events see configuratio/events
+ * 
+ * - Payment events (payment, refund)
+ * 
+ * - Change Order status

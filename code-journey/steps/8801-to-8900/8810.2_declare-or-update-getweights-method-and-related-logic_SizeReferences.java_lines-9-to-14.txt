@@ -1,0 +1,6 @@
+	public List<WeightUnit> getWeights() {
+		return weights;
+	}
+	public void setWeights(List<WeightUnit> weights) {
+		this.weights = weights;
+	}

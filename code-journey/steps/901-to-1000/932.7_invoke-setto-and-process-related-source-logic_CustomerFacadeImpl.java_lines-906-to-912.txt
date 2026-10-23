@@ -1,0 +1,7 @@
+      email.setTo(customer.getEmailAddress());
+      email.setTemplateName(RESET_PASSWORD_TPL);
+      email.setTemplateTokens(templateTokens);
+
+
+
+      emailService.sendHtmlEmail(store, email);

@@ -1,0 +1,7 @@
+
+
+	public void setJwtCustomerDetailsService(UserDetailsService jwtCustomerDetailsService) {
+		this.jwtCustomerDetailsService = jwtCustomerDetailsService;
+	}
+
+}

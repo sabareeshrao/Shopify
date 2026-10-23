@@ -1,0 +1,7 @@
+  
+  /**
+   * Validates password format
+   * @param password
+   * @return
+   */
+  public boolean validateUserPassword(final String password);

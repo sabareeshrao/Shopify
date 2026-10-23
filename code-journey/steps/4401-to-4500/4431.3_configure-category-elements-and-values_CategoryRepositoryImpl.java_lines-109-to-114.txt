@@ -1,0 +1,6 @@
+
+    	q.setParameter("id", product);
+    	q.setParameter("mid", store.getId());
+
+    	@SuppressWarnings("unchecked")
+		List<Category> c =  q.getResultList();

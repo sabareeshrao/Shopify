@@ -1,0 +1,9 @@
+	private long orderId;
+	private String orderStatus;
+	private String comments;
+	
+	
+	
+	public long getOrderId() {
+		return orderId;
+	}

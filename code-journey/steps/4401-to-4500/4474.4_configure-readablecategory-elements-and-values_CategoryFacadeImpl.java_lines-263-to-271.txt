@@ -1,0 +1,9 @@
+
+			List<ReadableCategory> childrenCats = children.stream()
+					.map(cat -> readableCategoryMapper.convert(cat, store, language))
+					.collect(Collectors.toList());
+
+			addChildToParent(readableCategory, childrenCats);
+			return readableCategory;
+
+	}

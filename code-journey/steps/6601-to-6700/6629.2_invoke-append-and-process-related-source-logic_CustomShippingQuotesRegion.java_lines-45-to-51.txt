@@ -1,0 +1,7 @@
+		
+		
+		
+		if(countries!=null) {
+			returnString.append(",");
+			StringBuilder coutriesList = new StringBuilder();
+			int countCountry = 0;

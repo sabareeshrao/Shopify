@@ -1,0 +1,7 @@
+
+##
+## configuration pooling base de donn\uFFFDes
+##
+db.initialPoolSize=8
+db.minPoolSize=8
+db.maxPoolSize=15

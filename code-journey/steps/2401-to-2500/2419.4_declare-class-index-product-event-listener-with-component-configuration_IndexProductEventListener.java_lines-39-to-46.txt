@@ -1,8 +1,0 @@
-@Component
-public class IndexProductEventListener implements ApplicationListener<ProductEvent> {
-
-	@Autowired
-	private SearchService searchService;
-
-	@Autowired
-	private ProductService productService;

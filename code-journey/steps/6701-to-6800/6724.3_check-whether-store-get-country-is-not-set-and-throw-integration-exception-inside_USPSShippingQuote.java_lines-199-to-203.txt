@@ -1,5 +1,0 @@
-
-			//must be US
-			if(!store.getCountry().getIsoCode().equals("US")) {
-				throw new IntegrationException("Can't use the service for store country code ");
-			}

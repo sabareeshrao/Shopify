@@ -1,0 +1,4 @@
+
+  void removeFiles(String merchantStoreCode, Optional<String> path) throws ServiceException;
+
+}

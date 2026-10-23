@@ -1,0 +1,8 @@
+
+				// need size in inch
+				double w = DataUtils.getMeasure(detail.getShippingWidth(),
+						store, MeasureUnit.IN.name());
+				double h = DataUtils.getMeasure(detail.getShippingHeight(),
+						store, MeasureUnit.IN.name());
+				double l = DataUtils.getMeasure(detail.getShippingLength(),
+						store, MeasureUnit.IN.name());

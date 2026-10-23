@@ -1,0 +1,9 @@
+		"variants": {
+			"type": "nested"
+		},
+		"store": {
+			"type": "keyword"
+		},
+		"link": {
+			"type": "keyword"
+		},

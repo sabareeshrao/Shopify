@@ -1,0 +1,6 @@
+		AuditSection section = null;
+		section = customer.getAuditSection();
+		Date lastModified = null;
+		//if(section != null) {//does not represent password change
+		//	lastModified = section.getDateModified();
+		//}

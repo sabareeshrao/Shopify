@@ -1,8 +1,0 @@
-	    
-	    // ---- variable informations - inventory - variants - prices
-	    ProductAvailability availability = createInventory(store, 100, new BigDecimal("99.99"));
-	    summerShoes.getAvailabilities().add(availability);
-	    // ---- add available sizes
-	    
-	    //DEFAULT (total quantity of 100 distributed)
-	    

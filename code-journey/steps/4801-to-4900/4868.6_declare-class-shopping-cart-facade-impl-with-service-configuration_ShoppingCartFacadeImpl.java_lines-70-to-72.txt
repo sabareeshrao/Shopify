@@ -1,3 +1,0 @@
-@Service(value = "shoppingCartFacade")
-public class ShoppingCartFacadeImpl implements ShoppingCartFacade {
-

@@ -1,0 +1,7 @@
+        if(source.getCountry()!=null) {
+            target.setCountry(source.getCountry().getIsoCode());
+            
+            //resolve country name
+            try {
+				Map<String,Country> countries = countryService.getCountriesMap(language);
+				Country c =countries.get(source.getCountry().getIsoCode());

@@ -1,0 +1,7 @@
+	        
+	        return (
+
+	        		usernameEquals && !isTokenExpired && !isTokenCreatedBeforeLastPasswordReset
+	        );
+	    }
+

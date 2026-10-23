@@ -1,0 +1,9 @@
+			
+			if(shippingOptions!=null) {
+				
+				for(ShippingOption option : shippingOptions) {
+					if(selectedOption==null) {
+						selectedOption = option;
+					}
+					//set price text
+					String priceText = pricingService.getDisplayAmount(option.getOptionPrice(), store);

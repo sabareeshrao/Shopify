@@ -1,0 +1,8 @@
+	
+	Page<Manufacturer> listByStore(MerchantStore store, String name,
+	      int page, int count) throws ServiceException;
+	
+	int count(MerchantStore store);
+
+	
+}

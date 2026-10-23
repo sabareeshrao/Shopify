@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Asturias",
-		"zoneName": "Asturias",
-		"countryCode": "ES"
-	},

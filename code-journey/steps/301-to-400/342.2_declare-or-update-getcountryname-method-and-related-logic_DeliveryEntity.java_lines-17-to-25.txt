@@ -1,0 +1,9 @@
+
+	private String countryName;
+
+	private String provinceName;
+
+
+	public String getCountryName() {
+		return countryName;
+	}

@@ -1,3 +1,0 @@
-	public void setValidationMessages(Map<String, String> validationMessages) {
-		this.validationMessages = validationMessages;
-	}

@@ -1,0 +1,8 @@
+
+/**
+ * Global system configuration information
+ * @author casams1
+ *
+ */
+@Entity
+@EntityListeners(value = AuditListener.class)

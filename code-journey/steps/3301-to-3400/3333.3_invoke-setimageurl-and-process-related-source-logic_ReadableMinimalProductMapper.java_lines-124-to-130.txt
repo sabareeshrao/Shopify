@@ -1,0 +1,7 @@
+
+				prdImage.setImageUrl(imgPath.toString());
+				prdImage.setId(img.getId());
+				prdImage.setImageType(img.getImageType());
+				if(img.getProductImageUrl()!=null){
+					prdImage.setExternalUrl(img.getProductImageUrl());
+				}

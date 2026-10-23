@@ -1,0 +1,7 @@
+	@Override
+	public void addProductImages(Product product, List<ProductImage> productImages) throws ServiceException {
+
+		try {
+			for (ProductImage productImage : productImages) {
+
+				Assert.notNull(productImage.getImage());

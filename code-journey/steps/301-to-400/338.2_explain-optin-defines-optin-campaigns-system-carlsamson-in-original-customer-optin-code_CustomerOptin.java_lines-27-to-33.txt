@@ -1,7 +1,0 @@
-
-
-/**
- * Optin defines optin campaigns for the system.
- * @author carlsamson
- *
- */

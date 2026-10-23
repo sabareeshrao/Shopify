@@ -1,0 +1,7 @@
+
+		Set<String> produces = new HashSet<>();
+		produces.add("application/json");
+
+		Set<String> consumes = new HashSet<>();
+		consumes.add("application/json");
+

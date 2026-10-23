@@ -1,0 +1,8 @@
+					option.setOptionCode(code);
+					// get description
+					String label = (String) serviceMap.get(code);
+					if (label == null) {
+						log
+								.warn("UPSXML cannot find description for service code "
+										+ code);
+					}

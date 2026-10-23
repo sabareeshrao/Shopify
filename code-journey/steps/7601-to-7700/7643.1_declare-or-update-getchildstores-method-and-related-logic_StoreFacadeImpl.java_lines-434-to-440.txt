@@ -1,0 +1,7 @@
+
+	@Override
+	public ReadableMerchantStoreList getChildStores(Language language, String code, int page, int count) {
+		try {
+
+			// first check if store is retailer
+			MerchantStore retailer = this.getByCode(code);

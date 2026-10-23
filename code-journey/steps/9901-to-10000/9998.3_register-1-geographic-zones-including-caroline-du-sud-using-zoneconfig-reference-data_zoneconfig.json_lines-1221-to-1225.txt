@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "SC",
-		"zoneName": "Caroline du Sud",
-		"countryCode": "US"
-	},

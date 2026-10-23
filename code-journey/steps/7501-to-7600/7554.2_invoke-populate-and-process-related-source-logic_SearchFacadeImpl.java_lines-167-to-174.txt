@@ -1,0 +1,8 @@
+
+		try {
+			return populator.populate(product, new ReadableProduct(), merchantStore, language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException(e);
+		}
+	}
+

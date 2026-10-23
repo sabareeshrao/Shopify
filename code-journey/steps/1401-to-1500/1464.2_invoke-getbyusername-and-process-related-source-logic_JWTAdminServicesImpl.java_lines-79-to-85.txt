@@ -1,0 +1,7 @@
+
+				user = userService.getByUserName(userName);
+			
+				if(user==null) {
+					//return null;
+					throw new UsernameNotFoundException("User " + userName + " not found");
+				}

@@ -1,5 +1,0 @@
-        ShippingInputParameters(country == "CA")
-        ShippingInputParameters(province == "QC")
-    then
-        decision.setModuleName("priceByDistance");
-end

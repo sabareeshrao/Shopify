@@ -1,0 +1,7 @@
+
+		Entity entity = new Entity();
+		entity.setId(attributeEntity.getId());
+		return entity;
+
+
+	}

@@ -1,0 +1,10 @@
+			
+			
+			
+			StringBuilder RETURN_URL = new StringBuilder();
+			RETURN_URL.append(
+					baseScheme);
+			
+			if(!StringUtils.isBlank(baseScheme) && !baseScheme.endsWith(Constants.SLASH)) {
+				RETURN_URL.append(Constants.SLASH);
+			}

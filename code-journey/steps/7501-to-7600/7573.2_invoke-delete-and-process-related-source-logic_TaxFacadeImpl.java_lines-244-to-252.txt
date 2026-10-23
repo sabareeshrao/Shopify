@@ -1,0 +1,9 @@
+		try {
+			taxRateService.delete(model);
+		} catch (ServiceException e) {
+			LOGGER.error("Error while deleting taxRate [" +  id + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error deleting taxRate [" +  id + "] for store [" + store.getCode() + "]", e);
+		}
+
+	}
+

@@ -1,0 +1,7 @@
+	    
+	    /** user selects black **/
+	    ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,blackAttribute);
+	    item.getAttributes().add(attributeItem);
+	    
+	    shoppingCart.getLineItems().add(item);
+

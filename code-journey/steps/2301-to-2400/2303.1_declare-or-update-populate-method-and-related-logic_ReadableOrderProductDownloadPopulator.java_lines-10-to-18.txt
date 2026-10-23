@@ -1,0 +1,9 @@
+public class ReadableOrderProductDownloadPopulator extends
+		AbstractDataPopulator<OrderProductDownload, ReadableOrderProductDownload> {
+
+	@Override
+	public ReadableOrderProductDownload populate(OrderProductDownload source,
+			ReadableOrderProductDownload target, MerchantStore store,
+			Language language) throws ConversionException {
+		try {
+			

@@ -1,0 +1,10 @@
+public interface ProductDefinitionFacade {
+
+	/**
+	 * 
+	 * @param store
+	 * @param product
+	 * @param language
+	 * @return
+	 */
+	Long saveProductDefinition(MerchantStore store, PersistableProductDefinition product, Language language);

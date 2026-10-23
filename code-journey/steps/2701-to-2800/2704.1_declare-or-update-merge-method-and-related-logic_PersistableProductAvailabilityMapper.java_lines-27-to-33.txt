@@ -1,0 +1,7 @@
+	@Override
+	public ProductAvailability merge(PersistableProductInventory source, ProductAvailability destination,
+			MerchantStore store, Language language) {
+
+		try {
+
+			destination.setRegion(Constants.ALL_REGIONS);

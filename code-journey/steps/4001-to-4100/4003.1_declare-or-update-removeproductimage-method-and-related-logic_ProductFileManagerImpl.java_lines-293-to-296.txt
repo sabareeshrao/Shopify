@@ -1,0 +1,4 @@
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+
+    this.removeImage.removeProductImage(productImage);

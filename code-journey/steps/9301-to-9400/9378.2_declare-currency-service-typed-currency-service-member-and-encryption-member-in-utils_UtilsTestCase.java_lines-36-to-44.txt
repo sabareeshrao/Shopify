@@ -1,9 +1,0 @@
-	
-	@Inject
-	private CurrencyService currencyService;
-	
-	@Inject
-	private Encryption encryption;
-	
-	@Inject
-	private CacheUtils cache;

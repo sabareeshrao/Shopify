@@ -1,0 +1,7 @@
+					
+					//if product is null it will be catched when invoking the module
+					orderTotal.setText(StringUtils.isNoneBlank(orderTotal.getText())?orderTotal.getText():product.getProductDescription().getName());
+					variation.getVariations().add(orderTotal);	
+				}
+			}
+		}

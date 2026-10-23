@@ -1,0 +1,8 @@
+    target.setAdminName(source.getUserName());
+    if(!StringUtils.isBlank(source.getPassword())) {
+      target.setAdminPassword(passwordEncoder.encode(source.getPassword()));
+    }
+    
+    if(!StringUtils.isBlank(source.getStore())) {
+        try {
+			MerchantStore userStore = merchantStoreService.getByCode(source.getStore());

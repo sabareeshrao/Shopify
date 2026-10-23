@@ -1,0 +1,6 @@
+	
+	private String path;
+
+	public String getPath() {
+		return path;
+	}

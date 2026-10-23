@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "ZG",
-		"zoneName": "Zug",
-		"countryCode": "CH"
-	},

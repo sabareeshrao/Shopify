@@ -1,0 +1,6 @@
+	protected final Log logger = LogFactory.getLog(getClass());
+	
+	@Autowired
+	private CountryService countryService;
+	@Autowired
+	private ZoneService zoneService;

@@ -1,4 +1,0 @@
-			
-			
-			List<OrderTotal> orderTotals = summary.getTotals();
-			BigDecimal tax = null;

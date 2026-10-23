@@ -1,0 +1,6 @@
+
+
+			if (product.getManufacturer() != null) {
+				item.setBrand(manufacturer(product.getManufacturer(), description.getLanguage().getCode()));
+			}
+

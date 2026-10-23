@@ -1,0 +1,7 @@
+import com.salesmanager.core.model.common.Criteria;
+
+public class CustomerCriteria extends Criteria {
+	
+	private String firstName;
+	private String lastName;
+	private String name;

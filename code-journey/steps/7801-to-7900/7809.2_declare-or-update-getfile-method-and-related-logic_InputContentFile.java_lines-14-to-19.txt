@@ -1,0 +1,6 @@
+   
+    
+    public InputStream getFile()
+    {
+        return file;
+    }

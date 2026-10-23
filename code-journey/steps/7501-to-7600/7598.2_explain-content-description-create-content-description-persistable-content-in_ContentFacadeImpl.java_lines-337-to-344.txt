@@ -1,0 +1,8 @@
+	 * ContentDescription contentDescription = new ContentDescription(); if
+	 * (contentModel != null) {
+	 * setContentDescriptionToContentModel(contentModel, contentDescription,
+	 * lang); } contentDescription.setLanguage(lang);
+	 * contentDescription.setMetatagDescription(objectContent.getMetaDescription
+	 * ()); contentDescription.setTitle(objectContent.getTitle());
+	 * contentDescription.setName(objectContent.getName());
+	 * contentDescription.setSeUrl(objectContent.getFriendlyUrl());

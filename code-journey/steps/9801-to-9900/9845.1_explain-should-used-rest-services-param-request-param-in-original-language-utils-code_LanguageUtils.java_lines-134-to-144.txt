@@ -1,0 +1,11 @@
+
+  /**
+   * Should be used by rest web services
+   * 
+   * @param request
+   * @param store
+   * @return
+   * @throws Exception
+   */
+  public Language getRESTLanguage(HttpServletRequest request, NativeWebRequest webRequest) {
+

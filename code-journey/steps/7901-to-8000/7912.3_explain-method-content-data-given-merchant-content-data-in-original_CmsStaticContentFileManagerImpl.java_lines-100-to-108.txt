@@ -1,0 +1,9 @@
+	 * 
+	 * @param merchantStoreCode
+	 *            merchant store for whom data is being stored
+	 * @param inputStaticContentData
+	 *            data object being stored
+	 * @throws ServiceException
+	 * 
+	 */
+	@Override

@@ -1,0 +1,8 @@
+        final File file1 = new File( IMAGE_FILE);
+
+        if ( !file1.exists() || !file1.canRead() )
+        {
+            throw new ServiceException( "Can't read" + file1.getAbsolutePath() );
+        }
+
+        final byte[] is = IOUtils.toByteArray( new FileInputStream( file1 ) );

@@ -1,0 +1,9 @@
+	
+	/**
+	 * 
+	 * Forgot password functionality
+	 * @param customerName
+	 * @param store
+	 * @param language
+	 */
+	void requestPasswordReset(String customerName, String customerContextPath, MerchantStore store, Language language);

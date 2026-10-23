@@ -1,0 +1,9 @@
+
+            g.drawImage(image, 0, 0, fWidth, fHeight, null);
+            g.dispose();
+
+            return resizedImage;
+	}
+
+
+}

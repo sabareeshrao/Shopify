@@ -1,0 +1,8 @@
+
+			StringBuilder lineage = new StringBuilder().append(categoryModel.getLineage());
+
+			ReadableCategory readableCategory = readableCategoryMapper.convert(categoryModel, store,
+					language);
+
+			// get children
+			List<Category> children = getListByLineage(store, lineage.toString());

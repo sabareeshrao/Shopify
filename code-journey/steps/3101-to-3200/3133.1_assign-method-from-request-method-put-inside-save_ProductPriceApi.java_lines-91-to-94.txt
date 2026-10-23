@@ -1,4 +1,0 @@
-	
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = { "/private/product/{sku}/inventory/{inventoryId}/price/{priceId}"},
-			method = RequestMethod.PUT)

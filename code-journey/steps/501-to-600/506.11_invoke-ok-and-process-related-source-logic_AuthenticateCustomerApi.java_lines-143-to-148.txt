@@ -1,0 +1,6 @@
+
+            // Return the token
+            return ResponseEntity.ok(new AuthenticationResponse(customer.getId(),token));
+
+        
+    }

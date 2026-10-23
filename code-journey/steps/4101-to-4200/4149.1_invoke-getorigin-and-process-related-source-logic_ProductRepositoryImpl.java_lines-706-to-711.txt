@@ -1,0 +1,6 @@
+		
+
+		/**/
+		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
+				&& !CollectionUtils.isEmpty(criteria.getAttributeCriteria())) {
+			int count = 0;

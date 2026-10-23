@@ -1,0 +1,8 @@
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public List<Product> getProductsListByCategories(Set categoryIds) {
+
+		// List regionList = new ArrayList();
+		// regionList.add("*");
+		// regionList.add(locale.getCountry());

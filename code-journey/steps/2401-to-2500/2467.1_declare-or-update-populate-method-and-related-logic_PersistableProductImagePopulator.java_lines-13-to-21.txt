@@ -1,0 +1,9 @@
+public class PersistableProductImagePopulator extends AbstractDataPopulator<PersistableImage, ProductImage> {
+
+	
+	private Product product;
+	
+	@Override
+	public ProductImage populate(PersistableImage source, ProductImage target, MerchantStore store, Language language)
+			throws ConversionException {
+		

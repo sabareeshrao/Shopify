@@ -1,0 +1,9 @@
+				for (Object arrayRegion : arrayRegions) {
+					supportedCountries.add((String) arrayRegion);
+				}
+			}
+			
+		}
+		
+		return supportedCountries;
+	}

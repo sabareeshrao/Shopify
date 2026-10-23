@@ -1,0 +1,8 @@
+		this.customerService = customerService;
+		this.permissionService = permissionService;
+		this.groupService = groupService;
+	}
+
+	@Override
+	protected UserDetails userDetails(String userName, Customer customer, Collection<GrantedAuthority> authorities) {
+        

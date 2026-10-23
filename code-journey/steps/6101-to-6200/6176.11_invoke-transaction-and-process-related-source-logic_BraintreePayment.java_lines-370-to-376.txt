@@ -1,0 +1,7 @@
+        
+        Transaction trx = new Transaction();
+        trx.setAmount(amount);
+        trx.setTransactionDate(new Date());
+        trx.setTransactionType(TransactionType.AUTHORIZECAPTURE);
+        trx.setPaymentType(PaymentType.CREDITCARD);
+        trx.getTransactionDetails().put("TRANSACTIONID", trxId);

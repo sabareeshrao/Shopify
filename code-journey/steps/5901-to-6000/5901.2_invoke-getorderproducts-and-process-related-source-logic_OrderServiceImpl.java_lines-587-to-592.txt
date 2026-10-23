@@ -1,0 +1,6 @@
+
+		boolean hasDownloads = false;
+		for(OrderProduct orderProduct : order.getOrderProducts()) {
+
+			if(CollectionUtils.isNotEmpty(orderProduct.getDownloads())) {
+				hasDownloads = true;

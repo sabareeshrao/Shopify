@@ -1,0 +1,7 @@
+		
+		if(storeModel.getParent() == null) {
+			return storeModel;
+		}
+	
+		return merchantRepository.getById(storeModel.getParent().getId());
+	}

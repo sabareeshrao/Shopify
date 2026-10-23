@@ -1,0 +1,9 @@
+	private BigDecimal subTotal;//one time price for items
+	private BigDecimal total;//final price
+	private BigDecimal taxTotal;//total of taxes
+	
+	private List<OrderTotal> totals;//all other fees (tax, shipping ....)
+
+	public BigDecimal getSubTotal() {
+		return subTotal;
+	}

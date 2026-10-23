@@ -1,0 +1,8 @@
+			qs.append("left join fetch pinsta.prices pinstap ");
+			qs.append("left join fetch pinstap.descriptions pinstapdesc ");
+			qs.append("left join fetch pinst.productVariantGroup pinstg ");
+			qs.append("left join fetch pinstg.images pinstgimg ");
+			qs.append("left join fetch pinstgimg.descriptions ");
+			//end variants
+
+			qs.append("where p.id=:productId and pm.id=:id");

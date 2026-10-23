@@ -1,8 +1,0 @@
-	    
-	    FinalPrice price = pricingService.calculateProductPrice(product);
-
-	    item.setItemPrice(price.getFinalPrice());
-	    item.setQuantity(1);
-	    
-	    /** user selects black **/
-	    ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,blackAttribute);

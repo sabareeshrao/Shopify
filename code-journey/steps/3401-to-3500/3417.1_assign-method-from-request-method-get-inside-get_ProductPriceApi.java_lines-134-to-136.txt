@@ -1,3 +1,0 @@
-	
-	@RequestMapping(value = { "/private/product/{sku}/inventory/{inventoryId}/price"},
-			method = RequestMethod.GET)

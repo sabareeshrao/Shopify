@@ -1,0 +1,7 @@
+		qs.append("join fetch p.categories categs ");
+
+		// not necessary
+		// qs.append("join fetch pap.descriptions papd ");
+
+		// images
+		qs.append("left join fetch p.images images ");

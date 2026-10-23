@@ -1,6 +1,0 @@
-
-  @Column(name = "TYPE")
-  @Enumerated(value = EnumType.STRING)
-  private MerchantConfigurationType merchantConfigurationType =
-      MerchantConfigurationType.INTEGRATION;
-

@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "LaRioja",
-		"zoneName": "La Rioja",
-		"countryCode": "ES"
-	},

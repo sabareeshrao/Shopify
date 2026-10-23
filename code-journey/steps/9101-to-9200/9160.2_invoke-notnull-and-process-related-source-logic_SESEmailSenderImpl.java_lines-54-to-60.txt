@@ -1,0 +1,7 @@
+
+      Validate.notNull(region,"AWS region is null");
+
+      AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
+          // Replace US_WEST_2 with the AWS Region you're using for
+          // Amazon SES.
+          .withRegion(Regions.valueOf(region.toUpperCase())).build();

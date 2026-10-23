@@ -1,0 +1,9 @@
+			return listItemsByGroup(group,store,language);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("ExceptionWhile getting product group [" + group + "]", e);
+		}
+		
+		
+		
+		
+	}

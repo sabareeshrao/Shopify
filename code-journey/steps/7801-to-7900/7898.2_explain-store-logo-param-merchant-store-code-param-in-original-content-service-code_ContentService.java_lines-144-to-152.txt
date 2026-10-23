@@ -1,9 +1,0 @@
-
-    /**
-     * Add the store logo
-     * @param merchantStoreCode
-     * @param cmsContentImage
-     * @throws ServiceException
-     */
-	void addLogo(String merchantStoreCode, InputContentFile cmsContentImage)
-			throws ServiceException;

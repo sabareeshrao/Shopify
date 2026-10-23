@@ -1,0 +1,6 @@
+				if(source.getPrice() != null) {
+					defaultPriceAmount = source.getPrice();
+				}
+
+			    defaultPrice = new ProductPrice();
+			    defaultPrice.setDefaultPrice(true);

@@ -1,0 +1,6 @@
+    List<Bucket> buckets = s3.listBuckets();
+    for (Bucket b : buckets) {
+      if (b.getName().equals(bucket_name)) {
+        named_bucket = b;
+      }
+    }

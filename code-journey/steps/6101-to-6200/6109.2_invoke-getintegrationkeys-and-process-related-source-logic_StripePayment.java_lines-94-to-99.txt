@@ -1,0 +1,6 @@
+      String publicKey = configuration.getIntegrationKeys().get("publishableKey");
+      Validate.notNull(publicKey,"Publishable key not found in configuration");
+
+      Transaction transaction = new Transaction();
+      transaction.setAmount(amount);
+      transaction.setDetails(publicKey);

@@ -1,0 +1,5 @@
+	    
+	    product.getAttributes().add(blackAttribute);
+
+	    productService.saveProduct(product);
+

@@ -1,0 +1,7 @@
+			details.setShippingHeight(height);
+			details.setShippingLength(length);
+			details.setShippingWeight(weight + box.getWeight());
+			details.setShippingWidth(width);
+			details.setItemName(store.getCode());
+			boxes.add(details);
+		}

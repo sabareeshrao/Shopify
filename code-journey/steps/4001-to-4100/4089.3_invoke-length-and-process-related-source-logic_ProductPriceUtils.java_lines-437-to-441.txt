@@ -1,0 +1,5 @@
+		for (int i = 0; i < amount.length(); i++) {
+			if (amount.charAt(i) != DECIMALPOINT && amount.charAt(i) != THOUSANDPOINT) {
+				newAmount.append(amount.charAt(i));
+			}
+		}

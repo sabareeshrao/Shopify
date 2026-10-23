@@ -1,0 +1,6 @@
+	      
+	      Map<String,String> map = new HashMap<String,String>();
+	  	  ObjectMapper mapper = new ObjectMapper();
+	  	  
+	  	  map = mapper.readValue(json, 
+			    new TypeReference<HashMap<String,String>>(){});

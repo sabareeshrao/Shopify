@@ -1,0 +1,6 @@
+	
+	@Inject
+	public OptinServiceImpl(OptinRepository optinRepository) {
+		super(optinRepository);
+		this.optinRepository = optinRepository;
+	}

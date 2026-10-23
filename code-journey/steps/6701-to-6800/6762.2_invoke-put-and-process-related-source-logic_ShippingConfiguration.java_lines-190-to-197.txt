@@ -1,0 +1,8 @@
+		data.put("shipPackageType", this.getShippingPackageType().name());
+		if(shipFreeType!=null) {
+			data.put("shipFreeType", this.getFreeShippingType().name());
+		}
+		data.put("shipDescription", this.getShippingDescription().name());
+		
+		
+		data.put("boxWidth", this.getBoxWidth());

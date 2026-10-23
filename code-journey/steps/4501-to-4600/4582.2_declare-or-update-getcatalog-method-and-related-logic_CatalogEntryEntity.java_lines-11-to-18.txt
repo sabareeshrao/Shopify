@@ -1,0 +1,8 @@
+	private String catalog;
+	private boolean visible;
+	public String getCatalog() {
+		return catalog;
+	}
+	public void setCatalog(String catalog) {
+		this.catalog = catalog;
+	}

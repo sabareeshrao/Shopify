@@ -1,0 +1,7 @@
+				String mimetype = URLConnection.guessContentTypeFromName(os.getKey());
+				if (!StringUtils.isBlank(mimetype)) {
+					fileNames.add(getName(os.getKey()));
+				}
+			}
+
+			LOGGER.info("Content get file names");

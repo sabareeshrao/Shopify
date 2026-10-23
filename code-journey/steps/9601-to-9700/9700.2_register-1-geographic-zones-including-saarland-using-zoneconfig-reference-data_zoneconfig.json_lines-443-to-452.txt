@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "SAR",
+		"zoneName": "Saarland",
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "SAS",
+		"zoneName": "Sachsen",
+		"countryCode": "DE"
+	},

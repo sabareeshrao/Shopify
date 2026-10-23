@@ -1,0 +1,6 @@
+        largeContentImage.setFileContentType(FileContentType.PRODUCT);
+        largeContentImage.setFileName(productImage.getProductImage());
+        largeContentImage.setFile(isLarge);
+
+
+        // largeContentImage.setBufferedImage(bufferedImage);

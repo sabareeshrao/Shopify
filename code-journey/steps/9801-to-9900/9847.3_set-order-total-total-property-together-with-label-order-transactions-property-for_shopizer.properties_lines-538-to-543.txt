@@ -1,0 +1,6 @@
+order.total.subtotal=Subtotal
+order.total.total=Total
+order.total.shipping=Shipping
+order.total.handling=Handling
+order.total.discount=Rebate
+

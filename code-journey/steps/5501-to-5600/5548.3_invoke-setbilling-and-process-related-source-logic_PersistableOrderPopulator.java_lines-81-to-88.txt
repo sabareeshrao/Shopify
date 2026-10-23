@@ -1,0 +1,8 @@
+					target.setBilling(modelCustomer.getBilling());
+					target.setDelivery(modelCustomer.getDelivery());
+					target.setCustomerEmailAddress(source.getCustomer().getEmailAddress());
+
+
+					
+				} 
+			}

@@ -1,0 +1,7 @@
+		for(OrderProductAttribute oProductAttribute : oAttributes) {
+			if(attributeName == null) {
+				attributeName = new StringBuilder();
+				attributeName.append("[");
+			} else {
+				attributeName.append(", ");
+			}

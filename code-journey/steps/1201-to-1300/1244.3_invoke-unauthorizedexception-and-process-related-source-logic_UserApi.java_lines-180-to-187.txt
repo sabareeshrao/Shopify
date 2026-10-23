@@ -1,0 +1,8 @@
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		UserCriteria criteria = new UserCriteria();
+		if(!StringUtils.isBlank(emailAddress)) {
+			criteria.setAdminEmail(emailAddress);
+		}

@@ -1,0 +1,10 @@
+
+	@Override
+	public ReadableTaxClass taxClass(String code, MerchantStore store, Language language) {
+		
+		Validate.notNull(code,"TaxClass code cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		try {
+			TaxClass model = taxClassService.getByCode(code, store);

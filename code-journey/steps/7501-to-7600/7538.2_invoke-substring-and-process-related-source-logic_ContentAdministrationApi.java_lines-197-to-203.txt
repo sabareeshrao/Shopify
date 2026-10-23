@@ -1,0 +1,7 @@
+		try {
+			
+			String fileName = path.substring(path.lastIndexOf("/")+1, path.length());
+			contentFacade.renameFile(merchantStore, FileContentType.IMAGE, fileName, newName);
+			return new FileStatus();
+		} catch (Exception e) {
+			//throw new ServiceRuntimeException("Error while getting file bytes");

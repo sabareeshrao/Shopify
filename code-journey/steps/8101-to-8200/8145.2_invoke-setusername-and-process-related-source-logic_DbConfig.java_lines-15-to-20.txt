@@ -1,0 +1,6 @@
+    	dbCredentials.setUserName(env.getProperty("user"));
+    	dbCredentials.setPassword(env.getProperty("password"));
+        return dbCredentials;
+    }
+
+}

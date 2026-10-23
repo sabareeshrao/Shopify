@@ -1,0 +1,9 @@
+			try {
+				shippingConfiguration = mapper.readValue(value, ShippingConfiguration.class);
+			} catch(Exception e) {
+				throw new ServiceException("Cannot parse json string " + value);
+			}
+		}
+		return shippingConfiguration;
+		
+	}

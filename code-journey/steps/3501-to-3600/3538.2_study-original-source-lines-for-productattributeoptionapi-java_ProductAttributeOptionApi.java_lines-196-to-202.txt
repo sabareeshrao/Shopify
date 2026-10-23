@@ -1,0 +1,7 @@
+	public void updateOptionValue(
+			@PathVariable Long id,
+			@Valid @RequestBody PersistableProductOptionValue optionValue,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, 
+			HttpServletResponse response) {
+

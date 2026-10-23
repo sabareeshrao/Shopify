@@ -1,0 +1,7 @@
+
+      PutObjectRequest request = new PutObjectRequest(bucketName,
+          nodePath + productImage.getProductImage(), contentImage.getFile(), metadata);
+      request.setCannedAcl(CannedAccessControlList.PublicRead);
+
+
+      s3.putObject(request);

@@ -1,0 +1,8 @@
+
+  @ManyToOne(targetEntity = ProductType.class)
+  @JoinColumn(name = "PRODUCT_TYPE_ID", nullable = false)
+  private ProductType productType;
+
+  public ProductType getProductType() {
+    return productType;
+  }

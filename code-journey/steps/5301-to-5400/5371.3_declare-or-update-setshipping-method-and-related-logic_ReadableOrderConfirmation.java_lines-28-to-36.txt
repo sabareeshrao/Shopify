@@ -1,0 +1,9 @@
+	public void setShipping(String shipping) {
+		this.shipping = shipping;
+	}
+	public String getPayment() {
+		return payment;
+	}
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}

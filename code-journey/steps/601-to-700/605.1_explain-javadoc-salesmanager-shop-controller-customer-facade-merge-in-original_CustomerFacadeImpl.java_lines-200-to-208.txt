@@ -1,9 +1,0 @@
-
-
-  /*
-   * (non-Javadoc)
-   * 
-   * @see com.salesmanager.web.shop.controller.customer.facade#mergeCart(final Customer
-   * customerModel, final String sessionShoppingCartId ,final MerchantStore store,final Language
-   * language)
-   */

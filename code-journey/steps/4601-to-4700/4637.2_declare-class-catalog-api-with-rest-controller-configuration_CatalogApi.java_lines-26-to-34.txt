@@ -1,9 +1,0 @@
-
-@RestController
-@RequestMapping(value = "/api/v1")
-@Api(tags = {"Catalog management resource (Catalog Management Api)"})
-@SwaggerDefinition(tags = {
-    @Tag(name = "Catalog management resource", description = "Manage catalogs and attached products")
-})
-public class CatalogApi {
-

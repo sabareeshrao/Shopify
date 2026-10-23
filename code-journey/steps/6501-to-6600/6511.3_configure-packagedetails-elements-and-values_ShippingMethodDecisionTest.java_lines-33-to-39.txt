@@ -1,0 +1,7 @@
+		PackageDetails pDetail = new PackageDetails();
+		pDetail.setShippingHeight(20);
+		pDetail.setShippingLength(10);
+		pDetail.setShippingWeight(70);
+		pDetail.setShippingWidth(78);
+		List<PackageDetails> details = new ArrayList<PackageDetails>();
+		details.add(pDetail);

@@ -1,0 +1,9 @@
+
+	/**
+	 * Get content page by name
+	 * @param name
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping(value = "/content/pages/name/{name}", produces = MediaType.APPLICATION_JSON_VALUE)

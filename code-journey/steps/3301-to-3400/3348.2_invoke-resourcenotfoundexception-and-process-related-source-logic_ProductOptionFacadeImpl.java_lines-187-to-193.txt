@@ -1,0 +1,7 @@
+
+		if (option == null) {
+			throw new ResourceNotFoundException("Option id [" + optionId + "] not found");
+		}
+
+		return readableMapper.convert(option, store, language);
+	}

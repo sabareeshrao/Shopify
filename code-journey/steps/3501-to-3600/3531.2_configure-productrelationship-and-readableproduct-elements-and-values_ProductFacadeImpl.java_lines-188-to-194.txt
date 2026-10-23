@@ -1,0 +1,7 @@
+
+		List<ProductRelationship> relatedItems = productRelationshipService.getByType(store, product,
+				ProductRelationshipType.RELATED_ITEM);
+		if (relatedItems != null && relatedItems.size() > 0) {
+			List<ReadableProduct> items = new ArrayList<ReadableProduct>();
+			for (ProductRelationship relationship : relatedItems) {
+				Product relatedProduct = relationship.getRelatedProduct();

@@ -1,0 +1,6 @@
+public class ReadableProductProperty extends ProductPropertyOption {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

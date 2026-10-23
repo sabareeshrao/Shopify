@@ -1,0 +1,7 @@
+		
+		TaxRate rate = taxRateByCode(code, store, language);
+		if(rate == null) {
+			return false;
+		}
+		return true;
+	}

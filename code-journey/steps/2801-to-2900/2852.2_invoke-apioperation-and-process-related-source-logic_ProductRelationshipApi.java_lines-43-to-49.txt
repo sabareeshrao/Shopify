@@ -1,0 +1,7 @@
+  @ApiOperation(
+      httpMethod = "GET",
+      value =
+          "Get product related items. This is used for doing cross-sell and up-sell functionality on a product details page",
+      notes = "",
+      produces = "application/json",
+      response = List.class)

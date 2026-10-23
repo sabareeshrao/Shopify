@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "WV",
-		"zoneName": "West Virginia",
-		"countryCode": "US"
-	},

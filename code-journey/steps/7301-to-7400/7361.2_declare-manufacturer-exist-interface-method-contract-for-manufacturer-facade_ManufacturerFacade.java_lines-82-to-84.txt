@@ -1,3 +1,0 @@
-  boolean manufacturerExist(MerchantStore store, String manufacturerCode);
-
-}

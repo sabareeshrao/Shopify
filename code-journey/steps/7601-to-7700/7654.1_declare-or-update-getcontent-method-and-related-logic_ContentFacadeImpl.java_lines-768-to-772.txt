@@ -1,0 +1,5 @@
+
+	@Override
+	public ReadableContentFull getContent(String code, MerchantStore store, Language language) {
+		Validate.notNull(store, "MerchantStore not null");
+		Validate.notNull(code, "Content code must not be null");

@@ -1,0 +1,6 @@
+		
+		ReadableProduct readableProduct = readableProductMapper.convert(product, store, language);
+
+		//get all instances for this product group by option
+		//limit to 15 searches
+		List<ProductVariant> instances = productVariantService.getByProductId(store, product, language);

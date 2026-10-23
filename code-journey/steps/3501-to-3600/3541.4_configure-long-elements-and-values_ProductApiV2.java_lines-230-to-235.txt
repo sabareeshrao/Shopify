@@ -1,0 +1,6 @@
+			
+			List<Long> listOfIds = new ArrayList<Long>();
+			listOfIds.add(category.getId());
+			
+			
+			criterias.setCategoryIds(listOfIds);

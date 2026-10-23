@@ -1,0 +1,9 @@
+			"fields": {
+        		"raw": {
+            		"type": "text" 
+        		}
+    		}
+		},
+		"brand": {
+			"type": "keyword",
+			"normalizer": "custom_normalizer",

@@ -1,0 +1,6 @@
+	
+	private String creationDate;
+
+	public String getCreationDate() {
+		return creationDate;
+	}

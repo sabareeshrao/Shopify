@@ -1,0 +1,8 @@
+
+							String optName = null;
+							String optValue = null;
+							if (!CollectionUtils.isEmpty(optionDescriptions)
+									&& !CollectionUtils.isEmpty(optionValueDescriptions)) {
+
+								optName = optionDescriptions.get(0).getName();
+								optValue = optionValueDescriptions.get(0).getName();

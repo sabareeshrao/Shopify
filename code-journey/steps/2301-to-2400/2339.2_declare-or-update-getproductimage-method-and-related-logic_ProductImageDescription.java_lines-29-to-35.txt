@@ -1,0 +1,7 @@
+	
+	@Column(name="ALT_TAG", length=100)
+	private String altTag;
+
+	public ProductImage getProductImage() {
+		return productImage;
+	}

@@ -1,0 +1,7 @@
+		productDescription.setDescription("TEST");
+		productDescription.setName("TestName");
+		productDescription.setLanguage("en");
+		product.getDescriptions().add(productDescription);
+		**/
+
+		final HttpEntity<PersistableProduct> entity = new HttpEntity<>(product, getHeader());

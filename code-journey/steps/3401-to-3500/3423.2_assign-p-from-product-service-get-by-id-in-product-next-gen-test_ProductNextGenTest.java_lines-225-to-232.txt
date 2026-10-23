@@ -1,0 +1,8 @@
+
+	    //ObjectMapper mapper = new ObjectMapper();
+	    //Converting the Object to JSONString
+	    //String jsonString = mapper.writeValueAsString(summerShoes);
+	    //System.out.println(jsonString);
+	    
+	    Product p = productService.getById(summerShoes.getId());
+	    assertNotNull(p);

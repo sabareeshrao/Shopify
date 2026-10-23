@@ -1,0 +1,8 @@
+	private String config1;
+	private String config2;
+	public String getScheme() {
+		return scheme;
+	}
+	public void setScheme(String scheme) {
+		this.scheme = scheme;
+	}

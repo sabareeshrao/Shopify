@@ -1,0 +1,8 @@
+		
+		try {
+			//ReadableProductPopulator readableProductPopulator = new ReadableProductPopulator();
+			//readableProductPopulator.setimageUtils(imageUtils);
+			//readableProductPopulator.setPricingService(pricingService);
+			
+			//ReadableProduct readableProduct = readableProductPopulator.populate(source.getProduct(), store, language);
+			ReadableCategory readableCategory = readableCategoryMapper.convert(source.getCategory(), store, language);

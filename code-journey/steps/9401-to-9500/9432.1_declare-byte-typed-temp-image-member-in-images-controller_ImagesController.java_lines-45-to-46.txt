@@ -1,2 +1,0 @@
-	private byte[] tempImage = null;
-	

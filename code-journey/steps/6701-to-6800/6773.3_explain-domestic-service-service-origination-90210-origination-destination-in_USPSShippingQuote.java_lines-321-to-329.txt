@@ -1,0 +1,9 @@
+			 * follows: REGULAR: package plus girth is 84 inches or less; LARGE:
+			 * package length plus girth measure more than 84 inches not more
+			 * than 108 inches; OVERSIZE: package length plus girth is more than
+			 * 108 but not 130 inches. For example: <Size>REGULAR</Size>
+			 * 
+			 * International <Package ID="1ST"> <Machinable>true</Machinable>
+			 * <MailType>Envelope</MailType> <Country>Canada</Country>
+			 * <Length>0</Length> <Width>0</Width> <Height>0</Height>
+			 * <ValueOfContents>250</ValueOfContents> </Package>

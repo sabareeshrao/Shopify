@@ -1,0 +1,8 @@
+ *
+ * @author Umesh Awasthi
+ * @version 1.2
+ */
+public class CustomerEntityPopulator
+    extends AbstractDataPopulator<Customer, CustomerEntity>
+{
+

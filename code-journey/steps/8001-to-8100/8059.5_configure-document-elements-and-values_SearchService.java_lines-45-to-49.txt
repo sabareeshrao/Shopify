@@ -1,0 +1,5 @@
+
+	
+	Optional<Document> getDocument(String language, MerchantStore store, Long id) throws ServiceException;
+
+}

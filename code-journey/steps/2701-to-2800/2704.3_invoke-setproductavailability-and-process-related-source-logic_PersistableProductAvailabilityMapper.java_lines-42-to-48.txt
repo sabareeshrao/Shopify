@@ -1,0 +1,7 @@
+				price.setProductAvailability(destination);
+				price.setDefaultPrice(source.getPrice().isDefaultPrice());
+				price.setProductPriceAmount(source.getPrice().getPrice());
+				price.setCode(source.getPrice().getCode());
+				price.setProductPriceSpecialAmount(source.getPrice().getDiscountedPrice());
+				if (source.getPrice().getDiscountStartDate() != null) {
+					Date startDate;

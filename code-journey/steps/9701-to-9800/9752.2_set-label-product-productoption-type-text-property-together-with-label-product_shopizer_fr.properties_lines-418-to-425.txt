@@ -1,8 +1,0 @@
-
-label.product.productoption.type.text=Texte
-label.product.productoption.type.radio=Radio
-label.product.productoption.type.select=Select
-label.product.productoption.type.checkbox=Checkbox
-
-label.product.customGroup.title=Groupe de produits
-label.product.customgroup.add=Ajouter un groupe de produits

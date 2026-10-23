@@ -1,0 +1,9 @@
+     
+    public abstract Class<?>[] groups() default {};
+  
+    public abstract Class<? extends Payload>[] payload() default {};
+     
+    public abstract Class<? extends java.lang.Enum<?>> enumClass();
+     
+    public abstract boolean ignoreCase() default false;
+}

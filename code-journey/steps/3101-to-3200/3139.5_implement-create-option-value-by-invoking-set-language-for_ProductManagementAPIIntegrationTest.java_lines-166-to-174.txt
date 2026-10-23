@@ -1,0 +1,9 @@
+
+		/**
+		 * { "descriptions" : [ { "name" : "Red", "description" : null,
+		 * "friendlyUrl" : null, "keyWords" : null, "highlights" : null,
+		 * "metaDescription" : null, "title" : null, "language" : "en", "id" : 0
+		 * } ], "order" : 1, "code" : "color-red", "id" : 0 }
+		 */
+
+		restTemplate = new RestTemplate();

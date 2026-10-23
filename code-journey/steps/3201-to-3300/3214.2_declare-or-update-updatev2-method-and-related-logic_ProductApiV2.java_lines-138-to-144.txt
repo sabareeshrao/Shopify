@@ -1,0 +1,7 @@
+	public void updateV2(@PathVariable Long id, 
+			@Valid @RequestBody PersistableProductDefinition product,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		productDefinitionFacade.update(id, product, merchantStore, language);
+
+	}

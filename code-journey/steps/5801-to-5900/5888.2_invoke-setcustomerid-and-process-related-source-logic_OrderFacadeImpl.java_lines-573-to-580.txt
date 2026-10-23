@@ -1,0 +1,8 @@
+		order.setCustomerId(customer.getId());
+		//set username
+		if(! customer.isAnonymous() && !StringUtils.isBlank(customer.getPassword())) {
+			customer.setNick(customer.getEmailAddress());
+		}
+
+	}
+

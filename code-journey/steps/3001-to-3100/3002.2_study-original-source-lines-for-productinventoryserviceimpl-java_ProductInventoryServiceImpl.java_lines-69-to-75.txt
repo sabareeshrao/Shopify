@@ -1,0 +1,7 @@
+				defaultAvailability = availability;
+			}
+		}
+		
+		return defaultAvailability;
+		
+	}

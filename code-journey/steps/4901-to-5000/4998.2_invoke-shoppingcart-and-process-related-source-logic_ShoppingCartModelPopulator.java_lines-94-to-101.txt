@@ -1,0 +1,8 @@
+            if(cartMdel==null){
+                cartMdel=new ShoppingCart();
+                cartMdel.setShoppingCartCode( shoppingCart.getCode() );
+                cartMdel.setMerchantStore( store );
+                if ( customer != null )
+                {
+                    cartMdel.setCustomerId( customer.getId() );
+                }

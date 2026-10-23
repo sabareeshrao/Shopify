@@ -1,4 +1,0 @@
-
-@Service("contentService")
-public class ContentServiceImpl extends SalesManagerEntityServiceImpl<Long, Content> implements ContentService {
-

@@ -1,0 +1,6 @@
+
+  private List<ReadableMerchantStore> data = new ArrayList<ReadableMerchantStore>();
+
+  public List<ReadableMerchantStore> getData() {
+    return data;
+  }

@@ -1,0 +1,6 @@
+                  ppd.setProductPrice(defaultPrice);
+                  ppd.setLanguage(lang);
+                  ppd.setName(ProductPriceDescription.DEFAULT_PRICE_DESCRIPTION);
+                  defaultPrice.getDescriptions().add(ppd);
+                }
+			}

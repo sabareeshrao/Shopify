@@ -1,0 +1,6 @@
+public class TaxItem extends OrderTotalItem {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

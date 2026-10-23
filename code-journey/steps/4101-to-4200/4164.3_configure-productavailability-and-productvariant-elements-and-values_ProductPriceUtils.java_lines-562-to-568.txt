@@ -1,0 +1,7 @@
+		Set<ProductAvailability> availabilities = null;
+		if (!CollectionUtils.isEmpty(product.getVariants())) {
+			Optional<ProductVariant> variants = product.getVariants().stream().filter(i -> i.isDefaultSelection())
+					.findFirst();
+			if (variants.isPresent()) {
+				availabilities = variants.get().getAvailabilities();
+				availabilities = this.applicableAvailabilities(availabilities);

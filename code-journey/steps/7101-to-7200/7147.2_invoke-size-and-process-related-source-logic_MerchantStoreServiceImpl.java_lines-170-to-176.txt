@@ -1,0 +1,7 @@
+		
+		
+		return stores.size() > 0;
+	}
+
+
+}

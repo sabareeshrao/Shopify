@@ -1,0 +1,7 @@
+	private String productName;
+	private String price;
+	private String subTotal;
+	
+	private List<ReadableOrderProductAttribute> attributes = null;
+	
+	private String sku;

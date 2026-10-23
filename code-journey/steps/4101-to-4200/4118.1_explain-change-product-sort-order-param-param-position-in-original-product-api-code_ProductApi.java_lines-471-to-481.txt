@@ -1,0 +1,11 @@
+
+	/**
+	 * Change product sort order
+	 *
+	 * @param id
+	 * @param position
+	 * @param merchantStore
+	 * @param language
+	 * @throws IOException
+	 */
+

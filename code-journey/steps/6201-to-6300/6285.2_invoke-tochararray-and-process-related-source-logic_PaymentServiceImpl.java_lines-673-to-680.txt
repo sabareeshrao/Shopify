@@ -1,0 +1,8 @@
+			throws ServiceException {
+		char[] charArray = numberString.toCharArray();
+		int[] number = new int[charArray.length];
+		int total = 0;
+	
+		for (int i = 0; i < charArray.length; i++) {
+			number[i] = Character.getNumericValue(charArray[i]);
+		}

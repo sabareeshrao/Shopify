@@ -1,3 +1,0 @@
-
-				//String refundAck = refundTransactionResponse.getAck().getValue();
-			 

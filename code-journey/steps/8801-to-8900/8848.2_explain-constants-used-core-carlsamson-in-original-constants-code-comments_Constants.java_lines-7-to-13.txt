@@ -1,7 +1,0 @@
-
-/**
- * Constants used for sm-core
- * 
- * @author carlsamson
- *
- */

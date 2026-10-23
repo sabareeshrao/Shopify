@@ -1,4 +1,0 @@
-
-/*
- * Attributes, Options and Options values management independently from Product
- */

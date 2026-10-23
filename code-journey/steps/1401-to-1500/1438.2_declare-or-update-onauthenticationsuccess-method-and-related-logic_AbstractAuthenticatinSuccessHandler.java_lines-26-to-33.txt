@@ -1,0 +1,8 @@
+	
+	@Inject
+	private UserService userService;
+	
+	    @Override
+	    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
+		  // last access timestamp
+		  String userName = authentication.getName();

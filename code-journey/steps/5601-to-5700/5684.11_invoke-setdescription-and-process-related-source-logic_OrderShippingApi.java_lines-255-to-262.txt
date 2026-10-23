@@ -1,0 +1,8 @@
+
+          shipOption.setDescription(carrier);
+          shipOption.setNote(note);
+
+          // option name
+          if (!StringUtils.isBlank(shipOption.getOptionCode())) {
+            // try to get the translate
+            StringBuilder optionCodeBuilder = new StringBuilder();

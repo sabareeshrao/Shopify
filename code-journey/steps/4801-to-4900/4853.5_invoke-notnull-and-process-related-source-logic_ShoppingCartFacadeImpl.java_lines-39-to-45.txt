@@ -1,0 +1,7 @@
+		Validate.notNull(customerId, "Customer id cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		
+		try {
+
+			// lookup customer
+			Customer customer = customerService.getById(customerId);

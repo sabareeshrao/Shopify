@@ -1,0 +1,6 @@
+
+		OrderSummary summary = new OrderSummary();
+
+		if (order instanceof ShopOrder) {
+			ShopOrder o = (ShopOrder) order;
+			summary.setProducts(o.getShoppingCartItems());

@@ -1,0 +1,8 @@
+		if(attributes!=null) {
+			for(CustomerAttribute attribute : attributes) {
+				customerAttributeService.delete(attribute);
+			}
+		}
+		customerRepository.delete(customer);
+
+	}

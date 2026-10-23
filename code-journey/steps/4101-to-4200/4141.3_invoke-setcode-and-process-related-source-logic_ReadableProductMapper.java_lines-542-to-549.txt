@@ -1,0 +1,8 @@
+
+			}
+		}
+
+		attr.setCode(productAttribute.getProductOption().getCode());
+		return attr;
+
+	}

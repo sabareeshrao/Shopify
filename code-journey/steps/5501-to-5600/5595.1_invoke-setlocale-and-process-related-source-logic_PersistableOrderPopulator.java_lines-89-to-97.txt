@@ -1,0 +1,9 @@
+			
+			target.setLocale(LocaleUtils.getLocale(store));
+			
+			CreditCard creditCard = source.getCreditCard();
+			if(creditCard!=null) {
+				String maskedNumber = CreditCardUtils.maskCardNumber(creditCard.getCcNumber());
+				creditCard.setCcNumber(maskedNumber);
+				target.setCreditCard(creditCard);
+			}

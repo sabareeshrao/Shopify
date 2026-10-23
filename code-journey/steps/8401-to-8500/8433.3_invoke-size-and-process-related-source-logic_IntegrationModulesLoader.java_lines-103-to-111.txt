@@ -1,0 +1,9 @@
+	        		if(count<(details.size()-1)) {
+	        			detailsStructure.append(",");
+	        		}
+	        		count++;
+	    		}
+	    		detailsStructure.append("}");
+	    		module.setConfigDetails(detailsStructure.toString());
+	    		
+	    	}

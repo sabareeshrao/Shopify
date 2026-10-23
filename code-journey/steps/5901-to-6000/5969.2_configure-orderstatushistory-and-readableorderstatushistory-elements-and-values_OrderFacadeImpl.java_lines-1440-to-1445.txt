@@ -1,0 +1,6 @@
+
+		Set<OrderStatusHistory> historyList = order.getOrderHistory();
+		List<ReadableOrderStatusHistory> returnList = historyList.stream().map(f -> mapToReadbleOrderStatusHistory(f))
+				.collect(Collectors.toList());
+		return returnList;
+	}

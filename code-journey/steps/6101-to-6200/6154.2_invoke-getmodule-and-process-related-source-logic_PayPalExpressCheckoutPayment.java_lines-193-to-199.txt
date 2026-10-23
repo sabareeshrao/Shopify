@@ -1,0 +1,7 @@
+				if(total.getModule().equals(Constants.OT_SHIPPING_MODULE_CODE)) {
+					BasicAmountType shipping = new BasicAmountType();
+					shipping.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(store.getCurrency().getCode()));
+					shipping.setValue(pricingService.getStringAmount(total.getValue(), store));
+					//System.out.println(pricingService.getStringAmount(total.getValue(), store));
+					paymentDetails.setShippingTotal(shipping);
+				}

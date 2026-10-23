@@ -1,7 +1,0 @@
-package com.salesmanager.core.modules;
-
-/**
- * Root interface for all modules
- * @author carlsamson
- *
- */

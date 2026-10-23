@@ -1,0 +1,7 @@
+					if(attr==null) {
+						throw new ConversionException("Attribute id " + id + " does not exists");
+					}
+					
+					if(attr.getProduct().getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Attribute id " + id + " invalid for this store");
+					}

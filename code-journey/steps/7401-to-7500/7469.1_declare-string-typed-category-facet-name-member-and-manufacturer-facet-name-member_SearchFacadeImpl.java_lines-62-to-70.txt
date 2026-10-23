@@ -1,0 +1,9 @@
+	private final static String CATEGORY_FACET_NAME = "categories";
+	private final static String MANUFACTURER_FACET_NAME = "manufacturer";
+	private final static int AUTOCOMPLETE_ENTRIES_COUNT = 15;
+
+	/**
+	 * Index all products from the catalogue Better stop the system, remove ES
+	 * indexex manually restart ES and run this query
+	 */
+	@Override

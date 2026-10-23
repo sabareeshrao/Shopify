@@ -1,0 +1,8 @@
+
+	public void setModuleName(String moduleName) {
+		this.moduleName = moduleName;
+	}
+
+	public String getCustomPrice() {
+		return customPrice;
+	}

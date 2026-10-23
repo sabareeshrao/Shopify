@@ -1,0 +1,7 @@
+		if (!CollectionUtils.isEmpty(cartAttributes)) {
+			for (ShoppingCartAttribute attribute : cartAttributes) {
+				ProductAttribute productAttribute = productAttributeService.getById(attribute.getAttributeId());
+				if (productAttribute != null
+						&& productAttribute.getProduct().getId().longValue() == product.getId().longValue()) {
+					com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attributeItem = new com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem(
+							item, productAttribute);

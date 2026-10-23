@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NJ",
-		"zoneName": "New Jersey",
-		"countryCode": "US"
-	},

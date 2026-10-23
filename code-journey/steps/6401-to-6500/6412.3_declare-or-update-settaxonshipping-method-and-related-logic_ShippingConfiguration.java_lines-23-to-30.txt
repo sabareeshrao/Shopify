@@ -1,0 +1,8 @@
+
+	public void setTaxOnShipping(boolean taxOnShipping) {
+		this.taxOnShipping = taxOnShipping;
+	}
+
+	public List<BoxConfiguration> getBoxConfigurations() {
+		return boxConfigurations;
+	}

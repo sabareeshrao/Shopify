@@ -1,0 +1,7 @@
+					if (langList != null) {
+						/**
+						 * submethod
+						 */
+						for (Language l : languages) {
+							for (Object z : langList) {
+								Map<String, String> e = (Map<String, String>) z;

@@ -1,0 +1,8 @@
+
+	public void setProviderUserId(String provider);
+
+	public String getProviderId();
+
+	public void setProviderId(String providerId);
+
+	public int getRank();

@@ -1,0 +1,8 @@
+
+		// adjust shipping and billing
+		if (customer.getDelivery() == null || StringUtils.isBlank(customer.getDelivery().getPostalCode())) {
+			if(customer.getBilling()!=null) {
+				billing = customer.getBilling();
+			}
+			delivery.setAddress(billing.getAddress());
+			delivery.setCity(billing.getCity());

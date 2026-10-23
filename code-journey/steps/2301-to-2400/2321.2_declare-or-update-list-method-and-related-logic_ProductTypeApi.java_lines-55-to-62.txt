@@ -1,0 +1,8 @@
+	public ReadableProductTypeList list(@RequestParam(name = "count", defaultValue = "10") int count,
+			@RequestParam(name = "page", defaultValue = "0") int page, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		return productTypeFacade.getByMerchant(merchantStore, language, count, page);
+
+	}
+

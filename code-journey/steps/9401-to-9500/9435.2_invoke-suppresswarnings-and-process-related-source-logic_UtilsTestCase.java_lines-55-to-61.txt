@@ -1,0 +1,7 @@
+
+		
+		@SuppressWarnings("rawtypes")
+		List countries = countryService.list();
+
+		//CacheUtils cache = CacheUtils.getInstance();
+		cache.putInCache(countries, "COUNTRIES");

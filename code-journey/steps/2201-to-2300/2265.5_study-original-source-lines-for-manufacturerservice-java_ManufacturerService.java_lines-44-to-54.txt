@@ -1,0 +1,11 @@
+	
+	/**
+	 * List by product in category lineage
+	 * @param store
+	 * @param category
+	 * @param language
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<Manufacturer> listByProductsInCategory(MerchantStore store,
+        Category category, Language language) throws ServiceException;

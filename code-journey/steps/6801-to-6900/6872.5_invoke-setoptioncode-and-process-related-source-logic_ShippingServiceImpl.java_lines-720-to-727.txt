@@ -1,0 +1,8 @@
+						q.setOptionCode(option.getOptionCode());
+						if(!StringUtils.isBlank(option.getOptionDeliveryDate())) {
+							try {
+							//q.setOptionDeliveryDate(DateUtil.formatDate(option.getOptionDeliveryDate()));
+							} catch(Exception e) {
+								LOGGER.error("Cannot transform to date " + option.getOptionDeliveryDate());
+							}
+						}

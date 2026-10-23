@@ -1,0 +1,5 @@
+
+			String xmlfooter = "</RateV3Request>";
+			if(!store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+				xmlfooter = "</IntlRateRequest>";
+			}

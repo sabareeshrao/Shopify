@@ -1,0 +1,5 @@
+
+            ResponseHandler<String> responseHandler = response -> {
+				int status = response.getStatusLine().getStatusCode();
+				if (status >= 200 && status < 300) {
+					HttpEntity entity = response.getEntity();

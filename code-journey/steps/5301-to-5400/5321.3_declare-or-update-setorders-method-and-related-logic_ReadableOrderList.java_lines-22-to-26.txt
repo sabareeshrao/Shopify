@@ -1,0 +1,5 @@
+	public void setOrders(List<ReadableOrder> orders) {
+		this.orders = orders;
+	}
+
+}

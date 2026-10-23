@@ -1,3 +1,0 @@
-    
-    @Value("${db.maxPoolSize}")
-    private int maxPoolSize;

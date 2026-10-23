@@ -1,3 +1,0 @@
-import com.salesmanager.shop.store.controller.product.facade.ProductDefinitionFacade;
-import com.salesmanager.shop.store.controller.product.facade.ProductFacade;
-

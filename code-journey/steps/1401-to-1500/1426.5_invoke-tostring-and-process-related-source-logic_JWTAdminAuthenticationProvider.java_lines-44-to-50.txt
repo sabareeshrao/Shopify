@@ -1,0 +1,7 @@
+        
+        String pass = credentials.toString();
+        String usr = name;
+        
+        if(!passwordMatch(pass, usr)) {
+        	throw new BadCredentialsException("Username/Password does not match for " + auth.getPrincipal());
+        }

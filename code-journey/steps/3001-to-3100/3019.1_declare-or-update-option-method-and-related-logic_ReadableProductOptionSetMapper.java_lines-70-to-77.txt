@@ -1,0 +1,8 @@
+	
+	private ReadableProductOption option (ProductOption option, MerchantStore store, Language lang) {
+
+		ReadableProductOption opt = new ReadableProductOption();
+		opt.setCode(option.getCode());
+		opt.setId(option.getId());
+		opt.setLang(lang.getCode());
+		opt.setReadOnly(option.isReadOnly());

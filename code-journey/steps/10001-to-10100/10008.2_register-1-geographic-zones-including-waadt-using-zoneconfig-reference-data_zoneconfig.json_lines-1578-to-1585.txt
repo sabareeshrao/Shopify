@@ -1,0 +1,8 @@
+		"zoneName": "Uri",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "VD",
+		"zoneName": "Waadt",
+		"countryCode": "CH"
+	},

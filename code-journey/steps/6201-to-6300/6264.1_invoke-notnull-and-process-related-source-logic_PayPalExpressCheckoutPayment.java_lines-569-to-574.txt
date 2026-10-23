@@ -1,0 +1,6 @@
+			
+			
+			Validate.notNull(capturableTransaction,"Transaction cannot be null");
+			Validate.notNull(capturableTransaction.getTransactionDetails().get("TRANSACTIONID"), "Transaction details must contain a TRANSACTIONID");
+			Validate.notNull(order,"Order must not be null");
+			Validate.notNull(order.getCurrency(),"Order nust contain Currency object");

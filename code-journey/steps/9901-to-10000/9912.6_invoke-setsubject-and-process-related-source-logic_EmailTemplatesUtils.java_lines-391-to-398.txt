@@ -1,0 +1,8 @@
+				email.setSubject(messages.getMessage("email.order.status.title",new String[]{String.valueOf(order.getId())},customerLocale));
+				email.setTo(customer.getEmailAddress());
+				email.setTemplateName(EmailConstants.ORDER_STATUS_TMPL);
+				email.setTemplateTokens(templateTokens);
+	
+	
+				
+				emailService.sendHtmlEmail(merchantStore, email);

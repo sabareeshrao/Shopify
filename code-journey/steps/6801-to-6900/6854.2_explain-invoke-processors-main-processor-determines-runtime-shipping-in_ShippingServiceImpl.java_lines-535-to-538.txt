@@ -1,4 +1,0 @@
-			
-			//invoke pre processors
-			//the main pre-processor determines at runtime the shipping module
-			//also available distance calculation

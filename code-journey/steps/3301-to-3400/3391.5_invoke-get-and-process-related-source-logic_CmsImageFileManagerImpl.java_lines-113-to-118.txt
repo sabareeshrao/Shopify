@@ -1,0 +1,6 @@
+      Path sizePath = Paths.get(nodePath.toString());
+      this.createDirectoryIfNorExist(sizePath);
+
+
+      // file creation
+      nodePath.append(Constants.SLASH).append(contentImage.getFileName());

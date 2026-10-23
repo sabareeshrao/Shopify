@@ -1,0 +1,7 @@
+
+			readableCategories = categories.stream()
+						.map(cat -> readableCategoryMapper.convert(cat, store, language))
+						.collect(Collectors.toList());
+			
+			ReadableCategoryList readableList = new ReadableCategoryList();
+			readableList.setCategories(readableCategories);

@@ -1,0 +1,8 @@
+
+	public void setAltTag(String altTag) {
+		this.altTag = altTag;
+	}
+
+	public ProductVariantImage getProductVariantImage() {
+		return productVariantImage;
+	}

@@ -1,0 +1,8 @@
+	
+	
+	public File getCroppedImage(File originalFile, int x1, int y1, int width,
+			int height) throws Exception {
+		
+		if(!this.cropeable) {
+			return originalFile;
+		}

@@ -1,0 +1,7 @@
+
+    String searchParam = request.getParameter("search[value]");
+    String orderColums = request.getParameter("order[0][column]");
+
+    if (!StringUtils.isBlank(orderColums)) {
+      String columnName = request.getParameter("columns[" + orderColums + "][data]");
+      String overwriteField = columnName;

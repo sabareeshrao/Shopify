@@ -1,2 +1,0 @@
-
-					// we need to set readonly attributes only

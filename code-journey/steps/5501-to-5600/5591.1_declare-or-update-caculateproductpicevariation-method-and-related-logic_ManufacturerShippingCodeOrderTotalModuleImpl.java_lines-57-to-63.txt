@@ -1,0 +1,7 @@
+	@Override
+	public OrderTotal caculateProductPiceVariation(final OrderSummary summary, ShoppingCartItem shoppingCartItem, Product product, Customer customer, MerchantStore store)
+			throws Exception {
+
+		
+	    Validate.notNull(product,"product must not be null");
+		Validate.notNull(product.getManufacturer(),"product manufacturer must not be null");

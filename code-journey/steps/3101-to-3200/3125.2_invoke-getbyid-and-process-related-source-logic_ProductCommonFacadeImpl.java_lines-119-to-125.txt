@@ -1,0 +1,7 @@
+
+		// get original product
+		Product productModel = productService.getById(product.getId());
+
+
+	}
+

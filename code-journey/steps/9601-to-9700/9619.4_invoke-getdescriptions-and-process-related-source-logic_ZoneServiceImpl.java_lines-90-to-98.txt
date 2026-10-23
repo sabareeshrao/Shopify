@@ -1,0 +1,9 @@
+			
+				//set names
+				for(Zone zone : zones) {
+					ZoneDescription description = zone.getDescriptions().get(0);
+					zone.setName(description.getName());
+					
+				}
+				cache.putInCache(zones, cacheKey);
+			}

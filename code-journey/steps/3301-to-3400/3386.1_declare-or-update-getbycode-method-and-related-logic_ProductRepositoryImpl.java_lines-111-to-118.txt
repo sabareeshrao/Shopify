@@ -1,0 +1,8 @@
+
+	@Override
+	public Product getByCode(String productCode, Language language) {
+
+		try {
+
+			StringBuilder qs = new StringBuilder();
+			qs.append("select distinct p from Product as p ");

@@ -1,0 +1,10 @@
+	public @ResponseBody ReadableProductOptionValueList optionsValues(
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language,
+			@RequestParam(value = "name", required = false) String name,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+
+		return productOptionFacade.optionValues(merchantStore, language, name, page, count);
+
+	}

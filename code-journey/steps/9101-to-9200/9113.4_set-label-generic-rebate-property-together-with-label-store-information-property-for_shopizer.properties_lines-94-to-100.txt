@@ -1,0 +1,7 @@
+label.generic.country=Country
+label.generic.hi=Hi
+label.generic.send=Send
+label.generic.rebate=Rebate
+
+label.soldout=Sold out
+

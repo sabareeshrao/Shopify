@@ -1,5 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory
-      .getLogger(MerchantConfigurationFacadeImpl.class);
-
-  @Inject
-  private MerchantConfigurationService merchantConfigurationService;

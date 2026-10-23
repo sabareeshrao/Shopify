@@ -1,0 +1,9 @@
+
+		if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+			throw new ResourceNotFoundException(
+					"Item with id " + shoppingCartItem.getProduct() + " does not belong to merchant " + store.getId());
+		}
+
+		if (!product.isAvailable()) {
+			throw new Exception("Product with sku " + product.getSku() + " is not available");
+		}

@@ -1,0 +1,9 @@
+    @ApiOperation(httpMethod = "POST", value = "Authenticates a customer to the application", notes = "Customer can authenticate after registration, request is {\"username\":\"admin\",\"password\":\"password\"}",response = ResponseEntity.class)
+    @ResponseBody
+    public ResponseEntity<?> authenticate(@RequestBody @Valid AuthenticationRequest authenticationRequest) throws AuthenticationException {
+
+    	//TODO SET STORE in flow
+        // Perform the security
+        Authentication authentication = null;
+        try {
+            

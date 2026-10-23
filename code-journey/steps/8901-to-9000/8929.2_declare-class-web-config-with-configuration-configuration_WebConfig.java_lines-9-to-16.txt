@@ -1,0 +1,8 @@
+
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+	
+	
+    @Autowired
+    private MerchantStoreArgumentResolver merchantStoreArgumentResolver;

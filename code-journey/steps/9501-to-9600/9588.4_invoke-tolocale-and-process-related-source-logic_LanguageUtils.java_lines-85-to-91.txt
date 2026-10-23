@@ -1,0 +1,7 @@
+          if (language != null) {
+            locale = languageService.toLocale(language, store);
+            if (locale != null) {
+              LocaleContextHolder.setLocale(locale);
+            }
+            request.getSession().setAttribute(Constants.LANGUAGE, language);
+          }

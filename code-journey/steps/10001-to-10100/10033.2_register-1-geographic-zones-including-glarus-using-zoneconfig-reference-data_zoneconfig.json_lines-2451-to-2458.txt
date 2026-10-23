@@ -1,0 +1,8 @@
+			"zoneName": "Genf",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "GL",
+			"zoneName": "Glarus",
+			"countryCode": "CH"
+		},

@@ -1,0 +1,9 @@
+	public String getProductAttributeUnformattedPrice() {
+		return productAttributeUnformattedPrice;
+	}
+	public void setProductAttributeUnformattedPrice(String productAttributeUnformattedPrice) {
+		this.productAttributeUnformattedPrice = productAttributeUnformattedPrice;
+	}
+
+
+}

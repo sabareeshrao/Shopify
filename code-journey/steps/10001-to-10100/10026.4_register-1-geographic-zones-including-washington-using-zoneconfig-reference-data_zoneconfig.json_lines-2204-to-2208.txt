@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "WA",
-			"zoneName": "Washington",
-			"countryCode": "US"
-		},

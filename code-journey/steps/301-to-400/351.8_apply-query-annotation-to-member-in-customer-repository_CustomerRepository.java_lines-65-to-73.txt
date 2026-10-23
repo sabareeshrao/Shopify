@@ -1,0 +1,9 @@
+			+ "left join fetch cav.descriptions  "
+			+ "left join fetch c.groups  "
+			+ "left join fetch c.delivery cd "
+			+ "left join fetch c.billing cb "
+			+ "left join fetch cd.country "
+			+ "left join fetch cd.zone "
+			+ "left join fetch cb.country "
+			+ "left join fetch cb.zone "
+			+ "where c.credentialsResetRequest.credentialsRequest = ?1 and cm.code = ?2")

@@ -1,0 +1,8 @@
+{
+    private Enum annotation;
+ 
+
+    public void initialize(Enum annotation)
+    {
+        this.annotation = annotation;
+    }

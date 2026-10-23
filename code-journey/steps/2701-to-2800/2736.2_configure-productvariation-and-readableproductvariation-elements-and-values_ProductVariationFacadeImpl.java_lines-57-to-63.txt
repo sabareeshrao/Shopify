@@ -1,0 +1,7 @@
+		
+
+			Page<ProductVariation> vars = productVariationService.getByMerchant(store, language, null, page, count);
+			List<ReadableProductVariation> variations = vars.stream().map(opt -> this.convert(opt, store, language)).collect(Collectors.toList());
+			ReadableEntityList<ReadableProductVariation> returnList = new ReadableEntityList<ReadableProductVariation>();
+			returnList.setItems(variations);
+			returnList.setNumber(variations.size());

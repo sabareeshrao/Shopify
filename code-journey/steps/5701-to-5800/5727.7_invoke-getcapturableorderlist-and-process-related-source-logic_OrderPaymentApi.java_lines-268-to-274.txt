@@ -1,0 +1,7 @@
+
+			ReadableOrderList returnList = orderFacade.getCapturableOrderList(merchantStore, sDate, eDate, language);
+
+			return returnList;
+
+		} catch (Exception e) {
+			LOGGER.error("Error while getting capturable payments", e);

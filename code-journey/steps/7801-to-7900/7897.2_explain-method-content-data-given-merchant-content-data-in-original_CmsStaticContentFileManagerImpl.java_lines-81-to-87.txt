@@ -1,0 +1,7 @@
+	 * <p>
+	 * Merchant store code will be used to create cache node where merchant data
+	 * will be stored,input data will contain name, file as well type of data
+	 * being stored.
+	 * 
+	 * @see FileContentType
+	 *      </p>

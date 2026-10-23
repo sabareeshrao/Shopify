@@ -1,0 +1,6 @@
+	public @ResponseBody ReadableShoppingCart getByCode(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletResponse response) {
+
+		try {
+	
+			ReadableShoppingCart cart = shoppingCartFacade.getByCode(code, merchantStore, language);

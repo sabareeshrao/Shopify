@@ -1,0 +1,10 @@
+
+	public List<Long> getproductVariants() {
+		return productVariants;
+	}
+
+	public void setproductVariants(List<Long> productVariants) {
+		this.productVariants = productVariants;
+	}
+
+}

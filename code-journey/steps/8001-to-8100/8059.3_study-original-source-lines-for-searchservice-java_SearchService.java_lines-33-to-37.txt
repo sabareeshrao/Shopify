@@ -1,0 +1,5 @@
+
+	/**
+	 * Similar keywords based on a a series of characters. Used in the auto-complete
+	 */
+	SearchResponse searchKeywords(MerchantStore store, String language, SearchRequest search, int entriesCount) throws ServiceException;

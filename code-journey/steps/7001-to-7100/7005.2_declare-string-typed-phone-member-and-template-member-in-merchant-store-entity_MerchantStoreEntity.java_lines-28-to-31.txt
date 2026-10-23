@@ -1,4 +1,0 @@
-	@NotNull
-	private String phone;
-	private String template;
-	

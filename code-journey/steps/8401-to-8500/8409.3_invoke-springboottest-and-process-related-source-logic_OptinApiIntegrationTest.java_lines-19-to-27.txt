@@ -1,0 +1,9 @@
+import com.salesmanager.shop.model.system.PersistableOptin;
+import com.salesmanager.test.shop.common.ServicesTestSupport;
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+public class OptinApiIntegrationTest extends ServicesTestSupport {
+  
+  @Autowired
+  private TestRestTemplate testRestTemplate;

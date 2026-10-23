@@ -1,0 +1,8 @@
+			return getOutputContentFile(IOUtils.toByteArray(o.getObjectContent()));
+		} catch (final Exception e) {
+			LOGGER.error("Error while getting file", e);
+			throw new ServiceException(e);
+
+		}
+	}
+

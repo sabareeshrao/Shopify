@@ -1,0 +1,6 @@
+	
+	public List<Group> build() {
+		return groups;
+	}
+
+}

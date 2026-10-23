@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NV",
-		"zoneName": "Nevada",
-		"countryCode": "US"
-	},

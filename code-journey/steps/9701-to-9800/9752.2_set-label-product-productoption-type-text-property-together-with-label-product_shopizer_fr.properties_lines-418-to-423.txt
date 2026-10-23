@@ -1,0 +1,6 @@
+
+label.product.productoption.type.text=Texte
+label.product.productoption.type.radio=Radio
+label.product.productoption.type.select=Select
+label.product.productoption.type.checkbox=Checkbox
+

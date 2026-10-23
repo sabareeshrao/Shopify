@@ -1,0 +1,7 @@
+		List<OutputContentFile> images = new ArrayList<OutputContentFile>();
+		try {
+
+			FileNameMap fileNameMap = URLConnection.getFileNameMap();
+			String nodePath = this.getNodePath(merchantStoreCode, staticContentType);
+
+			final Node<String, Object> merchantNode = this.getNode(nodePath);

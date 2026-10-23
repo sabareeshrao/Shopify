@@ -1,0 +1,6 @@
+		
+		if(isPositive(source.getId())) {
+			destination.setId(source.getId());
+		}
+		
+		destination.setCode(source.getCode());

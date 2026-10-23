@@ -1,0 +1,6 @@
+	private String label;
+	private TaxRate taxRate=null;
+
+	public void setLabel(String label) {
+		this.label = label;
+	}

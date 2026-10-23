@@ -1,0 +1,7 @@
+      if (auditSection.getDateCreated() == null) {
+        auditSection.setDateCreated(new Date());
+      }
+      audit.setAuditSection(auditSection);
+    }
+  }
+}

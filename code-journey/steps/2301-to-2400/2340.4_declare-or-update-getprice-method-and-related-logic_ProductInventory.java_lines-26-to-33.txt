@@ -1,0 +1,8 @@
+	public FinalPrice getPrice() {
+		return price;
+	}
+	public void setPrice(FinalPrice price) {
+		this.price = price;
+	}
+
+}

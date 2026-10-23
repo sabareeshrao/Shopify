@@ -1,0 +1,8 @@
+
+								for (ProductOptionDescription optionDescription : optionDescriptions) {
+									if (optionDescription.getLanguage() != null && optionDescription.getLanguage()
+											.getId().intValue() == language.getId().intValue()) {
+										optName = optionDescription.getName();
+										break;
+									}
+								}

@@ -1,4 +1,0 @@
-
-	@RequestMapping(value = { "/private/orders/{id}/payment/nextTransaction" }, method = RequestMethod.GET)
-	@ResponseStatus(HttpStatus.OK)
-

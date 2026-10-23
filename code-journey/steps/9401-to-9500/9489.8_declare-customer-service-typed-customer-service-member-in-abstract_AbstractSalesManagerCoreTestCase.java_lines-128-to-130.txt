@@ -1,3 +1,0 @@
-	
-	@Inject
-	protected CustomerService customerService;

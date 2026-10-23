@@ -1,0 +1,6 @@
+	 
+	 TaxRate getById(Long id, MerchantStore store)
+				throws ServiceException;
+
+	List<TaxRate> listByStore(MerchantStore store, Language language)
+			throws ServiceException;

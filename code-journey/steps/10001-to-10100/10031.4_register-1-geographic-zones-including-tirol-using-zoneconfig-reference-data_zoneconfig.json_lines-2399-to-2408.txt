@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "TIAT",
+			"zoneName": "Tirol",
+			"countryCode": "AT"
+		},
+		{
+			"zoneCode": "BLAT",
+			"zoneName": "Burgenland",
+			"countryCode": "AT"
+		},

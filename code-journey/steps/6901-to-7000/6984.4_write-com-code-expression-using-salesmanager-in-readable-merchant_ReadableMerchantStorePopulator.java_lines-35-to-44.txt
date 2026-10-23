@@ -1,0 +1,10 @@
+
+/**
+ * Populates MerchantStore core entity model object
+ * @author carlsamson
+ *
+ */
+@Component
+public class ReadableMerchantStorePopulator extends
+		AbstractDataPopulator<MerchantStore, ReadableMerchantStore> {
+	

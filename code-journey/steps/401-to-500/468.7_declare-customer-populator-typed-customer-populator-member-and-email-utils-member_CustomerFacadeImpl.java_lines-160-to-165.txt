@@ -1,6 +1,0 @@
-  
-  @Autowired
-  private CustomerPopulator customerPopulator;
-
-  @Inject
-  private EmailUtils emailUtils;

@@ -1,3 +1,0 @@
-	public static String trimPostalCode(String postalCode) {
-		return postalCode.replaceAll("[^a-zA-Z0-9]", "");
-	}

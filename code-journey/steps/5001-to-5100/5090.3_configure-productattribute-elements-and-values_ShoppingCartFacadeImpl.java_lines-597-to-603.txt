@@ -1,0 +1,7 @@
+
+				entryToUpdate.getProduct();
+
+				LOG.info("Updating cart entry quantity to" + newQuantity);
+				entryToUpdate.setQuantity((int) newQuantity);
+				List<ProductAttribute> productAttributes = new ArrayList<ProductAttribute>();
+				productAttributes.addAll(entryToUpdate.getProduct().getAttributes());

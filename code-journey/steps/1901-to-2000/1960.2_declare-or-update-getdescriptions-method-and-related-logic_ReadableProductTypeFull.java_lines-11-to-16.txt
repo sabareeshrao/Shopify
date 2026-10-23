@@ -1,0 +1,6 @@
+	
+	private List<ProductTypeDescription> descriptions;
+
+	public List<ProductTypeDescription> getDescriptions() {
+		return descriptions;
+	}

@@ -1,0 +1,6 @@
+	private int order;
+	private String code;
+	private String type;//TEXT|SELECT|RADIO|CHECKBOX
+	public void setOrder(int order) {
+		this.order = order;
+	}

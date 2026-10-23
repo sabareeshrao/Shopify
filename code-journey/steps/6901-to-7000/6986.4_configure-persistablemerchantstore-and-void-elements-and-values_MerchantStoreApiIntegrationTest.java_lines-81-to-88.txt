@@ -1,0 +1,8 @@
+      
+      final HttpEntity<PersistableMerchantStore> httpEntity = new HttpEntity<PersistableMerchantStore>(createdStore, getHeader());
+
+      ResponseEntity<Void> response = testRestTemplate.exchange(String.format("/api/v1/private/store/"), HttpMethod.POST, httpEntity, Void.class);
+
+      assertThat(response.getStatusCode(), is(HttpStatus.OK));
+
+  }

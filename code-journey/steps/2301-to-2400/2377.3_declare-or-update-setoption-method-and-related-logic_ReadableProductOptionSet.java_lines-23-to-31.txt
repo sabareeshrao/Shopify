@@ -1,0 +1,9 @@
+	public void setOption(ReadableProductOption option) {
+		this.option = option;
+	}
+	public List<ReadableProductOptionValue> getValues() {
+		return values;
+	}
+	public void setValues(List<ReadableProductOptionValue> values) {
+		this.values = values;
+	}

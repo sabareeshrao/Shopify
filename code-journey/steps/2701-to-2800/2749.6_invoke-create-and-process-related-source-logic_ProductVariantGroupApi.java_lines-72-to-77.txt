@@ -1,0 +1,6 @@
+
+		Long id = productVariantGroupFacade.create(instanceGroup, merchantStore, language);
+
+		return new Entity(id);
+
+	}

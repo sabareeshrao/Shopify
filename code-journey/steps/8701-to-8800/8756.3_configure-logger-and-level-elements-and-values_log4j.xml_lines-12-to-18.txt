@@ -1,0 +1,7 @@
+	
+	<!-- Application Loggers -->
+	<logger name="mytld.mycompany.myapp">
+		<level value="info" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->

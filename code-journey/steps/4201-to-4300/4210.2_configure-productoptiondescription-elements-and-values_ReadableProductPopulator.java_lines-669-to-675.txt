@@ -1,0 +1,7 @@
+
+
+
+
+		List<ProductOptionDescription> descriptions = productAttribute.getProductOption().getDescriptionsSettoList();
+
+		ReadableProductPropertyValue propertyValue = new ReadableProductPropertyValue();

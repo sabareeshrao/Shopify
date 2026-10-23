@@ -1,0 +1,9 @@
+        kieSession.fireAllRules();*/
+		
+		
+		//orderTotalMethodDecision.execute(inputParameters);
+		
+		
+		LOGGER.debug("Applied discount " + inputParameters.getDiscount());
+		
+		OrderTotal orderTotal = null;

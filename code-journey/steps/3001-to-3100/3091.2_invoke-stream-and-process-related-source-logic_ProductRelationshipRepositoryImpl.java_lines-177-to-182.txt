@@ -1,0 +1,6 @@
+    Map<String, ProductRelationship> relationMap = relations.stream()
+        .collect(Collectors.toMap(ProductRelationship::getCode, p -> p, (p, q) -> p));
+    return Lists.newArrayList(relationMap.values());
+  }
+
+

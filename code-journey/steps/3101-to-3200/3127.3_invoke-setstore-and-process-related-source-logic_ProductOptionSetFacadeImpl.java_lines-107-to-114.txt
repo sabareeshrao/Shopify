@@ -1,0 +1,8 @@
+		try {
+			model.setStore(store);
+			productOptionSetService.save(model);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductOptionSet", e);
+		}
+
+	}

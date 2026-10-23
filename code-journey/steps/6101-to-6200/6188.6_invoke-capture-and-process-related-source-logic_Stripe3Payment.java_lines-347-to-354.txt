@@ -1,0 +1,8 @@
+
+			paymentIntent = paymentIntent.capture(params);
+	
+			//Map<String,String> metadata = ch.getMetadata();
+			
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);

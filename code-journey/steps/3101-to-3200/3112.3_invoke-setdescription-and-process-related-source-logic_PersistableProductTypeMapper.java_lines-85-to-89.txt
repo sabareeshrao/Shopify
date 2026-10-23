@@ -1,0 +1,5 @@
+		desc.setDescription(description.getDescription());
+		desc.setLanguage(languageService.getByCode(description.getLanguage()));
+		desc.setProductType(typeModel);
+		return desc;
+	}

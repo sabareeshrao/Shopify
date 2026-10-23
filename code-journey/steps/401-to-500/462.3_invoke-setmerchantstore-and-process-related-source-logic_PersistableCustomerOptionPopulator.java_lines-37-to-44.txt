@@ -1,0 +1,8 @@
+			target.setMerchantStore(store);
+			target.setSortOrder(source.getOrder());
+			if(!StringUtils.isBlank(source.getType())) {
+				target.setCustomerOptionType(source.getType());
+			} else {
+				target.setCustomerOptionType("TEXT");
+			}
+			target.setPublicOption(true);

@@ -1,0 +1,8 @@
+	public static BufferedImage resize(BufferedImage image, int width, int height) {
+		int type = image.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : image
+				.getType();
+		BufferedImage resizedImage = new BufferedImage(width, height, type);
+		Graphics2D g = resizedImage.createGraphics();
+		g.setComposite(AlphaComposite.Src);
+		g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+				RenderingHints.VALUE_INTERPOLATION_BILINEAR);

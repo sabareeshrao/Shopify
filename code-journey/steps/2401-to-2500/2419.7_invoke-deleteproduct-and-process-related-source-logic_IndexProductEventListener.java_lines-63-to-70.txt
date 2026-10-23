@@ -1,0 +1,8 @@
+	
+			if (event instanceof DeleteProductEvent) {
+				deleteProduct((DeleteProductEvent) event);
+			}
+	
+			if (event instanceof SaveProductVariantEvent) {
+				saveProductVariant((SaveProductVariantEvent) event);
+			}

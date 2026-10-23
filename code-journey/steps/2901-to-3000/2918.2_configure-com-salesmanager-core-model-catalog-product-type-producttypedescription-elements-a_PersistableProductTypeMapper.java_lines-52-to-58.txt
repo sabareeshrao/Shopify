@@ -1,0 +1,7 @@
+		destination.setAllowAddToCart(type.isAllowAddToCart());
+		destination.setVisible(type.isVisible());
+		//destination.set
+
+		List<com.salesmanager.core.model.catalog.product.type.ProductTypeDescription> descriptions = new ArrayList<com.salesmanager.core.model.catalog.product.type.ProductTypeDescription>();
+		if(!CollectionUtils.isEmpty(type.getDescriptions())) {
+			

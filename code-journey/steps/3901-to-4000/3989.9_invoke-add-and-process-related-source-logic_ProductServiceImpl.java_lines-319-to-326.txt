@@ -1,0 +1,8 @@
+						newImageIds.add(image.getId());
+					} else {
+						if (!newImageIds.contains(image.getId())) {
+							productImageService.delete(image);
+						}
+					}
+				}
+			}

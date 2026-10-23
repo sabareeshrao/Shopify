@@ -1,0 +1,4 @@
+		  Page<CatalogCategoryEntry> listByCatalog(Long catalogId, Integer storeId, Integer languageId, String name, Pageable pageable);
+
+	
+}

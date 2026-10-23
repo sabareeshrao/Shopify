@@ -1,7 +1,0 @@
-message.product.association=This entity is attached to one or more products, remove the association before trying to delete.
-message.notexist.customer=Customer does not exist
-message.optionset.optionassociationexists=The option association already exist
-message.optionset.noassociation=Select an option and an option value
-
-messages.error.creditcard=Credit card data is invalid
-messages.error.creditcard.number=Credit card number is not valid

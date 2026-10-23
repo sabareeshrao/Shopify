@@ -1,0 +1,9 @@
+
+	@Override
+	public ReadableOrderTotal merge(OrderTotal source, ReadableOrderTotal target, MerchantStore store,
+			Language language) {
+
+		Validate.notNull(source, "OrderTotal must not be null");
+		Validate.notNull(target, "ReadableTotal must not be null");
+		Validate.notNull(store, "MerchantStore must not be null");
+		Validate.notNull(language, "Language must not be null");

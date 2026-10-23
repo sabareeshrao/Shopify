@@ -1,0 +1,7 @@
+	public ReadableProductPrice get(
+			@PathVariable String sku,
+			@PathVariable Long priceId,
+			@Valid @RequestBody PersistableProductPrice price,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		

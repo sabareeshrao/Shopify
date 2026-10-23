@@ -1,0 +1,8 @@
+	public void onApplicationEvent(ProductEvent event) {
+		
+		
+		if(!noIndex) {
+
+			if (event instanceof SaveProductEvent) {
+				saveProduct((SaveProductEvent) event);
+			}

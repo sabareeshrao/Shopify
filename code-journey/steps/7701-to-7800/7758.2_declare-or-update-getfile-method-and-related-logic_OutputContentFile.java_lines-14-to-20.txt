@@ -1,0 +1,7 @@
+{
+    private static final long serialVersionUID = 1L;
+    private ByteArrayOutputStream file;
+    public ByteArrayOutputStream getFile()
+    {
+        return file;
+    }

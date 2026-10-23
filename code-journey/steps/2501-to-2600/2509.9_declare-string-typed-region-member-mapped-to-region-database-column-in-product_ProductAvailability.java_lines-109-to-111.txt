@@ -1,3 +1,0 @@
-
-	@Column(name = "REGION")
-	private String region = SchemaConstant.ALL_REGIONS;

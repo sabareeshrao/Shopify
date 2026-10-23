@@ -1,0 +1,6 @@
+
+			if(store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+
+				xmldatabuffer.append("<Service>");
+				xmldatabuffer.append("ALL");
+				xmldatabuffer.append("</Service>");

@@ -1,0 +1,6 @@
+				try {
+					String price = pricingService.getDisplayAmount(attr.getProductAttributePrice(), store);
+					readableAttribute.setAttributePrice(price);
+				} catch (ServiceException e) {
+					throw new ConversionRuntimeException("Cannot format price", e);
+				}

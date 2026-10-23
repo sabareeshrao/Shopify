@@ -1,0 +1,9 @@
+
+		Currency curr = currency.getCurrency();
+		nf = NumberFormat.getInstance(Constants.DEFAULT_LOCALE);
+		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setCurrency(curr);
+
+		return nf.format(amount);
+	}

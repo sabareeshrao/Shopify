@@ -1,0 +1,9 @@
+	public ReadableProductOption getProperty() {
+		return property;
+	}
+	public void setProperty(ReadableProductOption property) {
+		this.property = property;
+	}
+	public ReadableProductPropertyValue getPropertyValue() {
+		return propertyValue;
+	}

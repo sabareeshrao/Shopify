@@ -1,0 +1,9 @@
+
+		// delete reviews
+		List<ProductReview> reviews = productReviewService.getByProductNoCustomers(product);
+		for (ProductReview review : reviews) {
+			productReviewService.delete(review);
+		}
+
+		// related - featured
+		List<ProductRelationship> relationships = productRelationshipService.listByProduct(product);

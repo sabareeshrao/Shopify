@@ -1,4 +1,0 @@
-
-	    //add category
-	    product.getCategories().add(tech);
-

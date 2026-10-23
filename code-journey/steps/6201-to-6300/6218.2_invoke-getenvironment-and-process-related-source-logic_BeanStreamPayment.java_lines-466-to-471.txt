@@ -1,0 +1,6 @@
+		
+		
+		boolean bSandbox = false;
+		if (configuration.getEnvironment().equals("TEST")) {// sandbox
+			bSandbox = true;
+		}

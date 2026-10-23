@@ -1,0 +1,8 @@
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}

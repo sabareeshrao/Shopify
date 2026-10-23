@@ -1,0 +1,8 @@
+	   
+	   /**
+	    * An external image url
+	    */
+	   private String imageUrl = null;
+	   
+
+

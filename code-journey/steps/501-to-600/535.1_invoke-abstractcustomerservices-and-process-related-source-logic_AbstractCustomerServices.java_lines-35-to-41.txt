@@ -1,0 +1,7 @@
+	public final static String ROLE_PREFIX = "ROLE_";//Spring Security 4
+	
+	public AbstractCustomerServices(
+			CustomerService customerService, 
+			PermissionService permissionService, 
+			GroupService groupService) {
+		

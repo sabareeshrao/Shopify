@@ -1,0 +1,9 @@
+public class CaptchaRequestUtils {
+	
+	@Inject
+	private CoreConfiguration configuration; //for reading public and secret key
+	
+	private static final String SUCCESS_INDICATOR = "success";
+	
+	  @Value("${config.recaptcha.secretKey}")
+	  private String secretKey;

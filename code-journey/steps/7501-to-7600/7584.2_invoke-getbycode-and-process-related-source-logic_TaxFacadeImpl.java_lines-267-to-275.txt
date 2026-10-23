@@ -1,0 +1,9 @@
+		
+
+		
+		try {
+			
+			TaxRate model = taxRateService.getByCode(taxRate.getCode(), store);
+			if(model!=null) {
+				throw new OperationNotAllowedException("Tax rate [" + taxRate.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}

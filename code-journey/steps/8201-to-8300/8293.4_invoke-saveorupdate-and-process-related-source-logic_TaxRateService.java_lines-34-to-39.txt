@@ -1,0 +1,6 @@
+
+	TaxRate saveOrUpdate(TaxRate taxRate) throws ServiceException;
+	
+	
+
+}

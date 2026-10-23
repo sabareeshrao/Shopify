@@ -1,0 +1,7 @@
+      if (response.getStatusCode() != HttpStatus.OK) {
+          throw new Exception(response.toString());
+      } else {
+          final ReadableUser user = response.getBody();
+          assertNotNull(user);
+      }
+  }

@@ -1,0 +1,4 @@
+
+				for(ShippingOption option : shippingOptions) {
+
+					StringBuilder description = new StringBuilder();

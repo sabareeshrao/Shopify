@@ -1,0 +1,7 @@
+	private Long productAvailabilityId;
+
+	private List<ProductPriceDescription> descriptions = new ArrayList<ProductPriceDescription>();
+
+	public List<ProductPriceDescription> getDescriptions() {
+		return descriptions;
+	}

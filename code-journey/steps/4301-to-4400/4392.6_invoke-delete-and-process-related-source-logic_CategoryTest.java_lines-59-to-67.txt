@@ -1,0 +1,9 @@
+
+	    // Clean up for other tests
+	    categoryService.delete(materingstuff);
+
+	}
+
+
+
+}

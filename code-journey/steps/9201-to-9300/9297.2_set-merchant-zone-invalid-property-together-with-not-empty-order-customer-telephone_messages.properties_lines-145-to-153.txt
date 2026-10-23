@@ -1,0 +1,9 @@
+NotEmpty.order.customerFirstName=Customer first name should not be empty
+NotEmpty.order.customerLastName=Customer last name should not be empty
+NotEmpty.order.customerStreetAddress=Customer street address should not be empty
+NotEmpty.order.customerCity=Customer city should not be empty
+NotEmpty.order.customerPostCode=Customer postal code should not be empty
+NotEmpty.order.customerTelephone=Customer phone should not be empty
+Email.order.customerEmailAddress=Customer email address is invalid
+NotEmpty.order.customerEmailAddress=Customer email address should not be empty
+

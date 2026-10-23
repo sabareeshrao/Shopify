@@ -1,0 +1,7 @@
+      for(ProductOptionValueDescription desc : source.getDescriptions()) {
+          com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription d = this.description(desc);
+          descriptions.add(d);
+      }
+      ((ReadableProductOptionValueFull)readableProductOptionValue).setDescriptions(descriptions);
+    } else {
+    	readableProductOptionValue = new ReadableProductOptionValue();

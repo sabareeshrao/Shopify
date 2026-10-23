@@ -1,8 +1,0 @@
-label.category.code=Category code
-label.category.categoryvisible=Category visible
-label.category.categorydescription=Category description
-label.category.parentcategory=Parent category
-label.category.hierarchy.text=Drag categories to re-organize the hierarchy
-label.category.maincategories=Main categories
-
-#manufacturer

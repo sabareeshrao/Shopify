@@ -1,0 +1,8 @@
+	
+	/**
+	 * Optin a given customer. This has no reference to a specific Customer object but contains
+	 * only email, first name and lastname
+	 * @param optin
+	 * @throws ServiceException
+	 */
+	void optinCumtomer(CustomerOptin optin) throws ServiceException;

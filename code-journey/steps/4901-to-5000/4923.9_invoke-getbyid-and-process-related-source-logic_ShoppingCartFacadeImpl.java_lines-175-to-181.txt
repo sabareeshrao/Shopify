@@ -1,0 +1,7 @@
+
+		// refresh cart
+		cartModel = shoppingCartService.getById(cartModel.getId(), store);
+
+		shoppingCartCalculationService.calculate(cartModel, store, language);
+
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();

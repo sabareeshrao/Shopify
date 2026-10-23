@@ -1,0 +1,6 @@
+		if (body) {
+			return new ResponseEntity<>(updatedCart, HttpStatus.OK);
+		}
+		return new ResponseEntity<>(updatedCart, HttpStatus.NO_CONTENT);
+	}
+}

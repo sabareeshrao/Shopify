@@ -1,5 +1,0 @@
-
-	// remove image
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = {
-			"/private/product/productVariantGroup/{id}/image/{imageId}" }, method = RequestMethod.DELETE)

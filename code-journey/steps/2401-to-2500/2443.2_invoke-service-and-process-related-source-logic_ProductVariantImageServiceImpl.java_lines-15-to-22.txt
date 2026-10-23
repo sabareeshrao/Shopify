@@ -1,0 +1,8 @@
+@Service("productVariantImageService")
+public class ProductVariantImageServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductVariantImage> implements ProductVariantImageService {
+
+	@Autowired
+	private ProductVariantImageRepository productVariantImageRepository;
+	
+	public ProductVariantImageServiceImpl(ProductVariantImageRepository productVariantImageRepository) {
+		super(productVariantImageRepository);

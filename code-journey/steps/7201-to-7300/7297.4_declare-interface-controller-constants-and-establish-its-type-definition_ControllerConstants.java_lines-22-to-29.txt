@@ -1,0 +1,8 @@
+        
+        interface Category{
+            final static String category="category";
+        }
+        
+        interface Product{
+            final static String product="product";
+        }

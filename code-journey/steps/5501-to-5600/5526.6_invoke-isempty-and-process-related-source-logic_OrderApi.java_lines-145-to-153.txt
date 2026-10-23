@@ -1,0 +1,9 @@
+
+		if (!CollectionUtils.isEmpty(orders)) {
+			for (ReadableOrder order : orders) {
+				order.setCustomer(readableCustomer);
+			}
+		}
+
+		return returnList;
+	}

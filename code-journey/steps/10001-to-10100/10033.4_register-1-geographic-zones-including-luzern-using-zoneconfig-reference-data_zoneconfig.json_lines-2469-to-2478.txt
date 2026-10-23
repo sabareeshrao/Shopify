@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "LU",
+			"zoneName": "Luzern",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "NECH",
+			"zoneName": "Neuenburg",
+			"countryCode": "CH"
+		},

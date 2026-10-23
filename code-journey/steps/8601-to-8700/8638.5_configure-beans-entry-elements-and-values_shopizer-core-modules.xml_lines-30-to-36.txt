@@ -1,0 +1,7 @@
+		<beans:entry key="priceByDistance" value-ref="priceByDistance" />
+
+		<!-- This will activate drules -->
+		<beans:entry key="customQuotesRules" value-ref="customShippingPriceModule" />
+
+	</util:map>
+

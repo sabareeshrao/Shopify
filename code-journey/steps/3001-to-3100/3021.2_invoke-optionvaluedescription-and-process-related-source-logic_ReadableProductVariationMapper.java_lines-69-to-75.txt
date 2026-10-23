@@ -1,0 +1,7 @@
+			ProductOptionValueDescription desc = optionValueDescription(val.getDescriptions(), language);
+			if(desc!=null) {
+				value.setName(desc.getName());
+			}
+			return value;
+
+	}

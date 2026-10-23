@@ -1,0 +1,8 @@
+		try {
+			Manufacturer manufacturer = manufacturerService.getById(id);
+
+			if (manufacturer != null) {
+				manufacturerFacade.deleteManufacturer(manufacturer, merchantStore, language);
+			} else {
+				response.sendError(404, "No Manufacturer found for ID : " + id);
+			}

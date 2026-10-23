@@ -1,0 +1,7 @@
+		if (user == null) {
+			throw new ResourceNotFoundException("User [" + userName + "] not found");
+		}
+
+		return user;
+
+	}

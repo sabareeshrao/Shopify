@@ -1,0 +1,10 @@
+import io.swagger.annotations.Api;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
+
+/**
+ * Authenticates a User (Administration purpose)
+ * @author c.samson
+ *
+ */
+@Controller

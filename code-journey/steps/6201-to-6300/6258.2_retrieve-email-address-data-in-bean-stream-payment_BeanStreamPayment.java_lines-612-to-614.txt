@@ -1,3 +1,0 @@
-			messageLogString.append("ordEmailAddress=").append(customer.getEmailAddress());
-			
-			

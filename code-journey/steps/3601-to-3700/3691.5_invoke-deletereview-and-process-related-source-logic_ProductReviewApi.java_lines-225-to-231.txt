@@ -1,0 +1,7 @@
+        return;
+      }
+
+      productCommonFacade.deleteReview(prodReview, merchantStore, language);
+
+    } catch (Exception e) {
+      LOGGER.error("Error while deleting product review", e);

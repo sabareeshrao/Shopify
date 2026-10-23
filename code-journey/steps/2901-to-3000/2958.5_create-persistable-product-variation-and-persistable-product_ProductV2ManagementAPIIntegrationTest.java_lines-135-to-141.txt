@@ -1,7 +1,0 @@
-		mediumEn.setName("Medium");
-		mediumEn.setLanguage("en");
-		white.getDescriptions().add(mediumEn);
-		
-		//create variantions
-		PersistableProductVariation whiteVariation = new PersistableProductVariation();
-		PersistableProductVariation mediumVariation = new PersistableProductVariation();

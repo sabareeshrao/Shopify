@@ -1,0 +1,7 @@
+    final String subject = email.getSubject();
+    final String tmpl = email.getTemplateName();
+    final Map<String, String> templateTokens = email.getTemplateTokens();
+
+    MimeMessagePreparator preparator = new MimeMessagePreparator() {
+      public void prepare(MimeMessage mimeMessage) throws MessagingException, IOException {
+

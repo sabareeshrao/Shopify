@@ -1,0 +1,7 @@
+		
+		try {
+			List<TaxRate> rates = taxRateService.listByStore(store, language);
+			List<ReadableTaxRate> readableRates = rates.stream().map(r -> readableTaxRateMapper.convert(r, store, language)).collect(Collectors.toList());
+			
+			ReadableEntityList<ReadableTaxRate> returnRates = new ReadableEntityList<ReadableTaxRate>();
+			returnRates.setItems(readableRates);

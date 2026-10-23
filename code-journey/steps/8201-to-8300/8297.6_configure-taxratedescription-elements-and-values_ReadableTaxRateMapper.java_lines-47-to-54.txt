@@ -1,0 +1,8 @@
+		
+	    Optional<TaxRateDescription> description = descriptions.stream()
+	            .filter(desc -> desc.getLanguage().getCode().equals(language.getCode())).findAny();
+	        if (description.isPresent()) {
+	          return Optional.of(convertDescription(description.get()));
+	        } else {
+	          return Optional.empty();
+	        }

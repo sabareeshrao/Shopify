@@ -1,3 +1,0 @@
-spring.jpa.properties.hibernate.default_schema=SALESMANAGER
-
-shopizer.test=true

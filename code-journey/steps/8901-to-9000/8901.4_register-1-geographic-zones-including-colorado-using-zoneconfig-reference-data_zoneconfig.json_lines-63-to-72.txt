@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "CO",
+		"zoneName": "Colorado",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "CT",
+		"zoneName": "Connecticut",
+		"countryCode": "US"
+	},

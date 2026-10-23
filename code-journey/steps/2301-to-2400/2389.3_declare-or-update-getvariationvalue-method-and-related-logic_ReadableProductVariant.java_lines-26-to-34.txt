@@ -1,0 +1,9 @@
+	public ReadableProductVariation getVariationValue() {
+		return variationValue;
+	}
+	public void setVariationValue(ReadableProductVariation variationValue) {
+		this.variationValue = variationValue;
+	}
+	public List<ReadableImage> getImages() {
+		return images;
+	}

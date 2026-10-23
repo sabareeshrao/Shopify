@@ -1,0 +1,6 @@
+
+	/**
+	 * Converts a ShoppingCartItem carried in the ShoppingCart to an OrderProduct
+	 * that will be saved in the system
+	 */
+	@Override

@@ -1,0 +1,9 @@
+
+	private void discountPrice(FinalPrice finalPrice) {
+
+		finalPrice.setDiscounted(true);
+
+		double arith = finalPrice.getProductPrice().getProductPriceSpecialAmount().doubleValue()
+				/ finalPrice.getProductPrice().getProductPriceAmount().doubleValue();
+		double fsdiscount = 100 - (arith * 100);
+		Float percentagediscount = new Float(fsdiscount);

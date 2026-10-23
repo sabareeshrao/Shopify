@@ -1,0 +1,8 @@
+
+			if (o.getShippingSummary() != null) {
+				summary.setShippingSummary(o.getShippingSummary());
+			}
+
+			if (!StringUtils.isBlank(o.getCartCode())) {
+
+				ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(o.getCartCode(), store);

@@ -1,0 +1,10 @@
+
+/**
+ * Index product in search module if it is configured to do so !
+ * 
+ * Should receive events that a product was created or updated or deleted
+ * 
+ * @author carlsamson
+ *
+ */
+@Component

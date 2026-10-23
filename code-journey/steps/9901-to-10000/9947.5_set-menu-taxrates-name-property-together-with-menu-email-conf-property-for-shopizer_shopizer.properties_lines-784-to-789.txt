@@ -1,0 +1,6 @@
+menu.taxrates.rate=Tax rate
+menu.taxrates.code=Tax rate code
+menu.taxrates.name=Tax rate name
+menu.product.category=Associate to categories
+menu.accounts-conf=Accounts configuration
+menu.email-conf=Email settings

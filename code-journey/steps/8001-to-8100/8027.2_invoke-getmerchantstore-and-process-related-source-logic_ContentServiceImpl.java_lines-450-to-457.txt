@@ -1,0 +1,8 @@
+		if (content != null) {
+			if (content.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+				return null;
+			}
+		}
+
+		return content;
+	}

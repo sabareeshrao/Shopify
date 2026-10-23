@@ -1,0 +1,8 @@
+
+			variantMap.put(variantCode, variantValueCode);
+
+		}
+		
+
+		if (variant.getVariationValue() != null) {
+			String variantCode = variant.getVariationValue().getProductOption().getCode();

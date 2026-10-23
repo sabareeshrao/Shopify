@@ -1,8 +1,0 @@
-NotEmpty.customer.EmailAddress=Customer email address should not be empty
-
-NotEmpty.customer.billingCompany=Billing company name should not be empty
-NotEmpty.customer.billingFirstName=Billing first name should not be empty
-NotEmpty.customer.billingLastName=Billing last name should not be empty  
-NotEmpty.customer.billingStreetAddress=Billing street address should not be empty
-NotEmpty.customer.billingCity=Billing city should not be empty
-NotEmpty.customer.billingState=Billing state should not be empty

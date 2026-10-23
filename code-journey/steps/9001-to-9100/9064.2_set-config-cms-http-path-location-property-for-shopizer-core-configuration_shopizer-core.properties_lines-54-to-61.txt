@@ -1,8 +1,0 @@
-config.cms.http.path.location=/Users/carlsamson/Documents/dev/processes/docker-compose/shopizer-docker-compose/outer-architecture/nginx/web
-
-
-#AWS S3 configuration
-#Name of bucket files
-#See regions here https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
-#Credentials must be set as environment variables when launching Shopizer
-#AWS_ACCESS_KEY_ID=<ACCESS KEY ID>

@@ -1,0 +1,10 @@
+	@Override
+	public ReadableProductDefinition merge(Product source, ReadableProductDefinition destination, MerchantStore store,
+			Language language) {
+		Validate.notNull(source, "Product cannot be null");
+		Validate.notNull(destination, "Product destination cannot be null");
+
+		ReadableProductDefinition returnDestination = destination;
+		if (language == null) {
+			returnDestination = new ReadableProductDefinitionFull();
+		}

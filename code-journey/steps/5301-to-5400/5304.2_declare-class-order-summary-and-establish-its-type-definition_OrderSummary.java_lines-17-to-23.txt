@@ -1,0 +1,7 @@
+public class OrderSummary implements Serializable {
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

@@ -1,0 +1,7 @@
+
+				if (options.size() == 0) {
+					LogMerchantUtil
+							.log(
+									store.getMerchantId(),
+									" none of the service code returned by UPS ["
+											+ selectedintlservices

@@ -1,5 +1,0 @@
-	private int quantity;
-	private String sku;//sku
-	private String code;//shopping cart code
-	private boolean productVirtual;
-	

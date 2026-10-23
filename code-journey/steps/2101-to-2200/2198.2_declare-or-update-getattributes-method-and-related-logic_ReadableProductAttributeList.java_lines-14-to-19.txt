@@ -1,0 +1,6 @@
+	
+	private List<ReadableProductAttributeEntity> attributes = new ArrayList<ReadableProductAttributeEntity>();
+
+	public List<ReadableProductAttributeEntity> getAttributes() {
+		return attributes;
+	}

@@ -1,0 +1,7 @@
+	
+	public ProductOptionValueDescription() {
+	}
+
+	public ProductOptionValue getProductOptionValue() {
+		return productOptionValue;
+	}

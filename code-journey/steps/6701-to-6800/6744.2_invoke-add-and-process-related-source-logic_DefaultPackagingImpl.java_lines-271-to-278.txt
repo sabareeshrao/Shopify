@@ -1,0 +1,8 @@
+
+				boxesList.add(box);
+
+				double volumeLeft = box.getVolumeLeft() - productVolume;
+				box.setVolumeLeft(volumeLeft);
+				double weightLeft = box.getWeightLeft() - productWeight;
+				box.setWeightLeft(weightLeft);
+				assignedProducts.add(p);

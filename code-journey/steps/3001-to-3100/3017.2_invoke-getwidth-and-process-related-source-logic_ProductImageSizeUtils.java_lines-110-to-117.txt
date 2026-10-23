@@ -1,0 +1,8 @@
+
+            //*Special* if the width or height is 0 use image src dimensions
+            if (destinationWidth == 0) {
+            	destinationWidth = image.getWidth();
+            }
+            if (destinationHeight == 0) {
+            	destinationHeight = image.getHeight();
+            }

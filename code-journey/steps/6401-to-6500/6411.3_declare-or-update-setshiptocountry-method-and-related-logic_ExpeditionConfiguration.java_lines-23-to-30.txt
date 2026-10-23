@@ -1,0 +1,8 @@
+
+	public void setShipToCountry(List<String> shipToCountry) {
+		this.shipToCountry = shipToCountry;
+	}
+
+	public boolean isTaxOnShipping() {
+		return taxOnShipping;
+	}

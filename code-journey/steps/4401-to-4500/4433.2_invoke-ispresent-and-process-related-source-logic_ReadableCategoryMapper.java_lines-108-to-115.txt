@@ -1,0 +1,8 @@
+
+		if (description.isPresent()) {
+			current.setDescription(description.get());
+		}
+
+		if (category.getParent() != null) {
+			current.setParent(this.createReadable(category.getParent(), language));
+		}

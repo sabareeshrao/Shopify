@@ -1,0 +1,5 @@
+	@Override
+	public ReadableCategoryList getCategoryHierarchy(MerchantStore store, ListCriteria criteria, int depth,
+			Language language, List<String> filter, int page, int count) {
+
+		Validate.notNull(store,"MerchantStore can not be null");

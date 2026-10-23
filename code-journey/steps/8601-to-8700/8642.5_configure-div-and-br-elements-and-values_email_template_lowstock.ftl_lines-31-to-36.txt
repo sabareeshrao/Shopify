@@ -1,0 +1,6 @@
+  <div class="content">
+    <div class="content-line">
+    	${EMAIL_STORE_NAME}<br /><br />
+    	${EMAIL_PRODUCT_TEXT}<br/>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.entity.ShopEntity;
+import com.salesmanager.shop.model.order.total.OrderTotal;
+
+
+@Component
+@Scope(value = "prototype")

@@ -1,0 +1,7 @@
+
+						ReadableProductOptionValue optValue = new ReadableProductOptionValue();
+
+						optValue.setDefaultValue(attribute.getAttributeDefault());
+						// optValue.setId(attribute.getProductOptionValue().getId());
+						optValue.setId(attribute.getId());
+						optValue.setCode(attribute.getProductOptionValue().getCode());

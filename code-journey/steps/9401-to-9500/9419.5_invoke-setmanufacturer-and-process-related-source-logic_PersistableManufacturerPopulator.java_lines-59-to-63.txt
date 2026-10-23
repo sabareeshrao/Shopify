@@ -1,0 +1,5 @@
+					
+					desc.setManufacturer(target);
+					desc.setDescription(description.getDescription());
+					desc.setName(description.getName());
+					Language lang = languageService.getByCode(description.getLanguage());

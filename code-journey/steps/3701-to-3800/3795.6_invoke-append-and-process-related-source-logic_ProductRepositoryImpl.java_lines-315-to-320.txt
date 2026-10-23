@@ -1,0 +1,6 @@
+		qs.append("and p.available=true and p.dateAvailable<=:dt ");
+		// this cannot be done on child elements from left join
+		// qs.append("and pod.languageId=:lang and povd.languageId=:lang");
+
+		String hql = qs.toString();
+		Query q = this.em.createQuery(hql);

@@ -1,0 +1,6 @@
+
+	  /**
+	   * Removes item from a category
+	   *
+	   * @param category
+	   * @param product

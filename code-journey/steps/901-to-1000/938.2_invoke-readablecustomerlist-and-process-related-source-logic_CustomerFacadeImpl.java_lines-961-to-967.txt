@@ -1,0 +1,7 @@
+
+    ReadableCustomerList readableCustomerList = new ReadableCustomerList();
+    readableCustomerList.setCustomers(readableCustomers);
+    readableCustomerList.setTotalPages(Math.toIntExact(customerList.getTotalCount()));
+    return readableCustomerList;
+  }
+

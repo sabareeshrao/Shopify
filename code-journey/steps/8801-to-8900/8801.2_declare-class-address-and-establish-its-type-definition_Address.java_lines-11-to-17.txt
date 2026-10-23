@@ -1,0 +1,7 @@
+	
+	
+	private String stateProvince;//code
+	private String country;//code
+	private String address;
+	private String postalCode;
+	private String city;

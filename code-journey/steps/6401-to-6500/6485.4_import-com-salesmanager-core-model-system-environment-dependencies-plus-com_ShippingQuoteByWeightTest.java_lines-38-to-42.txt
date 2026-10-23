@@ -1,5 +1,0 @@
-import com.salesmanager.core.model.system.Environment;
-import com.salesmanager.core.model.system.IntegrationConfiguration;
-import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQuoteWeightItem;
-import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQuotesConfiguration;
-import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQuotesRegion;

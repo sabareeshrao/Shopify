@@ -1,0 +1,8 @@
+
+      // delete large
+      StringBuilder largePath = new StringBuilder(nodePath);
+      largePath.append(Constants.SLASH).append(LARGE).append(Constants.SLASH)
+          .append(productImage.getProductImage());
+
+
+      path = Paths.get(largePath.toString());

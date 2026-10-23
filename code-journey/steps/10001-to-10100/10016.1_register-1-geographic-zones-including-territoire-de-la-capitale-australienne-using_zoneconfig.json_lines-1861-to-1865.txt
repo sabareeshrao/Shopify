@@ -1,5 +1,0 @@
-	{
-		"zoneCode":"ACT",
-		"zoneName":"Territoire de la capitale australienne",
-		"countryCode":"AU"
-	},

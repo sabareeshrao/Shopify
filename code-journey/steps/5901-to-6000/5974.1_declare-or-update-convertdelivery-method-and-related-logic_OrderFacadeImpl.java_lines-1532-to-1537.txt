@@ -1,0 +1,6 @@
+
+	private Delivery convertDelivery(Address source) throws ServiceException {
+		Delivery target = new Delivery();
+        target.setCity(source.getCity());
+        target.setCompany(source.getCompany());
+        target.setFirstName(source.getFirstName());

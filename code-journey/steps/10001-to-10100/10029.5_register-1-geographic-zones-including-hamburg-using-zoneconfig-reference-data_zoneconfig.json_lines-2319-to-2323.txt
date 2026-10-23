@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "HAM",
-			"zoneName": "Hamburg",
-			"countryCode": "DE"
-		},

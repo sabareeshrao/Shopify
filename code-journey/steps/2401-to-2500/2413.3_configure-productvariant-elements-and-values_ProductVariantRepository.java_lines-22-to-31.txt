@@ -1,0 +1,10 @@
+			
+			+ "left join fetch p.variationValue pvv "
+			+ "left join fetch pvv.productOption pvvpo "
+			+ "left join fetch pvv.productOptionValue pvvpov "
+			+ "left join fetch pvvpo.descriptions povvpod "
+			+ "left join fetch pvpov.descriptions povvpovd "			
+			
+			+ "left join fetch pv.merchantStore pvm "
+			+ "where p.id = ?1 and pvm.id = ?2")
+	Optional<ProductVariant> findOne(Long id, Integer storeId);

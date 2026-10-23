@@ -1,0 +1,10 @@
+	@Override
+	public ReadableProduct getProduct(MerchantStore store, String sku, Language language) throws Exception {
+
+		Product product = productService.getBySku(sku, store, language);
+
+		if (product == null) {
+			return null;
+		}
+
+		ReadableProduct readableProduct = new ReadableProduct();

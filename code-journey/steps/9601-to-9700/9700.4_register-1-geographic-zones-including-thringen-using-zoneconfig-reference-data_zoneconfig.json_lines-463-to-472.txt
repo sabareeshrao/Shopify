@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "THE",
+		"zoneName": "Thringen",
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "WIAT",
+		"zoneName": "Wien",
+		"countryCode": "AT"
+	},

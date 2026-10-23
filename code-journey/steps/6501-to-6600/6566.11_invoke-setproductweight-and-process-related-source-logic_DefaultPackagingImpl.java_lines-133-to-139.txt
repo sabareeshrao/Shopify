@@ -1,0 +1,7 @@
+				temp.setProductWeight(w);
+				temp.setAttributes(product.getAttributes());
+				temp.setDescriptions(product.getDescriptions());
+				individualProducts.add(temp);
+			}
+			iterCount++;
+		}

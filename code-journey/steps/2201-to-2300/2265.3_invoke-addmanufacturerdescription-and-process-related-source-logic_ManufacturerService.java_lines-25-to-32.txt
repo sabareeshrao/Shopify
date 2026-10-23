@@ -1,0 +1,8 @@
+	
+	void addManufacturerDescription(Manufacturer manufacturer, ManufacturerDescription description) throws ServiceException;
+	
+	Long getCountManufAttachedProducts( Manufacturer manufacturer )  throws ServiceException;
+	
+	void delete(Manufacturer manufacturer) throws ServiceException;
+	
+	Manufacturer getByCode(MerchantStore store, String code);

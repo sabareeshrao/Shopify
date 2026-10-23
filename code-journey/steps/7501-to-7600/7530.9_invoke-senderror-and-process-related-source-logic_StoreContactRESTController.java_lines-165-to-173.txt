@@ -1,0 +1,9 @@
+			try {
+				response.sendError(503, "Error while saving category " + e.getMessage());
+			} catch (Exception ignore) {
+			}
+			return null;
+		}
+	}
+
+}

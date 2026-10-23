@@ -1,0 +1,8 @@
+		
+		if(cropAreaWidth > width)
+			cropAreaWidth = width;
+		
+		cropAreaHeight = h;
+		
+		if(cropAreaHeight > height)
+			cropAreaHeight = height;

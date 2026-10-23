@@ -1,0 +1,10 @@
+
+					shoppingCartItem.setDisplaySubTotal(pricingService.getDisplayAmount(subTotal, store));
+
+					Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> attributes = item
+							.getAttributes();
+					if (attributes != null) {
+						for (com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attribute : attributes) {
+
+							ProductAttribute productAttribute = productAttributeService
+									.getById(attribute.getProductAttributeId());

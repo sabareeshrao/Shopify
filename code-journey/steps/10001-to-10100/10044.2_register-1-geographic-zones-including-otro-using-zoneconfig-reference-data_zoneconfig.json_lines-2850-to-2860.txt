@@ -1,0 +1,11 @@
+			"zoneCode": "CEN",
+			"zoneName": "Central",
+			"countryCode": "PY"
+		},
+		{
+			"zoneCode": "OTR",
+			"zoneName": "Otro",
+			"countryCode": "PY"
+		}
+] 
+}

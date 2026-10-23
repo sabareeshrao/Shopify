@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Murcia",
-			"zoneName": "Murcia",
-			"countryCode": "ES"
-		},

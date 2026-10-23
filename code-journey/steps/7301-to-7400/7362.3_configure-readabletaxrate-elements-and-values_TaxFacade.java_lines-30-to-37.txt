@@ -1,0 +1,8 @@
+	
+	ReadableEntityList<ReadableTaxRate> taxRates(MerchantStore store, Language language);
+	ReadableTaxRate taxRate(Long id, MerchantStore store, Language language);
+	
+	
+	
+
+}

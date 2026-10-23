@@ -1,0 +1,7 @@
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						<p class="lead">
+							${EMAIL_CUSTOMER_CONTACT}
+						</p>

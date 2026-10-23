@@ -1,0 +1,9 @@
+		if (quote.getSelectedShippingOption() != null) {
+			summary.setShippingQuote(true);
+			summary.setFreeShipping(quote.isFreeShipping());
+			summary.setTaxOnShipping(quote.isApplyTaxOnShipping());
+			summary.setHandling(quote.getHandlingFees());
+			summary.setShipping(quote.getSelectedShippingOption().getOptionPrice());
+			summary.setShippingOption(quote.getSelectedShippingOption().getOptionName());
+			summary.setShippingModule(quote.getShippingModuleCode());
+			summary.setShippingOptionCode(quote.getSelectedShippingOption().getOptionCode());

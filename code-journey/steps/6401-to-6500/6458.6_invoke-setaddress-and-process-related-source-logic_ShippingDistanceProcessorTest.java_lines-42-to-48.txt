@@ -1,0 +1,7 @@
+		origin.setAddress("7070, avenue Henri-Julien");
+		origin.setCity("Montreal");
+		origin.setPostalCode("H2S 3S3");
+		origin.setZone(zone);
+		origin.setCountry(country);
+		
+		//shippingDecisionTablePreProcessor.prePostProcessShippingQuotes(shippingQuote, null, null, delivery, origin, null, null, null, null, null, Locale.CANADA);

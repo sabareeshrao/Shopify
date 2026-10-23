@@ -1,0 +1,6 @@
+
+		if (CollectionUtils.isEmpty(orders)) {
+			returnList.setRecordsTotal(0);
+			// returnList.setMessage("No results for store code " + store);
+			return null;
+		}

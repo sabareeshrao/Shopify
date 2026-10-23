@@ -1,0 +1,6 @@
+		
+		if(criteria.getGroupIds()!=null && criteria.getGroupIds().size()>0) {
+			qs.append(" where grous.id in (:cid)");
+		}
+		
+		qs.append(" order by p.id asc ");

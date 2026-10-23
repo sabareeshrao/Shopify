@@ -1,0 +1,6 @@
+	@ApiModelProperty(notes = "Customer billing or shipping country code (2 letter code US, CA, UK, IT, IN, CN...)")
+	//@NotEmpty(message="{NotEmpty.customer.billing.country}")
+	private String country;//code
+	
+
+

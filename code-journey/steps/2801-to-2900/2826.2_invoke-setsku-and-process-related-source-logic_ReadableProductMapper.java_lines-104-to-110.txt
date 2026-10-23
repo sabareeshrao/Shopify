@@ -1,0 +1,7 @@
+
+		destination.setSku(source.getSku());
+		destination.setRefSku(source.getRefSku());
+		destination.setId(source.getId());
+		destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+
+		ProductDescription description = null;

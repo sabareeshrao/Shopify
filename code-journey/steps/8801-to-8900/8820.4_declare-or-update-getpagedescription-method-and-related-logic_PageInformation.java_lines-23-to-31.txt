@@ -1,0 +1,9 @@
+	public String getPageDescription() {
+		return pageDescription;
+	}
+	public void setPageDescription(String pageDescription) {
+		this.pageDescription = pageDescription;
+	}
+	public String getPageKeywords() {
+		return pageKeywords;
+	}

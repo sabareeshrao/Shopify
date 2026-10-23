@@ -1,8 +1,0 @@
-	    blackAttribute.setProduct(product);
-	    blackAttribute.setProductOption(option);
-	    blackAttribute.setProductAttributePrice(new BigDecimal(5));//5 + dollars
-	    blackAttribute.setProductAttributeWeight(new BigDecimal(0));//no weight variation
-	    blackAttribute.setProductOption(option);
-	    blackAttribute.setProductOptionValue(black);
-	    
-	    product.getAttributes().add(blackAttribute);

@@ -1,0 +1,7 @@
+					
+					if(attr.getProduct().getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Attribute id " + id + " invalid for this store");
+					}
+					
+					orderProductAttribute.setProductAttributeIsFree(attr.getProductAttributeIsFree());
+					orderProductAttribute.setProductAttributeName(attr.getProductOption().getDescriptionsSettoList().get(0).getName());

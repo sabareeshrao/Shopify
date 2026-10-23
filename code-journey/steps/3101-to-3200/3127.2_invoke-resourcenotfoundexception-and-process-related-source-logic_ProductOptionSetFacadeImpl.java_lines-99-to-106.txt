@@ -1,0 +1,8 @@
+		if (opt == null) {
+			throw new ResourceNotFoundException(
+					"ProductOptionSet not found for id [" + id + "] and store [" + store.getCode() + "]");
+		}
+
+		optionSet.setId(id);
+		optionSet.setCode(opt.getCode());
+		ProductOptionSet model = persistableProductOptionSetMapper.convert(optionSet, store, language);

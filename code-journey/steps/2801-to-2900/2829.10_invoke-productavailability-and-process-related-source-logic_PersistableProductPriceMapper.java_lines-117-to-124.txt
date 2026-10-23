@@ -1,0 +1,8 @@
+
+				availability = new ProductAvailability();
+				availability.setProduct(product);
+				availability.setRegion(Constants.ALL_REGIONS);
+			}
+
+			destination.setProductAvailability(availability);
+			destination.setDefaultPrice(source.isDefaultPrice());

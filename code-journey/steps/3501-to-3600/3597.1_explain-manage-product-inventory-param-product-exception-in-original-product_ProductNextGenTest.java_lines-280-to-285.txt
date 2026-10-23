@@ -1,6 +1,0 @@
-	
-	/**
-	 * Manage product inventory
-	 * @param product
-	 * @throws Exception
-	 */

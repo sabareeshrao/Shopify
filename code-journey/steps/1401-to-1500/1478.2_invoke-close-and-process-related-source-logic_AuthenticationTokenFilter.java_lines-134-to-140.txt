@@ -1,0 +1,7 @@
+    		if(userContext!=null) {
+    			userContext.close();
+    		}
+    		
+    	} catch(Exception s) {
+    		LOGGER.error("Error while getting ip address ", s);
+    	}

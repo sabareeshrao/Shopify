@@ -1,0 +1,7 @@
+			errorFields.add("services");
+		}
+		
+		if(services!=null && services.size()>3) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}

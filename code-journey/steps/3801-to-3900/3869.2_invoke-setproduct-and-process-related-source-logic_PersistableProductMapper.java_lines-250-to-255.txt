@@ -1,0 +1,6 @@
+				productAvailability.setProduct(destination);
+				destination.getAvailabilities().add(productAvailability);
+			} else {
+				//need an inventory to create a Product
+				if(!CollectionUtils.isEmpty(destination.getVariants())) {
+					ProductAvailability defaultAvailability = null;	

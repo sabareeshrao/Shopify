@@ -1,0 +1,6 @@
+	public List<ReadableTransaction> listTransactions(
+			@PathVariable final Long id, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();

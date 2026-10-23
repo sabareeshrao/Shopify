@@ -1,2 +1,0 @@
-	void removeCustomShippingQuoteModuleConfiguration(String moduleCode,
-			MerchantStore store) throws ServiceException;

@@ -1,9 +1,0 @@
-
-	@Autowired
-	private ProductDefinitionFacade productDefinitionFacade;
-	
-	@Autowired
-	private ProductFacade productFacadeV2;
-	
-	@Autowired
-	private ProductCommonFacade productCommonFacade;

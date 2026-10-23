@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "CA",
-		"zoneName": "California",
-		"countryCode": "US"
-	},

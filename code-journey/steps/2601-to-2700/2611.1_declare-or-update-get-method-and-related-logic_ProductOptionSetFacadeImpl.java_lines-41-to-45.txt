@@ -1,0 +1,5 @@
+	@Override
+	public ReadableProductOptionSet get(Long id, MerchantStore store, Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+		ProductOptionSet optionSet = productOptionSetService.getById(store, id, language);

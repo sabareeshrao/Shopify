@@ -1,6 +1,0 @@
-import com.salesmanager.core.business.services.user.GroupService;
-import com.salesmanager.core.business.services.user.PermissionService;
-import com.salesmanager.core.model.user.Group;
-import com.salesmanager.core.model.user.Permission;
-import com.salesmanager.shop.model.security.ReadableGroup;
-import com.salesmanager.shop.model.security.ReadablePermission;

@@ -1,0 +1,9 @@
+package com.salesmanager.shop.store.model.filter;
+
+/**
+ * Used in Category and Search to filter display based on other
+ * entities such as Manufacturer
+ * @author Carl Samson
+ *
+ */
+public class QueryFilter {

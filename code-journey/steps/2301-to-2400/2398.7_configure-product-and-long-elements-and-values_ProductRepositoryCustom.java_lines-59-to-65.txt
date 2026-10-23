@@ -1,0 +1,7 @@
+		
+		Product getById(Long productId, MerchantStore store, Language language);
+
+		List<Product> getProductsForLocale(MerchantStore store,
+				Set<Long> categoryIds, Language language, Locale locale);
+
+}

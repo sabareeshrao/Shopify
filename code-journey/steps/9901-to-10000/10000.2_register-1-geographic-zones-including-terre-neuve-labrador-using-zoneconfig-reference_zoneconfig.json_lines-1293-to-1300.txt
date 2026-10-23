@@ -1,0 +1,8 @@
+		"zoneName": "Manitoba",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NF",
+		"zoneName": "Terre-Neuve - Labrador",
+		"countryCode": "CA"
+	},

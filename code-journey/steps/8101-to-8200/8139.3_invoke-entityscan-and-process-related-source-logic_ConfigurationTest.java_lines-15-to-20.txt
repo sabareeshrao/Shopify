@@ -1,0 +1,6 @@
+@EntityScan(basePackages = "com.salesmanager.core.model")
+public class ConfigurationTest {
+	
+	
+
+}

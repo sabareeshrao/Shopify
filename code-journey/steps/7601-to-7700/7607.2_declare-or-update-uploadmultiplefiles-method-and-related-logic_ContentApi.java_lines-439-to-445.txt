@@ -1,0 +1,7 @@
+	public void uploadMultipleFiles(@RequestParam(value = "file[]", required = true) MultipartFile[] files,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		for (MultipartFile f : files) {
+			ContentFile cf = new ContentFile();
+			cf.setContentType(f.getContentType());
+			cf.setName(f.getName());

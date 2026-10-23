@@ -1,0 +1,7 @@
+      CustomerBillingAddressPopulator billingAddressPopulator =
+          new CustomerBillingAddressPopulator();
+      address = billingAddressPopulator.populate(customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());
+      address.setBillingAddress(true);
+      return address;
+    }

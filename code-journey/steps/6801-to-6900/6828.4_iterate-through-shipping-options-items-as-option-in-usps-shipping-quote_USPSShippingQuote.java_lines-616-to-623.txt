@@ -1,8 +1,0 @@
-				// String value =
-				// bundle.getString("shipping.quote.services.label." + key);
-				// services.put(value, key);
-				// }
-
-				for(ShippingOption option : shippingOptions) {
-
-					StringBuilder description = new StringBuilder();

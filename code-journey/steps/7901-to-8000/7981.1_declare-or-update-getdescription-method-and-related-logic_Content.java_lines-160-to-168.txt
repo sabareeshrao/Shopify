@@ -1,0 +1,9 @@
+	public ContentDescription getDescription() {
+		
+		if(this.getDescriptions()!=null && this.getDescriptions().size()>0) {
+			return this.getDescriptions().get(0);
+		}
+		
+		return null;
+		
+	}

@@ -1,0 +1,6 @@
+			
+			if(modelProduct.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+				throw new ConversionException("Invalid product with sku " + source.getSku());
+			}
+
+			DigitalProduct digitalProduct = digitalProductService.getByProduct(store, modelProduct);

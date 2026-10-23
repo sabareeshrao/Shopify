@@ -1,7 +1,0 @@
-
-	@Column(name = "CONTENT_POSITION", length=10, nullable=true)
-	@Enumerated(value = EnumType.STRING)
-	private ContentPosition contentPosition;
-	
-	//Used for grouping
-	//BOX, SECTION, PAGE

@@ -1,0 +1,7 @@
+							if (values.get("config2") != null) {
+								config.setConfig1((String) values.get("config2"));
+							}
+
+							moduleConfigs.put(env, config);
+
+						}

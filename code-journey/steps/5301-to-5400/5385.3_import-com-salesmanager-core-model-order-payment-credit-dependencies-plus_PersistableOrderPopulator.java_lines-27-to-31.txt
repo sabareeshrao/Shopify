@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.order.payment.CreditCard;
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.currency.Currency;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.core.model.reference.zone.Zone;

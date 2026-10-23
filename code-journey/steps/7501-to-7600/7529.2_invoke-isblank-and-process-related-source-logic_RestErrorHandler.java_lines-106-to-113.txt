@@ -1,0 +1,8 @@
+        if(StringUtils.isBlank(resultMessage)) {
+        	resultMessage = message;
+        }
+        Optional.ofNullable(resultMessage)
+                .ifPresent(errorEntity::setMessage);
+        return errorEntity;
+    }
+}

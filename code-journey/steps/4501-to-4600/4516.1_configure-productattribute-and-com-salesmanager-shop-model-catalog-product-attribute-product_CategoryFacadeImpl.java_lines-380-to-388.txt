@@ -1,0 +1,9 @@
+
+		try {
+			List<ProductAttribute> attributes = productAttributeService.getProductAttributesByCategoryLineage(store,
+					category.getLineage(), language);
+
+			/**
+			 * Option NAME OptionValueName OptionValueName
+			 **/
+			Map<String, List<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue>> rawFacet = new HashMap<String, List<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue>>();

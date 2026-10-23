@@ -1,0 +1,5 @@
+
+		qs.append("left join fetch pap.descriptions papd ");
+
+		// images
+		qs.append("left join fetch p.images images ");

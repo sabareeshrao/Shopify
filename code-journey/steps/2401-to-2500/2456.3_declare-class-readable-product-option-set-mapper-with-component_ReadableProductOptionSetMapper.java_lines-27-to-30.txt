@@ -1,4 +1,0 @@
-
-@Component
-public class ReadableProductOptionSetMapper implements Mapper<ProductOptionSet, ReadableProductOptionSet> {
- 

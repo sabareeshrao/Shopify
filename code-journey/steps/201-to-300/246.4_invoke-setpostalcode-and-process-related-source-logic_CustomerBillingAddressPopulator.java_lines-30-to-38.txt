@@ -1,0 +1,9 @@
+        target.setPostalCode(source.getBilling().getPostalCode());
+        target.setPhone(source.getBilling().getTelephone());
+        if(source.getBilling().getTelephone()==null) {
+            target.setPhone(source.getBilling().getTelephone());
+        }
+        target.setAddress(source.getBilling().getAddress());
+        if(source.getBilling().getCountry()!=null) {
+            target.setCountry(source.getBilling().getCountry().getIsoCode());
+        }

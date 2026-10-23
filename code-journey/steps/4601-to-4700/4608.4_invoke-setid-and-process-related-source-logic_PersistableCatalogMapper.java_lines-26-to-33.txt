@@ -1,0 +1,8 @@
+		destination.setId(source.getId());
+		destination.setMerchantStore(store);
+		destination.setVisible(source.isVisible());
+		
+		return destination;
+	}
+
+}

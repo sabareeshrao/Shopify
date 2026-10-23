@@ -1,0 +1,8 @@
+	public void setProductTypes(List<Long> productTypes) {
+		this.productTypes = productTypes;
+	}
+
+	
+	
+
+}

@@ -1,0 +1,6 @@
+
+		if (CollectionUtils.isEmpty(shippingProducts)) {
+			return null;// products are virtual
+		}
+
+		Delivery delivery = new Delivery();

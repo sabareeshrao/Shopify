@@ -1,0 +1,6 @@
+		String respText = "";
+		Map<String,String> nvp = null;
+		DataOutputStream output = null;
+		DataInputStream in = null;
+		BufferedReader is = null;
+		HttpURLConnection conn =null;

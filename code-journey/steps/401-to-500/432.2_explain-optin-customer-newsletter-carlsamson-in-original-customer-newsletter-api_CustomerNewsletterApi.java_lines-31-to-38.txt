@@ -1,0 +1,8 @@
+
+
+/**
+ * Optin a customer to newsletter
+ * @author carlsamson
+ *
+ */
+@RestController

@@ -1,0 +1,9 @@
+
+			shippingService.saveShippingQuoteModuleConfiguration(integrationConfiguration, merchantStore);
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error saving shipping modules", e);
+			throw new ServiceRuntimeException("Error saving shipping module", e);
+		}
+
+	}

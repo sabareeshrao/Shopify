@@ -1,0 +1,7 @@
+@Table(name="CONTENT_DESCRIPTION",uniqueConstraints={
+		@UniqueConstraint(columnNames={
+			"CONTENT_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

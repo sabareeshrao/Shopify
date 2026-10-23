@@ -1,0 +1,6 @@
+
+        target.setCode(source.getCode());
+        target.setId(source.getId());
+        if (source.getDepth() != null) {
+            target.setDepth(source.getDepth());
+        }

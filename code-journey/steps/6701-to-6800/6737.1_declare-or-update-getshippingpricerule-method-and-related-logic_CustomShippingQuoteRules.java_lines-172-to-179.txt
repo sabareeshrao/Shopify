@@ -1,0 +1,8 @@
+
+/*	public StatelessKnowledgeSession getShippingPriceRule() {
+		return shippingPriceRule;
+	}
+
+	public void setShippingPriceRule(StatelessKnowledgeSession shippingPriceRule) {
+		this.shippingPriceRule = shippingPriceRule;
+	}

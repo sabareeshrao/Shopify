@@ -1,0 +1,10 @@
+import com.salesmanager.shop.model.user.ReadableUser;
+import com.salesmanager.shop.model.user.ReadableUserList;
+import com.salesmanager.shop.model.user.UserPassword;
+
+/**
+ * Access to all methods for managing users
+ * 
+ * @author carlsamson
+ *
+ */

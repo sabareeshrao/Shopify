@@ -1,0 +1,6 @@
+public interface ProductVariantGroupService extends SalesManagerEntityService<Long, ProductVariantGroup> {
+
+	
+	Optional<ProductVariantGroup> getById(Long id, MerchantStore store);
+	
+	Optional<ProductVariantGroup> getByProductVariant(Long productVariantId, MerchantStore store, Language language);

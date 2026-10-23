@@ -1,0 +1,7 @@
+			
+			
+			/**
+			 * SPEIFICATIONS
+			 */
+			if(source.getProductSpecifications()!=null) {
+				destination.setProductHeight(source.getProductSpecifications().getHeight());

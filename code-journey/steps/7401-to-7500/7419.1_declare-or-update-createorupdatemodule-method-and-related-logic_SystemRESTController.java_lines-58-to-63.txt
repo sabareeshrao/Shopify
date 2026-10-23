@@ -1,0 +1,6 @@
+	@RequestMapping( value="/private/system/module", method=RequestMethod.POST, consumes = "text/plain;charset=UTF-8")
+	@ResponseBody
+	public AjaxResponse createOrUpdateModule(@RequestBody final String json, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		AjaxResponse resp = new AjaxResponse();

@@ -1,0 +1,8 @@
+			p = products.get(0);
+		} catch (javax.persistence.NoResultException ignore) {
+
+		}
+
+		return p;
+
+	}

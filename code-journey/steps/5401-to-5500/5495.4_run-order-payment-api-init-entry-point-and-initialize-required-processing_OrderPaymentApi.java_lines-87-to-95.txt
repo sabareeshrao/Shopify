@@ -1,0 +1,9 @@
+
+	@RequestMapping(value = { "/cart/{code}/payment/init" }, method = RequestMethod.POST)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableTransaction init(@Valid @RequestBody PersistablePayment payment, @PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) throws Exception {
+
+		ShoppingCart cart = shoppingCartService.getByCode(code, merchantStore);

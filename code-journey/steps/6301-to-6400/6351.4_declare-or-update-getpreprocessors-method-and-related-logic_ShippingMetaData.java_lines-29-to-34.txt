@@ -1,0 +1,6 @@
+	public List<String> getPreProcessors() {
+		return preProcessors;
+	}
+	public void setPreProcessors(List<String> preProcessors) {
+		this.preProcessors = preProcessors;
+	}

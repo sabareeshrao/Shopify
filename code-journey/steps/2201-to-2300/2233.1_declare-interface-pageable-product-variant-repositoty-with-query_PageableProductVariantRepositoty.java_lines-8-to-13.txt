@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+
+public interface PageableProductVariantRepositoty extends PagingAndSortingRepository<ProductVariant, Long> {
+
+
+	

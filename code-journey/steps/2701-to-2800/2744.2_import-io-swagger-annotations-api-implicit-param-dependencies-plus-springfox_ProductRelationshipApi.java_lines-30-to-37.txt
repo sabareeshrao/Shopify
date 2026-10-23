@@ -1,0 +1,8 @@
+@Controller
+@RequestMapping("/api/v1")
+public class ProductRelationshipApi {
+
+  @Inject private ProductFacade productFacade;
+
+  @Inject private ProductService productService;
+

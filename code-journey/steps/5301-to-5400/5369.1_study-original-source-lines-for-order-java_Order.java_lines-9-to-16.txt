@@ -1,0 +1,8 @@
+public class Order extends Entity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private boolean customerAgreement;

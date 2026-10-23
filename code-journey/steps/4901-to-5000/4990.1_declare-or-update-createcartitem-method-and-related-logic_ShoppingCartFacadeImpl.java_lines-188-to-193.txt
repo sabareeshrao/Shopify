@@ -1,0 +1,6 @@
+
+	private com.salesmanager.core.model.shoppingcart.ShoppingCartItem createCartItem(final ShoppingCart cartModel,
+			final ShoppingCartItem shoppingCartItem, final MerchantStore store) throws Exception {
+
+		Product product = productService.getBySku(shoppingCartItem.getSku(), store, store.getDefaultLanguage());
+

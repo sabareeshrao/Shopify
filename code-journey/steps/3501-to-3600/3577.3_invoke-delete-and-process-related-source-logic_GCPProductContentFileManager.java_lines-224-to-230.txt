@@ -1,0 +1,7 @@
+      boolean deleted = storage.delete(blobId);
+      if (!deleted) {
+        LOGGER.error("Cannot delete image [" + productImage.getProductImage() + "]");
+      }
+    }
+  
+  }

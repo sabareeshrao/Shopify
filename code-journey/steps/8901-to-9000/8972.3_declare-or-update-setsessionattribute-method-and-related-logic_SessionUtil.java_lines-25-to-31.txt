@@ -1,0 +1,7 @@
+
+    public static void setSessionAttribute(final String key, final Object value, HttpServletRequest request) {
+    	request.getSession().setAttribute( key, value );
+    }
+
+
+}

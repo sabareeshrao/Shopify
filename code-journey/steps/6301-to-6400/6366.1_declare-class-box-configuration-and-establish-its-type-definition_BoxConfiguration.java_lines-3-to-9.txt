@@ -1,0 +1,7 @@
+import java.io.Serializable;
+
+public class BoxConfiguration implements Serializable {
+	
+	private String code;
+	
+	private double boxWidth = 0;

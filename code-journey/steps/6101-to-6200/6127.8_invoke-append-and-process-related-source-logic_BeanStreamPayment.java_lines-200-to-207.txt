@@ -1,0 +1,8 @@
+			messageString.append("trnOrderNumber=").append(transaction.getTransactionDetails().get("TRNORDERNUMBER")).append("&");
+			messageString.append("trnAmount=").append(amnt).append("&");
+			messageString.append("adjId=").append(trnID);
+			
+			LOGGER.debug("REQUEST SENT TO BEANSTREAM -> " + messageString.toString());
+	
+			
+		

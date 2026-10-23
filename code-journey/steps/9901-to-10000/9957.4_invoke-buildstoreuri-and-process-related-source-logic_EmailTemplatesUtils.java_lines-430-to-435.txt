@@ -1,0 +1,6 @@
+
+	           //shop url
+	           String customerUrl = filePathUtils.buildStoreUri(merchantStore, contextPath);
+	           templateTokens.put(EmailConstants.CUSTOMER_ACCESS_URL, customerUrl);
+
+	           String[] orderInfo = {String.valueOf(order.getId())};

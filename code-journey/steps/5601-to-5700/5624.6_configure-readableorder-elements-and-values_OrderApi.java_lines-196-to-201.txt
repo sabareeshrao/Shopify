@@ -1,0 +1,6 @@
+
+		if (returnList == null) {
+			returnList = new ReadableOrderList();
+		}
+
+		List<ReadableOrder> orders = returnList.getOrders();

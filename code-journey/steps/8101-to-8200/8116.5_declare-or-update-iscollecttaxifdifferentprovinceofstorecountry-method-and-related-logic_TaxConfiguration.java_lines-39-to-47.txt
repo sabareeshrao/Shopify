@@ -1,0 +1,9 @@
+
+	public boolean isCollectTaxIfDifferentProvinceOfStoreCountry() {
+		return collectTaxIfDifferentProvinceOfStoreCountry;
+	}
+
+	public void setCollectTaxIfDifferentCountryOfStoreCountry(
+			boolean collectTaxIfDifferentCountryOfStoreCountry) {
+		this.collectTaxIfDifferentCountryOfStoreCountry = collectTaxIfDifferentCountryOfStoreCountry;
+	}

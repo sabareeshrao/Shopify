@@ -1,0 +1,7 @@
+		
+		payment.setCurrency(store.getCurrency());
+		
+		BigDecimal amount = order.getTotal();
+
+		//must have a shipping module configured
+		Map<String, IntegrationConfiguration> modules = this.getPaymentModulesConfigured(store);

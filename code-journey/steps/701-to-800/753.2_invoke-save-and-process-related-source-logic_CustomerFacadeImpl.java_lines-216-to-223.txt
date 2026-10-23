@@ -1,0 +1,8 @@
+		try {
+			customerService.save(customer);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while saving customer",e);
+		}
+
+	}
+

@@ -1,0 +1,7 @@
+
+	Page<ProductVariantGroup> getByProductId(MerchantStore store, Long productId, Language language, int page, int count);
+
+	ProductVariantGroup saveOrUpdate(ProductVariantGroup entity) throws ServiceException;
+	
+	
+}

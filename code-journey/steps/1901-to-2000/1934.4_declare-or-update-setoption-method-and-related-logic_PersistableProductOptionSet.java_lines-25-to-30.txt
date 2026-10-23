@@ -1,0 +1,6 @@
+	public void setOption(Long option) {
+		this.option = option;
+	}
+	public List<Long> getProductTypes() {
+		return productTypes;
+	}

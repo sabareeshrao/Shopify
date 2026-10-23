@@ -1,0 +1,8 @@
+		  
+		  .addGroup("ADMIN_CONTENT", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("CONTENT"))
+		  
+		  .addGroup("CUSTOMER", GroupType.CUSTOMER)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("AUTH_CUSTOMER"));

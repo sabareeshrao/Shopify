@@ -1,0 +1,7 @@
+
+    /**
+     * Delete cartitem from cart, should return 204 / no content
+     *
+     * @throws Exception
+     */
+    @Test

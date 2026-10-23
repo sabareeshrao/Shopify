@@ -1,0 +1,7 @@
+
+/**
+ * A marketplace is the main grouping for the state of product presentation.
+ * MarketPlace belongs to a main MerchantStore
+ * A MerchantStore can have a single MarketPlace
+ * A MarketPlace allows to determine the main MerchantStore allowing determination of content
+ * and configurations of a given MarketPlace. A MarketPlace has a list of Catalog created by each MerchantStore

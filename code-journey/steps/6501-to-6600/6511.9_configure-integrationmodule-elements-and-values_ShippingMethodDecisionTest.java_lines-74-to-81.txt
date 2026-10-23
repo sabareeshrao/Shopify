@@ -1,0 +1,8 @@
+		
+		IntegrationModule inhouse = new IntegrationModule();
+		inhouse.setCode("customQuotesRules");
+		
+		List<IntegrationModule> allModules = new ArrayList<IntegrationModule>();
+		allModules.add(canadapost);
+		allModules.add(ups);
+		allModules.add(inhouse);

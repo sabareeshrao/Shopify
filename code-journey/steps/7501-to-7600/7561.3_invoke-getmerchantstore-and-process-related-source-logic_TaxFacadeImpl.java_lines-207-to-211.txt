@@ -1,0 +1,5 @@
+			if(model != null) {
+				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot get tax rate [" + code + "]");
+				}
+			}

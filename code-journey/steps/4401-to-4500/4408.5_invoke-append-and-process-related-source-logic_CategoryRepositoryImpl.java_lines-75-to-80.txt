@@ -1,0 +1,6 @@
+				queryBuilder.append(" join fetch c.parent cp where cp.id =:cId and cm.id=:mid ");
+					//.where(qCategory.parent.eq(category)
+					//	.and(qCategory.merchantStore.eq(store)))
+					//.orderBy(qCategory.sortOrder.asc(),qCategory.id.desc());
+			}
+		}

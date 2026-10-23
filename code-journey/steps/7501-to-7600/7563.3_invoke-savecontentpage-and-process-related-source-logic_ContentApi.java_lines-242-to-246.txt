@@ -1,0 +1,5 @@
+		Long id = contentFacade.saveContentPage(page, merchantStore, language);
+		Entity entity = new Entity();
+		entity.setId(id);
+		return entity;
+	}

@@ -1,0 +1,7 @@
+	
+	@Query("select m from Manufacturer m left join m.descriptions md join fetch m.merchantStore ms where m.code=?1 and ms.id=?2")
+	Manufacturer findByCodeAndMerchandStore(String code, Integer storeId);
+	
+	@Query("select count(distinct m) from Manufacturer as m where m.merchantStore.id=?1")
+	int count(Integer storeId);
+	

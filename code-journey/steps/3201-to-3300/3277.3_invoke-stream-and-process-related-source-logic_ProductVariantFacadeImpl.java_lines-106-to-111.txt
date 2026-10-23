@@ -1,0 +1,6 @@
+			
+			boolean differentOption = variations.stream().map(i -> i.getProductOption().getCode()).distinct().count() > 1;
+
+			if(!differentOption) {
+				throw new ConstraintException("Product option of instance.variant and instance.variantValue must be different");
+			}

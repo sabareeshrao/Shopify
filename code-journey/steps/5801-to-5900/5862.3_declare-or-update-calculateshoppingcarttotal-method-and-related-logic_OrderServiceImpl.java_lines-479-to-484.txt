@@ -1,0 +1,6 @@
+    public OrderTotalSummary calculateShoppingCartTotal(
+                                                        final ShoppingCart shoppingCart, final Customer customer, final MerchantStore store,
+                                                        final Language language) throws ServiceException {
+        Validate.notNull(shoppingCart,"Order summary cannot be null");
+        Validate.notNull(customer,"Customery cannot be null");
+        Validate.notNull(store,"MerchantStore cannot be null.");

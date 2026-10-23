@@ -1,0 +1,6 @@
+	@Override
+	public List<Object[]> countProductsByCategories(MerchantStore store, List<Long> categoryIds) {
+
+		
+		StringBuilder qs = new StringBuilder();
+		qs.append("select category.id, count(product.id) from Product product ");

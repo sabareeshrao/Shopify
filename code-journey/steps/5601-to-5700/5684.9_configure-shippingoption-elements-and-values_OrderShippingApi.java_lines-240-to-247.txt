@@ -1,0 +1,8 @@
+
+      List<ShippingOption> options = quote.getShippingOptions();
+
+      if (!CollectionUtils.isEmpty(options)) {
+
+        for (ShippingOption shipOption : options) {
+
+          StringBuilder moduleName = new StringBuilder();

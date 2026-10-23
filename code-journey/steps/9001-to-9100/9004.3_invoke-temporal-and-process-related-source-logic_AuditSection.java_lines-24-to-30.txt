@@ -1,0 +1,7 @@
+
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name = "DATE_MODIFIED")
+  private Date dateModified;
+
+  @Column(name = "UPDT_ID", length = 60)
+  private String modifiedBy;

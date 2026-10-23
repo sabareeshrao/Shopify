@@ -1,0 +1,8 @@
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.store.controller.shoppingCart.facade.v1.ShoppingCartFacade;
+
+@Service("shoppingCartFacadev1")
+public class ShoppingCartFacadeImpl implements ShoppingCartFacade {
+
+	@Autowired
+	private CustomerService customerService;

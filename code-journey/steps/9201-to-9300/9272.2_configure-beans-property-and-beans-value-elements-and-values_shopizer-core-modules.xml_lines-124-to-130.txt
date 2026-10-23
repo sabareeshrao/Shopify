@@ -1,0 +1,7 @@
+		<beans:property name="username">
+			<beans:value>${mailSender.username}</beans:value>
+		</beans:property>
+
+		<beans:property name="password">
+			<beans:value>${mailSender.password}</beans:value>
+		</beans:property>

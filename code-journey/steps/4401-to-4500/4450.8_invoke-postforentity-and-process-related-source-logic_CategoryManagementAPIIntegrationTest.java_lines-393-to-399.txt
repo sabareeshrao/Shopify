@@ -1,0 +1,7 @@
+
+      response = testRestTemplate.postForEntity("/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, PersistableProduct.class);
+      assertThat(response.getStatusCode(), is(CREATED));
+            
+      //create second item      
+      
+      PersistableProduct product2 = super.product("PRODUCT2");

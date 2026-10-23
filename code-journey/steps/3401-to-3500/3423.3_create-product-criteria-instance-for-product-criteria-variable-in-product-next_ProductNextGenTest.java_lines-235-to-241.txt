@@ -1,7 +1,0 @@
-	    //assertThat(avs, not(empty()));
-	    
-	    //test product list service
-	    
-	    //list products per category
-	    //list 5 items
-	    ProductCriteria productCriteria = new ProductCriteria();

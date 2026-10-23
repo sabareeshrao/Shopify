@@ -1,0 +1,7 @@
+    	
+    	if(criteria.getMaxCount()>0) {
+    		
+    		
+	    	q.setFirstResult(criteria.getStartIndex());
+	    	if(criteria.getMaxCount()<count.intValue()) {
+	    		q.setMaxResults(criteria.getMaxCount());

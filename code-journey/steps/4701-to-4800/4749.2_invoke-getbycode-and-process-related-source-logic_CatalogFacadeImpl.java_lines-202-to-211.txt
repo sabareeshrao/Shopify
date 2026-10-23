@@ -1,0 +1,10 @@
+
+        Catalog catalog = catalogService.getByCode(entry.getCatalog(), store)
+                .orElseThrow(() -> new ResourceNotFoundException("catalog [" + entry.getCatalog() + "] not found"));
+
+        CatalogCategoryEntry catalogEntryModel = persistableCatalogEntryMapper.convert(entry, store, language);
+        catalogEntryService.add(catalogEntryModel, catalog);
+        return readableCatalogEntryMapper.convert(catalogEntryModel, store, language);
+
+    }
+

@@ -1,0 +1,7 @@
+
+	// @Override
+	public ShoppingCartData getShoppingCartData(ShoppingCart shoppingCartModel, Language language) throws Exception {
+
+		Validate.notNull(shoppingCartModel, "Shopping Cart cannot be null");
+
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();

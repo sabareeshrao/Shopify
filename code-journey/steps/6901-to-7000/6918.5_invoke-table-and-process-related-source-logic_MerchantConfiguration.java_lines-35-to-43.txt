@@ -1,0 +1,9 @@
+@Table(name = "MERCHANT_CONFIGURATION",
+    uniqueConstraints = @UniqueConstraint(columnNames = {"MERCHANT_ID", "CONFIG_KEY"}))
+public class MerchantConfiguration extends SalesManagerEntity<Long, MerchantConfiguration>
+    implements Serializable, Auditable {
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 4246917986731953459L;

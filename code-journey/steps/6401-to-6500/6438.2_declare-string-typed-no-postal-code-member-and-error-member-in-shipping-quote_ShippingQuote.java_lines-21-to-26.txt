@@ -1,6 +1,0 @@
-	public final static String NO_POSTAL_CODE= "NO_POSTAL_CODE";
-	public final static String ERROR= "ERROR";
-
-	/** shipping module used **/
-	private String shippingModuleCode;
-	private List<ShippingOption> shippingOptions = null;

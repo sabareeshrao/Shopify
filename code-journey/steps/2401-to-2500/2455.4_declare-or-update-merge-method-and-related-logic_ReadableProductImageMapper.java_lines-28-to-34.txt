@@ -1,0 +1,7 @@
+
+	@Override
+	public ReadableImage merge(ProductImage source, ReadableImage destination, MerchantStore store, Language language) {
+		
+		String contextPath = imageUtils.getContextPath();
+		
+		destination.setImageName(source.getProductImage());

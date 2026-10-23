@@ -1,0 +1,7 @@
+	private int productCount;
+	private BigDecimal minPrice;
+	private BigDecimal maxPrice;
+	private List<ReadableProduct> products = new ArrayList<ReadableProduct>();
+	public void setProducts(List<ReadableProduct> products) {
+		this.products = products;
+	}

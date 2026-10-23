@@ -1,0 +1,9 @@
+
+		OrderStatus orderStatus = OrderStatus.ORDERED;
+		order.setOrderStatus(orderStatus);
+
+		if (customer == null) {
+			customer = this.initEmptyCustomer(store);
+		}
+
+		PersistableCustomer persistableCustomer = persistableCustomer(customer, store, language);

@@ -1,0 +1,10 @@
+
+			}
+
+			for (PersistableGroup g : user.getGroups()) {
+				if (g.getName().equals("SUPERADMIN")) {
+					if (!isSuperAdmin) {
+						throw new UnauthorizedException("Superadmin group not allowed");
+					}
+				}
+			}

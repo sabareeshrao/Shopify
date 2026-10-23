@@ -1,0 +1,6 @@
+
+	/**
+	 * Requires web server headers to build image URL for social media
+	 * sharing.<br/>
+	 *
+	 * Nginx configuration example:

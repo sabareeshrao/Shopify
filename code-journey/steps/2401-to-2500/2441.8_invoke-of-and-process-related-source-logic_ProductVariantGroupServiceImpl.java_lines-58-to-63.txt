@@ -1,0 +1,6 @@
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableProductVariantGroupRepository.findByProductId(store.getId(), productId, pageRequest);
+	}
+
+
+}

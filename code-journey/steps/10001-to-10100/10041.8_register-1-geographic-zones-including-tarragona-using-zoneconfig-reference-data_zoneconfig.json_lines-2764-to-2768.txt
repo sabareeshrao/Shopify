@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Tarragona",
-			"zoneName": "Tarragona",
-			"countryCode": "ES"
-		},

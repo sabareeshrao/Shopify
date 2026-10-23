@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Burgos",
-		"zoneName": "Burgos",
-		"countryCode": "ES"
-	},

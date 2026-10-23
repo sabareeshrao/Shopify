@@ -1,0 +1,8 @@
+	    
+	    boolean checkCaptcha = false;
+	    
+
+	    try {
+	      // Execute the method.
+            HttpResponse httpResponse = client.execute(post);
+            int statusCode = httpResponse.getStatusLine().getStatusCode();

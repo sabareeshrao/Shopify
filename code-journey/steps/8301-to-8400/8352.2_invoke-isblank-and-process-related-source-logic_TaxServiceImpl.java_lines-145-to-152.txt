@@ -1,0 +1,8 @@
+			if(!StringUtils.isBlank(stateProvince)) {
+				if(store.getZone()!=null) {
+					if(!store.getZone().getName().equals(stateProvince)) {
+						return null;
+					}
+				}
+				else if(!StringUtils.isBlank(store.getStorestateprovince())) {
+

@@ -1,0 +1,6 @@
+	@Ignore
+	public void createOption() throws Exception {
+
+		final ProductOptionDescription description = new ProductOptionDescription();
+		description.setLanguage("en");
+		description.setName("Color");

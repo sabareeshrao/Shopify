@@ -1,0 +1,9 @@
+	public ProductSpecification getProductSpecifications() {
+		return productSpecifications;
+	}
+	public void setProductSpecifications(ProductSpecification productSpecifications) {
+		this.productSpecifications = productSpecifications;
+	}
+	public int getSortOrder() {
+		return sortOrder;
+	}

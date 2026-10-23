@@ -1,0 +1,6 @@
+
+		try {
+			Integer.parseInt(newAmount.toString());
+		} catch (Exception e) {
+			throw new Exception("Cannot parse " + amount);
+		}

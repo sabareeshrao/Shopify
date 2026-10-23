@@ -1,0 +1,9 @@
+	public void setShippingOptions(List<ShippingOption> shippingOptions) {
+		this.shippingOptions = shippingOptions;
+	}
+	public List<ShippingOption> getShippingOptions() {
+		return shippingOptions;
+	}
+	public void setShippingModuleCode(String shippingModuleCode) {
+		this.shippingModuleCode = shippingModuleCode;
+	}

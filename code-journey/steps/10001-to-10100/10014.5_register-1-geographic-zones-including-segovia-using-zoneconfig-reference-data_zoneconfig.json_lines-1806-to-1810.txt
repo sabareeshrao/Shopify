@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Segovia",
-		"zoneName": "Segovia",
-		"countryCode": "ES"
-	},

@@ -1,0 +1,5 @@
+			return readableUserList;
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot get users by criteria user", e);
+		}
+	}

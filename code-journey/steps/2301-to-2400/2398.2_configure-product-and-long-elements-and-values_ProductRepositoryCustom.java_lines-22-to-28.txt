@@ -1,0 +1,7 @@
+
+		 Product getByFriendlyUrl(MerchantStore store,String seUrl, Locale locale);
+
+		List<Product> getProductsListByCategories(@SuppressWarnings("rawtypes") Set categoryIds);
+
+		List<Product> getProductsListByCategories(Set<Long> categoryIds,
+				Language language);

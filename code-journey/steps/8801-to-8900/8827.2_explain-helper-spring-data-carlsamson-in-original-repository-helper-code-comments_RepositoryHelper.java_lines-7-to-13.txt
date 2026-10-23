@@ -1,7 +1,0 @@
-
-/**
- * Helper for Spring Data JPA
- * 
- * @author carlsamson
- *
- */

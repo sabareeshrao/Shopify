@@ -1,0 +1,9 @@
+  public static CmsImageFileManagerImpl getInstance() {
+
+    if (fileManager == null) {
+      fileManager = new CmsImageFileManagerImpl();
+    }
+
+    return fileManager;
+
+  }

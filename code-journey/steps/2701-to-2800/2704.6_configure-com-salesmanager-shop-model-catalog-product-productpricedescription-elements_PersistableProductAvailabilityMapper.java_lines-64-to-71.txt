@@ -1,0 +1,8 @@
+
+					// price appender
+					Optional<com.salesmanager.shop.model.catalog.product.ProductPriceDescription> description = source
+							.getPrice().getDescriptions().stream()
+							.filter(d -> d.getLanguage() != null && d.getLanguage().equals(lang.getCode())).findFirst();
+					if (description.isPresent()) {
+						ppd.setPriceAppender(description.get().getPriceAppender());
+					}

@@ -1,0 +1,8 @@
+		qs.append("left join fetch manuf.descriptions manufd ");
+		qs.append("left join fetch p.type type ");
+		qs.append("left join fetch p.taxClass tx ");
+		
+		return qs.toString();
+	}
+
+}

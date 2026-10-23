@@ -1,0 +1,9 @@
+			for(Map keyValue : this.getData()) {
+				if(dataEntries == null) {
+					dataEntries = new StringBuilder();
+				}
+				JSONObject data = new JSONObject();
+				Set<String> keys = keyValue.keySet();
+				for(String key : keys) {
+					data.put(key, keyValue.get(key));
+				}

@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Granada",
-			"zoneName": "Granada",
-			"countryCode": "ES"
-		},

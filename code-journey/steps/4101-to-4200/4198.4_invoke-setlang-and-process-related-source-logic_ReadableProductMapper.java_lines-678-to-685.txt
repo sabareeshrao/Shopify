@@ -1,0 +1,8 @@
+
+		if (description == null) {
+			return null;
+		}
+
+		option.setLang(language.getCode());
+		option.setName(description.getName());
+		option.setCode(opt.getCode());

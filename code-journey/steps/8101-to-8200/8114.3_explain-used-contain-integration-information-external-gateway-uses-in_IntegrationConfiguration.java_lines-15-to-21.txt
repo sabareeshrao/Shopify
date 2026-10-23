@@ -1,0 +1,7 @@
+ * 
+ * @author csamson
+ *
+ */
+public class IntegrationConfiguration implements JSONAware {
+
+

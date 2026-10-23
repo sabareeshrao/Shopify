@@ -1,0 +1,8 @@
+	private PersistableAddress address;
+	//code of parent store (can be null if retailer)
+	private String retailerStore;
+	private List<String> supportedLanguages;
+
+	public List<String> getSupportedLanguages() {
+		return supportedLanguages;
+	}

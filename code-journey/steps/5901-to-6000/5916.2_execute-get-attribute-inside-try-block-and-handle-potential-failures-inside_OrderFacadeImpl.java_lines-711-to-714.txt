@@ -1,4 +1,0 @@
-
-		try {
-
-			// Language language = (Language)request.getAttribute("LANGUAGE");

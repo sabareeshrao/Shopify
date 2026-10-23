@@ -1,3 +1,0 @@
-
-		final PersistableProduct product = super.product(code);
-

@@ -1,0 +1,7 @@
+
+		if (response.getStatusCode() != HttpStatus.OK) {
+			throw new Exception();
+		} else {
+			System.out.println(response.getBody().length + " Product records found.");
+		}
+	}

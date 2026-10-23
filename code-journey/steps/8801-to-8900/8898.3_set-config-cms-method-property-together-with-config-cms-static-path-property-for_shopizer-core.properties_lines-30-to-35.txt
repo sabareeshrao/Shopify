@@ -1,0 +1,6 @@
+config.cms.static.path=/static
+
+#httpd configuration
+#Specifies where htdocs repository is located
+config.cms.http.path.location=
+

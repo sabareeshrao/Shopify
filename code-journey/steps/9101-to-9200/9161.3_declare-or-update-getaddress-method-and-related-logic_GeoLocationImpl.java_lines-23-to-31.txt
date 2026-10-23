@@ -1,0 +1,9 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger( GeoLocationImpl.class );
+
+
+	@Override
+	public Address getAddress(String ipAddress) throws Exception {
+		
+			if(reader==null) {
+					try {
+						java.io.InputStream inputFile = GeoLocationImpl.class.getClassLoader().getResourceAsStream("reference/GeoLite2-City.mmdb");

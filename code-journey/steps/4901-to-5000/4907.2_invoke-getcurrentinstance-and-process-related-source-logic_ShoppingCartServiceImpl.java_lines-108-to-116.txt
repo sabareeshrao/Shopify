@@ -1,0 +1,9 @@
+
+		try {
+			UserContext userContext = UserContext.getCurrentInstance();
+			if (userContext != null) {
+				shoppingCart.setIpAddress(userContext.getIpAddress());
+			}
+		} catch (Exception s) {
+			LOGGER.error("Cannot add ip address to shopping cart ", s);
+		}

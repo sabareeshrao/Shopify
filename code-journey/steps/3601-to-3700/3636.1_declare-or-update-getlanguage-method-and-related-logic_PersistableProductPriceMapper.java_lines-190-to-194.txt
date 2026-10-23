@@ -1,0 +1,5 @@
+
+	private Language getLanguage(com.salesmanager.shop.model.catalog.product.ProductPriceDescription desc) {
+		try {
+			return Optional.ofNullable(languageService.getByCode(desc.getLanguage()))
+					.orElseThrow(() -> new ConversionRuntimeException(

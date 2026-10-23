@@ -1,0 +1,9 @@
+	public BigDecimal getShipping() {
+		return shipping;
+	}
+	public void setShipping(BigDecimal shipping) {
+		this.shipping = shipping;
+	}
+	public BigDecimal getHandling() {
+		return handling;
+	}

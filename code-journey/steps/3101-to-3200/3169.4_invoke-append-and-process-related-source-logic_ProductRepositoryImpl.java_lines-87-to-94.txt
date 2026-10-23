@@ -1,0 +1,8 @@
+
+			if(merchantId != null) {
+				//qs.append(" and merch.id=:mid");
+				qs.append(" and merch.id in (:mid)");
+			}
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);

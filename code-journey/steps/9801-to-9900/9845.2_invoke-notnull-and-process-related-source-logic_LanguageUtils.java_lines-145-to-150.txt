@@ -1,0 +1,6 @@
+    Validate.notNull(request, "HttpServletRequest must not be null");
+
+    try {
+      Language language = null;
+
+      String lang = request.getParameter(Constants.LANG);

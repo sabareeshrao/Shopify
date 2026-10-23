@@ -1,0 +1,8 @@
+  @NotNull
+  private String unique;
+  @NotNull
+  private String merchant;
+
+  public String getUnique() {
+    return unique;
+  }

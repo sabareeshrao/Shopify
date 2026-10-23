@@ -1,0 +1,8 @@
+
+			Email email = new Email();
+			email.setFrom(store.getStorename());
+			email.setFromEmail(store.getStoreEmailAddress());
+			email.setSubject(messages.getMessage("email.link.reset.password.title", locale));
+			email.setTo(customer.getEmailAddress());
+			email.setTemplateName(ACCOUNT_PASSWORD_RESET_TPL);
+			email.setTemplateTokens(templateTokens);

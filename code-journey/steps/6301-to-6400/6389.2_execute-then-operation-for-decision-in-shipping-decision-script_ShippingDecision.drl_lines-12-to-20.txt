@@ -1,9 +1,0 @@
-        ShippingInputParameters(size < 66)
-        ShippingInputParameters(country == "CA")
-    then
-        decision.setModuleName("canadapost");
-end
-
-rule "Shipping decision Home Delivery"
-    when
-        ShippingInputParameters(weight > 62 || size > 66)

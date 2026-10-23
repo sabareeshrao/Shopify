@@ -1,0 +1,6 @@
+
+        Category parent = new Category();
+
+        newCategory.setParent(parent);
+
+        CategoryDescription description = new CategoryDescription();

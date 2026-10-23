@@ -1,0 +1,7 @@
+	
+	/**
+	 * Goes along with
+	 * shipping-canadapost-spring-boot-starter
+	 */
+    @Autowired
+    private ShippingQuoteModule canadapost;

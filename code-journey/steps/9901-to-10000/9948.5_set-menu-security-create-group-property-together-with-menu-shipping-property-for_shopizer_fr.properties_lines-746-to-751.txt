@@ -1,0 +1,6 @@
+menu.security-permissions=Permissions
+menu.security-groups=Groupes
+menu.security-create-group=Créer un groupe
+menu.order=Commandes
+menu.order-list=Liste des commandes
+menu.shipping=Expédition

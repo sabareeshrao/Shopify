@@ -1,0 +1,10 @@
+
+	/**
+	 * Get merchant payment module details
+	 * 
+	 * @param code
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/payment/{code}")

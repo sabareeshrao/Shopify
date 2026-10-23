@@ -1,0 +1,8 @@
+			Address sourceShipping = source.getDelivery();
+			if(sourceShipping!=null) {
+				Delivery delivery = new Delivery();
+				delivery.setAddress(sourceShipping.getAddress());
+				delivery.setCity(sourceShipping.getCity());
+				delivery.setCompany(sourceShipping.getCompany());
+				delivery.setFirstName(sourceShipping.getFirstName());
+				delivery.setLastName(sourceShipping.getLastName());

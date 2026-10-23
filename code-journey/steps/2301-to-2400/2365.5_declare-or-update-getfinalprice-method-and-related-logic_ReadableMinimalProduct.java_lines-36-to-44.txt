@@ -1,0 +1,9 @@
+	public String getFinalPrice() {
+		return finalPrice;
+	}
+	public void setFinalPrice(String finalPrice) {
+		this.finalPrice = finalPrice;
+	}
+	public String getOriginalPrice() {
+		return originalPrice;
+	}

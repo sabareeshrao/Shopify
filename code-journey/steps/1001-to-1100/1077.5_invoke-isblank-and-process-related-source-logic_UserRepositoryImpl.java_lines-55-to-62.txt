@@ -1,0 +1,8 @@
+      if(!StringUtils.isBlank(criteria.getSearch())) {
+        //TODO
+      } else {
+        if (criteria.getStoreCode() != null) {
+          countQ.setParameter("storeCode", criteria.getStoreCode());
+          q.setParameter("storeCode", criteria.getStoreCode());
+        }
+      }

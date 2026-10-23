@@ -1,3 +1,0 @@
-	ShippingQuote getShippingQuote(Long shoppingCartId, MerchantStore store, Delivery delivery,
-			List<ShippingProduct> products, Language language)
-			throws ServiceException;

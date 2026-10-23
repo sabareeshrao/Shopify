@@ -1,0 +1,6 @@
+	
+	private ReadableMerchantStore store;
+
+	public ReadableMerchantStore getStore() {
+		return store;
+	}

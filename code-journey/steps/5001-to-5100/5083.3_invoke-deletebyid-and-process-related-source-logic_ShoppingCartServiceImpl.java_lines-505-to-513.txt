@@ -1,0 +1,9 @@
+
+			// delete
+			shoppingCartItemRepository.deleteById(id);
+
+		}
+
+	}
+
+}

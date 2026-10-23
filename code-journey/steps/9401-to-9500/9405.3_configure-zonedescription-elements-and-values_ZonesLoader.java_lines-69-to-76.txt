@@ -1,0 +1,8 @@
+			Map<String, Country> countriesMap = new HashMap<String, Country>();
+			for (Country country : countries) {
+				countriesMap.put(country.getIsoCode(), country);
+			}
+
+			Map<String, Zone> zonesMap = new LinkedHashMap<String, Zone>();
+			Map<String, List<ZoneDescription>> zonesDescriptionsMap = new LinkedHashMap<String, List<ZoneDescription>>();
+			Map<String, String> zonesMark = new LinkedHashMap<String, String>();

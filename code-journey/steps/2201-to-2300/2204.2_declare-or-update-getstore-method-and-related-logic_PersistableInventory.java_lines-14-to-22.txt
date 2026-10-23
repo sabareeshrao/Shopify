@@ -1,0 +1,9 @@
+	private String store;
+	@NotNull
+	private Long productId;
+	private Long variant;
+	private List<PersistableProductPrice> prices;
+
+	public String getStore() {
+		return store;
+	}

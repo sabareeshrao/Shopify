@@ -1,0 +1,5 @@
+    private OrderTotalSummary caculateShoppingCart( ShoppingCart shoppingCart, final Customer customer, final MerchantStore store, final Language language) throws Exception {
+
+
+    	OrderSummary orderSummary = new OrderSummary();
+    	orderSummary.setOrderSummaryType(OrderSummaryType.SHOPPINGCART);

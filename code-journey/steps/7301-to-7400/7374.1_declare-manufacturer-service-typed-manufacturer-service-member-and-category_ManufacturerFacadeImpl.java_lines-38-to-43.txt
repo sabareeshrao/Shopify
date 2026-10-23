@@ -1,6 +1,0 @@
-
-  @Autowired
-  private ManufacturerService manufacturerService;
-  
-  @Autowired
-  private CategoryService categoryService;

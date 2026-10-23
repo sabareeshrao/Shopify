@@ -1,2 +1,0 @@
-  @Override
-  public ReadableManufacturer getManufacturer(Long id, MerchantStore store, Language language)

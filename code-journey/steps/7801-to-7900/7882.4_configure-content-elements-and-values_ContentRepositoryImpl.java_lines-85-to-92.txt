@@ -1,0 +1,8 @@
+			
+
+			if(content!=null) {
+					return content.getDescription();
+			}
+			
+			@SuppressWarnings("unchecked")
+			List<Content> results = q.getResultList();

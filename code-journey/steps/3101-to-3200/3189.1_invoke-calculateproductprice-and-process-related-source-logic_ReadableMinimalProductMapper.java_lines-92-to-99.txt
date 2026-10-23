@@ -1,0 +1,8 @@
+
+		//price
+
+		try {
+			FinalPrice price = pricingService.calculateProductPrice(source);
+			if(price != null) {
+
+				destination.setFinalPrice(pricingService.getDisplayAmount(price.getFinalPrice(), store));

@@ -1,0 +1,9 @@
+
+		if (cart != null) {
+
+			readableCart = readableShoppingCartMapper.convert(cart, store, language);
+
+		}
+
+		return readableCart;
+	}

@@ -1,0 +1,8 @@
+
+	public AuditSection getAuditSection() {
+		return auditSection;
+	}
+
+	public void setAuditSection(AuditSection auditSection) {
+		this.auditSection = auditSection;
+	}

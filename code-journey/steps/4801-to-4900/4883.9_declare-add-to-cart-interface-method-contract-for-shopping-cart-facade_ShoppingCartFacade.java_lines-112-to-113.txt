@@ -1,2 +1,0 @@
-	ReadableShoppingCart addToCart(PersistableShoppingCartItem item, MerchantStore store,
-			Language language);

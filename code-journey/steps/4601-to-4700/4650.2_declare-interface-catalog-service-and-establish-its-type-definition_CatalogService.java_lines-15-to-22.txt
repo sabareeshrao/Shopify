@@ -1,0 +1,8 @@
+	
+	/**
+	 * Creates a new Catalog
+	 * @param store
+	 * @return Catalog
+	 * @throws ServiceException
+	 */
+	Catalog saveOrUpdate(Catalog catalog, MerchantStore store);

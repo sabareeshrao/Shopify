@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "NT",
+			"zoneName": "Northwest Territories",
+			"countryCode": "CA"
+		},
+		{
+			"zoneCode": "NU",
+			"zoneName": "Nunavut",
+			"countryCode": "CA"
+		},

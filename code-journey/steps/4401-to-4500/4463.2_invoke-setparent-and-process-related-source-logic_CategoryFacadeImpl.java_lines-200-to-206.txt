@@ -1,0 +1,7 @@
+
+		/** set lineage * */
+		if (parent != null) {
+			category.setParent(category);
+
+			String lineage = parent.getLineage();
+			int depth = parent.getDepth();

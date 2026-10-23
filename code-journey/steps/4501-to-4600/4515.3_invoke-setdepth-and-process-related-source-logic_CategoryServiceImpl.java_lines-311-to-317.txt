@@ -1,0 +1,7 @@
+				child.setDepth(0);
+				// child.setLineage(new
+				// StringBuilder().append("/").append(child.getId()).append("/").toString());
+				child.setLineage(new StringBuilder().append("/").append(child.getId()).append("/").toString());
+
+			} else {
+

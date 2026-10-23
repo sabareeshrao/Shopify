@@ -1,0 +1,11 @@
+	@GetMapping(value = "/private/tax/class/unique", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Verify if taxClass is unique", notes = "", produces = "application/json", response = ResponseEntity.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ResponseEntity<EntityExists> exists(@RequestParam String code, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		boolean exists = taxFacade.existsTaxClass(code, merchantStore, language);
+		return new ResponseEntity<EntityExists>(new EntityExists(exists), HttpStatus.OK);
+
+	}

@@ -1,0 +1,9 @@
+  private List<ProductOptionValueDescription> descriptions = new ArrayList<ProductOptionValueDescription>();
+  public List<ProductOptionValueDescription> getDescriptions() {
+    return descriptions;
+  }
+  public void setDescriptions(List<ProductOptionValueDescription> descriptions) {
+    this.descriptions = descriptions;
+  }
+
+}

@@ -1,0 +1,8 @@
+				ReadableProduct proxyProduct = populator.populate(relatedProduct, new ReadableProduct(), store,
+						language);
+				items.add(proxyProduct);
+			}
+			return items;
+		}
+		return null;
+	}

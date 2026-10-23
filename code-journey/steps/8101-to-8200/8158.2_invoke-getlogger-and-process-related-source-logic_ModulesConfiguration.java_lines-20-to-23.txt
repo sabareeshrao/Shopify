@@ -1,0 +1,4 @@
+public class ModulesConfiguration {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ModulesConfiguration.class);
+	

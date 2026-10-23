@@ -1,4 +1,0 @@
-	
-	@Autowired
-	private ContentService contentService; //file management
-

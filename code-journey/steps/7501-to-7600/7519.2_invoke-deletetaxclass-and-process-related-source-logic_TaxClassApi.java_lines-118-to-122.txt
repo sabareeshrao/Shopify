@@ -1,0 +1,5 @@
+		taxFacade.deleteTaxClass(id, merchantStore, language);
+
+	}
+
+}

@@ -1,0 +1,7 @@
+	public @ResponseBody ReadableShoppingCart addToCart(@PathVariable Long id,
+			@Valid @RequestBody PersistableShoppingCartItem shoppingCartItem, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletResponse response) {
+		
+		throw new OperationNotAllowedException("API is no more supported. Authenticate customer first then get customer cart");
+
+	}

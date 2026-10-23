@@ -1,0 +1,8 @@
+public interface ProductPriceFacade {
+
+	/**
+	 * Calculate product price based on specific product options
+	 * 
+	 * @param id
+	 * @param priceRequest
+	 * @param store

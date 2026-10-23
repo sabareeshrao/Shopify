@@ -1,0 +1,8 @@
+
+		// cleanup detached attributes
+		if (CollectionUtils.isEmpty(attributesList)) {
+			item.setAttributes(null);
+		}
+
+		// set item price
+		FinalPrice price = pricingService.calculateProductPrice(product, attributesList);

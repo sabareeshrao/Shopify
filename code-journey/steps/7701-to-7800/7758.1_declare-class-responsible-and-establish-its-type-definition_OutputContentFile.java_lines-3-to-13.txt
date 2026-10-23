@@ -1,0 +1,11 @@
+import java.io.ByteArrayOutputStream;
+import java.io.Serializable;
+
+/**
+ * Data class responsible for carrying out static content data from Infispan cache to 
+ * service layer.
+ * 
+ * @author Umesh Awasthi
+ * @since 1.2
+ */
+public class OutputContentFile extends StaticContentFile implements Serializable

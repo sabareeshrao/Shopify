@@ -1,0 +1,8 @@
+
+	IntegrationModule getByCode(String moduleCode);
+	
+	void createOrUpdateModule(String json) throws ServiceException;
+	
+
+
+}

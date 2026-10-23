@@ -1,0 +1,7 @@
+		
+		if(FileContentType.PROPERTY.name().equals(imageType)) {
+			imgType = FileContentType.PROPERTY;
+		}
+		
+		OutputContentFile image =contentService.getContentFile(storeCode, imgType, new StringBuilder().append(imageName).append(".").append(extension).toString());
+		

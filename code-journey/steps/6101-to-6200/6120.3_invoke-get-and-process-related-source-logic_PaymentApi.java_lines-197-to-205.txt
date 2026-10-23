@@ -1,0 +1,9 @@
+			if(configuredModules.get(module.getCode()).isActive()) {
+				readable.setActive(true);
+			}
+		}
+		return readable;
+
+	}
+
+}

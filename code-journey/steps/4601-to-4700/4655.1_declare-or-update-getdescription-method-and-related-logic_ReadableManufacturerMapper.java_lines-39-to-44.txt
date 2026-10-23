@@ -1,0 +1,6 @@
+
+  private Optional<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> getDescription(
+      Manufacturer source, Language language, ReadableManufacturer target) {
+
+    Optional<ManufacturerDescription> description =
+        getDescription(source.getDescriptions(), language);

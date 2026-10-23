@@ -1,0 +1,7 @@
+	
+	/**
+	 * Validates if a password request is valid
+	 * @param token
+	 * @param store
+	 */
+	void verifyPasswordRequestToken(String token, String store);

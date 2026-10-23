@@ -1,0 +1,8 @@
+	private long optionId;
+	private long optionValueId;
+	private long attributeId;
+	private String optionName;
+	private String optionValue;
+	public long getOptionId() {
+		return optionId;
+	}

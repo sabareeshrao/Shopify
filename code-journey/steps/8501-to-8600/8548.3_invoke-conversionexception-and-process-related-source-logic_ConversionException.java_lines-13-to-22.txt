@@ -1,0 +1,10 @@
+  
+  public ConversionException(final String msg, final Throwable cause)
+  {
+      super(msg, cause);
+  }
+
+  public ConversionException(final String msg)
+  {
+      super(msg);
+  }

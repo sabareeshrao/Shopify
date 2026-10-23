@@ -1,0 +1,9 @@
+	
+	/**
+	 * Create content page
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 */
+	@PostMapping(value = "/private/content/page")
+	@ResponseStatus(HttpStatus.CREATED)

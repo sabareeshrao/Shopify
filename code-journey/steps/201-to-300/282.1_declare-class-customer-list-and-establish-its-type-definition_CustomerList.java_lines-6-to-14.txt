@@ -1,0 +1,9 @@
+import com.salesmanager.core.model.common.EntityList;
+
+public class CustomerList extends EntityList {
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3108842276158069739L;

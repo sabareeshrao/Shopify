@@ -1,4 +1,0 @@
-button.label.continue=Continue shopping
-
-#menus
-menu.home=Home

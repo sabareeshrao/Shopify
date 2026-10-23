@@ -1,0 +1,8 @@
+      countQuery = "select  count(p) "
+      		+ "from ProductAttribute p "
+      		+ "join p.product pr "
+      		+ "join pr.merchantStore pm "
+      		+ "where pm.id = ?1 and pr.id = ?2")
+	Page<ProductAttribute> findByProductId(Integer storeId, Long productId, Pageable pageable);
+
+}

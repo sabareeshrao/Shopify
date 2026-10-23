@@ -1,0 +1,9 @@
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+	public String getDateAvailable() {
+		return dateAvailable;
+	}
+	public void setDateAvailable(String dateAvailable) {
+		this.dateAvailable = dateAvailable;
+	}

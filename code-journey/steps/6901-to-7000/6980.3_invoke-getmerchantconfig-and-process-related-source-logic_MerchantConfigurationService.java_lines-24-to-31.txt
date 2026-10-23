@@ -1,0 +1,8 @@
+
+	MerchantConfig getMerchantConfig(MerchantStore store)
+			throws ServiceException;
+
+	void saveMerchantConfig(MerchantConfig config, MerchantStore store)
+			throws ServiceException;
+
+}

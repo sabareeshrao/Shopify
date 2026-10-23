@@ -1,0 +1,9 @@
+	@Override
+	public ReadableProduct addProductToCategory(Category category, Product product, Language language) {
+
+		Validate.notNull(category, "Category cannot be null");
+		Validate.notNull(product, "Product cannot be null");
+
+		// not alloweed if category already attached
+		List<Category> assigned = product.getCategories().stream()
+				.filter(cat -> cat.getId().longValue() == category.getId().longValue()).collect(Collectors.toList());

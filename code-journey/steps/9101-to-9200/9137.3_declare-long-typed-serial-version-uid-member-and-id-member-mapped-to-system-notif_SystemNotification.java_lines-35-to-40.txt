@@ -1,0 +1,6 @@
+public class SystemNotification extends SalesManagerEntity<Long, SystemNotification> implements Serializable, Auditable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6269172313628887000L;

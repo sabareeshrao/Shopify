@@ -1,0 +1,8 @@
+	
+	private ReadableProductOptionValue optionValue (List<Long> ids, ProductOptionValue optionValue, MerchantStore store, Language language) {
+		
+		if(!ids.contains(optionValue.getId())) {
+			ReadableProductOptionValue value = new ReadableProductOptionValue();
+			value.setCode(optionValue.getCode());
+			value.setId(optionValue.getId());
+			ProductOptionValueDescription desc = optionValueDescription(optionValue.getDescriptions(), language);

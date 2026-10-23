@@ -1,0 +1,9 @@
+	    availability.setProduct(product);// associate with product
+
+	    //productAvailabilityService.create(availability);
+	    product.getAvailabilities().add(availability);
+
+	    ProductPrice dprice = new ProductPrice();
+	    dprice.setDefaultPrice(true);
+	    dprice.setProductPriceAmount(new BigDecimal(29.99));
+	    dprice.setProductAvailability(availability);

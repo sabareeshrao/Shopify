@@ -1,3 +1,0 @@
-	private final static String TD = "<td valign=\"top\">";
-	private final static String CLOSING_TD = "</td>";
-	

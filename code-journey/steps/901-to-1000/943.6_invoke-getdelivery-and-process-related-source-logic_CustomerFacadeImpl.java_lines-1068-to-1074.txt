@@ -1,0 +1,7 @@
+
+      
+      //update delivery
+      if(customer.getDelivery() != null) {
+    	  customer.getDelivery().setBillingAddress(false);
+          updateAddress(customer.getId(), store, customer.getDelivery(), store.getDefaultLanguage());
+      }

@@ -1,0 +1,8 @@
+	public void sendOrderDownloadEmail(
+			Customer customer, Order order, MerchantStore merchantStore,
+			Locale customerLocale, String contextPath) {
+		   /** issue with putting that elsewhere **/ 
+	       LOGGER.info( "Sending download email to customer" );
+	       try {
+
+	           Map<String, String> templateTokens = emailUtils.createEmailObjectsMap(contextPath, merchantStore, messages, customerLocale);

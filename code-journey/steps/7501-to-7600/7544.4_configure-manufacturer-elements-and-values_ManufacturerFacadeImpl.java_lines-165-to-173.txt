@@ -1,0 +1,9 @@
+        readableList.setNumber(manufacturers.size());
+      } else {
+
+        Page<Manufacturer> m = null;
+        if(language != null) {
+          m = manufacturerService.listByStore(store, language, criteria.getName(), page, count);
+        } else {
+          m = manufacturerService.listByStore(store, criteria.getName(), page, count);
+        }

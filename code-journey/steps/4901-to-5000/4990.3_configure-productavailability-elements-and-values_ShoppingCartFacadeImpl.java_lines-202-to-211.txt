@@ -1,0 +1,10 @@
+
+		/**
+		 * Check if product quantity is 0 Check if product is available Check if date
+		 * available <= now
+		 */
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();
+		if (availabilities == null) {
+
+			throw new Exception("Item with id " + product.getId() + " is not properly configured");

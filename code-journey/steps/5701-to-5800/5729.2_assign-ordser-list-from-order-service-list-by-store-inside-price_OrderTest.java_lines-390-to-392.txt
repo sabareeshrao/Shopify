@@ -1,3 +1,0 @@
-	
-		OrderList ordserList = orderService.listByStore(merchant, criteria);
-

@@ -1,0 +1,8 @@
+				if (langList != null) {
+					/**
+					 * submethod
+					 */
+					for (Object z : langList) {
+						@SuppressWarnings("unchecked")
+						Map<String, String> e = (Map<String, String>) z;
+						this.mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);

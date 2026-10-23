@@ -1,0 +1,10 @@
+
+	public Long getReviewedCustomer() {
+		return reviewedCustomer;
+	}
+
+	public void setReviewedCustomer(Long reviewedCustomer) {
+		this.reviewedCustomer = reviewedCustomer;
+	}
+
+}

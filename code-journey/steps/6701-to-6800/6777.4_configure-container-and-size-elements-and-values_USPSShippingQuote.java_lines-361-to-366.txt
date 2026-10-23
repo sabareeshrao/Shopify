@@ -1,0 +1,6 @@
+				xmldatabuffer.append("<Container>");
+				xmldatabuffer.append(pack);
+				xmldatabuffer.append("</Container>");
+				xmldatabuffer.append("<Size>");
+				xmldatabuffer.append(size);
+				xmldatabuffer.append("</Size>");

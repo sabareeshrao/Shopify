@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "VS",
-		"zoneName": "Wallis",
-		"countryCode": "CH"
-	},

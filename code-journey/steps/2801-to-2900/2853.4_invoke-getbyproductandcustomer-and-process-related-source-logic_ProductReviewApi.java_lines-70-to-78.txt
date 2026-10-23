@@ -1,0 +1,9 @@
+    try {
+      // rating already exist
+      ProductReview prodReview =
+          productReviewService.getByProductAndCustomer(
+              review.getProductId(), review.getCustomerId());
+      if (prodReview != null) {
+        response.sendError(500, "A review already exist for this customer and product");
+        return null;
+      }

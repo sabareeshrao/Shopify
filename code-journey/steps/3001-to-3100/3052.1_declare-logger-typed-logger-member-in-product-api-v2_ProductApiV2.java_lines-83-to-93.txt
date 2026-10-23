@@ -1,0 +1,11 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductApiV2.class);
+	
+	
+	/**
+	 * Create product inventory with variants, quantity and prices
+	 * @param product
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@ResponseStatus(HttpStatus.CREATED)

@@ -1,0 +1,8 @@
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxClass not found [" + code + "] for store [" + store.getCode() + "]");
+			}
+			if(model != null) {
+				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot get tax class [" + code + "]");
+				}
+			}

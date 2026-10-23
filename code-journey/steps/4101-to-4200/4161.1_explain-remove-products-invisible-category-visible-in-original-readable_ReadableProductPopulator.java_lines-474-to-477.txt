@@ -1,4 +1,0 @@
-
-
-
-			//remove products from invisible category -> set visible = false

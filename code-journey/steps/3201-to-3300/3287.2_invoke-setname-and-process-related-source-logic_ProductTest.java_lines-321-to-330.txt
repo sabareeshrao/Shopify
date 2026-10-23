@@ -1,0 +1,10 @@
+	    anotherPriceD.setName("Eco price");
+	    anotherPriceD.setProductPrice(anotherPrice);
+	    anotherPriceD.setLanguage(en);
+
+	    anotherPrice.getDescriptions().add(anotherPriceD);
+	    updatableAvailability.getPrices().add(anotherPrice);
+		
+		//Update product
+		productService.update(updatableProduct);
+		

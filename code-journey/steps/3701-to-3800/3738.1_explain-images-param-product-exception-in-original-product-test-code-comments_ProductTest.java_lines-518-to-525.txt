@@ -1,0 +1,8 @@
+	
+	/**
+	 * Images
+	 * @param product
+	 * @throws Exception
+	 */
+	private void testInsertImage(Product product) throws Exception {
+		

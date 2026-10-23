@@ -1,0 +1,6 @@
+
+          Properties prop = new Properties();
+          prop.put("mail.smtp.auth", emailConfig.isSmtpAuth());
+          prop.put("mail.smtp.starttls.enable", emailConfig.isStarttls());
+          impl.setJavaMailProperties(prop);
+        }

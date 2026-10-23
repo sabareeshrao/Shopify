@@ -1,0 +1,6 @@
+
+@Component
+public class PersistableProductOptionSetMapper implements Mapper<PersistableProductOptionSet, ProductOptionSet> {
+
+	@Autowired
+	private ProductOptionService productOptionService;

@@ -1,0 +1,7 @@
+
+	private List<ReadableCategory> category = new ArrayList<ReadableCategory>();
+
+	
+/*	public List<ReadableCatalogCategoryEntry> getEntry() {
+		return entry;
+	}

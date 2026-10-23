@@ -1,0 +1,7 @@
+			
+			//images
+			if(!CollectionUtils.isEmpty(source.getImages())) {
+				for(PersistableImage img : source.getImages()) {
+					ProductImage productImage = new ProductImage();
+					productImage.setImageType(img.getImageType());
+					productImage.setDefaultImage(img.isDefaultImage());

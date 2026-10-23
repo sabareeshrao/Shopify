@@ -1,7 +1,0 @@
-								if(attribute.getProductOptionValue()!=null) {
-								  attrValue.setId(attribute.getProductOptionValue().getId());//id of the option value
-								} else {
-								  attrValue.setId(attribute.getId());
-								}
-								attrValue.setLang(language.getCode());
-

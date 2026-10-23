@@ -1,0 +1,9 @@
+
+/**
+ * Constants used for sm-core
+ * 
+ * @author carlsamson
+ *
+ */
+public class Constants {
+

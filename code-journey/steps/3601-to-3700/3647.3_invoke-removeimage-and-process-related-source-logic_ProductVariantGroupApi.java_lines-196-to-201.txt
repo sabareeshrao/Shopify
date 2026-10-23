@@ -1,0 +1,6 @@
+
+		productVariantGroupFacade.removeImage(imageId, id, merchantStore);
+
+	}
+
+}

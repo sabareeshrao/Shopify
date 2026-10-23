@@ -1,0 +1,7 @@
+
+		Set<ProductAttribute> attributes = p.getAttributes();
+		if (attributes != null) {
+
+			for (ProductAttribute attribute : attributes) {
+
+				ProductOption po = attribute.getProductOption();

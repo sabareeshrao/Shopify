@@ -1,0 +1,7 @@
+	@Override
+	public Customer initEmptyCustomer(MerchantStore store) {
+
+		Customer customer = new Customer();
+		Billing billing = new Billing();
+		billing.setCountry(store.getCountry());
+		billing.setZone(store.getZone());

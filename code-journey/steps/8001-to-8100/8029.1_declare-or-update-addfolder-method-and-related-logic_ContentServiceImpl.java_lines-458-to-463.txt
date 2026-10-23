@@ -1,0 +1,6 @@
+
+	@Override
+	public void addFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(folderName, "Folder name cannot be null");
+		

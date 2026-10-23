@@ -1,0 +1,6 @@
+	private List<ProductAttribute> options = new ArrayList<ProductAttribute>();
+	private String sku;//product instance sku
+
+	public List<ProductAttribute> getOptions() {
+		return options;
+	}

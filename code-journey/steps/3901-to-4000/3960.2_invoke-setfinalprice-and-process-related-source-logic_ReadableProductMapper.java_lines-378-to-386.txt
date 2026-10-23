@@ -1,0 +1,9 @@
+			if (price != null) {
+
+				destination.setFinalPrice(pricingService.getDisplayAmount(price.getFinalPrice(), store));
+				destination.setPrice(price.getFinalPrice());
+				destination.setOriginalPrice(pricingService.getDisplayAmount(price.getOriginalPrice(), store));
+
+				if (price.isDiscounted()) {
+					destination.setDiscounted(true);
+				}

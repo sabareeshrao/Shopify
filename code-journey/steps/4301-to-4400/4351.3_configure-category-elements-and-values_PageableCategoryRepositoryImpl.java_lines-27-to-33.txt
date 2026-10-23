@@ -1,0 +1,7 @@
+		return new PageImpl<Category>(
+				query.getResultList(),
+				pageable,
+				countQueryResult.getMaxResults());
+	}
+
+}

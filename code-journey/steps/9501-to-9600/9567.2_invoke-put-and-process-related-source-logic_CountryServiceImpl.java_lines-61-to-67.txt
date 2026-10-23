@@ -1,0 +1,7 @@
+		
+		for(Country country : countries) {
+			returnMap.put(country.getIsoCode(), country);
+		}
+		
+		return returnMap;
+	}

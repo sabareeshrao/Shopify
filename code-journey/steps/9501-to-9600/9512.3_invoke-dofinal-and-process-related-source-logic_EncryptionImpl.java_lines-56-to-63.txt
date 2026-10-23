@@ -1,0 +1,8 @@
+		byte[] outText;
+		outText = cipher.doFinal(hexToBytes(value));
+		return new String(outText);
+		
+		
+	}
+	
+	

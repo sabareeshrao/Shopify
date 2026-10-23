@@ -1,0 +1,6 @@
+
+	private Bucket createBucket(String bucket_name) {
+		final AmazonS3 s3 = s3Client();
+		Bucket b = null;
+		if (s3.doesBucketExistV2(bucket_name)) {
+			System.out.format("Bucket %s already exists.\n", bucket_name);

@@ -1,0 +1,7 @@
+
+	public static String maskCardNumber(String clearcardnumber)
+			throws Exception {
+
+		if (clearcardnumber.length() < 10) {
+			throw new Exception("Invalid number of digits");
+		}

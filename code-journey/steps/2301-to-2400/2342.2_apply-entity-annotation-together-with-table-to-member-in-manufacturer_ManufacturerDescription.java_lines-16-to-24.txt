@@ -1,9 +1,0 @@
-
-@Entity
-@Table(name = "MANUFACTURER_DESCRIPTION", uniqueConstraints={
-	@UniqueConstraint(columnNames={
-			"MANUFACTURER_ID",
-			"LANGUAGE_ID"
-		})
-	}
-)

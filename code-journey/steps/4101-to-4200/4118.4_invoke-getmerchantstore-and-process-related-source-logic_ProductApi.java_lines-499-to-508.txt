@@ -1,0 +1,10 @@
+
+			if (p.getMerchantStore().getId() != merchantStore.getId()) {
+				throw new ResourceNotFoundException(
+						"Product [" + id + "] not found for merchant [" + merchantStore.getCode() + "]");
+			}
+
+			/**
+			 * Change order
+			 */
+			p.setSortOrder(position);

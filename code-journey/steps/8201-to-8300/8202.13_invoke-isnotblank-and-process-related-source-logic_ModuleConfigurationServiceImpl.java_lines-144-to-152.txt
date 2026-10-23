@@ -1,0 +1,9 @@
+						
+						
+						if(StringUtils.isNotBlank(mod.getConfigurable())) {
+							m.setConfigurable(mod.getConfigurable());
+						}
+
+						modules.add(m);
+					}
+				}

@@ -1,0 +1,7 @@
+
+			if (startDate != null) {
+				sDate = Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+			} else {
+				cal.add(Calendar.DATE, -1);
+				sDate = cal.getTime();
+			}

@@ -1,0 +1,8 @@
+	
+	@Column(name = "TAX_RATE" , nullable= false , precision=7, scale=4)
+	private BigDecimal taxRate;
+	
+	@NotEmpty
+	@Column(name = "TAX_CODE")
+	private String code;
+	

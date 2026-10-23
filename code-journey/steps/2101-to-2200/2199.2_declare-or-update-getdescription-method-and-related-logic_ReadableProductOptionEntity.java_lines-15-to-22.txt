@@ -1,0 +1,8 @@
+  public ProductOptionDescription getDescription() {
+    return description;
+  }
+  public void setDescription(ProductOptionDescription description) {
+    this.description = description;
+  }
+
+}

@@ -1,0 +1,6 @@
+
+						if (!StringUtils.isBlank(attribute.getProductOptionValue().getProductOptionValueImage())) {
+							optValue.setImage(imageUtils.buildProductPropertyImageUtils(store,
+									attribute.getProductOptionValue().getProductOptionValueImage()));
+						}
+						optValue.setSortOrder(0);

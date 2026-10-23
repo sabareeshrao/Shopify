@@ -1,0 +1,8 @@
+ * 
+ * Calculates a ShippingQuote with a price set to the price configured
+ * @author carlsamson
+ *
+ */
+public class StorePickupShippingQuote implements ShippingQuoteModule, ShippingQuotePrePostProcessModule {
+	
+	

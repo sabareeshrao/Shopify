@@ -1,0 +1,6 @@
+
+To build the application:
+-------------------
+
+1. Shopizer backend
+

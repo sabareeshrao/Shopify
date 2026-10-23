@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Zamora",
-			"zoneName": "Zamora",
-			"countryCode": "ES"
-		},

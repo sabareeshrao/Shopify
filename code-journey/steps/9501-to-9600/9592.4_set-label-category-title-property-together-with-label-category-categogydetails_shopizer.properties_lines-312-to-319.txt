@@ -1,8 +1,0 @@
-label.category.title=Category title
-label.category.highlight=Short category highlight
-label.categories.title=Categories
-label.categories.hierarchy.title=Categories hierarchy
-label.category.root=Root
-label.productedit.categoryname=Category name
-label.productedit.choosecategory=Choose a category
-label.category.categogydetails=Category details

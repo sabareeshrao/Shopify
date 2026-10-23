@@ -1,5 +1,0 @@
-	{
-		"zoneCode":"WAAU",
-		"zoneName":"Australie-Occidentale",
-		"countryCode":"AU"
-	},

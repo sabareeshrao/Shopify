@@ -1,0 +1,6 @@
+        Class<?> beanClass = bean.getClass();
+        PropertyDescriptor propertyDescriptor = getPropertyDescriptor( beanClass, property );
+        if ( propertyDescriptor == null )
+        {
+            throw new IllegalArgumentException( "No such property " + property + " for " + beanClass + " exists" );
+        }

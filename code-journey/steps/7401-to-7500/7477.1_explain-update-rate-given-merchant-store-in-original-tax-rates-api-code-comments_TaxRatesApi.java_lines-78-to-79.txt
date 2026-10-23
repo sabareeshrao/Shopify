@@ -1,2 +1,0 @@
-
-	/** Update tax rate for a given MerchantStore */

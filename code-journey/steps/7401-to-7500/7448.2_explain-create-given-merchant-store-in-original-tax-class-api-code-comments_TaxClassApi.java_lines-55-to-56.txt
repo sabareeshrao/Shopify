@@ -1,2 +1,0 @@
-
-	/** Create new tax class for a given MerchantStore */

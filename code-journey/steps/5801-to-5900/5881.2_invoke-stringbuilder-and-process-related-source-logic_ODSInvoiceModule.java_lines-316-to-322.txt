@@ -1,0 +1,7 @@
+			
+			//generate invoice file
+			StringBuilder tempInvoiceName = new StringBuilder();
+			tempInvoiceName.append(order.getId()).append(TEMP_INVOICE_SUFFIX_NAME);
+			File outputFile = new File(tempInvoiceName.toString());
+			OOUtils.open(sheet.getSpreadSheet().saveAs(outputFile));
+			

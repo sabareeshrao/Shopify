@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "MN",
-			"zoneName": "Minnesota",
-			"countryCode": "US"
-		},

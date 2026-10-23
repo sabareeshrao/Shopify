@@ -1,0 +1,9 @@
+	
+	/**
+	 * @param path
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/private/content/folder", produces = MediaType.APPLICATION_JSON_VALUE)

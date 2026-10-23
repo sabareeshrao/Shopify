@@ -1,7 +1,0 @@
-			 // Close the PDF document
-			 document.close();
-			 
-			 outputFile.delete();//remove temp file
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block

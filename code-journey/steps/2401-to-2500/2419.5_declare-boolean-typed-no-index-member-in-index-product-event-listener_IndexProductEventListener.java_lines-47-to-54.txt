@@ -1,0 +1,8 @@
+	
+    @Value("${search.noindex:false}")//skip indexing process
+    private boolean noIndex;
+
+	/**
+	 * Listens to ProductEvent and ProductVariantEvent
+	 */
+	@Override

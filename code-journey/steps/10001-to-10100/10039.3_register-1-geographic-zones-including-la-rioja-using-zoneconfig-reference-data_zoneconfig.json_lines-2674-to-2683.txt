@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "LaRioja",
+			"zoneName": "La Rioja",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "LasPalmas",
+			"zoneName": "Las Palmas",
+			"countryCode": "ES"
+		},

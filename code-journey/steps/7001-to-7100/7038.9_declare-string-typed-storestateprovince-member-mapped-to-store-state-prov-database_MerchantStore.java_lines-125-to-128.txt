@@ -1,4 +1,0 @@
-
-	@Column(name = "STORE_STATE_PROV", length = 100)
-	private String storestateprovince;
-

@@ -1,0 +1,7 @@
+
+		// adjust shipping and billing
+		if (order.isShipToBillingAdress()) {
+			Billing billing = customer.getBilling();
+			delivery.setAddress(billing.getAddress());
+			delivery.setCity(billing.getCity());
+			delivery.setCompany(billing.getCompany());

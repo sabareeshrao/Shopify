@@ -1,0 +1,8 @@
+				dataEntries.append("\"message\":\"").append(this.getValidationMessages().get(key)).append("\"");
+				dataEntries.append("}");
+
+				if(count<this.getValidationMessages().size()-1) {
+					dataEntries.append(",");
+				}
+				count ++;
+			}

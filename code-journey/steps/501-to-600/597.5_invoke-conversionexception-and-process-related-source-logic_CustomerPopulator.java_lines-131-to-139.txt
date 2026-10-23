@@ -1,0 +1,9 @@
+					if(zone==null) {
+						throw new ConversionException("Unsuported zone code " + sourceBilling.getZone());
+					}
+					Zone zoneDescription = zones.get(zone.getCode());
+					billing.setZone(zoneDescription);
+				}
+				// target.setBilling(billing);
+
+			}

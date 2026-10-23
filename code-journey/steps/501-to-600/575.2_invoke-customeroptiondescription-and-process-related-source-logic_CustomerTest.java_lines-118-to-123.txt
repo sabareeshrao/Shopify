@@ -1,0 +1,6 @@
+		
+		CustomerOptionDescription mailingListDesciption= new CustomerOptionDescription();
+		mailingListDesciption.setName("Subscribed to mailing list");
+		mailingListDesciption.setDescription("Subscribed to mailing list");
+		mailingListDesciption.setLanguage(en);
+		mailingListDesciption.setCustomerOption(subscribedToMailingList);

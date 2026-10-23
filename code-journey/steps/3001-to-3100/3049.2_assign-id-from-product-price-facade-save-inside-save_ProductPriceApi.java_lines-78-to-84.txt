@@ -1,0 +1,7 @@
+	public @ResponseBody Entity save(
+			@PathVariable String sku,
+			@Valid @RequestBody PersistableProductPrice price,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		price.setSku(sku);

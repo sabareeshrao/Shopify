@@ -1,0 +1,7 @@
+
+		// create shipping products
+		List<ShippingProduct> shippingProducts = shoppingCartService.createShippingProduct(cart);
+
+		if (CollectionUtils.isEmpty(shippingProducts)) {
+			return null;// products are virtual
+		}

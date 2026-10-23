@@ -1,0 +1,7 @@
+	@Override
+	public Entity createTaxClass(PersistableTaxClass taxClass, MerchantStore store, Language language) {
+		Validate.notNull(taxClass,"TaxClass cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		try {
+			

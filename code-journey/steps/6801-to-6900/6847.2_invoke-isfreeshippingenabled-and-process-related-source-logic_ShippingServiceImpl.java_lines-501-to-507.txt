@@ -1,0 +1,7 @@
+			if(shippingConfiguration.isFreeShippingEnabled()) {
+				BigDecimal freeShippingAmount = shippingConfiguration.getOrderTotalFreeShipping();
+				if(freeShippingAmount!=null) {
+					if(orderTotal.doubleValue()>freeShippingAmount.doubleValue()) {
+						if(shippingConfiguration.getFreeShippingType() == ShippingType.NATIONAL) {
+							if(store.getCountry().getIsoCode().equals(shipCountry.getIsoCode())) {
+								freeShipping = true;

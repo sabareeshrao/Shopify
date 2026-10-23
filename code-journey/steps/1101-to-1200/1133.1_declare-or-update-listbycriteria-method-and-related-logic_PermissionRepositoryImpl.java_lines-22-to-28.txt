@@ -1,0 +1,7 @@
+	@Override
+	public PermissionList listByCriteria(PermissionCriteria criteria) {
+		PermissionList permissionList = new PermissionList();
+
+        
+		StringBuilder countBuilderSelect = new StringBuilder();
+		countBuilderSelect.append("select count(p) from Permission as p");

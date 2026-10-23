@@ -1,0 +1,9 @@
+
+      Files.deleteIfExists(path);
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    }
+
+
+  }

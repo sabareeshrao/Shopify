@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(OrderShippingApi.class);
-
-  @Inject private CustomerService customerService;
-
-  @Inject private OrderFacade orderFacade;
-
-  @Inject private ShoppingCartFacade shoppingCartFacade;
-

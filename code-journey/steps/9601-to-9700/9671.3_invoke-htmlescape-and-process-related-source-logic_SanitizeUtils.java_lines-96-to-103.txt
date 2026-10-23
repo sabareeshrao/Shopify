@@ -1,0 +1,8 @@
+        
+        //return HtmlUtils.htmlEscape(value);	
+		
+        StringBuilder safe = new StringBuilder();
+        if(StringUtils.isNotEmpty(value)) {
+            // Fastest way for short strings - https://stackoverflow.com/a/11876086/195904
+            for(int i=0; i<value.length(); i++) {
+                char current = value.charAt(i);

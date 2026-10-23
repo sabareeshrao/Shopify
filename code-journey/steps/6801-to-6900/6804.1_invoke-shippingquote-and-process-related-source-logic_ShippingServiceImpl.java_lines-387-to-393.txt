@@ -1,0 +1,7 @@
+		
+		
+		ShippingQuote shippingQuote = new ShippingQuote();
+		ShippingQuoteModule shippingQuoteModule = null;
+		
+		try {
+			

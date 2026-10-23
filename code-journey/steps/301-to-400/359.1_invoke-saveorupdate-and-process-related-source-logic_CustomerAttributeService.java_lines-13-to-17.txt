@@ -1,0 +1,5 @@
+public interface CustomerAttributeService extends
+		SalesManagerEntityService<Long, CustomerAttribute> {
+
+	void saveOrUpdate(CustomerAttribute customerAttribute)
+			throws ServiceException;

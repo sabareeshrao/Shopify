@@ -1,0 +1,7 @@
+		
+		destination.setCode(source.getCode());
+		if(source.getId()!=null && source.getId().longValue() > 0) {
+			destination.setId(source.getId());
+		}
+		destination.setMerchantStore(store);
+		destination.setTitle(source.getName());

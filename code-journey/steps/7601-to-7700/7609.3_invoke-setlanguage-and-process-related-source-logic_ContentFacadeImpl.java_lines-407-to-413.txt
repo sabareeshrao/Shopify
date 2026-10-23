@@ -1,0 +1,7 @@
+			contentDescription.setLanguage(contentDescriptionModel.get().getLanguage());
+			contentDescription.setTitle(contentDescriptionModel.get().getTitle());
+			contentDescription.setName(contentDescriptionModel.get().getName());
+		} 
+
+	}
+

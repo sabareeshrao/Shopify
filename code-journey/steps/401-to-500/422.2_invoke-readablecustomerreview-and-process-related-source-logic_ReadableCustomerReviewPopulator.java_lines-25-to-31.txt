@@ -1,0 +1,7 @@
+			if(target==null) {
+				target = new ReadableCustomerReview();
+			}
+			
+			if(source.getReviewDate() != null) {
+				target.setDate(DateUtil.formatDate(source.getReviewDate()));
+			}

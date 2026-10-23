@@ -1,0 +1,6 @@
+
+	private void createCountries() throws ServiceException {
+		LOGGER.info(String.format("%s : Populating Countries ", name));
+		List<Language> languages = languageService.list();
+		for(String code : SchemaConstant.COUNTRY_ISO_CODE) {
+			Locale locale = SchemaConstant.LOCALES.get(code);

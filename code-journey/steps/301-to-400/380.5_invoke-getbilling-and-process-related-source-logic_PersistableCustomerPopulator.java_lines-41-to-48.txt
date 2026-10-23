@@ -1,0 +1,8 @@
+				if(source.getBilling().getState()!=null) {
+					address.setStateProvince(source.getBilling().getState());
+				}
+				
+				target.setBilling(address);
+			}
+			
+			target.setProvider(source.getProvider());

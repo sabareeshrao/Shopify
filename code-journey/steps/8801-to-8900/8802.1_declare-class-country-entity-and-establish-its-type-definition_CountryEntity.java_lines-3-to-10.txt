@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.entity.Entity;
+
+public class CountryEntity extends Entity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

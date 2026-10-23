@@ -1,0 +1,7 @@
+			
+			PayPalAPIInterfaceServiceService service = new PayPalAPIInterfaceServiceService(configurationMap);
+			SetExpressCheckoutResponseType setExpressCheckoutResponse = service.setExpressCheckout(setExpressCheckoutReq);
+			
+			String token = setExpressCheckoutResponse.getToken();
+			String correlationID = setExpressCheckoutResponse.getCorrelationID();
+			String ack = setExpressCheckoutResponse.getAck().getValue();

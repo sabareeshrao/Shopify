@@ -1,0 +1,6 @@
+
+	@Test
+	@Ignore
+	public void validateShippingMethod() throws Exception {
+		
+		ShippingQuote quote = new ShippingQuote();

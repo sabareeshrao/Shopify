@@ -1,0 +1,8 @@
+
+  private String location = null;
+  private String root = null;
+
+
+  public StaticContentCacheManagerImpl(String location, String root) {
+
+    super.init(NAMED_CACHE, location);

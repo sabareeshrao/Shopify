@@ -1,0 +1,9 @@
+			
+			if (!defaultImage && !CollectionUtils.isEmpty(images)) {
+				for (ProductImage image : images) {
+					if (image.isDefaultImage()) {
+						hasDefaultImage = true;
+						break;
+					}
+				}
+			}

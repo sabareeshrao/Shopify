@@ -1,0 +1,6 @@
+
+	public void setVariant(Long instance) {
+		this.variant = instance;
+	}
+
+}

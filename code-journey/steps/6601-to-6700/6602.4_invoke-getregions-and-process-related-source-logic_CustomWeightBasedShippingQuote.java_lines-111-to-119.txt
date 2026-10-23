@@ -1,0 +1,9 @@
+
+			for(CustomShippingQuotesRegion region : customConfiguration.getRegions()) {
+	
+				for(String countryCode : region.getCountries()) {
+					if(countryCode.equals(delivery.getCountry().getIsoCode())) {
+						
+						
+						//determine shipping weight
+						double weight = 0;

@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Ceuta",
-			"zoneName": "Ceuta",
-			"countryCode": "ES"
-		},

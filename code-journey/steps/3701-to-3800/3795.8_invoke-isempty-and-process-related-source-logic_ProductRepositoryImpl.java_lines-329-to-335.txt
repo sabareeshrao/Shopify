@@ -1,0 +1,7 @@
+		if (results.isEmpty())
+			return null;
+		else if (results.size() == 1)
+			return results.get(0);
+		throw new NonUniqueResultException();
+
+	}

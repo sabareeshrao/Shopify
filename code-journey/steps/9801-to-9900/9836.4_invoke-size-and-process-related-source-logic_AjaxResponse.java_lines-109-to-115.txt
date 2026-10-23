@@ -1,0 +1,7 @@
+				if(count<this.data.size()-1) {
+					dataEntries.append(",");
+				}
+				count ++;
+			}
+			
+			returnString.append(",").append("\"data\"").append(":[");

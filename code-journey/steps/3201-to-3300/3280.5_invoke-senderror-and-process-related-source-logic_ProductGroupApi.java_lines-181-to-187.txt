@@ -1,0 +1,7 @@
+        try {
+          response.sendError(503, "Error while adding product to group " + e.getMessage());
+        } catch (Exception ignore) {
+        }
+
+        return null;
+      }

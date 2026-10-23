@@ -1,0 +1,8 @@
+		
+		
+		List<CustomShippingQuotesRegion> regions = customConfiguration.getRegions();
+		
+		ShippingBasisType shippingType =  shippingConfiguration.getShippingBasisType();
+		ShippingOption shippingOption = null;
+		try {
+			

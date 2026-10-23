@@ -1,9 +1,0 @@
-
-/**
- * To be used when using an external web server for managing images
- * 	<beans:bean id="img" class="com.salesmanager.shop.utils.LocalImageFilePathUtils">
-		<beans:property name="basePath" value="/static" />
-	</beans:bean>
- * @author c.samson
- *
- */

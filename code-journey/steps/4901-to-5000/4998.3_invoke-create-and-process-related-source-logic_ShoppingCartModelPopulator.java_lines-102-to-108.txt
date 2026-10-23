@@ -1,0 +1,7 @@
+                shoppingCartService.create( cartMdel );
+            }
+        }
+        else
+        {
+            cartMdel.setShoppingCartCode( shoppingCart.getCode() );
+            cartMdel.setMerchantStore( store );

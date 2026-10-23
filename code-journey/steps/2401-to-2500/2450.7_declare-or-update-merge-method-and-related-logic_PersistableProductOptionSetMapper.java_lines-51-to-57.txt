@@ -1,0 +1,7 @@
+	
+	@Override
+	public ProductOptionSet merge(PersistableProductOptionSet source, ProductOptionSet destination,
+								  MerchantStore store, Language language) {
+		Validate.notNull(destination, "ProductOptionSet must not be null");
+		
+		destination.setId(source.getId());

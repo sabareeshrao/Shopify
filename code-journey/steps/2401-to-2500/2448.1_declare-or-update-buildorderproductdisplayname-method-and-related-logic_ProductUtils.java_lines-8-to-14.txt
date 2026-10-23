@@ -1,0 +1,7 @@
+public class ProductUtils {
+	
+	public static String buildOrderProductDisplayName(OrderProduct orderProduct) {
+		
+		String pName = orderProduct.getProductName();
+		Set<OrderProductAttribute> oAttributes = orderProduct.getOrderAttributes();
+		StringBuilder attributeName = null;

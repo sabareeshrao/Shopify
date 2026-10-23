@@ -1,0 +1,6 @@
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+
+@Table(name = "SYSTEM_NOTIFICATION",uniqueConstraints=
+    @UniqueConstraint(columnNames = {"MERCHANT_ID", "CONFIG_KEY"}) )

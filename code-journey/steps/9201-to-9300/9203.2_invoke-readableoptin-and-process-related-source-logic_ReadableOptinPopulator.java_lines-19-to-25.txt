@@ -1,0 +1,7 @@
+		
+		if(target==null) {
+			target = new ReadableOptin();
+		}
+		
+		target.setCode(source.getCode());
+		target.setDescription(source.getDescription());

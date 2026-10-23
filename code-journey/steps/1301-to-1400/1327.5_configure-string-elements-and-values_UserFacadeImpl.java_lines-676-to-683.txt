@@ -1,0 +1,8 @@
+
+				//user store is store request param
+				if (store.getCode().equalsIgnoreCase(merchant)) {
+					return true;
+				}
+
+				//Set<String> roles = authentication.getAuthorities().stream().map(r -> r.getAuthority())
+				//		.collect(Collectors.toSet());

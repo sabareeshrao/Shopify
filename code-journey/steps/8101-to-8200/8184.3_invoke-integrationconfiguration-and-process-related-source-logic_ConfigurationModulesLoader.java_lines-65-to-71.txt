@@ -1,0 +1,7 @@
+
+				IntegrationConfiguration configuration = new IntegrationConfiguration();
+
+				String moduleCode = (String) object.get("moduleCode");
+				if (object.get("active") != null) {
+					configuration.setActive((Boolean) object.get("active"));
+				}

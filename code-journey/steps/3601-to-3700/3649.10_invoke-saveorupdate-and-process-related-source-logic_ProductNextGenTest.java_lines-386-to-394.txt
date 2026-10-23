@@ -1,0 +1,9 @@
+	    
+	    //create an option value
+	    productOptionValueService.saveOrUpdate(nineHalf);
+	    
+	    
+	    //option value 10
+	    ten = new ProductOptionValue();
+	    ten.setMerchantStore(store);
+	    ten.setCode("ten");

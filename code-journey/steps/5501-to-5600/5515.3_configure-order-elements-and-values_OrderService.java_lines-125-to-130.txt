@@ -1,0 +1,6 @@
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<Order> getCapturableOrders(MerchantStore store, Date startDate, Date endDate) throws ServiceException;
+
+}

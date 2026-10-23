@@ -1,0 +1,7 @@
+	 * @param count
+	 * @return List of orders
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/private/orders" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody

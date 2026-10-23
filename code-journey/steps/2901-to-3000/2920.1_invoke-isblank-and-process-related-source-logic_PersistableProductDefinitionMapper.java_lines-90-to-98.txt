@@ -1,0 +1,9 @@
+			
+			//MANUFACTURER
+			if(!StringUtils.isBlank(source.getManufacturer())) {
+				Manufacturer manufacturer = manufacturerService.getByCode(store, source.getManufacturer());
+				if(manufacturer == null) {
+					throw new ConversionException("Manufacturer [" + source.getManufacturer() + "] does not exist");
+				}
+				destination.setManufacturer(manufacturer);
+			}

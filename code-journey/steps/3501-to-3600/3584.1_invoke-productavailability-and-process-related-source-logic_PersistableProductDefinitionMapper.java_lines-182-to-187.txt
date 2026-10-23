@@ -1,0 +1,6 @@
+			
+		    if(productAvailability == null) { //create with default values
+		      productAvailability = new ProductAvailability(destination, store);
+		      destination.getAvailabilities().add(productAvailability);
+		      
+		      productAvailability.setProductQuantity(source.getQuantity());

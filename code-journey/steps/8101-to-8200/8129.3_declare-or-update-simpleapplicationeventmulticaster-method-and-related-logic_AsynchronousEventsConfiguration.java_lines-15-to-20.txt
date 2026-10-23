@@ -1,0 +1,6 @@
+public class AsynchronousEventsConfiguration {
+	
+	   @Bean(name = "applicationEventMulticaster")
+	   public ApplicationEventMulticaster simpleApplicationEventMulticaster() {
+	       SimpleApplicationEventMulticaster eventMulticaster
+	         = new SimpleApplicationEventMulticaster();

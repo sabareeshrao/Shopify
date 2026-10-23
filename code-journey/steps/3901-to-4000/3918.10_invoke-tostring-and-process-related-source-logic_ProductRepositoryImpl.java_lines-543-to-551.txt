@@ -1,0 +1,9 @@
+
+		String hql = qs.toString();
+		Query q = this.em.createQuery(hql);
+
+		q.setParameter("cid", categoryIds);
+		q.setParameter("lid", regionList);
+		q.setParameter("dt", new Date());
+		q.setParameter("lang", language.getId());
+		q.setParameter("mId", store.getId());

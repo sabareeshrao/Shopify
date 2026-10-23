@@ -1,0 +1,7 @@
+
+        Catalog c = Optional.ofNullable(catalogService.getById(catalogId))
+                .orElseThrow(() -> new ResourceNotFoundException("Catalog with id [" + catalogId + "] not found"));
+
+        if (Objects.nonNull(c.getMerchantStore()) && !c.getMerchantStore().getCode().equals(store.getCode())) {
+            throw new ResourceNotFoundException("Catalog with id [" + catalogId + "] not found for merchant [" + store.getCode() + "]");
+        }

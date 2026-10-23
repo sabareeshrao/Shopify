@@ -1,7 +1,0 @@
-		// will contain options
-		TreeMap<Long, ReadableProductOption> selectableOptions = new TreeMap<Long, ReadableProductOption>();
-
-		destination.setSku(source.getSku());
-		destination.setRefSku(source.getRefSku());
-		destination.setId(source.getId());
-		destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));

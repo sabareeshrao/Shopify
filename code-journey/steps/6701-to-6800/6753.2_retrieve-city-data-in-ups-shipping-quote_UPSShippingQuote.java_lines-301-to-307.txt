@@ -1,7 +1,0 @@
-
-			// ship to
-			xmldatabuffer.append("<ShipTo>");
-			xmldatabuffer.append("<Address>");
-			xmldatabuffer.append("<City>");
-			xmldatabuffer.append(delivery.getCity());
-			xmldatabuffer.append("</City>");

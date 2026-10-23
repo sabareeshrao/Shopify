@@ -1,0 +1,8 @@
+              customerCart =
+                  shoppingCartService.mergeShoppingCarts(customerCart, sessionShoppingCart, store);
+              customerCart = shoppingCartService.getById(customerCart.getId(), store);
+              return customerCart;
+              // return populateShoppingCartData(customerCart,store,language);
+            } else {
+              if (sessionShoppingCart.getCustomerId().longValue() == customerModel.getId()
+                  .longValue()) {

@@ -1,0 +1,7 @@
+      
+      inputStream = Channels.newInputStream(reader);
+      ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+      IOUtils.copy(inputStream, outputStream);
+      OutputContentFile ct = new OutputContentFile();
+      ct.setFile(outputStream);
+      ct.setFileName(blob.getName());

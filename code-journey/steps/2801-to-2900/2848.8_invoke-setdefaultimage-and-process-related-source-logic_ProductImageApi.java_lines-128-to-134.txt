@@ -1,0 +1,7 @@
+
+					if (!hasDefaultImage) {
+						productImage.setDefaultImage(true);
+						hasDefaultImage = true;
+					}
+					productImage.setSortOrder(sortOrder);
+					position++;

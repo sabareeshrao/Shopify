@@ -1,0 +1,7 @@
+			ProductType t = productTypeService.getById(id, store, language);
+			if(t == null) {
+				throw new ResourceNotFoundException(
+						"Product type [" + id + "] does not exist for store [" + store.getCode() + "]");
+			}
+
+			productTypeService.delete(t);

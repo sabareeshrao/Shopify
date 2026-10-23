@@ -1,0 +1,10 @@
+	
+	private String paymentModule;//stripe|paypal|braintree|moneyorder ...
+	private String amount;
+	
+	public String getPaymentModule() {
+		return paymentModule;
+	}
+	public void setPaymentModule(String paymentModule) {
+		this.paymentModule = paymentModule;
+	}

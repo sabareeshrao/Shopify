@@ -1,0 +1,7 @@
+
+    notifyNewCustomer(customer, store, customerToPopulate.getDefaultLanguage());
+    //convert to readable
+    return convertCustomerToReadableCustomer(customerToPopulate, store, language);
+    
+
+  }

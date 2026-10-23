@@ -1,4 +1,0 @@
-
-@Component("contentFacade")
-public class ContentFacadeImpl implements ContentFacade {
-

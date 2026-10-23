@@ -1,2 +1,0 @@
-	List<ProductRelationship> getByType(MerchantStore store, Product product,
-			ProductRelationshipType type, Language language) throws ServiceException;

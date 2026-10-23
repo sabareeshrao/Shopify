@@ -1,0 +1,9 @@
+			              productAvailability.setProductQuantity(source.getQuantity());
+			              productAvailability.setProductStatus(source.isCanBePurchased());
+			              p.setProductPriceAmount(source.getPrice());
+			              break;
+			            }
+			          }
+			        }
+		      }
+		    }

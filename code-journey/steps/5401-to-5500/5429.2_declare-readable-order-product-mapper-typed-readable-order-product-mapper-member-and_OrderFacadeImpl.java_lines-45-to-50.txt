@@ -1,6 +1,0 @@
-	
-	@Autowired
-	private ReadableOrderProductMapper readableOrderProductMapper;
-	
-	@Autowired 
-	private LabelUtils messages;

@@ -1,0 +1,8 @@
+public class DecisionResponse {
+	
+	private String moduleName;
+	private String customPrice;
+
+	public String getModuleName() {
+		return moduleName;
+	}

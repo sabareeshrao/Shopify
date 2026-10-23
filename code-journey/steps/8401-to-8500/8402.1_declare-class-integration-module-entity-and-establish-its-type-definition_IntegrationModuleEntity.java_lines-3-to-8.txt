@@ -1,0 +1,6 @@
+import java.io.Serializable;
+
+public class IntegrationModuleEntity implements Serializable {
+	
+	private String code;
+	private boolean active;

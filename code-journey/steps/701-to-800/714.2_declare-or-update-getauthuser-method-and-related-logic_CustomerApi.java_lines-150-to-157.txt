@@ -1,0 +1,8 @@
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableCustomer getAuthUser(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			HttpServletRequest request) {
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+		return customerFacade.getCustomerByNick(userName, merchantStore, language);
+	}

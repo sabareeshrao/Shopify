@@ -1,0 +1,9 @@
+#config.emailSender=ses
+#config.emailSender.region=US_EAST_1
+
+#Shipping activated in the system ?
+config.displayShipping=true
+
+#Shipping activated in the system ?
+config.displayShipping=true
+

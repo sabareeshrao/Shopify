@@ -1,0 +1,8 @@
+	public ProductPropertyOption getOption() {
+		return option;
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

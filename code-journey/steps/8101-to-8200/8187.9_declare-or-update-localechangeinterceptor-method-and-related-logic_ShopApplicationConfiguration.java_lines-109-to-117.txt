@@ -1,0 +1,9 @@
+
+  @Bean
+  public LocaleChangeInterceptor localeChangeInterceptor() {
+    return new LocaleChangeInterceptor();
+  }
+
+	/*
+	 * @Bean public StoreFilter storeFilter() { return new StoreFilter(); }
+	 */

@@ -1,0 +1,6 @@
+
+
+		//get parent store
+		try {
+
+			MerchantStore parent = merchantStoreService.getParent(store.getCode());

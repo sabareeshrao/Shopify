@@ -1,0 +1,9 @@
+
+				shoppingCart.setLineItems(refreshedItems);
+				update(shoppingCart);
+
+				if (cartIsObsolete) {
+					shoppingCart.setObsolete(true);
+				}
+				return shoppingCart;
+			}

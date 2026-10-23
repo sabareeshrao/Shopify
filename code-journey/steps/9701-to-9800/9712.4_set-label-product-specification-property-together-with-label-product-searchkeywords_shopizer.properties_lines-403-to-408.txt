@@ -1,0 +1,6 @@
+label.product.specification=Specification
+label.product.digitalproduct=Digital product
+label.product.specials=Specials
+label.product.brand=Brand
+label.product.code=Product code
+label.product.nomoreitems=No more items available

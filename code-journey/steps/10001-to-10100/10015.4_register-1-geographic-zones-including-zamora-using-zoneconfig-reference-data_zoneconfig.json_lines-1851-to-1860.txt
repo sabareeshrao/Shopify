@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Zamora",
+		"zoneName": "Zamora",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Zaragoza",
+		"zoneName": "Zaragoza",
+		"countryCode": "ES"
+	},

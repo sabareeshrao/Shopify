@@ -1,0 +1,7 @@
+
+	@PatchMapping("/auth/customer/address")
+	@ApiOperation(httpMethod = "PATCH", value = "Updates a loged in customer address", notes = "Requires authentication", produces = "application/json", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void updateAuthUserAddress(@ApiIgnore MerchantStore merchantStore, @RequestBody PersistableCustomer customer,
+			HttpServletRequest request) {
+		Principal principal = request.getUserPrincipal();

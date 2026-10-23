@@ -1,7 +1,0 @@
-public class EmailConfig implements JSONAware {
-
-	private String host;
-	private String port;
-	private String protocol;
-	private String username;
-	private String password;

@@ -1,3 +1,0 @@
-#db.driverClass=com.mysql.jdbc.Driver
-#hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
-

@@ -1,0 +1,6 @@
+	@SuppressWarnings("rawtypes")
+	public static Query paginateQuery(Query q, Number count, GenericEntityList entityList, Criteria criteria) {
+
+		if (entityList == null) {
+			entityList = new GenericEntityList();
+		}

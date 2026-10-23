@@ -1,0 +1,11 @@
+		return AmazonS3ClientBuilder.standard().withRegion(region) // The
+																			// first
+																			// region
+																			// to
+																			// try
+																			// your
+																			// request
+																			// against
+				.build();
+	}
+

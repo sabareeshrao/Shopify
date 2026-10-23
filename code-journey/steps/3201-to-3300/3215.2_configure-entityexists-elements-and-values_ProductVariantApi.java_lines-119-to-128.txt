@@ -1,0 +1,10 @@
+	public @ResponseBody ResponseEntity<EntityExists> exists(
+			@PathVariable Long id, 
+			@PathVariable String sku,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

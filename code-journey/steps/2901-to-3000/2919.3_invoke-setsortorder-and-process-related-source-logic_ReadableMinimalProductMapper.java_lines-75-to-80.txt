@@ -1,0 +1,6 @@
+		destination.setSortOrder(source.getSortOrder());
+		destination.setSku(source.getSku());
+		
+		if(source.getDateAvailable() != null) {
+			destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+		}

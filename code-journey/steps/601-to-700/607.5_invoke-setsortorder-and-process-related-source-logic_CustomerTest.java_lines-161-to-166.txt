@@ -1,0 +1,6 @@
+
+		mailingListSetYes.setSortOrder(0);
+		mailingListSetYes.setCustomerOption(subscribedToMailingList);
+		mailingListSetYes.setCustomerOptionValue(yes);
+		
+		customerOptionSetService.create(mailingListSetYes);

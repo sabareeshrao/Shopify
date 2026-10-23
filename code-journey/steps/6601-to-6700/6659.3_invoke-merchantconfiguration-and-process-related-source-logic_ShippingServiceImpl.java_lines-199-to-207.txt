@@ -1,0 +1,9 @@
+	
+			if(configuration==null) {
+
+				configuration = new MerchantConfiguration();
+				configuration.setKey(moduleCode);
+				configuration.setMerchantStore(store);
+			}
+			configuration.setValue(configurationValue);
+			merchantConfigurationService.saveOrUpdate(configuration);

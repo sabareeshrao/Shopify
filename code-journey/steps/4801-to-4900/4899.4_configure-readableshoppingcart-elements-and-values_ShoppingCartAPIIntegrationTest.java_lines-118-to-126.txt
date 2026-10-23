@@ -1,0 +1,9 @@
+        final ResponseEntity<ReadableShoppingCart> response = testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() + "breakIt"),
+                HttpMethod.PUT,
+                cartEntity,
+                ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(NOT_FOUND));
+        data.getProducts().remove(product);
+    }

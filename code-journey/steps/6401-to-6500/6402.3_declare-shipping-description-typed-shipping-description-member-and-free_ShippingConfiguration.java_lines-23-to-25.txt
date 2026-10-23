@@ -1,3 +1,0 @@
-	private ShippingDescription shippingDescription = ShippingDescription.SHORT_DESCRIPTION;
-	private ShippingType freeShippingType = null;
-	

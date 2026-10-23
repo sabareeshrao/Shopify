@@ -1,0 +1,6 @@
+			if(!globalShippingConfiguration.isActive())
+				return;
+
+			String region = null;
+			
+			String price = globalShippingConfiguration.getIntegrationKeys().get("price");

@@ -1,0 +1,7 @@
+        
+        productService.update(product);//saves the ProductImage entity and the file on disk
+        
+        
+		
+		
+	}

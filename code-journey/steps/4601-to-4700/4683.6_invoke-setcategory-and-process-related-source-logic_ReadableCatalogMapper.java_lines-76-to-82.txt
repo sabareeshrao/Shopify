@@ -1,0 +1,7 @@
+			
+			destination.setCategory(new ArrayList<>(hierarchy.values()));
+		}
+		
+		return destination;
+		
+	}

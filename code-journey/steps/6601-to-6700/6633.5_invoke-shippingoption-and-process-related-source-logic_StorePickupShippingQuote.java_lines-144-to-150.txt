@@ -1,0 +1,7 @@
+			
+			ShippingOption shippingOption = new ShippingOption();
+			shippingOption.setShippingModuleCode(MODULE_CODE);
+			shippingOption.setOptionCode(MODULE_CODE);
+			shippingOption.setOptionId(new StringBuilder().append(MODULE_CODE).append("_").append(region).toString());
+			
+			shippingOption.setOptionPrice(productPriceUtils.getAmount(price));

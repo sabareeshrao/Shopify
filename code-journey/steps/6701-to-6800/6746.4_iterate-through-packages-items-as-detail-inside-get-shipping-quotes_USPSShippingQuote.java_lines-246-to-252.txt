@@ -1,0 +1,7 @@
+	
+				totalW = totalW + w;
+				totalH = totalH + h;
+				totalL = totalL + l;
+	
+				// Girth = Length + (Width x 2) + (Height x 2)
+				double girth = l + (w * 2) + (h * 2);

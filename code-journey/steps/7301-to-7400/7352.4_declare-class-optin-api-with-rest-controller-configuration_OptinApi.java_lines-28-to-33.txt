@@ -1,0 +1,6 @@
+
+  @Inject private OptinFacade optinFacade;
+
+
+  /** Create new optin */
+  @PostMapping("/private/optin")

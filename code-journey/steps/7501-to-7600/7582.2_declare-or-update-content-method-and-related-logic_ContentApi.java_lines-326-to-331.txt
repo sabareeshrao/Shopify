@@ -1,0 +1,6 @@
+	public ReadableContentFull content(@PathVariable("code") String code, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		return contentFacade.getContent(code, merchantStore, language);
+
+	}

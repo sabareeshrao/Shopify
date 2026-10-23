@@ -1,0 +1,7 @@
+
+			// file creation
+			// nodePath.append(Constants.SLASH).append(contentImage.getFileName());
+
+			// Path path = Paths.get(nodePath.toString());
+
+			Files.copy(inputStaticContentData.getFile(), path, StandardCopyOption.REPLACE_EXISTING);

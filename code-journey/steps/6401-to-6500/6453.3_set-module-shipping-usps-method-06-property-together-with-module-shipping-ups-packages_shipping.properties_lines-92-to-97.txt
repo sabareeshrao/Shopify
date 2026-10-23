@@ -1,0 +1,6 @@
+module.shipping.usps.method.06=BPM
+module.shipping.usps.method.07=Parcel Post
+
+#UPS
+module.shipping.ups.identifier=UPS access key
+module.shipping.ups.userid=User ID

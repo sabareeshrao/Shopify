@@ -1,0 +1,6 @@
+	
+	List<PackageDetails> listPackages(MerchantStore store);
+	
+	void updatePackage(String code, PackageDetails packaging, MerchantStore store);
+	
+	void deletePackage(String code, MerchantStore store);

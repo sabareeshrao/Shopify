@@ -1,0 +1,9 @@
+		products.stream().forEach(p -> {
+			try {
+				searchService.index(store, p);
+			} catch (ServiceException e) {
+				throw new RuntimeException("Exception while indexing products", e);
+			}
+		});
+
+	}

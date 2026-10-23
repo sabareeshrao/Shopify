@@ -1,0 +1,7 @@
+
+		if(t == null) {
+			throw new ResourceNotFoundException("Product type [" + code + "] not found for merchant [" + store.getCode() + "]");
+		}
+		
+		ReadableProductType readableType = readableProductTypeMapper.convert(t, store, language);
+		return readableType;

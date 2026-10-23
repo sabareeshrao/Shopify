@@ -1,0 +1,10 @@
+			if (stInternalTokenizer.countTokens() == 2) {
+				String key = URLDecoder.decode(stInternalTokenizer.nextToken(),
+						"UTF-8");
+				String value = URLDecoder.decode(stInternalTokenizer
+						.nextToken(), "UTF-8");
+				nvp.put(key.toUpperCase(), value);
+			}
+		}
+		return nvp;
+	}

@@ -1,0 +1,6 @@
+		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
+				&& !CollectionUtils.isEmpty(criteria.getAttributeCriteria())) {
+			qs.append(" inner join p.attributes pattr");
+			qs.append(" inner join pattr.productOption po");
+			qs.append(" inner join po.descriptions pod");
+			qs.append(" inner join pattr.productOptionValue pov ");

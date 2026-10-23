@@ -1,0 +1,7 @@
+@Table(name = "TAX_RATE_DESCRIPTION"  ,uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"TAX_RATE_ID",
+				"LANGUAGE_ID"
+			})
+		}
+)

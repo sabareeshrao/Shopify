@@ -1,0 +1,9 @@
+	
+	/**
+	 * YYYY-mm-DD:HH mm SSS
+	 */
+	private String date;
+
+	public String getDate() {
+		return date;
+	}

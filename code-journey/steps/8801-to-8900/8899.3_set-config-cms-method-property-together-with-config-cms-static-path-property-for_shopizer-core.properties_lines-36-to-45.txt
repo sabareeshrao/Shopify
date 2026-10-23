@@ -1,0 +1,10 @@
+# Which CMS method to use [ default | httpd | aws | gcp ]
+# default = infinispan
+# httpd = requires http server
+# aws = AWS S3 -> See AWS S3 configuration below
+# gcp = Google Cloud Storage
+
+config.cms.method=httpd
+config.cms.contentUrl=http://localhost:80
+config.cms.static.path=/static
+

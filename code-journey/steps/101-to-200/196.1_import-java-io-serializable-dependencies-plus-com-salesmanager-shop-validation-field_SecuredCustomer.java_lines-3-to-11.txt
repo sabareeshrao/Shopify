@@ -1,9 +1,0 @@
-import java.io.Serializable;
-import javax.validation.constraints.Size;
-import com.salesmanager.shop.validation.FieldMatch;
-
-
-@FieldMatch.List({
-    @FieldMatch(first="password",second="checkPassword",message="password.notequal")
-    
-})

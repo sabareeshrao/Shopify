@@ -1,0 +1,6 @@
+			StringBuilder regionsList = new StringBuilder();
+			int countRegion = 0;
+			regionsList.append("[");
+			for(CustomShippingQuotesRegion region : regions) {
+				regionsList.append(region.toJSONString());
+				countRegion ++;

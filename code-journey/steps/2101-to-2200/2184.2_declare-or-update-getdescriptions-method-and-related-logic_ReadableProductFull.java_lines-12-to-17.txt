@@ -1,0 +1,6 @@
+  
+  List<ProductDescription> descriptions = new ArrayList<ProductDescription>();
+
+  public List<ProductDescription> getDescriptions() {
+    return descriptions;
+  }

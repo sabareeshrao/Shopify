@@ -1,0 +1,9 @@
+
+	public GeoZone getGeoZone() {
+		return geoZone;
+	}
+
+	public void setGeoZone(GeoZone geoZone) {
+		this.geoZone = geoZone;
+	}
+}

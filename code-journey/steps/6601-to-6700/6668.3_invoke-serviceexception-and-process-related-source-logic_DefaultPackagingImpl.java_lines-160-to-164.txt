@@ -1,0 +1,5 @@
+			
+			throw new ServiceException("Product configuration exceeds box configuraton");
+			
+
+		}

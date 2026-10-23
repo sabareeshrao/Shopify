@@ -1,0 +1,8 @@
+		
+		if(finalTransactions.containsKey(TransactionType.AUTHORIZECAPTURE.name())) {
+			finalTransaction = finalTransactions.get(TransactionType.AUTHORIZECAPTURE.name());
+		}
+		
+		if(finalTransactions.containsKey(TransactionType.CAPTURE.name())) {
+			finalTransaction = finalTransactions.get(TransactionType.CAPTURE.name());
+		}

@@ -1,0 +1,7 @@
+	
+	private String productName;
+	private String downloadUrl;
+	
+	private String fileName;
+	
+	private int downloadExpiryDays = 0;

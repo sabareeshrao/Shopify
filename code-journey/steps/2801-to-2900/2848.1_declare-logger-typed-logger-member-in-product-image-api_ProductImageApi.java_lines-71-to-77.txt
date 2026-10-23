@@ -1,0 +1,7 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductImageApi.class);
+
+	/**
+	 * To be used with MultipartFile
+	 *
+	 * @param id
+	 * @param uploadfiles

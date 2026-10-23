@@ -1,0 +1,7 @@
+  protected String getJsonInfo() {
+
+    StringBuilder returnString = new StringBuilder();
+    returnString.append("{");
+    returnString.append("\"moduleCode\"").append(":\"").append(this.getModuleCode()).append("\"");
+    returnString.append(",");
+    returnString.append("\"active\"").append(":").append(this.isActive());

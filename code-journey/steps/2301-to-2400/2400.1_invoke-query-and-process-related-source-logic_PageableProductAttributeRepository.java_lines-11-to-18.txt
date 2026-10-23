@@ -1,0 +1,8 @@
+public interface PageableProductAttributeRepository extends PagingAndSortingRepository<Category, Long> {
+
+	@Query(value = "select distinct p from ProductAttribute p "
+			+ "join fetch p.product pr "
+			+ "left join fetch p.productOption po "
+			+ "left join fetch p.productOptionValue pov "
+			+ "left join fetch po.descriptions pod "
+			+ "left join fetch pov.descriptions povd "

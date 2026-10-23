@@ -1,0 +1,6 @@
+
+	    saveCustomer(cust);
+	    customer.setId(cust.getId());
+
+	    return customer;
+	  }

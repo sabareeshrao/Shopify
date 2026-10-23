@@ -1,0 +1,10 @@
+
+/**
+ * 
+ * @author casams1
+ *         http://stackoverflow.com/questions/5105776/spring-security-with
+ *         -custom-user-details
+ */
+@Service("userDetailsService")
+public class UserServicesImpl implements WebUserServices{
+	

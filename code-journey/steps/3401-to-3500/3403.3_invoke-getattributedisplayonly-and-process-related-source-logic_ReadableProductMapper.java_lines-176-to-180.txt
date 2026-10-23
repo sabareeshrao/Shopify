@@ -1,0 +1,5 @@
+
+					// we need to set readonly attributes only
+					if (attribute.getAttributeDisplayOnly()) {// read only attribute = property
+
+						property = createProperty(attribute, language);

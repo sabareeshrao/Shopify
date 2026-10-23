@@ -1,0 +1,6 @@
+	private String lastAccess;
+	private String loginTime;
+	private String merchant;
+	private String userName;
+	private boolean active;
+

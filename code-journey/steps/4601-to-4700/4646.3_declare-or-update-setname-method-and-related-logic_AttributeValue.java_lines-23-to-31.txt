@@ -1,0 +1,9 @@
+	public void setName(String name) {
+		this.name = name;
+	}
+	public boolean isDefaultAttribute() {
+		return defaultAttribute;
+	}
+	public void setDefaultAttribute(boolean defaultAttribute) {
+		this.defaultAttribute = defaultAttribute;
+	}

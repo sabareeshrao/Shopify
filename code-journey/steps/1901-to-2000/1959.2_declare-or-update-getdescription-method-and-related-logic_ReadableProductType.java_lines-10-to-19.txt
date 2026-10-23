@@ -1,0 +1,10 @@
+
+	public ProductTypeDescription getDescription() {
+		return description;
+	}
+
+	public void setDescription(ProductTypeDescription description) {
+		this.description = description;
+	}
+
+}

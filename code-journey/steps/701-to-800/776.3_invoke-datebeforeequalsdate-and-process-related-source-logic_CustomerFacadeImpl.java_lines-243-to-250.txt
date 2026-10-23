@@ -1,0 +1,8 @@
+
+		if (!DateUtil.dateBeforeEqualsDate(new Date(), tokenExpiry)) {
+			throw new GenericRuntimeException("Ttoken [" + token + "] has expired");
+		}
+
+		return customer;
+
+	}

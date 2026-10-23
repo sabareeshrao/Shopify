@@ -1,0 +1,6 @@
+public class ReadableUser extends UserEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

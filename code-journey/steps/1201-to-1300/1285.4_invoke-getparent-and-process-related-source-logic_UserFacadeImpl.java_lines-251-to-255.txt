@@ -1,0 +1,5 @@
+
+			if (user != null && !authorized) {
+
+				// get parent
+				MerchantStore store = merchantStoreService.getParent(merchantStoreCode);

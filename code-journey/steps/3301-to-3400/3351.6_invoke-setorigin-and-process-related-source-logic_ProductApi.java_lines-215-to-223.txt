@@ -1,0 +1,9 @@
+
+		criteria.setOrigin(origin);
+
+		// do not use legacy pagination anymore
+		if (lang != null) {
+			criteria.setLanguage(lang);
+		} else {
+			criteria.setLanguage(language.getCode());
+		}

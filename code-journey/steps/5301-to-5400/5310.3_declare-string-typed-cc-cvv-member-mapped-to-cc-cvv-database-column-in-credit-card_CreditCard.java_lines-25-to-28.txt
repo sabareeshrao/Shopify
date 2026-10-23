@@ -1,4 +1,0 @@
-	
-	@Column (name ="CC_CVV")
-	private String ccCvv;
-

@@ -1,0 +1,7 @@
+	@Override
+	public ReadableProductOptionEntity getOption(Long optionId, MerchantStore store, Language language) {
+
+		Validate.notNull(optionId, "Option id cannot be null");
+		Validate.notNull(store, "Store cannot be null");
+
+		ProductOption option = productOptionService.getById(store, optionId);

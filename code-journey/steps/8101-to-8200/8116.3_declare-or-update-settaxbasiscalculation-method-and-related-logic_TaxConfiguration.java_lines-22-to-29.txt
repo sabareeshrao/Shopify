@@ -1,0 +1,8 @@
+		data.put("taxBasisCalculation", this.getTaxBasisCalculation().name());
+		
+		return data.toJSONString();
+	}
+
+	public void setTaxBasisCalculation(TaxBasisCalculation taxBasisCalculation) {
+		this.taxBasisCalculation = taxBasisCalculation;
+	}

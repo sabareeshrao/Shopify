@@ -1,0 +1,6 @@
+
+  @Override
+  public void removeProductImages(Product product) throws ServiceException {
+
+    
+    Storage storage = StorageOptions.getDefaultInstance().getService();

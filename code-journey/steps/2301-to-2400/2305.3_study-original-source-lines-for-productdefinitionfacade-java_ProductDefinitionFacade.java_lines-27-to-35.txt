@@ -1,0 +1,9 @@
+
+	/**
+	 * 
+	 * @param store
+	 * @param id
+	 * @param language
+	 * @return
+	 */
+	ReadableProductDefinition getProduct(MerchantStore store, Long id, Language language);

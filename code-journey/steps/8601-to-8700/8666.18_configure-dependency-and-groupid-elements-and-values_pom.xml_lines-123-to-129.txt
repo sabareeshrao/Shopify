@@ -1,0 +1,7 @@
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-rng-simple</artifactId>
+			<version>${commons-rng-simple.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.owasp.antisamy/antisamy -->

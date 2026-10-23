@@ -1,0 +1,6 @@
+		<beans:property name="getImage">
+				<beans:ref bean="${config.cms.method}ProductAssetsManager" />
+		</beans:property>
+		<beans:property name="removeImage">
+				<beans:ref bean="${config.cms.method}ProductAssetsManager" />
+		</beans:property>

@@ -1,0 +1,8 @@
+
+						ReadableProductOption readableOption = new ReadableProductOption(); // that is the property
+						ReadableProductPropertyValue readableOptionValue = new ReadableProductPropertyValue();
+
+						readableOption.setCode(attribute.getProductOption().getCode());
+						readableOption.setId(attribute.getProductOption().getId());
+
+						Set<ProductOptionDescription> podescriptions = attribute.getProductOption().getDescriptions();

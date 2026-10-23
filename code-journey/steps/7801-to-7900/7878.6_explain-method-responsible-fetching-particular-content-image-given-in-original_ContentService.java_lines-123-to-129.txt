@@ -1,0 +1,7 @@
+     * @param imageName
+     * @return {@link OutputContentImage}
+     * @throws ServiceException
+     */
+    OutputContentFile getContentFile( String merchantStoreCode, FileContentType fileContentType, String fileName )
+        throws ServiceException;
+    

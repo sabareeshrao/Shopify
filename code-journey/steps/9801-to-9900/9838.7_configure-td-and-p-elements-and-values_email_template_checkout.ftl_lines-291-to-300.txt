@@ -1,0 +1,10 @@
+		<td class="container" bgcolor="#FFFFFF">
+			
+				
+						<p>
+							<h4>${EMAIL_ORDER_DETAILS_TITLE}</h4> 
+						</p>
+						<p>
+							${ORDER_PRODUCTS_DETAILS}
+						</p>
+		</td>

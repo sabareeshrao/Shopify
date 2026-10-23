@@ -1,0 +1,6 @@
+
+@Service("productTypeFacade")
+public class ProductTypeFacadeImpl implements ProductTypeFacade {
+
+	@Autowired
+	private ProductTypeService productTypeService;

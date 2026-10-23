@@ -1,3 +1,0 @@
-	private List<ShoppingCartItem> shoppingCartItems;//overrides parent API list of shoppingcartitem
-	private String cartCode = null;
-

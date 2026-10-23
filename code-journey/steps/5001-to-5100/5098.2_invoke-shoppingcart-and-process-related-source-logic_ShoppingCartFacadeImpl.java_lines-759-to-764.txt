@@ -1,0 +1,6 @@
+
+		// if cart does not exist create a new one
+
+		ShoppingCart cartModel = new ShoppingCart();
+		cartModel.setMerchantStore(store);
+		cartModel.setShoppingCartCode(uniqueShoppingCartCode());

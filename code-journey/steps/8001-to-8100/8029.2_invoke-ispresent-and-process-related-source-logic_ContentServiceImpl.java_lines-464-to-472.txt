@@ -1,0 +1,9 @@
+		if(path.isPresent()) {
+			if(!this.isValidLinuxDirectory(path.get())) {
+				throw new ServiceException("Path format [" + path.get() + "] not a valid directory format");
+			}
+		}
+		contentFileManager.addFolder(store.getCode(), folderName, path);
+
+
+	}

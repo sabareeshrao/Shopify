@@ -1,0 +1,7 @@
+
+	@Autowired
+	private EmailService emailService;
+
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;

@@ -1,0 +1,7 @@
+	@Inject
+	private ContentService contentService;
+
+
+	@Ignore
+	public void listImages() {	
+	}

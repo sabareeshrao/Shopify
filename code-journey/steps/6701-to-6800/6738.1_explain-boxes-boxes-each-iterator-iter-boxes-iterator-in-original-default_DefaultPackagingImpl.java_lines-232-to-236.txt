@@ -1,5 +1,0 @@
-
-			//List boxesList = boxesList;
-
-			// try each box
-			//Iterator boxIter = boxesList.iterator();

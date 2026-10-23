@@ -1,0 +1,7 @@
+			if(transaction.getTransactionType().name().equals(TransactionType.REFUND.name())) {
+				break;
+			}
+		}
+		
+		return capturable;
+	}

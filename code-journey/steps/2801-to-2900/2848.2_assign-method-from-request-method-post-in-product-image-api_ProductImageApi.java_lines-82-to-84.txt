@@ -1,3 +1,0 @@
-	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value = { "/private/product/{id}/image", "/auth/product/{id}/image" }, consumes = {
-			MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST)

@@ -1,0 +1,7 @@
+
+	/**
+	 * Calculates tax over an OrderSummary
+	 * @param orderSummary
+	 * @param customer
+	 * @param store
+	 * @param locale

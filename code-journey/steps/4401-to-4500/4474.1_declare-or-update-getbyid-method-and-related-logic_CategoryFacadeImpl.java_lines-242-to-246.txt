@@ -1,0 +1,5 @@
+
+	@Override
+	public ReadableCategory getById(MerchantStore store, Long id, Language language) {
+
+			Category categoryModel = null;

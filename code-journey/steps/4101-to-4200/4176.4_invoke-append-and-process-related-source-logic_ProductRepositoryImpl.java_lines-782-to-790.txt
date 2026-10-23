@@ -1,0 +1,9 @@
+			qs.append(" inner join pov.descriptions povd");
+		} else if(criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP)) {
+			qs.append(" left join fetch p.attributes pattr");
+			qs.append(" left join fetch pattr.productOption po");
+			/** prevent full table scan **/
+			qs.append(" left join fetch po.descriptions pod");
+			qs.append(" left join fetch pattr.productOptionValue pov");
+			qs.append(" left join fetch pov.descriptions povd");
+		}

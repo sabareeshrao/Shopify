@@ -1,0 +1,7 @@
+public class ReadableTaxRateFull extends TaxRateEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	List<ReadableTaxRateDescription> descriptions = new ArrayList<ReadableTaxRateDescription>();

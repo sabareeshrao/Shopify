@@ -1,0 +1,9 @@
+
+
+
+	/**
+	 * Need type, name and entity
+	 *
+	 * @param file
+	 */
+	@PostMapping(value = "/private/file")

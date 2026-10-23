@@ -1,0 +1,8 @@
+		transaction.getTransactionDetails().put("TRNORDERNUMBER", (String)nvp.get("TRNORDERNUMBER"));
+		transaction.getTransactionDetails().put("MESSAGETEXT", (String)nvp.get("MESSAGETEXT"));
+		if(nvp.get("INTERNALORDERID")!=null) {
+			transaction.getTransactionDetails().put("INTERNALORDERID", (String)nvp.get("INTERNALORDERID"));
+		}
+		return transaction;
+		
+	}

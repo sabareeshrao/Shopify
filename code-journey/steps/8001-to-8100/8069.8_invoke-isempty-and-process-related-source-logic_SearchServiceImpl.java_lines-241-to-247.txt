@@ -1,0 +1,7 @@
+
+			if (!CollectionUtils.isEmpty(variants)) {
+				item.setVariants(variants);
+			}
+
+			item.setLanguage(description.getLanguage().getCode());
+			item.setLink(description.getSeUrl());

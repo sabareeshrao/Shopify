@@ -1,0 +1,8 @@
+  public @ResponseBody ReadableProductList removeProductFromGroup(
+      @PathVariable Long productId,
+      @PathVariable String code,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+

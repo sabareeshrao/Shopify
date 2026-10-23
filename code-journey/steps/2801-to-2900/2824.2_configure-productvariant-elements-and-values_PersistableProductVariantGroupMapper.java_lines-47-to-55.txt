@@ -1,0 +1,9 @@
+		
+		if(destination == null) {
+			destination = new ProductVariantGroup();
+		}
+		
+		destination.setId(source.getId());
+		
+		
+		List<ProductVariant> productVariants = productVariantService.getByIds(source.getproductVariants(), store);

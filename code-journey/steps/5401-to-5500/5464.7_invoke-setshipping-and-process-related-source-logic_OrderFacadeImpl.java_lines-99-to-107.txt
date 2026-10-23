@@ -1,0 +1,9 @@
+	          orderConfirmation.setShipping(shippingName);
+	        } catch (Exception e) { // label not found
+	          LOGGER.warn("No shipping code found for " + optionCodeBuilder.toString());
+	        }
+		}
+		
+		if(order.getPaymentType() != null) {
+			orderConfirmation.setPayment(order.getPaymentType().name());
+		}

@@ -1,4 +1,0 @@
-
-
-	@Override
-	public ReadableProduct updateProductPrice(ReadableProduct product, ProductPriceEntity price, Language language)

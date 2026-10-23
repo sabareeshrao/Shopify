@@ -1,0 +1,7 @@
+    List<OutputContentFile> images = new ArrayList<OutputContentFile>();
+    FileNameMap fileNameMap = URLConnection.getFileNameMap();
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();

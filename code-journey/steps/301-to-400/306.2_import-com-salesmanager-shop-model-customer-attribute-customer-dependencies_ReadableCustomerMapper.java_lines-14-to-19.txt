@@ -1,6 +1,0 @@
-import com.salesmanager.shop.model.customer.attribute.CustomerOptionDescription;
-import com.salesmanager.shop.model.customer.attribute.CustomerOptionValueDescription;
-import com.salesmanager.shop.model.customer.attribute.ReadableCustomerAttribute;
-import com.salesmanager.shop.model.customer.attribute.ReadableCustomerOption;
-import com.salesmanager.shop.model.customer.attribute.ReadableCustomerOptionValue;
-import com.salesmanager.shop.model.security.ReadableGroup;

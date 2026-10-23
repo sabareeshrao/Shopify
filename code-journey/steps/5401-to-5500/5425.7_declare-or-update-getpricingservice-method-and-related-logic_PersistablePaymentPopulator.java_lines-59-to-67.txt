@@ -1,0 +1,9 @@
+	public PricingService getPricingService() {
+		return pricingService;
+	}
+
+	public void setPricingService(PricingService pricingService) {
+		this.pricingService = pricingService;
+	}
+
+}

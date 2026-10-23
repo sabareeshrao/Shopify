@@ -1,0 +1,9 @@
+
+			ReadableUser readableUser = findByUserName(userName, languageService.defaultLanguage());
+
+			// unless superadmin
+			for (ReadableGroup group : readableUser.getGroups()) {
+				if (Constants.GROUP_SUPERADMIN.equals(group.getName())) {
+					return true;
+				}
+			}

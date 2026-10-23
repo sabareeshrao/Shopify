@@ -1,0 +1,8 @@
+	private String countryCode;
+	private String code;
+	public String getCountryCode() {
+		return countryCode;
+	}
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}

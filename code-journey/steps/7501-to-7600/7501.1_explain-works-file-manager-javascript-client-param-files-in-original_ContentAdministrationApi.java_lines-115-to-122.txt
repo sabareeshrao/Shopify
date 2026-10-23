@@ -1,8 +1,0 @@
-	
-	
-	/**
-	 * works with file manager (javascript client)
-	 * @param files
-	 * @param merchantStore
-	 * @param language
-	 */

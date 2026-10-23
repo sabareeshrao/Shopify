@@ -1,7 +1,0 @@
-
-	
-	/**
-	 * Add possible choices
-	 * @param product
-	 * @throws Exception
-	 */

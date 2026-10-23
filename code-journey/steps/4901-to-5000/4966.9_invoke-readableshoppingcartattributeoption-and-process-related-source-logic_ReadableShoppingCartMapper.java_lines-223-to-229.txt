@@ -1,0 +1,7 @@
+
+							}
+
+							if (optName != null) {
+								ReadableShoppingCartAttributeOption attributeOption = new ReadableShoppingCartAttributeOption();
+								attributeOption.setCode(option.getCode());
+								attributeOption.setId(option.getId());

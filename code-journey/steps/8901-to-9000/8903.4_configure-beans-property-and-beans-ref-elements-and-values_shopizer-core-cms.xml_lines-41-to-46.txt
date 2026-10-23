@@ -1,0 +1,6 @@
+		<!-- *** Don't remove, required for this bean only *** -->
+		<beans:property name="configuration">
+				<beans:ref bean="coreConfiguration" />
+		</beans:property>
+	</beans:bean>
+	

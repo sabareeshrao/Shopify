@@ -1,0 +1,8 @@
+    if (!(obj instanceof Language)) {
+      return false;
+    } else {
+      Language language = (Language) obj;
+      return (this.id == language.getId());
+    }
+  }
+}

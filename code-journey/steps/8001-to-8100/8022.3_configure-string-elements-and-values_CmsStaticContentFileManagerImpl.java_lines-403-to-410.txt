@@ -1,0 +1,8 @@
+			String nodePath = this.getNodePath(merchantStoreCode, staticContentType);
+			final Node<String, Object> objectNode = this.getNode(nodePath);
+
+			if (objectNode.getKeys().isEmpty()) {
+				LOGGER.warn("Unable to find content attribute for given merchant");
+				return Collections.emptyList();
+			}
+			return new ArrayList<String>(objectNode.getKeys());

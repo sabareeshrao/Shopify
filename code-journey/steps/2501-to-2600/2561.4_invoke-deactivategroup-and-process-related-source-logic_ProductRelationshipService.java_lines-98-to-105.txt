@@ -1,0 +1,8 @@
+
+	void deactivateGroup(MerchantStore store, String groupName)
+			throws ServiceException;
+	
+	void deleteRelationship(ProductRelationship relationship) throws ServiceException;
+
+	void activateGroup(MerchantStore store, String groupName)
+			throws ServiceException;

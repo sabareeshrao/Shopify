@@ -1,0 +1,8 @@
+
+		if (!StringUtils.isBlank(sku)) {
+			criteria.setCode(sku);
+		}
+
+		// TODO
+		// RENTAL add filter by owner
+		// REPOSITORY to use the new filters

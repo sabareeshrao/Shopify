@@ -1,0 +1,6 @@
+import java.math.BigDecimal;
+
+public abstract class CustomShippingQuoteItem {
+	
+	private String priceText;
+	private BigDecimal price;

@@ -1,0 +1,7 @@
+	    		authorities.add(auth);
+	    	}
+    	
+		} catch (Exception e) {
+			LOGGER.error("Exception while querrying user",e);
+			throw new SecurityDataAccessException("Exception while querrying user",e);
+		}

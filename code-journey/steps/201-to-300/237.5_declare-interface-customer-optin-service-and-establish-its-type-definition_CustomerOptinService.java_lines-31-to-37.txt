@@ -1,0 +1,7 @@
+	
+	/**
+	 * Find an existing CustomerOptin
+	 * @param store
+	 * @param emailAddress
+	 * @param code
+	 * @return

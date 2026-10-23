@@ -1,0 +1,9 @@
+				target.setTotal(totalTotal);
+				totals.add(totalTotal);
+			}
+			else if(t.getOrderTotalType().name().equals(OrderTotalType.TAX.name())) {
+				com.salesmanager.shop.model.order.total.OrderTotal totalTotal = createTotal(t);
+				if(taxTotal==null) {
+					taxTotal = totalTotal;
+				} else {
+					BigDecimal v = taxTotal.getValue();

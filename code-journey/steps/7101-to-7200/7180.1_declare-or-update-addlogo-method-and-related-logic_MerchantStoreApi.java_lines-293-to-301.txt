@@ -1,0 +1,9 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/store/{code}/marketing/logo" })
+	@ApiOperation(httpMethod = "POST", value = "Add store logo", notes = "")
+	public void addLogo(@PathVariable String code, @RequestParam("file") MultipartFile uploadfile,
+			HttpServletRequest request) {
+
+		// user doing action must be attached to the store being modified
+		String userName = getUserFromRequest(request);

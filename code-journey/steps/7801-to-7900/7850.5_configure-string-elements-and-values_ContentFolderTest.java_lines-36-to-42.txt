@@ -1,0 +1,7 @@
+
+			String folderName = "newFolder";
+			
+			Optional<String> path = Optional.ofNullable(null);
+			
+			//add folder to root
+			contentService.addFolder(store, path, folderName);

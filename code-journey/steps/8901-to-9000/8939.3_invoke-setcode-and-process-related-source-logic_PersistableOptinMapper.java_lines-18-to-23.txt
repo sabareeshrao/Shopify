@@ -1,0 +1,6 @@
+    optinEntity.setCode(source.getCode());
+    optinEntity.setDescription(source.getDescription());
+    optinEntity.setOptinType(OptinType.valueOf(source.getOptinType()));
+    optinEntity.setMerchant(store);
+    return optinEntity;
+  }

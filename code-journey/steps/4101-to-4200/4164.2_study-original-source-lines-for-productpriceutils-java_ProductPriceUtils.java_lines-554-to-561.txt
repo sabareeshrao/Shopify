@@ -1,0 +1,8 @@
+
+		/**
+		 * Since 3.2.0 The rule is
+		 * 
+		 * If product.variants contains exactly one variant If Variant has availability
+		 * we use availability from variant Otherwise we use price
+		 */
+

@@ -1,0 +1,9 @@
+{
+	"analysis": {
+		"analyzer": {
+			"name_analyzer": {
+				"tokenizer": "name_tokenizer",
+				"filter": [ "lowercase" ]
+			}
+		},
+		"tokenizer": {

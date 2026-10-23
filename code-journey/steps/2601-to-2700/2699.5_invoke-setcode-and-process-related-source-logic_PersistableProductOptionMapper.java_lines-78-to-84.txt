@@ -1,0 +1,7 @@
+      
+      destination.setCode(source.getCode());
+      destination.setMerchantStore(store);
+      destination.setProductOptionSortOrder(source.getOrder());
+      destination.setProductOptionType(source.getType());
+      destination.setReadOnly(source.isReadOnly());
+

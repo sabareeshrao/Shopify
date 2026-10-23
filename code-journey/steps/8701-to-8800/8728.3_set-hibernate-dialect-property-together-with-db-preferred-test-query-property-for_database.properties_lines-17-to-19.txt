@@ -1,3 +1,0 @@
-hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
-db.preferredTestQuery=SELECT 1
-

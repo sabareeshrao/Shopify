@@ -1,0 +1,7 @@
+	private TransactionType transactionType;
+	public TransactionType getTransactionType() {
+		return transactionType;
+	}
+	public void setTransactionType(TransactionType transactionType) {
+		this.transactionType = transactionType;
+	}

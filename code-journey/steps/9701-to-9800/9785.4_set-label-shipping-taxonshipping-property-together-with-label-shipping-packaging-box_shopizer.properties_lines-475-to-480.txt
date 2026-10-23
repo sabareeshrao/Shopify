@@ -1,0 +1,6 @@
+label.shipping.taxonshipping=Apply tax on shipping
+label.shipping.freeshipping=Apply free shipping
+label.shipping.freeshippingamount=Free shipping on order amount over
+label.shipping.handlingfees=Handling fees
+label.shipping.packaging.title=Packaging information
+label.shipping.packaging.individual=Items will be shipped individually

@@ -1,0 +1,6 @@
+		
+		if(productOptionValue==null && ! source.isAttributeDisplayOnly()) {
+			throw new ConversionRuntimeException("Product option value id " + source.getOptionValue().getId() + " does not exist");
+		}
+		
+

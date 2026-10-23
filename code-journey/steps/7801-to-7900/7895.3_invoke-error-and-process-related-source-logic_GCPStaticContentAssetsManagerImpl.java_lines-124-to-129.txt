@@ -1,0 +1,6 @@
+			return files;
+		} catch (Exception e) {
+		LOGGER.error("Error while getting file names", e);
+		throw new ServiceException(e);
+		}
+	}

@@ -1,0 +1,7 @@
+			try {
+				Zone z = zoneService.getZones(language).get(source.getZone().getCode());
+				address.setStateProvince(z.getCode());
+			} catch (ServiceException e) {
+				logger.error("Cannot get Zone", e);
+			}
+		}

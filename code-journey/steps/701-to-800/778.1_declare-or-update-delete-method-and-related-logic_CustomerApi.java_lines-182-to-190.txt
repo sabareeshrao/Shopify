@@ -1,0 +1,9 @@
+	
+	@DeleteMapping("/auth/customer/")
+	@ApiOperation(httpMethod = "DELETE", value = "Deletes a loged in customer profile", notes = "Requires authentication", produces = "application/json", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void delete(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			HttpServletRequest request) {
+
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();

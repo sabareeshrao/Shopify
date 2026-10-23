@@ -1,0 +1,6 @@
+
+		Delivery delivery = new Delivery();
+		Billing billing = new Billing();
+		//default value
+		billing.setCountry(store.getCountry());
+

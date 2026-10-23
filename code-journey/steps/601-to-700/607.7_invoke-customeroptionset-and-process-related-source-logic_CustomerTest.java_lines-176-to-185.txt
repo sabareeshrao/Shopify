@@ -1,0 +1,10 @@
+		
+		//possible has returned items
+		
+		CustomerOptionSet hasReturnedItemsYes = new CustomerOptionSet();
+		hasReturnedItemsYes.setSortOrder(0);
+		hasReturnedItemsYes.setCustomerOption(hasReturnedItems);
+		hasReturnedItemsYes.setCustomerOptionValue(yes);
+		
+		customerOptionSetService.create(hasReturnedItemsYes);
+		

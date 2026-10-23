@@ -1,0 +1,8 @@
+	    
+	    ProductOptionValueDescription nineHalfDescription = new ProductOptionValueDescription();
+	    nineHalfDescription.setLanguage(en);
+	    nineHalfDescription.setName("9.5");
+	    nineHalfDescription.setDescription("Size 9.5");
+	    nineHalfDescription.setProductOptionValue(nineHalf);
+	    
+	    nineHalf.getDescriptions().add(nineHalfDescription);

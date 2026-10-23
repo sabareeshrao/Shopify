@@ -1,0 +1,11 @@
+	@Override
+	public List<Category> listByStoreAndParent(MerchantStore store, Category category) throws ServiceException {
+
+		try {
+			return categoryRepository.listByStoreAndParent(store, category);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}
+

@@ -1,0 +1,8 @@
+
+		Set<ProductImage> images = product.getImages();
+
+		for (ProductImage image : images) {
+			productImageService.removeProductImage(image);
+		}
+
+		product.setImages(null);

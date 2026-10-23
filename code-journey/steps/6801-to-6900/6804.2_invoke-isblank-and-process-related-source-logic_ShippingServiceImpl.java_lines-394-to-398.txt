@@ -1,0 +1,5 @@
+			
+			if(StringUtils.isBlank(delivery.getPostalCode())) {
+				shippingQuote.getWarnings().add("No postal code in delivery address");
+				shippingQuote.setShippingReturnCode(ShippingQuote.NO_POSTAL_CODE);
+			}

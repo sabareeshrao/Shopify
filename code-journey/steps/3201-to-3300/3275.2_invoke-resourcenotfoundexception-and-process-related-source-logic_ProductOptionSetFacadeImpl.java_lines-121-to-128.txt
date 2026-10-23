@@ -1,0 +1,8 @@
+		if (opt == null) {
+			throw new ResourceNotFoundException(
+					"ProductOptionSet not found for id [" + id + "] and store [" + store.getCode() + "]");
+		}
+		if (!opt.getStore().getCode().equals(store.getCode())) {
+			throw new ResourceNotFoundException(
+					"ProductOptionSet not found for id [" + id + "] and store [" + store.getCode() + "]");
+		}

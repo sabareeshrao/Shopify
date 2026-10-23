@@ -1,2 +1,0 @@
-import com.salesmanager.shop.model.shoppingcart.ReadableShoppingCart;
-import com.salesmanager.test.shop.common.ServicesTestSupport;

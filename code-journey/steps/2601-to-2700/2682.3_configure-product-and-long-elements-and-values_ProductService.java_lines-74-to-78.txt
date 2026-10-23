@@ -1,0 +1,5 @@
+
+	List<Product> getProducts(List<Long> categoryIds, Language language)
+			throws ServiceException;
+
+	Product getBySeUrl(MerchantStore store, String seUrl, Locale locale);

@@ -1,0 +1,10 @@
+
+/**
+ * Use mappers
+ * @author carlsamson
+ *
+ */
+@Deprecated
+public class ReadableOrderProductPopulator extends
+		AbstractDataPopulator<OrderProduct, ReadableOrderProduct> {
+	

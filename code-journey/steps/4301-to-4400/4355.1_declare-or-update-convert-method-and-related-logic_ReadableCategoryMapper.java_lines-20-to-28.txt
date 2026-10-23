@@ -1,0 +1,9 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ReadableCategoryMapper.class);
+
+	@Override
+	public ReadableCategory convert(Category source, MerchantStore store, Language language) {
+
+		if (Objects.isNull(language)) {
+			ReadableCategoryFull target = new ReadableCategoryFull();
+			List<com.salesmanager.shop.model.catalog.category.CategoryDescription> descriptions = source
+					.getDescriptions().stream().map(this::convertDescription).collect(Collectors.toList());

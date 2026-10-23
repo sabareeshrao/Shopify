@@ -1,0 +1,7 @@
+        	httpResponse.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type, Authorization, Cache-Control, X-Requested-With");
+        	httpResponse.setHeader("Access-Control-Allow-Origin", origin);
+	        
+        	return true;
+			
+		}
+}

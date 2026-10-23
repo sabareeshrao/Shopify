@@ -1,0 +1,9 @@
+      if (!StringUtils.isBlank(criteria.getStoreCode())) {
+        req.append("  where um.code=:storeCode");
+        countBuilder.append(" where um.code=:storeCode");
+      }
+      
+      if(!StringUtils.isBlank(criteria.getCriteriaOrderByField())) {
+        req.append(" order by u." + criteria.getCriteriaOrderByField() + " "
+            + criteria.getOrderBy().name().toLowerCase());
+      }

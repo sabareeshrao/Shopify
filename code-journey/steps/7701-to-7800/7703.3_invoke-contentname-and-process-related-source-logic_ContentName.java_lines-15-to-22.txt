@@ -1,0 +1,8 @@
+	
+	public ContentName() {
+		super();
+	}
+	
+	public ContentName(String name) {
+		super(name);
+	}

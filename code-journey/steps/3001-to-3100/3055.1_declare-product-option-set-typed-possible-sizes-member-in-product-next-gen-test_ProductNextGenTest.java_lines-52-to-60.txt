@@ -1,0 +1,9 @@
+	private ProductOptionSet possibleSizes;
+	
+	
+
+	/**
+	 * This method creates single product with variants using multiple catalog APIs
+	 * @throws ServiceException
+	 */
+	@Test

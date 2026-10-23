@@ -1,0 +1,6 @@
+
+        Catalog catalog = catalogService.getByCode(code, store)
+                .orElseThrow(() -> new ResourceNotFoundException("Catalog with code [" + code + "] not found"));
+        return readableCatalogMapper.convert(catalog, store, language);
+    }
+

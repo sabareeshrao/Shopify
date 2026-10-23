@@ -1,0 +1,10 @@
+			Map zonesMap = (Map) RefCache.getAllZonesmap(LanguageUtil
+					.getLanguageNumberCode(locale.getLanguage()));
+
+			Country storeCountry = (Country) countriesMap.get(store
+					.getCountry());
+
+			Country customerCountry = (Country) countriesMap.get(customer
+					.getCustomerCountryId());
+
+			int sZone = -1;

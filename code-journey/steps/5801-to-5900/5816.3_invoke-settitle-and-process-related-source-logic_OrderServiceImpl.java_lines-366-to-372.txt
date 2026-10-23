@@ -1,0 +1,7 @@
+                taxLine.setTitle(Constants.OT_TAX_MODULE_CODE);
+                taxLine.setText(tax.getLabel());
+                taxLine.setValue(tax.getItemPrice());
+
+                totalTaxes = totalTaxes.add(tax.getItemPrice());
+                orderTotals.add(taxLine);
+                //grandTotal=grandTotal.add(tax.getItemPrice());

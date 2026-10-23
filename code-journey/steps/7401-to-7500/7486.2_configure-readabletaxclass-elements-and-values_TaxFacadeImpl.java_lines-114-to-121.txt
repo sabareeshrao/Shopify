@@ -1,0 +1,8 @@
+			
+			List<ReadableTaxClass> taxClasses = models.stream().map(t -> convertToReadableTaxClass(t, store, language)).collect(Collectors.toList());
+
+			ReadableEntityList<ReadableTaxClass> list = new ReadableEntityList<ReadableTaxClass>();
+			list.setItems(taxClasses);
+			list.setNumber(taxClasses.size());
+			list.setTotalPages(1);
+			list.setRecordsTotal(taxClasses.size());

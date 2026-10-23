@@ -1,0 +1,6 @@
+
+  public void setDescriptions(List<CategoryDescription> descriptions) {
+    this.descriptions = descriptions;
+  }
+
+}

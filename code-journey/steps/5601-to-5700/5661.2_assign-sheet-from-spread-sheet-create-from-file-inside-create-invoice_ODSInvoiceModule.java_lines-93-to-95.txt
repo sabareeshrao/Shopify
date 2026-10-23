@@ -1,3 +1,0 @@
-		
-			Sheet sheet = SpreadSheet.createFromFile(file).getSheet(0);
-			

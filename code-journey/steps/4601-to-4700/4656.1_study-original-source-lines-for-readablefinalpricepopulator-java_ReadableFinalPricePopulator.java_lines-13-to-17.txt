@@ -1,0 +1,5 @@
+public class ReadableFinalPricePopulator extends
+		AbstractDataPopulator<FinalPrice, ReadableProductPrice> {
+	
+	
+	private PricingService pricingService;

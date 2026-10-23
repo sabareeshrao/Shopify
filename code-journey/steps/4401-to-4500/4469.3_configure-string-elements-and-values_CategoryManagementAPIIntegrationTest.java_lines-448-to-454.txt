@@ -1,0 +1,7 @@
+
+        HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
+
+        ResponseEntity response = testRestTemplate.postForEntity("/api/v1/private/category", entity, PersistableCategory.class);
+        PersistableCategory cat = (PersistableCategory) response.getBody();
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertNotNull(cat.getId());

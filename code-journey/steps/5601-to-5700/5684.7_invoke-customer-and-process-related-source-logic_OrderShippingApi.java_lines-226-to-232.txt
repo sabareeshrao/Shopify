@@ -1,0 +1,7 @@
+
+      
+      Customer temp = new Customer();
+      temp.setAnonymous(true);
+      temp.setDelivery(addr);
+      
+      ShippingQuote quote = orderFacade.getShippingQuote(temp, cart, merchantStore, language);

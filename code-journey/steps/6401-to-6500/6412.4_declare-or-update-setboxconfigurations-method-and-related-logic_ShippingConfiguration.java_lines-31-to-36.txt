@@ -1,0 +1,6 @@
+
+	public void setBoxConfigurations(List<BoxConfiguration> boxConfigurations) {
+		this.boxConfigurations = boxConfigurations;
+	}
+
+}

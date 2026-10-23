@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "SA",
-			"zoneName": "South Australia",
-			"countryCode": "AU"
-		},

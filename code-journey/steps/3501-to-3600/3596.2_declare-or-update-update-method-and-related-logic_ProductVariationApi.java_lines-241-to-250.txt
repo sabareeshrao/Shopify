@@ -1,0 +1,10 @@
+	public void update(
+			@Valid @RequestBody PersistableProductVariation variation, 
+			@PathVariable Long variationId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		variation.setId(variationId);
+		productVariationFacade.update(variationId, variation, merchantStore, language);
+
+	}

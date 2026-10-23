@@ -1,0 +1,9 @@
+			Group adminGroup = auth.getGroups().stream()
+					.filter((group) -> Constants.GROUP_SUPERADMIN.equals(group.getGroupName())
+							|| Constants.GROUP_SUPERADMIN.equals(group.getGroupName()))
+					.findAny().orElse(null);
+
+			if (adminGroup == null) {
+				userModel.setGroups(originalGroups);
+				userModel.setActive(isActive);
+			}

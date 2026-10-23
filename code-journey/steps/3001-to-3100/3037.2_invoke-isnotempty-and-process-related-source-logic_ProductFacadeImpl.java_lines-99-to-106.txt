@@ -1,0 +1,8 @@
+
+		/** This is for category **/
+		if (CollectionUtils.isNotEmpty(criterias.getCategoryIds())) {
+
+			if (criterias.getCategoryIds().size() == 1) {
+
+				com.salesmanager.core.model.catalog.category.Category category = categoryService
+						.getById(criterias.getCategoryIds().get(0));

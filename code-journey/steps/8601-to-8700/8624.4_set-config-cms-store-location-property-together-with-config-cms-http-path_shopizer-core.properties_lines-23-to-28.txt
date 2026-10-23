@@ -1,0 +1,6 @@
+
+#Infinispan configuration
+#Specifies where files are located
+config.cms.store.location=./files/store
+config.cms.files.location=./files/repos
+

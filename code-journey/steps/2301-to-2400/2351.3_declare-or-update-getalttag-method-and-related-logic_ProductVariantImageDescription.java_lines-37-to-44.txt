@@ -1,0 +1,8 @@
+	
+	@Column(name="ALT_TAG", length=100)
+	private String altTag;
+
+
+	public String getAltTag() {
+		return altTag;
+	}

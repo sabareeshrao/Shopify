@@ -1,0 +1,8 @@
+		if (option == null) {
+			if (other.option != null)
+				return false;
+		} else if (!option.equals(other.option))
+			return false;
+		return true;
+	}
+

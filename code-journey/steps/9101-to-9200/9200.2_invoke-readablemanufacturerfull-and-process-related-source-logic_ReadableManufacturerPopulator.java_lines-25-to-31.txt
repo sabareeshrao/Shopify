@@ -1,0 +1,7 @@
+
+    if (language == null) {
+      target = new ReadableManufacturerFull();
+    }
+    target.setOrder(source.getOrder());
+    target.setId(source.getId());
+    target.setCode(source.getCode());

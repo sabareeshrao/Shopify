@@ -1,0 +1,8 @@
+import org.springframework.dao.DataAccessException;
+
+public class SecurityDataAccessException extends DataAccessException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

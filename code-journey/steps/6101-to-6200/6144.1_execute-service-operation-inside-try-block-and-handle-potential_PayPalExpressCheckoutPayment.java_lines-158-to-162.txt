@@ -1,5 +1,0 @@
-
-		try {
-			
-			
-			PaymentDetailsType paymentDetails = new PaymentDetailsType();

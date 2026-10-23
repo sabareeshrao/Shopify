@@ -1,0 +1,7 @@
+
+
+	private void determineCropArea(int width, int specificationsWidth,
+			int height, int specificationsHeight) {
+
+		cropAreaWidth = specificationsWidth;
+		cropAreaHeight = specificationsHeight;

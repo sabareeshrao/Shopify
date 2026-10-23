@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
-import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
-import com.salesmanager.core.model.catalog.product.price.FinalPrice;
-import com.salesmanager.core.model.catalog.product.price.ProductPrice;
-import com.salesmanager.core.model.catalog.product.variant.ProductVariant;

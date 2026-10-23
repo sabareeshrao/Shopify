@@ -1,0 +1,8 @@
+  public boolean isUseAddressAutoComplete() {
+    return useAddressAutoComplete;
+  }
+  public void setUseAddressAutoComplete(boolean useAddressAutoComplete) {
+    this.useAddressAutoComplete = useAddressAutoComplete;
+  }
+
+}

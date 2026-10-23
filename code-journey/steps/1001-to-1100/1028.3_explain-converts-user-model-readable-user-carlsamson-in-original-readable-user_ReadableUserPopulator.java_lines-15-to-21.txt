@@ -1,7 +1,0 @@
-
-/**
- * Converts user model to readable user
- * 
- * @author carlsamson
- *
- */

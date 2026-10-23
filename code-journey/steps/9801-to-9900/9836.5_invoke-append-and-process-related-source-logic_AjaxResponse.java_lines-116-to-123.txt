@@ -1,0 +1,8 @@
+			if(dataEntries!=null) {
+				returnString.append(dataEntries.toString());
+			}
+			returnString.append("]");
+		}
+		
+		if(this.getDataMap().size()>0) {
+			StringBuilder dataEntries = null;

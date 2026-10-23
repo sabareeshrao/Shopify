@@ -1,0 +1,9 @@
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public List<TaxRateDescription> getDescriptions() {
+		return descriptions;
+	}
+	public void setDescriptions(List<TaxRateDescription> descriptions) {
+		this.descriptions = descriptions;
+	}

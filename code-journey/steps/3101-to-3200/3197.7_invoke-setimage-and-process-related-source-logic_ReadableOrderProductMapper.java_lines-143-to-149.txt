@@ -1,0 +1,7 @@
+				if (defaultImage != null) {
+					target.setImage(defaultImage.getProductImage());
+				}
+				
+				**/
+			}
+		}

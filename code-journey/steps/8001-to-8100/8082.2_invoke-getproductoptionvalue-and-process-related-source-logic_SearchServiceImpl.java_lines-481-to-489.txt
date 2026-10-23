@@ -1,0 +1,9 @@
+				
+		ProductOptionValueDescription value = attribute.getProductOptionValue().getDescriptions().stream()
+				.filter(a -> a.getLanguage().getCode().equals(language)).findFirst().get();
+
+		attributeValue.put(optionDescription.getName(), value.getName());
+
+		return attributeValue;
+	}
+	

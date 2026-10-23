@@ -1,0 +1,8 @@
+				finalTransaction.setTransactionDetails(objects);
+			} catch (Exception e) {
+				throw new ServiceException(e);
+			}
+		}
+		
+		return finalTransaction;
+	}

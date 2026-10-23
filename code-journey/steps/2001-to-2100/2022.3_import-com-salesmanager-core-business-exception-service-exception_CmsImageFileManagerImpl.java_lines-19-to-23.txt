@@ -1,0 +1,5 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.modules.cms.impl.CMSManager;
+import com.salesmanager.core.business.modules.cms.impl.CacheManager;
+import com.salesmanager.core.business.modules.cms.product.ProductAssetsManager;
+import com.salesmanager.core.model.catalog.product.Product;

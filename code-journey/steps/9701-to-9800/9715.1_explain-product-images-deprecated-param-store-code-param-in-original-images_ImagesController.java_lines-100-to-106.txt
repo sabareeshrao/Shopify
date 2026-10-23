@@ -1,0 +1,7 @@
+	
+
+	/**
+	 * For product images
+	 * @Deprecated
+	 * @param storeCode
+	 * @param productCode

@@ -1,0 +1,8 @@
+	private LanguageService languageService;
+
+	@Override
+	public Manufacturer populate(PersistableManufacturer source,
+			Manufacturer target, MerchantStore store, Language language)
+			throws ConversionException {
+		
+		Validate.notNull(languageService, "Requires to set LanguageService");

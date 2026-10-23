@@ -1,0 +1,8 @@
+		
+
+		for(ProductRelationship r : relationships) {
+			productRelationshipService.delete(r);
+		}
+
+		return listItemsByGroup(group,store,language);
+	}

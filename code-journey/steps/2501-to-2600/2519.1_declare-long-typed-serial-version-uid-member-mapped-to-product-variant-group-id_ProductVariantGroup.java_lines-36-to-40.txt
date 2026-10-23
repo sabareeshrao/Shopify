@@ -1,0 +1,5 @@
+	private static final long serialVersionUID = 1L;
+
+
+	@Id
+	@Column(name = "PRODUCT_VARIANT_GROUP_ID", unique=true, nullable=false)

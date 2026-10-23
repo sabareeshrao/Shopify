@@ -1,0 +1,8 @@
+	public void setAttributeValue(String attributeValue) {
+		this.attributeValue = attributeValue;
+	}
+	public String getAttributeValue() {
+		return attributeValue;
+	}
+
+}

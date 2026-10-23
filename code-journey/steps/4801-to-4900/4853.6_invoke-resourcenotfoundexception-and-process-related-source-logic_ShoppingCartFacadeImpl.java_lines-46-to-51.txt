@@ -1,0 +1,6 @@
+
+			if (customer == null) {
+				throw new ResourceNotFoundException("No Customer found for id [" + customerId + "]");
+			}
+			
+			ShoppingCart cartModel = shoppingCartService.getShoppingCart(customer, store);

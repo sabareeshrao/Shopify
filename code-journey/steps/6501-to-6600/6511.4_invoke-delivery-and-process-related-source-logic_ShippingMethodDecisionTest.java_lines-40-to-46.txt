@@ -1,0 +1,7 @@
+
+		Delivery delivery = new Delivery();
+		delivery.setAddress("358 Du Languedoc");
+		delivery.setCity("Boucherville");
+		delivery.setPostalCode("J4B 8J9");
+		
+		Country country = new Country();

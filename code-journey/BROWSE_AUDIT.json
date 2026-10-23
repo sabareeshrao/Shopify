@@ -1,8 +1,14 @@
 {
   "status": "PASS",
+  "github_browsable_source": "code-journey/steps/",
   "folders": 101,
-  "individual_txt_files": 17909,
+  "individual_txt_files": 24055,
+  "parent_tasks": 10044,
+  "child_tasks": 14011,
+  "child_min_lines": 1,
+  "child_max_lines": 11,
+  "child_over_eleven": 0,
   "zip_only_txt": true,
   "files_match_zip": true,
-  "source_rebuild": "PASS"
+  "parent_child_content_exact": "PASS"
 }

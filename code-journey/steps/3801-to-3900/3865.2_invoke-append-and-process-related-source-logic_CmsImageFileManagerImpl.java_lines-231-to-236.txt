@@ -1,0 +1,6 @@
+      nodePath.append(buildRootPath()).append(Constants.SLASH)
+          .append(product.getMerchantStore().getCode()).append(Constants.SLASH)
+          .append(product.getSku());
+
+
+      Path path = Paths.get(nodePath.toString());

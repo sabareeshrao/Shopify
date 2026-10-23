@@ -1,0 +1,7 @@
+          System.out.println(!isCreatedBeforeLastPasswordResetWithGrace(created, lastPasswordReset)
+                  && (!isTokenExpiredWithGrace(token) || ignoreTokenExpiration(token)));
+          //return !isCreatedBeforeLastPasswordResetWithGrace(created, lastPasswordReset)
+          //        && (!isTokenExpired(token) || ignoreTokenExpiration(token));
+          return true;
+        }	    
+

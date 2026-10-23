@@ -1,0 +1,8 @@
+			
+				//set names
+				for(Country country : countries) {
+					
+					CountryDescription description = country.getDescriptions().iterator().next();
+					country.setName(description.getName());
+					
+				}

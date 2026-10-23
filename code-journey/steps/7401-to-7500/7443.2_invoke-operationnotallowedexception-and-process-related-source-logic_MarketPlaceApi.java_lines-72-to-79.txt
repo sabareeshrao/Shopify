@@ -1,0 +1,8 @@
+
+		} catch (ResourceNotFoundException ignore) {//that is what will happen if user does not exists
+		}
+
+		if (user != null) {
+			throw new OperationNotAllowedException(
+					"User [" + store.getEmail() + "] already exist and cannot be registered");
+		}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode":"NTAU",
+		"zoneName":"Territoire du Nord",
+		"countryCode":"AU"
+	},
+	{
+		"zoneCode":"VIC",
+		"zoneName":"Victoria",
+		"countryCode":"AU"
+	},

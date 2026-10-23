@@ -1,3 +1,0 @@
-  @Inject
-  private Mapper<Manufacturer, ReadableManufacturer> readableManufacturerConverter;
-

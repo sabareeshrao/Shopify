@@ -1,0 +1,8 @@
+		if(customer.getCustomerReviewCount()!=null) {
+			count = customer.getCustomerReviewCount();
+		}
+				
+		
+		
+
+		BigDecimal averageRating = customer.getCustomerReviewAvg();

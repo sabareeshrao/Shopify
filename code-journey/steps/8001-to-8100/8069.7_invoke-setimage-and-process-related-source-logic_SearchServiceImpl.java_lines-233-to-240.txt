@@ -1,0 +1,8 @@
+
+			if (image != null) {
+				item.setImage(image.getProductImage());
+			}
+
+			if (product.getProductReviewAvg() != null) {
+				item.setReviews(product.getProductReviewAvg().toString());
+			}

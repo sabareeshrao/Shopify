@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "AR",
-		"zoneName": "Arkansas",
-		"countryCode": "US"
-	},

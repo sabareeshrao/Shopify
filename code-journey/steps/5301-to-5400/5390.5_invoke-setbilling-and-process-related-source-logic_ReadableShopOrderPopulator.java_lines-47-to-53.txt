@@ -1,0 +1,7 @@
+				
+				customer.setBilling(address);
+			}
+			
+			if(persistableCustomer.getDelivery()!=null) {
+				Address address = new Address();
+				address.setCity(persistableCustomer.getDelivery().getCity());

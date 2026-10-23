@@ -1,0 +1,9 @@
+
+  @Inject private PricingService pricingService;
+
+  @Inject private ProductService productService;
+  
+  @Inject private CategoryFacade categoryFacade;
+  
+  @Inject private ProductVariationFacade productVariationFacade;
+	

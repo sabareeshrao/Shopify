@@ -1,0 +1,8 @@
+			target.setCustomer(customer);
+			target.setRating(source.getReviewRating());
+			target.setProductId(source.getProduct().getId());
+			
+			Set<ProductReviewDescription> descriptions = source.getDescriptions();
+			if(descriptions!=null) {
+				for(ProductReviewDescription description : descriptions) {
+					target.setDescription(description.getDescription());

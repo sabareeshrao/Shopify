@@ -1,3 +1,0 @@
-@Component("shippingDistancePreProcessor")
-public class ShippingDistancePreProcessorImpl implements ShippingQuotePrePostProcessModule {
-	

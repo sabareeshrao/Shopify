@@ -1,3 +1,0 @@
-	private ProductAttributeRepository productAttributeRepository;
-	@Autowired
-	private PageableProductAttributeRepository pageableProductAttributeRepository;

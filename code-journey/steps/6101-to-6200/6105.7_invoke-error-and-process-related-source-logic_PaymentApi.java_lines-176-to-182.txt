@@ -1,0 +1,7 @@
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error getting payment module [" + code + "]", e);
+			throw new ServiceRuntimeException("Error getting payment module [" + code + "]", e);
+		}
+
+	}

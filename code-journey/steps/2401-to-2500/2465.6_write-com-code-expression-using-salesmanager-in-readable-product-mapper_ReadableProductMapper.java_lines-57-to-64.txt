@@ -1,8 +1,0 @@
-import com.salesmanager.shop.utils.ImageFilePath;
-
-/**
- * Works for product v2 model
- * 
- * @author carlsamson
- *
- */

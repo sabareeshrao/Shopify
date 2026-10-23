@@ -1,0 +1,8 @@
+
+	public ReadableContentBox() {
+		super.setContentType(BOX);
+	}
+
+	public ContentDescription getDescription() {
+		return description;
+	}

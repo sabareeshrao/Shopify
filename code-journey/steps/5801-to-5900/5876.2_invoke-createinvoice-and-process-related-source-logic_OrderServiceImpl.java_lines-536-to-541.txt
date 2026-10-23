@@ -1,0 +1,6 @@
+
+        try {
+            return invoiceModule.createInvoice(store, order, language);
+        } catch(Exception e) {
+            throw new ServiceException(e);
+        }

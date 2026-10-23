@@ -1,0 +1,9 @@
+	public Long getOption() {
+		return option;
+	}
+	public void setOption(Long option) {
+		this.option = option;
+	}
+	public Long getOptionValue() {
+		return optionValue;
+	}

@@ -1,0 +1,8 @@
+
+			ReadableProductAttributeList attrList = new ReadableProductAttributeList();
+			Page<ProductAttribute> attr = null;
+			
+			
+			if(language != null) { //all entry
+				//attributes = productAttributeService.getByProductId(store, product, language);
+				attr = productAttributeService.getByProductId(store, product, language, page, count);

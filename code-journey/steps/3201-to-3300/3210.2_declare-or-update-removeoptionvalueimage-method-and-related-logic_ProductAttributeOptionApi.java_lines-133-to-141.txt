@@ -1,0 +1,9 @@
+	public void removeOptionValueImage(
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletRequest request, HttpServletResponse response) {
+
+		productOptionFacade.removeOptionValueImage(id, merchantStore, language);
+
+	}

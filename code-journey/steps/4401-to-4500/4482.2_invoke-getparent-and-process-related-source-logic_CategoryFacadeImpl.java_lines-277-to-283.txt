@@ -1,0 +1,7 @@
+
+		// traverse map and add child to parent
+		for (ReadableCategory readable : childrenCats) {
+
+			if (readable.getParent() != null) {
+
+				ReadableCategory rc = categoryMap.get(readable.getParent().getId());

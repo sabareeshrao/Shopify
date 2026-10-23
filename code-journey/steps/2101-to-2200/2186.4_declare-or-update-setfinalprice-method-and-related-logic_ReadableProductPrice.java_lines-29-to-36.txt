@@ -1,0 +1,8 @@
+
+	public void setFinalPrice(String finalPrice) {
+		this.finalPrice = finalPrice;
+	}
+
+	public boolean isDiscounted() {
+		return discounted;
+	}

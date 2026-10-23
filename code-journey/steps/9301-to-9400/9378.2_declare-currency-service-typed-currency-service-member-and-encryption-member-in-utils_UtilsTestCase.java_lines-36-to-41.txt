@@ -1,0 +1,6 @@
+	
+	@Inject
+	private CurrencyService currencyService;
+	
+	@Inject
+	private Encryption encryption;

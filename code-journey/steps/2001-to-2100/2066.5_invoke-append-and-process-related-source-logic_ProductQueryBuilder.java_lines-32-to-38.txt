@@ -1,0 +1,7 @@
+		
+		
+		
+		//option 2 no relationships
+		
+		qs.append("select distinct p from Product as p ");
+		qs.append("join fetch p.merchantStore merch ");

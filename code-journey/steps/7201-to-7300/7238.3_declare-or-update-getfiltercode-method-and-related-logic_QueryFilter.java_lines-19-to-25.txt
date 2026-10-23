@@ -1,0 +1,7 @@
+	private QueryFilterType filterType;
+	public String getFilterCode() {
+		return filterCode;
+	}
+	public void setFilterCode(String filterCode) {
+		this.filterCode = filterCode;
+	}

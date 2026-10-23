@@ -1,0 +1,7 @@
+
+    if (named_bucket == null) {
+      named_bucket = createBucket(bucket_name);
+    }
+
+    return named_bucket;
+  }

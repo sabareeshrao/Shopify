@@ -1,0 +1,6 @@
+						if (attribute.getProductOptionSortOrder() != null) {
+							optValue.setSortOrder(attribute.getProductOptionSortOrder().intValue());
+						}
+
+						List<ProductOptionValueDescription> podescriptions = optionValue.getDescriptionsSettoList();
+						ProductOptionValueDescription podescription = null;

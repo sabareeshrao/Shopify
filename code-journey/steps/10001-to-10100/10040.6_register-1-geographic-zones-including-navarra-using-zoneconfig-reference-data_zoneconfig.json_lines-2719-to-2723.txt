@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Navarra",
-			"zoneName": "Navarra",
-			"countryCode": "ES"
-		},

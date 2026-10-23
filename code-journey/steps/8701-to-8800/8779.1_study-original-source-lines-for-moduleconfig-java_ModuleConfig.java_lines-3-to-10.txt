@@ -1,0 +1,8 @@
+public class ModuleConfig {
+
+	
+	private String scheme;
+	private String host;
+	private String port;
+	private String uri;
+	private String env;

@@ -1,0 +1,6 @@
+
+	public void setPriceAppender(String priceAppender) {
+		this.priceAppender = priceAppender;
+	}
+
+}

@@ -1,0 +1,7 @@
+
+			try {
+				
+
+				String currentPrincipalName = authentication.getName();
+
+				LOGGER.info("Principal " + currentPrincipalName);

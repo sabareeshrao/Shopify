@@ -1,0 +1,7 @@
+	
+	@Override
+	public ContentDescription getBySeUrl(MerchantStore store,String seUrl) {
+
+			StringBuilder qs = new StringBuilder();
+
+			qs.append("select c from Content c ");

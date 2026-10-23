@@ -1,0 +1,6 @@
+	public void setPort(String port) {
+		this.port = port;
+	}
+	public String getUri() {
+		return uri;
+	}

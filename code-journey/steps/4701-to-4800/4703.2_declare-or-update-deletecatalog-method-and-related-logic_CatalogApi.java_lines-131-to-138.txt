@@ -1,0 +1,8 @@
+  public void deleteCatalog(
+      @PathVariable Long id,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language) {
+
+	  catalogFacade.deleteCatalog(id, merchantStore, language);
+  }
+

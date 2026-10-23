@@ -1,0 +1,9 @@
+		 * 
+		 * userFacade.findByUserName
+		 * 
+		 * How to send an email
+		 * 
+		 * 
+		 * How to generate a token
+		 * 
+		 * Generate random token

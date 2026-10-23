@@ -1,0 +1,8 @@
+				xmldatabuffer.append("<Height>");
+				xmldatabuffer.append(new BigDecimal(packageDetail.getShippingHeight())
+						.setScale(2, BigDecimal.ROUND_HALF_UP));
+				xmldatabuffer.append("</Height>");
+				xmldatabuffer.append("</Dimensions>");
+				xmldatabuffer.append("</Package>");
+
+			}

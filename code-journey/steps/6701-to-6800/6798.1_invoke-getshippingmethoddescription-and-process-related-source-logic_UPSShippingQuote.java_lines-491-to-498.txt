@@ -1,0 +1,8 @@
+
+			/*String carrier = getShippingMethodDescription(locale);
+			// cost is in CAD, need to do conversion
+
+			boolean requiresCurrencyConversion = false; String storeCurrency
+			 = store.getCurrency();
+			if(!storeCurrency.equals(Constants.CURRENCY_CODE_CAD)) {
+			 requiresCurrencyConversion = true; }

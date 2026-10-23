@@ -1,0 +1,5 @@
+			User auth = userService.getByUserName(authenticatedUser);
+			if (auth == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + authenticatedUser + "]");
+			}
+			User adminName = getByUserName(user.getUserName());

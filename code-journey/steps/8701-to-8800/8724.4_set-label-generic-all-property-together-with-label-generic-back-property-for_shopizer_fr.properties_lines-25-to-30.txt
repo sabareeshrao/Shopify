@@ -1,0 +1,6 @@
+label.generic.all=Tout
+label.generic.email=Adresse courriel
+label.generic.address=Adresse
+label.generic.city=Ville
+label.generic.country=Pays
+label.generic.price=Prix

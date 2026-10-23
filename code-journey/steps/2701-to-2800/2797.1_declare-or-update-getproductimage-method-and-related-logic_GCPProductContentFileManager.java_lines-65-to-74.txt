@@ -1,0 +1,10 @@
+  @Override
+  public OutputContentFile getProductImage(String merchantStoreCode, String productCode,
+      String imageName) throws ServiceException {
+    // TODO Auto-generated method stub
+    
+ 
+    
+    return null;
+  }
+

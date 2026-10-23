@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "Salamanca",
+			"zoneName": "Salamanca",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "SantaCruzdeTenerife",
+			"zoneName": "Santa Cruz de Tenerife",
+			"countryCode": "ES"
+		},

@@ -1,0 +1,8 @@
+		        if (payemntType.equalsIgnoreCase(b.name())) {
+		          return b;
+		        }
+		      }
+		    }
+		    return null;
+	}
+}

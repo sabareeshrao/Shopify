@@ -1,0 +1,6 @@
+email.message.from = Message de {0}
+email.greeting=Bonjour {0},
+email.customer.greeting=Merci de vous joindre à {0}, vous pourrez accéder à la section des clients en utilisant ce lien {1}. Authentifiez-vous au système et naviguez vers la section de détail des commandes. Les informations vous permettant de vous authentifier sont incluses dans ce couriel. Si vous avez des difficultées à accéder à la section client, envoyez un couriel à {2}.
+email.order.statustext=Une mise à jour a été faite à la commande {0} commandée le {1}
+email.order.status=Mis à jour le {0} - Dernier statut de la commande {1}
+

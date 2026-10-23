@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "GR",
+		"zoneName": "Graubnden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "JU",
+		"zoneName": "Jura",
+		"countryCode": "CH"
+	},

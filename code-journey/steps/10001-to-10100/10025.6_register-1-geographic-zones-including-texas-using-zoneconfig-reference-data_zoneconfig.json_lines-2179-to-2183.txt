@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "TX",
-			"zoneName": "Texas",
-			"countryCode": "US"
-		},

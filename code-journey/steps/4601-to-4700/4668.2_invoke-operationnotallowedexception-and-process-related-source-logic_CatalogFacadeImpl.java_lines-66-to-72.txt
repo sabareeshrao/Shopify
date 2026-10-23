@@ -1,0 +1,7 @@
+        if (existByCode) {
+            throw new OperationNotAllowedException("Catalog [" + catalog.getCode() + "] already exists");
+        }
+        catalogService.saveOrUpdate(catalogToSave, store);
+        Catalog savedCatalog = catalogService.getByCode(catalogToSave.getCode(), store).get();
+        return readableCatalogMapper.convert(savedCatalog, store, language);
+    }

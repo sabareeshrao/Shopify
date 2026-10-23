@@ -1,0 +1,7 @@
+		destination.setId(source.getId());
+		destination.setVisible(source.isVisible());
+
+		
+		try {
+			
+			String catalog = source.getCatalog();

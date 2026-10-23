@@ -1,0 +1,6 @@
+
+		
+
+		order.setTotal(orderTotal);
+		order.setStatus(OrderStatus.REFUNDED);
+		

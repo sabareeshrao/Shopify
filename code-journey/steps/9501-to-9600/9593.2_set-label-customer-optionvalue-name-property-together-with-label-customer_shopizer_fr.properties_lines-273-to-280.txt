@@ -1,0 +1,8 @@
+label.customer.optionvalue.edit=Éditer la valeur d'option
+label.customer.optionvalue.name=Nom de la valeur d'option
+label.customer.optionvalue.code=Code de la valeur d'option
+
+label.customer.displaycustomersection=Afficher la section client
+label.customer.accessportal=Vous pouvez accéder à la section des utilisateurs en suivant ce lien
+label.customer.accessnow=Accéder maintenant !
+

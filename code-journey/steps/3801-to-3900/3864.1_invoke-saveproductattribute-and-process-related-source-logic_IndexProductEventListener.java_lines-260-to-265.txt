@@ -1,0 +1,6 @@
+	
+	void saveProductAttribute(SaveProductAttributeEvent event) {
+
+		Product product = productOfEvent(event);
+
+		MerchantStore store = product.getMerchantStore();

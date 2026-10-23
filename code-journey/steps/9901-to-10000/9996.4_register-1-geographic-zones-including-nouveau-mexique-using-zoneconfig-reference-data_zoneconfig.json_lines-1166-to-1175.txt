@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NM",
+		"zoneName": "Nouveau Mexique",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "NY",
+		"zoneName": "New York",
+		"countryCode": "US"
+	},

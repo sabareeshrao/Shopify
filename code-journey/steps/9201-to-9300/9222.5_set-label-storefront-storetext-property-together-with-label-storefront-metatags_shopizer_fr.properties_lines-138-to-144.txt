@@ -1,0 +1,7 @@
+label.store.allowPurchaseItems=Permettre l'achat d'items
+label.store.displayaddtocartfeatured=Permettre l'ajout au panier à partir des articles recommandés
+label.store.tofindus=Notre adresse
+
+label.storefront.storetext = Contenu de la page principale 
+label.storefront.metatags.keywords = (Meta tags) Mots-clés 
+label.storefront.metatags.description = (Meta tags) Description

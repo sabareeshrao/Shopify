@@ -1,0 +1,7 @@
+module.shipping.ups.method.12=UPS Three-Day Select
+module.shipping.ups.method.13=UPS Next Day Air Saver
+module.shipping.ups.method.14=UPS Next Day Air Early A.M.
+module.shipping.ups.method.54=UPS Worldwide Express Plus
+module.shipping.ups.method.59=UPS Second Day Air A.M.
+module.shipping.ups.method.65=UPS Saver
+

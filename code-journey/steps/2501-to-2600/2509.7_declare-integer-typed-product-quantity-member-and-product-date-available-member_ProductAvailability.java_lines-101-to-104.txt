@@ -1,0 +1,4 @@
+
+	@NotNull
+	@Column(name = "QUANTITY")
+	private Integer productQuantity = 0;

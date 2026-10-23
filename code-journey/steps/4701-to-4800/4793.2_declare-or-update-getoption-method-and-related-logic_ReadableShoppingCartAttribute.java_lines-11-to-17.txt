@@ -1,0 +1,7 @@
+	
+	private ReadableShoppingCartAttributeOption option;
+	private ReadableShoppingCartAttributeOptionValue optionValue;
+	
+	public ReadableShoppingCartAttributeOption getOption() {
+		return option;
+	}

@@ -1,0 +1,8 @@
+
+	@Override
+	public void deleteConfiguration(String module, MerchantStore store) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

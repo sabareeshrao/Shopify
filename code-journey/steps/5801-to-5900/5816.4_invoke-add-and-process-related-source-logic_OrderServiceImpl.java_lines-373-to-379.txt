@@ -1,0 +1,7 @@
+
+                taxCount ++;
+
+            }
+            grandTotal = grandTotal.add(totalTaxes);
+            totalSummary.setTaxTotal(totalTaxes);
+        }

@@ -1,0 +1,9 @@
+    
+
+    
+    @Inject
+    private CustomAuthenticationManager jwtCustomCustomerAuthenticationManager;
+    
+    @Inject
+    private CustomAuthenticationManager jwtCustomAdminAuthenticationManager;
+

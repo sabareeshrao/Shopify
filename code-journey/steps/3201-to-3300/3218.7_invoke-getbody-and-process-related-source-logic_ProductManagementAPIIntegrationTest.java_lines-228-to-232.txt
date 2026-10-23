@@ -1,0 +1,5 @@
+
+		final PersistableProductOption opt = (PersistableProductOption) response.getBody();
+		System.out.println("New option ID : " + opt.getId());
+
+	}

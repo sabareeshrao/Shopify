@@ -1,0 +1,9 @@
+			if(shipping!=null) {
+				country = shipping.getCountry();
+				zone = shipping.getZone();
+				stateProvince = shipping.getState();
+			}
+		} else if(taxBasisCalculation.name().equals(TaxBasisCalculation.BILLINGADDRESS)){
+			Billing billing = customer.getBilling();
+			if(billing!=null) {
+				country = billing.getCountry();

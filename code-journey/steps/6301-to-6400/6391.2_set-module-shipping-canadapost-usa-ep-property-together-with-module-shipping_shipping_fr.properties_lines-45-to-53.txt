@@ -1,0 +1,9 @@
+module.shipping.canadapost.USA.EP=Colis accélérés É.-U.
+module.shipping.canadapost.USA.PW.ENV=Enveloppe Priorité Mondial – É.-U. 
+module.shipping.canadapost.USA.PW.PAK=Paquet Priorité Mondial – É.-U.
+module.shipping.canadapost.USA.PW.PARCEL=Colis Priorité Mondial – É.-U.
+module.shipping.canadapost.USA.SP.AIR=Petits paquets-avion à destination des É.-U. 
+module.shipping.canadapost.USA.TP=Paquet repérable – É.-U.
+module.shipping.canadapost.USA.TP.LVM=Paquet repérable – É.-U. (GEC - gros expéditeur de courrier)
+module.shipping.canadapost.USA.XP=Xpresspost É.-U.
+

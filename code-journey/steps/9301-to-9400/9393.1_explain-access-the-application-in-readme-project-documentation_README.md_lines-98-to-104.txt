@@ -1,0 +1,7 @@
+
+### Access the application:
+-------------------
+
+Access the headless web application at: http://localhost:8080/swagger-ui.html
+
+

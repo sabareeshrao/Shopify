@@ -1,0 +1,9 @@
+			
+			if(!checkIfExist.isPresent()) {
+				throw new ResourceNotFoundException("Shipping module [" + code + "] not found");
+			}
+			
+			IntegrationConfiguration config = shippingService.getShippingConfiguration(code, merchantStore);
+			if (config == null) {
+				config = new IntegrationConfiguration();
+			}

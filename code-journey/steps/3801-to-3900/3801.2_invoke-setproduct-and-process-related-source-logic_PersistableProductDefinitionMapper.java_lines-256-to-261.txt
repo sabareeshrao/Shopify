@@ -1,0 +1,6 @@
+					
+					attribute.setProduct(destination);
+					destination.getAttributes().add(attribute);
+
+				}
+			}

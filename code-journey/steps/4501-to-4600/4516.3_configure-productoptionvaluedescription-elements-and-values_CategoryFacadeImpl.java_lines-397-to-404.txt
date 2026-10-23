@@ -1,0 +1,8 @@
+				
+				if(attr.getProductOptionValue() != null) {
+					Optional<ProductOptionValueDescription> desc = attr.getProductOptionValue().getDescriptions()
+					.stream().filter(o -> o.getLanguage().getId() == language.getId()).findFirst();
+					
+					com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue val = new com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue();
+					val.setCode(attr.getProductOption().getCode());
+					String order = attr.getAttributeSortOrder();

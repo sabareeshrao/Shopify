@@ -1,0 +1,7 @@
+      transaction.setPaymentType(payment.getPaymentType());
+      transaction.setTransactionDate(new Date());
+      transaction.setTransactionType(payment.getTransactionType());
+      
+      return transaction;
+	}
+

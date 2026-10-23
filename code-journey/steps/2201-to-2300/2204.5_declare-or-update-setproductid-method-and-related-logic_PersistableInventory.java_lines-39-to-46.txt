@@ -1,0 +1,8 @@
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
+	public Long getVariant() {
+		return variant;
+	}

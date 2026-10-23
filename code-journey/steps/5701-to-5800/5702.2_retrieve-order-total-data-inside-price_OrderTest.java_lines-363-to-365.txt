@@ -1,3 +1,0 @@
-		
-		order.getOrderTotal().add(total);
-

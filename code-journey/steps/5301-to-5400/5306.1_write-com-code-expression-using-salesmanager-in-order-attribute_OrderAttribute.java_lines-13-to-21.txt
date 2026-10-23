@@ -1,9 +1,0 @@
-import com.salesmanager.core.constants.SchemaConstant;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-import com.salesmanager.core.model.order.Order;
-
-/**
- * Entity used for storing various attributes related to an Order
- * @author c.samson
- *
- */

@@ -1,0 +1,10 @@
+ * 
+ * gsutil ls -L -b gs://shopizer-content
+ * 
+ * 
+ * @author carlsamson
+ *
+ */
+@Component("gcpContentAssetsManager")
+public class GCPStaticContentAssetsManagerImpl implements ContentAssetsManager {
+

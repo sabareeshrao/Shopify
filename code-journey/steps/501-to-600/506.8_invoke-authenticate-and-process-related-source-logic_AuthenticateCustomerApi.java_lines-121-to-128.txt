@@ -1,0 +1,8 @@
+            try {
+                
+                authentication = jwtCustomerAuthenticationManager.authenticate(
+                        new UsernamePasswordAuthenticationToken(
+                                customer.getUserName(),
+                                customer.getPassword()
+                        )
+                );

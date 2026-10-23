@@ -1,0 +1,10 @@
+
+	  /**
+	   * Saves or updates a Product review
+	   *
+	   * @param review
+	   * @param language
+	   * @throws Exception
+	   */
+	  void saveOrUpdateReview(PersistableProductReview review, MerchantStore store, Language language)
+	      throws Exception;

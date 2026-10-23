@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NH",
-		"zoneName": "Nouveau Hampshire",
-		"countryCode": "US"
-	},

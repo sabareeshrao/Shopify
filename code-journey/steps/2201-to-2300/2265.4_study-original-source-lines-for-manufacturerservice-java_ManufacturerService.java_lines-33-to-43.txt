@@ -1,0 +1,11 @@
+
+	/**
+	 * List manufacturers by products from a given list of categories
+	 * @param store
+	 * @param ids
+	 * @param language
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<Manufacturer> listByProductsByCategoriesId(MerchantStore store,
+			List<Long> ids, Language language) throws ServiceException;

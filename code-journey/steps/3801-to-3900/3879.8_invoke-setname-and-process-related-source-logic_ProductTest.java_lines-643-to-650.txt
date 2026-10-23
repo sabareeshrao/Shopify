@@ -1,0 +1,8 @@
+	    dpd.setName("Base price");
+	    dpd.setProductPrice(dprice);
+	    dpd.setLanguage(en);
+
+	    dprice.getDescriptions().add(dpd);
+	    availability.getPrices().add(dprice);
+	    
+	    related.getAvailabilities().add(availability);

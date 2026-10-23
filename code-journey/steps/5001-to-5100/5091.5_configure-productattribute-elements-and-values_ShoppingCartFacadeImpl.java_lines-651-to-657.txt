@@ -1,0 +1,7 @@
+
+			List<ProductAttribute> productAttributes = new ArrayList<ProductAttribute>();
+			productAttributes.addAll(entryToUpdate.getProduct().getAttributes());
+
+			final FinalPrice finalPrice = pricingService.calculateProductPrice(entryToUpdate.getProduct(),
+					productAttributes);
+			entryToUpdate.setItemPrice(finalPrice.getFinalPrice());

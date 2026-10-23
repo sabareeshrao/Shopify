@@ -1,0 +1,9 @@
+
+		if(group!=null) {
+			List<Long> ids = new ArrayList<Long>();
+			for(ProductRelationship relationship : groups) {
+				Product product = relationship.getRelatedProduct();
+				ids.add(product.getId());
+			}
+			
+			ReadableProductList list = listItemsByIds(store, language, ids, 0, 0);

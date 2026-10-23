@@ -1,0 +1,7 @@
+            Validate.notNull(customer.getBilling(),"Requires customer Country code");
+            Validate.notNull(customer.getBilling().getCountry(),"Requires customer Country code");
+            
+            customerFacade.registerCustomer(customer, merchantStore, language);
+            
+            // Perform the security
+            Authentication authentication = null;

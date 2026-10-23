@@ -1,2 +1,0 @@
-	@Override
-	public List<ReadableProductReview> getProductReviews(Product product, MerchantStore store, Language language)

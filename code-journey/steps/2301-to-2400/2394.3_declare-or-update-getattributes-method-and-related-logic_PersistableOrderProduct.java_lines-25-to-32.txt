@@ -1,0 +1,8 @@
+
+	public List<ProductAttribute> getAttributes() {
+		return attributes;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}

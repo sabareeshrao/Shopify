@@ -1,0 +1,8 @@
+		if(shipOptionPriceType.equals(ShippingOptionPriceType.HIGHEST.name())) {
+			sType = ShippingOptionPriceType.HIGHEST;
+		}
+		if(shipOptionPriceType.equals(ShippingOptionPriceType.LEAST.name())) {
+			sType = ShippingOptionPriceType.LEAST;
+		}
+		setShippingOptionPriceType(sType);
+	}

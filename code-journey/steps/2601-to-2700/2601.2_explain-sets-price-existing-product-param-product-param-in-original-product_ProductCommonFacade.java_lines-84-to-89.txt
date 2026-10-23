@@ -1,0 +1,6 @@
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */
+	  ReadableProduct updateProductPrice(ReadableProduct product, ProductPriceEntity price,
+	      Language language) throws Exception;

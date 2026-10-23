@@ -1,0 +1,7 @@
+
+        KieModule kieModule = kb.getKieModule();
+
+        return kieServices.newKieContainer(kieModule.getReleaseId());
+
+    }
+

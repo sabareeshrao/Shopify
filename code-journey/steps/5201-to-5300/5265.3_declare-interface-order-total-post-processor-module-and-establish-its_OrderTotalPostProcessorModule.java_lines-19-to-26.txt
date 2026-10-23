@@ -1,0 +1,8 @@
+public interface OrderTotalPostProcessorModule extends Module {
+	
+	   /**
+	    * Uses the OrderSummary and external tools for applying if necessary
+	    * variations on the OrderTotal calculation.
+	    * @param summary OrderSummary
+	    * @param shoppingCartItem ShoppingCartItem
+	    * @param product Product

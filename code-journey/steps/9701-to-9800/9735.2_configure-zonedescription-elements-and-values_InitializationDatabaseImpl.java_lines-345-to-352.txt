@@ -1,0 +1,8 @@
+
+	    	    if(value.getDescriptions()==null) {
+	    	    	LOGGER.warn("This zone " + key + " has no descriptions");
+	    	    	continue;
+	    	    }
+	    	    
+	    	    List<ZoneDescription> zoneDescriptions = value.getDescriptions();
+	    	    value.setDescriptons(null);

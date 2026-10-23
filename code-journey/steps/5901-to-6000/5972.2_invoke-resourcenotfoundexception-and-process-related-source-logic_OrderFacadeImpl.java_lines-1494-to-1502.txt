@@ -1,0 +1,9 @@
+
+		if(modelOrder == null) {
+			throw new ResourceNotFoundException("Order id [" + orderId + "] not found for store [" + store.getCode() + "]");
+		}
+
+		//set customer information
+		modelOrder.setCustomerEmailAddress(customer.getEmailAddress());
+		modelOrder.setBilling(this.convertBilling(customer.getBilling()));
+		modelOrder.setDelivery(this.convertDelivery(customer.getDelivery()));

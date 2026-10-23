@@ -1,0 +1,6 @@
+
+  @Override
+  public void removeImages(String merchantStoreCode) throws ServiceException {
+    try {
+      // get buckets
+      String bucketName = bucketName();

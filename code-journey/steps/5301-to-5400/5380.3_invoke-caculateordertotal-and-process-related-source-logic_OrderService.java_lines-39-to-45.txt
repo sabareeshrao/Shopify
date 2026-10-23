@@ -1,0 +1,7 @@
+    OrderTotalSummary caculateOrderTotal(OrderSummary orderSummary,
+                                         Customer customer, MerchantStore store, Language language)
+                                                         throws ServiceException;
+
+    /**
+     * Can be used to calculates the final prices of all items contained in a ShoppingCart
+     * @param orderSummary

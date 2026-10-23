@@ -1,0 +1,10 @@
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "HimachalPradesh",
+		"zoneName": "Himachal Pradesh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Jharkhand",
+		"zoneName": "Jharkhand",

@@ -1,0 +1,5 @@
+	@Override
+	public Content getById(Long id, MerchantStore store, Language language) throws ServiceException {
+
+		Content content = contentRepository.findOne(id);
+

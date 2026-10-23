@@ -1,0 +1,6 @@
+	private SearchResponse search(MerchantStore store, String languageCode, String query, Integer count,
+			Integer start) {
+		
+		Validate.notNull(query,"Search Keyword must not be null");
+		Validate.notNull(languageCode, "Language cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");

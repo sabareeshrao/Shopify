@@ -1,0 +1,9 @@
+										cartItem.setQuantity(
+												cartItem.getQuantity() + sessionShoppingCartItem.getQuantity());
+										duplicateFound = true;
+										break;
+									}
+								}
+							}
+						}
+					}

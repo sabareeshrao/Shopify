@@ -1,0 +1,10 @@
+import java.io.Serializable;
+import javax.validation.constraints.NotEmpty;
+
+@Deprecated
+public abstract class Content implements Serializable {
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;

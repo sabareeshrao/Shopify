@@ -1,0 +1,6 @@
+    
+      default int indexOfLastSeparator(String filename) {
+        if (filename == null) {
+          return -1;
+        }
+        int lastUnixPos = filename.lastIndexOf(UNIX_SEPARATOR);

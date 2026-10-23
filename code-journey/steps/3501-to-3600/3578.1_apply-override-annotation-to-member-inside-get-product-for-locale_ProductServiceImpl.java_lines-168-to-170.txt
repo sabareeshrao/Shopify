@@ -1,3 +1,0 @@
-
-	@Override
-	public List<Product> getProductsForLocale(Category category, Language language, Locale locale)

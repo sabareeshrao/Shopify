@@ -1,0 +1,7 @@
+
+			List<ReadableContentBox> boxes = contentPages.getContent().stream()
+					.map(content -> convertContentToReadableContentBox(store, language, content))
+					.collect(Collectors.toList());
+
+			items.setItems(boxes);
+			return items;

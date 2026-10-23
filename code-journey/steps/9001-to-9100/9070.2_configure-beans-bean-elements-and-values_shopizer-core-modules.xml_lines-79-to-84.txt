@@ -1,0 +1,6 @@
+	<beans:bean id="moneyorder"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.MoneyOrderPayment" />
+	<beans:bean id="paypal-ec"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.PayPalExpressCheckoutPayment" />
+	<beans:bean id="stripe"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.StripePayment" />

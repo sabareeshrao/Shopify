@@ -1,0 +1,8 @@
+	public PersistableProductOptionValue getOptionValue() {
+		return optionValue;
+	}
+	public void setOptionValue(PersistableProductOptionValue optionValue) {
+		this.optionValue = optionValue;
+	}
+
+}

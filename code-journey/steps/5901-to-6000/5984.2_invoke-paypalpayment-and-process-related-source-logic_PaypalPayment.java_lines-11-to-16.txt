@@ -1,0 +1,6 @@
+	private String payerId;
+	private String paymentToken;
+	
+	public PaypalPayment() {
+		super.setPaymentType(PaymentType.PAYPAL);
+	}

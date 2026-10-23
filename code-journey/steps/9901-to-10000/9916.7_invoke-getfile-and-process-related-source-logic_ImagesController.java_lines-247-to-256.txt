@@ -1,0 +1,10 @@
+		if(image!=null) {
+			return image.getFile().toByteArray();
+		} else {
+			//empty image placeholder
+			return tempImage;
+		}
+
+	}
+
+}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "UT",
+		"zoneName": "Utah",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "VT",
+		"zoneName": "Vermont",
+		"countryCode": "US"
+	},

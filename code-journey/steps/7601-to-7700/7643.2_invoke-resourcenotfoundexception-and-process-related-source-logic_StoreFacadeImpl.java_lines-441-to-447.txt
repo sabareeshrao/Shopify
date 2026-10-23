@@ -1,0 +1,7 @@
+			if (retailer == null) {
+				throw new ResourceNotFoundException("Merchant [" + code + "] not found");
+			}
+
+			if (retailer.isRetailer() == null || !retailer.isRetailer().booleanValue()) {
+				throw new ResourceNotFoundException("Merchant [" + code + "] not a retailer");
+			}

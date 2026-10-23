@@ -1,0 +1,10 @@
+	@Override
+	public MerchantConfig getMerchantConfig(MerchantStore store) throws ServiceException {
+
+		MerchantConfiguration configuration = merchantConfigurationRepository.findByMerchantStoreAndKey(store.getId(), MerchantConfigurationType.CONFIG.name());
+		
+		MerchantConfig config = null;
+		if(configuration!=null) {
+			String value = configuration.getValue();
+			
+			ObjectMapper mapper = new ObjectMapper();

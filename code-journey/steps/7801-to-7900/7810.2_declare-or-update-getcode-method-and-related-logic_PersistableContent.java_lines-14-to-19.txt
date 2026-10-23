@@ -1,0 +1,6 @@
+  private String code;
+  private boolean isDisplayedInMenu;
+
+  public String getCode() {
+    return code;
+  }

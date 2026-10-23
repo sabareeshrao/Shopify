@@ -1,0 +1,7 @@
+
+		desc.setName(contentDescription.getName());
+		desc.setDescription(contentDescription.getDescription());
+
+		page.setId(content.getId());
+		desc.setSeUrl(contentDescription.getSeUrl());
+		page.setLinkToMenu(content.isLinkToMenu());

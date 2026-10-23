@@ -1,0 +1,7 @@
+				target.getDownloads().add(orderProductDownload);
+			}
+
+			target.setOneTimeCharge(source.getItemPrice());	
+			target.setProductName(source.getProduct().getDescriptions().iterator().next().getName());
+			target.setProductQuantity(source.getQuantity());
+			target.setSku(source.getProduct().getSku());

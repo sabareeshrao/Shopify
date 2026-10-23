@@ -1,0 +1,7 @@
+public abstract class StaticContentFile extends ContentFile {
+	
+	private FileContentType fileContentType;
+
+	public FileContentType getFileContentType() {
+		return fileContentType;
+	}

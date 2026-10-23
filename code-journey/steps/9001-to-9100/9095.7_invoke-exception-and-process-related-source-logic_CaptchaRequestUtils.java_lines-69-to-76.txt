@@ -1,0 +1,8 @@
+
+	      if (statusCode != HttpStatus.SC_OK) {
+	    	throw new Exception("Got an invalid response from reCaptcha " + url + " [" + httpResponse.getStatusLine() + "]");
+	      }
+
+	      // Read the response body.
+            HttpEntity entity = httpResponse.getEntity();
+            byte[] responseBody =EntityUtils.toByteArray(entity);

@@ -1,0 +1,7 @@
+		if (size == ProductImageSize.LARGE) {
+			imageName = "L-" + imageName;
+		}
+
+		if (size == ProductImageSize.SMALL) {
+			imageName = "S-" + imageName;
+		}

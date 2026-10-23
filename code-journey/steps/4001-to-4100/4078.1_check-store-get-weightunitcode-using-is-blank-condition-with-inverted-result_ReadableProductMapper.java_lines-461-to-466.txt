@@ -1,6 +1,0 @@
-		if (!StringUtils.isBlank(store.getWeightunitcode())) {
-			specifications.setWeightUnitOfMeasure(WeightUnitOfMeasure.valueOf(store.getWeightunitcode().toLowerCase()));
-		}
-		destination.setProductSpecifications(specifications);
-
-		destination.setSortOrder(source.getSortOrder());

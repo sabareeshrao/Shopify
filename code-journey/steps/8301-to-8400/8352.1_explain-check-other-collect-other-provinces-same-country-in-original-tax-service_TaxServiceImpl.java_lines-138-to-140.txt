@@ -1,3 +1,0 @@
-		
-		//check other conditions
-		//do not collect tax on other provinces of same country

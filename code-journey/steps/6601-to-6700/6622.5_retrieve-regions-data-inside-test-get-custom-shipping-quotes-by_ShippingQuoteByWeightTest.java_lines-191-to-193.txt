@@ -1,3 +1,0 @@
-		
-		customConfiguration.getRegions().add(northRegion);
-	    

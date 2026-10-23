@@ -1,0 +1,10 @@
+			
+			//bill to
+			//count bill to address cell
+			int billToCell = BILLTO_ROW_START;
+			if(!StringUtils.isBlank(order.getBilling().getFirstName())) {
+				StringBuilder nm = new StringBuilder();
+				nm.append(order.getBilling().getFirstName()).append(" ").append(order.getBilling().getLastName());
+				sheet.setValueAt(nm.toString(), 0, billToCell);
+				billToCell ++;
+			}

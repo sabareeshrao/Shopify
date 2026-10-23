@@ -1,0 +1,6 @@
+	public List<ReadableProductVariant> getproductVariants() {
+		return productVariants;
+	}
+	public void setproductVariants(List<ReadableProductVariant> productVariants) {
+		this.productVariants = productVariants;
+	}

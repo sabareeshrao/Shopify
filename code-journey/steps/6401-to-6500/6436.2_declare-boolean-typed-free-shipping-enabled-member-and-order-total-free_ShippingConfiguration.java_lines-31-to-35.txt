@@ -1,5 +1,0 @@
-	
-	//free shipping
-	private boolean freeShippingEnabled = false;
-	private BigDecimal orderTotalFreeShipping = null;
-	

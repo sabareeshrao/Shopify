@@ -1,0 +1,5 @@
+			if (authenticatedUser.equals(adminName)) {
+
+				if (!userModel.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new OperationNotAllowedException("User [" + adminName + "] cannot change owning store");
+				}

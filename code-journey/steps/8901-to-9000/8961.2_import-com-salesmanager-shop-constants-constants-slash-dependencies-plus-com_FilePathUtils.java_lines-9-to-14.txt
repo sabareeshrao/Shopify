@@ -1,0 +1,6 @@
+import static com.salesmanager.shop.constants.Constants.ORDER_DOWNLOAD_URI;
+import static com.salesmanager.shop.constants.Constants.SHOP_URI;
+import static com.salesmanager.shop.constants.Constants.SLASH;
+import static com.salesmanager.shop.constants.Constants.STATIC_URI;
+import static com.salesmanager.shop.constants.Constants.URL_EXTENSION;
+

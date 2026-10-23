@@ -1,0 +1,7 @@
+			
+			availability = a;
+			destination.setQuantity(availability.getProductQuantity() == null ? 1 : availability.getProductQuantity());
+			destination.setQuantityOrderMaximum(
+					availability.getProductQuantityOrderMax() == null ? 1 : availability.getProductQuantityOrderMax());
+			destination.setQuantityOrderMinimum(
+					availability.getProductQuantityOrderMin() == null ? 1 : availability.getProductQuantityOrderMin());

@@ -1,0 +1,5 @@
+	@Override
+	public ReadableInventory add(PersistableInventory inventory, MerchantStore store,
+			Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		ProductAvailability availability = getProductAvailabilityToSave(inventory, store);

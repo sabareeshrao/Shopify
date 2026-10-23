@@ -1,0 +1,7 @@
+						shoppingCartItem.setVariant(readableProductVariationMapper.convert(productVariant.get().getVariation(), store, language));
+						if(productVariant.get().getVariationValue() != null) {
+							shoppingCartItem.setVariantValue(readableProductVariationMapper.convert(productVariant.get().getVariationValue(), store, language));
+						}
+						
+						if(productVariant.get().getProductVariantGroup() != null) {
+							Set<String> nameSet = new HashSet<>();

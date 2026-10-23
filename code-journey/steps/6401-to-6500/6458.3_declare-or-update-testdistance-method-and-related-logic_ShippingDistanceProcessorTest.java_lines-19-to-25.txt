@@ -1,0 +1,7 @@
+
+	@Ignore
+	public void testDistance() throws Exception {
+		
+		ShippingQuote shippingQuote = new ShippingQuote();
+		
+		Delivery delivery = new Delivery();

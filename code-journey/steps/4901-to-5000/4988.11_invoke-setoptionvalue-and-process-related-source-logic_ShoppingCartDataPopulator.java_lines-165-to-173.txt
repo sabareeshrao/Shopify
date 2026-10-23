@@ -1,0 +1,9 @@
+                            	cartAttribute.setOptionValue(optionValue);
+                            	cartAttributes.add(cartAttribute);
+                            }
+                        }
+                        shoppingCartItem.setShoppingCartAttributes(cartAttributes);
+                    }
+                    shoppingCartItemsList.add(shoppingCartItem);
+                }
+            }

@@ -1,0 +1,5 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/manufacturer/unique" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	@ApiOperation(httpMethod = "GET", value = "Check if manufacturer code already exists", notes = "", response = EntityExists.class)

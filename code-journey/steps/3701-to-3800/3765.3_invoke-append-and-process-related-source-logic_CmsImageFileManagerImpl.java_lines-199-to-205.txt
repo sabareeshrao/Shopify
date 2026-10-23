@@ -1,0 +1,7 @@
+      smallPath.append(Constants.SLASH).append(SMALL).append(Constants.SLASH)
+          .append(productImage.getProductImage());
+
+
+      Path path = Paths.get(smallPath.toString());
+
+      Files.deleteIfExists(path);

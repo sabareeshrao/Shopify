@@ -1,0 +1,7 @@
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_ORDER, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		Order order = orderService.getOrder(id, merchantStore);
+		if (order == null) {
+			throw new GenericRuntimeException("412", "Order not found [" + id + "]");
+		}

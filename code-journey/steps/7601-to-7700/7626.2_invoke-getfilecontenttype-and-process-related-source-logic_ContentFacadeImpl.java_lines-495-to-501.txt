@@ -1,0 +1,7 @@
+				FileContentType fileType = getFileContentType(type);
+
+				InputContentFile cmsContent = new InputContentFile();
+				cmsContent.setFileName(fileName);
+				cmsContent.setMimeType(file.getContentType());
+				cmsContent.setFile(targetStream);
+				cmsContent.setFileContentType(fileType);

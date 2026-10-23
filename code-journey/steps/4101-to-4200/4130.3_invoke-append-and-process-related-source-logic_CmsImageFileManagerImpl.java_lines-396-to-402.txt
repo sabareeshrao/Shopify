@@ -1,0 +1,7 @@
+      nodePath.append(merchantStoreCode).append(Constants.SLASH).append(productCode)
+          .append(Constants.SLASH).append(size);
+
+      Node<String, Object> productNode = this.getNode(nodePath.toString());
+
+
+      byte[] imageBytes = (byte[]) productNode.get(imageName);

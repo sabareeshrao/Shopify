@@ -1,0 +1,7 @@
+		Validate.notNull(product,"Must set a product setProduct(Product)");
+		Validate.notNull(product.getId(),"Product must have an id not null");
+		Validate.notNull(source.getContentType(),"Content type must be set on persistable image");
+
+		
+		target.setDefaultImage(source.isDefaultImage());
+		target.setImageType(source.getImageType());

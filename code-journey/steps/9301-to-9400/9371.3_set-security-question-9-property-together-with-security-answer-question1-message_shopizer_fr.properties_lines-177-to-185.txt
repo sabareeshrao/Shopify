@@ -1,0 +1,9 @@
+security.questions.differentmessages=Choisir 3 questions différentes
+
+security.question1=Question 1
+security.question2=Question 2
+security.question3=Question 3
+security.answer.question1.message=Veuillez répondre à la question de sécurité 1
+security.answer.question2.message=Veuillez répondre à la question de sécurité 2
+security.answer.question3.message=Veuillez répondre à la question de sécurité 3
+

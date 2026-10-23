@@ -1,0 +1,7 @@
+		if(quoteModule==null) {
+			return null;
+		}
+		return quoteModule.getCustomModuleConfiguration(store);
+		
+	}
+	

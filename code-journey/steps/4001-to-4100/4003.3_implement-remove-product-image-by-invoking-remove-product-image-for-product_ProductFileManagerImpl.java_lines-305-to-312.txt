@@ -1,0 +1,8 @@
+     * small.setProductImage("S" + productImage.getProductImage());
+     *
+     * this.removeImage.removeProductImage(small);
+     */
+
+  }
+
+

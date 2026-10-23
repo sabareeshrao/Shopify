@@ -1,0 +1,6 @@
+label.generic.country=Country
+label.generic.price=Price
+label.generic.phone=Phone number
+label.generic.back=Back
+label.generic.setAsDefault=Set as default
+label.generic.country.code=Country code

@@ -1,0 +1,6 @@
+	
+	/**
+	 * List product items by id
+	 * @param store
+	 * @param language
+	 * @param ids

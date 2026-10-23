@@ -1,0 +1,8 @@
+		target.setProductImage(source.getName());
+		if(source.getImageUrl() != null) {
+			target.setProductImageUrl(source.getImageUrl());
+		}
+		target.setProduct(product);
+		
+		return target;
+	}

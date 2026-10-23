@@ -1,0 +1,6 @@
+               
+               if(target instanceof ReadableProductPriceFull) {
+                 ((ReadableProductPriceFull)target).setDescriptions(fulldescriptions);
+               }
+		    }
+

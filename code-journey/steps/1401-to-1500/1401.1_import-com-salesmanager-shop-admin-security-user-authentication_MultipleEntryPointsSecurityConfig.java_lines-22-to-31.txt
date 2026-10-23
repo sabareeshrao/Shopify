@@ -1,0 +1,10 @@
+import com.salesmanager.shop.admin.security.UserAuthenticationSuccessHandler;
+import com.salesmanager.shop.admin.security.WebUserServices;
+import com.salesmanager.shop.store.controller.customer.facade.CustomerFacade;
+import com.salesmanager.shop.store.security.AuthenticationTokenFilter;
+import com.salesmanager.shop.store.security.ServicesAuthenticationSuccessHandler;
+import com.salesmanager.shop.store.security.admin.JWTAdminAuthenticationProvider;
+import com.salesmanager.shop.store.security.admin.JWTAdminServicesImpl;
+import com.salesmanager.shop.store.security.customer.JWTCustomerAuthenticationProvider;
+import com.salesmanager.shop.store.security.services.CredentialsService;
+import com.salesmanager.shop.store.security.services.CredentialsServiceImpl;

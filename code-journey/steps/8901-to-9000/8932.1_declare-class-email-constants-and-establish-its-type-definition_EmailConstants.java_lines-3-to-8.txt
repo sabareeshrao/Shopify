@@ -1,0 +1,6 @@
+public class EmailConstants {
+	
+	public static final String EMAIL_NEW_USER_TEXT = "EMAIL_NEW_USER_TEXT";
+	public static final String EMAIL_USER_FIRSTNAME = "EMAIL_USER_FIRSTNAME";
+	public static final String EMAIL_USER_LASTNAME = "EMAIL_USER_LASTNAME";
+	public static final String EMAIL_ADMIN_USERNAME_LABEL = "EMAIL_ADMIN_USERNAME_LABEL";

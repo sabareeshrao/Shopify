@@ -1,0 +1,8 @@
+
+@Component
+public class ReadableProductImageMapper implements Mapper<ProductImage, ReadableImage> {
+
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;

@@ -1,0 +1,9 @@
+
+			/**
+			 * Domestic <Package ID="1ST"> <Service>ALL</Service>
+			 * <ZipOrigination>90210</ZipOrigination>
+			 * <ZipDestination>96698</ZipDestination> <Pounds>8</Pounds>
+			 * <Ounces>32</Ounces> <Container/> <Size>REGULAR</Size>
+			 * <Machinable>true</Machinable> </Package>
+			 * 
+			 * //MAXWEIGHT=70 lbs

@@ -1,0 +1,4 @@
+	
+	public final static String DEFAULT_PRICE_CODE="base";
+
+}

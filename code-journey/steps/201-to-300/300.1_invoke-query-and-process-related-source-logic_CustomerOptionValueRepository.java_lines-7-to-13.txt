@@ -1,0 +1,7 @@
+import java.util.List;
+
+public interface CustomerOptionValueRepository extends JpaRepository<CustomerOptionValue, Long> {
+
+	
+	@Query("select o from CustomerOptionValue o join fetch o.merchantStore om left join fetch o.descriptions od where o.id = ?1")
+	CustomerOptionValue findOne(Long id);

@@ -1,0 +1,6 @@
+		oproduct.setProductName( description.getName() );
+		oproduct.setProductQuantity(1);
+		oproduct.setSku(product.getSku());
+		
+		//set order product price
+		OrderProductPrice orderProductPrice = new OrderProductPrice();

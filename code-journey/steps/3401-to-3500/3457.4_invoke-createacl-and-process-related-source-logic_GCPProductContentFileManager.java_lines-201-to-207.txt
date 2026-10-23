@@ -1,0 +1,7 @@
+        Acl acl = storage.createAcl(blobId, Acl.of(User.ofAllUsers(), Role.READER));
+      } catch (IOException ioe) {
+        throw new ServiceException(ioe);
+      }
+
+    
+  }

@@ -1,0 +1,7 @@
+
+    com.salesmanager.shop.model.catalog.product.ProductDescription populateDescription(ProductDescription description) {
+      if(description == null) {
+        return null;
+      }
+
+      com.salesmanager.shop.model.catalog.product.ProductDescription tragetDescription = new com.salesmanager.shop.model.catalog.product.ProductDescription();

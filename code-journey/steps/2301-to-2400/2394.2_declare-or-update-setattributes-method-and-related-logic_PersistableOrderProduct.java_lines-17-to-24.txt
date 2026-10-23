@@ -1,0 +1,8 @@
+	private BigDecimal price;//specify final price
+	private List<ProductAttribute> attributes;//may have attributes
+
+
+
+	public void setAttributes(List<ProductAttribute> attributes) {
+		this.attributes = attributes;
+	}

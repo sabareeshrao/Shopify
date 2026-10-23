@@ -1,0 +1,6 @@
+
+			return destination;
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Error while converting product option", e);
+		}
+	}

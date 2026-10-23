@@ -1,0 +1,6 @@
+	public List<String> getFileNames(final String merchantStoreCode, Optional<String> folderPath,
+			final FileContentType staticContentType) throws ServiceException {
+
+		try {
+
+			StringBuilder merchantPath = new StringBuilder();

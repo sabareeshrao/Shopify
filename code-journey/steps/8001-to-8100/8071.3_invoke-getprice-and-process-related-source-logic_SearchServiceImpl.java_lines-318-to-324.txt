@@ -1,0 +1,7 @@
+		if(inventory.getPrice().isDiscounted()) {
+			inventoryMap.put(DISCOUNT_PRICE, String.valueOf(inventory.getPrice().getStringDiscountedPrice()));
+		}
+		
+		
+		return inventoryMap;
+	}

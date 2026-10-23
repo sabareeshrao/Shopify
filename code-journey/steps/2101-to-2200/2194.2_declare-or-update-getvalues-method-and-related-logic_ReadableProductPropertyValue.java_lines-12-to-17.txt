@@ -1,0 +1,6 @@
+	
+	private List<ProductOptionValueDescription> values = new ArrayList<ProductOptionValueDescription>();
+
+	public List<ProductOptionValueDescription> getValues() {
+		return values;
+	}

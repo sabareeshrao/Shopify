@@ -1,8 +1,0 @@
-  private String rootName = ROOT_NAME;
-
-  private CacheManager cacheManager;
-
-
-  /**
-   * Requires to stop the engine when image servlet un-deploys
-   */

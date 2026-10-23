@@ -1,0 +1,5 @@
+		validateUserPermission(userName, code);
+
+		// delete store logo
+		storeFacade.deleteLogo(code);
+	}

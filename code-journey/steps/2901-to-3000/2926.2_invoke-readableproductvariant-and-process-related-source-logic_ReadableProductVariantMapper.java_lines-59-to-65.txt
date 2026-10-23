@@ -1,0 +1,7 @@
+		
+		if(destination == null) {
+			destination = new ReadableProductVariant();
+		}
+		
+		destination.setSortOrder(source.getSortOrder() != null ? source.getSortOrder().intValue():0);
+		destination.setAvailable(source.isAvailable());

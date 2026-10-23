@@ -1,0 +1,9 @@
+
+		java.util.Set<ProductAvailability> availabilities = persistable.getAvailabilities();
+		for (ProductAvailability availability : availabilities) {
+			availability.setProductQuantity(quantity);
+		}
+
+		productService.saveProduct(persistable);
+
+		ReadableProduct readableProduct = new ReadableProduct();

@@ -1,0 +1,10 @@
+
+        final ResponseEntity<ReadableCategoryList> response = testRestTemplate.exchange(String.format("/api/v1/category/"), HttpMethod.GET,
+                httpEntity, ReadableCategoryList.class);
+        if (response.getStatusCode() != HttpStatus.OK) {
+            throw new Exception(response.toString());
+        } else {
+            final List<ReadableCategory> categories = response.getBody().getCategories();
+            assertNotNull(categories);
+        }
+    }

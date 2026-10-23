@@ -1,0 +1,7 @@
+public class ReadableProductVariantGroup extends ProductVariantGroup {
+
+	private static final long serialVersionUID = 1L;
+	
+	List<ReadableImage> images = new ArrayList<ReadableImage>();
+	
+	private List<ReadableProductVariant> productVariants = new ArrayList<ReadableProductVariant>();

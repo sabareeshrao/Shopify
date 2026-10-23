@@ -1,0 +1,7 @@
+    boolean exists = false;
+    Manufacturer manufacturer = manufacturerService.getByCode(store, manufacturerCode);
+    if(manufacturer!=null) {
+      exists = true;
+    }
+    return exists;
+  }

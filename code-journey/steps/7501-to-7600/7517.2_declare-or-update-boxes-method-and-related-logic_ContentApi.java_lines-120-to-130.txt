@@ -1,0 +1,11 @@
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableEntityList<ReadableContentBox> boxes(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			int page,
+			int count
+			) {
+		return contentFacade.getContentBoxes(ContentType.BOX, merchantStore, language, page, count);
+	}

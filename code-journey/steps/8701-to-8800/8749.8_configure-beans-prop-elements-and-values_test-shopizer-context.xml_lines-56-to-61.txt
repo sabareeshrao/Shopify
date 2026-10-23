@@ -1,0 +1,6 @@
+				
+				<beans:prop key="POPULATE_TEST_DATA">true</beans:prop>
+
+  </util:properties>
+
+</beans:beans>

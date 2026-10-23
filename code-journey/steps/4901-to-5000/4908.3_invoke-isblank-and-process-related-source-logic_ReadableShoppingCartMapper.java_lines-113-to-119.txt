@@ -1,0 +1,7 @@
+			if (!StringUtils.isBlank(source.getPromoCode())) {
+				Date promoDateAdded = source.getPromoAdded();// promo valid 1 day
+				if (promoDateAdded == null) {
+					promoDateAdded = new Date();
+				}
+				Instant instant = promoDateAdded.toInstant();
+				ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());

@@ -1,0 +1,6 @@
+label.order.pastorders=Historique des commandes
+label.order.summary=Sommaire de la commande
+label.order.details=Détails de la commande
+label.order.PROCESSING=En traîtement
+label.order.ORDERED=Commandée
+label.order.PAID=Payée

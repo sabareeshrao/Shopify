@@ -1,0 +1,7 @@
+		
+		possibleSizes.setValues(values);
+		
+
+		productOptionSetService.create(possibleSizes);
+		
+	}

@@ -1,0 +1,6 @@
+ * @author carlsamson
+ *
+ */
+public class RebatesOrderTotalVariation extends OrderTotalVariation {
+
+}

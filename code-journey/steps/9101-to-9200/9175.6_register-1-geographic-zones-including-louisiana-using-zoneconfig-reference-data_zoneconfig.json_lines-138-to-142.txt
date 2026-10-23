@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "LA",
-		"zoneName": "Louisiana",
-		"countryCode": "US"
-	},

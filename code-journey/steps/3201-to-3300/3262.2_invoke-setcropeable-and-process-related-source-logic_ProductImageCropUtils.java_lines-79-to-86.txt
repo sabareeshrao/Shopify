@@ -1,0 +1,8 @@
+
+		if (x < 0 || y < 0) {
+			setCropeable(false);
+		}
+
+		if (x == 0 && y == 0) {
+			setCropeable(false);
+		}

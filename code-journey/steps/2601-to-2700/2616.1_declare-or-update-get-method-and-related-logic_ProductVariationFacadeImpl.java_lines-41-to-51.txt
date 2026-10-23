@@ -1,0 +1,11 @@
+	@Override
+	public ReadableProductVariation get(Long variationId, MerchantStore store, Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+		Optional<ProductVariation> variation =  productVariationService.getById(store, variationId, language);
+		if(variation.isEmpty()) {
+			throw new ResourceNotFoundException("ProductVariation not found for id [" + variationId +"] and store [" + store.getCode() + "]");
+		}
+		
+		return readableProductVariationMapper.convert(variation.get(), store, language);
+	}

@@ -1,0 +1,7 @@
+
+    public void initialize(final FieldMatch constraintAnnotation)
+    {
+        this.firstFieldName = constraintAnnotation.first();
+        this.secondFieldName = constraintAnnotation.second();
+        this.beanUtils = BeanUtils.newInstance();
+    }

@@ -1,7 +1,0 @@
-
-/**
- * Add variation to the OrderTotal
- * This has to be defined in shopizer-core-ordertotal-processors
- * @author carlsamson
- *
- */

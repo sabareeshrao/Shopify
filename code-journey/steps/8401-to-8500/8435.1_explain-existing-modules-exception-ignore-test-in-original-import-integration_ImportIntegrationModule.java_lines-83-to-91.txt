@@ -1,0 +1,9 @@
+	
+	/**
+	 * Import all non existing modules
+	 * @throws Exception
+	 */
+	@Ignore
+	//@Test
+	public void importNonExistingIntegrationModule() throws Exception {
+		

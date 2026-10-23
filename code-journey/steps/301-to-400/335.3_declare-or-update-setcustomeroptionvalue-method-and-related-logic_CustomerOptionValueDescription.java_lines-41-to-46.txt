@@ -1,0 +1,6 @@
+
+	public void setCustomerOptionValue(CustomerOptionValue customerOptionValue) {
+		this.customerOptionValue = customerOptionValue;
+	}
+
+}

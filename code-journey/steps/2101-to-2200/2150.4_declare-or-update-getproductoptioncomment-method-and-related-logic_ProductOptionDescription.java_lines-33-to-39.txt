@@ -1,0 +1,7 @@
+	
+	public ProductOptionDescription() {
+	}
+	
+	public String getProductOptionComment() {
+		return productOptionComment;
+	}

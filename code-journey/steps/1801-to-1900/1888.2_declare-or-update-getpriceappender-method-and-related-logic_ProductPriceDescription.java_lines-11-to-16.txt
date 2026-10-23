@@ -1,0 +1,6 @@
+
+	private String priceAppender;
+
+	public String getPriceAppender() {
+		return priceAppender;
+	}

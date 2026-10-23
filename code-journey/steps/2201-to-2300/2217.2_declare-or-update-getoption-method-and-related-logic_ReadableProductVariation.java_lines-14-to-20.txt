@@ -1,0 +1,7 @@
+	ReadableProductOptionValue optionValue = null;
+	public ReadableProductOption getOption() {
+		return option;
+	}
+	public void setOption(ReadableProductOption option) {
+		this.option = option;
+	}

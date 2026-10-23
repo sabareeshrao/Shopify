@@ -1,0 +1,7 @@
+							if (!StringUtils.isBlank(mimetype)) {
+								String type = mimetype.split("/")[0];
+								if (type.equals("image")) {
+									fileNames.add(fileName);
+								}
+							}
+							// fileNames.add(fileName);

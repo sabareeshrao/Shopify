@@ -1,0 +1,6 @@
+		if (optionSet != null) {
+			return true;
+		}
+
+		return false;
+	}

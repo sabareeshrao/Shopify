@@ -1,0 +1,9 @@
+		contentDescription.setFriendlyUrl(description.getSeUrl());
+		contentDescription.setDescription(description.getDescription());
+		if (description.getId() != null && description.getId().longValue() > 0) {
+			contentDescription.setId(description.getId());
+		}
+
+		return contentDescription;
+
+	}

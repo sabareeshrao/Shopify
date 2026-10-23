@@ -1,0 +1,8 @@
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiImplicitParams({
+			@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public FileStatus upload(
+			@RequestParam(value = "qqfile", required = true) MultipartFile qqfile,
+			@RequestParam(value = "qquuid", required = true) String qquuid,
+			@RequestParam(value = "qqfilename", required = true) String qqfilename,

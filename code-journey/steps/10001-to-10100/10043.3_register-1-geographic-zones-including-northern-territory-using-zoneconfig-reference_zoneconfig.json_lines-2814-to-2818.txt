@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "NTAU",
-			"zoneName": "Northern Territory",
-			"countryCode": "AU"
-		},

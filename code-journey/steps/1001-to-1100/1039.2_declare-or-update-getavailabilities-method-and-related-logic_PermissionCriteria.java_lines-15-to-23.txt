@@ -1,0 +1,9 @@
+	
+	private Set<Integer> groupIds;
+	
+	private List<String> availabilities;
+
+
+	public List<String> getAvailabilities() {
+		return availabilities;
+	}

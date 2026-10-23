@@ -1,0 +1,8 @@
+
+    ReadableCatalogCategoryEntry getCatalogEntry(Long id, MerchantStore store, Language language);
+
+    ReadableCatalogCategoryEntry addCatalogEntry(PersistableCatalogCategoryEntry entry, MerchantStore store, Language language);
+
+    void removeCatalogEntry(Long catalogId, Long catalogEntryId, MerchantStore store, Language language);
+
+}

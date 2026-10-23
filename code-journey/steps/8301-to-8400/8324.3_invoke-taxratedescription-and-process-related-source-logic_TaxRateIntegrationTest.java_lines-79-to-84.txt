@@ -1,0 +1,6 @@
+    	
+    	//descriptions
+    	TaxRateDescription en = new TaxRateDescription();
+    	en.setLanguage("en");
+    	en.setName("TaxCode1EN");
+    	en.setDescription("TaxCode1EN description");

@@ -1,0 +1,10 @@
+
+					imageList.add(prdImage);
+				}
+				imageList = imageList.stream()
+				.sorted(Comparator.comparingInt(ReadableImage::getOrder))
+				.collect(Collectors.toList());
+				
+				target
+				.setImages(imageList);
+			}

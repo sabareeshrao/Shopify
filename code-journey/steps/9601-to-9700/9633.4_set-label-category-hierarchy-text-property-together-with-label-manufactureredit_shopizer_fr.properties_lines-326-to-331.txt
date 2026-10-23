@@ -1,0 +1,6 @@
+label.category.hierarchy.text=Glisser les catégories pour ré-organiser la hierarchie
+label.category.maincategories=Main categories
+
+#manufacturer
+label.manufacturer.brand=Marques
+label.manufacturer.edit=éditer le manufacturier

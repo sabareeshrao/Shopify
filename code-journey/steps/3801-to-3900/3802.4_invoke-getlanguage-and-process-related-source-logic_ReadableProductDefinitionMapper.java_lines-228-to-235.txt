@@ -1,0 +1,8 @@
+
+		if (description.getLanguage() != null) {
+			tragetDescription.setLanguage(description.getLanguage().getCode());
+		}
+		return tragetDescription;
+	}
+
+}

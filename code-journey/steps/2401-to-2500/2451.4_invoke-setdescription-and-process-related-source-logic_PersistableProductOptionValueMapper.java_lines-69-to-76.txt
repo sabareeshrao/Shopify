@@ -1,0 +1,8 @@
+				            	  d.setDescription(desc.getDescription());
+				            	  d.setName(desc.getName());
+				            	  d.setTitle(desc.getTitle());
+				            	  if(StringUtils.isBlank(d.getName())) {
+				            		  d.setName(d.getDescription());
+				            	  }
+				            	  description = d;
+				            	  break;

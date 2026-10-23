@@ -1,0 +1,7 @@
+			try {
+				response.sendError(503, "Error while updating product " + e.getMessage());
+			} catch (Exception ignore) {
+			}
+
+		}
+	}

@@ -1,0 +1,8 @@
+
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
+
+	public PersistablePayment getPayment() {
+		return payment;
+	}

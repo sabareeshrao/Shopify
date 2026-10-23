@@ -1,0 +1,7 @@
+
+        if (source.getParent() != null) {
+            final com.salesmanager.shop.model.catalog.category.Category parent = new com.salesmanager.shop.model.catalog.category.Category();
+            parent.setCode(source.getParent().getCode());
+            parent.setId(source.getParent().getId());
+            target.setParent(parent);
+        }

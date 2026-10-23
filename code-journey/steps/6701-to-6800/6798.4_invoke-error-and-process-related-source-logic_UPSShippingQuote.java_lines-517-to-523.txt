@@ -1,0 +1,7 @@
+
+					} catch (Exception e) {
+						log.error("Display quote is not an integer value ["
+								+ rtdetails.getConfigurationValue1() + "]");
+					}
+				}
+			}*/

@@ -1,0 +1,6 @@
+
+	@Override
+	public void deleteAttribute(Long productId, Long attributeId, MerchantStore store) {
+		try {
+
+			ProductAttribute attr = productAttributeService.getById(attributeId);

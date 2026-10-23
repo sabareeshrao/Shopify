@@ -1,0 +1,6 @@
+
+	@Override
+	public void removeOptionValueImage(Long optionValueId, MerchantStore store,
+			Language language) {
+		Validate.notNull(optionValueId,"OptionValueId must not be null");
+		ProductOptionValue value = productOptionValueService.getById(store, optionValueId);

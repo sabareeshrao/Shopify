@@ -1,0 +1,8 @@
+
+	public void setTotal(BigDecimal total) {
+		this.total = total;
+	}
+
+	public List<OrderTotal> getTotals() {
+		return totals;
+	}

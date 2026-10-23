@@ -1,8 +1,0 @@
-
-	/**
-	 * Returns a list of Category by category code for a given language
-	 * @param store
-	 * @param codes
-	 * @param language
-	 * @return
-	 */

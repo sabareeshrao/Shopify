@@ -1,0 +1,5 @@
+
+/**
+ * Drop files in reference/zones with following format
+ * 
+ * <country code>_<language code>.json All lower cases

@@ -1,6 +1,0 @@
-
-  /**
-   * Currency
-   *
-   * @return
-   */

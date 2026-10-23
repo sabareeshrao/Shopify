@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "MH",
-			"zoneName": "Marshall Islands",
-			"countryCode": "US"
-		},

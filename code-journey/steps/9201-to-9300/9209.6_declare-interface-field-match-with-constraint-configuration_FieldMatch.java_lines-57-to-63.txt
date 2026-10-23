@@ -1,0 +1,7 @@
+
+    /**
+     * Defines several <code>@FieldMatch</code> annotations on the same element
+     *
+     * @see FieldMatch
+     */
+    @Target({TYPE, ANNOTATION_TYPE})

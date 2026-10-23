@@ -1,0 +1,9 @@
+	
+	/**
+	 * Delete a Catalog and related objects
+	 */
+	void delete(Catalog catalog) throws ServiceException;
+	
+	boolean existByCode(String code, MerchantStore store);
+
+}

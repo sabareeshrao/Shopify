@@ -1,0 +1,9 @@
+
+	/**
+	 * List specific content box
+	 * @param code
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping(value = "/content/pages/{code}", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -1,0 +1,7 @@
+					contentImagesList.add(productImage);
+				}
+			}
+
+			if (CollectionUtils.isNotEmpty(contentImagesList)) {
+				productImageService.addProductImages(product, contentImagesList);
+			}

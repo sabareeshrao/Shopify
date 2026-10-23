@@ -1,0 +1,9 @@
+public class CustomShippingQuoteWeightItem extends CustomShippingQuoteItem implements JSONAware {
+	
+	private int maximumWeight;
+	
+	private String priceText;
+
+	public String getPriceText() {
+		return priceText;
+	}

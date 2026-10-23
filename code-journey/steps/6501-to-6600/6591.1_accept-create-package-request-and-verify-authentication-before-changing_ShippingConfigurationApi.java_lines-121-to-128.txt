@@ -1,0 +1,8 @@
+
+	// create packaging
+	@ApiOperation(httpMethod = "POST", value = "Create new package specification", notes = "", produces = "application/json", response = Void.class)
+	@RequestMapping(value = { "/private/shipping/package" }, method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.OK)
+	public void createPackage(@RequestBody PackageDetails details, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+

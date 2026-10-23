@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.order.ShopOrder;
+import com.salesmanager.shop.model.order.history.PersistableOrderStatusHistory;
+import com.salesmanager.shop.model.order.history.ReadableOrderStatusHistory;
+import com.salesmanager.shop.model.order.transaction.ReadableTransaction;
+
+

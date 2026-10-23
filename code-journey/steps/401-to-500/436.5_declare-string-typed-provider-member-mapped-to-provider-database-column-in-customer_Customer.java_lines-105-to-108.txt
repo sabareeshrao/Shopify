@@ -1,4 +1,0 @@
-	
-	@Column(name="PROVIDER")
-	private String provider;
-	

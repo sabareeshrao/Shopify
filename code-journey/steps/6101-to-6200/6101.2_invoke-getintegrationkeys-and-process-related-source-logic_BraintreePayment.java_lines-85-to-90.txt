@@ -1,0 +1,6 @@
+		
+		String merchantId = configuration.getIntegrationKeys().get("merchant_id");
+		String publicKey = configuration.getIntegrationKeys().get("public_key");
+		String privateKey = configuration.getIntegrationKeys().get("private_key");
+		
+		Validate.notNull(merchantId,"merchant_id cannot be null");

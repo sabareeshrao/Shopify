@@ -1,0 +1,8 @@
+
+	public void setShoppingCartId(Long shoppingCartId) {
+		this.shoppingCartId = shoppingCartId;
+	}
+
+	public Long getCustomerId() {
+		return customerId;
+	}

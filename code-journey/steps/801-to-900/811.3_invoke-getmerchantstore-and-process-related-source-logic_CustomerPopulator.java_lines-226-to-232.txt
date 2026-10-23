@@ -1,0 +1,7 @@
+					
+					if(customerOptionValue.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Invalid customer option value id ");
+					}
+					
+					CustomerAttribute attribute = new CustomerAttribute();
+					attribute.setCustomer(target);

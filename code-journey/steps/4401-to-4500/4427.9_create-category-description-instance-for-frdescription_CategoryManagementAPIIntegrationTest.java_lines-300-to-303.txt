@@ -1,4 +1,0 @@
-        endescription.setTitle("Lounge");
-
-        frdescription = new CategoryDescription();
-        frdescription.setLanguage("fr");

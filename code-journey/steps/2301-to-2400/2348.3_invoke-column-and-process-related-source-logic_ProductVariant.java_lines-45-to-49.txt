@@ -1,0 +1,5 @@
+public class ProductVariant extends SalesManagerEntity<Long, ProductVariant> implements Auditable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "PRODUCT_VARIANT_ID", unique = true, nullable = false)

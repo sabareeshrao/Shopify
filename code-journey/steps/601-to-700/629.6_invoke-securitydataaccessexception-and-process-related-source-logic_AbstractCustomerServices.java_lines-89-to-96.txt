@@ -1,0 +1,8 @@
+			throw new SecurityDataAccessException("Cannot authenticate customer",e);
+		}
+
+		return userDetails(userName, user, authorities);
+		
+	}
+
+}

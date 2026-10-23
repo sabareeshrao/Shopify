@@ -1,0 +1,7 @@
+    
+    /**
+     * Method responsible for fetching particular content image for a given merchant store. Requested image will be
+     * search in Infinispan tree cache and OutputContentImage will be sent, in case no image is found null will
+     * returned.
+     * 
+     * @param merchantStoreCode

@@ -1,0 +1,7 @@
+			StringBuilder nodePath = new StringBuilder();
+			nodePath.append(merchantPath.toString()).append(Constants.SLASH);
+			if(folderPath.isPresent()) {
+				nodePath.append(folderPath.get()).append(Constants.SLASH);
+			}
+			
+			nodePath.append(folderName);

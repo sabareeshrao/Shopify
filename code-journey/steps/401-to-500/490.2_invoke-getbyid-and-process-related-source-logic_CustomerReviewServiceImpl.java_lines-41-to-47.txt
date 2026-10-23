@@ -1,0 +1,7 @@
+		
+		
+		//refresh customer
+		Customer customer = customerService.getById(review.getReviewedCustomer().getId());
+		
+		//ajust product rating
+		Integer count = 0;

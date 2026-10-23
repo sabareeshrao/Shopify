@@ -1,0 +1,6 @@
+public class PersistableTaxRate extends TaxRateEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

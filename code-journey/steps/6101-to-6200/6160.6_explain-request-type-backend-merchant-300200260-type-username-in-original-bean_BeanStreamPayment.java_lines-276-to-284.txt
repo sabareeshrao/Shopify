@@ -1,0 +1,9 @@
+			&ordProvince=QC
+			&ordPostalCode=J3B8J1
+			&ordCountry=CA
+			&ordPhoneNumber=(444) 555-6666
+			&ordEmailAddress=test@yahoo.com
+			**/
+			
+			/**
+			merchant_id=123456789&requestType=BACKEND

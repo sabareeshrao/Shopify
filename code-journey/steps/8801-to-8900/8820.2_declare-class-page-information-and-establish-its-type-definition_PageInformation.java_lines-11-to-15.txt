@@ -1,0 +1,5 @@
+	private String pageTitle;
+	private String pageDescription;
+	private String pageKeywords;
+	private String pageUrl;
+	private String pageImageUrl;

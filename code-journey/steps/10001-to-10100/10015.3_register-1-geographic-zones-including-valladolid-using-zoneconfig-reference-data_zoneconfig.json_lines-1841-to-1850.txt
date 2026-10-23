@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Valladolid",
+		"zoneName": "Valladolid",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Vizcaya",
+		"zoneName": "Vizcaya",
+		"countryCode": "ES"
+	},

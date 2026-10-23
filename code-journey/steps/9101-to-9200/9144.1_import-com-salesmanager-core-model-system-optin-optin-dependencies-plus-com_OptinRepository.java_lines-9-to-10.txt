@@ -1,2 +1,0 @@
-import com.salesmanager.core.model.system.optin.Optin;
-import com.salesmanager.core.model.system.optin.OptinType;

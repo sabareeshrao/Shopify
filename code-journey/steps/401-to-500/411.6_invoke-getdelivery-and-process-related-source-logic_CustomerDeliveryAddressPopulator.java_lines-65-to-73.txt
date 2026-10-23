@@ -1,0 +1,9 @@
+        if(source.getDelivery().getCountry()!=null) {
+            target.setCountry(source.getDelivery().getCountry().getIsoCode());
+        }
+        if(source.getDelivery().getZone()!=null) {
+            target.setZone(source.getDelivery().getZone().getCode());
+        }
+        }
+        return target;
+    }

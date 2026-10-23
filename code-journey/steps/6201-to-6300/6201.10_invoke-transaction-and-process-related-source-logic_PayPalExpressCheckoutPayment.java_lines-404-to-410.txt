@@ -1,0 +1,7 @@
+
+			 
+			 Transaction newTransaction = new Transaction();
+			 newTransaction.setAmount(amount);
+			 newTransaction.setTransactionDate(new Date());
+			 newTransaction.setTransactionType(TransactionType.REFUND);
+			 newTransaction.setPaymentType(PaymentType.PAYPAL);

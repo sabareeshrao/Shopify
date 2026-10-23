@@ -1,0 +1,9 @@
+	public BigDecimal getMaxPrice() {
+		return maxPrice;
+	}
+	public void setMaxPrice(BigDecimal maxPrice) {
+		this.maxPrice = maxPrice;
+	}
+
+
+}

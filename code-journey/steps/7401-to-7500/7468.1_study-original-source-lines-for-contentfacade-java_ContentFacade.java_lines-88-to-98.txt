@@ -1,0 +1,11 @@
+	
+	/**
+	 * Returns a content box for a given code and merchant store
+	 * @param code
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableContentBox getContentBox(String code, MerchantStore store, Language language);
+	

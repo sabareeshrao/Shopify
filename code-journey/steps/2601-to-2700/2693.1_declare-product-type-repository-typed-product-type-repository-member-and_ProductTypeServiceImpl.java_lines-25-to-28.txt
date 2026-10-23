@@ -1,4 +1,0 @@
-	private ProductTypeRepository productTypeRepository;
-	
-	@Autowired
-	private PageableProductTypeRepository pageableProductTypeRepository;

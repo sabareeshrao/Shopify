@@ -1,0 +1,6 @@
+	private String creationDate;
+	//private ReadableProduct product;
+	private ReadableCategory category;
+	public String getCreationDate() {
+		return creationDate;
+	}

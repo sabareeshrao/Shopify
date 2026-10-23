@@ -1,0 +1,9 @@
+
+@Service("emailService")
+public class EmailServiceImpl implements EmailService {
+
+	@Inject
+	private MerchantConfigurationService merchantConfigurationService;
+	
+	@Inject
+	private HtmlEmailSender sender;

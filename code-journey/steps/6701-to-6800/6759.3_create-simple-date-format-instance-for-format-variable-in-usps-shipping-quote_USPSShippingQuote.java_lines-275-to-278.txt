@@ -1,4 +1,0 @@
-			
-			SimpleDateFormat format = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
-			String shipDate = format.format(newDate);
-			

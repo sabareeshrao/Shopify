@@ -1,0 +1,6 @@
+
+	private IntegrationModuleSummaryEntity integrationModule(IntegrationModule module,
+			Map<String, IntegrationConfiguration> configuredModules) {
+
+		IntegrationModuleSummaryEntity readable = null;
+		readable = new IntegrationModuleSummaryEntity();

@@ -1,0 +1,9 @@
+
+    @Bean
+    public HikariDataSource dataSource() {
+    	HikariDataSource dataSource = DataSourceBuilder.create().type(HikariDataSource.class)
+    	.driverClassName(driverClassName)
+    	.url(url)
+    	.username(user)
+    	.password(password)
+    	.build();

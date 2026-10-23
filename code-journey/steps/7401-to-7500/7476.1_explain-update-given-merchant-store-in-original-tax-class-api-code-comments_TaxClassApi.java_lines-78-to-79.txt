@@ -1,2 +1,0 @@
-
-	/** Update tax class for a given MerchantStore */

@@ -1,7 +1,0 @@
-	public String buildStaticFilePath(String storeCode, String fileName) {
-		String path = FILES_URI + SLASH + storeCode + SLASH;
-		if (StringUtils.isNotBlank(fileName)) {
-			return path + fileName;
-		}
-		return path;
-	}

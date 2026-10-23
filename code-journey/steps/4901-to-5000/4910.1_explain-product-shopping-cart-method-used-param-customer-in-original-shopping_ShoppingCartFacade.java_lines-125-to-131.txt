@@ -1,0 +1,7 @@
+	@Nullable
+	ReadableShoppingCart removeShoppingCartItem(String cartCode, String sku, MerchantStore merchant, Language language, boolean returnCart) throws Exception;
+
+	/**
+	 * Add product to ShoppingCart
+	 * This method is used by the API
+	 * @param customer

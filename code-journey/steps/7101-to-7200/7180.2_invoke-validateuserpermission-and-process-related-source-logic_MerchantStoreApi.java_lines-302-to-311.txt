@@ -1,0 +1,10 @@
+
+		validateUserPermission(userName, code);
+
+		if (uploadfile.isEmpty()) {
+			throw new RestApiException("Upload file is empty");
+		}
+
+		InputContentFile cmsContentImage = createInputContentFile(uploadfile);
+		storeFacade.addStoreLogo(code, cmsContentImage);
+	}

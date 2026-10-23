@@ -1,8 +1,0 @@
-public class ShippingInputParameters {
-	
-	private String moduleName;
-	private long weight;
-	private long volume;
-	private String country;
-	private String province;
-	private long distance;

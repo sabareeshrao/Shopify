@@ -1,0 +1,7 @@
+
+		product.getCategories().remove(category);
+		productService.saveProduct(product);
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();

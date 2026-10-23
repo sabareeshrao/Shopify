@@ -1,0 +1,7 @@
+				response.sendError(503, "Merchant store is null for code " + store);
+				return null;
+			}
+			
+			Language language = merchantStore.getDefaultLanguage();
+			
+			Map<String,Language> langs = languageService.getLanguagesMap();

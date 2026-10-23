@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "GA",
-			"zoneName": "Georgia",
-			"countryCode": "US"
-		},

@@ -1,0 +1,8 @@
+			List<S3ObjectSummary> objects = results.getObjectSummaries();
+			for (S3ObjectSummary os : objects) {
+				if (isInsideSubFolder(os.getKey())) {
+					continue;
+				}
+				if (fileNames == null) {
+					fileNames = new ArrayList<String>();
+				}

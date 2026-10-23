@@ -1,0 +1,8 @@
+    
+                //to be used when username and password are set
+                authentication = jwtCustomerAuthenticationManager.authenticate(
+                        new UsernamePasswordAuthenticationToken(
+                                authenticationRequest.getUsername(),
+                                authenticationRequest.getPassword()
+                        )
+                );

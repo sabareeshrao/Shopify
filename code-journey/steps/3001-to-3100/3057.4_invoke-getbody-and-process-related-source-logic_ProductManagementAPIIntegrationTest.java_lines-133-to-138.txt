@@ -1,0 +1,6 @@
+
+		final PersistableProductReview rev = response.getBody();
+		assertThat(response.getStatusCode(), is(CREATED));
+		assertNotNull(rev.getId());
+
+	}

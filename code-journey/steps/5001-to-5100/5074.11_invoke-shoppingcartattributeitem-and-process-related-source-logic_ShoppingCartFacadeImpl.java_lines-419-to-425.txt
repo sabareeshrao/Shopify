@@ -1,0 +1,7 @@
+						com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attributeItem = new com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem(
+								item, productAttribute);
+
+						item.addAttributes(attributeItem);
+					}
+				}
+			}

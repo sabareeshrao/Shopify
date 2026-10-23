@@ -1,0 +1,7 @@
+        if (type != null && !FileContentType.IMAGE.name().equals(type.name()) && !FileContentType.STATIC_FILE.name().equals(type.name())) {
+            builder.append(type.name()).append(Constants.SLASH);
+        }
+
+        return builder.toString();
+
+    }

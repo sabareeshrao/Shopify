@@ -1,3 +1,0 @@
-	@Override
-	public List<PackageDetails> getItemPackagesDetails(
-			List<ShippingProduct> products, MerchantStore store)

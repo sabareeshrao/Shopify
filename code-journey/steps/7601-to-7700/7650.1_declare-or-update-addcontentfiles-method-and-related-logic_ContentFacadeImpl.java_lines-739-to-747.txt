@@ -1,0 +1,9 @@
+
+	@Override
+	public void addContentFiles(List<ContentFile> files, String merchantStoreCode) {
+		for (ContentFile file : files) {
+			addContentFile(file, merchantStoreCode);
+		}
+
+	}
+

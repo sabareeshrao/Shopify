@@ -1,0 +1,10 @@
+				while (((_line = is.readLine()) != null)) {
+					respText = respText + _line;
+				}
+				
+				LOGGER.debug("BeanStream response -> " + respText.trim());
+				
+				nvp = formatUrlResponse(respText.trim());
+			} else {
+				throw new IntegrationException("Invalid response from BeanStream, return code is " + rc);
+			}

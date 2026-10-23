@@ -1,0 +1,8 @@
+		
+		for(CustomerAttribute attribute : attributes) {
+			customerAttributeService.delete(attribute);
+		}
+		
+		CustomerOption option = this.getById(customerOption.getId());
+		
+		List<CustomerOptionSet> optionSets = customerOptionSetService.listByOption(customerOption, customerOption.getMerchantStore());

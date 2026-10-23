@@ -1,0 +1,8 @@
+
+		if (customer == null) {
+			throw new ResourceNotFoundException("No Customer found for id [" + id + "]");
+		}
+
+		customerFacadev1.authorize(customer, principal);
+
+		ReadableShoppingCart readableCart = shoppingCartFacadev1.get(cart, id, merchantStore, language);

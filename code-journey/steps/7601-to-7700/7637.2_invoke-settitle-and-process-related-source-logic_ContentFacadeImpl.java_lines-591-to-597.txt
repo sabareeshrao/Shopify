@@ -1,0 +1,7 @@
+		desc.setTitle(description.getTitle());
+		desc.setFriendlyUrl(description.getSeUrl());
+		desc.setId(description.getId());
+		desc.setLanguage(description.getLanguage().getCode());
+		return desc;
+	}
+

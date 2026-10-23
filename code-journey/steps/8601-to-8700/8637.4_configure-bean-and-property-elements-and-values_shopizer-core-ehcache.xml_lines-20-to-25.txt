@@ -1,0 +1,6 @@
+
+	<bean id="serviceCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager">
+			<ref bean="springCacheManager" />
+		</property>
+	</bean>

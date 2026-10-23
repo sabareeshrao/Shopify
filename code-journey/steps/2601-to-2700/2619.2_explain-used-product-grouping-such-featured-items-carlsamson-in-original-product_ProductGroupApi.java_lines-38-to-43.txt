@@ -1,6 +1,0 @@
-
-/**
- * Used for product grouping such as featured items
- *
- * @author carlsamson
- */

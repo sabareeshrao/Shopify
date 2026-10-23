@@ -1,0 +1,9 @@
+		if(productId == null) {
+			throw new RestApiException("Requires request parameter product id [/product/inventoty?productId");
+		}
+
+		return productInventoryFacade.get(productId, merchantStore, language, page, count);
+
+	}
+
+}

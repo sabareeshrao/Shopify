@@ -1,0 +1,5 @@
+		if(!StringUtils.isBlank(type)) {
+			return productOptionSetFacade.list(merchantStore, language, type);
+		} else {
+			return productOptionSetFacade.list(merchantStore, language);
+		}

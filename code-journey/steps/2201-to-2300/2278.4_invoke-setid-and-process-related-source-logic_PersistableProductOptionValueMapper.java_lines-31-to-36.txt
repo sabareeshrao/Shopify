@@ -1,0 +1,6 @@
+		desc.setId(null);
+		desc.setDescription(description.getDescription());
+		desc.setName(description.getName());
+		if(StringUtils.isBlank(desc.getName())) {
+			desc.setName(description.getDescription());
+		}

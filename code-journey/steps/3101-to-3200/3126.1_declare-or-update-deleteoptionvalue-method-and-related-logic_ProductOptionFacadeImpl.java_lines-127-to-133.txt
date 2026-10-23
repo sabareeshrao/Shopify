@@ -1,0 +1,7 @@
+	@Override
+	public void deleteOptionValue(Long optionValueId, MerchantStore store) {
+		ProductOptionValue optionModel = productOptionValueService.getById(store, optionValueId);
+		if (optionModel == null) {
+			throw new ResourceNotFoundException(
+					"ProductOptionValue not found for  [" + optionValueId + "] and store [" + store.getCode() + "]");
+		}

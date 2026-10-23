@@ -1,0 +1,8 @@
+			
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+				emailConfig = mapper.readValue(value, EmailConfig.class);
+			} catch(Exception e) {
+				throw new ServiceException("Cannot parse json string " + value);
+			}
+		}

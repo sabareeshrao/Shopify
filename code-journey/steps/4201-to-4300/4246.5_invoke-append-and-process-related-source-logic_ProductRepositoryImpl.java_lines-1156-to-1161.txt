@@ -1,0 +1,6 @@
+		
+		qs.append("left join fetch pinst.variationValue pvv ");
+		qs.append("left join fetch pvv.productOption pvvpo ");
+		qs.append("left join fetch pvv.productOptionValue pvvpov ");
+		qs.append("left join fetch pvvpo.descriptions povvpod ");
+		qs.append("left join fetch pvpov.descriptions povvpovd ");	

@@ -1,0 +1,8 @@
+	
+	@Before
+	public void init() throws ServiceException {
+		if(initializationDatabase.isEmpty()) {
+		  populate();
+		}
+
+	}

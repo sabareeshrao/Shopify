@@ -1,0 +1,9 @@
+		try {
+
+			boolean cartIsObsolete = false;
+			if (shoppingCart != null) {
+
+				Set<ShoppingCartItem> items = shoppingCart.getLineItems();
+				if (items == null || items.size() == 0) {
+					shoppingCart.setObsolete(true);
+					return shoppingCart;

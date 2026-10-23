@@ -1,0 +1,7 @@
+		if (user == null) {
+			throw new ResourceNotFoundException("User [" + id + "] not found");
+		}
+
+		return convertUserToReadableUser(lang, user);
+
+	}

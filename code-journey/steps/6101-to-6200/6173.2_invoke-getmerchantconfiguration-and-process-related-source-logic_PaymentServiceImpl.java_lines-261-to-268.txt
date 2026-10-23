@@ -1,0 +1,8 @@
+			MerchantConfiguration merchantConfiguration = merchantConfigurationService.getMerchantConfiguration(Constants.PAYMENT_MODULES, store);
+			if(merchantConfiguration!=null) {
+
+				if(!StringUtils.isBlank(merchantConfiguration.getValue())) {
+					
+					String decrypted = encryption.decrypt(merchantConfiguration.getValue());
+					modules = ConfigurationModulesLoader.loadIntegrationConfigurations(decrypted);
+				}

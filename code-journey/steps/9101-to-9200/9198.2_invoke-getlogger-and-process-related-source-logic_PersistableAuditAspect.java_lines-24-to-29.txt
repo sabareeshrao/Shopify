@@ -1,0 +1,6 @@
+@Configuration
+public class PersistableAuditAspect {
+	
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(PersistableAuditAspect.class);
+

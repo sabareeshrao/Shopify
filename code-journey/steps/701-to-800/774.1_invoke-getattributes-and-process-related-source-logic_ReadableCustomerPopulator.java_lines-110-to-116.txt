@@ -1,0 +1,7 @@
+
+			if(source.getAttributes()!=null) {
+				for(CustomerAttribute attribute : source.getAttributes()) {
+					ReadableCustomerAttribute readableAttribute = new ReadableCustomerAttribute();
+					readableAttribute.setId(attribute.getId());
+					readableAttribute.setTextValue(attribute.getTextValue());
+					ReadableCustomerOption option = new ReadableCustomerOption();

@@ -1,0 +1,8 @@
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+					.antMatcher(API_VERSION + "/private/**")
+					.authorizeRequests()
+					.antMatchers(API_VERSION + "/private/login*").permitAll()
+					.antMatchers(API_VERSION + "/private/refresh").permitAll()
+					.antMatchers(HttpMethod.OPTIONS, API_VERSION + "/private/**").permitAll()
+					.antMatchers(API_VERSION + "/private/**").hasRole("AUTH")

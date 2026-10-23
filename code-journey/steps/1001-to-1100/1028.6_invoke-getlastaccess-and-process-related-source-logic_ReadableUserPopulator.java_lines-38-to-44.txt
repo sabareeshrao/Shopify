@@ -1,0 +1,7 @@
+
+    if (source.getLastAccess() != null) {
+      target.setLastAccess(DateUtil.formatLongDate(source.getLastAccess()));
+    }
+
+    // set default language
+    target.setDefaultLanguage(Constants.DEFAULT_LANGUAGE);

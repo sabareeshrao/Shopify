@@ -1,0 +1,8 @@
+			coutriesList.append("[");
+			for(String country : countries) {
+				coutriesList.append("\"").append(country).append("\"");
+				countCountry ++;
+				if(countCountry<countries.size()) {
+					coutriesList.append(",");
+				}
+			}

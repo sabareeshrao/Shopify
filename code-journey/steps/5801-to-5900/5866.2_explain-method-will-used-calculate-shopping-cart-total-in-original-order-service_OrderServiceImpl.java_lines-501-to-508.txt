@@ -1,0 +1,8 @@
+     * @param shoppingCart
+     * @param store
+     * @param language
+     * @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     *
+     */
+    @Override

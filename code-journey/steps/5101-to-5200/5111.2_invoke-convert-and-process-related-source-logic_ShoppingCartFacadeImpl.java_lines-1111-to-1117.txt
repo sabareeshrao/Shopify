@@ -1,0 +1,7 @@
+
+		if (cart != null) {
+
+			readableCart = readableShoppingCartMapper.convert(cart, store, language);
+
+			if (!StringUtils.isBlank(cart.getPromoCode())) {
+				Date promoDateAdded = cart.getPromoAdded();// promo valid 1 day

@@ -1,0 +1,8 @@
+	public IntegrationConfiguration getInformations() {
+		return informations;
+	}
+	public void setInformations(IntegrationConfiguration informations) {
+		this.informations = informations;
+	}
+
+}

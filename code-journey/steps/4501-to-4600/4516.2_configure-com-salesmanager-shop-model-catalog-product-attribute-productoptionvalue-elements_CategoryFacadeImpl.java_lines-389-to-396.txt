@@ -1,0 +1,8 @@
+			Map<String, ProductOption> references = new HashMap<String, ProductOption>();
+			for (ProductAttribute attr : attributes) {
+				references.put(attr.getProductOption().getCode(), attr.getProductOption());
+				List<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue> values = rawFacet.get(attr.getProductOption().getCode());
+				if (values == null) {
+					values = new ArrayList<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue>();
+					rawFacet.put(attr.getProductOption().getCode(), values);
+				}

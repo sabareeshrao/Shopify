@@ -1,0 +1,7 @@
+
+    // send email
+
+    try {
+
+      // creation of a user, send an email
+      String[] storeEmail = {store.getStoreEmailAddress()};

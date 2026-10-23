@@ -1,0 +1,7 @@
+
+				// user can be in parent
+				MerchantStore st = user.getMerchantStore();
+				if (store != null && st.getCode().equals(store.getCode())) {
+					authorized = true;
+				}
+			}

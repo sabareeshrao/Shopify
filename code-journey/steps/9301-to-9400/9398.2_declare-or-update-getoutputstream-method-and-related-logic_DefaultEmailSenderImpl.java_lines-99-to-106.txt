@@ -1,0 +1,8 @@
+
+          public OutputStream getOutputStream() throws IOException {
+            throw new IOException("Read-only data");
+          }
+
+          public String getContentType() {
+            return "text/plain";
+          }

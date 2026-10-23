@@ -1,0 +1,9 @@
+
+			if (entryToUpdate == null) {
+				throw new CartModificationException("Unknown entry number.");
+			}
+
+			entryToUpdate.getProduct();
+
+			LOG.info("Updating cart entry quantity to" + item.getQuantity());
+			entryToUpdate.setQuantity((int) item.getQuantity());

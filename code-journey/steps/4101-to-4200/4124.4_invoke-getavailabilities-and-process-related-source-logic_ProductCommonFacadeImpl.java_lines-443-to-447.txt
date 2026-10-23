@@ -1,0 +1,5 @@
+			
+			for (ProductAvailability availability : modified.getAvailabilities()) {
+				this.setAvailability(availability, product);
+			}
+		}

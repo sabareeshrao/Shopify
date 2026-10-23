@@ -1,0 +1,8 @@
+	public List<ReadableInventory> getInventory() {
+		return inventory;
+	}
+	public void setInventory(List<ReadableInventory> inventory) {
+		this.inventory = inventory;
+	}
+
+}

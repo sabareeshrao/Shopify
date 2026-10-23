@@ -1,0 +1,6 @@
+  private String token;
+
+  public AuthenticationResponse(Long userId, String token) {
+    this.token = token;
+    super.setId(userId);
+  }

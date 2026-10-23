@@ -1,3 +1,0 @@
-import com.salesmanager.core.model.catalog.product.type.ProductType;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-import com.salesmanager.core.model.merchant.MerchantStore;

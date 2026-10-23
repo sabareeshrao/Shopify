@@ -1,0 +1,8 @@
+    if (source.getDescriptions() != null && !source.getDescriptions().isEmpty()
+        && description.isPresent()) {
+      return Optional.of(convertDescription(description.get(), source));
+    } else {
+      return Optional.empty();
+    }
+  }
+

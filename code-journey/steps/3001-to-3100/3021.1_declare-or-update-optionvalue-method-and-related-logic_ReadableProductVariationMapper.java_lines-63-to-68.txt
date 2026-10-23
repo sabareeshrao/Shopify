@@ -1,0 +1,6 @@
+	
+	private ReadableProductOptionValue optionValue (ProductOptionValue val, MerchantStore store, Language language) {
+
+			ReadableProductOptionValue value = new ReadableProductOptionValue();
+			value.setCode(val.getCode());
+			value.setId(val.getId());

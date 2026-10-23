@@ -1,0 +1,9 @@
+	@Override
+	public ReadableProduct getProductByCode(MerchantStore store, String uniqueCode, Language language)
+			throws Exception {
+
+		Product product = productService.getBySku(uniqueCode, store, language);
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();

@@ -1,0 +1,10 @@
+
+	/**
+	 * Returns a shipping module configuration given a moduleCode
+	 * @param moduleCode
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */
+	IntegrationConfiguration getShippingConfiguration(String moduleCode,
+			MerchantStore store) throws ServiceException;

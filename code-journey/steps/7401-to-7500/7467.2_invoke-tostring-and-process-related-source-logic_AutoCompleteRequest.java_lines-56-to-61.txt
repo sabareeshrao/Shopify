@@ -1,0 +1,6 @@
+		
+		return qBuilder.toString().toLowerCase();
+	}
+	
+	
+

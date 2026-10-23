@@ -1,3 +1,0 @@
-	  ReadableProduct removeProductFromCategory(Category category, Product product, Language language)
-	      throws Exception;
-

@@ -1,0 +1,8 @@
+  public List<ReadableCategory> getCategories() {
+    return categories;
+  }
+  public void setCategories(List<ReadableCategory> categories) {
+    this.categories = categories;
+  }
+
+}

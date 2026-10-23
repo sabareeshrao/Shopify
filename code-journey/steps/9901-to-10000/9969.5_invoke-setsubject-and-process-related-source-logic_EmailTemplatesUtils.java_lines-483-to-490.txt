@@ -1,0 +1,8 @@
+				email.setSubject(messages.getMessage("label.notification.title.passwordchanged",customerLocale));
+				email.setTo(customer.getEmailAddress());
+				email.setTemplateName(EmailConstants.EMAIL_NOTIFICATION_TMPL);
+				email.setTemplateTokens(templateTokens);
+	
+	
+				
+				emailService.sendHtmlEmail(merchantStore, email);

@@ -1,0 +1,8 @@
+	
+	@ManyToOne(targetEntity = Order.class)
+	@JoinColumn(name = "ORDER_ID", nullable=false)
+	private Order order;
+
+	public Order getOrder() {
+		return order;
+	}

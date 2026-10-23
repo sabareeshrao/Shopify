@@ -1,0 +1,6 @@
+	public void setDisplayedInMenu(boolean isDisplayedInMenu) {
+		this.isDisplayedInMenu = isDisplayedInMenu;
+	}
+	public boolean isVisible() {
+		return visible;
+	}

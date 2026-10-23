@@ -1,0 +1,7 @@
+				xmldatabuffer.append("<ValueOfContents>");
+				xmldatabuffer.append(productPriceUtils.getAdminFormatedAmount(store, orderTotal));
+				xmldatabuffer.append("</ValueOfContents>");
+				xmldatabuffer.append("<Country>");
+				xmldatabuffer.append(destination.getName());
+				xmldatabuffer.append("</Country>");
+			}

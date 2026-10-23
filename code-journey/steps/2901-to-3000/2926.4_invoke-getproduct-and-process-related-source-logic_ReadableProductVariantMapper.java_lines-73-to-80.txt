@@ -1,0 +1,8 @@
+		
+		//get product
+		Product baseProduct = source.getProduct();
+		if(baseProduct == null) {
+			throw new ResourceNotFoundException("Product instances do not include the parent product [" + destination.getSku() + "]");
+		}
+		
+		destination.setProductShipeable(baseProduct.isProductShipeable());

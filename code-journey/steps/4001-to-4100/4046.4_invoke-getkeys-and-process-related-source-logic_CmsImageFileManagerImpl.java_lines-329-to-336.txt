@@ -1,0 +1,8 @@
+
+      // TODO image sizes
+      for (Node<String, Object> node : childs) {
+
+        for (String key : node.getKeys()) {
+
+
+          byte[] imageBytes = (byte[]) merchantNode.get(key);

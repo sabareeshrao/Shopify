@@ -1,0 +1,8 @@
+      customerModel = shippingAddressPopulator.populate(address, customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());
+      customerModel.getDelivery().setCountry(country);
+      if (StringUtils.isNotBlank(address.getZone())) {
+        Zone zone = zoneService.getByCode(address.getZone());
+        if (zone == null) {
+          throw new ConversionException("Unsuported zone code " + address.getZone());
+        }

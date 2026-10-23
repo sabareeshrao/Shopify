@@ -1,0 +1,8 @@
+			
+			//against which environment are we using the service
+			String env = configuration.getEnvironment();
+
+			//must be US
+			if(!store.getCountry().getIsoCode().equals("US")) {
+				throw new IntegrationException("Can't use the service for store country code ");
+			}

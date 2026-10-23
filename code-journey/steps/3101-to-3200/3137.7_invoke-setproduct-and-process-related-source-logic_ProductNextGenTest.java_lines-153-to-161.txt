@@ -1,0 +1,9 @@
+        size_nine.setProduct(summerShoes);
+        size_nine.setProductOption(size);
+        size_nine.setAttributeDefault(true);
+        size_nine.setProductAttributePrice(new BigDecimal(0));//no price variation
+        size_nine.setProductAttributeWeight(new BigDecimal(0));//no weight variation
+        size_nine.setProductOptionValue(nine);
+        
+        summerShoes.getAttributes().add(size_nine);
+        

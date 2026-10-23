@@ -1,0 +1,5 @@
+			
+			+ "left join fetch pr.merchantStore prm "
+			+ "where p.id = ?1 and pr.id = ?2 and prm.id = ?3")
+	Optional<ProductVariant> findById(Long id, Long productId, Integer storeId);
+	

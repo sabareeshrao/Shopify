@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "Girona",
+			"zoneName": "Girona",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Granada",
+			"zoneName": "Granada",
+			"countryCode": "ES"
+		},

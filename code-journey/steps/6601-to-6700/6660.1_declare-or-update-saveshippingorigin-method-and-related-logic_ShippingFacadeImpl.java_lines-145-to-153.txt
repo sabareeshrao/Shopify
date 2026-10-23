@@ -1,0 +1,9 @@
+
+	@Override
+	public void saveShippingOrigin(PersistableAddress address, MerchantStore store) {
+		Validate.notNull(address, "PersistableAddress cannot be null");
+		try {
+			ShippingOrigin o = shippingOriginService.getByStore(store);
+			if(o == null) {
+				o = new ShippingOrigin();
+			}

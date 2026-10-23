@@ -1,0 +1,10 @@
+
+	    shoes.setDescriptions(descriptions);
+
+	    categoryService.create(shoes);
+	    //
+	    
+	    /**
+	     * Manufacturer / Brand
+	     */
+

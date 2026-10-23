@@ -1,0 +1,7 @@
+
+module.payment.transactiontype=Transaction type
+module.payment.transactiontype.preauth=Pre-authorization
+module.payment.transactiontype.capture=Capture
+module.payment.transactiontype.sale=Sale
+module.payment.transactiontype.refund=Refund
+

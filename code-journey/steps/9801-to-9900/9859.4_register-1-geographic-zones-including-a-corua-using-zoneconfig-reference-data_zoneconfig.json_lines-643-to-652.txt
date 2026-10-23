@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "ACorua",
+		"zoneName": "A Corua",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Alava",
+		"zoneName": "Alava",
+		"countryCode": "ES"
+	},

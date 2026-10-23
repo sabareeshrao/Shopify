@@ -1,0 +1,7 @@
+
+        newCategory.setDescriptions(descriptions);
+
+        final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        final String json = writer.writeValueAsString(newCategory);
+
+        HttpEntity<String> entity = new HttpEntity<>(json, getHeader());

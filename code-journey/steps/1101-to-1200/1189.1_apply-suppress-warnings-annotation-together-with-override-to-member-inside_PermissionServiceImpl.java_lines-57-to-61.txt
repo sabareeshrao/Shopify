@@ -1,5 +1,0 @@
-	
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Permission> getPermissions(List<Integer> groupIds)

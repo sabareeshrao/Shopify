@@ -1,0 +1,7 @@
+
+		LOG.info("Cart model found.");
+
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
+		shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
+		shoppingCartDataPopulator.setPricingService(pricingService);
+		shoppingCartDataPopulator.setimageUtils(imageUtils);

@@ -1,0 +1,6 @@
+    	paginationData.setCountByPage(count);
+
+    	paginationData.setTotalCount( resultCount );
+        return paginationData;
+    }
+}

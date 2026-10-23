@@ -1,0 +1,8 @@
+
+	public void setDescription(ContentDescription description) {
+		this.description = description;
+	}
+
+	public String getPath() {
+		return path;
+	}

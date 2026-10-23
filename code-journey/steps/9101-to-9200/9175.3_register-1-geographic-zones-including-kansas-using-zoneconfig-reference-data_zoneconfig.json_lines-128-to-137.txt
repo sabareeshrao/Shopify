@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "KS",
+		"zoneName": "Kansas",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "KY",
+		"zoneName": "Kentucky",
+		"countryCode": "US"
+	},

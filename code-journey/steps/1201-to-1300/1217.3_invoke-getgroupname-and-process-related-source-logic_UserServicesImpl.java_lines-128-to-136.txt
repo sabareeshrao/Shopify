@@ -1,0 +1,9 @@
+		  
+		  for(Group group : groups) {
+			  if(group.getGroupName().equals(Constants.GROUP_SUPERADMIN) || group.getGroupName().equals(Constants.GROUP_ADMIN)) {
+				  user.getGroups().add(group);
+			  }
+		  }
+
+		  user.setMerchantStore(store);		  
+		  userService.create(user);

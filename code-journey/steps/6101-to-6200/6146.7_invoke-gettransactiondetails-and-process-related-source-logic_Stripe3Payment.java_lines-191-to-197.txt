@@ -1,0 +1,7 @@
+			transaction.getTransactionDetails().put("TRNAPPROVED", paymentIntent.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", paymentIntent.getId());  // <---- We store the PI id here
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+			
+		} catch (Exception e) {
+			
+			throw buildException(e);

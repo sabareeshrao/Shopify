@@ -1,0 +1,9 @@
+	public ResponseEntity<ReadableShoppingCart> modifyCart(
+			@PathVariable String code,
+			@Valid @RequestBody PersistableShoppingCartItem shoppingCartItem, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletResponse response) {
+
+		try {
+			ReadableShoppingCart cart = shoppingCartFacade.modifyCart(code, shoppingCartItem, merchantStore, language);

@@ -1,4 +1,0 @@
-	protected List<Map<String,String>> getData() {
-		return data;
-	}
-	

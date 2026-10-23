@@ -1,0 +1,9 @@
+
+@Service
+public class OptinFacadeImpl implements OptinFacade {
+
+  @Inject
+  private OptinService optinService;
+
+  @Inject
+  private ReadableOptinMapper readableOptinConverter;

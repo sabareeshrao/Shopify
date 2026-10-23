@@ -1,0 +1,8 @@
+	private OrderSummaryType orderSummaryType = OrderSummaryType.ORDERTOTAL;
+	private ShippingSummary shippingSummary;
+	private String promoCode;
+	private List<ShoppingCartItem> products = new ArrayList<ShoppingCartItem>();
+
+	public void setProducts(List<ShoppingCartItem> products) {
+		this.products = products;
+	}

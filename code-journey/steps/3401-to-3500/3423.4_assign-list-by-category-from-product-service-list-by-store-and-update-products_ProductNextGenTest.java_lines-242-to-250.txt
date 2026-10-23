@@ -1,9 +1,0 @@
-	    productCriteria.setCategoryIds(Stream.of(shoes.getId())
-	    	      .collect(Collectors.toList()));
-	    
-	    Page<Product> listByCategory = productService.listByStore(store, en, productCriteria, 0, 5);
-	    List<Product> productsByCategory = listByCategory.getContent();
-	    assertThat(productsByCategory,  not(empty()));
-	    
-	    //list products per color attribute
-	    Page<Product> listByOptionValue = productService.listByStore(store, en, productCriteria, 0, 5);

@@ -1,0 +1,8 @@
+
+			/** DO NOT SUPPORT MUTIPLE PRICES **/
+/*			//Other prices
+			List<FinalPrice> otherPrices = finalPrice.getAdditionalPrices();
+			if(otherPrices!=null) {
+				for(FinalPrice otherPrice : otherPrices) {
+					OrderProductPrice other = orderProductPrice(otherPrice);
+					other.setOrderProduct(target);

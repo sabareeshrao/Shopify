@@ -1,0 +1,8 @@
+	    
+	    productService.save(related);
+	    
+	    ProductRelationship relationship = new ProductRelationship();
+	    
+	    relationship.setActive(true);
+	    relationship.setCode("spring");
+	    relationship.setProduct(product);

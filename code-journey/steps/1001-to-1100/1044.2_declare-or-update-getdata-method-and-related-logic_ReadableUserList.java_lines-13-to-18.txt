@@ -1,0 +1,6 @@
+
+  private List<ReadableUser> data = new ArrayList<ReadableUser>();
+
+  public List<ReadableUser> getData() {
+    return data;
+  }

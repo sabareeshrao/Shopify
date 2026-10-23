@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "SB",
-		"zoneName": "Salzburg",
-		"countryCode": "AT"
-	},

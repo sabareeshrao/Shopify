@@ -1,0 +1,8 @@
+
+        if (entry.getCatalog().getId().longValue() != catalogId.longValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }
+
+        if (entry.getCatalog().getMerchantStore().getId().intValue() != store.getId().intValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }

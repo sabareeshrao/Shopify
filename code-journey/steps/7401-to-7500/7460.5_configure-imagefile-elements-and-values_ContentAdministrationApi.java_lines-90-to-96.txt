@@ -1,0 +1,7 @@
+
+		ContentFolder folder = contentFacade.getContentFolder(decodedPath, merchantStore);
+		List<ImageFile> files = folder.getContent().stream().map(x -> convertToImageFile(merchantStore, x))
+				.collect(Collectors.toList());
+
+		return files;
+	}

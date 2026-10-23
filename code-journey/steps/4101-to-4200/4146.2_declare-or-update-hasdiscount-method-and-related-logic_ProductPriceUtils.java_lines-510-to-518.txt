@@ -1,0 +1,9 @@
+	public boolean hasDiscount(ProductPrice productPrice) {
+
+		Date today = new Date();
+
+		// calculate discount price
+		boolean hasDiscount = false;
+		if (productPrice.getProductPriceSpecialStartDate() != null
+				|| productPrice.getProductPriceSpecialEndDate() != null) {
+

@@ -1,0 +1,8 @@
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public boolean isVisible() {
+		return visible;
+	}

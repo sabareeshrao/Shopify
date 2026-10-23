@@ -1,0 +1,9 @@
+  @Override
+  public void addProductImage(ProductImage productImage, ImageContentFile contentImage)
+      throws ServiceException {
+
+
+    try {
+      // get buckets
+      String bucketName = bucketName();
+      final AmazonS3 s3 = s3Client();

@@ -1,0 +1,7 @@
+	@Override
+	public TaxClass saveOrUpdate(TaxClass taxClass) throws ServiceException {
+		if(taxClass.getId()!=null && taxClass.getId() > 0) {
+			this.update(taxClass);
+		} else {
+			taxClass = super.saveAndFlush(taxClass);
+		}

@@ -1,0 +1,9 @@
+	public void deleteAttribute(@PathVariable Long id,@PathVariable Long attributeId, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		productOptionFacade.deleteAttribute(id, attributeId, merchantStore);
+		return;
+
+	}
+
+}

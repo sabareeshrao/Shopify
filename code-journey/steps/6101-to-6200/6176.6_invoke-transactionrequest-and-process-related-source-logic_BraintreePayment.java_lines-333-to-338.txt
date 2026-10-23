@@ -1,0 +1,6 @@
+	    
+	   
+
+        TransactionRequest request = new TransactionRequest()
+            .amount(amount)
+            .paymentMethodNonce(nonce);

@@ -1,0 +1,7 @@
+	public void setProductOptionComment(String productOptionComment) {
+		this.productOptionComment = productOptionComment;
+	}
+
+	public ProductOption getProductOption() {
+		return productOption;
+	}

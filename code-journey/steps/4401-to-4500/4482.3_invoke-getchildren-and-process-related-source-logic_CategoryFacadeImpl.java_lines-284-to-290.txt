@@ -1,0 +1,7 @@
+				if (rc != null) {
+					rc.getChildren().add(readable);
+				}
+			}
+		}
+	}
+

@@ -1,0 +1,7 @@
+					if(img.getImageType()==1 && img.getProductImageUrl()!=null) {//video
+						prdImage.setVideoUrl(img.getProductImageUrl());
+					}
+
+					if(prdImage.isDefaultImage()) {
+						target.setImage(prdImage);
+					}

@@ -1,0 +1,7 @@
+  public ReadableCatalog createCatalog(
+      @RequestBody @Valid PersistableCatalog catalog,
+      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+	  return catalogFacade.saveCatalog(catalog, merchantStore, language);
+
+  }

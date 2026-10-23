@@ -1,4 +1,0 @@
-	
-	@Inject
-	protected PermissionService   permissionService;
-

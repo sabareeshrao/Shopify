@@ -1,0 +1,7 @@
+		item.setItemPrice(price.getFinalPrice());
+		item.setFinalPrice(price);
+
+		BigDecimal subTotal = item.getItemPrice().multiply(new BigDecimal(item.getQuantity()));
+		item.setSubTotal(subTotal);
+
+	}

@@ -1,7 +1,0 @@
-	private String shippingModule;
-	private String shippingOption;
-	private boolean freeShipping;
-	private boolean taxOnShipping;
-	private boolean shippingQuote;
-	private String shippingText;
-	private String handlingText;

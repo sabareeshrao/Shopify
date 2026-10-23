@@ -1,0 +1,7 @@
+
+      String nodePath = this.nodePath(productImage.getProduct().getMerchantStore().getCode(),
+          productImage.getProduct().getSku(), contentImage);
+
+
+      ObjectMetadata metadata = new ObjectMetadata();
+      metadata.setContentType(contentImage.getMimeType());

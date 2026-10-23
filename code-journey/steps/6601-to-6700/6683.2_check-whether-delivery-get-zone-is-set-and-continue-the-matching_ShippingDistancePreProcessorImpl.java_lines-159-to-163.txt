@@ -1,5 +1,0 @@
-		if(delivery.getZone()!=null) {
-			destinationAddress.append(delivery.getZone().getCode()).append(" ");
-		}
-		destinationAddress.append(delivery.getCountry().getIsoCode());
-		

@@ -1,0 +1,7 @@
+
+	private Set<ShoppingCartItem> getShoppingCartItems(final ShoppingCart sessionCart, final MerchantStore store,
+			final ShoppingCart cartModel) throws Exception {
+
+		Set<ShoppingCartItem> shoppingCartItemsSet = null;
+		if (CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+			shoppingCartItemsSet = new HashSet<ShoppingCartItem>();

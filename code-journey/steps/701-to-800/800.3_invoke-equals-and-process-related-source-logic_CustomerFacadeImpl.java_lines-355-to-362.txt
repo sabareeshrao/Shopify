@@ -1,0 +1,8 @@
+    if (customerModel == null) {
+      LOG.equals("Unable to create customer in system");
+      // throw new CustomerRegistrationException( "Unable to register customer" );
+      throw new Exception("Unable to register customer");
+    }
+
+    LOG.info("About to persist customer to database.");
+    customerService.saveOrUpdate(customerModel);

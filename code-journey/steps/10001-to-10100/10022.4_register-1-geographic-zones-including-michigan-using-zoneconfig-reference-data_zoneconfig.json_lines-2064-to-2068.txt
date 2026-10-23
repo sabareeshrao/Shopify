@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "MI",
-			"zoneName": "Michigan",
-			"countryCode": "US"
-		},

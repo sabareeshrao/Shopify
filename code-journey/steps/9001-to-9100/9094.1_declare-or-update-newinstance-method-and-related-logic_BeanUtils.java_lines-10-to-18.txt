@@ -1,0 +1,9 @@
+public class BeanUtils
+{
+ private BeanUtils(){
+        
+    }
+    
+    public static BeanUtils newInstance(){
+        return new BeanUtils();
+    }

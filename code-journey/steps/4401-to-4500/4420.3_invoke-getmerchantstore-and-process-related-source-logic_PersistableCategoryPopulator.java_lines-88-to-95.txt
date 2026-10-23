@@ -1,0 +1,8 @@
+			if(parent !=null && parent.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+				throw new ConversionException("Store id does not belong to specified parent id");
+			}
+
+			if(parent!=null) {
+				target.setParent(parent);
+
+				String lineage = parent.getLineage();

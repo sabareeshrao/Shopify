@@ -1,0 +1,9 @@
+	
+	private static SecretKey key = null;
+	
+	static {
+		
+		try {
+			
+			KeyGenerator keygen = KeyGenerator.getInstance("DES");
+		    key = keygen.generateKey();

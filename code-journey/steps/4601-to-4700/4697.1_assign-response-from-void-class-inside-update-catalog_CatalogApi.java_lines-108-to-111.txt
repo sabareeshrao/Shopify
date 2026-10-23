@@ -1,4 +1,0 @@
-  @GetMapping(value = "/private/catalog/{id}")
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(httpMethod = "GET", value = "Get catalog", notes = "",
-      response = Void.class)

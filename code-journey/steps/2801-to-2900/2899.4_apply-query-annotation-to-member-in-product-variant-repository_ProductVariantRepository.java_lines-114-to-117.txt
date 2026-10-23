@@ -1,0 +1,4 @@
+			
+
+			+ "left join fetch pv.merchantStore pvm " 
+			+ "where pr.id = ?2 and pvm.id = ?1")

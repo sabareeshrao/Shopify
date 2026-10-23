@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "AE",
-			"zoneName": "Armed Forces Europe",
-			"countryCode": "US"
-		},

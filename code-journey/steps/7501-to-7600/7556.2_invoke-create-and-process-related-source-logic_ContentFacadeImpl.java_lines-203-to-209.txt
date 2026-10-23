@@ -1,0 +1,7 @@
+
+		ContentDescriptionEntity description = this.create(content.getDescription());
+
+		contentEntity.setDescription(description);
+		contentEntity.setId(content.getId());
+		contentEntity.setDisplayedInMenu(content.isLinkToMenu());
+		contentEntity.setContentType(content.getContentType().name());

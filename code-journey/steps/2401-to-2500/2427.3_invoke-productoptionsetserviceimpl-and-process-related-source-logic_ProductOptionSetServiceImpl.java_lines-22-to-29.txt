@@ -1,0 +1,8 @@
+	
+
+	@Inject
+	public ProductOptionSetServiceImpl(
+			ProductOptionSetRepository productOptionSetRepository) {
+			super(productOptionSetRepository);
+			this.productOptionSetRepository = productOptionSetRepository;
+	}

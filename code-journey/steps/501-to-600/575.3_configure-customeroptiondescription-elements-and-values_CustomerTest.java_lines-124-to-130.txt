@@ -1,0 +1,7 @@
+		
+		Set<CustomerOptionDescription> mailingListDesciptionList = new HashSet<CustomerOptionDescription>();
+		mailingListDesciptionList.add(mailingListDesciption);
+		subscribedToMailingList.setDescriptions(mailingListDesciptionList);
+		
+		customerOptionService.create(subscribedToMailingList);
+		

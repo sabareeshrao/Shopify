@@ -1,0 +1,6 @@
+    @Override
+    public void removeCatalogEntry(Long catalogId, Long catalogEntryId, MerchantStore store, Language language) {
+        CatalogCategoryEntry entry = catalogEntryService.getById(catalogEntryId);
+        if (Objects.isNull(entry)) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }

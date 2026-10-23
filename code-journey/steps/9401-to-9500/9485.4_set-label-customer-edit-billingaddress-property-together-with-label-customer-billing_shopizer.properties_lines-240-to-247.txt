@@ -1,8 +1,0 @@
-label.customer.edit.billingaddress=Edit Billing Address
-label.customer.edit.shippinginformation=Edit Shipping information
-
-label.customer.billing.company=Billing company
-label.customer.billing.streetaddress=Billing street address
-label.customer.billing.suburb=Billing suburb
-label.customer.billing.postalcode=Billing postal code
-label.customer.billing.city=Billing city

@@ -1,0 +1,9 @@
+       
+           target.getBilling().setFirstName( source.getFirstName() );
+           target.getBilling().setLastName( source.getLastName() );
+          
+            // lets fill optional data now
+           
+           if(StringUtils.isNotBlank( source.getAddress())){
+               target.getBilling().setAddress( source.getAddress() ); 
+           }

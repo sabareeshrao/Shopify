@@ -1,0 +1,5 @@
+#checkout and signup address validation
+#see : https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+#Should be passed as an environment key
+config.googleMapsKey=
+

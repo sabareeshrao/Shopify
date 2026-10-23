@@ -1,0 +1,6 @@
+label.generic.phone=Téléphone
+label.generic.back=Retour
+label.generic.setAsDefault=Configurer par défaut
+label.generic.country.code=Code du pays
+label.generic.stateprovince=État / province
+label.generic.postalcode=Code postal

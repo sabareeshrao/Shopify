@@ -1,0 +1,9 @@
+
+		if (contentFile.getFileContentType().name().equals(FileContentType.IMAGE.name())
+				|| contentFile.getFileContentType().name().equals(FileContentType.STATIC_FILE.name())) {
+			addFile(merchantStoreCode, contentFile);
+		} else if(contentFile.getFileContentType().name().equals(FileContentType.API_IMAGE.name())) {
+			contentFile.setFileContentType(FileContentType.IMAGE);
+			addImage(merchantStoreCode, contentFile);
+		} else if(contentFile.getFileContentType().name().equals(FileContentType.API_FILE.name())) {
+			contentFile.setFileContentType(FileContentType.STATIC_FILE);

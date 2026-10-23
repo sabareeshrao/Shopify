@@ -1,0 +1,9 @@
+
+	@Column(name = "GROUP_TYPE")
+	@Enumerated(value = EnumType.STRING)
+	private GroupType groupType;
+
+	@NotEmpty
+	@Column(name = "GROUP_NAME", unique = true)
+	private String groupName;
+

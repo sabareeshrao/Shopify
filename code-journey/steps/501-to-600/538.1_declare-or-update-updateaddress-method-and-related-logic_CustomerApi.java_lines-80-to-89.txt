@@ -1,0 +1,10 @@
+
+	@PatchMapping("/private/customer/{id}/address")
+	@ApiOperation(httpMethod = "PATCH", value = "Updates a customer", notes = "Requires administration access", produces = "application/json", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void updateAddress(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@RequestBody PersistableCustomer customer) {
+
+		customer.setId(id);
+		customerFacade.updateAddress(customer, merchantStore);
+	}

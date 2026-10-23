@@ -1,0 +1,5 @@
+		List<ProductVariant> filteredVariants = product.getVariants().stream()
+				.filter(i -> variant.getId().longValue() != i.getId().longValue()).collect(Collectors.toList());
+
+		Set<ProductVariant> allVariants = new HashSet<ProductVariant>(filteredVariants);
+		product.setVariants(allVariants);

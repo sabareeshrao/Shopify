@@ -1,0 +1,9 @@
+label.product.customGroup.title=Product group
+label.product.customgroup.add=Add custom product group
+label.product.customgroup.code=Custom product group code (must be unique)
+
+label.product.rate=Rate product
+label.product.clickrate=Product rating (click on the stars to activate rating)
+
+#content Images - Files
+label.page=Page

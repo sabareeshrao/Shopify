@@ -1,0 +1,6 @@
+label.shipping.shippingaddress=Adresse de livraison
+label.shipping.billingaddress=Adresse de facturation
+label.message.maximumWeight.exist=Poids maximum existe déjà
+label.shipping.fees=Frais de livraison
+label.shipping.freeshipping=Livraison gratuite !
+label.shipping.freeshipping.over=Livraison gratuite pour les commandes dont le montant est supérieur à

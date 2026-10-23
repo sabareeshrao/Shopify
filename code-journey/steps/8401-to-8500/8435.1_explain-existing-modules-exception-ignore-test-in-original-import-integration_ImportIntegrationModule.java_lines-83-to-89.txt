@@ -1,7 +1,0 @@
-	
-	/**
-	 * Import all non existing modules
-	 * @throws Exception
-	 */
-	@Ignore
-	//@Test

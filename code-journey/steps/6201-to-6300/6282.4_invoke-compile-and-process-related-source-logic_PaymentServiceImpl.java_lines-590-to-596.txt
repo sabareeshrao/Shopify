@@ -1,0 +1,7 @@
+		
+		Matcher matcher = Pattern.compile("[\\s.-]").matcher(number);
+		
+		number = matcher.replaceAll("");
+		validateCreditCardDate(Integer.parseInt(month), Integer.parseInt(date));
+		validateCreditCardNumber(number, creditCard);
+	}

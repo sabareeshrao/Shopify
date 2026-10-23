@@ -1,0 +1,7 @@
+	public void setEntry(List<ReadableCatalogCategoryEntry> entry) {
+		this.entry = entry;
+	}*/
+
+	public ReadableMerchantStore getStore() {
+		return store;
+	}

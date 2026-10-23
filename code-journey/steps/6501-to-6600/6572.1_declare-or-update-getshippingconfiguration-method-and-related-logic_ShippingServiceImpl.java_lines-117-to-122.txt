@@ -1,0 +1,6 @@
+	@Override
+	public ShippingConfiguration getShippingConfiguration(MerchantStore store) throws ServiceException {
+
+		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(ShippingConstants.SHIPPING_CONFIGURATION, store);
+		
+		ShippingConfiguration shippingConfiguration = null;

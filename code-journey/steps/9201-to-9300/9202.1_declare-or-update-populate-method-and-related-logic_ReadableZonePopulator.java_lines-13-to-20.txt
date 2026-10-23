@@ -1,0 +1,8 @@
+public class ReadableZonePopulator extends AbstractDataPopulator<Zone, ReadableZone> {
+
+	@Override
+	public ReadableZone populate(Zone source, ReadableZone target, MerchantStore store, Language language)
+			throws ConversionException {
+		if(target==null) {
+			target = new ReadableZone();
+		}

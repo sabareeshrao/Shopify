@@ -1,0 +1,9 @@
+	public String getZone() {
+		return zone;
+	}
+	public void setZone(String zone) {
+		this.zone = zone;
+	}
+	public String getCountry() {
+		return country;
+	}

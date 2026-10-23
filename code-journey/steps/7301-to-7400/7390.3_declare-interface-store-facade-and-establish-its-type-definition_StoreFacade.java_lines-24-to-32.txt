@@ -1,0 +1,9 @@
+
+	/**
+	 * Find MerchantStore model from store code
+	 * 
+	 * @param code
+	 * @return
+	 * @throws Exception
+	 */
+	MerchantStore getByCode(HttpServletRequest request);

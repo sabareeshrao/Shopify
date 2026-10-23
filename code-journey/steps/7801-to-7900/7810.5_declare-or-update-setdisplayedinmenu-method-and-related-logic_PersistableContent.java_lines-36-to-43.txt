@@ -1,0 +1,8 @@
+
+  public void setDisplayedInMenu(boolean isDisplayedInMenu) {
+    this.isDisplayedInMenu = isDisplayedInMenu;
+  }
+
+  private List<ObjectContent> descriptions = new ArrayList<ObjectContent>();
+
+}

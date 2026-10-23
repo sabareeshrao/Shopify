@@ -1,0 +1,9 @@
+
+		@Bean
+		public AuthenticationEntryPoint shopAuthenticationEntryPoint() {
+			BasicAuthenticationEntryPoint entryPoint = new BasicAuthenticationEntryPoint();
+			entryPoint.setRealmName("shop-realm");
+			return entryPoint;
+		}
+
+	}

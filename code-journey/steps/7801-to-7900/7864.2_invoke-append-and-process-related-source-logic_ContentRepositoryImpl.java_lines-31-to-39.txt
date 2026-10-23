@@ -1,0 +1,9 @@
+			qs.append("left join fetch c.descriptions cd join fetch c.merchantStore cm ");
+			qs.append("where c.contentType in (:ct) ");
+			qs.append("and cm.id =:cm ");
+			qs.append("and cd.language.id =:cl ");
+			qs.append("and c.visible=true ");
+			qs.append("order by c.sortOrder");
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);

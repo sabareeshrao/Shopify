@@ -1,0 +1,8 @@
+			Optional<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> oOldItem = existingItems.stream()
+					.filter(i -> i.getSku().equals(newItemValue.getSku())
+
+					).findFirst();
+
+			if (oOldItem.isPresent()) {
+				// update of existing cartItem
+				com.salesmanager.core.model.shoppingcart.ShoppingCartItem oldCartItem = oOldItem.get();

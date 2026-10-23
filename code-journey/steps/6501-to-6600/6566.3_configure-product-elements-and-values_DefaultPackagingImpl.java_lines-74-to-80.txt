@@ -1,0 +1,7 @@
+
+		List<Product> individualProducts = new ArrayList<Product>();
+
+		// need to put items individually
+		for(ShippingProduct shippingProduct : products){
+
+			Product product = shippingProduct.getProduct();

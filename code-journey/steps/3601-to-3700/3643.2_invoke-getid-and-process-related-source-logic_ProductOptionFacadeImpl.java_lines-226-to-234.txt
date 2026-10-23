@@ -1,0 +1,9 @@
+		if (optionValue.getId() != null && optionValue.getId().longValue() > 0) {
+			value = productOptionValueService.getById(store, optionValue.getId());
+			if (value == null) {
+				throw new ResourceNotFoundException("ProductOptionValue [" + optionValue.getId()
+						+ "] does not exists for store [" + store.getCode() + "]");
+			}
+		}
+
+		value = persistableOptionValueMapper.merge(optionValue, value, store, language);

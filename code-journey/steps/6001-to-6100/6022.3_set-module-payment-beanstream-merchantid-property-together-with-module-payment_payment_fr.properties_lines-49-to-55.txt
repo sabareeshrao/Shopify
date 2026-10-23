@@ -1,0 +1,7 @@
+module.payment.beanstream.message.merchantid=Identifiant marchand requis
+module.payment.beanstream.message.username=Nom d'usager requis
+module.payment.beanstream.message.password=Mot de passe requis
+
+#Moneyorder
+module.payment.moneyorder.adress=Le chèque doit être fait à cette adresse
+module.payment.moneyorder.message.address=L'adresse est requise

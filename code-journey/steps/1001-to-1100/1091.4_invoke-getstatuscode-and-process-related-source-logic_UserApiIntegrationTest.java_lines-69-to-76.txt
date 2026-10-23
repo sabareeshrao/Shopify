@@ -1,0 +1,8 @@
+      if (response.getStatusCode() != HttpStatus.OK) {
+          throw new Exception(response.toString());
+      } else {
+          user = response.getBody();
+          assertNotNull(user); 
+      }
+      
+      String oldPassword = CREATED_PASSWORD;

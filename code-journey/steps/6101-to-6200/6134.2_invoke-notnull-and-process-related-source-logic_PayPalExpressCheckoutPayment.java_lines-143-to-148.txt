@@ -1,0 +1,6 @@
+		Validate.notNull(paypalPayment.getPaymentToken(), "A paypal payment token is required to process this transaction");
+		
+		return processTransaction(store, customer, items, amount, paypalPayment, configuration, module);
+		
+	}*/
+	

@@ -1,0 +1,9 @@
+
+	/*
+	 * private Content convertContentPageToContent(MerchantStore store, Language
+	 * language, Content content, PersistableContentEntity contentPage) throws
+	 * ServiceException {
+	 * 
+	 * ContentType contentType =
+	 * ContentType.valueOf(contentPage.getContentType()); if (contentType ==
+	 * null) { throw new

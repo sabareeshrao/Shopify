@@ -1,0 +1,6 @@
+    if (userExist(customer.getUserName())) {
+      throw new ServiceRuntimeException("User already exist");
+    }
+    //end user exists
+
+    Customer customerToPopulate = convertPersistableCustomerToCustomer(customer, store);

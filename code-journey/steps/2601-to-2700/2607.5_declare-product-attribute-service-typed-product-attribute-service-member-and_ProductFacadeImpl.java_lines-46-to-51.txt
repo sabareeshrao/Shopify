@@ -1,0 +1,6 @@
+	
+	@Inject
+	private ProductAttributeService productAttributeService;
+
+	@Inject
+	private ProductService productService;

@@ -1,0 +1,10 @@
+	
+	/**
+	 * Create content box
+	 * 
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 * @param pageCode
+	 */
+	@PostMapping(value = "/private/content/box")

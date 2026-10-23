@@ -1,0 +1,7 @@
+						
+					}
+				}
+				
+				if(price == null) {
+					price = new ProductPrice();
+				}

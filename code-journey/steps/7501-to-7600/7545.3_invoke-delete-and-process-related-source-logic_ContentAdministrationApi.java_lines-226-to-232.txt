@@ -1,0 +1,7 @@
+			contentFacade.delete(merchantStore, fileName, FileContentType.IMAGE.name());
+			return new FileStatus();
+		} catch (Exception e) {
+			//throw new ServiceRuntimeException("Error while getting file bytes");
+			LOGGER.error("Error when renaming file",e);
+			FileStatus fs = new FileStatus();
+			fs.setError(e.getMessage());

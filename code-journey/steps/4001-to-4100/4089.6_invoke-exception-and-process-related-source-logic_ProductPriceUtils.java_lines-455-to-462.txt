@@ -1,0 +1,8 @@
+				if (bdamount == null) {
+					throw new Exception("Cannot parse " + amount);
+				} else {
+					return bdamount;
+				}
+			} else {
+				throw new Exception("Not a positive integer " + amount);
+			}

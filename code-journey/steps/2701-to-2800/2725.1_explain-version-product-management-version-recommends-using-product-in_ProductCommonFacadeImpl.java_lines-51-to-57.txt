@@ -1,7 +1,0 @@
-
-/**
- * Version 1 Product management
- * Version 2 Recommends using productVariant
- * @author carlsamson
- *
- */

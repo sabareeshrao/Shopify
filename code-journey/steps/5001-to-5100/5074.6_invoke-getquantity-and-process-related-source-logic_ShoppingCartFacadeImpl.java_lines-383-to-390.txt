@@ -1,0 +1,8 @@
+
+			/**
+			 * Check if product is available Check if product quantity is 0 Check if date
+			 * available <= now
+			 */
+			if (shoppingCartItem.getQuantity() > 0 && !p.isAvailable()) {
+				throw new Exception("Item with id " + p.getId() + " is not available");
+			}

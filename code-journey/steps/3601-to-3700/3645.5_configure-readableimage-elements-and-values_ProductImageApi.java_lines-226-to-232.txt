@@ -1,0 +1,7 @@
+			
+			if(p.getMerchantStore().getId() != merchantStore.getId()) {
+				throw new ResourceNotFoundException("Product images not found for product id [" + productId
+						+ "] and merchant [" + merchantStore.getCode() + "]");
+			}
+			
+			List<ReadableImage> target = new ArrayList<ReadableImage>();

@@ -1,0 +1,9 @@
+	private static final String PATH = "classpath:/reference/zones/*.json";
+
+	private static final String ALL_REGIONS = "*";
+
+	//
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List<Map<String, Zone>> loadIndividualZones() throws Exception {
+
+		List<Map<String, Zone>> loadedZones = new ArrayList<Map<String, Zone>>();

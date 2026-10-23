@@ -1,0 +1,6 @@
+			quote.setDeliveryAddress(q.getDelivery());
+			quote.setShipping(q.getPrice());
+			quote.setShippingModule(q.getModule());
+			quote.setShippingOption(q.getOptionName());
+			quote.setShippingOptionCode(q.getOptionCode());
+			quote.setHandling(q.getHandling());

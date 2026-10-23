@@ -1,0 +1,9 @@
+	public String getShippingModuleCode() {
+		return shippingModuleCode;
+	}
+	public void setShippingReturnCode(String shippingReturnCode) {
+		this.shippingReturnCode = shippingReturnCode;
+	}
+	public String getShippingReturnCode() {
+		return shippingReturnCode;
+	}

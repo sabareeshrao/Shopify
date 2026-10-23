@@ -1,0 +1,7 @@
+
+		
+			Rectangle goal = new Rectangle( (int)this.getCropAreaWidth(), (int) this.getCropAreaHeight()); 
+			
+			//Then intersect it with the dimensions of your image:
+
+			Rectangle clip = goal.intersection(new Rectangle(originalFile.getWidth(), originalFile.getHeight())); 

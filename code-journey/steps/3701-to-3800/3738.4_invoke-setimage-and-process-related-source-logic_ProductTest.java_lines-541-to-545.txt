@@ -1,0 +1,5 @@
+        
+        //absolutely required otherwise the file is not created on disk
+        productImage.setImage(inputStream);
+        
+        product.getImages().add(productImage);

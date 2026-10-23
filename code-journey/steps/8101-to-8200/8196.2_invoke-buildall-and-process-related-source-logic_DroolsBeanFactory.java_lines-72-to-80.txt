@@ -1,0 +1,9 @@
+        kb.buildAll();
+        KieModule kieModule = kb.getKieModule();
+
+        KieContainer kContainer = kieServices.newKieContainer(kieModule.getReleaseId());
+
+        return kContainer.newKieSession();
+
+    }
+

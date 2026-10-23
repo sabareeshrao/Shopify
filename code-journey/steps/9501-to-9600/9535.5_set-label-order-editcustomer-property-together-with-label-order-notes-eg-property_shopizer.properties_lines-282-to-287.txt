@@ -1,0 +1,6 @@
+label.customer.resetpasswor.confirm=Are you sure you want to reset the customer password?
+label.customer.moredetails=More details!
+label.order.editcustomer=Edit customer
+label.order.displayagreement=Display customer terms and policy agreement in order page
+label.order.notes=Order notes
+label.order.notes.eg=Notes for the order or delivery

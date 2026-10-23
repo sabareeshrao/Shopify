@@ -1,0 +1,8 @@
+				digester.addSetProperties("IntlRateResponse/Package/Service",
+						"ID", "optionId");
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/SvcDescription",
+						"setOptionName", 0);
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/SvcDescription",
+						"setOptionCode", 0);

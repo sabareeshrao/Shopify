@@ -1,0 +1,9 @@
+
+			// reset password link
+			// this will build http | https ://domain/contextPath
+			String baseUrl = filePathUtils.buildBaseUrl(customerContextPath, store);
+
+			// need to add link to controller receiving user reset password
+			// request
+			String customerResetLink = new StringBuilder().append(baseUrl)
+					.append(String.format(resetCustomerLink, store.getCode(), token)).toString();

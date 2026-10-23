@@ -1,0 +1,8 @@
+    	
+    	TaxRateDescription fr = new TaxRateDescription();
+    	fr.setLanguage("fr");
+    	fr.setName("TaxCode1FR");
+    	fr.setDescription("TaxCode1fr description");
+    	
+    	taxRate.getDescriptions().add(en);
+    	taxRate.getDescriptions().add(fr);

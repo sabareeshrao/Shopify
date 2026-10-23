@@ -1,0 +1,7 @@
+	
+	@Column (name ="LONGITUDE", length=100)
+	private String longitude;
+	
+	@Column (name ="LATITUDE", length=100)
+	private String latitude;
+

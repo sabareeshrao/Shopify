@@ -1,0 +1,7 @@
+@RequestMapping(value = "/api/v1", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(tags = { "Optin Customer to newsletter" })
+@SwaggerDefinition(tags = { @Tag(name = "Manage customer subscription to newsletter", description = "Manage customer subscription to newsletter") })
+public class CustomerNewsletterApi {
+
+	@Inject
+	private CustomerFacade customerFacade;

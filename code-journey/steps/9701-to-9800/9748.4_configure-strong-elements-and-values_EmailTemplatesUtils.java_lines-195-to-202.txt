@@ -1,0 +1,8 @@
+		    		   			orderTable.append("<strong>");
+
+		    		   			orderTable.append(pricingService.getDisplayAmount(total.getValue(), merchantStore));
+
+	    		   				orderTable.append("</strong>");
+		    		   		orderTable.append(CLOSING_TD);
+		    		   orderTable.append(CLOSING_TR);
+		    	   }

@@ -1,6 +1,0 @@
-	public void setDelivery(ReadableDelivery delivery) {
-		this.delivery = delivery;
-	}
-	public boolean isShippingQuote() {
-		return shippingQuote;
-	}

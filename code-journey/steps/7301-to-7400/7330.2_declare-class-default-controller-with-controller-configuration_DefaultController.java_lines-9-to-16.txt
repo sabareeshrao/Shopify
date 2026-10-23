@@ -1,0 +1,8 @@
+
+
+@Controller
+public class DefaultController {
+	
+
+	@Autowired
+	private Environment env;

@@ -1,0 +1,10 @@
+	{
+		"zoneCode":"TAS",
+		"zoneName":"Tasmanie",
+		"countryCode":"AU"
+	},
+	{
+		"zoneCode":"QLD",
+		"zoneName":"Queensland",
+		"countryCode":"AU"
+	},

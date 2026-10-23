@@ -1,0 +1,8 @@
+
+	public void setSubTotal(BigDecimal subTotal) {
+		this.subTotal = subTotal;
+	}
+
+	public BigDecimal getTotal() {
+		return total;
+	}

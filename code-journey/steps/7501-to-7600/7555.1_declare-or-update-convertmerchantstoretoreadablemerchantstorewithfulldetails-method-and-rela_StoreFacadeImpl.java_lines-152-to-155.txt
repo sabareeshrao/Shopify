@@ -1,0 +1,4 @@
+
+	private ReadableMerchantStore convertMerchantStoreToReadableMerchantStoreWithFullDetails(Language language, MerchantStore store) {
+		ReadableMerchantStore readable = new ReadableMerchantStore();
+

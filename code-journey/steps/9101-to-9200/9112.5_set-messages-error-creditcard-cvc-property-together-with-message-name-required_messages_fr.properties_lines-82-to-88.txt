@@ -1,0 +1,7 @@
+message.creditcard.invalid=Les informations de la carte de crédit sont requises
+message.payment.declined=La transaction a été refusée
+message.payment.error=Une erreur est survenue en essayant de compléter le paiement, si possible utiliser une autre méthode de paiement.
+messages.error.creditcard.cvc=Le numéro de vérification inscrit sur la carte est invalide
+
+message.order.canprocess=La commande peut être complétée
+message.name.required=Le nom de l'objet est reuis

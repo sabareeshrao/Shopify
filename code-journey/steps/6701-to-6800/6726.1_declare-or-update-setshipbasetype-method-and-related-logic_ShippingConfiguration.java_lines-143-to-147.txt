@@ -1,0 +1,5 @@
+
+
+	public void setShipBaseType(String shipBaseType) {
+		this.shipBaseType = shipBaseType;
+		ShippingBasisType sType = ShippingBasisType.SHIPPING;

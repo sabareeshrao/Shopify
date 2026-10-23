@@ -1,0 +1,8 @@
+
+	private CatalogEntryRepository catalogEntryRepository;
+	
+	@Inject
+	public CatalogEntryServiceImpl(CatalogEntryRepository repository) {
+		super(repository);
+		this.catalogEntryRepository = repository;
+	}

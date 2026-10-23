@@ -1,0 +1,10 @@
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+/**
+ * Custom authautentication provider for customer api
+ * @author carlsamson
+ *
+ */
+public class JWTCustomerAuthenticationProvider extends DaoAuthenticationProvider {
+	

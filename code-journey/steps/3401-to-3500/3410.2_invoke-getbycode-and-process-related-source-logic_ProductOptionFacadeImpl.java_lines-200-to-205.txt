@@ -1,0 +1,6 @@
+		ProductOption option = productOptionService.getByCode(store, code);
+		if (option != null) {
+			exists = true;
+		}
+		return exists;
+	}

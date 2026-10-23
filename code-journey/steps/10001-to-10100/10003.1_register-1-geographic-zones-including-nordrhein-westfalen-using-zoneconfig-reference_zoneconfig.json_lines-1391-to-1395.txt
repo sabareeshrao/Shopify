@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NRW",
-		"zoneName": "Nordrhein-Westfalen",
-		"countryCode": "DE"
-	},

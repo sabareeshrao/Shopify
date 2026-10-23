@@ -1,0 +1,8 @@
+
+							if (productAttribute == null) {
+								LOG.warn("Product attribute with ID " + attribute.getId()
+										+ " not found, skipping cart attribute " + attribute.getId());
+								continue;
+							}
+
+							ReadableShoppingCartAttribute cartAttribute = new ReadableShoppingCartAttribute();

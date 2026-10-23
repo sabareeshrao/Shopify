@@ -1,0 +1,6 @@
+		
+		Transaction transaction = new Transaction();
+		transaction.setAmount(amount);
+		transaction.setTransactionDate(new Date());
+		transaction.setTransactionType(TransactionType.AUTHORIZECAPTURE);
+		transaction.setPaymentType(PaymentType.MONEYORDER);

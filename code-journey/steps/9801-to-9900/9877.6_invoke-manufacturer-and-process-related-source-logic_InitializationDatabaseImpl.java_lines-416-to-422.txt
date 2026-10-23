@@ -1,0 +1,7 @@
+		
+		//create default manufacturer
+		Manufacturer defaultManufacturer = new Manufacturer();
+		defaultManufacturer.setCode("DEFAULT");
+		defaultManufacturer.setMerchantStore(store);
+		
+		ManufacturerDescription manufacturerDescription = new ManufacturerDescription();

@@ -1,0 +1,6 @@
+	protected PersistableCategory category(String code, String name) {
+
+		PersistableCategory newCategory = category(code);
+
+
+		CategoryDescription description = new CategoryDescription();

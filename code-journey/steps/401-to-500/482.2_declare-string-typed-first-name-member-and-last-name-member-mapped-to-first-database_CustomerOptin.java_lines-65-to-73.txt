@@ -1,9 +1,0 @@
-	
-	@Column(name="FIRST")
-	private String firstName;
-	
-	@Column(name="LAST")
-	private String lastName;
-	
-	@Column(name="EMAIL", nullable=false)
-	private String email;

@@ -1,0 +1,9 @@
+	public void addvariantImage(
+			@PathVariable Long id,
+			@RequestParam(name = "file", required = true) MultipartFile file, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletRequest request, 
+			HttpServletResponse response) {
+
+		//productOptionFacade.addOptionValueImage(file, id, merchantStore, language);

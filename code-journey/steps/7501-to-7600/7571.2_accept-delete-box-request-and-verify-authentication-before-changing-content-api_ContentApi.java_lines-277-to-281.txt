@@ -1,0 +1,5 @@
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(httpMethod = "DELETE", value = "Delete content box", notes = "", response = Void.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })

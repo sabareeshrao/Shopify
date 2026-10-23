@@ -1,0 +1,6 @@
+	
+	List<ReadableProductType> list = new ArrayList<ReadableProductType>();
+
+	public List<ReadableProductType> getList() {
+		return list;
+	}

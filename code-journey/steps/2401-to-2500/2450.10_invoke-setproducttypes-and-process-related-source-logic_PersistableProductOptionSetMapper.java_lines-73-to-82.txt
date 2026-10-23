@@ -1,0 +1,10 @@
+				destination.setProductTypes(typesSet);
+			} catch (ServiceException e) {
+				throw new ConversionRuntimeException("Error while mpping ProductOptionSet", e);
+			}
+		}
+		
+		return destination;
+	}
+
+}

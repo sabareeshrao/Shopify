@@ -1,9 +1,0 @@
-  @GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
-  private Long id;
-
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "MERCHANT_ID", nullable = true)
-  private MerchantStore merchantStore;
-
-  @Embedded
-  private AuditSection auditSection = new AuditSection();

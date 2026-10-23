@@ -1,0 +1,8 @@
+			Category target = Optional.ofNullable(categoryId)
+					.filter(merchant -> store !=null)
+					.filter(id -> id > 0)
+					.map(categoryService::getById)
+					.orElse(new Category());
+
+			Category dbCategory = populateCategory(store, category, target);
+			saveCategory(store, dbCategory, null);

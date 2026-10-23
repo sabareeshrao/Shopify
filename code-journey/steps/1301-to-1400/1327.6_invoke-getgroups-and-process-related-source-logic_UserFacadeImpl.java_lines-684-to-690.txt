@@ -1,0 +1,7 @@
+
+				// is superadmin
+				for (ReadableGroup group : readableUser.getGroups()) {
+					if (Constants.GROUP_SUPERADMIN.equals(group.getName())) {
+						return true;
+					}
+				}

@@ -1,0 +1,7 @@
+
+			if(modelOrder == null) {
+				throw new ResourceNotFoundException("Order id [" + orderId + "] not found for store [" + store.getCode() + "]");
+			}
+
+			Transaction last = transactionService.lastTransaction(modelOrder, store);
+

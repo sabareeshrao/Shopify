@@ -1,5 +1,0 @@
-
-	    
-	    
-	    //check the product
-	    Set<ProductAvailability> avails = product.getAvailabilities();

@@ -1,0 +1,8 @@
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+    
+    return categoryFacade.categoryProductVariants(id, merchantStore, language);
+    
+  }

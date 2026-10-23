@@ -1,0 +1,6 @@
+
+    manufacturerService.saveOrUpdate(manuf);
+
+    manufacturer.setId(manuf.getId());
+
+  }

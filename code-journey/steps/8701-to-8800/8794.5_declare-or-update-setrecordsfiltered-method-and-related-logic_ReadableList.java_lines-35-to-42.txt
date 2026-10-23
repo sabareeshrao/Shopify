@@ -1,0 +1,8 @@
+
+	public void setRecordsFiltered(int recordsFiltered) {
+		this.recordsFiltered = recordsFiltered;
+	}
+
+	public int getNumber() {
+		return number;
+	}

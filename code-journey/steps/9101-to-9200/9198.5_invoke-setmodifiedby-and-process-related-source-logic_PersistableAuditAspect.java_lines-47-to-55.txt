@@ -1,0 +1,9 @@
+							audit.setModifiedBy(user.getUsername());
+						}
+					}
+					//TODO put in log audit log trail
+					entity.setAuditSection(audit);
+				}
+			} catch (Throwable e) {
+				LOGGER.error("Error while setting audit values" + e.getMessage());
+			}

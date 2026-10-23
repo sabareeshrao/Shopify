@@ -1,0 +1,6 @@
+		PersistableProductVariation mediumVariation = new PersistableProductVariation();
+		// toto
+		//create variants
+	}
+
+}

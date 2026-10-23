@@ -1,0 +1,9 @@
+
+		int productCount = individualProducts.size();
+
+		List<PackingBox> boxesList = new ArrayList<PackingBox>();
+
+		//start the creation of boxes
+		PackingBox box = new PackingBox();
+		// set box max volume
+		double maxVolume = width * length * height;

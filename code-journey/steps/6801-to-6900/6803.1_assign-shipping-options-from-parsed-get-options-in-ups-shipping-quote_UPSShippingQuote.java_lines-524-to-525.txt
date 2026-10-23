@@ -1,2 +1,0 @@
-
-			List<ShippingOption> shippingOptions = parsed.getOptions();

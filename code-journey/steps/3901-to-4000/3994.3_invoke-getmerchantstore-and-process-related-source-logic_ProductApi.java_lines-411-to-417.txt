@@ -1,0 +1,7 @@
+
+			if (product.getMerchantStore().getId().intValue() != merchantStore.getId().intValue()) {
+				throw new UnauthorizedException(
+						"Product id [" + productId + "] does not belong to store [" + merchantStore.getCode() + "]");
+			}
+
+			Category category = categoryService.getById(categoryId);

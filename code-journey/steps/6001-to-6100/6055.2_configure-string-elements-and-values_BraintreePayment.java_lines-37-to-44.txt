@@ -1,0 +1,8 @@
+		
+		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
+		
+		//validate integrationKeys['merchant_id']
+		if(keys==null || StringUtils.isBlank(keys.get("merchant_id"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("merchant_id");
+		}

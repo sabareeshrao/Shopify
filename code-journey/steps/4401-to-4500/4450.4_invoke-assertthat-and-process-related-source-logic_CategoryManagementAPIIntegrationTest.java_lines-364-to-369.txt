@@ -1,0 +1,6 @@
+      assertThat(response.getStatusCode(), is(CREATED));
+      
+      //create category
+      PersistableCategory category = super.category("TEST");
+      Category cat = new Category();//to be used in product
+      cat.setCode("TEST");

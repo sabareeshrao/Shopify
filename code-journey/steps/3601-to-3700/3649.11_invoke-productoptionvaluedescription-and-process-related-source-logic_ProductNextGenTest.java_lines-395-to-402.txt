@@ -1,0 +1,8 @@
+	    
+	    ProductOptionValueDescription tenDescription = new ProductOptionValueDescription();
+	    tenDescription.setLanguage(en);
+	    tenDescription.setName("10");
+	    tenDescription.setDescription("Size 10");
+	    tenDescription.setProductOptionValue(ten);
+	    
+	    ten.getDescriptions().add(tenDescription);

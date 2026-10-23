@@ -1,0 +1,8 @@
+
+	    //add category
+	    product.getCategories().add(tech);
+
+	    
+
+	    // Availability
+	    ProductAvailability availability = new ProductAvailability();

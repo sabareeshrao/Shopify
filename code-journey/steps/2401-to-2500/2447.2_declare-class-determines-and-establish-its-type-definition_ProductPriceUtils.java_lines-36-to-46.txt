@@ -1,0 +1,11 @@
+
+/**
+ * This class determines the price that is displayed in the catalogue for a
+ * given item. It does not calculate the total price for a given item
+ * 
+ * @author casams1
+ *
+ */
+@Component("priceUtil")
+public class ProductPriceUtils {
+

@@ -1,0 +1,9 @@
+		try {
+
+			langs = (List<Language>) cache.getFromCache("LANGUAGES");
+			if(langs==null) {
+				langs = this.list();
+
+				
+				cache.putInCache(langs, "LANGUAGES");
+			}

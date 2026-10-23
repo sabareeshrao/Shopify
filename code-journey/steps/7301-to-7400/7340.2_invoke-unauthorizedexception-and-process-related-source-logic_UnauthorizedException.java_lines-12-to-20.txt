@@ -1,0 +1,9 @@
+
+  public UnauthorizedException(String errorCode, String message) {
+    super(errorCode, message);
+  }
+
+  public UnauthorizedException(String message) {
+    super(ERROR_CODE, message);
+  }
+}

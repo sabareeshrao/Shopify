@@ -1,4 +1,0 @@
-module.shipping.ups.shippingmethods=Select a shipping method
-module.shipping.ups.message.identifier=UPS account identifier required
-module.shipping.ups.message.packages=You must select one package type
-

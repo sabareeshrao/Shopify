@@ -1,0 +1,7 @@
+		
+		
+		List<ReadableOrderProduct> products = order.getOrderProducts().stream().map(pr -> convertOrderProduct(pr, store, language)).collect(Collectors.toList());
+		orderConfirmation.setProducts(products);
+		
+		if(!StringUtils.isBlank(order.getShippingModuleCode())) {
+	        StringBuilder optionCodeBuilder = new StringBuilder();

@@ -1,0 +1,10 @@
+			
+
+
+		} catch (Exception e) {
+			LOGGER.error("Cannot save images " + e.getMessage());
+		}
+		
+		return product;
+
+	}

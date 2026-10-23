@@ -1,0 +1,4 @@
+					
+				
+					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.ALL.name())) {
+	

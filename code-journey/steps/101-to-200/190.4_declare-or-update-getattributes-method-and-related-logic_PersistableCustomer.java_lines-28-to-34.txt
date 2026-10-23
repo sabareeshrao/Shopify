@@ -1,0 +1,7 @@
+	public List<PersistableCustomerAttribute> getAttributes() {
+		return attributes;
+	}
+
+	public String getPassword() {
+		return password;
+	}

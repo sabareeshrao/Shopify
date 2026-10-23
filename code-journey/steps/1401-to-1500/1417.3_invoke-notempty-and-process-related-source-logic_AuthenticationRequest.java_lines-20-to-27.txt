@@ -1,0 +1,8 @@
+	@NotEmpty(message="{message.password.required}")
+    private String password;
+    
+
+
+    public AuthenticationRequest() {
+        super();
+    }

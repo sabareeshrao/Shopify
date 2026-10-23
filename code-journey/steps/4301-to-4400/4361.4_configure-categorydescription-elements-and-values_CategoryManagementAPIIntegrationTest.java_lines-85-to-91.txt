@@ -1,0 +1,7 @@
+        description.setLanguage("en");
+        description.setName("Javascript");
+        description.setFriendlyUrl("javascript");
+        description.setTitle("Javascript");
+
+        List<CategoryDescription> descriptions = new ArrayList<>();
+        descriptions.add(description);

@@ -1,0 +1,6 @@
+		inputParameters.setProvince("*");
+		inputParameters.setModuleName(module.getCode());
+		
+		if(delivery.getZone() != null && delivery.getZone().getCode()!=null) {
+			inputParameters.setProvince(delivery.getZone().getCode());
+		}

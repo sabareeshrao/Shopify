@@ -1,0 +1,7 @@
+
+	@Override
+	public List<Category> listByProduct(MerchantStore store, Long product) {
+
+		
+		
+		StringBuilder qs = new StringBuilder();

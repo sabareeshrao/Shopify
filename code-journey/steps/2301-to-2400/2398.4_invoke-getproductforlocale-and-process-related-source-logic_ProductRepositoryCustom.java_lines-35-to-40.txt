@@ -1,0 +1,6 @@
+
+		Product getProductForLocale(long productId, Language language,
+				Locale locale);
+
+		Product getById(Long productId);
+		Product getById(Long productId, MerchantStore merchant);

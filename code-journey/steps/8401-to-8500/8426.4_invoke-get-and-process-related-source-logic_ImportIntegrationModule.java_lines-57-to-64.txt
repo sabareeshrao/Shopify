@@ -1,0 +1,8 @@
+
+			IntegrationModule module = null;
+			//get the module to be loaded
+			for (Map o : objects) {
+				//load that specific module
+				if (o.get("code").equals("beanstream")) {
+					//get module object
+					module = integrationModulesLoader.loadModule(o);

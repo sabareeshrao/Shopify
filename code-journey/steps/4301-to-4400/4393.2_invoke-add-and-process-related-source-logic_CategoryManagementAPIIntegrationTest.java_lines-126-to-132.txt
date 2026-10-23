@@ -1,0 +1,7 @@
+        descriptions.add(description);
+
+        newCategory.setDescriptions(descriptions);
+
+        final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        final String json = writer.writeValueAsString(newCategory);
+

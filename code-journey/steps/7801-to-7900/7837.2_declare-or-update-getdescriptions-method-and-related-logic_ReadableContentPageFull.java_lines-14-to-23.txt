@@ -1,0 +1,10 @@
+
+	public List<ContentDescription> getDescriptions() {
+		return descriptions;
+	}
+
+	public void setDescriptions(List<ContentDescription> descriptions) {
+		this.descriptions = descriptions;
+	}
+
+}

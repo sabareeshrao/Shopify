@@ -1,0 +1,8 @@
+		
+		try {
+			
+			
+			
+			LOGGER.debug("Creating or updating an integration module : " + json);
+			
+			moduleConfigurationService.createOrUpdateModule(json);

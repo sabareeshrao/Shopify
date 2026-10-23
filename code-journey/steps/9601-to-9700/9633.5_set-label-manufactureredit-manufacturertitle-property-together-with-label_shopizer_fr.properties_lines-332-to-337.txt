@@ -1,0 +1,6 @@
+label.manufacturer.create=Créer un manufacturier
+label.manufactureredit.manufacturername=Nom du manufacturier
+label.manufactureredit.manufacturertitle=Titre du manufacturier 
+label.manufactureredit.manufacturerurl=URL
+label.manufactureredit.manufacturerurlclicked=URL clique
+label.manufactureredit.manufacturerdescription=Description du manufacturier 

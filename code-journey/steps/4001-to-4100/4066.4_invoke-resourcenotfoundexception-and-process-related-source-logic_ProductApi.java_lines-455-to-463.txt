@@ -1,0 +1,9 @@
+
+			if (category == null) {
+				throw new ResourceNotFoundException("Category id [" + categoryId + "] is not found");
+			}
+
+			if (category.getMerchantStore().getId().intValue() != merchantStore.getId().intValue()) {
+				throw new UnauthorizedException(
+						"Category id [" + categoryId + "] does not belong to store [" + merchantStore.getCode() + "]");
+			}

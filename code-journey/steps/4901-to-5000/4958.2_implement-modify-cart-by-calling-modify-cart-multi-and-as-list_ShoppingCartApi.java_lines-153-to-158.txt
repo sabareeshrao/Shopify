@@ -1,0 +1,6 @@
+	public ResponseEntity<ReadableShoppingCart> modifyCart(
+			@PathVariable String code,
+			@Valid @RequestBody PersistableShoppingCartItem[] shoppingCartItems, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+

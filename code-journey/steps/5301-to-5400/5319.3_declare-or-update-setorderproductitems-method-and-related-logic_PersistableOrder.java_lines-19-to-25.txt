@@ -1,0 +1,7 @@
+	private boolean shipToBillingAdress = true;
+	private boolean shipToDeliveryAddress = false;
+	
+	
+	public void setOrderProductItems(List<PersistableOrderProduct> orderProductItems) {
+		this.orderProductItems = orderProductItems;
+	}

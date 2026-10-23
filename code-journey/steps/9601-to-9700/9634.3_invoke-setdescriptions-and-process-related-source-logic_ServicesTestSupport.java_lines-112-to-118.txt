@@ -1,0 +1,7 @@
+
+		newCategory.setDescriptions(descriptions);
+
+		return newCategory;
+
+	}
+	

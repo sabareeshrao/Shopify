@@ -1,0 +1,10 @@
+		
+		try {
+
+			productService.saveProduct(product);
+	
+			ReadableProductPopulator populator = new ReadableProductPopulator();
+	
+			populator.setPricingService(pricingService);
+			populator.setimageUtils(imageUtils);
+			populator.populate(product, readableProduct, product.getMerchantStore(), language);

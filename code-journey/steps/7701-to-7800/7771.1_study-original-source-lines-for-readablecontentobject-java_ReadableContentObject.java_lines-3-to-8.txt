@@ -1,0 +1,6 @@
+public class ReadableContentObject extends ObjectContent {
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;

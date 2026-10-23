@@ -1,0 +1,8 @@
+	
+	/**
+	 * List of configured ShippingCountry for a given store
+	 * @param store
+	 * @param lanuage
+	 * @return
+	 */
+	List<ReadableCountry> shipToCountry(MerchantStore store, Language lanuage);

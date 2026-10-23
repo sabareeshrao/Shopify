@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NB",
+		"zoneName": "New Brunswick",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NS",
+		"zoneName": "Nova Scotia",
+		"countryCode": "CA"
+	},

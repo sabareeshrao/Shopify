@@ -1,0 +1,8 @@
+
+
+			return orderFacadeV1.orderConfirmation(modelOrder, customer, merchantStore, language);
+
+
+
+		} catch (Exception e) {
+			LOGGER.error("Error while processing checkout", e);

@@ -1,0 +1,11 @@
+  private CMSManager cmsManager;
+
+  public static S3ProductContentFileManager getInstance() {
+
+    if (fileManager == null) {
+      fileManager = new S3ProductContentFileManager();
+    }
+
+    return fileManager;
+
+  }

@@ -1,2 +1,0 @@
-	// Utility
-	public String getFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount, Locale locale)

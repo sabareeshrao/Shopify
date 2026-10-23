@@ -1,4 +1,0 @@
-					if (link.getRel().equalsIgnoreCase("approval_url")) {
-						req.setAttribute("redirectURL", link.getHref());
-					}
-				}

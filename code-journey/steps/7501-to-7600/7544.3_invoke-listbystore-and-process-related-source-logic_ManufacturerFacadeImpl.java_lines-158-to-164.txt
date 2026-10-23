@@ -1,0 +1,7 @@
+
+        if(language != null) {
+          manufacturers = manufacturerService.listByStore(store, language);
+        } else {
+          manufacturers = manufacturerService.listByStore(store);
+        }
+        readableList.setRecordsTotal(total);

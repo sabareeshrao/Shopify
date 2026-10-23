@@ -1,0 +1,6 @@
+		
+			for (String fileName : fileNames) {
+				files.add(getFile(merchantStoreCode, folderPath, fileContentType, fileName));
+			}
+		
+			LOGGER.info("Content get file names");

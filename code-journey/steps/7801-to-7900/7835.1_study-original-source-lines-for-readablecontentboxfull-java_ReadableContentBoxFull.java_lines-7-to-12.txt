@@ -1,0 +1,6 @@
+public class ReadableContentBoxFull extends ReadableContentBox {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

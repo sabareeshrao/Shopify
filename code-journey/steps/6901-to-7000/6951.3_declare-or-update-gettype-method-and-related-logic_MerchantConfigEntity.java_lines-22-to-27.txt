@@ -1,0 +1,6 @@
+  public MerchantConfigurationType getType() {
+    return type;
+  }
+  public void setType(MerchantConfigurationType type) {
+    this.type = type;
+  }

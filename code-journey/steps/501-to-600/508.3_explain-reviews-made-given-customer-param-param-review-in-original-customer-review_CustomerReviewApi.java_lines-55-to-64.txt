@@ -1,0 +1,10 @@
+
+  /**
+   * Reviews made for a given customer
+   *
+   * @param id
+   * @param review
+   * @return
+   * @throws Exception
+   */
+  @PostMapping("/private/customers/{id}/reviews")

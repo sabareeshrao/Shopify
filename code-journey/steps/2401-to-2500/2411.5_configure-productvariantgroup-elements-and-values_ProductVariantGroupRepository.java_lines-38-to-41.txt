@@ -1,0 +1,4 @@
+	List<ProductVariantGroup> finByProduct(Long productId, String storeCode);
+	
+
+}

@@ -1,0 +1,8 @@
+    Optional<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> desc = this.getDescription(source, language, target);
+    if(description.isPresent()) {
+    	target.setDescription(desc.get());
+    }
+    
+
+    return target;
+  }

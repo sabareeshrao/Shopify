@@ -1,6 +1,0 @@
-	private boolean virtual = false;
-	private boolean canBePurchased = true;
-	private String dateAvailable;
-	private String identifier;
-	private String sku; //to match v1 api
-	private ProductSpecification productSpecifications;

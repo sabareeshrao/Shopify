@@ -1,0 +1,8 @@
+    InputStream input = null;
+    OutputContentFile contentImage = new OutputContentFile();
+    try {
+
+      FileNameMap fileNameMap = URLConnection.getFileNameMap();
+
+      // SMALL by default
+      StringBuilder nodePath = new StringBuilder();

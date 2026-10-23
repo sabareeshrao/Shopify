@@ -1,0 +1,8 @@
+
+		if (owner != null) {
+			criteria.setOwnerId(owner);
+		}
+
+		if (page != null) {
+			criteria.setStartPage(page);
+		}

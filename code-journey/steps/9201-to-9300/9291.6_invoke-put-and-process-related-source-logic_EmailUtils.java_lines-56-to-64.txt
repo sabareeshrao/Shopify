@@ -1,0 +1,9 @@
+			templateTokens.put(LOGOPATH, logoPath.toString());
+		} else {
+			templateTokens.put(LOGOPATH, store.getStorename());
+		}
+
+		return templateTokens;
+	}
+
+}

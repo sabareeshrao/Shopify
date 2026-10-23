@@ -1,0 +1,7 @@
+    
+    
+      try {
+        byte[] targetArray = IOUtils.toByteArray(contentImage.getFile());
+        BlobId blobId = BlobId.of(bucketName, fileName.toString());
+        BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType("image/jpeg").build();
+        storage.create(blobInfo, targetArray);

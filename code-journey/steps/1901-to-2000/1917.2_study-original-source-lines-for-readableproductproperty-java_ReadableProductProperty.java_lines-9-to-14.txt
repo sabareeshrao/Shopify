@@ -1,0 +1,6 @@
+	
+	/** 
+	 * Property use option objects
+	 */
+	private ReadableProductOption property = null;
+	private ReadableProductPropertyValue propertyValue = null;

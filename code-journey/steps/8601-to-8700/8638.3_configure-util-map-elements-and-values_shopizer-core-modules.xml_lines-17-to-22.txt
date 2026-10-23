@@ -1,0 +1,6 @@
+
+	<!-- Shipping integration modules -->
+
+	<util:map id="shippingModules" map-class="java.util.HashMap"
+		key-type="java.lang.String"
+		value-type="com.salesmanager.core.business.modules.integration.shipping.model.ShippingQuoteModule">

@@ -1,0 +1,9 @@
+					.antMatchers(HttpMethod.OPTIONS, API_VERSION + "/auth/**").permitAll()
+					.antMatchers(API_VERSION + "/auth/**")
+					.hasRole("AUTH_CUSTOMER").anyRequest().authenticated()
+					.and()
+					.httpBasic()
+					.authenticationEntryPoint(apiCustomerAuthenticationEntryPoint()).and().csrf().disable()
+					.addFilterAfter(authenticationTokenFilter, BasicAuthenticationFilter.class);
+
+		}

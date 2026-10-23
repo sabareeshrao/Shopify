@@ -1,0 +1,7 @@
+
+	@Query(value = "select distinct m from MerchantStore m left join m.parent mp " + "left join fetch m.country pc "
+			+ "left join fetch m.currency pcu " + "left join fetch m.languages pl " + "left join fetch m.zone pz "
+			+ "where mp.code = ?1 or m.code = ?1 "
+			+ "and (?2 is null or (m.storename like %?2% or mp.storename like %?2%))", countQuery = "select count(distinct m) from MerchantStore m left join m.parent mp "
+					+ "where mp.code = ?1 or m.code = ?1 and (?2 is null or (m.storename like %?2% or mp.storename like %?2%))")
+	Page<MerchantStore> listChilds(String storeCode, String storeName, Pageable pageable);

@@ -1,0 +1,6 @@
+
+		if(productOption==null) {
+			throw new ConversionRuntimeException("Product option id " + source.getOption().getId() + " does not exist");
+		}
+		
+		ProductOptionValue productOptionValue = null;

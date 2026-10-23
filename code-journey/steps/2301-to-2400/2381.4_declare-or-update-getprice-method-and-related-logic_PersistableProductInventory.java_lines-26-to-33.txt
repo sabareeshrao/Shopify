@@ -1,0 +1,8 @@
+	public PersistableProductPrice getPrice() {
+		return price;
+	}
+	public void setPrice(PersistableProductPrice price) {
+		this.price = price;
+	}
+
+}

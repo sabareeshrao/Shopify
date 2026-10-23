@@ -1,0 +1,5 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/{productId}/variant" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })

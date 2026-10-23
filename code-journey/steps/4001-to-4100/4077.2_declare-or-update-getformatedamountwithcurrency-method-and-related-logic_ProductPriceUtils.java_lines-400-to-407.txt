@@ -1,0 +1,8 @@
+	public String getFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount, Locale locale)
+			throws Exception {
+
+		NumberFormat nf = null;
+
+		Currency currency = store.getCurrency().getCurrency();
+
+		nf = NumberFormat.getInstance(locale);

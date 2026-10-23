@@ -1,0 +1,8 @@
+
+	public void setRecordsTotal(long recordsTotal) {
+		this.recordsTotal = recordsTotal;
+	}
+
+	public int getRecordsFiltered() {
+		return recordsFiltered;
+	}

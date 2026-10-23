@@ -1,0 +1,8 @@
+				destination.setProductLength(source.getProductSpecifications().getLength());
+				destination.setProductWeight(source.getProductSpecifications().getWeight());
+				destination.setProductWidth(source.getProductSpecifications().getWidth());
+
+				 /**
+				  * BRANDING
+				  */
+

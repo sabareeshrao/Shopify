@@ -1,8 +1,0 @@
-public class CmsStaticContentFileManagerImpl
-		// implements FilePut,FileGet,FileRemove
-		implements ContentAssetsManager {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;

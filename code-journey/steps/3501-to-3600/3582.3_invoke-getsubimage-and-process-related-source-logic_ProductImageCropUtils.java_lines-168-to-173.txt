@@ -1,0 +1,6 @@
+		BufferedImage out = image.getSubimage(x1, y1, width, height);
+		File tempFile = File.createTempFile("temp", "." + extension );
+		tempFile.deleteOnExit();
+		ImageIO.write(out, extension, tempFile);
+		return tempFile;
+	}

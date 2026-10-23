@@ -1,0 +1,7 @@
+
+	List<TaxRate> listByCountryStateProvinceAndTaxClass(Country country,
+			String stateProvince, TaxClass taxClass, MerchantStore store,
+			Language language) throws ServiceException;
+
+	 TaxRate getByCode(String code, MerchantStore store)
+			throws ServiceException;

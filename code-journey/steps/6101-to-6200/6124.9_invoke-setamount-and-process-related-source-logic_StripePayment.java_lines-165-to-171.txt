@@ -1,0 +1,7 @@
+			
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);

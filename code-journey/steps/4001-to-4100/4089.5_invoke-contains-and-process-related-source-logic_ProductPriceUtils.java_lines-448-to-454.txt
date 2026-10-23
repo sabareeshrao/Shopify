@@ -1,0 +1,7 @@
+
+		if (!amount.contains(Character.toString(DECIMALPOINT)) && !amount.contains(Character.toString(THOUSANDPOINT))
+				&& !amount.contains(" ")) {
+
+			if (matchPositiveInteger(amount)) {
+				BigDecimalValidator validator = CurrencyValidator.getInstance();
+				BigDecimal bdamount = validator.validate(amount, Locale.US);

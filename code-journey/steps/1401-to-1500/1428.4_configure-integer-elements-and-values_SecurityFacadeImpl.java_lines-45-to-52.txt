@@ -1,0 +1,8 @@
+
+      List<Integer> ids = new ArrayList<Integer>();
+      for (Group g : userGroups) {
+        ids.add(g.getId());
+      }
+
+      PermissionCriteria criteria = new PermissionCriteria();
+      criteria.setGroupIds(new HashSet(ids));

@@ -1,0 +1,8 @@
+		if (cacheManager.getTreeCache() == null) {
+			LOGGER.error("Unable to find cacheManager.getTreeCache() in Infinispan..");
+			throw new ServiceException("CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+		}
+
+		try {
+
+			final StringBuilder merchantPath = new StringBuilder();

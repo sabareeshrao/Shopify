@@ -1,0 +1,10 @@
+
+	private void indexProduct(MerchantStore store, ProductDescription description, Product product,
+			List<Map<String, String>> variants) throws ServiceException {
+
+		try {
+			ProductImage image = null;
+			if (!CollectionUtils.isEmpty(product.getImages())) {
+				image = product.getImages().stream().filter(i -> i.isDefaultImage()).findFirst()
+						.orElse(product.getImages().iterator().next());
+			}

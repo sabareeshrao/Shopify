@@ -1,0 +1,5 @@
+
+		List<ContentDescription> descriptions = buildDescriptions(contentModel, content.getDescriptions());
+		contentModel.setCode(content.getCode());
+		contentModel.setContentType(ContentType.PAGE);
+		contentModel.setMerchantStore(store);

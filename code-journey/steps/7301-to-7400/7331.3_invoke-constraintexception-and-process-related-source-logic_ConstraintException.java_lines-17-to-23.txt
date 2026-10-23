@@ -1,0 +1,7 @@
+
+    public ConstraintException(String message, Throwable exception) {
+        super(CONSTRAINT_ERROR_CODE,message, exception);
+    }
+
+
+}

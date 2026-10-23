@@ -1,0 +1,6 @@
+
+        if (entry.getCatalog().getMerchantStore().getId().intValue() != store.getId().intValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + id + "] not found");
+        }
+        return readableCatalogEntryMapper.convert(entry, store, language);
+    }

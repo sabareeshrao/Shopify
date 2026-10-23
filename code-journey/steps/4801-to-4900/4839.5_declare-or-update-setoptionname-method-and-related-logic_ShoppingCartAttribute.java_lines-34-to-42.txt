@@ -1,0 +1,9 @@
+	public void setOptionName(String optionName) {
+		this.optionName = optionName;
+	}
+	public String getOptionValue() {
+		return optionValue;
+	}
+	public void setOptionValue(String optionValue) {
+		this.optionValue = optionValue;
+	}

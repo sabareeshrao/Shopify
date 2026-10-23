@@ -1,0 +1,7 @@
+			&trnType=P&trnOrderNumber=1234TEST&trnAmount=5.00&trnCardOwner=Joe+Test
+					&trnCardNumber=4030000010001234
+					&trnExpMonth=10
+					&trnExpYear=16
+					&ordName=Joe+Test
+					&ordAddress1=123+Test+Street
+					&ordCity=Victoria

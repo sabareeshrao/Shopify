@@ -1,7 +1,0 @@
-				// Map services = new HashMap();
-
-				// ResourceBundle bundle = ResourceBundle.getBundle("usps",
-				// locale);
-
-				// while(servicesIterator.hasNext()) {
-				// String key = (String)servicesIterator.next();

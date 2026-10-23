@@ -1,0 +1,8 @@
+
+	public Product getByFriendlyUrl(MerchantStore store, String seUrl, Locale locale) {
+
+		List<String> regionList = new ArrayList<>();
+		regionList.add("*");
+		regionList.add(locale.getCountry());
+
+		StringBuilder qs = new StringBuilder();

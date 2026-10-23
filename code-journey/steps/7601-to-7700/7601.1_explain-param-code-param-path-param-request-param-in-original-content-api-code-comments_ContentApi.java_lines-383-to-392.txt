@@ -1,0 +1,10 @@
+
+	/**
+	 * @param code
+	 * @param path
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/content/images", produces = MediaType.APPLICATION_JSON_VALUE)

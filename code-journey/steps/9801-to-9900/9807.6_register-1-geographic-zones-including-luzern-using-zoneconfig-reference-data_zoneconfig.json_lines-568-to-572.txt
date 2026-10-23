@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "LU",
-		"zoneName": "Luzern",
-		"countryCode": "CH"
-	},

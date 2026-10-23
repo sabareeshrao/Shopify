@@ -1,0 +1,8 @@
+        Validate.notNull(customer.getBilling().getCity(), "Billing city can not be null");
+        Validate.notNull(customer.getBilling().getPostalCode(), "Billing postal code can not be null");
+        Validate.notNull(customer.getBilling().getCountry(), "Billing country can not be null");
+    }
+    if(customer.getDelivery() == null) {
+      customer.setDelivery(customer.getBilling());
+    } else {
+

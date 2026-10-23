@@ -1,3 +1,0 @@
-    void addContentFile( String merchantStoreCode, InputContentFile contentFile )
-        throws ServiceException;
-

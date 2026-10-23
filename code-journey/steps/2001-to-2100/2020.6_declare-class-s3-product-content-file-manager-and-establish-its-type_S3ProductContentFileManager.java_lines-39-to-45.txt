@@ -1,7 +1,0 @@
-public class S3ProductContentFileManager
-    implements ProductAssetsManager {
-
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;

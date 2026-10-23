@@ -1,0 +1,8 @@
+			
+			List<ContentDescription> descriptions = new ArrayList<ContentDescription>();
+			for(Content c : contents) {
+					String name = c.getDescription().getName();
+					String url = c.getDescription().getSeUrl();
+					ContentDescription contentDescription = new ContentDescription();
+					contentDescription.setName(name);
+					contentDescription.setSeUrl(url);

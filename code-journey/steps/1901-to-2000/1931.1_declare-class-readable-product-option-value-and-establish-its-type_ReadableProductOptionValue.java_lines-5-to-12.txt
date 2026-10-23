@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription;
+
+public class ReadableProductOptionValue extends ProductOptionValueEntity {
+
+  /**
+   * 
+   */
+  private String price;

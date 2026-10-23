@@ -1,0 +1,6 @@
+	
+	@Autowired
+	private ProductOptionValueService productOptionValueService;
+	
+	@Autowired
+	private ProductTypeService productTypeService;

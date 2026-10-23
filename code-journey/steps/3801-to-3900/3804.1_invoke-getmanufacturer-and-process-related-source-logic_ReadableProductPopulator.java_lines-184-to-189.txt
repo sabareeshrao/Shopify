@@ -1,0 +1,6 @@
+
+			if(source.getManufacturer()!=null) {
+				ManufacturerDescription manufacturer = source.getManufacturer().getDescriptions().iterator().next();
+				ReadableManufacturer manufacturerEntity = new ReadableManufacturer();
+				com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription d = new com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription();
+				d.setName(manufacturer.getName());

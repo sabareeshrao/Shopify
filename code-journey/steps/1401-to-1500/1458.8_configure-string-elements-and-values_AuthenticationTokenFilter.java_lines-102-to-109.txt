@@ -1,0 +1,8 @@
+    		
+    		Enumeration<String> headers = request.getHeaderNames();
+    		//while(headers.hasMoreElements()) {
+    			//LOGGER.debug(headers.nextElement());
+    		//}
+
+	    	final String requestHeader = request.getHeader(this.tokenHeader);//token
+	    	

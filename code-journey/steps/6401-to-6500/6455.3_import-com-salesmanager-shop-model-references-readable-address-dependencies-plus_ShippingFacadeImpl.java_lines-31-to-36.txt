@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.references.ReadableAddress;
+import com.salesmanager.shop.model.references.ReadableCountry;
+import com.salesmanager.shop.model.shipping.ExpeditionConfiguration;
+import com.salesmanager.shop.populator.references.ReadableCountryPopulator;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+import com.salesmanager.shop.store.api.exception.OperationNotAllowedException;

@@ -1,3 +1,0 @@
-	@Override
-	public Transaction processCapturePayment(Order order, Customer customer,
-			MerchantStore store)

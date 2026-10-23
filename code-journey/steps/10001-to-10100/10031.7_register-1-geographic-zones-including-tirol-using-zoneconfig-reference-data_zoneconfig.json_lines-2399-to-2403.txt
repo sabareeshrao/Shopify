@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "TIAT",
-			"zoneName": "Tirol",
-			"countryCode": "AT"
-		},

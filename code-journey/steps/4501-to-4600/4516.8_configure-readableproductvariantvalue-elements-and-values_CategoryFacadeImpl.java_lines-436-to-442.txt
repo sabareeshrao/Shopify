@@ -1,0 +1,7 @@
+						v.setValue(value.getId());
+						v.setOrder(option.getProductOptionSortOrder());
+						optionValues.add(v);
+					}
+					
+				    Comparator<ReadableProductVariantValue> orderComparator
+				      = Comparator.comparingInt(ReadableProductVariantValue::getOrder);

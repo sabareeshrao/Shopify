@@ -1,0 +1,6 @@
+				
+				imageList.add(prdImage);
+			}
+			destination
+			.setImages(imageList);
+		}

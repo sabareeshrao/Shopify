@@ -1,0 +1,8 @@
+
+    LOG.info("getting Delivery address..");
+    CustomerDeliveryAddressPopulator deliveryAddressPopulator =
+        new CustomerDeliveryAddressPopulator();
+    return deliveryAddressPopulator.populate(customerModel, merchantStore,
+        merchantStore.getDefaultLanguage());
+
+  }

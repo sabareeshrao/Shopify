@@ -1,3 +1,0 @@
-	public final static String MANUFACTURERS_BY_PRODUCTS_CACHE_KEY = "CATALOG_BRANDS_BY_PRODUCTS";
-	public final static String CONFIG_CACHE_KEY = "CONFIG";
-

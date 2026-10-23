@@ -1,0 +1,9 @@
+  public void setDisplayedInMenu(boolean isDisplayedInMenu) {
+    this.isDisplayedInMenu = isDisplayedInMenu;
+  }
+  public String getCode() {
+    return code;
+  }
+  public void setCode(String code) {
+    this.code = code;
+  }

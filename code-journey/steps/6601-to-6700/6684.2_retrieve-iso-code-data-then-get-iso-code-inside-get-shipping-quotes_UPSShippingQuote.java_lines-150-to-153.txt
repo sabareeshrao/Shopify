@@ -1,4 +1,0 @@
-		if(!(country.getIsoCode().equals("US") || country.getIsoCode().equals("CA"))) {
-			return null;
-			//throw new IntegrationException("UPS Not configured for shipping in country " + country.getIsoCode());
-		}

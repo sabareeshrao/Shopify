@@ -1,0 +1,8 @@
+
+	public void setPayment(PersistablePayment payment) {
+		this.payment = payment;
+	}
+
+	public Long getShippingQuote() {
+		return shippingQuote;
+	}

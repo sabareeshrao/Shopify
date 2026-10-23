@@ -1,0 +1,7 @@
+                    Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> attributes = item.getAttributes();
+                    if(attributes!=null) {
+                        List<ShoppingCartAttribute> cartAttributes = new ArrayList<ShoppingCartAttribute>();
+                        for(com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attribute : attributes) {
+                            ShoppingCartAttribute cartAttribute = new ShoppingCartAttribute();
+                            cartAttribute.setId(attribute.getId());
+                            cartAttribute.setAttributeId(attribute.getProductAttributeId());

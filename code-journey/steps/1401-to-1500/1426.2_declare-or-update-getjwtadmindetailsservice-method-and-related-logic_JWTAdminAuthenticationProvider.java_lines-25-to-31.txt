@@ -1,0 +1,7 @@
+    
+    @Inject
+    private PasswordEncoder passwordEncoder;
+
+	public UserDetailsService getJwtAdminDetailsService() {
+		return jwtAdminDetailsService;
+	}

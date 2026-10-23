@@ -1,0 +1,9 @@
+	
+	
+	/**
+	 * works with file manager (javascript client)
+	 * @param files
+	 * @param merchantStore
+	 * @param language
+	 */
+	@PostMapping(value = "/private/content/images/add", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })

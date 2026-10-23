@@ -1,0 +1,7 @@
+
+		// Get products
+
+		// Filter availability
+
+		return productRepository.getProductsForLocale(category.getMerchantStore(), categoryIds, language, locale);
+	}

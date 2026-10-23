@@ -1,0 +1,8 @@
+
+			//List boxesList = boxesList;
+
+			// try each box
+			//Iterator boxIter = boxesList.iterator();
+			for (PackingBox pbox : boxesList) {
+				double volumeLeft = pbox.getVolumeLeft();
+				double weightLeft = pbox.getWeightLeft();

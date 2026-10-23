@@ -1,5 +1,0 @@
-
-@Service("customerReviewService")
-public class CustomerReviewServiceImpl extends
-	SalesManagerEntityServiceImpl<Long, CustomerReview> implements CustomerReviewService {
-	

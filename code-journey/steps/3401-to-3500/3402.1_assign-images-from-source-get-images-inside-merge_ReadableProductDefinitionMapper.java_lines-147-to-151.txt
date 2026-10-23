@@ -1,5 +1,0 @@
-		
-		returnDestination.setSortOrder(source.getSortOrder());
-		
-		//images
-		Set<ProductImage> images = source.getImages();

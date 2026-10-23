@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.shoppingcart.PersistableShoppingCartItem;
+import com.salesmanager.shop.model.shoppingcart.ReadableShoppingCart;
+import com.salesmanager.shop.model.store.ReadableMerchantStore;
+import com.salesmanager.shop.populator.customer.ReadableCustomerList;
+import com.salesmanager.shop.store.security.AuthenticationRequest;
+import com.salesmanager.shop.store.security.AuthenticationResponse;

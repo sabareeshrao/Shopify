@@ -1,0 +1,7 @@
+
+		final File imgPath = new File(image);
+
+		// PersistableImage persistableImage = new PersistableImage();
+
+		// persistableImage.setBytes(this.extractBytes(imgPath));
+		// persistableImage.setImageName(imgPath.getName());

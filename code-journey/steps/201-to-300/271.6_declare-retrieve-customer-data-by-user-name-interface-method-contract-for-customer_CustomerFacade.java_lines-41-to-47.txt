@@ -1,0 +1,7 @@
+     * @param store
+     * @param store
+     * @param language
+     * @throws Exception
+     *
+     */
+    public CustomerEntity getCustomerDataByUserName(final String userName,final MerchantStore store, final Language language) throws Exception;

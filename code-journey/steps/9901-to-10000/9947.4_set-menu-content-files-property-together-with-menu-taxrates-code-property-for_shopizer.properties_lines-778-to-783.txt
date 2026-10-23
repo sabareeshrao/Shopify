@@ -1,0 +1,6 @@
+menu.content-files=Manage files
+menu.payment=Payment
+menu.tax=Manage taxes
+menu.taxconfiguration=Tax configuration
+menu.taxclass=Tax classes
+menu.taxrates=Tax rates

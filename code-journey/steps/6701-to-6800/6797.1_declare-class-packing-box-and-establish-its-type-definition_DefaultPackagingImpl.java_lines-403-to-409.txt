@@ -1,0 +1,7 @@
+
+
+class PackingBox {
+
+	private double volumeLeft;
+	private double weightLeft;
+	private double weight;

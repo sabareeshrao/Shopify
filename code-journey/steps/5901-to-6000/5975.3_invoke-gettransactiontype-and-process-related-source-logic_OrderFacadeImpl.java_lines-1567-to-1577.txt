@@ -1,0 +1,11 @@
+			if(last.getTransactionType().name().equals(TransactionType.AUTHORIZE.name())) {
+				return TransactionType.CAPTURE;
+			} else if(last.getTransactionType().name().equals(TransactionType.AUTHORIZECAPTURE.name())) {
+				return TransactionType.REFUND;
+			} else if(last.getTransactionType().name().equals(TransactionType.CAPTURE.name())) {
+				return TransactionType.REFUND;
+			} else if(last.getTransactionType().name().equals(TransactionType.REFUND.name())) {
+				return TransactionType.OK;
+			} else {
+				return TransactionType.OK;
+			}

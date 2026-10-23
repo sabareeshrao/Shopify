@@ -1,7 +1,0 @@
-    
-    
-    /**
-     * Test category by name
-     * @throws Exception
-     */
-

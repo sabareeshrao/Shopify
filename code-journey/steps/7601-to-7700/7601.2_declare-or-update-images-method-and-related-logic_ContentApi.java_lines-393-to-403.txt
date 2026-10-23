@@ -1,0 +1,11 @@
+	@ApiOperation(httpMethod = "GET", value = "Get store content images", notes = "", response = ContentFolder.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ContentFolder images(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			@RequestParam(value = "path", required = false) String path, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		//String decodedPath = decodeContentPath(path);
+		ContentFolder folder = contentFacade.getContentFolder(path, merchantStore);
+		return folder;
+	}

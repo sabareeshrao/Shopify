@@ -1,0 +1,8 @@
+			 
+			 String refundAck = refundTransactionResponse.getAck().getValue();
+			 
+			 
+			 if(!"Success".equals(refundAck)) {
+				LOGGER.error("Wrong value from transaction commit " + refundAck);
+				throw new IntegrationException(ServiceException.EXCEPTION_TRANSACTION_DECLINED,"Paypal refund transaction code [" + refundTransactionResponse.getErrors().get(0).getErrorCode() + "], message-> " + refundTransactionResponse.getErrors().get(0).getShortMessage());
+			 }

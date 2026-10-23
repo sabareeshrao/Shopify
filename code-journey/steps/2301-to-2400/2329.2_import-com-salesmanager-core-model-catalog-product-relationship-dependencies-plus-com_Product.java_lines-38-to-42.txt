@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.catalog.product.relationship.ProductRelationship;
+import com.salesmanager.core.model.catalog.product.type.ProductType;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+import com.salesmanager.core.model.common.audit.AuditListener;
+import com.salesmanager.core.model.common.audit.AuditSection;

@@ -1,0 +1,6 @@
+
+Clone from fork repository
+-------------------
+
+       $ git clone https://github.com/yourusername/shopizer.git
+

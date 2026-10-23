@@ -1,0 +1,8 @@
+				if(c!=null) {
+					target.setCountryName(c.getName());
+				}
+			} catch (ServiceException e) {
+				// TODO Auto-generated catch block
+				throw new ConversionException(e);
+			}
+        }

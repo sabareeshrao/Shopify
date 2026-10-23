@@ -1,0 +1,6 @@
+
+			destination.setAvailable(source.isVisible());
+			destination.setDateAvailable(new Date());
+
+			destination.setRefSku(source.getRefSku());
+			

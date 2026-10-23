@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "MI",
+		"zoneName": "Michigan",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MN",
+		"zoneName": "Minnesota",
+		"countryCode": "US"
+	},

@@ -1,0 +1,10 @@
+
+
+	/**
+	 * Simple resize, does not maintain aspect ratio
+	 * @param image
+	 * @param width
+	 * @param height
+	 * @return
+	 */
+

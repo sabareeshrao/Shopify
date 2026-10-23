@@ -1,0 +1,7 @@
+	private Map<String, String> attributes(Product product, String language) {
+
+		/**
+		 * ProductAttribute ProductOption ProductOptionValue
+		 */
+
+		Map<String, String> allAttributes = new HashMap<String, String>();

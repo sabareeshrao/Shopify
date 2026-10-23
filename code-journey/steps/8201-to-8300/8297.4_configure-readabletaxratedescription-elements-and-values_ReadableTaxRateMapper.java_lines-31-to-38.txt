@@ -1,0 +1,8 @@
+		Validate.notNull(source, "source TaxRate cannot be null");
+		destination.setId(source.getId());
+		destination.setCountry(source.getCountry().getIsoCode());
+		destination.setZone(source.getZone().getCode());
+		destination.setRate(source.getTaxRate().toString());
+		destination.setCode(source.getCode());
+		destination.setPriority(source.getTaxPriority());
+		Optional<ReadableTaxRateDescription> description = this.convertDescription(source.getDescriptions(), language);

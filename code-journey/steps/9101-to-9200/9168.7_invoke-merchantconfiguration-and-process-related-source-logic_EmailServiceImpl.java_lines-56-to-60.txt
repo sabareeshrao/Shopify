@@ -1,0 +1,5 @@
+		if(configuration==null) {
+			configuration = new MerchantConfiguration();
+			configuration.setMerchantStore(store);
+			configuration.setKey(Constants.EMAIL_CONFIG);
+		}

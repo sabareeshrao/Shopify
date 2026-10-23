@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "JU",
-			"zoneName": "Jura",
-			"countryCode": "CH"
-		},

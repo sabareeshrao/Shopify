@@ -1,0 +1,9 @@
+
+	@Deprecated
+	private ReadableContentFull convertContentToReadableContentFull(MerchantStore store, Language language,
+			Content content) {
+		ReadableContentFull contentFull = new ReadableContentFull();
+
+		try {
+			List<ContentDescriptionEntity> descriptions = this.createContentDescriptionEntitys(store, content,
+					language);

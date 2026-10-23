@@ -1,0 +1,7 @@
+label.order.SHIPPED=Delivered
+label.order.PREPARED=Prepared
+label.order.REFUNDED=Refunded
+label.order.DELIVERED=Delivered
+label.order.CANCELED=Canceled
+refund=Refund
+

@@ -1,0 +1,9 @@
+
+	/**
+	 * Removes the data in a given merchant node
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void removeFiles(final String merchantStoreCode, Optional<String> path) throws ServiceException {
+
+		LOGGER.info("Removing all images for {} merchant ", merchantStoreCode);

@@ -1,0 +1,8 @@
+
+				if (creditCardType == null) {
+					ServiceException serviceException = new ServiceException(ServiceException.EXCEPTION_VALIDATION,
+							"cc.type");
+					throw serviceException;
+				}
+
+			}

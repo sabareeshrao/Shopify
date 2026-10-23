@@ -1,0 +1,7 @@
+	 *            Merchant store
+	 * @param contentFileName
+	 *            name of file being requested
+	 * @return {@link OutputStaticContentData}
+	 * @throws ServiceException
+	 */
+	@Override

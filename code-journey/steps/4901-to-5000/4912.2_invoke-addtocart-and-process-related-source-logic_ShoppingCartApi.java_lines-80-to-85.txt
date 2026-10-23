@@ -1,0 +1,6 @@
+	public @ResponseBody ReadableShoppingCart addToCart(
+			@Valid @RequestBody PersistableShoppingCartItem shoppingCartItem,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		return shoppingCartFacade.addToCart(shoppingCartItem, merchantStore, language);
+	}

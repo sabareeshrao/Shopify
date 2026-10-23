@@ -1,8 +1,0 @@
-#search.jksAbsolutePath=/Users/csa/Documents/dev/processes/open-search/config/testnode.jks
-search.jksAbsolutePath=
-
-#Languages to be configured for the search engine. Too much will impact the size and how indexes are built
-search.searchLanguages=en,fr
-
-search.host[0].scheme=http
-search.host[0].host=0.0.0.0

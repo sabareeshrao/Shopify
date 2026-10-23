@@ -1,0 +1,6 @@
+    		if(status==null) {
+    			status = OrderStatus.ORDERED;
+    			order.setStatus(status);
+    		}
+    		Set<OrderStatusHistory> statusHistorySet = new HashSet<OrderStatusHistory>();
+    		OrderStatusHistory statusHistory = new OrderStatusHistory();

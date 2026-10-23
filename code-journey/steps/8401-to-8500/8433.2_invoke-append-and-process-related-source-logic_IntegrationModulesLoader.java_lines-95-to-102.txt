@@ -1,0 +1,8 @@
+	    		int count = 0;
+	    		detailsStructure.append("{");
+	    		for(String key : details.keySet()) {
+	    			String jsonKeyString = mapper.writeValueAsString(key);
+	    			detailsStructure.append(jsonKeyString);
+	    			detailsStructure.append(":");
+	    			String jsonValueString = mapper.writeValueAsString(details.get(key));
+	    			detailsStructure.append(jsonValueString);

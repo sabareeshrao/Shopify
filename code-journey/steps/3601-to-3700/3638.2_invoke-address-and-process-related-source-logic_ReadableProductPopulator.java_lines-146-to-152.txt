@@ -1,0 +1,7 @@
+				com.salesmanager.shop.model.customer.address.Address address = new com.salesmanager.shop.model.customer.address.Address();
+				address.setAddress(source.getOwner().getBilling().getAddress());
+				address.setBillingAddress(true);
+				address.setCity(source.getOwner().getBilling().getCity());
+				address.setCompany(source.getOwner().getBilling().getCompany());
+				address.setCountry(source.getOwner().getBilling().getCountry().getIsoCode());
+				address.setZone(source.getOwner().getBilling().getZone().getCode());

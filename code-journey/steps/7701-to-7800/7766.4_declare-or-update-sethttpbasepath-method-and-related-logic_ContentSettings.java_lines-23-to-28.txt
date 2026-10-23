@@ -1,0 +1,6 @@
+
+	public void setHttpBasePath(String httpBasePath) {
+		this.httpBasePath = httpBasePath;
+	}
+
+}

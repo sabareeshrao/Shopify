@@ -1,3 +1,0 @@
-	private List<OrderTotal> totals;
-	private List<OrderAttribute> attributes = new ArrayList<OrderAttribute>();
-	

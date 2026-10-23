@@ -1,0 +1,11 @@
+	@Override
+	public ProductPrice saveOrUpdate(ProductPrice price) throws ServiceException {
+		
+		
+		ProductPrice returnEntity = productPriceRepository.save(price);
+
+		return returnEntity;
+
+
+	}
+	

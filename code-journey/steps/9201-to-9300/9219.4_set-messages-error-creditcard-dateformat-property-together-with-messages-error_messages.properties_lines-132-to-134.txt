@@ -1,3 +1,0 @@
-messages.error.creditcard.dateformat=Credit card expiration date is invalid
-messages.error.creditcard.cvc=Credit card verification digits are invalid
-

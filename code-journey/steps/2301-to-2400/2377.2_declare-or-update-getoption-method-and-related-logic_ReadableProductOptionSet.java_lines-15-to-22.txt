@@ -1,0 +1,8 @@
+	
+	private ReadableProductOption option;
+	private List<ReadableProductOptionValue> values;
+	private List<ReadableProductType> productTypes;
+	
+	public ReadableProductOption getOption() {
+		return option;
+	}

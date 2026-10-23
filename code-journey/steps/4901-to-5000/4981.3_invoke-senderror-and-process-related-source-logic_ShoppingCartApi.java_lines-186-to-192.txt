@@ -1,0 +1,7 @@
+
+			if (cart == null) {
+				response.sendError(404, "No ShoppingCart found for customer code : " + code);
+				return null;
+			}
+
+			return cart;

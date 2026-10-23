@@ -1,0 +1,8 @@
+
+		List<Product> products = productSkus.stream().map(p -> this.fetchProduct(p, store, store.getDefaultLanguage()))
+				.collect(Collectors.toList());
+
+		if (products == null || products.size() != shoppingCartItems.size()) {
+			LOG.warn("----------------------- Items with in id-list " + productSkus + " does not exist");
+			throw new ResourceNotFoundException("Item with skus " + productSkus + " does not exist");
+		}

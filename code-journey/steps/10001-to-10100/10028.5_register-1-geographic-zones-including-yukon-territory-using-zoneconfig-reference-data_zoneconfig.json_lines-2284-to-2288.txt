@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "YT",
-			"zoneName": "Yukon Territory",
-			"countryCode": "CA"
-		},

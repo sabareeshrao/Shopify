@@ -1,3 +1,0 @@
-			
-
-			List<PaymentDetailsItemType> lineItems = new ArrayList<PaymentDetailsItemType>();

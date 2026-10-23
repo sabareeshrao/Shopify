@@ -1,0 +1,10 @@
+ * 
+ * Access google developers console
+ * https://console.developers.google.com/project
+ * 
+ * Geocoding
+ * Distance Matrix
+ * Directions
+ * 
+ * Create new key for server application
+ * Copy API key

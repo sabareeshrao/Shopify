@@ -1,0 +1,8 @@
+
+		if (assigned.size() > 0) {
+			throw new OperationNotAllowedException("Category with id [" + category.getId()
+					+ "] already attached to product [" + product.getId() + "]");
+		}
+
+		product.getCategories().add(category);
+		ReadableProduct readableProduct = new ReadableProduct();

@@ -1,0 +1,8 @@
+
+		// Update product with minimal set
+		modified.setAvailable(product.isAvailable());
+
+		for (ProductAvailability availability : modified.getAvailabilities()) {
+			availability.setProductQuantity(product.getQuantity());
+			if (!StringUtils.isBlank(product.getPrice())) {
+				// set default price

@@ -1,0 +1,8 @@
+public interface ProductVariationService extends SalesManagerEntityService<Long, ProductVariation> {
+	
+
+	void saveOrUpdate(ProductVariation entity) throws ServiceException;
+
+	Optional<ProductVariation> getById(MerchantStore store, Long id, Language lang);
+	
+	Optional<ProductVariation> getById(MerchantStore store, Long id);

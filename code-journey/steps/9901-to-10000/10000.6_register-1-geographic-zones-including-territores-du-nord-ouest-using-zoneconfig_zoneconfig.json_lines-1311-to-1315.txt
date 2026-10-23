@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NT",
-		"zoneName": "Territores du Nord-Ouest",
-		"countryCode": "CA"
-	},

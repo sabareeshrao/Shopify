@@ -1,0 +1,7 @@
+
+			searchModule.index(item);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

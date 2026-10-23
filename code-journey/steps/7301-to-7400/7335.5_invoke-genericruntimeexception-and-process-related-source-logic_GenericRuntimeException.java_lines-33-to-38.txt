@@ -1,0 +1,6 @@
+
+  public GenericRuntimeException(String errorCode, String errorMessage, Throwable exception) {
+    super(exception);
+    this.setErrorCode(errorCode);
+    this.setErrorMessage(errorMessage);
+  }

@@ -1,0 +1,6 @@
+	@Override
+	public ReadableCategory getByCode(MerchantStore store, String code, Language language) throws Exception {
+
+		Validate.notNull(code, "category code must not be null");
+		ReadableCategoryPopulator categoryPopulator = new ReadableCategoryPopulator();
+		ReadableCategory readableCategory = new ReadableCategory();

@@ -1,0 +1,8 @@
+	public void delete(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, @PathVariable Long id,
+			HttpServletRequest request) {
+
+		/** Must be superadmin or admin */
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

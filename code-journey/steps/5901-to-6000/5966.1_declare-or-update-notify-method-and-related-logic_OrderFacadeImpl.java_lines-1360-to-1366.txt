@@ -1,0 +1,7 @@
+
+	@Async
+	private void notify(Order order, Customer customer, MerchantStore store, Language language, Locale locale) throws Exception {
+
+		// send order confirmation email to customer
+		emailTemplatesUtils.sendOrderEmail(customer.getEmailAddress(), customer, order, locale,
+				language, store, coreConfiguration.getProperty("CONTEXT_PATH"));

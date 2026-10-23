@@ -1,0 +1,7 @@
+	protected PersistableProduct product(String code) {
+
+		PersistableProduct product = new PersistableProduct();
+
+		PersistableProductInventory inventory = new PersistableProductInventory();
+		inventory.setQuantity(5);
+		inventory.setSku(code);

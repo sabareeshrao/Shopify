@@ -1,0 +1,5 @@
+					
+					productVariant.setOptions(readableValues);
+					variants.add(productVariant);
+				}
+			}

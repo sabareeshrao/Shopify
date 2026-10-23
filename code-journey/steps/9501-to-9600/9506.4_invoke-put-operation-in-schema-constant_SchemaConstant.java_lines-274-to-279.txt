@@ -1,6 +1,0 @@
-		//CURRENCY_MAP.put("ZWL", "Zimbabwe Dollar");
-		
-
-
-	}
-}

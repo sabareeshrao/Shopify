@@ -1,0 +1,7 @@
+
+
+@Service("socialCustomerDetailsService")
+public class SocialCustomerServicesImpl implements UserDetailsService{
+	
+	@Inject
+	UserDetailsService customerDetailsService;

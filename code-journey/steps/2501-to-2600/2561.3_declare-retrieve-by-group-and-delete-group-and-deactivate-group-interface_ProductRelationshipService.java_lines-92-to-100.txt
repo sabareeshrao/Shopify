@@ -1,9 +1,0 @@
-
-	List<ProductRelationship> getByGroup(MerchantStore store, String groupName)
-			throws ServiceException;
-
-	void deleteGroup(MerchantStore store, String groupName)
-			throws ServiceException;
-
-	void deactivateGroup(MerchantStore store, String groupName)
-			throws ServiceException;

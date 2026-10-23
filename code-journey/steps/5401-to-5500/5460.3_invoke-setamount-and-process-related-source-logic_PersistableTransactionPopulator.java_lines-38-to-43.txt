@@ -1,0 +1,6 @@
+
+			target.setAmount(pricingService.getAmount(source.getAmount()));
+			target.setDetails(source.getDetails());
+			target.setPaymentType(PaymentType.valueOf(source.getPaymentType()));
+			target.setTransactionType(TransactionType.valueOf(source.getTransactionType()));
+			target.setTransactionDate(DateUtil.getDate(source.getTransactionDate()));

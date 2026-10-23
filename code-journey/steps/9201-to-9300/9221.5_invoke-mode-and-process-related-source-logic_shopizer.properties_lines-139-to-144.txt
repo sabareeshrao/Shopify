@@ -1,0 +1,6 @@
+label.store.debugmode=Debug mode (add additional debug)
+label.store.allowPurchaseItems=Allow purchase items
+label.store.displayaddtocartfeatured=Allow add to cart on featured items
+label.store.tofindus=Where to find us
+
+label.storefront.landingpage=Landing page information

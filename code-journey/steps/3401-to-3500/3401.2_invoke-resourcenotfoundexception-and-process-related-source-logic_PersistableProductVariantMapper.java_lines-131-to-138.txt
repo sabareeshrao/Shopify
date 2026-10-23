@@ -1,0 +1,8 @@
+			
+			if(product == null) {
+				throw new ResourceNotFoundException("Product [" + source.getId() + "] + not found for store [" + store.getCode() + "]");
+			}
+
+			if(product.getMerchantStore().getId() != store.getId()) {
+				throw new ResourceNotFoundException("Product [" + source.getId() + "] + not found for store [" + store.getCode() + "]");
+			}

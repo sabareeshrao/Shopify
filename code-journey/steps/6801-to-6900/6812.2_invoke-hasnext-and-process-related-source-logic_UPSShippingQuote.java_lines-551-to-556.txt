@@ -1,0 +1,6 @@
+				while (i.hasNext()) {
+					ShippingOption option = (ShippingOption) i.next();
+					// option.setCurrency(store.getCurrency());
+					StringBuffer description = new StringBuffer();
+
+					String code = option.getOptionCode();

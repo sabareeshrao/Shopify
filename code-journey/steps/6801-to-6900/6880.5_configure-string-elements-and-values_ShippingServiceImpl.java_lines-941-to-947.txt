@@ -1,0 +1,7 @@
+		List<String> postProcessorKeys = new ArrayList<String>();
+		if(postProcessors!=null) {
+			for(ShippingQuotePrePostProcessModule processor : postProcessors) {
+				postProcessorKeys.add(processor.getModuleCode());
+			}
+		}
+		metaData.setPostProcessors(postProcessorKeys);

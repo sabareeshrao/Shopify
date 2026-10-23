@@ -1,0 +1,6 @@
+
+/*								propertyValue.setCode(attribute.getProductOptionValue().getCode());
+								propertyValue.setId(attribute.getProductOptionValue().getId());
+
+
+								propertyValue.setSortOrder(0);

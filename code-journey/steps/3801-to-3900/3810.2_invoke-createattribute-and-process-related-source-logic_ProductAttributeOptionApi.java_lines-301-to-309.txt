@@ -1,0 +1,9 @@
+	public @ResponseBody Entity createAttribute(
+			@PathVariable Long id,
+			@Valid @RequestBody PersistableProductAttribute attribute, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletRequest request, 
+			HttpServletResponse response) {
+
+		ReadableProductAttributeEntity attributeEntity = productOptionFacade.saveAttribute(id, attribute, merchantStore, language);

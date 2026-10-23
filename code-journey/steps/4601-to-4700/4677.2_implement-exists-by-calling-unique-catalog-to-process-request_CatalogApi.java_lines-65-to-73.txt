@@ -1,9 +1,0 @@
-  @ApiOperation(httpMethod = "GET", value = "Check if catalog code already exists", notes = "",
-      response = EntityExists.class)
-  public ResponseEntity<EntityExists> exists(
-      @RequestParam(value = "code") String code,
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language) {
-      boolean existByCode = catalogFacade.uniqueCatalog(code, merchantStore);
-      return new ResponseEntity<EntityExists>(new EntityExists(existByCode), HttpStatus.OK);
-  }

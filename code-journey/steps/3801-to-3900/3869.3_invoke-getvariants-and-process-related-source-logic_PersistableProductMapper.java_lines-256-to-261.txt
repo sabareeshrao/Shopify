@@ -1,0 +1,6 @@
+					for(ProductVariant variant : destination.getVariants()) {
+						defaultAvailability = this.defaultAvailability(variant.getAvailabilities().stream().collect(Collectors.toList()));
+						if(defaultAvailability != null) {
+							break;
+						}
+					}

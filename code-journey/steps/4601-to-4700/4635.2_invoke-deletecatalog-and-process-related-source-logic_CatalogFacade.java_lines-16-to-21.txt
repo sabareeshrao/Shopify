@@ -1,0 +1,6 @@
+
+    void deleteCatalog(Long catalogId, MerchantStore store, Language language);
+
+    boolean uniqueCatalog(String code, MerchantStore store);
+
+    ReadableCatalog getCatalog(String code, MerchantStore store, Language language);

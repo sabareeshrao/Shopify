@@ -1,0 +1,10 @@
+public class BeanStreamPayment implements PaymentModule {
+	
+	@Inject
+	private ProductPriceUtils productPriceUtils;
+	
+	@Inject
+	private MerchantLogService merchantLogService;
+	
+
+	

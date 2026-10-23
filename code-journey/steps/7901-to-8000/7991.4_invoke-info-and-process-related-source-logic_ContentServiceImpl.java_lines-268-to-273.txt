@@ -1,0 +1,6 @@
+
+		LOG.info("Adding content images for merchant....");
+		contentFileManager.addFiles(merchantStoreCode, path, contentFilesList);
+		// staticContentFileManager.addFiles(merchantStoreCode,
+		// contentFilesList);
+

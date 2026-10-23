@@ -1,0 +1,6 @@
+        q.setParameter("code", "%" + criteria.getCode().toLowerCase() + "%");
+      }
+      if (criteria.getName() != null) {
+        countQ.setParameter("name", "%" + criteria.getCode().toLowerCase() + "%");
+        q.setParameter("name", "%" + criteria.getCode().toLowerCase() + "%");
+      }

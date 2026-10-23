@@ -1,0 +1,8 @@
+
+  public void setLength(BigDecimal length) {
+    this.length = length;
+  }
+
+  public BigDecimal getWidth() {
+    return width;
+  }

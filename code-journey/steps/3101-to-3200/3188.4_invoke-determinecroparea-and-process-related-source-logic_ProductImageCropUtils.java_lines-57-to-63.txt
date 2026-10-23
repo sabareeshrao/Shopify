@@ -1,0 +1,7 @@
+		
+				determineCropArea(width, largeImageWidth, height, largeImageHeight);
+			
+			} catch (Exception e) {
+				LOGGER.error("Image Utils error in constructor", e);
+			}
+		

@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.common.Criteria;
+
+public class UserCriteria extends Criteria {
+	
+	private String adminEmail;
+	private String adminName;

@@ -1,0 +1,6 @@
+		try {
+			ReadableManufacturer manufacturer = manufacturerFacade.getManufacturer(id, merchantStore, language);
+
+			if (manufacturer == null) {
+				response.sendError(404, "No Manufacturer found for ID : " + id);
+			}

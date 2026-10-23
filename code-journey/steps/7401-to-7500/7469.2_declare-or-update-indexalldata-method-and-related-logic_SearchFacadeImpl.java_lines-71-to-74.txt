@@ -1,0 +1,4 @@
+	@Async
+	public void indexAllData(MerchantStore store) throws Exception {
+		List<Product> products = productService.listByStore(store);
+

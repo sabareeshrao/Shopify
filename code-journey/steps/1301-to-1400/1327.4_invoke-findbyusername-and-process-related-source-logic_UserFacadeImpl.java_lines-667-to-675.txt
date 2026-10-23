@@ -1,0 +1,9 @@
+
+				ReadableUser readableUser = findByUserName(currentPrincipalName, languageService.defaultLanguage());
+				//ReadableUser readableUser =	  findByUserName(currentPrincipalName, store.getCode(), store.getDefaultLanguage());
+				if (readableUser == null) {
+					return false;
+				}
+
+				// current user match;
+				String merchant = readableUser.getMerchant();

@@ -1,3 +1,0 @@
-		Validate.notNull(digitalProductService,"digitalProductService must be set");
-		Validate.notNull(productAttributeService,"productAttributeService must be set");
-

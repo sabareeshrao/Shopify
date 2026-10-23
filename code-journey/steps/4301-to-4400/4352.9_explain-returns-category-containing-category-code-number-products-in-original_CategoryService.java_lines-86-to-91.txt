@@ -1,0 +1,6 @@
+	 *   ...
+	 * @param store
+	 * @param categoryIds
+	 * @return
+	 * @throws ServiceException
+	 */

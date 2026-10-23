@@ -1,0 +1,8 @@
+		
+		//calculate volume (L x W x H)
+		Double volume = null;
+		Double weight = 0D;
+		Double size = null;
+		//calculate weight, volume and largest size
+		for(PackageDetails pack : packages) {
+			weight = weight + pack.getShippingWeight();

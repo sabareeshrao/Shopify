@@ -1,0 +1,10 @@
+		                        .scopes(new AuthorizationScope[0])
+		                        .build()
+		                    )
+		                )
+		                .build())
+		        )
+				.produces(produces).consumes(consumes).globalResponseMessage(RequestMethod.GET, getMessages)
+	            .globalResponseMessage(RequestMethod.GET, getMessages);
+
+	}

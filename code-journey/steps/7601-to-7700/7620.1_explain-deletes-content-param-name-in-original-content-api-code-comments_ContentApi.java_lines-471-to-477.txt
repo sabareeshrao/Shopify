@@ -1,0 +1,7 @@
+
+	/**
+	 * Deletes a content from CMS
+	 *
+	 * @param name
+	 */
+	@Deprecated

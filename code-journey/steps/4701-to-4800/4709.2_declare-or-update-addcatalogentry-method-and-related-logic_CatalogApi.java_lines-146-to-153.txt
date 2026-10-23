@@ -1,0 +1,8 @@
+  public ReadableCatalogCategoryEntry addCatalogEntry(
+      @PathVariable Long id,
+	  @RequestBody @Valid PersistableCatalogCategoryEntry catalogEntry,
+      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+
+
+	  ReadableCatalog c = catalogFacade.getCatalog(id, merchantStore, language);

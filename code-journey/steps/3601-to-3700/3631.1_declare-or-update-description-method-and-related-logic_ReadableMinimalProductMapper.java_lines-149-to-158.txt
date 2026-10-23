@@ -1,0 +1,10 @@
+	private ReadableDescription description(ProductDescription description) {
+		ReadableDescription desc = new ReadableDescription();
+		desc.setDescription(description.getDescription());
+		desc.setName(description.getName());
+		desc.setId(description.getId());
+		desc.setLanguage(description.getLanguage().getCode());
+		return desc;
+	}
+
+}

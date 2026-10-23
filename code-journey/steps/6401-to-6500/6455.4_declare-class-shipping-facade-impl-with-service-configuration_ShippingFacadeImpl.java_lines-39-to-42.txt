@@ -1,4 +1,0 @@
-
-@Service("shippingFacade")
-public class ShippingFacadeImpl implements ShippingFacade {
-	

@@ -1,0 +1,6 @@
+
+    if (resp.getStatusCode() != HttpStatus.OK) {
+      throw new Exception(resp.toString());
+    } else {
+      assertTrue(true);
+    }

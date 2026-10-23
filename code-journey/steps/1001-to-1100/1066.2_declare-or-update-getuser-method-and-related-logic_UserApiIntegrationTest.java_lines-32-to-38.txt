@@ -1,0 +1,7 @@
+  
+  @Test
+  public void getUser() throws Exception {
+      final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
+
+      final ResponseEntity<ReadableUser> response = testRestTemplate.exchange(String.format("/api/v1/private/users/" + DEFAULT_USER_ID), HttpMethod.GET,
+              httpEntity, ReadableUser.class);

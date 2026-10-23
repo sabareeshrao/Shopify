@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "ZH",
+			"zoneName": "Zrich",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "ACorua",
+			"zoneName": "A Corua",
+			"countryCode": "ES"
+		},

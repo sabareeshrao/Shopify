@@ -1,0 +1,9 @@
+        if ( items != null && items.size() > 0 )
+        {
+            for ( ShoppingCartItem item : items )
+            {
+
+                Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartItems = cartMdel.getLineItems();
+                if ( cartItems != null && cartItems.size() > 0 )
+                {
+

@@ -1,0 +1,7 @@
+		try {
+			productOptionSetService.delete(opt);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while deleting ProductOptionSet", e);
+		}
+
+	}

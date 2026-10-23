@@ -1,0 +1,8 @@
+			qs.append("left join fetch c.descriptions cd join fetch c.merchantStore cm ");
+			qs.append("where cm.id =:cm ");
+			qs.append("and c.visible =true ");
+			qs.append("and cd.seUrl =:se ");
+
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);

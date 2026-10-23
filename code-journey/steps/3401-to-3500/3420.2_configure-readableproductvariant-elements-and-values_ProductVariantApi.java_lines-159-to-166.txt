@@ -1,0 +1,8 @@
+	public @ResponseBody ReadableEntityList<ReadableProductVariant> list(@PathVariable final Long id,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+
+		return productVariantFacade.list(id, merchantStore, language, page, count);
+
+	}

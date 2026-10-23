@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("XAF", "CFA Franc BEAC");
-		CURRENCY_MAP.put("CAD", "Canadian Dollar");
-		CURRENCY_MAP.put("CVE", "Cape Verde Escudo");
-		CURRENCY_MAP.put("KYD", "Cayman Islands Dollar");
-		CURRENCY_MAP.put("CLF", "Unidades de fomento");
-		CURRENCY_MAP.put("CLP", "Chilean Peso");
-		CURRENCY_MAP.put("CNY", "Yuan Renminbi");
-		CURRENCY_MAP.put("COP", "Colombian Peso");

@@ -1,0 +1,8 @@
+		
+		for(ProductRelationship relationship : relationships) {
+			
+				ProductGroup g = new ProductGroup();
+				g.setActive(relationship.isActive());
+				g.setCode(relationship.getCode());
+				g.setId(relationship.getId());
+				groups.add(g);

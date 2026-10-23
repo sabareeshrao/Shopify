@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "GA",
+		"zoneName": "Georgia",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "GU",
+		"zoneName": "Guam",
+		"countryCode": "US"
+	},

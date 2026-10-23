@@ -1,0 +1,7 @@
+	@Override
+	public ReadableShopOrder populate(ShopOrder source,
+			ReadableShopOrder target, MerchantStore store, Language language)
+			throws ConversionException {
+		
+		//not that much is required
+		

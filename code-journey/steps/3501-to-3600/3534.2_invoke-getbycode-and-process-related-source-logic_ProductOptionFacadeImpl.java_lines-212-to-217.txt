@@ -1,0 +1,6 @@
+		ProductOptionValue optionValue = productOptionValueService.getByCode(store, code);
+		if (optionValue != null) {
+			exists = true;
+		}
+		return exists;
+	}

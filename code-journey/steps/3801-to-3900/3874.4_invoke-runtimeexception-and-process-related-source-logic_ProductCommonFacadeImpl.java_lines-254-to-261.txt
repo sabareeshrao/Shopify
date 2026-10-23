@@ -1,0 +1,8 @@
+		
+		} catch(Exception e) {
+			throw new RuntimeException("Exception when adding product [" + product.getId() + "] to category [" + category.getId() + "]",e);
+		}
+
+		return readableProduct;
+
+	}

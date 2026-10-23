@@ -1,0 +1,8 @@
+@Component
+@Order(0)
+public class XssFilter implements Filter {
+
+	 /**
+	  * Description: Log
+	  */
+	 private static final Logger LOGGER = LoggerFactory.getLogger(XssFilter.class);

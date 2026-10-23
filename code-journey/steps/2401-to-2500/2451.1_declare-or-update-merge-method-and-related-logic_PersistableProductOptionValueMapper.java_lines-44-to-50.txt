@@ -1,0 +1,7 @@
+
+	@Override
+	public ProductOptionValue merge(PersistableProductOptionValue source, ProductOptionValue destination,
+									MerchantStore store, Language language) {
+		if (destination == null) {
+			destination = new ProductOptionValue();
+		}

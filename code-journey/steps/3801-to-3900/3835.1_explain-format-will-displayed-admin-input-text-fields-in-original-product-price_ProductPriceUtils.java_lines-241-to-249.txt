@@ -1,0 +1,9 @@
+
+	/**
+	 * This is the format that will be displayed in the admin input text fields when
+	 * editing an entity having a BigDecimal to be displayed as a raw amount
+	 * 1,299.99 The admin user will also be force to input the amount using that
+	 * format
+	 * 
+	 * @param store
+	 * @param amount

@@ -1,0 +1,7 @@
+
+		/**/
+		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
+				&& !CollectionUtils.isEmpty(criteria.getAttributeCriteria())) {
+			int cnt = 0;
+			for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
+				qs.append(" and po.code =:").append(attributeCriteria.getAttributeCode());

@@ -1,0 +1,8 @@
+
+				ReadableProduct productProxy;
+				try {
+					productProxy = populator.populate(product, new ReadableProduct(), store, language);
+					target.setProduct(productProxy);
+				} catch (ConversionException e) {
+					throw new ConversionRuntimeException("Cannot convert product", e);
+				}

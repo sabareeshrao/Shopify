@@ -1,0 +1,6 @@
+
+	private void setContentDescriptionToContentModel(Content content, ContentDescription contentDescription,
+			Language language) {
+
+		Optional<ContentDescription> contentDescriptionModel = findAppropriateContentDescription(
+				content.getDescriptions(), language);

@@ -1,0 +1,6 @@
+	@Override
+	public void setVisible(PersistableCategory category, MerchantStore store) {
+		Validate.notNull(category, "Category must not be null");
+		Validate.notNull(store, "Store must not be null");
+		try {
+			Category c = this.getById(store, category.getId());

@@ -1,5 +1,0 @@
-
-@Entity
-@Table (name="ORDERS")
-public class Order extends SalesManagerEntity<Long, Order> {
-	

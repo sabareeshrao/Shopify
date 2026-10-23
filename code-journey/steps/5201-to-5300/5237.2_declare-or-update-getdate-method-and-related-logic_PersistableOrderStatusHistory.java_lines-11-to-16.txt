@@ -1,0 +1,6 @@
+	
+	private String date;
+
+	public String getDate() {
+		return date;
+	}

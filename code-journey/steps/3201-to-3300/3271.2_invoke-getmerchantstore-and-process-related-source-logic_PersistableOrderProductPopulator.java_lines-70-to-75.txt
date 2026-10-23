@@ -1,0 +1,6 @@
+			
+			if(modelProduct.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+				throw new ConversionException("Invalid product id " + source.getProduct().getId());
+			}
+
+			DigitalProduct digitalProduct = digitalProductService.getByProduct(store, modelProduct);

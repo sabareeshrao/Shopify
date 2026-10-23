@@ -1,0 +1,9 @@
+			
+			destination.setSortOrder(source.getSortOrder());
+			destination.setProductVirtual(source.isProductVirtual());
+			destination.setProductShipeable(source.isProductShipeable());
+			if(source.getRating() != null) {
+				destination.setProductReviewAvg(new BigDecimal(source.getRating()));
+			}
+			destination.setProductReviewCount(source.getRatingCount());
+			

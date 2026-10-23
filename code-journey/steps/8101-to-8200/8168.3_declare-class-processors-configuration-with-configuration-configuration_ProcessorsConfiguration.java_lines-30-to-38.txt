@@ -1,0 +1,9 @@
+ * 
+ * @author carlsamson
+ *
+ */
+@Configuration
+public class ProcessorsConfiguration {
+
+	@Inject
+	private PromoCodeCalculatorModule promoCodeCalculatorModule;

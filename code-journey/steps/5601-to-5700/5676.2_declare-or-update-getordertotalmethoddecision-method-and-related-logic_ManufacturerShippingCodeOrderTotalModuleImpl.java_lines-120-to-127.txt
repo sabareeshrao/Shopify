@@ -1,0 +1,8 @@
+
+	public StatelessKnowledgeSession getOrderTotalMethodDecision() {
+		return orderTotalMethodDecision;
+	}
+
+	public void setOrderTotalMethodDecision(StatelessKnowledgeSession orderTotalMethodDecision) {
+		this.orderTotalMethodDecision = orderTotalMethodDecision;
+	}*/

@@ -1,0 +1,8 @@
+	    desc.setDescription(source.getDescription());
+	    desc.setName(source.getName());
+	    if(source.getId() != null && source.getId().longValue()>0) {
+	      desc.setId(source.getId());
+	    }
+	    Language lang = languageService.getByCode(source.getLanguage());
+	    desc.setLanguage(lang);
+	    return desc;

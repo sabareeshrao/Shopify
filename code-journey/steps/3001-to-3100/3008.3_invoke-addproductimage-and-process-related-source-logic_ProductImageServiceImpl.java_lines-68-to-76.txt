@@ -1,0 +1,9 @@
+
+				addProductImage(product, productImage, cmsContentImage);
+			}
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

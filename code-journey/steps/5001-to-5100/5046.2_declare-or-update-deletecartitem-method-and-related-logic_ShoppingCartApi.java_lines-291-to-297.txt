@@ -1,0 +1,7 @@
+	public ResponseEntity<ReadableShoppingCart> deleteCartItem(@PathVariable("code") String cartCode,
+			@PathVariable("sku") String sku, 
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			@RequestParam(defaultValue = "false") boolean body) throws Exception {
+
+		ReadableShoppingCart updatedCart = shoppingCartFacade.removeShoppingCartItem(cartCode, sku, merchantStore,
+				language, body);

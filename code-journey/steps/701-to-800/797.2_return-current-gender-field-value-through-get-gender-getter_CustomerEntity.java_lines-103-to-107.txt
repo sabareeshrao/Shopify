@@ -1,5 +1,0 @@
-	public String getGender() {
-		return gender;
-	}
-
-

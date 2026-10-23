@@ -1,0 +1,9 @@
+	public void setShipPackageType(String shipPackageType) {
+		this.shipPackageType = shipPackageType;
+		ShippingPackageType sType = ShippingPackageType.ITEM;
+		if(shipPackageType.equals(ShippingPackageType.BOX.name())) {
+			sType = ShippingPackageType.BOX;
+		}
+		this.setShippingPackageType(sType);
+	}
+	

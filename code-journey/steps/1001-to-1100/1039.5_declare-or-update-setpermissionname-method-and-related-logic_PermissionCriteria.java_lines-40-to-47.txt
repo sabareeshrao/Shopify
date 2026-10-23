@@ -1,0 +1,8 @@
+
+	public void setPermissionName(String permissionName) {
+		this.permissionName = permissionName;
+	}
+
+	public Set<Integer> getGroupIds() {
+		return groupIds;
+	}

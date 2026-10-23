@@ -1,0 +1,9 @@
+		if(customer.getId()!=null && customer.getId()>0) {
+			super.update(customer);
+		} else {			
+		
+			super.create(customer);
+
+		}
+	}
+

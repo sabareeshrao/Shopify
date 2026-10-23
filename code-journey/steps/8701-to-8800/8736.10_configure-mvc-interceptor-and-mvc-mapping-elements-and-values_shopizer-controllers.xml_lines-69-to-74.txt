@@ -1,0 +1,6 @@
+ 		
+ 		<!-- customer section filter -->
+ 		<mvc:interceptor>
+  			<mvc:mapping path="/customer/**"/>
+  			<bean class="com.salesmanager.shop.filter.StoreFilter"/>
+ 		</mvc:interceptor>

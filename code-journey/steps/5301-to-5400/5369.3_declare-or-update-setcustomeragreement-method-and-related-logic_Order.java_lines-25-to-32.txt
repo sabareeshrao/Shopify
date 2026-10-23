@@ -1,0 +1,8 @@
+
+	public void setCustomerAgreement(boolean customerAgreement) {
+		this.customerAgreement = customerAgreement;
+	}
+
+	public String getComments() {
+		return comments;
+	}

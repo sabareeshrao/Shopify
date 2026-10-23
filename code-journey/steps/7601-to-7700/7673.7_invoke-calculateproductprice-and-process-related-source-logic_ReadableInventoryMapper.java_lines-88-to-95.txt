@@ -1,0 +1,8 @@
+
+			FinalPrice price = null;
+			//try {
+				price = pricingService.calculateProductPrice(source);
+				destination.setPrice(price.getStringPrice());
+			//} catch (ServiceException e) {
+			//	throw new ConversionRuntimeException("Unable to get product price", e);
+			//}

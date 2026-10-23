@@ -1,0 +1,7 @@
+
+  List<User> listByStore(MerchantStore store) throws ServiceException;
+
+  User findByStore(Long userId, String storeCode) throws ServiceException;
+
+  @Deprecated
+  GenericEntityList<User> listByCriteria(Criteria criteria) throws ServiceException;

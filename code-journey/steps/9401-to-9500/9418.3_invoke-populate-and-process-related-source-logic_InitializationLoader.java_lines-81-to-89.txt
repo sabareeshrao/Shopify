@@ -1,0 +1,9 @@
+		
+				 initializationDatabase.populate("sm-shop");
+				
+				 MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
+
+                  userDetailsService.createDefaultAdmin();
+                  MerchantConfig config = new MerchantConfig();
+				  config.setAllowPurchaseItems(true);
+				  config.setDisplayAddToCartOnFeaturedItems(true);

@@ -1,0 +1,8 @@
+
+	public void setDescription(ProductPriceDescription description) {
+		this.description = description;
+	}
+
+	public boolean isDefaultPrice() {
+		return defaultPrice;
+	}

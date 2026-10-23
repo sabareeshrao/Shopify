@@ -1,0 +1,10 @@
+			if(!CollectionUtils.isEmpty(categories)) {
+				for(Category c : categories) {
+					if(c.isVisible()) {
+						isVisible = true;
+						break;
+					} else {
+						isVisible = false;
+					}
+				}
+			}*/

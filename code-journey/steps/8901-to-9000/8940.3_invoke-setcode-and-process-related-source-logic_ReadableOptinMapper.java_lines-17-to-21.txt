@@ -1,0 +1,5 @@
+    optinEntity.setCode(source.getCode());
+    optinEntity.setDescription(source.getDescription());
+    optinEntity.setOptinType(source.getOptinType().name());
+    return optinEntity;
+  }

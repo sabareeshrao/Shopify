@@ -1,0 +1,7 @@
+			target.setModuleName(source.getPaymentModule());
+			target.setPaymentType(PaymentType.valueOf(source.getPaymentType()));
+			target.setTransactionType(TransactionType.valueOf(source.getTransactionType()));
+			
+			Map<String,String> metadata = new HashMap<String,String>();
+			metadata.put("paymentToken", source.getPaymentToken());
+			target.setPaymentMetaData(metadata);

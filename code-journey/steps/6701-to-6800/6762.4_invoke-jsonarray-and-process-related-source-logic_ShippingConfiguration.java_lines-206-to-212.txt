@@ -1,0 +1,7 @@
+		
+		
+		JSONArray jsonArray = new JSONArray();
+
+		for(Package p : this.getPackages()) {
+			jsonArray.add(transformPackage(p));
+		}

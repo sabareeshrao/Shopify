@@ -1,4 +1,0 @@
-
-			// OrdetTotalSummary contains all calculations
-
-			OrderTotalSummary orderSummary = shoppingCartCalculationService.calculate(source, store, language);

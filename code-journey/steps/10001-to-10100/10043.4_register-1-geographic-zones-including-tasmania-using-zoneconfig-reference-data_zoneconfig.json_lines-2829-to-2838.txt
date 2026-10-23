@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "TAS",
+			"zoneName": "Tasmania",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "VIC",
+			"zoneName": "Victoria",
+			"countryCode": "AU"
+		},

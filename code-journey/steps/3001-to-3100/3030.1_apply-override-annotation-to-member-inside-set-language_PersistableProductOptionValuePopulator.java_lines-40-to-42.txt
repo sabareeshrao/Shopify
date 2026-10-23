@@ -1,3 +1,0 @@
-	@Override
-	public ProductOptionValue populate(PersistableProductOptionValue source,
-			ProductOptionValue target, MerchantStore store, Language language)

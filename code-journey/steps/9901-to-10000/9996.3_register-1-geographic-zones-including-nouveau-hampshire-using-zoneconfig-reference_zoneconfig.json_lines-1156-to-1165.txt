@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NH",
+		"zoneName": "Nouveau Hampshire",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "NJ",
+		"zoneName": "New Jersey",
+		"countryCode": "US"
+	},

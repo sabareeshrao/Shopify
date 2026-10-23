@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "RI",
-		"zoneName": "Rhode Island",
-		"countryCode": "US"
-	},

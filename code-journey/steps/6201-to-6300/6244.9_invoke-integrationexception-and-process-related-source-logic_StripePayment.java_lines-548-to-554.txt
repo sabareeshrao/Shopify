@@ -1,0 +1,7 @@
+		if(ex instanceof IntegrationException) {
+			return (IntegrationException)ex;
+		} else {
+			IntegrationException te = new IntegrationException(
+					"Can't process Stripe authorize, exception", ex);
+			te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+			te.setMessageCode("message.payment.error");

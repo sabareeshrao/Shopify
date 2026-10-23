@@ -1,0 +1,7 @@
+
+				shoppingCartItemsSet.add(item);
+			}
+
+		}
+		return shoppingCartItemsSet;
+	}

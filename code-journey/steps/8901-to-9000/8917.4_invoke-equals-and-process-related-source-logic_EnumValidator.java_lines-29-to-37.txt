@@ -1,0 +1,9 @@
+         
+        if(enumValues != null)
+        {
+            for(Object enumValue:enumValues)
+            {
+                if(valueForValidation.equals(enumValue.toString()) 
+                   || (this.annotation.ignoreCase() && valueForValidation.equalsIgnoreCase(enumValue.toString())))
+                {
+                    result = true; 

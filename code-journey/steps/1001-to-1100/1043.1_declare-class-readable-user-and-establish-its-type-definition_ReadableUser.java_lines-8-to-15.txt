@@ -1,8 +1,0 @@
-public class ReadableUser extends UserEntity {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String lastAccess;
-	private String loginTime;

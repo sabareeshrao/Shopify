@@ -1,0 +1,8 @@
+
+  public ConversionRuntimeException(String errorCode, String message) {
+    super(errorCode, message);
+  }
+
+  public ConversionRuntimeException(String message) {
+    super(message);
+  }

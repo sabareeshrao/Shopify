@@ -1,0 +1,6 @@
+label.product.ordermax=Quantity order max
+label.product.ordermin=Quantity order min
+label.product.visible=Product visible
+label.product.status=Status
+label.product.weight=Weight
+label.product.height=Height

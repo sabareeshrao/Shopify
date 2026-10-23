@@ -1,0 +1,7 @@
+
+		// need to check if the item is already in the cart
+		boolean duplicateFound = false;
+		// only if item has no attributes
+		if (CollectionUtils.isEmpty(item.getAttributes())) {// increment quantity
+			// get duplicate item from the cart
+			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartModelItems = cartModel.getLineItems();

@@ -1,0 +1,8 @@
+	private double boxHeight = 0;
+	private double boxLength = 0;
+	private double boxWeight = 0;
+	private double maxWeight = 0;
+	
+	
+
+}

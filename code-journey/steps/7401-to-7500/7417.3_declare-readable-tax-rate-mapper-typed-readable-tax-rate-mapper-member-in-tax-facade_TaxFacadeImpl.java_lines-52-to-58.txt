@@ -1,0 +1,7 @@
+	
+	@Autowired
+	private PersistableTaxRateMapper persistableTaxRateMapper;
+	
+	@Autowired
+	private ReadableTaxRateMapper readableTaxRateMapper;
+

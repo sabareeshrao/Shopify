@@ -1,0 +1,6 @@
+				if (!StringUtils.isEmpty(source.getLastName())) {
+					target.getBilling().setLastName(
+							source.getLastName()
+					);
+				}
+			}

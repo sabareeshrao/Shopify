@@ -1,0 +1,6 @@
+
+@Component
+public class MarketPlaceFacadeImpl implements MarketPlaceFacade {
+
+	@Inject
+	private StoreFacade storeFacade;

@@ -1,0 +1,8 @@
+
+			boolean authorized = false;
+			User user = userService.findByStore(readableUser.getId(), merchantStoreCode);
+			if (user != null) {
+				authorized = true;
+			} else {
+				user = userService.getByUserName(userName);
+			}

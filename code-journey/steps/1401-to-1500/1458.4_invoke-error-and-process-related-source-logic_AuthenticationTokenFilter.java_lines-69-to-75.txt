@@ -1,0 +1,7 @@
+    		
+    	} catch(Exception s) {
+    		LOGGER.error("Error while getting ip address ", s);
+    	}
+    	
+    	String requestUrl = request.getRequestURL().toString();
+

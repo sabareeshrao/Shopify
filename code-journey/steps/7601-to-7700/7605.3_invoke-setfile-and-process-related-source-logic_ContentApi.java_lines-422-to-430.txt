@@ -1,0 +1,9 @@
+		try {
+			f.setFile(file.getBytes());
+		} catch (IOException e) {
+			throw new ServiceRuntimeException("Error while getting file bytes");
+		}
+
+		contentFacade.addContentFile(f, merchantStore.getCode());
+
+	}

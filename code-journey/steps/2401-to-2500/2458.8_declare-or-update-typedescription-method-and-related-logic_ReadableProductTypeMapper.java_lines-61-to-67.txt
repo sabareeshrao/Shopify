@@ -1,0 +1,7 @@
+		
+		return readableType;
+	}
+	
+	private ProductTypeDescription typeDescription(com.salesmanager.core.model.catalog.product.type.ProductTypeDescription description) {
+		ProductTypeDescription desc = new ProductTypeDescription();
+		desc.setId(description.getId());

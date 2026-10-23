@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Badajoz",
-		"zoneName": "Badajoz",
-		"countryCode": "ES"
-	},

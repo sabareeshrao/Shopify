@@ -1,0 +1,9 @@
+			&trnCardOwner=Carl Samson
+			&trnCardNumber=5100000020002000
+			&trnExpMonth=10
+			&trnExpYear=14
+			&trnCardCvd=123
+			&trnAmount=77.01
+			&ordName=Carl S
+			&ordAddress1=378 Du Languedoc
+			&ordCity=Boucherville

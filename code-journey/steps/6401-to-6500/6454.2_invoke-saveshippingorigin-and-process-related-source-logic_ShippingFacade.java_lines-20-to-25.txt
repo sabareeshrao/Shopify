@@ -1,0 +1,6 @@
+	void saveShippingOrigin(PersistableAddress address, MerchantStore store);
+	
+
+	void createPackage(PackageDetails packaging, MerchantStore store);
+	
+	PackageDetails getPackage(String code, MerchantStore store);

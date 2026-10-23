@@ -1,0 +1,8 @@
+	public String getConfig2() {
+		return config2;
+	}
+	public void setConfig2(String config2) {
+		this.config2 = config2;
+	}
+	
+}

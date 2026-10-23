@@ -1,0 +1,7 @@
+		country.setIsoCode("CA");
+		country.setName("Canada");
+		
+		//country.setIsoCode("US");
+		//country.setName("United States");
+		
+		delivery.setCountry(country);

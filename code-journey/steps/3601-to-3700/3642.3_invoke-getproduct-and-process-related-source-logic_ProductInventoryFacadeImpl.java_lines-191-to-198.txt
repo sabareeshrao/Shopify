@@ -1,0 +1,8 @@
+				product = instance.getProduct();
+			}
+		}
+
+		ProductAvailability avail = originAvailability.stream()
+		  .filter(a -> a.getId().longValue() == inventory.getId())
+		  .findAny()
+		  .orElse(null);

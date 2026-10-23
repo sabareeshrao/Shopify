@@ -1,0 +1,8 @@
+		
+		if(inventory.getProductId()!=null && inventory.getProductId().longValue()>0) {
+			product = this.getProductById(inventory.getProductId(), store);
+			originAvailability = product.getAvailabilities();
+		} else {
+			if(inventory.getVariant() != null && inventory.getId().longValue() > 0) {
+				ProductVariant instance = this.getProductByInstance(inventory.getVariant(), store);
+				originAvailability = instance.getAvailabilities();

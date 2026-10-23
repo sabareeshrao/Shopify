@@ -1,0 +1,7 @@
+			
+
+
+			if (qty > 1) {
+
+				for (int i = 1; i <= qty; i++) {
+					Product temp = new Product();

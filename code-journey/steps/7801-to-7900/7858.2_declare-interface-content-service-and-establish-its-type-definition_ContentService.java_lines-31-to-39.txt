@@ -1,9 +1,0 @@
-public interface ContentService
-    extends SalesManagerEntityService<Long, Content>
-{
-
-    List<Content> listByType( ContentType contentType, MerchantStore store, Language language )
-        throws ServiceException;
-
-    List<Content> listByType( List<ContentType> contentType, MerchantStore store, Language language )
-        throws ServiceException;

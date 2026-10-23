@@ -1,0 +1,9 @@
+	public ReadableCategoryList list(
+			@PathVariable(name = "ProductId") Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language lang) {
+
+
+		return categoryFacade.listByProduct(merchantStore, id, lang);
+
+	}

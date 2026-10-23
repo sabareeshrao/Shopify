@@ -1,4 +1,0 @@
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.salesmanager.core.constants.SchemaConstant;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.generic.SalesManagerEntity;

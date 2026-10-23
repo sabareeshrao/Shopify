@@ -1,0 +1,10 @@
+
+	@Override
+	public ReadableProductList addItemToGroup(Product product, String group, MerchantStore store, Language language) {
+		
+		Validate.notNull(product,"Product must not be null");
+		Validate.notNull(group,"group must not be null");
+		
+		
+		//check if product is already in group
+		List<ProductRelationship> existList = null;

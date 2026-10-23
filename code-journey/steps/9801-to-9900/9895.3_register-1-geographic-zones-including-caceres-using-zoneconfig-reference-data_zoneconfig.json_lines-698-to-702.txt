@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Caceres",
-		"zoneName": "Caceres",
-		"countryCode": "ES"
-	},

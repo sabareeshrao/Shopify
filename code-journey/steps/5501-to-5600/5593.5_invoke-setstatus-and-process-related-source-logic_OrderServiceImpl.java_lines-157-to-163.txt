@@ -1,0 +1,7 @@
+    		statusHistory.setStatus(status);
+    		statusHistory.setDateAdded(new Date());
+    		statusHistory.setOrder(order);
+    		statusHistorySet.add(statusHistory);
+    		order.setOrderHistory(statusHistorySet);
+
+    	}

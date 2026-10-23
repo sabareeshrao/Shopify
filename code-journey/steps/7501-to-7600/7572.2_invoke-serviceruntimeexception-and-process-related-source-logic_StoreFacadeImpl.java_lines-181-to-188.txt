@@ -1,0 +1,8 @@
+		if (storeForCheck != null) {
+			throw new ServiceRuntimeException("MerhantStore " + store.getCode() + " already exists");
+		}
+
+		MerchantStore mStore = convertPersistableMerchantStoreToMerchantStore(store, languageService.defaultLanguage());
+		createMerchantStore(mStore);
+
+	}

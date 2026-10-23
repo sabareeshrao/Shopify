@@ -1,0 +1,8 @@
+		String userName = principal.getName();
+
+		Customer customer = customerService.getByNick(userName);
+
+		if (customer == null) {
+			response.sendError(401, "Error while listing orders, customer not authorized");
+			return null;
+		}

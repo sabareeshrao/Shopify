@@ -1,5 +1,0 @@
-		mailingListDesciptionList.add(mailingListDesciption);
-		subscribedToMailingList.setDescriptions(mailingListDesciptionList);
-		
-		customerOptionService.create(subscribedToMailingList);
-		

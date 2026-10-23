@@ -1,0 +1,6 @@
+	private String latitude;
+	private String longitude;
+	
+	@ApiModelProperty(notes = "Customer billing or shipping state / province (2 letter code CA, ON...)")
+	private String zone;//code
+	

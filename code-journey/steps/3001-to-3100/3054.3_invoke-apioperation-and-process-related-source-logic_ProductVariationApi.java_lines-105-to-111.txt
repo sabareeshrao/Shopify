@@ -1,0 +1,7 @@
+  @ApiOperation(
+      httpMethod = "POST",
+      value = "Get product price variation based on selected product",
+      notes = "",
+      produces = "application/json",
+      response = ReadableProductPrice.class)
+  @ResponseBody

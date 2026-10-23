@@ -1,0 +1,6 @@
+
+			// validate if product fits in the box
+			if (p.getProductWidth().doubleValue() > width
+					|| p.getProductHeight().doubleValue() > height
+					|| p.getProductLength().doubleValue() > length) {
+				// log message to customer

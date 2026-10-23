@@ -1,0 +1,6 @@
+	
+	private String httpBasePath;
+
+	public String getHttpBasePath() {
+		return httpBasePath;
+	}

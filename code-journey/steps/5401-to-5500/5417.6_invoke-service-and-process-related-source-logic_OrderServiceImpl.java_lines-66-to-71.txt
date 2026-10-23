@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
+import com.salesmanager.core.model.tax.TaxItem;
+
+@Service("orderService")
+public class OrderServiceImpl  extends SalesManagerEntityServiceImpl<Long, Order> implements OrderService {
+

@@ -1,0 +1,9 @@
+	
+
+	private ContentDescription description ;
+	private String path;
+
+
+	public ContentDescription getDescription() {
+		return description;
+	}

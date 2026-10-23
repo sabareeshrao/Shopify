@@ -1,0 +1,8 @@
+
+@Configuration
+@ConfigurationProperties(prefix = "search")
+@PropertySource("classpath:shopizer-core.properties")
+public class ApplicationSearchConfiguration {
+	
+    private String clusterName;
+    private Credentials credentials;

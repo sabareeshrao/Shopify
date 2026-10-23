@@ -1,0 +1,7 @@
+	 *
+	 * @return ReadableOrderList
+	 * @throws Exception
+	 */
+
+	com.salesmanager.shop.model.order.v0.ReadableOrderList getReadableOrderList(OrderCriteria criteria, MerchantStore store);
+

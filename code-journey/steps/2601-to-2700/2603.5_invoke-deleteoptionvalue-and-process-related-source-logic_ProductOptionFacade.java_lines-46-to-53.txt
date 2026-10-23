@@ -1,0 +1,8 @@
+  
+  void deleteOptionValue(Long optionValueId, MerchantStore store);
+  
+  ReadableProductOptionList options(MerchantStore store, Language language, String name, int page, int count);
+  
+  ReadableProductOptionValueList optionValues(MerchantStore store, Language language, String name, int page, int count);
+
+  ReadableProductAttributeEntity saveAttribute(Long productId, PersistableProductAttribute attribute, MerchantStore store, Language language);

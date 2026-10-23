@@ -1,3 +1,0 @@
-label.customer.city = Ville 
-label.customer.zone = État / Province 
-label.customer.country = Pays 

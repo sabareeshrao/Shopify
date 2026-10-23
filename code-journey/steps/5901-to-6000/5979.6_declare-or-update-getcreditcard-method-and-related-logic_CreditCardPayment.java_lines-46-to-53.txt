@@ -1,0 +1,8 @@
+	public CreditCardType getCreditCard() {
+		return creditCard;
+	}
+	public void setCreditCard(CreditCardType creditCard) {
+		this.creditCard = creditCard;
+	}
+
+}

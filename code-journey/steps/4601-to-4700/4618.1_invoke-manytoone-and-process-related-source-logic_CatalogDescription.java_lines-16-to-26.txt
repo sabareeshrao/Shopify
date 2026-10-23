@@ -1,0 +1,11 @@
+public class CatalogDescription extends Description {
+
+	
+
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/*	@ManyToOne(targetEntity = Catalog.class)
+	@JoinColumn(name = "CATALOG_ID", nullable = false)*/
+	private Catalog catalog;

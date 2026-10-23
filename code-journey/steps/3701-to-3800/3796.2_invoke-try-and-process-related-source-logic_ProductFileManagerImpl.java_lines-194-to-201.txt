@@ -1,0 +1,8 @@
+
+        try(FileInputStream isLarge = new FileInputStream(tempLarge)) {
+
+
+        // IOUtils.copy(isLarge, output);
+
+
+        ImageContentFile largeContentImage = new ImageContentFile();

@@ -1,0 +1,8 @@
+
+    	q.setParameter("cid", categoryIds);
+    	q.setParameter("dt", new Date());
+
+
+    	
+    	@SuppressWarnings("unchecked")
+		List<Object[]> counts =  q.getResultList();

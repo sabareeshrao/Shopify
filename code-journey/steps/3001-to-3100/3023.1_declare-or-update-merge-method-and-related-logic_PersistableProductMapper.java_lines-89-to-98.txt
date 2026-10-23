@@ -1,0 +1,10 @@
+	@Override
+	public Product merge(PersistableProduct source, Product destination, MerchantStore store, Language language) {
+
+		  
+	    Validate.notNull(destination,"Product must not be null");
+
+		try {
+
+			//core properties
+			destination.setSku(source.getSku());

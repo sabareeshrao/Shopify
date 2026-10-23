@@ -1,4 +1,0 @@
-@Service("manufacturerService")
-public class ManufacturerServiceImpl extends SalesManagerEntityServiceImpl<Long, Manufacturer>
-    implements ManufacturerService {
-

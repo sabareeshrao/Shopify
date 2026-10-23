@@ -1,0 +1,7 @@
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error updating password");
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

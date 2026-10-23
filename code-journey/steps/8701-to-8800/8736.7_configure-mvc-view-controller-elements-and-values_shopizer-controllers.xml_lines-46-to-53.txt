@@ -1,0 +1,8 @@
+
+	</mvc:annotation-driven>
+	
+
+	<!-- Maps '/' requests to the 'home' view -->
+	<mvc:view-controller path="/" view-name="shop"/>
+	
+

@@ -1,0 +1,7 @@
+public interface ProductOptionValueService extends SalesManagerEntityService<Long, ProductOptionValue> {
+
+	void saveOrUpdate(ProductOptionValue entity) throws ServiceException;
+
+	List<ProductOptionValue> getByName(MerchantStore store, String name,
+			Language language) throws ServiceException;
+

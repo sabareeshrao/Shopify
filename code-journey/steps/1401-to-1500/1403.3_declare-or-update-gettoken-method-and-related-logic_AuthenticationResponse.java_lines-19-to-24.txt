@@ -1,0 +1,6 @@
+
+  public String getToken() {
+    return token;
+  }
+
+}

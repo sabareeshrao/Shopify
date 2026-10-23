@@ -1,0 +1,8 @@
+		
+		Set<OrderTotal> totals = order.getOrderTotal();
+		List<ReadableOrderTotal> readableTotals = totals.stream()
+				.sorted(Comparator.comparingInt(OrderTotal::getSortOrder))
+				.map(tot -> convertOrderTotal(tot, store, language))
+				.collect(Collectors.toList());
+		
+		readableTotal.setTotals(readableTotals);

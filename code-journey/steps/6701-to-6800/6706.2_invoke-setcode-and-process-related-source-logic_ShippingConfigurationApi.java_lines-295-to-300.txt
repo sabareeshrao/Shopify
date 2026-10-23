@@ -1,0 +1,6 @@
+
+		readable.setCode(module.getCode());
+		readable.setImage(module.getImage());
+		if (configuredModules.containsKey(module.getCode())) {
+			IntegrationConfiguration conf = configuredModules.get(module.getCode());
+			readable.setConfigured(true);

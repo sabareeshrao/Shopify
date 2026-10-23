@@ -1,0 +1,8 @@
+			content = convertContentPageToContent(merchantStore, content, page);
+			contentService.saveOrUpdate(content);
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

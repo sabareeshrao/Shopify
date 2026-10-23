@@ -1,0 +1,10 @@
+
+
+
+	/**
+	 * customer api
+	 * 
+	 * @author dur9213
+	 *
+	 */
+	@Configuration

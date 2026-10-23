@@ -1,0 +1,6 @@
+	public String getDisplaySubTotal() {
+		return displaySubTotal;
+	}
+	public void setDisplaySubTotal(String displaySubTotal) {
+		this.displaySubTotal = displaySubTotal;
+	}

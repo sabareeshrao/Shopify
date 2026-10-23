@@ -1,0 +1,6 @@
+ * - Rebuild a shopping cart item after the product definition has been modified
+ * @author Carl Samson
+ *
+ */
+public class ShoppingCartTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	

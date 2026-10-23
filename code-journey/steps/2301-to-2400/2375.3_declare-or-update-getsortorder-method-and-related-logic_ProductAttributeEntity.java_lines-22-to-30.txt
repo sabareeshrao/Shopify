@@ -1,0 +1,9 @@
+	public int getSortOrder() {
+		return sortOrder;
+	}
+	public void setAttributeDefault(boolean attributeDefault) {
+		this.attributeDefault = attributeDefault;
+	}
+	public boolean isAttributeDefault() {
+		return attributeDefault;
+	}

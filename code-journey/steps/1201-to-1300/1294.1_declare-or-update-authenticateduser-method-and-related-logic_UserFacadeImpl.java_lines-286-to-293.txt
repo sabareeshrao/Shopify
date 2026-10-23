@@ -1,0 +1,8 @@
+
+	@Override
+	public String authenticatedUser() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+		if (authentication == null) {
+			throw new UnauthorizedException("User Not authorized");
+		}

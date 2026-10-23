@@ -1,0 +1,8 @@
+
+
+		ProductImage image = event.getProductImage();// to be removed
+
+		/**
+		 * add new image to be saved
+		 **/
+

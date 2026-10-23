@@ -1,0 +1,10 @@
+	public void update(
+			@Valid @RequestBody PersistableProductOptionSet option, 
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		option.setId(id);
+		productOptionSetFacade.update(id, option, merchantStore, language);
+
+	}

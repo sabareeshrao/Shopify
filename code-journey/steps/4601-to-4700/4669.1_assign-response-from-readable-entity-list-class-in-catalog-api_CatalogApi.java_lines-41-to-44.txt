@@ -1,4 +1,0 @@
-  @GetMapping(value = "/private/catalogs")
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(httpMethod = "GET", value = "Get catalogs by merchant", notes = "",
-      response = ReadableEntityList.class)

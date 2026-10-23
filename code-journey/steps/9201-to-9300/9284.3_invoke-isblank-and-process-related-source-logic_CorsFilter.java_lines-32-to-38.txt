@@ -1,0 +1,7 @@
+        	
+        	String origin = "*";
+        	if(!StringUtils.isBlank(request.getHeader("origin"))) {
+        		origin = request.getHeader("origin");
+        	}
+	
+	        httpResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE, PATCH");

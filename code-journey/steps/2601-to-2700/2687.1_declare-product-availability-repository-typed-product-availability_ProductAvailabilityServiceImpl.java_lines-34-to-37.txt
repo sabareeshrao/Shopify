@@ -1,4 +1,0 @@
-	private ProductAvailabilityRepository productAvailabilityRepository;
-
-	@Inject
-	private PageableProductAvailabilityRepository pageableProductAvailabilityRepository;

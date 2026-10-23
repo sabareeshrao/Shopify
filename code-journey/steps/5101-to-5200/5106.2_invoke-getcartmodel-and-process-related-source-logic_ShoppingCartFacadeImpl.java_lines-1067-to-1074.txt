@@ -1,0 +1,8 @@
+
+		ShoppingCart cartModel = this.getCartModel(cartCode, store);
+		if (cartModel == null) {
+			throw new IllegalArgumentException("Cart code not valid");
+		}
+
+		return modifyCartMulti(cartModel, items, store, language);
+	}

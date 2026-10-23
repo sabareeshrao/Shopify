@@ -1,0 +1,7 @@
+    
+    final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+    final String json = writer.writeValueAsString(customerOptin);
+    System.out.println(json);
+    
+    final HttpEntity<String> e = new HttpEntity<>(json);
+    final ResponseEntity<?> resp = testRestTemplate.postForEntity("/api/v1/newsletter", e, PersistableCustomerOptin.class);

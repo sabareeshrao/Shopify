@@ -1,0 +1,9 @@
+			userService.saveOrUpdate(userModel);
+			// now build returned object
+			User createdUser = userService.getById(userModel.getId());
+			return convertUserToReadableUser(createdUser.getDefaultLanguage(), createdUser);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(
+					"Cannot create user " + user.getUserName() + " for store " + store.getCode(), e);
+		}
+	}

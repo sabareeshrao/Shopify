@@ -1,4 +1,0 @@
-import com.salesmanager.core.business.repositories.catalog.product.variant.ProductVariantImageRepository;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.model.catalog.product.variant.ProductVariantImage;
-import com.salesmanager.core.model.merchant.MerchantStore;

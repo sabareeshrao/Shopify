@@ -1,0 +1,7 @@
+public class PersistableOrderProduct extends OrderProductEntity implements
+		Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

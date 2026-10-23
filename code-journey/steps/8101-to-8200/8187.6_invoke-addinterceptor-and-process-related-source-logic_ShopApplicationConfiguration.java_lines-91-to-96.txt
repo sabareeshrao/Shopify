@@ -1,0 +1,6 @@
+    registry
+        .addInterceptor(corsFilter())
+        // public services cors filter
+        .addPathPatterns("/services/**")
+        // REST api
+        .addPathPatterns("/api/**");

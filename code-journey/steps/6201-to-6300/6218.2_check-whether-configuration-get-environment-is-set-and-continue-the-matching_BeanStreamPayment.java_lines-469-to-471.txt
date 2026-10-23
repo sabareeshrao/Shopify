@@ -1,3 +1,0 @@
-		if (configuration.getEnvironment().equals("TEST")) {// sandbox
-			bSandbox = true;
-		}

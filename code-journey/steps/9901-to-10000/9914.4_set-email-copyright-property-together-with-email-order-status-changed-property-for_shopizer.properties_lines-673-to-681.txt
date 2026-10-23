@@ -1,0 +1,9 @@
+email.contactowner=If you have any questions on this request, please send an email to {0} in order to receive more details.
+email.spam.disclaimer=This email is sent in accordance with the US CAN-SPAM Law in effect 2004-01-01. Removal requests can be sent to this address and will be honored and respected.
+email.copyright=Copyright @ {0} {1}, All Rights Reserved
+email.message.from=Message from {0}
+email.greeting=Hi {0},
+email.customer.greeting=Thanks for joining {0}, you will be able to get access to the customer section by clicking on the following link {1}. Log on to the system and navigate to your order details. Informations to log in are included in this email. If you are having any difficulty with acceding to the customer section please send an email to {2}.
+email.order.statustext=An update on the status has been made on order {0} ordered on {1}
+email.order.status.changed=Order status changed:  {0} -> {1}
+

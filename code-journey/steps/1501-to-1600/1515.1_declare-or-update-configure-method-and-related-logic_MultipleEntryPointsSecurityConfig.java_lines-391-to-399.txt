@@ -1,0 +1,9 @@
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+			
+				.antMatcher(API_VERSION + "/auth/**")
+				.authorizeRequests()
+					.antMatchers(API_VERSION + "/auth/refresh").permitAll()
+					.antMatchers(API_VERSION + "/auth/login").permitAll()
+					.antMatchers(API_VERSION + "/auth/register").permitAll()

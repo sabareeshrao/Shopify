@@ -1,0 +1,7 @@
+			return model;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxRate [" +  code + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxRate [" +  code + "] for store [" + store.getCode() + "]", e);
+		}
+		
+	}

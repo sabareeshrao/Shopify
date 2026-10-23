@@ -1,0 +1,8 @@
+
+	public void setAttributes(List<OrderAttribute> attributes) {
+		this.attributes = attributes;
+	}
+
+
+
+}

@@ -1,0 +1,6 @@
+
+			// node path
+			StringBuilder nodePath = new StringBuilder();
+			nodePath.append(rootPath).append(merchantStoreCode);
+			Path merchantPath = Paths.get(nodePath.toString());
+			this.createDirectoryIfNorExist(merchantPath);

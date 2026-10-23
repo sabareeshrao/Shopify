@@ -1,0 +1,7 @@
+		if (optionSet == null) {
+			throw new ResourceNotFoundException(
+					"ProductOptionSet not found for id [" + id + "] and store [" + store.getCode() + "]");
+		}
+
+		return readableProductOptionSetMapper.convert(optionSet, store, language);
+	}

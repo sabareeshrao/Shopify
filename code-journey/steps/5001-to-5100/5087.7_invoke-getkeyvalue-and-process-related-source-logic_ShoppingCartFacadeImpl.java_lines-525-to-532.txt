@@ -1,0 +1,8 @@
+
+		MerchantStore merchantStore = (MerchantStore) getKeyValue(Constants.MERCHANT_STORE);
+
+		ShoppingCartData shoppingCartData = shoppingCartDataPopulator.populate(cart, merchantStore, language);
+
+		return shoppingCartData;
+
+	}

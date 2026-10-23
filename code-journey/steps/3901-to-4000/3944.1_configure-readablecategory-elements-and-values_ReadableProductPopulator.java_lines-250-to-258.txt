@@ -1,0 +1,9 @@
+
+			if(!CollectionUtils.isEmpty(source.getCategories())) {
+
+				ReadableCategoryPopulator categoryPopulator = new ReadableCategoryPopulator();
+				List<ReadableCategory> categoryList = new ArrayList<ReadableCategory>();
+
+				for(Category category : source.getCategories()) {
+
+					ReadableCategory readableCategory = new ReadableCategory();

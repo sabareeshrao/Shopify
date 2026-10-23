@@ -1,0 +1,6 @@
+
+        try {
+            
+            MerchantStore merchantStore = storeFacade.getByCode(request);
+
+            Customer customer = customerFacade.getCustomerByUserName(passwordRequest.getUsername(), merchantStore);

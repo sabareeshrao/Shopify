@@ -1,0 +1,6 @@
+	Page<Product> listByStore(MerchantStore store, Language language,
+			ProductCriteria criteria, int page, int count);
+
+	List<Product> listByStore(MerchantStore store);
+
+	List<Product> listByTaxClass(TaxClass taxClass);

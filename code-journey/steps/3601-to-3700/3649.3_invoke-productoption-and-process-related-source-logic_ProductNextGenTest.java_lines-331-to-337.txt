@@ -1,0 +1,7 @@
+		
+
+	     /**
+         * Create size option
+         */
+        size = new ProductOption();
+        size.setMerchantStore(store);

@@ -1,0 +1,7 @@
+
+#config.googleMapsKey=
+
+#recaptcha https://developers.google.com/recaptcha/
+#config.recaptcha.secretKey=
+#config.recaptcha.siteKey=
+

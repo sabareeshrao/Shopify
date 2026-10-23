@@ -1,0 +1,6 @@
+
+
+				} catch (Exception e) {
+					LOGGER.error("Cannot send order confirmation email", e);
+				}
+			}

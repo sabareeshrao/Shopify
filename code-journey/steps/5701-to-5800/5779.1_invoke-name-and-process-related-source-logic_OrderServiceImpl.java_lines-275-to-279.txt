@@ -1,0 +1,5 @@
+
+        //only in order page, otherwise invokes too many processing
+        if(
+        		OrderSummaryType.ORDERTOTAL.name().equals(summary.getOrderSummaryType().name()) ||
+        		OrderSummaryType.SHOPPINGCART.name().equals(summary.getOrderSummaryType().name())

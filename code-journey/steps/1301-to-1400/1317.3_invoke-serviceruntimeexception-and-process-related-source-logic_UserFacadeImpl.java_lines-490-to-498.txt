@@ -1,0 +1,9 @@
+
+			if (auth == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + authenticatedUser + "]");
+			}
+
+			User userModel = userService.getById(userId);
+			if (userModel == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + userId + "]");
+			}

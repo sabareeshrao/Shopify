@@ -1,0 +1,9 @@
+  <div class="content">
+    <div class="content-line">
+    	${EMAIL_STORE_NAME}<br /><br /><br/>
+        ${EMAIL_SUBJECT} - ${EMAIL_PRODUCT_NAME}<br/>
+	${EMAIL_CUSTOMER_REVIEW}<br/><br />
+    	${EMAIL_REVIEW_RATING}<br/><br/>
+	${EMAIL_REVIEW_TEXT}<br/>
+    </div>
+</div>

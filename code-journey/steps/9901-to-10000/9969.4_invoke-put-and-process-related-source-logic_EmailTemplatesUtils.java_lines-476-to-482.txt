@@ -1,0 +1,7 @@
+		        
+		        templateTokens.put(EmailConstants.EMAIL_NOTIFICATION_MESSAGE, messages.getMessage("label.notification.message.passwordchanged", date, customerLocale));
+		        
+
+				Email email = new Email();
+				email.setFrom(merchantStore.getStorename());
+				email.setFromEmail(merchantStore.getStoreEmailAddress());

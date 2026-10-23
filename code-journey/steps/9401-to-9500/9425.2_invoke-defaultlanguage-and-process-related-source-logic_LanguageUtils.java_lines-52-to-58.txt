@@ -1,0 +1,7 @@
+
+    if (l == null) {
+      l = languageService.defaultLanguage();
+    }
+
+    return l;
+  }

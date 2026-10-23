@@ -1,0 +1,8 @@
+
+  @Override
+  public void send(Email email) throws Exception {
+    switch(emailSender) 
+    { 
+        case "default": 
+          defaultEmailSender.send(email);
+            break; 

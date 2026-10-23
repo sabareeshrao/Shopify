@@ -1,0 +1,6 @@
+
+		final List<ProductOptionValueDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);
+
+		final PersistableProductOptionValue optionValue = new PersistableProductOptionValue();
+		optionValue.setOrder(1);

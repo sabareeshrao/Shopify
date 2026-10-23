@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NRW",
+		"zoneName": "Nordrhein-Westfalen",
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "RHE",
+		"zoneName": "Rheinland-Pfalz",
+		"countryCode": "DE"
+	},

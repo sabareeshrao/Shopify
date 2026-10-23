@@ -1,6 +1,0 @@
-	
-	/**
-	 * Images
-	 * @param product
-	 * @throws Exception
-	 */

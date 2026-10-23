@@ -1,0 +1,6 @@
+				cartModel.getLineItems().add(newItemValue);
+				++itemUpdatedCnt;
+			}
+		}
+		// at the moment we expect that some change have been done
+		saveShoppingCart(cartModel);

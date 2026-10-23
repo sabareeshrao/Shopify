@@ -1,0 +1,10 @@
+					if (config != null) {
+						merchantConfigurationService.delete(config);
+					}
+				}
+			}
+		} catch (ServiceException se) {
+			throw new ServiceRuntimeException(se);
+		}
+
+	}

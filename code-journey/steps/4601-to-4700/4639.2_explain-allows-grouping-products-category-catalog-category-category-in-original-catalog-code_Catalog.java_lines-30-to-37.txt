@@ -1,0 +1,8 @@
+
+/**
+ * Allows grouping products and category
+ * Catalog
+ *      - category 1
+ *      - category 2
+ *      
+ *      - product 1

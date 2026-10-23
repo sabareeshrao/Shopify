@@ -1,0 +1,7 @@
+        if (bean == null) {
+            throw new IllegalArgumentException("No bean specified");
+        }
+        if(property == null){
+            
+            throw new IllegalArgumentException("No name specified for bean class '" + bean.getClass() + "'");
+        }

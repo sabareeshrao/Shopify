@@ -1,8 +1,0 @@
-
-		// RENTAL
-		/**
-		if (!StringUtils.isBlank(criteria.getStatus())) {
-			q.setParameter("status", criteria.getStatus());
-		}
-		**/
-

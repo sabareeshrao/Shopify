@@ -1,4 +1,0 @@
-	
-	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value = { "/private/product/{sku}/price"},
-			method = RequestMethod.POST)

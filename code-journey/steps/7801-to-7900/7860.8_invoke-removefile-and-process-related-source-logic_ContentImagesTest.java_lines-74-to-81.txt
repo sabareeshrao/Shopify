@@ -1,0 +1,8 @@
+
+		// remove image
+		contentService.removeFile(store.getCode(), FileContentType.LOGO, store.getStoreLogo());
+
+	}
+	
+
+}

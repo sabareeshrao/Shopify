@@ -1,0 +1,6 @@
+label.generic.sizeunit.CM = Centimètres
+label.generic.sizeunit.IN = Pouces
+label.generic.remove=Retirer
+label.generic.yes=Oui
+label.generic.no=Non
+label.generic.alphanumeric=Alpha numérique

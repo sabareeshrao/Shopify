@@ -1,0 +1,6 @@
+      product2.getCategories().add(cat);
+      
+      
+      specifications = new ProductSpecification();
+      specifications.setManufacturer("BRAND2");
+      product2.setProductSpecifications(specifications);

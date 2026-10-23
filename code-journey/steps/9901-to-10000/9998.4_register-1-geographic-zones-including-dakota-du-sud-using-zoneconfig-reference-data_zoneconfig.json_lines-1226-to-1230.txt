@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "SD",
-		"zoneName": "Dakota du Sud",
-		"countryCode": "US"
-	},

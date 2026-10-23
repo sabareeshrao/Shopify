@@ -1,3 +1,0 @@
-import com.salesmanager.core.model.content.ImageContentFile;
-import com.salesmanager.core.model.content.OutputContentFile;
-import com.salesmanager.core.model.merchant.MerchantStore;

@@ -1,3 +1,0 @@
-		
-		String amnt = productPriceUtils.getAdminFormatedAmount(store, amount);
-		

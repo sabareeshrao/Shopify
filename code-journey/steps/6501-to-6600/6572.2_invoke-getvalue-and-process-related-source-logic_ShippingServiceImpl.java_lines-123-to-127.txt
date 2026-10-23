@@ -1,0 +1,5 @@
+		
+		if(configuration!=null) {
+			String value = configuration.getValue();
+			
+			ObjectMapper mapper = new ObjectMapper();

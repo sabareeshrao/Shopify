@@ -1,0 +1,6 @@
+		<bean id="shippingMethodDecisionProcess"
+			class="com.salesmanager.core.business.modules.integration.shipping.impl.ShippingDecisionPreProcessorImpl">
+		</bean>
+		
+		<!-- Any post process required after getting a quote -->
+		<!-- Shipping post-processors -->

@@ -1,0 +1,7 @@
+	private Product get(Long productId, MerchantStore merchant) {
+
+		try {
+
+			Integer merchantId = null;
+			Integer parentId = null;
+			List<Integer> ids = new ArrayList<Integer>();

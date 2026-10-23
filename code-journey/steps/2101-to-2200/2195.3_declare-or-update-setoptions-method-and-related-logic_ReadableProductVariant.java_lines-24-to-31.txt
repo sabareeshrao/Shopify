@@ -1,0 +1,8 @@
+
+  public void setOptions(List<ReadableProductVariantValue> options) {
+    this.options = options;
+  }
+
+  public String getName() {
+    return name;
+  }

@@ -1,0 +1,6 @@
+
+
+  @Override
+  public PersistableCustomer registerCustomer(final PersistableCustomer customer,
+      final MerchantStore merchantStore, Language language) throws Exception {
+    LOG.info("Starting customer registration process..");

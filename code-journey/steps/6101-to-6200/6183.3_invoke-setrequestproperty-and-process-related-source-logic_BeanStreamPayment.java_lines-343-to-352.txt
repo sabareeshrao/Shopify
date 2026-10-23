@@ -1,0 +1,10 @@
+
+			conn.setRequestProperty("Content-Length", String
+					.valueOf(transaction.length()));
+			conn.setRequestMethod("POST");
+
+			// get the output stream to POST to.
+			output = new DataOutputStream(conn.getOutputStream());
+			output.writeBytes(transaction);
+			output.flush();
+

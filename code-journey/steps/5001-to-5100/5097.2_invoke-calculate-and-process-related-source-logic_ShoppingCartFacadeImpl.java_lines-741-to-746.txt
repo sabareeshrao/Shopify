@@ -1,0 +1,6 @@
+
+		if (cartModel == null) {
+			return null;
+		}
+
+		shoppingCartCalculationService.calculate(cartModel, store, language);

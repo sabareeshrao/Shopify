@@ -1,3 +1,0 @@
-#Shipping activated in the system ?
-config.displayShipping=true
-

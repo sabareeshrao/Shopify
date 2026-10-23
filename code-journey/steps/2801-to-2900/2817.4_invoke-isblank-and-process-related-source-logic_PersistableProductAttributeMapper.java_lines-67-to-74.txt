@@ -1,0 +1,8 @@
+		
+		if(!StringUtils.isBlank(source.getOptionValue().getCode())) {
+			productOptionValue = productOptionValueService.getByCode(store, source.getOptionValue().getCode());
+		} else if(source.getProductId() != null && source.getOptionValue().getId().longValue()>0) {
+			productOptionValue = productOptionValueService.getById(source.getOptionValue().getId());
+		} else {
+			//ProductOption value is text
+			productOptionValue = new ProductOptionValue();

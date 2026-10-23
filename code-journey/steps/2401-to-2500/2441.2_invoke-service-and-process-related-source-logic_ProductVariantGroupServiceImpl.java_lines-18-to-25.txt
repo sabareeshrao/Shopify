@@ -1,0 +1,8 @@
+
+
+@Service("productVariantGroupService")
+public class ProductVariantGroupServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductVariantGroup> implements ProductVariantGroupService {
+
+	
+	@Autowired
+	private PageableProductVariantGroupRepository pageableProductVariantGroupRepository;

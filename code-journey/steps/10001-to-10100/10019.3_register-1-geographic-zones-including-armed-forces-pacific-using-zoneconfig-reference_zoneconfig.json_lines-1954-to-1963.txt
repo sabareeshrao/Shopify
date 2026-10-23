@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "AP",
+			"zoneName": "Armed Forces Pacific",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "CA",
+			"zoneName": "California",
+			"countryCode": "US"
+		},

@@ -1,0 +1,6 @@
+		if (content != null) {
+			if (content.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+				throw new ResourceNotFoundException(
+						"No content found with id [" + id + "] for store [" + store.getCode() + "]");
+			}
+		}

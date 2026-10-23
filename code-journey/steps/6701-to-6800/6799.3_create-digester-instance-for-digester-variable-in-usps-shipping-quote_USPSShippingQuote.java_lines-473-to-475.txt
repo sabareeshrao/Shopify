@@ -1,3 +1,0 @@
-
-			Digester digester = new Digester();
-			digester.push(parsed);

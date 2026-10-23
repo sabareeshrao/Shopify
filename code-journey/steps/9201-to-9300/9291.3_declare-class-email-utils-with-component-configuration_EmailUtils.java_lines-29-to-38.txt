@@ -1,0 +1,10 @@
+	
+	/**
+	 * Builds generic html email information
+	 * @param store
+	 * @param messages
+	 * @param locale
+	 * @return
+	 */
+	public Map<String, String> createEmailObjectsMap(String contextPath, MerchantStore store, LabelUtils messages, Locale locale){
+		

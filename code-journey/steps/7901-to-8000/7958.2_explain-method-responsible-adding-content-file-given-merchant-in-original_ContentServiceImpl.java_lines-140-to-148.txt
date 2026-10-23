@@ -1,0 +1,9 @@
+	 *            Merchant store
+	 * @param contentFile
+	 *            {@link InputContentFile} being stored
+	 * @throws ServiceException
+	 *             service exception
+	 */
+	@Override
+	public void addContentFile(String merchantStoreCode, InputContentFile contentFile) throws ServiceException {
+		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");

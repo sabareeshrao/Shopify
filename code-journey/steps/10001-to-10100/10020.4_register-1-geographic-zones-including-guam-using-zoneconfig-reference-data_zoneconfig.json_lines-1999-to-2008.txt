@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "GU",
+			"zoneName": "Guam",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "HI",
+			"zoneName": "Hawaii",
+			"countryCode": "US"
+		},

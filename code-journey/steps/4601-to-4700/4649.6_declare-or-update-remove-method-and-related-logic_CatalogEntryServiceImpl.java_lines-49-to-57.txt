@@ -1,0 +1,9 @@
+
+	@Override
+	public void remove(CatalogCategoryEntry catalogEntry) throws ServiceException {
+		catalogEntryRepository.delete(catalogEntry);
+		
+	}
+
+
+}

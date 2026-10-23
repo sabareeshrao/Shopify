@@ -1,0 +1,6 @@
+
+		if (!StringUtils.isBlank(item.getPromoCode())) {
+			cartModel.setPromoCode(item.getPromoCode());
+			cartModel.setPromoAdded(new Date());
+		}
+

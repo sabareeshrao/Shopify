@@ -1,0 +1,9 @@
+	public void setDefaultSelected(boolean defaultSelected) {
+		this.defaultSelected = defaultSelected;
+	}
+	public IntegrationModule getModule() {
+		return module;
+	}
+	public void setModule(IntegrationModule module) {
+		this.module = module;
+	}

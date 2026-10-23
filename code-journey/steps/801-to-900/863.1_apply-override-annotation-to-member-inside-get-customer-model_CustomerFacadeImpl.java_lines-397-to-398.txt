@@ -1,2 +1,0 @@
-  @Override
-  public void setCustomerModelDefaultProperties(Customer customer, MerchantStore store)

@@ -1,8 +1,0 @@
-
-db.show.sql=false;
-db.schema=SALESMANAGER
-hibernate.hbm2ddl.auto=update
-
-
-##
-#configuration connection pool

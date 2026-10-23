@@ -1,0 +1,5 @@
+public class ProductQueryBuilder {
+	
+	public static String buildProductQuery() {
+		
+		StringBuilder qs = new StringBuilder();

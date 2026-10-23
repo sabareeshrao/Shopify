@@ -1,0 +1,7 @@
+		manufacturerDescription.setLanguage(en);
+		manufacturerDescription.setName("DEFAULT");
+		manufacturerDescription.setManufacturer(defaultManufacturer);
+		manufacturerDescription.setDescription("DEFAULT");
+		defaultManufacturer.getDescriptions().add(manufacturerDescription);
+		
+		manufacturerService.create(defaultManufacturer);

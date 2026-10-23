@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "QC",
-			"zoneName": "Quebec",
-			"countryCode": "CA"
-		},

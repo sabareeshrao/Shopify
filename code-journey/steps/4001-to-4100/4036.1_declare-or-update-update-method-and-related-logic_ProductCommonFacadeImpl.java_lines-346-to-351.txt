@@ -1,0 +1,6 @@
+
+
+	@Override
+	public void update(Long productId, LightPersistableProduct product, MerchantStore merchant, Language language) {
+		// Get product
+		Product modified = productService.findOne(productId, merchant);

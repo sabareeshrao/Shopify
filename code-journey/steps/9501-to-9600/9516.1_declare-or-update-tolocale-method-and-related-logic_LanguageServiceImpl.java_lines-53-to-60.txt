@@ -1,0 +1,8 @@
+	@Override
+	public Locale toLocale(Language language, MerchantStore store) {
+		
+		if(store != null) {
+		
+			String countryCode = store.getCountry().getIsoCode();
+			
+			return new Locale(language.getCode(), countryCode);

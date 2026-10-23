@@ -1,4 +1,0 @@
-import com.salesmanager.core.model.shipping.ShippingProduct;
-import com.salesmanager.core.model.shoppingcart.ShoppingCart;
-import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
-

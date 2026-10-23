@@ -1,0 +1,6 @@
+
+@Service
+public class CurrencyFacadeImpl implements CurrencyFacade {
+
+  @Inject
+  private CurrencyService currencyService;

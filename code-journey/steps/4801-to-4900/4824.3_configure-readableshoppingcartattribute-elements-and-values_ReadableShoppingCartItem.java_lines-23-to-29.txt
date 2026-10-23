@@ -1,0 +1,7 @@
+	private String displaySubTotal;
+	private List<ReadableShoppingCartAttribute> cartItemattributes = new ArrayList<ReadableShoppingCartAttribute>();
+	
+	private ReadableProductVariation variant = null;
+	private ReadableProductVariation variantValue = null;
+
+	

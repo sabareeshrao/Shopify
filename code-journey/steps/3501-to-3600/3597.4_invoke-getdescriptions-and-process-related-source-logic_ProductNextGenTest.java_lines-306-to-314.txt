@@ -1,0 +1,9 @@
+
+	    dprice.getDescriptions().add(dpd);
+	    availability.getPrices().add(dprice);
+	    
+	    return availability;
+		
+		
+		
+	}

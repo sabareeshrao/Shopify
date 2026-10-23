@@ -1,0 +1,7 @@
+                    if ( attribute.getAttributeId() > 0 )
+                    {
+                        attributeItem.setId( attribute.getId() );
+                    }
+                    item.addAttributes( attributeItem );
+                    //newAttributes.add( attributeItem );
+                }

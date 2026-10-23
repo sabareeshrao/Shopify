@@ -1,0 +1,7 @@
+			te.setMessageCode("message.payment.error");
+			te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+			throw te;
+        }
+        
+        Transaction trx = new Transaction();
+        trx.setAmount(amount);

@@ -1,0 +1,6 @@
+
+		List<Product> getProductsListByIds(Set<Long> productIds);
+
+		List<Product> listByTaxClass(TaxClass taxClass);
+
+		List<Product> listByStore(MerchantStore store);

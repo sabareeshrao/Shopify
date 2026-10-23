@@ -1,0 +1,10 @@
+
+	/**
+	 * List all boxes
+	 * 
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping(value = {"/content/boxes","/private/content/boxes"}, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get boxes for a given MerchantStore", notes = "", produces = "application/json", response = List.class)

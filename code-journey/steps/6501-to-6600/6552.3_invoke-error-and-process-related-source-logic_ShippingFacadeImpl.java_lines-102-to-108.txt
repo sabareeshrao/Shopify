@@ -1,0 +1,7 @@
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting expedition configuration", e);
+			throw new ServiceRuntimeException("Error while getting Expedition configuration for store[" + store.getCode() + "]", e);
+		}
+
+	}

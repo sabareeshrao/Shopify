@@ -1,0 +1,6 @@
+			
+			//merge with existing or replace
+			List<ProductPrice> prices = new ArrayList<ProductPrice>();
+			for (PersistableProductPrice priceEntity : source.getPrices()) {
+
+				ProductPrice price = null;

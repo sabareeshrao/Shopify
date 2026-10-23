@@ -1,0 +1,6 @@
+	@Override
+	public ReadableCatalog merge(Catalog source, ReadableCatalog destination, MerchantStore store,
+								 Language language) {
+		if(destination == null) {
+			destination = new ReadableCatalog();
+		}

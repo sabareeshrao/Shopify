@@ -1,0 +1,8 @@
+
+			List<Order> orders = orderList.getOrders();
+			com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();
+
+			if (CollectionUtils.isEmpty(orders)) {
+				returnList.setRecordsTotal(0);
+				return returnList;
+			}

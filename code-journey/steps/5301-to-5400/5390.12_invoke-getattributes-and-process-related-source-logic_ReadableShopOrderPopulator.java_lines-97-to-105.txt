@@ -1,0 +1,9 @@
+					customer.getAttributes().add(readableAttribute);
+				}
+			}*/
+			
+			target.setCustomer(customer);
+		
+		} catch (Exception e) {
+			throw new ConversionException(e);
+		}

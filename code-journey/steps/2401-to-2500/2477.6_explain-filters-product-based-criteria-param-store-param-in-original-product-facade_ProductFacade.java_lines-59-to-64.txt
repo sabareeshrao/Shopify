@@ -1,0 +1,6 @@
+
+  /**
+   * Filters a list of product based on criteria
+   *
+   * @param store
+   * @param language

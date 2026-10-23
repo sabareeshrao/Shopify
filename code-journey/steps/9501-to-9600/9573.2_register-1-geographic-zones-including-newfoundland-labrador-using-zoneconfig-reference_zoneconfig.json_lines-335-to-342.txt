@@ -1,0 +1,8 @@
+		"zoneName": "Manitoba",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NF",
+		"zoneName": "Newfoundland - Labrador",
+		"countryCode": "CA"
+	},

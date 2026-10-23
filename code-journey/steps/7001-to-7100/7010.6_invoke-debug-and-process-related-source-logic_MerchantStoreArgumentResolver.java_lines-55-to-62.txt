@@ -1,0 +1,8 @@
+		LOGGER.debug("is request authorized {} for {} and store {}", authorized, httpServletRequest.getRequestURI(),
+				storeModel.getCode());
+		if(!authorized){
+			throw new UnauthorizedException("Cannot authorize user for store " + storeModel.getCode());
+		}
+		return storeModel;
+	}
+}

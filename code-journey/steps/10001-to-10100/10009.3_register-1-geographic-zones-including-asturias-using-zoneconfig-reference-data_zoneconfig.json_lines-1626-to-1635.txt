@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Asturias",
+		"zoneName": "Asturias",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Avila",
+		"zoneName": "Avila",
+		"countryCode": "ES"
+	},

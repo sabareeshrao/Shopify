@@ -1,0 +1,6 @@
+		if (img != null) {
+			image = Optional.of(img);
+		}
+
+		return image;
+	}

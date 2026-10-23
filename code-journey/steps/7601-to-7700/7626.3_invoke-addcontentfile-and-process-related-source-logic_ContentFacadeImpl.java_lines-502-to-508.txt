@@ -1,0 +1,7 @@
+
+				contentService.addContentFile(merchantStoreCode, cmsContent);
+			}
+		} catch (ServiceException | IOException e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}

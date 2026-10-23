@@ -1,0 +1,8 @@
+
+        data.setCartId(response.getBody().getCode());
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertEquals(response.getBody().getQuantity(), 1);
+
+    }

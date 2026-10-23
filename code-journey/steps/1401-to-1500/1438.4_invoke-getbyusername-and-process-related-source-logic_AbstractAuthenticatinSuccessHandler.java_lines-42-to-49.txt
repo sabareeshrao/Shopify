@@ -1,0 +1,8 @@
+		  
+		  try {
+			  User user = userService.getByUserName(userName);
+			  
+			  Date lastAccess = user.getLoginTime();
+			  if(lastAccess==null) {
+				  lastAccess = new Date();
+			  }

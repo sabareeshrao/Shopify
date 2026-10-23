@@ -1,0 +1,5 @@
+
+	@Override
+	public boolean userInRoles(String userName, List<String> groupNames) {
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

@@ -1,0 +1,7 @@
+			
+			coutriesList.append("]");
+			returnString.append("\"countries\"").append(":").append(coutriesList.toString());
+		}
+		
+		if(quoteItems!=null) {
+			returnString.append(",");

@@ -1,0 +1,9 @@
+  @Override
+  public void addViewControllers(ViewControllerRegistry registry) {
+    registry.addViewController("/").setViewName("shop");
+  }
+
+  @Override
+  public void addInterceptors(InterceptorRegistry registry) {
+    // Changes the locale when a 'locale' request parameter is sent; e.g. /?locale=de
+    registry.addInterceptor(localeChangeInterceptor());

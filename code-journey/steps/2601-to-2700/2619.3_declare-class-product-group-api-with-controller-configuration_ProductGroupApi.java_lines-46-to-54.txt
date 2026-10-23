@@ -1,0 +1,9 @@
+@Api(tags = { "Product groups management resource (Product Groups Management Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product groups management resource", description = "Product groups management") })
+public class ProductGroupApi {
+
+  @Inject private ProductService productService;
+
+  @Inject private ProductItemsFacade productItemsFacade;
+

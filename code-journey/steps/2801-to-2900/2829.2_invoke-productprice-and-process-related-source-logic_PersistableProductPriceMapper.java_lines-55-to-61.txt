@@ -1,0 +1,7 @@
+
+		try {
+			if (destination == null) {
+				destination = new ProductPrice();
+			}
+			
+			destination.setId(source.getId());

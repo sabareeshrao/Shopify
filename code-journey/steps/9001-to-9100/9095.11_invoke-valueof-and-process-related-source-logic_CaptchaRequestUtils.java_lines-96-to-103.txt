@@ -1,0 +1,8 @@
+	  	  
+	  	  Boolean responseBoolean = Boolean.valueOf(successInd);
+	  	  
+	  	  if(responseBoolean) {
+	  		checkCaptcha = true;
+	  	  }
+	  	  
+	  	  return checkCaptcha;

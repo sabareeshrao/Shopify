@@ -1,0 +1,8 @@
+      throws Exception {
+
+    try {
+      // product exist
+      Product product = productService.getById(id);
+
+      if (product == null) {
+        response.sendError(404, "Product id " + id + " does not exists");

@@ -1,0 +1,9 @@
+		d.setDescription(desc.getDescription());
+		d.setId(desc.getId());
+		d.setTitle(desc.getTitle());
+		return d;
+	}
+
+
+
+}

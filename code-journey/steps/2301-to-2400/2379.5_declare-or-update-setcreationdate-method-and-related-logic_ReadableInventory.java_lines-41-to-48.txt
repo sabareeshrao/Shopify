@@ -1,0 +1,8 @@
+
+	public void setCreationDate(String creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public String getSku() {
+		return sku;
+	}

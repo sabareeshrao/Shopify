@@ -1,0 +1,5 @@
+		{
+			List<ReadableProductVariant> instances = source
+					.getVariants().stream()
+					.map(i -> readableProductVariantMapper.convert(i, store, language)).collect(Collectors.toList());
+			destination.setVariants(instances);

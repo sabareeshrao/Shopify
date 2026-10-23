@@ -1,0 +1,8 @@
+	private String code;
+	private boolean visible;
+	private String contentType;
+	
+
+	public String getCode() {
+		return code;
+	}

@@ -1,0 +1,6 @@
+
+NotEmpty.order.billingName=Le nom de facturation ne doit pas être vide
+NotEmpty.order.billingStreetAddress=L'adresse de facturation ne doit pas être vide
+NotEmpty.order.billingCity=La ville de facturation ne doit pas être vide
+NotEmpty.order.billingState=La province de facturation ne doit pas être vide
+NotEmpty.order.billingPostCode=Le code postal de facturation ne doit pas être vide

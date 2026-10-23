@@ -1,0 +1,7 @@
+ * 
+ * @author carlsamson
+ *
+ */
+@Component
+public class ZonesLoader {
+

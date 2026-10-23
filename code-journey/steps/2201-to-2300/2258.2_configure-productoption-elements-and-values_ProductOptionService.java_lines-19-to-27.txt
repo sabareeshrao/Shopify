@@ -1,0 +1,9 @@
+
+	void saveOrUpdate(ProductOption entity) throws ServiceException;
+
+
+	List<ProductOption> listReadOnly(MerchantStore store, Language language)
+			throws ServiceException;
+
+
+	ProductOption getByCode(MerchantStore store, String optionCode);

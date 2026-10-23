@@ -1,0 +1,8 @@
+
+	private String code;
+	private boolean visible;
+	boolean allowAddToCart;
+
+	public boolean isAllowAddToCart() {
+		return allowAddToCart;
+	}

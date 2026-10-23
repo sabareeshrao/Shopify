@@ -1,6 +1,0 @@
-
-/**
- * Builds market places objects for shop and REST api
- * @author c.samson
- *
- */

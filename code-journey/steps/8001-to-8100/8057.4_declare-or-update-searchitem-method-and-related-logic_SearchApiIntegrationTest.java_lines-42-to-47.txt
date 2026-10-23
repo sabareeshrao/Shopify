@@ -1,0 +1,6 @@
+    @Ignore
+    public void searchItem() throws Exception {
+    	
+    	PersistableProduct product = super.product("TESTPRODUCT");
+    	
+        final HttpEntity<PersistableProduct> entity = new HttpEntity<>(product, getHeader());

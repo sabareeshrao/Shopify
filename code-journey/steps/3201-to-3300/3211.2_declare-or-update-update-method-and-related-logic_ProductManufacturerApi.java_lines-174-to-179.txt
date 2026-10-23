@@ -1,0 +1,6 @@
+	public void update(@PathVariable Long id,
+			@Valid @RequestBody PersistableManufacturer manufacturer, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		try {
+			manufacturer.setId(id);

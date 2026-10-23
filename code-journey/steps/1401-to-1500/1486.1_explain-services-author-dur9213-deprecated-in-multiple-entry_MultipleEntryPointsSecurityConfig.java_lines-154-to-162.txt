@@ -1,0 +1,9 @@
+	
+	/**
+	 * services api v0
+	 * 
+	 * @author dur9213
+	 * @deprecated
+	 *
+	 */
+	@Configuration

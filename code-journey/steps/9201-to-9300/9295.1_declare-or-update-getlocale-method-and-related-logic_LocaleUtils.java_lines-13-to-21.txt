@@ -1,0 +1,9 @@
+public class LocaleUtils {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(LocaleUtils.class);
+
+	public static Locale getLocale(Language language) {
+
+		return new Locale(language.getCode());
+
+	}

@@ -1,0 +1,10 @@
+		for(IntegrationModule module : modules) {
+			if(module.getRegionsSet().contains(store.getCountry().getIsoCode())
+					|| module.getRegionsSet().contains("*")) {
+				
+				returnModules.add(module);
+			}
+		}
+		
+		return returnModules;
+	}

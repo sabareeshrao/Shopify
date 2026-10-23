@@ -1,0 +1,9 @@
+	        		if(values.get("config1") !=null) {
+	        			config.setConfig1((String)values.get("config1"));
+	        		}
+	        		if(values.get("config2") !=null) {
+	        			config.setConfig2((String)values.get("config2"));
+	        		}
+	        		
+	        		String jsonConfigString = mapper.writeValueAsString(config);
+	        		configString.append(jsonConfigString);

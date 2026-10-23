@@ -1,3 +1,0 @@
-	@Autowired
-	protected TestRestTemplate testRestTemplate;
-

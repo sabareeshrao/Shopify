@@ -1,0 +1,6 @@
+			InputStream input = new ByteArrayInputStream(image.getBytes());
+			cmsContentImage = new InputContentFile();
+			cmsContentImage.setFileName(image.getOriginalFilename());
+			cmsContentImage.setMimeType(image.getContentType());
+			cmsContentImage.setFileContentType(FileContentType.LOGO);
+			cmsContentImage.setFile(input);

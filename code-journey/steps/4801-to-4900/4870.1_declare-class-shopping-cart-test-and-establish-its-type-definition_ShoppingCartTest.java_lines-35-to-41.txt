@@ -1,0 +1,7 @@
+
+
+/**
+ * Test 
+ * 
+ * - Add a product to persistent shopping cart
+ * - Retrieve an item from the persistent shopping cart

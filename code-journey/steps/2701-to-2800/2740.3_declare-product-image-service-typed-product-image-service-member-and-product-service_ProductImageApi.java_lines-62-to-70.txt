@@ -1,0 +1,9 @@
+	@Inject
+	private ProductImageService productImageService;
+
+	@Inject
+	private ProductService productService;
+	
+	@Autowired
+	private ReadableProductImageMapper readableProductImageMapper;
+

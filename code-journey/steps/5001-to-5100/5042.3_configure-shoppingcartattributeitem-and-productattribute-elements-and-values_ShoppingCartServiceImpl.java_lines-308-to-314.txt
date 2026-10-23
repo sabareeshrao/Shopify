@@ -1,0 +1,7 @@
+
+		Set<ShoppingCartAttributeItem> cartAttributes = item.getAttributes();
+		Set<ProductAttribute> productAttributes = product.getAttributes();
+		List<ProductAttribute> attributesList = new ArrayList<ProductAttribute>();// attributes maintained
+		List<ShoppingCartAttributeItem> removeAttributesList = new ArrayList<ShoppingCartAttributeItem>();// attributes
+																											// to remove
+		// DELETE ORPHEANS MANUALLY

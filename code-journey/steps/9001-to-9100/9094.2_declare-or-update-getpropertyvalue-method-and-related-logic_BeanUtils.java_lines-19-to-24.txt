@@ -1,0 +1,6 @@
+    
+    @SuppressWarnings( "nls" )
+    public Object getPropertyValue( Object bean, String property )
+        throws IntrospectionException, IllegalArgumentException, IllegalAccessException, InvocationTargetException
+    {
+        

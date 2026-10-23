@@ -1,0 +1,7 @@
+
+	@Override
+	public List<ReadableProductPrice> list(String sku, MerchantStore store, Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(sku, "Product sku cannot be null");
+
+			List<ProductPrice> prices = productPriceService.findByProductSku(sku, store);

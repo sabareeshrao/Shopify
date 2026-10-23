@@ -1,0 +1,9 @@
+      for (Group group : groups) {
+        if (group.getGroupName().equals(Constants.GROUP_CUSTOMER)) {
+          customer.getGroups().add(group);
+        }
+      }
+
+    }
+
+  }

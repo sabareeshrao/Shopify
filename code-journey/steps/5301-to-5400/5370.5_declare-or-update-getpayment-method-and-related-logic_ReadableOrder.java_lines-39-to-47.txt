@@ -1,0 +1,9 @@
+	public ReadablePayment getPayment() {
+		return payment;
+	}
+	public void setPayment(ReadablePayment payment) {
+		this.payment = payment;
+	}
+	public ReadableTotal getTotal() {
+		return total;
+	}

@@ -1,0 +1,6 @@
+				
+				if(!StringUtils.isBlank(source.getOrderTotalCode())) {
+					if(Constants.OT_DISCOUNT_TITLE.equals(source.getOrderTotalCode())) {
+						target.setDiscounted(true);
+					}
+				}

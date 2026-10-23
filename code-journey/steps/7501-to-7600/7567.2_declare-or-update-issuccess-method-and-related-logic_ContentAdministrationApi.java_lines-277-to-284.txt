@@ -1,0 +1,8 @@
+		private String error = null;
+		private boolean preventRetry = true;
+		public boolean isSuccess() {
+			return success;
+		}
+		public void setSuccess(boolean success) {
+			this.success = success;
+		}

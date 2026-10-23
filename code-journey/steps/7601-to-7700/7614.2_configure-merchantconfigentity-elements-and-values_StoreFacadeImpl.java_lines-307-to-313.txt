@@ -1,0 +1,7 @@
+			ReadableImage image = createReadableImage(mStore.getStoreLogo(), imagePath);
+			readableBrand.setLogo(image);
+		}
+		List<MerchantConfigEntity> merchantConfigTOs = getMerchantConfigEntities(mStore);
+		readableBrand.getSocialNetworks().addAll(merchantConfigTOs);
+		return readableBrand;
+	}

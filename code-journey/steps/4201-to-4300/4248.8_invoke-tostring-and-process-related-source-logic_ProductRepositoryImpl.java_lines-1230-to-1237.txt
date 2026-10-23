@@ -1,0 +1,8 @@
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);
+
+			q.setParameter("productId", id);
+			q.setParameter("id", store.getId());
+
+			return (Product) q.getSingleResult();

@@ -1,0 +1,8 @@
+
+	public void setAddress(PersistableAddress address) {
+		this.address = address;
+	}
+
+  public String getRetailerStore() {
+    return retailerStore;
+  }

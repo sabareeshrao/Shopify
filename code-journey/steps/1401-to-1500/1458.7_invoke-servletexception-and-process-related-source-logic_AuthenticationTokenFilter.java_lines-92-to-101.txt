@@ -1,0 +1,10 @@
+	        
+	    	} catch(Exception e) {
+	    		throw new ServletException(e);
+	    	}
+    	}
+ 
+    	
+    	if(requestUrl.contains("/api/v1/private") || requestUrl.contains("/api/v2/private")) {
+    		
+    		//setHeader(request,response);  

@@ -1,0 +1,8 @@
+    	    	  language = storeModel.getDefaultLanguage();
+    	      } catch (Exception e) {
+    	    	  logger.warn("Cannot get store with code [" + storeValue + "]");
+    	      }
+    	    	
+    	    } else {
+    	    	language = languageService.defaultLanguage();
+    	    }

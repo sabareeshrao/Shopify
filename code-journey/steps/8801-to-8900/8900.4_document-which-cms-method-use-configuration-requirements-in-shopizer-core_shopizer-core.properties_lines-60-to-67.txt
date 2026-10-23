@@ -1,8 +1,0 @@
-search.host[0].host=0.0.0.0
-search.host[0].port=9200
-search.host[1].scheme=http
-search.host[1].host=0.0.0.0
-search.host[1].port=9201
-
-# Which CMS method to use
-# default = infinispan

@@ -1,0 +1,5 @@
+
+			String p = null;
+			Optional<String> path = Optional.ofNullable(p);
+
+			contentFileManager.addFile(merchantStoreCode, path, contentImage);

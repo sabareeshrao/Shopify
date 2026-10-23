@@ -1,4 +1,0 @@
-	
-	@Autowired
-	private ResourcePatternResolver resourceResolver;
-

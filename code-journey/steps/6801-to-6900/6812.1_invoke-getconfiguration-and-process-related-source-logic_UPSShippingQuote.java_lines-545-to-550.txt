@@ -1,0 +1,6 @@
+/*			if (options != null) {
+
+				Map selectedintlservices = (Map) config
+						.getConfiguration("service-global-upsxml");
+
+				Iterator i = options.iterator();

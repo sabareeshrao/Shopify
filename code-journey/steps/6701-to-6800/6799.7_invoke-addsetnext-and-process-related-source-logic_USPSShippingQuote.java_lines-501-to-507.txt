@@ -1,0 +1,7 @@
+				digester.addSetNext("RateV3Response/Package/Postage",
+						"addOption");
+
+			} else {
+
+				digester.addCallMethod("Error/Description",
+						"setError", 0);

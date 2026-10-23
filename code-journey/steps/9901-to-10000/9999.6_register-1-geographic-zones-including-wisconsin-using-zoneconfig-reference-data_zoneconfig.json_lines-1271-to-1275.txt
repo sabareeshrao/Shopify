@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "WI",
-		"zoneName": "Wisconsin",
-		"countryCode": "US"
-	},

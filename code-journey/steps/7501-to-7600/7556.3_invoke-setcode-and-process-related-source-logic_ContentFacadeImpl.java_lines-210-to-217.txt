@@ -1,0 +1,8 @@
+		contentEntity.setCode(content.getCode());
+		contentEntity.setId(content.getId());
+		contentEntity.setVisible(content.isVisible());
+
+		return contentEntity;
+
+	}
+

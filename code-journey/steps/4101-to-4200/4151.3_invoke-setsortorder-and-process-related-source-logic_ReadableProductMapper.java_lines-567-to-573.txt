@@ -1,0 +1,7 @@
+		optValue.setSortOrder(0);
+
+		if (optionValue.getProductOptionValueSortOrder() != null) {
+			optValue.setSortOrder(optionValue.getProductOptionValueSortOrder().intValue());
+		}
+
+		optValue.setCode(optionValue.getCode());

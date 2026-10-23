@@ -1,5 +1,0 @@
-
-		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-decisiontables</artifactId>
-		</dependency>

@@ -1,0 +1,8 @@
+
+        String authorizationId = null;
+        
+        if (result.isSuccess()) {
+        	com.braintreegateway.Transaction transaction = result.getTarget();
+        	authorizationId  = transaction.getId();
+        } else if (result.getTransaction() != null) {
+        	com.braintreegateway.Transaction transaction = result.getTransaction();

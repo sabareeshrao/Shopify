@@ -1,0 +1,8 @@
+	private String price;
+	private String image;
+	private BigDecimal productPrice;
+	private int quantity;
+	private String sku;//sku
+	private String code;//shopping cart code
+	private boolean productVirtual;
+	

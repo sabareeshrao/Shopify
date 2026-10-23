@@ -1,0 +1,7 @@
+				
+			}
+			else {
+				com.salesmanager.shop.model.order.total.OrderTotal otherTotal = createTotal(t);
+				totals.add(otherTotal);
+			}
+		}

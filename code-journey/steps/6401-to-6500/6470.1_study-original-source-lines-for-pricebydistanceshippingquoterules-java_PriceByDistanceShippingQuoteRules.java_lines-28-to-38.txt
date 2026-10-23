@@ -1,0 +1,11 @@
+
+/**
+ * Requires to set pre-processor distance calculator
+ * pre-processor calculates the distance (in kilometers [can be changed to miles]) based on delivery address
+ * when that module is invoked during process it will calculate the price
+ * DISTANCE * PRICE/KM
+ * @author carlsamson
+ *
+ */
+public class PriceByDistanceShippingQuoteRules implements ShippingQuoteModule {
+	

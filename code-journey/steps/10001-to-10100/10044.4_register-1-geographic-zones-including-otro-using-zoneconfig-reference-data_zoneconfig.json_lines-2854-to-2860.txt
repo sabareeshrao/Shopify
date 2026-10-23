@@ -1,7 +1,0 @@
-		{
-			"zoneCode": "OTR",
-			"zoneName": "Otro",
-			"countryCode": "PY"
-		}
-] 
-}

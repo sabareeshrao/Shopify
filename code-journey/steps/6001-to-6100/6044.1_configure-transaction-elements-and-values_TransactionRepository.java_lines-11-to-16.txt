@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.payments.Transaction;
+
+public interface TransactionRepository extends JpaRepository<Transaction, Long> {
+
+	@Query("select t from Transaction t join fetch t.order to where to.id = ?1")
+	List<Transaction> findByOrder(Long orderId);

@@ -1,0 +1,7 @@
+      
+        target.setStateProvince(source.getDelivery().getState());
+        
+        if(source.getDelivery().getTelephone()==null) {
+            target.setPhone(source.getDelivery().getTelephone());
+        }
+        target.setAddress(source.getDelivery().getAddress());

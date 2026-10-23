@@ -1,0 +1,7 @@
+  
+  /**
+   * Encode clear password
+   * @param password
+   * @return
+   */
+  public String encodePassword(final String password);

@@ -1,7 +1,0 @@
-	/**
-	 * 
-	 * @param parent
-	 * @param folder
-	 * @param merchantStore
-	 * @param language
-	 */

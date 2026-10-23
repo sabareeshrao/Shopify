@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.content.box.ReadableContentBox;
+import com.salesmanager.shop.model.entity.ReadableEntityList;
+import com.salesmanager.shop.model.content.ReadableContentEntity;
+import com.salesmanager.shop.model.content.ReadableContentFull;
+import com.salesmanager.shop.model.content.page.PersistableContentPage;
+import com.salesmanager.shop.model.content.page.ReadableContentPage;

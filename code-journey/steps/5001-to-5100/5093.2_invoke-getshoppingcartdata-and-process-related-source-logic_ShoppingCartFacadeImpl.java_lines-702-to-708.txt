@@ -1,0 +1,7 @@
+			if (cartModel != null) {
+
+				ShoppingCartData cart = getShoppingCartData(cartModel, language);
+				return cart;
+			}
+		} catch (NoResultException nre) {
+			// nothing

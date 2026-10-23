@@ -1,0 +1,6 @@
+label.store.displaycontactussection=Afficher la page contactez-nous
+label.store.displaystoreaddress=Afficher l'adresse de la boutique
+label.store.displaysearchbox=Afficher la boîte de recheche
+label.store.displaypagesmenu=Afficher le menu des pages
+label.store.testmode=Mode tests (cache les catégories et le détail des produits)
+label.store.debugmode=Mode 'debug' (ajoute des traces additionnelles)

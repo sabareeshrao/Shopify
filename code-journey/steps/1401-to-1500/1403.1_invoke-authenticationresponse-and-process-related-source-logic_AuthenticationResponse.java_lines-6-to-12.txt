@@ -1,0 +1,7 @@
+public class AuthenticationResponse extends Entity implements Serializable {
+  public AuthenticationResponse() {}
+
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;

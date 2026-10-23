@@ -1,0 +1,9 @@
+	
+	public ZoneDescription() {
+	}
+	
+	public ZoneDescription(Zone zone, Language language, String name) {
+		setZone(zone);
+		setLanguage(language);
+		setName(name);
+	}

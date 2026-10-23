@@ -1,0 +1,8 @@
+		
+		Zone zone = new Zone();
+		zone.setCode("QC");
+		zone.setName("Quebec");
+		
+		delivery.setZone(zone);
+		
+		ShippingOrigin origin = new ShippingOrigin();

@@ -1,0 +1,9 @@
+
+
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+
+    if (cacheManager.getTreeCache() == null) {
+      throw new ServiceException(
+          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+    }

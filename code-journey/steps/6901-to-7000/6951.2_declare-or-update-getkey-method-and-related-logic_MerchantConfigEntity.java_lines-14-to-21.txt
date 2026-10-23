@@ -1,0 +1,8 @@
+  private String value;
+  private boolean active;
+  public String getKey() {
+    return key;
+  }
+  public void setKey(String key) {
+    this.key = key;
+  }

@@ -1,0 +1,8 @@
+
+	    ManufacturerDescription novellsd = new ManufacturerDescription();
+	    novellsd.setLanguage(en);
+	    novellsd.setManufacturer(novells);
+	    novellsd.setName("Novells publishing");
+	    novells.getDescriptions().add(novellsd);
+
+	    manufacturerService.create(novells);

@@ -1,0 +1,7 @@
+    instagramConfigValue.ifPresent(readableConfig::setInstagram);
+
+
+    Optional<String> pinterestConfigValue = getConfigValue(KEY_PINTEREST_PAGE_URL, merchantStore);
+    pinterestConfigValue.ifPresent(readableConfig::setPinterest);
+
+    readableConfig.setDisplayShipping(false);

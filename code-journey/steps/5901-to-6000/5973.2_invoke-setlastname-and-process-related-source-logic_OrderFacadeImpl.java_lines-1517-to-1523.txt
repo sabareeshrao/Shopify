@@ -1,0 +1,7 @@
+        target.setLastName(source.getLastName());
+        target.setPostalCode(source.getPostalCode());
+        target.setTelephone(source.getPhone());
+        target.setAddress(source.getAddress());
+        if(source.getCountry()!=null) {
+        	target.setCountry(countryService.getByCode(source.getCountry()));
+        }

@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.zone.Zone;
+import com.salesmanager.core.model.tax.taxclass.TaxClass;
+
+@Entity
+@EntityListeners(value = AuditListener.class)

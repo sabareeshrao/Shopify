@@ -1,0 +1,5 @@
+			for (ProductVariant instance : source.getVariants()) {
+				instanceToOption(selectableOptions, instance, store, language);
+			}
+
+		}

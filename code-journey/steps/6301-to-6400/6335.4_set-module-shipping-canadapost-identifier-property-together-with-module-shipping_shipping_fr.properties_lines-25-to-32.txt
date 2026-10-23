@@ -1,8 +1,0 @@
-
-#Canada Post
-module.shipping.canadapost.identifier=Identifiant Postes Canada (numéro CPC)
-module.shipping.canadapost.username=Nom d'usager Postes Canada (première partie de la clé API avant les 2 points :)
-module.shipping.canadapost.password=Mot de passe Postes Canada (deuxième partie de la clé API après les 2 points :)
-module.shipping.canadapost.apikey=Clé API Postes Canada
-module.shipping.canadapost.services=Services de postage à calculer
-module.shipping.canadapost.packages=Type d'emballage

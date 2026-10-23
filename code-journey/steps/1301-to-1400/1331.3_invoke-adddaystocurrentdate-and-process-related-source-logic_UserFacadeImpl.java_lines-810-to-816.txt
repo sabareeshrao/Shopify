@@ -1,0 +1,7 @@
+
+			Date expiry = DateUtil.addDaysToCurrentDate(2);
+
+			CredentialsReset credsRequest = new CredentialsReset();
+			credsRequest.setCredentialsRequest(token);
+			credsRequest.setCredentialsRequestExpiry(expiry);
+			user.setCredentialsResetRequest(credsRequest);

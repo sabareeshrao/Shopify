@@ -1,0 +1,7 @@
+	@Override
+	public CustomerReview populate(PersistableCustomerReview source, CustomerReview target, MerchantStore store,
+			Language language) throws ConversionException {
+		
+		Validate.notNull(customerService,"customerService cannot be null");
+		Validate.notNull(languageService,"languageService cannot be null");
+		Validate.notNull(source.getRating(),"Rating cannot bot be null");

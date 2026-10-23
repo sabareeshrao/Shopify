@@ -1,6 +1,0 @@
-
-	/**
-	 * Builds an amazon S3 client
-	 * 
-	 * @return
-	 */

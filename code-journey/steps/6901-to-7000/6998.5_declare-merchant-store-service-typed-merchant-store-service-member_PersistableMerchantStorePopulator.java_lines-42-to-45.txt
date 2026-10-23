@@ -1,4 +1,0 @@
-	@Inject
-	private MerchantStoreService merchantStoreService;
-	
-	

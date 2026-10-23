@@ -1,0 +1,11 @@
+
+	/**
+	 * Transformation of an amount of money submited by the admin user to be
+	 * inserted as a BigDecimal in the database
+	 * 
+	 * @param amount
+	 * @param locale
+	 * @return
+	 * @throws Exception
+	 */
+	// Utility

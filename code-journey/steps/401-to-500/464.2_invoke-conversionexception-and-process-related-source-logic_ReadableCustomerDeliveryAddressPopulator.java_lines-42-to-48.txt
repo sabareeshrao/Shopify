@@ -1,0 +1,7 @@
+		
+		if(zoneService==null) {
+			throw new ConversionException("zoneService must be set");
+		}
+		
+
+		target.setLatitude(source.getLatitude());

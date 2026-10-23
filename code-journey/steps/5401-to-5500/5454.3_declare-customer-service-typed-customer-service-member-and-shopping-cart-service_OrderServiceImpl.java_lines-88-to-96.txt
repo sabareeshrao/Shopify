@@ -1,9 +1,0 @@
-
-    @Inject
-    private CustomerService customerService;
-
-    @Inject
-    private ShoppingCartService shoppingCartService;
-
-    @Inject
-    private TransactionService transactionService;

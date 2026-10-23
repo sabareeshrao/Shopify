@@ -1,0 +1,7 @@
+        
+        final String token = jwtTokenUtil.generateToken(userDetails);
+
+        // Return the token
+        return ResponseEntity.ok(new AuthenticationResponse(userDetails.getId(),token));
+
+    }

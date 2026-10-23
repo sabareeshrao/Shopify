@@ -1,0 +1,9 @@
+Pattern.optionValue.code=The code must be alphanumeric
+NotEmpty.optionValue.code=The code should not be empty
+Pattern.option.code=The code must be alphanumeric
+NotEmpty.option.code=The code should not be empty
+NotEmpty.keyword.keyword=The keyword cannot be empty
+NotEmpty.review.description=Your opinion is required
+NotEmpty.review.rating=Product rating is required
+NotEmpty.group.groupType=Group type is required
+NotEmpty.group.groupName=Group name is required

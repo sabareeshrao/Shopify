@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Guadalajara",
-		"zoneName": "Guadalajara",
-		"countryCode": "ES"
-	},

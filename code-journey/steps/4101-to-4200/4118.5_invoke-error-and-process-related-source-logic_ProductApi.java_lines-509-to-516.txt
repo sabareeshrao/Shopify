@@ -1,0 +1,8 @@
+
+		} catch (Exception e) {
+			LOGGER.error("Error while updating Product position", e);
+			throw new ServiceRuntimeException("Product [" + id + "] cannot be edited");
+		}
+	}
+
+}

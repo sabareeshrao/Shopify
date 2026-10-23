@@ -1,0 +1,7 @@
+		 
+		config.getKeywordsMappings().put("store", "keyword");
+		*/
+
+		return config;
+
+	}

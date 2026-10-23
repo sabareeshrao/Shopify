@@ -1,0 +1,8 @@
+
+			if (!itemModified) {
+				newItems.add(itemModel);
+			}
+
+			if (newItems.isEmpty()) {
+				newItems = null;
+			}

@@ -1,0 +1,5 @@
+NotEmpty.contact.comment=Les commentaires sont requis
+Email.contact.email=L'adresse couriel est invalide
+NotEmpty.contact.captchaResponseField=La réponse 'Captcha' est requise
+NotEmpty.contact.captchaChallengeField=La question 'Captcha' est requise
+

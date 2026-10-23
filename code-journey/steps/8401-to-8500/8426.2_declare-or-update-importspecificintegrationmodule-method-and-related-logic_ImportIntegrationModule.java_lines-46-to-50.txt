@@ -1,0 +1,5 @@
+	public void importSpecificIntegrationModule() throws Exception {
+		
+
+			ObjectMapper mapper = new ObjectMapper();
+			File file = new File(" /Users/carlsamson/Documents/dev/workspaces/shopizer-master/shopizer/sm-core/src/main/resources/reference/integrationmodules.json");

@@ -1,0 +1,7 @@
+
+		
+		ShippingSummary quote = null;
+		
+		if(q != null) {
+			
+			quote = new ShippingSummary();

@@ -1,0 +1,10 @@
+	public void deleteOptionValue(
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, 
+			HttpServletResponse response) {
+
+		productOptionFacade.deleteOptionValue(id, merchantStore);
+		return;
+
+	}

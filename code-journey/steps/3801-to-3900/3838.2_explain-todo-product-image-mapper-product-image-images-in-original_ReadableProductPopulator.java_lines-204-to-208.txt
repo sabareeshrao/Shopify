@@ -1,5 +1,0 @@
-
-			/**
-			 * TODO use ProductImageMapper
-			 */
-			Set<ProductImage> images = source.getImages();

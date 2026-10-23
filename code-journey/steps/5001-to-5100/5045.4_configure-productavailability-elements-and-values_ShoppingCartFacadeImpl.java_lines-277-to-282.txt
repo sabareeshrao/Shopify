@@ -1,0 +1,6 @@
+
+		if (!DateUtil.dateBeforeEqualsDate(product.getDateAvailable(), new Date())) {
+			throw new Exception("Item with sku " + product.getSku() + " is not available");
+		}
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();

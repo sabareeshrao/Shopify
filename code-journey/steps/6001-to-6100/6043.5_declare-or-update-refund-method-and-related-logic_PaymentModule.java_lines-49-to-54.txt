@@ -1,0 +1,6 @@
+	
+	public Transaction refund(
+			boolean partial, MerchantStore store, Transaction transaction, Order order, BigDecimal amount, IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException;
+
+}

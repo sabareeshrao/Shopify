@@ -1,0 +1,9 @@
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+	public boolean isDefaultCatalog() {
+		return defaultCatalog;
+	}
+	public void setDefaultCatalog(boolean defaultCatalog) {
+		this.defaultCatalog = defaultCatalog;
+	}

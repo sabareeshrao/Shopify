@@ -1,0 +1,6 @@
+							break;
+						}
+					}
+				} else {
+					description = descriptions.iterator().next();
+				}

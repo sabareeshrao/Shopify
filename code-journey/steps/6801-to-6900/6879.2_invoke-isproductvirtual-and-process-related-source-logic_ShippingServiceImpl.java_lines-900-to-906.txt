@@ -1,0 +1,7 @@
+			if(!product.isProductVirtual() && product.isProductShipeable()) {
+				requiresShipping = true;
+			}
+		}
+
+		return requiresShipping;		
+	}

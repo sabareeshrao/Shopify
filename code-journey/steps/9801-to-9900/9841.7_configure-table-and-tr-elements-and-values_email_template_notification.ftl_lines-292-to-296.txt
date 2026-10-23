@@ -1,0 +1,5 @@
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>

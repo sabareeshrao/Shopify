@@ -1,0 +1,8 @@
+	public void create(
+			@Valid @RequestBody PersistableProductOptionSet optionSet, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		productOptionSetFacade.create(optionSet, merchantStore, language);
+
+	}

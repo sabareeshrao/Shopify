@@ -1,0 +1,9 @@
+		for(IntegrationModule module : modules) {
+			if(module.getCode().equals(code)) {
+				
+				return module;
+			}
+		}
+		
+		return null;
+	}

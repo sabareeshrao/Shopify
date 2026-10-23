@@ -1,0 +1,7 @@
+@RequestMapping("/api/v1")
+@Api(tags = {
+		"Product definition resource (Create udtate and delete product definition. Serves api v1 and v2 with backward compatibility)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product definition  resource, add product to category", description = "View product, Add product, edit product and delete product") })
+public class ProductApi {
+

@@ -1,0 +1,8 @@
+public class CustomerServicesImpl extends AbstractCustomerServices{
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServicesImpl.class);
+	
+
+	private CustomerService customerService;
+	private PermissionService  permissionService;
+	private GroupService   groupService;

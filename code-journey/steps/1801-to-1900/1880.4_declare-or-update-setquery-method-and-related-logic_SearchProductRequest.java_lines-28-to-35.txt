@@ -1,0 +1,8 @@
+
+	public void setQuery(String query) {
+		this.query = query;
+	}
+
+	public int getStart() {
+		return start;
+	}

@@ -1,0 +1,7 @@
+			
+			Catalog catalogModel = catalogFacade.getCatalog(catalog, store);
+			if(catalogModel == null) {
+				throw new ConversionRuntimeException("Error while converting CatalogEntry product [" + source.getCatalog() + "] not found");
+			}
+			
+			destination.setCatalog(catalogModel);

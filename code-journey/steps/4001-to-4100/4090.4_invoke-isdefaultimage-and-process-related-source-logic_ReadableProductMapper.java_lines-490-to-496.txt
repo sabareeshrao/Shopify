@@ -1,0 +1,7 @@
+
+		if (prdImage.isDefaultImage()) {
+			prdImage.setDefaultImage(true);
+		}
+
+		return prdImage;
+	}

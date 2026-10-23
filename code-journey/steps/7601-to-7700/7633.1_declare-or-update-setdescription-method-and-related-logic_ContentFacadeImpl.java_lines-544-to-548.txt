@@ -1,0 +1,5 @@
+	
+	private void setDescription(Content content, ReadableContentBox box, Language lang) {
+		
+		Optional<ContentDescription> contentDescription = findAppropriateContentDescription(
+				content.getDescriptions(), lang);

@@ -1,0 +1,5 @@
+		if (!StringUtils.isBlank(status)) {
+			criteria.setStatus(status);
+		}
+		// Start Category handling
+		List<Long> categoryIds = new ArrayList<Long>();

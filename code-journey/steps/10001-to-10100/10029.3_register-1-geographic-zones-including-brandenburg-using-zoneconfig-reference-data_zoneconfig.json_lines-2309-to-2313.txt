@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "BRG",
-			"zoneName": "Brandenburg",
-			"countryCode": "DE"
-		},

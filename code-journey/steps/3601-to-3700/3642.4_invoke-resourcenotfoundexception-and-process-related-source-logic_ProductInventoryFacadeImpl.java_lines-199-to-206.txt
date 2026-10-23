@@ -1,0 +1,8 @@
+		
+		if (avail == null) {
+			throw new ResourceNotFoundException(
+					"Inventory with id [" + inventory.getId() + "] not found");
+		}
+
+
+		inventory.setProductId(product.getId());

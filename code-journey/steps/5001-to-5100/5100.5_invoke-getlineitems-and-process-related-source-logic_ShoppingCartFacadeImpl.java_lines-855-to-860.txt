@@ -1,0 +1,6 @@
+
+		if (!duplicateFound) {
+			cartModel.getLineItems().add(itemModel);
+		}
+
+		saveShoppingCart(cartModel);

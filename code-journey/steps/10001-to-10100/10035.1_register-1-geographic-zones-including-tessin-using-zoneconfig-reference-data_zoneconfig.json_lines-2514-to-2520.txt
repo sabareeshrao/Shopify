@@ -1,0 +1,7 @@
+		{
+			"zoneCode": "TI",
+			"zoneName": "Tessin",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "UR",

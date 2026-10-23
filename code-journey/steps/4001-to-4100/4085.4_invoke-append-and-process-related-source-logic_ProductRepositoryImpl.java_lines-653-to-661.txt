@@ -1,0 +1,9 @@
+						countBuilderWhere.append(" and povd.description like :").append("val").append(count)
+								.append(attributeCriteria.getAttributeCode());
+					}
+					count++;
+				}
+				if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+					countBuilderWhere.append(" and povd.language.code=:lang");
+				}
+			}

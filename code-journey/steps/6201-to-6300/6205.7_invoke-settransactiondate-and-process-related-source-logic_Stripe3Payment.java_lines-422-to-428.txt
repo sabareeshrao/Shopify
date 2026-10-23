@@ -1,0 +1,7 @@
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.CAPTURE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", transaction.getTransactionDetails().get("TRANSACTIONID"));
+			transaction.getTransactionDetails().put("TRNAPPROVED", re.getReason());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", re.getId());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);

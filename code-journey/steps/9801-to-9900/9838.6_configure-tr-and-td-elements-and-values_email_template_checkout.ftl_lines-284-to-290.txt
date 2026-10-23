@@ -1,0 +1,7 @@
+				</tr>
+			</table>
+			</div><!-- /content -->
+		</td>
+	</tr>
+	<tr>
+		<td></td>

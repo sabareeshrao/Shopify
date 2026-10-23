@@ -1,0 +1,8 @@
+			if (user == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + id + "]");
+			}
+
+			// cannot delete superadmin
+			if (user.getGroups().contains(Constants.GROUP_SUPERADMIN)) {
+				throw new ServiceRuntimeException("Cannot delete superadmin user [" + id + "]");
+			}

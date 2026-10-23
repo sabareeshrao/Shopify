@@ -1,0 +1,6 @@
+
+		if (CollectionUtils.isEmpty(shippingProducts)) {
+			return null;// products are virtual
+		}
+
+		Customer customer = customerFacade.getCustomerModel(persistableCustomer, store, language);

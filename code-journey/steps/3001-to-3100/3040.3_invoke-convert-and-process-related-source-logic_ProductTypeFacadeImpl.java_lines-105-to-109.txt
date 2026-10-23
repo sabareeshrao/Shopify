@@ -1,0 +1,5 @@
+
+			ProductType model = persistableProductTypeMapper.convert(type, store, language);
+			model.setMerchantStore(store);
+			ProductType saved = productTypeService.saveOrUpdate(model);
+			return saved.getId();

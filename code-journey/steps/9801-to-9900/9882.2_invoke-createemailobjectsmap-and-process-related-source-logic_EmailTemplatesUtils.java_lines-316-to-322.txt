@@ -1,0 +1,7 @@
+		       try {
+
+		           Map<String, String> templateTokens = emailUtils.createEmailObjectsMap(contextPath, merchantStore, messages, storeLocale);
+		           
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_NAME, contact.getName());
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_EMAIL, contact.getEmail());
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_CONTENT, contact.getComment());

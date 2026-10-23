@@ -1,3 +1,0 @@
-	    
-	    shippingService.setSupportedCountries(store, supportedCountries);
-	    

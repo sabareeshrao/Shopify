@@ -1,0 +1,9 @@
+	
+	
+	boolean exist(String sku, Long productId);
+	
+	ProductVariant saveProductVariant(ProductVariant variant) throws ServiceException;
+	
+
+
+}

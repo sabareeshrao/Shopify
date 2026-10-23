@@ -1,0 +1,5 @@
+
+  public ConversionRuntimeException(String errorCode, String message, Throwable exception) {
+    super(errorCode, message, exception);
+  }
+}

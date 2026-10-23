@@ -1,0 +1,8 @@
+	
+    public static UserContext getCurrentInstance() {
+        return instance.get();
+    }
+
+	public String getIpAddress() {
+		return ipAddress;
+	}

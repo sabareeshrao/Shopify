@@ -1,3 +1,0 @@
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.salesmanager.core.constants.SchemaConstant;
-import com.salesmanager.core.model.common.description.Description;

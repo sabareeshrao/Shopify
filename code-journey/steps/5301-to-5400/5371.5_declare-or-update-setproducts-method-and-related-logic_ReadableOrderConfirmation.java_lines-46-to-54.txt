@@ -1,0 +1,9 @@
+	public void setProducts(List<ReadableOrderProduct> products) {
+		this.products = products;
+	}
+	public Address getBilling() {
+		return billing;
+	}
+	public void setBilling(Address billing) {
+		this.billing = billing;
+	}

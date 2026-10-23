@@ -1,0 +1,7 @@
+
+  @Inject private CustomerService customerService;
+
+  @Inject private ShippingQuoteService shippingQuoteService;
+
+  @Inject private OrderService orderService;
+

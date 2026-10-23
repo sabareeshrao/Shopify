@@ -1,0 +1,9 @@
+
+	private void createModules() throws ServiceException {
+		
+		try {
+			
+			List<IntegrationModule> modules = modulesLoader.loadIntegrationModules("reference/integrationmodules.json");
+            for (IntegrationModule entry : modules) {
+        	    moduleConfigurationService.create(entry);
+          }

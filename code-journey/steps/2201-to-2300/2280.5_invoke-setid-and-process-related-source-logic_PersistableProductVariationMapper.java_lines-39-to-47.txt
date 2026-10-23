@@ -1,0 +1,9 @@
+		
+		destination.setId(source.getId());
+		destination.setCode(source.getCode());
+		destination.setMerchantStore(store);
+		
+		ProductOption option = productOptionService.getById(store, source.getOption());
+		if(option == null) {
+			throw new ConversionRuntimeException("ProductOption [" + source.getOption() + "] does not exists");
+		}

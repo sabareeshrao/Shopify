@@ -1,3 +1,0 @@
-	@Override
-	public List<CustomerOptionSet> listByOptionValue(
-			CustomerOptionValue optionValue, MerchantStore store)

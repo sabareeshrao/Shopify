@@ -1,3 +1,0 @@
-	List<Category> listByIds(MerchantStore store, List<Long> ids,
-			Language language);
-	

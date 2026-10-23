@@ -1,7 +1,0 @@
-	  @GetMapping("/private/configurations/shipping")
-	  @ApiOperation(
-	      httpMethod = "GET",
-	      value = "List shipping configurations summary",
-	      notes = "Requires administration access",
-	      produces = "application/json",
-	      response = List.class)

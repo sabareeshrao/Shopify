@@ -1,3 +1,0 @@
-
-	@Override
-	public ReadableTransaction captureOrder(MerchantStore store, Order order, Customer customer, Language language)

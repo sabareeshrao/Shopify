@@ -1,0 +1,10 @@
+			for(Category c: saveAfter) {
+				if(c.getId() == null || c.getId().longValue()==0) {
+					for (Category sub : children) {
+						saveCategory(store, sub, parent);
+					}
+				}
+			}
+		}
+
+	}

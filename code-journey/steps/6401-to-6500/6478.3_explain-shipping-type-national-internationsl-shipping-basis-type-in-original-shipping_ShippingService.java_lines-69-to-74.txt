@@ -1,0 +1,6 @@
+
+	/**
+	 * ShippingType (NATIONAL, INTERNATIONSL)
+	 * ShippingBasisType (SHIPPING, BILLING)
+	 * ShippingPriceOptionType (ALL, LEAST, HIGHEST)
+	 * Packages

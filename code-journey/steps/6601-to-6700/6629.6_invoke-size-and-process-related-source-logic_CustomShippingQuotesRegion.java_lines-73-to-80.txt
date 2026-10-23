@@ -1,0 +1,8 @@
+				if(countQuotes<quoteItems.size()) {
+					quotesList.append(",");
+				}
+			}
+			quotesList.append("]");
+
+			returnString.append("\"quoteItems\"").append(":").append(quotesList.toString());
+		}

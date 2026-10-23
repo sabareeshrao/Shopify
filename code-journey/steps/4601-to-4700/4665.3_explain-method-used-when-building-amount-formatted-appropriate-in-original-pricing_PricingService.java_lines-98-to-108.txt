@@ -1,0 +1,11 @@
+	
+	/**
+	 * Method to be used when building an amount formatted with the appropriate currency
+	 * @param amount
+	 * @param locale
+	 * @param currency
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */
+	String getDisplayAmount(BigDecimal amount, Locale locale, Currency currency, MerchantStore store)

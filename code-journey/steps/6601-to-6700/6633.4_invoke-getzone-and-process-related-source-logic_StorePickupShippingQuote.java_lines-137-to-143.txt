@@ -1,0 +1,7 @@
+	
+	
+			if(delivery.getZone()!=null) {
+				region = delivery.getZone().getCode();
+			} else {
+				region = delivery.getState();
+			}

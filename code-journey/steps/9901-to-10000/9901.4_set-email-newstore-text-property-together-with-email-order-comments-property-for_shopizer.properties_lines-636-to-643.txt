@@ -1,0 +1,8 @@
+
+email.newuser.title=New user created
+email.newstore.title=New store created
+email.newstore.text=A new store has been created
+email.newuser.text=A new user has been created
+email.newstore.name=Store name : {0}
+email.newstore.info=User informations will be sent on a separate email.
+

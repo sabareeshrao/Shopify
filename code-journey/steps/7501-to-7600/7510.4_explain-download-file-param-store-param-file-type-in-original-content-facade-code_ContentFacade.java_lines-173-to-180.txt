@@ -1,8 +1,0 @@
-	
-	/**
-	 * Download file
-	 * @param store
-	 * @param fileType
-	 * @param fileName
-	 * @return
-	 */

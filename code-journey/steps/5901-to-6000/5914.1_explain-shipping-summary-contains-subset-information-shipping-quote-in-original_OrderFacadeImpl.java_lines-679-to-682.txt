@@ -1,4 +1,0 @@
-
-	/**
-	 * ShippingSummary contains the subset of information of a ShippingQuote
-	 */

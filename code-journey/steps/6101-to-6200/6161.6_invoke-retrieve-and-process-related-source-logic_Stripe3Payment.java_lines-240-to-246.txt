@@ -1,0 +1,7 @@
+
+			Stripe.apiKey = apiKey;
+
+
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					chargeId
+			);

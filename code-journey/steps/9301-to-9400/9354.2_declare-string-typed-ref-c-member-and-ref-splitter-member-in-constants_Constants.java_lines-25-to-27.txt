@@ -1,3 +1,0 @@
-	public final static String REF_C = "c:";
-	public final static String REF_SPLITTER = ":";
-	

@@ -1,0 +1,8 @@
+		target.setEndDate(source.getEndDate());
+		target.setId(source.getId());
+		target.setOptinType(source.getOptinType().name());
+		target.setStartDate(source.getStartDate());
+		target.setStore(store.getCode());
+
+		return target;
+	}

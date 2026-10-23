@@ -1,0 +1,8 @@
+		inputFile.setFileContentType(fileContentType);
+		inputFile.setFileName(newName);
+		inputFile.setMimeType(file.getMimeType());
+		inputFile.setFile(is);
+		
+		contentFileManager.addFile(merchantStoreCode, path, inputFile);
+	
+	}

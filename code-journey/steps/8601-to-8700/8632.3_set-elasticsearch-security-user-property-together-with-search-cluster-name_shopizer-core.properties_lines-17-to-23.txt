@@ -1,0 +1,7 @@
+elasticsearch.security.user=elastic
+elasticsearch.security.password=changeme
+
+###Search starter configuration instead of config above
+search.credentials.username=admin
+search.credentials.password=admin
+

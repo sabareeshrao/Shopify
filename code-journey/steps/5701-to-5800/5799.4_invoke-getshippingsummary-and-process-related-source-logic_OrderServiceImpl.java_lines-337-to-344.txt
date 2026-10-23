@@ -1,0 +1,8 @@
+            if(summary.getShippingSummary().getHandling()!=null && summary.getShippingSummary().getHandling().doubleValue()>0) {
+                if(shippingConfiguration.getHandlingFees()!=null && shippingConfiguration.getHandlingFees().doubleValue()>0) {
+                    OrderTotal handlingubTotal = new OrderTotal();
+                    handlingubTotal.setModule(Constants.OT_HANDLING_MODULE_CODE);
+                    handlingubTotal.setOrderTotalType(OrderTotalType.HANDLING);
+                    handlingubTotal.setOrderTotalCode("order.total.handling");
+                    handlingubTotal.setTitle(Constants.OT_HANDLING_MODULE_CODE);
+                    //handlingubTotal.setText("order.total.handling");

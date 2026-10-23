@@ -1,0 +1,7 @@
+		
+		String configurationValue = shippingConfiguration.toJSONString();
+		
+		
+		try {
+
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(moduleCode, store);

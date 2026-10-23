@@ -1,0 +1,8 @@
+
+      emailService.sendHtmlEmail(merchant, email);
+
+    
+  }
+
+
+}

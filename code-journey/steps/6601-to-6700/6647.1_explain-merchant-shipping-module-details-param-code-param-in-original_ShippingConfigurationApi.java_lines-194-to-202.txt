@@ -1,9 +1,0 @@
-
-	/**
-	 * Get merchant shipping module details
-	 * 
-	 * @param code
-	 * @param merchantStore
-	 * @param language
-	 * @return
-	 */

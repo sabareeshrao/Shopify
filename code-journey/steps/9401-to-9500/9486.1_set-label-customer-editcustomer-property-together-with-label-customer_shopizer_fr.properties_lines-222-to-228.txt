@@ -1,0 +1,7 @@
+label.customer.editcustomer=Éditer un client
+label.customer.createcustomer=Créer un client
+label.customer.order.date= Date de la commande
+label.customer.order.agreement=Je suis d'accord avec les termes et conditions
+label.customer.order.agreement.title=Termes et conditions
+label.customer.options.edit=Éditer l'option
+

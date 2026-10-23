@@ -1,0 +1,8 @@
+
+		
+		/**
+		 * ReadableProductMapper
+		 */
+		
+		List<ReadableProduct> readableProducts = products.stream().map(p -> readableProductMapper.convert(p, store, language))
+				.sorted(Comparator.comparing(ReadableProduct::getSortOrder)).collect(Collectors.toList());

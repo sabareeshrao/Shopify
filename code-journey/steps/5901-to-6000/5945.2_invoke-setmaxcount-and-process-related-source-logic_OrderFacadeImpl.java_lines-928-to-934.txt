@@ -1,0 +1,7 @@
+		criteria.setMaxCount(maxCount);
+		criteria.setCustomerId(customer.getId());
+
+		return this.getReadableOrderList(criteria, store, language);
+
+	}
+

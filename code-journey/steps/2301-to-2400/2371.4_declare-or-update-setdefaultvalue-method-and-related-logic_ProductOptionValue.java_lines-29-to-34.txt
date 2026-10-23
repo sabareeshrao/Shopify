@@ -1,0 +1,6 @@
+	public void setDefaultValue(boolean defaultValue) {
+		this.defaultValue = defaultValue;
+	}
+	public int getSortOrder() {
+		return sortOrder;
+	}

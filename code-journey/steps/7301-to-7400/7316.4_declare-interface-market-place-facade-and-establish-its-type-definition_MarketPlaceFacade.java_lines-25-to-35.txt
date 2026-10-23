@@ -1,0 +1,11 @@
+	
+	/**
+	 * Finds an optin by merchant and type
+	 * @param store
+	 * @param type
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableOptin findByMerchantAndType(MerchantStore store, OptinType type);
+
+}

@@ -1,0 +1,8 @@
+
+/**
+ * Aspect class that will trigger an event once a product is created Code
+ * inspired from http://www.discoversdk.com/blog/spring-event-handling-and-aop
+ * 
+ * create product
+ * update product
+ * delete product

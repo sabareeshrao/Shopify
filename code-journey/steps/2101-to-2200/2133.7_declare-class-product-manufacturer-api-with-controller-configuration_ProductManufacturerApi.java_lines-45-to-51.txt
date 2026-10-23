@@ -1,7 +1,0 @@
-@Controller
-@RequestMapping("/api/v1")
-@Api(tags = { "Manufacturer / Brand management resource (Manufacturer / Brand Management Api)" })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Manufacturer / Brand Management Api", description = "Edit Manufacturer / Brand") })
-public class ProductManufacturerApi {
-

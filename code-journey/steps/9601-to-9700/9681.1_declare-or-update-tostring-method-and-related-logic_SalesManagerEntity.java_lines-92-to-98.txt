@@ -1,0 +1,7 @@
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("entity.");
+		builder.append(Hibernate.getClass(this).getSimpleName());
+		builder.append("<");
+		builder.append(getId());

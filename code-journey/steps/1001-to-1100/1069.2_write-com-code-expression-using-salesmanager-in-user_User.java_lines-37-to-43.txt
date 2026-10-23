@@ -1,7 +1,0 @@
-import com.salesmanager.core.model.reference.language.Language;
-
-/**
- * User management
- * @author carlsamson
- *
- */

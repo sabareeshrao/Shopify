@@ -1,0 +1,9 @@
+
+			if (quote.getDeliveryAddress() != null) {
+				summary.setDeliveryAddress(quote.getDeliveryAddress());
+			}
+
+		}
+
+		return summary;
+	}

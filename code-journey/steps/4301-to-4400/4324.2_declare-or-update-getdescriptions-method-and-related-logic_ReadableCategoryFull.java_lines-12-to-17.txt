@@ -1,0 +1,6 @@
+  
+  private List<CategoryDescription> descriptions = new ArrayList<CategoryDescription>();
+
+  public List<CategoryDescription> getDescriptions() {
+    return descriptions;
+  }

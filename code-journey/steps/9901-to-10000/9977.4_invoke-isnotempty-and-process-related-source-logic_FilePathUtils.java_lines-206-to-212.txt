@@ -1,0 +1,7 @@
+		if (StringUtils.isNotEmpty(request.getHeader(X_FORWARDED_HOST))) {
+			uri = request.getHeader(X_FORWARDED_HOST);
+		} else {
+			uri = buildStoreUri(merchantStore, request);
+		}
+		return uri;
+	}

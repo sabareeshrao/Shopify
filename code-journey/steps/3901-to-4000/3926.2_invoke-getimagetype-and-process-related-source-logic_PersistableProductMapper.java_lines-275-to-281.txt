@@ -1,0 +1,7 @@
+					if (img.getImageType() == 1) {//external url
+						productImage.setProductImageUrl(img.getImageUrl());
+						productImage.setImage(new ByteArrayInputStream(new byte[0]));
+					} else {
+						ByteArrayInputStream in = new ByteArrayInputStream(img.getBytes());
+						productImage.setImage(in);
+					}

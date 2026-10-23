@@ -1,0 +1,6 @@
+	public int getOrderedQuantity() {
+		return orderedQuantity;
+	}
+	public ReadableProduct getProduct() {
+		return product;
+	}

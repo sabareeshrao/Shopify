@@ -1,0 +1,6 @@
+    @Override
+    public void saveOrUpdate(final Order order) throws ServiceException {
+
+        if(order.getId()!=null && order.getId()>0) {
+            LOGGER.debug("Updating Order");
+            super.update(order);

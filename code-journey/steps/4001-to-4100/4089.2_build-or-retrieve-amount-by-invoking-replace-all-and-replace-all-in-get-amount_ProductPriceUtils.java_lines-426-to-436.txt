@@ -1,0 +1,11 @@
+	public BigDecimal getAmount(String amount) throws Exception {
+
+		// validations
+		/**
+		 * 1) remove decimal and thousand
+		 * 
+		 * String.replaceAll(decimalPoint, ""); String.replaceAll(thousandPoint, "");
+		 * 
+		 * Should be able to parse to Integer
+		 */
+		StringBuilder newAmount = new StringBuilder();

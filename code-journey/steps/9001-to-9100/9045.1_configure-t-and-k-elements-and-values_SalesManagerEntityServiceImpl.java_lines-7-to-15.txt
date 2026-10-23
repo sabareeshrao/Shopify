@@ -1,0 +1,9 @@
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+
+/**
+ * @param <T> entity type
+ */
+public abstract class SalesManagerEntityServiceImpl<K extends Serializable & Comparable<K>, E extends SalesManagerEntity<K, ?>>

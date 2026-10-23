@@ -1,0 +1,8 @@
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(buildRootPath()).append(Constants.SLASH)
+          .append(productImage.getProduct().getMerchantStore().getCode()).append(Constants.SLASH)
+          .append(productImage.getProduct().getSku());
+
+      // delete small
+      StringBuilder smallPath = new StringBuilder(nodePath);

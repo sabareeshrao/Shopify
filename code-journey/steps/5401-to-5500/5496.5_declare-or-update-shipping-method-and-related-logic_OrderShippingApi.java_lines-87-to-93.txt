@@ -1,0 +1,7 @@
+  public ReadableShippingSummary shipping(
+      @PathVariable final String code,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+

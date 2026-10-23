@@ -1,0 +1,7 @@
+      category.setDepth(0);
+    }
+    category.setLineage(lineage.toString());
+    super.update(category);
+
+
+  }

@@ -1,0 +1,8 @@
+	 *            Merchant store
+	 * @param contentImagesList
+	 *            list of {@link CMSContentImage} being stored
+	 * @throws ServiceException
+	 *             service exception
+	 */
+	@Override
+	public void addContentFiles(String merchantStoreCode, List<InputContentFile> contentFilesList)

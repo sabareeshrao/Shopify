@@ -1,0 +1,7 @@
+  public @ResponseBody ValueList autocomplete(
+      @RequestBody SearchProductRequest searchRequest,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language) {
+    return searchFacade.autocompleteRequest(searchRequest.getQuery(), merchantStore, language);
+  }
+}

@@ -1,0 +1,6 @@
+	public void setCategoryFacets(List<ReadableCategory> categoryFacets) {
+		this.categoryFacets = categoryFacets;
+	}
+
+
+}

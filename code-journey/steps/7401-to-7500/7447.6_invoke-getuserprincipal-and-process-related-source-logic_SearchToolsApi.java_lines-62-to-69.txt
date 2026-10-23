@@ -1,0 +1,8 @@
+		
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+		ReadableUser user = userFacade.findByUserName(userName, null, language);
+		
+		if(user== null) {
+			throw new UnauthorizedException();
+		}

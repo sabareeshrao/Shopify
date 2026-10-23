@@ -1,0 +1,7 @@
+
+		/**
+		 * Only admin and superadmin can change other user password
+		 */
+		User auth = null;
+		try {
+			auth = userService.getByUserName(authenticatedUser);

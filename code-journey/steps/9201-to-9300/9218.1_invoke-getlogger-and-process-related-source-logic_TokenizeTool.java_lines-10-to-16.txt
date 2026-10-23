@@ -1,0 +1,7 @@
+public class TokenizeTool {
+	
+	private final static String CIPHER = "AES/ECB/PKCS5Padding";
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(TokenizeTool.class);
+	
+	private TokenizeTool(){}

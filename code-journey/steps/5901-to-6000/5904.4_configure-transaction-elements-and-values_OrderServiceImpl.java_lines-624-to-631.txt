@@ -1,0 +1,8 @@
+				if(processingTransactions.containsKey(order.getId())) {
+					listTransactions = processingTransactions.get(order.getId());
+				} else {
+					listTransactions = new ArrayList<Transaction>();
+					processingTransactions.put(order.getId(), listTransactions);
+				}
+				listTransactions.add(trx);
+			}

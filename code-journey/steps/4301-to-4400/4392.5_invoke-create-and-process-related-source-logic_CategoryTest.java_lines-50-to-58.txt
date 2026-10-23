@@ -1,0 +1,9 @@
+
+	    categoryService.create(materingstuff);
+	    
+	    assertNotNull(materingstuff.getId());
+	    
+	    Long bookId = materingstuff.getId();
+	    
+	    Category fetchedBook = categoryService.getById(bookId, store.getId());
+		Assert.assertEquals(2, fetchedBook.getDescriptions().size());

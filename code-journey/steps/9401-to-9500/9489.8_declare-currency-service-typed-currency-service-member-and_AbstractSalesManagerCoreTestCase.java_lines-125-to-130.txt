@@ -1,0 +1,6 @@
+	
+	@Inject
+	protected ZoneService zoneService;
+	
+	@Inject
+	protected CustomerService customerService;

@@ -1,0 +1,6 @@
+
+		if (persistable == null) {
+			throw new Exception("product is null for id " + product.getId());
+		}
+
+		java.util.Set<ProductAvailability> availabilities = persistable.getAvailabilities();

@@ -1,0 +1,8 @@
+
+	/**
+	 * Removes the data in a given merchant node
+	 */
+	@Override
+	public void removeFiles(final String merchantStoreCode, Optional<String> folderPath) throws ServiceException {
+
+		LOGGER.debug("Removing all images for {} merchant ", merchantStoreCode);

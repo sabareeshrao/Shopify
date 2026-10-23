@@ -1,4 +1,0 @@
-
-    /**
-     * Create new customer for a given MerchantStore, then authenticate that customer
-     */

@@ -1,0 +1,6 @@
+label.shipping.allquotes=Afficher toutes les catations obtenues
+label.shipping.leastexpensivequotes=Afficher la catations obtenue la moins dispendieuse
+label.shipping.moreexpensivequotes=Afficher la catations obtenue la plus dispendieuse
+label.message.region.available=Région disponible
+label.message.region.exist=Région existe déjà
+label.shipping.maximumWeight=Poids maximum

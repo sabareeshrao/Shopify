@@ -1,5 +1,0 @@
-
-@Component
-@Aspect
-public class PublishProductAspect {
-

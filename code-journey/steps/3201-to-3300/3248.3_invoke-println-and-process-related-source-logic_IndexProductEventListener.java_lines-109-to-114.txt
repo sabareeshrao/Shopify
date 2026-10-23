@@ -1,0 +1,6 @@
+			
+			if(fullProduct != null) {
+				product = fullProduct;
+			} else {
+				System.out.println("Product not loaded");
+			}

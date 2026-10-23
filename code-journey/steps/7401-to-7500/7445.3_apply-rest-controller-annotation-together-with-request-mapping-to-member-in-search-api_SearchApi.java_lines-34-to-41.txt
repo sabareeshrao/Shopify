@@ -1,0 +1,8 @@
+@RequestMapping("/api/v1")
+@Api(tags = {"Search products and search word/sentence completion functionality (Search Api)"})
+@SwaggerDefinition(tags = {
+    @Tag(name = "Search products resource", description = "Search products and search term completion functionality")
+})
+public class SearchApi {
+
+  @Inject private SearchFacade searchFacade;

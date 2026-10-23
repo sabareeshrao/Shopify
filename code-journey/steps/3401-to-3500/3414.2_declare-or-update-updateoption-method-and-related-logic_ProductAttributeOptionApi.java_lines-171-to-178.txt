@@ -1,0 +1,8 @@
+	public void updateOption(@Valid @RequestBody PersistableProductOptionEntity option, @PathVariable Long optionId,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletRequest request,
+			HttpServletResponse response) {
+		option.setId(optionId);
+		productOptionFacade.saveOption(option, merchantStore, language);
+		return;
+
+	}

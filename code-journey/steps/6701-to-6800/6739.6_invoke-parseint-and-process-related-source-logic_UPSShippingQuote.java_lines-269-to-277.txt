@@ -1,0 +1,9 @@
+			try {
+				sZone = Integer.parseInt(store.getZone());
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+
+			Zone storeZone = (Zone) zonesMap.get(sZone);
+			Zone customerZone = (Zone) zonesMap.get(customer
+					.getCustomerZoneId());**/

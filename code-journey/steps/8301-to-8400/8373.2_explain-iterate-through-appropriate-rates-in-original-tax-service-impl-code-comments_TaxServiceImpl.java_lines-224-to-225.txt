@@ -1,2 +1,0 @@
-		
-		//iterate through the tax class and get appropriate rates

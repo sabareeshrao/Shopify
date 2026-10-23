@@ -1,0 +1,8 @@
+				throw te;
+			}
+
+			Stripe.apiKey = apiKey;
+			
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					token
+			);

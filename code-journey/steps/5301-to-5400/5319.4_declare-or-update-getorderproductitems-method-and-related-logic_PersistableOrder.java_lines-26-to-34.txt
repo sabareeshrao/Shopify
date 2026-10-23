@@ -1,0 +1,9 @@
+	public List<PersistableOrderProduct> getOrderProductItems() {
+		return orderProductItems;
+	}
+	public void setCustomer(PersistableCustomer customer) {
+		this.customer = customer;
+	}
+	public PersistableCustomer getCustomer() {
+		return customer;
+	}

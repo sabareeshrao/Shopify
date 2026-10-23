@@ -1,0 +1,6 @@
+			target.setProductName(source.getOrderProduct().getProductName());
+			target.setDownloadCount(source.getDownloadCount());
+			target.setDownloadExpiryDays(source.getMaxdays());
+			target.setId(source.getId());
+			target.setFileName(source.getOrderProductFilename());
+			target.setOrderId(source.getOrderProduct().getOrder().getId());

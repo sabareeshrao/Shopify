@@ -1,0 +1,7 @@
+    List<Integer> groupsId = new ArrayList<Integer>();
+    List<Group> groups = customer.getGroups();
+    if (groups != null) {
+      for (Group group : groups) {
+        groupsId.add(group.getId());
+
+      }

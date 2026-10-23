@@ -1,0 +1,7 @@
+			
+			//invoke pre processors
+			//the main pre-processor determines at runtime the shipping module
+			//also available distance calculation
+			if(!CollectionUtils.isEmpty(shippingModulePreProcessors)) {
+				for(ShippingQuotePrePostProcessModule preProcessor : shippingModulePreProcessors) {
+					//System.out.println("Using pre-processor " + preProcessor.getModuleCode());

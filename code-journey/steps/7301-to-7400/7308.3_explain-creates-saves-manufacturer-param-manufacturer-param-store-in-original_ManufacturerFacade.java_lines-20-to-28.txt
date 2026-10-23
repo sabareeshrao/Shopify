@@ -1,9 +1,0 @@
-  
-  /**
-   * Creates or saves a manufacturer
-   * 
-   * @param manufacturer
-   * @param store
-   * @param language
-   * @throws Exception
-   */

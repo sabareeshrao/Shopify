@@ -1,0 +1,5 @@
+	ProductOptionSet getCode(MerchantStore store, String code);
+	List<ProductOptionSet> getByProductType (Long productTypeId, MerchantStore store, Language lang);
+
+
+}

@@ -1,0 +1,10 @@
+
+@Component
+public class PersistableOrderApiPopulator extends AbstractDataPopulator<PersistableOrder, Order> {
+
+	@Autowired
+	private CurrencyService currencyService;
+	@Autowired
+	private CustomerService customerService;
+/*	@Autowired
+	private ShoppingCartService shoppingCartService;

@@ -1,3 +1,0 @@
-#For using priceByDistance shipping module
-shippingDistancePreProcessor.apiKey=<YOUR KEY>
-

@@ -1,0 +1,8 @@
+
+			// load files individually
+			for (Resource resource : files) {
+				InputStream in = resource.getInputStream();
+				if(in == null) {
+					continue;
+				}
+				Map<String, Object> data = mapper.readValue(in, Map.class);

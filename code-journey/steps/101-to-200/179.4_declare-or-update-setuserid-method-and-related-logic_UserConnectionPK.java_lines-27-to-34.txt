@@ -1,0 +1,8 @@
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getProviderId() {
+		return providerId;
+	}

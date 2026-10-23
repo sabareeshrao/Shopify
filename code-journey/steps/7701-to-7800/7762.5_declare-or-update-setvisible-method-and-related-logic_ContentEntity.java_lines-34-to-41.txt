@@ -1,0 +1,8 @@
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+}

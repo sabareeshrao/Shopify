@@ -1,0 +1,6 @@
+
+	public void setCustomPrice(String customPrice) {
+		this.customPrice = customPrice;
+	}
+
+}

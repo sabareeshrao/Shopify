@@ -1,0 +1,7 @@
+
+		LOGGER.debug("Using shipping nodule " + inputParameters.getModuleName());
+		
+		if(!StringUtils.isBlank(inputParameters.getModuleName())) {
+			for(IntegrationModule toBeUsed : allModules) {
+				if(toBeUsed.getCode().equals(inputParameters.getModuleName())) {
+					quote.setCurrentShippingModule(toBeUsed);

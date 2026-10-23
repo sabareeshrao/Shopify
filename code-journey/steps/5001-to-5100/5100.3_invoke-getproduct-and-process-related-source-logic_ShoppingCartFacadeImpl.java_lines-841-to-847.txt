@@ -1,0 +1,7 @@
+			for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem cartItem : cartModelItems) {
+				if (cartItem.getProduct().getSku().equals(item.getProduct())) {
+					if (CollectionUtils.isEmpty(cartItem.getAttributes())) {
+						if (!duplicateFound) {
+							if (!itemModel.isProductVirtual()) {
+								cartItem.setQuantity(cartItem.getQuantity() + item.getQuantity());
+							}

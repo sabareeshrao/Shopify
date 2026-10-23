@@ -1,0 +1,8 @@
+
+	public void setOptions(List<ProductAttribute> options) {
+		this.options = options;
+	}
+
+	public String getSku() {
+		return sku;
+	}

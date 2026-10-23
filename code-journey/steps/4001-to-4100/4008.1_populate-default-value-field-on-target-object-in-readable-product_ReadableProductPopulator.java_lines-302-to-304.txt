@@ -1,3 +1,0 @@
-
-
-								attrValue.setDefaultValue(attribute.getAttributeDefault());

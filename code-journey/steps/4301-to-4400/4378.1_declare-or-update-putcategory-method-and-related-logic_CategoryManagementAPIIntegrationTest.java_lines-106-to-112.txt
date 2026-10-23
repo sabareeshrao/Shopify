@@ -1,0 +1,7 @@
+    
+    /**
+    @Test
+    public void putCategory() throws Exception {
+
+        //create
+        PersistableCategory newCategory = new PersistableCategory();

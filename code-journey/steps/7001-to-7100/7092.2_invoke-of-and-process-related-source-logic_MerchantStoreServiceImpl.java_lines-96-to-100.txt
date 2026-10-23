@@ -1,0 +1,5 @@
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableMerchantRepository.listAllRetailers(store, pageRequest);
+
+	}
+

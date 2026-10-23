@@ -1,0 +1,9 @@
+  @Override
+  public String getLocation() {
+    return regionName;
+  }
+
+
+  public String getBucketName() {
+    return bucketName;
+  }

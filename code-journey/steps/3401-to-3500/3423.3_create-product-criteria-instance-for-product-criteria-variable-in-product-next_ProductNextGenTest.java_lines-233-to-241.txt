@@ -1,0 +1,9 @@
+	    
+	    //List<ProductAvailability> avs = p.getAvailabilities().stream().filter(a -> !a.getVariants().isEmpty()).collect(Collectors.toList());
+	    //assertThat(avs, not(empty()));
+	    
+	    //test product list service
+	    
+	    //list products per category
+	    //list 5 items
+	    ProductCriteria productCriteria = new ProductCriteria();

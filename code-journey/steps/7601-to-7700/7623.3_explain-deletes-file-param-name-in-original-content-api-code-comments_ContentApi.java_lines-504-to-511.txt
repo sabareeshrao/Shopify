@@ -1,0 +1,8 @@
+
+	/**
+	 * Deletes a file from CMS
+	 *
+	 * @param name
+	 */
+	@DeleteMapping(value = "/private/content/")
+	@ApiOperation(httpMethod = "DELETE", value = "Deletes a file from CMS", notes = "Delete a file from server", response = Void.class)

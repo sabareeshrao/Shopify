@@ -1,0 +1,7 @@
+	
+	public BufferedImage getCroppedImage() throws IOException {
+		
+
+			//out if croppedArea == 0 or file is null
+		
+

@@ -1,0 +1,10 @@
+
+	/**
+	 * List content pages
+	 * @param merchantStore
+	 * @param language
+	 * @param page
+	 * @param count
+	 * @return
+	 */
+	@GetMapping(value = {"/private/content/pages", "/content/pages"}, produces = MediaType.APPLICATION_JSON_VALUE)

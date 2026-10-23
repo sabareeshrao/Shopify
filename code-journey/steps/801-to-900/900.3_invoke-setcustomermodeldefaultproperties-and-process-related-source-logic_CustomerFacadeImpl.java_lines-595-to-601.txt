@@ -1,0 +1,7 @@
+    try {
+		setCustomerModelDefaultProperties(customerToPopulate, store);
+	} catch (Exception e) {
+		throw new ServiceRuntimeException("Cannot set default customer properties",e);
+	}
+    saveCustomer(customerToPopulate);
+    customer.setId(customerToPopulate.getId());

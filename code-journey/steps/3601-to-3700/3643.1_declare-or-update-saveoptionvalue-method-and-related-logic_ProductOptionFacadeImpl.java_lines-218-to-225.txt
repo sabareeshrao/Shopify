@@ -1,0 +1,8 @@
+
+	@Override
+	public ReadableProductOptionValue saveOptionValue(PersistableProductOptionValue optionValue,
+			MerchantStore store, Language language) {
+		Validate.notNull(optionValue, "Option value code must not be null");
+		Validate.notNull(store, "Store code must not be null");
+
+		ProductOptionValue value = new ProductOptionValue();

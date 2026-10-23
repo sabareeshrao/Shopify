@@ -1,7 +1,0 @@
-
-	/**
-	 * Creates a product option value that can be used to create a product
-	 * attribute when creating a new product
-	 *
-	 * @throws Exception
-	 */

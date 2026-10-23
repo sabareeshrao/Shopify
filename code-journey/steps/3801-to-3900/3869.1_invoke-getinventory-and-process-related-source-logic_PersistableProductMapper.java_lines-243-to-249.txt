@@ -1,0 +1,7 @@
+			
+			/**
+			 * Default inventory
+			 */
+			
+			if(source.getInventory() != null) {
+				ProductAvailability productAvailability = persistableProductAvailabilityMapper.convert(source.getInventory(), store, language);

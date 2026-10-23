@@ -1,0 +1,7 @@
+
+	}
+    
+    protected void setSessionAttribute(final String key, final Object value, HttpServletRequest request) {
+    	com.salesmanager.shop.utils.SessionUtil.setSessionAttribute(key, value, request);
+	}
+    

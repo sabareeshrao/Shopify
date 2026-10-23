@@ -1,0 +1,6 @@
+	public @ResponseBody ReadableInventory create(@PathVariable Long productId,
+			@Valid @RequestBody PersistableInventory inventory, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		inventory.setProductId(productId);
+		return productInventoryFacade.add(inventory, merchantStore, language);
+	}

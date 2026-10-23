@@ -1,0 +1,9 @@
+    	
+    	if(authentication == null) {
+    		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    	}
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        // Reload password post-security so we can generate token
+        final JWTUser userDetails = (JWTUser)jwtAdminDetailsService.loadUserByUsername(authenticationRequest.getUsername());

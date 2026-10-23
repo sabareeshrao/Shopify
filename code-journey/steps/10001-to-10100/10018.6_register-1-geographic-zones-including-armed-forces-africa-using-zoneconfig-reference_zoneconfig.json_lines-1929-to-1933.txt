@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "AF",
-			"zoneName": "Armed Forces Africa",
-			"countryCode": "US"
-		},

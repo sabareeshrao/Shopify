@@ -1,0 +1,5 @@
+		if (!StringUtils.isBlank(product.getPrice())) {
+			// set default price
+			for (ProductPrice price : availability.getPrices()) {
+				if (price.isDefaultPrice()) {
+					try {

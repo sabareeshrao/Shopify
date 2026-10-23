@@ -1,0 +1,7 @@
+		
+		if(this.exists(var.getCode(), store)) {
+			throw new OperationNotAllowedException("Option set with code [" + var.getCode() + "] already exist");
+		}
+		
+		ProductVariation p = persistableProductVariationMapper.convert(var, store, language);
+		p.setMerchantStore(store);

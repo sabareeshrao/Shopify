@@ -1,0 +1,9 @@
+
+	/**
+	 * 
+	 * @param parent
+	 * @param folder
+	 * @param merchantStore
+	 * @param language
+	 */
+	@DeleteMapping(value = "/content/folder", produces = MediaType.APPLICATION_JSON_VALUE)

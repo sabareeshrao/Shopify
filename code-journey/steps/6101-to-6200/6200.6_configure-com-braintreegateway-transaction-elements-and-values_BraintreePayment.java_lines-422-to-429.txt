@@ -1,0 +1,8 @@
+	    
+
+        Result<com.braintreegateway.Transaction> result = gateway.transaction().refund(auth, amount);
+
+        String trxId = null;
+        
+        if (result.isSuccess()) {
+        	com.braintreegateway.Transaction settledTransaction = result.getTarget();

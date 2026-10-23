@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.catalog.product.inventory.ProductInventory;
+import com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer;
+import com.salesmanager.core.model.catalog.product.manufacturer.ManufacturerDescription;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+import com.salesmanager.core.model.merchant.MerchantStore;
+

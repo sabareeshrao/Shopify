@@ -1,0 +1,7 @@
+	FinalPrice calculateProductPrice(Product product,
+			List<ProductAttribute> attributes, Customer customer)
+			throws ServiceException;
+
+	/**
+	 * Method to be used to print a displayable formated amount to the end user
+	 * @param amount

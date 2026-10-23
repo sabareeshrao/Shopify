@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.store.ReadableMerchantStore;
+
+public class ReadableMarketPlace extends MarketPlaceEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "AF",
+			"zoneName": "Armed Forces Africa",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "AA",
+			"zoneName": "Armed Forces Americas",
+			"countryCode": "US"
+		},

@@ -1,0 +1,10 @@
+	public @ResponseBody Entity create(
+			@Valid @RequestBody PersistableProductVariant variant, 
+			@PathVariable Long productId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

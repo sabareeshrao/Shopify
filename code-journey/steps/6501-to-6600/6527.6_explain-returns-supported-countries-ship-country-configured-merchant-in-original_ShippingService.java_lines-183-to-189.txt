@@ -1,0 +1,7 @@
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<Country> getShipToCountryList(MerchantStore store, Language language)
+			throws ServiceException;

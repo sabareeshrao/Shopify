@@ -1,0 +1,9 @@
+
+	@Override
+	public Transaction initTransaction(Customer customer, Payment payment, MerchantStore store) throws ServiceException {
+
+		Validate.notNull(store);
+		Validate.notNull(payment);
+		Validate.notNull(payment.getAmount());
+		
+		payment.setCurrency(store.getCurrency());

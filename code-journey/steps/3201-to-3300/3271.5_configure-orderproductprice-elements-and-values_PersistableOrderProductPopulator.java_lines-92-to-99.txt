@@ -1,0 +1,8 @@
+			orderProductPrice.setDefaultPrice(true);
+			orderProductPrice.setProductPrice(source.getPrice());
+			orderProductPrice.setOrderProduct(target);
+			
+
+			
+			Set<OrderProductPrice> prices = new HashSet<OrderProductPrice>();
+			prices.add(orderProductPrice);

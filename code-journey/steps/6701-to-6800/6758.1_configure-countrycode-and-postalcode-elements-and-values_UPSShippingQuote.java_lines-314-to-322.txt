@@ -1,0 +1,9 @@
+			xmldatabuffer.append("<CountryCode>");
+			xmldatabuffer.append(delivery.getCountry().getIsoCode());
+			xmldatabuffer.append("</CountryCode>");
+			xmldatabuffer.append("<PostalCode>");
+			xmldatabuffer.append(DataUtils
+					.trimPostalCode(delivery.getPostalCode()));
+			xmldatabuffer.append("</PostalCode></Address></ShipTo>");
+			// xmldatabuffer.append("<Service><Code>11</Code></Service>");//TODO service codes (next day ...)
+

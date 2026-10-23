@@ -1,0 +1,9 @@
+	
+	/**
+	 * @param code
+	 * @param type
+	 * @param store
+	 * @return
+	 */
+	boolean codeExist(String code, String type, MerchantStore store);
+	

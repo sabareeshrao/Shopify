@@ -1,0 +1,9 @@
+import com.salesmanager.core.model.tax.taxrate.TaxRate;
+
+public interface TaxRateRepository extends JpaRepository<TaxRate, Long> {
+
+	@Query("select t from TaxRate t join fetch t.taxClass join fetch t.merchantStore tm join fetch t.country left join fetch t.zone left join fetch t.descriptions left join t.parent where tm.id=?1 order by t.taxPriority asc")
+	List<TaxRate> findByStore(Integer id);
+	
+	@Query("select t from TaxRate t join fetch t.taxClass join fetch t.merchantStore tm join fetch t.country left join fetch t.zone left join fetch t.descriptions td left join t.parent where tm.id=?1 and td.language.id=?2 order by t.taxPriority asc")
+	List<TaxRate> findByStoreAndLanguage(Integer id, Integer languageId);

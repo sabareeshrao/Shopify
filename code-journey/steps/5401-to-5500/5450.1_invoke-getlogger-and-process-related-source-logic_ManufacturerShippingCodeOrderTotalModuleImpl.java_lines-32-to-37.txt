@@ -1,0 +1,6 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ManufacturerShippingCodeOrderTotalModuleImpl.class);
+	
+	private String name;
+	private String code;
+	
+	//private StatelessKnowledgeSession orderTotalMethodDecision;//injected from xml file

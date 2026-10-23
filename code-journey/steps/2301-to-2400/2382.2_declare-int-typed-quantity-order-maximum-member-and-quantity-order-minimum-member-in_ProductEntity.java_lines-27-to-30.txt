@@ -1,4 +1,0 @@
-	private int quantityOrderMaximum = -1;// default unlimited
-	private int quantityOrderMinimum = 1;// default 1
-	private boolean productIsFree;
-

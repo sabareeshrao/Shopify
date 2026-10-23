@@ -1,7 +1,0 @@
-
-/**
- * Test content with CMS store logo
- * 
- * @author Carl Samson
- *
- */

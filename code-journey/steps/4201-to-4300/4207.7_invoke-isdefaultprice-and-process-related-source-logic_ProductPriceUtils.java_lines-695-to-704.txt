@@ -1,0 +1,10 @@
+
+		if (price.isDefaultPrice()) {
+			finalPrice.setDefaultPrice(true);
+		}
+		if (hasDiscount) {
+			discountPrice(finalPrice);
+		}
+
+		return finalPrice;
+	}

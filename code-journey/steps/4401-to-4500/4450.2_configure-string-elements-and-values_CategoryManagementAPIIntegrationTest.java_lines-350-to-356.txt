@@ -1,0 +1,7 @@
+      
+      String json = writer.writeValueAsString(m1);
+      HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
+
+      @SuppressWarnings("rawtypes")
+      ResponseEntity response = testRestTemplate.postForEntity("/api/v1/private/manufacturer", entity, PersistableManufacturer.class);
+      assertThat(response.getStatusCode(), is(CREATED));

@@ -1,0 +1,8 @@
+
+		// set attributes
+		List<com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute> attributes = shoppingCartItem
+				.getAttributes();
+		if (!CollectionUtils.isEmpty(attributes)) {
+			for (com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute attribute : attributes) {
+
+				ProductAttribute productAttribute = productAttributeService.getById(attribute.getId());

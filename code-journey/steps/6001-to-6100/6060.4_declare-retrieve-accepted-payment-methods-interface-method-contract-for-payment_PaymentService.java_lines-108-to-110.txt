@@ -1,3 +1,0 @@
-
-	List<PaymentMethod> getAcceptedPaymentMethods(MerchantStore store)
-			throws ServiceException;

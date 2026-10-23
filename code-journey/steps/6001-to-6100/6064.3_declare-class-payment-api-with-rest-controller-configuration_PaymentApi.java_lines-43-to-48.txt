@@ -1,6 +1,0 @@
-@RestController
-@RequestMapping(value = "/api/v1")
-@Api(tags = { "Payment api" })
-@SwaggerDefinition(tags = { @Tag(name = "Payment management resources", description = "Payment management resources") })
-public class PaymentApi {
-

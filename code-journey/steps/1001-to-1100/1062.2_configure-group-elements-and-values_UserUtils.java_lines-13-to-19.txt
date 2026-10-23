@@ -1,0 +1,7 @@
+		
+		List<Group> logedInUserGroups = user.getGroups();
+		for(Group group : logedInUserGroups) {
+			if(group.getGroupName().equals(groupName)) {
+				return true;
+			}
+		}

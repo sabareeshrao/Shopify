@@ -1,0 +1,8 @@
+					fPrice = price.getProductPriceSpecialAmount();
+					finalPrice.setDiscountEndDate(price.getProductPriceSpecialEndDate());
+				}
+			}
+		} else {
+			if (price.getProductPriceSpecialAmount() != null
+					&& price.getProductPriceSpecialAmount().doubleValue() > 0) {
+				hasDiscount = true;

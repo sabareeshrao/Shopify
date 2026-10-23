@@ -1,0 +1,6 @@
+				item.setName(cartItem.getProduct().getProductDescription().getName());
+				item.setAmount(amt);
+				//System.out.println(pricingService.getStringAmount(cartItem.getSubTotal(), store));
+				lineItems.add(item);
+			
+			}

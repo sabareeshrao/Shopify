@@ -1,0 +1,8 @@
+		
+		OrderTotalInputParameters inputParameters = new OrderTotalInputParameters();
+		inputParameters.setPromoCode(summary.getPromoCode());
+		inputParameters.setDate(new Date());
+		
+        kieSession.insert(inputParameters);
+        kieSession.setGlobal("total",resp);
+        kieSession.fireAllRules();

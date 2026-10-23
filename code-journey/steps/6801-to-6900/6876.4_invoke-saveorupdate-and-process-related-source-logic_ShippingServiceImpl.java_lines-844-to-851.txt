@@ -1,0 +1,8 @@
+
+			merchantConfigurationService.saveOrUpdate(configuration);
+			
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "VB",
-			"zoneName": "Voralberg",
-			"countryCode": "AT"
-		},

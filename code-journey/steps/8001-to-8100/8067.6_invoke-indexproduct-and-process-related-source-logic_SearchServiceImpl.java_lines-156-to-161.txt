@@ -1,0 +1,6 @@
+
+		for (ProductDescription description : descriptions) {
+			indexProduct(store, description, product, variants);
+		}
+
+	}

@@ -1,0 +1,11 @@
+					<td>
+						<h4>${LABEL_HI} ${EMAIL_CUSTOMER_FIRSTNAME} ${EMAIL_CUSTOMER_LASTNAME}<br/></h4>
+						<p class="lead">
+							${EMAIL_ORDER_NUMBER}
+						</p>
+						<br>
+						<p>
+							${EMAIL_ORDER_DATE}<br/>
+							${EMAIL_ORDER_THANKS}
+						</p>
+					</td>

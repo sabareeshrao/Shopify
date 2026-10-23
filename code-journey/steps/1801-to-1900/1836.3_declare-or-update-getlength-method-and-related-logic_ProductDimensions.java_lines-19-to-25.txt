@@ -1,0 +1,7 @@
+
+  @Column(name = "WEIGHT")
+  private BigDecimal weight;
+
+  public BigDecimal getLength() {
+    return length;
+  }

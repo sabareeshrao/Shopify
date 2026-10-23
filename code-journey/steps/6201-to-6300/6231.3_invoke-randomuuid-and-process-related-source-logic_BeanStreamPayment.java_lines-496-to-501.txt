@@ -1,0 +1,6 @@
+		String uniqueId = UUID.randomUUID().toString();//TODO
+			
+		String orderNumber = uniqueId;
+		
+		String amnt = productPriceUtils.getAdminFormatedAmount(store, amount);
+		

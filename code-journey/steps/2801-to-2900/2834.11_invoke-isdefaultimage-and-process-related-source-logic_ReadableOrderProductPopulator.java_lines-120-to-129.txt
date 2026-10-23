@@ -1,0 +1,10 @@
+					if(images!=null) {
+						for(ProductImage image : images) {
+							if(defaultImage==null) {
+								defaultImage = image;
+							}
+							if(image.isDefaultImage()) {
+								defaultImage = image;
+							}
+						}
+					}

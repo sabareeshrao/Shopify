@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NB",
+		"zoneName": "Nouveau Brunswick",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NS",
+		"zoneName": "Nouvelle Écosse",
+		"countryCode": "CA"
+	},

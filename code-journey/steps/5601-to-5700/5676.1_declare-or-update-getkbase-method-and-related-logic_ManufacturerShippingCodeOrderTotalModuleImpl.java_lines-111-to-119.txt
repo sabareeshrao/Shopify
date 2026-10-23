@@ -1,0 +1,9 @@
+	
+/*	public KnowledgeBase getKbase() {
+		return kbase;
+	}
+
+
+	public void setKbase(KnowledgeBase kbase) {
+		this.kbase = kbase;
+	}

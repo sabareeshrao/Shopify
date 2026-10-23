@@ -1,0 +1,9 @@
+			if (!CollectionUtils.isEmpty(product.getCategories())) {
+				item.setCategory(
+						category(product.getCategories().iterator().next(), description.getLanguage().getCode()));
+			}
+
+			if (!CollectionUtils.isEmpty(product.getAttributes())) {
+				Map<String, String> attributes = attributes(product, description.getLanguage().getCode());
+				item.setAttributes(attributes);
+			}

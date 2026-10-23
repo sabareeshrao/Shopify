@@ -1,8 +1,0 @@
-
-	
-	@Deprecated
-	@PutMapping(value = "/private/content/{id}")
-	@ResponseStatus(HttpStatus.OK)
-	@ApiOperation(httpMethod = "PUT", value = "Update content page", notes = "Updates a content page",
-
-			response = Void.class)

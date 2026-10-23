@@ -1,0 +1,9 @@
+		if (yearNow > y) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid date format","messages.error.creditcard.dateformat");
+		}
+		// OK, change implementation
+		if (yearNow == y && monthNow > m) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid date format","messages.error.creditcard.dateformat");
+		}
+	
+	}

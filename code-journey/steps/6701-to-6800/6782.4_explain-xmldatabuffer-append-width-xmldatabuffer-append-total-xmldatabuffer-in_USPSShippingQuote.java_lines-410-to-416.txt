@@ -1,0 +1,7 @@
+			 * xmldatabuffer.append("<Height>"); xmldatabuffer.append(totalH);
+			 * xmldatabuffer.append("</Height>");
+			 * xmldatabuffer.append("<Girth>"); xmldatabuffer.append(totalG);
+			 * xmldatabuffer.append("</Girth>");
+			 */
+
+			xmldatabuffer.append("</Package>");

@@ -1,0 +1,6 @@
+    	orderSummary.setProducts(itemList);
+
+
+    	return caculateOrder(orderSummary, customer, store, language);
+
+    }

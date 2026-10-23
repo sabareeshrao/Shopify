@@ -1,0 +1,6 @@
+	
+	@Inject
+	private CountryService countryService;
+	
+	@Inject
+	private ProductPriceUtils priceUtil;

@@ -1,0 +1,8 @@
+		
+        if(count.intValue()==0)
+        	return permissionList;
+
+		
+		StringBuilder qs = new StringBuilder();
+		qs.append("select p from Permission as p ");
+		qs.append("join fetch p.groups grous ");

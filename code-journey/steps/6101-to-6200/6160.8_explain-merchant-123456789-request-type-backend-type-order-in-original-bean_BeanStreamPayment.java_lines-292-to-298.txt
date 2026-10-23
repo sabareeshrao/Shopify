@@ -1,0 +1,7 @@
+					&ordProvince=BC
+					&ordCountry=CA
+					&ordPostalCode=V8T2E7
+					&ordPhoneNumber=5555555555
+					&ordEmailAddress=joe%40testemail.com
+			**/
+			

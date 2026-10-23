@@ -1,0 +1,6 @@
+
+	@Column(name = "AVAILABLE")
+	private Boolean available;
+
+	@Column(name = "QUANTITY_ORD_MIN")
+	private Integer productQuantityOrderMin = 0;

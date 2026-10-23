@@ -1,0 +1,7 @@
+	 * @param startCount
+	 * @param maxCount
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableProductList listItemsByIds(MerchantStore store, Language language, List<Long> ids, int startCount, int maxCount) throws Exception;
+

@@ -1,0 +1,8 @@
+		if(product.getProductReviewCount()!=null) {
+			count = product.getProductReviewCount();
+		}
+				
+		
+		
+
+		BigDecimal averageRating = product.getProductReviewAvg();

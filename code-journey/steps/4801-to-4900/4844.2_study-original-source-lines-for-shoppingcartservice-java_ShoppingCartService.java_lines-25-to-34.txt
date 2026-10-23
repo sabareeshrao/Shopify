@@ -1,0 +1,10 @@
+
+	/**
+	 * Creates a list of ShippingProduct based on the ShoppingCart if items are
+	 * virtual return list will be null
+	 * 
+	 * @param cart
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<ShippingProduct> createShippingProduct(ShoppingCart cart) throws ServiceException;

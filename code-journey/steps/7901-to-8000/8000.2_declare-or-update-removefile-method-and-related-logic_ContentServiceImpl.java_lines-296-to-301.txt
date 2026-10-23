@@ -1,0 +1,6 @@
+	@Override
+	public void removeFile(String merchantStoreCode, FileContentType fileContentType, String fileName)
+			throws ServiceException {
+		Assert.notNull(merchantStoreCode, "Merchant Store Id can not be null");
+		Assert.notNull(fileContentType, "Content file type can not be null");
+		Assert.notNull(fileName, "Content Image type can not be null");

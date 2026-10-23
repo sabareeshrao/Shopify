@@ -1,9 +1,0 @@
-**/bin
-**/build
-**/.settings
-**/.classpath
-*/sm-shop/src/main/resources/*
-sm-shop/src/main/resources/database.properties
-.DS_Store
-
-.mvnw/*.jar

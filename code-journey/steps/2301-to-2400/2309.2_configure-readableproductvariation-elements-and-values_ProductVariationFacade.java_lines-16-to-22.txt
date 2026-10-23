@@ -1,0 +1,7 @@
+	void delete(Long variation, MerchantStore store);
+	ReadableEntityList<ReadableProductVariation> list(MerchantStore store, Language language, int page, int count);
+	
+	
+	
+
+}

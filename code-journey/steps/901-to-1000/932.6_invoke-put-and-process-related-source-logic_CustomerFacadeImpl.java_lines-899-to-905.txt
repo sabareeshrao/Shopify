@@ -1,0 +1,7 @@
+      templateTokens.put(EmailConstants.EMAIL_CUSTOMER_PASSWORD, password);
+
+
+      Email email = new Email();
+      email.setFrom(store.getStorename());
+      email.setFromEmail(store.getStoreEmailAddress());
+      email.setSubject(messages.getMessage("label.generic.changepassword", locale));

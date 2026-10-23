@@ -1,0 +1,7 @@
+
+			PaymentIntentCaptureParams params =
+					PaymentIntentCaptureParams.builder()
+							.setAmountToCapture(Long.parseLong(strAmount))
+							.setStatementDescriptor(
+									store.getStorename().length() > 22 ?
+											store.getStorename().substring(0, 22) :

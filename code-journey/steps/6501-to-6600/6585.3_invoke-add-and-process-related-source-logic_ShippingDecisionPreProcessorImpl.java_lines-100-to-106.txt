@@ -1,0 +1,7 @@
+			sizeList.add(pack.getShippingLength());
+			sizeList.add(pack.getShippingWidth());
+			Double maxSize = Collections.max(sizeList);
+			if(size==null || maxSize > size) {
+				size = maxSize;
+			}
+		}

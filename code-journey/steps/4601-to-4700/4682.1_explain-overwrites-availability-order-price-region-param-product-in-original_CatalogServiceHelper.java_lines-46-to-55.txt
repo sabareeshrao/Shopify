@@ -1,0 +1,10 @@
+
+	/**
+	 * Overwrites the availability in order to return 1 price / region
+	 *
+	 * @param product
+	 * @param locale
+	 */
+	public static void setToAvailability(Product product, Locale locale) {
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();

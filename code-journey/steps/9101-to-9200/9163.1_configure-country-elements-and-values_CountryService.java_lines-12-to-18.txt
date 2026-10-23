@@ -1,0 +1,7 @@
+public interface CountryService extends SalesManagerEntityService<Integer, Country> {
+
+	Country getByCode(String code) throws ServiceException;
+	
+	void addCountryDescription(Country country, CountryDescription description) throws ServiceException;
+
+	List<Country> getCountries(Language language) throws ServiceException;

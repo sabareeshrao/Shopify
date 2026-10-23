@@ -1,0 +1,7 @@
+		
+		for(Language lang : langs) {
+			returnMap.put(lang.getCode(), lang);
+		}
+		return returnMap;
+
+	}

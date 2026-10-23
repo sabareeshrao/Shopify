@@ -1,0 +1,9 @@
+
+	public TaxBasisCalculation getTaxBasisCalculation() {
+		return taxBasisCalculation;
+	}
+
+	public void setCollectTaxIfDifferentProvinceOfStoreCountry(
+			boolean collectTaxIfDifferentProvinceOfStoreCountry) {
+		this.collectTaxIfDifferentProvinceOfStoreCountry = collectTaxIfDifferentProvinceOfStoreCountry;
+	}

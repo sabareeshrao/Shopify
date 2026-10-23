@@ -1,0 +1,7 @@
+		
+		//requires the postal code
+		if(StringUtils.isBlank(delivery.getPostalCode())) {
+			return null;
+		}
+
+		Double distance = null;

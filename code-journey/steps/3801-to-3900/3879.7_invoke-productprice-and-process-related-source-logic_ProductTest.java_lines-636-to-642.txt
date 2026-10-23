@@ -1,0 +1,7 @@
+
+	    ProductPrice dprice = new ProductPrice();
+	    dprice.setDefaultPrice(true);
+	    dprice.setProductPriceAmount(new BigDecimal(39.99));
+	    dprice.setProductAvailability(availability);
+
+	    ProductPriceDescription dpd = new ProductPriceDescription();

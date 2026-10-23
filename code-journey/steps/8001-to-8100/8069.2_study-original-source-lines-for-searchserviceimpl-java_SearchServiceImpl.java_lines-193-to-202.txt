@@ -1,0 +1,10 @@
+			
+			/**
+			 * Inventory
+			 */
+			
+			/**
+			 * SKU, QTY, PRICE, DISCOUNT
+			 */
+			
+			List<Map<String, String>> itemInventory = new ArrayList<Map<String, String>>();

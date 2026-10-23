@@ -1,0 +1,9 @@
+				Map<String,Country> countries = countryService.getCountriesMap(en);
+				Country c = countries.get(customer.getBilling().getCountry().getIsoCode());
+				if(c!=null) {
+					billToProvince.append(c.getName());
+				} else {
+					billToProvince.append(customer.getBilling().getCountry().getIsoCode());
+				}
+				
+			}

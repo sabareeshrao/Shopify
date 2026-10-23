@@ -1,0 +1,8 @@
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setTaxRate(TaxRate taxRate) {
+		this.taxRate = taxRate;
+	}

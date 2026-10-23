@@ -1,0 +1,7 @@
+    	
+    	if(manuf.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+    		throw new ResourceNotFoundException("Manufacturer with id [" + manufacturer.getId() + "] not found for store [" + store.getId() + "]");
+    	}
+    }
+
+    populator.populate(manufacturer, manuf, store, language);

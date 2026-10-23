@@ -1,0 +1,10 @@
+				countryList = countries.stream()
+				        .map(c -> {
+							try {
+								return convert(c, store, language);
+							} catch (ConversionException e) {
+								throw new ConversionRuntimeException("Error converting Country to readable country,e");
+							}
+						})
+						.sorted(Comparator.comparing(ReadableCountry::getName))
+						.collect(Collectors.toList());

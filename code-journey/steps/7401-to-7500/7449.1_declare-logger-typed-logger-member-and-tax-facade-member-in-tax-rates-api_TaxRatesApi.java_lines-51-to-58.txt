@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(TaxRatesApi.class);
+
+	@Autowired
+	private TaxFacade taxFacade;
+
+	/** Create new tax rate for a given MerchantStore */
+	@PostMapping("/private/tax/rate")
+	@ApiOperation(httpMethod = "POST", value = "Creates a taxRate", notes = "Requires administration access", produces = "application/json", response = Entity.class)

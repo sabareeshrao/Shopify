@@ -1,0 +1,9 @@
+              
+              if(StringUtils.isNotBlank( source.getStateProvince())){
+                  delivery.setPostalCode( source.getStateProvince());
+              }
+              
+              target.setDelivery( delivery );
+          }
+          else{
+           target.getDelivery().setFirstName( source.getFirstName() );

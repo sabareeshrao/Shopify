@@ -1,0 +1,7 @@
+
+  public OperationNotAllowedException(String message) {
+    super(ERROR_CODE, message);
+  }
+  
+
+}

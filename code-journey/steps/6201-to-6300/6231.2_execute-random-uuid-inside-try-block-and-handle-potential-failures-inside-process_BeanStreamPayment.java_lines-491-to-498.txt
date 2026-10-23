@@ -1,8 +1,0 @@
-		
-		HttpURLConnection conn = null;
-		
-		try {
-			
-		String uniqueId = UUID.randomUUID().toString();//TODO
-			
-		String orderNumber = uniqueId;

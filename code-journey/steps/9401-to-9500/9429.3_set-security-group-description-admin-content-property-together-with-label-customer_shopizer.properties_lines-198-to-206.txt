@@ -1,0 +1,9 @@
+label.security.loggedinas=You are logged in as
+label.security.nologinacces.store=We can't display store logon box
+
+#customer
+label.customer.registered=Registered customer
+label.customer.new=New customer
+label.customer.registered.signinemail=If you have an account, sign in with your email address
+label.customer.signin.social=Make it easier and sign in with your {0} account!
+label.customer.signin.social.system=Sign in with {0}

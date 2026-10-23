@@ -1,0 +1,6 @@
+        
+        size.getDescriptions().add(sizeDescription);
+        
+        //create option
+        productOptionService.saveOrUpdate(size);
+	    

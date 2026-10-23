@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "NH",
-			"zoneName": "New Hampshire",
-			"countryCode": "US"
-		},

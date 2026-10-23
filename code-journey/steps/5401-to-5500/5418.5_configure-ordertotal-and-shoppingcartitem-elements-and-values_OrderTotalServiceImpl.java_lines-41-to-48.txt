@@ -1,0 +1,8 @@
+		
+		List<OrderTotal> totals = null;
+		
+		if(orderTotalPostProcessors != null) {
+			for(OrderTotalPostProcessorModule module : orderTotalPostProcessors) {
+				//TODO check if the module is enabled from the Admin
+				
+				List<ShoppingCartItem> items = summary.getProducts();

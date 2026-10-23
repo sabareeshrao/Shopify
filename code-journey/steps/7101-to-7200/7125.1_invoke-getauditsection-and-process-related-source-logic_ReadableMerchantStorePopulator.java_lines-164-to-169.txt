@@ -1,0 +1,6 @@
+		
+		if(source.getAuditSection()!=null) {
+			ReadableAudit audit = new ReadableAudit();
+			if(source.getAuditSection().getDateCreated()!=null) {
+				audit.setCreated(DateUtil.formatDate(source.getAuditSection().getDateCreated()));
+			}

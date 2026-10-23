@@ -1,0 +1,7 @@
+		try {
+
+			/**
+			 * Refresh product
+			 */
+
+			Product fullProduct = productService.findOne(product.getId(), store);

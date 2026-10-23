@@ -1,0 +1,9 @@
+
+			
+			messageLogString.append("ordProvince=").append(stateProvince).append("&");
+			messageLogString.append("ordPostalCode=").append(customer.getBilling().getPostalCode()).append("&");
+			messageLogString.append("ordCountry=").append(customer.getBilling().getCountry().getName()).append("&");
+			messageLogString.append("ordPhoneNumber=").append(customer.getBilling().getTelephone()).append("&");
+			messageLogString.append("ordEmailAddress=").append(customer.getEmailAddress());
+			
+			

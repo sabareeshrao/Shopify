@@ -1,0 +1,6 @@
+				configuration.
+				setKey(SUPPORTED_COUNTRIES);
+				configuration.setMerchantStore(store);
+			} 
+			
+			configuration.setValue(value);

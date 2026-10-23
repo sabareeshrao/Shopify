@@ -1,3 +1,0 @@
-			
-			Map<String,Zone> zns = zoneService.getZones(language);
-

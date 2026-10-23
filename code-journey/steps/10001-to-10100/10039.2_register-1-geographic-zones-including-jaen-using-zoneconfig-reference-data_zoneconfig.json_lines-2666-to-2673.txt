@@ -1,0 +1,8 @@
+			"zoneName": "Huesca",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Jaen",
+			"zoneName": "Jaen",
+			"countryCode": "ES"
+		},

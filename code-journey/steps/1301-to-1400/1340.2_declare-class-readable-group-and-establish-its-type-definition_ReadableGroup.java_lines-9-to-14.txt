@@ -1,0 +1,6 @@
+public class ReadableGroup extends GroupEntity {
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;

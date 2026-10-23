@@ -1,0 +1,6 @@
+	public void setOptionValueId(long optionValueId) {
+		this.optionValueId = optionValueId;
+	}
+	public String getOptionName() {
+		return optionName;
+	}

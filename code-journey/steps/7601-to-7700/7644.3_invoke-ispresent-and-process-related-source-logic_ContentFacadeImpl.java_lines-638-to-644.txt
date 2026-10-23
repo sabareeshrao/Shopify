@@ -1,0 +1,7 @@
+
+				if (contentDescription.isPresent()) {
+					com.salesmanager.shop.model.content.common.ContentDescription desc = this
+							.contentDescription(contentDescription.get());//return cdata description
+					desc.setDescription(this.fixContentDescription(desc.getDescription()));
+					box.setDescription(desc);
+				}

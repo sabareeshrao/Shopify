@@ -1,0 +1,6 @@
+  @ApiOperation(
+      httpMethod = "GET",
+      value = "Get public configuration for a given merchant store",
+      notes = "",
+      produces = "application/json",
+      response = Configs.class)

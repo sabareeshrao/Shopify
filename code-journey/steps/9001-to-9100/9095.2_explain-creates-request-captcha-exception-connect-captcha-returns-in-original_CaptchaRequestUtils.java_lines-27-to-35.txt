@@ -1,9 +1,0 @@
-
-/**
- * Creates a request to reCaptcha 2
- * https://www.google.com/recaptcha/api/siteverify
- * Throws an exception if it can't connect to reCaptcha
- * returns true or false if validation has passed
- * @author carlsamson
- *
- */

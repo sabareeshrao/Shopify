@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "OW",
-		"zoneName": "Obwalden",
-		"countryCode": "CH"
-	},

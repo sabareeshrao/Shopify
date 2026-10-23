@@ -1,0 +1,9 @@
+		for(Transaction transaction : transactions) {
+			if(transaction.getTransactionType().name().equals(TransactionType.AUTHORIZECAPTURE.name())) {
+				finalTransactions.put(TransactionType.AUTHORIZECAPTURE.name(),transaction);
+				continue;
+			}
+			if(transaction.getTransactionType().name().equals(TransactionType.CAPTURE.name())) {
+				finalTransactions.put(TransactionType.CAPTURE.name(),transaction);
+				continue;
+			}

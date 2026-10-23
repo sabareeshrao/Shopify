@@ -1,0 +1,7 @@
+
+			convertedDestination.setCatalog(source.getCatalog().getCode());
+
+			convertedDestination.setId(source.getId());
+			convertedDestination.setVisible(source.isVisible());
+			convertedDestination.setCategory(readableCategory);
+			//destination.setProduct(readableProduct);

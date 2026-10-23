@@ -1,0 +1,8 @@
+
+			// attributes
+
+			orderProducts.add(orderProduct);
+		}
+
+		readableOrder.setProducts(orderProducts);
+	}

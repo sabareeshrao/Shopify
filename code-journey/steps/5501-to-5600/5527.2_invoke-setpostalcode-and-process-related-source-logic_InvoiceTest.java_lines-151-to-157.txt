@@ -1,0 +1,7 @@
+	    delivery.setPostalCode("J4B-8J9" );
+	    delivery.setZone(zone);	    
+	    
+	    Billing billing = new Billing();
+	    billing.setAddress("358 Du Languadoc");
+	    billing.setCity("Boucherville");
+	    billing.setCompany("CSTI Consulting");

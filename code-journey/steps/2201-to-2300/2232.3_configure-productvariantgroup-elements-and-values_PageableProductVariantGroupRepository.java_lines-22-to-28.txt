@@ -1,0 +1,7 @@
+			countQuery = "select p from ProductVariantGroup p " + 
+			"join fetch p.productVariants pi "
+					+ "left join fetch p.merchantStore pm join fetch pi.product pip " + 
+			"where pip.id = ?2 and pm.id = ?1")
+	Page<ProductVariantGroup> findByProductId(Integer storeId, Long productId, Pageable pageable);
+	
+}

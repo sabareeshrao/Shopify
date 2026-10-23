@@ -1,0 +1,7 @@
+
+				if (this.payments != null) {
+					for (ModuleStarter mod : this.payments) {
+						IntegrationModule m = new IntegrationModule();
+						m.setCode(mod.getUniqueCode());
+						m.setModule(Constants.PAYMENT_MODULES);
+						

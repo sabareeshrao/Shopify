@@ -1,0 +1,8 @@
+			description.setLanguage(lang);
+			description.setName("-");
+			description.setCustomerReview(target);
+			
+			Set<CustomerReviewDescription> descriptions = new HashSet<CustomerReviewDescription>();
+			descriptions.add(description);
+			
+			target.setDescriptions(descriptions);

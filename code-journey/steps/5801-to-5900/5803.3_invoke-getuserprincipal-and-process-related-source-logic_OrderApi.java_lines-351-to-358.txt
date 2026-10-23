@@ -1,0 +1,8 @@
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			HttpServletRequest request,
+			HttpServletResponse response, Locale locale) throws Exception {
+
+		try {
+			Principal principal = request.getUserPrincipal();
+			String userName = principal.getName();

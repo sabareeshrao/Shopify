@@ -1,0 +1,8 @@
+				if(source.getDelivery().getState()!=null) {
+					address.setStateProvince(source.getDelivery().getState());
+				}
+				
+				target.setDelivery(address);
+			}
+			
+			target.setId(source.getId());

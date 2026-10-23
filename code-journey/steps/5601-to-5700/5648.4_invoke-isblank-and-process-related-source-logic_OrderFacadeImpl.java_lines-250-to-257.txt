@@ -1,0 +1,8 @@
+
+				// promo code
+				if (!StringUtils.isBlank(shoppingCart.getPromoCode())) {
+					Date promoDateAdded = shoppingCart.getPromoAdded();// promo
+																		// valid
+																		// 1 day
+					Instant instant = promoDateAdded.toInstant();
+					ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());

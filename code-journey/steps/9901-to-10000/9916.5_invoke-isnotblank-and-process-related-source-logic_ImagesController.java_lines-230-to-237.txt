@@ -1,0 +1,8 @@
+		
+				
+		if(StringUtils.isNotBlank(request.getParameter("size"))) {
+			String requestSize = request.getParameter("size");
+			if(requestSize.equals(ProductImageSize.SMALL.name())) {
+				size = ProductImageSize.SMALL;
+			} 
+		}

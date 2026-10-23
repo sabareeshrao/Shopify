@@ -1,0 +1,8 @@
+
+    if (target == null) {
+      target = new User();
+    }
+
+    target.setFirstName(source.getFirstName());
+    target.setLastName(source.getLastName());
+    target.setAdminEmail(source.getEmailAddress());

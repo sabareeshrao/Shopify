@@ -1,0 +1,6 @@
+      treeCache = f.createTreeCache(cache);
+      cache.start();
+
+      LOGGER.debug("CMS started");
+
+

@@ -1,0 +1,7 @@
+			returnList.setRecordsTotal(vars.getTotalElements());
+			returnList.setTotalPages(vars.getTotalPages());
+			return returnList;
+		
+
+	}
+	

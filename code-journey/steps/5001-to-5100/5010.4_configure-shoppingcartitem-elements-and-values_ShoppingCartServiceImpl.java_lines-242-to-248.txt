@@ -1,0 +1,7 @@
+
+				}
+
+				// Set<ShoppingCartItem> shoppingCartItems = new
+				// HashSet<ShoppingCartItem>();
+				for (ShoppingCartItem item : items) {
+					LOGGER.debug("Populate item " + item.getId());

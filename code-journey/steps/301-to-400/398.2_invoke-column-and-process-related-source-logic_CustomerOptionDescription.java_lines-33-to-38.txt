@@ -1,0 +1,6 @@
+
+	@Column(name = "CUSTOMER_OPTION_COMMENT", length=4000)
+	private String customerOptionComment;
+	
+	public CustomerOptionDescription() {
+	}

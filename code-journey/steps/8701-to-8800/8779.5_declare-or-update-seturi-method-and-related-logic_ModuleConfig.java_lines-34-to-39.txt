@@ -1,0 +1,6 @@
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	public void setEnv(String env) {
+		this.env = env;
+	}

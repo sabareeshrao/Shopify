@@ -1,0 +1,6 @@
+              shipOption.setOptionName(optionName);
+            } catch (Exception e) { // label not found
+              LOGGER.warn("No shipping code found for " + optionCodeBuilder.toString());
+            }
+          }
+        }

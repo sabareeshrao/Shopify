@@ -1,0 +1,7 @@
+            if(!blackList.contains(current)) {
+                safe.append(current);
+            }
+        }
+    }
+    return StringEscapeUtils.escapeXml11(safe.toString());
+}

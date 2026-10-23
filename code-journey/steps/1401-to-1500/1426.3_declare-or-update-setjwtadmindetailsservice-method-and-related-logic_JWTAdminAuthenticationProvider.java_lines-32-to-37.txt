@@ -1,0 +1,6 @@
+	public void setJwtAdminDetailsService(UserDetailsService jwtAdminDetailsService) {
+		this.jwtAdminDetailsService = jwtAdminDetailsService;
+	}
+	@Override
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        UsernamePasswordAuthenticationToken auth = (UsernamePasswordAuthenticationToken) authentication;

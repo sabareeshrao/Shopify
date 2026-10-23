@@ -1,0 +1,10 @@
+
+	/**
+	 * Set an order id to a shopping cart
+	 * @param code
+	 * @param orderId
+	 * @param store
+	 * @throws Exception
+	 */
+	void setOrderId(String code, Long orderId, MerchantStore store) throws Exception;
+	

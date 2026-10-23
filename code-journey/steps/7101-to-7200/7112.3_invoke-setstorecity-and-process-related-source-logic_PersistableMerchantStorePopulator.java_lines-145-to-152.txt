@@ -1,0 +1,8 @@
+				target.setStorecity(address.getCity());
+				target.setCountry(country);
+				target.setStorepostalcode(address.getPostalCode());
+				
+			} catch (ServiceException e) {
+				throw new ConversionException(e);
+			}
+		}

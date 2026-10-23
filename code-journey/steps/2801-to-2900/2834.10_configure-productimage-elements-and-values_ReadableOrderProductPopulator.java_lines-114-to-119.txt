@@ -1,0 +1,6 @@
+					
+					ReadableProduct productProxy = populator.populate(product, new ReadableProduct(), store, language);
+					target.setProduct(productProxy);
+					
+					Set<ProductImage> images = product.getImages();
+					ProductImage defaultImage = null;

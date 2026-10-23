@@ -1,0 +1,7 @@
+		
+		//add inventory to the product
+		
+		saveOrUpdate(availability);
+		return readableInventoryMapper.convert(availability, store, language);
+	}
+

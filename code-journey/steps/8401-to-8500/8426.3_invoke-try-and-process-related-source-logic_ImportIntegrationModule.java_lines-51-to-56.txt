@@ -1,0 +1,6 @@
+
+
+		try (InputStream in = new FileInputStream(file)) {
+
+			@SuppressWarnings("rawtypes")
+			Map[] objects = mapper.readValue(in, Map[].class);

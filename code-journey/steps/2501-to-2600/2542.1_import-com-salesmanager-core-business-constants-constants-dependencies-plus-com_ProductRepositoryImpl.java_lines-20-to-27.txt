@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.utils.RepositoryHelper;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.catalog.product.ProductCriteria;
-import com.salesmanager.core.model.catalog.product.ProductList;
-import com.salesmanager.core.model.catalog.product.attribute.AttributeCriteria;
-import com.salesmanager.core.model.common.GenericEntityList;
-import com.salesmanager.core.model.merchant.MerchantStore;

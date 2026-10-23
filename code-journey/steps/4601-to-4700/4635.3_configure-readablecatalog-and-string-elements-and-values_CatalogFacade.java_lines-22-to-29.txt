@@ -1,0 +1,8 @@
+
+    Catalog getCatalog(String code, MerchantStore store);
+
+    ReadableCatalog getCatalog(Long id, MerchantStore store, Language language);
+
+    ReadableEntityList<ReadableCatalog> getListCatalogs(Optional<String> code, MerchantStore store, Language language, int page, int count);
+
+    ReadableEntityList<ReadableCatalogCategoryEntry> listCatalogEntry(Optional<String> product, Long catalogId, MerchantStore store, Language language, int page, int count);

@@ -1,8 +1,0 @@
-
-label.customer.optionv.edit=Edit option
-label.customer.option.name=Option name
-label.customer.option.code=Option code
-label.customer.option.type=Display type
-
-label.customer.optionvalue.edit=Edit option value
-label.customer.optionvalue.name=Option value name

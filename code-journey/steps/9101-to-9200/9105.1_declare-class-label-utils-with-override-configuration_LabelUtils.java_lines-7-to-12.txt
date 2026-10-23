@@ -1,0 +1,6 @@
+import java.util.Locale;
+
+public class LabelUtils implements ApplicationContextAware {
+
+	
+	private ApplicationContext applicationContext;

@@ -1,0 +1,8 @@
+		
+		Category tech = categoryService.getByCode(store, "tech");
+		
+		
+		//create new related product
+	    // PRODUCT 1
+
+	    Product related = new Product();

@@ -1,0 +1,9 @@
+					productDescription.setMetatagKeywords(description.getKeyWords());
+					productDescription.setMetatagDescription(description.getMetaDescription());
+					productDescription.setTitle(description.getTitle());
+					
+					languages.add(lang);
+					productDescription.setLanguage(lang);
+					descriptions.add(productDescription);
+				}
+			}

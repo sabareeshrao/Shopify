@@ -1,0 +1,8 @@
+	    Language en = languageService.getByCode("en");
+	    Language fr = languageService.getByCode("fr");
+
+	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
+
+	    Category materingstuff = new Category();
+	    materingstuff.setMerchantStore(store);
+	    materingstuff.setCode("materingstuff");

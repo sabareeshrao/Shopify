@@ -1,0 +1,8 @@
+			
+			FinalPrice finalPrice = source.getFinalPrice();
+			if(finalPrice==null) {
+				throw new ConversionException("Object final price not populated in shoppingCartItem (source)");
+			}
+			//Default price
+			OrderProductPrice orderProductPrice = orderProductPrice(finalPrice);
+			orderProductPrice.setOrderProduct(target);

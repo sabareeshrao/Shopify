@@ -1,9 +1,0 @@
-	
-	/**
-	 * Binds request parameter values to specific request criterias
-	 * @param criteria
-	 * @param mappingFields
-	 * @param request
-	 * @return
-	 * @throws Exception
-	 */

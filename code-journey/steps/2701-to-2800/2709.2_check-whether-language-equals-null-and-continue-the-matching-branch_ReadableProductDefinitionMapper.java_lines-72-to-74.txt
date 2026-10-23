@@ -1,3 +1,0 @@
-		if (language == null) {
-			returnDestination = new ReadableProductDefinitionFull();
-		}

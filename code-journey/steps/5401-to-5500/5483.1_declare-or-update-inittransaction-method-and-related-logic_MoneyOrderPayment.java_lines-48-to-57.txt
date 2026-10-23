@@ -1,0 +1,10 @@
+
+	@Override
+	public Transaction initTransaction(MerchantStore store, Customer customer,
+			BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		//NOT REQUIRED
+		return null;
+	}
+

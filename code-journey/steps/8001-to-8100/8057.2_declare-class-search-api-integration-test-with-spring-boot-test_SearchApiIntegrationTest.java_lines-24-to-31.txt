@@ -1,0 +1,8 @@
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+@Ignore
+public class SearchApiIntegrationTest extends ServicesTestSupport {
+
+    @Autowired
+    private TestRestTemplate testRestTemplate;

@@ -1,0 +1,9 @@
+			if(!taxItemsMap.containsKey(taxRate.getCode())) {
+				taxItemsMap.put(taxRate.getCode(), taxItem);
+			} 
+			
+			TaxItem item = taxItemsMap.get(taxRate.getCode());
+			BigDecimal amount = item.getItemPrice();
+			amount = amount.add(taxItem.getItemPrice());			
+			
+		}

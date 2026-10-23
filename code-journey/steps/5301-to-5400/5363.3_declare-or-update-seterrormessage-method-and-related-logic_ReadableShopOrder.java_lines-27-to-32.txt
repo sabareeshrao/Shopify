@@ -1,0 +1,6 @@
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+	public String getGrandTotal() {
+		return grandTotal;
+	}

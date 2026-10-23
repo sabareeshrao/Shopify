@@ -1,0 +1,7 @@
+  
+  @Value("${config.cms.method}")
+  private String method;
+  
+  @Value("${config.cms.static.path}")
+  private String staticPath;
+

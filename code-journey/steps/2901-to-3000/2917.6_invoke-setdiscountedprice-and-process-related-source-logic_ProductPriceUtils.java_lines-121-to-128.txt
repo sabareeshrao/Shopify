@@ -1,0 +1,8 @@
+					finalPrice.setDiscountedPrice(dp);
+				}
+
+			}
+		}
+
+		return finalPrice;
+	}

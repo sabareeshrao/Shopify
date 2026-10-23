@@ -1,0 +1,6 @@
+
+
+			int i = 1;
+
+			// need pounds and ounces
+			int pounds = (int) totalP;

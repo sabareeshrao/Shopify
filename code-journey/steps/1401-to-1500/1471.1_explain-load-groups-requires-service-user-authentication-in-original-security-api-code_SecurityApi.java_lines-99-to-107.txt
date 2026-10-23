@@ -1,0 +1,9 @@
+
+	/**
+	 * Load groups Requires service user authentication
+	 * 
+	 * @return
+	 */
+	@GetMapping("/private/groups")
+	public List<ReadableGroup> groups() {
+		List<Group> groups = groupService.list();

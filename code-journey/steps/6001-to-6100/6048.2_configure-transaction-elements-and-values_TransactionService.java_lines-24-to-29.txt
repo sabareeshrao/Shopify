@@ -1,0 +1,6 @@
+
+	Transaction getRefundableTransaction(Order order) throws ServiceException;
+
+	List<Transaction> listTransactions(Order order) throws ServiceException;
+	
+	List<Transaction> listTransactions(Date startDate, Date endDate) throws ServiceException;

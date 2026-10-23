@@ -1,0 +1,8 @@
+        JavaMailSenderImpl impl = (JavaMailSenderImpl) mailSender;
+        // if email configuration is present in Database, use the same
+        if (emailConfig != null) {
+          impl.setProtocol(emailConfig.getProtocol());
+          impl.setHost(emailConfig.getHost());
+          impl.setPort(Integer.parseInt(emailConfig.getPort()));
+          impl.setUsername(emailConfig.getUsername());
+          impl.setPassword(emailConfig.getPassword());

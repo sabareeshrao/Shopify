@@ -1,5 +1,3 @@
-# Shopizer logical code journey
+# Shopizer Code Journey — maximum 11 lines per child
 
-Browse **steps/** folders in ascending task order. Parent 1.0 contains the full code block; children 1.1, 1.2 etc. contain sequential original line slices. Use children instead of their parent, not both. Blocks may exceed eight lines to preserve complete statements, methods and markup structures.
-
-The ZIP contains only .txt files. The root MASTER_INDEX.csv maps each parent to its original repository path and line range. Descriptions and sequencing are inferred learning aids, not historical developer activity.
+Read the **steps/** folders in numerical task order. Every parent ends in .0 and contains the original full source block. Children .1, .2, .3 and so on contain its original contiguous line slices. Children normally contain 1–8 lines and **never exceed 11 lines**. For long methods, follow multiple children: method code may cross child boundaries. Never paste both parent and children. The ZIP contains ONLY TXT files. MASTER_INDEX.csv records original paths and exact positions. The numbering approximates a plausible learning sequence, not historical developer commits.

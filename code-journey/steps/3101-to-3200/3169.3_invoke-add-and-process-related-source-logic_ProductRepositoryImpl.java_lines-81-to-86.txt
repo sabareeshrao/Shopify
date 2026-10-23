@@ -1,0 +1,6 @@
+				ids.add(merchantId);
+				if(merchant.getParent()!=null) {
+					parentId = merchant.getParent().getId();
+					ids.add(parentId);
+				}
+			}

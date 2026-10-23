@@ -1,0 +1,7 @@
+
+		populator.populate(payment, paymentModel, merchantStore, language);
+
+		Transaction transactionModel = paymentService.initTransaction(null, paymentModel, merchantStore);
+
+		ReadableTransaction transaction = new ReadableTransaction();
+		ReadableTransactionPopulator trxPopulator = new ReadableTransactionPopulator();

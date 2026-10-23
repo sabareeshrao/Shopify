@@ -1,0 +1,7 @@
+
+				cache.putInCache(modules, "INTEGRATION_M" + module);
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("getIntegrationModules()", e);
+		}

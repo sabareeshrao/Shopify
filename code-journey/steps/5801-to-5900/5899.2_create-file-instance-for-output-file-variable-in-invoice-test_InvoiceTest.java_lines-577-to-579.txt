@@ -1,3 +1,0 @@
-			File outputFile = new File(order.getId() + "_invoice.ods");
-			OOUtils.open(sheet.getSpreadSheet().saveAs(outputFile));
-			

@@ -1,8 +1,0 @@
-	/**
-	 * Datasource
-	 */
-    @Value("${db.driverClass}")
-    private String driverClassName;
-    
-    @Value("${db.jdbcUrl}")
-    private String url;

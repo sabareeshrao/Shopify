@@ -1,0 +1,6 @@
+				queryBuilder.append(" where c.parent IsNull and cm.id=:mid ");
+					//.where(qCategory.parent.isNull()
+					//	.and(qCategory.merchantStore.eq(store)))
+					//.orderBy(qCategory.sortOrder.asc(),qCategory.id.desc());
+			} else {
+				//query.from(qCategory)

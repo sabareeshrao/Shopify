@@ -1,0 +1,6 @@
+  private com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription convertDescription(
+      ManufacturerDescription description, Manufacturer source) {
+    final com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription desc =
+        new com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription();
+
+    desc.setFriendlyUrl(description.getUrl());

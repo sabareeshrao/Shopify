@@ -1,0 +1,7 @@
+    if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+
+      List<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> fulldescriptions =
+          new ArrayList<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription>();
+
+      Set<ManufacturerDescription> descriptions = source.getDescriptions();
+      ManufacturerDescription description = null;

@@ -1,0 +1,8 @@
+@EntityListeners(value = AuditListener.class)
+@Table(name = "USERS", 
+    indexes = { @Index(name="USR_NAME_IDX", columnList = "ADMIN_NAME")},
+	uniqueConstraints=
+	@UniqueConstraint(columnNames = {"MERCHANT_ID", "ADMIN_NAME"}))
+public class User extends SalesManagerEntity<Long, User> implements Auditable {
+	
+	

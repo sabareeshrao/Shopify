@@ -1,0 +1,8 @@
+		
+		try {
+			ReadableCustomerPopulator populator = new ReadableCustomerPopulator();
+			ReadableCustomer customer = new ReadableCustomer();
+			populator.populate(source.getCustomer(), customer, store, language);
+
+			target.setId(source.getId());
+			target.setDate(DateUtil.formatDate(source.getReviewDate()));

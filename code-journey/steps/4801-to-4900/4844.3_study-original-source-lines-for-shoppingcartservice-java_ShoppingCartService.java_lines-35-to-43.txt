@@ -1,0 +1,9 @@
+
+	/**
+	 * Populates a ShoppingCartItem from a Product and attributes if any. Calculate price based on availability
+	 * 
+	 * @param product
+	 * @return
+	 * @throws ServiceException
+	 */
+	ShoppingCartItem populateShoppingCartItem(Product product, MerchantStore store) throws ServiceException;

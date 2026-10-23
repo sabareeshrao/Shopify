@@ -1,0 +1,8 @@
+			
+			Set<CustomerReviewDescription> descriptions = source.getDescriptions();
+			if(CollectionUtils.isNotEmpty(descriptions)) {
+				CustomerReviewDescription description = null;
+				if(descriptions.size()>1) {
+					for(CustomerReviewDescription desc : descriptions) {
+						if(desc.getLanguage().getCode().equals(language.getCode())) {
+							description = desc;

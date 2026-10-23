@@ -1,8 +1,0 @@
-
-
-
-	/**
-	 * customer api
-	 * 
-	 * @author dur9213
-	 *

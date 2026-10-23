@@ -1,0 +1,8 @@
+			List<Group> groups = user.getGroups();
+			for(Group group : groups) {
+				groupsId.add(group.getId());
+			}
+			
+	
+			if(CollectionUtils.isNotEmpty(groupsId)) {
+		    	List<Permission> permissions = permissionService.getPermissions(groupsId);

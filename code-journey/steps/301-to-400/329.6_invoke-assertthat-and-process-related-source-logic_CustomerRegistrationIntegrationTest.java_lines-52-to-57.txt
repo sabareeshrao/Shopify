@@ -1,0 +1,6 @@
+        assertThat(loginResponse.getStatusCode(), is(OK));
+        assertNotNull(loginResponse.getBody().getToken());
+
+    }
+
+}

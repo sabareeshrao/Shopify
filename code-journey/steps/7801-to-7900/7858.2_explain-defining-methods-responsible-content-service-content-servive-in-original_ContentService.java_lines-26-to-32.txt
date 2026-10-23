@@ -1,0 +1,7 @@
+ *  
+ * @author Umesh Awasthhi
+ * @author Carl Samson
+ *
+ */
+public interface ContentService
+    extends SalesManagerEntityService<Long, Content>

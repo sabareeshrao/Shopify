@@ -1,0 +1,10 @@
+  
+  User getByPasswordResetToken(String storeCode, String token);
+
+  /**
+   * Create or update a User
+   * 
+   * @param user
+   * @throws ServiceException
+   */
+  void saveOrUpdate(User user) throws ServiceException;

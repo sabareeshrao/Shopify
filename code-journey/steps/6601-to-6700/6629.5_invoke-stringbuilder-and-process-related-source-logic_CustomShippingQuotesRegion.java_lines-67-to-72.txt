@@ -1,0 +1,6 @@
+			StringBuilder quotesList = new StringBuilder();
+			int countQuotes = 0;
+			quotesList.append("[");
+			for(CustomShippingQuoteWeightItem quote : quoteItems) {
+				quotesList.append(quote.toJSONString());
+				countQuotes ++;

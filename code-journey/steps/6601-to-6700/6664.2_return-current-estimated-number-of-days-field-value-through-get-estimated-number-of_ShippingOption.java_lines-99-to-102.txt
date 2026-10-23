@@ -1,4 +1,0 @@
-	public String getEstimatedNumberOfDays() {
-		return estimatedNumberOfDays;
-	}
-

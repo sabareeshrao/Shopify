@@ -1,0 +1,5 @@
+		orderProductPrice.setDefaultPrice(true);//default price (same as default product price)
+		orderProductPrice.setOrderProduct(oproduct);
+		orderProductPrice.setProductPrice(dprice.getProductPriceAmount());
+		orderProductPrice.setProductPriceCode(ProductPriceType.ONE_TIME.name());
+		

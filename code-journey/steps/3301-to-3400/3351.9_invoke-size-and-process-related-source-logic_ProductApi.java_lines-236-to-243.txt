@@ -1,0 +1,8 @@
+		if (categoryIds.size() > 0) {
+			criteria.setCategoryIds(categoryIds);
+		}
+		// End Category handling
+
+		if (available != null && available) {
+			criteria.setAvailable(available);
+		}

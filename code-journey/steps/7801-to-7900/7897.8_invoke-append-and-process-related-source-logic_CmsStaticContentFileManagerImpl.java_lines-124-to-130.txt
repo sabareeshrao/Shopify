@@ -1,0 +1,7 @@
+
+			// folder path
+
+			// file creation
+			nodePath.append(inputStaticContentData.getFileName());
+
+			Path path = Paths.get(nodePath.toString());

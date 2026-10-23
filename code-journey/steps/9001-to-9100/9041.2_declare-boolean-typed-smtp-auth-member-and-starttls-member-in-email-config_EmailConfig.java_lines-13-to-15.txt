@@ -1,3 +1,0 @@
-	private boolean smtpAuth = false;
-	private boolean starttls = false;
-	

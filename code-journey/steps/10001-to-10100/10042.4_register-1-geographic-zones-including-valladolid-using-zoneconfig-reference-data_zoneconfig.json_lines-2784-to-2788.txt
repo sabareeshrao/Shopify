@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Valladolid",
-			"zoneName": "Valladolid",
-			"countryCode": "ES"
-		},

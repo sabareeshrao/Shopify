@@ -1,0 +1,9 @@
+		if(!CollectionUtils.isEmpty(countryList)) {
+			for(Country c : countryList) {
+				if(isoCodes.contains(c.getIsoCode())) {
+					requestedCountryList.add(c);
+				}
+			}
+		}
+		return requestedCountryList;
+	}

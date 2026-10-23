@@ -1,0 +1,9 @@
+			
+			/**
+			 * Default availability
+			 * store
+			 * product
+			 * instance null
+			 * region variant null
+			 */
+			

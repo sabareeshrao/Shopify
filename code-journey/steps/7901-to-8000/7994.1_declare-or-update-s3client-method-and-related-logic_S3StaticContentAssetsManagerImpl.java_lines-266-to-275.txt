@@ -1,0 +1,10 @@
+
+	/**
+	 * Builds an amazon S3 client
+	 * 
+	 * @return
+	 */
+	private AmazonS3 s3Client() {
+		String region = regionName();
+		LOGGER.debug("AWS CMS Using region " + region);
+

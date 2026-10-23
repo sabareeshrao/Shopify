@@ -1,0 +1,8 @@
+
+	public void setRank(int rank);
+
+	public String getSecret();
+
+	public void setSecret(String secret);
+
+	public String getDisplayName();

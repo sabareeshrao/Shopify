@@ -1,0 +1,7 @@
+                    handlingubTotal.setSortOrder(120);
+                    handlingubTotal.setValue(summary.getShippingSummary().getHandling());
+                    orderTotals.add(handlingubTotal);
+                    grandTotal=grandTotal.add(summary.getShippingSummary().getHandling());
+                }
+            }
+        }

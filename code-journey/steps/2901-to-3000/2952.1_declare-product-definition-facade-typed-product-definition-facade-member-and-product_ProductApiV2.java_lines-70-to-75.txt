@@ -1,0 +1,6 @@
+
+	@Autowired
+	private ProductDefinitionFacade productDefinitionFacade;
+	
+	@Autowired
+	private ProductFacade productFacadeV2;

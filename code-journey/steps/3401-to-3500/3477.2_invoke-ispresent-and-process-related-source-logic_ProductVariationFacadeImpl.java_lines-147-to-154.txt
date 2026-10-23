@@ -1,0 +1,8 @@
+		if(var.isPresent()) {
+			return true;
+		}
+		
+		return false;
+	}
+
+}

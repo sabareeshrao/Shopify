@@ -1,0 +1,10 @@
+	
+	/**
+	 * Check if customer exist
+	 * @param userName
+	 * @param store
+	 * @return
+	 */
+	boolean customerExists(String userName, MerchantStore store);
+
+}

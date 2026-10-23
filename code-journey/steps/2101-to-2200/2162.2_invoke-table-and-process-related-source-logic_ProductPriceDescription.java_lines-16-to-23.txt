@@ -1,0 +1,8 @@
+@Table(name="PRODUCT_PRICE_DESCRIPTION",
+uniqueConstraints={
+		@UniqueConstraint(columnNames={
+			"PRODUCT_PRICE_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

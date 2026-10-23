@@ -1,0 +1,6 @@
+
+  private static final long serialVersionUID = 1L;
+
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name = "DATE_CREATED")
+  private Date dateCreated;

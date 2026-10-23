@@ -1,0 +1,6 @@
+public class ReadableProductOptionSet extends ProductOptionSetEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

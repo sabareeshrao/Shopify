@@ -1,0 +1,9 @@
+	public String getEnv() {
+		return env;
+	}
+	public String getConfig1() {
+		return config1;
+	}
+	public void setConfig1(String config1) {
+		this.config1 = config1;
+	}

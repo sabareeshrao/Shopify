@@ -1,0 +1,8 @@
+		
+	} else if (ex instanceof AuthenticationException) {
+		LOGGER.error("Authentication error with stripe", ex.getMessage());
+		AuthenticationException e = (AuthenticationException)ex;
+		  // Authentication with Stripe's API failed
+		  // (maybe you changed API keys recently)
+		IntegrationException te = new IntegrationException(
+				"Can't process Stripe, missing invalid payment parameters");

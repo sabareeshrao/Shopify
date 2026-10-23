@@ -1,0 +1,8 @@
+	public void deletePage(
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		contentFacade.delete(merchantStore, id);
+
+	}

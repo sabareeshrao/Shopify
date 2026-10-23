@@ -1,0 +1,8 @@
+
+	@Override
+	public void saveExpeditionConfiguration(ExpeditionConfiguration expedition, MerchantStore store) {
+		Validate.notNull(expedition, "ExpeditionConfiguration cannot be null");
+		try {
+			
+			//get original configuration
+			ShippingConfiguration config = getDbConfig(store);

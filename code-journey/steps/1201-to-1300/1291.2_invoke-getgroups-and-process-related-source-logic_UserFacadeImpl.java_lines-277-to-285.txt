@@ -1,0 +1,9 @@
+		for (ReadableGroup group : readableUser.getGroups()) {
+			if (groupName.contains(group.getName())) {
+				return;
+			}
+		}
+
+		throw new UnauthorizedException("User " + userName + " not authorized");
+
+	}

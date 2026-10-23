@@ -1,0 +1,8 @@
+	public ReadableProductVariation get(
+			@PathVariable Long variationId, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		return productVariationFacade.get(variationId, merchantStore, language);
+
+	}

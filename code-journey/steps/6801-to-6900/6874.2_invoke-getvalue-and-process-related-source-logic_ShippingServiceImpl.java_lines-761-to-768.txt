@@ -1,0 +1,8 @@
+		
+		if(configuration!=null) {
+			
+			String countries = configuration.getValue();
+			if(!StringUtils.isBlank(countries)) {
+
+				Object objRegions=JSONValue.parse(countries); 
+				JSONArray arrayRegions=(JSONArray)objRegions;

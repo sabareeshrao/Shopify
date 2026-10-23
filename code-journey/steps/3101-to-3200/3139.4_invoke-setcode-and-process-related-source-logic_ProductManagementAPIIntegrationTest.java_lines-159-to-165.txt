@@ -1,0 +1,7 @@
+		optionValue.setCode("colorred");
+		optionValue.setDescriptions(descriptions);
+
+		final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+		final String json = writer.writeValueAsString(optionValue);
+
+		System.out.println(json);

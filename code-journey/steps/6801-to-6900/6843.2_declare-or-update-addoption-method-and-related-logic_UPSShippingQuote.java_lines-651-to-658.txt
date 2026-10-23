@@ -1,0 +1,8 @@
+
+	public void addOption(ShippingOption option) {
+		options.add(option);
+	}
+
+	public List<ShippingOption> getOptions() {
+		return options;
+	}

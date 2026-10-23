@@ -1,0 +1,9 @@
+
+	      final ResponseEntity<Void> response = testRestTemplate.
+	    		  exchange("/actuator/health/ping/", HttpMethod.GET, entity, Void.class);
+	      if (response.getStatusCode() != HttpStatus.OK) {
+	          throw new Exception(response.toString());
+	      }
+	  }
+
+}

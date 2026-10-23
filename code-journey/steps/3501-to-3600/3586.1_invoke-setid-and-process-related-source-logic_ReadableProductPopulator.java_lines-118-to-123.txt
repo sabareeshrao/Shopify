@@ -1,0 +1,6 @@
+
+		    final Language lang = language;
+
+			target.setId(source.getId());
+			target.setAvailable(source.isAvailable());
+			target.setProductShipeable(source.isProductShipeable());

@@ -1,0 +1,8 @@
+
+			Collections.reverse(categories);
+
+			List<Long> categoryIds = new ArrayList<Long>();
+
+			for (Category c : categories) {
+				categoryIds.add(c.getId());
+			}

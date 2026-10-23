@@ -1,0 +1,8 @@
+  
+  public void createCustomerOptinNewsletter() throws Exception {
+
+
+    PersistableCustomerOptin customerOptin = new PersistableCustomerOptin();
+    customerOptin.setEmail("test@test.com");
+    customerOptin.setFirstName("Jack");
+    customerOptin.setLastName("John");

@@ -1,0 +1,10 @@
+
+	
+	
+	/**
+	 * shop / customer
+	 * 
+	 * @author dur9213
+	 *
+	 */
+	@Configuration

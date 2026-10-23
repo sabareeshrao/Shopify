@@ -1,0 +1,6 @@
+
+	@Override
+	public boolean optionValueExists(String code, MerchantStore store) {
+		Validate.notNull(code, "Option value code must not be null");
+		Validate.notNull(store, "Store code must not be null");
+		boolean exists = false;

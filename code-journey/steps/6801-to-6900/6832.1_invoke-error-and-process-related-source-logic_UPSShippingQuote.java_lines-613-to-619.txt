@@ -1,0 +1,7 @@
+
+
+
+			return shippingOptions;
+	}
+		} catch (Exception e1) {
+			LOGGER.error("UPS quote error",e1);

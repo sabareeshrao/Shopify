@@ -1,0 +1,8 @@
+        
+        if(StringUtils.isNotBlank( source.getDelivery().getCompany() )){
+            target.setCompany(source.getDelivery().getCompany());
+        }
+        
+        if(StringUtils.isNotBlank( source.getDelivery().getAddress() )){
+            target.setAddress(source.getDelivery().getAddress());
+        }

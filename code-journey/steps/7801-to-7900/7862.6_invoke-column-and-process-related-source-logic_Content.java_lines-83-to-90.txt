@@ -1,0 +1,8 @@
+	
+	@Column(name = "SORT_ORDER")
+	private Integer sortOrder = 0;
+	
+	//A page can contain one product listing
+	@Column(name = "PRODUCT_GROUP", nullable = true)
+	private String productGroup;
+

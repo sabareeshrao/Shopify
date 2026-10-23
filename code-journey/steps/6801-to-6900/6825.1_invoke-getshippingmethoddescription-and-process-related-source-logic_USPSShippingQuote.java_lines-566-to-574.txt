@@ -1,0 +1,9 @@
+
+
+
+/*			String carrier = getShippingMethodDescription(locale);
+			// cost is in USD, need to do conversion
+
+			MerchantConfiguration rtdetails = config
+					.getMerchantConfiguration(ShippingConstants.MODULE_SHIPPING_DISPLAY_REALTIME_QUOTES);
+			int displayQuoteDeliveryTime = ShippingConstants.NO_DISPLAY_RT_QUOTE_TIME;

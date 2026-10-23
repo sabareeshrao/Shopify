@@ -1,0 +1,7 @@
+			 if(partial) {
+				 refundType = RefundType.PARTIAL;
+			 }
+			 
+			 refundTransactionRequest.setRefundType(refundType);
+			 
+			 BasicAmountType refundAmount = new BasicAmountType();

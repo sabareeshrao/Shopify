@@ -1,0 +1,6 @@
+		
+		data.put("packages", jsonArray);
+		
+		
+		return data.toJSONString();
+	}

@@ -1,0 +1,7 @@
+				detail.setShippingWidth(wd.doubleValue());
+				detail.setShippingQuantity(shippingProduct.getQuantity());
+				String description = "item";
+				if(product.getDescriptions().size()>0) {
+					description = product.getDescriptions().iterator().next().getName();
+				}
+				detail.setItemName(description);

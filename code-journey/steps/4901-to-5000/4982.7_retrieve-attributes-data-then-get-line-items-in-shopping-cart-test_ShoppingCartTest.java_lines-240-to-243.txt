@@ -1,4 +1,0 @@
-	    item.getAttributes().add(attributeItem);
-	    
-	    shoppingCart.getLineItems().add(item);
-

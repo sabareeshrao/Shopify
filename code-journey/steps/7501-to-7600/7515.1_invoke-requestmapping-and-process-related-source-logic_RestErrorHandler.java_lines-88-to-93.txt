@@ -1,0 +1,6 @@
+
+    @RequestMapping(produces = "application/json")
+    @ExceptionHandler(RestApiException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public @ResponseBody ErrorEntity handleRestApiException(RestApiException exception) {
+        log.error(exception.getErrorMessage(), exception);

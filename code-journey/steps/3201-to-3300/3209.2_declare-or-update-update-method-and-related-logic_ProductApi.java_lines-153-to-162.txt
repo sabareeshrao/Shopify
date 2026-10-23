@@ -1,0 +1,10 @@
+	public void update(
+			@PathVariable Long id,
+			@Valid @RequestBody
+			LightPersistableProduct product,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		productCommonFacade.update(id, product, merchantStore, language);
+		return;
+
+	}

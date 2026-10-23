@@ -1,7 +1,0 @@
-
-#Email implementation [default | ses]
-#default=SpringHtmlEmailSender
-#ses=AWS SES service
-config.emailSender=default
-config.emailSender.region=us_east_1
-

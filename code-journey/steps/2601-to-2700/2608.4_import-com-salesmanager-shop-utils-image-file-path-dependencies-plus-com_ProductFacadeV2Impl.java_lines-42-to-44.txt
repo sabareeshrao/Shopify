@@ -1,3 +1,0 @@
-import com.salesmanager.shop.utils.ImageFilePath;
-import com.salesmanager.shop.utils.LocaleUtils;
-

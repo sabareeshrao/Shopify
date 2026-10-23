@@ -1,0 +1,8 @@
+
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+
+		contentFileManager.removeFile(merchantStoreCode, fileContentType, fileName, path);
+
+	}
+

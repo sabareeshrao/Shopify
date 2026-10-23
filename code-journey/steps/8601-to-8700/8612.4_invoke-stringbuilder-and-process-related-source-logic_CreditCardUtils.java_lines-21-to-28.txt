@@ -1,0 +1,8 @@
+
+		return new StringBuilder()
+				.append(prefix)
+				.append("XXXXXXXXXX")
+				.append(suffix)
+				.toString();
+	}
+}

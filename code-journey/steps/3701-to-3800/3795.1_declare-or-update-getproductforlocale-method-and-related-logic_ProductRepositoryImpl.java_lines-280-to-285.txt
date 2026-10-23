@@ -1,0 +1,6 @@
+	@Override
+	public Product getProductForLocale(long productId, Language language, Locale locale) {
+
+		List regionList = new ArrayList();
+		regionList.add("*");
+		regionList.add(locale.getCountry());

@@ -1,0 +1,6 @@
+	            .setParameter("available", true)
+	            .setParameter("rpid", product.getId())
+	            .setParameter("storeId", store.getId())
+	            .getResultList();
+	}
+}

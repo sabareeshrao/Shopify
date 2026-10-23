@@ -1,0 +1,6 @@
+
+
+			if (!CollectionUtils.isEmpty(stores.getContent())) {
+				for (MerchantStore store : stores)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}

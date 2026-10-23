@@ -1,0 +1,6 @@
+	private String province;
+	private long distance;
+	private long size;
+	private int price;//integer should be rounded from BigBecimal
+	private String priceQuote;
+	

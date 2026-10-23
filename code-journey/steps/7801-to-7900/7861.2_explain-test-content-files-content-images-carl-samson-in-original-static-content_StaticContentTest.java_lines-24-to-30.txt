@@ -1,0 +1,7 @@
+
+
+
+/**
+ * Test 
+ * 
+ * - static content files (.js, .pdf etc)

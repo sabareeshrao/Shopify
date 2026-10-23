@@ -1,0 +1,8 @@
+  public ReadableOrderTotalSummary payment(
+      @PathVariable final Long id,
+      @RequestParam(value = "quote", required = false) Long quote,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+

@@ -1,0 +1,7 @@
+		nf.setCurrency(currency);
+		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+
+		return nf.format(amount);
+
+	}

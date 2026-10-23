@@ -1,8 +1,0 @@
-message.content.missing.agreement=Le contenu défini avec le code 'agreement' n'existe pas
-
-merchant.storeId.invalid=Le numéro de marchand est invalide
-merchant.files.invalid=Veuillez fournir un ou plusieurs fichiers é charger
-merchant.zone.invalid=L'état / province est requise
-
-NotEmpty.order.customerFirstName=Le prénom du client ne doit pas être vide
-NotEmpty.order.customerLastName=Le nom de famille du client ne doit pas être vide

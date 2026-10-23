@@ -1,0 +1,6 @@
+		
+		ProductVariantImage image = productVariantImageService.getById(imageId);
+		
+		if(image == null) {
+			throw new ResourceNotFoundException("productVariantImage [" + imageId + "] was not found");
+		}

@@ -1,0 +1,5 @@
+		try {
+			ReadableShoppingCart cart = shoppingCartFacade.modifyCartMulti(code, Arrays.asList(shoppingCartItems),
+					merchantStore, language);
+
+			return new ResponseEntity<>(cart, HttpStatus.CREATED);

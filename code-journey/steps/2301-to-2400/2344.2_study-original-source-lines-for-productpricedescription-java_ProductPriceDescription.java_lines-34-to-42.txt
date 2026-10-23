@@ -1,0 +1,9 @@
+	
+    @JsonIgnore
+	@ManyToOne(targetEntity = ProductPrice.class)
+	@JoinColumn(name = "PRODUCT_PRICE_ID", nullable = false)
+	private ProductPrice productPrice;
+	
+	
+	@Column(name = "PRICE_APPENDER")
+	private String priceAppender;

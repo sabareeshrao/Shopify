@@ -1,0 +1,9 @@
+
+		ModelAndView model = null;
+		if(ex instanceof AccessDeniedException) {
+			
+			model = new ModelAndView("error/access_denied");
+			
+		} else {
+			
+			model = new ModelAndView("error/generic_error");

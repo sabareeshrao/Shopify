@@ -1,0 +1,10 @@
+	
+	@Query("select distinct r from CustomerReview r join fetch r.customer rc join fetch r.reviewedCustomer rr join fetch rc.merchantStore rrm left join fetch r.descriptions rd where rr.id = ?1")
+	List<CustomerReview> findByReviewed(Long id);
+	
+	@Query( customerQuery + "where rc.id = ?1 and rr.id = ?2")
+	CustomerReview findByRevieweAndReviewed(Long reviewer, Long reviewed);
+
+	
+	
+}

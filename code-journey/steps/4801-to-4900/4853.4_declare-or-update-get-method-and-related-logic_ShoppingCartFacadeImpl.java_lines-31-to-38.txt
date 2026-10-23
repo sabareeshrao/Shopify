@@ -1,0 +1,8 @@
+
+	@Autowired
+	private com.salesmanager.shop.store.controller.shoppingCart.facade.ShoppingCartFacade shoppingCartFacade; // legacy
+																												// facade
+
+	@Override
+	public ReadableShoppingCart get(Optional<String> cart, Long customerId, MerchantStore store, Language language) {
+

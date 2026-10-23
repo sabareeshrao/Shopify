@@ -1,0 +1,7 @@
+
+		// retrieve original order
+		Order order = orderService.getOrder(id, store);
+		if (order == null) {
+			throw new ResourceNotFoundException(
+					"Order with id [" + id + "] does not exist for merchant [" + store.getCode() + "]");
+		}

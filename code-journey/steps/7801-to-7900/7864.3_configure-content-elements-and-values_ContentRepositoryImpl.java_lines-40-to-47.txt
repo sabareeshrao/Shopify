@@ -1,0 +1,8 @@
+
+	    	q.setParameter("ct", contentType);
+	    	q.setParameter("cm", store.getId());
+	    	q.setParameter("cl", language.getId());
+	
+
+			@SuppressWarnings("unchecked")
+			List<Content> contents = q.getResultList();

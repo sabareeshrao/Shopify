@@ -1,0 +1,7 @@
+
+				// else false
+				return authorized;
+			} catch (Exception e) {
+				throw new UnauthorizedException("Cannot authorize user " + authentication.getPrincipal().toString()
+						+ " for store " + store.getCode(), e.getMessage());
+			}

@@ -1,0 +1,7 @@
+						attributePrice = attributePrice.add(attribute.getProductAttributePrice());
+					}
+				}
+			}
+
+			if (attributePrice != null && attributePrice.doubleValue() > 0) {
+				BigDecimal fp = finalPrice.getFinalPrice();

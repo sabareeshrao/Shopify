@@ -1,0 +1,6 @@
+	
+	private String email;
+
+	private String countryName;
+
+	private String provinceName;

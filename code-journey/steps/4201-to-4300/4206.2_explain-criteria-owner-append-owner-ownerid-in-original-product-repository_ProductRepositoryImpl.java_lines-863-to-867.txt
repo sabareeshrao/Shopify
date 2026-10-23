@@ -1,5 +1,0 @@
-		/**
-		if (criteria.getOwnerId() != null) {
-			qs.append(" and owner.id = :ownerid");
-		}
-		**/

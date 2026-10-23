@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "WIAT",
-			"zoneName": "Wien",
-			"countryCode": "AT"
-		},

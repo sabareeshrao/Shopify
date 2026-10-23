@@ -1,0 +1,5 @@
+		
+		Authentication authResult = null;
+
+		try {
+			authResult = this.attemptAuthentication(request, response);

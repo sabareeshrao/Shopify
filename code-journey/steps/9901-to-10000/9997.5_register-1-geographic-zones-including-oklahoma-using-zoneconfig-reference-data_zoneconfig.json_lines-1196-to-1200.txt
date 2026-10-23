@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "OK",
-		"zoneName": "Oklahoma",
-		"countryCode": "US"
-	},

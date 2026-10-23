@@ -1,0 +1,5 @@
+	@Override
+	public ReadableProductOptionSet merge(ProductOptionSet source, ReadableProductOptionSet destination,
+										  MerchantStore store, Language language) {
+		Validate.notNull(source,"ProductOptionSet must not be null");
+		Validate.notNull(destination,"ReadableProductOptionSet must not be null");

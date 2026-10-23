@@ -1,0 +1,6 @@
+	public List<ReadableContentBox> pagesSummary(
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		//return contentFacade.getContentBoxes(ContentType.BOX, "summary_", merchantStore, language);
+		return null;
+	}

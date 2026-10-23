@@ -1,0 +1,9 @@
+		data.put("username", this.getUsername());
+		data.put("smtpAuth", this.isSmtpAuth());
+		data.put("starttls", this.isStarttls());
+		data.put("password", this.getPassword());
+		return data.toJSONString();
+	}
+	
+	
+

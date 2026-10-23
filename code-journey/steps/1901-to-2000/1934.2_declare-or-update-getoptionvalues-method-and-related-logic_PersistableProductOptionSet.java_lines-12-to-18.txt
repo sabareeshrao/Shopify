@@ -1,0 +1,7 @@
+	private List<Long> optionValues;
+	private List<Long> productTypes;
+	private Long option;
+	
+	public List<Long> getOptionValues() {
+		return optionValues;
+	}

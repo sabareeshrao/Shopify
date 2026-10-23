@@ -1,0 +1,6 @@
+        String name = auth.getName();
+        Object credentials = auth.getCredentials();
+        UserDetails user = jwtAdminDetailsService.loadUserByUsername(name);
+        if (user == null) {
+            throw new BadCredentialsException("Username/Password does not match for " + auth.getPrincipal());
+        }

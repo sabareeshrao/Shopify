@@ -1,0 +1,9 @@
+			
+			
+
+			// configured modules
+			IntegrationConfiguration config = paymentService.getPaymentConfiguration(code, merchantStore);
+			
+			if(config == null) {
+				return returnConfig;
+			}

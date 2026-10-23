@@ -1,0 +1,7 @@
+public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Object>
+{
+    
+    private static final Logger LOG=LoggerFactory.getLogger(FieldMatchValidator.class);
+    private String firstFieldName;
+    private String secondFieldName;
+    private BeanUtils beanUtils;

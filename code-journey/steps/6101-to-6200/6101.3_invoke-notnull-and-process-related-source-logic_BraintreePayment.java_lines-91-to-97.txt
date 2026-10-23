@@ -1,0 +1,7 @@
+		Validate.notNull(publicKey,"public_key cannot be null");
+		Validate.notNull(privateKey,"private_key cannot be null");
+		
+		Environment environment= Environment.PRODUCTION;
+		if (configuration.getEnvironment().equals("TEST")) {// sandbox
+			environment= Environment.SANDBOX;
+		}

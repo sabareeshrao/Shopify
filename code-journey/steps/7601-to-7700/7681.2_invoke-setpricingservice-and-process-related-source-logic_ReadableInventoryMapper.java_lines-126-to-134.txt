@@ -1,0 +1,9 @@
+			populator.setPricingService(pricingService);
+			ReadableProductPrice p = populator.populate(price, new ReadableProductPrice(), store, language);
+			prices.add(p);
+
+		}
+		return prices;
+	}
+
+}

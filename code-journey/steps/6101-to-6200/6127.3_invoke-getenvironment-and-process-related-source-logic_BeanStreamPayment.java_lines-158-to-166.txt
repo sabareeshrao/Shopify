@@ -1,0 +1,9 @@
+			if (configuration.getEnvironment().equals("TEST")) {// sandbox
+				bSandbox = true;
+			}
+
+			ModuleConfig configs = module.getModuleConfigs().get("PROD");
+
+			if (bSandbox) {
+				configs = module.getModuleConfigs().get("TEST");
+			} 

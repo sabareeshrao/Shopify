@@ -1,0 +1,8 @@
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getLastName())) {
+					FieldError error = new FieldError("customer.delivery.lastName", "customer.delivery.lastName",
+							messages.getMessage("NotEmpty.customer.shipping.lastName", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.lastName",
+							messages.getMessage("NotEmpty.customer.shipping.lastName", locale));
+				}

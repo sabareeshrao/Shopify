@@ -1,0 +1,10 @@
+
+module.shipping.canadapost.INT.XP=Xpresspost International
+module.shipping.canadapost.INT.IP.AIR=International Parcel Air
+module.shipping.canadapost.INT.IP.SURF=International Parcel Surface
+module.shipping.canadapost.INT.PW.ENV=Priority Worldwide Envelope International
+module.shipping.canadapost.INT.PW.PAK=Priority Worldwide pak International
+module.shipping.canadapost.INT.PW.PARCEL=Priority Worldwide parcel International
+module.shipping.canadapost.INT.SP.AIR=Small Packet International Air
+module.shipping.canadapost.INT.SP.SURF=Small Packet International Surface
+module.shipping.canadapost.INT.TP=Tracked Packet - International

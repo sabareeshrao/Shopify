@@ -1,0 +1,6 @@
+  @Override
+  public ReadableManufacturer populate(
+      com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer source,
+      ReadableManufacturer target, MerchantStore store, Language language)
+      throws ConversionException {
+

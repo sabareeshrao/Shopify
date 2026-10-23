@@ -1,0 +1,9 @@
+        
+        /**
+         * Create size values (9, 9.5, 10)
+         */
+	    
+	    //option value 9
+	    nine = new ProductOptionValue();
+	    nine.setMerchantStore(store);
+	    nine.setCode("nine");

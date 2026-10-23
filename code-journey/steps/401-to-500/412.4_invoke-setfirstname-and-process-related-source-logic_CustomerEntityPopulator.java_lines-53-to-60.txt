@@ -1,0 +1,8 @@
+                address.setFirstName( source.getBilling().getFirstName() );
+                address.setLastName( source.getBilling().getLastName() );
+                address.setPostalCode( source.getBilling().getPostalCode() );
+                address.setPhone( source.getBilling().getTelephone() );
+                if ( source.getBilling().getCountry() != null )
+                {
+                    address.setCountry( source.getBilling().getCountry().getIsoCode() );
+                }

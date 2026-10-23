@@ -1,4 +1,0 @@
-	public static String generateTimeStamp() {
-		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmSS");
-		return format.format(new Date());
-	}

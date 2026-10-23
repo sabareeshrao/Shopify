@@ -1,0 +1,7 @@
+
+	@Override
+	public OutputContentFile getFile(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType, String contentName)
+			throws ServiceException {
+		try {
+			// get buckets
+			String bucketName = bucketName();

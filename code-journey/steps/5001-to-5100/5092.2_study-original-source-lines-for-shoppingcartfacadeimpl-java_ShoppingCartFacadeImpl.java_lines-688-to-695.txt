@@ -1,0 +1,8 @@
+				return null;
+			} catch (NoResultException nre) {
+				// nothing
+			}
+
+		}
+		return null;
+	}

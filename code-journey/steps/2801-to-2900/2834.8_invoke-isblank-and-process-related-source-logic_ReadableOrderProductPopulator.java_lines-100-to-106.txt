@@ -1,0 +1,7 @@
+			if(!StringUtils.isBlank(productSku)) {
+				Product product = null;
+				try {
+					product = productService.getBySku(productSku, store, language);
+				} catch (ServiceException e) {
+					throw new ServiceRuntimeException(e);
+				}

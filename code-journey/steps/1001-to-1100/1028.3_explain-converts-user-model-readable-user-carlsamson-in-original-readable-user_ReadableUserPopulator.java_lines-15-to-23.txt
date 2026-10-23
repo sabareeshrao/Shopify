@@ -1,0 +1,9 @@
+
+/**
+ * Converts user model to readable user
+ * 
+ * @author carlsamson
+ *
+ */
+public class ReadableUserPopulator extends AbstractDataPopulator<User, ReadableUser> {
+

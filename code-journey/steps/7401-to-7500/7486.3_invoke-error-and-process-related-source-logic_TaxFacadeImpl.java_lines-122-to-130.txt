@@ -1,0 +1,9 @@
+			
+			return list;
+			
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxClasses for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxClasses for store [" + store.getCode() + "]", e);
+		}
+	}
+	

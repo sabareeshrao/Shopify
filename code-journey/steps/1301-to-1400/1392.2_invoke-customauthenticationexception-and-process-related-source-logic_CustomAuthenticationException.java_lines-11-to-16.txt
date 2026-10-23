@@ -1,0 +1,6 @@
+
+	public CustomAuthenticationException(String msg) {
+		super(msg);
+	}
+
+}

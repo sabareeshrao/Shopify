@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Baleares",
-		"zoneName": "Baleares",
-		"countryCode": "ES"
-	},

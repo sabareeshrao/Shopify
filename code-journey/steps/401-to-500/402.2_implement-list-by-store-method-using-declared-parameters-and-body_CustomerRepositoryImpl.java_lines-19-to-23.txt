@@ -1,5 +1,0 @@
-    
-	@SuppressWarnings("unchecked")
-	@Override
-	public CustomerList listByStore(MerchantStore store, CustomerCriteria criteria) {
-		

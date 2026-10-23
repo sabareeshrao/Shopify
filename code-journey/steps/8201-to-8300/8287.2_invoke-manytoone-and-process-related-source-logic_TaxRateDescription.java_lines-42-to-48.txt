@@ -1,0 +1,7 @@
+
+	@ManyToOne(targetEntity = TaxRate.class)
+	@JoinColumn(name = "TAX_RATE_ID")
+	private TaxRate taxRate;
+	
+	public TaxRateDescription() {
+	}

@@ -1,0 +1,8 @@
+#recaptcha https://developers.google.com/recaptcha/
+config.recaptcha.secretKey=
+config.recaptcha.siteKey=
+
+#shipping rules
+config.shipping.rule.priceByDistance=PriceByDistance.drl
+config.shipping.rule.shippingModuleDecision=ShippingDecision.drl
+

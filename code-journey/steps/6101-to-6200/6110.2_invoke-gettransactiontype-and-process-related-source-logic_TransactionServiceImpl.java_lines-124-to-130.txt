@@ -1,0 +1,7 @@
+		for(Transaction transaction : transactions) {
+			if(transaction.getTransactionType().name().equals(TransactionType.AUTHORIZE.name())) {
+				if(!StringUtils.isBlank(transaction.getDetails())) {
+					try {
+						@SuppressWarnings("unchecked")
+						Map<String,String> objects = mapper.readValue(transaction.getDetails(), Map.class);
+						transaction.setTransactionDetails(objects);

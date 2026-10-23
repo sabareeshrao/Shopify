@@ -1,0 +1,8 @@
+		
+		
+		
+		Map<String,TaxItem> taxItemsMap = new TreeMap<String,TaxItem>();
+		//consolidate tax rates of same code
+		for(TaxItem taxItem : taxItems) {
+			
+			TaxRate taxRate = taxItem.getTaxRate();

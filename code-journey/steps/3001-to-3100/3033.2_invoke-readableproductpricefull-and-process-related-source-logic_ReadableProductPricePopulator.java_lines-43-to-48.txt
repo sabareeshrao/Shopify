@@ -1,0 +1,6 @@
+		
+		try {
+		  
+		    if(language == null) {
+		      target = new ReadableProductPriceFull();
+		    }

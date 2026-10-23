@@ -1,0 +1,6 @@
+		ObjectMapper mapper = new ObjectMapper();
+		for(Transaction transaction : transactions) {
+				if(!StringUtils.isBlank(transaction.getDetails())) {
+					try {
+						@SuppressWarnings("unchecked")
+						Map<String,String> objects = mapper.readValue(transaction.getDetails(), Map.class);

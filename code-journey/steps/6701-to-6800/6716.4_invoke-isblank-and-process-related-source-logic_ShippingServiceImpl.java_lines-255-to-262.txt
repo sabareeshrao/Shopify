@@ -1,0 +1,8 @@
+				if(merchantConfiguration!=null) {
+					if(!StringUtils.isBlank(merchantConfiguration.getValue())) {
+						
+						String decrypted = encryption.decrypt(merchantConfiguration.getValue());
+						modules = ConfigurationModulesLoader.loadIntegrationConfigurations(decrypted);
+					}
+				} else {
+					merchantConfiguration = new MerchantConfiguration();

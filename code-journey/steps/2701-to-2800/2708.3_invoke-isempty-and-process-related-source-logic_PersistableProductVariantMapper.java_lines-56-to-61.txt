@@ -1,0 +1,6 @@
+		
+		if(StringUtils.isEmpty(productVariationCode)) {
+		
+			variation = productVariationService.getById(store, productVariation);
+			if(productVariationValue != null) {
+				variationValue = productVariationService.getById(store, productVariationValue);

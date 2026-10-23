@@ -1,0 +1,9 @@
+  public ReadableOrderTotalSummary calculateTotal(
+      @PathVariable final String code,
+      @RequestParam(value = "quote", required = false) Long quote,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,//possible postal code, province and country
+      HttpServletResponse response) {
+
+    try {
+      ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);

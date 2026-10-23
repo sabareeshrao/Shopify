@@ -1,3 +1,0 @@
-@Service("productCommonFacade")
-public class ProductCommonFacadeImpl implements ProductCommonFacade {
-

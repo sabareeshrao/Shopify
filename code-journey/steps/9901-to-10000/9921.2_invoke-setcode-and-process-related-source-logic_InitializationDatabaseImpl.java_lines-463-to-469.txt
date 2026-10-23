@@ -1,0 +1,7 @@
+		productType.setCode(ProductType.GENERAL_TYPE);
+		productTypeService.create(productType);
+
+
+		
+		
+	}

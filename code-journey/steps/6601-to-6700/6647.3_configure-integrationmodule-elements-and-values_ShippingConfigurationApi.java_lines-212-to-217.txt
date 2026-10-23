@@ -1,0 +1,6 @@
+			List<IntegrationModule> modules = 
+					shippingService
+					.getShippingMethods(merchantStore);
+			
+			//check if exist
+			Optional<IntegrationModule> checkIfExist = modules.stream().filter(m -> m.getCode().equals(code)).findAny();

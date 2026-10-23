@@ -1,0 +1,9 @@
+
+/**
+ * Uses google api to get lng, lat and distance in km for a given delivery address
+ * The route will be displayed on a map to the end user and available
+ * from the admin section
+ * 
+ * The module can be configured to use miles by changing distance.inMeters
+ * 
+ * To use this pre-processor you will need a google api-key

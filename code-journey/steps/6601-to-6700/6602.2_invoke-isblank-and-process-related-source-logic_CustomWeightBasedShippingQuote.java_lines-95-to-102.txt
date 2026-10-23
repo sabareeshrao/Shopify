@@ -1,0 +1,8 @@
+			throws IntegrationException {
+
+		if(StringUtils.isBlank(delivery.getPostalCode())) {
+			return null;
+		}
+		
+		//get configuration
+		CustomShippingQuotesConfiguration customConfiguration = (CustomShippingQuotesConfiguration)this.getCustomModuleConfiguration(store);

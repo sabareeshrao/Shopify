@@ -1,0 +1,9 @@
+			if (integrationModule == null) {
+				throw new ResourceNotFoundException("Payment module [" + code + "] not found");
+			}
+			
+			IntegrationModuleConfiguration returnConfig = new IntegrationModuleConfiguration();
+			returnConfig.setConfigurable(integrationModule.getConfigurable());
+			returnConfig.setActive(false);
+			returnConfig.setDefaultSelected(false);
+			returnConfig.setCode(code);

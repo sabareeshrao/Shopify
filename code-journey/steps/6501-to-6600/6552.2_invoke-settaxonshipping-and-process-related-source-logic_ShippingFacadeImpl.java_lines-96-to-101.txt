@@ -1,0 +1,6 @@
+			config.setTaxOnShipping(expedition.isTaxOnShipping());
+			config.setShippingType(expedition.isIternationalShipping()?ShippingType.INTERNATIONAL:ShippingType.NATIONAL);
+			this.saveShippingConfiguration(config, store);
+			
+			shippingService.setSupportedCountries(store, expedition.getShipToCountry());
+

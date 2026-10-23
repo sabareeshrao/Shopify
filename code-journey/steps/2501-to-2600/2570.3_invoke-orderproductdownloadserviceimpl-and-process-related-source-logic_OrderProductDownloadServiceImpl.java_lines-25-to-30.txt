@@ -1,0 +1,6 @@
+
+    @Inject
+    public OrderProductDownloadServiceImpl(OrderProductDownloadRepository orderProductDownloadRepository) {
+        super(orderProductDownloadRepository);
+        this.orderProductDownloadRepository = orderProductDownloadRepository;
+    }

@@ -1,0 +1,6 @@
+	
+	@Column (name ="IDENTIFIER", nullable=false)
+	private String key;
+	
+	@Column (name ="VALUE", nullable=false)
+	private String value;

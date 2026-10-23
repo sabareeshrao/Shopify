@@ -1,0 +1,8 @@
+
+	public void setTotalPages(int totalCount) {
+		this.totalPages = totalCount;
+	}
+
+	public long getRecordsTotal() {
+		return recordsTotal;
+	}

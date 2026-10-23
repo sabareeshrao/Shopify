@@ -1,0 +1,5 @@
+			
+			
+
+			if (shippingProduct.getQuantity() == 1) {
+				PackageDetails detail = new PackageDetails();

@@ -1,6 +1,0 @@
-
-@Entity
-@Table(name = "PRODUCT_PRICE")
-public class ProductPrice extends SalesManagerEntity<Long, ProductPrice> {
-	private static final long serialVersionUID = 1L;
-

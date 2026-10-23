@@ -1,0 +1,9 @@
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Zone.class)
+	@JoinColumn(name = "ZONE_ID", nullable = true, updatable = true)
+	private Zone zone;
+
+	@Column(name = "STORE_STATE_PROV", length = 100)
+	private String storestateprovince;
+

@@ -1,0 +1,8 @@
+		"zoneName": "Armed Forces Europe",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "AM",
+		"zoneName": "Armed Forces Middle East",
+		"countryCode": "US"
+	},

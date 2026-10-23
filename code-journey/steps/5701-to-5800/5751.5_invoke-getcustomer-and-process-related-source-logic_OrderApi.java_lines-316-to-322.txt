@@ -1,0 +1,7 @@
+
+		if (order.getCustomer() == null) {
+			LOGGER.error("Order is null for customer " + principal);
+			response.sendError(404, "Order is null for customer " + principal);
+			return null;
+		}
+

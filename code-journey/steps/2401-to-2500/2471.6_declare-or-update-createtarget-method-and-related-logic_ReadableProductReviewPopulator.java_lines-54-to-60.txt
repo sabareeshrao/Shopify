@@ -1,0 +1,7 @@
+
+	@Override
+	protected ReadableProductReview createTarget() {
+		return null;
+	}
+
+}

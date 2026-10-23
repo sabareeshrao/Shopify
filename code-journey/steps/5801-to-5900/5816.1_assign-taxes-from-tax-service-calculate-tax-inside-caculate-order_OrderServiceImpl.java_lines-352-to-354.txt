@@ -1,3 +1,0 @@
-
-        //tax
-        List<TaxItem> taxes = taxService.calculateTax(summary, customer, store, language);

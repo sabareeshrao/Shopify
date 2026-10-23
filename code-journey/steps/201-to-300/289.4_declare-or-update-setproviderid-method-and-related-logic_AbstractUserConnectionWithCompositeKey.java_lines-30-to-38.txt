@@ -1,0 +1,9 @@
+	@Override
+	public void setProviderId(String providerId) {
+		primaryKey.setProviderId(providerId);
+	}
+
+	@Override
+	public String getProviderUserId() {
+		return primaryKey.getProviderUserId();
+	}

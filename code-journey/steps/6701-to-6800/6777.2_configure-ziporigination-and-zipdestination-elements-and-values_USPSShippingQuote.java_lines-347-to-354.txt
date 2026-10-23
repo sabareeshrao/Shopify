@@ -1,0 +1,8 @@
+				xmldatabuffer.append("<ZipOrigination>");
+				xmldatabuffer.append(DataUtils
+						.trimPostalCode(store.getStorepostalcode()));
+				xmldatabuffer.append("</ZipOrigination>");
+				xmldatabuffer.append("<ZipDestination>");
+				xmldatabuffer.append(DataUtils
+						.trimPostalCode(delivery.getPostalCode()));
+				xmldatabuffer.append("</ZipDestination>");

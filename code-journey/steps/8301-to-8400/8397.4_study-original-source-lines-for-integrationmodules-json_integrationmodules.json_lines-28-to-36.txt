@@ -1,0 +1,9 @@
+
+	},
+	{
+		"module": "SHIPPING",
+		"code": "weightBased",
+		"customModule":"true",
+		"version":"1.0",
+		"regions": ["*"]
+	},

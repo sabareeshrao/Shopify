@@ -1,0 +1,9 @@
+
+		try {
+			merchantStoreService.delete(mStore);
+		} catch (Exception e) {
+			LOG.error("Error while deleting MerchantStore", e);
+			throw new ServiceRuntimeException("Error while deleting MerchantStore " + e.getMessage());
+		}
+
+	}

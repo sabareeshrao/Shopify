@@ -1,6 +1,0 @@
-
-    /**
-     * Add an other item to cart which then does not exist which should return HTTP 404
-     *
-     * @throws Exception
-     */

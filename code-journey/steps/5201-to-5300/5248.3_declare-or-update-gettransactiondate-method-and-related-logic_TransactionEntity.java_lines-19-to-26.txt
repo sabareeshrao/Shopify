@@ -1,0 +1,8 @@
+	private String details;
+	private String transactionDate;
+	private String amount;
+	
+	
+	public String getTransactionDate() {
+		return transactionDate;
+	}

@@ -1,3 +1,0 @@
-@Service("shoppingCartCalculationService")
-public class ShoppingCartCalculationServiceImpl implements ShoppingCartCalculationService {
-

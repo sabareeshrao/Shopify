@@ -1,0 +1,9 @@
+		
+		
+		
+	
+		
+		User secUser = new User(userName, user.getAdminPassword(), user.isActive(), true,
+				true, true, authorities);
+		return secUser;
+	}

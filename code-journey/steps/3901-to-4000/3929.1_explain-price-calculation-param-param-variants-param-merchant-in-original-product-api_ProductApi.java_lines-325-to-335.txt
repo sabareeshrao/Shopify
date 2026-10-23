@@ -1,0 +1,11 @@
+
+	/**
+	 * Price calculation
+	 * @param id
+	 * @param variants
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	/**
+	@RequestMapping(value = "/product/{id}/price", method = RequestMethod.POST)

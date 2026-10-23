@@ -1,0 +1,7 @@
+			
+			Map<String, Object> chargeParams = new HashMap<String, Object>();
+			chargeParams.put("amount", strAmount);
+			chargeParams.put("capture", true);
+			chargeParams.put("currency", store.getCurrency().getCode());
+			chargeParams.put("source", token); // obtained with Stripe.js
+			chargeParams.put("description", new StringBuilder().append(TRANSACTION).append(" - ").append(store.getStorename()).toString());

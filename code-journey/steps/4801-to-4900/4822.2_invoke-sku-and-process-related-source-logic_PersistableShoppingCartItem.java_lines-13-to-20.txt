@@ -1,0 +1,8 @@
+public class PersistableShoppingCartItem implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String product;// or product sku (instance or product)
+	private int quantity;

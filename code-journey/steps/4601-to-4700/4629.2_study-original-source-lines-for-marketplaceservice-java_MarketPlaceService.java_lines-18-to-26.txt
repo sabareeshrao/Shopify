@@ -1,0 +1,9 @@
+	
+	/**
+	 * Fetch a specific marketplace
+	 * @param store
+	 * @param code
+	 * @return MarketPlace
+	 * @throws ServiceException
+	 */
+	MarketPlace getByCode(MerchantStore store, String code) throws ServiceException;

@@ -1,4 +1,0 @@
-	
-	@Autowired
-	private ProductVariantService productVariantService;
-	

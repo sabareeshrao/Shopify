@@ -1,0 +1,8 @@
+
+  public void setDescriptions(List<ObjectContent> descriptions) {
+    this.descriptions = descriptions;
+  }
+
+  public boolean isDisplayedInMenu() {
+    return isDisplayedInMenu;
+  }

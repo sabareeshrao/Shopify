@@ -1,0 +1,9 @@
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		} finally {
+			try {
+
+				if (inputImage.getFile() != null) {
+					inputImage.getFile().close();
+				}

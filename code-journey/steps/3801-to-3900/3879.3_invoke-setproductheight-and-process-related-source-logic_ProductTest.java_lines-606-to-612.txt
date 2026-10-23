@@ -1,0 +1,7 @@
+	    related.setProductHeight(new BigDecimal(4));
+	    related.setProductLength(new BigDecimal(3));
+	    related.setProductWidth(new BigDecimal(1));
+	    related.setSku("TB67891");
+	    related.setManufacturer(oreilley);
+	    related.setType(generalType);
+	    related.setMerchantStore(store);

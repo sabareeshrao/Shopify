@@ -1,0 +1,11 @@
+			throws ServiceException;
+
+	/**
+	 * Adds a property (option) image
+	 * @param merchantStoreId
+	 * @param cmsContentImage
+	 * @throws ServiceException
+	 */
+	void addOptionImage(String merchantStoreCode, InputContentFile cmsContentImage)
+			throws ServiceException;
+

@@ -1,0 +1,7 @@
+public class VendorCacheManager {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(VendorCacheManager.class);
+  private EmbeddedCacheManager manager = null;
+  private static VendorCacheManager vendorCacheManager = null;
+
+

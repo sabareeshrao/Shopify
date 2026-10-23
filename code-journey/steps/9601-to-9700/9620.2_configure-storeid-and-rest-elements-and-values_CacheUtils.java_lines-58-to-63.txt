@@ -1,0 +1,6 @@
+			  
+				try {
+					String sKey = (String)key;
+					
+					// a key should be <storeId>_<rest of the key>
+					int delimiterPosition = sKey.indexOf(KEY_DELIMITER);

@@ -1,4 +1,0 @@
-
-    /**
-     * This methods tests {@link DataUtils#getMeasure(double, MerchantStore, String)}
-     */

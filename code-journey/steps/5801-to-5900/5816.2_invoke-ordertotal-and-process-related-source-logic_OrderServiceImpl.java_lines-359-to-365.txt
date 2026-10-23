@@ -1,0 +1,7 @@
+            for(TaxItem tax : taxes) {
+
+                OrderTotal taxLine = new OrderTotal();
+                taxLine.setModule(Constants.OT_TAX_MODULE_CODE);
+                taxLine.setOrderTotalType(OrderTotalType.TAX);
+                taxLine.setOrderTotalCode(tax.getLabel());
+                taxLine.setSortOrder(taxCount);

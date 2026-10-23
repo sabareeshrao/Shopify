@@ -1,0 +1,8 @@
+		product.setPrice(BigDecimal.TEN);
+		product.setSku("123ABC");
+		final HttpEntity<PersistableProduct> entity = new HttpEntity<>(product, getHeader());
+
+		final ResponseEntity<PersistableProduct> response = testRestTemplate.postForEntity(
+				"/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, PersistableProduct.class);
+		assertThat(response.getStatusCode(), is(CREATED));
+	}

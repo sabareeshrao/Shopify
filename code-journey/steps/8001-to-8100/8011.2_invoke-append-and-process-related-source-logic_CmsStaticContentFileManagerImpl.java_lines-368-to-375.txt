@@ -1,0 +1,8 @@
+		nodePath.append(storeCode).append("/").append(contentType.name());
+
+		return nodePath.toString();*/
+		
+		
+		return null;
+
+	}

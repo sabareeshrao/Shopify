@@ -1,0 +1,8 @@
+	    	try {
+		        if (requestHeader != null && requestHeader.startsWith(BEARER_TOKEN)) {//Bearer
+		        	
+		        	jwtCustomAdminAuthenticationManager.authenticateRequest(request, response);
+	
+		        } else {
+		        	LOGGER.warn("couldn't find any authorization token, will ignore the header, might be a preflight check");
+		        }

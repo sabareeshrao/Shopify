@@ -1,9 +1,0 @@
-
-@Component
-public class PersistableProductVariantMapper implements Mapper<PersistableProductVariant, ProductVariant> {
-	
-	@Autowired
-	private ProductVariationService productVariationService;
-	
-	@Autowired
-	private PersistableProductAvailabilityMapper persistableProductAvailabilityMapper;

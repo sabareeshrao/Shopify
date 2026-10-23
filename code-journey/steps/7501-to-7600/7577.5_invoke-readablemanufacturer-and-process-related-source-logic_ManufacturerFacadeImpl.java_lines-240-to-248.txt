@@ -1,0 +1,9 @@
+    
+        for (Manufacturer mf : manufacturers) {
+          ReadableManufacturer readableManufacturer = new ReadableManufacturer();
+          populator.populate(mf, readableManufacturer, store, language);
+          returnList.add(readableManufacturer);
+        }
+
+        readableList.setManufacturers(returnList);
+        return readableList;

@@ -1,0 +1,11 @@
+		 * 
+		 * Calculate token expiration date
+		 * 
+		 * Now + 48 hours
+		 * 
+		 * Update User in the database with token
+		 * 
+		 * Send reset token email
+		 */
+
+	}

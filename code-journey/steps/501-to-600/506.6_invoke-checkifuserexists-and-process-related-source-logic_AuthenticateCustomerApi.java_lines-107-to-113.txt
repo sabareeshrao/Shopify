@@ -1,0 +1,7 @@
+            
+			if(customerFacade.checkIfUserExists(customer.getUserName(),  merchantStore)) {
+				//409 Conflict
+				throw new GenericRuntimeException("409", "Customer with email [" + customer.getEmailAddress() + "] is already registered");
+			}
+            
+            Validate.notNull(customer.getUserName(),"Username cannot be null");

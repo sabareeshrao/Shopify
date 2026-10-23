@@ -1,0 +1,8 @@
+	public String getConfigurable() {
+		return configurable;
+	}
+	public void setConfigurable(String configurable) {
+		this.configurable = configurable;
+	}
+
+}

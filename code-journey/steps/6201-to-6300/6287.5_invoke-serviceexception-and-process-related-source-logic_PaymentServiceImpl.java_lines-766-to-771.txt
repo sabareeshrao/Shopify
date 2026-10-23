@@ -1,0 +1,6 @@
+		
+		if(module==null) {
+			throw new ServiceException("Payment module " + payment.getModuleName() + " does not exist");
+		}
+		
+		IntegrationModule integrationModule = getPaymentMethodByCode(store,payment.getModuleName());

@@ -1,0 +1,8 @@
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+
+	public String getProvinceName() {
+		return provinceName;
+	}

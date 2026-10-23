@@ -1,0 +1,6 @@
+				String moduleCode = configuration.getModuleCode();
+				ShippingQuoteModule quoteModule = (ShippingQuoteModule)shippingModules.get(moduleCode);
+				if(quoteModule==null) {
+					throw new ServiceException("Shipping quote module " + moduleCode + " does not exist");
+				}
+				quoteModule.validateModuleConfiguration(configuration, store);

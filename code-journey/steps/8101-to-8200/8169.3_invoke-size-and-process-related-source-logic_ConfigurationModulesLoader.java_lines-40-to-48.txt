@@ -1,0 +1,9 @@
+			if(count<configurations.size()) {
+				jsonModules.append(",");
+			}
+		}
+		jsonModules.append("]");
+		return jsonModules.toString();
+		
+		
+	}

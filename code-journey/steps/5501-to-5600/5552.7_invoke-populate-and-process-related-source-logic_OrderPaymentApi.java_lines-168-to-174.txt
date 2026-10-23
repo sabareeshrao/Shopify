@@ -1,0 +1,7 @@
+
+			trxPopulator.populate(transactionModel, transaction, merchantStore, language);
+
+			return transaction;
+
+		} catch (Exception e) {
+			LOGGER.error("Error while initializing the payment", e);

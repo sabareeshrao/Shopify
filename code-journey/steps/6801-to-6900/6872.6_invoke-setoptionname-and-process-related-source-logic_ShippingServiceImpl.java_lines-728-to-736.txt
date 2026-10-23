@@ -1,0 +1,9 @@
+						q.setOptionName(option.getOptionName());
+						q.setOptionShippingDate(new Date());
+						q.setPrice(option.getOptionPrice());
+						
+					}
+					
+					if(handlingFees != null) {
+						q.setHandling(handlingFees);
+					}

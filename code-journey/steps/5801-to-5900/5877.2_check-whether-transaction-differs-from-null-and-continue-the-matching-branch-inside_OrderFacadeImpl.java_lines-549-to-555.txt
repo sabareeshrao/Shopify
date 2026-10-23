@@ -1,7 +1,0 @@
-
-			if (transaction != null) {
-				orderService.processOrder(modelOrder, customer, order.getShoppingCartItems(), summary, payment, store);
-			} else {
-				orderService.processOrder(modelOrder, customer, order.getShoppingCartItems(), summary, payment,
-						transaction, store);
-			}

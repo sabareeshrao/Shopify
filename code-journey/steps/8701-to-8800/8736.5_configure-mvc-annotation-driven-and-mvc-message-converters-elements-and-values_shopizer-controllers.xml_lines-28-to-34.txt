@@ -1,0 +1,7 @@
+	<mvc:annotation-driven enable-matrix-variables="true">
+
+		<mvc:message-converters >
+
+		    <bean
+             class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+

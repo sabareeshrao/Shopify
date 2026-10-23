@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "SZ",
+			"zoneName": "Schwyz",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "TG",
+			"zoneName": "Thurgau",
+			"countryCode": "CH"
+		},

@@ -1,0 +1,9 @@
+	public List<String> getPostProcessors() {
+		return postProcessors;
+	}
+	public void setPostProcessors(List<String> postProcessors) {
+		this.postProcessors = postProcessors;
+	}
+	public List<Country> getShipToCountry() {
+		return shipToCountry;
+	}

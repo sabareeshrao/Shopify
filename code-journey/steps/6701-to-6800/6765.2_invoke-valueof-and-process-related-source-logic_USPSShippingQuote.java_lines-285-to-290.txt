@@ -1,0 +1,6 @@
+			String ouncesString = String.valueOf(totalP - pounds);
+			int ouncesIndex = ouncesString.indexOf(".");
+			String ounces = "00";
+			if (ouncesIndex > -1) {
+				ounces = ouncesString.substring(ouncesIndex + 1);
+			}

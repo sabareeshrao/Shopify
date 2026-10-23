@@ -1,0 +1,8 @@
+		if(description.isPresent()) {
+			destination.setDescription(description.get());
+		}
+		return destination;
+	}
+	
+	private Optional<ReadableTaxRateDescription> convertDescription(List<TaxRateDescription> descriptions, Language language) {
+		Validate.notEmpty(descriptions,"List of TaxRateDescriptions should not be empty");

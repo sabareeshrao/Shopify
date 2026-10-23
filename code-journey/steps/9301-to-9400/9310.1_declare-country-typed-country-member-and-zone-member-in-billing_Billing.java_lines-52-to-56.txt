@@ -1,0 +1,5 @@
+
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
+	@JoinColumn(name="BILLING_COUNTRY_ID", nullable=false)
+	private Country country;
+	

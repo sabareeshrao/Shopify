@@ -1,0 +1,6 @@
+	public void delete(
+			@PathVariable String sku,
+			@PathVariable Long priceId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		

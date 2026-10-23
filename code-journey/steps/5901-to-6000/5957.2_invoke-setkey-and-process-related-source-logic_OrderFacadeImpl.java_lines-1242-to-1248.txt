@@ -1,0 +1,7 @@
+					attr.setKey(attribute.getKey());
+					attr.setValue(attribute.getValue());
+					attr.setOrder(modelOrder);
+					attrs.add(attr);
+				}
+				modelOrder.setOrderAttributes(attrs);
+			}

@@ -1,0 +1,7 @@
+
+
+	
+	
+	public void setOrderedQuantity(int orderedQuantity) {
+		this.orderedQuantity = orderedQuantity;
+	}

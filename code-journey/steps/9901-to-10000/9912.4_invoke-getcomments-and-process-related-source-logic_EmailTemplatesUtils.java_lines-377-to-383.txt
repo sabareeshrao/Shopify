@@ -1,0 +1,7 @@
+		        
+		        String comments = lastHistory.getComments();
+		        if(StringUtils.isBlank(comments)) {
+		        	comments = messages.getMessage("label.order." + order.getStatus().name(), customerLocale, order.getStatus().name());
+		        }
+		        
+				templateTokens.put(EmailConstants.EMAIL_ORDER_STATUS_TEXT, messages.getMessage("email.order.statustext", statusMessageText, customerLocale));

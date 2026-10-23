@@ -1,0 +1,8 @@
+		
+		/**
+		 * List of possible imageType
+		 * 
+		 */
+		
+
+		ProductImageSize size = ProductImageSize.SMALL;

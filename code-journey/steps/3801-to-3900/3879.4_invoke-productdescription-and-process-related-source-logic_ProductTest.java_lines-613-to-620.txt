@@ -1,0 +1,8 @@
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Spring 4 in Action");
+	    description.setLanguage(en);
+	    description.setProduct(related);
+
+	    product.getDescriptions().add(description);

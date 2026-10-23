@@ -1,0 +1,8 @@
+    private List<SearchHost> host;
+    private List<String> searchLanguages;
+	public String getClusterName() {
+		return clusterName;
+	}
+	public void setClusterName(String clusterName) {
+		this.clusterName = clusterName;
+	}

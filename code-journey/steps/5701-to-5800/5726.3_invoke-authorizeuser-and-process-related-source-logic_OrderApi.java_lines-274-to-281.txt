@@ -1,0 +1,8 @@
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_ORDER, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+
+		ReadableOrder order = orderFacade.getReadableOrder(id, merchantStore, language);
+
+		return order;
+	}

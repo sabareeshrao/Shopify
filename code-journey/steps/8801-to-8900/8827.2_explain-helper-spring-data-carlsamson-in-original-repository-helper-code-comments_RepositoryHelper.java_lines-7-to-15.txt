@@ -1,0 +1,9 @@
+
+/**
+ * Helper for Spring Data JPA
+ * 
+ * @author carlsamson
+ *
+ */
+public class RepositoryHelper {
+

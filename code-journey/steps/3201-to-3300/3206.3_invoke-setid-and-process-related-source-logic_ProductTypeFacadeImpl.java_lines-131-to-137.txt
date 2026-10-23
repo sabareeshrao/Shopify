@@ -1,0 +1,7 @@
+
+			type.setId(t.getId());
+			type.setCode(t.getCode());
+
+			ProductType model = persistableProductTypeMapper.merge(type, t, store, language);
+			model.setMerchantStore(store);
+			productTypeService.saveOrUpdate(model);

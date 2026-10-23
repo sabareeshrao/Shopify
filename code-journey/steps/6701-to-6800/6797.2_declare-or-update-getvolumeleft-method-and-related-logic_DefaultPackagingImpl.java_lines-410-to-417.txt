@@ -1,0 +1,8 @@
+
+	public double getVolumeLeft() {
+		return volumeLeft;
+	}
+
+	public void setVolumeLeft(double volumeLeft) {
+		this.volumeLeft = volumeLeft;
+	}

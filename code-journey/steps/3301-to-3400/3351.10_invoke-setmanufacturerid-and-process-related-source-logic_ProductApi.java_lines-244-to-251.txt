@@ -1,0 +1,8 @@
+
+		if (manufacturer != null) {
+			criteria.setManufacturerId(manufacturer);
+		}
+
+		if (CollectionUtils.isNotEmpty(optionValueIds)) {
+			criteria.setOptionValueIds(optionValueIds);
+		}

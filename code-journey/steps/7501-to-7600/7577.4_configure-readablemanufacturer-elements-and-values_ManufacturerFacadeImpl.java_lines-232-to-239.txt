@@ -1,0 +1,8 @@
+        readableList.setTotalPages(m.getTotalPages());
+        readableList.setRecordsTotal(m.getTotalElements());
+        readableList.setNumber(m.getContent().size());
+
+
+        
+        ReadableManufacturerPopulator populator = new ReadableManufacturerPopulator();
+        List<ReadableManufacturer> returnList = new ArrayList<ReadableManufacturer>();

@@ -1,0 +1,7 @@
+			if (userModel == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + user.getUserName() + "]");
+			}
+			if (userModel.getId().longValue() != id.longValue()) {
+				throw new ServiceRuntimeException(
+						"Cannot find user [" + user.getUserName() + "] id or name does not match");
+			}

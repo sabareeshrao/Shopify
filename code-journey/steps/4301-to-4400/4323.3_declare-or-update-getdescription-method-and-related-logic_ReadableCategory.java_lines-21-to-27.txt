@@ -1,0 +1,7 @@
+	public CategoryDescription getDescription() {
+		return description;
+	}
+
+	public int getProductCount() {
+		return productCount;
+	}

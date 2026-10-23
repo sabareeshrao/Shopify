@@ -1,0 +1,6 @@
+
+	/**
+	 * Modify an item to an existing cart, quantity of line item will reflect item.getQuantity
+	 * @param cartCode
+	 * @param item
+	 * @param store

@@ -1,0 +1,8 @@
+			  type.setName(source.getType().getCode());//need name
+			  target.setType(type);
+			}*/
+
+			/**
+			 * TODO use ProductImageMapper
+			 */
+			Set<ProductImage> images = source.getImages();

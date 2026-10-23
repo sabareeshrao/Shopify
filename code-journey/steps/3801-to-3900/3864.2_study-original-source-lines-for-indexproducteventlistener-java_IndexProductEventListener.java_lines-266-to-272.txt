@@ -1,0 +1,7 @@
+
+		ProductAttribute attribute = event.getProductAttribute();// to be removed
+
+		/**
+		 * add new attribute to be saved
+		 **/
+

@@ -1,0 +1,11 @@
+	private ProductTypeRepository productTypeRepository;
+	
+	@Autowired
+	private PageableProductTypeRepository pageableProductTypeRepository;
+
+	@Inject
+	public ProductTypeServiceImpl(ProductTypeRepository productTypeRepository) {
+		super(productTypeRepository);
+		this.productTypeRepository = productTypeRepository;
+	}
+

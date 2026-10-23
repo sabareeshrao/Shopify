@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NS",
-		"zoneName": "Nouvelle Écosse",
-		"countryCode": "CA"
-	},

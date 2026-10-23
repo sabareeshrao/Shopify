@@ -1,0 +1,8 @@
+
+	public void setSupportedLanguages(List<String> supportedLanguages) {
+		this.supportedLanguages = supportedLanguages;
+	}
+
+	public PersistableAddress getAddress() {
+		return address;
+	}

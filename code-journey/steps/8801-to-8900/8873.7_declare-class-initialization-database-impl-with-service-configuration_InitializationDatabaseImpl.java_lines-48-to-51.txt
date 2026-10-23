@@ -1,4 +1,0 @@
-
-@Service("initializationDatabase")
-public class InitializationDatabaseImpl implements InitializationDatabase {
-	

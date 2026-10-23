@@ -1,0 +1,7 @@
+			BigDecimal wd = product.getProductWidth();
+			if(w==null) {
+				w = new BigDecimal(defaultWeight);
+			}
+			if(h==null) {
+				h = new BigDecimal(defaultHeight);
+			}

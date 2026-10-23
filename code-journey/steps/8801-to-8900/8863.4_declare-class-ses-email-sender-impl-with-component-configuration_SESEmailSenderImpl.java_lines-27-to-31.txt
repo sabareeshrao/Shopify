@@ -1,5 +1,0 @@
-@Component("sesEmailSender")
-public class SESEmailSenderImpl implements EmailModule {
-
-  @Inject
-  private Configuration freemarkerMailConfiguration;

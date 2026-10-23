@@ -1,3 +1,0 @@
-	void saveCustomShippingConfiguration(String moduleCode,
-			CustomIntegrationConfiguration shippingConfiguration,
-			MerchantStore store) throws ServiceException;

@@ -1,0 +1,8 @@
+      throws Exception {
+    if (StringUtils.isNotBlank(userName) && store != null) {
+      Customer customer = customerService.getByNick(userName, store.getId());
+      if (customer != null) {
+        LOG.info("Customer with userName {} already exists for store {} ", userName,
+            store.getStorename());
+        return true;
+      }

@@ -1,0 +1,9 @@
+	@Override
+	public List<Product> listByTaxClass(TaxClass taxClass) {
+
+		/**
+		 * Testing in debug mode takes a long time with this query running in
+		 * normal mode is fine
+		 */
+
+		StringBuilder qs = new StringBuilder();

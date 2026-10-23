@@ -1,0 +1,11 @@
+ * https://console.developers.google.com
+ * 
+ * https://developers.google.com/maps/documentation/webservices/client-library
+ * https://github.com/googlemaps/google-maps-services-java/tree/master/src/test/java/com/google/maps
+ * 
+ * @author carlsamson
+ *
+ */
+@Component("shippingDistancePreProcessor")
+public class ShippingDistancePreProcessorImpl implements ShippingQuotePrePostProcessModule {
+	

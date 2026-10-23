@@ -1,0 +1,5 @@
+
+        target.setLineage(source.getLineage());
+        if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+
+            CategoryDescription description = source.getDescription();

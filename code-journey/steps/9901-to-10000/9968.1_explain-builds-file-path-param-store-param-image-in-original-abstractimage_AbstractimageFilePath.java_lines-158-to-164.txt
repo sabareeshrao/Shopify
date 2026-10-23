@@ -1,7 +1,0 @@
-	
-	/**
-	 * Builds static file url path
-	 * @param store
-	 * @param imageName
-	 * @return
-	 */

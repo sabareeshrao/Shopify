@@ -1,0 +1,8 @@
+
+
+      if (contentImage.getFileContentType().name().equals(FileContentType.PRODUCT.name())) {
+        nodePath.append(SMALL);
+      } else if (contentImage.getFileContentType().name()
+          .equals(FileContentType.PRODUCTLG.name())) {
+        nodePath.append(LARGE);
+      }

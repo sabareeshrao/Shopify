@@ -1,3 +1,0 @@
-											+ "] for this shipping is in your selection list");
-				}
-			}*/

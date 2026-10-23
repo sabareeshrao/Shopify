@@ -1,4 +1,0 @@
-label.order.REFUNDED=Remboursée
-label.order.DELIVERED=Livrée
-label.order.CANCELED=Annulée
-refund=Remboursement

@@ -1,0 +1,8 @@
+		for (ProductRelationship relationship : relationships) {
+			productRelationshipService.deleteRelationship(relationship);
+		}
+
+		super.delete(product);
+		//searchService.deleteIndex(product.getMerchantStore(), product);
+
+	}

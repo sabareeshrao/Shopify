@@ -1,0 +1,8 @@
+	public @ResponseBody ReadableProductOptionEntity createOption(
+			@Valid @RequestBody PersistableProductOptionEntity option, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		ReadableProductOptionEntity entity = productOptionFacade.saveOption(option, merchantStore, language);
+		return entity;
+
+	}

@@ -1,0 +1,5 @@
+	
+	@Override
+	public void saveMerchantConfig(MerchantConfig config, MerchantStore store) throws ServiceException {
+		
+		MerchantConfiguration configuration = merchantConfigurationRepository.findByMerchantStoreAndKey(store.getId(), MerchantConfigurationType.CONFIG.name());

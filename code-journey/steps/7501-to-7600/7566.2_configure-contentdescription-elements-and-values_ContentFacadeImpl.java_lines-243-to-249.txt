@@ -1,0 +1,7 @@
+
+		List<ContentDescription> descriptions = buildDescriptions(contentModel, content.getDescriptions());
+		for(ContentDescription cd : descriptions) {
+			cd.setContent(contentModel);
+		}
+
+		contentModel.setCode(content.getCode());

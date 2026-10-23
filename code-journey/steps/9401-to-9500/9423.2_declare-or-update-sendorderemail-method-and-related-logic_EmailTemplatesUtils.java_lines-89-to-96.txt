@@ -1,0 +1,8 @@
+	public void sendOrderEmail(String toEmail, Customer customer, Order order, Locale customerLocale, Language language, MerchantStore merchantStore, String contextPath) {
+			   /** issue with putting that elsewhere **/ 
+		       LOGGER.info( "Sending welcome email to customer" );
+		       try {
+		    	   
+		    	   Map<String,Zone> zones = zoneService.getZones(language);
+		    	   
+		    	   Map<String,Country> countries = countryService.getCountriesMap(language);

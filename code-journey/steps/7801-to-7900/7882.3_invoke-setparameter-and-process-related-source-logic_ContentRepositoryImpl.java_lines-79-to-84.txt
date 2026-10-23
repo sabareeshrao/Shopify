@@ -1,0 +1,6 @@
+
+	    	q.setParameter("cm", store.getId());
+	    	q.setParameter("se", seUrl);
+	
+
+	    	Content content = (Content)q.getSingleResult();

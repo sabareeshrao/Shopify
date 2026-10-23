@@ -1,0 +1,8 @@
+      templateTokens.put("EMAIL_STORE_NAME", "");
+      templateTokens.put("EMAIL_FOOTER_COPYRIGHT", "");
+      templateTokens.put("EMAIL_DISCLAIMER", "");
+      templateTokens.put("EMAIL_SPAM_DISCLAIMER", "");
+      templateTokens.put("LOGOPATH", "");
+
+      
+      templateTokens.put("EMAIL_CONTACT_NAME", "Test");

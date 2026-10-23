@@ -1,0 +1,10 @@
+
+				// ResourceBundle bundle = ResourceBundle.getBundle("usps",
+				// locale);
+
+				// while(servicesIterator.hasNext()) {
+				// String key = (String)servicesIterator.next();
+				// String value =
+				// bundle.getString("shipping.quote.services.label." + key);
+				// services.put(value, key);
+				// }

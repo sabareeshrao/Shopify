@@ -1,0 +1,7 @@
+			if (!StringUtils.isEmpty(image)) {
+				contentService.removeFile(store.getCode(), image);
+			}
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e.getMessage());
+		}
+	}

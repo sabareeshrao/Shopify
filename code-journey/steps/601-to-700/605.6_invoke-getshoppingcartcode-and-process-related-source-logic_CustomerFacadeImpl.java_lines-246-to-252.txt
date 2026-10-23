@@ -1,0 +1,7 @@
+                if (!customerCart.getShoppingCartCode()
+                    .equals(sessionShoppingCart.getShoppingCartCode())) {
+                  // merge carts
+                  LOG.info("Customer shopping cart as well session cart is available");
+                  customerCart = shoppingCartService.mergeShoppingCarts(customerCart,
+                      sessionShoppingCart, store);
+                  customerCart = shoppingCartService.getById(customerCart.getId(), store);

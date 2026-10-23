@@ -1,0 +1,6 @@
+
+    default String nodePath(String store, FileContentType type) {
+
+        StringBuilder builder = new StringBuilder();
+        String root = nodePath(store);
+        builder.append(root);

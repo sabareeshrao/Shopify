@@ -1,3 +1,0 @@
-		For clients that support media queries.
-		Nothing fancy. 
--------------------------------------------- */

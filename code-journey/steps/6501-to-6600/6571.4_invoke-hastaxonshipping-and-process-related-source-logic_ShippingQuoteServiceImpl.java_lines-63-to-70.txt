@@ -1,0 +1,8 @@
+			
+			if(shippingService.hasTaxOnShipping(store)) {
+				quote.setTaxOnShipping(true);
+			}
+			
+			
+			
+		}

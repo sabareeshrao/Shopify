@@ -1,0 +1,8 @@
+		  
+		  /**
+		   * Spring Security 4 does not seem to add security context in the session
+		   * creating the authentication to be lost during the login
+		   */
+		  SecurityContext securityContext = SecurityContextHolder.getContext();
+		  HttpSession session = request.getSession(true);
+		  session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);

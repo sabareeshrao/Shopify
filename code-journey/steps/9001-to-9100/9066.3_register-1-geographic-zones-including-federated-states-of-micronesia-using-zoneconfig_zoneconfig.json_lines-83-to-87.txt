@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "FM",
-		"zoneName": "Federated States Of Micronesia",
-		"countryCode": "US"
-	},

@@ -1,0 +1,6 @@
+			try {
+				productOptionValueService.saveOrUpdate(productOptionValue);
+			} catch (ServiceException e) {
+				throw new ConversionRuntimeException("Error converting ProductOptionValue",e); 
+			}
+		}

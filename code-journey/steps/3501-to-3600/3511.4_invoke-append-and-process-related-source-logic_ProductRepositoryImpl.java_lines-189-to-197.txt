@@ -1,0 +1,9 @@
+
+
+			qs.append("where p.sku=:code and pm.id=:id");
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);
+
+			q.setParameter("code", productCode);
+			q.setParameter("id", store.getId());

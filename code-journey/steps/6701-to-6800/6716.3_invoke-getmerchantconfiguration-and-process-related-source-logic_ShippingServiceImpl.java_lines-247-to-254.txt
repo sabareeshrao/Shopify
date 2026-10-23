@@ -1,0 +1,8 @@
+				
+			} catch (IntegrationException ie) {
+				throw ie;
+			}
+			
+			try {
+				Map<String,IntegrationConfiguration> modules = new HashMap<String,IntegrationConfiguration>();
+				MerchantConfiguration merchantConfiguration = merchantConfigurationService.getMerchantConfiguration(SHIPPING_MODULES, store);

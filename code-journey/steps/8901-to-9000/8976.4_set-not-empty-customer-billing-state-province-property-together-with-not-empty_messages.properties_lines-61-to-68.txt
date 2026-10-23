@@ -1,8 +1,0 @@
-NotEmpty.customer.billing.stateProvince=State / Province is required
-
-NotEmpty.customer.shipping.firstName=Shipping first name should not be empty
-NotEmpty.customer.shipping.lastName=Shipping last name should not be empty
-NotEmpty.customer.shipping.address=Shipping street address should not be empty
-NotEmpty.customer.shipping.city=Shipping city should not be empty
-NotEmpty.customer.shipping.postalCode=Shipping postal code should not be empty
-NotEmpty.customer.shipping.phone=Shipping phone should not be empty

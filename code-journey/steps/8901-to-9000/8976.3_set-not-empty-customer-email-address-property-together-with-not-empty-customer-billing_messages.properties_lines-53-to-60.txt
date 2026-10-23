@@ -1,8 +1,0 @@
-
-NotEmpty.customer.emailAddress=Email address is required
-Email.customer.emailAddress=Email address is invalid
-NotEmpty.customer.billing.phone=Phone number is required
-NotEmpty.customer.billing.address=Street address is required
-NotEmpty.customer.billing.city=City is required
-NotEmpty.customer.billing.postalCode=Postal code is required
-NotEmpty.customer.billing.country=Country is required

@@ -1,0 +1,9 @@
+		
+		if(store!=null) {
+			return store.getLanguages();
+		}
+		
+		return Collections.emptyList();
+	}
+
+}

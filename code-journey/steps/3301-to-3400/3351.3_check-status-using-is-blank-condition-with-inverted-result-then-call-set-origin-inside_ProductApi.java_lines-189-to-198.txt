@@ -1,0 +1,10 @@
+	public ReadableProductList list(
+			@RequestParam(value = "lang", required = false) String lang,
+			@RequestParam(value = "category", required = false) Long category,
+			@RequestParam(value = "name", required = false) String name,
+			@RequestParam(value = "sku", required = false) String sku,
+			@RequestParam(value = "manufacturer", required = false) Long manufacturer,
+			@RequestParam(value = "optionValues", required = false) List<Long> optionValueIds,
+			@RequestParam(value = "status", required = false) String status,
+			@RequestParam(value = "owner", required = false) Long owner,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page, // current

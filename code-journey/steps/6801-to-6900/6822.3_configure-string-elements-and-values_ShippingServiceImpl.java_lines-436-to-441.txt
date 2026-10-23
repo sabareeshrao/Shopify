@@ -1,0 +1,6 @@
+					return shippingQuote;
+				}
+			} else if(shippingType.name().equals(ShippingType.INTERNATIONAL.name())){
+				
+				//customer shipping country code must be in accepted list
+				List<String> supportedCountries = this.getSupportedCountries(store);

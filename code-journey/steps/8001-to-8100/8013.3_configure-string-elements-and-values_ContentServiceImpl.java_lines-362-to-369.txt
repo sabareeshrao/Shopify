@@ -1,0 +1,8 @@
+		Assert.notNull(fileName, "File name can not be null");
+
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+
+		return contentFileManager.getFile(merchantStoreCode, path, fileContentType, fileName);
+
+	}

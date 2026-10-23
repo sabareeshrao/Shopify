@@ -1,8 +1,0 @@
-	
-	/**
-	 * String format of the money amount without currency symbol
-	 * @param amount
-	 * @param store
-	 * @return
-	 * @throws ServiceException
-	 */

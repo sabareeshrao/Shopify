@@ -1,0 +1,9 @@
+    try {
+      /**
+       * Is this a pageable request
+       */
+
+      List<Manufacturer> manufacturers = null;
+      if(page == 0 && count == 0) {
+    	//need total count
+        int total = manufacturerService.count(store);

@@ -1,0 +1,9 @@
+public class ImageFilePathUtils extends AbstractimageFilePath{
+	
+	private String basePath = Constants.STATIC_URI;
+	private String contentUrl = null;
+
+	@Override
+	public String getBasePath(MerchantStore store) {
+		return basePath;
+	}

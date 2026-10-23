@@ -1,0 +1,9 @@
+	
+	/**
+	 * Sends an email to the customer after registration
+	 * @param request
+	 * @param customer
+	 * @param merchantStore
+	 * @param customerLocale
+	 */
+	@Async

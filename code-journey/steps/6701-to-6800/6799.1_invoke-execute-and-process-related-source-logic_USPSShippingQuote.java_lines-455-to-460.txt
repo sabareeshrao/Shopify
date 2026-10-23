@@ -1,0 +1,6 @@
+
+            String data = httpclient.execute(httpget, responseHandler);
+/*			int result = client.executeMethod(httpget);
+			if (result != 200) {
+				LOGGER.error("Communication Error with usps quote " + result + " "
+						+ protocol + "://" + host + ":" + port + url);

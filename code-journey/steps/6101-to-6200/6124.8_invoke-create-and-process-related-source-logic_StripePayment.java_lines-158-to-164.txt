@@ -1,0 +1,7 @@
+			
+			Stripe.apiKey = apiKey;
+			
+			
+			Charge ch = Charge.create(chargeParams);
+
+			//Map<String,String> metadata = ch.getMetadata();

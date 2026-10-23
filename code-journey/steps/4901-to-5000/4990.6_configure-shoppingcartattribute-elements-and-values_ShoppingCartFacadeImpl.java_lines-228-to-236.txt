@@ -1,0 +1,9 @@
+
+		com.salesmanager.core.model.shoppingcart.ShoppingCartItem item = shoppingCartService
+				.populateShoppingCartItem(product, store);
+
+		item.setQuantity(shoppingCartItem.getQuantity());
+		item.setShoppingCart(cartModel);
+
+		// attributes
+		List<ShoppingCartAttribute> cartAttributes = shoppingCartItem.getShoppingCartAttributes();

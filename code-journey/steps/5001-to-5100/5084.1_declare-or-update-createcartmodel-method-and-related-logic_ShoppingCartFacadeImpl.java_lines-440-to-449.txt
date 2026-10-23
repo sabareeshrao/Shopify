@@ -1,0 +1,10 @@
+	@Override
+	public ShoppingCart createCartModel(final String shoppingCartCode, final MerchantStore store,
+			final Customer customer) throws Exception {
+		final Long CustomerId = customer != null ? customer.getId() : null;
+		ShoppingCart cartModel = new ShoppingCart();
+		if (StringUtils.isNotBlank(shoppingCartCode)) {
+			cartModel.setShoppingCartCode(shoppingCartCode);
+		} else {
+			cartModel.setShoppingCartCode(uniqueShoppingCartCode());
+		}

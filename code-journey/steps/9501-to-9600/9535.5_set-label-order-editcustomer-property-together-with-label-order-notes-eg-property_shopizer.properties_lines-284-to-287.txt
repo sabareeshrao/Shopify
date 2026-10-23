@@ -1,4 +1,0 @@
-label.order.editcustomer=Edit customer
-label.order.displayagreement=Display customer terms and policy agreement in order page
-label.order.notes=Order notes
-label.order.notes.eg=Notes for the order or delivery

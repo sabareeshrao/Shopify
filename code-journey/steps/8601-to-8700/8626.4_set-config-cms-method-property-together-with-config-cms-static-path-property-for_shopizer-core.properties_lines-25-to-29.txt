@@ -1,5 +1,0 @@
-# gcp
-
-config.cms.method=default
-config.cms.static.path=/static
-

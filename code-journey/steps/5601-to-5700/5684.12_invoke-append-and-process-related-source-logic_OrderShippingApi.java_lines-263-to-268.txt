@@ -1,0 +1,6 @@
+            try {
+
+              optionCodeBuilder
+                  .append("module.shipping.")
+                  .append(shipOption.getShippingModuleCode());
+              String optionName = messages.getMessage(optionCodeBuilder.toString(), new String[]{merchantStore.getStorename()},locale);

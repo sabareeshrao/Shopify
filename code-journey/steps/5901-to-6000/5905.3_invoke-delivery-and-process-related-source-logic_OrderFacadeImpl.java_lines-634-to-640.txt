@@ -1,0 +1,7 @@
+
+		Delivery delivery = new Delivery();
+
+		// adjust shipping and billing
+		if (order.isShipToBillingAdress() && !order.isShipToDeliveryAddress()) {
+
+			Billing billing = customer.getBilling();

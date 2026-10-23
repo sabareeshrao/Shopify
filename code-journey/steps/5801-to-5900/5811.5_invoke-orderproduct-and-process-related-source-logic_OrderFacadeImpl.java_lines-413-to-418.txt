@@ -1,0 +1,6 @@
+
+				OrderProduct orderProduct = new OrderProduct();
+				orderProduct = orderProductPopulator.populate(item, orderProduct, store, language);
+				orderProduct.setOrder(modelOrder);
+				orderProducts.add(orderProduct);
+			}

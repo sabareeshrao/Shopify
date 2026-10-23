@@ -1,0 +1,7 @@
+email.order.title={0} - Order confirmation: {1}
+email.order.confirmation=Order confirmation: {0}
+email.order.comments=Notes: {0} 
+email.order.ordered=Ordered on : {0}
+email.order.updated=Updated on : {0}
+email.order.status.title=Order {0} updated
+email.order.status=Last order status: {0}

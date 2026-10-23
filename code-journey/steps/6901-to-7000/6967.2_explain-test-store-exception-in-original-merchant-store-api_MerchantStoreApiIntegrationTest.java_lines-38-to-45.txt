@@ -1,0 +1,8 @@
+  
+  /**
+   * Test get DEFAULT store
+   * @throws Exception
+   */
+  @Test
+  public void testGetDefaultStore() throws Exception {
+      final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());

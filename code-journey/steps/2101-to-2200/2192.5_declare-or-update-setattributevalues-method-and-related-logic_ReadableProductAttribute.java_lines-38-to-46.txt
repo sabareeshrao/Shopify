@@ -1,0 +1,9 @@
+	public void setAttributeValues(List<ReadableProductAttributeValue> attributeValues) {
+		this.attributeValues = attributeValues;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}

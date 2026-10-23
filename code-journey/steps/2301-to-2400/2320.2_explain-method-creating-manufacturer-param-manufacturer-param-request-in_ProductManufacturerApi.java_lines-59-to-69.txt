@@ -1,0 +1,11 @@
+
+	/**
+	 * Method for creating a manufacturer
+	 *
+	 * @param manufacturer
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/private/manufacturer", method = RequestMethod.POST)

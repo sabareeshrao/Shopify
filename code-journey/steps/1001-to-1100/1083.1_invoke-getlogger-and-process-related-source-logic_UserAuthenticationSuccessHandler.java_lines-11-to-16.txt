@@ -1,0 +1,6 @@
+public class UserAuthenticationSuccessHandler extends AbstractAuthenticatinSuccessHandler {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserAuthenticationSuccessHandler.class);
+	
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+

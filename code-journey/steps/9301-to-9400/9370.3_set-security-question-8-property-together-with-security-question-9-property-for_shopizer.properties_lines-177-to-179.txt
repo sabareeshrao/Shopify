@@ -1,3 +1,0 @@
-security.question.8=In which city did you met your spouse/significant other?
-security.question.9=What was your childhood nickname?
-

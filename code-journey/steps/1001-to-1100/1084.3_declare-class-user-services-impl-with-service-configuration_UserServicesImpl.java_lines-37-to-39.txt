@@ -1,3 +1,0 @@
-@Service("userDetailsService")
-public class UserServicesImpl implements WebUserServices{
-	

@@ -1,0 +1,10 @@
+	public final static String MODULE_CODE = "customQuotesRules";
+
+	@Override
+	public void validateModuleConfiguration(
+			IntegrationConfiguration integrationConfiguration,
+			MerchantStore store) throws IntegrationException {
+		// Not used
+
+	}
+

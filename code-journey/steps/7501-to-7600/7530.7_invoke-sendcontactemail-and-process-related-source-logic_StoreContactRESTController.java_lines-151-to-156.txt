@@ -1,0 +1,6 @@
+			
+			
+			/** end default routine **/
+
+			
+	        emailTemplatesUtils.sendContactEmail(contact, merchantStore, l, request.getContextPath());

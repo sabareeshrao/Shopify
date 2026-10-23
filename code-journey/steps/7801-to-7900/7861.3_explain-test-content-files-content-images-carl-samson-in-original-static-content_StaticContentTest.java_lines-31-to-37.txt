@@ -1,0 +1,7 @@
+ * - static content images (jpg, gig ...)
+ * @author Carl Samson
+ *
+ */
+@Ignore
+public class StaticContentTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	

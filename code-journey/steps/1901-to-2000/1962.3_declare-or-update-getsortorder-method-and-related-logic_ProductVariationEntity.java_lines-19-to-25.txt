@@ -1,0 +1,7 @@
+	
+	private int sortOrder;
+	
+	private boolean defaultValue = false;
+	public int getSortOrder() {
+		return sortOrder;
+	}

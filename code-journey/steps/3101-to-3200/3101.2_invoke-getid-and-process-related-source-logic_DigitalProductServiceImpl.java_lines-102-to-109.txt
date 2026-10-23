@@ -1,0 +1,8 @@
+		if(digitalProduct.getId()==null || digitalProduct.getId() ==0) {
+			super.save(digitalProduct);
+		} else {
+			super.create(digitalProduct);
+		}
+		
+		digitalProduct.getProduct().setProductVirtual(true);
+		productService.update(digitalProduct.getProduct());

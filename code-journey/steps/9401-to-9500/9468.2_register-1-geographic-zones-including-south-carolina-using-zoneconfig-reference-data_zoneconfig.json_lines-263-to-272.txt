@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "SC",
+		"zoneName": "South Carolina",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "SD",
+		"zoneName": "South Dakota",
+		"countryCode": "US"
+	},

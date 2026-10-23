@@ -1,0 +1,7 @@
+	public PersistableCategory create(
+			@Valid @RequestBody PersistableCategory category,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		// superadmin, admin and admin_catalogue
+		String authenticatedUser = userFacade.authenticatedUser();

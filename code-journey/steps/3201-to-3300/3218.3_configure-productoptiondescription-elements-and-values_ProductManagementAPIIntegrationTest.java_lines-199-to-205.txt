@@ -1,0 +1,7 @@
+
+		final List<ProductOptionDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);
+
+		final PersistableProductOption option = new PersistableProductOption();
+		option.setOrder(1);
+		option.setCode("color");

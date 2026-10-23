@@ -1,0 +1,8 @@
+		
+		merchantService.create(store);
+		
+		
+		TaxClass taxclass = new TaxClass(TaxClass.DEFAULT_TAX_CLASS);
+		taxclass.setMerchantStore(store);
+		
+		taxClassService.create(taxclass);

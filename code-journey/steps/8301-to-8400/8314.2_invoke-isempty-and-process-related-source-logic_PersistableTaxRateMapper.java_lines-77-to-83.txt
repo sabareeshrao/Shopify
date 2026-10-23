@@ -1,0 +1,7 @@
+	            if(!CollectionUtils.isEmpty(destination.getDescriptions())) {
+	              for(com.salesmanager.core.model.tax.taxrate.TaxRateDescription d : destination.getDescriptions()) {
+	                if(!StringUtils.isBlank(desc.getLanguage()) && desc.getLanguage().equals(d.getLanguage().getCode())) {
+	              	  d.setDescription(desc.getDescription());
+	              	  d.setName(desc.getName());
+	              	  d.setTitle(desc.getTitle());
+	              	  description = d;

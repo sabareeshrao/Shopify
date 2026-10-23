@@ -1,0 +1,8 @@
+	public long getAttributeId() {
+		return attributeId;
+	}
+	public void setAttributeId(long attributeId) {
+		this.attributeId = attributeId;
+	}
+
+}

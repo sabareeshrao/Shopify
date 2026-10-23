@@ -1,0 +1,6 @@
+	
+	@Inject
+	protected CurrencyService currencyService;
+	
+	@Inject
+	protected ManufacturerService manufacturerService;

@@ -1,0 +1,7 @@
+    	boolean sto = Boolean.valueOf(stores);
+
+        criteria.setRetailers(retail);
+        criteria.setStores(sto);
+    } catch(Exception e) {
+    	LOGGER.error("Error parsing boolean values",e);
+    }

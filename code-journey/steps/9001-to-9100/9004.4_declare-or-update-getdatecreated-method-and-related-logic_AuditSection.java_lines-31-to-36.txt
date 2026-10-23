@@ -1,0 +1,6 @@
+
+  public AuditSection() {}
+
+  public Date getDateCreated() {
+    return CloneUtils.clone(dateCreated);
+  }

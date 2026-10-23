@@ -1,0 +1,8 @@
+				if(shippingTotal==null) {
+					shippingTotal = totalTotal;
+				} else {
+					BigDecimal v = shippingTotal.getValue();
+					v = v.add(totalTotal.getValue());
+					shippingTotal.setValue(v);
+				}
+				target.setShipping(totalTotal);

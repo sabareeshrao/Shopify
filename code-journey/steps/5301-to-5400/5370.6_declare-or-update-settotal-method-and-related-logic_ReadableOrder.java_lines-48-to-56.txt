@@ -1,0 +1,9 @@
+	public void setTotal(ReadableTotal total) {
+		this.total = total;
+	}
+	public ShippingOption getShippingOption() {
+		return shippingOption;
+	}
+	public void setShippingOption(ShippingOption shippingOption) {
+		this.shippingOption = shippingOption;
+	}

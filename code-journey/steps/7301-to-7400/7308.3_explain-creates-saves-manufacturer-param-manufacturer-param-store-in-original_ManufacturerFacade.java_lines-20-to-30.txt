@@ -1,0 +1,11 @@
+  
+  /**
+   * Creates or saves a manufacturer
+   * 
+   * @param manufacturer
+   * @param store
+   * @param language
+   * @throws Exception
+   */
+  void saveOrUpdateManufacturer(PersistableManufacturer manufacturer, MerchantStore store,
+      Language language) throws Exception;

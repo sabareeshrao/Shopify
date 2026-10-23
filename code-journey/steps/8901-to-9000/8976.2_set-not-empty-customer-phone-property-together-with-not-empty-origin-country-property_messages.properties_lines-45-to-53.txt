@@ -1,0 +1,9 @@
+NotEmpty.customer.phone=Phone number is required
+NotEmpty.customer.city=City is required
+NotEmpty.customer.agreement=Please agree to our terms and conditions
+
+NotEmpty.origin.address=Street address is required
+NotEmpty.origin.postalCode=Postal code is required
+NotEmpty.origin.city=City is required
+NotEmpty.origin.country=Country is required
+

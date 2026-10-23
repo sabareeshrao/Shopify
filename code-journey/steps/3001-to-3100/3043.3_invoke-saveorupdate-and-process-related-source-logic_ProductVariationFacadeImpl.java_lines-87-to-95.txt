@@ -1,0 +1,9 @@
+		try {
+			productVariationService.saveOrUpdate(p);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductOptionSet", e);
+		}
+		
+		return p.getId();
+
+	}

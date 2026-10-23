@@ -1,0 +1,7 @@
+
+	@Override
+	public Optional<ProductImage> getProductImage(Long imageId, Long productId, MerchantStore store) {
+
+		Optional<ProductImage> image = Optional.empty();
+
+		ProductImage img = productImageRepository.finById(imageId, productId, store.getCode());

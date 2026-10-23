@@ -1,0 +1,7 @@
+
+    try {
+
+      this.location = locationFolder;
+      // manager = new DefaultCacheManager(repositoryFileName);
+
+      VendorCacheManager manager = VendorCacheManager.getInstance();

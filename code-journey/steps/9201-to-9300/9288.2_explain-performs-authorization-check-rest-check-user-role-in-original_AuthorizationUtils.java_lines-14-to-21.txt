@@ -1,8 +1,0 @@
-
-/**
- * Performs authorization check for REST Api
- * - check if user is in role
- * - check if user can perform actions on marchant
- * @author carlsamson
- *
- */

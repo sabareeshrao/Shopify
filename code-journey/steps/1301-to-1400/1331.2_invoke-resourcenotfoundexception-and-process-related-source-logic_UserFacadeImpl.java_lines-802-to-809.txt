@@ -1,0 +1,8 @@
+
+			if (user == null) {
+				throw new ResourceNotFoundException(
+						"User [" + userName + "] not found for store [" + store.getCode() + "]");
+			}
+
+			// generates unique token
+			String token = UUID.randomUUID().toString();

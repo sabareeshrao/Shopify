@@ -1,0 +1,7 @@
+		try {
+			if (request.getParameter("startdate") != null) {
+				sDate = myDateFormat.parse(request.getParameter("startdate"));
+			}
+			if (request.getParameter("enddate") != null) {
+				eDate = myDateFormat.parse(request.getParameter("enddate"));
+			}

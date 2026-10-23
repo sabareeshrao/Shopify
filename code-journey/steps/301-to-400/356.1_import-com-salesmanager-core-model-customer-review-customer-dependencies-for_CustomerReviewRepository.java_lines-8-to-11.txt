@@ -1,0 +1,4 @@
+import com.salesmanager.core.model.customer.review.CustomerReview;
+
+public interface CustomerReviewRepository extends JpaRepository<CustomerReview, Long> {
+	

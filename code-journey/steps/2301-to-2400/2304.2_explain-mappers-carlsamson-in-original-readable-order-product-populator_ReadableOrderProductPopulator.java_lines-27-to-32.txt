@@ -1,6 +1,0 @@
-
-/**
- * Use mappers
- * @author carlsamson
- *
- */

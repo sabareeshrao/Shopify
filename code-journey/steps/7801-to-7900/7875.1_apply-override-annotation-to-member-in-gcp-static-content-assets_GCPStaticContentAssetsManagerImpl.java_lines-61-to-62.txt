@@ -1,2 +1,0 @@
-  @Override
-	public OutputContentFile getFile(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType, String contentName)

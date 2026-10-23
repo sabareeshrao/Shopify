@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Melilla",
-			"zoneName": "Melilla",
-			"countryCode": "ES"
-		},

@@ -1,0 +1,11 @@
+
+	/**
+	 * Get a given order by id
+	 *
+	 * @param id
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/auth/orders/{id}" }, method = RequestMethod.GET)

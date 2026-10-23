@@ -1,0 +1,8 @@
+
+	protected ReadableProduct sampleProduct(String code) {
+
+		final PersistableCategory newCategory = new PersistableCategory();
+		newCategory.setCode(code);
+		newCategory.setSortOrder(1);
+		newCategory.setVisible(true);
+		newCategory.setDepth(4);

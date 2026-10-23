@@ -1,0 +1,8 @@
+		
+		ReadableOrderConfirmation orderConfirmation = new ReadableOrderConfirmation();
+		
+		ReadableCustomer readableCustomer = readableCustomerMapper.convert(customer, store, language);
+		orderConfirmation.setBilling(readableCustomer.getBilling());
+		orderConfirmation.setDelivery(readableCustomer.getDelivery());
+		
+		ReadableTotal readableTotal = new ReadableTotal();

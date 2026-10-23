@@ -1,0 +1,7 @@
+								if(opt!=null) {
+									selectableOptions.put(attribute.getProductOption().getId(), opt);
+								}
+
+								optValue.setDefaultValue(attribute.getAttributeDefault());
+								//optValue.setId(attribute.getProductOptionValue().getId());
+								optValue.setId(attribute.getId());

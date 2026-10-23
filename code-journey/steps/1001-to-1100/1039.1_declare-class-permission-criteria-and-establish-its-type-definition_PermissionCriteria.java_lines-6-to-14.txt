@@ -1,0 +1,9 @@
+import com.salesmanager.core.model.common.Criteria;
+
+public class PermissionCriteria extends Criteria {
+	
+	
+	private String permissionName;
+
+	
+	private Boolean available = null;

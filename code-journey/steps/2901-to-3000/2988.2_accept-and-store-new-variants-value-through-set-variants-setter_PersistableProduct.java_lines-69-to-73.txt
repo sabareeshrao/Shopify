@@ -1,5 +1,0 @@
-	public void setVariants(List<PersistableProductVariant> variants) {
-		this.variants = variants;
-	}
-
-}

@@ -1,0 +1,10 @@
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Tripura",
+		"zoneName": "Tripura",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Uttarakhand",
+		"zoneName": "Uttarakhand",

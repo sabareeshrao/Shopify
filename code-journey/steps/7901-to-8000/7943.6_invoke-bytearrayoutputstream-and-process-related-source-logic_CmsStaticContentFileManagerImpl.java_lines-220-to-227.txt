@@ -1,0 +1,8 @@
+
+			final ByteArrayOutputStream output = new ByteArrayOutputStream();
+			IOUtils.copy(input, output);
+
+			outputStaticContentData.setFile(output);
+			outputStaticContentData.setMimeType(URLConnection.getFileNameMap().getContentTypeFor(contentFileName));
+			outputStaticContentData.setFileName(contentFileName);
+			outputStaticContentData.setFileContentType(fileContentType);

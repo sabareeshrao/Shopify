@@ -1,0 +1,4 @@
+
+			for(PackageDetails packageDetail : packages){
+
+				xmldatabuffer.append("<Package>");

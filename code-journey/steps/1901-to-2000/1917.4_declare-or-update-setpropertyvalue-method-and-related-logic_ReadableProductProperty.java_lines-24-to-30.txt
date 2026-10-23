@@ -1,0 +1,7 @@
+	public void setPropertyValue(ReadableProductPropertyValue propertyValue) {
+		this.propertyValue = propertyValue;
+	}
+
+
+
+}

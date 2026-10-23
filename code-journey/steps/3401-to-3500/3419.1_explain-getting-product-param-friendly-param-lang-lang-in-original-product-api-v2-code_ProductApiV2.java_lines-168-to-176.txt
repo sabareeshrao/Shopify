@@ -1,0 +1,9 @@
+	
+	/**
+	 * API for getting a product
+	 *
+	 * @param friendlyUrl
+	 * @param lang        ?lang=fr|en
+	 * @param response
+	 * @return ReadableProduct
+	 * @throws Exception

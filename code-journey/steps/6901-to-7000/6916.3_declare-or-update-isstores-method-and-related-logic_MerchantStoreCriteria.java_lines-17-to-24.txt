@@ -1,0 +1,8 @@
+
+	public boolean isStores() {
+		return stores;
+	}
+
+	public void setStores(boolean stores) {
+		this.stores = stores;
+	}

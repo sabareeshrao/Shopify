@@ -1,0 +1,11 @@
+
+	/**
+	 * 
+	 * @param store
+	 * @param uniqueCode
+	 * @param language
+	 * @return
+	 */
+	ReadableProductDefinition getProductBySku(MerchantStore store, String uniqueCode, Language language);
+
+}

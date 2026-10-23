@@ -1,0 +1,7 @@
+			if (httpget != null) {
+				httpget.releaseConnection();
+			}
+		}
+
+
+	}

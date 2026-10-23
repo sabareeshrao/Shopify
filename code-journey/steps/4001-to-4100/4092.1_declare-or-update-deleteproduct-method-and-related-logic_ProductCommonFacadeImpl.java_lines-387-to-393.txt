@@ -1,0 +1,7 @@
+	@Override
+	public void deleteProduct(Long id, MerchantStore store) {
+
+		Validate.notNull(id, "Product id cannot be null");
+		Validate.notNull(store, "store cannot be null");
+
+		Product p = productService.getById(id);

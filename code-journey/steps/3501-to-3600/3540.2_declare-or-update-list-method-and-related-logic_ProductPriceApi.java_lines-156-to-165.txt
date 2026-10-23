@@ -1,0 +1,10 @@
+	public List<ReadableProductPrice> list(
+			@PathVariable String sku,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		
+		return productPriceFacade.list(sku, merchantStore, language);
+
+		
+	}

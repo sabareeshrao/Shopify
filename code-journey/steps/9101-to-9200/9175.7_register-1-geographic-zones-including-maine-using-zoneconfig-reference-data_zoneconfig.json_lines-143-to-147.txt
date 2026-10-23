@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "ME",
-		"zoneName": "Maine",
-		"countryCode": "US"
-	},

@@ -1,4 +1,0 @@
-
-
-	@OneToMany(mappedBy = "taxClass", targetEntity = Product.class)
-	private List<Product> products = new ArrayList<Product>();

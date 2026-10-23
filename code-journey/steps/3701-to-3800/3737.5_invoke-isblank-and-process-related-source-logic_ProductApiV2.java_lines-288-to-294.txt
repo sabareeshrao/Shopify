@@ -1,0 +1,7 @@
+		if (!StringUtils.isBlank(searchCriterias.getSku())) {
+			searchCriterias.setCode(searchCriterias.getSku());
+		}
+		
+		if (!StringUtils.isBlank(searchCriterias.getName())) {
+			searchCriterias.setProductName(searchCriterias.getName());
+		}

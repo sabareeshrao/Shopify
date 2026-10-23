@@ -1,0 +1,8 @@
+	
+	    	    zoneService.create(value);
+	    	    
+	    	    for(ZoneDescription description : zoneDescriptions) {
+	    	    	description.setZone(value);
+	    	    	zoneService.addDescription(value, description);
+	    	    }
+	        }

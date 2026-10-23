@@ -1,0 +1,10 @@
+	
+	/**
+	 * Manage product inventory
+	 * @param product
+	 * @throws Exception
+	 */
+	private ProductAvailability createInventory(MerchantStore store, int quantity, BigDecimal price) throws Exception {
+		
+		//add inventory
+	    ProductAvailability availability = new ProductAvailability();

@@ -1,0 +1,6 @@
+	 *            Merchant store
+	 * @return list of {@link OutputContentImage}
+	 * @throws ServiceException
+	 */
+	@Override
+	public List<OutputContentFile> getContentFiles(String merchantStoreCode, FileContentType fileContentType)

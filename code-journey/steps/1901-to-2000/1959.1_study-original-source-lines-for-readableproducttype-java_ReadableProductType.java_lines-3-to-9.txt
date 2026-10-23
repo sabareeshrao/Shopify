@@ -1,0 +1,7 @@
+public class ReadableProductType extends ProductTypeEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ProductTypeDescription description;

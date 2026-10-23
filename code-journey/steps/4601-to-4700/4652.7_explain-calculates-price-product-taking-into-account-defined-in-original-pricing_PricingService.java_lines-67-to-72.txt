@@ -1,0 +1,6 @@
+	 * @param attributes
+	 * @return
+	 * @throws ServiceException
+	 */
+	FinalPrice calculateProductPrice(Product product,
+			List<ProductAttribute> attributes) throws ServiceException;

@@ -1,0 +1,7 @@
+
+		try {
+			return productFacade.getProductListsByCriterias(merchantStore, language, criteria);
+
+		} catch (Exception e) {
+
+			LOGGER.error("Error while filtering products product", e);

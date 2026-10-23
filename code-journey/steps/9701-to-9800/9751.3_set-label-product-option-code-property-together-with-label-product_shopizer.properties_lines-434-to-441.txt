@@ -1,0 +1,8 @@
+#options values
+label.product.productoptionsvalues.title=Product option values
+label.product.productoptionsvalues.list=Product options values list
+label.product.productoptiosvalue.title=Product option value
+label.product.productoptionvalue.edit.title=Edit product option value
+label.product.productoptionvalue.create.title=Create product option value
+label.product.productoptionvalue=Option value image
+

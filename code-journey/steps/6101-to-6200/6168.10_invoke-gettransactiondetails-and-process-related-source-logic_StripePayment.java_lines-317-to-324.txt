@@ -1,0 +1,8 @@
+			transaction.getTransactionDetails().put("TRANSACTIONID", token);
+			transaction.getTransactionDetails().put("TRNAPPROVED", ch.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", ch.getId());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+			
+		} catch (Exception e) {
+			
+			throw buildException(e);

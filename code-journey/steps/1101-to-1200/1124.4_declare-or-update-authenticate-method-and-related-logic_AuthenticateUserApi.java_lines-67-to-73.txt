@@ -1,0 +1,7 @@
+    public ResponseEntity<?> authenticate(@RequestBody @Valid AuthenticationRequest authenticationRequest) throws AuthenticationException {
+
+    	//TODO SET STORE in flow
+        // Perform the security
+    	Authentication authentication = null;
+    	try {
+    		

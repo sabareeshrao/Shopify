@@ -1,0 +1,5 @@
+		productTypeFacade.delete(id, merchantStore, language);
+
+	}
+
+}

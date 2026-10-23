@@ -1,0 +1,8 @@
+			
+			
+			
+			instanceImage.setProductImage(image.getOriginalFilename());
+			instanceImage.setProductVariantGroup(group);
+			String imageName = image.getOriginalFilename();
+			InputStream inputStream = image.getInputStream();
+			InputContentFile cmsContentImage = new InputContentFile();

@@ -1,0 +1,8 @@
+
+	@Override
+	public void contextDestroyed(ServletContextEvent servletContextEvent) {
+		logger.info("===context destroy===");
+		VendorCacheManager cacheManager = VendorCacheManager.getInstance();
+		cacheManager.getManager().stop();
+	}
+}

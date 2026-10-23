@@ -1,0 +1,7 @@
+
+				ReadableProductVariant productVariant = new ReadableProductVariant();
+				Optional<ProductOptionDescription>  optionDescription = option.getDescriptions().stream().filter(o -> o.getLanguage().getId() == language.getId()).findFirst();
+				if(optionDescription.isPresent()) {
+					productVariant.setName(optionDescription.get().getName());
+					productVariant.setId(optionDescription.get().getId());
+					productVariant.setCode(optionDescription.get().getProductOption().getCode());

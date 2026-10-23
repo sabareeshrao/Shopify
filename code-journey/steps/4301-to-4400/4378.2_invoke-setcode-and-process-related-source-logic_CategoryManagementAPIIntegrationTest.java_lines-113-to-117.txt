@@ -1,0 +1,5 @@
+        newCategory.setCode("angular");
+        newCategory.setSortOrder(1);
+        newCategory.setVisible(true);
+        newCategory.setDepth(4);
+

@@ -1,8 +1,0 @@
-public class OrderTotalApi {
-
-  @Inject private ShoppingCartFacade shoppingCartFacade;
-
-  @Inject private LabelUtils messages;
-
-  @Inject private PricingService pricingService;
-

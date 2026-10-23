@@ -1,0 +1,9 @@
+import freemarker.template.TemplateException;
+
+/**
+ * AWS HTML email sender
+ * 
+ * @author carlsamson
+ *
+ */
+@Component("sesEmailSender")

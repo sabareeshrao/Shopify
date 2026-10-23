@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "OR",
+		"zoneName": "Oregon",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "PA",
+		"zoneName": "Pennsylvanie",
+		"countryCode": "US"
+	},

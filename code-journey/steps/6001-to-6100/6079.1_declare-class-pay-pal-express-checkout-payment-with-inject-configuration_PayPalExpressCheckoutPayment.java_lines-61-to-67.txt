@@ -1,7 +1,0 @@
-public class PayPalExpressCheckoutPayment implements PaymentModule {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PayPalExpressCheckoutPayment.class);
-	
-	
-	@Inject
-	private PricingService pricingService;

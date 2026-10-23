@@ -1,0 +1,8 @@
+
+  public void setMetaDetails(String metaDetails) {
+    this.metaDetails = metaDetails;
+  }
+
+  public String getTitle() {
+    return title;
+  }

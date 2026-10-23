@@ -1,0 +1,7 @@
+		if(target == null) {
+			target = new Payment();
+		}
+		
+		try {
+		
+			target.setAmount(pricingService.getAmount(source.getAmount()));

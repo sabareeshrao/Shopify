@@ -1,0 +1,7 @@
+
+	// @Override
+	// DELETE
+	public ShoppingCartData getShoppingCartData(final Customer customer, final MerchantStore store,
+			final String shoppingCartId, Language language) throws Exception {
+
+		ShoppingCart cart = null;

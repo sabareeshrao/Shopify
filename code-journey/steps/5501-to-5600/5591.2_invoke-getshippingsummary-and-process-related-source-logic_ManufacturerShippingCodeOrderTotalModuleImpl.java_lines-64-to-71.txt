@@ -1,0 +1,8 @@
+		
+		//requires shipping summary, otherwise return null
+		if(summary.getShippingSummary()==null) {
+			return null;
+		}
+
+		OrderTotalInputParameters inputParameters = new OrderTotalInputParameters();
+		inputParameters.setItemManufacturerCode(product.getManufacturer().getCode());

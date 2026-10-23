@@ -1,0 +1,7 @@
+	
+	private String postalCode;
+	private String countryCode;
+	
+	public String getPostalCode() {
+		return postalCode;
+	}

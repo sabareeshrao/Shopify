@@ -1,0 +1,11 @@
+
+
+			/** debug **/
+	
+	
+			LOGGER.debug("REQUEST SENT TO BEANSTREAM -> " + messageLogString.toString());
+
+			
+			URL postURL = new URL(server);
+			conn = (HttpURLConnection) postURL.openConnection();
+

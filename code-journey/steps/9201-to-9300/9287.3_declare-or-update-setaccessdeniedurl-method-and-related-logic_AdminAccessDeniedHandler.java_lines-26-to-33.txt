@@ -1,0 +1,8 @@
+
+	public void setAccessDeniedUrl(String accessDeniedUrl) {
+		this.accessDeniedUrl = accessDeniedUrl;
+	}
+
+	private String accessDeniedUrl = null;
+
+}

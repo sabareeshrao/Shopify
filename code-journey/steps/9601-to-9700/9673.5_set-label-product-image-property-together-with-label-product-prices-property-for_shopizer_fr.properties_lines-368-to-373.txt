@@ -1,0 +1,6 @@
+label.product.length =Profondeur 
+label.product.width =Largeur 
+label.product.image =Image 
+label.product.uploadfile = Importer un fichier
+label.product.details=Détails du produit
+label.product.prices=Prix du produit

@@ -1,0 +1,6 @@
+
+	List<MerchantConfiguration> listByStore(MerchantStore store)
+			throws ServiceException;
+
+	List<MerchantConfiguration> listByType(MerchantConfigurationType type,
+			MerchantStore store) throws ServiceException;

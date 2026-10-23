@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Ourense",
+		"zoneName": "Ourense",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Palencia",
+		"zoneName": "Palencia",
+		"countryCode": "ES"
+	},

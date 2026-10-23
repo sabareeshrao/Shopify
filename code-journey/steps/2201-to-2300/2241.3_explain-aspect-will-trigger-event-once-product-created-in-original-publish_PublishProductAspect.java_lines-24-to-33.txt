@@ -1,0 +1,10 @@
+ * 
+ * decorate
+ * 	product variant
+ * 	product attribute
+ *  product image
+ * 
+ * @author carlsamson
+ *
+ */
+

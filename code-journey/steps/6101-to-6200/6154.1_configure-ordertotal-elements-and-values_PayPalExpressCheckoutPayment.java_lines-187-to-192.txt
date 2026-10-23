@@ -1,0 +1,6 @@
+			
+			
+			List<OrderTotal> orderTotals = summary.getTotals();
+			BigDecimal tax = null;
+			for(OrderTotal total : orderTotals) {
+				

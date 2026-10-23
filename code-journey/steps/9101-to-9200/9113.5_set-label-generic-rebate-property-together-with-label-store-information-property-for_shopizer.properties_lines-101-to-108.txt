@@ -1,0 +1,8 @@
+#merchant store
+label.store.information.title=Information
+label.store.title=Merchant Store
+label.store.information=Store information
+label.storeadministration=Store administration
+label.storeadministrator=Store administrator
+label.storename=Store Name
+label.storecode=Unique Store Code

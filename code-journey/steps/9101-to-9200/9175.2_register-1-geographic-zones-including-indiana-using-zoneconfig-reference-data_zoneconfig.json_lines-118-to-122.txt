@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "IN",
-		"zoneName": "Indiana",
-		"countryCode": "US"
-	},

@@ -1,0 +1,10 @@
+
+	/**
+	 * Get logged in customer profile
+	 * 
+	 * @param merchantStore
+	 * @param language
+	 * @param request
+	 * @return
+	 */
+	@GetMapping({ "/private/customer/profile", "/auth/customer/profile" })

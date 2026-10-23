@@ -1,0 +1,9 @@
+
+    if(!this.bucketExists(storage, bucketName)) {
+      createBucket(storage, bucketName);
+    }
+    
+    //build filename
+    StringBuilder fileName = new StringBuilder()
+        .append(filePath(productImage.getProduct().getMerchantStore().getCode(), productImage.getProduct().getSku(), contentImage.getFileContentType()))
+        .append(productImage.getProductImage());

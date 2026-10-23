@@ -1,6 +1,0 @@
-
-/**
- * Global system configuration information
- * @author casams1
- *
- */

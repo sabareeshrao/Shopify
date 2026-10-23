@@ -1,0 +1,6 @@
+				merchantLogService.save(new MerchantLog(store,"shipping","Product "
+						+ p.getSku()
+						+ " has a demension larger than the box size specified. Will use per item calculation."));
+				throw new ServiceException("Product configuration exceeds box configuraton");
+
+			}

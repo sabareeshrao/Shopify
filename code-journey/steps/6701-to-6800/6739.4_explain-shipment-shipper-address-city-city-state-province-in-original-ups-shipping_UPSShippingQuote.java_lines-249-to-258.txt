@@ -1,0 +1,10 @@
+			 * 
+			 * 
+			 * </Shipment>
+			 * 
+			 * <CustomerClassification> <Code>03</Code>
+			 * </CustomerClassification> </RatingServiceSelectionRequest>
+			 * **/
+
+			/**Map countriesMap = (Map) RefCache.getAllcountriesmap(LanguageUtil
+					.getLanguageNumberCode(locale.getLanguage()));

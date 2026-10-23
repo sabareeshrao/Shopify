@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "VA",
+		"zoneName": "Virginie",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "WA",
+		"zoneName": "Washington",
+		"countryCode": "US"
+	},

@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "RHE",
-		"zoneName": "Rheinland-Pfalz",
-		"countryCode": "DE"
-	},

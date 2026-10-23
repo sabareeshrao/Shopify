@@ -1,3 +1,0 @@
-public class StorePickupShippingQuote implements ShippingQuoteModule, ShippingQuotePrePostProcessModule {
-	
-	

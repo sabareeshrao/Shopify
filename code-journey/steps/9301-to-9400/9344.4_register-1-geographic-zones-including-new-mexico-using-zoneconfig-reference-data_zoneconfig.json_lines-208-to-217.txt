@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NM",
+		"zoneName": "New Mexico",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "NY",
+		"zoneName": "New York",
+		"countryCode": "US"
+	},

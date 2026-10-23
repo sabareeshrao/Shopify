@@ -1,0 +1,6 @@
+
+		// RENTAL
+		//qs.append("left join fetch p.owner owner ");
+
+		qs.append("where p.id=:pid and pa.region in (:lid) ");
+		qs.append("and pd.language.id=:lang and papd.language.id=:lang ");

@@ -1,0 +1,9 @@
+
+
+
+        com.salesmanager.core.model.shoppingcart.ShoppingCartItem item =
+            new com.salesmanager.core.model.shoppingcart.ShoppingCartItem( cart, product );
+        item.setQuantity( shoppingCartItem.getQuantity() );
+        item.setItemPrice( shoppingCartItem.getProductPrice() );
+        item.setShoppingCart( cart );
+        item.setSku(shoppingCartItem.getSku());

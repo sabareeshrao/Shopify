@@ -1,0 +1,8 @@
+
+	@Override
+	// KEEP
+	public ReadableShoppingCart modifyCart(String cartCode, PersistableShoppingCartItem item, MerchantStore store,
+			Language language) throws Exception {
+
+		Validate.notNull(cartCode, "String cart code cannot be null");
+		Validate.notNull(item, "PersistableShoppingCartItem cannot be null");

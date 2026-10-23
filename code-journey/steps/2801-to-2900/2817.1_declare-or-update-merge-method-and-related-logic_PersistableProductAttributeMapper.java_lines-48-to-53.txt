@@ -1,0 +1,6 @@
+	@Override
+	public ProductAttribute merge(PersistableProductAttribute source, ProductAttribute destination,
+								  MerchantStore store, Language language) {
+
+		
+		ProductOption productOption = null;

@@ -1,0 +1,6 @@
+	
+	//private KnowledgeBase kbase;//injected from xml file
+	
+	//@Inject
+	//KieContainer kieManufacturerBasedPricingContainer;
+	

@@ -1,0 +1,6 @@
+
+		Category dbCategory = getById(category.getId(), category.getMerchantStore().getId());
+
+		if (dbCategory != null && dbCategory.getId().longValue() == category.getId().longValue()) {
+
+			categories.add(dbCategory);

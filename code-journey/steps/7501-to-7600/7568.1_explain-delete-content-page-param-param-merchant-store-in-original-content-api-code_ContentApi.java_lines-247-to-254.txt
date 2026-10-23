@@ -1,8 +1,0 @@
-	
-	
-	/**
-	 * Delete content page
-	 * @param id
-	 * @param merchantStore
-	 * @param language
-	 */

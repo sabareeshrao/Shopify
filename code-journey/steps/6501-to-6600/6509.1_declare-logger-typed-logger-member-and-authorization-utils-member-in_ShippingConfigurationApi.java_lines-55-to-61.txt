@@ -1,7 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingConfigurationApi.class);
-
-	@Autowired
-	private AuthorizationUtils authorizationUtils;
-
-	@Autowired
-	private ShippingFacade shippingFacade;

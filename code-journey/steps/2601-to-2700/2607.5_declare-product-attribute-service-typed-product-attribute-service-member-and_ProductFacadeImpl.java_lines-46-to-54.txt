@@ -1,9 +1,0 @@
-	
-	@Inject
-	private ProductAttributeService productAttributeService;
-
-	@Inject
-	private ProductService productService;
-
-	@Inject
-	private PricingService pricingService;

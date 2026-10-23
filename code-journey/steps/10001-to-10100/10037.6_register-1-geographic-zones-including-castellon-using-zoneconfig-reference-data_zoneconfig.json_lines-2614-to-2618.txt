@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Castellon",
-			"zoneName": "Castellon",
-			"countryCode": "ES"
-		},

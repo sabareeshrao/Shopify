@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "MP",
-			"zoneName": "Northern Mariana Islands",
-			"countryCode": "US"
-		},

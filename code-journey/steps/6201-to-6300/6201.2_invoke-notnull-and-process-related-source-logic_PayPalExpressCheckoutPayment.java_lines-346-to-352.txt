@@ -1,0 +1,7 @@
+
+		try {
+			
+			
+			
+			Validate.notNull(transaction,"Transaction cannot be null");
+			Validate.notNull(transaction.getTransactionDetails().get("TRANSACTIONID"), "Transaction details must contain a TRANSACTIONID");

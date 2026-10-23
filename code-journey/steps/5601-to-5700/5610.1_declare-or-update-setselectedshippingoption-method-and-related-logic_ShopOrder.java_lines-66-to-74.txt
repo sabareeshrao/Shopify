@@ -1,0 +1,9 @@
+	public void setSelectedShippingOption(ShippingOption selectedShippingOption) {
+		this.selectedShippingOption = selectedShippingOption;
+	}
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}

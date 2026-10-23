@@ -1,3 +1,0 @@
-				if(totalName.contains(".")) {
-					totalName = orderTotal.getTitle();
-				}

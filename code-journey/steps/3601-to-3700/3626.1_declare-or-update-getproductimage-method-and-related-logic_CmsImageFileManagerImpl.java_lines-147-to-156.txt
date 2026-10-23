@@ -1,0 +1,10 @@
+
+  @Override
+  public OutputContentFile getProductImage(ProductImage productImage) throws ServiceException {
+
+    return getProductImage(productImage.getProduct().getMerchantStore().getCode(),
+        productImage.getProduct().getSku(), productImage.getProductImage());
+
+  }
+
+

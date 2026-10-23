@@ -1,0 +1,7 @@
+
+						property.setProperty(readableOption);
+
+						Set<ProductOptionValueDescription> povdescriptions = attribute.getProductOptionValue()
+								.getDescriptions();
+						readableOptionValue.setId(attribute.getProductOptionValue().getId());
+						readableOptionValue.setCode(optionValue.getCode());

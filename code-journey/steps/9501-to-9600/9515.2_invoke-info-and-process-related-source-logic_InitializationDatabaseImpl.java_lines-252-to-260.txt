@@ -1,0 +1,9 @@
+            	
+            	if(c==null) {
+            		LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            	}
+            	
+            		//check if it exist
+            		
+	            	Currency currency = new Currency();
+	            	currency.setName(c.getCurrencyCode());

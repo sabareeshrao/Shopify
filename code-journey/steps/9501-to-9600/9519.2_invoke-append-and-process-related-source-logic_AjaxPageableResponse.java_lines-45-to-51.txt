@@ -1,0 +1,7 @@
+		
+		returnString.append(getJsonInfo()).append(",");
+		returnString.append(getPageInfo());
+
+		if(this.getData().size()>0) {
+			StringBuilder dataEntries = null;
+			int count = 0;

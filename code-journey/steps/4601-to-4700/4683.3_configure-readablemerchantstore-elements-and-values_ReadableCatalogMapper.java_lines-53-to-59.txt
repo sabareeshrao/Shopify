@@ -1,0 +1,7 @@
+		destination.setDefaultCatalog(source.isDefaultCatalog());
+		destination.setVisible(source.isVisible());
+
+		Optional<ReadableMerchantStore> readableStore = Optional.ofNullable(source.getMerchantStore())
+				.map(MerchantStore::getCode)
+				.map(code -> storeFacade.getByCode(code, language));
+		readableStore.ifPresent(destination::setStore);

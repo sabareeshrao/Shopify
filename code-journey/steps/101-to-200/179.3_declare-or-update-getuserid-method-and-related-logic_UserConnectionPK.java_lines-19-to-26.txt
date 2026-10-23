@@ -1,0 +1,8 @@
+
+	private String userId;
+	private String providerId;
+	private String providerUserId;
+
+	public String getUserId() {
+		return userId;
+	}

@@ -1,0 +1,10 @@
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation(httpMethod = "POST", value = "Create content box", notes = "", response = Entity.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public Entity createBox(
+			@RequestBody @Valid PersistableContentBox box, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+

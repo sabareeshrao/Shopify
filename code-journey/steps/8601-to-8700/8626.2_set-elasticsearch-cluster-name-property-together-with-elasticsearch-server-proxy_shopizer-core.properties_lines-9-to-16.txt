@@ -1,8 +1,0 @@
-
-#Elastic Search configurations
-elasticsearch.cluster.name=shopizer
-elasticsearch.mode=remote
-#elasticsearch.server.host=localhost
-#elasticsearch.server.protocole=http
-#elasticsearch.server.port=9200
-elasticsearch.server.proxy.user=

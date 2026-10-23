@@ -1,0 +1,7 @@
+	
+			shippingOption.setOptionPriceText(productPriceUtils.getStoreFormatedAmountWithCurrency(store, productPriceUtils.getAmount(price)));
+	
+			List<ShippingOption> options = quote.getShippingOptions();
+			
+			if(options == null) {
+				options = new ArrayList<ShippingOption>();

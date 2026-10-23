@@ -1,0 +1,7 @@
+
+		/**
+		if (criteria.getOwnerId() != null) {
+			countBuilderSelect.append(" INNER JOIN p.owner owner");
+			countBuilderWhere.append(" and owner.id = :ownerid");666
+		}
+		**/

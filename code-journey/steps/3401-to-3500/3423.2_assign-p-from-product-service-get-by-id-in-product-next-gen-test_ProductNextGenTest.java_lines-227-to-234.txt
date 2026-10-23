@@ -1,8 +1,0 @@
-	    //Converting the Object to JSONString
-	    //String jsonString = mapper.writeValueAsString(summerShoes);
-	    //System.out.println(jsonString);
-	    
-	    Product p = productService.getById(summerShoes.getId());
-	    assertNotNull(p);
-	    
-	    //List<ProductAvailability> avs = p.getAvailabilities().stream().filter(a -> !a.getVariants().isEmpty()).collect(Collectors.toList());

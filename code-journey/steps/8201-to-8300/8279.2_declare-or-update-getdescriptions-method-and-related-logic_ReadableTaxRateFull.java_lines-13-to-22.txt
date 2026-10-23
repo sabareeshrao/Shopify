@@ -1,0 +1,10 @@
+	public List<ReadableTaxRateDescription> getDescriptions() {
+		return descriptions;
+	}
+	public void setDescriptions(List<ReadableTaxRateDescription> descriptions) {
+		this.descriptions = descriptions;
+	}
+	
+
+
+}

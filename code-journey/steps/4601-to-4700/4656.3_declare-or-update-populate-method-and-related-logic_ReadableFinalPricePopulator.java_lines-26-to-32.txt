@@ -1,0 +1,7 @@
+
+	@Override
+	public ReadableProductPrice populate(FinalPrice source,
+			ReadableProductPrice target, MerchantStore store, Language language)
+			throws ConversionException {
+		Validate.notNull(pricingService,"pricingService must be set");
+		

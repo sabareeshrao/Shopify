@@ -1,0 +1,6 @@
+		
+		
+		ProductCriteria productCriteria = new ProductCriteria();
+		productCriteria.setMaxCount(maxCount);
+		productCriteria.setStartIndex(startCount);
+		productCriteria.setProductIds(ids);

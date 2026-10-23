@@ -1,0 +1,9 @@
+						
+						if(CollectionUtils.isNotEmpty(mod.getSupportedCountry())) {
+							m.setRegions(mod.getSupportedCountry().toString());
+							m.setRegionsSet(new HashSet<String>(mod.getSupportedCountry()));
+						}
+						
+						if(!StringUtils.isBlank(mod.getLogo())) {
+							m.setBinaryImage(mod.getLogo());//base 64
+						}

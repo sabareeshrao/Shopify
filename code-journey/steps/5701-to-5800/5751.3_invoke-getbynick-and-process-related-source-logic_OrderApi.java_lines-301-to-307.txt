@@ -1,0 +1,7 @@
+
+		Customer customer = customerService.getByNick(userName);
+
+		if (customer == null) {
+			response.sendError(401, "Error while performing checkout customer not authorized");
+			return null;
+		}

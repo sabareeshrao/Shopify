@@ -1,0 +1,9 @@
+			 
+			<ref bean="shippingDistancePreProcessor"/>
+
+			<!-- 
+				Used drules decision tables to decide at runtime which module the system will use
+				for instance you can specify rules such as if dimension (volume) of each item lte
+				a given volume then use this method, otherwise use another one. Decision tables
+				need to be configured in resources/rules/shipping-decision-rules.xls
+			

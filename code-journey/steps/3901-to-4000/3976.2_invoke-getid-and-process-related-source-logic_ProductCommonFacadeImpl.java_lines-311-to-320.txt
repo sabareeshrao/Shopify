@@ -1,0 +1,10 @@
+
+		if (review.getId() == null) {
+			productReviewService.create(rev);
+		} else {
+			productReviewService.update(rev);
+		}
+
+		review.setId(rev.getId());
+
+	}

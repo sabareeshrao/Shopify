@@ -1,0 +1,8 @@
+      
+      if(!this.bucketExists(storage, bucketName)) {
+        return null;
+      }
+
+      Blob blob = storage.get(BlobId.of(bucketName, filePath(merchantStoreCode,productCode, size.name(), imageName)));
+
+      ReadChannel reader = blob.reader();

@@ -1,9 +1,0 @@
-
-		
-
-		order.setTotal(orderTotal);
-		order.setStatus(OrderStatus.REFUNDED);
-		
-		
-		
-		OrderStatusHistory orderHistory = new OrderStatusHistory();

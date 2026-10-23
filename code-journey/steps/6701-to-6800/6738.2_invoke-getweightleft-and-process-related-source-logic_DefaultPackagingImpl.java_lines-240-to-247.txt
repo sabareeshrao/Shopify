@@ -1,0 +1,8 @@
+
+				if ((volumeLeft * .75) >= productVolume
+						&& pbox.getWeightLeft() >= productWeight) {// fit the item
+																	// in this
+																	// box
+					// fit in the current box
+					volumeLeft = volumeLeft - productVolume;
+					pbox.setVolumeLeft(volumeLeft);

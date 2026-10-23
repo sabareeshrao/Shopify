@@ -1,0 +1,10 @@
+
+  @Override
+  public OutputContentFile getProductImage(ProductImage productImage) throws ServiceException {
+
+    // the web server takes care of the images
+    return null;
+
+  }
+
+

@@ -1,0 +1,9 @@
+
+
+#USPS
+module.shipping.usps.identifier=USPS account identifier
+module.shipping.usps.packages=Package type
+module.shipping.usps.shippingmethods=Select up to 3 shipping methods
+module.shipping.usps.message.identifier=USPS account identifier required
+module.shipping.usps.message.packages=You must select one package type
+

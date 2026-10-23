@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Cantabria",
-			"zoneName": "Cantabria",
-			"countryCode": "ES"
-		},

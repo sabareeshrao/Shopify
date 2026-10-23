@@ -1,0 +1,6 @@
+			return convertedDestination;
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("Error while creating ReadableCatalogEntry", e);
+		}
+	}
+}

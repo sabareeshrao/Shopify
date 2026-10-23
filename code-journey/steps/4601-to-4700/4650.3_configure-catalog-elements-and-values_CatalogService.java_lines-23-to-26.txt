@@ -1,0 +1,4 @@
+
+	Optional<Catalog> getById(Long catalogId, MerchantStore store);
+
+	Optional<Catalog> getByCode(String code, MerchantStore store);

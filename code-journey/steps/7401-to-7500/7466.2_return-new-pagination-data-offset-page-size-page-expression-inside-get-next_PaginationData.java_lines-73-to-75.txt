@@ -1,3 +1,0 @@
-    {
-        return new PaginationData( offset + pageSize, pageSize );
-    }

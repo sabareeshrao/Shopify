@@ -1,0 +1,11 @@
+
+	/**
+	 *
+	 * @param userShoppingModel
+	 * @param sessionCart
+	 * @param store
+	 * @return {@link ShoppingCart} merged Shopping Cart
+	 * @throws Exception
+	 */
+	ShoppingCart mergeShoppingCarts(final ShoppingCart userShoppingCart, final ShoppingCart sessionCart,
+			final MerchantStore store) throws Exception;

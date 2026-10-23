@@ -1,0 +1,7 @@
+
+		return orderFacade.getReadableOrderHistory(id, merchantStore, language);
+
+	}
+
+	@RequestMapping(value = { "private/orders/{id}/history" }, method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)

@@ -1,0 +1,8 @@
+	public ReadableCategory get(
+			@PathVariable(name = "id") Long categoryId, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		ReadableCategory category = categoryFacade.getById(merchantStore, categoryId, language);
+		return category;
+	}
+

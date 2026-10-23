@@ -1,0 +1,7 @@
+
+		ResponseEntity<ReadableProduct> readableProduct = testRestTemplate.exchange(apiUrl, HttpMethod.GET, httpEntity,
+				ReadableProduct.class);
+		assertThat(readableProduct.getStatusCode(), is(OK));
+
+		return readableProduct.getBody();
+	}

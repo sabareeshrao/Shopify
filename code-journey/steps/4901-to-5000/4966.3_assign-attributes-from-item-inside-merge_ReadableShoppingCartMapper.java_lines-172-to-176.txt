@@ -1,5 +1,0 @@
-
-					shoppingCartItem.setDisplaySubTotal(pricingService.getDisplayAmount(subTotal, store));
-
-					Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> attributes = item
-							.getAttributes();

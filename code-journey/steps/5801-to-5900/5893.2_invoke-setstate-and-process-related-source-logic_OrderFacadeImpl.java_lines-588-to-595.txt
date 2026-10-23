@@ -1,0 +1,8 @@
+		billing.setState(store.getStorestateprovince());
+		/** empty postal code for initial quote **/
+		// billing.setPostalCode(store.getStorepostalcode());
+		customer.setBilling(billing);
+
+		Delivery delivery = new Delivery();
+		delivery.setCountry(store.getCountry());
+		delivery.setZone(store.getZone());

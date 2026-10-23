@@ -1,0 +1,10 @@
+		 * 
+		 * user.setPasswordToken
+		 * 
+		 * Needs to use UserFacade to save to the database
+		 * 
+		 * All of this done in the facade
+		 */
+
+	}
+

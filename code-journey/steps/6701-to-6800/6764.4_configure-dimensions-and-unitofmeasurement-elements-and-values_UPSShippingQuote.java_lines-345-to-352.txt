@@ -1,0 +1,8 @@
+
+				// dimension
+				xmldatabuffer.append("<Dimensions>");
+				xmldatabuffer.append("<UnitOfMeasurement>");
+				xmldatabuffer.append("<Code>");
+				xmldatabuffer.append(measureCode);
+				xmldatabuffer.append("</Code>");
+				xmldatabuffer.append("</UnitOfMeasurement>");

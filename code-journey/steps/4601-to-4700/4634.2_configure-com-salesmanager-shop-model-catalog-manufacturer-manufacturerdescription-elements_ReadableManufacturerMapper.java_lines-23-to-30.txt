@@ -1,0 +1,8 @@
+
+    Optional<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> description =
+        getDescription(source, language, target);
+    description.ifPresent(target::setDescription);
+
+    target.setCode(source.getCode());
+    target.setId(source.getId());
+    target.setOrder(source.getOrder());

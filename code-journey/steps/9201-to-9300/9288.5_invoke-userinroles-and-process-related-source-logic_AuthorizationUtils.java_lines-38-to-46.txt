@@ -1,0 +1,9 @@
+		if (!userFacade.userInRoles(authenticatedUser, Arrays.asList(Constants.GROUP_SUPERADMIN))) {
+			if (!userFacade.authorizedStore(authenticatedUser, store.getCode())) {
+				throw new UnauthorizedException("Operation unauthorized for user [" + authenticatedUser
+						+ "] and store [" + store.getCode() + "]");
+			}
+		}
+	}
+
+}

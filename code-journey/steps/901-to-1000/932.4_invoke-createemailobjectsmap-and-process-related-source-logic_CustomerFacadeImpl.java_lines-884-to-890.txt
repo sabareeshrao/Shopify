@@ -1,0 +1,7 @@
+
+
+      Map<String, String> templateTokens =
+          emailUtils.createEmailObjectsMap(imageUtils.getContextPath(), store, messages, locale);
+      templateTokens.put(EmailConstants.LABEL_HI, messages.getMessage("label.generic.hi", locale));
+      templateTokens.put(EmailConstants.EMAIL_CUSTOMER_FIRSTNAME,
+          customer.getBilling().getFirstName());

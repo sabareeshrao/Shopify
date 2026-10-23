@@ -1,0 +1,5 @@
+				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+				te.setMessageCode("message.payment.error");
+				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+				throw te;
+			}

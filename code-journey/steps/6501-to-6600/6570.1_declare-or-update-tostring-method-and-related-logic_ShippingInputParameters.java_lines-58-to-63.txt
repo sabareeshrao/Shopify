@@ -1,0 +1,6 @@
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(" weight : ").append(this.getWeight());
+		sb.append(" volume : ").append(this.getVolume())
+		.append(" size : ").append(this.getSize())
+		.append(" distance : ").append(this.getDistance())

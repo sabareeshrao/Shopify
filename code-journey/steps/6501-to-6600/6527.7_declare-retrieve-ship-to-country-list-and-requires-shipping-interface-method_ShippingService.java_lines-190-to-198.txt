@@ -1,0 +1,9 @@
+	
+	/**
+	 * Determines if Shipping should be proposed to the customer
+	 * @param items
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */
+	boolean requiresShipping(List<ShoppingCartItem> items, MerchantStore store) throws ServiceException;

@@ -1,3 +1,0 @@
-			transaction.getTransactionDetails().put("TOKEN", token);
-			transaction.getTransactionDetails().put("CORRELATION", correlationID);
-			

@@ -1,0 +1,7 @@
+	private ReadableImage convertImage(Product product, ProductImage image, MerchantStore store) {
+		ReadableImage prdImage = new ReadableImage();
+		prdImage.setImageName(image.getProductImage());
+		prdImage.setDefaultImage(image.isDefaultImage());
+
+		// TODO product variant image
+		StringBuilder imgPath = new StringBuilder();

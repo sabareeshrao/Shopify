@@ -1,0 +1,10 @@
+  public void updateCatalog(
+	  @PathVariable Long id,
+      @RequestBody @Valid PersistableCatalog catalog,
+      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+	  catalog.setId(id);
+	  catalogFacade.updateCatalog(id, catalog, merchantStore, language);
+
+  }
+

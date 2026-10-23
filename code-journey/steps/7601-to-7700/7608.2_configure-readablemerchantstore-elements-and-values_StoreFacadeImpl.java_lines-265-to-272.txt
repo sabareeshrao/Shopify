@@ -1,0 +1,8 @@
+			storeList.setData(
+					(List<ReadableMerchantStore>) stores.getList().stream()
+					.map(s -> convertMerchantStoreToReadableMerchantStore(language, s))
+			        .collect(Collectors.toList())
+					);
+			storeList.setTotalPages(stores.getTotalPages());
+			storeList.setRecordsTotal(stores.getTotalCount());
+			storeList.setNumber(stores.getList().size());

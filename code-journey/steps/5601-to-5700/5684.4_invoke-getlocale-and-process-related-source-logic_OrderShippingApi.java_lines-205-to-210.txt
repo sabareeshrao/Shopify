@@ -1,0 +1,6 @@
+      throws Exception {
+
+    try {
+      Locale locale = request.getLocale();
+
+      ShoppingCart cart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);

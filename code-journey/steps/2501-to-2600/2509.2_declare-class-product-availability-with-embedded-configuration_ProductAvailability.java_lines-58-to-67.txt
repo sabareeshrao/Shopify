@@ -1,0 +1,10 @@
+ * 
+ * @author carlsamson
+ *
+ */
+public class ProductAvailability extends SalesManagerEntity<Long, ProductAvailability> implements Auditable {
+
+	/**
+	* 
+	*/
+	private static final long serialVersionUID = 1L;

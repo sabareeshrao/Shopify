@@ -1,0 +1,7 @@
+
+@Service("manufacturerFacade")
+public class ManufacturerFacadeImpl implements ManufacturerFacade {
+
+  @Inject
+  private Mapper<Manufacturer, ReadableManufacturer> readableManufacturerConverter;
+

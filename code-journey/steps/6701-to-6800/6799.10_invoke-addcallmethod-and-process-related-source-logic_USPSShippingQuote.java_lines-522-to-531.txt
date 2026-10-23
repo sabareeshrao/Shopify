@@ -1,0 +1,10 @@
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/Postage",
+						"setOptionPriceText", 0);
+				//digester.addCallMethod(
+				//		"IntlRateResponse/Package/Service/SvcCommitments",
+				//		"setEstimatedNumberOfDays", 0);
+				digester.addSetNext("IntlRateResponse/Package/Service",
+						"addOption");
+
+			}

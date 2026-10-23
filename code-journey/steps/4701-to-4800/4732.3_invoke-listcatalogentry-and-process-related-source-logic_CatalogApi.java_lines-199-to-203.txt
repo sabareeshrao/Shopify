@@ -1,0 +1,5 @@
+	  return catalogFacade.listCatalogEntry(catalogEntryFilter(request), id, merchantStore, language, page, count);
+
+
+  }
+

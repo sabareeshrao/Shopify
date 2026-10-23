@@ -1,0 +1,9 @@
+		
+		IntegrationModule integrationModule = getPaymentMethodByCode(store,module);
+		
+		//get the associated transaction
+		Transaction refundable = transactionService.getRefundableTransaction(order);
+		
+		if(refundable==null) {
+			throw new ServiceException("No refundable transaction for this order");
+		}

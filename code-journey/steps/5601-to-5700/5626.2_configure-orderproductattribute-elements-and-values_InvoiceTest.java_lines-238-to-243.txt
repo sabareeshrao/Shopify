@@ -1,0 +1,6 @@
+		orderAttribute.setProductAttributePrice(colorAttribute.getProductAttributePrice());
+		
+		Set<OrderProductAttribute> orderAttributes = new HashSet<OrderProductAttribute>();
+		orderAttributes.add(orderAttribute);
+		
+		oproduct.setOrderAttributes(orderAttributes);

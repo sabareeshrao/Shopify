@@ -1,0 +1,8 @@
+              
+              if(StringUtils.isNotBlank( source.getCity())){
+                  delivery.setCity( source.getCity() );
+              }
+              
+              if(StringUtils.isNotBlank( source.getCompany())){
+                  delivery.setCompany( source.getCompany() );
+              }

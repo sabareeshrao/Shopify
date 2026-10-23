@@ -1,0 +1,6 @@
+        
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        JWTUser user = (JWTUser) jwtAdminDetailsService.loadUserByUsername(username);
+
+        if (jwtTokenUtil.canTokenBeRefreshedWithGrace(token, user.getLastPasswordResetDate())) {
+            String refreshedToken = jwtTokenUtil.refreshToken(token);

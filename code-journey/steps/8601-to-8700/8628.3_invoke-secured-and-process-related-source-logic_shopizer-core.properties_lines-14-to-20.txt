@@ -1,0 +1,7 @@
+elasticsearch.server.proxy.user=
+elasticsearch.server.proxy.password=
+#enable if ES is secured (by default it is not)
+elasticsearch.security.enabled=false
+elasticsearch.security.user=elastic
+elasticsearch.security.password=changeme
+

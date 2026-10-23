@@ -1,2 +1,0 @@
-	com.salesmanager.shop.model.order.v0.ReadableOrderList getCapturableOrderList(MerchantStore store, Date startDate, Date endDate,
-			Language language) throws Exception;

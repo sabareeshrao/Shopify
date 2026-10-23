@@ -1,0 +1,7 @@
+
+	
+				detail.setShippingHeight(h
+						.doubleValue());
+				detail.setShippingLength(l
+						.doubleValue());
+				detail.setShippingWeight(w.doubleValue());

@@ -1,3 +1,0 @@
-	private static CmsStaticContentFileManagerImpl fileManager = null;
-	private static final String ROOT_NAME = "static";
-

@@ -1,0 +1,6 @@
+      if(StringUtils.isBlank(customer.getDelivery().getAddress())) {
+    	  customer.getDelivery().setAddress(customer.getBilling().getAddress());
+      }
+      if(StringUtils.isBlank(customer.getDelivery().getCity())) {
+    	  customer.getDelivery().setAddress(customer.getBilling().getCity());
+      }

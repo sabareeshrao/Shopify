@@ -1,0 +1,7 @@
+			Double tmpVolume = pack.getShippingHeight() * pack.getShippingLength() * pack.getShippingWidth();
+			if(volume == null || tmpVolume > volume) { //take the largest volume
+				volume = tmpVolume;
+			} 
+			//largest size
+			List<Double> sizeList = new ArrayList<Double>();
+			sizeList.add(pack.getShippingHeight());

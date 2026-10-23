@@ -1,0 +1,8 @@
+		
+		if(storeModel == null) {
+			throw new ServiceException("Store with code [" + code + "] is not found");
+		}
+		
+		if(storeModel.isRetailer() != null && storeModel.isRetailer() && storeModel.getParent() == null) {
+			return storeModel;
+		}

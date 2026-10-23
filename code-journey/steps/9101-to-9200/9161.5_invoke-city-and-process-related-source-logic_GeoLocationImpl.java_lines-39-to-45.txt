@@ -1,0 +1,7 @@
+
+			try {
+			
+			CityResponse response = reader.city(InetAddress.getByName(ipAddress));
+
+			address.setCountry(response.getCountry().getIsoCode());
+			address.setPostalCode(response.getPostal().getCode());

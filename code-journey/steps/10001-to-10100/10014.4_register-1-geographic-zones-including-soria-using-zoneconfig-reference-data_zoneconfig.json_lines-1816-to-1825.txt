@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Soria",
+		"zoneName": "Soria",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Tarragona",
+		"zoneName": "Tarragona",
+		"countryCode": "ES"
+	},

@@ -1,0 +1,6 @@
+				if(md==null) {
+					continue;
+				}
+				PaymentMethod paymentMethod = new PaymentMethod();
+				
+				paymentMethod.setDefaultSelected(config.isDefaultSelected());

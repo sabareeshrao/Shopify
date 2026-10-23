@@ -1,5 +1,0 @@
-		
-		//go and get products again
-		products = productService.listByStore(store);
-
-		updatableProduct = products.get(0);

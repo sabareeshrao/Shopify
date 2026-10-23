@@ -1,0 +1,10 @@
+
+	/**
+	 * Get a {@link ShoppingCart} for a given id. Will update the shopping cart
+	 * prices and items based on the actual inventory. This method will remove the
+	 * shopping cart if no items are attached.
+	 */
+	/*
+	 * @Override
+	 * 
+	 * @Transactional public ShoppingCart getById(final Long id, MerchantStore

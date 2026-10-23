@@ -1,0 +1,6 @@
+module.shipping.canadapost.services=Services de postage à calculer
+module.shipping.canadapost.packages=Type d'emballage
+module.shipping.canadapost.message.identifier=Identifiant Postes Canada requis
+module.shipping.canadapost.message.packages=Au moins un type d'emballage
+module.shipping.canadapost.message.apikey=Clé API requise
+

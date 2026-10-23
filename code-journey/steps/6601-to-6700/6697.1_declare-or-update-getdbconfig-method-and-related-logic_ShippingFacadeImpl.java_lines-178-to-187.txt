@@ -1,0 +1,10 @@
+
+	private ShippingConfiguration getDbConfig(MerchantStore store) {
+
+		try {
+			//get original configuration
+			ShippingConfiguration config = shippingService.getShippingConfiguration(store);
+			if(config==null) {
+				config = new ShippingConfiguration();
+				config.setShippingType(ShippingType.INTERNATIONAL);
+			}

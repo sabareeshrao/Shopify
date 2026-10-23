@@ -1,0 +1,8 @@
+
+				BigDecimal op = finalPrice.getOriginalPrice();
+				op = op.add(attributePrice);
+				finalPrice.setOriginalPrice(op);
+
+				BigDecimal dp = finalPrice.getDiscountedPrice();
+				if (dp != null) {
+					dp = dp.add(attributePrice);

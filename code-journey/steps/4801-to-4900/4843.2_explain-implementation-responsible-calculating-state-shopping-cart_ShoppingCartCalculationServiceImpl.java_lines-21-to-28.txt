@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
+
+/**
+ * <p>
+ * Implementation class responsible for calculating state of shopping cart. This
+ * class will take care of calculating price of each line items of shopping cart
+ * as well any discount including sub-total and total amount.
+ * </p>

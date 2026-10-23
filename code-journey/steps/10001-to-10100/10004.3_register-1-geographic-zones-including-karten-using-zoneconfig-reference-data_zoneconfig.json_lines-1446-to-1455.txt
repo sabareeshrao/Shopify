@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "KN",
+		"zoneName": "Karten",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "ST",
+		"zoneName": "Steiermark",
+		"countryCode": "AT"
+	},

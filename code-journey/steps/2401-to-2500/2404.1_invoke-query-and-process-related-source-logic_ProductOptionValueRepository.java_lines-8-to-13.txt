@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValue;
+
+public interface ProductOptionValueRepository extends JpaRepository<ProductOptionValue, Long> {
+
+	@Query("select p from ProductOptionValue p join fetch p.merchantStore pm left join fetch p.descriptions pd where p.id = ?1")
+	ProductOptionValue findOne(Long id);

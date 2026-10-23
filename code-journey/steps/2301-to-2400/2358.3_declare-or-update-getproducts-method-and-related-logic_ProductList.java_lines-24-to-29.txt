@@ -1,0 +1,6 @@
+	public List<ReadableProduct> getProducts() {
+		return products;
+	}
+	public int getProductCount() {
+		return productCount;
+	}

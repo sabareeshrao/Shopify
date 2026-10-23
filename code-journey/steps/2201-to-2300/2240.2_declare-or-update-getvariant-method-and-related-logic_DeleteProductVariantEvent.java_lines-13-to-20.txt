@@ -1,0 +1,8 @@
+		this.variant = variant;
+	}
+
+	public ProductVariant getVariant() {
+		return variant;
+	}
+
+}

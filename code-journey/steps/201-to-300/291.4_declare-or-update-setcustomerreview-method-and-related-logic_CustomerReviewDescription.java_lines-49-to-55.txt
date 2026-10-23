@@ -1,0 +1,7 @@
+
+	public void setCustomerReview(CustomerReview customerReview) {
+		this.customerReview = customerReview;
+	}
+
+	public CustomerReviewDescription() {
+	}

@@ -1,0 +1,9 @@
+	private void createMerchant() throws ServiceException {
+		LOGGER.info(String.format("%s : Creating merchant ", name));
+		
+		Date date = new Date(System.currentTimeMillis());
+		
+		Language en = languageService.getByCode("en");
+		Country ca = countryService.getByCode("CA");
+		Currency currency = currencyService.getByCode("CAD");
+		Zone qc = zoneService.getByCode("QC");

@@ -1,0 +1,6 @@
+		
+				/*** determine if image can be cropped ***/
+				determineCropeable(width, largeImageWidth, height, largeImageHeight);
+		
+				/*** determine crop area calculation baseline ***/
+				//this.determineBaseline(width, height);

@@ -1,3 +1,0 @@
-	List<IntegrationModule> getShippingMethods(MerchantStore store)
-			throws ServiceException;
-

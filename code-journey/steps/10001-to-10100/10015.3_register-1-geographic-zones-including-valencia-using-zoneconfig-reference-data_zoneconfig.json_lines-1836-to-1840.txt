@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Valencia",
-		"zoneName": "Valencia",
-		"countryCode": "ES"
-	},

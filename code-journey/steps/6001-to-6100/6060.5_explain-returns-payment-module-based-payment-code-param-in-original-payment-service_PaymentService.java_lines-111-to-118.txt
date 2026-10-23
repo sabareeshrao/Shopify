@@ -1,8 +1,0 @@
-
-	/**
-	 * Returns a PaymentModule based on the payment code
-	 * @param paymentModuleCode
-	 * @return PaymentModule
-	 * @throws ServiceException
-	 */
-	PaymentModule getPaymentModule(String paymentModuleCode)

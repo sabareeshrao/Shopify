@@ -1,0 +1,8 @@
+		try {
+			populator.populate(product, readableProduct, product.getMerchantStore(), language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException("Product with code [" + uniqueCode + "] cannot be converted", e);
+		}
+
+		return readableProduct;
+	}

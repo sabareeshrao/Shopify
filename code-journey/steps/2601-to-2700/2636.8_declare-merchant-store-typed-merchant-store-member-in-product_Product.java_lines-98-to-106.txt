@@ -1,0 +1,9 @@
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="MERCHANT_ID", nullable=false)
+	private MerchantStore merchantStore;
+	
+	/**
+	 * Product to category
+	 */
+	@ManyToMany(fetch=FetchType.LAZY, cascade = {CascadeType.REFRESH})

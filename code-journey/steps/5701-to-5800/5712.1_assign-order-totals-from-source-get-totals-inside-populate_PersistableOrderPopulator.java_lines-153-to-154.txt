@@ -1,2 +1,0 @@
-			
-			List<OrderTotal> orderTotals = source.getTotals();

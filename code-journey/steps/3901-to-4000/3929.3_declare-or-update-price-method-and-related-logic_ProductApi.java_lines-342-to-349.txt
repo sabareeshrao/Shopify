@@ -1,0 +1,8 @@
+	public ReadableProductPrice price(@PathVariable final Long id,
+			@RequestBody ProductPriceRequest variants,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		return productFacade.getProductPrice(id, variants, merchantStore, language);
+
+	}
+	**/

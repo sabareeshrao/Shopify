@@ -1,0 +1,8 @@
+	
+			if (event instanceof DeleteProductImageEvent) {
+				deleteProductImage((DeleteProductImageEvent) event);
+			}
+			
+			if (event instanceof SaveProductAttributeEvent) {
+				saveProductAttribute((SaveProductAttributeEvent) event);
+			}

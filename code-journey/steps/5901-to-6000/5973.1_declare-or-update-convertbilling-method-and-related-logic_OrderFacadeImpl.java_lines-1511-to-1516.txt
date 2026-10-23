@@ -1,0 +1,6 @@
+
+	private Billing convertBilling(Address source) throws ServiceException {
+		Billing target = new Billing();
+        target.setCity(source.getCity());
+        target.setCompany(source.getCompany());
+        target.setFirstName(source.getFirstName());

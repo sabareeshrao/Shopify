@@ -1,0 +1,5 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = "/private/category", produces = { APPLICATION_JSON_VALUE })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })

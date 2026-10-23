@@ -1,0 +1,9 @@
+	    billing.setCountry(country);
+//	    billing.setCountryCode(CA_COUNTRY_CODE);
+	    billing.setFirstName("Carl" );
+	    billing.setLastName("Samson" );
+	    billing.setPostalCode("J4B-8J9");
+	    billing.setZone(zone);
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);		

@@ -1,0 +1,8 @@
+				productCount--;
+				double w = box.getWeight();
+				w = w + productWeight;
+				box.setWeight(w);
+				maxBox--;
+			}
+
+		}

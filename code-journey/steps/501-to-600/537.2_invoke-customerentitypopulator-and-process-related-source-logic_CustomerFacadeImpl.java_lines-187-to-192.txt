@@ -1,0 +1,6 @@
+      try {
+        CustomerEntityPopulator customerEntityPopulator = new CustomerEntityPopulator();
+        return customerEntityPopulator.populate(customer, store, language); // store, language
+
+      } catch (ConversionException ex) {
+        LOG.error("Error while converting Customer to CustomerEntity", ex);

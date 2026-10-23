@@ -1,0 +1,7 @@
+
+			if (cartModel == null) {
+				cartModel = getCartModel(item.getCode(), store);
+			}
+
+			com.salesmanager.core.model.shoppingcart.ShoppingCartItem entryToUpdate = getEntryToUpdate(item.getId(),
+					cartModel);

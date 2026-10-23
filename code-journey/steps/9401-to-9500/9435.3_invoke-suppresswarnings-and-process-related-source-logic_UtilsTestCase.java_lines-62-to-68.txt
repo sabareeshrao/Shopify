@@ -1,0 +1,7 @@
+		
+		@SuppressWarnings("rawtypes")
+		List objects = (List) cache.getFromCache("COUNTRIES");
+		
+		Assert.assertNotNull(objects);
+		
+	}

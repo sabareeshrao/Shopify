@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Guadalajara",
+		"zoneName": "Guadalajara",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Guipuzcoa",
+		"zoneName": "Guipuzcoa",
+		"countryCode": "ES"
+	},

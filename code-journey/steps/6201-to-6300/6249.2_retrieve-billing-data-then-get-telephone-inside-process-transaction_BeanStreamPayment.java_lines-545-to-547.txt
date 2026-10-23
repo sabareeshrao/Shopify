@@ -1,3 +1,0 @@
-		messageString.append("ordPhoneNumber=").append(customer.getBilling().getTelephone()).append("&");
-		messageString.append("ordEmailAddress=").append(customer.getEmailAddress());
-		

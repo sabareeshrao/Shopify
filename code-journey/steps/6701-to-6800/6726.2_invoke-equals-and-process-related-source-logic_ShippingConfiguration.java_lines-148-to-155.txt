@@ -1,0 +1,8 @@
+		if(shipBaseType.equals(ShippingBasisType.BILLING.name())) {
+			sType = ShippingBasisType.BILLING;
+		}
+		setShippingBasisType(sType);
+	}
+
+
+

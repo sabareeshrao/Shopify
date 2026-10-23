@@ -1,0 +1,7 @@
+
+		} catch (IOException ioe) {
+			throw new RestApiException(ioe);
+		}
+
+		return cmsContentImage;
+	}

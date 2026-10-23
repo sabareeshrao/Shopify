@@ -1,0 +1,11 @@
+
+
+@Ignore
+public class CustomerTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	
+	@Test
+	public void createCustomer() throws ServiceException {
+		
+		
+		Language en = languageService.getByCode("en");
+		

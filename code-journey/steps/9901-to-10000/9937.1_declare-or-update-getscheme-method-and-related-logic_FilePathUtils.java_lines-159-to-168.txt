@@ -1,0 +1,10 @@
+	private String getScheme(MerchantStore store) {
+		String baseScheme = store.getDomainName();
+		if (baseScheme != null && baseScheme.length() > 0
+				&& baseScheme.charAt(baseScheme.length() - 1) == Constants.SLASH.charAt(0)) {
+			baseScheme = baseScheme.substring(0, baseScheme.length() - 1);
+		}
+		// end no more
+		return validUrl(baseScheme);
+	}
+

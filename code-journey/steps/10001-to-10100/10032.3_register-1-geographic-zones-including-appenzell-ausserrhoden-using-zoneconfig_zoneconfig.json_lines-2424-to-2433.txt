@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "ARCH",
+			"zoneName": "Appenzell Ausserrhoden",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "BE",
+			"zoneName": "Bern",
+			"countryCode": "CH"
+		},

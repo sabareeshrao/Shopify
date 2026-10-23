@@ -1,0 +1,8 @@
+
+@Service("systemConfigurationService")
+public class SystemConfigurationServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, SystemConfiguration> implements
+		SystemConfigurationService {
+
+	
+	private SystemConfigurationRepository systemConfigurationReposotory;

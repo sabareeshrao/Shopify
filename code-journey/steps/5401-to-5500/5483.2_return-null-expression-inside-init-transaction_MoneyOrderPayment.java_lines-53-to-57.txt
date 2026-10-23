@@ -1,5 +1,0 @@
-			throws IntegrationException {
-		//NOT REQUIRED
-		return null;
-	}
-

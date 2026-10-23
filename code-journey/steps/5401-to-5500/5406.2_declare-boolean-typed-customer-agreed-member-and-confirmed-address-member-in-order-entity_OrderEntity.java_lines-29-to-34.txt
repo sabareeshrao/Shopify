@@ -1,0 +1,6 @@
+	private Date datePurchased;
+	private String currency;
+	private boolean customerAgreed;
+	private boolean confirmedAddress;
+	private String comments;
+	

@@ -1,0 +1,9 @@
+    @Override
+    public Address populate( Customer source, Address target, MerchantStore store, Language language )
+        throws ConversionException
+    {
+        
+        if(source.getDelivery()!=null){
+        if(StringUtils.isNotBlank( source.getDelivery().getCity() )){
+            target.setCity(source.getDelivery().getCity());
+        }

@@ -1,0 +1,9 @@
+ * 
+ * @author Umesh Awasthi
+ * @version 1.2
+ * 
+ *
+ */
+public class StaticContentCacheManagerImpl extends CacheManagerImpl {
+
+  private final static String NAMED_CACHE = "FilesRepository";

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "HI",
+		"zoneName": "Hawaii",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "ID",
+		"zoneName": "Idaho",
+		"countryCode": "US"
+	},

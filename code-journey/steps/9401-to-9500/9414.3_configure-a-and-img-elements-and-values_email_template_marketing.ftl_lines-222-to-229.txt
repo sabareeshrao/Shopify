@@ -1,0 +1,8 @@
+			padding-top: 20px;" class="hero">
+			<a target="_blank" style="text-decoration: none;"
+			href="https://www.bamwood.ca">
+			<img border="0" vspace="0" hspace="0"
+			src="https://bamwood.ca/img/marketing/fr-design-header.jpg"
+			alt="Please enable images to view this content" title="Hero Image"
+			width="560" style="
+			width: 100%;

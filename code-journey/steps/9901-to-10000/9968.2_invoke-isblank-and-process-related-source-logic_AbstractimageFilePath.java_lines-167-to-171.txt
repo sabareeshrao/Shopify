@@ -1,0 +1,5 @@
+		if(!StringUtils.isBlank(fileName)) {
+			sb.append(fileName);
+		}
+		return sb.toString();
+	}

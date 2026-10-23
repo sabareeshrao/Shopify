@@ -1,0 +1,7 @@
+				xmldatabuffer.append("<PackagingType>");
+				xmldatabuffer.append("<Code>");
+				xmldatabuffer.append(pack);
+				xmldatabuffer.append("</Code>");
+				xmldatabuffer.append("</PackagingType>");
+
+				// weight

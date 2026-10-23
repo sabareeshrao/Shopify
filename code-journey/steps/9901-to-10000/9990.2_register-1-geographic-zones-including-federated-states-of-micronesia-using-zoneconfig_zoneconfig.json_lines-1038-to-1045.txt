@@ -1,0 +1,8 @@
+		"zoneName": "District de Columbia",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "FM",
+		"zoneName": "Federated States Of Micronesia",
+		"countryCode": "US"
+	},

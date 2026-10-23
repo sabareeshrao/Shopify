@@ -1,0 +1,9 @@
+	public @ResponseBody byte[] printImage(@PathVariable final String storeCode, @PathVariable final String productCode, @PathVariable final String imageName, @PathVariable final String extension, HttpServletRequest request) throws IOException {
+
+		// product image
+		// example small product image -> /static/products/DEFAULT/TB12345/product1.jpg?size=small
+		
+		// example large product image -> /static/products/DEFAULT/TB12345/product1.jpg
+		// or
+		//example large product image -> /static/products/DEFAULT/TB12345/product1.jpg?size=large
+		

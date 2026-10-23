@@ -1,0 +1,8 @@
+			
+		} catch(Exception e) {
+			if(e instanceof IntegrationException) {
+				throw (IntegrationException)e;
+			} else {
+				throw new IntegrationException(e);
+			}
+		}

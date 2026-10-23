@@ -1,0 +1,9 @@
+label.customer.faster=Creating an account has many benefits: check out faster, keep more than one address, track orders and more.
+label.customer.myaccount=My Account
+label.customer.contactus=Contact us
+label.customer.list=Customer list
+label.customer.name=Customer name
+label.customer.lastname=Customer last name
+label.customer.firstname=Customer first name
+label.customer.id=Customer id
+label.customer.companyname=Company name

@@ -1,0 +1,8 @@
+   * @param request
+   * @param response
+   * @return
+   * @throws Exception
+   */
+  @RequestMapping(
+      value = {"/auth/cart/{id}/total"},
+      method = RequestMethod.GET)

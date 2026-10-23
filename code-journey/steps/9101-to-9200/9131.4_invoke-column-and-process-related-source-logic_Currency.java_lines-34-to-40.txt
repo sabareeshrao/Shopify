@@ -1,0 +1,7 @@
+	
+	@Column(name = "CURRENCY_CODE", unique = true)
+	private String code;
+	
+	@Column(name = "CURRENCY_NAME", unique = true)
+	private String name;
+	

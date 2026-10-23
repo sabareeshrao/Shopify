@@ -1,0 +1,7 @@
+	private String store;
+	private List<ReadableCategory> children = new ArrayList<ReadableCategory>();
+	
+	
+	public void setDescription(CategoryDescription description) {
+		this.description = description;
+	}

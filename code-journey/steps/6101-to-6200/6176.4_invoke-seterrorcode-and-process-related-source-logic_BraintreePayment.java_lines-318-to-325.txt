@@ -1,0 +1,8 @@
+			te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+			throw te;
+	    }
+		
+		Environment environment= Environment.PRODUCTION;
+		if (configuration.getEnvironment().equals("TEST")) {// sandbox
+			environment= Environment.SANDBOX;
+		}

@@ -1,0 +1,9 @@
+  public PersistableProductReview update(
+      @PathVariable final Long id,
+      @PathVariable final Long reviewId,
+      @Valid @RequestBody PersistableProductReview review,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+

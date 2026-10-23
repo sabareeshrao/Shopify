@@ -1,0 +1,7 @@
+
+		Category category = categoryService.getByCode(store, code);
+		categoryPopulator.populate(category, readableCategory, store, language);
+
+		return readableCategory;
+	}
+

@@ -1,0 +1,8 @@
+		
+		if(target == null) {
+			target = new Transaction();
+		}
+		
+		
+		try {
+			

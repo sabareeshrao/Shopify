@@ -1,0 +1,9 @@
+			if (CollectionUtils.isNotEmpty(userShoppingModel.getLineItems())
+					&& CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+				return userShoppingModel;
+			}
+		}
+
+		LOGGER.info("Starting merging shopping carts");
+		if (CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+			Set<ShoppingCartItem> shoppingCartItemsSet = getShoppingCartItems(sessionCart, store, userShoppingModel);

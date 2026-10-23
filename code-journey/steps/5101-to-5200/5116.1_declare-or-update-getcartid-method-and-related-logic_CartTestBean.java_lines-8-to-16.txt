@@ -1,0 +1,9 @@
+public class CartTestBean {
+
+    private String cartId;
+
+    private List<ReadableProduct> products = new ArrayList<>();
+
+    public String getCartId() {
+        return cartId;
+    }

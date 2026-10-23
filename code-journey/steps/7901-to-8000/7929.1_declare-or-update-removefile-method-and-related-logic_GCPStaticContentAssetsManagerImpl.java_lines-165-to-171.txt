@@ -1,0 +1,7 @@
+	@Override
+	public void removeFile(String merchantStoreCode, FileContentType staticContentType, String fileName, Optional<String> folderPath)
+			throws ServiceException {
+		try {
+			String bucketName = bucketName();
+			Storage storage = StorageOptions.getDefaultInstance().getService();
+			storage.delete(bucketName, nodePath(merchantStoreCode, staticContentType) + fileName);

@@ -1,0 +1,8 @@
+        
+        if(StringUtils.isNotBlank( source.getDelivery().getPostalCode() )){
+            target.setPostalCode(source.getDelivery().getPostalCode());
+        }
+        
+        if(StringUtils.isNotBlank( source.getDelivery().getTelephone() )){
+            target.setPhone(source.getDelivery().getTelephone());
+        }

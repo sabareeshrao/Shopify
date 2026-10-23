@@ -1,0 +1,7 @@
+				int depth = parent.getDepth();
+
+				target.setDepth(depth+1);
+				target.setLineage(new StringBuilder().append(lineage).append(target.getId()).append("/").toString());
+			}
+
+		}

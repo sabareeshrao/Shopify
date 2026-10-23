@@ -1,0 +1,6 @@
+		
+		productService.update(product);
+		
+		review.setProduct(product);
+		
+	}

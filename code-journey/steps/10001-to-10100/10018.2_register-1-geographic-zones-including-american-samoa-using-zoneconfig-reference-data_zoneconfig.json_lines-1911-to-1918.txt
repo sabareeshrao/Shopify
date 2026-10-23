@@ -1,0 +1,8 @@
+			"zoneName": "Alaska",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "AS",
+			"zoneName": "American Samoa",
+			"countryCode": "US"
+		},

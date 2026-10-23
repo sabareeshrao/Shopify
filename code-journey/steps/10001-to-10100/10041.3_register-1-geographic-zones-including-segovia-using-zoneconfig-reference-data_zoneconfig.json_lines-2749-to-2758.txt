@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "Segovia",
+			"zoneName": "Segovia",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Sevilla",
+			"zoneName": "Sevilla",
+			"countryCode": "ES"
+		},

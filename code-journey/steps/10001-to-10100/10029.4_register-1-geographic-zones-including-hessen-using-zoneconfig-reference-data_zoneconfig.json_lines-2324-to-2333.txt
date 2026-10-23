@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "HES",
+			"zoneName": "Hessen",
+			"countryCode": "DE"
+		},
+		{
+			"zoneCode": "MEC",
+			"zoneName": "Mecklenburg-Vorpommern",
+			"countryCode": "DE"
+		},

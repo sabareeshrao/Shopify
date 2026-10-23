@@ -1,4 +1,0 @@
-import com.salesmanager.shop.application.ShopApplication;
-
-
-

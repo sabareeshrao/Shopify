@@ -1,0 +1,10 @@
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableCategoryList list(
+			@RequestParam(value = "filter", required = false) List<String> filter,
+			@RequestParam(value = "name", required = false) String name,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+

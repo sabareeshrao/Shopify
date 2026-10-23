@@ -1,0 +1,7 @@
+	    availability.setProductDateAvailable(date);
+	    availability.setProductQuantity(200);
+	    availability.setRegion("*");
+	    availability.setProduct(related);// associate with product
+
+	    //productAvailabilityService.create(availability);
+	    related.getAvailabilities().add(availability);

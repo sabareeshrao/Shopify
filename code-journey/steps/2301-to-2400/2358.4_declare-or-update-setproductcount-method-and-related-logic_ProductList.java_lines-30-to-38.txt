@@ -1,0 +1,9 @@
+	public void setProductCount(int productCount) {
+		this.productCount = productCount;
+	}
+	public BigDecimal getMinPrice() {
+		return minPrice;
+	}
+	public void setMinPrice(BigDecimal minPrice) {
+		this.minPrice = minPrice;
+	}

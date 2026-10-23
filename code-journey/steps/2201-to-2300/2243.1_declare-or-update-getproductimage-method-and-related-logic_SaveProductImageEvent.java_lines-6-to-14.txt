@@ -1,0 +1,9 @@
+public class SaveProductImageEvent extends ProductEvent {
+	
+	
+	private static final long serialVersionUID = 1L;
+	private ProductImage productImage;
+
+	public ProductImage getProductImage() {
+		return productImage;
+	}

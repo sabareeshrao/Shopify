@@ -1,0 +1,8 @@
+
+	public void setTaxTotal(String taxTotal) {
+		this.taxTotal = taxTotal;
+	}
+
+	public List<ReadableOrderTotal> getTotals() {
+		return totals;
+	}

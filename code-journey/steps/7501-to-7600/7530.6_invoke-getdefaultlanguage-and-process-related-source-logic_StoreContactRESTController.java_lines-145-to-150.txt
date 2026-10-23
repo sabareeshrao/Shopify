@@ -1,0 +1,6 @@
+			
+			if(language==null) {
+				language = merchantStore.getDefaultLanguage();
+			}
+			
+			Locale l = LocaleUtils.getLocale(language);

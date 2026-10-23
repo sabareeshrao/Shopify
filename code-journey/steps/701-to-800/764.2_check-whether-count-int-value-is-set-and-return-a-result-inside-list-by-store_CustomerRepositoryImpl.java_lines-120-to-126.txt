@@ -1,7 +1,0 @@
-		
-        if(count.intValue()==0)
-        	return customerList;
-        
-		//TO BE USED
-        int max = criteria.getMaxCount();
-        int first = criteria.getStartIndex();

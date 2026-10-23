@@ -1,0 +1,6 @@
+#manufacturer
+label.manufacturer.brand=Brands
+label.manufacturer.edit=Edit manufacturer
+label.manufacturer.create=Create a manufacturer
+label.manufactureredit.manufacturername=Manufacturer name
+label.manufactureredit.manufacturertitle=Manufacturer title

@@ -1,3 +1,0 @@
-	public static final String ORDER_STATUS = "ORDER_STATUS";
-	public final static String EMAIL_ORDER_DOWNLOAD = "EMAIL_ORDER_DOWNLOAD";
-

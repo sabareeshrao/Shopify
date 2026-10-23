@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "SAS",
-		"zoneName": "Sachsen",
-		"countryCode": "DE"
-	},

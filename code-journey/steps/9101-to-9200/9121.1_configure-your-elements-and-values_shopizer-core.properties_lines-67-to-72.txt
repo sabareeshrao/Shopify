@@ -1,0 +1,6 @@
+
+#Google map API key
+#For using priceByDistance shipping module
+config.shippingDistancePreProcessor.apiKey=<YOUR KEY>
+config.shippingDistancePreProcessor.acceptedZones=QC,ON,AB,NY,MA
+

@@ -1,0 +1,6 @@
+
+		/**
+		 * Image creation needs extra service to save the file in the CMS
+		 */
+		List<Long> newImageIds = new ArrayList<Long>();
+		Set<ProductImage> images = product.getImages();

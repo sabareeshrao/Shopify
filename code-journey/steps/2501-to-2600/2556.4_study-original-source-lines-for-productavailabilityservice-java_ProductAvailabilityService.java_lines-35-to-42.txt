@@ -1,0 +1,8 @@
+	
+	/**
+	 * All availability by product / product variant sku and store
+	 * @param sku
+	 * @param store
+	 * @return
+	 */
+	List<ProductAvailability> getBySku(String sku, MerchantStore store);

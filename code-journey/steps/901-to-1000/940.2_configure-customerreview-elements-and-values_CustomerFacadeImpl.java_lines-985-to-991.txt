@@ -1,0 +1,7 @@
+    Optional<CustomerReview> customerReview =
+        Optional.ofNullable(
+            customerReviewService.getByReviewerAndReviewed(review.getCustomerId(), customerId));
+
+    if(customerReview.isPresent()) {
+      throw new ServiceRuntimeException("A review already exist for this customer and product");
+    }

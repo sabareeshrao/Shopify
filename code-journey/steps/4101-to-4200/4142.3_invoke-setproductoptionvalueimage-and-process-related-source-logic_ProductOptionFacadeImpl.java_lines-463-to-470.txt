@@ -1,0 +1,8 @@
+			value.setProductOptionValueImage(null);
+			productOptionValueService.saveOrUpdate(value);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Exception while removing option value image", e);
+		}
+
+		return;
+	}

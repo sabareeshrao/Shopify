@@ -1,0 +1,9 @@
+	private String subTotal;//one time price for items
+	private String total;//final price
+	private String taxTotal;//total of taxes
+	
+	private List<ReadableOrderTotal> totals = new ArrayList<ReadableOrderTotal>();//all other fees (tax, shipping ....)
+
+	public String getSubTotal() {
+		return subTotal;
+	}

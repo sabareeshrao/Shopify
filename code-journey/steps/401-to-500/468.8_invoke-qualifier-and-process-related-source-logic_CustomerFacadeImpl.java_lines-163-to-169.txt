@@ -1,0 +1,7 @@
+
+  @Inject
+  private EmailUtils emailUtils;
+
+  @Inject
+  @Qualifier("img")
+  private ImageFilePath imageUtils;

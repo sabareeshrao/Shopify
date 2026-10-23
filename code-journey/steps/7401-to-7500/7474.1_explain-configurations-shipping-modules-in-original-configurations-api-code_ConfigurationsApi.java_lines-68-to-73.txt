@@ -1,0 +1,6 @@
+	  
+	  
+	  
+	  
+	  /** Configurations of shipping modules */
+	  @GetMapping("/private/configurations/shipping")

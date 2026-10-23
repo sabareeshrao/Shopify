@@ -1,0 +1,6 @@
+
+  ReadableProductOptionValue getOptionValue(Long optionValueId, MerchantStore store, Language language);
+
+  ReadableProductOptionEntity saveOption(PersistableProductOptionEntity option, MerchantStore store, Language language);
+  
+  ReadableProductOptionValue saveOptionValue(PersistableProductOptionValue optionValue, MerchantStore store, Language language);

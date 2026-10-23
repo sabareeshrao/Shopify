@@ -1,0 +1,6 @@
+
+	       } catch (Exception e) {
+	           LOGGER.error("Error occured while sending order download email ",e);
+	       }
+		
+	}

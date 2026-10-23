@@ -1,0 +1,6 @@
+
+  private List<ReadableProductOptionEntity> options = new ArrayList<ReadableProductOptionEntity>();
+
+  public List<ReadableProductOptionEntity> getOptions() {
+    return options;
+  }

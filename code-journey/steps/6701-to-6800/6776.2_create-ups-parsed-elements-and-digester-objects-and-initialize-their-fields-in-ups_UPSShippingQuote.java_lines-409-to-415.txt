@@ -1,7 +1,0 @@
-
-			LOGGER.debug("ups quote response " + data);
-
-			UPSParsedElements parsed = new UPSParsedElements();
-
-			Digester digester = new Digester();
-			digester.push(parsed);

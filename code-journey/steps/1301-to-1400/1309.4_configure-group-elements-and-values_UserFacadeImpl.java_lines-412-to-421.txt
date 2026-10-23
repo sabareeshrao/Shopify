@@ -1,0 +1,10 @@
+			if (adminName != null) {
+				if (adminName.getId().longValue() != userModel.getId().longValue()) {
+					throw new ServiceRuntimeException(
+							"User id [" + userModel.getId() + "] does not match [" + user.getUserName() + "]");
+				}
+			}
+			boolean isActive = userModel.isActive();
+			List<Group> originalGroups = userModel.getGroups();
+			Group superadmin = originalGroups.stream()
+					.filter(group -> Constants.GROUP_SUPERADMIN.equals(group.getGroupName())).findAny().orElse(null);

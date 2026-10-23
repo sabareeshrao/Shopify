@@ -1,0 +1,7 @@
+		if (slug != null) {
+			Category categoryBySlug = categoryService.getBySeUrl(merchantStore, slug, language);
+			categoryIds.add(categoryBySlug.getId());
+		}
+		if (category != null) {
+			categoryIds.add(category);
+		}

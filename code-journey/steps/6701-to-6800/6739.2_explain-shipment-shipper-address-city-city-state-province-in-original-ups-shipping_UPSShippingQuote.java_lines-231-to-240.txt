@@ -1,0 +1,10 @@
+			 * 
+			 * <Shipper> <Address> <City></City>
+			 * <StateProvinceCode>QC</StateProvinceCode>
+			 * <CountryCode>CA</CountryCode> <PostalCode></PostalCode>
+			 * </Address> </Shipper>
+			 * 
+			 * <ShipTo> <Address> <City>Redwood Shores</City>
+			 * <StateProvinceCode>CA</StateProvinceCode>
+			 * <CountryCode>US</CountryCode> <PostalCode></PostalCode>
+			 * <ResidentialAddressIndicator/> </Address> </ShipTo>

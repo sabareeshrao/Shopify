@@ -1,0 +1,8 @@
+			model.addObject("stackError", ExceptionUtils.getStackTrace(ex));
+			model.addObject("errMsg", ex.getMessage());
+			
+		}
+
+		return model;
+ 
+	}

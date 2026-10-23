@@ -1,0 +1,6 @@
+		contentModel.setLinkToMenu(content.isLinkToMenu());
+		contentModel.setVisible(content.isVisible());
+		contentModel.setDescriptions(descriptions);
+		contentModel.setId(content.getId());
+		return contentModel;
+	}

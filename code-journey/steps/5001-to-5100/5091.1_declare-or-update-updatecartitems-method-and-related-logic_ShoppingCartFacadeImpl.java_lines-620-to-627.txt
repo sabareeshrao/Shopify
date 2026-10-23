@@ -1,0 +1,8 @@
+
+	// TODO promoCode request parameter
+	// @Override
+	// DELETE
+	public ShoppingCartData updateCartItems(Optional<String> promoCode, final List<ShoppingCartItem> shoppingCartItems,
+			final MerchantStore store, final Language language) throws Exception {
+
+		Validate.notEmpty(shoppingCartItems, "shoppingCartItems null or empty");

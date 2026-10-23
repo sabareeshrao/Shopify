@@ -1,0 +1,6 @@
+public interface MerchantStoreService extends SalesManagerEntityService<Integer, MerchantStore>{
+	
+
+	MerchantStore getByCode(String code) throws ServiceException;
+	
+	MerchantStore getParent(String code) throws ServiceException;

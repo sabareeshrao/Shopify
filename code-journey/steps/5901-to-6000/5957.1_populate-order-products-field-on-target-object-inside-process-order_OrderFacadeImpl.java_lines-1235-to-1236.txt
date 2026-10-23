@@ -1,2 +1,0 @@
-
-			modelOrder.setOrderProducts(orderProducts);

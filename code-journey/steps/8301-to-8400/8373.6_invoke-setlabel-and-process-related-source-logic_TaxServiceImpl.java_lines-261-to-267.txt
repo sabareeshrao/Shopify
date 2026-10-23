@@ -1,0 +1,7 @@
+				taxItem.setLabel(taxRate.getDescriptions().get(0).getName());
+				taxItem.setTaxRate(taxRate);
+				taxItems.add(taxItem);
+				
+			}
+			
+		}

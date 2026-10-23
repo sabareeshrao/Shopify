@@ -1,0 +1,7 @@
+			return other.getProviderId().equals(getProviderId())
+					&& other.getProviderUserId().equals(getProviderUserId())
+					&& other.getUserId().equals(getUserId());
+		} else {
+			return false;
+		}
+	}

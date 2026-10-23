@@ -1,0 +1,7 @@
+		
+		
+		
+		if(destination == null) {
+			destination = new CatalogCategoryEntry();
+			
+		}

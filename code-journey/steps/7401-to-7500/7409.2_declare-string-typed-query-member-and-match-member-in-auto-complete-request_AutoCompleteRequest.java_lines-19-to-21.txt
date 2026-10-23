@@ -1,3 +1,0 @@
-	private final static String QUERY = "query";
-	private final static String MATCH = "match";
-	

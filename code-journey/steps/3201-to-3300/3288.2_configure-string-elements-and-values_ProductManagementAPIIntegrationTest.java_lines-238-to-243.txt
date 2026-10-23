@@ -1,0 +1,6 @@
+
+		final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
+
+		final ResponseEntity<ReadableProduct[]> response = restTemplate.exchange(
+				"http://localhost:8080/sm-shop/services/rest/products/DEFAULT/en/" + testCategoryID, HttpMethod.GET,
+				httpEntity, ReadableProduct[].class);

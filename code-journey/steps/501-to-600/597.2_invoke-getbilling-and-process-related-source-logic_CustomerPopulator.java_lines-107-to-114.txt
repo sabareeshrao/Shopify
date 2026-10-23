@@ -1,0 +1,8 @@
+			if(sourceBilling!=null) {
+				Billing billing = target.getBilling();
+				billing.setAddress(sourceBilling.getAddress());
+				billing.setCity(sourceBilling.getCity());
+				billing.setCompany(sourceBilling.getCompany());
+				//billing.setCountry(country);
+				if (!StringUtils.isEmpty(sourceBilling.getFirstName()))
+					billing.setFirstName(sourceBilling.getFirstName());

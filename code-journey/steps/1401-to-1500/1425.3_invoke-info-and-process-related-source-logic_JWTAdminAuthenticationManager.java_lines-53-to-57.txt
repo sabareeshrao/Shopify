@@ -1,0 +1,5 @@
+
+
+    UsernamePasswordAuthenticationToken authentication = null;
+
+    logger.info("checking authentication for user " + username);

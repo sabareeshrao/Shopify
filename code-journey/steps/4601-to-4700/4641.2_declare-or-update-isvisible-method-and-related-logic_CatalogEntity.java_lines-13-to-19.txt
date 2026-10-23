@@ -1,0 +1,7 @@
+
+	private boolean visible;
+	private boolean defaultCatalog;
+	private String code;
+	public boolean isVisible() {
+		return visible;
+	}

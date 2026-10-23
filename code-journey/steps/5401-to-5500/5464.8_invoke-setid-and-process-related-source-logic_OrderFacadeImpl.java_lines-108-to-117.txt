@@ -1,0 +1,10 @@
+		
+		
+		/**
+		 * Confirmation may be formatted
+		 */
+		orderConfirmation.setId(order.getId());
+
+		
+		return orderConfirmation;
+	}

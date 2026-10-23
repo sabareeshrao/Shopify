@@ -1,0 +1,8 @@
+		
+		for(ProductVariant p : productVariants) {
+			p.setProductVariantGroup(destination);
+		}
+
+		//images are not managed from this object
+		if(source.getId() != null) {
+			List<ProductVariantImage> images = productVariantImageService.listByProductVariantGroup(source.getId(), store);

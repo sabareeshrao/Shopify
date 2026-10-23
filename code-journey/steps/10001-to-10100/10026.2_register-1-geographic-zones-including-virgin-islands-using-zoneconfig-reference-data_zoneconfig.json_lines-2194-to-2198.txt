@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "VI",
-			"zoneName": "Virgin Islands",
-			"countryCode": "US"
-		},

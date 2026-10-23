@@ -1,0 +1,9 @@
+public class ReadableContentBox extends Content {
+	
+	private ContentDescription description ;
+	private static final String BOX = "BOX";
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

@@ -1,0 +1,5 @@
+			logger.debug("Updated SecurityContextHolder to contain null Authentication");
+		}
+		
+		unSuccessfullAuthentication(request, response);
+	}

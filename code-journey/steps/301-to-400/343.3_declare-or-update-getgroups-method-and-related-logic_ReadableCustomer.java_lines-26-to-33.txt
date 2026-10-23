@@ -1,0 +1,8 @@
+	public List<ReadableGroup> getGroups() {
+		return groups;
+	}
+	public void setGroups(List<ReadableGroup> groups) {
+		this.groups = groups;
+	}
+
+}

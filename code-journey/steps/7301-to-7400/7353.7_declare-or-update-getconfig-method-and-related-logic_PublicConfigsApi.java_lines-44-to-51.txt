@@ -1,0 +1,8 @@
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public Configs getConfig(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+    return configurationFacade.getMerchantConfig(merchantStore, language);
+  }
+}

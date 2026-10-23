@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+public interface MerchantRepository extends JpaRepository<MerchantStore, Integer>, MerchantRepositoryCustom {
+
+

@@ -1,0 +1,7 @@
+
+      Country c = countryService.getByCode(address.getCountryCode());
+      
+      if(c==null) {
+    	c = merchantStore.getCountry();
+      }
+      addr.setCountry(c);

@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "Toledo",
-		"zoneName": "Toledo",
-		"countryCode": "ES"
-	},

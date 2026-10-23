@@ -1,0 +1,8 @@
+
+    void setCartId(String cartId) {
+        this.cartId = cartId;
+    }
+
+    public void setProducts(List<ReadableProduct> products) {
+        this.products = products;
+    }

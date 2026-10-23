@@ -1,0 +1,7 @@
+
+      if (!CollectionUtils.isEmpty(options)) {
+
+        for (ShippingOption shipOption : options) {
+
+          StringBuilder moduleName = new StringBuilder();
+          moduleName.append("module.shipping.").append(shipOption.getShippingModuleCode());

@@ -1,0 +1,11 @@
+
+	/**
+	 * List of keywords / autocompletes for a given word being typed
+	 * @param query
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ValueList autocompleteRequest(String query, MerchantStore store, Language language);
+}

@@ -1,0 +1,7 @@
+import com.salesmanager.core.model.user.Permission;
+
+public interface PermissionRepository extends JpaRepository<Permission, Integer>, PermissionRepositoryCustom {
+
+	
+	@Query("select p from Permission as p where p.id = ?1")
+	Permission findOne(Integer id);

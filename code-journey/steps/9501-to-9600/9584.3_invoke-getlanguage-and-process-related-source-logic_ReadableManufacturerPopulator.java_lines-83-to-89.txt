@@ -1,0 +1,7 @@
+    if (description.getLanguage() != null) {
+      d.setLanguage(description.getLanguage().getCode());
+    }
+    return d;
+  }
+
+}

@@ -1,0 +1,6 @@
+		 * populator.setCountryService(countryService);
+		 * populator.setZoneService(zoneService);
+		 */
+		return readableMerchantStorePopulator.populate(store, new ReadableMerchantStore(), store, language);
+	}
+

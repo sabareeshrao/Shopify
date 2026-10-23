@@ -1,0 +1,8 @@
+	    dprice.setDefaultPrice(true);
+	    dprice.setProductPriceAmount(price);
+	    dprice.setProductAvailability(availability);
+
+	    ProductPriceDescription dpd = new ProductPriceDescription();
+	    dpd.setName("Base price");
+	    dpd.setProductPrice(dprice);
+	    dpd.setLanguage(en);

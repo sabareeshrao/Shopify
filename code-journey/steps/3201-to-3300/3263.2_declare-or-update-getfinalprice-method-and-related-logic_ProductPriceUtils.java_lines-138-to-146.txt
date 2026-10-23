@@ -1,0 +1,9 @@
+	 * @return
+	 */
+	// Pricer
+	public FinalPrice getFinalPrice(Product product) throws ServiceException {
+
+		FinalPrice finalPrice = calculateFinalPrice(product);
+
+		// attributes
+		BigDecimal attributePrice = null;

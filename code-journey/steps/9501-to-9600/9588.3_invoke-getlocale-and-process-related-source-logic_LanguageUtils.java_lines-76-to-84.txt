@@ -1,0 +1,9 @@
+    if (language == null) {
+      try {
+
+        locale = LocaleContextHolder.getLocale();// should be browser locale
+
+
+
+        if (store != null) {
+          language = store.getDefaultLanguage();

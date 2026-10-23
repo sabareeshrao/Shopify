@@ -1,0 +1,7 @@
+		
+		count = count + 1;
+		double avg = totalRating.doubleValue() / count;
+		
+		customer.setCustomerReviewAvg(new BigDecimal(avg));
+		customer.setCustomerReviewCount(count);
+		super.save(review);

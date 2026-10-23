@@ -1,0 +1,6 @@
+	public void setStarttls(boolean starttls) {
+		this.starttls = starttls;
+	}
+	public void setEmailTemplatesPath(String emailTemplatesPath) {
+		this.emailTemplatesPath = emailTemplatesPath;
+	}

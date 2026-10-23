@@ -1,0 +1,8 @@
+
+      if (cart == null) {
+        response.sendError(404, "Cart id " + code + " does not exist");
+      }
+
+      
+      Delivery addr = new Delivery();
+      addr.setPostalCode(address.getPostalCode());

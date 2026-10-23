@@ -1,0 +1,8 @@
+	public List<ReadableImage> getImages() {
+		return images;
+	}
+	public void setImages(List<ReadableImage> images) {
+		this.images = images;
+	}
+
+}

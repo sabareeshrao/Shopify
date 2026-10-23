@@ -1,0 +1,9 @@
+	public void setHighlights(String highlights) {
+		this.highlights = highlights;
+	}
+	public String getMetaDescription() {
+		return metaDescription;
+	}
+	public void setMetaDescription(String metaDescription) {
+		this.metaDescription = metaDescription;
+	}

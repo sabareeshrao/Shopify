@@ -1,0 +1,7 @@
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while finding all merchant", e);
+		}
+
+
+	}

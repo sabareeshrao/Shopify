@@ -1,0 +1,6 @@
+label.shipping.packaging.boxes=Items will be combined and shipped in a box
+label.shipping.packaging.box.height=Box height
+label.shipping.packaging.box.length=Box length
+label.shipping.packaging.box.width=Box width
+label.shipping.packaging.box.weight=Box weight
+label.shipping.packaging.box.maxweight=Maximum weight in box

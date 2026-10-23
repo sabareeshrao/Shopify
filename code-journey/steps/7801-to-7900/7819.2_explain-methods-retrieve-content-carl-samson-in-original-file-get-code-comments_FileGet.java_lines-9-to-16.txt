@@ -1,8 +1,0 @@
-
-
-/**
- * Methods to retrieve the static content from the CMS
- * 
- * @author Carl Samson
- *
- */

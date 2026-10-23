@@ -1,0 +1,7 @@
+    @Inject
+    private UserDetailsService jwtCustomerDetailsService;
+    
+    @Inject
+    private PasswordEncoder passwordEncoder;
+
+

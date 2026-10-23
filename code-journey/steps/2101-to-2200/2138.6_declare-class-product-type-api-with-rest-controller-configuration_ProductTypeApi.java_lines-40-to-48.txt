@@ -1,9 +1,0 @@
-@RestController
-@RequestMapping("/api/v1")
-@Api(tags = { "Product type resource (Product Type Api)" })
-@SwaggerDefinition(tags = { @Tag(name = "Product type resource", description = "Manage product types") })
-public class ProductTypeApi {
-
-	@Inject
-	private ProductTypeFacade productTypeFacade;
-

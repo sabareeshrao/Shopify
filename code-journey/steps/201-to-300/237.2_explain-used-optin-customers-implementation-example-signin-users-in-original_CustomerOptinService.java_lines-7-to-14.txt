@@ -1,0 +1,8 @@
+
+/**
+ * Used for optin in customers
+ * An implementation example is for signin in users
+ * @author carlsamson
+ *
+ */
+public interface CustomerOptinService extends SalesManagerEntityService<Long, CustomerOptin> {

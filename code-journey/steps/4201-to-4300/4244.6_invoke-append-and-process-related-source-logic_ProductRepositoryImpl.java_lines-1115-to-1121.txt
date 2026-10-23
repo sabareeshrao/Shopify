@@ -1,0 +1,7 @@
+
+		// RENTAL REMOVED
+		//qs.append("left join fetch p.owner owner ");
+		return qs.toString();
+
+	}
+	

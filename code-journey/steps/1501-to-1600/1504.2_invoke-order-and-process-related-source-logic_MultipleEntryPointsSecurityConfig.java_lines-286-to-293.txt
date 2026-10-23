@@ -1,0 +1,8 @@
+	@Order(5)
+	public static class UserApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Autowired
+		private AuthenticationTokenFilter authenticationTokenFilter;
+
+		@Autowired
+		JWTAdminServicesImpl jwtUserDetailsService;

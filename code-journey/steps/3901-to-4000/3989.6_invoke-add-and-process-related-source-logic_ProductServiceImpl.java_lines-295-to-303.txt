@@ -1,0 +1,9 @@
+						newImageIds.add(image.getId());
+					} else {
+						if (image.getId() != null) {
+							productImageService.save(image);
+							newImageIds.add(image.getId());
+						}
+					}
+				}
+			}

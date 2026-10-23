@@ -1,0 +1,8 @@
+
+        shippingSummary.setShippingOptions(options);
+      }
+
+      return shippingSummary;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while getting shipping quote", e);

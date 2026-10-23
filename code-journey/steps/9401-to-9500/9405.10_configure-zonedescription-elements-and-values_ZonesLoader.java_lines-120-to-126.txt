@@ -1,0 +1,7 @@
+
+					// get descriptions
+					List<ZoneDescription> descriptions = zonesDescriptionsMap.get(key);
+					if (descriptions != null) {
+						value.setDescriptons(descriptions);
+					}
+				}

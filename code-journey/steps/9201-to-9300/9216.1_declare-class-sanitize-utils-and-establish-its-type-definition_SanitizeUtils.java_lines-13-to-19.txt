@@ -1,7 +1,0 @@
-import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
-
-public class SanitizeUtils {
-
-	/**
-	 * should not contain /
-	 */

@@ -1,0 +1,7 @@
+					if (regions != null) {
+						Object objRegions = JSONValue.parse(regions);
+						JSONArray arrayRegions = (JSONArray) objRegions;
+						for (Object arrayRegion : arrayRegions) {
+							mod.getRegionsSet().add((String) arrayRegion);
+						}
+					}

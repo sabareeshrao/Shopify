@@ -1,0 +1,9 @@
+	
+	/**
+	 * Authorize
+	 * AuthorizeAndCapture
+	 * Capture
+	 * Refund
+	 * 
+	 * Check transactions
+	 * next transaction flow is

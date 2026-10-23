@@ -1,0 +1,7 @@
+		 * i < contentType.size(); i++) {
+		 * contentTypes.add(contentType.get(i).name()); }
+		 */
+
+		return contentRepository.findByTypes(contentType, store.getId(), language.getId());
+	}
+

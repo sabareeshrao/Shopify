@@ -1,0 +1,6 @@
+
+    if (userExist(customer.getUserName())) {
+      throw new UserAlreadyExistException("User already exist");
+    }
+
+    Customer customerModel = getCustomerModel(customer, merchantStore, language);

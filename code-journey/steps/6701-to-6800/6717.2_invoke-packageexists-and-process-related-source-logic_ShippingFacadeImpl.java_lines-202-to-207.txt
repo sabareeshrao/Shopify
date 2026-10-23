@@ -1,0 +1,6 @@
+		
+		if(this.packageExists(config, packaging)) {
+			throw new OperationNotAllowedException("Package with unique code [" + packaging.getCode() + "] already exist");
+		}
+		
+		com.salesmanager.core.model.shipping.Package pack = toPackage(packaging);

@@ -1,0 +1,9 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/productVariantGroup" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public @ResponseBody Entity create(
+			@Valid @RequestBody PersistableProductVariantGroup instanceGroup,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+

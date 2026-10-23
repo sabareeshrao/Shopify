@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturerList;
+import com.salesmanager.shop.model.entity.EntityExists;
+import com.salesmanager.shop.model.entity.ListCriteria;
+import com.salesmanager.shop.store.controller.manufacturer.facade.ManufacturerFacade;
+import io.swagger.annotations.Api;

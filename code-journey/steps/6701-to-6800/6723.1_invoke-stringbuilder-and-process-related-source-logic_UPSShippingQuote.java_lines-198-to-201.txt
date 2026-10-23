@@ -1,0 +1,4 @@
+
+			
+			StringBuilder xmlreqbuffer = new StringBuilder();
+			xmlreqbuffer.append("<?xml version=\"1.0\"?>");

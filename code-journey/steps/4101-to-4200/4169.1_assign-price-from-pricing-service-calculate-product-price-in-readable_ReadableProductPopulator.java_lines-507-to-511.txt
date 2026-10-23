@@ -1,5 +1,0 @@
-
-
-			target.setSku(source.getSku());
-
-			FinalPrice price = pricingService.calculateProductPrice(source);

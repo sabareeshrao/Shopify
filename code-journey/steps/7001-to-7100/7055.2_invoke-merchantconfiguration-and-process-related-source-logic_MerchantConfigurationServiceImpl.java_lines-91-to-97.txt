@@ -1,0 +1,7 @@
+
+		if(configuration==null) {
+			configuration = new MerchantConfiguration();
+			configuration.setMerchantStore(store);
+			configuration.setKey(MerchantConfigurationType.CONFIG.name());
+			configuration.setMerchantConfigurationType(MerchantConfigurationType.CONFIG);
+		}

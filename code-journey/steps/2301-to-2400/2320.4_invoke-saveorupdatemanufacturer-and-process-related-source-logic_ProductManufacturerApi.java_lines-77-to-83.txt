@@ -1,0 +1,7 @@
+		try {
+			manufacturerFacade.saveOrUpdateManufacturer(manufacturer, merchantStore, language);
+
+			return manufacturer;
+
+		} catch (Exception e) {
+			LOGGER.error("Error while creating manufacturer", e);

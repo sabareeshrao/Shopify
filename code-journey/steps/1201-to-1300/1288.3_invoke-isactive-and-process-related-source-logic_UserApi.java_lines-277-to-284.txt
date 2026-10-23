@@ -1,0 +1,8 @@
+		if (!user.isActive()) {
+			throw new UnauthorizedException("User " + userName + " not not active");
+		}
+
+		return user;
+
+	}
+}

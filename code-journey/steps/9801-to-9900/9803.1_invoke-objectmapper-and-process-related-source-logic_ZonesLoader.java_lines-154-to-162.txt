@@ -1,0 +1,9 @@
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		try {
+
+			InputStream in = this.getClass().getClassLoader().getResourceAsStream(jsonFilePath);
+
+			@SuppressWarnings("unchecked")
+			Map<String, Object> data = mapper.readValue(in, Map.class);

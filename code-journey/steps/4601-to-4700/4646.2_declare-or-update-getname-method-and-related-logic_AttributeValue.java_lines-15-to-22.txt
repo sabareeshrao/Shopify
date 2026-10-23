@@ -1,0 +1,8 @@
+	private boolean defaultAttribute;
+	private String image;
+	private String price;
+	private int sortOrder;
+
+	public String getName() {
+		return name;
+	}

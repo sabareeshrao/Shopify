@@ -1,0 +1,7 @@
+		
+		if(category == null) {
+			throw new ResourceNotFoundException("Category with friendlyUrl [" + friendlyUrl + "] was not found");
+		}
+		
+		ReadableCategoryPopulator categoryPopulator = new ReadableCategoryPopulator();
+		ReadableCategory readableCategory = new ReadableCategory();

@@ -1,0 +1,9 @@
+
+      if (imageBytes == null) {
+        LOGGER.warn("Image " + imageName + " does not exist");
+        return null;// no post processing will occur
+      }
+
+      input = new ByteArrayInputStream(imageBytes);
+      ByteArrayOutputStream output = new ByteArrayOutputStream();
+      IOUtils.copy(input, output);

@@ -1,0 +1,5 @@
+  private String rootName;// file location root
+
+  public LocalCacheManagerImpl(String rootName) {
+    this.rootName = rootName;
+  }

@@ -1,0 +1,10 @@
+						if (selectableOptions == null) {
+							selectableOptions = new TreeMap<Long, ReadableProductOption>();
+						}
+						opt = selectableOptions.get(attribute.getProductOption().getId());
+						if (opt == null) {
+							opt = createOption(attribute.getProductOption(), language);
+						}
+						if (opt != null) {
+							selectableOptions.put(attribute.getProductOption().getId(), opt);
+						}

@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.order.orderstatus.OrderStatusHistory;
+import com.salesmanager.core.model.order.payment.CreditCard;
+import com.salesmanager.core.model.payments.CreditCardType;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.currency.Currency;

@@ -1,0 +1,9 @@
+
+	/**
+	 * Get available shipping modules
+	 * 
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/shipping")

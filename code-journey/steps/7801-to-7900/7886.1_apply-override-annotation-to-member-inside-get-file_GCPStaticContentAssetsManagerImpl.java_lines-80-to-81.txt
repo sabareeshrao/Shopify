@@ -1,2 +1,0 @@
-	@Override
-	public List<String> getFileNames(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType)

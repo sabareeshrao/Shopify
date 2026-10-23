@@ -1,0 +1,6 @@
+
+		
+		Optional<ProductVariant> instanceModel = this.getproductVariant(productVariant, productId, store);
+		if(instanceModel.isEmpty()) {
+			throw new ResourceNotFoundException("productVariant with id [" + productVariant + "] not found for store [" + store.getCode() + "] and productId [" + productId + "]");
+		}

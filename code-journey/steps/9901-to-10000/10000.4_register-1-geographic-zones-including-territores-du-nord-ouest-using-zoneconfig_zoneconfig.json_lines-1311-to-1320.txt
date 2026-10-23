@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "NT",
+		"zoneName": "Territores du Nord-Ouest",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NU",
+		"zoneName": "Nunavut",
+		"countryCode": "CA"
+	},

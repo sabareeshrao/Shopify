@@ -1,0 +1,6 @@
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.springframework.http.HttpStatus.OK;
+import org.junit.Test;
+import org.junit.runner.RunWith;

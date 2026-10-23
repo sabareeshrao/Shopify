@@ -1,0 +1,9 @@
+
+							cartAttribute.setId(attribute.getId());
+
+							ProductOption option = productAttribute.getProductOption();
+							ProductOptionValue optionValue = productAttribute.getProductOptionValue();
+
+							List<ProductOptionDescription> optionDescriptions = option.getDescriptionsSettoList();
+							List<ProductOptionValueDescription> optionValueDescriptions = optionValue
+									.getDescriptionsSettoList();

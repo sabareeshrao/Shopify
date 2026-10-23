@@ -1,0 +1,9 @@
+*/
+
+
+								//if(properties==null) {
+								//	properties = new TreeMap<Long,ReadableProductProperty>();
+								//}
+								//property = properties.get(attribute.getProductOption().getId());
+								//if(property==null) {
+								property = createProperty(attribute, language);

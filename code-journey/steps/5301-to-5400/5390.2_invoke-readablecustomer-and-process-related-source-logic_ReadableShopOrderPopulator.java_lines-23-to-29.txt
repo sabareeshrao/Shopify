@@ -1,0 +1,7 @@
+		
+		//customer
+		
+		try {
+			
+			ReadableCustomer customer = new ReadableCustomer();
+			PersistableCustomer persistableCustomer = source.getCustomer();

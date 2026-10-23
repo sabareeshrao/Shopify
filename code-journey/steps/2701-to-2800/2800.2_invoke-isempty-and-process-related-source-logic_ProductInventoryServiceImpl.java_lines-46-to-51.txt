@@ -1,0 +1,6 @@
+		if(!CollectionUtils.isEmpty(variant.getAvailabilities())) {
+			availability = defaultAvailability(variant.getAvailabilities());
+		} else {
+			availability = defaultAvailability(variant.getProduct().getAvailabilities());
+		}
+		FinalPrice finalPrice = pricingService.calculateProductPrice(variant);

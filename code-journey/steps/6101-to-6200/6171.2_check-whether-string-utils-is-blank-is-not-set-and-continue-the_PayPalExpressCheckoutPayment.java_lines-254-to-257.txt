@@ -1,4 +1,0 @@
-			
-			if(!StringUtils.isBlank(baseScheme) && !baseScheme.endsWith(Constants.SLASH)) {
-				RETURN_URL.append(Constants.SLASH);
-			}

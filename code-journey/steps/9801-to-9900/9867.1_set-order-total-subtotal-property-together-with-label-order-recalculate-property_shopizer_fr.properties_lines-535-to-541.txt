@@ -1,0 +1,7 @@
+
+order.total.subtotal=Sous-total
+order.total.total=Total
+order.total.shipping=Livraison
+order.total.handling=Manutention
+order.total.discount=Rabais
+

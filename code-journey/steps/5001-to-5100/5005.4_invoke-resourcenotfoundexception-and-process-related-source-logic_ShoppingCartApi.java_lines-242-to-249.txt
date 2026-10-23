@@ -1,0 +1,8 @@
+
+		if (readableCart == null) {
+			throw new ResourceNotFoundException("No cart found for customerid [" + id + "]");
+		}
+
+		return readableCart;
+
+	}

@@ -1,0 +1,7 @@
+		
+		if(distance < 1) { //minimum 1 unit
+			distance = 1D;
+		}
+
+
+		ShippingOption shippingOption = new ShippingOption();

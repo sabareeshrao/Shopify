@@ -1,2 +1,0 @@
-	@Override
-	public void addFolder(String merchantStoreCode, String folderName, Optional<String> folderPath)

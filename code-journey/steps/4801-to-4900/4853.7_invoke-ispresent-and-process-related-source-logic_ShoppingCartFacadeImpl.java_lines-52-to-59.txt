@@ -1,0 +1,8 @@
+			
+			if(cart.isPresent()) {
+				cartModel = customerFacade.mergeCart(customer, cart.get(), store, language);
+			}
+			
+			if(cartModel == null) {
+				return null;
+			}

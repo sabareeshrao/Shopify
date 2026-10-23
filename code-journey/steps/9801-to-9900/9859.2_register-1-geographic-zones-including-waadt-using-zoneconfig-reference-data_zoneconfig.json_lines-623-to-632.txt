@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "VD",
+		"zoneName": "Waadt",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "VS",
+		"zoneName": "Wallis",
+		"countryCode": "CH"
+	},

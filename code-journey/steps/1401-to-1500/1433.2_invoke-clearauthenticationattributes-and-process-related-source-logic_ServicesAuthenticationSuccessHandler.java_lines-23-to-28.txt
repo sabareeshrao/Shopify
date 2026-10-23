@@ -1,0 +1,6 @@
+
+        if (savedRequest == null) {
+            clearAuthenticationAttributes(request);
+            return;
+        }
+        String targetUrlParam = getTargetUrlParameter();

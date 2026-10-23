@@ -1,0 +1,6 @@
+	private ReadableContentPage convertContentToReadableContentPage(MerchantStore store, Language language,
+			Content content) {
+		if (language != null) {
+			ReadableContentPage page = new ReadableContentPage();
+			Optional<ContentDescription> contentDescription = findAppropriateContentDescription(
+					content.getDescriptions(), language);

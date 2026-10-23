@@ -1,0 +1,8 @@
+    			
+    			
+    	         if(source.getProductSpecifications().getManufacturer()!=null) {
+                   
+                   Manufacturer manuf = null;
+                   if(!StringUtils.isBlank(source.getProductSpecifications().getManufacturer())) {
+                       manuf = manufacturerService.getByCode(store, source.getProductSpecifications().getManufacturer());
+                   } 

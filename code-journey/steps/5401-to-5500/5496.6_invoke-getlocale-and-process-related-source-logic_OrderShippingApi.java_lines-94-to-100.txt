@@ -1,0 +1,7 @@
+    try {
+      Locale locale = request.getLocale();
+      Principal principal = request.getUserPrincipal();
+      String userName = principal.getName();
+
+      // get customer id
+      Customer customer = customerService.getByNick(userName);

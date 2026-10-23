@@ -1,0 +1,8 @@
+
+	public void setPriceText(String priceText) {
+		this.priceText = priceText;
+	}
+
+	public void setMaximumWeight(int maximumWeight) {
+		this.maximumWeight = maximumWeight;
+	}

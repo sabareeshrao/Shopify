@@ -1,0 +1,8 @@
+			"zoneName": "Maryland",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "MA",
+			"zoneName": "Massachusetts",
+			"countryCode": "US"
+		},

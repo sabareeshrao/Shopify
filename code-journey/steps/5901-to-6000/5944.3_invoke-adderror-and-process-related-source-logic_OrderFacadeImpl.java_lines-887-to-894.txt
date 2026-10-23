@@ -1,0 +1,8 @@
+					bindingResult.addError(error);
+					messagesResult.put("creditcard", messages.getMessage("messages.error.creditcard", locale));
+					return;
+				}
+
+				CreditCardType creditCardType = null;
+				String cardType = order.getPayment().get("creditcard_card_type");
+

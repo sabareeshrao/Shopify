@@ -1,8 +1,0 @@
-  ReadableManufacturerList listByStore(MerchantStore store, Language language, ListCriteria criteria, int page, int count) ;
-  
-  /**
-   * Determines if manufacturer code already exists
-   * @param store
-   * @param manufacturerCode
-   * @return
-   */

@@ -1,0 +1,8 @@
+	    	
+	    	List<String> regions = (List<String>)object.get("regions");
+	    	if(regions!=null) {
+	    		
+	
+	    		StringBuilder configString = new StringBuilder();
+	    		configString.append("[");
+	    		int count=0;

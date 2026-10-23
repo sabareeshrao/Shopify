@@ -1,0 +1,8 @@
+	public void setDescriptions(List<ProductOptionDescription> descriptions) {
+		this.descriptions = descriptions;
+	}
+	public List<ProductOptionDescription> getDescriptions() {
+		return descriptions;
+	}
+
+}

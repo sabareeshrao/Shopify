@@ -1,0 +1,7 @@
+		shippingSummary.setShipping(selectedShippingOption.getOptionPrice());
+		shippingSummary.setShippingModule(shippingQuote.getShippingModuleCode());
+		shippingSummary.setShippingOption(selectedShippingOption.getDescription());
+		
+		return shippingSummary;
+	}
+

@@ -1,0 +1,6 @@
+			readableList.setData(readableStores);
+			readableList.setRecordsTotal(stores.getTotalElements());
+			readableList.setTotalPages(stores.getTotalPages());
+			readableList.setNumber(stores.getSize());
+			readableList.setRecordsFiltered(stores.getSize());
+						return readableList;

@@ -1,0 +1,9 @@
+            <configuration>
+              <additionalparam>${javadoc.opts}</additionalparam>
+              <doclint>none</doclint>
+              <source>11</source>
+    		  <detectJavaApiLink>false</detectJavaApiLink>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>

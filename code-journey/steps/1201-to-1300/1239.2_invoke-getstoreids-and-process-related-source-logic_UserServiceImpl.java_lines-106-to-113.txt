@@ -1,0 +1,8 @@
+		if (criteria.getStoreIds() != null) {// search within a predefined list
+												// of stores
+			users = pageableUserRepository.listByStoreIds(criteria.getStoreIds(), criteria.getAdminEmail(),
+					pageRequest);
+		} else if (StringUtils.isBlank(criteria.getStoreCode())) {// search for
+																	// a
+																	// specific
+																	// store

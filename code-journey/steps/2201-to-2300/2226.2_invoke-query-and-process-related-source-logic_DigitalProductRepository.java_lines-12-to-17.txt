@@ -1,0 +1,6 @@
+	
+	@Query("select p from DigitalProduct p inner join fetch p.product pp inner join fetch pp.merchantStore ppm where p.id = ?1")
+	DigitalProduct findOne(Long id);
+	
+	
+}

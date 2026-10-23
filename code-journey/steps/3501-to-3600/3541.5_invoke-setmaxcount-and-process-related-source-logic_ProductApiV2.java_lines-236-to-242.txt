@@ -1,0 +1,7 @@
+			
+			criterias.setMaxCount(count);
+			criterias.setLanguage(language.getCode());
+			criterias.setStartPage(page);
+			
+			return productFacadeV2.getProductListsByCriterias(merchantStore, language, criterias);
+			

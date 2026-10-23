@@ -1,0 +1,5 @@
+	
+	public Content getById(Long id, MerchantStore store) throws ServiceException {
+
+		Content content = contentRepository.findOne(id);
+

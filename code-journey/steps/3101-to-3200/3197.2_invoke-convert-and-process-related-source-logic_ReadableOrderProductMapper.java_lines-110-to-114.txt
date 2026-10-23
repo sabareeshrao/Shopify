@@ -1,0 +1,5 @@
+			if (product != null) {
+				
+				
+				ReadableProduct productProxy = readableProductMapper.convert(product, store, language);
+				target.setProduct(productProxy);

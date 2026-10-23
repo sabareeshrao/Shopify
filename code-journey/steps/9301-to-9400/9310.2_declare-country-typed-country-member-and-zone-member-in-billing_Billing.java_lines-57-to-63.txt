@@ -1,0 +1,7 @@
+	
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Zone.class)
+	@JoinColumn(name="BILLING_ZONE_ID", nullable=true)
+	private Zone zone;
+
+
+

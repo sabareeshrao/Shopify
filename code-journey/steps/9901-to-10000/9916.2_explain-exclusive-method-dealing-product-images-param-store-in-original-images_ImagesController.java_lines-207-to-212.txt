@@ -1,0 +1,6 @@
+	 * @param request
+	 * @return
+	 * @throws IOException
+	 */
+	@RequestMapping(value="/static/products/{storeCode}/{productCode}/{imageName}.{extension}",
+	produces = {"image/gif", "image/jpg", "image/png", "application/octet-stream"})

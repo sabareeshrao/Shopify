@@ -1,0 +1,8 @@
+			"zoneName": "Berlin",
+			"countryCode": "DE"
+		},
+		{
+			"zoneCode": "BRG",
+			"zoneName": "Brandenburg",
+			"countryCode": "DE"
+		},

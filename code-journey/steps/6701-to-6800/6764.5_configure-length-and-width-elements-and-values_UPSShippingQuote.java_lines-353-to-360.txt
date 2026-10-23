@@ -1,0 +1,8 @@
+				xmldatabuffer.append("<Length>");
+				xmldatabuffer.append(new BigDecimal(packageDetail.getShippingLength())
+						.setScale(2, BigDecimal.ROUND_HALF_UP));
+				xmldatabuffer.append("</Length>");
+				xmldatabuffer.append("<Width>");
+				xmldatabuffer.append(new BigDecimal(packageDetail.getShippingWidth())
+						.setScale(2, BigDecimal.ROUND_HALF_UP));
+				xmldatabuffer.append("</Width>");

@@ -1,0 +1,7 @@
+
+		try {
+
+			String nodePath = this.getNodePath(merchantStoreCode, staticContentType);
+			final Node<String, Object> merchantNode = this.getNode(nodePath);
+
+			merchantNode.remove(fileName);

@@ -1,0 +1,10 @@
+	public ReadableProductList list(
+			@RequestParam(value = "lang", required = false) String lang,
+			ProductCriteria searchCriterias,
+
+			// page
+			// 0
+			// ..
+			// n
+			// allowing
+			// navigation

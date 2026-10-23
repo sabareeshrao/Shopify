@@ -1,0 +1,11 @@
+	@Override
+	public Category getByCode(MerchantStore store, String code) throws ServiceException {
+
+		try {
+			return categoryRepository.findByCode(store.getId(), code);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}
+

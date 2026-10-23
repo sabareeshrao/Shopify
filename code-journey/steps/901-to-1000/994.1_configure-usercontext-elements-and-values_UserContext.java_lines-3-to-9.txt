@@ -1,0 +1,7 @@
+public final class UserContext implements AutoCloseable {
+	
+	private String ipAddress;
+	
+	private static ThreadLocal<UserContext> instance = new ThreadLocal<>();
+
+	private UserContext() {}

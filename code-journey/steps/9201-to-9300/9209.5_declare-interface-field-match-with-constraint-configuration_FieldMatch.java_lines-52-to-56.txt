@@ -1,0 +1,5 @@
+
+    /**
+     * @return The second field
+     */
+    String second();

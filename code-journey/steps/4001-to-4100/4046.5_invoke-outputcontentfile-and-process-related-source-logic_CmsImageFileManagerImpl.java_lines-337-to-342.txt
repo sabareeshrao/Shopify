@@ -1,0 +1,6 @@
+
+          OutputContentFile contentImage = new OutputContentFile();
+
+          InputStream input = new ByteArrayInputStream(imageBytes);
+          ByteArrayOutputStream output = new ByteArrayOutputStream();
+          IOUtils.copy(input, output);

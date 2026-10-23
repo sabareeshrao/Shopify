@@ -1,0 +1,7 @@
+      
+	<!-- 
+	********************
+	Content management
+	config.cms.method=default | http | aws
+	********************
+	 -->  

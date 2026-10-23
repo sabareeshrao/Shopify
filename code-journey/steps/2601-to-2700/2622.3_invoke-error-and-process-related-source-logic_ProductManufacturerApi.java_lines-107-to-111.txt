@@ -1,0 +1,5 @@
+
+			return manufacturer;
+
+		} catch (Exception e) {
+			LOGGER.error("Error while getting manufacturer", e);

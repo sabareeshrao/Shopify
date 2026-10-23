@@ -1,0 +1,8 @@
+           
+           if(StringUtils.isNotBlank( source.getStateProvince())){
+               target.getBilling().setState(source.getStateProvince());
+           }
+           
+           return target;
+        
+    }

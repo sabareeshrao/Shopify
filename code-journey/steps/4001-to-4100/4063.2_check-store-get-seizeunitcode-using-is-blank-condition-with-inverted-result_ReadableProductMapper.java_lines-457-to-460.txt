@@ -1,4 +1,0 @@
-		if (!StringUtils.isBlank(store.getSeizeunitcode())) {
-			specifications
-					.setDimensionUnitOfMeasure(DimensionUnitOfMeasure.valueOf(store.getSeizeunitcode().toLowerCase()));
-		}

@@ -1,0 +1,9 @@
+
+
+    Manufacturer manuf = new Manufacturer();
+  
+    if(manufacturer.getId() != null && manufacturer.getId().longValue() > 0) {
+    	manuf = manufacturerService.getById(manufacturer.getId());
+    	if(manuf == null) {
+    		throw new ResourceNotFoundException("Manufacturer with id [" + manufacturer.getId() + "] not found");
+    	}

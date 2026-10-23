@@ -1,0 +1,7 @@
+	
+	@Override
+	public List<PaymentMethod> getAcceptedPaymentMethods(MerchantStore store) throws ServiceException {
+		
+		Map<String,IntegrationConfiguration> modules =  this.getPaymentModulesConfigured(store);
+
+		List<PaymentMethod> returnModules = new ArrayList<PaymentMethod>();

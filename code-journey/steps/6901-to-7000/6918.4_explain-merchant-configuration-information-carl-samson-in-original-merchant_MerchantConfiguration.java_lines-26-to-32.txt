@@ -1,7 +1,0 @@
-
-/**
- * Merchant configuration information
- * 
- * @author Carl Samson
- *
- */

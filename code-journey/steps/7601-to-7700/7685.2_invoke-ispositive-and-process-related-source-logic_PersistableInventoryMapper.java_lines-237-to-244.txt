@@ -1,0 +1,8 @@
+		if (isPositive(desc.getId())) {
+			target.setId(desc.getId());
+		}
+		Language lang = getLanguage(desc);
+		target.setLanguage(lang);
+		return target;
+
+	}

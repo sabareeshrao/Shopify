@@ -1,0 +1,6 @@
+button.label.addToCart=Ajouter au panier
+button.label.continue=Continuez votre magasinage
+
+menu.home=Page d'accueil
+menu.catalogue=Catalogue
+menu.store=Boutique

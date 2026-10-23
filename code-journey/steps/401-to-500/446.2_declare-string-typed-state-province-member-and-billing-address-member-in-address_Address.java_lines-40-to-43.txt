@@ -1,4 +1,0 @@
-	@ApiModelProperty(notes = "Customer billing or shipping state / province (if no 2 letter codes, example: North estate)")
-	private String stateProvince;
-	private boolean billingAddress;
-	

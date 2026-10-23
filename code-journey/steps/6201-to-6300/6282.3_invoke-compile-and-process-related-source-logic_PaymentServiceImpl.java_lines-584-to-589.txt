@@ -1,0 +1,6 @@
+		
+		Matcher m = Pattern.compile("[^\\d\\s.-]").matcher(number);
+		
+		if (m.find()) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
+		}

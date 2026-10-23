@@ -1,0 +1,6 @@
+public class ContentName extends Content {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

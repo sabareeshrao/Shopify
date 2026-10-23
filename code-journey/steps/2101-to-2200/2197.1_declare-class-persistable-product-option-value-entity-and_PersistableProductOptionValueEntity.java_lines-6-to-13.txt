@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription;
+
+public class PersistableProductOptionValueEntity extends ProductOptionValueEntity {
+  
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;

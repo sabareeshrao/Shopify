@@ -1,3 +1,0 @@
-package com.salesmanager.core.model.customer.connection;
-
-//import org.springframework.social.UserIdSource;

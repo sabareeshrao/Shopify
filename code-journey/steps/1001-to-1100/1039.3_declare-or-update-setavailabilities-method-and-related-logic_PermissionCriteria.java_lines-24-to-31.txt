@@ -1,0 +1,8 @@
+
+	public void setAvailabilities(List<String> availabilities) {
+		this.availabilities = availabilities;
+	}
+
+	public Boolean getAvailable() {
+		return available;
+	}

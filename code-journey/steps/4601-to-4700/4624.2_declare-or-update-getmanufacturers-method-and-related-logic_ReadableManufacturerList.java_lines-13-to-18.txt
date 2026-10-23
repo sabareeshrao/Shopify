@@ -1,0 +1,6 @@
+  
+  private List<ReadableManufacturer> manufacturers = new ArrayList<ReadableManufacturer>();
+
+  public List<ReadableManufacturer> getManufacturers() {
+    return manufacturers;
+  }

@@ -1,0 +1,8 @@
+		desc.setTitle(contentDescription.getTitle());
+		desc.setMetatagDescription(contentDescription.getMetatagDescription());
+		page.setContentType(ContentType.PAGE.name());
+		page.setCode(content.getCode());
+		page.setPath(fileUtils.buildStaticFilePath(store.getCode(), contentDescription.getSeUrl()));
+		return page;
+
+	}

@@ -1,0 +1,8 @@
+           
+           if(StringUtils.isNotBlank( source.getCity())){
+               target.getBilling().setCity( source.getCity() );
+           }
+           
+           if(StringUtils.isNotBlank( source.getCompany())){
+               target.getBilling().setCompany( source.getCompany() );
+           }

@@ -1,0 +1,7 @@
+		
+		Optional<ProductVariation> p =  productVariationService.getById(store, variationId, language);
+		if(p.isEmpty()) {
+			throw new ResourceNotFoundException("ProductVariation not found for id [" + variationId +"] and store [" + store.getCode() + "]");
+		}
+		
+		ProductVariation productVariant = p.get();

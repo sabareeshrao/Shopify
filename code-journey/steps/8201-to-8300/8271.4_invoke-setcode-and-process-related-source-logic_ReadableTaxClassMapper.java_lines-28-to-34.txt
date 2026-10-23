@@ -1,0 +1,7 @@
+		destination.setCode(source.getCode());
+		destination.setName(source.getTitle());
+		destination.setStore(store.getCode());
+		return destination;
+	}
+
+}

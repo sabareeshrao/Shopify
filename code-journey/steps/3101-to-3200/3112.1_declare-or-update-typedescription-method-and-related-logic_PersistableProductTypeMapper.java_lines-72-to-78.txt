@@ -1,0 +1,7 @@
+	
+	private com.salesmanager.core.model.catalog.product.type.ProductTypeDescription typeDescription(ProductTypeDescription description, ProductType typeModel, String lang) throws ServiceException {
+		
+		com.salesmanager.core.model.catalog.product.type.ProductTypeDescription desc = null;
+		if(!CollectionUtils.isEmpty(typeModel.getDescriptions()) ){
+			desc = this.findAppropriateDescription(typeModel, lang);
+		}

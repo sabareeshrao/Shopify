@@ -1,0 +1,7 @@
+
+		// remaining items
+		if (items.size() > 0) {
+			cart.setLineItems(items);
+		} else {
+			cart.getLineItems().clear();
+		}

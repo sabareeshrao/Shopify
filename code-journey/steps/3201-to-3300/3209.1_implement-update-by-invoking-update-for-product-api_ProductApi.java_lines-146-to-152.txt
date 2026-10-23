@@ -1,0 +1,7 @@
+
+	/** updates price quantity **/
+	@ResponseStatus(HttpStatus.OK)
+	@PatchMapping(value = "/private/product/{id}", produces = { APPLICATION_JSON_VALUE })
+	@ApiOperation(httpMethod = "PATCH", value = "Update product inventory", notes = "Updates product inventory", produces = "application/json", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })

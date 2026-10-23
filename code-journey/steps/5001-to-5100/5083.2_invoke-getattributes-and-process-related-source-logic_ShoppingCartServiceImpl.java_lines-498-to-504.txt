@@ -1,0 +1,7 @@
+			if (item.getAttributes() != null) {
+				item.getAttributes().forEach(a -> shoppingCartAttributeItemRepository.deleteById(a.getId()));
+				item.getAttributes().clear();
+			}
+
+			// refresh
+			item = shoppingCartItemRepository.findOne(id);

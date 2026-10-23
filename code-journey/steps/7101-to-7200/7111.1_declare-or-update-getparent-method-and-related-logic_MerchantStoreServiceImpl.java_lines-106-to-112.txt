@@ -1,0 +1,7 @@
+	@Override
+	public MerchantStore getParent(String code) throws ServiceException {
+		Validate.notNull(code, "MerchantStore code cannot be null");
+
+		
+		//get it
+		MerchantStore storeModel = this.getByCode(code);

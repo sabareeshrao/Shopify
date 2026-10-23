@@ -1,0 +1,10 @@
+import java.io.Serializable;
+
+import io.swagger.annotations.ApiModelProperty;
+
+
+/**
+ * Customer or someone address
+ * @author carlsamson
+ *
+ */

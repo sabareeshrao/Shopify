@@ -1,9 +1,0 @@
-	private final static int PRODUCT_ROW_START = 16;
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger( ODSInvoiceModule.class );
-	
-	@Inject
-	private ZoneService zoneService;
-	
-	@Inject
-	private CountryService countryService;

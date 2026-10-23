@@ -1,0 +1,8 @@
+					vd.setName(attribute.getCustomerOptionValue().getDescriptionsSettoList().get(0).getName());
+					optionValue.setCode(attribute.getCustomerOptionValue().getCode());
+					optionValue.setDescription(vd);
+
+
+					readableAttribute.setCustomerOptionValue(optionValue);
+					target.getAttributes().add(readableAttribute);
+				}

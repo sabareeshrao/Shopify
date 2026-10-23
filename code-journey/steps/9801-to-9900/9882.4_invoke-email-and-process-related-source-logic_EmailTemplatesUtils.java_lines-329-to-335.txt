@@ -1,0 +1,7 @@
+
+
+
+		           Email email = new Email();
+		           email.setFrom(contact.getName());
+		           //since shopizer sends email to store email, sender is store email
+		           email.setFromEmail(merchantStore.getStoreEmailAddress());

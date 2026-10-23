@@ -1,0 +1,8 @@
+  
+  
+  @Test
+  public void createOptin() throws Exception {
+
+      PersistableOptin optin = new PersistableOptin();
+      optin.setCode(OptinType.PROMOTIONS.name());
+      optin.setOptinType(OptinType.PROMOTIONS.name());

@@ -1,0 +1,6 @@
+
+@Component
+public class PersistableProductPriceMapper implements Mapper<PersistableProductPrice, ProductPrice> {
+
+	@Autowired
+	private LanguageService languageService;

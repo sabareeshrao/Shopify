@@ -1,8 +1,0 @@
-		/** payment details **/
-		CreditCard creditCard = new CreditCard();
-		creditCard.setCardType(CreditCardType.VISA);
-
-		creditCard.setCcCvv("123");
-		creditCard.setCcExpires("12/30/2020" );
-		creditCard.setCcNumber( "123456789");
-		creditCard.setCcOwner("ccOwner" );

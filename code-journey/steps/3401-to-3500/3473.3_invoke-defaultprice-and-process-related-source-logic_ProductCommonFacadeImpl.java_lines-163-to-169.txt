@@ -1,0 +1,7 @@
+		for (ProductAvailability availability : availabilities) {
+			ProductPrice productPrice = availability.defaultPrice();
+			productPrice.setProductPriceAmount(price.getPrice());
+			if (price.isDiscounted()) {
+				productPrice.setProductPriceSpecialAmount(price.getDiscountedPrice());
+				if (!StringUtils.isBlank(price.getDiscountStartDate())) {
+					Date startDate = DateUtil.getDate(price.getDiscountStartDate());

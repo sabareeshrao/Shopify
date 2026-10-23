@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "GU",
-		"zoneName": "Guam",
-		"countryCode": "US"
-	},

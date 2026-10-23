@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.product.variant.ReadableProductVariant;
-import com.salesmanager.shop.model.catalog.product.type.ReadableProductType;
-

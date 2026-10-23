@@ -1,0 +1,8 @@
+		  
+		  .addGroup("ADMIN_CATALOGUE", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("PRODUCTS"))
+		  
+		  .addGroup("ADMIN_ORDER", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("ORDER"))

@@ -1,0 +1,7 @@
+		List<ProductImage> filteredImages = product.getImages().stream()
+				.filter(i -> i.getId().longValue() != i.getId().longValue()).collect(Collectors.toList());
+
+		filteredImages.add(image);
+
+		Set<ProductImage> allInmages = new HashSet<ProductImage>(filteredImages);
+		product.setImages(allInmages);

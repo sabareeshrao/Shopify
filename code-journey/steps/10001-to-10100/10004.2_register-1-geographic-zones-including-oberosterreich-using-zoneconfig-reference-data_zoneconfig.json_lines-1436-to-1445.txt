@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "OO",
+		"zoneName": "Oberosterreich",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "SB",
+		"zoneName": "Salzburg",
+		"countryCode": "AT"
+	},

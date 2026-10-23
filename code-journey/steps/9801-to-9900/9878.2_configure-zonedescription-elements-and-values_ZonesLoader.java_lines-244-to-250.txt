@@ -1,0 +1,7 @@
+		ZoneDescription zoneDescription = new ZoneDescription();
+		zoneDescription.setLanguage(l);
+		zoneDescription.setName(list.get("zoneName"));
+		Zone zone = null;
+		List<ZoneDescription> descriptions = null;
+		if (!zonesMap.containsKey(zoneCode)) {
+			zone = new Zone();

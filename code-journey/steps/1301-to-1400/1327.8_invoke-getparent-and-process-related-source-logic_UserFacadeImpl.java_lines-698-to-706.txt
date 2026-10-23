@@ -1,0 +1,9 @@
+						
+				if(store.getParent()!=null) {
+					parent=merchantStoreService.getParent(merchant);
+				}
+
+				// user can be in parent
+				if (parent != null && parent.getCode().equals(store.getCode())) {
+					authorized = true;
+				}

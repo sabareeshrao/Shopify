@@ -1,0 +1,6 @@
+	
+	@Column(name="FIRST")
+	private String firstName;
+	
+	@Column(name="LAST")
+	private String lastName;

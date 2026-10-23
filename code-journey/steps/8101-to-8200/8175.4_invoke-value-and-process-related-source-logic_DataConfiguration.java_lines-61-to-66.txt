@@ -1,0 +1,6 @@
+    
+    @Value("${db.minPoolSize}")
+    private int minPoolSize;
+    
+    @Value("${db.maxPoolSize}")
+    private int maxPoolSize;

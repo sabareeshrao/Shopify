@@ -1,0 +1,6 @@
+	protected String getJsonInfo() {
+		
+		StringBuilder returnString = new StringBuilder();
+		returnString.append("{");
+		returnString.append("\"response\"").append(":");
+		returnString.append("{");

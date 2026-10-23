@@ -1,0 +1,9 @@
+
+		}
+
+		@Bean
+		public AuthenticationEntryPoint servicesAuthenticationEntryPoint() {
+			BasicAuthenticationEntryPoint entryPoint = new BasicAuthenticationEntryPoint();
+			entryPoint.setRealmName("rest-customer-realm");
+			return entryPoint;
+		}

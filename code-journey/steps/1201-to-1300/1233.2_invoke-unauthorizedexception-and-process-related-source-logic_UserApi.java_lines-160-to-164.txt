@@ -1,0 +1,5 @@
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+		userFacade.changePassword(id, authenticatedUser, password);
+	}

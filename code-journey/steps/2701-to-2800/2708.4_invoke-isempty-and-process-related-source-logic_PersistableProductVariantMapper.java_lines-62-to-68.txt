@@ -1,0 +1,7 @@
+				if(variationValue.isEmpty()) {
+					throw new ResourceNotFoundException("ProductVaritionValue [" + productVariationValue + "] + not found for store [" + store.getCode() + "]");
+				}
+				
+			}
+		} else {
+			variation = productVariationService.getByCode(store, productVariationCode);

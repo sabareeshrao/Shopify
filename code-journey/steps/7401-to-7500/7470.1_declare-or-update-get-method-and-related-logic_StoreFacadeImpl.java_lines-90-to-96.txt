@@ -1,0 +1,7 @@
+	@Override
+	public MerchantStore get(String code) {
+		try {
+			MerchantStore store = merchantStoreService.getByCode(code);
+			return store;
+		} catch (ServiceException e) {
+			LOG.error("Error while getting MerchantStore", e);

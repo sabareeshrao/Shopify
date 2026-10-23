@@ -1,0 +1,7 @@
+
+		} catch (Exception e) {
+			LOG.error("Error while trying to convert input stream to buffered image", e);
+			throw new ServiceException(e);
+
+		} finally {
+

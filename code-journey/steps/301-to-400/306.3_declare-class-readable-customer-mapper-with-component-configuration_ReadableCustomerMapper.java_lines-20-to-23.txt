@@ -1,4 +1,0 @@
-
-@Component
-public class ReadableCustomerMapper implements Mapper<Customer, ReadableCustomer> {
-

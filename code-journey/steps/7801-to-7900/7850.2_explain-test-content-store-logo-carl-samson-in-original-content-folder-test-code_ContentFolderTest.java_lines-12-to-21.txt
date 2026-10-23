@@ -1,0 +1,10 @@
+
+/**
+ * Test content with CMS store logo
+ * 
+ * @author Carl Samson
+ *
+ */
+@Ignore
+public class ContentFolderTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+

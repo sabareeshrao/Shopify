@@ -1,0 +1,8 @@
+		try {
+
+			Product p = productService.getById(id);
+
+			if (p == null) {
+				throw new ResourceNotFoundException(
+						"Product [" + id + "] not found for merchant [" + merchantStore.getCode() + "]");
+			}

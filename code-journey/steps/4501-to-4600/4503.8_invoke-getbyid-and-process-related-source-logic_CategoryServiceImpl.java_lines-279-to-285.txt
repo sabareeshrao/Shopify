@@ -1,0 +1,7 @@
+
+			Category categ = getById(category.getId(), category.getMerchantStore().getId());
+			categoryRepository.delete(categ);
+
+		}
+
+	}

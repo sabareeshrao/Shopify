@@ -1,0 +1,9 @@
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void deleteFile(@Valid ContentName name, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		contentFacade.delete(merchantStore, name.getName(), name.getContentType());
+	}
+
+
+}

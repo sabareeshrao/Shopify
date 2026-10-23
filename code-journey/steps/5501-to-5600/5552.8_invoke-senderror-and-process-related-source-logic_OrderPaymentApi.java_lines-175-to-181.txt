@@ -1,0 +1,7 @@
+			try {
+				response.sendError(503, "Error while initializing the payment " + e.getMessage());
+			} catch (Exception ignore) {
+			}
+			return null;
+		}
+	}

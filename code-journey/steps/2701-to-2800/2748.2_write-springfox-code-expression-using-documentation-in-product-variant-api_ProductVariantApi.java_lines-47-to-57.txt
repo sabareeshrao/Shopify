@@ -1,0 +1,11 @@
+
+/**
+ * Api to manage productVariant
+ * 
+ * Product variant allows to specify product
+ * size, sku and options related to this product variant
+ * 
+ * @author carlsamson
+ *
+ */
+@Controller

@@ -1,0 +1,6 @@
+			if (modules == null) {
+				modules = moduleConfigurationRepository.findByModule(module);
+				// set json objects
+				for (IntegrationModule mod : modules) {
+
+					String regions = mod.getRegions();

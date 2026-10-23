@@ -1,8 +1,0 @@
-label.entity.order=Order
-label.entity.status=Status
-label.generic.all=All
-label.generic.email=Email address
-label.generic.address=Address
-label.generic.city=City
-label.generic.country=Country
-label.generic.price=Price

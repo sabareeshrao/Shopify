@@ -1,7 +1,0 @@
-
-			if (!CollectionUtils.isEmpty(totals)) {
-				for (com.salesmanager.core.model.order.OrderTotal total : totals) {
-					total.setOrder(modelOrder);
-					set.add(total);
-				}
-			}

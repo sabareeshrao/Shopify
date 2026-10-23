@@ -1,0 +1,7 @@
+
+  List<CodeEntity> createAttributes(List<PersistableProductAttribute> attributes, Long productId, MerchantStore store);
+  void updateAttributes(List<PersistableProductAttribute> attributes, Long productId, MerchantStore store);
+  
+  void addOptionValueImage(MultipartFile image, Long optionValueId, MerchantStore store, Language language);
+  
+  void removeOptionValueImage(Long optionValueId, MerchantStore store, Language language);

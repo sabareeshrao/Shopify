@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.ProductDescription;
+
+public class ReadableProductDefinitionFull extends ReadableProductDefinition {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

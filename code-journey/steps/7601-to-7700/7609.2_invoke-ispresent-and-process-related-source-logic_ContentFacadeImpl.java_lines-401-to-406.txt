@@ -1,0 +1,6 @@
+
+		if (contentDescriptionModel.isPresent()) {
+			contentDescription.setMetatagDescription(contentDescriptionModel.get().getMetatagDescription());
+			contentDescription.setDescription(contentDescriptionModel.get().getDescription());
+			contentDescription.setId(contentDescriptionModel.get().getId());
+			contentDescription.setAuditSection(contentDescriptionModel.get().getAuditSection());

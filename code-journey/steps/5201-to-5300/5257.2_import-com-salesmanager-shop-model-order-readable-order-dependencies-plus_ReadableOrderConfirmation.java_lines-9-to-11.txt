@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.order.ReadableOrderProduct;
-import com.salesmanager.shop.model.order.total.ReadableTotal;
-

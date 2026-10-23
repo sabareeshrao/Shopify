@@ -1,0 +1,7 @@
+	
+	@Autowired
+	private PersistableProductAvailabilityMapper persistableProductAvailabilityMapper;
+	
+	@Autowired
+	private ProductService productService;
+

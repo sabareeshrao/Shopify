@@ -1,0 +1,10 @@
+
+	/**
+	 * Get userName by merchant code and userName
+	 *
+	 * @param storeCode
+	 * @param name
+	 * @param request
+	 * @return
+	 */
+	@ResponseStatus(HttpStatus.OK)

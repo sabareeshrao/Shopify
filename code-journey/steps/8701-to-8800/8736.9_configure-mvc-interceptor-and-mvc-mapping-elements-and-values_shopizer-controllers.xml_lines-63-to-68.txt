@@ -1,0 +1,6 @@
+ 		
+ 		<!-- public services cors filter -->
+ 		<mvc:interceptor>
+  			<mvc:mapping path="/services/**"/>
+  			<bean class="com.salesmanager.shop.filter.CorsFilter"/>
+ 		</mvc:interceptor>

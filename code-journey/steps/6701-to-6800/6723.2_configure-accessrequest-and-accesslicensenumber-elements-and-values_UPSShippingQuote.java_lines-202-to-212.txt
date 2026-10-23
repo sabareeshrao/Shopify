@@ -1,0 +1,11 @@
+			xmlreqbuffer.append("<AccessRequest>");
+			xmlreqbuffer.append("<AccessLicenseNumber>");
+			xmlreqbuffer.append(accessKey);
+			xmlreqbuffer.append("</AccessLicenseNumber>");
+			xmlreqbuffer.append("<UserId>");
+			xmlreqbuffer.append(userId);
+			xmlreqbuffer.append("</UserId>");
+			xmlreqbuffer.append("<Password>");
+			xmlreqbuffer.append(password);
+			xmlreqbuffer.append("</Password>");
+			xmlreqbuffer.append("</AccessRequest>");

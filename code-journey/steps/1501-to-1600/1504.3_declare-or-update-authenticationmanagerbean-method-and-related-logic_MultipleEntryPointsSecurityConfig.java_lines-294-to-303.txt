@@ -1,0 +1,10 @@
+
+		@Bean("jwtAdminAuthenticationManager")
+		@Override
+		public AuthenticationManager authenticationManagerBean() throws Exception {
+			AuthenticationManager mgr = super.authenticationManagerBean();
+			return mgr;
+		}
+		
+		
+

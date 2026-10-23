@@ -1,0 +1,8 @@
+		List<String> supportedCountries = new ArrayList<String>();
+		if(shippingConfiguration==null) {
+			shippingConfiguration = new ShippingConfiguration();
+		}
+		
+		if(shippingConfiguration.getShippingType()!=null) {
+				shippingType = shippingConfiguration.getShippingType();
+		}

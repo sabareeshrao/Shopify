@@ -1,0 +1,10 @@
+	
+	@Autowired
+	private ReadableOrderProductMapper readableOrderProductMapper;
+	
+	@Autowired 
+	private LabelUtils messages;
+	
+	@Autowired
+	private LanguageService languageService;
+

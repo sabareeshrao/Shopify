@@ -1,4 +1,0 @@
-		
-		Locale l = Locale.CANADA;
-		order.setLocale(l);
-

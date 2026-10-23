@@ -1,0 +1,6 @@
+	public ReadableProductOptionEntity getOption(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		return productOptionFacade.getOption(id, merchantStore, language);
+
+	}

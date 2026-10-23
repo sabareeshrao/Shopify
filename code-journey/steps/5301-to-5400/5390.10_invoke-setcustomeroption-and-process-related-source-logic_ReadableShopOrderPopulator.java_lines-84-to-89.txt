@@ -1,0 +1,6 @@
+					
+					readableAttribute.setCustomerOption(option);
+					
+					ReadableCustomerOptionValue optionValue = new ReadableCustomerOptionValue();
+					optionValue.setId(attribute.getCustomerOptionValue().getId());
+					CustomerOptionValueDescription vd = new CustomerOptionValueDescription();

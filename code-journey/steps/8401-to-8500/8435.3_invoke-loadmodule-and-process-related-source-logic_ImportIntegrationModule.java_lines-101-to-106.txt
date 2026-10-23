@@ -1,0 +1,6 @@
+
+
+			//get the module to be loaded
+			for (Map o : objects) {
+				//get module object
+				IntegrationModule module = integrationModulesLoader.loadModule(o);

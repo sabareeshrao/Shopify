@@ -1,0 +1,9 @@
+	
+	Page<ProductAttribute> getByProductId(MerchantStore store, Product product, int page, int count)
+			throws ServiceException;
+
+	List<ProductAttribute> getByAttributeIds(MerchantStore store, Product product, List<Long> ids)
+			throws ServiceException;
+	
+	List<ProductAttribute> getProductAttributesByCategoryLineage(MerchantStore store, String lineage, Language language) throws Exception;
+}

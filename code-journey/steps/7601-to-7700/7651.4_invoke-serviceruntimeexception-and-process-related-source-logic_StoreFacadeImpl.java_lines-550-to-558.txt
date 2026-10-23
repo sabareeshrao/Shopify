@@ -1,0 +1,9 @@
+			
+			
+			return stores;
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while getting store name",e);
+		}
+		
+
+	}

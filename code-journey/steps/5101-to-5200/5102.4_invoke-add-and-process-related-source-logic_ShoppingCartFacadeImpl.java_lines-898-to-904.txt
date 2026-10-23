@@ -1,0 +1,7 @@
+						newItems.add(anItem);
+					}
+					itemModified = true;
+				} else {
+					newItems.add(anItem);
+				}
+			}

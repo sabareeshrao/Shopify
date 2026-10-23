@@ -1,7 +1,0 @@
-
-
-/**
- * Customer or someone address
- * @author carlsamson
- *
- */

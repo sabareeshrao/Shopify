@@ -1,0 +1,8 @@
+
+		if (!principal.getName().equals(customer.getNick())) {
+			throw new UnauthorizedException(
+					"User [" + principal.getName() + "] unauthorized for customer [" + customer.getId() + "]");
+		}
+
+	}
+

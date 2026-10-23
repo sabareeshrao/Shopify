@@ -1,9 +1,0 @@
-@Controller
-@RequestMapping("/services")
-public class StoreContactRESTController {
-	
-	@Inject
-	private LanguageService languageService;
-	
-	@Inject
-	private MerchantStoreService merchantStoreService;

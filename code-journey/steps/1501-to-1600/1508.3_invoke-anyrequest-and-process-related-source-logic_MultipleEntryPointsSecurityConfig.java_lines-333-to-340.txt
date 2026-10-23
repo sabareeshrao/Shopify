@@ -1,0 +1,8 @@
+					.anyRequest().authenticated()
+					.and()
+					.httpBasic().authenticationEntryPoint(apiAdminAuthenticationEntryPoint())
+					.and()
+					.addFilterAfter(authenticationTokenFilter, BasicAuthenticationFilter.class)
+					.csrf().disable();
+
+		}

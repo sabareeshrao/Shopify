@@ -1,0 +1,7 @@
+				String dataField = data.toJSONString();
+				dataEntries.append(dataField);
+				if(count<super.getData().size()-1) {
+					dataEntries.append(",");
+				}
+				count ++;
+			}

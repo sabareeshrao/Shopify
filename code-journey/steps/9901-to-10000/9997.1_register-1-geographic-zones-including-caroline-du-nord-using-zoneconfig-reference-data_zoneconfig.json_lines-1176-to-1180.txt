@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "NC",
-		"zoneName": "Caroline du Nord",
-		"countryCode": "US"
-	},

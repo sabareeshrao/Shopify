@@ -1,3 +1,0 @@
-	private FolderPut addFolder;
-	private FolderList listFolder;
-

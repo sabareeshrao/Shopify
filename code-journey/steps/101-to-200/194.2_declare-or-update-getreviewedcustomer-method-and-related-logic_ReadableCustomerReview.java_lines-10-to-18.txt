@@ -1,0 +1,9 @@
+	public ReadableCustomer getReviewedCustomer() {
+		return reviewedCustomer;
+	}
+	public void setReviewedCustomer(ReadableCustomer reviewedCustomer) {
+		this.reviewedCustomer = reviewedCustomer;
+	}
+
+
+}

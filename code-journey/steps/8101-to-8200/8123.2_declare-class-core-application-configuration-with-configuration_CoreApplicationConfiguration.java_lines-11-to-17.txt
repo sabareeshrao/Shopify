@@ -1,0 +1,7 @@
+
+@Configuration
+@ComponentScan({"com.salesmanager.core.business"})
+@EnableAutoConfiguration
+@EnableConfigurationProperties(ApplicationSearchConfiguration.class)
+@EnableJpaRepositories(basePackages = "com.salesmanager.core.business.repositories")
+@EntityScan(basePackages = "com.salesmanager.core.model")

@@ -1,0 +1,9 @@
+	public void setModule(String module) {
+		this.module = module;
+	}
+	public BigDecimal getValue() {
+		return value;
+	}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}

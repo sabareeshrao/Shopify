@@ -1,0 +1,9 @@
+
+    public RestApiException(String message, Throwable exception) {
+        super(message, exception);
+    }
+
+    public RestApiException(String errorCode, String message, Throwable exception) {
+        super(errorCode, message, exception);
+    }
+}

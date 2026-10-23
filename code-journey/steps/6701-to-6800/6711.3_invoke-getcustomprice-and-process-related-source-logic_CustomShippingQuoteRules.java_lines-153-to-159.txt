@@ -1,0 +1,7 @@
+
+		if(resp.getCustomPrice() != null) {
+
+			ShippingOption shippingOption = new ShippingOption();
+			
+			
+			shippingOption.setOptionPrice(new BigDecimal(resp.getCustomPrice()));

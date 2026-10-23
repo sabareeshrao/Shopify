@@ -1,5 +1,0 @@
-	{
-		"zoneCode": "VA",
-		"zoneName": "Virginie",
-		"countryCode": "US"
-	},

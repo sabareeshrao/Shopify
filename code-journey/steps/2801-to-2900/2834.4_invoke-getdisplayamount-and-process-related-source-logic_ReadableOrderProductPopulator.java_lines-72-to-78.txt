@@ -1,0 +1,7 @@
+		
+		try {
+			String subTotalPrice = pricingService.getDisplayAmount(subTotal, store);
+			target.setSubTotal(subTotalPrice);
+		} catch(Exception e) {
+			throw new ConversionException("Cannot format price",e);
+		}

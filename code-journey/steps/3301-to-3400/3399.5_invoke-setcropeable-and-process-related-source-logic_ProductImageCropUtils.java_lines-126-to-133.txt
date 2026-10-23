@@ -1,0 +1,8 @@
+		double h = factor * specificationsHeight;
+		
+		if(w==h) {
+			setCropeable(false);
+		}
+		
+
+		cropAreaWidth = w;

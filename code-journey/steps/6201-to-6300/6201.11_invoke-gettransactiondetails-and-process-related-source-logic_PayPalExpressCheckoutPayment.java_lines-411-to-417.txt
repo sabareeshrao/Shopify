@@ -1,0 +1,7 @@
+			 newTransaction.getTransactionDetails().put("TRANSACTIONID", refundTransactionResponse.getRefundTransactionID());
+			 transaction.getTransactionDetails().put("CORRELATION", refundTransactionResponse.getCorrelationID());
+							
+			
+
+			return newTransaction;
+			

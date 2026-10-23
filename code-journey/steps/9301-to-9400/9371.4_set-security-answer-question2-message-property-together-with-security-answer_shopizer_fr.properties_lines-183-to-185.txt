@@ -1,3 +1,0 @@
-security.answer.question2.message=Veuillez répondre à la question de sécurité 2
-security.answer.question3.message=Veuillez répondre à la question de sécurité 3
-

@@ -1,0 +1,9 @@
+				deliveryAddress.setAddress(source.getDeliveryAddress().getAddress());
+				deliveryAddress.setPostalCode(source.getDeliveryAddress().getPostalCode());
+				deliveryAddress.setCity(source.getDeliveryAddress().getCity());
+				if(source.getDeliveryAddress().getZone()!=null) {
+					deliveryAddress.setZone(source.getDeliveryAddress().getZone().getCode());
+				}
+				if(source.getDeliveryAddress().getCountry()!=null) {
+					deliveryAddress.setCountry(source.getDeliveryAddress().getCountry().getIsoCode());
+				}

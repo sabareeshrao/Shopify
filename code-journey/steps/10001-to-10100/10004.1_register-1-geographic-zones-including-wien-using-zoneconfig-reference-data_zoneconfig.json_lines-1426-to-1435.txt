@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "WIAT",
+		"zoneName": "Wien",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "NO",
+		"zoneName": "Niederosterreich",
+		"countryCode": "AT"
+	},

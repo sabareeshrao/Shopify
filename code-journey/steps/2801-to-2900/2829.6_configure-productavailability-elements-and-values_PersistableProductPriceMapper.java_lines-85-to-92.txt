@@ -1,0 +1,8 @@
+
+				if (!CollectionUtils.isEmpty(existing)) {
+					// find default availability
+					Optional<ProductAvailability> avail = existing.stream()
+							.filter(a -> a.getRegion() != null && a.getRegion().equals(Constants.ALL_REGIONS))
+							.findAny();
+					if (avail.isPresent()) {
+						availability = avail.get();

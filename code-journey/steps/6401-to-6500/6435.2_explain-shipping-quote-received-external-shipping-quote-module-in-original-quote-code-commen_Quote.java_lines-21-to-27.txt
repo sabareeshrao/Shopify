@@ -1,0 +1,7 @@
+
+/**
+ * Shipping quote received from external shipping quote module or calculated internally
+ * @author c.samson
+ *
+ */
+

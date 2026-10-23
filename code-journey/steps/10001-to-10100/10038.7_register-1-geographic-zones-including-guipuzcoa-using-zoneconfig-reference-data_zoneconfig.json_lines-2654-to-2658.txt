@@ -1,5 +1,0 @@
-		{
-			"zoneCode": "Guipuzcoa",
-			"zoneName": "Guipuzcoa",
-			"countryCode": "ES"
-		},

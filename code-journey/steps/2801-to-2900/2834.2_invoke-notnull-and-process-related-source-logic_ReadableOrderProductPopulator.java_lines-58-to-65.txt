@@ -1,0 +1,8 @@
+		Validate.notNull(imageUtils,"Requires imageUtils");
+		target.setId(source.getId());
+		target.setOrderedQuantity(source.getProductQuantity());
+		try {
+			target.setPrice(pricingService.getDisplayAmount(source.getOneTimeCharge(), store));
+		} catch(Exception e) {
+			throw new ConversionException("Cannot convert price",e);
+		}

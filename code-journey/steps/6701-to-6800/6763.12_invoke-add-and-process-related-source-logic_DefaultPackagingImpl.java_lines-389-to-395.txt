@@ -1,0 +1,7 @@
+					
+					packages.add(detail);
+				}
+			}
+		}
+		
+		return packages;

@@ -1,0 +1,6 @@
+
+						if (pr.isPresent() && language !=null) {
+							readableProductPrice.setId(pr.get().getId());
+							Optional<ProductPriceDescription> d = pr.get().getDescriptions().stream()
+									.filter(desc -> desc.getLanguage().getCode().equals(language.getCode()))
+									.findFirst();

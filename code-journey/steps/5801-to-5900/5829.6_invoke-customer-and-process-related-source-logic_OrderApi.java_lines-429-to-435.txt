@@ -1,0 +1,7 @@
+
+			Customer customer = new Customer();
+			customer = customerFacade.populateCustomerModel(customer, order.getCustomer(), merchantStore, language);
+
+			if(!StringUtils.isBlank(presistableCustomer.getPassword())) {
+				//check if customer already exist
+				customer.setAnonymous(false);

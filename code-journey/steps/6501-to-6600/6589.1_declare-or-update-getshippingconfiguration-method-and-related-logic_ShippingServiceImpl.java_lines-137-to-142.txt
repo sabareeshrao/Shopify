@@ -1,0 +1,6 @@
+	
+	@Override
+	public IntegrationConfiguration getShippingConfiguration(String moduleCode, MerchantStore store) throws ServiceException {
+
+		
+		Map<String,IntegrationConfiguration> configuredModules = getShippingModulesConfigured(store);

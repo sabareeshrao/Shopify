@@ -1,0 +1,11 @@
+	
+	/**
+	 * Logo, content image
+	 * @param storeId
+	 * @param imageType (LOGO, CONTENT, IMAGE)
+	 * @param imageName
+	 * @return
+	 * @throws IOException
+	 * @throws ServiceException 
+	 */
+	@RequestMapping("/static/files/{storeCode}/{imageType}/{imageName}.{extension}")

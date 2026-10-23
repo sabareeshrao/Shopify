@@ -1,0 +1,8 @@
+
+/**
+ * Registers Optin events
+ * @author carlsamson
+ *
+ */
+public interface OptinService extends SalesManagerEntityService<Long, Optin> {
+	

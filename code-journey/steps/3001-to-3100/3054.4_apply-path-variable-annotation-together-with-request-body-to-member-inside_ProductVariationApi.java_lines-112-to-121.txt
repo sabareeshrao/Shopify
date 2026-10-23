@@ -1,0 +1,10 @@
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public ReadableProductPrice calculateVariant(
+      @PathVariable final Long id,
+      @RequestBody ReadableSelectedProductVariant options,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletResponse response)

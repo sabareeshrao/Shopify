@@ -1,0 +1,7 @@
+  public @ResponseBody ReadableProductList addProductToGroup(
+      @PathVariable Long productId,
+      @PathVariable String code,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletResponse response) {
+

@@ -1,0 +1,7 @@
+public class ReadableOptinPopulator extends AbstractDataPopulator<Optin, ReadableOptin> {
+
+	@Override
+	public ReadableOptin populate(Optin source, ReadableOptin target, MerchantStore store, Language language)
+			throws ConversionException {
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(source,"Optin cannot be null");

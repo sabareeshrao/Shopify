@@ -1,0 +1,8 @@
+					contentDescription.setContent(c);
+					descriptions.add(contentDescription);
+					
+			}
+			
+			return descriptions;
+
+	}

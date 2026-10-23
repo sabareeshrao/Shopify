@@ -1,0 +1,8 @@
+	private int totalPages;//totalPages
+	private int number;//number of record in current page
+	private long recordsTotal;//total number of records in db
+	private int recordsFiltered;
+
+	public int getTotalPages() {
+		return totalPages;
+	}

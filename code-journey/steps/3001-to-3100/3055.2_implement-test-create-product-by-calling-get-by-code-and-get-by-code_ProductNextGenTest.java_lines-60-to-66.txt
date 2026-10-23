@@ -1,7 +1,0 @@
-	@Test
-	public void testCreateProduct() throws Exception {
-
-	    Language en = languageService.getByCode("en");
-
-	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
-	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);

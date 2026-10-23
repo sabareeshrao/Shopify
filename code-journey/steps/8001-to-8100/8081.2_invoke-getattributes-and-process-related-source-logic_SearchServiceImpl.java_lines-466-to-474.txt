@@ -1,0 +1,9 @@
+
+		for (ProductAttribute attribute : product.getAttributes()) {
+			Map<String, String> attr = attribute(attribute, language);
+			allAttributes.putAll(attr);
+		}
+
+		return allAttributes;
+
+	}

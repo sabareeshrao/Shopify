@@ -1,0 +1,10 @@
+		boolean isUserExist = true;// default user exist
+		try {
+			// will throw an exception if not fount
+			userFacade.findByUserName(userName.getUnique(), userName.getMerchant(), language);
+
+		} catch (ResourceNotFoundException e) {
+			isUserExist = false;
+		}
+		return new ResponseEntity<EntityExists>(new EntityExists(isUserExist), HttpStatus.OK);
+	}

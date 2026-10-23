@@ -1,0 +1,9 @@
+
+			// images from CMS
+			List<ContentImage> contentImages = imageNames.stream().map(name -> convertToContentImage(name, store))
+					.collect(Collectors.toList());
+
+			ContentFolder contentFolder = new ContentFolder();
+			if (!StringUtils.isBlank(folder)) {
+				contentFolder.setPath(URLEncoder.encode(folder, "UTF-8"));
+			}

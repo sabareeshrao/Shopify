@@ -1,0 +1,10 @@
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Cannot verify customer token", e);
+		}
+
+		Date tokenExpiry = customer.getCredentialsResetRequest().getCredentialsRequestExpiry();
+
+		if (tokenExpiry == null) {
+			throw new GenericRuntimeException("No expiry date configured for token [" + token + "]");
+		}

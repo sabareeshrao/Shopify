@@ -1,0 +1,6 @@
+
+			// need to add link to controller receiving user reset password
+			// request
+			String customerResetLink = new StringBuilder().append(baseUrl)
+					.append(Constants.SLASH)
+					.append(String.format(resetUserLink, store.getCode(), token)).toString();

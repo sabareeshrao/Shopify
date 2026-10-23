@@ -1,0 +1,9 @@
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("An error occured while mapping product availability", e);
+		}
+		
+		return destination;
+	}
+
+}

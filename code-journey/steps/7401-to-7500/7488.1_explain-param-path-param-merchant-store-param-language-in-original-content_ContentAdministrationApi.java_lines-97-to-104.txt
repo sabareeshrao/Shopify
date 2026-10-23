@@ -1,8 +1,0 @@
-	
-	/**
-	 * @param path
-	 * @param merchantStore
-	 * @param language
-	 * @return
-	 * @throws Exception
-	 */

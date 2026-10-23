@@ -1,0 +1,9 @@
+public class InvoiceTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+/*	
+	@Inject
+	ProductPriceUtils priceUtil;
+
+
+	@Ignore
+	public void createInvoice() throws ServiceException {
+		
