@@ -1,3 +1,0 @@
-	private long recordsTotal;//total number of records in db
-	private int recordsFiltered;
-

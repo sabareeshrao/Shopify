@@ -1,5 +1,0 @@
-public interface MerchantConfigurationFacade {
-
-  Configs getMerchantConfig(MerchantStore merchantStore, Language language);
-
-}

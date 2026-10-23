@@ -1,4 +1,0 @@
-  private String location = null;
-  private String root = null;
-
-

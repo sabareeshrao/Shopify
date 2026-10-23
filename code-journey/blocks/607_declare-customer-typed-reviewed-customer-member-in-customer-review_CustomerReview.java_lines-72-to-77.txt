@@ -1,6 +1,0 @@
-
-	
-	@OneToOne
-	@JoinColumn(name="REVIEWED_CUSTOMER_ID")
-	private Customer reviewedCustomer;
-

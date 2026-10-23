@@ -1,8 +1,0 @@
-		"zoneCode": "JU",
-		"zoneName": "Jura",
-		"countryCode": "CH"
-	},
-	{
-		"zoneCode": "LU",
-		"zoneName": "Luzern",
-		"countryCode": "CH"

@@ -1,8 +1,0 @@
-	@Override
-	public boolean exists(String sku, MerchantStore store) {
-		return productRepository.existsBySku(sku, store.getId());
-	}
-
-
-
-}

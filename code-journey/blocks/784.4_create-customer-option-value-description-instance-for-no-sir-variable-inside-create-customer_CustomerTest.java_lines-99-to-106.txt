@@ -1,8 +1,0 @@
-		noDescription.setCustomerOptionValue(no);
-		
-		CustomerOptionValueDescription no_sir = new CustomerOptionValueDescription();
-		no_sir.setCustomerOptionValue(no);
-		no_sir.setDescription("Nope!");
-		no_sir.setName("Nope!");
-		no_sir.setLanguage(en);
-		no.getDescriptions().add(no_sir);

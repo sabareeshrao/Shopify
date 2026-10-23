@@ -1,4 +1,0 @@
-		"zoneName": "A Corua",
-		"countryCode": "ES"
-	},
-	{

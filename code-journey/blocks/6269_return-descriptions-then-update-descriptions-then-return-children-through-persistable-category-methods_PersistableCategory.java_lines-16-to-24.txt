@@ -1,9 +1,0 @@
-	public List<CategoryDescription> getDescriptions() {
-		return descriptions;
-	}
-	public void setDescriptions(List<CategoryDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-	public List<PersistableCategory> getChildren() {
-		return children;
-	}

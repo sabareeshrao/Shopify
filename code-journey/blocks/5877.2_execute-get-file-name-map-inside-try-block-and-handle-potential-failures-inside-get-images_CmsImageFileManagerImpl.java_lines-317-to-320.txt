@@ -1,4 +1,0 @@
-    FileNameMap fileNameMap = URLConnection.getFileNameMap();
-
-    try {
-

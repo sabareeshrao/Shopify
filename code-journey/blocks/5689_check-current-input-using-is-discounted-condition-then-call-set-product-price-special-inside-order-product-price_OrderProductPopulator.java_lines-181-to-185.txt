@@ -1,5 +1,0 @@
-		if(price.isDiscounted()) {
-			orderProductPrice.setProductPriceSpecial(productPrice.getProductPriceSpecialAmount());
-			orderProductPrice.setProductPriceSpecialStartDate(productPrice.getProductPriceSpecialStartDate());
-			orderProductPrice.setProductPriceSpecialEndDate(productPrice.getProductPriceSpecialEndDate());
-		}

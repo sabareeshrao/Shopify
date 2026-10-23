@@ -1,4 +1,0 @@
-	public Date getDateOfBirth() {
-		return CloneUtils.clone(dateOfBirth);
-	}
-

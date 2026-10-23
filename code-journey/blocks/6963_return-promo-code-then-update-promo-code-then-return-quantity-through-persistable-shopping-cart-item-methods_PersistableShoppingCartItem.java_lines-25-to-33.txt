@@ -1,9 +1,0 @@
-	public String getPromoCode() {
-		return promoCode;
-	}
-	public void setPromoCode(String promoCode) {
-		this.promoCode = promoCode;
-	}
-	public int getQuantity() {
-		return quantity;
-	}

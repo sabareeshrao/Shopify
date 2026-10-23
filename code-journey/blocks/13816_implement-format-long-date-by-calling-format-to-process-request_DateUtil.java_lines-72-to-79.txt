@@ -1,8 +1,0 @@
-	public static String formatLongDate(Date date) {
-		
-		if (date == null)
-			return null;
-		SimpleDateFormat format = new SimpleDateFormat(LONGDATE_FORMAT);
-		return format.format(date);
-		
-	}

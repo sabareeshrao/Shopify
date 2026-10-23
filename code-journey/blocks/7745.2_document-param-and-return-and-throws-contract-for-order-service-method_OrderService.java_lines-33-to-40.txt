@@ -1,8 +1,0 @@
-     * @param customer
-     * @param store
-     * @param language
-     * @return
-     * @throws ServiceException
-     */
-    OrderTotalSummary caculateOrderTotal(OrderSummary orderSummary,
-                                         Customer customer, MerchantStore store, Language language)

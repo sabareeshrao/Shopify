@@ -1,9 +1,0 @@
-	public void setDisplaySubTotal(String displaySubTotal) {
-		this.displaySubTotal = displaySubTotal;
-	}
-	public List<ReadableShoppingCartAttribute> getCartItemattributes() {
-		return cartItemattributes;
-	}
-	public void setCartItemattributes(List<ReadableShoppingCartAttribute> cartItemattributes) {
-		this.cartItemattributes = cartItemattributes;
-	}

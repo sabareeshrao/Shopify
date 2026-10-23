@@ -1,4 +1,0 @@
-		nf.setCurrency(curr);
-
-		return nf.format(amount);
-	}

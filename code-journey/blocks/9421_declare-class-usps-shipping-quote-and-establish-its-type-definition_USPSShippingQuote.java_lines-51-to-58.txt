@@ -1,8 +1,0 @@
-
-/**
- * Integrates with USPS online API
- * @author casams1
- *
- */
-public class USPSShippingQuote implements ShippingQuoteModule {
-	

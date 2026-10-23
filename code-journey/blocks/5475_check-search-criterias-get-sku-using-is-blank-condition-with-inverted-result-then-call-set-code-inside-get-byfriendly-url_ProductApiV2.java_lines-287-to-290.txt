@@ -1,4 +1,0 @@
-		
-		if (!StringUtils.isBlank(searchCriterias.getSku())) {
-			searchCriterias.setCode(searchCriterias.getSku());
-		}

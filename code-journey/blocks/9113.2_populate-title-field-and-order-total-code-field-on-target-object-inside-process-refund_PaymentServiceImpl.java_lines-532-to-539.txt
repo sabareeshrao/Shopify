@@ -1,8 +1,0 @@
-        refund.setTitle(Constants.OT_REFUND_MODULE_CODE);
-        refund.setOrderTotalCode(Constants.OT_REFUND_MODULE_CODE);
-        refund.setOrderTotalType(OrderTotalType.REFUND);
-        refund.setValue(amount);
-        refund.setSortOrder(100);
-        refund.setOrder(order);
-        
-        order.getOrderTotal().add(refund);

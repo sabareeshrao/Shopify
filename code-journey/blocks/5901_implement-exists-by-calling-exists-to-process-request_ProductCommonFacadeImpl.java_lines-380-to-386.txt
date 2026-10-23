@@ -1,7 +1,0 @@
-	@Override
-	public boolean exists(String sku, MerchantStore store) {
-
-		return productService.exists(sku, store);
-	}
-
-

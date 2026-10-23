@@ -1,8 +1,0 @@
-	private void createZones() throws ServiceException {
-		LOGGER.info(String.format("%s : Populating Zones ", name));
-        try {
-
-    		  Map<String,Zone> zonesMap = new HashMap<String,Zone>();
-    		  zonesMap = zonesLoader.loadZones("reference/zoneconfig.json");
-    		  
-    		  this.addZonesToDb(zonesMap);

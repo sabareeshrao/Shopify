@@ -1,7 +1,0 @@
-  public StaticContentCacheManagerImpl(String location, String root) {
-
-    super.init(NAMED_CACHE, location);
-    this.location = location;
-    this.root = root;
-  }
-

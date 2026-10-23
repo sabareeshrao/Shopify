@@ -1,9 +1,0 @@
-	public void setDescription(ProductDescription description) {
-		this.description = description;
-	}
-	public List<ReadableImage> getImages() {
-		return images;
-	}
-	public void setImages(List<ReadableImage> images) {
-		this.images = images;
-	}

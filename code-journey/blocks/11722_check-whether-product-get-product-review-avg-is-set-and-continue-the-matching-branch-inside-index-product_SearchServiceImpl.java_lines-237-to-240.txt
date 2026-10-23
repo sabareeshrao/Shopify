@@ -1,4 +1,0 @@
-
-			if (product.getProductReviewAvg() != null) {
-				item.setReviews(product.getProductReviewAvg().toString());
-			}

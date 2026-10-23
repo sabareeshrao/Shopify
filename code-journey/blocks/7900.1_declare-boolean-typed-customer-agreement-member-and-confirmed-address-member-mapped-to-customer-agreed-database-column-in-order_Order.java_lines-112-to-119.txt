@@ -1,8 +1,0 @@
-	
-	@Column(name = "CUSTOMER_AGREED")
-	private Boolean customerAgreement = false;
-	
-	@Column(name = "CONFIRMED_ADDRESS")
-	private Boolean confirmedAddress = false;
-
-	@Embedded

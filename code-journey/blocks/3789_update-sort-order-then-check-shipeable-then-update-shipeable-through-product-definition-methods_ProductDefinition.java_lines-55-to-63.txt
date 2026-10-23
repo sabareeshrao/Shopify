@@ -1,9 +1,0 @@
-	public void setSortOrder(int sortOrder) {
-		this.sortOrder = sortOrder;
-	}
-	public boolean isShipeable() {
-		return shipeable;
-	}
-	public void setShipeable(boolean shipeable) {
-		this.shipeable = shipeable;
-	}

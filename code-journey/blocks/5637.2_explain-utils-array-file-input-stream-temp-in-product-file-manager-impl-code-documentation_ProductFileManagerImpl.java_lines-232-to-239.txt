@@ -1,8 +1,0 @@
-         * //byte[] is = IOUtils.toByteArray(new FileInputStream(tempSmall));
-         *
-         * FileInputStream isSmall = new FileInputStream(tempSmall);
-         *
-         * output = new ByteArrayOutputStream(); IOUtils.copy(isSmall, output);
-         *
-         *
-         * smallContentImage = new InputContentImage(ImageContentType.PRODUCT);

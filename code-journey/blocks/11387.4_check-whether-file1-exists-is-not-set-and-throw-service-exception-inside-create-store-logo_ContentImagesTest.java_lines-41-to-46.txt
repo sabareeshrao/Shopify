@@ -1,6 +1,0 @@
-
-		final File file1 = new File("C:/doc/Hadoop.jpg");
-
-		if (!file1.exists() || !file1.canRead()) {
-			throw new ServiceException("Can't read" + file1.getAbsolutePath());
-		}

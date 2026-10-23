@@ -1,8 +1,0 @@
-	 * @author dur9213
-	 *
-	 */
-	@Configuration
-	@Order(6)
-	public static class CustomeApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
-
-		@Autowired

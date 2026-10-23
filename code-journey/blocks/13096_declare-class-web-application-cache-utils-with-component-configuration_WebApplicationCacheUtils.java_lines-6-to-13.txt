@@ -1,8 +1,0 @@
-import javax.inject.Inject;
-
-@Component
-public class WebApplicationCacheUtils {
-	
-	@Inject
-	private CacheUtils cache;
-	

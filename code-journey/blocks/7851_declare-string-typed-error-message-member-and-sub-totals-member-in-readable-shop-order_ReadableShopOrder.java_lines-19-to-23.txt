@@ -1,5 +1,0 @@
-	private String errorMessage = null;//global error message
-	private List<ReadableOrderTotal> subTotals;//order calculation	
-	private String grandTotal;//grand total - order calculation
-	
-

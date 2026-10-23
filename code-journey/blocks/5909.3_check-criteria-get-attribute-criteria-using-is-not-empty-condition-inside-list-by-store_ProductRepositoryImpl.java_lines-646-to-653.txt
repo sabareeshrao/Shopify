@@ -1,8 +1,0 @@
-			countBuilderSelect.append(" INNER JOIN pov.descriptions povd ");
-			
-			if(CollectionUtils.isNotEmpty(criteria.getAttributeCriteria())) {
-				int count = 0;
-				for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
-					if (count == 0) {
-						countBuilderWhere.append(" and po.code =:").append(attributeCriteria.getAttributeCode());
-						countBuilderWhere.append(" and povd.description like :").append("val").append(count)

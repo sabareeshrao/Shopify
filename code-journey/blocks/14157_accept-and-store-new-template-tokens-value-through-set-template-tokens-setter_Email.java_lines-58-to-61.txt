@@ -1,4 +1,0 @@
-	public void setTemplateTokens(Map<String, String> templateTokens) {
-		this.templateTokens = templateTokens;
-	}
-

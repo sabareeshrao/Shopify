@@ -1,4 +1,0 @@
-	public Map<String,Boolean> getUseDefaultSearchConfig() {
-		return useDefaultSearchConfig;
-	}
-

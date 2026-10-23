@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getEmail())) {
-			String mailQuery =" and c.emailAddress like:email";
-			countBuilderWhere.append(mailQuery);
-			objectBuilderWhere.append(mailQuery);
-		}

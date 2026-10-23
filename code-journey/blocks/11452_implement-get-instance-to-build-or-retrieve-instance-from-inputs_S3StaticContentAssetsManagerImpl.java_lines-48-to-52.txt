@@ -1,5 +1,0 @@
-	public static S3StaticContentAssetsManagerImpl getInstance() {
-
-		if (fileManager == null) {
-			fileManager = new S3StaticContentAssetsManagerImpl();
-		}

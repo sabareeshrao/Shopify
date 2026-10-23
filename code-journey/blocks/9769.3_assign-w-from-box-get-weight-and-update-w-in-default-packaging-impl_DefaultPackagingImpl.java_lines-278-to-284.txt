@@ -1,7 +1,0 @@
-				assignedProducts.add(p);
-				productCount--;
-				double w = box.getWeight();
-				w = w + productWeight;
-				box.setWeight(w);
-				maxBox--;
-			}

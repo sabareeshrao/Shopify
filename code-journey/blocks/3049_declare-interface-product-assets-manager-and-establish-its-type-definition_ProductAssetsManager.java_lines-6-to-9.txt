@@ -1,4 +1,0 @@
-public interface ProductAssetsManager
-    extends AssetsManager, ProductImageGet, ProductImagePut, ProductImageRemove, Serializable {
-
-}

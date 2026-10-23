@@ -1,8 +1,0 @@
-import com.salesmanager.shop.mapper.Mapper;
-import com.salesmanager.shop.model.catalog.product.ReadableImage;
-import com.salesmanager.shop.model.catalog.product.ReadableMinimalProduct;
-import com.salesmanager.shop.model.catalog.product.product.ProductSpecification;
-import com.salesmanager.shop.model.entity.ReadableDescription;
-import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
-import com.salesmanager.shop.utils.DateUtil;
-import com.salesmanager.shop.utils.ImageFilePath;

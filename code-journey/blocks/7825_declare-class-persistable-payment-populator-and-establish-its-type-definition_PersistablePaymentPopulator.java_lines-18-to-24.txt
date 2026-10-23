@@ -1,7 +1,0 @@
-public class PersistablePaymentPopulator extends AbstractDataPopulator<PersistablePayment, Payment> {
-	
-	
-	PricingService pricingService;
-
-
-

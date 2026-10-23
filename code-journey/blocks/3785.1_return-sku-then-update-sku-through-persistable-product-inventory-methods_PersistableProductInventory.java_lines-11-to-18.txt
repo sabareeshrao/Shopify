@@ -1,8 +1,0 @@
-	private String sku;
-	private int quantity = 0;
-	private PersistableProductPrice price;
-	public String getSku() {
-		return sku;
-	}
-	public void setSku(String sku) {
-		this.sku = sku;

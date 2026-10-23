@@ -1,8 +1,0 @@
-	public void setExpirationYear(String expirationYear) {
-		this.expirationYear = expirationYear;
-	}
-	public String getCardOwner() {
-		return cardOwner;
-	}
-	public void setCardOwner(String cardOwner) {
-		this.cardOwner = cardOwner;

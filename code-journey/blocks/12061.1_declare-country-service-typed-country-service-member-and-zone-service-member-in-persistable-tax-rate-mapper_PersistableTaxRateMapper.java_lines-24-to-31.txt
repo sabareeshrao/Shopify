@@ -1,8 +1,0 @@
-	
-	@Autowired
-	private CountryService countryService;
-	
-	@Autowired
-	private ZoneService zoneService;
-	
-	@Autowired

@@ -1,5 +1,0 @@
-
-				if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
-					throw new Exception("Item with sku " + shoppingCartItem.getSku()
-							+ " does not belong to merchant " + store.getId());
-				}

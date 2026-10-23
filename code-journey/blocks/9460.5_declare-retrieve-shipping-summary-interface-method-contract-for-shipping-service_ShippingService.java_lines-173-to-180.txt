@@ -1,8 +1,0 @@
-	 * @throws ServiceException
-	 */
-	ShippingSummary getShippingSummary(MerchantStore store, ShippingQuote shippingQuote, 
-			ShippingOption selectedShippingOption) throws ServiceException;
-
-	/**
-	 * Returns a list of supported countries (ship to country list) configured by merchant
-	 * If the merchant configured shipping National, then only store country will be in the list

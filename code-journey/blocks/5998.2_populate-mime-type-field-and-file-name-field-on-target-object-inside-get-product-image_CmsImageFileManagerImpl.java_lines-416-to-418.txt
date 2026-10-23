@@ -1,3 +1,0 @@
-      contentImage.setMimeType(contentType);
-      contentImage.setFileName(imageName);
-

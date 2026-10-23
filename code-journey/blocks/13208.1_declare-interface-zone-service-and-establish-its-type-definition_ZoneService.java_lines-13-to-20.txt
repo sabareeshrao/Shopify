@@ -1,8 +1,0 @@
-public interface ZoneService extends SalesManagerEntityService<Long, Zone> {
-	
-	Zone getByCode(String code);
-
-	void addDescription(Zone zone, ZoneDescription description) throws ServiceException;
-
-	List<Zone> getZones(Country country, Language language)
-			throws ServiceException;

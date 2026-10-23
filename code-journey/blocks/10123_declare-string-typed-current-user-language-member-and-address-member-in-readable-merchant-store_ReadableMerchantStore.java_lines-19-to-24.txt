@@ -1,6 +1,0 @@
-	private String currentUserLanguage;
-	private ReadableAddress address;
-	private ReadableImage logo;
-	private ReadableAudit audit;
-	private ReadableMerchantStore parent;
-

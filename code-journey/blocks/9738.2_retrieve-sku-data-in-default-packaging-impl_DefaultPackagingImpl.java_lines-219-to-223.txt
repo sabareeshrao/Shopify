@@ -1,5 +1,0 @@
-						+ p.getSku()
-						+ " has one of the dimension set to 0 and therefore cannot calculate the volume"));
-				
-				throw new ServiceException("Product configuration exceeds box configuraton");
-				

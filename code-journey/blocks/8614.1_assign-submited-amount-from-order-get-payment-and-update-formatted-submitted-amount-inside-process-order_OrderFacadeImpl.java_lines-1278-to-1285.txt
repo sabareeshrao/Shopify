@@ -1,8 +1,0 @@
-
-			String submitedAmount = order.getPayment().getAmount();
-
-			BigDecimal formattedSubmittedAmount = productPriceUtils.getAmount(submitedAmount);
-
-			BigDecimal submitedAmountFormat = productPriceUtils.getAmount(submitedAmount);
-
-			BigDecimal calculatedAmount = orderTotalSummary.getTotal();

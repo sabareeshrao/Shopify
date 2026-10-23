@@ -1,6 +1,0 @@
-
-    List<ReadableProductVariantValue> ids = options.getOptions();
-
-    if (CollectionUtils.isEmpty(ids)) {
-      return null;
-    }

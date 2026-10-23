@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.order.orderproduct.OrderProduct;
-
-/**
- * This class determines the price that is displayed in the catalogue for a
- * given item. It does not calculate the total price for a given item
- * 
- * @author casams1

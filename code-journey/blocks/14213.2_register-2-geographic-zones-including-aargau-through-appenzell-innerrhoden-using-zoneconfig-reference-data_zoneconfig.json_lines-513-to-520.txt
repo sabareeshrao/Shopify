@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "AG",
-		"zoneName": "Aargau",
-		"countryCode": "CH"
-	},
-	{
-		"zoneCode": "AI",
-		"zoneName": "Appenzell Innerrhoden",

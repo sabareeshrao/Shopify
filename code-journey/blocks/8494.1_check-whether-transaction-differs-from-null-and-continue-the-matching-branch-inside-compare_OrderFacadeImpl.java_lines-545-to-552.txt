@@ -1,8 +1,0 @@
-
-			modelOrder.setShoppingCartCode(shoppingCartCode);
-			modelOrder.setPaymentModuleCode(order.getPaymentModule());
-			payment.setModuleName(order.getPaymentModule());
-
-			if (transaction != null) {
-				orderService.processOrder(modelOrder, customer, order.getShoppingCartItems(), summary, payment, store);
-			} else {

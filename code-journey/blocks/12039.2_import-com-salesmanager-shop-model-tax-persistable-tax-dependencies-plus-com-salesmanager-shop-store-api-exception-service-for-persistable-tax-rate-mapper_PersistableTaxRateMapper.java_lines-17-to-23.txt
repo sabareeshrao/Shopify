@@ -1,7 +1,0 @@
-import com.salesmanager.shop.model.tax.PersistableTaxRate;
-import com.salesmanager.shop.model.tax.TaxRateDescription;
-import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
-
-@Component
-public class PersistableTaxRateMapper implements Mapper<PersistableTaxRate, TaxRate> {
-	

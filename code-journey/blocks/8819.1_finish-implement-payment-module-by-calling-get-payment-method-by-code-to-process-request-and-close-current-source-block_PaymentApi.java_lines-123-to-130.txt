@@ -1,8 +1,0 @@
-
-	}
-
-	/**
-	 * Get merchant payment module details
-	 * 
-	 * @param code
-	 * @param merchantStore

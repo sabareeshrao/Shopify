@@ -1,7 +1,0 @@
-	
-	@Autowired
-	private DroolsBeanFactory droolsBeanFactory;
-	
-	@Autowired
-	private PricingService pricingService;
-

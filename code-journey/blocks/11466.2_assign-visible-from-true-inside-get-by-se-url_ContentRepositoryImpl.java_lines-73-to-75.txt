@@ -1,3 +1,0 @@
-			qs.append("and c.visible =true ");
-			qs.append("and cd.seUrl =:se ");
-

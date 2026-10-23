@@ -1,8 +1,0 @@
-	@Column (name ="IDENTIFIER", nullable=false)
-	private String key;
-	
-	@Column (name ="VALUE", nullable=false)
-	private String value;
-	
-	@ManyToOne(targetEntity = Order.class)
-	@JoinColumn(name = "ORDER_ID", nullable=false)

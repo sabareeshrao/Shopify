@@ -1,8 +1,0 @@
-
-	// @Override
-	// DELETE
-	public ShoppingCartData removeCartItem(final Long itemID, final String cartId, final MerchantStore store,
-			final Language language) throws Exception {
-		if (StringUtils.isNotBlank(cartId)) {
-
-			ShoppingCart cartModel = getCartModel(cartId, store);

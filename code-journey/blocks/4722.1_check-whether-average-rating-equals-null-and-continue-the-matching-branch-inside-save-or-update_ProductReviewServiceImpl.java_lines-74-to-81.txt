@@ -1,8 +1,0 @@
-				
-		
-		
-
-		BigDecimal averageRating = product.getProductReviewAvg();
-		if(averageRating==null) {
-			averageRating = new BigDecimal(0);
-		}

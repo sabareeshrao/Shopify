@@ -1,2 +1,0 @@
-			throw new ServiceRuntimeException("Cannor delete product group",e);
-		}

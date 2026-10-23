@@ -1,8 +1,0 @@
-
-      LOG.info("No customer found with userName {} for store {} ", userName, store.getStorename());
-      return false;
-
-    }
-    LOG.info("Either userName is empty or we have not found any value for store");
-    return false;
-  }

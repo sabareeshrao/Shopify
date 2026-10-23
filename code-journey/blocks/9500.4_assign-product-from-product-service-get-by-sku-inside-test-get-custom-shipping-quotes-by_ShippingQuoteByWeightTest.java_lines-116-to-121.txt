@@ -1,6 +1,0 @@
-	    
-	    productPriceService.create(dprice);
-	    
-	    //get product
-	    product = productService.getBySku("TESTSKU", store, en);
-

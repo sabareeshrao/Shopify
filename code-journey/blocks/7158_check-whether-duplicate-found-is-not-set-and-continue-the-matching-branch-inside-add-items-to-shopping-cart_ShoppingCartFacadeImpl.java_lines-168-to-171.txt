@@ -1,4 +1,0 @@
-
-		if (!duplicateFound) {
-			cartModel.getLineItems().add(shoppingCartItem);
-		}

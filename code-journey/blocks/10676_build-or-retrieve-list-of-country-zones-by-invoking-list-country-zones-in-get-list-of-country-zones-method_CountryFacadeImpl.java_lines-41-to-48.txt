@@ -1,8 +1,0 @@
-  private List<Country> getListOfCountryZones(Language language) {
-    try{
-      return countryService.listCountryZones(language);
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException(e);
-    }
-  }
-}

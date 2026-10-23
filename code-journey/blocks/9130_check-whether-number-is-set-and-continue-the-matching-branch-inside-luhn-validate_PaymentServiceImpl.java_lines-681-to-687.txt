@@ -1,7 +1,0 @@
-	
-		for (int i = number.length - 2; i > -1; i -= 2) {
-			number[i] *= 2;
-	
-			if (number[i] > 9)
-				number[i] -= 9;
-		}

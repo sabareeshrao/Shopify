@@ -1,6 +1,0 @@
-import com.salesmanager.core.modules.integration.IntegrationException;
-import com.salesmanager.core.modules.integration.shipping.model.Packaging;
-import com.salesmanager.core.modules.integration.shipping.model.ShippingQuoteModule;
-import com.salesmanager.core.modules.integration.shipping.model.ShippingQuotePrePostProcessModule;
-import com.salesmanager.core.modules.utils.Encryption;
-

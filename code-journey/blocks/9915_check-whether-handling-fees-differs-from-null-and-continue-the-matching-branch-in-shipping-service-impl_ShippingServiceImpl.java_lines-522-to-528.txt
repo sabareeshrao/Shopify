@@ -1,7 +1,0 @@
-			
-
-			//handling fees
-			BigDecimal handlingFees = shippingConfiguration.getHandlingFees();
-			if(handlingFees!=null) {
-				shippingQuote.setHandlingFees(handlingFees);
-			}

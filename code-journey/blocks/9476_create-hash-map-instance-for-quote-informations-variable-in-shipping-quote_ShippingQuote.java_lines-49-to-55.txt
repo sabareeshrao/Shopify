@@ -1,7 +1,0 @@
-	private String quoteError = null;
-	
-	/** additinal shipping information **/
-	private Map<String,Object> quoteInformations = new HashMap<String,Object>();
-	
-	
-	

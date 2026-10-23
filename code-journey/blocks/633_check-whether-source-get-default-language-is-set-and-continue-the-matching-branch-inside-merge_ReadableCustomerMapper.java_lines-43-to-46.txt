@@ -1,4 +1,0 @@
-
-		if (source.getDefaultLanguage()!= null) {
-			target.setLanguage(source.getDefaultLanguage().getCode());
-		}

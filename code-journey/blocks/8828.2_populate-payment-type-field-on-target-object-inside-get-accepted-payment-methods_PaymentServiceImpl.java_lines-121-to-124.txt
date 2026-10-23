@@ -1,4 +1,0 @@
-
-				paymentMethod.setPaymentType(type);
-				returnModules.add(paymentMethod);
-			}

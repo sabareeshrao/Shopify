@@ -1,9 +1,0 @@
-	public void setGrandTotal(String grandTotal) {
-		this.grandTotal = grandTotal;
-	}
-	public List<ReadableOrderTotal> getSubTotals() {
-		return subTotals;
-	}
-	public void setSubTotals(List<ReadableOrderTotal> subTotals) {
-		this.subTotals = subTotals;
-	}

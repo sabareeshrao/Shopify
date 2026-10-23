@@ -1,7 +1,0 @@
-	@Override
-	public void delete(TaxRate taxRate) throws ServiceException {
-		
-		taxRateRepository.delete(taxRate);
-		
-	}
-	

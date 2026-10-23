@@ -1,5 +1,0 @@
-
-			readableOrder.setProducts(orderProducts);
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("Error while getting order [" + orderId + "]");
-		}

@@ -1,4 +1,0 @@
-	public void setDimension(MeasureUnit dimension) {
-		this.dimension = dimension;
-	}
-

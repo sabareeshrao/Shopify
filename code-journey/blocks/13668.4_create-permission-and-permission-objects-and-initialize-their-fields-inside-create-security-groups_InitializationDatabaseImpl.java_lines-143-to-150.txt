@@ -1,8 +1,0 @@
-		  
-		  Permission CONTENT = new Permission("CONTENT");
-		  permissionService.create(CONTENT);
-		  permissionKeys.put(CONTENT.getPermissionName(), CONTENT);
-		  
-		  Permission STORE = new Permission("STORE");
-		  permissionService.create(STORE);
-		  permissionKeys.put(STORE.getPermissionName(), STORE);

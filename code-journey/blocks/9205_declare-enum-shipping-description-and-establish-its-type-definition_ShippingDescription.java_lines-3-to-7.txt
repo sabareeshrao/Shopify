@@ -1,5 +1,0 @@
-public enum ShippingDescription {
-
-	
-	SHORT_DESCRIPTION, LONG_DESCRIPTION
-}

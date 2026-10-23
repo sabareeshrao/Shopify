@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.services.reference.country.CountryService;
-import com.salesmanager.core.business.services.reference.language.LanguageService;
-import com.salesmanager.core.business.services.reference.zone.ZoneService;
-import com.salesmanager.core.business.services.shoppingcart.ShoppingCartService;
-import com.salesmanager.core.business.services.system.EmailService;
-import com.salesmanager.core.business.services.system.optin.OptinService;
-import com.salesmanager.core.business.services.user.GroupService;
-import com.salesmanager.core.business.services.user.PermissionService;

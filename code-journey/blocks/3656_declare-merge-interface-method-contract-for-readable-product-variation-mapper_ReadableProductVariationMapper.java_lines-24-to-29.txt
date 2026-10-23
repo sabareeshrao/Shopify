@@ -1,6 +1,0 @@
-	@Override
-	public ReadableProductVariation convert(ProductVariation source, MerchantStore store, Language language) {
-		ReadableProductVariation variation = new ReadableProductVariation();
-		return merge(source, variation, store, language);
-	}
-

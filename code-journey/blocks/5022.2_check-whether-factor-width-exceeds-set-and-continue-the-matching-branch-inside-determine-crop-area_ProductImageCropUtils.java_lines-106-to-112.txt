@@ -1,7 +1,0 @@
-		double factorHeight = Integer.valueOf(height).doubleValue() / Integer.valueOf(specificationsHeight).doubleValue();
-
-		double factor = factorWidth;
-		
-		if(factorWidth>factorHeight) {
-			factor = factorHeight;
-		}

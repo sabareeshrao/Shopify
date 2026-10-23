@@ -1,5 +1,0 @@
-public enum CustomerGender {
-	
-	M, F
-
-}

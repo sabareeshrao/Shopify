@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("UGX", "Uganda Shilling");
-		CURRENCY_MAP.put("UAH", "Hryvnia");
-		CURRENCY_MAP.put("AED", "UAE Dirham");
-		CURRENCY_MAP.put("GBP", "Pound Sterling");
-		//CURRENCY_MAP.put("UYI", "Uruguay Peso en Unidades Indexadas (URUIURUI)");
-		CURRENCY_MAP.put("UYU", "Peso Uruguayo");
-		CURRENCY_MAP.put("UZS", "Uzbekistan Sum");
-		CURRENCY_MAP.put("VUV", "Vatu");

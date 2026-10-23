@@ -1,3 +1,0 @@
-			countriesMap.put(country.getIsoCode(), country);
-
-		}

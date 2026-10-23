@@ -1,8 +1,0 @@
-	 * @param fileType
-	 * @param originalName
-	 * @param newName
-	 */
-	void renameFile(MerchantStore store, FileContentType fileType, String originalName, String newName);
-	
-	/**
-	 * Download file

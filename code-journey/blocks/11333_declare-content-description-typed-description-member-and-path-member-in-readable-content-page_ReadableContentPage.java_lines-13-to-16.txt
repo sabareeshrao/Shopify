@@ -1,4 +1,0 @@
-	private ContentDescription description ;
-	private String path;
-
-

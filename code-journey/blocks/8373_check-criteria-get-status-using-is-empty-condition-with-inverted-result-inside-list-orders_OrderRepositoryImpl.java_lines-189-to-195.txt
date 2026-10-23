@@ -1,7 +1,0 @@
-		
-		//status
-		if(!StringUtils.isEmpty(criteria.getStatus())) {
-			String nameQuery =  " and o.status =:status";
-			objectBuilderWhere.append(nameQuery);
-			countBuilderSelect.append(nameQuery);
-		}

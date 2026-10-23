@@ -1,2 +1,0 @@
-	    Language en = languageService.getByCode("en");
-

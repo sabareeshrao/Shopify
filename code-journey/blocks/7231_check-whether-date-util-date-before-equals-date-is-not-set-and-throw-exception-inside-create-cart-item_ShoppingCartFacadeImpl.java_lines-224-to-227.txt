@@ -1,4 +1,0 @@
-
-		if (!DateUtil.dateBeforeEqualsDate(product.getDateAvailable(), new Date())) {
-			throw new Exception("Item with id " + product.getId() + " is not available");
-		}

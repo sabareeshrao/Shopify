@@ -1,6 +1,0 @@
-	@Override
-	public ReadableProductOptionSet convert(ProductOptionSet source, MerchantStore store, Language language) {
-		ReadableProductOptionSet optionSource = new ReadableProductOptionSet();
-		return merge(source, optionSource, store, language);
-	}
-

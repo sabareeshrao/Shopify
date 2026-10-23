@@ -1,8 +1,0 @@
-label.configuration.pinterest=Pinterest
-label.configuration.instagram=Instagram
-label.social.connect=Restons en contact
-label.social.facebook=FaceBook
-label.social.twitter=Twitter
-label.configuration.useglobalsearch_suggestions=Utiliser un fichier global de recherches pré-défini
-label.configuration.globalsearch_suggestions_path=Chemin d'accès du fichier global de recherches pré-défini
-

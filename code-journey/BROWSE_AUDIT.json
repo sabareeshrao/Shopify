@@ -11,5 +11,6 @@
   "every_txt_matches_zip_bytes": true,
   "all_parent_children_concatenate_to_parent_exactly": true,
   "source_byte_exact_reconstruction": "PASS",
-  "source_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee"
+  "source_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
+  "redundant_flat_blocks_removed": true
 }

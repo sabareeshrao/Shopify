@@ -1,8 +1,0 @@
-
-	},
-	{
-		"module": "SHIPPING",
-		"code": "canadapost",
-		"version":"",
-		"regions": ["CA"],
-		"image":"canadapost.jpg",

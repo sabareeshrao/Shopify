@@ -1,3 +1,0 @@
-    public final static String DEBUG_MODE = "debugMode";
-
-}

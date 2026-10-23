@@ -1,8 +1,0 @@
-			
-			//Store name 
-			sheet.setValueAt(store.getStorename(), 0, 0);
-			
-			store.setStoreaddress("2001 zoo avenue");
-			store.setCurrencyFormatNational(true);//use $ instead of USD
-			
-			

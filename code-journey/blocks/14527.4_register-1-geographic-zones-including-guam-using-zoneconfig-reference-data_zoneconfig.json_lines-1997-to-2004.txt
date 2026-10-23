@@ -1,8 +1,0 @@
-			"countryCode": "US"
-		},
-		{
-			"zoneCode": "GU",
-			"zoneName": "Guam",
-			"countryCode": "US"
-		},
-		{

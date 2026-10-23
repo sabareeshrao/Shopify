@@ -1,4 +1,0 @@
-	private String code;
-	private boolean visible;
-	boolean allowAddToCart;
-

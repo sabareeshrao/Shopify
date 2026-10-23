@@ -1,7 +1,0 @@
-                    Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> lineItems =
-                        cartMdel.getLineItems();
-                    if ( lineItems == null )
-                    {
-                        lineItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-                        cartMdel.setLineItems( lineItems );
-                    }

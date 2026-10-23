@@ -1,8 +1,0 @@
-   * Get by criteria
-   * @param criteria
-   * @return
-   */
-  @Deprecated
-  ReadableUserList getByCriteria(Language language,String draw,Criteria criteria);
-  
-  /**

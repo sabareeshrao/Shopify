@@ -1,9 +1,0 @@
-    @Override
-    public ReadableEntityList<ReadableCatalog> getListCatalogs(Optional<String> code, MerchantStore store, Language language, int page, int count) {
-        Validate.notNull(store, "MerchantStore cannot be null");
-
-        String catalogCode = code.orElse(null);
-        Page<Catalog> catalogs = catalogService.getCatalogs(store, language, catalogCode, page, count);
-        if (catalogs.isEmpty()) {
-            return new ReadableEntityList<>();
-        }

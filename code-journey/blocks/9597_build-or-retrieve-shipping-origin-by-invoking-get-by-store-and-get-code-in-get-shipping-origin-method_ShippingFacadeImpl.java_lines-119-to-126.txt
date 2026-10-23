@@ -1,8 +1,0 @@
-	@Override
-	public ReadableAddress getShippingOrigin(MerchantStore store) {
-		
-		ShippingOrigin o = shippingOriginService.getByStore(store);
-		
-		if(o == null) {
-			throw new ResourceNotFoundException("Shipping origin does not exists for store [" + store.getCode() + "]");
-		}

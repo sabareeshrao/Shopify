@@ -1,7 +1,0 @@
-			
-			Product p = productService.getById(id);
-			
-			if(p==null) {
-				throw new ResourceNotFoundException("Product image [" + imageId + "] not found for product id [" + id
-						+ "] and merchant [" + merchantStore.getCode() + "]");
-			}

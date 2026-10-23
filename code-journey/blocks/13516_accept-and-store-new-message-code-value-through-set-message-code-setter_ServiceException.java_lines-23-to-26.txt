@@ -1,4 +1,0 @@
-	public void setMessageCode(String messageCode) {
-		this.messageCode = messageCode;
-	}
-

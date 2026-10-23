@@ -1,3 +1,0 @@
-                exception.getLocalizedMessage());
-        return errorEntity;
-    }

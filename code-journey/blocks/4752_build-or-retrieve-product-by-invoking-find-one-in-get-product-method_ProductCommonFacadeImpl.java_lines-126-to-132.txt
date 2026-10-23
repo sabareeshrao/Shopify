@@ -1,7 +1,0 @@
-	@Override
-	public ReadableProduct getProduct(MerchantStore store, Long id, Language language) {
-
-		Product product = productService.findOne(id, store);
-		if (product == null) {
-			throw new ResourceNotFoundException("Product [" + id + "] not found");
-		}

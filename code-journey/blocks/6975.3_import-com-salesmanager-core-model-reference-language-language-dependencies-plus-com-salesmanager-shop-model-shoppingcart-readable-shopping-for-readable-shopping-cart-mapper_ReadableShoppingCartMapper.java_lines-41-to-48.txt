@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.core.model.shoppingcart.ShoppingCart;
-import com.salesmanager.shop.mapper.Mapper;
-import com.salesmanager.shop.mapper.catalog.ReadableMinimalProductMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableProductVariationMapper;
-import com.salesmanager.shop.model.catalog.product.ReadableImage;
-import com.salesmanager.shop.model.order.total.ReadableOrderTotal;
-import com.salesmanager.shop.model.shoppingcart.ReadableShoppingCart;

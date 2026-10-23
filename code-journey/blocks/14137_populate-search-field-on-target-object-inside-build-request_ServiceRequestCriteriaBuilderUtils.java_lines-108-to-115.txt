@@ -1,8 +1,0 @@
-    
-    criteria.setSearch(searchParam);
-
-    return criteria;
-    
-  }
-
-}

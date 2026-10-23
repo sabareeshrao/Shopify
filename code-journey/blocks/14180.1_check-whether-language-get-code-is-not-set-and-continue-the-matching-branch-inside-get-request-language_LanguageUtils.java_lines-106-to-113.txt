@@ -1,8 +1,0 @@
-        }
-      }
-    } else {
-
-
-      Locale localeFromContext = LocaleContextHolder.getLocale();// should be browser locale
-      if (!language.getCode().equals(localeFromContext.getLanguage())) {
-        // get locale context

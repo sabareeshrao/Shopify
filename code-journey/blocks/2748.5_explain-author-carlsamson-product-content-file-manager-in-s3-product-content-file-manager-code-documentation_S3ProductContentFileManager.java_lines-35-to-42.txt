@@ -1,8 +1,0 @@
- * 
- * @author carlsamson
- *
- */
-public class S3ProductContentFileManager
-    implements ProductAssetsManager {
-
-  /**

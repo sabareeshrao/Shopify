@@ -1,7 +1,0 @@
-	public void setShoppingCartItems(List<ShoppingCartItem> shoppingCartItems) {
-		this.shoppingCartItems = shoppingCartItems;
-	}
-	public List<ShoppingCartItem> getShoppingCartItems() {
-		return shoppingCartItems;
-	}
-

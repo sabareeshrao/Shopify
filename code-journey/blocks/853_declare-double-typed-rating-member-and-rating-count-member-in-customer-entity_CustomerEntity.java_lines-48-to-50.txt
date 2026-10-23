@@ -1,3 +1,0 @@
-	private Double rating = 0D;
-	private int ratingCount;
-	

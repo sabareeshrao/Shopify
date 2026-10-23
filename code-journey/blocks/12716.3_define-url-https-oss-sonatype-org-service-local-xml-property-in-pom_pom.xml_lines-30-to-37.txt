@@ -1,8 +1,0 @@
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
-
-  <scm>
-    <connection>scm:git:git://github.com:shopizer-ecommerce/shopizer-sm-core-modules.git
-    </connection>
-    <developerConnection>scm:git:ssh://github.com:shopizer-ecommerce/shopizer-sm-core-modules.git

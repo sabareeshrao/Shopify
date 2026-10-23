@@ -1,6 +1,0 @@
-	public ProductPriceType getProductPriceType() {
-		return productPriceType;
-	}
-
-
-}

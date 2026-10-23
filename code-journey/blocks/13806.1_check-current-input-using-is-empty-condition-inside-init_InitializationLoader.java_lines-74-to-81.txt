@@ -1,8 +1,0 @@
-			
-			if (initializationDatabase.isEmpty()) {
-				
-
-				//All default data to be created
-				
-				LOGGER.info(String.format("%s : Shopizer database is empty, populate it....", "sm-shop"));
-		

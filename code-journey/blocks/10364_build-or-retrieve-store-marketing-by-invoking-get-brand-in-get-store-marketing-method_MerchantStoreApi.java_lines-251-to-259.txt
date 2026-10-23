@@ -1,9 +1,0 @@
-
-	@ResponseStatus(HttpStatus.OK)
-	@GetMapping(value = { "/private/store/{code}/marketing" }, produces = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(httpMethod = "GET", value = "Get store branding and marketing details", notes = "", response = ReadableBrand.class)
-	public ReadableBrand getStoreMarketing(@PathVariable String code, HttpServletRequest request) {
-		String userName = getUserFromRequest(request);
-		validateUserPermission(userName, code);
-		return storeFacade.getBrand(code);
-	}

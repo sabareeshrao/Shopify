@@ -1,6 +1,0 @@
-
-			if (source.getAuditSection() != null) {
-				if (source.getAuditSection().getDateCreated() != null) {
-					destination.setCreationDate(DateUtil.formatDate(source.getAuditSection().getDateCreated()));
-				}
-			}

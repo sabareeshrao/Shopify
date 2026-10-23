@@ -1,3 +1,0 @@
-	public void setCustomerOption(ReadableCustomerOption customerOption) {
-		this.customerOption = customerOption;
-	}

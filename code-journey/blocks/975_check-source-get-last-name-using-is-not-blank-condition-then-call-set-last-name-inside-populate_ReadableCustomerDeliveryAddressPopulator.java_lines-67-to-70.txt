@@ -1,4 +1,0 @@
-        
-        if(StringUtils.isNotBlank( source.getLastName() )){
-            target.setLastName(source.getLastName());
-        }

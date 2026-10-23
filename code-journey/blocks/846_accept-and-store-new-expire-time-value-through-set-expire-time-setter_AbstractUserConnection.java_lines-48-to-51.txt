@@ -1,4 +1,0 @@
-	public void setExpireTime(Long expireTime) {
-		this.expireTime = expireTime;
-	}
-

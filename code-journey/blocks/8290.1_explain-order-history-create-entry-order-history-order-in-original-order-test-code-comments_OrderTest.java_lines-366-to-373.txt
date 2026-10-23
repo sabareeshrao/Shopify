@@ -1,8 +1,0 @@
-		
-		
-		
-		/** ORDER HISTORY **/
-		
-		//create a log entry in order history
-		OrderStatusHistory history = new OrderStatusHistory();
-		history.setOrder(order);

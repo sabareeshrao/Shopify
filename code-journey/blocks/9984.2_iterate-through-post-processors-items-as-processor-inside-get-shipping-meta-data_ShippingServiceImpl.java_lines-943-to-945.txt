@@ -1,3 +1,0 @@
-			for(ShippingQuotePrePostProcessModule processor : postProcessors) {
-				postProcessorKeys.add(processor.getModuleCode());
-			}

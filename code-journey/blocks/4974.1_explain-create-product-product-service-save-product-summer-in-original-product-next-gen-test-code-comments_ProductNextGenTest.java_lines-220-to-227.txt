@@ -1,8 +1,0 @@
-	    
-	    /**
-	     * Create product
-	     */
-	    productService.saveProduct(summerShoes);
-
-	    //ObjectMapper mapper = new ObjectMapper();
-	    //Converting the Object to JSONString

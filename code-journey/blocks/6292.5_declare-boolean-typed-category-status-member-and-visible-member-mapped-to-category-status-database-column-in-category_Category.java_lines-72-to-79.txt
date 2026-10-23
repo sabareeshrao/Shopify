@@ -1,8 +1,0 @@
-
-    @Column(name = "CATEGORY_STATUS")
-    private boolean categoryStatus;
-
-    @Column(name = "VISIBLE")
-    private boolean visible;
-
-    @Column(name = "DEPTH")

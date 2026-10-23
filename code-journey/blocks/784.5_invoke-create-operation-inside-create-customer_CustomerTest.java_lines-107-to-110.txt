@@ -1,4 +1,0 @@
-		
-		//needs to be saved before using it
-		customerOptionValueService.create(no);
-		

@@ -1,6 +1,0 @@
-NotEmpty.taxRate.code=Le code du taux de taxation est requis
-NotEmpty.taxRate.unique.code=Le code du taux de taxation doit être unique
-NotEmpty.taxRate.rateText=Le taux de taxation est requis
-NotEmpty.taxRateDescription.name=Le nom du taux de taxation est requis
-NotNull.taxRate.parent=Le taux de taxation parent doit être sélectionné
-

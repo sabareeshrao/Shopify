@@ -1,5 +1,0 @@
-		
-		if(criteria.getGroupIds()!=null && criteria.getGroupIds().size()>0) {
-			countBuilderSelect.append(" INNER JOIN p.groups grous");
-			countBuilderWhere.append(" where grous.id in (:cid)");
-		}

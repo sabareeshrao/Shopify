@@ -1,8 +1,0 @@
-
-		<!-- Shipping pre-processors -->
-		<!-- Uncomment beans that can be part of pre process when calculating shipping quotes -->
-		<util:list id="shippingModulePreProcessors" value-type="com.salesmanager.core.business.modules.integration.shipping.model.ShippingQuotePrePostProcessModule">
-			<!-- Not configured by default, should know what is your intention before enabling -->
-			
-			<!-- 
-				Shipping distance preprocessor as indicated in its name is a module that calculates

@@ -1,8 +1,0 @@
-	private void createSecurityGroups() throws ServiceException {
-		
-		  //create permissions
-		  //Map name object
-		  Map<String, Permission> permissionKeys = new HashMap<String, Permission>();
-		  Permission AUTH = new Permission("AUTH");
-		  permissionService.create(AUTH);
-		  permissionKeys.put(AUTH.getPermissionName(), AUTH);

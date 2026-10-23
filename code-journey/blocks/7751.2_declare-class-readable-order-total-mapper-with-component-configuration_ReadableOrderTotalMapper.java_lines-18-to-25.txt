@@ -1,8 +1,0 @@
-import com.salesmanager.shop.utils.LabelUtils;
-import com.salesmanager.shop.utils.LocaleUtils;
-
-@Component
-public class ReadableOrderTotalMapper implements Mapper<OrderTotal, ReadableOrderTotal> {
-
-	@Autowired
-	private PricingService pricingService;

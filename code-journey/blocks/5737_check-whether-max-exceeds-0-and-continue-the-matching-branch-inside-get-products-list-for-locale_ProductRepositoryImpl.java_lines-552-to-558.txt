@@ -1,7 +1,0 @@
-
-		q.setFirstResult(first);
-		if (max > 0) {
-			int maxCount = first + max;
-
-			q.setMaxResults(Math.min(maxCount, count.intValue()));
-		}

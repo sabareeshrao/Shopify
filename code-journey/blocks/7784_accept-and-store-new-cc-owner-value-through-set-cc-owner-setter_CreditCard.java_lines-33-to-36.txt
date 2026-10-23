@@ -1,4 +1,0 @@
-	public void setCcOwner(String ccOwner) {
-		this.ccOwner = ccOwner;
-	}
-

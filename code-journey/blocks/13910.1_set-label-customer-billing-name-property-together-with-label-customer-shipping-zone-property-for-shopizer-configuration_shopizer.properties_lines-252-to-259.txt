@@ -1,8 +1,0 @@
-label.customer.billing.name=Billing name
-
-label.customer.shipping.company=Shipping company
-label.customer.shipping.streetaddress=Shipping street address
-label.customer.shipping.suburb=Shipping suburb
-label.customer.shipping.postalcode=Shipping postal code
-label.customer.shipping.city=Shipping city
-label.customer.shipping.zone=Shipping state / province

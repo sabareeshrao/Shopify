@@ -1,3 +1,0 @@
-package com.salesmanager.core.model.catalog.category;
-
-

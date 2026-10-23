@@ -1,8 +1,0 @@
-		OrderStatusHistory orderHistory = new OrderStatusHistory();
-		orderHistory.setOrder(order);
-		orderHistory.setStatus(OrderStatus.PROCESSED);
-		orderHistory.setDateAdded(new Date());
-		
-		orderService.addOrderStatusHistory(order, orderHistory);
-		
-		order.setStatus(OrderStatus.PROCESSED);

@@ -1,8 +1,0 @@
-        //value = value.replaceAll("<script>", "");
-        //value = value.replaceAll("</script>", "");
-        
-        //return HtmlUtils.htmlEscape(value);	
-		
-        StringBuilder safe = new StringBuilder();
-        if(StringUtils.isNotEmpty(value)) {
-            // Fastest way for short strings - https://stackoverflow.com/a/11876086/195904

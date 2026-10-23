@@ -1,8 +1,0 @@
-
-	/*
-	 * @Override public ReadableInventory get(Long inventoryId, MerchantStore store,
-	 * Language language) { ProductAvailability availability =
-	 * getAvailabilityById(store, inventoryId); return
-	 * readableInventoryMapper.convert(availability, store, language); }
-	 */
-

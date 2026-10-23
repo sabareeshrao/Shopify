@@ -1,8 +1,0 @@
-				}
-			}*/
-
-			List<ShippingOption> shippingOptions = parsed.getOptions();
-			if(shippingOptions!=null) {
-				Map<String,String> details = module.getDetails();
-				for(ShippingOption option : shippingOptions) {
-					String name = details.get(option.getOptionCode());

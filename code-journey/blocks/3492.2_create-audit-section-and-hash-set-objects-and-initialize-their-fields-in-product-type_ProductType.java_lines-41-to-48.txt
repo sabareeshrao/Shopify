@@ -1,8 +1,0 @@
-
-  @Embedded
-  private AuditSection auditSection = new AuditSection();
-  
-  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "productType")
-  private Set<ProductTypeDescription> descriptions = new HashSet<ProductTypeDescription>();
-
-  @Column(name = "PRD_TYPE_CODE")

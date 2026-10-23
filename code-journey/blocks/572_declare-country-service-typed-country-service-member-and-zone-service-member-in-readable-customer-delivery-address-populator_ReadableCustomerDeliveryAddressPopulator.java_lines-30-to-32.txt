@@ -1,3 +1,0 @@
-	private CountryService countryService;
-	private ZoneService zoneService;
-	

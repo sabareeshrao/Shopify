@@ -1,6 +1,0 @@
-	private ApplicationEventPublisher eventPublisher;
-
-	@Autowired
-	public void setEventPublisher(ApplicationEventPublisher eventPublisher) {
-		this.eventPublisher = eventPublisher;
-	}

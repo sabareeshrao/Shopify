@@ -1,9 +1,0 @@
-
-				//put transaction
-				List<Transaction> listTransactions = null;
-				if(processingTransactions.containsKey(order.getId())) {
-					listTransactions = processingTransactions.get(order.getId());
-				} else {
-					listTransactions = new ArrayList<Transaction>();
-					processingTransactions.put(order.getId(), listTransactions);
-				}

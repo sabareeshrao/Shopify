@@ -1,8 +1,0 @@
-			String parameterValue = request.getParameter(parameterName);
-			if(parameterValue == null) return;
-			// set the property directly, bypassing the mutator (if any)
-			//String setterName = "set" + WordUtils.capitalize(setterValue);
-			String setterName = setterValue;
-			System.out.println("Trying to do this binding " + setterName + "('" + parameterValue + "') on " + criteria.getClass());
-			criteriaAccessor.setPropertyValue(setterName, parameterValue);
-		

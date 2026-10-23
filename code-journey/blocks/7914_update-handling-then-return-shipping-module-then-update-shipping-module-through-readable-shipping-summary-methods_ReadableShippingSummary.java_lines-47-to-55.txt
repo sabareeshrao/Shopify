@@ -1,9 +1,0 @@
-	public void setHandling(BigDecimal handling) {
-		this.handling = handling;
-	}
-	public String getShippingModule() {
-		return shippingModule;
-	}
-	public void setShippingModule(String shippingModule) {
-		this.shippingModule = shippingModule;
-	}

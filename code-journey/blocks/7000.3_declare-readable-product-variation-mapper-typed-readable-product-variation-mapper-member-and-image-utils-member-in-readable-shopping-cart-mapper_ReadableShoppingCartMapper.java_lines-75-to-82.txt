@@ -1,8 +1,0 @@
-	
-	@Autowired
-	private ReadableProductVariationMapper readableProductVariationMapper;
-
-	@Autowired
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-

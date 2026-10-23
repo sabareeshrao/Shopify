@@ -1,8 +1,0 @@
-
-	@Inject
-	ProductImageService productImageService;
-
-	@Inject
-	CoreConfiguration configuration;
-
-	@Inject

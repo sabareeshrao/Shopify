@@ -1,8 +1,0 @@
-	    
-	    productAttributeService.create(smallAttr);
-	    
-	    product.getAttributes().add(smallAttr);
-	    
-	    productService.update(product);
-	    
-	    /**

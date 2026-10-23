@@ -1,8 +1,0 @@
-
-	@Id
-	private UserConnectionPK primaryKey = new UserConnectionPK();
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;

@@ -1,8 +1,0 @@
-	private Category populateCategory(MerchantStore store, PersistableCategory category, Category target) {
-		try {
-			return persistableCatagoryPopulator.populate(category, target, store, store.getDefaultLanguage());
-		} catch (ConversionException e) {
-			throw new ServiceRuntimeException(e);
-		}
-	}
-

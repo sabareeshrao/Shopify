@@ -1,4 +1,0 @@
-		},
-		{
-			"zoneCode": "NECH",
-			"zoneName": "Neuenburg",

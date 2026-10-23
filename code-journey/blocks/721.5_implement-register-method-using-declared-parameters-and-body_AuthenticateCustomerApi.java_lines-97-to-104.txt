@@ -1,8 +1,0 @@
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
-		@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-    @ResponseBody
-    public ResponseEntity<?> register(
-    		@Valid @RequestBody PersistableCustomer customer, 
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) throws Exception {
-

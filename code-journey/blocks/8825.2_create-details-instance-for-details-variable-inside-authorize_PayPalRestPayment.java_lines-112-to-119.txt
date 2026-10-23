@@ -1,8 +1,0 @@
-			String authorizationID = null;
-
-			// ###Details
-			// Let's you specify details of a payment amount.
-			//Details details = new Details();
-			//details.setShipping("0.03");
-			//details.setSubtotal("107.41");
-			//details.setTax("0.03");

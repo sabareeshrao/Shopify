@@ -1,8 +1,0 @@
-	    
-	    // --- options set
-	    /**
-	     * Option Set facilitates product attributes creation for redundant product creation
-	     * it offers a list of possible options and options values administrator can create in order
-	     * to easily create attributes 
-	     */
-	    createOptionsSet(store);

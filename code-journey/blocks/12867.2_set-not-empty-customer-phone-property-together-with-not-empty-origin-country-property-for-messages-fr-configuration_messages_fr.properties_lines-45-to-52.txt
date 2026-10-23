@@ -1,8 +1,0 @@
-NotEmpty.customer.phone=Le téléphone est requis
-NotEmpty.customer.city=La ville est requise
-
-NotEmpty.origin.address=L'addresse est requise
-NotEmpty.origin.postalCode=Le code postal est requis
-NotEmpty.origin.city=La ville est requise
-NotEmpty.origin.country=Le pays est requis
-

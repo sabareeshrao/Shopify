@@ -1,5 +1,0 @@
-		
-		destinationAddress.append(delivery.getAddress()).append(BLANK);
-		if(!StringUtils.isBlank(delivery.getCity())) {
-			destinationAddress.append(delivery.getCity()).append(BLANK);
-		}

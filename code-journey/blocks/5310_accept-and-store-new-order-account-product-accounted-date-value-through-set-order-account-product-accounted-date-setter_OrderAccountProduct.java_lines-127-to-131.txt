@@ -1,5 +1,0 @@
-	public void setOrderAccountProductAccountedDate(
-			Date orderAccountProductAccountedDate) {
-		this.orderAccountProductAccountedDate = CloneUtils.clone(orderAccountProductAccountedDate);
-	}
-

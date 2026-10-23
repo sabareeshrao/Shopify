@@ -1,9 +1,0 @@
-	public boolean isProductShipeable() {
-		return productShipeable;
-	}
-	public void setProductShipeable(boolean productShipeable) {
-		this.productShipeable = productShipeable;
-	}
-	public boolean isAvailable() {
-		return available;
-	}

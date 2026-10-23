@@ -1,8 +1,0 @@
-		
-		return new JWTUser(
-        		user.getId(),
-        		userName,
-        		user.getFirstName(),
-        		user.getLastName(),
-                user.getAdminEmail(),
-                user.getAdminPassword(),

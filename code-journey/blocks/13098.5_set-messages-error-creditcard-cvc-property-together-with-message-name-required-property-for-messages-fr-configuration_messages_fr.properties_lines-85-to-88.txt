@@ -1,4 +1,0 @@
-messages.error.creditcard.cvc=Le numéro de vérification inscrit sur la carte est invalide
-
-message.order.canprocess=La commande peut être complétée
-message.name.required=Le nom de l'objet est reuis

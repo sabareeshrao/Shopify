@@ -1,8 +1,0 @@
-label.checkout.text=Thank you for ordering from {0}.
-label.checkout.orderid=Your order id is {0}.
-label.checkout.email=An email with your order details has been sent to {0}.
-label.checkout.additionaltext=If you have any comments or suggestions for us, please send us an email with your order id. We value your feedback.
-label.checkout.downloads.completed=Here are your download files.
-label.checkout.downloads.processing=An email with your file(s) download instructions will be sent once the payment for this order will be completed.
-
-label.entitylist.paging=Showing {0} - {1} of {2} result(s)

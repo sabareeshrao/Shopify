@@ -1,8 +1,0 @@
-	private Category getById(MerchantStore store, Long id) {
-		Validate.notNull(id, "category id must not be null");
-		Validate.notNull(store, "MerchantStore must not be null");
-		Category category = categoryService.getById(id, store.getId());
-		if (category == null) {
-			throw new ResourceNotFoundException("Category with id [" + id + "] not found");
-		}
-		if (category.getMerchantStore().getId().intValue() != store.getId().intValue()) {

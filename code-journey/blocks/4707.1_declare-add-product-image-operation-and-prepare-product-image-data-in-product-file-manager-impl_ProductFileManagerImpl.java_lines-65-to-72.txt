@@ -1,8 +1,0 @@
-  public void addProductImage(ProductImage productImage, ImageContentFile contentImage)
-      throws ServiceException {
-
-
-    try {
-
-      /** copy to input stream **/
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();

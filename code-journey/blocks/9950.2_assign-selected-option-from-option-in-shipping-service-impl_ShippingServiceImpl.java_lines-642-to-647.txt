@@ -1,6 +1,0 @@
-								.longValue()) {
-							selectedOption = option;
-						}
-					}
-
-				}

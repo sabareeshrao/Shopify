@@ -1,8 +1,0 @@
-			
-		
-			
-			URL postURL = new URL(server);
-			conn = (HttpURLConnection) postURL.openConnection();
-
-
-

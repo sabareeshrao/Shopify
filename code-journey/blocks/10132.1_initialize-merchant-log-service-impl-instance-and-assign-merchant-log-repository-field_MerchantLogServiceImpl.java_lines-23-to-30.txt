@@ -1,8 +1,0 @@
-	private MerchantLogRepository merchantLogRepository;
-	
-	@Inject
-	public MerchantLogServiceImpl(
-			MerchantLogRepository merchantLogRepository) {
-			super(merchantLogRepository);
-			this.merchantLogRepository = merchantLogRepository;
-	}

@@ -1,5 +1,0 @@
-	private String code;
-	private boolean readOnly;
-	public Long getId() {
-		return id;
-	}

@@ -1,8 +1,0 @@
-
-	@JsonIgnore
-	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE)
-	private Set<MerchantStore> stores = new HashSet<MerchantStore>();
-
-	@Column(name = "IS_RETAILER")
-	private Boolean retailer = false;
-

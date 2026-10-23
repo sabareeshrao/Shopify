@@ -1,3 +1,0 @@
-				groups.add(g);
-				this.lastGroup = g;
-			}

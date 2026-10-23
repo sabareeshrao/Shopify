@@ -1,8 +1,0 @@
-	 */
-	MarketPlace create(MerchantStore store, String code) throws ServiceException;
-	
-	/**
-	 * Fetch a specific marketplace
-	 * @param store
-	 * @param code
-	 * @return MarketPlace

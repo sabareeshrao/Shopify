@@ -1,3 +1,0 @@
-	private boolean retailers = false;
-	private boolean stores = false;
-

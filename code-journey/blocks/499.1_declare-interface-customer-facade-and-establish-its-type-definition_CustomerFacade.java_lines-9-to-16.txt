@@ -1,8 +1,0 @@
-public interface CustomerFacade {
-	
-	/** validates username with principal **/
-	void authorize(Customer customer,  Principal principal);
-	
-	/**
-	 * 
-	 * Forgot password functionality

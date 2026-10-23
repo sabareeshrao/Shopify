@@ -1,4 +1,0 @@
-	public Integer getCustomerReviewCount() {
-		return customerReviewCount;
-	}
-

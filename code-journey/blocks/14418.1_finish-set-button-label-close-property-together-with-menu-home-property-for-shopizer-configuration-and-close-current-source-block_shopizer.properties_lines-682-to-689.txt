@@ -1,8 +1,0 @@
-
-# General Form
-button.label.close=Close
-button.label.esc=Esc key
-button.label.submit=Save
-button.label.submit2=Submit
-button.label.submitorder=Submit order
-button.label.ok=Ok

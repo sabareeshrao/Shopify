@@ -1,8 +1,0 @@
-	 * @param store
-	 *            Merchant merchantStoreCode
-	 * @param imageName
-	 *            name of requested image
-	 * @return {@link OutputContentImage}
-	 * @throws ServiceException
-	 */
-	@Override

@@ -1,8 +1,0 @@
-    private final static String FACEBOOK_TOKEN ="FB ";
-    
-    //private final static String privateApiPatternString = "/api/v*/private";
-    
-    //private final static Pattern pattern = Pattern.compile(privateApiPatternString);
-    
-
-    

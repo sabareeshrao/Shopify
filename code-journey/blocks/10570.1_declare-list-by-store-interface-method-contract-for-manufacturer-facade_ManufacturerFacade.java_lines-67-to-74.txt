@@ -1,8 +1,0 @@
-   * @param store
-   * @param language
-   * @param criteria
-   * @param page
-   * @param count
-   * @return
-   */
-  ReadableManufacturerList listByStore(MerchantStore store, Language language, ListCriteria criteria, int page, int count) ;

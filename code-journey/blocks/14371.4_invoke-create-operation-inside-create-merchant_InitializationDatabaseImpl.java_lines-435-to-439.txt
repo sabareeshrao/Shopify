@@ -1,5 +1,0 @@
-	   optinService.create(newsletter);
-		
-		
-	}
-

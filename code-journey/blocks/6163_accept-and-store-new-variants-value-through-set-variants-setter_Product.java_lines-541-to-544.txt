@@ -1,4 +1,0 @@
-	public void setVariants(Set<ProductVariant> variants) {
-		this.variants = variants;
-	}
-

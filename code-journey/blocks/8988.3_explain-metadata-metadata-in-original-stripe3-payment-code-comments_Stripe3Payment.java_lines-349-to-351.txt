@@ -1,3 +1,0 @@
-	
-			//Map<String,String> metadata = ch.getMetadata();
-			

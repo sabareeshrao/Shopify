@@ -1,5 +1,0 @@
-	public static Locale getLocale(Language language) {
-
-		return new Locale(language.getCode());
-
-	}

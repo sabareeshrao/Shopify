@@ -1,8 +1,0 @@
-public class DataUtilsTest {
-
-    /**
-     * This methods tests {@link DataUtils#trimPostalCode(String)}
-     */
-    @Test
-    public void testTrimPostalCode(){
-        String result = DataUtils.trimPostalCode(" 364856-A56 - B888@ ");

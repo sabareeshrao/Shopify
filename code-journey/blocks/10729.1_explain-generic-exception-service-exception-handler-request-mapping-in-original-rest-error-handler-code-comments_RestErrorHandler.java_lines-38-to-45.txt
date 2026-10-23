@@ -1,8 +1,0 @@
-
-
-    /**
-     * Generic exception serviceException handler
-     */
-    @RequestMapping(produces = "application/json")
-    @ExceptionHandler(ServiceRuntimeException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)

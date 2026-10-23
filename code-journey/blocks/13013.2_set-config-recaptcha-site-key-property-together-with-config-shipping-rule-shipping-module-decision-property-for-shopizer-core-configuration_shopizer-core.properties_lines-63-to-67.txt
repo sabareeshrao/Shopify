@@ -1,5 +1,0 @@
-config.recaptcha.siteKey=
-
-#shipping rules
-config.shipping.rule.priceByDistance=PriceByDistance.drl
-config.shipping.rule.shippingModuleDecision=ShippingDecision.drl

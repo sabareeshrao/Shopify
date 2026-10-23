@@ -1,8 +1,0 @@
-		
-		PersistableProductInventory inventory = new PersistableProductInventory();
-		inventory.setQuantity(5);
-		inventory.setSku(code);
-		
-
-
-		final PersistableProductPrice productPrice = new PersistableProductPrice();

@@ -1,8 +1,0 @@
-		Assert.assertEquals(2, fetchedBook.getDescriptions().size());
-
-	    // Clean up for other tests
-	    categoryService.delete(materingstuff);
-
-	}
-
-

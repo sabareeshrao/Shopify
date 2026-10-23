@@ -1,8 +1,0 @@
-			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-	public void updateOrderCustomer(
-			@PathVariable final Long id,
-			@Valid @RequestBody PersistableCustomer orderCustomer,
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		String user = authorizationUtils.authenticatedUser();

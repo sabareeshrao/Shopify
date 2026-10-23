@@ -1,3 +1,0 @@
-            assertNotNull(readResponse);
-            assertTrue(categoryCode.equals(categ.getCode()));
-        }

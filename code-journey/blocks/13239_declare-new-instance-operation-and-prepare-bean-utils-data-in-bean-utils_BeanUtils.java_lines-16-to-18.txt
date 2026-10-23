@@ -1,3 +1,0 @@
-    public static BeanUtils newInstance(){
-        return new BeanUtils();
-    }

@@ -1,5 +1,0 @@
-    @Override
-    public List<OrderStatusHistory> findByOrder(Order order) {
-        return orderStatusHistoryRepository.findByOrderId(order.getId());
-    }
-}

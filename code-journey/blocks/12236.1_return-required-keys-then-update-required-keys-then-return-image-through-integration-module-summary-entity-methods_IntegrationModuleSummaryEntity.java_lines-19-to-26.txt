@@ -1,8 +1,0 @@
-	public List<String> getRequiredKeys() {
-		return requiredKeys;
-	}
-	public void setRequiredKeys(List<String> requiredKeys) {
-		this.requiredKeys = requiredKeys;
-	}
-	public String getImage() {
-		return image;

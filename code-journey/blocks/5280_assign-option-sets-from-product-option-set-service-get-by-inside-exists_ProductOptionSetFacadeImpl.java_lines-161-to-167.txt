@@ -1,7 +1,0 @@
-
-		List<ProductOptionSet> optionSets = productOptionSetService.getByProductType(readable.getId(), store, language);
-		return optionSets.stream().map(opt -> this.convert(opt, store, language)).collect(Collectors.toList());
-
-	}
-
-}

@@ -1,8 +1,0 @@
-			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
-			@RequestParam(value = "name", required = false) String name,
-			@RequestParam(value = "id", required = false) Long id,
-			@RequestParam(value = "status", required = false) String status,
-			@RequestParam(value = "phone", required = false) String phone,
-			@RequestParam(value = "email", required = false) String email,
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {

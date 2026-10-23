@@ -1,5 +1,0 @@
-	private boolean allowOnlinePurchase;
-	private boolean displaySearchBox;
-	private boolean displayContactUs;
-	private boolean displayShipping;
-

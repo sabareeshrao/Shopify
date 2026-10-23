@@ -1,9 +1,0 @@
-	@Override
-	public void addGroup(MerchantStore store, String groupName) throws ServiceException {
-		ProductRelationship relationship = new ProductRelationship();
-		relationship.setCode(groupName);
-		relationship.setStore(store);
-		relationship.setActive(true);
-		this.save(relationship);
-	}
-	

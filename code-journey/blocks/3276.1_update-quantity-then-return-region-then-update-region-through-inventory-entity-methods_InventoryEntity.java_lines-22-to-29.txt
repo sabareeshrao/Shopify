@@ -1,8 +1,0 @@
-  public void setQuantity(int quantity) {
-    this.quantity = quantity;
-  }
-  public String getRegion() {
-    return region;
-  }
-  public void setRegion(String region) {
-    this.region = region;

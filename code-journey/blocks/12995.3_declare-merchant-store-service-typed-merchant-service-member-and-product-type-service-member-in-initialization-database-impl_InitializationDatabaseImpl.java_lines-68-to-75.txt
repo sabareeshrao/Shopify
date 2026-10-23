@@ -1,8 +1,0 @@
-	protected MerchantStoreService merchantService;
-		
-	@Inject
-	protected ProductTypeService productTypeService;
-	
-	@Inject
-	private TaxClassService taxClassService;
-	

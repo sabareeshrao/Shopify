@@ -1,8 +1,0 @@
-			}
-		}
-		metaData.setPreProcessors(preProcessorKeys);
-		
-		//post processors
-		List<ShippingQuotePrePostProcessModule> postProcessors = this.shippingModulePostProcessors;
-		List<String> postProcessorKeys = new ArrayList<String>();
-		if(postProcessors!=null) {

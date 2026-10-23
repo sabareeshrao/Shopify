@@ -1,6 +1,0 @@
-			 refundTransactionRequest.setTransactionID(transaction.getTransactionDetails().get("TRANSACTIONID"));
-			 
-			 RefundTransactionResponseType refundTransactionResponse = service.refundTransaction(refundRequest);
-			 
-			 String refundAck = refundTransactionResponse.getAck().getValue();
-			 

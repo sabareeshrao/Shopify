@@ -1,6 +1,0 @@
-	private String statusCode;
-	private String statusMessage;
-	private String error = "";
-	private String errorCode = "";
-	private List<ShippingOption> options = new ArrayList<ShippingOption>();
-

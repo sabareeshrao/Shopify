@@ -1,5 +1,0 @@
-	public void setZones(Set<Zone> zones) {
-		this.zones = zones;
-	}
-
-

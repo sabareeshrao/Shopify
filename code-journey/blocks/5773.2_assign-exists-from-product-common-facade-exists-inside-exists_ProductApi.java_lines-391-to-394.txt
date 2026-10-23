@@ -1,4 +1,0 @@
-		boolean exists = productCommonFacade.exists(code, merchantStore);
-		return new ResponseEntity<EntityExists>(new EntityExists(exists), HttpStatus.OK);
-
-	}

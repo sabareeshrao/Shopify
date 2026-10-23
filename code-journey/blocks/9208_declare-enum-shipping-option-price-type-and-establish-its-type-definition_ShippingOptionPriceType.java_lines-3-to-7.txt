@@ -1,5 +1,0 @@
-public enum ShippingOptionPriceType {
-	
-	LEAST, HIGHEST, ALL
-
-}

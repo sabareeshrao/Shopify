@@ -1,7 +1,0 @@
-						// don't add it to new list of item
-						removeItems.add(anItem);
-					} else {
-						// new quantity
-						anItem.setQuantity(item.getQuantity());
-						newItems.add(anItem);
-					}

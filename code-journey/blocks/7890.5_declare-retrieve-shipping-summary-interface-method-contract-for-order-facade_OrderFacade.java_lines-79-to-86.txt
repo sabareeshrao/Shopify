@@ -1,8 +1,0 @@
-	ShippingSummary getShippingSummary(ShippingQuote quote, MerchantStore store, Language language);
-
-	/**
-	 * Validates an order submitted from the web application
-	 * @param order
-	 * @param bindingResult
-	 * @param messagesResult
-	 * @param store

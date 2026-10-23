@@ -1,8 +1,0 @@
-    	
-        final HttpEntity<PersistableTaxRate> taxClassEntity = new HttpEntity<>(taxRate, getHeader());
-        final ResponseEntity<Entity> response = testRestTemplate.postForEntity(String.format("/api/v1/private/tax/rate/"), taxClassEntity, Entity.class);
-        
-        Entity e = response.getBody();
-        
-        assertNotNull(e.getId());
-        assertTrue(e.getId() > 0);

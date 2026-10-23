@@ -1,8 +1,0 @@
-	@JoinColumn(name = "MANUFACTURER_ID", nullable = false)
-	private Manufacturer manufacturer;
-	
-	@Column(name = "MANUFACTURERS_URL")
-	private String url;
-	
-	@Column(name = "URL_CLICKED")
-	private Integer urlClicked;

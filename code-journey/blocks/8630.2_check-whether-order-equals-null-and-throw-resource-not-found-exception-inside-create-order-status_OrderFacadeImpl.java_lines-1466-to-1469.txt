@@ -1,4 +1,0 @@
-		if (order == null) {
-			throw new ResourceNotFoundException(
-					"Order with id [" + id + "] does not exist for merchant [" + store.getCode() + "]");
-		}

@@ -1,6 +1,0 @@
-  @GetMapping("/country")
-  public List<ReadableCountry> getCountry(@ApiIgnore Language language, HttpServletRequest request) {
-    MerchantStore merchantStore = storeFacade.getByCode(request);
-    return countryFacade.getListCountryZones(language, merchantStore);
-  }
-

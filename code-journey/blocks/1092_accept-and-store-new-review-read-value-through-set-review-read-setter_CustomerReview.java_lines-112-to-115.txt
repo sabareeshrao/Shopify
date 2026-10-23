@@ -1,4 +1,0 @@
-	public void setReviewRead(Long reviewRead) {
-		this.reviewRead = reviewRead;
-	}
-

@@ -1,8 +1,0 @@
-			Transaction transactionModel = paymentService.initTransaction(customer, paymentModel, merchantStore);
-
-			ReadableTransaction transaction = new ReadableTransaction();
-			ReadableTransactionPopulator trxPopulator = new ReadableTransactionPopulator();
-			trxPopulator.setOrderService(orderService);
-			trxPopulator.setPricingService(pricingService);
-
-			trxPopulator.populate(transactionModel, transaction, merchantStore, language);

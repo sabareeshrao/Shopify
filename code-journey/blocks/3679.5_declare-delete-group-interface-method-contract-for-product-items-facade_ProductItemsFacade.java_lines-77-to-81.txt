@@ -1,5 +1,0 @@
-	
-	void deleteGroup(String group, MerchantStore store);
-	
-
-}

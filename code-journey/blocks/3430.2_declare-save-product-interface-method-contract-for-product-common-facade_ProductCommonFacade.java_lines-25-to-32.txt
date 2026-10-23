@@ -1,8 +1,0 @@
-	   * @return
-	   */
-	  Long saveProduct(MerchantStore store, PersistableProduct product,
-	      Language language);
-
-	  /**
-	   * Update minimal product details
-	   * @param product

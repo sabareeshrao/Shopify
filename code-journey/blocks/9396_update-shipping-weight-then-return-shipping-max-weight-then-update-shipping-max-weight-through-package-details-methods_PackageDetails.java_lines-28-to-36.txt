@@ -1,9 +1,0 @@
-	public void setShippingWeight(double shippingWeight) {
-		this.shippingWeight = shippingWeight;
-	}
-	public double getShippingMaxWeight() {
-		return shippingMaxWeight;
-	}
-	public void setShippingMaxWeight(double shippingMaxWeight) {
-		this.shippingMaxWeight = shippingMaxWeight;
-	}

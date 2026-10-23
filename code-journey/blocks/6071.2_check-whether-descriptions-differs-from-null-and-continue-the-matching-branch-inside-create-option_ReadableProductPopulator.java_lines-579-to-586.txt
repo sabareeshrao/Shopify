@@ -1,8 +1,0 @@
-		ProductOptionDescription description = null;
-		if(descriptions!=null && descriptions.size()>0) {
-			description = descriptions.get(0);
-			if(descriptions.size()>1) {
-				for(ProductOptionDescription optionDescription : descriptions) {
-					if(optionDescription.getLanguage().getCode().equals(language.getCode())) {
-						description = optionDescription;
-						break;

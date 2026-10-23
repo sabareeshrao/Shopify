@@ -1,5 +1,0 @@
-		
-		boolean partial = false;
-		if(amount.doubleValue()!=order.getTotal().doubleValue()) {
-			partial = true;
-		}

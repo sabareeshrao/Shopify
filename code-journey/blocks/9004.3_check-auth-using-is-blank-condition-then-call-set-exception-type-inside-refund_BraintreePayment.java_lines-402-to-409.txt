@@ -1,8 +1,0 @@
-	    if(StringUtils.isBlank(auth)) {
-			IntegrationException te = new IntegrationException(
-						"Can't process Braintree refund, missing transaction id");
-			te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
-			te.setMessageCode("message.payment.error");
-			te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-			throw te;
-	    }

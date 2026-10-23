@@ -1,3 +1,0 @@
-			
-			zones = (Map<String, Zone>) cache.getFromCache(cacheKey);
-

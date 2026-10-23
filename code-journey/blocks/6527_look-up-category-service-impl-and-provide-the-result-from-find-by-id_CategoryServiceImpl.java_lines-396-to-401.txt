@@ -1,6 +1,0 @@
-	@Override
-	public Category findById(Long category) {
-		Optional<Category> cat = categoryRepository.findById(category);
-		return cat.orElse(null);
-	}
-

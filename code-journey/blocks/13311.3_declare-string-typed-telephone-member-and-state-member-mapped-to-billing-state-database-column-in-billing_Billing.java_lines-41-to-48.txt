@@ -1,8 +1,0 @@
-	private String telephone;
-	
-	@Column (name ="BILLING_STATE", length=100)
-	private String state;
-	
-	@Column (name ="LONGITUDE", length=100)
-	private String longitude;
-	

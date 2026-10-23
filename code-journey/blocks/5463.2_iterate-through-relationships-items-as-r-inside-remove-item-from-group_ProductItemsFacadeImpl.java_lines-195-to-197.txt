@@ -1,3 +1,0 @@
-		for(ProductRelationship r : relationships) {
-			productRelationshipService.delete(r);
-		}

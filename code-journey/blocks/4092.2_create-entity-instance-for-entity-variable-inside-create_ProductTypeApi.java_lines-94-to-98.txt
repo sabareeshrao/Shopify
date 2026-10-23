@@ -1,5 +1,0 @@
-		Entity entity = new Entity();
-		entity.setId(id);
-		return entity;
-
-	}

@@ -1,8 +1,0 @@
-
-	@PutMapping("/private/customers/{id}/reviews/{reviewid}")
-  public PersistableCustomerReview update(
-      @PathVariable final Long id,
-      @PathVariable final Long reviewId,
-      @Valid @RequestBody PersistableCustomerReview review,
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language) {

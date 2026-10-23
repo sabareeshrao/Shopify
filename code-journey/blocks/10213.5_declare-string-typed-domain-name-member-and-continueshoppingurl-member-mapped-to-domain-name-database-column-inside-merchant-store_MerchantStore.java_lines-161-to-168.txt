@@ -1,8 +1,0 @@
-
-	@Column(name = "DOMAIN_NAME", length = 80)
-	private String domainName;
-
-	@JsonIgnore
-	@Column(name = "CONTINUESHOPPINGURL", length = 150)
-	private String continueshoppingurl;
-

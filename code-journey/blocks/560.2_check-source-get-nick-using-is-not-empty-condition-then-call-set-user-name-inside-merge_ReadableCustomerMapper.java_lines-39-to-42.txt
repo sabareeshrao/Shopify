@@ -1,4 +1,0 @@
-
-		if (StringUtils.isNotEmpty(source.getNick())) {
-			target.setUserName(source.getNick());
-		}

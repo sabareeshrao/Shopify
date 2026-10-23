@@ -1,3 +1,0 @@
-			throw new ResourceNotFoundException(
-					"Inventory with id [" + inventory.getId() + "] not found");
-		}

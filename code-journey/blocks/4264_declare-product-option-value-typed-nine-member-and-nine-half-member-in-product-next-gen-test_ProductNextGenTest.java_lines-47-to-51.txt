@@ -1,5 +1,0 @@
-	private ProductOptionValue nine = null;
-	private ProductOptionValue nineHalf = null;
-	private ProductOptionValue ten = null;
-	private ProductOption size = null;
-	

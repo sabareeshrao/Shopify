@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.ReadableProductReview;
-import com.salesmanager.shop.store.controller.product.facade.ProductCommonFacade;
-

@@ -1,5 +1,0 @@
-import io.jsonwebtoken.ExpiredJwtException;
-
-@Component("jwtCustomCustomerAuthenticationManager")//different than jwtCustomerAuthenticationManager
-public class JWTCustomerAuthenticationManager extends CustomAuthenticationManager {
-	

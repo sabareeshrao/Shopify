@@ -1,8 +1,0 @@
-			+ "join fetch p.productVariantGroup pg "
-			+ "join fetch pg.productVariants pi "
-			+ "join fetch pi.product ppp "
-			+ "join fetch ppp.merchantStore pppm "
-			+ "where pi.id = ?1 and pppm.code = ?2 and pd.language.code = ?3")
-	List<ProductVariantImage> finByProductVariant(Long productVariantId, String storeCode);
-
-}

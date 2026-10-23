@@ -1,8 +1,0 @@
-		
-		Optional<ReadableOrderTotal> grandTotal = readableTotals.stream().filter(tot -> tot.getCode().equals("order.total.total")).findFirst();
-		
-		
-		if(grandTotal.isPresent()) {
-			readableTotal.setGrandTotal(grandTotal.get().getText());
-		}
-		orderConfirmation.setTotal(readableTotal);

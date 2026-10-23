@@ -1,8 +1,0 @@
-	 * @param depth
-	 * @param language
-	 * @return
-	 */
-	List<Category> getListByDepth(MerchantStore store, int depth, Language language);
-	
-	/**
-	 * Returns category hierarchy filter by featured

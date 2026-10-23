@@ -1,9 +1,0 @@
-	public void setWeight(long weight) {
-		this.weight = weight;
-	}
-	public long getVolume() {
-		return volume;
-	}
-	public void setVolume(long volume) {
-		this.volume = volume;
-	}

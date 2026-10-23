@@ -1,5 +1,0 @@
-      ShoppingCart cart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);
-
-      if (cart == null) {
-        response.sendError(404, "Cart id " + code + " does not exist");
-      }

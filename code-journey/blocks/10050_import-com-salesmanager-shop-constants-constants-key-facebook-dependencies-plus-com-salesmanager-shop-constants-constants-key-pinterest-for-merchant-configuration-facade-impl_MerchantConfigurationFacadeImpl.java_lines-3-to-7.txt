@@ -1,5 +1,0 @@
-import static com.salesmanager.shop.constants.Constants.KEY_FACEBOOK_PAGE_URL;
-import static com.salesmanager.shop.constants.Constants.KEY_GOOGLE_ANALYTICS_URL;
-import static com.salesmanager.shop.constants.Constants.KEY_INSTAGRAM_URL;
-import static com.salesmanager.shop.constants.Constants.KEY_PINTEREST_PAGE_URL;
-

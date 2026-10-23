@@ -1,8 +1,0 @@
-		
-		//validate integrationKeys['publishableKey']
-		if(keys==null || StringUtils.isBlank(keys.get("publishableKey"))) {
-			if(errorFields==null) {
-				errorFields = new ArrayList<String>();
-			}
-			errorFields.add("publishableKey");
-		}

@@ -1,8 +1,0 @@
-		ReadableEntityList items = new ReadableEntityList();
-		Page<Content> contentBoxes;
-		try {
-			contentBoxes = contentService.listByType(type, store, page, count);
-
-			items.setTotalPages(contentBoxes.getTotalPages());
-			items.setNumber(contentBoxes.getContent().size());
-			items.setRecordsTotal(contentBoxes.getNumberOfElements());

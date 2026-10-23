@@ -1,8 +1,0 @@
-	public Content getById(Long id, MerchantStore store) throws ServiceException {
-
-		Content content = contentRepository.findOne(id);
-
-		if (content != null) {
-			if (content.getMerchantStore().getId().intValue() != store.getId().intValue()) {
-				return null;
-			}

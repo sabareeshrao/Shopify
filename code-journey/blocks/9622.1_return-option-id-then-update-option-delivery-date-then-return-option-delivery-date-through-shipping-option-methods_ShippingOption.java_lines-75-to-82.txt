@@ -1,8 +1,0 @@
-	public String getOptionId() {
-		return optionId;
-	}
-	public void setOptionDeliveryDate(String optionDeliveryDate) {
-		this.optionDeliveryDate = optionDeliveryDate;
-	}
-	public String getOptionDeliveryDate() {
-		return optionDeliveryDate;

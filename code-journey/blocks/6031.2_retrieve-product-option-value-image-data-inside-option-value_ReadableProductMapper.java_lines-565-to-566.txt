@@ -1,2 +1,0 @@
-					imageUtils.buildProductPropertyImageUtils(store, optionValue.getProductOptionValueImage()));
-		}

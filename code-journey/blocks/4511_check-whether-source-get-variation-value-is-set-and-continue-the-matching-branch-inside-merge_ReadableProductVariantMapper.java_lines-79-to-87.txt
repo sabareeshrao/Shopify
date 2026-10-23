@@ -1,9 +1,0 @@
-		
-		destination.setProductShipeable(baseProduct.isProductShipeable());
-		
-		//destination.setStore(null);
-		destination.setStore(store.getCode());
-		destination.setVariation(readableProductVariationMapper.convert(source.getVariation(), store, language));
-		if(source.getVariationValue() != null) {
-			destination.setVariationValue(readableProductVariationMapper.convert(source.getVariationValue(), store, language));
-		}

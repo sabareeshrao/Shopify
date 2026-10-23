@@ -1,8 +1,0 @@
-	private void saveCategory(MerchantStore store, Category category, Category parent) throws ServiceException {
-
-		/**
-		 * c.children1
-		 *
-		 * <p>
-		 * children1.children1 children1.children2
-		 *

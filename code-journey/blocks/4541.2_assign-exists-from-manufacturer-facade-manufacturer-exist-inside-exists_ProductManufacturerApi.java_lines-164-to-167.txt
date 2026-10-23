@@ -1,4 +1,0 @@
-		boolean exists = manufacturerFacade.manufacturerExist(merchantStore, code);
-		return new ResponseEntity<EntityExists>(new EntityExists(exists), HttpStatus.OK);
-
-	}

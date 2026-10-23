@@ -1,4 +1,0 @@
-	protected CustomerService customerService;
-	protected PermissionService  permissionService;
-	protected GroupService   groupService;
-	

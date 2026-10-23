@@ -1,8 +1,0 @@
-
-
-	<!--Encryption -->
-	<beans:bean id="encryption"
-		class="com.salesmanager.core.business.modules.utils.EncryptionImpl">
-		<beans:property name="secretKey" ref="secretKey" />
-	</beans:bean>
-

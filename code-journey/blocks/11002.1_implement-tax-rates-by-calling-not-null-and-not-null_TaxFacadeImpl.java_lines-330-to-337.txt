@@ -1,8 +1,0 @@
-	@Override
-	public ReadableEntityList<ReadableTaxRate> taxRates(MerchantStore store, Language language) {
-		
-		Validate.notNull(store,"MerchantStore cannot be null");
-		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
-		
-		try {
-			List<TaxRate> rates = taxRateService.listByStore(store, language);

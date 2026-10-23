@@ -1,7 +1,0 @@
-						displayQuoteDeliveryTime = Integer.parseInt(rtdetails
-								.getConfigurationValue1());
-
-					} catch (Exception e) {
-						log.error("Display quote is not an integer value ["
-								+ rtdetails.getConfigurationValue1() + "]");
-					}

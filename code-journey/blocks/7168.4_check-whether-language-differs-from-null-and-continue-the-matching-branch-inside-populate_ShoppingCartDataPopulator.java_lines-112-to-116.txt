@@ -1,5 +1,0 @@
-                    	for(ProductDescription productDescription : item.getProduct().getDescriptions()) {
-                    		if(language != null && language.getId().intValue() == productDescription.getLanguage().getId().intValue()) {
-                    			itemName = productDescription.getName();
-                    			break;
-                    		}

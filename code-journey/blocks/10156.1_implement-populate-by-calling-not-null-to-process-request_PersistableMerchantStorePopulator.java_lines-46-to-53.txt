@@ -1,8 +1,0 @@
-	@Override
-	public MerchantStore populate(PersistableMerchantStore source, MerchantStore target, MerchantStore store,
-			Language language) throws ConversionException {
-
-		Validate.notNull(source, "PersistableMerchantStore mst not be null");
-		
-		if(target == null) {
-			target = new MerchantStore();

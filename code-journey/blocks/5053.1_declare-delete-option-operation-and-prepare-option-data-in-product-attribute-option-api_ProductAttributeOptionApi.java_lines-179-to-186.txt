@@ -1,8 +1,0 @@
-
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = { "/private/product/option/{optionId}" }, method = RequestMethod.DELETE)
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
-	public void deleteOption(@PathVariable Long optionId, @ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
-

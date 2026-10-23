@@ -1,7 +1,0 @@
-	private BigDecimal rate;
-	private String store;
-	private String zone;
-	private String country;
-	private String taxClass;
-	private List<TaxRateDescription> descriptions = new ArrayList<TaxRateDescription>();
-	

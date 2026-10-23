@@ -1,2 +1,0 @@
-	public static void setToLanguage(Product p, int language) {
-

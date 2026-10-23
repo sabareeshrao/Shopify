@@ -1,8 +1,0 @@
-	public void setFreeShipping(boolean freeShipping) {
-		this.freeShipping = freeShipping;
-	}
-	public boolean isTaxOnShipping() {
-		return taxOnShipping;
-	}
-	public void setTaxOnShipping(boolean taxOnShipping) {
-		this.taxOnShipping = taxOnShipping;

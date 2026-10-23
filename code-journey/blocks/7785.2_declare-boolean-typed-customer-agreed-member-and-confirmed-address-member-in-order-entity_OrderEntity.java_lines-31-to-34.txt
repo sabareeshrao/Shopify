@@ -1,4 +1,0 @@
-	private boolean customerAgreed;
-	private boolean confirmedAddress;
-	private String comments;
-	

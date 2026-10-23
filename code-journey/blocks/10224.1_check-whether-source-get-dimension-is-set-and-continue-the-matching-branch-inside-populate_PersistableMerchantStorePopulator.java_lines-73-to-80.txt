@@ -1,8 +1,0 @@
-
-		if(source.getDimension()!=null) {
-		  target.setSeizeunitcode(source.getDimension().name());
-		}
-		if(source.getWeight()!=null) {
-		  target.setWeightunitcode(source.getWeight().name());
-		}
-		target.setCurrencyFormatNational(source.isCurrencyFormatNational());

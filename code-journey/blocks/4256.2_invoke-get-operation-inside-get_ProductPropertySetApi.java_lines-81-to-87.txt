@@ -1,7 +1,0 @@
-			@PathVariable Long id, 
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		return productOptionSetFacade.get(id, merchantStore, language);
-
-	}

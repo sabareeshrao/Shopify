@@ -1,4 +1,0 @@
-	public List<Long> getProductIds() {
-		return productIds;
-	}
-

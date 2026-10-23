@@ -1,8 +1,0 @@
-
-
-		<!-- For transient Multipart File only -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-		</dependency>
-

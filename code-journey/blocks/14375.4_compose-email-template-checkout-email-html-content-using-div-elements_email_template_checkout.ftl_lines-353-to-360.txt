@@ -1,8 +1,0 @@
-							</li>
-						</ul>
-					</td>
-				</tr>
-				</table>
-				<div class="clear"></div>
-				
-		</td>

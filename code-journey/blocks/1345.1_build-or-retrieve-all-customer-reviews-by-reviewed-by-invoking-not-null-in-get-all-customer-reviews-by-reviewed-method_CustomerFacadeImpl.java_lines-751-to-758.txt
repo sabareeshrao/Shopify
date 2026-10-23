@@ -1,8 +1,0 @@
-  @Override
-  public List<ReadableCustomerReview> getAllCustomerReviewsByReviewed(Long customerId,
-      MerchantStore store, Language language) {
-
-    //customer exist
-    Customer customer = getCustomerById(customerId);
-    Validate.notNull(customer, "Reviewed customer cannot be null");
-

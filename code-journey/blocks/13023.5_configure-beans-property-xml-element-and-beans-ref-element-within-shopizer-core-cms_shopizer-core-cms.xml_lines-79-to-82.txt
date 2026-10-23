@@ -1,4 +1,0 @@
-		<beans:property name="removeFile">
-			<beans:ref bean="${config.cms.method}DownloadsManager" />
-		</beans:property>
-	</beans:bean>

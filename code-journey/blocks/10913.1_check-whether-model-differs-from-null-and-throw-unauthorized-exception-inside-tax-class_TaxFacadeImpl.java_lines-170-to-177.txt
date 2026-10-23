@@ -1,8 +1,0 @@
-			if(model != null) {
-				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
-					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot get tax class [" + code + "]");
-				}
-			}
-			return readableTaxClassMapper.convert(model, store, language);
-		} catch (ServiceException e) {
-			LOGGER.error("Error while getting taxClass [" +  code + "] for store [" + store.getCode() + "]", e);

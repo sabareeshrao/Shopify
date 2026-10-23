@@ -1,9 +1,0 @@
-			
-			/**
-			 * Variants
-			 */
-			if(!CollectionUtils.isEmpty(source.getVariants())) {
-				Set<ProductVariant> variants = source.getVariants().stream().map(v -> this.variant(destination, v, store, language)).collect(Collectors.toSet());
-
-				destination.setVariants(variants);
-			}

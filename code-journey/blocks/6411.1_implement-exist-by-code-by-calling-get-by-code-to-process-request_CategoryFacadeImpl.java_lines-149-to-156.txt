@@ -1,8 +1,0 @@
-	@Override
-	public boolean existByCode(MerchantStore store, String code) {
-		try {
-			Category c = categoryService.getByCode(store, code);
-			return c != null ? true : false;
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException(e);
-		}

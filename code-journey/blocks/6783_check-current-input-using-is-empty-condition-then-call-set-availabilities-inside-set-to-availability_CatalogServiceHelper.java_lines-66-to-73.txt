@@ -1,8 +1,0 @@
-
-		if (productAvailabilities.isEmpty()) {
-			product.setAvailabilities(productAvailabilities);
-
-		}
-	}
-
-}

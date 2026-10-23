@@ -1,8 +1,0 @@
-	 * @param request
-	 * @return
-	 */
-	@GetMapping("/private/user/profile")
-	@ApiImplicitParams({ @ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-	public ReadableUser getAuthUser(@ApiIgnore Language language, HttpServletRequest request) {
-		Principal principal = request.getUserPrincipal();
-		String userName = principal.getName();

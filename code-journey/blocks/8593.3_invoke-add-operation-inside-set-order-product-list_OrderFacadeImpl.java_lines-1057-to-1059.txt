@@ -1,3 +1,0 @@
-
-			orderProducts.add(orderProduct);
-		}

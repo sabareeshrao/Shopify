@@ -1,8 +1,0 @@
-		product.getDescriptions().add(productDescription);
-		**/
-
-		final HttpEntity<PersistableProduct> entity = new HttpEntity<>(product, getHeader());
-
-		final ResponseEntity<Entity> response = testRestTemplate.postForEntity(
-				"/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, Entity.class);
-		assertThat(response.getStatusCode(), is(CREATED));

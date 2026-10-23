@@ -1,4 +1,0 @@
-email.order.ordered=Ordered on : {0}
-email.order.updated=Updated on : {0}
-email.order.status.title=Order {0} updated
-email.order.status=Last order status: {0}

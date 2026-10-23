@@ -1,4 +1,0 @@
-	public void save(E entity) throws ServiceException {
-		repository.saveAndFlush(entity);
-	}
-	

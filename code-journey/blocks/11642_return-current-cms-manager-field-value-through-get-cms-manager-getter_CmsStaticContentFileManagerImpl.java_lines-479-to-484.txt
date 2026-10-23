@@ -1,6 +1,0 @@
-	@Override
-	public CMSManager getCmsManager() {
-	  return null;
-	}
-
-}

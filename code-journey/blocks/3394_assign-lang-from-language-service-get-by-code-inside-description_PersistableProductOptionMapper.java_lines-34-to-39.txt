@@ -1,6 +1,0 @@
-    Language lang = languageService.getByCode(description.getLanguage());
-    desc.setLanguage(lang);
-    return desc;
-  }
-
-

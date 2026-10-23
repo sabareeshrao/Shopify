@@ -1,8 +1,0 @@
-			"countryCode": "DE"
-		},
-		{
-			"zoneCode": "SCN",
-			"zoneName": "Schleswig-Holstein",
-			"countryCode": "DE"
-		},
-		{

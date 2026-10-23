@@ -1,4 +1,0 @@
-	public void setMaxCount(int maxCount) {
-		this.maxCount = maxCount;
-	}
-

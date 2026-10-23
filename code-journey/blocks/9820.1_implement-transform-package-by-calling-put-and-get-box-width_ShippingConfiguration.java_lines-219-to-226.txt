@@ -1,8 +1,0 @@
-	
-	@SuppressWarnings("unchecked")
-	private JSONObject transformPackage(Package p) {
-		JSONObject data = new JSONObject();
-		data.put("boxWidth", p.getBoxWidth());
-		data.put("boxHeight", p.getBoxHeight());
-		data.put("boxLength", p.getBoxLength());
-		data.put("boxWeight", p.getBoxWeight());

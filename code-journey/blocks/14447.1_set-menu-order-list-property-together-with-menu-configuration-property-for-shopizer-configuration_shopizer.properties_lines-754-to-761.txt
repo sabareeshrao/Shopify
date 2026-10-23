@@ -1,8 +1,0 @@
-menu.order-list=List of orders
-menu.shipping=Shipping
-menu.shipping-configs=Shipping configurations
-menu.shipping-methods=Shipping methods
-menu.shipping-options=Shipping options
-menu.shipping-packages=Packaging
-menu.shipping-origin=Shipping origin
-menu.configuration=Configurations

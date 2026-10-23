@@ -1,7 +1,0 @@
-	public OrderTotal getShipping() {
-		return shipping;
-	}
-	public void setShipping(OrderTotal shipping) {
-		this.shipping = shipping;
-	}
-

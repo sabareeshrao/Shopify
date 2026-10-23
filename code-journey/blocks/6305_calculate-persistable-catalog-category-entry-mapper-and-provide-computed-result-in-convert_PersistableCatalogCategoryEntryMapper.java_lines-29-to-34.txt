@@ -1,6 +1,0 @@
-	@Override
-	public CatalogCategoryEntry convert(PersistableCatalogCategoryEntry source, MerchantStore store, Language language) {
-		CatalogCategoryEntry destination = new CatalogCategoryEntry();
-		return this.merge(source, destination, store, language);
-	}
-

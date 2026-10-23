@@ -1,6 +1,0 @@
-				target.setDelivery(delivery);
-			}
-			
-			if(source.getRating() != null && source.getRating().doubleValue() > 0) {
-				target.setCustomerReviewAvg(new BigDecimal(source.getRating().doubleValue()));
-			}

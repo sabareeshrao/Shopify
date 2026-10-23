@@ -1,8 +1,0 @@
-
-#do not index in default profile
-search.noindex=true
-
-# Which CMS method to use [ default | httpd | aws | gcp ]
-# default = infinispan
-# httpd = requires http server
-# aws = AWS S3 -> See AWS S3 configuration below

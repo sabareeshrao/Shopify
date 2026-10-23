@@ -1,5 +1,0 @@
-import com.salesmanager.shop.constants.EmailConstants;
-import com.salesmanager.shop.model.customer.PersistableCustomer;
-import com.salesmanager.shop.model.shop.ContactForm;
-import org.apache.commons.lang3.StringUtils;
-

@@ -1,9 +1,0 @@
-
-	
-	/**
-	 * Add possible choices
-	 * @param product
-	 * @throws Exception
-	 */
-	private void createOptions(Product product) throws Exception {
-		

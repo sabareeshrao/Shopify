@@ -1,6 +1,0 @@
-
-			content = contentService.getByCode(page.getCode(), merchantStore);
-			if (content != null) {
-				throw new ConstraintException("Page with code [" + page.getCode() + "] already exist for store ["
-						+ merchantStore.getCode() + "]");
-			}

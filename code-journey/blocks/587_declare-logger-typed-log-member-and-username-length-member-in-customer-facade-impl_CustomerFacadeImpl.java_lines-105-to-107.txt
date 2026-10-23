@@ -1,3 +1,0 @@
-  private static final Logger LOG = LoggerFactory.getLogger(CustomerFacadeImpl.class);
-  public final static int USERNAME_LENGTH = 6;
-

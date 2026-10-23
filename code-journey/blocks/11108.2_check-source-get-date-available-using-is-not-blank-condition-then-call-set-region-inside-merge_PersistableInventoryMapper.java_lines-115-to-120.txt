@@ -1,6 +1,0 @@
-			destination.setRegion(region);
-
-			destination.setRegionVariant(source.getRegionVariant());
-			if (StringUtils.isNotBlank(source.getDateAvailable())) {
-				destination.setProductDateAvailable(DateUtil.getDate(source.getDateAvailable()));
-			}

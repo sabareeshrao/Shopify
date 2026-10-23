@@ -1,8 +1,0 @@
-	@Override
-	public Transaction processPayment(Customer customer,
-			MerchantStore store, Payment payment, List<ShoppingCartItem> items, Order order)
-			throws ServiceException {
-
-
-		Validate.notNull(customer);
-		Validate.notNull(store);

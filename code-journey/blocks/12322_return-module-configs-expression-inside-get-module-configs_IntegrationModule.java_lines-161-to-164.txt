@@ -1,4 +1,0 @@
-	public Map<String, ModuleConfig> getModuleConfigs() {
-		return moduleConfigs;
-	}
-

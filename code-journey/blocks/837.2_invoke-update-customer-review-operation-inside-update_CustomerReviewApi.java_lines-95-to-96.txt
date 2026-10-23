@@ -1,2 +1,0 @@
-      return customerFacade.updateCustomerReview(id, reviewId, review, merchantStore, language);
-	}

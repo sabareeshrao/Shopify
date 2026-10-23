@@ -1,8 +1,0 @@
-        }
-
-        // do not keep a large image for now, just take care of the regular image and a small image
-
-        // resize large
-        // ByteArrayOutputStream output = new ByteArrayOutputStream();
-        BufferedImage largeResizedImage;
-        if(bufferedImage.getWidth() > largeImageWidth ||bufferedImage.getHeight() > largeImageHeight) {

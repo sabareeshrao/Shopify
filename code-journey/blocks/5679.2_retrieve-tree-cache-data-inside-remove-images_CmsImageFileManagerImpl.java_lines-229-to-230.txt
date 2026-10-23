@@ -1,2 +1,0 @@
-          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
-    }

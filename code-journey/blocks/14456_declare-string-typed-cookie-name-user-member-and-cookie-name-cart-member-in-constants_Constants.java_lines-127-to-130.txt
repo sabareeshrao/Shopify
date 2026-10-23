@@ -1,4 +1,0 @@
-    public final static String COOKIE_NAME_USER = "user";
-    public final static String COOKIE_NAME_CART = "cart";
-    public final static String RESPONSE_KEY_USERNAME = "userName";
-    

@@ -1,6 +1,0 @@
-		
-		if(availability != null) {
-			returnDestination.setCanBePurchased(availability.getProductStatus());
-			ReadableInventory inventory = readableInventoryMapper.convert(availability, store, language);
-			returnDestination.setInventory(inventory);
-		}

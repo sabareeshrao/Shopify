@@ -1,8 +1,0 @@
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="CUSTOMER_DOB")
-	private Date dateOfBirth;
-	
-	@Email
-	@NotEmpty
-	@Column(name="CUSTOMER_EMAIL_ADDRESS", length=96, nullable=false)

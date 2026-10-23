@@ -1,8 +1,0 @@
-	        		count++;
-	        		
-	        		
-	        	}
-	        	configString.append("]");
-	        	module.setConfiguration(configString.toString());
-	        	module.setModuleConfigs(moduleConfigs);
-	    	}

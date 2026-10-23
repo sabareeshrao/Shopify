@@ -1,8 +1,0 @@
-	public String getTransactionDate() {
-		return transactionDate;
-	}
-	public void setTransactionDate(String transactionDate) {
-		this.transactionDate = transactionDate;
-	}
-	public Long getOrderId() {
-		return orderId;

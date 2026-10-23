@@ -1,8 +1,0 @@
-	    
-	    /**
-	     * Create a complex product
-	     */
-	    Product product = new Product();
-	    product.setProductHeight(new BigDecimal(4));
-	    product.setProductLength(new BigDecimal(3));
-	    product.setProductWidth(new BigDecimal(1));

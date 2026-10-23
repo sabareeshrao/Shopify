@@ -1,5 +1,0 @@
-	private CustomerService customerService;
-	private CountryService countryService;
-	private CurrencyService currencyService;
-
-

@@ -1,4 +1,0 @@
-	public void setStorename(String storename) {
-		this.storename = storename;
-	}
-

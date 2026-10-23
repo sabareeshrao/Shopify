@@ -1,8 +1,0 @@
-	@Override
-	public PackageDetails getPackage(String code, MerchantStore store) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notEmpty(code,"Packaging unique code cannot be empty");
-		
-		ShippingConfiguration config = getDbConfig(store);
-		
-		com.salesmanager.core.model.shipping.Package p = this.packageDetails(config, code);

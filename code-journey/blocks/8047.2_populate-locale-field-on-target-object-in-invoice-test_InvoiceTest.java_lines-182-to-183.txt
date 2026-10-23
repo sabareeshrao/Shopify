@@ -1,2 +1,0 @@
-		order.setLocale(l);
-

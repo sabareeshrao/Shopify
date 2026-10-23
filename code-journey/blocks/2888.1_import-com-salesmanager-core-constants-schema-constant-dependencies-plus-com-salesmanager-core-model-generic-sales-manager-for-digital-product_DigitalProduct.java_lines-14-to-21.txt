@@ -1,8 +1,0 @@
-import com.salesmanager.core.constants.SchemaConstant;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-
-
-/**
- * Representation of a digital product
- * @author csamson777

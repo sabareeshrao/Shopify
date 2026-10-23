@@ -1,3 +1,0 @@
-		return this.merge(source, taxClass, store, language);
-	}
-

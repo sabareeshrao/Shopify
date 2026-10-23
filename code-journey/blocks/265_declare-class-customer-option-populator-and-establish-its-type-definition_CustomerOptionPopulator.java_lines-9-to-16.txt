@@ -1,8 +1,0 @@
-public class CustomerOptionPopulator {
-	
-	/**
-	extends
-}
-		AbstractDataPopulator<com.salesmanager.core.model.customer.attribute.CustomerOption, com.salesmanager.shop.admin.model.customer.attribute.CustomerOption> {
-
-	

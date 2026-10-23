@@ -1,8 +1,0 @@
-		product.setQuantityOrderMinimum(1);// force to 1 minimum when ordering
-		product.setProductShipeable(true);// all items are shipeable
-
-		/** images **/
-		final String image = "/Users/carlsamson/Documents/csti/IMG_4626.jpg";
-		// String image = "C:/personal/em/pictures-misc/IMG_2675.JPG";
-
-		final File imgPath = new File(image);

@@ -1,8 +1,0 @@
-			+ "left join fetch ppri.availabilities ppria "
-			+ "left join fetch ppria.prices ppriap "
-			+ "left join fetch ppriap.descriptions ppriapd "
-			+ "where ppr.id=?1 and pm.code=?2", countQuery = "select  count(p) from ProductAvailability p "
-					+ "join p.merchantStore pm " + "join p.product ppr left join ppr.variants ppri left join ppri.availabilities ppria " + "where ppr.id=?1 "
-							+ "and pm.code=?2")
-	Page<ProductAvailability> getByProductId(Long productId, String store, Pageable pageable);
-

@@ -1,8 +1,0 @@
-elasticsearch.mode=remote
-elasticsearch.server.host=localhost
-elasticsearch.server.protocole=http
-elasticsearch.server.port=9200
-elasticsearch.server.proxy.user=
-elasticsearch.server.proxy.password=
-#enable if ES is secured (by default it is not)
-elasticsearch.security.enabled=false

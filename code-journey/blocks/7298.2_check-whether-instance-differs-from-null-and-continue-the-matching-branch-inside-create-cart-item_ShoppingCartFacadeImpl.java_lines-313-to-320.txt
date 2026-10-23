@@ -1,8 +1,0 @@
-				.populateShoppingCartItem(product, store);
-
-		item.setQuantity(shoppingCartItem.getQuantity());
-		item.setShoppingCart(cartModel);
-		item.setSku(product.getSku());
-
-		if (instance != null) {
-			item.setVariant(instance.getId());

@@ -1,7 +1,0 @@
-	@Override
-	public ReadableProductVariant get(Long instanceId, Long productId, MerchantStore store, Language language) {
-		Optional<ProductVariant> productVariant =  this.getproductVariant(instanceId, productId, store);
-		
-		if(productVariant.isEmpty()) {
-			throw new ResourceNotFoundException("Product instance + [" + instanceId + "] not found for store [" + store.getCode() + "]");
-		}

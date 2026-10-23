@@ -1,6 +1,0 @@
-
-					.invalidateHttpSession(false)
-					.and()
-					.exceptionHandling().accessDeniedPage("/shop/");
-
-		}

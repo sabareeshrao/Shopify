@@ -1,4 +1,0 @@
-                    billingCountry = countries.get(source.getBilling().getCountry());
-                    if(billingCountry==null) {
-                        throw new ConversionException("Unsuported country code " + sourceBilling.getCountry());
-                    }

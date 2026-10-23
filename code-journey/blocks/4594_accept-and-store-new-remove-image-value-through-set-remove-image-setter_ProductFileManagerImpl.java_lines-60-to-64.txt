@@ -1,5 +1,0 @@
-  public void setRemoveImage(ProductImageRemove removeImage) {
-    this.removeImage = removeImage;
-  }
-
-

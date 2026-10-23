@@ -1,5 +1,0 @@
-  public ProductImageGet getGetImage() {
-    return getImage;
-  }
-
-

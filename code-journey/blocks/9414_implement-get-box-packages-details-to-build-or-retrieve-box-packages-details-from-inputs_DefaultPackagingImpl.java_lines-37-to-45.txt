@@ -1,9 +1,0 @@
-	@Override
-	public List<PackageDetails> getBoxPackagesDetails(
-			List<ShippingProduct> products, MerchantStore store)
-			throws ServiceException {
-
-		
-		if (products == null) {
-			throw new ServiceException("Product list cannot be null !!");
-		}

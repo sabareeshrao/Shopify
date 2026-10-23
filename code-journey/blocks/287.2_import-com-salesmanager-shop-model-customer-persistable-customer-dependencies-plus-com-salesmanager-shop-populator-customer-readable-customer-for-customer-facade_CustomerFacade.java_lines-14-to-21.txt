@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.customer.PersistableCustomer;
-import com.salesmanager.shop.model.customer.PersistableCustomerReview;
-import com.salesmanager.shop.model.customer.ReadableCustomer;
-import com.salesmanager.shop.model.customer.ReadableCustomerReview;
-import com.salesmanager.shop.model.customer.address.Address;
-import com.salesmanager.shop.model.customer.optin.PersistableCustomerOptin;
-import com.salesmanager.shop.populator.customer.ReadableCustomerList;
-

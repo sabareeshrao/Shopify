@@ -1,8 +1,0 @@
-	public void setShippingHeight(double shippingHeight) {
-		this.shippingHeight = shippingHeight;
-	}
-	public double getShippingWidth() {
-		return shippingWidth;
-	}
-	public void setShippingWidth(double shippingWidth) {
-		this.shippingWidth = shippingWidth;

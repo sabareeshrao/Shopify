@@ -1,4 +1,0 @@
-		"customModule":"true",
-		"version":"1.0",
-		"regions": ["*"]
-	},

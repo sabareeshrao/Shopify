@@ -1,3 +1,0 @@
-				if (contentImage.getFile() != null) {
-					contentImage.getFile().close();
-				}

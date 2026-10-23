@@ -1,8 +1,0 @@
-
-	
-	/**
-	 * Builds a merchant store logo path
-	 * @param store
-	 * @return
-	 */
-	public String buildStoreLogoFilePath(MerchantStore store);

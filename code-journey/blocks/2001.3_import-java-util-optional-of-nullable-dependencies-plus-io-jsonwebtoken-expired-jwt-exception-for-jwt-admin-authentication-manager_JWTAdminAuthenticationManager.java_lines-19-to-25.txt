@@ -1,7 +1,0 @@
-import static java.util.Optional.ofNullable;
-import static org.apache.commons.lang3.StringUtils.removeStart;
-import io.jsonwebtoken.ExpiredJwtException;
-
-@Component("jwtCustomAdminAuthenticationManager")
-public class JWTAdminAuthenticationManager extends CustomAuthenticationManager {
-

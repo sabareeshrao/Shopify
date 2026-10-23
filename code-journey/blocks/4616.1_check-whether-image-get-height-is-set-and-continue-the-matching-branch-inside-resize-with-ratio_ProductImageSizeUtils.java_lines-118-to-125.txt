@@ -1,8 +1,0 @@
-
-            int fHeight = destinationHeight;
-            int fWidth = destinationWidth;
-
-            //Work out the resized width/height
-            if (image.getHeight() > destinationHeight || image.getWidth() > destinationWidth) {
-				if (image.getHeight() > image.getWidth()) {
-					fHeight = destinationHeight;

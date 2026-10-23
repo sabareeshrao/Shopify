@@ -1,5 +1,0 @@
-
-				ContentDescriptionEntity contentDescription = create(description);
-				descriptions.add(contentDescription);
-			}
-		}

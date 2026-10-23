@@ -1,8 +1,0 @@
-
-/**
- * Integrates with UPS online API
- * @author casams1
- *
- */
-public class UPSShippingQuote implements ShippingQuoteModule {
-	

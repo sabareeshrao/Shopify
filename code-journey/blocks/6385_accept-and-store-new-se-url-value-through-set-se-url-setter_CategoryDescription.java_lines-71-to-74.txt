@@ -1,4 +1,0 @@
-	public void setSeUrl(String seUrl) {
-		this.seUrl = seUrl;
-	}
-

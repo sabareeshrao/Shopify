@@ -1,8 +1,0 @@
-  @Override
-  public PersistableCustomerReview saveOrUpdateCustomerReview(PersistableCustomerReview reviewTO, MerchantStore store,
-      Language language) {
-    CustomerReview review = convertPersistableCustomerReviewToCustomerReview(reviewTO, store, language);
-    createReview(review);
-    reviewTO.setId(review.getId());
-    return reviewTO;
-  }

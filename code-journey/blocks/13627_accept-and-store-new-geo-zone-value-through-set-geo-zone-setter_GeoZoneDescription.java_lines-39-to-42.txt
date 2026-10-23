@@ -1,4 +1,0 @@
-	public void setGeoZone(GeoZone geoZone) {
-		this.geoZone = geoZone;
-	}
-}

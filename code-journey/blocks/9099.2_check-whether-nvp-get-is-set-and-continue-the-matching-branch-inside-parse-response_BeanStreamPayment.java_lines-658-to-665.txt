@@ -1,8 +1,0 @@
-		transaction.setTransactionDate(new Date());
-		transaction.setTransactionType(transactionType);
-		transaction.setPaymentType(PaymentType.CREDITCARD);
-		transaction.getTransactionDetails().put("TRANSACTIONID", (String)nvp.get("TRNID"));
-		transaction.getTransactionDetails().put("TRNAPPROVED", (String)nvp.get("TRNAPPROVED"));
-		transaction.getTransactionDetails().put("TRNORDERNUMBER", (String)nvp.get("TRNORDERNUMBER"));
-		transaction.getTransactionDetails().put("MESSAGETEXT", (String)nvp.get("MESSAGETEXT"));
-		if(nvp.get("INTERNALORDERID")!=null) {

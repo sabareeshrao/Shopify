@@ -1,4 +1,0 @@
-	
-	void removeFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException ;
-
-}

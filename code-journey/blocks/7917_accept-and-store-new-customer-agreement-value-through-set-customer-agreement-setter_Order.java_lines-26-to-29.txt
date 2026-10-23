@@ -1,4 +1,0 @@
-	public void setCustomerAgreement(boolean customerAgreement) {
-		this.customerAgreement = customerAgreement;
-	}
-

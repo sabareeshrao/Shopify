@@ -1,8 +1,0 @@
-	@Override
-	public List<OutputContentFile> getFiles(final String merchantStoreCode, Optional<String> folderPath,
-			final FileContentType staticContentType) throws ServiceException {
-
-		throw new ServiceException("Not implemented for httpd image manager");
-
-	}
-

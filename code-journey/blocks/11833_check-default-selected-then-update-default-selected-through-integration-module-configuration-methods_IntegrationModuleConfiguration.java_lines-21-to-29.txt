@@ -1,9 +1,0 @@
-	public boolean isDefaultSelected() {
-		return defaultSelected;
-	}
-	public void setDefaultSelected(boolean defaultSelected) {
-		this.defaultSelected = defaultSelected;
-	}
-	public Map<String, String> getIntegrationKeys() {
-		return integrationKeys;
-	}

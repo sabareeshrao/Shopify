@@ -1,5 +1,0 @@
-	public void removeAttributes(ShoppingCartAttributeItem shoppingCartAttributeItem)
-	{
-	    this.attributes.remove(shoppingCartAttributeItem);
-	}
-

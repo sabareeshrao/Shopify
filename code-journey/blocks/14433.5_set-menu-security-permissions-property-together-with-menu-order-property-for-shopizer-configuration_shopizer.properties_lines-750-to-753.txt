@@ -1,4 +1,0 @@
-menu.security-permissions=Permissions
-menu.security-groups=Groups
-menu.security-create-group=Create group
-menu.order=Orders

@@ -1,3 +1,0 @@
-	private Double discount = null;
-	private String expiration;
-

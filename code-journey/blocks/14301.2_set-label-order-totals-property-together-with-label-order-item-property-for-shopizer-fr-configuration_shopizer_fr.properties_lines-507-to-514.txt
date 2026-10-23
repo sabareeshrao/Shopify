@@ -1,8 +1,0 @@
-label.order.totals=Total
-label.order.date=Date de la commande
-label.order.module=Module du paiement
-label.order.shippingmethod=Mode d'expédition
-label.order.paymentmode=Mode de paiement
-label.order.refund=Appliquer un remboursement
-label.order.capture=Compléter la transaction
-label.order.item=Article

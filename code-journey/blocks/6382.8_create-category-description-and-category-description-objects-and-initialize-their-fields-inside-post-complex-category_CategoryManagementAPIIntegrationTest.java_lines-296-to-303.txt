@@ -1,8 +1,0 @@
-        endescription = new CategoryDescription();
-        endescription.setLanguage("en");
-        endescription.setName("Lounge");
-        endescription.setFriendlyUrl("lounge");
-        endescription.setTitle("Lounge");
-
-        frdescription = new CategoryDescription();
-        frdescription.setLanguage("fr");

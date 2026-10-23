@@ -1,8 +1,0 @@
-	@Override
-	public void updateOrderStatus(Order order, OrderStatus newStatus, MerchantStore store) {
-
-		// make sure we are changing to different that current status
-		if (order.getStatus().equals(newStatus)) {
-			return; // we have the same status, lets just return
-		}
-		OrderStatus oldStatus = order.getStatus();

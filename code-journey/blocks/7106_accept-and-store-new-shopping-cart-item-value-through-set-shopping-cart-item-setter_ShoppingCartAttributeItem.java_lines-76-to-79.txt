@@ -1,4 +1,0 @@
-	public void setShoppingCartItem(ShoppingCartItem shoppingCartItem) {
-		this.shoppingCartItem = shoppingCartItem;
-	}
-

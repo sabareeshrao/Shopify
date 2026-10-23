@@ -1,4 +1,0 @@
-
-        if (extension == null) {
-          extension = "jpeg";
-        }

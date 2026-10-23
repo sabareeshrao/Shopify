@@ -1,8 +1,0 @@
-	@Override
-	public ReadableUserList getByCriteria(Language language, String drawParam, Criteria criteria) {
-		try {
-			ReadableUserList readableUserList = new ReadableUserList();
-			GenericEntityList<User> userList = userService.listByCriteria(criteria);
-			for (User user : userList.getList()) {
-				ReadableUser readableUser = this.convertUserToReadableUser(language, user);
-				readableUserList.getData().add(readableUser);

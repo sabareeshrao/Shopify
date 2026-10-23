@@ -1,4 +1,0 @@
-			  productAvailability.setRegion(Constants.ALL_REGIONS);
-			  productAvailability.setAvailable(Boolean.valueOf(destination.isAvailable()));
-			  productAvailability.setProductStatus(source.isCanBePurchased());
-		    }

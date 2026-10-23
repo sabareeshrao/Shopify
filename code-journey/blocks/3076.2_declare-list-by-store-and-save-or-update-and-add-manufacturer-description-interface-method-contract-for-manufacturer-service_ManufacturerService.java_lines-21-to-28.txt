@@ -1,8 +1,0 @@
-
-	Page<Manufacturer> listByStore(MerchantStore store, Language language, String name, int page, int count) throws ServiceException;
-	
-	void saveOrUpdate(Manufacturer manufacturer) throws ServiceException;
-	
-	void addManufacturerDescription(Manufacturer manufacturer, ManufacturerDescription description) throws ServiceException;
-	
-	Long getCountManufAttachedProducts( Manufacturer manufacturer )  throws ServiceException;

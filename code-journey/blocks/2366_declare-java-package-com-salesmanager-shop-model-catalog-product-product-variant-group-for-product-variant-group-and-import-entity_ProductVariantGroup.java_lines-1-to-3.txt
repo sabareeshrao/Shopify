@@ -1,3 +1,0 @@
-package com.salesmanager.shop.model.catalog.product.product.variantGroup;
-import com.salesmanager.shop.model.entity.Entity;
-

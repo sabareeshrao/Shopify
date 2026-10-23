@@ -1,4 +1,0 @@
-	public void setPermissions(List<ReadablePermission> permissions) {
-		this.permissions = permissions;
-	}
-

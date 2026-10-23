@@ -1,8 +1,0 @@
-
-	}
-
-	@RequestMapping(value = { "/private/orders/{id}/customer" }, method = RequestMethod.PATCH)
-	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	@ApiImplicitParams({
-			@ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),

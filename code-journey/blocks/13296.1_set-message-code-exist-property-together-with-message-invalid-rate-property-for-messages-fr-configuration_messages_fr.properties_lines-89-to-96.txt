@@ -1,8 +1,0 @@
-
-message.code.exist=Ce code existe déjà
-message.name.exist=Ce nom existe déjà
-message.invalid.amount=Montant invalide
-message.region.exists=cette région existe déjà
-message.region.null=La région ne peut être vide
-message.invalid.price=Le format du prix est invalide
-message.invalid.rate=Le format du taux est invalide

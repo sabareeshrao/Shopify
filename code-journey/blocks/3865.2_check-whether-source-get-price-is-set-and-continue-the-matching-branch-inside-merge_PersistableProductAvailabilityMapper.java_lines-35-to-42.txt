@@ -1,8 +1,0 @@
-			destination.setProductQuantity(source.getQuantity());
-			destination.setProductQuantityOrderMin(1);
-			destination.setProductQuantityOrderMax(1);
-
-			if (source.getPrice() != null) {
-
-				ProductPrice price = new ProductPrice();
-				price.setProductAvailability(destination);

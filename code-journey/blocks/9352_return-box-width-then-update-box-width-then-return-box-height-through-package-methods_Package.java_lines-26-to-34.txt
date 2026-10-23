@@ -1,9 +1,0 @@
-	public double getBoxWidth() {
-		return boxWidth;
-	}
-	public void setBoxWidth(double boxWidth) {
-		this.boxWidth = boxWidth;
-	}
-	public double getBoxHeight() {
-		return boxHeight;
-	}

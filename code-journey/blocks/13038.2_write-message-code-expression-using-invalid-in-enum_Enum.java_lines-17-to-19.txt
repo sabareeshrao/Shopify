@@ -1,3 +1,0 @@
-{
-    public abstract String message() default "Invalid value. This is not permitted.";
-     

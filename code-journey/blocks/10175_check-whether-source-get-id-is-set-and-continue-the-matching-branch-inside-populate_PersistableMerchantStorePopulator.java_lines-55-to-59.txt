@@ -1,5 +1,0 @@
-		
-		target.setCode(source.getCode());
-		if(source.getId()!=0) {
-			target.setId(source.getId());
-		}

@@ -1,6 +1,0 @@
-		
-		BigDecimal orderTotal = order.getTotal();
-		
-		if(amount.doubleValue()>orderTotal.doubleValue()) {
-			throw new ServiceException("Invalid amount, the refunded amount is greater than the total allowed");
-		}

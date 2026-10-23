@@ -1,8 +1,0 @@
-config.cms.http.path.location=/Applications/MAMP/htdocs/cms
-config.cms.contentUrl=https://s3.ca-central-1.amazonaws.com/shopizer-lightsail
-
-#AWS S3 configuration
-#Name of bucket files
-#See regions here https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
-#Credentials must be set as environment variables when launching Shopizer
-AWS_ACCESS_KEY_ID=<ACCESS KEY ID>

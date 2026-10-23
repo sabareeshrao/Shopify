@@ -1,9 +1,0 @@
-			
-			/** merchant module configs **/
-			List<IntegrationModule> shippingMethods = this.getShippingMethods(store);
-			IntegrationModule shippingModule = null;
-			for(IntegrationModule mod : shippingMethods) {
-				if(mod.getCode().equals(moduleName)){
-					shippingModule = mod;
-					break;
-				}

@@ -1,8 +1,0 @@
-				if(!StringUtils.isBlank(transaction.getDetails())) {
-					try {
-						@SuppressWarnings("unchecked")
-						Map<String,String> objects = mapper.readValue(transaction.getDetails(), Map.class);
-						transaction.setTransactionDetails(objects);
-						capturable = transaction;
-					} catch (Exception e) {
-						throw new ServiceException(e);

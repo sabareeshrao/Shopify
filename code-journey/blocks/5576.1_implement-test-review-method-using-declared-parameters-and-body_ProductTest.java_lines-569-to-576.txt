@@ -1,8 +1,0 @@
-		
-	}
-	
-	
-	//REVIEW
-	private void testReview(Product product) throws Exception {
-	  
-	     ProductReview review = new ProductReview();

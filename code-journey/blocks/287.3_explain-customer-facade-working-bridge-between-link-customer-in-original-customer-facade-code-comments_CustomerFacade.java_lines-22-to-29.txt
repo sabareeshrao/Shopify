@@ -1,8 +1,0 @@
-/**
- * <p>Customer facade working as a bridge between {@link CustomerService} and Controller
- * It will take care about interacting with Service API and doing any pre and post processing
- * </p>
- *
- * @author Umesh Awasthi
- * @version 2.2.1 - 2.7.0
- * @author carlsamson

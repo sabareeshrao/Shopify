@@ -1,6 +1,0 @@
-	public void setProducts(List<ReadableShoppingCartItem> products) {
-		this.products = products;
-	}
-
-
-

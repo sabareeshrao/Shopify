@@ -1,2 +1,0 @@
-			source.setDateAvailable(DateUtil.formatDate(new Date()));
-		}

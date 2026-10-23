@@ -1,2 +1,0 @@
-					defaultPriceAmount = source.getPrice();
-				}

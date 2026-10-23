@@ -1,8 +1,0 @@
-	public Set<ProductType> getProductTypes() {
-		return productTypes;
-	}
-	public void setProductTypes(Set<ProductType> productTypes) {
-		this.productTypes = productTypes;
-	}
-
-}

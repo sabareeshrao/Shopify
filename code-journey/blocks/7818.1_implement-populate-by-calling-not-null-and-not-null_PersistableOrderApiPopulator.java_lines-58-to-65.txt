@@ -1,8 +1,0 @@
-	@Override
-	public Order populate(PersistableOrder source, Order target, MerchantStore store, Language language)
-			throws ConversionException {
-		
-
-/*		Validate.notNull(currencyService,"currencyService must be set");
-		Validate.notNull(customerService,"customerService must be set");
-		Validate.notNull(shoppingCartService,"shoppingCartService must be set");

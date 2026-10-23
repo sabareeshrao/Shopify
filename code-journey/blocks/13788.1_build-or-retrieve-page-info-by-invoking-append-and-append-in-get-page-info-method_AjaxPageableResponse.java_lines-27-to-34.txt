@@ -1,8 +1,0 @@
-	protected String getPageInfo() {
-		
-		StringBuilder returnString = new StringBuilder();
-		returnString.append("\"startRow\"").append(":");
-		returnString.append(this.startRow).append(",");
-		returnString.append("\"endRow\"").append(":").append(this.endRow).append(",");
-		returnString.append("\"totalRows\"").append(":").append(super.getData().size());
-		return returnString.toString();

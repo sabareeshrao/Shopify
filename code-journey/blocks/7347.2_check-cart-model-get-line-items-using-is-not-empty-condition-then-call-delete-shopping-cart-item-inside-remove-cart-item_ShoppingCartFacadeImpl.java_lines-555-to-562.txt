@@ -1,8 +1,0 @@
-			if (cartModel != null) {
-				if (CollectionUtils.isNotEmpty(cartModel.getLineItems())) {
-					Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> shoppingCartItemSet = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-					for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem shoppingCartItem : cartModel
-							.getLineItems()) {
-						if (shoppingCartItem.getId().longValue() == itemID.longValue()) {
-							shoppingCartService.deleteShoppingCartItem(itemID);
-						} else {

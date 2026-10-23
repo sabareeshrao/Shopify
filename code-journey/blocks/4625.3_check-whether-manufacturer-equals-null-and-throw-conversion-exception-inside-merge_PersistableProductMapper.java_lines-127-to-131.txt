@@ -1,5 +1,0 @@
-    	        	 
-    					Manufacturer manufacturer = manufacturerService.getByCode(store, source.getProductSpecifications().getManufacturer());
-    					if(manufacturer == null) {
-    						throw new ConversionException("Manufacturer [" + source.getProductSpecifications().getManufacturer() + "] does not exist");
-    					}

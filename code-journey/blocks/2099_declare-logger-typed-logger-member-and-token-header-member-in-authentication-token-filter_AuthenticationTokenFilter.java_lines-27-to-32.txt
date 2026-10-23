@@ -1,6 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationTokenFilter.class);
-
-    
-    @Value("${authToken.header}")
-    private String tokenHeader;
-    

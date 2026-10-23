@@ -1,8 +1,0 @@
-	private ReadableImage image(ProductVariantImage instanceImage, MerchantStore store, Language language) {
-		ReadableImage img = new ReadableImage();
-		img.setDefaultImage(instanceImage.isDefaultImage());
-		img.setId(instanceImage.getId());
-		img.setImageName(instanceImage.getProductImage());
-		img.setImageUrl(imageUtils.buildCustomTypeImageUtils(store, img.getImageName(), FileContentType.VARIANT));
-		return img;
-	}

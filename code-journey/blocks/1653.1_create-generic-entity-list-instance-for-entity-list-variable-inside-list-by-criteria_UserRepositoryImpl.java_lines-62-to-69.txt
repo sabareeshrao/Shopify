@@ -1,8 +1,0 @@
-      }
-
-      Number count = (Number) countQ.getSingleResult();
-
-      @SuppressWarnings("rawtypes")
-      GenericEntityList entityList = new GenericEntityList();
-      entityList.setTotalCount(count.intValue());
-      

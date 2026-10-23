@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "DE",
-		"zoneName": "Delaware",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "DC",
-		"zoneName": "District of Columbia",

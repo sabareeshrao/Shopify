@@ -1,8 +1,0 @@
-		    		   		orderTable.append(TD);
-		    		   		orderTable.append("<strong>");
-		    		   			if(total.getModule().equals("tax")) {
-		    		   				orderTable.append(total.getText()).append(": ");
-
-		    		   			} else {
-		    		   				//if(total.getModule().equals("total") || total.getModule().equals("subtotal")) {
-		    		   				//}

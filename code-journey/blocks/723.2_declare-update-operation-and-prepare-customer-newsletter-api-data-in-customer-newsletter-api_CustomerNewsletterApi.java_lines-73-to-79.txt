@@ -1,7 +1,0 @@
-  public void update(
-      @PathVariable String email,
-      @Valid @RequestBody PersistableCustomer customer,
-      HttpServletRequest request,
-      HttpServletResponse response) {
-    throw new UnsupportedOperationException();
-  }

@@ -1,8 +1,0 @@
-			+ "left join fetch pv.productOption pvpo "
-			+ "left join fetch pv.productOptionValue pvpov "
-			+ "left join fetch pvpo.descriptions pvpod "
-			+ "left join fetch pvpov.descriptions pvpovd "
-			
-			+ "left join fetch p.variationValue pvv "
-			+ "left join fetch pvv.productOption pvvpo "
-			+ "left join fetch pvv.productOptionValue pvvpov "

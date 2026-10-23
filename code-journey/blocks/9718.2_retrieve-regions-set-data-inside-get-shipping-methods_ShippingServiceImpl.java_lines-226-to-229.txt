@@ -1,4 +1,0 @@
-					|| module.getRegionsSet().contains("*")) {
-				
-				returnModules.add(module);
-			}

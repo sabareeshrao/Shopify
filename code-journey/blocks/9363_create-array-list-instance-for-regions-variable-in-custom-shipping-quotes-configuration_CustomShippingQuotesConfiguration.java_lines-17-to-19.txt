@@ -1,3 +1,0 @@
-	private List<CustomShippingQuotesRegion> regions = new ArrayList<CustomShippingQuotesRegion>();
-	
-	

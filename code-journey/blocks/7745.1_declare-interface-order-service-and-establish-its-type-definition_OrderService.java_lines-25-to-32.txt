@@ -1,8 +1,0 @@
-public interface OrderService extends SalesManagerEntityService<Long, Order> {
-
-    void addOrderStatusHistory(Order order, OrderStatusHistory history)
-                    throws ServiceException;
-
-    /**
-     * Can be used to calculates the final prices of all items contained in checkout page
-     * @param orderSummary

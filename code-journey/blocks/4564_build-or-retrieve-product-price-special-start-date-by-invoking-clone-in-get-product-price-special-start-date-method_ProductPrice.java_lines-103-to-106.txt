@@ -1,4 +1,0 @@
-	public Date getProductPriceSpecialStartDate() {
-		return CloneUtils.clone(productPriceSpecialStartDate);
-	}
-

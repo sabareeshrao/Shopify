@@ -1,8 +1,0 @@
-		description.setFriendlyUrl(name);
-
-		List<CategoryDescription> descriptions = new ArrayList<>();
-		descriptions.add(description);
-
-		newCategory.setDescriptions(descriptions);
-
-		return newCategory;

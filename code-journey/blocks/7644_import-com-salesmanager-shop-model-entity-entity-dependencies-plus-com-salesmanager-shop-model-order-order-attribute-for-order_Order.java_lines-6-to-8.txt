@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.entity.Entity;
-import com.salesmanager.shop.model.order.OrderAttribute;
-

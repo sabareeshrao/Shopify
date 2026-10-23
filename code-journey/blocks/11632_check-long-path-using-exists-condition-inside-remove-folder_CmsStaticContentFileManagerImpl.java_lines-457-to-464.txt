@@ -1,8 +1,0 @@
-			
-			nodePath.append(folderName);
-			
-			Path longPath = Paths.get(nodePath.toString());
-			
-			if (Files.exists(longPath)) {
-				Files.delete(longPath);
-			}

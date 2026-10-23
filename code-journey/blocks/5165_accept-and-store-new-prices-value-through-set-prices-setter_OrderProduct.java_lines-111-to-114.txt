@@ -1,4 +1,0 @@
-	public void setPrices(Set<OrderProductPrice> prices) {
-		this.prices = prices;
-	}
-

@@ -1,4 +1,0 @@
-	ReadableProductOptionValue optionValue = null;
-	public ReadableProductOption getOption() {
-		return option;
-	}

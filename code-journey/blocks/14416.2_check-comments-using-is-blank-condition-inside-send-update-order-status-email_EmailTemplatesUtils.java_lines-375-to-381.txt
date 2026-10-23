@@ -1,7 +1,0 @@
-		        String status = messages.getMessage("label.order." + order.getStatus().name(), customerLocale, order.getStatus().name());
-		        String[] statusMessage = {DateUtil.formatDate(lastHistory.getDateAdded()),status};
-		        
-		        String comments = lastHistory.getComments();
-		        if(StringUtils.isBlank(comments)) {
-		        	comments = messages.getMessage("label.order." + order.getStatus().name(), customerLocale, order.getStatus().name());
-		        }

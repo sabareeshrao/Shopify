@@ -1,7 +1,0 @@
-	@Column(name="ADMIN_LAST_NAME")
-	private String lastName;
-	
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Language.class)
-	@JoinColumn(name = "LANGUAGE_ID")
-	private Language defaultLanguage;
-	

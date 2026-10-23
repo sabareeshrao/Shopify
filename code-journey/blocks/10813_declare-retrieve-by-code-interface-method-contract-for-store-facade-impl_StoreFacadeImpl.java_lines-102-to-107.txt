@@ -1,6 +1,0 @@
-	@Override
-	public ReadableMerchantStore getByCode(String code, String lang) {
-		Language language = getLanguage(lang);
-		return getByCode(code, language);
-	}
-

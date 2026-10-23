@@ -1,3 +1,0 @@
-  @Inject
-  private CategoryDescriptionRepository categoryDescriptionRepository;
-

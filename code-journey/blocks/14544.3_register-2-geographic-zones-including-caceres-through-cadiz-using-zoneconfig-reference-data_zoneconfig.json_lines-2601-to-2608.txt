@@ -1,8 +1,0 @@
-			"zoneName": "Caceres",
-			"countryCode": "ES"
-		},
-		{
-			"zoneCode": "Cadiz",
-			"zoneName": "Cadiz",
-			"countryCode": "ES"
-		},

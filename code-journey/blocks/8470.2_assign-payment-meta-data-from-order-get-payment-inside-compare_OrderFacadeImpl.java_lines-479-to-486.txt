@@ -1,8 +1,0 @@
-				((CreditCardPayment) payment)
-						.setExpirationMonth(order.getPayment().get("creditcard_card_expirationmonth"));
-				((CreditCardPayment) payment)
-						.setExpirationYear(order.getPayment().get("creditcard_card_expirationyear"));
-
-				Map<String, String> paymentMetaData = order.getPayment();
-				payment.setPaymentMetaData(paymentMetaData);
-				payment.setPaymentType(PaymentType.valueOf(paymentType));

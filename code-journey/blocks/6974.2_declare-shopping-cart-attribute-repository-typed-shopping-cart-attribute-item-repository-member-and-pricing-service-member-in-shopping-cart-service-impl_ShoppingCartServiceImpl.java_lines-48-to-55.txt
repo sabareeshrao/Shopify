@@ -1,8 +1,0 @@
-	@Inject
-	private ShoppingCartAttributeRepository shoppingCartAttributeItemRepository;
-
-	@Inject
-	private PricingService pricingService;
-
-	@Inject
-	private ProductAttributeService productAttributeService;

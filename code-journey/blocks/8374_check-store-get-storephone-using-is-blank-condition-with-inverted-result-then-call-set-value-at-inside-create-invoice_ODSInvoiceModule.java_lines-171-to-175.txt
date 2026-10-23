@@ -1,5 +1,0 @@
-			
-			//6
-			if(!StringUtils.isBlank(store.getStorephone())) {
-				sheet.setValueAt(store.getStorephone(), 0, storeAddressCell);
-			}

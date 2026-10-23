@@ -1,8 +1,0 @@
-		org.hibernate.annotations.CascadeType.REPLICATE
-		
-	})
-	private List<Group> groups = new ArrayList<Group>();
-	
-	@NotEmpty
-	@Email
-	@Column(name="ADMIN_EMAIL")

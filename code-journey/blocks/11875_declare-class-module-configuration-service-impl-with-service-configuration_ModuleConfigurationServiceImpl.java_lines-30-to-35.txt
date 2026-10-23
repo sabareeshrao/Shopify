@@ -1,6 +1,0 @@
-import modules.commons.ModuleStarter;
-
-@Service("moduleConfigurationService")
-public class ModuleConfigurationServiceImpl extends SalesManagerEntityServiceImpl<Long, IntegrationModule>
-		implements ModuleConfigurationService {
-

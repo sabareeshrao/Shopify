@@ -1,8 +1,0 @@
-		
-		if(this.getDataMap().size()>0) {
-			StringBuilder dataEntries = null;
-			int count = 0;
-			for(String key : this.getDataMap().keySet()) {
-				if(dataEntries == null) {
-					dataEntries = new StringBuilder();
-				}

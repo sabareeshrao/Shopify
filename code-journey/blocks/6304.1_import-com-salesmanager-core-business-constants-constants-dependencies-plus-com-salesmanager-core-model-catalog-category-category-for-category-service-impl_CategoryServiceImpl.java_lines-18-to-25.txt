@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.repositories.catalog.category.CategoryDescriptionRepository;
-import com.salesmanager.core.business.repositories.catalog.category.CategoryRepository;
-import com.salesmanager.core.business.repositories.catalog.category.PageableCategoryRepository;
-import com.salesmanager.core.business.services.catalog.product.ProductService;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.model.catalog.category.Category;

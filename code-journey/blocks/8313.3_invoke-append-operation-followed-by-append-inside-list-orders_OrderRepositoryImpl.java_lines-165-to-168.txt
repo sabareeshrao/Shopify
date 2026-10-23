@@ -1,4 +1,0 @@
-			String nameQuery =  " and o.billing.firstName like:name or o.billing.lastName like:name";
-			objectBuilderWhere.append(nameQuery);
-			countBuilderSelect.append(nameQuery);
-		}

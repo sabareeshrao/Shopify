@@ -1,4 +1,0 @@
-						
-						if(!StringUtils.isBlank(mod.getLogo())) {
-							m.setBinaryImage(mod.getLogo());//base 64
-						}

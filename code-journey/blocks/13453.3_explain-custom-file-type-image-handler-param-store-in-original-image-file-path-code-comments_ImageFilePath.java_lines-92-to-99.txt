@@ -1,8 +1,0 @@
-	
-	/**
-	 * A custom file type image handler
-	 * @param store
-	 * @param imageName
-	 * @param type
-	 * @return
-	 */

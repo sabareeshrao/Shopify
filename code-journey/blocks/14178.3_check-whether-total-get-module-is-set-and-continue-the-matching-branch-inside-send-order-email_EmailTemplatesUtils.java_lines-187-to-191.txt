@@ -1,5 +1,0 @@
-		    		   				orderTable.append(messages.getMessage(total.getOrderTotalCode(), customerLocale)).append(": ");
-		    		   				//if(total.getModule().equals("total") || total.getModule().equals("subtotal")) {
-		    		   					
-		    		   				//}
-		    		   			}

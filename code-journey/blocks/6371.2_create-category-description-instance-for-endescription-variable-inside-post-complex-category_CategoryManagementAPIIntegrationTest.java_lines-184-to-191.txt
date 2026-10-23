@@ -1,8 +1,0 @@
-        dining.setSortOrder(0);
-        dining.setVisible(true);
-
-        CategoryDescription endescription = new CategoryDescription();
-        endescription.setLanguage("en");
-        endescription.setName("Dining room");
-        endescription.setFriendlyUrl("dining-room");
-        endescription.setTitle("Dining room");

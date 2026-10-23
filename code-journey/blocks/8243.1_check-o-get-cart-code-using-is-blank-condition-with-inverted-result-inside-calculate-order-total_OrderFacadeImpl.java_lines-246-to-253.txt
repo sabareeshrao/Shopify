@@ -1,8 +1,0 @@
-
-			if (!StringUtils.isBlank(o.getCartCode())) {
-
-				ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(o.getCartCode(), store);
-
-				// promo code
-				if (!StringUtils.isBlank(shoppingCart.getPromoCode())) {
-					Date promoDateAdded = shoppingCart.getPromoAdded();// promo

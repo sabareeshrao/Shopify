@@ -1,3 +1,0 @@
-import java.util.List;
-import com.salesmanager.shop.model.catalog.product.PersistableProductPrice;
-

@@ -1,8 +1,0 @@
-				
-			}
-			
-			if(shippingOption!=null) {
-				List<ShippingOption> options = new ArrayList<ShippingOption>();
-				options.add(shippingOption);
-				return options;
-			}

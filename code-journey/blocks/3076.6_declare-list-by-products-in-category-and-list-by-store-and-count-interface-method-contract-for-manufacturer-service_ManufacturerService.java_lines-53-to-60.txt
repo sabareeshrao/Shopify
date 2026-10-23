@@ -1,8 +1,0 @@
-	List<Manufacturer> listByProductsInCategory(MerchantStore store,
-        Category category, Language language) throws ServiceException;
-	
-	Page<Manufacturer> listByStore(MerchantStore store, String name,
-	      int page, int count) throws ServiceException;
-	
-	int count(MerchantStore store);
-

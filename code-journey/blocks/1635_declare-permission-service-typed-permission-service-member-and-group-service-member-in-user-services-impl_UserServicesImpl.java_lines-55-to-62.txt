@@ -1,8 +1,0 @@
-
-	
-	@Inject
-	protected PermissionService  permissionService;
-	
-	@Inject
-	protected GroupService   groupService;
-	

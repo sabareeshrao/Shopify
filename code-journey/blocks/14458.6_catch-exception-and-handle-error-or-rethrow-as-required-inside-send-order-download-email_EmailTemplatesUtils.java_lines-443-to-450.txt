@@ -1,8 +1,0 @@
-	           email.setTemplateTokens(templateTokens);
-
-	           LOGGER.debug( "Sending email to {} with download info",customer.getEmailAddress() );
-	           emailService.sendHtmlEmail(merchantStore, email);
-
-	       } catch (Exception e) {
-	           LOGGER.error("Error occured while sending order download email ",e);
-	       }

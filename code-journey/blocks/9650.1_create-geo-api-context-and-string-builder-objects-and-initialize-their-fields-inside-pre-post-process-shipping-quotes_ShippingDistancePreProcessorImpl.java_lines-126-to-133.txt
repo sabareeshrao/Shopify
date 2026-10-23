@@ -1,8 +1,0 @@
-		
-		Validate.notNull(apiKey, "Requires the configuration of google apiKey");
-		
-		GeoApiContext context = new GeoApiContext().setApiKey(apiKey);
-		
-		//build origin address
-		StringBuilder originAddress = new StringBuilder();
-		

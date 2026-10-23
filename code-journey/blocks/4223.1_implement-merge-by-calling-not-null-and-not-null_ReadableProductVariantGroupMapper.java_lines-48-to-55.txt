@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductVariantGroup merge(ProductVariantGroup source, ReadableProductVariantGroup destination,
-			MerchantStore store, Language language) {
-		Validate.notNull(source, "productVariantGroup cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(language, "Language cannot be null");
-		if(destination == null) {
-			destination = new ReadableProductVariantGroup();

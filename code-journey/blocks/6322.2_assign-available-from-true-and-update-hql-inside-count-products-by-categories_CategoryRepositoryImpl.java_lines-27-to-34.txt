@@ -1,8 +1,0 @@
-		qs.append("and product.available=true and product.dateAvailable<=:dt ");
-		qs.append("group by category.id");
-		
-    	String hql = qs.toString();
-		Query q = this.em.createQuery(hql);
-
-    	q.setParameter("cid", categoryIds);
-    	q.setParameter("dt", new Date());

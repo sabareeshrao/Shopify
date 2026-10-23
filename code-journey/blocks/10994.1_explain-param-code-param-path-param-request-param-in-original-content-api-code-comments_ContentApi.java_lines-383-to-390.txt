@@ -1,8 +1,0 @@
-
-	/**
-	 * @param code
-	 * @param path
-	 * @param request
-	 * @param response
-	 * @return
-	 * @throws Exception

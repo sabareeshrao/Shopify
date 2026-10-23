@@ -1,5 +1,0 @@
-			// p = (Product)q.getSingleResult();
-			p = products.get(0);
-		} catch (javax.persistence.NoResultException ignore) {
-
-		}

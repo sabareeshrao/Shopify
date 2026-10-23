@@ -1,2 +1,0 @@
-    private static final String PROPERTY_NAME_WRAPPER_URL = "wrapperUrl";
-

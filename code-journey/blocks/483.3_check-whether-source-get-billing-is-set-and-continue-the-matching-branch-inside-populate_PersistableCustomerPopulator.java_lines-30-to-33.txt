@@ -1,4 +1,0 @@
-				address.setPhone(source.getBilling().getTelephone());
-				if(source.getBilling().getTelephone()==null) {
-					address.setPhone(source.getBilling().getTelephone());
-				}

@@ -1,8 +1,0 @@
-	 */
-	public static void setToAvailability(Product product, Locale locale) {
-
-		Set<ProductAvailability> availabilities = product.getAvailabilities();
-		Set<ProductAvailability> productAvailabilities = new HashSet<ProductAvailability>();
-
-		Optional<ProductAvailability> defaultAvailability = availabilities.stream().filter(productAvailability -> productAvailability.getRegion().equals(Constants.ALL_REGIONS)).findFirst();
-		Optional<ProductAvailability> localeAvailability = availabilities.stream().filter(productAvailability -> productAvailability.getRegion().equals(locale.getCountry())).findFirst();

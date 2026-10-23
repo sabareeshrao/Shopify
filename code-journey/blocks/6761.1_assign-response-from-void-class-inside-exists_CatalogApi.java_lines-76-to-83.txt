@@ -1,8 +1,0 @@
-  @PostMapping(value = "/private/catalog")
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(httpMethod = "POST", value = "Create catalog", notes = "",
-      response = Void.class)
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")})
-  public ReadableCatalog createCatalog(

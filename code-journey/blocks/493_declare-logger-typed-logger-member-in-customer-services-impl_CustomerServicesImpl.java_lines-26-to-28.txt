@@ -1,3 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServicesImpl.class);
-	
-

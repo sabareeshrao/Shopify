@@ -1,8 +1,0 @@
-	private Map<String, ModuleConfig> moduleConfigs = new HashMap<String, ModuleConfig>();
-
-	@Transient
-	private Map<String, String> details = new HashMap<String, String>();
-	
-	/**
-	 * A json tructure decribing how the module must be built
-	 */

@@ -1,8 +1,0 @@
-        descriptions.add(endescription);
-        descriptions.add(frdescription);
-
-        bench.setDescriptions(descriptions);
-        dining.getChildren().add(bench);
-
-        /** Living room **/
-        final PersistableCategory living = new PersistableCategory();

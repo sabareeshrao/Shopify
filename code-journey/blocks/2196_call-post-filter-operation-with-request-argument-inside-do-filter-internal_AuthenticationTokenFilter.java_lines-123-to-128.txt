@@ -1,6 +1,0 @@
-
-        chain.doFilter(request, response);
-        postFilter(request, response, chain);
-    }
-    
-    

@@ -1,2 +1,0 @@
-  private static S3ProductContentFileManager fileManager = null;
-

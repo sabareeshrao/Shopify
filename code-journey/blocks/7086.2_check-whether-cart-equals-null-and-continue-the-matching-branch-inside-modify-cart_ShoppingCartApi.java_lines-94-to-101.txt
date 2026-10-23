@@ -1,8 +1,0 @@
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language, 
-			HttpServletResponse response) {
-
-		try {
-			ReadableShoppingCart cart = shoppingCartFacade.modifyCart(code, shoppingCartItem, merchantStore, language);
-
-			if (cart == null) {

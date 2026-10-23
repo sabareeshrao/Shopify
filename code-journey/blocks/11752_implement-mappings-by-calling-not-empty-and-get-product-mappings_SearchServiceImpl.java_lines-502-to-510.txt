@@ -1,9 +1,0 @@
-	private void mappings(SearchConfiguration config, String language) throws Exception {
-		Validate.notEmpty(language, "Configuration requires language");
-
-
-		config.getProductMappings().put(language, loadClassPathResource(PRODUCT_MAPPING_DEFAULT));
-		config.getKeywordsMappings().put(language, KEYWORDS_MAPPING_DEFAULT);
-			
-	}
-	

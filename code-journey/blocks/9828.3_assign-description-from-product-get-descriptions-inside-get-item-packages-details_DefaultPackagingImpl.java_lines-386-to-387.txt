@@ -1,2 +1,0 @@
-						description = product.getDescriptions().iterator().next().getName();
-					}

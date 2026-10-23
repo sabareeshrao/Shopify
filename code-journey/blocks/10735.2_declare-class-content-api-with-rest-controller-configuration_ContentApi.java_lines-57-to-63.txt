@@ -1,7 +1,0 @@
-@RestController
-@RequestMapping(value = "/api/v1")
-@Api(tags = { "Content management resource (Content Management Api)" })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Content management resource", description = "Add pages, content boxes, manage images and files") })
-public class ContentApi {
-

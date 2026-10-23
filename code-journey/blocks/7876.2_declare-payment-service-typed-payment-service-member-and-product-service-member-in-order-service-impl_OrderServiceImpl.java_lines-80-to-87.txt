@@ -1,8 +1,0 @@
-    @Inject
-    private PaymentService paymentService;
-
-    @Inject
-    private ProductService productService;
-
-    @Inject
-    private TaxService taxService;

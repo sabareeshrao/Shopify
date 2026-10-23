@@ -1,3 +1,0 @@
-	@JoinColumn(name = "COUNTRY_ID", nullable = false)
-	private Country country;
-	

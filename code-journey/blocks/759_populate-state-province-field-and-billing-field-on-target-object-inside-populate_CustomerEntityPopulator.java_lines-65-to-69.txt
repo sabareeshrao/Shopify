@@ -1,5 +1,0 @@
-                
-                address.setStateProvince(source.getBilling().getState());
-
-                target.setBilling( address );
-            }

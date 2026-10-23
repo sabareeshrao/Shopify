@@ -1,8 +1,0 @@
-
-	    categoryService.create(shoes);
-	    //
-	    
-	    /**
-	     * Manufacturer / Brand
-	     */
-

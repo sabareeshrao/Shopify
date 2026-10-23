@@ -1,5 +1,0 @@
-
-
-			if(source.getDateAvailable() != null) {
-				target.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
-			}

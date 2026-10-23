@@ -1,6 +1,0 @@
-						"Can't process Stripe, missing stripe token");
-				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
-				te.setMessageCode("message.payment.error");
-				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-				throw te;
-			}

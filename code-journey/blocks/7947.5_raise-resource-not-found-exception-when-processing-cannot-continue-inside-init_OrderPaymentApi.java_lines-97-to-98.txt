@@ -1,2 +1,0 @@
-			throw new ResourceNotFoundException("Cart code " + code + " does not exist");
-		}

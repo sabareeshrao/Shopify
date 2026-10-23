@@ -1,4 +1,0 @@
-
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customerReview")
-	private Set<CustomerReviewDescription> descriptions = new HashSet<CustomerReviewDescription>();
-	

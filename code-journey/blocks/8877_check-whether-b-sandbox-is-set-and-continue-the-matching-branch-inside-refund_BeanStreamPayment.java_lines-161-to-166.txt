@@ -1,6 +1,0 @@
-
-			ModuleConfig configs = module.getModuleConfigs().get("PROD");
-
-			if (bSandbox) {
-				configs = module.getModuleConfigs().get("TEST");
-			} 

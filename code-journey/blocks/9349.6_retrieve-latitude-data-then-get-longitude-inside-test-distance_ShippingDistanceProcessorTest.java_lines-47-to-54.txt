@@ -1,8 +1,0 @@
-		
-		//shippingDecisionTablePreProcessor.prePostProcessShippingQuotes(shippingQuote, null, null, delivery, origin, null, null, null, null, null, Locale.CANADA);
-		
-		System.out.println(delivery.getLatitude());
-		System.out.println(delivery.getLongitude());
-		//System.out.println(shippingQuote.getQuoteInformations().get(Constants.DISTANCE_KEY));
-
-	}

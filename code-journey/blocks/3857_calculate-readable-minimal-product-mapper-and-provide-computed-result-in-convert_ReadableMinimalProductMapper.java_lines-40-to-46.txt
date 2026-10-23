@@ -1,7 +1,0 @@
-	@Override
-	public ReadableMinimalProduct convert(Product source, MerchantStore store, Language language) {
-		// TODO Auto-generated method stub
-		ReadableMinimalProduct minimal = new ReadableMinimalProduct();
-		return this.merge(source, minimal, store, language);
-	}
-

@@ -1,9 +1,0 @@
-	
-	<!--  -->
-	
-	<!-- 
-		*** End CMS configuration ***
-	 -->
-    
-    
-    </beans:beans>

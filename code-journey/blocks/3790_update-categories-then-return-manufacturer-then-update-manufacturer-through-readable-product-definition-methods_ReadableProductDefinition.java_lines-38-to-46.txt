@@ -1,9 +1,0 @@
-	public void setCategories(List<ReadableCategory> categories) {
-		this.categories = categories;
-	}
-	public ReadableManufacturer getManufacturer() {
-		return manufacturer;
-	}
-	public void setManufacturer(ReadableManufacturer manufacturer) {
-		this.manufacturer = manufacturer;
-	}

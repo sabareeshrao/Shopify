@@ -1,8 +1,0 @@
-				destination.setProduct(product);
-			}
-			
-			/**
-			 * Merging rules
-			 * 
-			 * Create vs update
-			 * - existing product availability 

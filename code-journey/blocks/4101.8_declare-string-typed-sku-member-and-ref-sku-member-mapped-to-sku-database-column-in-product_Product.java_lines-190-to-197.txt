@@ -1,8 +1,0 @@
-	@Column(name = "SKU")
-	private String sku;
-	
-	/**
-	 * External system reference SKU/ID
-	 */
-	@Column(name = "REF_SKU")
-	private String refSku;

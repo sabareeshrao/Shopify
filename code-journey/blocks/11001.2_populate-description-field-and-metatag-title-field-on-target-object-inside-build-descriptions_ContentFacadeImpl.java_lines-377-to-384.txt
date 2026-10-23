@@ -1,8 +1,0 @@
-			contentDescription.setDescription(objectContent.getDescription());
-			contentDescription.setMetatagTitle(objectContent.getTitle());
-			contentDescription.setContent(contentModel);
-			contentDescription.setLanguage(lang);
-			descriptions.add(contentDescription);
-			//contentDescription.setId(objectContent.getId());
-			/**
-			contentDescription.setMetatagDescription(objectContent.getMetaDescription());

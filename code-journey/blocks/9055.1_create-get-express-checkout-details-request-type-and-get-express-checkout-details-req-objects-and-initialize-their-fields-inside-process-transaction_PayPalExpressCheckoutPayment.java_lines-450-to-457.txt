@@ -1,8 +1,0 @@
-			
-	  
-			 //get token from url and return the user to generate a payerid
-			   
-			 GetExpressCheckoutDetailsRequestType getExpressCheckoutDetailsRequest = new GetExpressCheckoutDetailsRequestType(paypalPayment.getPaymentToken());
-			 getExpressCheckoutDetailsRequest.setVersion("104.0");
-
-			 GetExpressCheckoutDetailsReq getExpressCheckoutDetailsReq = new GetExpressCheckoutDetailsReq();

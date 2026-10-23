@@ -1,8 +1,0 @@
-	    ProductOptionValueDescription redDescription = new ProductOptionValueDescription();
-	    redDescription.setDescription("Red");
-	    redDescription.setLanguage(en);
-	    redDescription.setName("Red");
-	    redDescription.setProductOptionValue(red);
-	    
-	    Set<ProductOptionValueDescription> redDescriptions = new HashSet<ProductOptionValueDescription>();
-	    redDescriptions.add(redDescription);

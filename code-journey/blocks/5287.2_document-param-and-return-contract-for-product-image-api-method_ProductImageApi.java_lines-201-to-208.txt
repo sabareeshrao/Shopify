@@ -1,8 +1,0 @@
-	 * @param merchantStore
-	 * @param language
-	 * @return
-	 */
-	
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = { "/product/{productId}/images" }, method = RequestMethod.GET)
-	@ApiOperation(httpMethod = "GET", value = "Get images for a given product")

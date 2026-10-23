@@ -1,3 +1,0 @@
-	private BigDecimal total;//final price
-	private BigDecimal taxTotal;//total of taxes
-	

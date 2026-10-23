@@ -1,8 +1,0 @@
-			httppost.setEntity(entity);
-            // Create a custom response handler
-            ResponseHandler<String> responseHandler = response -> {
-				int status = response.getStatusLine().getStatusCode();
-				if (status >= 200 && status < 300) {
-					HttpEntity entity1 = response.getEntity();
-					return entity1 != null ? EntityUtils.toString(entity1) : null;
-				} else {

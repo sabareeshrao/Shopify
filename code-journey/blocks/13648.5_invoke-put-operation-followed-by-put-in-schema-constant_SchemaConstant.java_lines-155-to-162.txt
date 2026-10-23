@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("GBP", "Pound Sterling");
-		CURRENCY_MAP.put("ILS", "New Israeli Sheqel");
-		CURRENCY_MAP.put("JMD", "Jamaican Dollar");
-		CURRENCY_MAP.put("JPY", "Yen");
-		CURRENCY_MAP.put("GBP", "Pound Sterling");
-		CURRENCY_MAP.put("JOD", "Jordanian Dinar");
-		CURRENCY_MAP.put("KZT", "Tenge");
-		CURRENCY_MAP.put("KES", "Kenyan Shilling");

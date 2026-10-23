@@ -1,8 +1,0 @@
-elasticsearch.security.user=elastic
-elasticsearch.security.password=changeme
-
-#do not index in default profile
-search.noindex=true
-
-# Which CMS method to use [ default | httpd | aws | gcp ]
-# default = infinispan

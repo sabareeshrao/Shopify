@@ -1,5 +1,0 @@
-
-		Category parent = c.getParent();
-		if(Objects.nonNull(parent)) {
-			rp = hierarchy.computeIfAbsent(parent.getId(), i -> toReadableCategory(c.getParent(), store, language, processed));
-		}

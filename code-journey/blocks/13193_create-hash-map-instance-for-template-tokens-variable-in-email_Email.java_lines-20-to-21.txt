@@ -1,2 +1,0 @@
-	private Map<String,String> templateTokens = new HashMap<String,String>();
-

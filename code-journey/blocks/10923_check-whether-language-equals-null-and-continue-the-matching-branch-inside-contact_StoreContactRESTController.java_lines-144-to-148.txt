@@ -1,5 +1,0 @@
-			}
-			
-			if(language==null) {
-				language = merchantStore.getDefaultLanguage();
-			}

@@ -1,5 +1,0 @@
-public enum TransactionType {
-	
-	INIT, AUTHORIZE, CAPTURE, AUTHORIZECAPTURE, REFUND, OK
-
-}

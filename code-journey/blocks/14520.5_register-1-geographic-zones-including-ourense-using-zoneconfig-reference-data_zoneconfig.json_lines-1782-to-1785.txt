@@ -1,4 +1,0 @@
-		"zoneCode": "Ourense",
-		"zoneName": "Ourense",
-		"countryCode": "ES"
-	},

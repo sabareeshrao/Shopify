@@ -1,8 +1,0 @@
-		
-		//collect tax in different countries
-		if(taxConfiguration.isCollectTaxIfDifferentCountryOfStoreCountry()) {
-			//use store country
-			country = store.getCountry();
-			zone = store.getZone();
-			stateProvince = store.getStorestateprovince();
-		}

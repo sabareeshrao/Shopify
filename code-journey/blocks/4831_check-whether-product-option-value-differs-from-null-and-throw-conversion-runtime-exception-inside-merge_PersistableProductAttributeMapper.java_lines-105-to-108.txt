@@ -1,4 +1,0 @@
-		
-		if(productOptionValue!=null && productOptionValue.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
-			throw new ConversionRuntimeException("Invalid product option value id ");
-		}

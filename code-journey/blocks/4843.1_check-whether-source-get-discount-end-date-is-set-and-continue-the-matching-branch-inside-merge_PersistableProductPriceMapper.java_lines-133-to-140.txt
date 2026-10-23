@@ -1,8 +1,0 @@
-			if (source.getDiscountEndDate() != null) {
-				Date endDate = DateUtil.getDate(source.getDiscountEndDate());
-
-				destination.setProductPriceSpecialEndDate(endDate);
-			}
-			availability.getPrices().add(destination);
-			destination.setProductAvailability(availability);
-			destination.setDescriptions(this.getProductPriceDescriptions(destination, source.getDescriptions(), store));

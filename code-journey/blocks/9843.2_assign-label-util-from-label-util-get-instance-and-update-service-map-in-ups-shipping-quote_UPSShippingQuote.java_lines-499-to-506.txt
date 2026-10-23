@@ -1,8 +1,0 @@
-
-			LabelUtil labelUtil = LabelUtil.getInstance();
-			Map serviceMap = com.salesmanager.core.util.ShippingUtil
-					.buildServiceMap("upsxml", locale);
-
-			*//** Details on whit RT quote information to display **//*
-			MerchantConfiguration rtdetails = config
-					.getMerchantConfiguration(ShippingConstants.MODULE_SHIPPING_DISPLAY_REALTIME_QUOTES);

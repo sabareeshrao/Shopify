@@ -1,4 +1,0 @@
-	public void setAddress(ReadableAddress address) {
-		this.address = address;
-	}
-

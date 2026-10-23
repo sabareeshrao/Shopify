@@ -1,8 +1,0 @@
-		  
-		  Permission TAX = new Permission("TAX");
-		  permissionService.create(TAX);
-		  permissionKeys.put(TAX.getPermissionName(), TAX);
-		  
-		  Permission PAYMENT = new Permission("PAYMENT");
-		  permissionService.create(PAYMENT);
-		  permissionKeys.put(PAYMENT.getPermissionName(), PAYMENT);

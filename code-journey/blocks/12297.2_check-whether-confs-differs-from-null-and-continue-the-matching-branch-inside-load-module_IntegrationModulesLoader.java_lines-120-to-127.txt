@@ -1,8 +1,0 @@
-	    	if(confs!=null) {
-	    		StringBuilder configString = new StringBuilder();
-	    		configString.append("[");
-	    		Map<String,ModuleConfig> moduleConfigs = new HashMap<String,ModuleConfig>();
-	        	int count=0;
-	    		for(Object oo : confs) {
-	        		
-	        		Map values = (Map)oo;

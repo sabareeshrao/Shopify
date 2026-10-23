@@ -1,8 +1,0 @@
-	@JoinColumn(name="RELATED_PRODUCT_ID",updatable=false,nullable=true) 
-	private Product relatedProduct = null;
-	
-	@Column(name="CODE")
-	private String code;
-	
-	@Column(name="ACTIVE")
-	private boolean active = true;

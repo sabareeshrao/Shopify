@@ -1,8 +1,0 @@
-	 */
-	String absolutePath(MerchantStore store, String file);
-	
-	/**
-	 * Deletes a file from CMS
-	 * @param store
-	 * @param fileName
-	 */

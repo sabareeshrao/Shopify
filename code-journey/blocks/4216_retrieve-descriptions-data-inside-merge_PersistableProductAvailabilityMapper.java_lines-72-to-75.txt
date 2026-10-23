@@ -1,4 +1,0 @@
-					price.getDescriptions().add(ppd);
-				}
-
-			}

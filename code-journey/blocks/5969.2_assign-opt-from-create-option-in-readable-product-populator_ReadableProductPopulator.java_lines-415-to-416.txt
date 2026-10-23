@@ -1,2 +1,0 @@
-									opt = createOption(attribute, language);
-								}

@@ -1,8 +1,0 @@
-		"zoneName": "Chhattisgarh",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "Goa",
-		"zoneName": "Goa",
-		"countryCode": "IN"
-	},

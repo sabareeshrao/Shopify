@@ -1,5 +1,0 @@
-    public void setBilstateOther( String bilstateOther )
-    {
-        this.bilstateOther = bilstateOther;
-    }
-

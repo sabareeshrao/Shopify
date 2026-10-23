@@ -1,5 +1,0 @@
-import com.salesmanager.shop.utils.EmailUtils;
-import com.salesmanager.shop.utils.ImageFilePath;
-import com.salesmanager.shop.utils.LabelUtils;
-import com.salesmanager.shop.utils.LocaleUtils;
-

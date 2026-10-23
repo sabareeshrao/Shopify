@@ -1,5 +1,0 @@
-	public void updatePage(@PathVariable Long id, @RequestBody @Valid PersistableContentEntity page,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-		page.setId(id);
-		//contentFacade.saveContentPage(page, merchantStore, language);
-	}

@@ -1,8 +1,0 @@
-label.quantity=Quantity
-
-label.defaultlanguage=Default language
-label.defaultSelection=Default selection
-lang.en=English
-lang.fr=French
-lang.ru=Russian
-lang.es=Spanish

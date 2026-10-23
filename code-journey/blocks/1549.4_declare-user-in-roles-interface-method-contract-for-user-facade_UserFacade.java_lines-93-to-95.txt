@@ -1,3 +1,0 @@
-   */
-  boolean userInRoles(String userName, List<String> groupNames);
-  

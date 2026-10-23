@@ -1,8 +1,0 @@
-import org.junit.Ignore;
-
-
-/**
- * This test has to be completed
- * @author c.samson
- *
- */

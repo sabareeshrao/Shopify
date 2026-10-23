@@ -1,8 +1,0 @@
-		
-		/** ORDER PRODUCT **/
-		
-		//OrderProduct
-		OrderProduct oproduct = new OrderProduct();
-		oproduct.setDownloads(null);
-		oproduct.setOneTimeCharge(dprice.getProductPriceAmount());
-		oproduct.setOrder(order);		

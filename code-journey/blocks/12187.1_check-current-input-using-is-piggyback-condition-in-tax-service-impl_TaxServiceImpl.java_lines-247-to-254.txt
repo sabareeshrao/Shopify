@@ -1,8 +1,0 @@
-
-				if(taxRate.isPiggyback()) {//(compound)
-					if(totalTaxedItemValue.doubleValue()>0) {
-						beforeTaxeAmount = totalTaxedItemValue;
-					}
-				} //else just use nominal taxing (combine)
-				
-				double value  = (beforeTaxeAmount.doubleValue() * taxRateDouble)/100;

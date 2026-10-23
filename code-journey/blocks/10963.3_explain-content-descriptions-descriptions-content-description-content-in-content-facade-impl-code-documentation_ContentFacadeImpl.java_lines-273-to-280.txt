@@ -1,8 +1,0 @@
-	 * content.setDescriptions(descriptions);
-	 * 
-	 * // ContentDescription contentDescription = //
-	 * createContentDescription(store, contentPage, language); //
-	 * setContentDescriptionToContentModel(content,contentDescription,language);
-	 * 
-	 * // contentDescription.setContent(content);
-	 * 

@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getEmail())) {
-			String email = new StringBuilder().append("%").append(criteria.getEmail()).append("%").toString();
-			countQ.setParameter("email",email);
-			objectQ.setParameter("email",email);
-		}

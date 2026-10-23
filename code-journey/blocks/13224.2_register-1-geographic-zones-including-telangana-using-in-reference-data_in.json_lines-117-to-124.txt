@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "Telangana",
-		"zoneName": "Telangana",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "Tripura",

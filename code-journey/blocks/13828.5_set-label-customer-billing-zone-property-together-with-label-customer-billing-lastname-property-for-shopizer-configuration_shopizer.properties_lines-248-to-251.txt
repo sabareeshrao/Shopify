@@ -1,4 +1,0 @@
-label.customer.billing.zone=Billing state / province
-label.customer.billing.country=Billing country
-label.customer.billing.firstname=Billing first name
-label.customer.billing.lastname=Billing last name

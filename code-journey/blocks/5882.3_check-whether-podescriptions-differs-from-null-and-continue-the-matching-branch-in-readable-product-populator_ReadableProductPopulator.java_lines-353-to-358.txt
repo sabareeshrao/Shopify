@@ -1,6 +1,0 @@
-								Set<ProductOptionDescription> podescriptions = attribute.getProductOption().getDescriptions();
-								if(podescriptions!=null && podescriptions.size()>0) {
-									for(ProductOptionDescription optionDescription : podescriptions) {
-										if(optionDescription.getLanguage().getCode().equals(language.getCode())) {
-											readableOption.setName(optionDescription.getName());
-										}

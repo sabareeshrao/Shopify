@@ -1,8 +1,0 @@
-
-#when running from IDE (eclipse) or from springboot:run command
-#server.contextPath=/shopizer
-
-logging.level.org.springframework=ERROR
-logging.level.com.shopizer=INFO
-logging.level.org.hibernate=ERROR
-logging.level.org.apache.http=ERROR

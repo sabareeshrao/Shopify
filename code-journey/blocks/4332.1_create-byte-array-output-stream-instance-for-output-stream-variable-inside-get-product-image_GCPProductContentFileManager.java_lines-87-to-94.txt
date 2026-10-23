@@ -1,8 +1,0 @@
-
-      Blob blob = storage.get(BlobId.of(bucketName, filePath(merchantStoreCode,productCode, size.name(), imageName)));
-
-      ReadChannel reader = blob.reader();
-      
-      inputStream = Channels.newInputStream(reader);
-      ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-      IOUtils.copy(inputStream, outputStream);

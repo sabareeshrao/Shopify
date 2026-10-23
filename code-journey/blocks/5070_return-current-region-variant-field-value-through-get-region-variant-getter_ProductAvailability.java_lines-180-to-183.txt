@@ -1,4 +1,0 @@
-	public String getRegionVariant() {
-		return regionVariant;
-	}
-

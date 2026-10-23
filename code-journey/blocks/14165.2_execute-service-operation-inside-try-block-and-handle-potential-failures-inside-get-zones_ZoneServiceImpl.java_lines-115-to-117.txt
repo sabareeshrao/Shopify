@@ -1,3 +1,0 @@
-		List<Zone> zones = null;
-		try {
-			

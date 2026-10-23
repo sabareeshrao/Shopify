@@ -1,4 +1,0 @@
-	public String getAnswer1() {
-		return answer1;
-	}
-

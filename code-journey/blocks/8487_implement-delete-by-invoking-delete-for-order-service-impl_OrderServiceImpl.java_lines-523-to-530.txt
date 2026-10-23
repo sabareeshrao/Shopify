@@ -1,8 +1,0 @@
-    @Override
-    public void delete(final Order order) throws ServiceException {
-
-
-        super.delete(order);
-    }
-
-

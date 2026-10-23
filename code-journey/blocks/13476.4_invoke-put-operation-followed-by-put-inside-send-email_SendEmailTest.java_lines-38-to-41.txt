@@ -1,4 +1,0 @@
-      templateTokens.put("EMAIL_DISCLAIMER", "");
-      templateTokens.put("EMAIL_SPAM_DISCLAIMER", "");
-      templateTokens.put("LOGOPATH", "");
-

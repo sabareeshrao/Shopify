@@ -1,8 +1,0 @@
-		
-		returnDestination.setSortOrder(source.getSortOrder());
-		
-		//images
-		Set<ProductImage> images = source.getImages();
-		if(CollectionUtils.isNotEmpty(images)) {
-
-			List<ReadableImage> imageList = images.stream().map(i -> this.convertImage(source, i, store)).collect(Collectors.toList());

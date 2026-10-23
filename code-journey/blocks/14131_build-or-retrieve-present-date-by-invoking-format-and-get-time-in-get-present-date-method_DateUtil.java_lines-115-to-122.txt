@@ -1,8 +1,0 @@
-	public static String getPresentDate() {
-
-		Date dt = new Date();
-
-		SimpleDateFormat format = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
-		return format.format(new Date(dt.getTime()));
-	}
-

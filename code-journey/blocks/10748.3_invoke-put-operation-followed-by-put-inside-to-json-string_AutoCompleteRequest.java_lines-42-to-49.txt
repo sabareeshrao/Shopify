@@ -1,8 +1,0 @@
-		
-		keyword.put(KEYWORD, q);
-		
-		match.put(MATCH, keyword);
-		
-		mq.put(QUERY, match);
-		return mq.toJSONString();
-	}

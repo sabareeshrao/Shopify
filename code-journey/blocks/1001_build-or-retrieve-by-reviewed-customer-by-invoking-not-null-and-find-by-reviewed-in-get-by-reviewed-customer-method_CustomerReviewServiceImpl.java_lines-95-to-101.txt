@@ -1,7 +1,0 @@
-	@Override
-	public List<CustomerReview> getByReviewedCustomer(Customer customer) {
-		Validate.notNull(customer,"Customer cannot be null");
-		return customerReviewRepository.findByReviewed(customer.getId());
-	}
-
-

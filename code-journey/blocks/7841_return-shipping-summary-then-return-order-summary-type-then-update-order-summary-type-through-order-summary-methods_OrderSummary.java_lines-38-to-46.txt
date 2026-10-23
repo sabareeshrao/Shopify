@@ -1,9 +1,0 @@
-	public ShippingSummary getShippingSummary() {
-		return shippingSummary;
-	}
-	public OrderSummaryType getOrderSummaryType() {
-		return orderSummaryType;
-	}
-	public void setOrderSummaryType(OrderSummaryType orderSummaryType) {
-		this.orderSummaryType = orderSummaryType;
-	}

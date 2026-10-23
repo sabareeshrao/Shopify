@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.Mapper;
-import com.salesmanager.shop.mapper.catalog.ReadableCategoryMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableManufacturerMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableProductTypeMapper;
-import com.salesmanager.shop.model.catalog.category.ReadableCategory;
-import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;

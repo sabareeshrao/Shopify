@@ -1,6 +1,0 @@
-			if(configuration==null) {
-
-				configuration = new MerchantConfiguration();
-				configuration.setKey(moduleCode);
-				configuration.setMerchantStore(store);
-			}

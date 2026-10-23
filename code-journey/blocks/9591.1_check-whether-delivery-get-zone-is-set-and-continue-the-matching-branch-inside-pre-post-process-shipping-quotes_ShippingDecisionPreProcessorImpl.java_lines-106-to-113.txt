@@ -1,8 +1,0 @@
-		}
-		
-		//Build a ShippingInputParameters
-		ShippingInputParameters inputParameters = new ShippingInputParameters();
-		
-		inputParameters.setWeight((long)weight.doubleValue());
-		inputParameters.setCountry(delivery.getCountry().getIsoCode());
-		if(delivery.getZone()!=null && delivery.getZone().getCode()!=null) {

@@ -1,7 +1,0 @@
-
-			productCommonFacade.removeProductFromCategory(category, product, language);
-
-		} catch (Exception e) {
-			throw new ServiceRuntimeException(e);
-		}
-	}

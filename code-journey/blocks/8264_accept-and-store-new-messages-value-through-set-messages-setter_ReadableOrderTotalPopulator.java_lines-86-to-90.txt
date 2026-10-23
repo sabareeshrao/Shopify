@@ -1,5 +1,0 @@
-	public void setMessages(LabelUtils messages) {
-		this.messages = messages;
-	}
-
-}

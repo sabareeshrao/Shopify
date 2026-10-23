@@ -1,4 +1,0 @@
-	public ZoneService getZoneService() {
-		return zoneService;
-	}
-

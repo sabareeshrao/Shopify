@@ -1,8 +1,0 @@
-						cmsContentImage.setFileName(image.getProductImage());
-						cmsContentImage.setFile(inputStream);
-						cmsContentImage.setFileContentType(FileContentType.PRODUCT);
-
-						productImageService.addProductImage(product, image, cmsContentImage);
-						newImageIds.add(image.getId());
-					} else {
-						if (image.getId() != null) {

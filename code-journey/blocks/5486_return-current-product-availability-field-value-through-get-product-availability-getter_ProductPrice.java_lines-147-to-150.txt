@@ -1,4 +1,0 @@
-	public ProductAvailability getProductAvailability() {
-		return productAvailability;
-	}
-

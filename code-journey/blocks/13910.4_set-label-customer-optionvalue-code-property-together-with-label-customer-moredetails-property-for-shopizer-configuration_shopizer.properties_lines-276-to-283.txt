@@ -1,8 +1,0 @@
-label.customer.optionvalue.code=Option value code
-
-label.customer.displaycustomersection=Display customer section
-label.customer.accessportal=You can access the customer section using the following url
-label.customer.accessnow=Access now!
-
-label.customer.resetpasswor.confirm=Are you sure you want to reset the customer password?
-label.customer.moredetails=More details!

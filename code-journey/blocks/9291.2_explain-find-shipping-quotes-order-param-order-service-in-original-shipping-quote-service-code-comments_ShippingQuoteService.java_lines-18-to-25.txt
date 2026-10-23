@@ -1,8 +1,0 @@
-	
-	/**
-	 * Find shipping quotes by Order
-	 * @param order
-	 * @return
-	 * @throws ServiceException
-	 */
-	List<Quote> findByOrder(Order order) throws ServiceException;

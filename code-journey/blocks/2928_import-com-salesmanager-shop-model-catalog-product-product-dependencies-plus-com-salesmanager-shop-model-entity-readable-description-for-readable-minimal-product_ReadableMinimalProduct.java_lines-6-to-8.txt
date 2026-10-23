@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.product.ProductEntity;
-import com.salesmanager.shop.model.entity.ReadableDescription;
-

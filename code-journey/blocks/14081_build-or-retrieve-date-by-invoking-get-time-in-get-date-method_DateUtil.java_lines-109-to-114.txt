@@ -1,6 +1,0 @@
-	public static Date getDate() {
-
-		return new Date(new Date().getTime());
-
-	}
-

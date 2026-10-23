@@ -1,8 +1,0 @@
-label.shipping.packaging.box.height=Hauteur de la boîte
-label.shipping.packaging.box.length=Longueur de la boîte
-label.shipping.packaging.box.width=Largeur de la boîte
-label.shipping.packaging.box.weight=Poids de la boîte
-label.shipping.packaging.box.maxweight=Poids maximum supporté par la boîte
-label.shipping.packaging.box.maxitems=Nombre maximum d'items dans la boîte
-label.shipping.addregion=Ajouter une région
-label.shipping.region=Région

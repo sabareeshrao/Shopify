@@ -1,4 +1,0 @@
-    @NotEmpty
-    @Column(name="CODE", length=100, nullable=false)
-    private String code;
-

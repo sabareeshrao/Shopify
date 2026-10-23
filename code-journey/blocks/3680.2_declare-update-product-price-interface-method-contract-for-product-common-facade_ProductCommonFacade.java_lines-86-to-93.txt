@@ -1,8 +1,0 @@
-	   * @throws Exception
-	   */
-	  ReadableProduct updateProductPrice(ReadableProduct product, ProductPriceEntity price,
-	      Language language) throws Exception;
-
-	  /**
-	   * Sets a new price to an existing product
-	   *

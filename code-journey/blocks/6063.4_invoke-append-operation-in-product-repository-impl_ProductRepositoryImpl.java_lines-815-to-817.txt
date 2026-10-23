@@ -1,3 +1,0 @@
-			qs.append(" left join fetch pinstgimg.descriptions ");
-		//end variants
-		}

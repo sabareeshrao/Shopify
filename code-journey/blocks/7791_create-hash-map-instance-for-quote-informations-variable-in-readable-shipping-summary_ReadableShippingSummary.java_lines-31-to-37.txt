@@ -1,7 +1,0 @@
-	private ShippingOption selectedShippingOption = null;//Default selected option
-	private List<ShippingOption> shippingOptions = null;
-	
-	/** additional information that comes from the quote **/
-	private Map<String,String> quoteInformations = new HashMap<String,String>();
-	
-	

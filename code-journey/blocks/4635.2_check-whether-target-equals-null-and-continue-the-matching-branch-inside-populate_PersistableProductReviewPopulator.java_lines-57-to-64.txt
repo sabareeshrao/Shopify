@@ -1,8 +1,0 @@
-		Validate.notNull(languageService,"languageService cannot be null");
-		Validate.notNull(source.getRating(),"Rating cannot bot be null");
-		
-		try {
-			
-			if(target==null) {
-				target = new ProductReview();
-			}

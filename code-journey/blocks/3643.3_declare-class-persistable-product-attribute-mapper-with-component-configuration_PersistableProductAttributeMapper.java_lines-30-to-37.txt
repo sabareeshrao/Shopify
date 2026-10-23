@@ -1,8 +1,0 @@
-@Component
-public class PersistableProductAttributeMapper implements Mapper<PersistableProductAttribute, ProductAttribute> {
-
-	@Inject
-	private ProductOptionService productOptionService;
-	@Inject
-	private ProductOptionValueService productOptionValueService;
-	@Inject

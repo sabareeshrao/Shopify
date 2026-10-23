@@ -1,9 +1,0 @@
-		
-	    BraintreeGateway gateway = new BraintreeGateway(
-	    		   environment,
-	    		   merchantId,
-	    		   publicKey,
-	    		   privateKey
-				);
-	    
-	   

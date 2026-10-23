@@ -1,6 +1,0 @@
-		
-		PaymentModule paymentModule = this.paymentModules.get(module);
-		
-		if(paymentModule==null) {
-			throw new ServiceException("Payment module " + paymentModule + " does not exist");
-		}

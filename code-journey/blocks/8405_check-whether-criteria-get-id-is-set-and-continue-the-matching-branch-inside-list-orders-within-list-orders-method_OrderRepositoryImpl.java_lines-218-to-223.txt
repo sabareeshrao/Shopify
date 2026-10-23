@@ -1,6 +1,0 @@
-		
-		//id
-		if(criteria.getId() != null) {
-			countQ.setParameter("id", like(String.valueOf(criteria.getId())));
-			objectQ.setParameter("id", like(String.valueOf(criteria.getId())));
-		}

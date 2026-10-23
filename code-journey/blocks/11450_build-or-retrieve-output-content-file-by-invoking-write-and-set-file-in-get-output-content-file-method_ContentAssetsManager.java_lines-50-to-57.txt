@@ -1,8 +1,0 @@
-
-    default OutputContentFile getOutputContentFile(byte[] byteArray) {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream(byteArray.length);
-        baos.write(byteArray, 0, byteArray.length);
-        OutputContentFile ct = new OutputContentFile();
-        ct.setFile(baos);
-        return ct;
-    }

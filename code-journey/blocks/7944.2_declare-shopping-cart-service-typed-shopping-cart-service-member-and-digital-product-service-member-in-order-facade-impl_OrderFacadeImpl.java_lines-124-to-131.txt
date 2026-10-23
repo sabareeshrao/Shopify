@@ -1,8 +1,0 @@
-	@Inject
-	private ShoppingCartService shoppingCartService;
-	@Inject
-	private DigitalProductService digitalProductService;
-	@Inject
-	private ShippingService shippingService;
-	@Inject
-	private CustomerFacade customerFacade;

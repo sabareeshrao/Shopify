@@ -1,5 +1,0 @@
-
-		if (!CollectionUtils.isEmpty(criteria.getCategoryIds())) {
-			countBuilderSelect.append(" INNER JOIN p.categories categs");
-			countBuilderWhere.append(" and categs.id in (:cid)");
-		}

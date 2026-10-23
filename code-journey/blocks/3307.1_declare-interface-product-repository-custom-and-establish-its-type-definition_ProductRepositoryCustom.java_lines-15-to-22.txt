@@ -1,8 +1,0 @@
-public interface ProductRepositoryCustom {
-
-
-		ProductList listByStore(MerchantStore store, Language language,
-			ProductCriteria criteria);
-
-		Product getProductWithOnlyMerchantStoreById(Long productId);
-

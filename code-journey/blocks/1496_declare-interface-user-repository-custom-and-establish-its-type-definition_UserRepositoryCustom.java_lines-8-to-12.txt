@@ -1,5 +1,0 @@
-public interface UserRepositoryCustom {
-  
-  GenericEntityList<User> listByCriteria(Criteria criteria) throws ServiceException;
-
-}

@@ -1,8 +1,0 @@
-	
-	@Autowired
-	private PersistableTaxClassMapper persistableTaxClassMapper;
-	
-	@Autowired
-	private ReadableTaxClassMapper readableTaxClassMapper;
-	
-	@Autowired

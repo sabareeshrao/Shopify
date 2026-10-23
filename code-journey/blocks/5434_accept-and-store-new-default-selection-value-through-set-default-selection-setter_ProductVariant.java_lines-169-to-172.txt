@@ -1,4 +1,0 @@
-	public void setDefaultSelection(boolean defaultSelection) {
-		this.defaultSelection = defaultSelection;
-	}
-

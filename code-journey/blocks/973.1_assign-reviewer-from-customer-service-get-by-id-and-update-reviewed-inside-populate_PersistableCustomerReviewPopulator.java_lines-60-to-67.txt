@@ -1,8 +1,0 @@
-			
-			
-			Customer reviewer = customerService.getById(source.getCustomerId());
-			Customer reviewed = customerService.getById(source.getReviewedCustomer());
-			
-			target.setReviewRating(source.getRating());
-			
-			target.setCustomer(reviewer);

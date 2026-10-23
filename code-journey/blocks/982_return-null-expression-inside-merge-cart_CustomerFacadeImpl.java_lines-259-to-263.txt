@@ -1,5 +1,0 @@
-              } else {
-                // the saved cart belongs to another user
-                return null;
-              }
-            }

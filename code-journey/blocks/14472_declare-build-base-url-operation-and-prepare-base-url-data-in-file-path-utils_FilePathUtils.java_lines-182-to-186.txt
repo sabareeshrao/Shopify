@@ -1,5 +1,0 @@
-	public String buildBaseUrl(String contextPath, MerchantStore store) {
-		String normalizePath = normalizePath(contextPath);
-		String scheme = getScheme(store);
-		return scheme + SLASH + normalizePath;
-	}

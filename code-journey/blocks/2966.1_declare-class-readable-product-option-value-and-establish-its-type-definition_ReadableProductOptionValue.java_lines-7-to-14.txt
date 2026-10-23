@@ -1,8 +1,0 @@
-public class ReadableProductOptionValue extends ProductOptionValueEntity {
-
-  /**
-   * 
-   */
-  private String price;
-  private static final long serialVersionUID = 1L;
-  private ProductOptionValueDescription description;

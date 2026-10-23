@@ -1,3 +1,0 @@
-				if(quoteModule==null) {
-					throw new ServiceException("Shipping quote module " + moduleCode + " does not exist");
-				}

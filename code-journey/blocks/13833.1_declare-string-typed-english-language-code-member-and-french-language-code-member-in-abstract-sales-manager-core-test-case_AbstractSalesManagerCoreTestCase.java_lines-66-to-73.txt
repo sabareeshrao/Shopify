@@ -1,8 +1,0 @@
-	protected static String ENGLISH_LANGUAGE_CODE = "en";
-	protected static String FRENCH_LANGUAGE_CODE = "fr";
-	
-	@Inject
-	protected InitializationDatabase   initializationDatabase;
-	
-	@Inject
-	protected ProductService productService;

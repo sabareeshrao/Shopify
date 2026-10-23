@@ -1,8 +1,0 @@
-	public void setPayment(String payment) {
-		this.payment = payment;
-	}
-	public ReadableTotal getTotal() {
-		return total;
-	}
-	public void setTotal(ReadableTotal total) {
-		this.total = total;

@@ -1,8 +1,0 @@
-
-
-	{
-		"module": "PAYMENT",
-		"code": "beanstream",
-		"type":"creditcard",
-		"version":"",
-		"regions": ["US","CA","GB"],

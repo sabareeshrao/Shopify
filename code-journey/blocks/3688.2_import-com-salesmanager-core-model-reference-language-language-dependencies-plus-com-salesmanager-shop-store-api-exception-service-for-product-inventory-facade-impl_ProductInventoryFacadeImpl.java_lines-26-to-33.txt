@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.inventory.PersistableInventoryMapper;
-import com.salesmanager.shop.mapper.inventory.ReadableInventoryMapper;
-import com.salesmanager.shop.model.catalog.product.inventory.PersistableInventory;
-import com.salesmanager.shop.model.catalog.product.inventory.ReadableInventory;
-import com.salesmanager.shop.model.entity.ReadableEntityList;
-import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
-import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;

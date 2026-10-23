@@ -1,8 +1,0 @@
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Input object used when selecting an item option
- * @author carlsamson
- *

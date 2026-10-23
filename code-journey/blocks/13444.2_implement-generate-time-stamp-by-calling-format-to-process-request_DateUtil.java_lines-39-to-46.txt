@@ -1,8 +1,0 @@
-	 * Generates a time stamp
-	 * yyyymmddhhmmss
-	 * @return
-	 */
-	public static String generateTimeStamp() {
-		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmSS");
-		return format.format(new Date());
-	}

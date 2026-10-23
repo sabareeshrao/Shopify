@@ -1,6 +1,0 @@
-		
-		// superadmin, admin and retail_admin
-		String authenticatedUser = userFacade.authenticatedUser();
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();
-		}

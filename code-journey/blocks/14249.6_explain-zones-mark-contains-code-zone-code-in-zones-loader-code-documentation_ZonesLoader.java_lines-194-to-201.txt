@@ -1,8 +1,0 @@
-						 * 
-						 * }
-						 * 
-						 * if (zonesMark.containsKey(l.getCode() + "_" +
-						 * zoneCode)) { LOGGER.warn("This zone seems to be a
-						 * duplicate ! " + zoneCode + " and language code " +
-						 * l.getCode()); continue; }
-						 * 

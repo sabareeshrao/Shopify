@@ -1,6 +1,0 @@
-
-  /**
-   * root -productFiles -merchant-id PRODUCT-ID(key) -> CacheAttribute(value) - image 1 - image 2 -
-   * image 3
-   */
-

@@ -1,4 +1,0 @@
-			
-			if (event instanceof SaveProductImageEvent) {
-				saveProductImage((SaveProductImageEvent) event);
-			}

@@ -1,8 +1,0 @@
-
-##
-## db pool settings
-##
-db.initialPoolSize=3
-db.minPoolSize=1
-db.maxPoolSize=3
-

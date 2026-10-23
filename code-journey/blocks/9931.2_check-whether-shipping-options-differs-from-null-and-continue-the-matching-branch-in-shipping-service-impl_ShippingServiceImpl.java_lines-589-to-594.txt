@@ -1,6 +1,0 @@
-			if(shippingOptions!=null) {
-				
-				for(ShippingOption option : shippingOptions) {
-					if(selectedOption==null) {
-						selectedOption = option;
-					}

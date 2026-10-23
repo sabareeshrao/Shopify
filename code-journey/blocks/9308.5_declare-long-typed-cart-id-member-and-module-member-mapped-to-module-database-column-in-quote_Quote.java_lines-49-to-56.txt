@@ -1,8 +1,0 @@
-	private Long cartId;
-
-	@Column(name = "MODULE", nullable = false)
-	private String module;
-	
-	@Column(name = "OPTION_NAME", nullable = true)
-	private String optionName = null;
-	

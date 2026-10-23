@@ -1,4 +1,0 @@
-	public TaxRate getParent() {
-		return parent;
-	}
-

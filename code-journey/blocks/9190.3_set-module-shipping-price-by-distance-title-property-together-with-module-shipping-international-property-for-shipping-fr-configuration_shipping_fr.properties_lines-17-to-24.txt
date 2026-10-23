@@ -1,8 +1,0 @@
-
-#custom
-module.shipping.priceByDistance.title=Vous pouvez produire vos propre règles de coûts d'expédition basées sur la distance
-module.shipping.priceByDistance.text=Calcul du prix de livraison sur un prix fixe par kilomètre. Requiert le pré-processeur permettant de calculer la distance de livraison.
-
-module.shipping.canada=Canada
-module.shipping.usa=États-Unis
-module.shipping.international=International

@@ -1,8 +1,0 @@
-	@Override
-	public ReadableEntityList<ReadableTaxClass> taxClasses(MerchantStore store, Language language) {
-		Validate.notNull(store,"MerchantStore cannot be null");
-		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
-		try {
-			List<TaxClass> models = taxClassService.listByStore(store);
-			
-			List<ReadableTaxClass> taxClasses = models.stream().map(t -> convertToReadableTaxClass(t, store, language)).collect(Collectors.toList());

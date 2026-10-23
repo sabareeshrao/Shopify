@@ -1,3 +1,0 @@
-  private String code;
-  private List<ReadableProductVariantValue> options = new ArrayList<ReadableProductVariantValue>();
-

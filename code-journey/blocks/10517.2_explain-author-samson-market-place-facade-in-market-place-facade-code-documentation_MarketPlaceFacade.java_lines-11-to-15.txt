@@ -1,5 +1,0 @@
- * @author c.samson
- *
- */
-public interface MarketPlaceFacade {
-	

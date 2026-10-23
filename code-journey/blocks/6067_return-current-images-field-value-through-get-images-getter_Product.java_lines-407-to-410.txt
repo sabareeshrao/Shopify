@@ -1,4 +1,0 @@
-	public Set<ProductImage> getImages() {
-		return images;
-	}
-

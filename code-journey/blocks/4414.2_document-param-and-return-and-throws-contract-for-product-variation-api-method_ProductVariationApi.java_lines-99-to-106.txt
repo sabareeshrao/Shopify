@@ -1,8 +1,0 @@
-   * @param response
-   * @return
-   * @throws Exception
-   */
-  @RequestMapping(value = "/product/{id}/variation", method = RequestMethod.POST)
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(
-      httpMethod = "POST",

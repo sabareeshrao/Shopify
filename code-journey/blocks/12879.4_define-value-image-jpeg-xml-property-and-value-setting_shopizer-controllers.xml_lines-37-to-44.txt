@@ -1,8 +1,0 @@
-	                <list>
-	                    <value>image/jpeg</value>
-	                    <value>image/gif</value>
-	                    <value>image/png</value>
-	                    <value>image/webp</value>
-	                </list>
-	            </property>
-	        </bean>

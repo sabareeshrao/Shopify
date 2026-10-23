@@ -1,8 +1,0 @@
-
-	    categoryService.create(music);
-
-	    Category novell = new Category();
-	    novell.setMerchantStore(store);
-	    novell.setCode("novell");
-
-	    CategoryDescription novellEnglishDescription = new CategoryDescription();

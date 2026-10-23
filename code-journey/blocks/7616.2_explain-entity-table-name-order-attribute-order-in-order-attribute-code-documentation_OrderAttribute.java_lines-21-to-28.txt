@@ -1,8 +1,0 @@
- */
-@Entity
-@Table (name="ORDER_ATTRIBUTE" )
-public class OrderAttribute extends SalesManagerEntity<Long, OrderAttribute> {
-	
-	/**
-	 * 
-	 */

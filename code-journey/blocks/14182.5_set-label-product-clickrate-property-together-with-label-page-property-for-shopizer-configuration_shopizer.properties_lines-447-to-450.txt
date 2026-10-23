@@ -1,4 +1,0 @@
-label.product.clickrate=Product rating (click on the stars to activate rating)
-
-#content Images - Files
-label.page=Page

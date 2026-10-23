@@ -1,8 +1,0 @@
-
-  /**
-   * Get shipping quote based on postal code
-   * @param code
-   * @param address
-   * @param merchantStore
-   * @param language
-   * @param request

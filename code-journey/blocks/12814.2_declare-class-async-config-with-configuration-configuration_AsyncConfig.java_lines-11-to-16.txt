@@ -1,6 +1,0 @@
-
-@Configuration
-@EnableScheduling
-@EnableAsync
-public class AsyncConfig implements AsyncConfigurer {
-

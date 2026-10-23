@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("AFN", "Afghani");
-		CURRENCY_MAP.put("EUR", "Euro");
-		CURRENCY_MAP.put("ALL", "Lek");
-		CURRENCY_MAP.put("DZD", "Algerian Dinar");
-		CURRENCY_MAP.put("USD", "US Dollar");
-		CURRENCY_MAP.put("AOA", "Kwanza");
-		CURRENCY_MAP.put("XCD", "East Caribbean Dollar");
-		CURRENCY_MAP.put("ARS", "Argentine Peso");

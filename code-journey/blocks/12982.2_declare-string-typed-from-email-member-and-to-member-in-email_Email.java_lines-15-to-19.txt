@@ -1,5 +1,0 @@
-	private String fromEmail;
-	private String to;
-	private String subject;
-	private String templateName;
-	

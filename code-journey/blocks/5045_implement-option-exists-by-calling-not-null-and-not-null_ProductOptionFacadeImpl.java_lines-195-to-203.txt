@@ -1,9 +1,0 @@
-	@Override
-	public boolean optionExists(String code, MerchantStore store) {
-		Validate.notNull(code, "Option code must not be null");
-		Validate.notNull(store, "Store code must not be null");
-		boolean exists = false;
-		ProductOption option = productOptionService.getByCode(store, code);
-		if (option != null) {
-			exists = true;
-		}

@@ -1,4 +1,0 @@
-		
-		if(!configuration.isActive()) {
-			throw new ServiceException("Payment module " + payment.getModuleName() + " is not active");
-		}

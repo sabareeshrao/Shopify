@@ -1,8 +1,0 @@
-					
-				    Comparator<ReadableProductVariantValue> orderComparator
-				      = Comparator.comparingInt(ReadableProductVariantValue::getOrder);
-				    
-				    //Arrays.sort(employees, employeeSalaryComparator);
-					
-				    List<ReadableProductVariantValue> readableValues = optionValues.stream()
-				    			.sorted(orderComparator)

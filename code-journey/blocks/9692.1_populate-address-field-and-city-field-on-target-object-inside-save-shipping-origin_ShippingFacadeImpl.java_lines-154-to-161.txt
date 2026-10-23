@@ -1,8 +1,0 @@
-			
-			o.setAddress(address.getAddress());
-			o.setCity(address.getCity());
-			o.setCountry(countryService.getByCode(address.getCountry()));
-			o.setMerchantStore(store);
-			o.setActive(address.isActive());
-			o.setPostalCode(address.getPostalCode());
-			

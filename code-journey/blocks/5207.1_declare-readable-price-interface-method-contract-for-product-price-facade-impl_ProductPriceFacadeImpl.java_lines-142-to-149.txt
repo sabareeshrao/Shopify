@@ -1,8 +1,0 @@
-		
-		try {
-			return readablePrice(price, store, language);
-		} catch (ConversionException e) {
-			throw new ServiceRuntimeException("An exception occured while deleting product price [" + productPriceId + "] for product sku [" + sku + "] and Store [" + store.getCode() + "]", e);
-		}
-	}
-

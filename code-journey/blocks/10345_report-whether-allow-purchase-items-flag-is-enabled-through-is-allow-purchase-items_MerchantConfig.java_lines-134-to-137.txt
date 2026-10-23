@@ -1,4 +1,0 @@
-	public boolean isAllowPurchaseItems() {
-		return allowPurchaseItems;
-	}
-

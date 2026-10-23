@@ -1,8 +1,0 @@
-
-	    Manufacturer packed = new Manufacturer();
-	    packed.setMerchantStore(store);
-	    packed.setCode("packed2");
-
-	    ManufacturerDescription packedd = new ManufacturerDescription();
-	    packedd.setLanguage(en);
-	    packedd.setManufacturer(packed);

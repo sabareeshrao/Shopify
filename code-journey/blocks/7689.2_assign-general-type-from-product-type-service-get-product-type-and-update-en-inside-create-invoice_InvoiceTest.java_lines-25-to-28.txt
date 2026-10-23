@@ -1,4 +1,0 @@
-	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
-	    
-	    Language en = languageService.getByCode("en");
-	    

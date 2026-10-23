@@ -1,4 +1,0 @@
-
-		productOptionSetService.create(possibleSizes);
-		
-	}

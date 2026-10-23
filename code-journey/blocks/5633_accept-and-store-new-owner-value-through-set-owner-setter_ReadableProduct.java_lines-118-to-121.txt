@@ -1,4 +1,0 @@
-	public void setOwner(RentalOwner owner) {
-		this.owner = owner;
-	}
-

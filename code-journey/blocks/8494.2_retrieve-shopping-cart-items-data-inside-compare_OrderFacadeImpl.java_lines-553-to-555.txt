@@ -1,3 +1,0 @@
-				orderService.processOrder(modelOrder, customer, order.getShoppingCartItems(), summary, payment,
-						transaction, store);
-			}

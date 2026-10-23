@@ -1,3 +1,0 @@
-package com.salesmanager.shop.model.customer;
-
-

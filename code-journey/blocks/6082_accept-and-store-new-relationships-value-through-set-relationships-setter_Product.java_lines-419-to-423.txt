@@ -1,5 +1,0 @@
-	public void setRelationships(Set<ProductRelationship> relationships) {
-		this.relationships = relationships;
-	}
-
-

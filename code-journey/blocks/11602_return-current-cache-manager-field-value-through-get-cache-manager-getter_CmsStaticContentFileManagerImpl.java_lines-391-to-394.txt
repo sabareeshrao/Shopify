@@ -1,4 +1,0 @@
-	public LocalCacheManagerImpl getCacheManager() {
-		return cacheManager;
-	}
-

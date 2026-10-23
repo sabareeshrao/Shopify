@@ -1,8 +1,0 @@
-
-			// file creation
-			nodePath.append(inputStaticContentData.getFileName());
-
-			Path path = Paths.get(nodePath.toString());
-
-			// file creation
-			// nodePath.append(Constants.SLASH).append(contentImage.getFileName());

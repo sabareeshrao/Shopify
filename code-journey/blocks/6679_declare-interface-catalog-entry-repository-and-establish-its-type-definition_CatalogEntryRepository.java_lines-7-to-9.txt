@@ -1,3 +1,0 @@
-public interface CatalogEntryRepository extends JpaRepository<CatalogCategoryEntry, Long> {
-
-}

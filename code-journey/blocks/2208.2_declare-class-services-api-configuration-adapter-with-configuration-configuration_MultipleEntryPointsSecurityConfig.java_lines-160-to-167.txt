@@ -1,8 +1,0 @@
-	 *
-	 */
-	@Configuration
-	@Order(2)
-	public static class ServicesApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
-
-		@Autowired
-		private WebUserServices userDetailsService;

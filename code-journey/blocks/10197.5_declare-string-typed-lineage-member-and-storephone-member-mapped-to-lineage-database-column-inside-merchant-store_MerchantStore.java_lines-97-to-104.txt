@@ -1,8 +1,0 @@
-	
-    @Column(name = "LINEAGE")
-    private String lineage;
-
-	@NotEmpty
-	@Column(name = "STORE_PHONE", length = 50)
-	private String storephone;
-

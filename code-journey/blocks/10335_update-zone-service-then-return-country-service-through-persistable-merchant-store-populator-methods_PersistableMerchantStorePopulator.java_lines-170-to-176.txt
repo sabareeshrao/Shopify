@@ -1,7 +1,0 @@
-	public void setZoneService(ZoneService zoneService) {
-		this.zoneService = zoneService;
-	}
-	public CountryService getCountryService() {
-		return countryService;
-	}
-

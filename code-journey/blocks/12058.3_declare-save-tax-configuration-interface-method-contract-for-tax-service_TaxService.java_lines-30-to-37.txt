@@ -1,8 +1,0 @@
-	 */
-	void saveTaxConfiguration(TaxConfiguration shippingConfiguration,
-			MerchantStore store) throws ServiceException;
-
-	/**
-	 * Calculates tax over an OrderSummary
-	 * @param orderSummary
-	 * @param customer

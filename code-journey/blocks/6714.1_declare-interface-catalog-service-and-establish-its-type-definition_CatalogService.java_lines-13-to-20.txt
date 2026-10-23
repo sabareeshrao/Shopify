@@ -1,8 +1,0 @@
-public interface CatalogService extends SalesManagerEntityService<Long, Catalog> {
-	
-	
-	/**
-	 * Creates a new Catalog
-	 * @param store
-	 * @return Catalog
-	 * @throws ServiceException

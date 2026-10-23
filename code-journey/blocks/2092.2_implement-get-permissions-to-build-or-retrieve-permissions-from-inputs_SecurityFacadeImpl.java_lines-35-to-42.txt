@@ -1,8 +1,0 @@
-  @Inject
-  private PasswordEncoder passwordEncoder;
-
-  @SuppressWarnings({"rawtypes", "unchecked"})
-  @Override
-  public List<ReadablePermission> getPermissions(List<String> groups) {
-
-    List<Group> userGroups = null;

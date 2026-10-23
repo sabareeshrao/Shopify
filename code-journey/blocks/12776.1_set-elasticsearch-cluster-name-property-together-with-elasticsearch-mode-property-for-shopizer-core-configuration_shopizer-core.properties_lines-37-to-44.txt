@@ -1,8 +1,0 @@
-# -e config.emailSender=smtp \
-# -e config.emailSender.region=US_EAST_1 \
-
-
-#Deprecated in favor of search starter
-#Elastic Search configurations
-elasticsearch.cluster.name=shopizer
-elasticsearch.mode=remote

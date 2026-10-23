@@ -1,4 +1,0 @@
-	public void setInBusinessSince(String inBusinessSince) {
-		this.inBusinessSince = inBusinessSince;
-	}
-

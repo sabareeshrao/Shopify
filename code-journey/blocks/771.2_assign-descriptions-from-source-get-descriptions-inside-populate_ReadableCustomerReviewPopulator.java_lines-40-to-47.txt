@@ -1,8 +1,0 @@
-			target.setId(source.getId());
-			target.setCustomerId(source.getCustomer().getId());
-			target.setReviewedCustomer(reviewed);
-			target.setRating(source.getReviewRating());
-			target.setReviewedCustomer(reviewed);
-			target.setCustomerId(source.getCustomer().getId());
-			
-			Set<CustomerReviewDescription> descriptions = source.getDescriptions();

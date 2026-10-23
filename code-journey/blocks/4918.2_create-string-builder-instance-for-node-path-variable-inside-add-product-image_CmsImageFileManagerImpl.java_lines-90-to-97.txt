@@ -1,8 +1,0 @@
-      String rootPath = this.buildRootPath();
-      Path confDir = Paths.get(rootPath);
-      this.createDirectoryIfNorExist(confDir);
-
-      // node path
-      StringBuilder nodePath = new StringBuilder();
-      nodePath.append(rootPath).append(productImage.getProduct().getMerchantStore().getCode());
-      Path merchantPath = Paths.get(nodePath.toString());

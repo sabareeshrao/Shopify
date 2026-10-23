@@ -1,4 +1,0 @@
-			criteria.setLanguage(lang);
-		} else {
-			criteria.setLanguage(language.getCode());
-		}

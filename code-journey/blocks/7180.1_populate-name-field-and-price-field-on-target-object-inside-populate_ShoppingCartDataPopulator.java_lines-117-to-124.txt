@@ -1,8 +1,0 @@
-                    	}
-                    }
-                    
-                    shoppingCartItem.setName(itemName);
-
-                    shoppingCartItem.setPrice(pricingService.getDisplayAmount(item.getItemPrice(),store));
-                    shoppingCartItem.setQuantity(item.getQuantity());
-                    

@@ -1,3 +1,0 @@
-				
-				cache.putInCache(langs, "LANGUAGES");
-			}

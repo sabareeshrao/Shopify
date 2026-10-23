@@ -1,3 +1,0 @@
-public class TaxClass extends SalesManagerEntity<Long, TaxClass> {
-	private static final long serialVersionUID = 1L;
-	

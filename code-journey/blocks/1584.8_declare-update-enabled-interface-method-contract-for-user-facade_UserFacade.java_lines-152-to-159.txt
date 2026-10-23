@@ -1,8 +1,0 @@
-   * Update user enable / disabled flag
-   * @param store
-   * @param user
-   */
-  void updateEnabled(MerchantStore store, PersistableUser user);
-  
-	/**
-	 * 

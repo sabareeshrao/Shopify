@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "Haryana",
-		"zoneName": "Haryana",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "HimachalPradesh",

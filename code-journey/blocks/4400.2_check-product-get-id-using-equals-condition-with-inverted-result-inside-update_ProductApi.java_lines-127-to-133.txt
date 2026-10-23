@@ -1,7 +1,0 @@
-			HttpServletRequest request, HttpServletResponse response) {
-
-		try {
-			// Make sure we have consistency in this request
-			if (!id.equals(product.getId())) {
-				response.sendError(400, "Error url id does not match object id");
-			}

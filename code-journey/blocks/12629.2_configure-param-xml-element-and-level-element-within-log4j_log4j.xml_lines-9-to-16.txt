@@ -1,8 +1,0 @@
-			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
-		</layout>
-	</appender>
-	
-	<!-- Application Loggers -->
-	<logger name="mytld.mycompany.myapp">
-		<level value="info" />
-	</logger>

@@ -1,4 +1,0 @@
-	},
-	{
-		"zoneCode": "BS",
-		"zoneName": "Basel-Stadt",

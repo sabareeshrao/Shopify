@@ -1,6 +1,0 @@
-	
-	/**
-	 * final delivery address
-	 */
-	private Delivery deliveryAddress;
-	

@@ -1,9 +1,0 @@
-	@Override
-	public List<Product> getProducts(List<Long> categoryIds) throws ServiceException {
-
-		@SuppressWarnings({ "unchecked", "rawtypes" })
-		Set ids = new HashSet(categoryIds);
-		return productRepository.getProductsListByCategories(ids);
-
-	}
-

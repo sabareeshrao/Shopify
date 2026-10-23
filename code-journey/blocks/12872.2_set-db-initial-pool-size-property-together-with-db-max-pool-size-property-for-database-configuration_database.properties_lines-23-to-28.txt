@@ -1,6 +1,0 @@
-##
-## db pool config
-##
-db.initialPoolSize=4
-db.minPoolSize=4
-db.maxPoolSize=8

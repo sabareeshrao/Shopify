@@ -1,4 +1,0 @@
-	public void setErrorFields(List<String> errorFields) {
-		this.errorFields = errorFields;
-	}
-

@@ -1,4 +1,0 @@
-				sheet.setValueAt(totalName, 2, productCell);
-				sheet.setValueAt(totalValue, 3, productCell);
-				productCell++;
-			}

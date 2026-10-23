@@ -1,8 +1,0 @@
-		
-		//create a customer option to be used
-		CustomerOption hasReturnedItems = new CustomerOption();
-		hasReturnedItems.setActive(true);
-		hasReturnedItems.setPublicOption(true);
-		hasReturnedItems.setCode("hasReturnedItems");
-		hasReturnedItems.setMerchantStore(store);
-		

@@ -1,8 +1,0 @@
-
-			target.setMerchantStore(store);
-			target.setProductOptionSortOrder(source.getOrder());
-			target.setCode(source.getCode());
-			
-			if(!CollectionUtils.isEmpty(source.getDescriptions())) {
-				Set<com.salesmanager.core.model.catalog.product.attribute.ProductOptionDescription> descriptions = new HashSet<com.salesmanager.core.model.catalog.product.attribute.ProductOptionDescription>();
-				for(ProductOptionDescription desc  : source.getDescriptions()) {

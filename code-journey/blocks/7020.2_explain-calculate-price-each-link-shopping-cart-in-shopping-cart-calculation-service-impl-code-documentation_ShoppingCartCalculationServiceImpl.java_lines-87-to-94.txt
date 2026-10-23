@@ -1,8 +1,0 @@
-	 * <li>Calculate price for each {@link ShoppingCartItem} and update it.</li>
-	 * <p>
-	 * This method is backbone method for all price calculation related to
-	 * shopping cart.
-	 * </p>
-	 *
-	 * @see OrderServiceImpl
-	 *

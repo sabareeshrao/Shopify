@@ -1,8 +1,0 @@
-
-		try {
-
-			// configured modules
-			List<IntegrationModule> modules = 
-					shippingService
-					.getShippingMethods(merchantStore);
-			

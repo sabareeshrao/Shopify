@@ -1,5 +1,0 @@
-				sheet.setValueAt(t, 3, productCell);
-
-				productCell++;
-				
-			}

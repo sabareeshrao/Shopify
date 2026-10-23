@@ -1,6 +1,0 @@
-	@Override
-	protected UserConnectionPK getId() {
-		return primaryKey;
-	}
-
-}

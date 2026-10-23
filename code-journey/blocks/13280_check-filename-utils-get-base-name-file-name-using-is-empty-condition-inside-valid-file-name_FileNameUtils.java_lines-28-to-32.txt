@@ -1,5 +1,0 @@
-		
-		//has a filename
-		if(StringUtils.isEmpty(FilenameUtils.getBaseName(fileName))) {
-			validName = false;
-		}

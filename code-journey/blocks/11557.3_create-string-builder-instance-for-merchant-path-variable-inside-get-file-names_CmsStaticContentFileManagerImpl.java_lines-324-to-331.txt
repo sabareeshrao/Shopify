@@ -1,8 +1,0 @@
-
-			StringBuilder merchantPath = new StringBuilder();
-			merchantPath.append(buildRootPath()).append(merchantStoreCode).append(Constants.SLASH)
-					.append(staticContentType);
-
-			Path path = Paths.get(merchantPath.toString());
-
-			List<String> fileNames = null;

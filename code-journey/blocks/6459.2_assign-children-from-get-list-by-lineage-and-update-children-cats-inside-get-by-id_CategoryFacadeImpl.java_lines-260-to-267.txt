@@ -1,8 +1,0 @@
-
-			// get children
-			List<Category> children = getListByLineage(store, lineage.toString());
-
-			List<ReadableCategory> childrenCats = children.stream()
-					.map(cat -> readableCategoryMapper.convert(cat, store, language))
-					.collect(Collectors.toList());
-

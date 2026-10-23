@@ -1,7 +1,0 @@
-		/** save product first **/
-
-		if (product.getId() != null && product.getId() > 0) {
-			super.update(product);
-		} else {
-			super.create(product);
-		}

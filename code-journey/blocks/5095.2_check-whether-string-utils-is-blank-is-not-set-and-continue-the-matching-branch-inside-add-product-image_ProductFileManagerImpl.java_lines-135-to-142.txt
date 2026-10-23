@@ -1,8 +1,0 @@
-
-      //Resizes
-      if (!StringUtils.isBlank(slargeImageHeight) && !StringUtils.isBlank(slargeImageWidth)) { // &&
-                                                                                               // !StringUtils.isBlank(ssmallImageHeight)
-                                                                                               // &&
-                                                                                               // !StringUtils.isBlank(ssmallImageWidth))
-                                                                                               // {
-

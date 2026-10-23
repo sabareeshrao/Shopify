@@ -1,4 +1,0 @@
-	public void setProductPriceCode(String productPriceCode) {
-		this.productPriceCode = productPriceCode;
-	}
-

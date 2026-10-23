@@ -1,8 +1,0 @@
-
-			// insert ProductImage
-			ProductImage img = saveOrUpdate(productImage);
-			//manual workaround since aspect is not working
-			eventPublisher.publishEvent(new SaveProductImageEvent(eventPublisher, img, product));
-
-		} catch (Exception e) {
-			throw new ServiceException(e);

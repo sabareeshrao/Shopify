@@ -1,8 +1,0 @@
-
-    // set default language
-    target.setDefaultLanguage(lang);
-
-    List<Group> userGroups = new ArrayList<Group>();
-    List<String> names = new ArrayList<String>();
-    for (PersistableGroup group : source.getGroups()) {
-      names.add(group.getName());

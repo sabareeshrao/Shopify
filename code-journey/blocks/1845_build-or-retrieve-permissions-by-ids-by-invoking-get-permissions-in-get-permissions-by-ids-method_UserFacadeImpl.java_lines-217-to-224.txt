@@ -1,8 +1,0 @@
-	private List<Permission> getPermissionsByIds(List<Integer> ids) {
-		try {
-			return permissionService.getPermissions(ids);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException(e);
-		}
-	}
-

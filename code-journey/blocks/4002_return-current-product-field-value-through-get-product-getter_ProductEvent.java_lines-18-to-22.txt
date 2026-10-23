@@ -1,5 +1,0 @@
-	public Product getProduct() {
-		return product;
-	}
-
-}

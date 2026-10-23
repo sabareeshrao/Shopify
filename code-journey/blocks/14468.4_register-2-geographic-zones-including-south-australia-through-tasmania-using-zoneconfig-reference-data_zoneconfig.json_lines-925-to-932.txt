@@ -1,8 +1,0 @@
-		"zoneName": "South Australia",
-		"countryCode": "AU"
-	},
-	{
-		"zoneCode": "TAS",
-		"zoneName": "Tasmania",
-		"countryCode": "AU"
-	},

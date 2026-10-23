@@ -1,9 +1,0 @@
-
-		zonesMark.put(l.getCode() + "_" + zoneCode, l.getCode() + "_" + zoneCode);
-
-		if (zonesDescriptionsMap.containsKey(zoneCode)) {
-			descriptions = zonesDescriptionsMap.get(zoneCode);
-		} else {
-			descriptions = new ArrayList<ZoneDescription>();
-			zonesDescriptionsMap.put(zoneCode, descriptions);
-		}

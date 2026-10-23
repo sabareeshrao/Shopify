@@ -1,8 +1,0 @@
-	    
-	    //create cart
-	    shoppingCartService.create(shoppingCart);
-
-	    
-	    /** Retrieve cart **/
-
-	    ShoppingCart retrievedCart = shoppingCartService.getByCode(cartCode.toString(), store);

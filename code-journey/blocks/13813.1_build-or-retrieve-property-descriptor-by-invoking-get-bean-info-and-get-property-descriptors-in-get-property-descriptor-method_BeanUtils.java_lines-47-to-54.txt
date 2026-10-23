@@ -1,8 +1,0 @@
-    private PropertyDescriptor getPropertyDescriptor( Class<?> beanClass, String propertyname )
-        throws IntrospectionException
-    {
-        BeanInfo beanInfo = Introspector.getBeanInfo( beanClass );
-        PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
-        PropertyDescriptor propertyDescriptor = null;
-        for ( int i = 0; i < propertyDescriptors.length; i++ )
-        {

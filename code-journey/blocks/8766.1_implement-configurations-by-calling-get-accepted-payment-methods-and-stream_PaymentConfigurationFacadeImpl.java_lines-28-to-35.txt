@@ -1,8 +1,0 @@
-	@Override
-	public List<ReadableConfiguration> configurations(MerchantStore store) {
-		
-		try {
-			
-			List<PaymentMethod> methods = paymentService.getAcceptedPaymentMethods(store);
-			List<ReadableConfiguration> configurations = 
-					methods.stream()

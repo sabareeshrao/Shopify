@@ -1,3 +1,0 @@
-  protected final Log logger = LogFactory.getLog(getClass());
-  public static final String REQUEST_PARAMATER_STORE = "store";
-

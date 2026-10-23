@@ -1,4 +1,0 @@
-    public void setDepth(Integer depth) {
-        this.depth = depth;
-    }
-

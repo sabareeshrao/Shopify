@@ -1,2 +1,0 @@
-    public abstract Class<? extends java.lang.Enum<?>> enumClass();
-     

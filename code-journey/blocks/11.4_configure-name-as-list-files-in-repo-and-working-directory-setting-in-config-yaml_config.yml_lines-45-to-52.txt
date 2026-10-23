@@ -1,8 +1,0 @@
-       - run:
-           name: list files in repo
-           command: ls -al
-           working_directory: .
-       - run:
-           name: list files in shop
-           command: ls -al
-           working_directory: ./sm-shop

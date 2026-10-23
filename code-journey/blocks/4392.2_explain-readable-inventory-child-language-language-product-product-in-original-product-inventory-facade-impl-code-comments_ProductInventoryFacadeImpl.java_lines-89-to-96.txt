@@ -1,8 +1,0 @@
-
-	//public ReadableInventory get(String child, Language language) {
-		/*
-		 * Product product = getProductById(productId); MerchantStore store =
-		 * getMerchantStore(child);
-		 * 
-		 * if (isStoreParentNotExist(store) ||
-		 * store.getParent().getId().equals(product.getMerchantStore().getId())) { throw

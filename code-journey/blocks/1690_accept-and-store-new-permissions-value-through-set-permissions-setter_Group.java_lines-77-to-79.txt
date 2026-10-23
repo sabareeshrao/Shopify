@@ -1,3 +1,0 @@
-	public void setPermissions(Set<Permission> permissions) {
-		this.permissions = permissions;
-	}

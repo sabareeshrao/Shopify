@@ -1,8 +1,0 @@
-	<!-- Httpd -->
-	
-	<beans:bean id="httpdProductAssetsManager"
-				class="com.salesmanager.core.business.modules.cms.product.local.CmsImageFileManagerImpl" factory-method="getInstance" >
-				<!-- internal implementation -->
-				<beans:property name="cacheManager">
-						<beans:ref bean="httpdAssetsManager" />
-				</beans:property>

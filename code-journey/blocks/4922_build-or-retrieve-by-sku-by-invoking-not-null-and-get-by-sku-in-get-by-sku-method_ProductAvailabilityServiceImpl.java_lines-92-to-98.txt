@@ -1,7 +1,0 @@
-	@Override
-	public List<ProductAvailability> getBySku(String sku, MerchantStore store) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		return productAvailabilityRepository.getBySku(sku, store.getCode());
-	}
-
-}

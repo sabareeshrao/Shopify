@@ -1,8 +1,0 @@
-				LOGGER.error("Image Utils error in constructor", e);
-			}
-		
-
-
-		
-		
-		

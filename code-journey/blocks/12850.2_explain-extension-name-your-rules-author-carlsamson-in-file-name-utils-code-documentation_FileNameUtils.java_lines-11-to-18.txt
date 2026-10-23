@@ -1,8 +1,0 @@
- * - has an extension
- * - has a name
- * - ... your own rules ...
- * @author carlsamson
- *
- */
-@Component
-public class FileNameUtils {

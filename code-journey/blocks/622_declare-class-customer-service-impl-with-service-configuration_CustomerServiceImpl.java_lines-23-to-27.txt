@@ -1,5 +1,0 @@
-
-
-@Service("customerService")
-public class CustomerServiceImpl extends SalesManagerEntityServiceImpl<Long, Customer> implements CustomerService {
-

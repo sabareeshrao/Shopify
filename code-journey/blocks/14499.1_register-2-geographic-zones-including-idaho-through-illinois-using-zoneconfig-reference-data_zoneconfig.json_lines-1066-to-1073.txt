@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "ID",
-		"zoneName": "Idaho",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "IL",
-		"zoneName": "Illinois",

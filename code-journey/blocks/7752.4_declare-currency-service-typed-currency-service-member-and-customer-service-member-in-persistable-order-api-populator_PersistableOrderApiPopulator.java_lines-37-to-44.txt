@@ -1,8 +1,0 @@
-
-	@Autowired
-	private CurrencyService currencyService;
-	@Autowired
-	private CustomerService customerService;
-/*	@Autowired
-	private ShoppingCartService shoppingCartService;
-	@Autowired

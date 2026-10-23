@@ -1,5 +1,0 @@
-	public List<CustomerOptionDescription> getDescriptionsList() {
-		return descriptionsList;
-	}
-	
-

@@ -1,8 +1,0 @@
-	 * 2->obj[0] = 2
-	 *    obj[1] = 35
-	 *   ...
-	 * @param store
-	 * @param categoryIds
-	 * @return
-	 * @throws ServiceException
-	 */

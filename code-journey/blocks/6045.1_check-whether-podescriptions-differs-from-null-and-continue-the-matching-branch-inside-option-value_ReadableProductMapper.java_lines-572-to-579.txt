@@ -1,8 +1,0 @@
-
-		optValue.setCode(optionValue.getCode());
-
-		List<ProductOptionValueDescription> podescriptions = optionValue.getDescriptionsSettoList();
-		ProductOptionValueDescription podescription = null;
-		if (podescriptions != null && podescriptions.size() > 0) {
-			podescription = podescriptions.get(0);
-			if (podescriptions.size() > 1) {

@@ -1,8 +1,0 @@
-
-	// delete product
-	
-	@After("execution(* com.salesmanager.core.business.services.catalog.product.ProductService.delete(com.salesmanager.core.model.catalog.product.Product))")
-	public void logBeforeDeleteProduct(JoinPoint joinPoint) {
-	   Object[] signatureArgs = joinPoint.getArgs();
-	   eventPublisher.publishEvent(new DeleteProductEvent(eventPublisher, (Product)signatureArgs[0]));
-	}

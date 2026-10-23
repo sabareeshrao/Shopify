@@ -1,9 +1,0 @@
-	private SystemConfigurationRepository systemConfigurationReposotory;
-	
-	@Inject
-	public SystemConfigurationServiceImpl(
-			SystemConfigurationRepository systemConfigurationReposotory) {
-			super(systemConfigurationReposotory);
-			this.systemConfigurationReposotory = systemConfigurationReposotory;
-	}
-	

@@ -1,8 +1,0 @@
-	 * @param language
-	 */
-	void deleteCustomerReview(Long customerId, Long reviewId, MerchantStore store, Language language);
-	
-	/**
-	 * Optin a customer to newsletter
-	 * @param optin
-	 * @param store

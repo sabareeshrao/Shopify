@@ -1,8 +1,0 @@
-	/**
-	 *
-	 * @param store
-	 * @param code
-	 * @param language
-	 * @return ReadableCategory
-	 * @throws Exception
-	 */

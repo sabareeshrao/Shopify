@@ -1,8 +1,0 @@
-
-      List<ReadableProductReview> reviews =
-    		  productCommonFacade.getProductReviews(product, merchantStore, language);
-
-      return reviews;
-
-    } catch (Exception e) {
-      LOGGER.error("Error while getting product reviews", e);

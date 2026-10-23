@@ -1,4 +1,0 @@
-	public Date getOptinDate() {
-		return optinDate;
-	}
-

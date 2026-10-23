@@ -1,8 +1,0 @@
-		"zoneName": "Washington",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "WV",
-		"zoneName": "West Virginia",
-		"countryCode": "US"
-	},

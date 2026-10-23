@@ -1,8 +1,0 @@
-	private Double discount;//output value set by engine
-	private String totalCode;//output value set by engine
-	
-	//input parameters
-	private long productId;
-	private String itemManufacturerCode;
-	private String itemCategoryCode;
-	private String shippingMethod;

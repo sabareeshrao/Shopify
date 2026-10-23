@@ -1,4 +1,0 @@
-		
-		if(StringUtils.isBlank(delivery.getPostalCode())) {
-			return null;
-		}

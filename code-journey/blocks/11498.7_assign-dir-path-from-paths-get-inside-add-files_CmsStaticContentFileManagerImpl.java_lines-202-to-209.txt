@@ -1,8 +1,0 @@
-			for (final InputContentFile inputStaticContentData : inputStaticContentDataList) {
-
-				// file path
-				nodePath.append(Constants.SLASH).append(inputStaticContentData.getFileContentType())
-						.append(Constants.SLASH);
-				Path dirPath = Paths.get(nodePath.toString());
-				this.createDirectoryIfNorExist(dirPath);
-

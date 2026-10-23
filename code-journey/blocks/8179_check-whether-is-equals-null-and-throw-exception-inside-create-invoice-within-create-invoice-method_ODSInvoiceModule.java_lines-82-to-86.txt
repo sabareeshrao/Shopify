@@ -1,5 +1,0 @@
-			
-			if(is==null) {
-				LOGGER.warn("Cannot open template " + template);
-				throw new Exception("Cannot open " + new StringBuilder().append(INVOICE_TEMPLATE).append(INVOICE_TEMPLATE_EXTENSION).toString());
-			}

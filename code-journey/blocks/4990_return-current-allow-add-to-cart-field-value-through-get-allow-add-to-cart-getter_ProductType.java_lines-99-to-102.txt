@@ -1,4 +1,0 @@
-  public Boolean getAllowAddToCart() {
-    return allowAddToCart;
-  }
-

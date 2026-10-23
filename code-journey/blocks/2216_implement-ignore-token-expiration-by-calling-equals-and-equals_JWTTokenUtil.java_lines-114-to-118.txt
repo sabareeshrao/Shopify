@@ -1,5 +1,0 @@
-	    private Boolean ignoreTokenExpiration(String token) {
-	        String audience = getAudienceFromToken(token);
-	        return (AUDIENCE_TABLET.equals(audience) || AUDIENCE_MOBILE.equals(audience));
-	    }
-

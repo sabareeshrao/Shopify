@@ -1,6 +1,0 @@
-
-  @JsonProperty("moduleCode")
-  public void setModuleCode(String moduleCode) {
-    this.moduleCode = moduleCode;
-  }
-

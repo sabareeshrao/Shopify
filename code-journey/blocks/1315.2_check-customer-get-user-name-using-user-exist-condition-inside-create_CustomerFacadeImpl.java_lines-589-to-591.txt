@@ -1,3 +1,0 @@
-    if (userExist(customer.getUserName())) {
-      throw new ServiceRuntimeException("User already exist");
-    }

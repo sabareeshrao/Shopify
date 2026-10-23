@@ -1,4 +1,0 @@
-				Category persistCategory = this.populate(cat, new Category(), store, language);
-				target.getCategories().add(persistCategory);
-
-			}

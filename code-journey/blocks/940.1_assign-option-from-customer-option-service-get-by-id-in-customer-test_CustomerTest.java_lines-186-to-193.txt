@@ -1,8 +1,0 @@
-		
-		subscribedToMailingList.setSortOrder(2);
-		customerOptionService.update(subscribedToMailingList);
-		
-		CustomerOption option = customerOptionService.getById(subscribedToMailingList.getId());
-		
-		option.setSortOrder(4);
-		customerOptionService.update(option);

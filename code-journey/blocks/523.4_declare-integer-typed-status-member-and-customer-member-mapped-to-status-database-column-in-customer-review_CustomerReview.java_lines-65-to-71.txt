@@ -1,7 +1,0 @@
-	@Column(name = "STATUS")
-	private Integer status;
-
-	@ManyToOne
-	@JoinColumn(name="CUSTOMERS_ID")
-	private Customer customer;
-	

@@ -1,8 +1,0 @@
-
-			// configured modules
-			Map<String, IntegrationConfiguration> configuredModules = shippingService
-					.getShippingModulesConfigured(merchantStore);
-			return modules.stream().map(m -> integrationModule(m, configuredModules)).collect(Collectors.toList());
-
-		} catch (ServiceException e) {
-			LOGGER.error("Error getting shipping modules", e);

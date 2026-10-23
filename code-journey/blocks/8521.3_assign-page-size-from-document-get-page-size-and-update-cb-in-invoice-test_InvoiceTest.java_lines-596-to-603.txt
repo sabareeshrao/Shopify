@@ -1,8 +1,0 @@
-			 document.open();
-
-			 // Create a template and a Graphics2D object 
-			 Rectangle pageSize = document.getPageSize();
-			 int w = (int) (pageSize.getWidth() * 0.9);
-			 int h = (int) (pageSize.getHeight() * 0.95);
-			 PdfContentByte cb = writer.getDirectContent();
-			 PdfTemplate tp = cb.createTemplate(w, h);

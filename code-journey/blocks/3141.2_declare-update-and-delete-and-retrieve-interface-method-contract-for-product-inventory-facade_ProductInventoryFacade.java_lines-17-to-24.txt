@@ -1,8 +1,0 @@
-  void update(PersistableInventory inventory, MerchantStore store, Language language);
-  
-  void delete(Long productId, Long inventoryId, MerchantStore store);
-  
-  ReadableEntityList<ReadableInventory> get(Long productId, MerchantStore store, Language language, int page, int count);
-  
-  
-

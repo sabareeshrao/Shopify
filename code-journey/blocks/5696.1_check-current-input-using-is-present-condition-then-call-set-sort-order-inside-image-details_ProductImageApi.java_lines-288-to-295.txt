@@ -1,8 +1,0 @@
-			
-			Optional<ProductImage> productImage = productImageService.getProductImage(imageId, id, merchantStore);
-
-			if (productImage.isPresent()) {
-				productImage.get().setSortOrder(position);
-				productImageService.updateProductImage(p, productImage.get());
-			} else {
-				throw new ResourceNotFoundException("Product image [" + imageId + "] not found for product id [" + id

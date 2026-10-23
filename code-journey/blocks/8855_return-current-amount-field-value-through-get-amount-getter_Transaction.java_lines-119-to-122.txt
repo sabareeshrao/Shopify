@@ -1,4 +1,0 @@
-	public BigDecimal getAmount() {
-		return amount;
-	}
-

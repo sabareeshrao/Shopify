@@ -1,8 +1,0 @@
-	@Override
-	public CustomerReview getByReviewerAndReviewed(Long reviewer, Long reviewed) {
-		Validate.notNull(reviewer,"Reviewer customer cannot be null");
-		Validate.notNull(reviewed,"Reviewer customer cannot be null");
-		return customerReviewRepository.findByRevieweAndReviewed(reviewer, reviewed);
-	}
-
-}

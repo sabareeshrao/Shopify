@@ -1,4 +1,0 @@
-	public List<String> getCountries() {
-		return countries;
-	}
-

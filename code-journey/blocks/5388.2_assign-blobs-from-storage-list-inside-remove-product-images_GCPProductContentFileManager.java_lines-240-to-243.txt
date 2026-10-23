@@ -1,4 +1,0 @@
-    Page<Blob> blobs =
-        storage.list(
-            bucketName, BlobListOption.currentDirectory(), BlobListOption.prefix(product.getSku()));
-

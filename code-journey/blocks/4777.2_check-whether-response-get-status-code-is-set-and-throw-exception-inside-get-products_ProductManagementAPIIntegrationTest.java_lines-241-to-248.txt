@@ -1,8 +1,0 @@
-		final ResponseEntity<ReadableProduct[]> response = restTemplate.exchange(
-				"http://localhost:8080/sm-shop/services/rest/products/DEFAULT/en/" + testCategoryID, HttpMethod.GET,
-				httpEntity, ReadableProduct[].class);
-
-		if (response.getStatusCode() != HttpStatus.OK) {
-			throw new Exception();
-		} else {
-			System.out.println(response.getBody().length + " Product records found.");

@@ -1,8 +1,0 @@
-
-		try {
-			target = persistableProductDefinitionMapper.merge(product, target, store, language);
-				
-			productService.saveProduct(target);
-			product.setId(target.getId());
-
-

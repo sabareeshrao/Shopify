@@ -1,8 +1,0 @@
-
-		List<PackageDetails> boxes = new ArrayList<PackageDetails>();
-
-		// maximum number of boxes
-		int maxBox = 100;
-		int iterCount = 0;
-
-		List<Product> individualProducts = new ArrayList<Product>();

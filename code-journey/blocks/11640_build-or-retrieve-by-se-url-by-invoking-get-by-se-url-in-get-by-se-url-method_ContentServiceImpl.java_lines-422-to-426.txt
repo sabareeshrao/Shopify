@@ -1,5 +1,0 @@
-	@Override
-	public ContentDescription getBySeUrl(MerchantStore store, String seUrl) {
-		return contentRepository.getBySeUrl(store, seUrl);
-	}
-

@@ -1,8 +1,0 @@
-	    redDescription.setName("Red");
-	    redDescription.setDescription("Red color");
-	    redDescription.setProductOptionValue(red);
-	    
-	    red.getDescriptions().add(redDescription);
-	    
-	    //create an option value
-	    productOptionValueService.saveOrUpdate(red);

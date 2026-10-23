@@ -1,8 +1,0 @@
-  public static int indexOfLastSeparator(String filename) {
-    if (filename == null) {
-      return -1;
-    }
-    int lastUnixPos = filename.lastIndexOf(UNIX_SEPARATOR);
-    int lastWindowsPos = filename.lastIndexOf(WINDOWS_SEPARATOR);
-    return Math.max(lastUnixPos, lastWindowsPos);
-  }

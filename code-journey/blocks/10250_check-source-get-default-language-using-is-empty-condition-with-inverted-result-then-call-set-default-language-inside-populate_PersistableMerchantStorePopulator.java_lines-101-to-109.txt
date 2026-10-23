@@ -1,9 +1,0 @@
-		}
-		
-		
-		try {
-			
-			if(!StringUtils.isEmpty(source.getDefaultLanguage())) {
-				Language l = languageService.getByCode(source.getDefaultLanguage());
-				target.setDefaultLanguage(l);
-			}

@@ -1,6 +1,0 @@
-
-
-	@Autowired
-	private PageableProductVariationRepository pageableProductVariationSetRepository;
-
-

@@ -1,8 +1,0 @@
-
-					productDescription.setProduct(destination);
-					productDescription.setDescription(description.getDescription());
-
-					productDescription.setProductHighlight(description.getHighlights());
-
-					productDescription.setName(description.getName());
-					productDescription.setSeUrl(description.getFriendlyUrl());

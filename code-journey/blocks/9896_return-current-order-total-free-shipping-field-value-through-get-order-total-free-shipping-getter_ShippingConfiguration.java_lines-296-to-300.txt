@@ -1,5 +1,0 @@
-	public BigDecimal getOrderTotalFreeShipping() {
-		return orderTotalFreeShipping;
-	}
-
-

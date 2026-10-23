@@ -1,8 +1,0 @@
-label.product.reviews.logon.write=Vous devez vous authentifier afin d'évaluer ce produit
-label.product.reviews.evaluated=Vous avez évalué ce produit
-label.product.featured.meassage=Pour ajouter un produit à la liste des produits vedettes faites glisser le produit du contenant des produits vers la boîte des produits vedetted.
-label.product.group.meassage=Pour ajouter un produit à la liste du groupe de produits faites glisser le produit du contenant des produits vers la boîte du groupe de produit courant.
-label.product.related.title=Produits connexes
-label.product.related.meassage=Pour ajouter un produit à la liste des produits connexes faites glisser le produit du contenant des produits vers la boîte des produits connexes.
-label.product.createsimilar=Créer un produit similaire
-label.product.configure=Définition du produit

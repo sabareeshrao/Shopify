@@ -1,8 +1,0 @@
-
-			// if startdate or enddate are null use default range (last 24
-			// hours) DD-1 to DD
-			Calendar cal = Calendar.getInstance();
-			Date sDate = null;
-
-			if (startDate != null) {
-				sDate = Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant());

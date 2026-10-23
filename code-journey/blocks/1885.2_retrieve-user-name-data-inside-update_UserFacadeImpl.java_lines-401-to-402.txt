@@ -1,2 +1,0 @@
-				throw new ServiceRuntimeException("Cannot find user [" + user.getUserName() + "]");
-			}

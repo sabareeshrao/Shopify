@@ -1,7 +1,0 @@
-		List<ReadableProductReview> productReviews = new ArrayList<ReadableProductReview>();
-
-		for (ProductReview review : reviews) {
-			ReadableProductReview readableReview = new ReadableProductReview();
-			populator.populate(review, readableReview, store, language);
-			productReviews.add(readableReview);
-		}

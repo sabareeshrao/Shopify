@@ -1,8 +1,0 @@
-
-		
-		HttpGet  httpget = null;
-		Reader xmlreader = null;
-		String pack = configuration.getIntegrationOptions().get("packages").get(0);
-
-		try {
-			

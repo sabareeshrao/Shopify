@@ -1,8 +1,0 @@
-	 * null) { throw new
-	 * ServiceRuntimeException("Invalid specified contentType [" +
-	 * contentPage.getContentType() + "]"); }
-	 * 
-	 * List<ContentDescription> descriptions = createContentDescription(store,
-	 * content, contentPage); descriptions.stream().forEach(c ->
-	 * c.setContent(content));
-	 * 

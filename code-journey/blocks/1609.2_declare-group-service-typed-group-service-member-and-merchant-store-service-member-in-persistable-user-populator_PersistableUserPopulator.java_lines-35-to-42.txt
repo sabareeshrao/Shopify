@@ -1,8 +1,0 @@
-  private GroupService groupService;
-  
-  @Inject
-  private MerchantStoreService merchantStoreService;
-  
-  @Inject
-  @Named("passwordEncoder")
-  private PasswordEncoder passwordEncoder;

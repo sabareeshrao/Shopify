@@ -1,2 +1,0 @@
-	    	populator.setPricingService(pricingService);
-	    	

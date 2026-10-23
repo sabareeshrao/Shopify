@@ -1,2 +1,0 @@
-          throw new MailPreparationException("Can't generate HTML mail", e);
-        }

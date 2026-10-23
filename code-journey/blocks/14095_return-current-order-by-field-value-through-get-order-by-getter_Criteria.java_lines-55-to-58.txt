@@ -1,4 +1,0 @@
-	public CriteriaOrderBy getOrderBy() {
-		return orderBy;
-	}
-

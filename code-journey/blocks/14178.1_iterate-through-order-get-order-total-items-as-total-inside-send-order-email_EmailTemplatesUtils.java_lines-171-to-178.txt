@@ -1,8 +1,0 @@
-
-		    	   //order totals
-		    	   for(OrderTotal total : order.getOrderTotal()) {
-		    		   orderTable.append(TR_BORDER);
-		    		   		//orderTable.append(TD);
-		    		   		//orderTable.append(CLOSING_TD);
-		    		   		orderTable.append(TD);
-		    		   		orderTable.append(CLOSING_TD);

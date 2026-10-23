@@ -1,8 +1,0 @@
-	
-	@OneToMany(mappedBy = "geoZone", cascade = CascadeType.ALL)
-	private List<GeoZoneDescription> descriptions = new ArrayList<GeoZoneDescription>();
-	
-	@JsonIgnore
-	@OneToMany(mappedBy = "geoZone", targetEntity = Country.class)
-	private List<Country> countries = new ArrayList<Country>();
-	

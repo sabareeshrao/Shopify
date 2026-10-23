@@ -1,7 +1,0 @@
-		
-		price.setSku(sku);
-		price.setId(priceId);
-
-		return productPriceFacade.get(sku, priceId, merchantStore, language);
-	
-	}

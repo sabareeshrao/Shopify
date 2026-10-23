@@ -1,6 +1,0 @@
-
-		<!-- Stripe -->
-		<dependency>
-			<groupId>com.stripe</groupId>
-			<artifactId>stripe-java</artifactId>
-		</dependency>

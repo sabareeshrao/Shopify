@@ -1,4 +1,0 @@
-	private int sortOrder;
-	private String dateAvailable;
-	private String creationDate;
-	

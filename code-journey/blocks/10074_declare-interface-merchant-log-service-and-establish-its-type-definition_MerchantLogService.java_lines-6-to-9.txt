@@ -1,4 +1,0 @@
-public interface MerchantLogService extends
-		SalesManagerEntityService<Long, MerchantLog> {
-
-}

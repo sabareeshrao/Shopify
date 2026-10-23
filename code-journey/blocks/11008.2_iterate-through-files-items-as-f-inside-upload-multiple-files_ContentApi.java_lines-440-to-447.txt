@@ -1,8 +1,0 @@
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-
-		for (MultipartFile f : files) {
-			ContentFile cf = new ContentFile();
-			cf.setContentType(f.getContentType());
-			cf.setName(f.getName());
-			try {
-				cf.setFile(f.getBytes());

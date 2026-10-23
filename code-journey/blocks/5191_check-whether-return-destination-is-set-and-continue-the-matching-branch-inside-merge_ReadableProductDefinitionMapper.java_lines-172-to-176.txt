@@ -1,5 +1,0 @@
-		
-
-		if (returnDestination instanceof ReadableProductDefinitionFull) {
-			((ReadableProductDefinitionFull) returnDestination).setDescriptions(fulldescriptions);
-		}

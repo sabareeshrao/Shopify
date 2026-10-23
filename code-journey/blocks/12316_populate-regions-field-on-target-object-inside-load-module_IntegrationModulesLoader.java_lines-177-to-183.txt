@@ -1,7 +1,0 @@
-	        		count++;
-	
-	    		}
-	    		configString.append("]");
-	    		module.setRegions(configString.toString());
-	
-	    	}

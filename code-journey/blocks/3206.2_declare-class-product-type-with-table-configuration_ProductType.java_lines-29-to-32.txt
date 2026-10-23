@@ -1,4 +1,0 @@
-@Table(name = "PRODUCT_TYPE")
-public class ProductType extends SalesManagerEntity<Long, ProductType> implements Auditable {
-  private static final long serialVersionUID = 1L;
-

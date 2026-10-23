@@ -1,7 +1,0 @@
-        
-        
-    	if(max>0) {
-    			int maxCount = first + max;
-
-			objectQ.setMaxResults(Math.min(maxCount, count.intValue()));
-    	}

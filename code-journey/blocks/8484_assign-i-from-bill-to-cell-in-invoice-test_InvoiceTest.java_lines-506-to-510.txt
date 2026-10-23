@@ -1,5 +1,0 @@
-			
-			//delete address blank lines
-			for(int i = billToCell; i<13; i++) {
-				sheet.setValueAt("", 0, i);
-			}

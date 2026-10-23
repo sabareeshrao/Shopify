@@ -1,8 +1,0 @@
-import com.salesmanager.shop.mapper.tax.PersistableTaxRateMapper;
-import com.salesmanager.shop.mapper.tax.ReadableTaxClassMapper;
-import com.salesmanager.shop.mapper.tax.ReadableTaxRateMapper;
-import com.salesmanager.shop.model.entity.Entity;
-import com.salesmanager.shop.model.entity.ReadableEntityList;
-import com.salesmanager.shop.model.tax.PersistableTaxClass;
-import com.salesmanager.shop.model.tax.PersistableTaxRate;
-import com.salesmanager.shop.model.tax.ReadableTaxClass;

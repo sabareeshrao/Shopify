@@ -1,3 +1,0 @@
-		this.productTypeRepository = productTypeRepository;
-	}
-

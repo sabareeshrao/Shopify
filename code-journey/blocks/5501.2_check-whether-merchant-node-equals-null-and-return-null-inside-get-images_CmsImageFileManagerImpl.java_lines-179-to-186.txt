@@ -1,8 +1,0 @@
-      StringBuilder nodePath = new StringBuilder();
-      nodePath.append(product.getMerchantStore().getCode());
-
-      Node<String, Object> merchantNode = this.getNode(nodePath.toString());
-
-      if (merchantNode == null) {
-        return null;
-      }

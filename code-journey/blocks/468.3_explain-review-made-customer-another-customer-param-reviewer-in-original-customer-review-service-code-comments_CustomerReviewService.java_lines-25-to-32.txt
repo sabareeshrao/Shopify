@@ -1,8 +1,0 @@
-	
-	/**
-	 * Get a review made by a customer to another customer
-	 * @param reviewer
-	 * @param reviewed
-	 * @return
-	 */
-	CustomerReview getByReviewerAndReviewed(Long reviewer, Long reviewed);

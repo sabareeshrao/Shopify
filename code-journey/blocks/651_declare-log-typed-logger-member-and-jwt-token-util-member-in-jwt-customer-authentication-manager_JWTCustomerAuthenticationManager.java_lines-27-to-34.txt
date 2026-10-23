@@ -1,8 +1,0 @@
-	protected final Log logger = LogFactory.getLog(getClass());
-	
-    @Inject
-    private JWTTokenUtil jwtTokenUtil;
-    
-    @Inject
-    private UserDetailsService jwtCustomerDetailsService;
-

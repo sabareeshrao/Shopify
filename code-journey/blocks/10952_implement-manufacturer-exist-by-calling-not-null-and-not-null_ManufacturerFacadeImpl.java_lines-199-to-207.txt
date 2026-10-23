@@ -1,9 +1,0 @@
-  @Override
-  public boolean manufacturerExist(MerchantStore store, String manufacturerCode) {
-    Validate.notNull(store,"Store must not be null");
-    Validate.notNull(manufacturerCode,"Manufacturer code must not be null");
-    boolean exists = false;
-    Manufacturer manufacturer = manufacturerService.getByCode(store, manufacturerCode);
-    if(manufacturer!=null) {
-      exists = true;
-    }

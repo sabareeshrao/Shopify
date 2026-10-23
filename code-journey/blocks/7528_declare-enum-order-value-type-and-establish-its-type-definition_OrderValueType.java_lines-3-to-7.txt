@@ -1,5 +1,0 @@
-public enum OrderValueType {
-	
-	ONE_TIME, MONTHLY
-
-}

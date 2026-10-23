@@ -1,8 +1,0 @@
-	 * @param name
-	 * @return IntegrationModule
-	 * @throws ServiceException
-	 */
-	IntegrationModule getPaymentMethodByCode(MerchantStore store, String name)
-			throws ServiceException;
-
-	/**

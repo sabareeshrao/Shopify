@@ -1,8 +1,0 @@
-	private MerchantStore convertPersistableMerchantStoreToMerchantStore(PersistableMerchantStore store,
-			Language language) {
-		MerchantStore mStore = new MerchantStore();
-
-		// set default values
-		mStore.setWeightunitcode(MeasureUnit.KG.name());
-		mStore.setSeizeunitcode(MeasureUnit.IN.name());
-

@@ -1,5 +1,0 @@
-  private PersistableCustomer updateAuthCustomer(PersistableCustomer customer, MerchantStore store) {
-
-	    if (customer.getId() == null || customer.getId() == 0) {
-	      throw new ServiceRuntimeException("Can't update a customer with null id");
-	    }

@@ -1,8 +1,0 @@
-
-		//relations
-		qs.append("left join fetch p.relationships pr ");
-
-		// variants
-		//qs.append("left join fetch pa.variants pav ");
-		//qs.append("left join fetch pav.attribute pavattr ");
-

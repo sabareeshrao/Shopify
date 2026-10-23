@@ -1,4 +1,0 @@
-
-	@Pointcut("@target(org.springframework.stereotype.Service)")
-	public void serviceMethods() {
-	}

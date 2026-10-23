@@ -1,8 +1,0 @@
-
-			}
-			
-			if (productVolume > maxVolume) {
-				
-				throw new ServiceException("Product configuration exceeds box configuraton");
-				
-			}

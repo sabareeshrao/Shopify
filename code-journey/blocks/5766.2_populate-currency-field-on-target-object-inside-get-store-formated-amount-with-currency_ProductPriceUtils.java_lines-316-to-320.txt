@@ -1,5 +1,0 @@
-		currencyInstance.setCurrency(currency);
-
-		return currencyInstance.format(amount.doubleValue());
-
-	}

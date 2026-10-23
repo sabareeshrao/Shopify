@@ -1,4 +1,0 @@
-
-		return orderFacade.listTransactions(id, merchantStore);
-
-	}

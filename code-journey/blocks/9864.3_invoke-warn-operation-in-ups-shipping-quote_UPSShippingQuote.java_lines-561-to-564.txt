@@ -1,4 +1,0 @@
-						log
-								.warn("UPSXML cannot find description for service code "
-										+ code);
-					}

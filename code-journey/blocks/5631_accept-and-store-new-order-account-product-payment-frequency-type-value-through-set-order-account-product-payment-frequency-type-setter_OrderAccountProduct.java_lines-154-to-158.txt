@@ -1,5 +1,0 @@
-	public void setOrderAccountProductPaymentFrequencyType(
-			Integer orderAccountProductPaymentFrequencyType) {
-		this.orderAccountProductPaymentFrequencyType = orderAccountProductPaymentFrequencyType;
-	}
-

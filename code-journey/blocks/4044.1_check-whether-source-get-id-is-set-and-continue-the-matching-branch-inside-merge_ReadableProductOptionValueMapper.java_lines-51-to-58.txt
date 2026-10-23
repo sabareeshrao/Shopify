@@ -1,8 +1,0 @@
-    
-    readableProductOptionValue.setCode(source.getCode());
-    if(source.getId()!=null) {
-    	readableProductOptionValue.setId(source.getId().longValue());
-    }
-    if(source.getProductOptionValueSortOrder()!=null) {
-    	readableProductOptionValue.setOrder(source.getProductOptionValueSortOrder().intValue());
-    }

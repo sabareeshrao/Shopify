@@ -1,9 +1,0 @@
-public class ProductPriceRequest implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private List<ProductAttribute> options = new ArrayList<ProductAttribute>();
-	private String sku;//product instance sku
-

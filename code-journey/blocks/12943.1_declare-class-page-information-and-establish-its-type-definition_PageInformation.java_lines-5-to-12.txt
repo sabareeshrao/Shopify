@@ -1,8 +1,0 @@
-public class PageInformation implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String pageTitle;
-	private String pageDescription;

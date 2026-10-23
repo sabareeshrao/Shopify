@@ -1,4 +1,0 @@
-	public void setProductPriceAmount(BigDecimal productPriceAmount) {
-		this.productPriceAmount = productPriceAmount;
-	}
-

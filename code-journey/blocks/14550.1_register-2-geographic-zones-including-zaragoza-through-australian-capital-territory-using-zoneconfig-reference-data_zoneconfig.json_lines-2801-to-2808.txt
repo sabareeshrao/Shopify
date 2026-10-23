@@ -1,8 +1,0 @@
-			"zoneName": "Zaragoza",
-			"countryCode": "ES"
-		},
-		{
-			"zoneCode": "ACT",
-			"zoneName": "Australian Capital Territory",
-			"countryCode": "AU"
-		},

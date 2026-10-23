@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.configuration.events.products.DeleteProductAttributeEvent;
-import com.salesmanager.core.business.configuration.events.products.DeleteProductEvent;
-import com.salesmanager.core.business.configuration.events.products.DeleteProductImageEvent;
-import com.salesmanager.core.business.configuration.events.products.DeleteProductVariantEvent;
-import com.salesmanager.core.business.configuration.events.products.ProductEvent;
-import com.salesmanager.core.business.configuration.events.products.SaveProductAttributeEvent;
-import com.salesmanager.core.business.configuration.events.products.SaveProductEvent;
-import com.salesmanager.core.business.configuration.events.products.SaveProductImageEvent;

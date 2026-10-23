@@ -1,4 +1,0 @@
-
-			if(source.getAuditSection()!=null) {
-			  target.setCreationDate(DateUtil.formatDate(source.getAuditSection().getDateCreated()));
-			}

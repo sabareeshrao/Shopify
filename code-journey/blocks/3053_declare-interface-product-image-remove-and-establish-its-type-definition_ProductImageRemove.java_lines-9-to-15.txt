@@ -1,7 +1,0 @@
-public interface ProductImageRemove extends ImageRemove {
-
-  void removeProductImage(ProductImage productImage) throws ServiceException;
-
-  void removeProductImages(Product product) throws ServiceException;
-
-}

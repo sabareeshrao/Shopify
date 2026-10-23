@@ -1,8 +1,0 @@
-
-		Fqn contentFilesFqn = Fqn.fromString(merchantPath.toString());
-
-		Node<String, Object> nd = cacheManager.getTreeCache().getRoot().getChild(contentFilesFqn);
-
-		if (nd == null) {
-
-			cacheManager.getTreeCache().getRoot().addChild(contentFilesFqn);

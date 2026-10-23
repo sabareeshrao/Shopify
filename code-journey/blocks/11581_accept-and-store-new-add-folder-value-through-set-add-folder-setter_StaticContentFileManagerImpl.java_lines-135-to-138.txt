@@ -1,4 +1,0 @@
-	public void setAddFolder(FolderPut addFolder) {
-		this.addFolder = addFolder;
-	}
-

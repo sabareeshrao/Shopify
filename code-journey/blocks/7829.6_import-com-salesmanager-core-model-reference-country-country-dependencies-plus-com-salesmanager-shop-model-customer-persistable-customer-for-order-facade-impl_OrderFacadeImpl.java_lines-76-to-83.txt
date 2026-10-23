@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.reference.country.Country;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.core.model.shipping.ShippingProduct;
-import com.salesmanager.core.model.shipping.ShippingQuote;
-import com.salesmanager.core.model.shipping.ShippingSummary;
-import com.salesmanager.core.model.shoppingcart.ShoppingCart;
-import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
-import com.salesmanager.shop.model.customer.PersistableCustomer;

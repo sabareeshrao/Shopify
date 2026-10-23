@@ -1,3 +1,0 @@
-public interface OrderStatusHistoryService {
-    List<OrderStatusHistory> findByOrder(Order order);
-}

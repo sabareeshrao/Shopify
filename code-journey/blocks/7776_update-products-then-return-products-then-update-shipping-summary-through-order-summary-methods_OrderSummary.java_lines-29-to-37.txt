@@ -1,9 +1,0 @@
-	public void setProducts(List<ShoppingCartItem> products) {
-		this.products = products;
-	}
-	public List<ShoppingCartItem> getProducts() {
-		return products;
-	}
-	public void setShippingSummary(ShippingSummary shippingSummary) {
-		this.shippingSummary = shippingSummary;
-	}

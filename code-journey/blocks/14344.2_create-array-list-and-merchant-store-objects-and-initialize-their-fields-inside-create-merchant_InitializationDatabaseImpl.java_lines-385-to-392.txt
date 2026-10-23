@@ -1,8 +1,0 @@
-		Zone qc = zoneService.getByCode("QC");
-		
-		List<Language> supportedLanguages = new ArrayList<Language>();
-		supportedLanguages.add(en);
-		
-		//create a merchant
-		MerchantStore store = new MerchantStore();
-		store.setCountry(ca);

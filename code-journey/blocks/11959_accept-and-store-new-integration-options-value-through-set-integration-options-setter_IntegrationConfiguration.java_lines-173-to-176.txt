@@ -1,4 +1,0 @@
-  public void setIntegrationOptions(Map<String, List<String>> integrationOptions) {
-    this.integrationOptions = integrationOptions;
-  }
-

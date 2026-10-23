@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription;
-import com.salesmanager.shop.model.catalog.product.product.PersistableProduct;
-import com.salesmanager.shop.model.catalog.product.product.PersistableProductInventory;
-import com.salesmanager.shop.model.catalog.product.product.ProductSpecification;
-import com.salesmanager.test.shop.common.ServicesTestSupport;
-
-@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-@RunWith(SpringRunner.class)

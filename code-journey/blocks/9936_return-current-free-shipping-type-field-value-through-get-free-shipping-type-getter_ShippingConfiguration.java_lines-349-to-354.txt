@@ -1,6 +1,0 @@
-	public ShippingType getFreeShippingType() {
-		return freeShippingType;
-	}
-
-
-

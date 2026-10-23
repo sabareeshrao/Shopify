@@ -1,8 +1,0 @@
-  
-  @JsonIgnore
-  @Embedded
-  private AuditSection auditSection = new AuditSection();
-
-  @Column(name = "CODE", nullable = false)
-  private String code;
-

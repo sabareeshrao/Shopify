@@ -1,9 +1,0 @@
-
-
-		} catch(Exception e) {
-			throw new ServiceRuntimeException("Error while getting last transaction for order [" + orderId + "]",e);
-		}
-
-
-	}
-

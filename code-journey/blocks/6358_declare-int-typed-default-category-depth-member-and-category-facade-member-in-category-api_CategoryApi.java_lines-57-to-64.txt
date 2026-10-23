@@ -1,8 +1,0 @@
-	private static final int DEFAULT_CATEGORY_DEPTH = 0;
-
-	@Inject
-	private CategoryFacade categoryFacade;
-
-	@Inject
-	private UserFacade userFacade;
-

@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getCountry())) {
-			String countryQuery =" and c.billing.country.isoCode like:country";
-			countBuilderWhere.append(countryQuery);
-			objectBuilderWhere.append(countryQuery);
-		}

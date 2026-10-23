@@ -1,8 +1,0 @@
-	/*
-	 * Creates a Customer from a PersistableCustomer received from REST API
-	 */
-	ReadableCustomer create(PersistableCustomer customer, MerchantStore store, Language language);
-	
-	/**
-	 * Reset customer password
-	 * @param customer

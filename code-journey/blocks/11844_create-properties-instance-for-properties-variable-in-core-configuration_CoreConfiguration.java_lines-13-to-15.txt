@@ -1,3 +1,0 @@
-	public Properties properties = new Properties();
-	private static final Logger LOGGER = LoggerFactory.getLogger(CoreConfiguration.class);
-	

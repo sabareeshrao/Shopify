@@ -1,8 +1,0 @@
-    							${EMAIL_USERNAME_LABEL}: ${EMAIL_USER_NAME}<br />
-    							${EMAIL_PASSWORD_LABEL}: ${EMAIL_CUSTOMER_PASSWORD}<br />
-
-						</p>
-						<!-- Callout Panel -->
-						<p class="callout">
-							${CUSTOMER_ACCESS_LABEL}&nbsp;<a href="${CUSTOMER_ACCESS_URL}">${ACCESS_NOW_LABEL} &raquo;</a>
-						</p><!-- /Callout Panel -->					

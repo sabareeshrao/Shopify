@@ -1,4 +1,0 @@
-	public String buildProductUrl(MerchantStore store, String contextPath, String url) {
-		return buildStoreUri(store, contextPath) + SHOP_URI + Constants.PRODUCT_URI + SLASH + url + URL_EXTENSION;
-	}
-

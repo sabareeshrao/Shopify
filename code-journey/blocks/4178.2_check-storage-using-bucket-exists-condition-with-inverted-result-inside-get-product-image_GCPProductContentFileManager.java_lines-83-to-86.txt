@@ -1,4 +1,0 @@
-      
-      if(!this.bucketExists(storage, bucketName)) {
-        return null;
-      }

@@ -1,8 +1,0 @@
-
-			 DoExpressCheckoutPaymentResponseType doExpressCheckoutPaymentResponse = service.doExpressCheckoutPayment(doExpressCheckoutPaymentReq); 
-			 String commitAck = doExpressCheckoutPaymentResponse.getAck().getValue();
-			 
-			 
-			 if(!"Success".equals(commitAck)) {
-				LOGGER.error("Wrong value from transaction commit " + ack);
-				throw new IntegrationException("Wrong paypal ack from init transaction " + ack);

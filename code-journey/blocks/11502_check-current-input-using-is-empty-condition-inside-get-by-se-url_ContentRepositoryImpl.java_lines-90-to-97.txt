@@ -1,8 +1,0 @@
-			
-			@SuppressWarnings("unchecked")
-			List<Content> results = q.getResultList();
-	        if (results.isEmpty()) {
-	        	return null;
-	        } else if (results.size() >= 1) {
-	        		content = results.get(0);
-	        }

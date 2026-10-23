@@ -1,6 +1,0 @@
-		//inputParameters.setModuleName(currentModule.getCode());
-		
-		
-		if(size!=null) {
-			inputParameters.setSize((long)size.doubleValue());
-		}

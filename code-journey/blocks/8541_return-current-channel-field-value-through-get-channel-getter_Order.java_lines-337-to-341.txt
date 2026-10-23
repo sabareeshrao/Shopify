@@ -1,5 +1,0 @@
-	public OrderChannel getChannel() {
-		return channel;
-	}
-
-

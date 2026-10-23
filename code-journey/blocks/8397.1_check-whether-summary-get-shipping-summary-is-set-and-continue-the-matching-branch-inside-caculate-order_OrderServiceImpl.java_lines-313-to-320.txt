@@ -1,8 +1,0 @@
-
-        //shipping
-        if(summary.getShippingSummary()!=null) {
-
-
-	            OrderTotal shippingSubTotal = new OrderTotal();
-	            shippingSubTotal.setModule(Constants.OT_SHIPPING_MODULE_CODE);
-	            shippingSubTotal.setOrderTotalType(OrderTotalType.SHIPPING);

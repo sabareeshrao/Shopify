@@ -1,4 +1,0 @@
-		
-		if(finalTransactions.containsKey(TransactionType.AUTHORIZECAPTURE.name())) {
-			finalTransaction = finalTransactions.get(TransactionType.AUTHORIZECAPTURE.name());
-		}

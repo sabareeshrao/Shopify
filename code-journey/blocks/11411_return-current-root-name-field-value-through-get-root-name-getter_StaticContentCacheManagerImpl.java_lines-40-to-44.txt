@@ -1,5 +1,0 @@
-  @Override
-  public String getRootName() {
-    return root;
-  }
-}

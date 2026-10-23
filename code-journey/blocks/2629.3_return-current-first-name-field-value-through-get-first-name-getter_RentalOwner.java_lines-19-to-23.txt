@@ -1,5 +1,0 @@
-	private Address address;
-	private String emailAddress;
-	public String getFirstName() {
-		return firstName;
-	}

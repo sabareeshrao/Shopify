@@ -1,6 +1,0 @@
-			
-			//5
-			if(!StringUtils.isBlank(store.getStorepostalcode())) {
-				sheet.setValueAt(store.getStorepostalcode(), 0, storeAddressCell);
-				storeAddressCell ++;
-			}

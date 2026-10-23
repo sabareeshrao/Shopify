@@ -1,8 +1,0 @@
-    public InputStream getFile()
-    {
-        return file;
-    }
-    public void setFile( InputStream file )
-    {
-        this.file = file;
-    }

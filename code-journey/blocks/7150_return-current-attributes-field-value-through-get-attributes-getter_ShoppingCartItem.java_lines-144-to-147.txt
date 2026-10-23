@@ -1,4 +1,0 @@
-	public Set<ShoppingCartAttributeItem> getAttributes() {
-		return attributes;
-	}
-

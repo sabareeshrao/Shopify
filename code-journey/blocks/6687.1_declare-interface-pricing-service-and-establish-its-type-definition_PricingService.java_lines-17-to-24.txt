@@ -1,8 +1,0 @@
-
-/**
- * Services for Product item price calculation. 
- * @author Carl Samson
- *
- */
-public interface PricingService {
-

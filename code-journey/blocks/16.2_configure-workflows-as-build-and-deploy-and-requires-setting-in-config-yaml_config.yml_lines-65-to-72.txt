@@ -1,8 +1,0 @@
-# Orchestrate our job run sequence
-workflows:
-  build_and_deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build

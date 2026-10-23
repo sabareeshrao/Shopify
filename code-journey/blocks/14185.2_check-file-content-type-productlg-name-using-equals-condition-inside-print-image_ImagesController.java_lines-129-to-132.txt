@@ -1,4 +1,0 @@
-		
-		if(imageType.equals(FileContentType.PRODUCTLG.name())) {
-			size = ProductImageSize.LARGE;
-		} 

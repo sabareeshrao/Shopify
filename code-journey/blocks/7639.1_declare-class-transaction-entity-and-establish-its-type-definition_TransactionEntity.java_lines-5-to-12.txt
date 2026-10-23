@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.entity.Entity;
-
-/**
- * Readable version of Transaction entity object
- * @author c.samson
- *
- */
-public class TransactionEntity extends Entity implements Serializable {

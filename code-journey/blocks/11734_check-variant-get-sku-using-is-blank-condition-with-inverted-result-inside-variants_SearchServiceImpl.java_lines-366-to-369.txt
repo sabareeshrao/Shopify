@@ -1,4 +1,0 @@
-		
-		if(!StringUtils.isBlank(variant.getSku())) {
-			variantMap.put(VSKU, variant.getSku());
-		}

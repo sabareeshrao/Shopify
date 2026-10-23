@@ -1,8 +1,0 @@
-
-label.customer.edit.billingaddress=Modifier l'adresse de facturation
-label.customer.edit.shippinginformation=Modifier l'adresse de livraison
-
-
-label.customer.billing.company=Nom de l'entreprise
-label.customer.billing.streetaddress = Adresse de facturation 
-label.customer.billing.suburb = Banlieue de facturation 

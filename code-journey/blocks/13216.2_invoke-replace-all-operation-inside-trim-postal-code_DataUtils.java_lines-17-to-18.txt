@@ -1,2 +1,0 @@
-		return postalCode.replaceAll("[^a-zA-Z0-9]", "");
-	}

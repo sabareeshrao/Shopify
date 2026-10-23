@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "OO",
-		"zoneName": "Oberosterreich",
-		"countryCode": "AT"
-	},
-	{
-		"zoneCode": "SB",

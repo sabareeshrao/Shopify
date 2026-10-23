@@ -1,4 +1,0 @@
-	public Set<OrderAccountProduct> getOrderAccountProducts() {
-		return orderAccountProducts;
-	}
-

@@ -1,5 +1,0 @@
-
-			if (cart.getCustomerId() == null) {
-				response.sendError(404, "Cart code " + code + " does not exist for exist for user " + userName);
-				return null;
-			}

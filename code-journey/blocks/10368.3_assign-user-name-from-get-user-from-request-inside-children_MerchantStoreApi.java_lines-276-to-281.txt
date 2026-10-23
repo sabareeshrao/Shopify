@@ -1,6 +1,0 @@
-
-		String userName = getUserFromRequest(request);
-		validateUserPermission(userName, code);
-		return storeFacade.getChildStores(language, code, page, count);
-
-	}

@@ -1,8 +1,0 @@
-	@Override
-	public void update(PersistableProductType type, Long id, MerchantStore store, Language language) {
-		Validate.notNull(type,"ProductType cannot be null");
-		Validate.notNull(store,"MerchantStore cannot be null");
-		Validate.notNull(id,"id cannot be empty");
-
-		try {
-

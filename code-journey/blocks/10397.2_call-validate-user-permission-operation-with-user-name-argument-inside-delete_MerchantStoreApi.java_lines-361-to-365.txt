@@ -1,5 +1,0 @@
-		validateUserPermission(userName, code);
-		storeFacade.delete(code);
-	}
-
-	

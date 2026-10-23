@@ -1,8 +1,0 @@
-	@Override
-	public void addContentFile(ContentFile file, String merchantStoreCode) {
-		try {
-			byte[] payload = file.getFile();
-			String fileName = file.getName();
-
-			try (InputStream targetStream = new ByteArrayInputStream(payload)) {
-

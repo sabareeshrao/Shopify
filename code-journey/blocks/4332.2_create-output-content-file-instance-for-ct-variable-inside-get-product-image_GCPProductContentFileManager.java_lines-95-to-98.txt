@@ -1,4 +1,0 @@
-      OutputContentFile ct = new OutputContentFile();
-      ct.setFile(outputStream);
-      ct.setFileName(blob.getName());
-

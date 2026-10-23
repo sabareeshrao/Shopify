@@ -1,8 +1,0 @@
-
-			// ?API=RateV3
-
-			httpget = new HttpGet(protocol + "://" + host + ":" + port
-					+ completeUri);
-			// RequestEntity entity = new
-			// StringRequestEntity(xmlbuffer.toString(),"text/plain","UTF-8");
-			// httpget.setRequestEntity(entity);

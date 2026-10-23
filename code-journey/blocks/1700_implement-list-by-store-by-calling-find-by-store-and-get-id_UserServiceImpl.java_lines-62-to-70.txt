@@ -1,9 +1,0 @@
-	@Override
-	public List<User> listByStore(MerchantStore store) throws ServiceException {
-		try {
-			return userRepository.findByStore(store.getId());
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}
-	}
-

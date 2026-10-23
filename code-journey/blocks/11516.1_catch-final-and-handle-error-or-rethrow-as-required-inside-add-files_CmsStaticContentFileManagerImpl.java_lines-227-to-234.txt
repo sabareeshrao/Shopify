@@ -1,8 +1,0 @@
-
-			LOGGER.info("Total {} files added successfully.", inputStaticContentDataList.size());
-
-		} catch (final Exception e) {
-			LOGGER.error("Error while saving content image", e);
-			throw new ServiceException(e);
-
-		}

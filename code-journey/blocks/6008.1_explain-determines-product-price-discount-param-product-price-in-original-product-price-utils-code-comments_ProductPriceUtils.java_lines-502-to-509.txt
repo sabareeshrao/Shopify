@@ -1,8 +1,0 @@
-
-	/**
-	 * Determines if a ProductPrice has a discount
-	 * 
-	 * @param productPrice
-	 * @return
-	 */
-	// discounter

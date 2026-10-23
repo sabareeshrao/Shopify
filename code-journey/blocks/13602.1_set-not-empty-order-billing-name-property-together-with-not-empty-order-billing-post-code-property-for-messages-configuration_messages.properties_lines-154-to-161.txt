@@ -1,8 +1,0 @@
-
-NotEmpty.order.billingName=Billing name should not be empty 
-NotEmpty.order.billingStreetAddress=Billing street address should not be empty
-NotEmpty.order.billingCity=Billing city should not be empty
-NotEmpty.order.billingState=Billing state should not be empty
-NotEmpty.order.billingPostCode=Billing postal code should not be empty
-
-

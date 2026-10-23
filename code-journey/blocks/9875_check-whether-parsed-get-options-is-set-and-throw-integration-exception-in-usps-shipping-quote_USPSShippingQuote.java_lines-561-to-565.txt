@@ -1,5 +1,0 @@
-
-			if (parsed.getOptions() == null || parsed.getOptions().size() == 0) {
-				LOGGER.warn("No options returned from USPS");
-				throw new IntegrationException(parsed.getError());
-			}

@@ -1,8 +1,0 @@
-		},
-		"store": {
-			"type": "keyword"
-		},
-		"link": {
-			"type": "keyword"
-		},
-		"reviews": {

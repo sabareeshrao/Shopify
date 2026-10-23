@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.entity.ReadableEntityList;
-import org.springframework.data.domain.Page;
-

@@ -1,8 +1,0 @@
-
-	@SuppressWarnings("unchecked")
-	@Deprecated
-	public String toJSONString(String query) {
-
-		//{"size": 10,"query": {"match": {"keyword": {"query": "wat","operator":"and"}}}}";
-
-		

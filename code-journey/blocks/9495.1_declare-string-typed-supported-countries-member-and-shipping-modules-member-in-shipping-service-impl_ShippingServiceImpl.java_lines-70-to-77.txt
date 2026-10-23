@@ -1,8 +1,0 @@
-	private final static String SUPPORTED_COUNTRIES = "SUPPORTED_CNTR";
-	private final static String SHIPPING_MODULES = "SHIPPING";
-	private final static String SHIPPING_DISTANCE = "shippingDistanceModule";
-
-	
-	@Inject
-	private MerchantConfigurationService merchantConfigurationService;
-	

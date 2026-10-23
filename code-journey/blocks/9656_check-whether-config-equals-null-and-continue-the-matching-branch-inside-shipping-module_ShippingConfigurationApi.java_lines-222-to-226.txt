@@ -1,5 +1,0 @@
-			
-			IntegrationConfiguration config = shippingService.getShippingConfiguration(code, merchantStore);
-			if (config == null) {
-				config = new IntegrationConfiguration();
-			}

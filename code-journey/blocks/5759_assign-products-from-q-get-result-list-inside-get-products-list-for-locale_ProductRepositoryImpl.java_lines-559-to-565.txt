@@ -1,7 +1,0 @@
-
-		List<Product> products = q.getResultList();
-		productList.setProducts(products);
-
-		return productList;
-
-	}

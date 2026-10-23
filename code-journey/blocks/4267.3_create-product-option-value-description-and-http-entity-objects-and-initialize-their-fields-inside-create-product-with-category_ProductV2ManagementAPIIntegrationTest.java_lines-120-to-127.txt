@@ -1,8 +1,0 @@
-		white.setCode("white");
-		ProductOptionValueDescription whiteEn = new ProductOptionValueDescription();
-		whiteEn.setName("White");
-		whiteEn.setLanguage("en");
-		white.getDescriptions().add(whiteEn);
-		
-		final HttpEntity<PersistableProductOptionValue> whiteEntity = new HttpEntity<>(white, getHeader());
-		final ResponseEntity<PersistableProductOptionValue> whiteResponse = testRestTemplate.postForEntity(

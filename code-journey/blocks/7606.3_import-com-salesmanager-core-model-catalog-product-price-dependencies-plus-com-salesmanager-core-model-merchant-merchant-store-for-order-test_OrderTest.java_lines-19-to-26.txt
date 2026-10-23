@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.catalog.product.price.ProductPriceDescription;
-import com.salesmanager.core.model.catalog.product.price.ProductPriceType;
-import com.salesmanager.core.model.catalog.product.type.ProductType;
-import com.salesmanager.core.model.common.Billing;
-import com.salesmanager.core.model.common.Delivery;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.customer.CustomerGender;
-import com.salesmanager.core.model.merchant.MerchantStore;

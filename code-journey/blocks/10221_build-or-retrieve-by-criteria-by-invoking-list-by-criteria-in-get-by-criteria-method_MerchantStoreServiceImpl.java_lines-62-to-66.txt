@@ -1,5 +1,0 @@
-	@Override
-	public GenericEntityList<MerchantStore> getByCriteria(MerchantStoreCriteria criteria) throws ServiceException {
-		return merchantRepository.listByCriteria(criteria);
-	}
-

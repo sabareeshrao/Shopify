@@ -1,8 +1,0 @@
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language, 
-			HttpServletRequest request, 
-			HttpServletResponse response) {
-
-		ReadableProductOptionValue entity = productOptionFacade.saveOptionValue( optionValue,
-				merchantStore, language);
-		return entity;

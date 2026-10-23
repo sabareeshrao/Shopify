@@ -1,4 +1,0 @@
-	public void setQuantityOrderMaximum(int quantityOrderMaximum) {
-		this.quantityOrderMaximum = quantityOrderMaximum;
-	}
-

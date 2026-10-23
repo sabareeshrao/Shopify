@@ -1,6 +1,0 @@
-		//delivery without postal code is accepted
-		Validate.notNull(store,"MerchantStore must not be null");
-		Validate.notNull(delivery,"Delivery must not be null");
-		Validate.notEmpty(products,"products must not be empty");
-		Validate.notNull(language,"Language must not be null");
-		

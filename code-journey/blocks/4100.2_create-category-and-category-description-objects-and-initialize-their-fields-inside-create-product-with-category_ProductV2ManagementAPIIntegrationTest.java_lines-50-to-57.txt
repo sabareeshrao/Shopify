@@ -1,8 +1,0 @@
-		newCategory.setDepth(4);
-
-		final Category parent = new Category();
-
-		newCategory.setParent(parent);
-
-		final CategoryDescription description = new CategoryDescription();
-		description.setLanguage("en");

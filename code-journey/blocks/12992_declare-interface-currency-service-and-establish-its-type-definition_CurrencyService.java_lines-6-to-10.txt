@@ -1,5 +1,0 @@
-public interface CurrencyService extends SalesManagerEntityService<Long, Currency> {
-
-	Currency getByCode(String code);
-
-}

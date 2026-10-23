@@ -1,8 +1,0 @@
-		if (base.equals(MeasureUnit.LB.name())) {
-			if (store.getWeightunitcode().equals(MeasureUnit.LB.name())) {
-				return new BigDecimal(String.valueOf(weight))
-				.setScale(2, RoundingMode.HALF_UP).doubleValue();
-			} else {// pound = kilogram
-				double answer = weight * weightConstant;
-				BigDecimal w = new BigDecimal(answer);
-				return w.setScale(2, RoundingMode.HALF_UP).doubleValue();

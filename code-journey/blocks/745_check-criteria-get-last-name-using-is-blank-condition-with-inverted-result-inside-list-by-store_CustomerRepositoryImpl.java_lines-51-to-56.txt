@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getLastName())) {
-			String nameQuery =" and c.billing.lastName like:ln";
-			countBuilderWhere.append(nameQuery);
-			objectBuilderWhere.append(nameQuery);
-		}

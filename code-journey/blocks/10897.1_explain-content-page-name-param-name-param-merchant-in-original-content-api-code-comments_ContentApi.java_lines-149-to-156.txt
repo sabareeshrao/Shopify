@@ -1,8 +1,0 @@
-
-	/**
-	 * Get content page by name
-	 * @param name
-	 * @param merchantStore
-	 * @param language
-	 * @return
-	 */

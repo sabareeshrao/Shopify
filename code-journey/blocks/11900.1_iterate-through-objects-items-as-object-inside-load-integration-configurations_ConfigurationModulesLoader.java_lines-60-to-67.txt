@@ -1,8 +1,0 @@
-
-            Map[] objects = mapper.readValue(value, Map[].class);
-
-			for (Map object : objects) {
-
-
-				IntegrationConfiguration configuration = new IntegrationConfiguration();
-

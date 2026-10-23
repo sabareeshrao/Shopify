@@ -1,8 +1,0 @@
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language,
-      HttpServletRequest request,
-      HttpServletResponse response) {
-
-    try {
-      Principal principal = request.getUserPrincipal();
-      String userName = principal.getName();

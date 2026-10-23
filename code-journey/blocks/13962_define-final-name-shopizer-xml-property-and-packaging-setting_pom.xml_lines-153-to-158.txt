@@ -1,6 +1,0 @@
-		</plugins>
-		<finalName>shopizer</finalName>
-	</build>
-
-	<packaging>jar</packaging>
-</project>

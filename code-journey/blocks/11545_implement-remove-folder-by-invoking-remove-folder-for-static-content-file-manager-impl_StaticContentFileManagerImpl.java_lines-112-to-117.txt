@@ -1,6 +1,0 @@
-	@Override
-	public void removeFolder(String merchantStoreCode, String folderName, Optional<String> path) throws ServiceException {
-		this.removeFolder.removeFolder(merchantStoreCode, folderName, path);
-
-	}
-

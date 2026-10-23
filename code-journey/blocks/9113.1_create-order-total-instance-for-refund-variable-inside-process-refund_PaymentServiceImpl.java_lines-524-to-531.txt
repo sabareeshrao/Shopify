@@ -1,8 +1,0 @@
-		
-		Transaction transaction = paymentModule.refund(partial, store, refundable, order, amount, configuration, integrationModule);
-		transaction.setOrder(order);
-		transactionService.create(transaction);
-		
-        OrderTotal refund = new OrderTotal();
-        refund.setModule(Constants.OT_REFUND_MODULE_CODE);
-        refund.setText(Constants.OT_REFUND_MODULE_CODE);

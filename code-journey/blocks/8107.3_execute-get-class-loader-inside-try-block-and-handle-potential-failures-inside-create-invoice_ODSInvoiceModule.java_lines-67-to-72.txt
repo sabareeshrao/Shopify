@@ -1,6 +1,0 @@
-			try {
-				is = getClass().getClassLoader().getResourceAsStream(template);
-			} catch (Exception e) {
-				LOGGER.warn("Cannot open template " + template);
-				throw new Exception("Cannot open " + template);
-			}

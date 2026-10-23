@@ -1,8 +1,0 @@
-					}
-
-					cartModel.setLineItems(shoppingCartItemSet);
-
-					ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
-					shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
-					shoppingCartDataPopulator.setPricingService(pricingService);
-					shoppingCartDataPopulator.setimageUtils(imageUtils);

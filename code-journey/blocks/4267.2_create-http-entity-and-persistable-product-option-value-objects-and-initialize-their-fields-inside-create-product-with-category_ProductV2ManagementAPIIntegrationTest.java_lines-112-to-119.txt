@@ -1,8 +1,0 @@
-		final HttpEntity<PersistableProductOption> sizeEntity = new HttpEntity<>(size, getHeader());
-		final ResponseEntity<PersistableProductOption> sizeResponse = testRestTemplate.postForEntity(
-				"/api/v1/private/product/option?store=" + Constants.DEFAULT_STORE, sizeEntity, PersistableProductOption.class);
-		assertTrue(sizeResponse.getStatusCode()== CREATED);
-		System.out.println(colorResponse.getBody().getId());
-		
-		//opions values
-		PersistableProductOptionValue white = new PersistableProductOptionValue();

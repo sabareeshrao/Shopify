@@ -1,6 +1,0 @@
-			ShopOrder o = (ShopOrder) order;
-			summary.setProducts(o.getShoppingCartItems());
-
-			if (o.getShippingSummary() != null) {
-				summary.setShippingSummary(o.getShippingSummary());
-			}

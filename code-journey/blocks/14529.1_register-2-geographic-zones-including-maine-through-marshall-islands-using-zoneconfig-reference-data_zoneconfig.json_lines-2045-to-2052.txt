@@ -1,8 +1,0 @@
-			"zoneCode": "ME",
-			"zoneName": "Maine",
-			"countryCode": "US"
-		},
-		{
-			"zoneCode": "MH",
-			"zoneName": "Marshall Islands",
-			"countryCode": "US"

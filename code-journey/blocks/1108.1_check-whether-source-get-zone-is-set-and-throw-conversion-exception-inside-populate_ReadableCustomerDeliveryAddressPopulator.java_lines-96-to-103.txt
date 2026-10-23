@@ -1,8 +1,0 @@
-			} catch (ServiceException e) {
-				// TODO Auto-generated catch block
-				throw new ConversionException(e);
-			}
-        }
-        if(source.getZone()!=null) {
-            target.setZone(source.getZone().getCode());
-            

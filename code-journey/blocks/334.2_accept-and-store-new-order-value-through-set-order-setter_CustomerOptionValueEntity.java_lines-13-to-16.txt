@@ -1,4 +1,0 @@
-	private String code;
-	public void setOrder(int order) {
-		this.order = order;
-	}

@@ -1,4 +1,0 @@
-	public void setProductQuantityOrderMax(Integer productQuantityOrderMax) {
-		this.productQuantityOrderMax = productQuantityOrderMax;
-	}
-

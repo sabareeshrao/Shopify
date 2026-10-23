@@ -1,3 +1,0 @@
-					destination.getCategories().add(c);
-				}
-			}

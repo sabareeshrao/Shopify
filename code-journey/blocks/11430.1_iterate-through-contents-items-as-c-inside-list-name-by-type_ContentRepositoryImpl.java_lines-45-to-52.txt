@@ -1,8 +1,0 @@
-
-			@SuppressWarnings("unchecked")
-			List<Content> contents = q.getResultList();
-			
-			List<ContentDescription> descriptions = new ArrayList<ContentDescription>();
-			for(Content c : contents) {
-					String name = c.getDescription().getName();
-					String url = c.getDescription().getSeUrl();

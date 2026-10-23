@@ -1,8 +1,0 @@
-	    techFrenchDescription.setLanguage(fr);
-
-	    Set<CategoryDescription> descriptions4 = new HashSet<CategoryDescription>();
-	    descriptions4.add(techFrenchDescription);
-	    descriptions4.add(techFrenchDescription);
-
-	    tech.setDescriptions(descriptions4);
-	    

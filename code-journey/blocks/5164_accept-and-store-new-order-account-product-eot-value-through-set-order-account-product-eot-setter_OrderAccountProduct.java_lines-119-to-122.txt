@@ -1,4 +1,0 @@
-	public void setOrderAccountProductEot(Date orderAccountProductEot) {
-		this.orderAccountProductEot = CloneUtils.clone(orderAccountProductEot);
-	}
-

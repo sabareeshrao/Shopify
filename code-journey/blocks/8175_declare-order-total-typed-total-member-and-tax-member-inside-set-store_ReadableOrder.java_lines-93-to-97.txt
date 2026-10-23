@@ -1,5 +1,0 @@
-	private OrderTotal total;
-	private OrderTotal tax;
-	private OrderTotal shipping;
-
-}

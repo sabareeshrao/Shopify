@@ -1,8 +1,0 @@
-		"zoneName": "Ceuta",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "CiudadReal",
-		"zoneName": "Ciudad Real",
-		"countryCode": "ES"
-	},

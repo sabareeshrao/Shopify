@@ -1,6 +1,0 @@
-
-@Service("permissionService")
-public class PermissionServiceImpl extends
-		SalesManagerEntityServiceImpl<Integer, Permission> implements
-		PermissionService {
-

@@ -1,8 +1,0 @@
-	@Override
-	public ReadableImage merge(ProductImage source, ReadableImage destination, MerchantStore store, Language language) {
-		
-		String contextPath = imageUtils.getContextPath();
-		
-		destination.setImageName(source.getProductImage());
-		destination.setDefaultImage(source.isDefaultImage());
-		destination.setOrder(source.getSortOrder() != null ? source.getSortOrder().intValue() : 0);

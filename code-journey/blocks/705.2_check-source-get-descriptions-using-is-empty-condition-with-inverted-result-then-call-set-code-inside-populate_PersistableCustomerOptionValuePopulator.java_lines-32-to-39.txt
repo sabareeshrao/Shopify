@@ -1,8 +1,0 @@
-		
-		try {
-			
-			target.setCode(source.getCode());
-			target.setMerchantStore(store);
-			target.setSortOrder(source.getOrder());
-			
-			if(!CollectionUtils.isEmpty(source.getDescriptions())) {

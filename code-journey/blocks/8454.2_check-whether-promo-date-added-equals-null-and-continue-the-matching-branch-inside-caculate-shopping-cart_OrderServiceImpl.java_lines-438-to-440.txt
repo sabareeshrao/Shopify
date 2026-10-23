@@ -1,3 +1,0 @@
-    		if(promoDateAdded == null) {
-    			promoDateAdded = new Date();
-    		}

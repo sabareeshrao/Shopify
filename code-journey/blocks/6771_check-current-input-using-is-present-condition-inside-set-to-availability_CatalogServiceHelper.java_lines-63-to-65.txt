@@ -1,3 +1,0 @@
-		if (localeAvailability.isPresent()) {
-			productAvailabilities.add(localeAvailability.get());
-		}

@@ -1,8 +1,0 @@
-			convertedDestination.setId(source.getId());
-			convertedDestination.setVisible(source.isVisible());
-			convertedDestination.setCategory(readableCategory);
-			//destination.setProduct(readableProduct);
-			return convertedDestination;
-		} catch (Exception e) {
-			throw new ConversionRuntimeException("Error while creating ReadableCatalogEntry", e);
-		}

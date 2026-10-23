@@ -1,4 +1,0 @@
-	private final static char DECIMALCOUNT = '2';
-	private final static char DECIMALPOINT = '.';
-	private final static char THOUSANDPOINT = ',';
-

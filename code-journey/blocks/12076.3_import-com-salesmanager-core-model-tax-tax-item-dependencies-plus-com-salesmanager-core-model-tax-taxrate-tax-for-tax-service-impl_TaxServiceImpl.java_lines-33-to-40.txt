@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.tax.TaxItem;
-import com.salesmanager.core.model.tax.taxclass.TaxClass;
-import com.salesmanager.core.model.tax.taxrate.TaxRate;
-
-@Service("taxService")
-public class TaxServiceImpl 
-		implements TaxService {
-	

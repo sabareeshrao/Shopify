@@ -1,9 +1,0 @@
-					}
-					option.setDescription(description.toString());
-
-					// get currency
-					if (!option.getCurrency().equals(store.getCurrency())) {
-						option.setOptionPrice(CurrencyUtil.convertToCurrency(
-								option.getOptionPrice(), option.getCurrency(),
-								store.getCurrency()));
-					}

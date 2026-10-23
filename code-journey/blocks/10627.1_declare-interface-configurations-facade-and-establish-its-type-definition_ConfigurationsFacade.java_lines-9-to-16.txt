@@ -1,8 +1,0 @@
-public interface ConfigurationsFacade {
-	
-	List<ReadableConfiguration> configurations(MerchantStore store);
-	
-	ReadableConfiguration configuration(String module, MerchantStore store);
-	
-	void saveConfiguration(PersistableConfiguration configuration, MerchantStore store);
-	

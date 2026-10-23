@@ -1,8 +1,0 @@
-		destination.setCode(source.getShoppingCartCode());
-		int cartQuantity = 0;
-
-		destination.setCustomer(source.getCustomerId());
-
-		try {
-
-			if (!StringUtils.isBlank(source.getPromoCode())) {

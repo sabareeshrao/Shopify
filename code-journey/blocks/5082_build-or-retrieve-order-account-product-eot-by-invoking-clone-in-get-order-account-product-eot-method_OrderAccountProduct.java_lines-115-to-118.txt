@@ -1,4 +1,0 @@
-	public Date getOrderAccountProductEot() {
-		return CloneUtils.clone(orderAccountProductEot);
-	}
-

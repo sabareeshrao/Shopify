@@ -1,7 +1,0 @@
-
-		// cleanup orphean item
-		if (CollectionUtils.isNotEmpty(removeAttributesList)) {
-			for (ShoppingCartAttributeItem attr : removeAttributesList) {
-				shoppingCartAttributeItemRepository.delete(attr);
-			}
-		}

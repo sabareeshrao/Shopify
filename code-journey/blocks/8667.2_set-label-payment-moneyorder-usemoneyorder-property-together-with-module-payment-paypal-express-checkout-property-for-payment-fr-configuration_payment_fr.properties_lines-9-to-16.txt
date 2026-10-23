@@ -1,8 +1,0 @@
-label.payment.moneyorder.usemoneyorder=Utiliser les chèques
-
-
-module.payment.PayPal=PayPal
-module.payment.beanstream=Beanstream
-module.payment.authorizenet=Authorize Net
-module.payment.moneyorder=Chèque
-module.payment.paypal-express-checkout=PayPal express checkout

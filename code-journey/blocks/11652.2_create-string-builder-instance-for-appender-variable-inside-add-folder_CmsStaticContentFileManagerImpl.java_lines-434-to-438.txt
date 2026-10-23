@@ -1,5 +1,0 @@
-		StringBuilder appender = new StringBuilder();
-		appender.append(nodePath).append(Constants.SLASH);
-
-		path.ifPresent(appender::append);
-		

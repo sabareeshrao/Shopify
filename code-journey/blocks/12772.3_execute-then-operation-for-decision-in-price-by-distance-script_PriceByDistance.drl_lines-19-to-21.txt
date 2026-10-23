@@ -1,3 +1,0 @@
-    then
-        decision.setCustomPrice("140");
-end

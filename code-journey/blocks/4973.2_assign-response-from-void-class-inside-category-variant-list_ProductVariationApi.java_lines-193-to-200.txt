@@ -1,8 +1,0 @@
-		      response = Void.class)
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
-	public @ResponseBody Entity create(
-			@Valid @RequestBody PersistableProductVariation variation, 
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-

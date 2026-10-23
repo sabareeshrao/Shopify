@@ -1,8 +1,0 @@
-			 
-			 
-			 List<PaymentInfoType> paymentInfoList =  doExpressCheckoutPaymentResponse.getDoExpressCheckoutPaymentResponseDetails().getPaymentInfo();
-			 String transactionId = null;
-			 
-			 for(PaymentInfoType paymentInfo : paymentInfoList) {
-				 transactionId = paymentInfo.getTransactionID();
-			 }

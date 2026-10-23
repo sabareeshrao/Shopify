@@ -1,8 +1,0 @@
-
-        // grand total
-        OrderTotal orderTotal = new OrderTotal();
-        orderTotal.setModule(Constants.OT_TOTAL_MODULE_CODE);
-        orderTotal.setOrderTotalType(OrderTotalType.TOTAL);
-        orderTotal.setOrderTotalCode("order.total.total");
-        orderTotal.setTitle(Constants.OT_TOTAL_MODULE_CODE);
-        //orderTotal.setText("order.total.total");

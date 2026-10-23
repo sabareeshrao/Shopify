@@ -1,8 +1,0 @@
-
-			PaymentIntent paymentIntent = PaymentIntent.retrieve(
-					token
-		  	);
-
-			PaymentIntentCaptureParams params =
-					PaymentIntentCaptureParams.builder()
-							.setAmountToCapture(Long.parseLong(strAmount))

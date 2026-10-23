@@ -1,6 +1,0 @@
-	private final static String IV_P = "fedcba9876543210";
-	private final static String KEY_SPEC = "AES";
-	private final static String CYPHER_SPEC = "AES/CBC/PKCS5Padding";
-	
-
-

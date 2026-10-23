@@ -1,8 +1,0 @@
-
-
-	    shippingService.saveShippingConfiguration(shippingConfiguration, store);
-	    shippingService.saveShippingQuoteModuleConfiguration(configuration, store);//create the basic configuration
-	    shippingService.saveCustomShippingConfiguration("weightBased", customConfiguration, store);//and the custom configuration
-	    
-	    //now create ShippingProduct
-	    ShippingProduct shippingProduct1 = new ShippingProduct(product);

@@ -1,2 +1,0 @@
-	private final static String CIPHER = "AES/ECB/PKCS5Padding";
-

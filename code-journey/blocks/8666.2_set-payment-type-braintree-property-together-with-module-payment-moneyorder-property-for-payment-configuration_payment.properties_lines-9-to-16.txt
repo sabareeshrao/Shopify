@@ -1,8 +1,0 @@
-payment.type.BRAINTREE=Credit card
-
-label.payment.moneyorder.usemoneyorder=Use money order
-
-module.payment.paypal=PayPal
-module.payment.beanstream=Beanstream
-module.payment.authorizenet=Authorize Net
-module.payment.moneyorder=Money order

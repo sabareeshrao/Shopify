@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("LSL", "Loti");
-		CURRENCY_MAP.put("ZAR", "Rand");
-		CURRENCY_MAP.put("LRD", "Liberian Dollar");
-		CURRENCY_MAP.put("LYD", "Libyan Dinar");
-		CURRENCY_MAP.put("CHF", "Swiss Franc");
-		CURRENCY_MAP.put("LTL", "Lithuanian Litas");
-		CURRENCY_MAP.put("EUR", "Euro");
-		CURRENCY_MAP.put("MOP", "Pataca");

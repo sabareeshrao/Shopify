@@ -1,7 +1,0 @@
-
-	@Autowired
-	private ReadableManufacturerMapper readableManufacturerMapper;
-
-	@Autowired
-	private PricingService pricingService;
-

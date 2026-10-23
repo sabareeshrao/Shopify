@@ -1,9 +1,0 @@
-	public String getItemCategoryCode() {
-		return itemCategoryCode;
-	}
-	public void setItemCategoryCode(String itemCategoryCode) {
-		this.itemCategoryCode = itemCategoryCode;
-	}
-	public long getProductId() {
-		return productId;
-	}

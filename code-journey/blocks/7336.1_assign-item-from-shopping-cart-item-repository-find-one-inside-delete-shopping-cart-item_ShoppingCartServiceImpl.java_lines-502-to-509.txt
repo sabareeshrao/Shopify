@@ -1,8 +1,0 @@
-
-			// refresh
-			item = shoppingCartItemRepository.findOne(id);
-
-			// delete
-			shoppingCartItemRepository.deleteById(id);
-
-		}

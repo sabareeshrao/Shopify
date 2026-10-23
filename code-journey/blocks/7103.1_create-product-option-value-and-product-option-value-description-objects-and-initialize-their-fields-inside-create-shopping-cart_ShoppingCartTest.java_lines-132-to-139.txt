@@ -1,8 +1,0 @@
-	    
-	    ProductOptionValue black = new ProductOptionValue();
-	    black.setMerchantStore(store);
-	    black.setCode("black");
-	    
-	    /** second option value **/
-	    ProductOptionValueDescription blackDesc = new ProductOptionValueDescription();
-	    blackDesc.setLanguage(en);

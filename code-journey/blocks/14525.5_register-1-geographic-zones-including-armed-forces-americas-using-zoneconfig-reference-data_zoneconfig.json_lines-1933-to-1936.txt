@@ -1,4 +1,0 @@
-		},
-		{
-			"zoneCode": "AA",
-			"zoneName": "Armed Forces Americas",

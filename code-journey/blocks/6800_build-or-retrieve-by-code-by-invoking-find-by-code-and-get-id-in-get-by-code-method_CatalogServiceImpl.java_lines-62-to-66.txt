@@ -1,5 +1,0 @@
-	@Override
-	public Optional<Catalog> getByCode(String code, MerchantStore store) {
-		return catalogRepository.findByCode(code, store.getId());
-	}
-

@@ -1,8 +1,0 @@
-			"zoneCode": "ASU",
-			"zoneName": "Asunción",
-			"countryCode": "PY"
-		},
-		{
-			"zoneCode": "CEN",
-			"zoneName": "Central",
-			"countryCode": "PY"

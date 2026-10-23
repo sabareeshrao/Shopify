@@ -1,4 +1,0 @@
-      cache.start();
-
-      LOGGER.debug("CMS started");
-

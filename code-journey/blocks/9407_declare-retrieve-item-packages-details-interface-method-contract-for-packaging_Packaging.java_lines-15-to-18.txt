@@ -1,4 +1,0 @@
-	public List<PackageDetails> getItemPackagesDetails(
-			List<ShippingProduct> products, MerchantStore store) throws ServiceException;
-
-}

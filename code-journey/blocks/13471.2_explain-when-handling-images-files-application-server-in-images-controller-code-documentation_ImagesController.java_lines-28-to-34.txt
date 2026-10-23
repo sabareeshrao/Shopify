@@ -1,7 +1,0 @@
- * When handling images and files from the application server
- * @author c.samson
- *
- */
-@Controller
-public class ImagesController {
-	

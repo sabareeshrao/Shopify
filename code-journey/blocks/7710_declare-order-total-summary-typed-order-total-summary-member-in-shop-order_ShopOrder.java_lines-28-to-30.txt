@@ -1,3 +1,0 @@
-	private OrderTotalSummary orderTotalSummary;//The order total displayed to the end user. That object will be used when committing the order
-	
-	

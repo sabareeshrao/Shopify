@@ -1,8 +1,0 @@
-	@Override
-	public ProductInventory inventory(Product product) throws ServiceException {
-		Validate.notNull(product.getAvailabilities());
-		
-		ProductAvailability availability = defaultAvailability(product.getAvailabilities());
-		FinalPrice finalPrice = pricingService.calculateProductPrice(product);
-		
-		ProductInventory inventory = inventory(availability, finalPrice);

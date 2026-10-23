@@ -1,8 +1,0 @@
-				}
-
-				boolean authorized = false;
-
-				// user store can be parent and requested store is child
-				// get parent
-				// TODO CACHE
-				MerchantStore parent = null;

@@ -1,8 +1,0 @@
-		/**
-		 * Testing in debug mode takes a long time with this query running in
-		 * normal mode is fine
-		 */
-
-		StringBuilder qs = new StringBuilder();
-		qs.append("select distinct p from Product as p ");
-		qs.append("join fetch p.merchantStore merch ");

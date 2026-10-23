@@ -1,7 +1,0 @@
-	@Autowired
-	private PersistableProductMapper persistableProductMapper;
-
-	@Inject
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-

@@ -1,7 +1,0 @@
-	@Override
-	public Page<ProductVariation> getByMerchant(MerchantStore store, Language language, String code, int page,
-			int count) {
-		Pageable p = PageRequest.of(page, count);
-		return pageableProductVariationSetRepository.list(store.getId(), code, p);
-	}
-

@@ -1,6 +1,0 @@
-
-
-@Service("transactionService")
-public class TransactionServiceImpl  extends SalesManagerEntityServiceImpl<Long, Transaction> implements TransactionService {
-	
-

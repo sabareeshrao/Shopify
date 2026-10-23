@@ -1,9 +1,0 @@
-  public int getProductQuantityOrderMin() {
-    return productQuantityOrderMin;
-  }
-  public void setProductQuantityOrderMin(int productQuantityOrderMin) {
-    this.productQuantityOrderMin = productQuantityOrderMin;
-  }
-  public int getProductQuantityOrderMax() {
-    return productQuantityOrderMax;
-  }

@@ -1,8 +1,0 @@
-	
-	/**
-	 * Removes a specific CustomerOptin
-	 * @param optin
-	 * @throws ServiceException
-	 */
-	void optoutCumtomer(CustomerOptin optin) throws ServiceException;
-	

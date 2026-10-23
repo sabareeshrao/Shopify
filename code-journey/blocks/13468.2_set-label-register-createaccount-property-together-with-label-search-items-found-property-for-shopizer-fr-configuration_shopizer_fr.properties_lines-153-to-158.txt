@@ -1,6 +1,0 @@
-label.register.createaccount=Crééer un compte
-
-#search
-label.search.searchQuery=mots recherchés
-label.search.items.found=article(s) trouvé(s)
-

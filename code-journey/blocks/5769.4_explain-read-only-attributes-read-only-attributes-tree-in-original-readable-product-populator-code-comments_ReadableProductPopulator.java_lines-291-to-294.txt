@@ -1,4 +1,0 @@
-								/*
-								if(readOnlyAttributes==null) {
-									readOnlyAttributes = new TreeMap<Long,ReadableProductAttribute>();
-								}

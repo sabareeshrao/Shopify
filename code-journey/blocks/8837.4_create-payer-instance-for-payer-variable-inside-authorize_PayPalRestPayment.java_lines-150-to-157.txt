@@ -1,8 +1,0 @@
-			// Payment Method
-			// as 'paypal'
-			Payer payer = new Payer();
-			payer.setPaymentMethod("paypal");
-
-			// ###Payment
-			// A Payment Resource; create one using
-			// the above types and intent as 'sale'

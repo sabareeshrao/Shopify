@@ -1,8 +1,0 @@
-  @Override
-  @SuppressWarnings("unchecked")
-  public List<ProductRelationship> listByProducts(Product product) {
-    return entityManager.createQuery(HQL_GET_PRODUCTS_BY_PRODUCT_ID)
-        .setParameter("id", product.getId())
-        .getResultList();
-  }
-

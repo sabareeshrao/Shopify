@@ -1,6 +1,0 @@
-		factory.setJpaVendorAdapter(vendorAdapter);
-		factory.setPackagesToScan("com.salesmanager.core.model");
-		factory.setJpaProperties(additionalProperties());
-		factory.setDataSource(dataSource());
-		return factory;
-	}

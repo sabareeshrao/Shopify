@@ -1,2 +1,0 @@
-	public final static String INIT_TRANSACTION_KEY = "init_transaction";
-

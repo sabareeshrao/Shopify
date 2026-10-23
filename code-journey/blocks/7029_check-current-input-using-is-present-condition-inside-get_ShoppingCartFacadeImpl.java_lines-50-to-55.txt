@@ -1,6 +1,0 @@
-			
-			ShoppingCart cartModel = shoppingCartService.getShoppingCart(customer, store);
-			
-			if(cart.isPresent()) {
-				cartModel = customerFacade.mergeCart(customer, cart.get(), store, language);
-			}

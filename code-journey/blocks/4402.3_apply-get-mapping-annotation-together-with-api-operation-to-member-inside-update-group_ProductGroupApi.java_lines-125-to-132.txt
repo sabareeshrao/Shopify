@@ -1,8 +1,0 @@
-  @GetMapping("/products/group/{code}")
-  @ApiOperation(httpMethod = "GET", value = "Get products by group code", notes = "", response = ReadableProductList.class)
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
-  })
-  public @ResponseBody ReadableProductList getProductItemsByGroup(
-      @PathVariable final String code,

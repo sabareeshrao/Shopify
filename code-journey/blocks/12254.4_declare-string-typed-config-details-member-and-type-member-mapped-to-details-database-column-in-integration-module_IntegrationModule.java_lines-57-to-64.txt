@@ -1,8 +1,0 @@
-
-	@Column(name = "DETAILS")
-	@Type(type = "org.hibernate.type.TextType")
-	private String configDetails;
-
-	@Column(name = "TYPE")
-	private String type;
-

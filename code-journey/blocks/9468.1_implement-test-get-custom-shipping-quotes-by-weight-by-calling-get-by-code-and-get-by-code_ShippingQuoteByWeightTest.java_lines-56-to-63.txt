@@ -1,8 +1,0 @@
-	
-	
-	@Ignore
-	//@Test
-	public void testGetCustomShippingQuotesByWeight() throws ServiceException {
-
-	    Language en = languageService.getByCode("en");
-	    Country country = countryService.getByCode("CA");

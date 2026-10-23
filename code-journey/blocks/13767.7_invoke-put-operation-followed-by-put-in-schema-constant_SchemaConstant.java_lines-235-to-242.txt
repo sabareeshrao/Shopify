@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("ZAR", "Rand");
-		//CURRENCY_MAP.put("SSP", "South Sudanese Pound");
-		CURRENCY_MAP.put("LKR", "Sri Lanka Rupee");
-		CURRENCY_MAP.put("SDG", "Sudanese Pound");
-		CURRENCY_MAP.put("SRD", "Surinam Dollar");
-		CURRENCY_MAP.put("NOK", "Norwegian Krone");
-		CURRENCY_MAP.put("SZL", "Lilangeni");
-		CURRENCY_MAP.put("SEK", "Swedish Krona");

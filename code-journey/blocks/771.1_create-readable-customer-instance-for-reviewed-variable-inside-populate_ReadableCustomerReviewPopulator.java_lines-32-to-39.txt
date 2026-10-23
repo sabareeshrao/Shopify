@@ -1,8 +1,0 @@
-			
-
-			ReadableCustomer reviewed = new ReadableCustomer();
-			reviewed.setId(source.getReviewedCustomer().getId());
-			reviewed.setFirstName(source.getReviewedCustomer().getBilling().getFirstName());
-			reviewed.setLastName(source.getReviewedCustomer().getBilling().getLastName());
-
-			

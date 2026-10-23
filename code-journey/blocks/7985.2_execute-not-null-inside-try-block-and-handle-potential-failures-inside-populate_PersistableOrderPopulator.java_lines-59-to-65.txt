@@ -1,7 +1,0 @@
-		Validate.notNull(customerService,"customerService must be set");
-		Validate.notNull(countryService,"countryService must be set");
-		Validate.notNull(zoneService,"zoneService must be set");
-		Validate.notNull(currencyService,"currencyService must be set");
-
-		try {
-			

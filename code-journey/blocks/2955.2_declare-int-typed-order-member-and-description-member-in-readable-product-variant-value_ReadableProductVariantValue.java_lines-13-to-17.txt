@@ -1,5 +1,0 @@
-	private int order;
-	private String description;
-	private Long option;// option id
-	private Long value;// option value id
-

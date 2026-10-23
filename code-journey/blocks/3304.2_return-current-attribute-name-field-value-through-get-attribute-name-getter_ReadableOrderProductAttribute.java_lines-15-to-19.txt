@@ -1,5 +1,0 @@
-	private String attributePrice;
-	private String attributeValue;
-	public String getAttributeName() {
-		return attributeName;
-	}

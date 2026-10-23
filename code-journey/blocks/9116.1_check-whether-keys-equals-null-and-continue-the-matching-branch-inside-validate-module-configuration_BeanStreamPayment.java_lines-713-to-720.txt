@@ -1,8 +1,0 @@
-		
-		
-		//validate integrationKeys['password']
-		if(keys==null || StringUtils.isBlank(keys.get("password"))) {
-			if(errorFields==null) {
-				errorFields = new ArrayList<String>();
-			}
-			errorFields.add("password");

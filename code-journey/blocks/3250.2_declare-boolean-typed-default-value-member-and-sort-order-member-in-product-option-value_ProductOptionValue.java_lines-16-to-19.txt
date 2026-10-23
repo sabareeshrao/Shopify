@@ -1,4 +1,0 @@
-	private boolean defaultValue;
-	private int sortOrder;
-	private String image;
-	

@@ -1,6 +1,0 @@
-	@Override
-	public PermissionList listByCriteria(PermissionCriteria criteria)
-			throws ServiceException {
-		return permissionRepository.listByCriteria(criteria);
-	}
-

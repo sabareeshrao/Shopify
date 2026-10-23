@@ -1,8 +1,0 @@
-     **/
-
-    @Test
-    public void postComplexCategory() throws Exception {
-
-        /** Dining room **/
-        final PersistableCategory dining = new PersistableCategory();
-        dining.setCode("diningroom");

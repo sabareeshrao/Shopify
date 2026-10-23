@@ -1,8 +1,0 @@
-	private List<Category> getListByLineage(MerchantStore store, String lineage) {
-		try {
-			return categoryService.getListByLineage(store, lineage);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException(String.format("Error while getting root category %s", e.getMessage()), e);
-		}
-	}
-

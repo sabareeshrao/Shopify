@@ -1,6 +1,0 @@
-	private static final String API_VERSION = "/api/v*";
-
-	@Bean
-	public AuthenticationTokenFilter authenticationTokenFilter() {
-		return new AuthenticationTokenFilter();
-	}

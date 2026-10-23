@@ -1,8 +1,0 @@
-	@Override
-	public void deleteGroup(MerchantStore store, String groupName) throws ServiceException {
-		List<ProductRelationship> entities = productRelationshipRepository.getByGroup(store, groupName);
-		for(ProductRelationship relation : entities) {
-			this.delete(relation);
-		}
-	}
-	

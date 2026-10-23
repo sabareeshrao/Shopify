@@ -1,8 +1,0 @@
-	private static final Map<String, String> MAPPING_FIELDS = ImmutableMap.<String, String>builder()
-			.put("name", "name").put("readableAudit.user", "auditSection.modifiedBy").build();
-
-	@Inject
-	private StoreFacade storeFacade;
-
-	@Inject
-	private UserFacade userFacade;

@@ -1,4 +1,0 @@
-	public Boolean getSupported() {
-		return supported;
-	}
-

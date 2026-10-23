@@ -1,6 +1,0 @@
-					}
-					ids.add(category.getId());
-					criterias.setCategoryIds(ids);
-				}
-			}
-		}

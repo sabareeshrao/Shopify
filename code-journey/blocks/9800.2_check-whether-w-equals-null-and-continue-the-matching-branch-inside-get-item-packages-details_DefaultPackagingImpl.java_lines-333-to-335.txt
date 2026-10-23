@@ -1,3 +1,0 @@
-			if(w==null) {
-				w = new BigDecimal(defaultWeight);
-			}

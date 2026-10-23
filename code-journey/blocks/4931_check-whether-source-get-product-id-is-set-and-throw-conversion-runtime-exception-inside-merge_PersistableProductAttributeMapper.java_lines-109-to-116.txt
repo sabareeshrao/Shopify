@@ -1,8 +1,0 @@
-		
-		if(source.getProductId() != null && source.getProductId().longValue() >0 ) {
-			Product p = productService.getById(source.getProductId());
-			if(p == null) {
-				throw new ConversionRuntimeException("Invalid product id ");
-			}
-			destination.setProduct(p);
-		}

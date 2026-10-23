@@ -1,4 +1,0 @@
-	public Country(String isoCode) {
-		this.setIsoCode(isoCode);
-	}
-	

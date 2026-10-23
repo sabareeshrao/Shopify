@@ -1,8 +1,0 @@
-label.store.inbusinesssince=Web site operating since
-label.changepasswordrequest = Change password request
-label.store.weightunit=Weight units
-label.store.sizeunits=Size units
-label.store.list=Stores
-label.store.useCache=Use cache
-label.store.currency.format=National currency format
-label.store.currency.format.help=National currency format ex $1,345.79 or International currency format ex USD1,345.79

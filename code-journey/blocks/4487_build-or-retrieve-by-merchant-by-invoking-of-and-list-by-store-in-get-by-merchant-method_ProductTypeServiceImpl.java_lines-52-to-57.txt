@@ -1,6 +1,0 @@
-	@Override
-	public Page<ProductType> getByMerchant(MerchantStore store, Language language, int page, int count) throws ServiceException {
-		Pageable pageRequest = PageRequest.of(page, count);
-		return pageableProductTypeRepository.listByStore(store.getId(), pageRequest);
-	}
-

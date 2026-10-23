@@ -1,4 +1,0 @@
-
-	@Pointcut("serviceMethods() && saveProductMethod()")
-	public void entityCreationMethods() {
-	}

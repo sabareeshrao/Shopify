@@ -1,8 +1,0 @@
-	@Inject
-	private ContentService contentService;
-
-	// @Test
-	@Ignore
-	public void createStoreLogo() throws ServiceException, FileNotFoundException, IOException {
-
-		MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);

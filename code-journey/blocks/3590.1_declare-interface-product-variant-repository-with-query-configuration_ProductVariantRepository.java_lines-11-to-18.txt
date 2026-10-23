@@ -1,8 +1,0 @@
-public interface ProductVariantRepository extends JpaRepository<ProductVariant, Long> {
-	
-
-	
-	
-	@Query("select p from ProductVariant p join fetch p.product pr "
-			+ "left join fetch p.variation pv "
-			+ "left join fetch pv.productOption pvpo "

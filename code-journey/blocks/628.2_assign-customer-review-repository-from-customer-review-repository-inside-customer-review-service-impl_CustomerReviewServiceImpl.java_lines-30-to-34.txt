@@ -1,5 +1,0 @@
-			super(customerReviewRepository);
-			this.customerReviewRepository = customerReviewRepository;
-	}
-	
-	

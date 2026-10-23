@@ -1,8 +1,0 @@
-	@Override
-	public ReadableOrder populate(Order source, ReadableOrder target,
-			MerchantStore store, Language language) throws ConversionException {
-		
-		
-		
-		target.setId(source.getId());
-		target.setDatePurchased(source.getDatePurchased());

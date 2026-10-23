@@ -1,8 +1,0 @@
- */
-public class PersistableOrder extends Order {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	

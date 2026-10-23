@@ -1,7 +1,0 @@
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-
-@Entity
-@Table(name = "PRODUCT_VAR_IMAGE")
-public class ProductVariantImage extends SalesManagerEntity<Long, ProductVariantImage> {
-
-

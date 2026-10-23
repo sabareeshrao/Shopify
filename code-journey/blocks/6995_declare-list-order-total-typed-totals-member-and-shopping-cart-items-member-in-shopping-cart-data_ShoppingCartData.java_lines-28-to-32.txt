@@ -1,5 +1,0 @@
-	private List<OrderTotal> totals;//calculated from OrderTotalSummary
-	private List<ShoppingCartItem> shoppingCartItems;
-	private List<ShoppingCartItem> unavailables;
-	
-	

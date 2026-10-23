@@ -1,4 +1,0 @@
-	public void addDataEntry(Map<String,String> dataEntry) {
-		this.data.add(dataEntry);
-	}
-	

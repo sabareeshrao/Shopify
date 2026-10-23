@@ -1,8 +1,0 @@
-	 * @param amount BigDecimal
-	 * @param payment Payment
-	 * @param configuration IntegrationConfiguration
-	 * @param module IntegrationModule
-	 * @return Transaction a Transaction
-	 * @throws IntegrationException IntegrationException
-	 */
-	public Transaction initTransaction(

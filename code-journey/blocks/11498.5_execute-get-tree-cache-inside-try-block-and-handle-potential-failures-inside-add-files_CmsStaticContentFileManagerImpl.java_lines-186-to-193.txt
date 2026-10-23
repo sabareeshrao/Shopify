@@ -1,8 +1,0 @@
-		 * "CmsStaticContentFileManagerInfinispanImpl has a null cacheManager.getTreeCache()"
-		 * ); }
-		 */
-		try {
-
-			// base path
-			String rootPath = this.buildRootPath();
-			Path confDir = Paths.get(rootPath);

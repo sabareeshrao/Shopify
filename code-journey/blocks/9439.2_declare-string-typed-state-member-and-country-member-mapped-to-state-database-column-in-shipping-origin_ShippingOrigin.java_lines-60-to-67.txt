@@ -1,8 +1,0 @@
-	
-	@Column (name ="STATE", length=100)
-	private String state;
-
-	@ManyToOne(fetch = FetchType.EAGER, targetEntity = Country.class)
-	@JoinColumn(name="COUNTRY_ID", nullable=true)
-	private Country country;
-	

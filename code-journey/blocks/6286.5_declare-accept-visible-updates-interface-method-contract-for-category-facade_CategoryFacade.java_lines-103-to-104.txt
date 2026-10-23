@@ -1,2 +1,0 @@
-	void setVisible(PersistableCategory category, MerchantStore store);
-	

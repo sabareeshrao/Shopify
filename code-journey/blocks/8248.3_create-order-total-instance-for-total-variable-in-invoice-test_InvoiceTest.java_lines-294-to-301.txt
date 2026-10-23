@@ -1,8 +1,0 @@
-		tax.setText("Tax" );
-		tax.setTitle("Tax" );
-		tax.setValue(new BigDecimal(4) );
-		tax.setOrder(order);
-		
-		order.getOrderTotal().add(tax);
-		
-		OrderTotal total = new OrderTotal();	

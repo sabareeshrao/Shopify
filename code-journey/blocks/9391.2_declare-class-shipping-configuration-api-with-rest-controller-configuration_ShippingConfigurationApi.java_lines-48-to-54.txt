@@ -1,7 +1,0 @@
-@RestController
-@RequestMapping("/api/v1")
-@Api(tags = { "Shipping configuration resource (Shipping Management Api)" })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Shipping management resource", description = "Manage shipping configuration") })
-public class ShippingConfigurationApi {
-

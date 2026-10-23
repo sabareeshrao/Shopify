@@ -1,8 +1,0 @@
-			"zoneName": "Las Palmas",
-			"countryCode": "ES"
-		},
-		{
-			"zoneCode": "Leon",
-			"zoneName": "Leon",
-			"countryCode": "ES"
-		},

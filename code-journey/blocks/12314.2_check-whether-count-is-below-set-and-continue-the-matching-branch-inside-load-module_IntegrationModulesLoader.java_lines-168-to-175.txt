@@ -1,8 +1,0 @@
-	    		for(String region : regions) {
-	    			
-	    			module.getRegionsSet().add(region);
-	    			String jsonConfigString = mapper.writeValueAsString(region);
-	    			configString.append(jsonConfigString);
-	    			
-	        		if(count<(regions.size()-1)) {
-	        			configString.append(",");

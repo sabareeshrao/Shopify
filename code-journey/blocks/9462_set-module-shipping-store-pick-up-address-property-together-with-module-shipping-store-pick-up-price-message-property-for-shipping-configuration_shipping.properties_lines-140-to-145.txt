@@ -1,6 +1,0 @@
-
-#store pick up
-module.shipping.storePickUp.address=Pick up address that will be displayed to the client
-module.shipping.storePickUp.address.message=Pick up address is a required field
-module.shipping.storePickUp.price=Price for store pick up in numeric format (usually 0)
-module.shipping.storePickUp.price.message=Price for store pick up is required (in numeric format)

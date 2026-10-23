@@ -1,8 +1,0 @@
-	public void setTotals(List<OrderTotal> totals) {
-		this.totals = totals;
-	}
-	public List<OrderTotal> getTotals() {
-		return totals;
-	}
-	public PaymentType getPaymentType() {
-		return paymentType;

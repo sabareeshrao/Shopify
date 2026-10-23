@@ -1,5 +1,0 @@
-  public PersistableGroup(String name) {
-    super.setName(name);
-  }
-
-}

@@ -1,5 +1,0 @@
-        interface Pages{
-            final static String notFound="404";
-            final static String timeout="timeout";
-        }
-        

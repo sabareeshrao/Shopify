@@ -1,8 +1,0 @@
-		
-		address.setPostalCode(source.getStorepostalcode());
-
-		target.setAddress(address);
-		
-		target.setCurrencyFormatNational(source.isCurrencyFormatNational());
-		target.setEmail(source.getStoreEmailAddress());
-		target.setName(source.getStorename());

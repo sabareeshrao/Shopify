@@ -1,8 +1,0 @@
-	private MerchantStore getMerchantStore(String child) {
-		try {
-			return Optional.ofNullable(merchantStoreService.getByCode(child))
-					.orElseThrow(() -> new ResourceNotFoundException("MerchantStore [" + child + "] not found"));
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while getting inventory", e);
-		}
-	}

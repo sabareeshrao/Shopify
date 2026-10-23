@@ -1,8 +1,0 @@
-
-			/**
-			 * Build return object for now this is a read copy
-			 */
-
-			config.setActive(config.isActive());
-			config.setDefaultSelected(config.isDefaultSelected());
-			config.setIntegrationKeys(config.getIntegrationKeys());

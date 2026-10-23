@@ -1,8 +1,0 @@
-
-			if (PaymentType.CREDITCARD.name().equals(paymentType)) {
-
-				payment = new CreditCardPayment();
-				((CreditCardPayment) payment).setCardOwner(order.getPayment().get("creditcard_card_holder"));
-				((CreditCardPayment) payment)
-						.setCredidCardValidationNumber(order.getPayment().get("creditcard_card_cvv"));
-				((CreditCardPayment) payment).setCreditCardNumber(order.getPayment().get("creditcard_card_number"));

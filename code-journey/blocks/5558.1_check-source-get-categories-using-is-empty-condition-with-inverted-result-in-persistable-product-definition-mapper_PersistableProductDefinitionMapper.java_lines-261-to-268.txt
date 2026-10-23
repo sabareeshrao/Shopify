@@ -1,8 +1,0 @@
-			}
-
-			
-			//categories
-			if(!CollectionUtils.isEmpty(source.getCategories())) {
-				for(com.salesmanager.shop.model.catalog.category.Category categ : source.getCategories()) {
-					
-					Category c = null;

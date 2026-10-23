@@ -1,8 +1,0 @@
-
-	// used for api
-	private List<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> createCartItems(ShoppingCart cartModel,
-			List<PersistableShoppingCartItem> shoppingCartItems, MerchantStore store) throws Exception {
-
-		List<String> productSkus = shoppingCartItems.stream().map(s -> s.getProduct()).collect(Collectors.toList());
-
-		List<Product> products = productSkus.stream().map(p -> this.fetchProduct(p, store, store.getDefaultLanguage()))

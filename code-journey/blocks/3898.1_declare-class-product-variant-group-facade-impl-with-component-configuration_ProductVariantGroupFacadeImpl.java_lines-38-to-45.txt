@@ -1,8 +1,0 @@
-
-@Component
-public class ProductVariantGroupFacadeImpl implements ProductVariantGroupFacade {
-	
-	@Autowired
-	private ProductVariantGroupService productVariantGroupService;
-	
-	@Autowired

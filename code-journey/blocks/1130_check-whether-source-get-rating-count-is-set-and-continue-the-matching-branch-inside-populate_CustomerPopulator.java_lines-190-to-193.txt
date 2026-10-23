@@ -1,4 +1,0 @@
-			
-			if(source.getRatingCount() > 0) {
-				target.setCustomerReviewCount(source.getRatingCount());
-			}

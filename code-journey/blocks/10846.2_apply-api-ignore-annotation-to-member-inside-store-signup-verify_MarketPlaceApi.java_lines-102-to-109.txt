@@ -1,8 +1,0 @@
-			@ApiIgnore Language language) {
-
-		/**
-		 * Receives signup token. Needs to validate if a store
-		 * to validate if token has expired
-		 * 
-		 * If no problem void is returned otherwise throw OperationNotAllowed
-		 */

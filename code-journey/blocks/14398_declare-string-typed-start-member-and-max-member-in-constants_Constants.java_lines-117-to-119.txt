@@ -1,3 +1,0 @@
-	public final static String START = "start";
-	public final static String MAX = "max";
-	

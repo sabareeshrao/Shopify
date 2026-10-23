@@ -1,8 +1,0 @@
-  @Override
-  public List<ReadableCountry> getListCountryZones(Language language, MerchantStore merchantStore) {
-    return getListOfCountryZones(language)
-        .stream()
-        .map(country -> convertToReadableCountry(country, language, merchantStore))
-        .collect(Collectors.toList());
-  }
-

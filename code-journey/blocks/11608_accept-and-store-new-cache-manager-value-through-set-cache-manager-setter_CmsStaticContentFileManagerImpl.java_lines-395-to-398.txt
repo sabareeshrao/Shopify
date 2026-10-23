@@ -1,4 +1,0 @@
-	public void setCacheManager(LocalCacheManagerImpl cacheManager) {
-		this.cacheManager = cacheManager;
-	}
-

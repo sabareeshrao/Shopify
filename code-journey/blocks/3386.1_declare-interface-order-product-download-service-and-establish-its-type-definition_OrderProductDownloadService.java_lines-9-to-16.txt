@@ -1,8 +1,0 @@
-public interface OrderProductDownloadService extends SalesManagerEntityService<Long, OrderProductDownload> {
-
-	/**
-	 * List {@link OrderProductDownload} by order id
-	 * @param orderId
-	 * @return
-	 */
-	List<OrderProductDownload> getByOrderId(Long orderId);

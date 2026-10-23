@@ -1,5 +1,0 @@
-	private ZoneRepository zoneRepository;
-	
-	@Inject
-	private CacheUtils cache;
-	

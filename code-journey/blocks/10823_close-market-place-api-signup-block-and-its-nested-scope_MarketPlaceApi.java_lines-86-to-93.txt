@@ -1,8 +1,0 @@
-
-		// create user
-
-		// create store
-
-		// send notification
-
-	}

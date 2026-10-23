@@ -1,8 +1,0 @@
-
-			if (StringUtils.isBlank(order.getCustomer().getBilling().getPostalCode())) {
-				FieldError error = new FieldError("customer.billing.postalCode", "customer.billing.postalCode",
-						messages.getMessage("NotEmpty.customer.billing.postalCode", locale));
-				bindingResult.addError(error);
-				messagesResult.put("customer.billing.postalCode",
-						messages.getMessage("NotEmpty.customer.billing.postalCode", locale));
-			}

@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("RUB", "Russian Ruble");
-		CURRENCY_MAP.put("RWF", "Rwanda Franc");
-		CURRENCY_MAP.put("SHP", "Saint Helena Pound");
-		CURRENCY_MAP.put("XCD", "East Caribbean Dollar");
-		CURRENCY_MAP.put("WST", "Tala");
-		CURRENCY_MAP.put("STD", "Dobra");
-		CURRENCY_MAP.put("SAR", "Saudi Riyal");
-		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");

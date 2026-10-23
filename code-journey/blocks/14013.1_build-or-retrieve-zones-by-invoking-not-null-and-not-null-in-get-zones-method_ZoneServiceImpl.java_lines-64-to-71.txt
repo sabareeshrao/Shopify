@@ -1,8 +1,0 @@
-	}
-	
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Zone> getZones(Country country, Language language) throws ServiceException {
-		
-		//Validate.notNull(country,"Country cannot be null");
-		Validate.notNull(language,"Language cannot be null");

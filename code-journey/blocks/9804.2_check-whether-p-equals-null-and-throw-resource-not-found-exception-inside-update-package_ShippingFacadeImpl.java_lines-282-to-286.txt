@@ -1,5 +1,0 @@
-		com.salesmanager.core.model.shipping.Package p = this.packageDetails(config, code);
-		
-		if(p == null) {
-			throw new ResourceNotFoundException("Package with unique code [" + packaging.getCode() + "] not found");
-		}

@@ -1,8 +1,0 @@
-      ProductCriteria criterias) throws Exception;
-
-  /**
-   * Get related items
-   *
-   * @param store
-   * @param product
-   * @param language

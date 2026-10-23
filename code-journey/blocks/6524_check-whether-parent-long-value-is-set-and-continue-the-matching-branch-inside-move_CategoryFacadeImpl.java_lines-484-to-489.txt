@@ -1,6 +1,0 @@
-
-			if(parent.longValue()==-1) {
-				categoryService.addChild(null, c);
-				return;
-
-			}

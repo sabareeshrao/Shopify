@@ -1,4 +1,0 @@
-import com.salesmanager.shop.model.catalog.category.Category;
-import com.salesmanager.shop.model.catalog.product.ProductDescription;
-import com.salesmanager.shop.model.catalog.product.attribute.PersistableProductAttribute;
-

@@ -1,8 +1,0 @@
-config.cms.gcp.bucket=
-
-#You need an AWS access key ID and AWS secret access key to access Amazon SES using an SDK
-#AWS keys need to be specified in environment variables
-# -e AWS_ACCESS_KEY_ID=YOUR-ACCESS-KEY \
-# -e AWS_SECRET_ACCESS_KEY=YOUR-SECRET-ACCESS-KEY \
-#Email implementation [default | ses]
-#default=SpringHtmlEmailSender - through SMTP server and requires configurations from admin console

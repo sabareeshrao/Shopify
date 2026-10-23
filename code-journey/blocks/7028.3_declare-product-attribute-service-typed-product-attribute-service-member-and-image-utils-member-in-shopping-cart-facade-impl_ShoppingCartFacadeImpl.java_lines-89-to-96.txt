@@ -1,8 +1,0 @@
-	private ProductAttributeService productAttributeService;
-
-	@Inject
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-
-	@Autowired
-	private ReadableShoppingCartMapper readableShoppingCartMapper;

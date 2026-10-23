@@ -1,4 +1,0 @@
-	public Date getOrderAccountProductLastStatusDate() {
-		return CloneUtils.clone(orderAccountProductLastStatusDate);
-	}
-

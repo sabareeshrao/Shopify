@@ -1,8 +1,0 @@
-	 */
-	public String buildStoreForwardedUri(MerchantStore merchantStore, HttpServletRequest request) {
-		String uri;
-		if (StringUtils.isNotEmpty(request.getHeader(X_FORWARDED_HOST))) {
-			uri = request.getHeader(X_FORWARDED_HOST);
-		} else {
-			uri = buildStoreUri(merchantStore, request);
-		}

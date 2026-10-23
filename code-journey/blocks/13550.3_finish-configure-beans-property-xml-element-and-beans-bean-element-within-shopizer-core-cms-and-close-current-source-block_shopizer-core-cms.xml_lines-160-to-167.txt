@@ -1,8 +1,0 @@
-				</beans:property>
-	</beans:bean>
-
-	<!--  end of CMS implementation for static content data -->
-
-	<!--  end of CMS implementation for static content data -->
-
-	<!-- ++++++++++++ -->

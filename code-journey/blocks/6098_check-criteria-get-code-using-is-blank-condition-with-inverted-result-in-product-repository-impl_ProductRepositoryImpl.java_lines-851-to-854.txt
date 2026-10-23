@@ -1,4 +1,0 @@
-
-		if (!StringUtils.isBlank(criteria.getCode())) {
-			qs.append(" and lower(p.sku) like :sku");
-		}

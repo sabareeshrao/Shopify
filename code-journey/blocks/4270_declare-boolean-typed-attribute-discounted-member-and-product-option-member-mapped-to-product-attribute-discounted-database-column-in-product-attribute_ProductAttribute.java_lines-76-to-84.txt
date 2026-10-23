@@ -1,9 +1,0 @@
-
-	@Column(name="PRODUCT_ATTRIBUTE_DISCOUNTED")
-	private boolean attributeDiscounted=false;
-	
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="OPTION_ID", nullable=false)
-	private ProductOption productOption;
-	

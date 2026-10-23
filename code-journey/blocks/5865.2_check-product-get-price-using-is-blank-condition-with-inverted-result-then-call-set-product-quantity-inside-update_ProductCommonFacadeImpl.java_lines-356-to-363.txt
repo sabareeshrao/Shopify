@@ -1,8 +1,0 @@
-		for (ProductAvailability availability : modified.getAvailabilities()) {
-			availability.setProductQuantity(product.getQuantity());
-			if (!StringUtils.isBlank(product.getPrice())) {
-				// set default price
-				for (ProductPrice price : availability.getPrices()) {
-					if (price.isDefaultPrice()) {
-						try {
-							price.setProductPriceAmount(pricingService.getAmount(product.getPrice()));

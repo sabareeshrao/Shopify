@@ -1,8 +1,0 @@
-
-	
-	@Column(name="PRODUCT_ATTR_ID", nullable=false)
-	private Long productAttributeId;
-	
-	@JsonIgnore
-	@Transient
-	private ProductAttribute productAttribute;

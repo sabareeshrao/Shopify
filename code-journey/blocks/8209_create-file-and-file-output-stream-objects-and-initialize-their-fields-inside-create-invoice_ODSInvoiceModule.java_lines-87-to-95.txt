@@ -1,9 +1,0 @@
-			
-			File file = new File(order.getId() + "_working");
-			OutputStream os = new FileOutputStream(file);
-			IOUtils.copy(is, os);
-			os.close();
-			//File file = new File(resource.toURI().toURL());
-		
-			Sheet sheet = SpreadSheet.createFromFile(file).getSheet(0);
-			

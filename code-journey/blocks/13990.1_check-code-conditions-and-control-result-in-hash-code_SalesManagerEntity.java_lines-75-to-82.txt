@@ -1,8 +1,0 @@
-	@Override
-	public int hashCode() {
-		int hash = 7;
-		
-		K id = getId();
-		hash = 31 * hash + ((id == null) ? 0 : id.hashCode());
-
-		return hash;

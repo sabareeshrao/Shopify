@@ -1,8 +1,0 @@
-   * @param language
-   * @return
-   * @throws Exception
-   */
-  ReadableManufacturerList getAllManufacturers(MerchantStore store, Language language, ListCriteria criteria, int page, int count) ;
-  
-  /**
-   * List manufacturers by a specific store

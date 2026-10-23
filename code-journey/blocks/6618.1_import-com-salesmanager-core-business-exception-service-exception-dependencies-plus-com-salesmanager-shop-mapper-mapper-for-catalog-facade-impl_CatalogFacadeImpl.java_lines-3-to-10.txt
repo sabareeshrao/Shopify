@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.services.catalog.catalog.CatalogEntryService;
-import com.salesmanager.core.business.services.catalog.catalog.CatalogService;
-import com.salesmanager.core.model.catalog.catalog.Catalog;
-import com.salesmanager.core.model.catalog.catalog.CatalogCategoryEntry;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.Mapper;

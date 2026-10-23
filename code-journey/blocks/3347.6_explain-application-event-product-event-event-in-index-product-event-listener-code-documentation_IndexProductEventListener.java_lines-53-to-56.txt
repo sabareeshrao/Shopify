@@ -1,4 +1,0 @@
-	 */
-	@Override
-	public void onApplicationEvent(ProductEvent event) {
-		

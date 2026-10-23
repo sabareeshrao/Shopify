@@ -1,3 +1,0 @@
-	public String buildRelativeStoreUri(HttpServletRequest request, MerchantStore store) {
-		return "" + normalizePath(request.getContextPath());
-	}

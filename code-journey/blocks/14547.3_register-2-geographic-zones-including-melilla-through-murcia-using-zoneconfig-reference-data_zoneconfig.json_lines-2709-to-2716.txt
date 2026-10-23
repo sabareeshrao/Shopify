@@ -1,8 +1,0 @@
-		{
-			"zoneCode": "Melilla",
-			"zoneName": "Melilla",
-			"countryCode": "ES"
-		},
-		{
-			"zoneCode": "Murcia",
-			"zoneName": "Murcia",

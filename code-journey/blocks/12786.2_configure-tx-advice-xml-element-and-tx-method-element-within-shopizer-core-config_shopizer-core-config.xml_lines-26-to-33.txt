@@ -1,8 +1,0 @@
-
-	<tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="get*" read-only="true" />
-			<tx:method name="list*" read-only="true" />
-			<tx:method name="search*" read-only="true" />
-			<tx:method name="*" read-only="false"
-				rollback-for="com.salesmanager.core.business.exception.ServiceException" />

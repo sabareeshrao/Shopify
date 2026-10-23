@@ -1,8 +1,0 @@
-	
-	@Inject
-	protected PricingService pricingService;
-	
-	@Inject
-	protected ProductPriceService productPriceService;
-	
-	@Inject

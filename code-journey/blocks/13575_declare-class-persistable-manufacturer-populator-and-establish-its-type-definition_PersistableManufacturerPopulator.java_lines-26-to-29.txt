@@ -1,4 +1,0 @@
-public class PersistableManufacturerPopulator extends AbstractDataPopulator<PersistableManufacturer, Manufacturer>
-{
-	
-	

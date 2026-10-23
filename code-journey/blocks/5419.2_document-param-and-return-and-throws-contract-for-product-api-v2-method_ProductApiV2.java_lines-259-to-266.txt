@@ -1,8 +1,0 @@
-	 * &manufacturer=2 &type=... &lang=en|fr NOT REQUIRED, will use request language
-	 * &start=0 NOT REQUIRED, can be used for pagination &count=10 NOT REQUIRED, can
-	 * be used to limit item count
-	 *
-	 * @param request
-	 * @param response
-	 * @return
-	 * @throws Exception

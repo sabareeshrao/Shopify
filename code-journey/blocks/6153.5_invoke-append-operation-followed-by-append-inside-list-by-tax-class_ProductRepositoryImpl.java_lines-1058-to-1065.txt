@@ -1,8 +1,0 @@
-		qs.append("left join fetch p.type type ");
-		qs.append("left join fetch p.taxClass tx ");
-
-		// RENTAL
-		//qs.append("left join fetch p.owner owner ");
-
-		// qs.append("where pa.region in (:lid) ");
-		qs.append("where tx.id=:tid");

@@ -1,7 +1,0 @@
-		
-		//refresh
-		try {
-			store = merchantStoreService.getByCode(store.getCode());
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("An exception occured when getting store [" + store.getCode() + "]");
-		}

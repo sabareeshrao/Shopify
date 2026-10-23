@@ -1,8 +1,0 @@
-	public void setExternalUrl(String externalUrl) {
-		this.externalUrl = externalUrl;
-	}
-	public String getVideoUrl() {
-		return videoUrl;
-	}
-	public void setVideoUrl(String videoUrl) {
-		this.videoUrl = videoUrl;

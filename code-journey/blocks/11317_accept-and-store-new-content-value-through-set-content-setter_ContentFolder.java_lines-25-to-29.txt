@@ -1,5 +1,0 @@
-	public void setContent(List<Content> content) {
-		this.content = content;
-	}
-
-}

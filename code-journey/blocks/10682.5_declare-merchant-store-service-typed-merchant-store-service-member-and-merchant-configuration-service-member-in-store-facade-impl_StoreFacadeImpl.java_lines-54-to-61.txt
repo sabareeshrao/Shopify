@@ -1,8 +1,0 @@
-	@Inject
-	private MerchantStoreService merchantStoreService;
-
-	@Inject
-	private MerchantConfigurationService merchantConfigurationService;
-
-	@Inject
-	private LanguageService languageService;

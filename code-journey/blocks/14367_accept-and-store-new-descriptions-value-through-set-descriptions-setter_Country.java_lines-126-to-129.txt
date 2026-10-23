@@ -1,4 +1,0 @@
-	public void setDescriptions(Set<CountryDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-}

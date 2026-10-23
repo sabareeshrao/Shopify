@@ -1,8 +1,0 @@
-	
-	@JsonIgnore
-	@Transient
-	private String showCustomerStateList;
-	
-	@JsonIgnore
-	@Transient
-	private String showBillingStateList;

@@ -1,8 +1,0 @@
-	List<Category> findByLineage(String storeCode, String linenage);
-	
-	@Query("select distinct c from Category c left join fetch c.descriptions cd join fetch cd.language cdl join fetch c.merchantStore cm where cm.id=?1 and c.depth >= ?2 order by c.lineage, c.sortOrder asc")
-	List<Category> findByDepth(Integer merchantId, int depth);
-	
-	@Query("select distinct c from Category c left join fetch c.descriptions cd join fetch cd.language cdl join fetch c.merchantStore cm where cm.id=?1 and cdl.id=?3 and c.depth >= ?2 order by c.lineage, c.sortOrder asc")
-	List<Category> findByDepth(Integer merchantId, int depth, Integer languageId);
-	

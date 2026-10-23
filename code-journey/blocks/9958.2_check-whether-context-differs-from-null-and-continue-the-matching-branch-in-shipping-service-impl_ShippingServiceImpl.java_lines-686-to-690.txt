@@ -1,5 +1,0 @@
-			String ipAddress = null;
-	    	UserContext context = UserContext.getCurrentInstance();
-	    	if(context != null) {
-	    		ipAddress = context.getIpAddress();
-	    	}

@@ -1,8 +1,0 @@
-	public static String buildProductQuery() {
-		
-		StringBuilder qs = new StringBuilder();
-		
-		//option 1
-		qs.append("select distinct p from Product as p ");
-		qs.append("join fetch p.availabilities pa ");
-		qs.append("join fetch p.descriptions pd ");

@@ -1,8 +1,0 @@
-     * @return
-     */
-    ReadableCustomer getCustomerById(final Long id, final MerchantStore merchantStore, final Language language);
-    
-    /**
-     * Get Customer using unique username
-     * @param userName
-     * @param merchantStore

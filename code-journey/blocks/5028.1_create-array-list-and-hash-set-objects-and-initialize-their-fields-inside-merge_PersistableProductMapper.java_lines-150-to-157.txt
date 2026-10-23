@@ -1,8 +1,0 @@
-			
-			destination.setMerchantStore(store);
-			
-			/**
-			 * descriptions
-			 */
-			List<Language> languages = new ArrayList<Language>();
-			Set<ProductDescription> descriptions = new HashSet<ProductDescription>();

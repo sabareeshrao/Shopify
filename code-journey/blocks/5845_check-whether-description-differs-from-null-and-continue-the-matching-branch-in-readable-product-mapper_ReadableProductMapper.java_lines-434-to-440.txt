@@ -1,7 +1,0 @@
-
-		if (description != null) {
-			com.salesmanager.shop.model.catalog.product.ProductDescription tragetDescription = populateDescription(
-					description);
-			destination.setDescription(tragetDescription);
-
-		}

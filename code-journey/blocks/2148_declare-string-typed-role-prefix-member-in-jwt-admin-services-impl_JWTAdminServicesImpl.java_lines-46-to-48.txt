@@ -1,3 +1,0 @@
-	public final static String ROLE_PREFIX = "ROLE_";//Spring Security 4
-
-

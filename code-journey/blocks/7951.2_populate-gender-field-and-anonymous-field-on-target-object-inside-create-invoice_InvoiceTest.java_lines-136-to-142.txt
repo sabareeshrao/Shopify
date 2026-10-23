@@ -1,7 +1,0 @@
-		customer.setGender(CustomerGender.M);				
-		customer.setAnonymous(true);
-		customer.setCompany("ifactory");
-		customer.setDateOfBirth(new Date());
-		customer.setNick("My nick");
-		customer.setDefaultLanguage(en);
-		

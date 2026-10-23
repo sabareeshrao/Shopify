@@ -1,4 +1,0 @@
-	public void setHandling(BigDecimal handling) {
-		this.handling = handling;
-	}
-	

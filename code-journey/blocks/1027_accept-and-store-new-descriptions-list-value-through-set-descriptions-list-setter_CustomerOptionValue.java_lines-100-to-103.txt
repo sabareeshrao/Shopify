@@ -1,4 +1,0 @@
-	public void setDescriptionsList(List<CustomerOptionValueDescription> descriptionsList) {
-		this.descriptionsList = descriptionsList;
-	}
-

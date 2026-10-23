@@ -1,3 +1,0 @@
-				} catch (ServiceException e) {
-					throw new ConversionRuntimeException("Cannot format price", e);
-				}

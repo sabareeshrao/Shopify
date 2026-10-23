@@ -1,3 +1,0 @@
-  private List<ObjectContent> descriptions = new ArrayList<ObjectContent>();
-
-}

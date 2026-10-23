@@ -1,8 +1,0 @@
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Description implements Auditable, Serializable {
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@Column(name = "DESCRIPTION_ID")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "description_gen")
-	private Long id;

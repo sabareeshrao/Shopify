@@ -1,8 +1,0 @@
-
-	/**
-	 * Get all category starting from root filter can be used for filtering on
-	 * fields only featured is supported
-	 *
-	 * @return
-	 */
-	@GetMapping(value = "/category", produces = { APPLICATION_JSON_VALUE })

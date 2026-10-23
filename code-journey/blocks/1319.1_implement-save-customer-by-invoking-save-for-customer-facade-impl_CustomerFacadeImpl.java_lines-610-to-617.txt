@@ -1,8 +1,0 @@
-  private void saveCustomer(Customer customerToPopulate) {
-    try{
-      customerService.save(customerToPopulate);
-    } catch (ServiceException exception) {
-      throw new ServiceRuntimeException(exception);
-    }
-
-  }

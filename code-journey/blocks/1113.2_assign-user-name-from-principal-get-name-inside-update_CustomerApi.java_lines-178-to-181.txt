@@ -1,4 +1,0 @@
-		String userName = principal.getName();
-
-		return customerFacade.update(userName, customer, merchantStore);
-	}

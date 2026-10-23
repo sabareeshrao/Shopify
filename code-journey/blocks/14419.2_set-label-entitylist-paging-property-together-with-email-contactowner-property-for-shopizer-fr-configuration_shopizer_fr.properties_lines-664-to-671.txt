@@ -1,8 +1,0 @@
-label.entitylist.paging=Affichage de {0} - {1} de {2} résultat(s)
-
-label.checkout.moneyorder=S'il vous plaît faire votre chèque ou mandat à l'ordre de :
-
-email.user.resetpassword.text=Une requête a été faite afin de ré-initialiser votre mot de passe. Vous trouverez ci-joint votre nouveau mot de passe.
-email.customer.resetpassword.text=Une requête a été faite afin de ré-initialiser votre mot de passe. Vous trouverez ci-joint votre nouveau mot de passe.
-email.disclaimer = Cette adresse de courriel nous a été donnée par vous ou par un de nos clients. Si vous pensez que vous avez reçu ce courriel par erreur, s''il vous plaît envoyez un courriel à {0} pour procéder à la désactivation
-email.contactowner=Si vous avez des questions concernant cette requête, envoyez un message courriel à {0} afin de recevoir plus de détails.

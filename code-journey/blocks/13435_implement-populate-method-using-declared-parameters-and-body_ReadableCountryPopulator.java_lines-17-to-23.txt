@@ -1,7 +1,0 @@
-	@Override
-	public ReadableCountry populate(Country source, ReadableCountry target, MerchantStore store, Language language)
-			throws ConversionException {
-		
-		if(target==null) {
-			target = new ReadableCountry();
-		}

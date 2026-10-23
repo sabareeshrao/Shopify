@@ -1,4 +1,0 @@
-	</logger>
-
-	<!-- Root Logger -->
-	<root>

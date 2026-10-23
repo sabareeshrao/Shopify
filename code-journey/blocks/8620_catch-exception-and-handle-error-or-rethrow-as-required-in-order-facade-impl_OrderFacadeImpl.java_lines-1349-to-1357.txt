@@ -1,9 +1,0 @@
-			}
-
-			return modelOrder;
-
-		} catch (Exception e) {
-
-			throw new ServiceException(e);
-
-		}

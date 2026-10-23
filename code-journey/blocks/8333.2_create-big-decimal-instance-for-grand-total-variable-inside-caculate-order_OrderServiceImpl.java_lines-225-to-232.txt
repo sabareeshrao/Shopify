@@ -1,8 +1,0 @@
-        BigDecimal grandTotal = new BigDecimal(0);
-        grandTotal.setScale(2, RoundingMode.HALF_UP);
-
-        //price by item
-        /**
-         * qty * price
-         * subtotal
-         */

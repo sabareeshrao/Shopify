@@ -1,8 +1,0 @@
-	  
-	  
-	  /** Configurations of payment modules */
-	  @GetMapping("/private/configurations/payment")
-	  @ApiOperation(
-	      httpMethod = "GET",
-	      value = "List payment configurations summary",
-	      notes = "Requires administration access",

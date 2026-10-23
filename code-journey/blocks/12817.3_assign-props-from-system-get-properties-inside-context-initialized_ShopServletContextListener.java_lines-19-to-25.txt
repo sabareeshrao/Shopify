@@ -1,7 +1,0 @@
-		});
-		Properties props = System.getProperties();
-		props.forEach((k, v) -> {
-		  logger.debug(k + ":" + v);
-		});
-	}
-

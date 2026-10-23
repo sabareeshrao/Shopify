@@ -1,8 +1,0 @@
-        		}
-    		}
-		},
-		"attributes": {
-			"type": "nested"
-		},
-		"variants": {
-			"type": "nested"

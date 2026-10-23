@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("MKD", "Denar");
-		CURRENCY_MAP.put("MGA", "Malagasy Ariary");
-		CURRENCY_MAP.put("MWK", "Kwacha");
-		CURRENCY_MAP.put("MYR", "Malaysian Ringgit");
-		CURRENCY_MAP.put("MVR", "Rufiyaa");
-		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");
-		CURRENCY_MAP.put("MRO", "Ouguiya");
-		CURRENCY_MAP.put("MUR", "Mauritius Rupee");

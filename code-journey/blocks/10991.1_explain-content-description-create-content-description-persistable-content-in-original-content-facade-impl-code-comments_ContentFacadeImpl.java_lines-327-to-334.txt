@@ -1,8 +1,0 @@
-
-	/*
-	 * private List<ContentDescription> createContentDescription(
-	 * PersistableContentPage content) throws ServiceException {
-	 * Validate.notNull(contentModel, "Content cannot be null");
-	 * 
-	 * List<ContentDescription> descriptions = new
-	 * ArrayList<ContentDescription>(); for (NamedEntity objectContent :

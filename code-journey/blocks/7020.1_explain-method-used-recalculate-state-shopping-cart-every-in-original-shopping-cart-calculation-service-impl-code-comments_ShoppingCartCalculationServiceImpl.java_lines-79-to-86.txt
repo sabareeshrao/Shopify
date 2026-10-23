@@ -1,8 +1,0 @@
-
-	/**
-	 * <p>
-	 * Method used to recalculate state of shopping cart every time any change
-	 * has been made to underlying {@link ShoppingCart} object in DB.
-	 * </p>
-	 * Following operations will be performed by this method.
-	 *

@@ -1,4 +1,0 @@
-	void saveMerchantConfig(MerchantConfig config, MerchantStore store)
-			throws ServiceException;
-
-}

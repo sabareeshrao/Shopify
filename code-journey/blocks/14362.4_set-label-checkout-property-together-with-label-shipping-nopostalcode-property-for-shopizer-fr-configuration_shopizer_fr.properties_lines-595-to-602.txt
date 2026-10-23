@@ -1,8 +1,0 @@
-label.checkout=Paiement
-label.proceed.checkout=Effectuer le paiement
-label.subtotal=Sous-total
-label.checkout.confirmation=La commande a été complétée
-
-label.shipping.nopostalcode=Les frais de livraison seront ajustés après avoir inscrit votre code postal.
-
-#register

@@ -1,8 +1,0 @@
-	    book.setMerchantStore(store);
-	    book.setCode("book");
-
-	    CategoryDescription bookEnglishDescription = new CategoryDescription();
-	    bookEnglishDescription.setName("Book");
-	    bookEnglishDescription.setCategory(book);
-	    bookEnglishDescription.setLanguage(en);
-

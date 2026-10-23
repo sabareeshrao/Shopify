@@ -1,8 +1,0 @@
-			
- 
-			 PaymentDetailsType paymentDetail = new PaymentDetailsType();
-			 /** IPN **/
-			 //paymentDetail.setNotifyURL("http://replaceIpnUrl.com");
-			 BasicAmountType orderTotal = new BasicAmountType();
-			 orderTotal.setValue(pricingService.getStringAmount(amount, store));
-			 orderTotal.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(payment.getCurrency().getCode()));

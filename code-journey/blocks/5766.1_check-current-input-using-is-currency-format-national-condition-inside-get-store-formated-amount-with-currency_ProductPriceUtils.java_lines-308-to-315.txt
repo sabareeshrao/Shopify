@@ -1,8 +1,0 @@
-
-		NumberFormat currencyInstance = null;
-
-		if (store.isCurrencyFormatNational()) {
-			currencyInstance = NumberFormat.getCurrencyInstance(locale);// national
-		} else {
-			currencyInstance = NumberFormat.getCurrencyInstance();// international
-		}

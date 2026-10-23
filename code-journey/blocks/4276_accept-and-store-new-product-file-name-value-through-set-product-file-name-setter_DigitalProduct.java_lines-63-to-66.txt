@@ -1,4 +1,0 @@
-	public void setProductFileName(String productFileName) {
-		this.productFileName = productFileName;
-	}
-	

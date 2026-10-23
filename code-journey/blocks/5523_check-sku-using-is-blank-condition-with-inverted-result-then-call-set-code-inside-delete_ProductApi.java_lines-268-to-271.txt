@@ -1,4 +1,0 @@
-
-		if (!StringUtils.isBlank(sku)) {
-			criteria.setCode(sku);
-		}

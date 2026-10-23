@@ -1,4 +1,0 @@
-
-						mod.setModuleConfigs(moduleConfigs);
-
-					}

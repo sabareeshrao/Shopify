@@ -1,8 +1,0 @@
-
-			if (StringUtils.isBlank(order.getCustomer().getEmailAddress())) {
-				FieldError error = new FieldError("customer.emailAddress", "customer.emailAddress",
-						messages.getMessage("NotEmpty.customer.emailAddress", locale));
-				bindingResult.addError(error);
-				messagesResult.put("customer.emailAddress",
-						messages.getMessage("NotEmpty.customer.emailAddress", locale));
-			}

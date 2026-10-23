@@ -1,3 +1,0 @@
-					module = integrationModulesLoader.loadModule(o);
-					break;
-				}

@@ -1,2 +1,0 @@
-			throw new ServiceRuntimeException("Exception while saving option value", e);
-		}

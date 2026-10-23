@@ -1,8 +1,0 @@
-	    product.setSku("TB12345");
-	    product.setManufacturer(addidas);
-	    product.setType(generalType);
-	    product.setMerchantStore(merchant);
-
-	    // Product description
-	    ProductDescription description = new ProductDescription();
-	    description.setName("Short sleeves shirt");

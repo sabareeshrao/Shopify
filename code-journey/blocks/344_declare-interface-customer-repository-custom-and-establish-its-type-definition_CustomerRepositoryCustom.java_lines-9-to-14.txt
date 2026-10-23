@@ -1,6 +1,0 @@
-public interface CustomerRepositoryCustom {
-
-	CustomerList listByStore(MerchantStore store, CustomerCriteria criteria);
-	
-
-}

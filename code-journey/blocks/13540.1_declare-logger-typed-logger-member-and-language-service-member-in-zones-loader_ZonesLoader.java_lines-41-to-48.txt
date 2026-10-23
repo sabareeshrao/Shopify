@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(ZonesLoader.class);
-
-	@Inject
-	private LanguageService languageService;
-
-	@Inject
-	private CountryService countryService;
-	

@@ -1,6 +1,0 @@
-import com.salesmanager.shop.store.controller.items.facade.ProductItemsFacade;
-import com.salesmanager.shop.utils.ImageFilePath;
-
-@Component
-public class ProductItemsFacadeImpl implements ProductItemsFacade {
-	

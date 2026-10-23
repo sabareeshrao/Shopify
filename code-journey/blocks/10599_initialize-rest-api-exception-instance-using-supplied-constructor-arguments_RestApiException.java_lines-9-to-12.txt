@@ -1,4 +1,0 @@
-    public RestApiException(String errorCode, String message) {
-        super(errorCode, message);
-    }
-

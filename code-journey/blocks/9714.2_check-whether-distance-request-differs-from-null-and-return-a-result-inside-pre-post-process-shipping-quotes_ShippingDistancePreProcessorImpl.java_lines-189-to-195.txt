@@ -1,7 +1,0 @@
-				if(distanceRequest!=null) {
-					DistanceMatrixRow distanceMax = distanceRequest.rows[0];
-					Distance distance = distanceMax.elements[0].distance;
-					quote.getQuoteInformations().put(Constants.DISTANCE_KEY, 0.001 * distance.inMeters);
-				} else {
-				  LOGGER.error("Expected distance inner google api to return DistanceMatrix, it returned null. API key might not be working for this request");
-				}

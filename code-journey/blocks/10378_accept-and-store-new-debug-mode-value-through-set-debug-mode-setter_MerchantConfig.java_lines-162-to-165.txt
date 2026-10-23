@@ -1,4 +1,0 @@
-	public void setDebugMode(boolean debugMode) {
-		this.debugMode = debugMode;
-	}
-

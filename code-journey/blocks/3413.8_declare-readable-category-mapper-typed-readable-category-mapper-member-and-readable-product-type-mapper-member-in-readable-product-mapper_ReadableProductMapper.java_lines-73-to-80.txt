@@ -1,8 +1,0 @@
-	@Autowired
-	private ReadableCategoryMapper readableCategoryMapper;
-
-	@Autowired
-	private ReadableProductTypeMapper readableProductTypeMapper;
-
-	@Autowired
-	private ReadableProductVariantMapper readableProductVariantMapper;

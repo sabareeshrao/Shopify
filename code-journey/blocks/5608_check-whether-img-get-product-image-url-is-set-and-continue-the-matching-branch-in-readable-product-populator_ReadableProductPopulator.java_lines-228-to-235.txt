@@ -1,8 +1,0 @@
-					prdImage.setId(img.getId());
-					prdImage.setImageType(img.getImageType());
-					if(img.getProductImageUrl()!=null){
-						prdImage.setExternalUrl(img.getProductImageUrl());
-					}
-					if(img.getImageType()==1 && img.getProductImageUrl()!=null) {//video
-						prdImage.setVideoUrl(img.getProductImageUrl());
-					}

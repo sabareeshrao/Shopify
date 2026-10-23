@@ -1,5 +1,0 @@
-	@NotNull
-	private String code;
-	@NotNull
-	private String name;
-

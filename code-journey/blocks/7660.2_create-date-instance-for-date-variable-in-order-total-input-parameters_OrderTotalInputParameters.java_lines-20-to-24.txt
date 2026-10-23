@@ -1,5 +1,0 @@
-	private String promoCode;
-	private Date date = new Date();
-	
-	//might add variation based on other objects such as Customer
-	

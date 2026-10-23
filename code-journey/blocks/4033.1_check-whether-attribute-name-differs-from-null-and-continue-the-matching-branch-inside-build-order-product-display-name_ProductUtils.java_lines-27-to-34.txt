@@ -1,8 +1,0 @@
-		
-		
-		StringBuilder productName = new StringBuilder();
-		productName.append(pName);
-		
-		if(attributeName!=null) {
-			attributeName.append("]");
-			productName.append(" ").append(attributeName.toString());

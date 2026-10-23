@@ -1,5 +1,0 @@
-		option.setId(optionId);
-		productOptionFacade.saveOption(option, merchantStore, language);
-		return;
-
-	}

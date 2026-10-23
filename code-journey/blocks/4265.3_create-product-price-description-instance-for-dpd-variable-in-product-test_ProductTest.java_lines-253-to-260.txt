@@ -1,8 +1,0 @@
-
-	    ProductPriceDescription dpd = new ProductPriceDescription();
-	    dpd.setName("Base price");
-	    dpd.setProductPrice(dprice);
-	    dpd.setLanguage(en);
-
-	    dprice.getDescriptions().add(dpd);
-	    availability.getPrices().add(dprice);

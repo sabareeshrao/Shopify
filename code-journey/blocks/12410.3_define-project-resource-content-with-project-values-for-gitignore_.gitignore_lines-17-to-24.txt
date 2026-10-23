@@ -1,8 +1,0 @@
-.project
-sm-admin/**/rebel*.xml
-sm-shop/**/rebel*.xml
-sm-admin/.project
-sm-core-model/.project
-sm-core-modules/.project
-sm-core/.project
-sm-shop/.project

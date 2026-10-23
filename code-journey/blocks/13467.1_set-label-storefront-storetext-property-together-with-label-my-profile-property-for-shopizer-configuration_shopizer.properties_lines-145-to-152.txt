@@ -1,8 +1,0 @@
-label.storefront.storetext=Landing page main text
-label.storefront.metatags.keywords=Meta tags keywords
-label.storefront.metatags.description=Meta tags description
-label.storefront.landingpage.title=Landing page title
-
-#user
-label.profile.title=User profile
-label.my.profile=My profile

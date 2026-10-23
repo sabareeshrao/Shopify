@@ -1,8 +1,0 @@
-	@Override
-	public List<ReadableTransaction> listTransactions(Long orderId, MerchantStore store) {
-		Validate.notNull(orderId, "orderId must not be null");
-		Validate.notNull(store, "MerchantStore must not be null");
-		List<ReadableTransaction> trx = new ArrayList<ReadableTransaction>();
-		try {
-			Order modelOrder = orderService.getOrder(orderId, store);
-

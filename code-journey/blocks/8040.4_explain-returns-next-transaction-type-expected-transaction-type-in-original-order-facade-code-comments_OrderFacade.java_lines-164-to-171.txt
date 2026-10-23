@@ -1,8 +1,0 @@
-	/**
-	 * Returns next TransactionType expected if any.
-	 */
-	TransactionType nextTransaction(Long orderId, MerchantStore store);
-
-	/**
-	 * Get orders for a given store
-	 * @param store

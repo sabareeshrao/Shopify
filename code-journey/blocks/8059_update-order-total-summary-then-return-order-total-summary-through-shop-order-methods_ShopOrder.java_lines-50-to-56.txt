@@ -1,7 +1,0 @@
-	public void setOrderTotalSummary(OrderTotalSummary orderTotalSummary) {
-		this.orderTotalSummary = orderTotalSummary;
-	}
-	public OrderTotalSummary getOrderTotalSummary() {
-		return orderTotalSummary;
-	}
-

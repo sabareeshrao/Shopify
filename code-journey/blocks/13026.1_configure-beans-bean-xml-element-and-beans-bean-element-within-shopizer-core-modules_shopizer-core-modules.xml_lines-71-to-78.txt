@@ -1,8 +1,0 @@
-
-	<!--Default packaging -->
-	<beans:bean id="boxPackaging"
-		class="com.salesmanager.core.business.modules.integration.shipping.impl.DefaultPackagingImpl" />
-
-	<!-- Payment -->
-	<beans:bean id="beanstream"
-		class="com.salesmanager.core.business.modules.integration.payment.impl.BeanStreamPayment" />

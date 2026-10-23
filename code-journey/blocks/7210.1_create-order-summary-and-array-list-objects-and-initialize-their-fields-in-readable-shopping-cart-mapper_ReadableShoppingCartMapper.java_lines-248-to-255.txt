@@ -1,8 +1,0 @@
-
-			// Calculate totals using shoppingCartService
-			// OrderSummary contains ShoppingCart items
-
-			OrderSummary summary = new OrderSummary();
-			List<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> productsList = new ArrayList<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-			productsList.addAll(source.getLineItems());
-			summary.setProducts(productsList);

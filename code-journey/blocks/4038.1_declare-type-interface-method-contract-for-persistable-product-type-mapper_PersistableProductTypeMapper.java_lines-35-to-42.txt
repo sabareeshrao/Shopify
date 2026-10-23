@@ -1,8 +1,0 @@
-	@Override
-	public ProductType merge(PersistableProductType source, ProductType destination, MerchantStore store,
-							 Language language) {
-		Validate.notNull(destination, "ReadableProductType cannot be null");
-		try {
-			return type(source, destination);
-		} catch (ServiceException e) {
-			throw new ConversionRuntimeException(e);

@@ -1,8 +1,0 @@
-			            
-			 tp.setWidth(w);
-			 tp.setHeight(h);
-
-			 // Configure the renderer
-			 ODTRenderer renderer = new ODTRenderer(doc);
-			 renderer.setIgnoreMargins(true);
-			 renderer.setPaintMaxResolution(true);

@@ -1,4 +1,0 @@
-		
-		Assert.assertNotNull(objects);
-		
-	}

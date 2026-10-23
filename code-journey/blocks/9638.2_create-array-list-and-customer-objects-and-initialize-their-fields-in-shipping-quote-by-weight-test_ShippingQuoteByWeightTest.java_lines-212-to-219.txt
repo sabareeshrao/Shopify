@@ -1,8 +1,0 @@
-	    FinalPrice price = pricingService.calculateProductPrice(product);
-	    shippingProduct1.setFinalPrice(price);
-	    
-	    List<ShippingProduct> shippingProducts = new ArrayList<ShippingProduct>();
-	    shippingProducts.add(shippingProduct1);
-	    
-		Customer customer = new Customer();
-		customer.setMerchantStore(store);

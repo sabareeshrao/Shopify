@@ -1,8 +1,0 @@
-	   * @param product
-	   * @param merchant
-	   * @param language
-	   */
-	  void update(String sku, LightPersistableProduct product, MerchantStore merchant, Language language);
-
-	  /**
-	   * Get a Product by id and store

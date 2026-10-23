@@ -1,4 +1,0 @@
-	public Long getOwnerId() {
-		return ownerId;
-	}
-

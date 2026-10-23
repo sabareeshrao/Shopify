@@ -1,8 +1,0 @@
-	List<MerchantStore> findAllStoreNames();
-	
-	 @Query(value = "select new com.salesmanager.core.model.merchant.MerchantStore(m.id, m.code, m.storename) from MerchantStore m left join m.parent mp "
-	  			+ "where mp.code = ?1 or m.code = ?1")
-	List<MerchantStore> findAllStoreNames(String storeCode);
-	 
-	 @Query(value = "select new com.salesmanager.core.model.merchant.MerchantStore(m.id, m.code, m.storename) from MerchantStore m left join m.parent mp "
-	  			+ "where mp.code in ?1 or m.code in ?1")

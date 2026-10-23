@@ -1,8 +1,0 @@
-lang.ar=Arabic
-lang.pt-BR=Portuguese (BR)
-
-label.shop=Shop
-label.entity.id=Id
-label.entity.name=Name
-label.entity.code=Code
-label.entity.visible=Visible

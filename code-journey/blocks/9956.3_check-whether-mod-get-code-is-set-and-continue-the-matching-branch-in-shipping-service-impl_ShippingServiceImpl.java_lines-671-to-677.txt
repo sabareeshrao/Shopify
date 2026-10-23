@@ -1,7 +1,0 @@
-					
-					IntegrationModule postProcessModule = null;
-					for(IntegrationModule mod : shippingMethods) {
-						if(mod.getCode().equals(postProcessor.getModuleCode())){
-							postProcessModule = mod;
-							break;
-						}

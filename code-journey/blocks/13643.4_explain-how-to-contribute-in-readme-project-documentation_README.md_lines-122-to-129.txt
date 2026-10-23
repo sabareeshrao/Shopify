@@ -1,8 +1,0 @@
-Feel to use the contact form <http://www.shopizer.com/contact.html> and share your email address
-so we can send an invite to our Slack channel
-
-### How to Contribute:
--------------------
-Fork the repository to your GitHub account
-
-Clone from fork repository

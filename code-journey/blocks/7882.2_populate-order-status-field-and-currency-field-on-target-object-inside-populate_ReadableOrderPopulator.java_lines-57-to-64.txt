@@ -1,8 +1,0 @@
-		target.setOrderStatus(source.getStatus());
-		target.setCurrency(source.getCurrency().getCode());
-		//target.setCurrencyModel(source.getCurrency());
-		
-		target.setPaymentType(source.getPaymentType());
-		target.setPaymentModule(source.getPaymentModuleCode());
-		target.setShippingModule(source.getShippingModuleCode());
-		

@@ -1,6 +1,0 @@
-	Locale toLocale(Language language, MerchantStore store);
-
-	Language toLanguage(Locale locale);
-	
-	Language defaultLanguage();
-}

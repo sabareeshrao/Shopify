@@ -1,8 +1,0 @@
-	private com.salesmanager.shop.model.order.v0.ReadableOrderList populateOrderList(final OrderList orderList,
-			final MerchantStore store, final Language language) {
-		List<Order> orders = orderList.getOrders();
-		com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();
-		if (CollectionUtils.isEmpty(orders)) {
-			LOGGER.info("Order list if empty..Returning empty list");
-			returnList.setRecordsTotal(0);
-			// returnList.setMessage("No results for store code " + store);

@@ -1,3 +1,0 @@
-	private String code;//shopping cart code
-	private boolean productVirtual;
-	

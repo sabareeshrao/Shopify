@@ -1,5 +1,0 @@
-	    relationship.setCode("spring");
-	    relationship.setProduct(product);
-	    relationship.setRelatedProduct(related);
-	    relationship.setStore(store);
-	    

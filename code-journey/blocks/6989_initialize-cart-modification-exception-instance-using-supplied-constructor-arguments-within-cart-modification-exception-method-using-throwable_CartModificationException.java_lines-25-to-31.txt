@@ -1,7 +1,0 @@
-	  public CartModificationException(Throwable t)
-	  {
-	      super(t);
-	  }
-	  
-
-}

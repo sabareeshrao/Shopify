@@ -1,6 +1,0 @@
-    public ShoppingCartCalculationService getOrderService() {
-        return shoppingCartCalculationService;
-    }
-
-
-

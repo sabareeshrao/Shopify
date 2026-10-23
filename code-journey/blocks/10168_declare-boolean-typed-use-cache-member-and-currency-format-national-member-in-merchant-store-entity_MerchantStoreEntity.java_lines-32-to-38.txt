@@ -1,7 +1,0 @@
-	private boolean useCache;
-	private boolean currencyFormatNational;
-	private boolean retailer;
-	private MeasureUnit dimension;
-	private WeightUnit weight;
-	
-

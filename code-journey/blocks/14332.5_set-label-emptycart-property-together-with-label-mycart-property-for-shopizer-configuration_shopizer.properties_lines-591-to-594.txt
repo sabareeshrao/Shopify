@@ -1,4 +1,0 @@
-#cart
-label.emptycart=No items in your shopping cart
-label.cart=Shopping cart
-label.mycart=My cart

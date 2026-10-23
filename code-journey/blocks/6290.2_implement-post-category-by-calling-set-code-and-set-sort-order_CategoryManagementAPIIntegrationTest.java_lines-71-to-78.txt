@@ -1,8 +1,0 @@
-    @Test
-    public void postCategory() throws Exception {
-
-        PersistableCategory newCategory = new PersistableCategory();
-        newCategory.setCode("javascript");
-        newCategory.setSortOrder(1);
-        newCategory.setVisible(true);
-        newCategory.setDepth(4);

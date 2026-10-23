@@ -1,8 +1,0 @@
-	private static final long serialVersionUID = 1L;
-	private BigDecimal discountedPrice = null;//final price if a discount is applied
-	private BigDecimal originalPrice = null;//original price
-	private BigDecimal finalPrice = null;//final price discount or not
-	private boolean discounted = false;
-	private int discountPercent = 0;
-	private String stringPrice;
-	private String stringDiscountedPrice;

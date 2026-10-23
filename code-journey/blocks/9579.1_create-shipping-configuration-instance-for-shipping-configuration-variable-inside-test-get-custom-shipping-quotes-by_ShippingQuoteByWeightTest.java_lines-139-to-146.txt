@@ -1,8 +1,0 @@
-	    
-
-	    
-	    //configure shipping
-	    ShippingConfiguration shippingConfiguration = new ShippingConfiguration();
-	    shippingConfiguration.setShippingBasisType(ShippingBasisType.SHIPPING);//based on shipping or billing address
-	    shippingConfiguration.setShippingType(ShippingType.INTERNATIONAL);
-	    shippingConfiguration.setShippingPackageType(ShippingPackageType.ITEM);//individual item pricing or box packaging (see unit test above)

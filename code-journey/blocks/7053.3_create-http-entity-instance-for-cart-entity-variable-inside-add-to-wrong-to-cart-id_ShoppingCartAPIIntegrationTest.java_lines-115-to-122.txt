@@ -1,8 +1,0 @@
-        cartItem.setQuantity(1);
-
-        final HttpEntity<PersistableShoppingCartItem> cartEntity = new HttpEntity<>(cartItem, getHeader());
-        final ResponseEntity<ReadableShoppingCart> response = testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() + "breakIt"),
-                HttpMethod.PUT,
-                cartEntity,
-                ReadableShoppingCart.class);
-

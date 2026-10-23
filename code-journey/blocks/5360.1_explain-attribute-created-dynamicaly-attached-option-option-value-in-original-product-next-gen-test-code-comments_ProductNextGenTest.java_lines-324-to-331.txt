@@ -1,8 +1,0 @@
-		
-		/**
-		 * An attribute can be created dynamicaly but the attached Option and Option value need to exist
-		 */
-		
-		MerchantStore store = product.getMerchantStore();
-		Language en = languageService.getByCode("en");
-		

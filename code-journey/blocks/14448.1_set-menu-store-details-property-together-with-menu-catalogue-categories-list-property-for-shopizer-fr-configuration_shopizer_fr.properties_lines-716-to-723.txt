@@ -1,8 +1,0 @@
-menu.storeDetails=Boutique
-menu.storeLanding=Boutique - page principale
-menu.storeBranding=Boutique - image de marque
-menu.catalogue-products=Produits
-menu.catalogue-products-create=Créer un produit
-menu.catalogue-categories=Catégories
-menu.catalogue-categories-create=Créer une catégorie
-menu.catalogue-categories-list=Liste des catégories

@@ -1,8 +1,0 @@
-module.shipping.canadapost.services=Services to be rated
-module.shipping.canadapost.message.identifier=Canada Post identifier required
-module.shipping.canadapost.message.username=Canada Post user name required
-module.shipping.canadapost.message.password=Canada Post password required
-module.shipping.canadapost.message.apikey=Canada Post API key required
-
-module.shipping.canadapost.DOM.RP=Regular Parcel
-module.shipping.canadapost.DOM.EP=Expedited Parcel

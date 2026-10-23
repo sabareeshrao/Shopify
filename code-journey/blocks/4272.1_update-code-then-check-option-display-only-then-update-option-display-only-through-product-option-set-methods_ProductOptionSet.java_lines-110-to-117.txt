@@ -1,8 +1,0 @@
-	public void setCode(String code) {
-		this.code = code;
-	}
-	public boolean isOptionDisplayOnly() {
-		return optionDisplayOnly;
-	}
-	public void setOptionDisplayOnly(boolean optionDisplayOnly) {
-		this.optionDisplayOnly = optionDisplayOnly;

@@ -1,8 +1,0 @@
-label.customer.signin.social.system=Connectez-vous avec {0}
-label.customer.faster=Il y a plusieurs bénéfices à créer un compte dont simplifier le processus d'achat, obtnir des informations sur vos commandes et bien plus.
-label.customer.myaccount=Mon compte
-label.customer.contactus=Contactez-nous
-label.customer.list=Liste de clients
-label.customer.customerlist.title = Liste des clients 
-label.customer.customerdetails.title = Détails du client 
-label.customer.name = Nom du client 

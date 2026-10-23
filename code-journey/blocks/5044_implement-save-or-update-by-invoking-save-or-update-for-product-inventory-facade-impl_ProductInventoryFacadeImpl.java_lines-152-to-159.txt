@@ -1,8 +1,0 @@
-	private void saveOrUpdate(ProductAvailability availability) {
-		try {
-			productAvailabilityService.saveOrUpdate(availability);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Cannot create Inventory", e);
-		}
-	}
-

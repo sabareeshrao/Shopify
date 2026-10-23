@@ -1,8 +1,0 @@
-	private CustomerRepository customerRepository;
-	
-	@Inject
-	private CustomerAttributeService customerAttributeService;
-	
-	@Inject
-	private GeoLocation geoLocation;
-

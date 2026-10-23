@@ -1,3 +1,0 @@
-	@Column(name="SEF_URL", length=120)
-	private String seUrl;
-

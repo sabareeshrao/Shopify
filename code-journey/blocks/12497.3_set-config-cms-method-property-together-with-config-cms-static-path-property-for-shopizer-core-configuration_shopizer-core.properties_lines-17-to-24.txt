@@ -1,8 +1,0 @@
-# default = infinispan
-# httpd = requires http server
-# aws = AWS S3 -> See AWS S3 configuration below
-
-config.cms.method=aws
-config.cms.static.path=/static
-
-#Infinispan configuration

@@ -1,8 +1,0 @@
-
-			}
-			
-			/** set final delivery address **/
-			shippingQuote.setDeliveryAddress(delivery);
-			
-			shippingQuote.setShippingOptions(shippingOptions);
-			

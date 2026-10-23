@@ -1,8 +1,0 @@
-	private static final long serialVersionUID = 1L;
-	private FilePut uploadFile;
-	private FileGet getFile;
-	private FileRemove removeFile;
-	private FolderRemove removeFolder;
-	private FolderPut addFolder;
-	private FolderList listFolder;
-

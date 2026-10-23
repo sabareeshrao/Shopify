@@ -1,8 +1,0 @@
-
-        CategoryDescription frdescription = new CategoryDescription();
-        frdescription.setLanguage("fr");
-        frdescription.setName("Salle à manger");
-        frdescription.setFriendlyUrl("salle-a-manger");
-        frdescription.setTitle("Salle à manger");
-
-        List<CategoryDescription> descriptions = new ArrayList<>();

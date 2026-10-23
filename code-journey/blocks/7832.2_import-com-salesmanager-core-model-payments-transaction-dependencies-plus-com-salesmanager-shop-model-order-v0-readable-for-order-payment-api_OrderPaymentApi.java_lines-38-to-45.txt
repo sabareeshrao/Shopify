@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.payments.Transaction;
-import com.salesmanager.core.model.payments.TransactionType;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.core.model.shoppingcart.ShoppingCart;
-import com.salesmanager.shop.constants.Constants;
-import com.salesmanager.shop.model.order.transaction.PersistablePayment;
-import com.salesmanager.shop.model.order.transaction.ReadableTransaction;
-import com.salesmanager.shop.model.order.v0.ReadableOrderList;

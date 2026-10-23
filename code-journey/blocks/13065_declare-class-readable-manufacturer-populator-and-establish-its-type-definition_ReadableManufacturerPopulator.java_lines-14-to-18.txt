@@ -1,5 +1,0 @@
-public class ReadableManufacturerPopulator extends
-    AbstractDataPopulator<com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer, ReadableManufacturer> {
-
-
-

@@ -1,2 +1,0 @@
-			@Param("to") @Temporal(javax.persistence.TemporalType.TIMESTAMP) Date endDate);
-}

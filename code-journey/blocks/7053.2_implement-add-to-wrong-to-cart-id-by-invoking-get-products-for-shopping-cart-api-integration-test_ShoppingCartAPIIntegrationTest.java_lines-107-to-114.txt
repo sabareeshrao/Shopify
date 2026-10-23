@@ -1,8 +1,0 @@
-    public void addToWrongToCartId() throws Exception {
-
-        ReadableProduct product = sampleProduct("add3Cart");
-        assertNotNull(product);
-        data.getProducts().add(product);
-
-        PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();
-        cartItem.setProduct(product.getSku());

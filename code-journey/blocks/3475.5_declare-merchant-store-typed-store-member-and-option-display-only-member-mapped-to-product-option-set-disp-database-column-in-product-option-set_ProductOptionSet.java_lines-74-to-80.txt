@@ -1,7 +1,0 @@
-	@JoinColumn(name="MERCHANT_ID", nullable=false)
-	private MerchantStore store;
-	
-	@Column(name="PRODUCT_OPTION_SET_DISP")
-	private boolean optionDisplayOnly = false;
-	
-	

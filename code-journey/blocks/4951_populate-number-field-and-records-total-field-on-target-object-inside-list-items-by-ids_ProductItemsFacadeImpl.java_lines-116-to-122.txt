@@ -1,7 +1,0 @@
-		
-		productList.setNumber(Math.toIntExact(products.getTotalCount()));
-		productList.setRecordsTotal(new Long(products.getTotalCount()));
-
-		return productList;
-	}
-

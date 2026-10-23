@@ -1,5 +1,0 @@
-     * @throws ServiceException
-     */
-    OrderTotalSummary caculateOrderTotal(OrderSummary orderSummary,
-                                         MerchantStore store, Language language) throws ServiceException;
-

@@ -1,8 +1,0 @@
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="MERCHANT_ID", nullable=false)
-	private MerchantStore merchantStore;
-	
-	@Valid
-	@OneToMany(mappedBy = "taxRate", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<TaxRateDescription> descriptions = new ArrayList<TaxRateDescription>();

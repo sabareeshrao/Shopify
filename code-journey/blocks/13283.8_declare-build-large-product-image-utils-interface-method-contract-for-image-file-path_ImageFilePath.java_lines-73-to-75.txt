@@ -1,3 +1,0 @@
-	 */
-	public String buildLargeProductImageUtils(MerchantStore store, String sku, String imageName);
-

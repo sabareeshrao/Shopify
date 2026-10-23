@@ -1,4 +1,0 @@
-			chargeParams.put("description", new StringBuilder().append(TRANSACTION).append(" - ").append(store.getStorename()).toString());
-			
-			Stripe.apiKey = apiKey;
-			

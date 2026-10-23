@@ -1,8 +1,0 @@
-import com.salesmanager.shop.utils.SanitizeUtils;
-
-/**
- * Cross Site Scripting filter enforcing html encoding of request parameters
- * @author carlsamson
- *
- */
-public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {

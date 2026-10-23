@@ -1,8 +1,0 @@
-		
-		List<Zone> zones = null;
-		try {
-			
-			String countryCode = Constants.DEFAULT_COUNTRY;
-			if(country!=null) {
-				countryCode = country.getIsoCode();
-			}

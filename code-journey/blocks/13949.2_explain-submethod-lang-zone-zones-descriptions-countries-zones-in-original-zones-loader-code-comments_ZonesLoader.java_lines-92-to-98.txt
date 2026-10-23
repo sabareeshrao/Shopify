@@ -1,7 +1,0 @@
-								/**
-								 * submethod
-								 */
-								for (Object z : langList) {
-									Map<String, String> e = (Map<String, String>) z;
-									mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
-								}

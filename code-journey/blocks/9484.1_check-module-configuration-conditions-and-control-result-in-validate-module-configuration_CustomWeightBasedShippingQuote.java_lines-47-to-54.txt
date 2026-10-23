@@ -1,8 +1,0 @@
-	@Override
-	public void validateModuleConfiguration(
-			IntegrationConfiguration integrationConfiguration,
-			MerchantStore store) throws IntegrationException {
-		
-		
-		//not used, it has its own controller with complex validators
-

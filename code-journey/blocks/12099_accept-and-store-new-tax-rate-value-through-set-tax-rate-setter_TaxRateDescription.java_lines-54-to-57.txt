@@ -1,4 +1,0 @@
-	public void setTaxRate(TaxRate taxRate) {
-		this.taxRate = taxRate;
-	}
-}

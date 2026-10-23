@@ -1,8 +1,0 @@
-  @Override
-  public void saveOrUpdate(Manufacturer manufacturer) throws ServiceException {
-
-    LOGGER.debug("Creating Manufacturer");
-
-    if (manufacturer.getId() != null && manufacturer.getId() > 0) {
-      super.update(manufacturer);
-

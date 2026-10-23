@@ -1,8 +1,0 @@
-            shoppingCartService.create( cartMdel );
-        }
-
-        List<ShoppingCartItem> items = shoppingCart.getShoppingCartItems();
-        Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> newItems =
-            new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-        if ( items != null && items.size() > 0 )
-        {

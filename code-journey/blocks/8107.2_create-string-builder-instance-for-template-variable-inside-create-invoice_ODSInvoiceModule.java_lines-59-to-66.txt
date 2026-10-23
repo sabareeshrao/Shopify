@@ -1,8 +1,0 @@
-			List<Zone> zones = zoneService.getZones(store.getCountry(), language);
-			Map<String,Country> countries = countryService.getCountriesMap(language);
-			
-			//get default template
-			String template = new StringBuilder().append(INVOICE_TEMPLATE).append("_").append(language.getCode().toLowerCase()).append(INVOICE_TEMPLATE_EXTENSION).toString();
-			
-			//try by language
-			InputStream is = null;

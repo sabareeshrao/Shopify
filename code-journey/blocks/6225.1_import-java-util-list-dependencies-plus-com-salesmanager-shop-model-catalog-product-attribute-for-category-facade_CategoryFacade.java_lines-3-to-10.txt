@@ -1,8 +1,0 @@
-import java.util.List;
-import com.salesmanager.core.model.catalog.category.Category;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.model.catalog.category.PersistableCategory;
-import com.salesmanager.shop.model.catalog.category.ReadableCategory;
-import com.salesmanager.shop.model.catalog.category.ReadableCategoryList;
-import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductVariant;

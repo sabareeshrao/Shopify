@@ -1,8 +1,0 @@
-	public void setLanguage(final String language) {
-		this.language = language;
-	}
-	public String getLanguage() {
-		return language;
-	}
-	
-

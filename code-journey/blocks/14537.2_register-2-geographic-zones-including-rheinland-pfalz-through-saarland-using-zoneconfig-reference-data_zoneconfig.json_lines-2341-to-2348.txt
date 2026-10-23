@@ -1,8 +1,0 @@
-			"zoneName": "Rheinland-Pfalz",
-			"countryCode": "DE"
-		},
-		{
-			"zoneCode": "SAR",
-			"zoneName": "Saarland",
-			"countryCode": "DE"
-		},

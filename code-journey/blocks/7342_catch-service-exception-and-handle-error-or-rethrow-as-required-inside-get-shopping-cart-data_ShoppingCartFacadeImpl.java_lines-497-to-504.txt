@@ -1,8 +1,0 @@
-
-			}
-
-		} catch (ServiceException ex) {
-			LOG.error("Error while retriving cart from customer", ex);
-		} catch (NoResultException nre) {
-			// nothing
-		}

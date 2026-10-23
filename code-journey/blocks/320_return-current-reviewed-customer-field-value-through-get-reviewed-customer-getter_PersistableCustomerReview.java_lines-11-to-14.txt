@@ -1,4 +1,0 @@
-	public Long getReviewedCustomer() {
-		return reviewedCustomer;
-	}
-

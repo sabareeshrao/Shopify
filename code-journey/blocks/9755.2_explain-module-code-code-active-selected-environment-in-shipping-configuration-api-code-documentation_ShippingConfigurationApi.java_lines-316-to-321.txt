@@ -1,6 +1,0 @@
-	 * 
-	 * moduleCode:CODE, active:true, defaultSelected:false, environment: "TEST",
-	 * integrationKeys { "key":"value", "anotherkey":"anothervalue"... }
-	 */
-
-}

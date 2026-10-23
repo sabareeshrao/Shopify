@@ -1,6 +1,0 @@
-	public User(String userName,String password, String email) {
-		
-		this.adminName = userName;
-		this.adminPassword = password;
-		this.adminEmail = email;
-	}

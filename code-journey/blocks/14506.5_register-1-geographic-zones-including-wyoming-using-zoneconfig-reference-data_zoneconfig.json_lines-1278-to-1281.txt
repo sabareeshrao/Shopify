@@ -1,4 +1,0 @@
-		"zoneName": "Wyoming",
-		"countryCode": "US"
-	},
-	{

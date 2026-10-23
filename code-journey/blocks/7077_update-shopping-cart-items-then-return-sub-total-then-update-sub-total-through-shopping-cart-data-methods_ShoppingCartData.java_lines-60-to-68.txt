@@ -1,9 +1,0 @@
-	public void setShoppingCartItems(List<ShoppingCartItem> shoppingCartItems) {
-		this.shoppingCartItems = shoppingCartItems;
-	}
-	public String getSubTotal() {
-		return subTotal;
-	}
-	public void setSubTotal(String subTotal) {
-		this.subTotal = subTotal;
-	}

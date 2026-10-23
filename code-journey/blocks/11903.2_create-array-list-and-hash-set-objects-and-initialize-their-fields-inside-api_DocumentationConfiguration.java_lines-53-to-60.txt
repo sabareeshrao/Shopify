@@ -1,8 +1,0 @@
-
-		final List<ResponseMessage> getMessages = new ArrayList<ResponseMessage>();
-		getMessages.add(new ResponseMessageBuilder().code(500).message("500 message")
-				.responseModel(new ModelRef("Error")).build());
-		getMessages.add(new ResponseMessageBuilder().code(403).message("Forbidden").build());
-		getMessages.add(new ResponseMessageBuilder().code(401).message("Unauthorized").build());
-
-		Set<String> produces = new HashSet<>();

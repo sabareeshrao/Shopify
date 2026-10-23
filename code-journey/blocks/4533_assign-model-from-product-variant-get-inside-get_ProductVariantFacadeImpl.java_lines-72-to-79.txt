@@ -1,8 +1,0 @@
-		
-		
-		ProductVariant model =  productVariant.get();
-		return readableProductVariantMapper.convert(model, store, language);
-		
-		
-	}
-

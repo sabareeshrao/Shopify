@@ -1,8 +1,0 @@
-
-      
-      ReadableManufacturerPopulator populator = new ReadableManufacturerPopulator();
-      List<ReadableManufacturer> returnList = new ArrayList<ReadableManufacturer>();
-  
-      for (Manufacturer m : manufacturers) {
-        ReadableManufacturer readableManufacturer = new ReadableManufacturer();
-        populator.populate(m, readableManufacturer, store, language);

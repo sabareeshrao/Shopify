@@ -1,8 +1,0 @@
-    
-    if(!StringUtils.isBlank(source.getStore())) {
-        try {
-			MerchantStore userStore = merchantStoreService.getByCode(source.getStore());
-			target.setMerchantStore(userStore);
-		} catch (ServiceException e) {
-			throw new ConversionException("Error while reading MerchantStore store [" + source.getStore() + "]",e);
-		}

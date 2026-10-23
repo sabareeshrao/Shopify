@@ -1,8 +1,0 @@
-    
-    @SuppressWarnings( "nls" )
-    public Object getPropertyValue( Object bean, String property )
-        throws IntrospectionException, IllegalArgumentException, IllegalAccessException, InvocationTargetException
-    {
-        
-        if (bean == null) {
-            throw new IllegalArgumentException("No bean specified");

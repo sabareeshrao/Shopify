@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.core.model.shipping.PackageDetails;
-import com.salesmanager.core.model.shipping.ShippingConfiguration;
-import com.salesmanager.core.model.shipping.ShippingOption;
-import com.salesmanager.core.model.shipping.ShippingOrigin;
-import com.salesmanager.core.model.shipping.ShippingQuote;
-import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
-import com.salesmanager.core.model.system.IntegrationConfiguration;

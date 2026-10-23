@@ -1,8 +1,0 @@
-public class StoreContactRESTController {
-	
-	@Inject
-	private LanguageService languageService;
-	
-	@Inject
-	private MerchantStoreService merchantStoreService;
-	

@@ -1,5 +1,0 @@
-
-		// cleanup detached attributes
-		if (CollectionUtils.isEmpty(attributesList)) {
-			item.setAttributes(null);
-		}

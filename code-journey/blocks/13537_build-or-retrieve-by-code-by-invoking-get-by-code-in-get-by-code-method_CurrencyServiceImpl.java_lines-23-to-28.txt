@@ -1,6 +1,0 @@
-	@Override
-	public Currency getByCode(String code) {
-		return currencyRepository.getByCode(code);
-	}
-
-}

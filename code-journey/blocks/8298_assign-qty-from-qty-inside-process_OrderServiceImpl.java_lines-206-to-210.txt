@@ -1,5 +1,0 @@
-                qty = qty - orderProduct.getProductQuantity();
-                availability.setProductQuantity(qty);
-            }
-            productService.update(p);
-        }

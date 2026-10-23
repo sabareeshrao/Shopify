@@ -1,4 +1,0 @@
-
-			throw new Exception("Item with id " + product.getId() + " is not properly configured");
-
-		}

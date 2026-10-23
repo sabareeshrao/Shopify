@@ -1,4 +1,0 @@
-	<tr>
-		<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-			padding-top: 20px;" class="hero">
-			<a target="_blank" style="text-decoration: none;"

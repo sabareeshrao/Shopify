@@ -1,9 +1,0 @@
-	private final static String LINE_BREAK = "<br/>";
-	private final static String TABLE = "<table width=\"100%\">";
-	private final static String CLOSING_TABLE = "</table>";
-	private final static String TR = "<tr>";
-	private final static String TR_BORDER = "<tr class=\"border\">";
-	private final static String CLOSING_TR = "</tr>";
-	private final static String TD = "<td valign=\"top\">";
-	private final static String CLOSING_TD = "</td>";
-	

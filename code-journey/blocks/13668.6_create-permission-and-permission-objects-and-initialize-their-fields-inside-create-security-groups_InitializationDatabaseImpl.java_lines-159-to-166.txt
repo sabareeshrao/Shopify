@@ -1,8 +1,0 @@
-		  
-		  Permission CUSTOMER = new Permission("CUSTOMER");
-		  permissionService.create(CUSTOMER);
-		  permissionKeys.put(CUSTOMER.getPermissionName(), CUSTOMER);
-		  
-		  Permission SHIPPING = new Permission("SHIPPING");
-		  permissionService.create(SHIPPING);
-		  permissionKeys.put(SHIPPING.getPermissionName(), SHIPPING);

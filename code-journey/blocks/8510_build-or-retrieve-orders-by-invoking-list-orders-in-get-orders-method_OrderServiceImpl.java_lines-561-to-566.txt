@@ -1,6 +1,0 @@
-    @Override
-    public OrderList getOrders(final OrderCriteria criteria, MerchantStore store) {
-        return orderRepository.listOrders(store, criteria);
-    }
-
-

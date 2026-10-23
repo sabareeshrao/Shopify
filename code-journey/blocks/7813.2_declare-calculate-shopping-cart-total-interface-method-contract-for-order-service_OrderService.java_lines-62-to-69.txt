@@ -1,8 +1,0 @@
-     * @throws ServiceException
-     */
-    OrderTotalSummary calculateShoppingCartTotal(final ShoppingCart shoppingCart,final Customer customer, final MerchantStore store, final Language language) throws ServiceException;
-
-    /**
-     * Can be used to calculates the final prices of all items contained in a ShoppingCart
-     * @param shoppingCart
-     * @param store

@@ -1,8 +1,0 @@
-	    colorDescription.setName("Color");
-	    colorDescription.setLanguage(en);
-	    colorDescription.setProductOption(color);
-	    
-	    Set<ProductOptionDescription> colorDescriptions = new HashSet<ProductOptionDescription>();
-	    colorDescriptions.add(colorDescription);
-	    
-	    color.setDescriptions(colorDescriptions);

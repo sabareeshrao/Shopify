@@ -1,8 +1,0 @@
-	private ReadableContentPage contentDescriptionToReadableContent(MerchantStore store, Content content,
-			ContentDescription contentDescription) {
-
-		ReadableContentPage page = new ReadableContentPage();
-
-		ContentDescription desc = new ContentDescription();
-
-		desc.setName(contentDescription.getName());

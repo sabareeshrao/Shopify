@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.services.content.ContentService;
-import com.salesmanager.core.model.merchant.MerchantStore;
-
-/**
- * Test content with CMS store logo
- * 
- * @author Carl Samson

@@ -1,8 +1,0 @@
-
-	@JsonIgnore
-	@ManyToOne(targetEntity = MerchantStore.class)
-	@JoinColumn(name="MERCHANTID")
-	private MerchantStore merchant;
-	
-	//@OneToMany(mappedBy = "order")
-	//private Set<OrderAccount> orderAccounts = new HashSet<OrderAccount>();

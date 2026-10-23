@@ -1,8 +1,0 @@
-	private String moduleName;
-	private long weight;
-	private long volume;
-	private String country;
-	private String province;
-	private long distance;
-	private long size;
-	private int price;//integer should be rounded from BigBecimal

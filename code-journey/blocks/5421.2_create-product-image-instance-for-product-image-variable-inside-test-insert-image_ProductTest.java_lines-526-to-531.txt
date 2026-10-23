@@ -1,6 +1,0 @@
-		
-		ProductImage productImage = new ProductImage();
-		
-		ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-		InputStream inputStream = classloader.getResourceAsStream("img/" + IMAGE_NAME);
-

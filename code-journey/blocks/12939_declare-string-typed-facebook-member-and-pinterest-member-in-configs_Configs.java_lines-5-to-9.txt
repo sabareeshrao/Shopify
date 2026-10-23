@@ -1,5 +1,0 @@
-	private String facebook;
-	private String pinterest;
-	private String ga;
-	private String instagram;
-

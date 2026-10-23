@@ -1,8 +1,0 @@
-					.append(Constants.SLASH).append(staticContentType).append(Constants.SLASH).append(fileName);
-
-			Path path = Paths.get(merchantPath.toString());
-
-			Files.deleteIfExists(path);
-
-		} catch (final Exception e) {
-			LOGGER.error("Error while deleting files for {} merchant ", merchantStoreCode);

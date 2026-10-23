@@ -1,4 +1,0 @@
-	public void setSupported(boolean supported) {
-		this.supported = supported;
-	}
-

@@ -1,8 +1,0 @@
-	@Override
-	public ReadableShoppingCart merge(ShoppingCart source, ReadableShoppingCart destination, MerchantStore store,
-			Language language) {
-		Validate.notNull(source, "ShoppingCart cannot be null");
-		Validate.notNull(destination, "ReadableShoppingCart cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(language, "Language cannot be null");
-

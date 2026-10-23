@@ -1,8 +1,0 @@
-		
-		orderStatusHistory.setComments("We received your order");
-		orderStatusHistory.setCustomerNotified(1);
-		orderStatusHistory.setStatus(OrderStatus.ORDERED);
-		orderStatusHistory.setDateAdded(new Date() );
-		orderStatusHistory.setOrder(order);
-		order.getOrderHistory().add( orderStatusHistory );		
-		

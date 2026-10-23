@@ -1,8 +1,0 @@
-	
-	@Value("${config.shipping.rule.priceByDistance}")
-	private String priceByDistance;
-	
-	@Value("${config.shipping.rule.shippingModuleDecision}")
-	private String shippingDecision;
-	
-

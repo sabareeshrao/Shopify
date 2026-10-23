@@ -1,8 +1,0 @@
-    target.setOrder(source.getOrder());
-    target.setId(source.getId());
-    target.setCode(source.getCode());
-    if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
-
-      List<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> fulldescriptions =
-          new ArrayList<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription>();
-

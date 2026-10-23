@@ -1,6 +1,0 @@
-	@Override
-	public Page<ProductAvailability> getBySku(String sku, int page, int count) {
-		Pageable pageRequest = PageRequest.of(page, count);
-		return pageableProductAvailabilityRepository.getBySku(sku, pageRequest);
-	}
-

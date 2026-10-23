@@ -1,8 +1,0 @@
-		
-		order = orderService.getById(order.getId());
-		
-		*//**
-		 * 2 Create an invoice
-		 *//*
-		try {
-			URL resource = getClass().getResource("/templates/invoice/invoice.ods");

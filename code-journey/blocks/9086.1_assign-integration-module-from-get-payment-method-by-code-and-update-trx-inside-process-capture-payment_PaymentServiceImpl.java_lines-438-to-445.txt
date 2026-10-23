@@ -1,8 +1,0 @@
-		
-
-		IntegrationModule integrationModule = getPaymentMethodByCode(store,order.getPaymentModuleCode());
-		
-		//TransactionType transactionType = payment.getTransactionType();
-
-			//get the previous transaction
-		Transaction trx = transactionService.getCapturableTransaction(order);

@@ -1,8 +1,0 @@
-        mediumDescription.setName("Medium");
-        mediumDescription.setDescription("Medium size");
-        mediumDescription.setProductOptionValue(medium);
-        
-        medium.getDescriptions().add(mediumDescription);
-
-        //create another option value
-        productOptionValueService.saveOrUpdate(medium);

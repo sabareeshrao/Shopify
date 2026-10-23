@@ -1,7 +1,0 @@
-	public void setShippingQuote(Long shippingQuote) {
-		this.shippingQuote = shippingQuote;
-	}
-	
-
-
-}

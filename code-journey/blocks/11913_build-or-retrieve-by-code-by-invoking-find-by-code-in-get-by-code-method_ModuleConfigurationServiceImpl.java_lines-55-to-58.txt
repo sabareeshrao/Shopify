@@ -1,4 +1,0 @@
-	@Override
-	public IntegrationModule getByCode(String moduleCode) {
-		return moduleConfigurationRepository.findByCode(moduleCode);
-	}

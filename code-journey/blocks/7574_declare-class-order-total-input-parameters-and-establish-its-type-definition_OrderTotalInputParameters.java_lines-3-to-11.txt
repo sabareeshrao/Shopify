@@ -1,9 +1,0 @@
-import java.util.Date;
-
-/**
- * Input itm to be added to drules engine
- * @author carlsamson
- *
- */
-public class OrderTotalInputParameters {
-	

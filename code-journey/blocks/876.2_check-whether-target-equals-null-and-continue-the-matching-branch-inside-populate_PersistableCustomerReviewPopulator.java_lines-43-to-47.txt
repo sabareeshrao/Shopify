@@ -1,5 +1,0 @@
-		try {
-			
-			if(target==null) {
-				target = new CustomerReview();
-			}

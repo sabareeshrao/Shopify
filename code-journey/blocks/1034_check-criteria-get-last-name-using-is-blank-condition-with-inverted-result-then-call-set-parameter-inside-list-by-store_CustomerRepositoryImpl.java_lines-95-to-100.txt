@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getLastName())) {
-			String nameParam = new StringBuilder().append("%").append(criteria.getLastName()).append("%").toString();
-			countQ.setParameter("ln",nameParam);
-			objectQ.setParameter("ln",nameParam);
-		}

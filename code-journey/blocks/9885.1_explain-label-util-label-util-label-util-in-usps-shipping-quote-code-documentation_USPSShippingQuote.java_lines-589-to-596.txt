@@ -1,8 +1,0 @@
-				}
-			}
-
-			LabelUtil labelUtil = LabelUtil.getInstance();*/
-			// Map serviceMap =
-			// com.salesmanager.core.util.ShippingUtil.buildServiceMap("usps",locale);
-
-			@SuppressWarnings("unchecked")

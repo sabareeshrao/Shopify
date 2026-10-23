@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "Cantabria",
-		"zoneName": "Cantabria",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Castellon",
-		"zoneName": "Castellon",

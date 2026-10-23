@@ -1,8 +1,0 @@
-
-
-	/** creates a working copy of customer when the user is anonymous **/
-	Customer initEmptyCustomer(MerchantStore store);
-	List<Country> getShipToCountry(MerchantStore store, Language language)
-			throws Exception;
-
-	/**

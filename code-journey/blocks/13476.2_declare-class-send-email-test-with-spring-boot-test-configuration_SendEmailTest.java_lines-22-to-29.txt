@@ -1,8 +1,0 @@
-@SpringBootTest(classes = {ConfigurationTest.class})
-@Ignore
-public class SendEmailTest extends AbstractSalesManagerCoreTestCase {
-  
-  @Inject
-  private EmailService emailService;
-  
-  @Test

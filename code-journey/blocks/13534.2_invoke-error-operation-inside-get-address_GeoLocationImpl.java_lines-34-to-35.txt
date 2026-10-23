@@ -1,2 +1,0 @@
-						LOGGER.error("Cannot instantiate IP database",e);
-					}

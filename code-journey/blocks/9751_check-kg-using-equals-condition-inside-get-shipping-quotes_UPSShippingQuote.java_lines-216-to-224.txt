@@ -1,9 +1,0 @@
-
-			String weightCode = store.getWeightunitcode();
-			String measureCode = store.getSeizeunitcode();
-
-			if (weightCode.equals("KG")) {
-				weightCode = "KGS";
-			} else {
-				weightCode = "LBS";
-			}

@@ -1,7 +1,0 @@
-		
-		//id
-		if(criteria.getId() != null) {
-			String nameQuery =  " and str(o.id) like:id";
-			objectBuilderWhere.append(nameQuery);
-			countBuilderSelect.append(nameQuery);
-		}

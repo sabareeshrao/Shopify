@@ -1,3 +1,0 @@
-				throw new ResourceNotFoundException(
-						"No content found with id [" + id + "] for store [" + store.getCode() + "]");
-			}

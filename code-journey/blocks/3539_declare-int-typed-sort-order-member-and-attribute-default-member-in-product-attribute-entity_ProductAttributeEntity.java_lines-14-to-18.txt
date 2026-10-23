@@ -1,5 +1,0 @@
-	private int sortOrder;
-	private boolean attributeDefault=false;
-	private boolean attributeDisplayOnly = false;
-
-

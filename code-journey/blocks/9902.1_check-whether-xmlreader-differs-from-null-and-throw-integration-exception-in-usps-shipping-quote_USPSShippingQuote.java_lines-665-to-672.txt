@@ -1,8 +1,0 @@
-
-		} catch (Exception e1) {
-			LOGGER.error("Error in USPS shipping quote ",e1);
-			throw new IntegrationException(e1);
-		} finally {
-			if (xmlreader != null) {
-				try {
-					xmlreader.close();

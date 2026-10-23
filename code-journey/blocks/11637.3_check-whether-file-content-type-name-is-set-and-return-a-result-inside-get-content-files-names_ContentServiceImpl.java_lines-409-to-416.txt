@@ -1,8 +1,0 @@
-
-		return contentFileManager.getFileNames(merchantStoreCode, path, fileContentType);
-
-		/*
-		 * if(fileContentType.name().equals(FileContentType.IMAGE.name()) ||
-		 * fileContentType.name().equals(FileContentType.STATIC_FILE.name())) {
-		 * return contentFileManager.getFileNames(merchantStoreCode,
-		 * fileContentType); } else { return

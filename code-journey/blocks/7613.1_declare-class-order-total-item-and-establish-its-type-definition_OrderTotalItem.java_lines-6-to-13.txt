@@ -1,8 +1,0 @@
-public class OrderTotalItem implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private BigDecimal itemPrice;
-	private String itemCode;

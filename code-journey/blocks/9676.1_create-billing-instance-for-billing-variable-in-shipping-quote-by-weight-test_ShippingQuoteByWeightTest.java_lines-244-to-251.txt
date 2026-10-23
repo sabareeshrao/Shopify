@@ -1,8 +1,0 @@
-	    
-	    Billing billing = new Billing();
-	    billing.setAddress("Billing address");
-	    billing.setCountry(country);
-	    billing.setZone(zone);
-	    billing.setPostalCode("J4B-8J9");
-	    billing.setFirstName("Carl");
-	    billing.setLastName("Samson");

@@ -1,8 +1,0 @@
-		    	   Map<String,Zone> zones = zoneService.getZones(language);
-		    	   
-		    	   Map<String,Country> countries = countryService.getCountriesMap(language);
-		    	   
-		    	   //format Billing address
-		    	   StringBuilder billing = new StringBuilder();
-		    	   if(StringUtils.isBlank(order.getBilling().getCompany())) {
-		    		   billing.append(order.getBilling().getFirstName()).append(" ")

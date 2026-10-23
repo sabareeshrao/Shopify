@@ -1,3 +1,0 @@
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.system.MerchantLog;
-

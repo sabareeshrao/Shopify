@@ -1,8 +1,0 @@
- * Interface declaring various methods used to calculate {@link ShoppingCart}
- * object details.
- * 
- * @author Umesh Awasthi
- * @since 1.2
- *
- */
-public interface ShoppingCartCalculationService {

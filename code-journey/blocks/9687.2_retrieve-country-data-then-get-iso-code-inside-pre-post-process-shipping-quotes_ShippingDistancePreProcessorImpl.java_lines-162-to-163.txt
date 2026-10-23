@@ -1,2 +1,0 @@
-		destinationAddress.append(delivery.getCountry().getIsoCode());
-		

@@ -1,8 +1,0 @@
-	private String productQueryV2() {
-		StringBuilder qs = new StringBuilder();
-		qs.append("select distinct p from Product as p ");
-		qs.append("join fetch p.descriptions pd ");
-		qs.append("join fetch p.merchantStore merch ");
-		qs.append("left join fetch p.availabilities pavail ");
-		qs.append("left join fetch p.type type ");
-		// images

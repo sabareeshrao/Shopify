@@ -1,8 +1,0 @@
-		
-		CreditCardPayment creditCardPayment = (CreditCardPayment)payment;
-
-		messageString.append("requestType=BACKEND&");
-		messageString.append("merchant_id=").append(configuration.getIntegrationKeys().get("merchantid")).append("&");
-		messageString.append("trnType=").append(transactionType).append("&");
-		messageString.append("username=").append(configuration.getIntegrationKeys().get("username")).append("&");
-		messageString.append("password=").append(configuration.getIntegrationKeys().get("password")).append("&");

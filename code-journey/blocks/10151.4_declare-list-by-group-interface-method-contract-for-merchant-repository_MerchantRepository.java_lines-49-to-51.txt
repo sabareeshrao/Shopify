@@ -1,3 +1,0 @@
-	  nativeQuery = true)
-	  List<MerchantStore> listByGroup(String storeCode, Integer id);
-}

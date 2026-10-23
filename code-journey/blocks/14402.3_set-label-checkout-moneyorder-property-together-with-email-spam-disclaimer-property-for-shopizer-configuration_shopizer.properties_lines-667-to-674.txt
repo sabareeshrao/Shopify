@@ -1,8 +1,0 @@
-
-label.checkout.moneyorder=Please make your check or money order payable to:
-
-email.user.resetpassword.text=A request has been made to reset you password. You will find herein your new password.
-email.customer.resetpassword.text=A request has been made to reset you password. You will find herein your new password.
-email.disclaimer=This email address was given to us by you or by one of our customers. If you feel that you have received this email in error, please send an email to {0} for de-activation
-email.contactowner=If you have any questions on this request, please send an email to {0} in order to receive more details.
-email.spam.disclaimer=This email is sent in accordance with the US CAN-SPAM Law in effect 2004-01-01. Removal requests can be sent to this address and will be honored and respected.

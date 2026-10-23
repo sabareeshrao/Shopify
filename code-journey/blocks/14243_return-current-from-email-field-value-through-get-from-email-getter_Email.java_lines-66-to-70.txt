@@ -1,5 +1,0 @@
-	public String getFromEmail() {
-		return fromEmail;
-	}
-
-}

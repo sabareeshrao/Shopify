@@ -1,4 +1,0 @@
-	public AutoCompleteRequest(String merchantCode, String languageCode) {
-		this.merchantCode = merchantCode;
-		this.languageCode = languageCode;
-	}

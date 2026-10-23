@@ -1,8 +1,0 @@
-		
-		List<TaxItem> taxItems = new ArrayList<TaxItem>();
-		
-		//iterate through the tax class and get appropriate rates
-		for(Long taxClassId : taxClassAmountMap.keySet()) {
-			
-			//get taxRate by tax class
-			List<TaxRate> taxRates = null; 

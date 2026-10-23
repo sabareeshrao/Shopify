@@ -1,5 +1,0 @@
-public class ReadableCustomerPopulator extends
-		AbstractDataPopulator<Customer, ReadableCustomer> {
-
-	
-

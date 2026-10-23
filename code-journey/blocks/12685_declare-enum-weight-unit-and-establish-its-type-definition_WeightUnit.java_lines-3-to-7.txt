@@ -1,5 +1,0 @@
-public enum WeightUnit {
-	
-	LB,KG,//GR
-
-}

@@ -1,7 +1,0 @@
-@Api(tags = { "Optin Customer to newsletter" })
-@SwaggerDefinition(tags = { @Tag(name = "Manage customer subscription to newsletter", description = "Manage customer subscription to newsletter") })
-public class CustomerNewsletterApi {
-
-	@Inject
-	private CustomerFacade customerFacade;
-

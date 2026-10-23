@@ -1,4 +1,0 @@
-	private boolean taxOnShipping = false;
-	private List<BoxConfiguration> boxConfigurations = new ArrayList<BoxConfiguration>();
-
-

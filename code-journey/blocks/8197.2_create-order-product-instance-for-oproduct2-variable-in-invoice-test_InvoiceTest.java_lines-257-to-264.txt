@@ -1,8 +1,0 @@
-		//OrderProduct
-		OrderProduct oproduct2 = new OrderProduct();
-		oproduct2.setOneTimeCharge( new BigDecimal(9.99) );
-		oproduct2.setOrder(order);		
-		oproduct2.setProductName( "Additional item name" );
-		oproduct2.setProductQuantity(1);
-		oproduct2.setSku("TB12346" );		
-		oproduct2.getPrices().add(oproductprice2 ) ;

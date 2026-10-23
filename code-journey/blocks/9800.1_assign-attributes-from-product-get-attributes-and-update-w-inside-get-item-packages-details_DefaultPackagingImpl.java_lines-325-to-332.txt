@@ -1,8 +1,0 @@
-
-			//BigDecimal weight = product.getProductWeight();
-			Set<ProductAttribute> attributes = product.getAttributes();
-			// set attributes values
-			BigDecimal w = product.getProductWeight();
-			BigDecimal h = product.getProductHeight();
-			BigDecimal l = product.getProductLength();
-			BigDecimal wd = product.getProductWidth();

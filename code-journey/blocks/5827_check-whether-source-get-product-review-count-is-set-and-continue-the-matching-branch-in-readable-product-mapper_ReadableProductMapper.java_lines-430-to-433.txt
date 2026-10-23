@@ -1,4 +1,0 @@
-
-		if (source.getProductReviewCount() != null) {
-			destination.setRatingCount(source.getProductReviewCount().intValue());
-		}

@@ -1,8 +1,0 @@
-config.cms.method=default
-config.cms.contentUrl=http://localhost:8080
-config.cms.static.path=/static
-
-
-#Infinispan configuration
-#Specifies where files are located
-config.cms.store.location=./files/store

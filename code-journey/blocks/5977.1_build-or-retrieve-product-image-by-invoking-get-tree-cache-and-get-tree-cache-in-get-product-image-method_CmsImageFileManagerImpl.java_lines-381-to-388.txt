@@ -1,8 +1,0 @@
-  private OutputContentFile getProductImage(String merchantStoreCode, String productCode,
-      String imageName, String size) throws ServiceException {
-
-    if (cacheManager.getTreeCache() == null) {
-      throw new ServiceException(
-          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
-    }
-    InputStream input = null;

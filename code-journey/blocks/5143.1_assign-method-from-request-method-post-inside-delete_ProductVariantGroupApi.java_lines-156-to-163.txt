@@ -1,8 +1,0 @@
-
-	// add image
-	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value = { "/private/product/productVariantGroup/{id}/image" }, consumes = {
-			MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST)
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
-	public void addImage(

@@ -1,5 +1,0 @@
-	@Override
-	public TaxClass getById(Long id) {
-		return taxClassRepository.getOne(id);
-	}
-

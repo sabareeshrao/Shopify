@@ -1,8 +1,0 @@
-		} else {// need CM
-			if (store.getSeizeunitcode().equals(MeasureUnit.CM.name())) {
-				return new BigDecimal(String.valueOf(measure)).setScale(2,
-				RoundingMode.HALF_UP).doubleValue();
-			} else {// in (centimeter to inch)
-				double measureConstant = 0.39;
-
-				double answer = measure * measureConstant;

@@ -1,8 +1,0 @@
-	private Transaction parseResponse(TransactionType transactionType,
-			PaymentType paymentType, Map<String,String> nvp,
-			BigDecimal amount) throws Exception {
-		
-		
-		Transaction transaction = new Transaction();
-		transaction.setAmount(amount);
-		//transaction.setOrder(order);

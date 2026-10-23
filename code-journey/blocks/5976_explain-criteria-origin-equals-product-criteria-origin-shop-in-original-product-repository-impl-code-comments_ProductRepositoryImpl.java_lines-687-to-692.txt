@@ -1,6 +1,0 @@
-		
-		/**/
-		if(criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
-				&& CollectionUtils.isNotEmpty(criteria.getOptionValueIds())) {
-			countQ.setParameter("povid", criteria.getOptionValueIds());
-		}

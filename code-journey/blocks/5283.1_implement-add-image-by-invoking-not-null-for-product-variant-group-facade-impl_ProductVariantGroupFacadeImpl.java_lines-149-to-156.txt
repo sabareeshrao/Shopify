@@ -1,8 +1,0 @@
-	@Override
-	public void addImage(MultipartFile image, Long instanceGroupId,
-			MerchantStore store, Language language) {
-		
-		
-		Validate.notNull(instanceGroupId,"productVariantGroupId must not be null");
-		Validate.notNull(image,"Image must not be null");
-		Validate.notNull(store,"MerchantStore must not be null");

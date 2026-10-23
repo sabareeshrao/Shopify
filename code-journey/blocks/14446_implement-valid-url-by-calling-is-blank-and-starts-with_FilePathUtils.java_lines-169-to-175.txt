@@ -1,7 +1,0 @@
-	public String validUrl(final String url) {
-		if (!StringUtils.isBlank(url) && !url.startsWith(HTTP) && !url.startsWith(HTTP)) {
-			return HTTPS + url;
-		}
-		return url;
-	}
-

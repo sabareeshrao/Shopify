@@ -1,8 +1,0 @@
-			&ordEmailAddress=test@yahoo.com
-			**/
-			
-			/**
-			merchant_id=123456789&requestType=BACKEND
-			&trnType=P&trnOrderNumber=1234TEST&trnAmount=5.00&trnCardOwner=Joe+Test
-					&trnCardNumber=4030000010001234
-					&trnExpMonth=10

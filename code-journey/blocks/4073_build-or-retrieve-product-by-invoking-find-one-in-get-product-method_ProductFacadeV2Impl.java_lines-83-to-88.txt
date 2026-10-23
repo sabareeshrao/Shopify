@@ -1,6 +1,0 @@
-	@Override
-	public Product getProduct(Long id, MerchantStore store) {
-		//same as v1
-		return productService.findOne(id, store);
-	}
-

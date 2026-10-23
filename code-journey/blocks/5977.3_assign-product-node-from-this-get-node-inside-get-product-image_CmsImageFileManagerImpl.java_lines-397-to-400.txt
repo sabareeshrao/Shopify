@@ -1,4 +1,0 @@
-          .append(Constants.SLASH).append(size);
-
-      Node<String, Object> productNode = this.getNode(nodePath.toString());
-

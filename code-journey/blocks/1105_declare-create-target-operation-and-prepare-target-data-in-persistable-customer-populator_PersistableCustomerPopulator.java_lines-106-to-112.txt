@@ -1,7 +1,0 @@
-	@Override
-	protected PersistableCustomer createTarget() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-}

@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(USPSShippingQuote.class);
-
-	
-	@Inject
-	private ProductPriceUtils productPriceUtils;
-	
-	@Inject
-	private CountryService countryService;

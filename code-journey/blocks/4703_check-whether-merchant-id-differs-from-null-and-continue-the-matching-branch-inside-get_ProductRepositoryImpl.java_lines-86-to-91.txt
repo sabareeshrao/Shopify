@@ -1,6 +1,0 @@
-			}
-
-			if(merchantId != null) {
-				//qs.append(" and merch.id=:mid");
-				qs.append(" and merch.id in (:mid)");
-			}

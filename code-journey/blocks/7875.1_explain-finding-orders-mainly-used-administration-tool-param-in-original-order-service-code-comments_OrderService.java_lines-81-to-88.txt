@@ -1,8 +1,0 @@
-    
-    /**
-     * For finding orders. Mainly used in the administration tool
-     * @param store
-     * @param criteria
-     * @return
-     */
-    OrderList listByStore(MerchantStore store, OrderCriteria criteria);

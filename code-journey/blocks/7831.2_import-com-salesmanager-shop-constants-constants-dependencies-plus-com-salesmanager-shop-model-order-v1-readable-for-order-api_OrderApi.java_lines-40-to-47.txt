@@ -1,8 +1,0 @@
-import com.salesmanager.shop.constants.Constants;
-import com.salesmanager.shop.model.customer.PersistableCustomer;
-import com.salesmanager.shop.model.customer.ReadableCustomer;
-import com.salesmanager.shop.model.order.v0.ReadableOrder;
-import com.salesmanager.shop.model.order.v0.ReadableOrderList;
-import com.salesmanager.shop.model.order.v1.PersistableAnonymousOrder;
-import com.salesmanager.shop.model.order.v1.PersistableOrder;
-import com.salesmanager.shop.model.order.v1.ReadableOrderConfirmation;

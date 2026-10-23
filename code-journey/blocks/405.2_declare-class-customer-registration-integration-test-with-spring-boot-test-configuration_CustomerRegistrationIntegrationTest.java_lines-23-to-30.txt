@@ -1,8 +1,0 @@
-
-@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-@RunWith(SpringRunner.class)
-public class CustomerRegistrationIntegrationTest extends ServicesTestSupport {
-
-    @Test
-    public void registerCustomer() {
-        

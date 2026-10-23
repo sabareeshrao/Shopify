@@ -1,8 +1,0 @@
-			"zoneName": "Valencia",
-			"countryCode": "ES"
-		},
-		{
-			"zoneCode": "Valladolid",
-			"zoneName": "Valladolid",
-			"countryCode": "ES"
-		},

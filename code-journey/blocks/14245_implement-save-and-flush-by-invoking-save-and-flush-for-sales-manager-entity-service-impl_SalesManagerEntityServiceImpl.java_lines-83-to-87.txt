@@ -1,5 +1,0 @@
-	protected E saveAndFlush(E entity) {
-		return repository.saveAndFlush(entity);
-	}
-
-}

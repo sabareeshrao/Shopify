@@ -1,8 +1,0 @@
-	    shoesDescription.setName("Shoes");
-	    shoesDescription.setCategory(shoes);
-	    shoesDescription.setLanguage(en);
-
-	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
-	    descriptions.add(shoesDescription);
-
-	    shoes.setDescriptions(descriptions);

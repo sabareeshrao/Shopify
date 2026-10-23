@@ -1,8 +1,0 @@
-NO_SHIPPING_MODULE_CONFIGURED=No shipping module configured
-
-module.shipping.canadapost=Canada Post
-module.shipping.ups=UPS
-module.shipping.usps=United States Postal Service
-module.shipping.fedex=Fedex
-module.shipping.weightBased=Weight based shipping price
-module.shipping.customQuotesRules=Shipping by {0}

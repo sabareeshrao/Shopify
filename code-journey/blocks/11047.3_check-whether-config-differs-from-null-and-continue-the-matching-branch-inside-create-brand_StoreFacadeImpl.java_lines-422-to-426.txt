@@ -1,5 +1,0 @@
-					MerchantConfiguration config = merchantConfigurationService
-							.getMerchantConfiguration(mConfigs.getKey(), mStore);
-					if (config != null) {
-						merchantConfigurationService.delete(config);
-					}

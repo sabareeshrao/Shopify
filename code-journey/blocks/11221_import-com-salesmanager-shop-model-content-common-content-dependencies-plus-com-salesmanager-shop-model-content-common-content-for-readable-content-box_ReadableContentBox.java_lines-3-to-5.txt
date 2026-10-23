@@ -1,3 +1,0 @@
-import com.salesmanager.shop.model.content.common.Content;
-import com.salesmanager.shop.model.content.common.ContentDescription;
-

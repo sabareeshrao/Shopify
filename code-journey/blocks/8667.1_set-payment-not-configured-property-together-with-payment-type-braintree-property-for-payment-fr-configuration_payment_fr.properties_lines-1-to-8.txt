@@ -1,8 +1,0 @@
-payment.not.configured=Aucun module de paiement configuré
-
-payment.type.MONEYORDER=Chèque
-payment.type.PayPal=PayPal
-payment.type.CREDITCARD=Carte de crédit
-payment.type.STRIPE=Carte de crédit
-payment.type.BRAINTREE=Carte de crédit
-

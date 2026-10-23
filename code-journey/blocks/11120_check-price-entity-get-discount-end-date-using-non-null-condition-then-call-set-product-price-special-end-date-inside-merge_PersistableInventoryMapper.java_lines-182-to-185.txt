@@ -1,4 +1,0 @@
-				if (Objects.nonNull(priceEntity.getDiscountEndDate())) {
-					Date endDate = DateUtil.getDate(priceEntity.getDiscountEndDate());
-					price.setProductPriceSpecialEndDate(endDate);
-				}

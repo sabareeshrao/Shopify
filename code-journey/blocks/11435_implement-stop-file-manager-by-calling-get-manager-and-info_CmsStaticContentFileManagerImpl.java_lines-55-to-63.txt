@@ -1,9 +1,0 @@
-	public void stopFileManager() {
-
-		try {
-			cacheManager.getManager().stop();
-			LOGGER.info("Stopping CMS");
-		} catch (final Exception e) {
-			LOGGER.error("Error while stopping CmsStaticContentFileManager", e);
-		}
-	}

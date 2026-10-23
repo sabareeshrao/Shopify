@@ -1,4 +1,0 @@
-		"zoneName": "Hawaii",
-		"countryCode": "US"
-	},
-	{

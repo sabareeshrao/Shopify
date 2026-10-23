@@ -1,3 +1,0 @@
-	GenericEntityList<MerchantStore> getByCriteria(MerchantStoreCriteria criteria) throws ServiceException;
-
-}

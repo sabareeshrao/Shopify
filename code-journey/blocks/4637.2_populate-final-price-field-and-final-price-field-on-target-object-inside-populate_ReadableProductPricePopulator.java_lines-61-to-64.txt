@@ -1,4 +1,0 @@
-				target.setFinalPrice(pricingService.getDisplayAmount(source.getProductPriceSpecialAmount(), store));
-			} else {
-				target.setFinalPrice(pricingService.getDisplayAmount(finalPrice.getOriginalPrice(), store));
-			}

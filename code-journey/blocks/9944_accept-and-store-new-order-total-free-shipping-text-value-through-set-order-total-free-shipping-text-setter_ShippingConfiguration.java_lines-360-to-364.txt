@@ -1,5 +1,0 @@
-	public void setOrderTotalFreeShippingText(String orderTotalFreeShippingText) {
-		this.orderTotalFreeShippingText = orderTotalFreeShippingText;
-	}
-
-

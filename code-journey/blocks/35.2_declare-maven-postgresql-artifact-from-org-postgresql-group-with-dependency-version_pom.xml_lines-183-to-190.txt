@@ -1,8 +1,0 @@
-			<!-- <dependency> <groupId>com.oracle.database.jdbc</groupId> <artifactId>ojdbc8</artifactId> 
-				<version>${oracle.version}</version> </dependency> -->
-
-
-			<!-- For connecting to postgresql -->
-			<!-- <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
-				<version>${postgresql.version}</version> <scope>runtime</scope> </dependency> -->
-

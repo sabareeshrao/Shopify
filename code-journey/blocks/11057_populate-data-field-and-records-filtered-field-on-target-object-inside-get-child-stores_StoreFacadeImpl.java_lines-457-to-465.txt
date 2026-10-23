@@ -1,9 +1,0 @@
-			readableList.setData(readableStores);
-			readableList.setRecordsFiltered(children.getSize());
-			readableList.setTotalPages(children.getTotalPages());
-			readableList.setRecordsTotal(children.getTotalElements());
-			readableList.setNumber(children.getNumber());
-			
-			return readableList;
-			
-			

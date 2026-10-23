@@ -1,5 +1,0 @@
-
-      if (prodReview.getProduct().getId().longValue() != id.longValue()) {
-        response.sendError(404, "Product review with id " + reviewId + " does not exist");
-        return;
-      }

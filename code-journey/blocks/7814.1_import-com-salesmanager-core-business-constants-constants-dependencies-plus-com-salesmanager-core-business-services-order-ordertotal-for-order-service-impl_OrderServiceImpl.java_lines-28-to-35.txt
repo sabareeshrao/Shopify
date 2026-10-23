@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.modules.order.InvoiceModule;
-import com.salesmanager.core.business.repositories.order.OrderRepository;
-import com.salesmanager.core.business.services.catalog.product.ProductService;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.business.services.customer.CustomerService;
-import com.salesmanager.core.business.services.order.ordertotal.OrderTotalService;

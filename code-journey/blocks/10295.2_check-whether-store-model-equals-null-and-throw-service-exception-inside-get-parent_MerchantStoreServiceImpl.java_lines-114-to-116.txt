@@ -1,3 +1,0 @@
-		if(storeModel == null) {
-			throw new ServiceException("Store with code [" + code + "] is not found");
-		}

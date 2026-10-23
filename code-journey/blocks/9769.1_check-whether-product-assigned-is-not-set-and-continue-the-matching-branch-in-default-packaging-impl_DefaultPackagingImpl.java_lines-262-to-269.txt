@@ -1,8 +1,0 @@
-
-			}
-
-			if (!productAssigned) {// create a new box
-
-				box = new PackingBox();
-				// set box max volume
-				box.setVolumeLeft(maxVolume);

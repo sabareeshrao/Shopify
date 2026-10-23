@@ -1,2 +1,0 @@
-public class CustomShippingQuoteWeightItem extends CustomShippingQuoteItem implements JSONAware {
-	

@@ -1,8 +1,0 @@
-  @Override
-  public List<ReadableZone> getZones(String countryCode, Language language, MerchantStore merchantStore) {
-    List<Zone> listZones = getListZones(countryCode, language);
-    if (listZones.isEmpty()){
-    	return Collections.emptyList();   
-      //throw new ResourceNotFoundException("No zones found");
-    }
-    return listZones.stream()

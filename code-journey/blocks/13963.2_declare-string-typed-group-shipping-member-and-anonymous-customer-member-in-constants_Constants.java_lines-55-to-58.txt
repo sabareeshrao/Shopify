@@ -1,4 +1,0 @@
-	public final static String GROUP_SHIPPING = "SHIPPING";
-	public final static String ANONYMOUS_CUSTOMER = "ANONYMOUS_CUSTOMER";
-
-

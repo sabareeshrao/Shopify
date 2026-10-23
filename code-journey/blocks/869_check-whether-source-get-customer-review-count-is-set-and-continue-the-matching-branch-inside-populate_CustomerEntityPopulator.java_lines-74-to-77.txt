@@ -1,4 +1,0 @@
-    		
-    		if(source.getCustomerReviewCount() != null) {
-    			target.setRatingCount(source.getCustomerReviewCount().intValue());
-    		}

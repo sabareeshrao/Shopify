@@ -1,8 +1,0 @@
-	/**
-	 * Définit la valeur de l'identifiant unique.
-	 * 
-	 * @param id id
-	 */
-	public abstract void setId(K id);
-	
-	/**

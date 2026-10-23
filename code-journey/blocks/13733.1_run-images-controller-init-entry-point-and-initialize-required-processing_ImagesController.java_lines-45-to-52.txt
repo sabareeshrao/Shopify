@@ -1,8 +1,0 @@
-	private byte[] tempImage = null;
-	
-	@PostConstruct
-	public void init() {
-		try {
-			File file = ResourceUtils.getFile("classpath:static/not-found.png");
-			if(file != null) {
-				byte[] bFile = Files.readAllBytes(file.toPath());

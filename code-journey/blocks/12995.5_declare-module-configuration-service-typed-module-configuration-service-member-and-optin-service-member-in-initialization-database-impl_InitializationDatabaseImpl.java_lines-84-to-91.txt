@@ -1,8 +1,0 @@
-	
-	@Inject
-	private ModuleConfigurationService moduleConfigurationService;
-	
-	@Inject
-	private OptinService optinService;
-	
-	@Inject

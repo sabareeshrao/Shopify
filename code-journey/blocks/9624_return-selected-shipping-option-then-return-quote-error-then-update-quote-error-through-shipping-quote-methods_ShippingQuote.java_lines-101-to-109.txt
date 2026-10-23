@@ -1,9 +1,0 @@
-	public ShippingOption getSelectedShippingOption() {
-		return selectedShippingOption;
-	}
-	public String getQuoteError() {
-		return quoteError;
-	}
-	public void setQuoteError(String quoteError) {
-		this.quoteError = quoteError;
-	}

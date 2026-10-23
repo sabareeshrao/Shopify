@@ -1,8 +1,0 @@
-
-	/**
-	 * Creates a Locale object for currency format only with country code
-	 * This method ignoes the language
-	 * @param store
-	 * @return
-	 */
-	public static Locale getLocale(MerchantStore store) {

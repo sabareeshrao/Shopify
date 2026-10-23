@@ -1,8 +1,0 @@
-
-			String apiKey = configuration.getIntegrationKeys().get("secretKey");
-
-			if(payment.getPaymentMetaData()==null || StringUtils.isBlank(apiKey)) {
-				IntegrationException te = new IntegrationException(
-						"Can't process Stripe, missing payment.metaData");
-				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
-				te.setMessageCode("message.payment.error");

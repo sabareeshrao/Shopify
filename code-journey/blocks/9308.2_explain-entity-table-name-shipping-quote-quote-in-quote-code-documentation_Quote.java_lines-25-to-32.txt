@@ -1,8 +1,0 @@
- *
- */
-
-@Entity
-@Table (name="SHIPPING_QUOTE" )
-public class Quote extends SalesManagerEntity<Long, Quote> {
-
-	/**

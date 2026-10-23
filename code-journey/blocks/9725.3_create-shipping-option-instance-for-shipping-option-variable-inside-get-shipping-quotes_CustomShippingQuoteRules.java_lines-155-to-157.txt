@@ -1,3 +1,0 @@
-
-			ShippingOption shippingOption = new ShippingOption();
-			

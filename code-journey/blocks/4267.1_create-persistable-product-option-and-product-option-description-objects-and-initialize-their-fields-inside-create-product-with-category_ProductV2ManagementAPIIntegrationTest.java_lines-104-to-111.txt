@@ -1,8 +1,0 @@
-		
-		PersistableProductOption size = new PersistableProductOption();
-		size.setCode("size");
-		ProductOptionDescription sizeEn = new ProductOptionDescription();
-		sizeEn.setName("Size");
-		sizeEn.setLanguage("en");
-		size.getDescriptions().add(sizeEn);
-		

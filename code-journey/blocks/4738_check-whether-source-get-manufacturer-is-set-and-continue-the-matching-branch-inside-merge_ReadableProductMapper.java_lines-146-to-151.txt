@@ -1,6 +1,0 @@
-
-		if (source.getManufacturer() != null) {
-			ReadableManufacturer manufacturer = readableManufacturerMapper.convert(source.getManufacturer(), store,
-					language);
-			destination.setManufacturer(manufacturer);
-		}

@@ -1,8 +1,0 @@
-public interface ProductRelationshipRepositoryCustom {
-
-	List<ProductRelationship> getByType(MerchantStore store, String type,
-			Language language);
-
-	List<ProductRelationship> getByType(MerchantStore store, String type,
-			Product product, Language language);
-

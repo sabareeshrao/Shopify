@@ -1,7 +1,0 @@
-	@Override
-	public List<ProductAttribute> getByOptionId(MerchantStore store, Long id) throws ServiceException {
-
-		return productAttributeRepository.findByOptionId(store.getId(), id);
-
-	}
-

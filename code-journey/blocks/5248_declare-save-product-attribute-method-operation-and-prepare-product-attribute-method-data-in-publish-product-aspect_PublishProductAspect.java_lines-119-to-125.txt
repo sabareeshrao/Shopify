@@ -1,7 +1,0 @@
-	
-	
-	//attributes
-	
-	@Pointcut("execution(* com.salesmanager.core.business.services.catalog.product.attribute.ProductAttributeService.saveOrUpdate(com.salesmanager.core.model.catalog.product.attribute.ProductAttribute))")
-	public void saveProductAttributeMethod() {
-	}

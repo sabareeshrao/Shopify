@@ -1,7 +1,0 @@
-
-      lineage.append(p.getLineage()).append(category.getId()).append("/");
-      category.setDepth(p.getDepth() + 1);
-    } else {
-      lineage.append("/").append(category.getId()).append("/");
-      category.setDepth(0);
-    }

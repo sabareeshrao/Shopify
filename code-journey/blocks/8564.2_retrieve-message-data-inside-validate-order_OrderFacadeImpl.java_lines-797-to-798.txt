@@ -1,2 +1,0 @@
-							messages.getMessage("NotEmpty.customer.shipping.firstName", locale));
-				}

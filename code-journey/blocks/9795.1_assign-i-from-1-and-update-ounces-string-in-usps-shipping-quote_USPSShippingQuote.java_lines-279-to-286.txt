@@ -1,8 +1,0 @@
-
-
-			int i = 1;
-
-			// need pounds and ounces
-			int pounds = (int) totalP;
-			String ouncesString = String.valueOf(totalP - pounds);
-			int ouncesIndex = ouncesString.indexOf(".");

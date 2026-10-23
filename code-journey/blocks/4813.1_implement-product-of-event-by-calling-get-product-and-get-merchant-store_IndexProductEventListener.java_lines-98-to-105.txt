@@ -1,8 +1,0 @@
-	private Product productOfEvent(ProductEvent event) {
-		
-		Product product = event.getProduct();
-		MerchantStore store = product.getMerchantStore();
-		try {
-
-			/**
-			 * Refresh product

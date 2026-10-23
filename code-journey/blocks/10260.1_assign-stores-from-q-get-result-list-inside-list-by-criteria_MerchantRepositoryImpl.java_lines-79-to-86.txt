@@ -1,8 +1,0 @@
-
-      List<MerchantStore> stores = q.getResultList();
-      entityList.setList(stores);
-
-
-      return entityList;
-
-

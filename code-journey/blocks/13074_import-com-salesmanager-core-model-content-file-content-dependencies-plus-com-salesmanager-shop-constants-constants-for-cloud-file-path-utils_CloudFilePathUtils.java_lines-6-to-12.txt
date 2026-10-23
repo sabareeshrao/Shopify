@@ -1,7 +1,0 @@
-import com.salesmanager.core.model.content.FileContentType;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.shop.constants.Constants;
-
-@Component
-public class CloudFilePathUtils extends AbstractimageFilePath {
-

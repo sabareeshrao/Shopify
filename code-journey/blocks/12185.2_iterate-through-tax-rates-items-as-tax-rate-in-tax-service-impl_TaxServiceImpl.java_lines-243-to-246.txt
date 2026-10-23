@@ -1,4 +1,0 @@
-			for(TaxRate taxRate : taxRates) {
-				
-				double taxRateDouble = taxRate.getTaxRate().doubleValue();//5% ... 8% ...
-				

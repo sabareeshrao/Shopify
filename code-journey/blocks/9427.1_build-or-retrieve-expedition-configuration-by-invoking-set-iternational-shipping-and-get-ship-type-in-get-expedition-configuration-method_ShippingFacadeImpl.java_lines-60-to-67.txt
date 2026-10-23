@@ -1,8 +1,0 @@
-	@Override
-	public ExpeditionConfiguration getExpeditionConfiguration(MerchantStore store, Language language) {
-		ExpeditionConfiguration expeditionConfiguration = new ExpeditionConfiguration();
-		try {
-			
-			ShippingConfiguration config = getDbConfig(store);
-			if(config!=null) {
-				expeditionConfiguration.setIternationalShipping(config.getShipType()!=null && config.getShipType().equals(ShippingType.INTERNATIONAL.name())?true:false);

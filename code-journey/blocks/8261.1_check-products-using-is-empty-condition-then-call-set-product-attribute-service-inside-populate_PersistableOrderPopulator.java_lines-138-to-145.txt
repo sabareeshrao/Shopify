@@ -1,8 +1,0 @@
-			
-			List<PersistableOrderProduct> products = source.getOrderProductItems();
-			if(CollectionUtils.isEmpty(products)) {
-				throw new ConversionException("Requires at least 1 PersistableOrderProduct");
-			}
-			com.salesmanager.shop.populator.order.PersistableOrderProductPopulator orderProductPopulator = new PersistableOrderProductPopulator();
-			orderProductPopulator.setProductAttributeService(productAttributeService);
-			orderProductPopulator.setProductService(productService);

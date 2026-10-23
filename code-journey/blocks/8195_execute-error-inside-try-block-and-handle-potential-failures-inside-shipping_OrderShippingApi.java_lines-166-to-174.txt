@@ -1,9 +1,0 @@
-
-      return shippingSummary;
-
-    } catch (Exception e) {
-      LOGGER.error("Error while getting shipping quote", e);
-      try {
-        response.sendError(503, "Error while getting shipping quote" + e.getMessage());
-      } catch (Exception ignore) {
-      }

@@ -1,5 +1,0 @@
-
-
-		if (criteria.getManufacturerId() != null) {
-			qs.append(" and manuf.id = :manufid");
-		}

@@ -1,8 +1,0 @@
-label.order.price=Prix
-label.order.sendinvoice=Envoyer la facture par courriel
-label.order.printinvoice=Imprimer la facture
-label.order.packing=Imprimer l'étiquette d'expédition
-label.order.updatestatus=Envoyer un statut de la commande
-label.order.downloademail=Envoyer les instructions de téléchargement
-label.order.history=Historique
-label.order.recent=Dernières commandes

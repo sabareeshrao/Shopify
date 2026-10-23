@@ -1,4 +1,0 @@
-	public BigDecimal getOriginalPrice() {
-		return originalPrice;
-	}
-

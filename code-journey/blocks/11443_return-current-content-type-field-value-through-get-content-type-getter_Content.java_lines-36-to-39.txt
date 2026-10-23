@@ -1,4 +1,0 @@
-  public String getContentType() {
-    return contentType;
-  }
-

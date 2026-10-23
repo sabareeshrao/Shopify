@@ -1,8 +1,0 @@
-		"configuration":[{"env":"TEST","scheme":"https","host":"ct.soa-gw.canadapost.ca","port":"443","uri":"/rs/ship/price"},{"env":"PROD","scheme":"https","host":"soa-gw.canadapost.ca","port":"443","uri":"/rs/ship/price"}]
-
-	},
-	{
-		"module": "SHIPPING",
-		"code": "ups",
-		"version":"",
-		"regions": ["US","CA","FR","GB"],

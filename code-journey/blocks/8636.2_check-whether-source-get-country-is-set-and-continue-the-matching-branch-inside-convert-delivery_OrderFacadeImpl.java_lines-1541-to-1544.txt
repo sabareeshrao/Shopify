@@ -1,4 +1,0 @@
-        target.setAddress(source.getAddress());
-        if(source.getCountry()!=null) {
-        	target.setCountry(countryService.getByCode(source.getCountry()));
-        }

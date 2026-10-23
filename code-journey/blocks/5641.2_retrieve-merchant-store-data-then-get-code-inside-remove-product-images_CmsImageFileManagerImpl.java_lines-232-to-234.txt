@@ -1,3 +1,0 @@
-          .append(product.getMerchantStore().getCode()).append(Constants.SLASH)
-          .append(product.getSku());
-

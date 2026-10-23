@@ -1,4 +1,0 @@
-label.payment.paypal.usepaypal=Use PayPal
-label.payment.moneyorder.usemoneyorder=Use money order
-label.payment.creditcard.usecredicard=Use your credit card
-label.payment.creditcard.cardowner=Card Holder's Name

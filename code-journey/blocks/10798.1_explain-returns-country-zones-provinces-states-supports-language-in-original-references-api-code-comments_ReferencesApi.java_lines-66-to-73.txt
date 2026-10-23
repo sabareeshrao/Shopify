@@ -1,8 +1,0 @@
-
-  /**
-   * Returns a country with zones (provinces, states) supports language set in parameter
-   * ?lang=en|fr|ru...
-   *
-   * @param request
-   * @return
-   */

@@ -1,8 +1,0 @@
-	
-	/**
-	 * Retourne la valeur de l'identifiant unique.
-	 * 
-	 * @return id
-	 */
-	public abstract K getId();
-

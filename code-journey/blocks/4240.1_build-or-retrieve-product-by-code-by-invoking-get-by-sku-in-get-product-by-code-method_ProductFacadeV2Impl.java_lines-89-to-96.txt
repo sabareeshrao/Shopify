@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProduct getProductByCode(MerchantStore store, String sku, Language language) {
-
-		
-		Product product = null;
-		try {
-			product = productService.getBySku(sku, store, language);
-		} catch (ServiceException e) {

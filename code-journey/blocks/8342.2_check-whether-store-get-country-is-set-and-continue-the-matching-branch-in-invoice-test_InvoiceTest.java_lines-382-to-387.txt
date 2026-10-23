@@ -1,6 +1,0 @@
-			if(store.getCountry()!=null) {
-				if(storeProvince==null) {
-					storeProvince = new StringBuilder();
-				} else {
-					storeProvince.append(", ");
-				}

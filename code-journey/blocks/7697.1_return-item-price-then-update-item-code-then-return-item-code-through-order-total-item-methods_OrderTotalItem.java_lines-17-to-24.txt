@@ -1,8 +1,0 @@
-	public BigDecimal getItemPrice() {
-		return itemPrice;
-	}
-	public void setItemCode(String itemCode) {
-		this.itemCode = itemCode;
-	}
-	public String getItemCode() {
-		return itemCode;

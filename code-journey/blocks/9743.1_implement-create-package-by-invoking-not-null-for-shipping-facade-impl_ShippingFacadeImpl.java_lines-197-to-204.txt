@@ -1,8 +1,0 @@
-	@Override
-	public void createPackage(PackageDetails packaging, MerchantStore store) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(packaging, "PackageDetails cannot be null");
-		ShippingConfiguration config = getDbConfig(store);
-		
-		if(this.packageExists(config, packaging)) {
-			throw new OperationNotAllowedException("Package with unique code [" + packaging.getCode() + "] already exist");

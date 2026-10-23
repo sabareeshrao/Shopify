@@ -1,6 +1,0 @@
-public class PermissionRepositoryImpl implements PermissionRepositoryCustom {
-
-	
-    @PersistenceContext
-    private EntityManager em;
-    

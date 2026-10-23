@@ -1,3 +1,0 @@
-					throw new ConversionRuntimeException("Product with sku [" + source.getSku()
-							+ "] not found for MerchantStore [" + store.getCode() + "]");
-				}

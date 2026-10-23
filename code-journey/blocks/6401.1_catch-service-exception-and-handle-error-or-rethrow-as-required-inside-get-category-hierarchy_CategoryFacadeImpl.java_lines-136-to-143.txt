@@ -1,8 +1,0 @@
-			
-			returnList.setCategories(filteredList);
-
-			
-			
-			return returnList;
-
-		} catch (ServiceException e) {

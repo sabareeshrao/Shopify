@@ -1,5 +1,0 @@
-
-
-		if(transactionType != TransactionType.INIT) {
-			transactionService.create(transaction);
-		}

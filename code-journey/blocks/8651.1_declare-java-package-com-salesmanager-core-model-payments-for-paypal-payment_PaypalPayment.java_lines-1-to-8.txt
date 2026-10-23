@@ -1,8 +1,0 @@
-package com.salesmanager.core.model.payments;
-
-/**
- * When the user performs a payment using paypal
- * @author Carl Samson
- *
- */
-public class PaypalPayment extends Payment {

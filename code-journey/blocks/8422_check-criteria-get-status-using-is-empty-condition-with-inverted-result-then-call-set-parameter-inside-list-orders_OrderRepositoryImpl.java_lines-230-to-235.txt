@@ -1,6 +1,0 @@
-		
-		//status
-		if(!StringUtils.isEmpty(criteria.getStatus())) {
-			countQ.setParameter("status", OrderStatus.valueOf(criteria.getStatus().toUpperCase()));
-			objectQ.setParameter("status", OrderStatus.valueOf(criteria.getStatus().toUpperCase()));
-		}

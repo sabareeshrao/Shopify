@@ -1,8 +1,0 @@
-	 * @param lanuage
-	 * @return
-	 */
-	List<ReadableCountry> shipToCountry(MerchantStore store, Language lanuage);
-	
-	List<PackageDetails> listPackages(MerchantStore store);
-	
-	void updatePackage(String code, PackageDetails packaging, MerchantStore store);

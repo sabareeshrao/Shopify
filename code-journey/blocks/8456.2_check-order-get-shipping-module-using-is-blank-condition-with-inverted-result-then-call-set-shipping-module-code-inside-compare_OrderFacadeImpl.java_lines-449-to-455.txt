@@ -1,7 +1,0 @@
-			// customer object
-			orderCustomer(customer, modelOrder, language);
-
-			// populate shipping information
-			if (!StringUtils.isBlank(order.getShippingModule())) {
-				modelOrder.setShippingModuleCode(order.getShippingModule());
-			}

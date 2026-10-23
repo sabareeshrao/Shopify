@@ -19,3 +19,9 @@ Data files: `MASTER_INDEX.csv`, `SOURCE_MANIFEST.csv`, `AUDIT.json`.
 ## Filename quality audit
 
 All generated TXT basenames and sequence identifiers are unique, and the old generic description templates are rejected. Source bytes are never rewritten by renaming.
+
+## Browse individual TXT files on GitHub
+
+Open [`steps/`](steps/) for the numbered project journey split into 100-parent-task folders, or use [`BROWSE_INDEX.csv`](BROWSE_INDEX.csv) to locate any task. The individual original source lines are preserved exactly, and the ZIP still contains the complete original flat source blocks.
+
+See `BROWSE_AUDIT.json` for folder and file-count verification.

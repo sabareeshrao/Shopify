@@ -1,3 +1,0 @@
-	private OrderService orderService;
-	private PricingService pricingService;
-	

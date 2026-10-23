@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.catalog.product.manufacturer.ManufacturerDescription;
-import com.salesmanager.core.model.catalog.product.price.ProductPrice;
-import com.salesmanager.core.model.catalog.product.price.ProductPriceDescription;
-import com.salesmanager.core.model.catalog.product.relationship.ProductRelationship;
-import com.salesmanager.core.model.catalog.product.review.ProductReview;
-import com.salesmanager.core.model.catalog.product.review.ProductReviewDescription;
-import com.salesmanager.core.model.catalog.product.type.ProductType;
-import com.salesmanager.core.model.content.FileContentType;

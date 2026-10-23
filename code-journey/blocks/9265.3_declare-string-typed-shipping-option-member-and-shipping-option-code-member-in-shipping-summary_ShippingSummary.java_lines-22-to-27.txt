@@ -1,6 +1,0 @@
-	private String shippingOption;
-	private String shippingOptionCode;
-	private boolean freeShipping;
-	private boolean taxOnShipping;
-	private boolean shippingQuote;
-	

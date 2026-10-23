@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductPrice get(String sku, Long productPriceId, MerchantStore store, Language language) {
-		Validate.notNull(productPriceId, "Product Price id cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(sku, "Product sku cannot be null");
-		ProductPrice price = productPriceService.findById(productPriceId, sku, store);
-		
-		if(price == null) {

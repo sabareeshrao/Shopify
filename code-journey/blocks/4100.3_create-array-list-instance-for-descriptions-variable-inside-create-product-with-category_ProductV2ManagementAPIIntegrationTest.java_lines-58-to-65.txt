@@ -1,8 +1,0 @@
-		description.setName("test-catv2");
-		description.setFriendlyUrl("test-catv2");
-		description.setTitle("test-catv2");
-
-		final List<CategoryDescription> descriptions = new ArrayList<>();
-		descriptions.add(description);
-
-		newCategory.setDescriptions(descriptions);

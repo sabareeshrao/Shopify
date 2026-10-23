@@ -1,8 +1,0 @@
-import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.model.S3ObjectSummary;
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.modules.cms.impl.CMSManager;
-import com.salesmanager.core.business.modules.cms.product.ProductAssetsManager;
-import com.salesmanager.core.model.catalog.product.Product;

@@ -1,8 +1,0 @@
-	    Zone zone = zoneService.getByCode("QC");
-
-	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
-	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
-	    
-	    //set valid store postal code
-	    store.setStorepostalcode("J4B-9J9");
-

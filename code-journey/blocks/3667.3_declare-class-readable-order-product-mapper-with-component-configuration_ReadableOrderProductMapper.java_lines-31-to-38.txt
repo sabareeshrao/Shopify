@@ -1,8 +1,0 @@
-
-@Component
-public class ReadableOrderProductMapper implements Mapper<OrderProduct, ReadableOrderProduct> {
-
-	@Autowired
-	PricingService pricingService;
-
-	@Autowired

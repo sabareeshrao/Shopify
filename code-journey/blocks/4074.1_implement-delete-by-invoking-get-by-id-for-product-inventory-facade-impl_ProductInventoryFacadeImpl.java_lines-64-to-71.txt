@@ -1,8 +1,0 @@
-	@Override
-	public void delete(Long productId, Long inventoryId, MerchantStore store) {
-		Optional<ProductAvailability> availability = productAvailabilityService.getById(inventoryId, store);
-		try {
-			if (availability.isPresent()) {
-				if(availability.get().getProduct().getId() == productId) {
-					productAvailabilityService.delete(availability.get());
-				} else {

@@ -1,8 +1,0 @@
-                  LOG.info("Customer shopping cart as well session cart is available");
-                  customerCart = shoppingCartService.mergeShoppingCarts(customerCart,
-                      sessionShoppingCart, store);
-                  customerCart = shoppingCartService.getById(customerCart.getId(), store);
-                  return customerCart;
-                  // return populateShoppingCartData(customerCart,store,language);
-                } else {
-                  return customerCart;

@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.catalog.NamedEntity;
-
-@Deprecated
-public class ContentDescriptionEntity extends NamedEntity {
-
-	/**
-	 * 
-	 */

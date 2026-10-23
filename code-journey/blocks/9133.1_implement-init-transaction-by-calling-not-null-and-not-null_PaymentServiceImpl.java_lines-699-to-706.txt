@@ -1,8 +1,0 @@
-	@Override
-	public Transaction initTransaction(Order order, Customer customer, Payment payment, MerchantStore store) throws ServiceException {
-		
-		Validate.notNull(store);
-		Validate.notNull(payment);
-		Validate.notNull(order);
-		Validate.notNull(order.getTotal());
-		

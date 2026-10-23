@@ -1,5 +1,0 @@
-	public String getTelephone() {
-		return telephone;
-	}
-	
-	

@@ -1,8 +1,0 @@
-				List langList = (List) data.get(l.getCode());
-				if (langList != null) {
-					/**
-					 * submethod
-					 */
-					for (Object z : langList) {
-						@SuppressWarnings("unchecked")
-						Map<String, String> e = (Map<String, String>) z;

@@ -1,8 +1,0 @@
-
-		//create an option value
-		CustomerOptionValue yes = new CustomerOptionValue();
-		yes.setCode("yes");
-		yes.setMerchantStore(store);
-		CustomerOptionValueDescription yesDescription = new CustomerOptionValueDescription();
-		yesDescription.setLanguage(en);
-		yesDescription.setCustomerOptionValue(yes);

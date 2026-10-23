@@ -1,8 +1,0 @@
-		
-
-		final String categoryCode = "ROOT";// root category
-
-		final Category category = new Category();
-		category.setCode(categoryCode);
-		final List<Category> categories = new ArrayList<>();
-		categories.add(category);

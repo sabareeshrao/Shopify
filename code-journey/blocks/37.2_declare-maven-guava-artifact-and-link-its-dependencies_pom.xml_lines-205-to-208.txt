@@ -1,4 +1,0 @@
-						<artifactId>guava</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>

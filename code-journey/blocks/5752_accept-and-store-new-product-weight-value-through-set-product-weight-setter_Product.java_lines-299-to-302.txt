@@ -1,4 +1,0 @@
-	public void setProductWeight(BigDecimal productWeight) {
-		this.productWeight = productWeight;
-	}
-

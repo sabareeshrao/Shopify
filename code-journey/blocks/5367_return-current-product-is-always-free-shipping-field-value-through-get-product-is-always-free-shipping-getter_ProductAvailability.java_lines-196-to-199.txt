@@ -1,4 +1,0 @@
-	public boolean getProductIsAlwaysFreeShipping() {
-		return productIsAlwaysFreeShipping;
-	}
-

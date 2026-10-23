@@ -1,8 +1,0 @@
-	    
-	    // PRODUCT
-	    
-	    // -- non variable informations
-
-	    Product summerShoes = new Product();
-	    summerShoes.setProductHeight(new BigDecimal(3));
-	    summerShoes.setProductLength(new BigDecimal(9));//average

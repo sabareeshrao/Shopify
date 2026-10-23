@@ -1,8 +1,0 @@
-
-      List<ReadableProduct> relatedItems =
-          productFacade.relatedItems(merchantStore, product, language);
-
-      return relatedItems;
-
-    } catch (Exception e) {
-      LOGGER.error("Error while getting product reviews", e);

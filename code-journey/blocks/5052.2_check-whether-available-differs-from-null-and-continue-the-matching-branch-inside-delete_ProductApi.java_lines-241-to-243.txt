@@ -1,3 +1,0 @@
-		if (available != null && available) {
-			criteria.setAvailable(available);
-		}

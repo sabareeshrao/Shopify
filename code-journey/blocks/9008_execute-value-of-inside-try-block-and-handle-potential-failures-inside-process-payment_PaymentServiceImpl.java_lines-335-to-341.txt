@@ -1,7 +1,0 @@
-		
-		try {
-			TransactionType.valueOf(sTransactionType);
-		} catch(IllegalArgumentException ie) {
-			LOGGER.warn("Transaction type " + sTransactionType + " does noe exist, using default AUTHORIZECAPTURE");
-			sTransactionType = "AUTHORIZECAPTURE";
-		}

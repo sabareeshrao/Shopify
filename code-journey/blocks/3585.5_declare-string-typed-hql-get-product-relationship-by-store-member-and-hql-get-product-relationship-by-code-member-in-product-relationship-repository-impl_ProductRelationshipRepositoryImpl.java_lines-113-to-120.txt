@@ -1,8 +1,0 @@
-          + "where pr.code=:code "
-          + "and pr.store.id=:storeId ";
-  private static final String HQL_GET_PRODUCT_RELATIONSHIP_BY_STORE_ID =
-      "select distinct pr from ProductRelationship as pr "
-          + "where pr.store.id=:store "
-          + "and pr.product=null";
-  private static final String HQL_GET_PRODUCT_RELATIONSHIP_BY_CODE_AND_STORE_ID =
-      "select distinct pr from ProductRelationship as pr "

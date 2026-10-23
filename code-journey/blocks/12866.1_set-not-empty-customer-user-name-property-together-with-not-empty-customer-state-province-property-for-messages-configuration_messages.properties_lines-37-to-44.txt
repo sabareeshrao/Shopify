@@ -1,8 +1,0 @@
-
-NotEmpty.customer.userName=User name is required
-NotEmpty.customer.firstName=First name is required
-NotEmpty.customer.lastName=Last name is required
-NotEmpty.customer.address=Street address is required
-NotEmpty.customer.address2=Street address is required
-NotEmpty.customer.postalCode=Postal code is required
-NotEmpty.customer.stateProvince=State / Province is required

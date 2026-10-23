@@ -1,4 +1,0 @@
-	public String getTransactionTypeName() {
-		return this.getTransactionType()!=null?this.getTransactionType().name():"";
-	}
-

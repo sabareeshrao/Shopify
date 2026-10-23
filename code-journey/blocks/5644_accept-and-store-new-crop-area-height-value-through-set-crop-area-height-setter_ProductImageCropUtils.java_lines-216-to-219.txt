@@ -1,4 +1,0 @@
-	public void setCropAreaHeight(int cropAreaHeight) {
-		this.cropAreaHeight = cropAreaHeight;
-	}
-

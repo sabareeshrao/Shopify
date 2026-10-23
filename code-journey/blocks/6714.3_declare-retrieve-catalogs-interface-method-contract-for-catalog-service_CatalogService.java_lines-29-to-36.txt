@@ -1,8 +1,0 @@
-	 * Get a list of Catalog associated with a MarketPlace
-	 * @param marketPlace
-	 * @return List<Catalog>
-	 * @throws ServiceException
-	 */
-	Page<Catalog> getCatalogs(MerchantStore store, Language language, String name, int page, int count);
-	
-	/**

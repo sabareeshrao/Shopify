@@ -1,5 +1,0 @@
-		
-		if(!CollectionUtils.isEmpty(source.getProductTypes())) {
-			List<ReadableProductType> types = source.getProductTypes().stream().map( t -> this.productType(t, store, language)).collect(Collectors.toList());
-			destination.setProductTypes(types);
-		}

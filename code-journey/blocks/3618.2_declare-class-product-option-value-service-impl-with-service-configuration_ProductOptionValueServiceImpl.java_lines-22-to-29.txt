@@ -1,8 +1,0 @@
-
-@Service("productOptionValueService")
-public class ProductOptionValueServiceImpl extends
-		SalesManagerEntityServiceImpl<Long, ProductOptionValue> implements
-		ProductOptionValueService {
-
-	@Inject
-	private ProductAttributeService productAttributeService;

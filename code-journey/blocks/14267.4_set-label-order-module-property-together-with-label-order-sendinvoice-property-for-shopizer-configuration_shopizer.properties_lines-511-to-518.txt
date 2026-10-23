@@ -1,8 +1,0 @@
-label.order.module=Payment module
-label.order.paymentmode=Payment mode
-label.order.shippingmethod=Shipping mode
-label.order.refund=Apply refund
-label.order.capture=Capture transaction
-label.order.item=Item
-label.order.price=Price
-label.order.sendinvoice=Send email invoice

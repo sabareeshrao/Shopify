@@ -1,8 +1,0 @@
-		
-		//if default instance
-
-		destination.setSku(source.getSku());
-
-		try {
-			FinalPrice price = pricingService.calculateProductPrice(source);
-			if (price != null) {

@@ -1,8 +1,0 @@
-				if (fileNames == null) {
-					fileNames = new ArrayList<String>();
-				}
-				String mimetype = URLConnection.guessContentTypeFromName(os.getKey());
-				if (!StringUtils.isBlank(mimetype)) {
-					fileNames.add(getName(os.getKey()));
-				}
-			}

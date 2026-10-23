@@ -1,3 +1,0 @@
-	table.social div[class="column"] {
-		width:auto!important;
-	}

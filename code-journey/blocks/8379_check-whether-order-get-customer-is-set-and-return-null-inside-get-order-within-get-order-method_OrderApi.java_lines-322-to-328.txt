@@ -1,7 +1,0 @@
-
-		if (order.getCustomer().getId() != null
-				&& order.getCustomer().getId().longValue() != customer.getId().longValue()) {
-			LOGGER.error("Order is null for customer " + principal);
-			response.sendError(404, "Order is null for customer " + principal);
-			return null;
-		}

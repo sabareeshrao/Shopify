@@ -1,8 +1,0 @@
-	private Transaction sendTransaction(
-			String orderNumber,
-			MerchantStore store,
-			String transaction, 
-			String beanstreamType, 
-			TransactionType transactionType,
-			PaymentType paymentType,
-			BigDecimal amount,

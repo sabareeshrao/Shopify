@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("HRK", "Croatian Kuna");
-		//CURRENCY_MAP.put("CUC", "Peso Convertible");
-		CURRENCY_MAP.put("CUP", "Cuban Peso");
-		CURRENCY_MAP.put("ANG", "Netherlands Antillean Guilder");
-		CURRENCY_MAP.put("CZK", "Czech Koruna");
-		CURRENCY_MAP.put("DKK", "Danish Krone");
-		CURRENCY_MAP.put("DJF", "Djibouti Franc");
-		CURRENCY_MAP.put("XCD", "East Caribbean Dollar");

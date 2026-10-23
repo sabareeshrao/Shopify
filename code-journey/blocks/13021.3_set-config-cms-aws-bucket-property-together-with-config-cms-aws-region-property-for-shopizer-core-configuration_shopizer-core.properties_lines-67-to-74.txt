@@ -1,8 +1,0 @@
-#AWS_SECRETE_ACCESS_KEY=<SECRET ACCESS KEY>
-config.cms.aws.bucket=
-config.cms.aws.region=us-east-1
-
-#GCP Cloud Storage configuration
-#Name of the bucket file
-#If the bucket does not exists it will be created
-#export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json"

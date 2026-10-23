@@ -1,8 +1,0 @@
-label.product.refsku=Identifiant de l'item dans le système de référence
-label.product.available=Disponible
-label.product.create=Créer a produit
-label.product.edit=éditer le produit
-label.productedit.productname=Nom du produit
-label.productedit.producthl=Description éclair
-label.productedit.productdesc=Description du produit
-label.product.title=Titre du produit

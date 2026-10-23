@@ -1,8 +1,0 @@
-	/**
-	 * Retrieves a shopping cart by ID
-	 * @param shoppingCartId
-	 * @param store
-	 * @param language
-	 * @return
-	 * @throws Exception
-	 */

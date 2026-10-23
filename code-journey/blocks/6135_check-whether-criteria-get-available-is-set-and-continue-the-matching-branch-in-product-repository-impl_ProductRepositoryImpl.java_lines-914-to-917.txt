@@ -1,4 +1,0 @@
-
-		if (criteria.getAvailable() != null) {
-			q.setParameter("dt", new Date());
-		}

@@ -1,4 +1,0 @@
-	public void setOneTimeCharge(BigDecimal oneTimeCharge) {
-		this.oneTimeCharge = oneTimeCharge;
-	}
-

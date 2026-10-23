@@ -1,2 +1,0 @@
-shippingDistancePreProcessor.apiKey=<YOUR KEY>
-

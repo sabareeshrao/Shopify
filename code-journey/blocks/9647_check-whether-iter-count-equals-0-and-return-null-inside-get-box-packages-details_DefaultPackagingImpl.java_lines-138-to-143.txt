@@ -1,6 +1,0 @@
-			iterCount++;
-		}
-
-		if (iterCount == 0) {
-			return null;
-		}

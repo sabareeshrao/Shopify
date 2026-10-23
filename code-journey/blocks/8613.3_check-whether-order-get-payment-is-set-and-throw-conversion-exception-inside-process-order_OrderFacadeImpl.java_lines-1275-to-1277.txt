@@ -1,3 +1,0 @@
-			if (order.getPayment().getAmount() == null) {
-				throw new ConversionException("Requires Payment.amount");
-			}

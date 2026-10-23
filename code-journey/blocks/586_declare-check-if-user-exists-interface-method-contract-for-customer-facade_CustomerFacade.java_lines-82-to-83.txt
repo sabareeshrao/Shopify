@@ -1,2 +1,0 @@
-    public boolean checkIfUserExists(final String userName,final MerchantStore store) throws Exception;
-    

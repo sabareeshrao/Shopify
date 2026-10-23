@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("USD", "US Dollar");
-		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");
-		CURRENCY_MAP.put("NZD", "New Zealand Dollar");
-		CURRENCY_MAP.put("TTD", "Trinidad and Tobago Dollar");
-		CURRENCY_MAP.put("TND", "Tunisian Dinar");
-		CURRENCY_MAP.put("TRY", "Turkish Lira");
-		//CURRENCY_MAP.put("TMT", "Turkmenistan New Manat");
-		CURRENCY_MAP.put("AUD", "Australian Dollar");

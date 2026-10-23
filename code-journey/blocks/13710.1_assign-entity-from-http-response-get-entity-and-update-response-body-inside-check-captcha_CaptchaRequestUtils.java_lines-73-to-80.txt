@@ -1,8 +1,0 @@
-
-	      // Read the response body.
-            HttpEntity entity = httpResponse.getEntity();
-            byte[] responseBody =EntityUtils.toByteArray(entity);
-
-
-	      // Deal with the response.
-	      // Use caution: ensure correct character encoding and is not binary data

@@ -1,4 +1,0 @@
-	public void setErrorMessage(Throwable t) {
-		this.setStatusMessage(t.getMessage());
-	}
-	

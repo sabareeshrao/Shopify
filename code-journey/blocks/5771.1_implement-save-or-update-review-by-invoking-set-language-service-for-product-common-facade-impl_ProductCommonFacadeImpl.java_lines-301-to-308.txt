@@ -1,8 +1,0 @@
-	@Override
-	public void saveOrUpdateReview(PersistableProductReview review, MerchantStore store, Language language)
-			throws Exception {
-		PersistableProductReviewPopulator populator = new PersistableProductReviewPopulator();
-		populator.setLanguageService(languageService);
-		populator.setCustomerService(customerService);
-		populator.setProductService(productService);
-

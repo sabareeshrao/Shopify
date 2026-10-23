@@ -1,8 +1,0 @@
-import springfox.documentation.annotations.ApiIgnore;
-
-@Controller
-@RequestMapping("/api/v1")
-@Api(tags = { "Product images management. Add, remove and set the order of product images." })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Product images management", description = "Add and remove products images. Change images sort order.") })
-public class ProductImageApi {

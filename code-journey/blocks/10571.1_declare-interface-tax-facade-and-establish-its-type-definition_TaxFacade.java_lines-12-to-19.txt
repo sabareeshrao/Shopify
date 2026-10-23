@@ -1,8 +1,0 @@
-public interface TaxFacade {
-	
-	
-	//tax class
-	Entity createTaxClass(PersistableTaxClass taxClass, MerchantStore store, Language language);
-	void updateTaxClass(Long id, PersistableTaxClass taxClass, MerchantStore store, Language language);
-	void deleteTaxClass(Long id, MerchantStore store, Language language);
-	boolean existsTaxClass(String code, MerchantStore store, Language language);

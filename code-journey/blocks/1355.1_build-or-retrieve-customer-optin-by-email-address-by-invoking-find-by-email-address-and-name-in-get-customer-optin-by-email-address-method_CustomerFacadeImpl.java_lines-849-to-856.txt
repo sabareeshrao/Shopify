@@ -1,8 +1,0 @@
-  private CustomerOptin getCustomerOptinByEmailAddress(String optinEmail,
-      MerchantStore store, OptinType optinType) {
-    try{
-      return customerOptinService.findByEmailAddress(store, optinEmail, optinType.name());
-    } catch (ServiceException e){
-      throw new ServiceRuntimeException(e);
-    }
-

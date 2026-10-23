@@ -1,7 +1,0 @@
-
-@Component
-public class PersistableProductTypeMapper implements Mapper<PersistableProductType, ProductType> {
-	
-	@Autowired
-	private LanguageService languageService;
-

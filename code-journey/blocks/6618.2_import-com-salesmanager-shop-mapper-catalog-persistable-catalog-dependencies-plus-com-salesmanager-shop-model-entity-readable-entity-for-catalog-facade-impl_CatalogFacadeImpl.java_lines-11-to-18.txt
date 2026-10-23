@@ -1,8 +1,0 @@
-import com.salesmanager.shop.mapper.catalog.PersistableCatalogMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableCatalogCategoryEntryMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableCatalogMapper;
-import com.salesmanager.shop.model.catalog.catalog.PersistableCatalog;
-import com.salesmanager.shop.model.catalog.catalog.PersistableCatalogCategoryEntry;
-import com.salesmanager.shop.model.catalog.catalog.ReadableCatalog;
-import com.salesmanager.shop.model.catalog.catalog.ReadableCatalogCategoryEntry;
-import com.salesmanager.shop.model.entity.ReadableEntityList;

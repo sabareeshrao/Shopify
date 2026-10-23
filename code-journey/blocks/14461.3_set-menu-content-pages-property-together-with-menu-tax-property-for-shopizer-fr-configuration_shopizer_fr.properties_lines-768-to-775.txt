@@ -1,8 +1,0 @@
-menu.content-pages=Gérer les pages
-menu.content-pages-create=Créer une page
-menu.content-boxes-create=Créer une boîte
-menu.content-boxes=Gérer les boîtes
-menu.content-images=Gérer les images
-menu.content-files=Gérer les fichiers
-menu.payment=Paiement
-menu.tax=Taxes de vente

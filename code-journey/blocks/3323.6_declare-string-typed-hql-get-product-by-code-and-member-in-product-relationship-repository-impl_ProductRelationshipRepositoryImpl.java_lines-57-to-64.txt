@@ -1,8 +1,0 @@
-          + "left join fetch pr.relatedProduct rp "
-          + "left join fetch rp.attributes pattr "
-          + "left join fetch rp.categories rpc "
-          + "left join fetch p.descriptions pd "
-          + "left join fetch rp.descriptions rpd "
-          + "where p.id=:id"
-          + " or rp.id=:id";
-  private static final String HQL_GET_PRODUCT_BY_CODE_AND_STORE_ID =

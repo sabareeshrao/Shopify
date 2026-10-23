@@ -1,4 +1,0 @@
-		//return new OAuthTokenCredential(clientID, clientSecret)
-		//		.getAccessToken();
-	}
-

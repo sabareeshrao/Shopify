@@ -1,4 +1,0 @@
-label.category.editcategory=Edit category
-label.category.movecategory=Move category
-label.category.moveundercategory=Move under category
-label.category.createcategory=Create category

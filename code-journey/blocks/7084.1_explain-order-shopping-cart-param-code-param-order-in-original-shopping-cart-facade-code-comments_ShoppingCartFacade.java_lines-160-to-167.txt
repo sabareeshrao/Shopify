@@ -1,8 +1,0 @@
-
-	/**
-	 * Set an order id to a shopping cart
-	 * @param code
-	 * @param orderId
-	 * @param store
-	 * @throws Exception
-	 */

@@ -1,8 +1,0 @@
-
-@Service("merchantService")
-public class MerchantStoreServiceImpl extends SalesManagerEntityServiceImpl<Integer, MerchantStore>
-		implements MerchantStoreService {
-
-	@Inject
-	protected ProductTypeService productTypeService;
-

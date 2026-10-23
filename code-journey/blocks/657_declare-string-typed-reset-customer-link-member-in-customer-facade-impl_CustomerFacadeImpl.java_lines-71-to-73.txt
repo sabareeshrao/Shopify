@@ -1,3 +1,0 @@
-	private static final String resetCustomerLink = "customer/%s/reset/%s"; // front
-																			// url
-

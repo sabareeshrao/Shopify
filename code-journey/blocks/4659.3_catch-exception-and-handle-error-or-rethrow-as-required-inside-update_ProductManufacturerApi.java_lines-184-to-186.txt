@@ -1,3 +1,0 @@
-				response.sendError(503, "Error while creating manufacturer " + e.getMessage());
-			} catch (Exception ignore) {
-			}

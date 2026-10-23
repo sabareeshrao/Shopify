@@ -1,4 +1,0 @@
-			
-			if(StringUtils.isBlank(transactionApproved)) {
-				throw new IntegrationException("Required field transactionApproved missing from BeanStream response");
-			}

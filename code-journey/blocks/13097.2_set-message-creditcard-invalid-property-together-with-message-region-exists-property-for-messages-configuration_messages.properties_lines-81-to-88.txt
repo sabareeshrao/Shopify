@@ -1,8 +1,0 @@
-message.creditcard.invalid=Credit card details are required
-message.order.canprocess=The order can be completed
-message.name.required=The object name is required
-
-message.code.exist=This code already exist
-message.name.exist=This name already exist
-message.invalid.amount=Invalid amount
-message.region.exists=Region already exist

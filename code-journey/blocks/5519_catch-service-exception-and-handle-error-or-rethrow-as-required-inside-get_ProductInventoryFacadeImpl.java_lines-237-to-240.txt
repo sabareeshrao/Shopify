@@ -1,4 +1,0 @@
-			} catch (ServiceException e) {
-				throw new ServiceRuntimeException("An error occured while getting product with sku " + sku,e);
-			}
-		}

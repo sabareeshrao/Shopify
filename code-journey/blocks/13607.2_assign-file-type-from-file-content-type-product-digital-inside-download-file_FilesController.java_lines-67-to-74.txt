@@ -1,8 +1,0 @@
-	 * @return
-	 * @throws Exception
-	 */
-	@PreAuthorize("hasRole('PRODUCTS')")
-	@RequestMapping("/admin/files/downloads/{storeCode}/{fileName}.{extension}")
-	public @ResponseBody byte[] downloadProduct(@PathVariable final String storeCode, @PathVariable final String fileName, @PathVariable final String extension, HttpServletRequest request, HttpServletResponse response) throws Exception {
-
-		FileContentType fileType = FileContentType.PRODUCT_DIGITAL;

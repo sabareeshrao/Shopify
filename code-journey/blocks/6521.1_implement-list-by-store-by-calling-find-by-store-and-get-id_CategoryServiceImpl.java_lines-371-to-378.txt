@@ -1,8 +1,0 @@
-	@Override
-	public List<Category> listByStore(MerchantStore store) throws ServiceException {
-
-		try {
-			return categoryRepository.findByStore(store.getId());
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}

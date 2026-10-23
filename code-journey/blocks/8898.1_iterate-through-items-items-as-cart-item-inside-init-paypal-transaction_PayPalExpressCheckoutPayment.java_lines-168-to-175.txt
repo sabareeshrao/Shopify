@@ -1,8 +1,0 @@
-			
-
-			List<PaymentDetailsItemType> lineItems = new ArrayList<PaymentDetailsItemType>();
-			
-			for(ShoppingCartItem cartItem : items) {
-			
-				PaymentDetailsItemType item = new PaymentDetailsItemType();
-				BasicAmountType amt = new BasicAmountType();

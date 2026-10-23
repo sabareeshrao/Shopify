@@ -1,5 +1,0 @@
-	public ProductAvailability(Product product, MerchantStore store) {
-		this.product = product;
-		this.merchantStore = store;
-	}
-

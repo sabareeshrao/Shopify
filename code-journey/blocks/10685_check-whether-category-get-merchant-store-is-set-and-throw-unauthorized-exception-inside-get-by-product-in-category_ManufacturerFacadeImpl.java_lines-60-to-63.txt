@@ -1,4 +1,0 @@
-    
-    if(category.getMerchantStore().getId().longValue() != store.getId().longValue()) {
-      throw new UnauthorizedException("Merchant [" + store.getCode() + "] not authorized");
-    }

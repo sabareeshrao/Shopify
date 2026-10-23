@@ -1,4 +1,0 @@
-	public Long getExpireTime() {
-		return expireTime;
-	}
-

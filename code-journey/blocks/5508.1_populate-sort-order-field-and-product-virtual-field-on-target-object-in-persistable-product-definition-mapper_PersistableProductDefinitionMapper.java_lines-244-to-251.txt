@@ -1,8 +1,0 @@
-               }
-    			
-			}
-			destination.setSortOrder(source.getSortOrder());
-			destination.setProductVirtual(source.isVirtual());
-			destination.setProductShipeable(source.isShipeable());
-			
-			

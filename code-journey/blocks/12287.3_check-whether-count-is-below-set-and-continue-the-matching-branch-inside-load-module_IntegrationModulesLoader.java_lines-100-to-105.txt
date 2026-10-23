@@ -1,6 +1,0 @@
-	    			detailsStructure.append(":");
-	    			String jsonValueString = mapper.writeValueAsString(details.get(key));
-	    			detailsStructure.append(jsonValueString);
-	        		if(count<(details.size()-1)) {
-	        			detailsStructure.append(",");
-	        		}

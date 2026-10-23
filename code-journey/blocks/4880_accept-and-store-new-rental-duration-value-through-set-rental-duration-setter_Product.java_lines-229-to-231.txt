@@ -1,3 +1,0 @@
-	public void setRentalDuration(Integer rentalDuration) {
-		this.rentalDuration = rentalDuration;
-	}

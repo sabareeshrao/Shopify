@@ -1,4 +1,0 @@
-				
-					returnList.setNumber(filteredList.size());
-
-			}

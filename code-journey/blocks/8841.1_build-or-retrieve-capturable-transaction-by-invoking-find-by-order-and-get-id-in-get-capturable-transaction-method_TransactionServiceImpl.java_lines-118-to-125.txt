@@ -1,8 +1,0 @@
-	@Override
-	public Transaction getCapturableTransaction(Order order)
-			throws ServiceException {
-		List<Transaction> transactions = transactionRepository.findByOrder(order.getId());
-		ObjectMapper mapper = new ObjectMapper();
-		Transaction capturable = null;
-		for(Transaction transaction : transactions) {
-			if(transaction.getTransactionType().name().equals(TransactionType.AUTHORIZE.name())) {

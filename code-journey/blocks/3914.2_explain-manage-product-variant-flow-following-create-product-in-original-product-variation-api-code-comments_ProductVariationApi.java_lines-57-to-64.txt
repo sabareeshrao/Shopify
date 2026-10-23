@@ -1,8 +1,0 @@
-/**
- * API to manage product variant
- * 
- * The flow is the following
- * 
- * - create a product definition
- * - create a product variant
- *

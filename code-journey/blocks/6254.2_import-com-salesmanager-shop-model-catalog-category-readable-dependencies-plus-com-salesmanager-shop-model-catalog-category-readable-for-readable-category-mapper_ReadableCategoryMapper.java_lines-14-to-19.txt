@@ -1,6 +1,0 @@
-import com.salesmanager.shop.model.catalog.category.ReadableCategory;
-import com.salesmanager.shop.model.catalog.category.ReadableCategoryFull;
-
-@Component
-public class ReadableCategoryMapper implements Mapper<Category, ReadableCategory> {
-

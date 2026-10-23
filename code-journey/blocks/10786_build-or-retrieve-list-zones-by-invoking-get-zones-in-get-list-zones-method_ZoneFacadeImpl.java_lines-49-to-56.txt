@@ -1,8 +1,0 @@
-  private List<Zone> getListZones(String countryCode, Language language) {
-    try{
-      return zoneService.getZones(countryCode, language);
-    } catch (ServiceException e){
-      throw new ServiceRuntimeException(e);
-    }
-  }
-}

@@ -1,6 +1,0 @@
-				}
-			}
-			
-			if(contentDescription == null) {
-				contentDescription = new ContentDescription();
-			}

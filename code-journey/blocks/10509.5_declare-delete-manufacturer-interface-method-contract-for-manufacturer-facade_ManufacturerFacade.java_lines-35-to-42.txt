@@ -1,8 +1,0 @@
-   * @param manufacturer
-   * @param store
-   * @param language
-   * @throws Exception
-   */
-  void deleteManufacturer(Manufacturer manufacturer, MerchantStore store, Language language)
-      throws Exception;
-

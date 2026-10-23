@@ -1,8 +1,0 @@
-        
-
-  <beans:import resource="classpath:/spring/shopizer-core-context.xml" />
-
-
-  <!--
-  <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-    <beans:property name="driverClassName" value="${db.driverClass}" />

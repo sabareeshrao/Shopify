@@ -1,8 +1,0 @@
-label.customer.shipping.company=Company de livraison 
-label.customer.shipping.streetaddress=Adresse de livraison 
-label.customer.shipping.suburb=Banlieue de livraison 
-label.customer.shipping.postalcode=Code postal de livraison 
-label.customer.shipping.city=Ville de livraison 
-label.customer.shipping.zone=État / province de livraison
-label.customer.shipping.country=Pays de livraison 
-label.customer.shipping.firstname=Prénom à la livraison 

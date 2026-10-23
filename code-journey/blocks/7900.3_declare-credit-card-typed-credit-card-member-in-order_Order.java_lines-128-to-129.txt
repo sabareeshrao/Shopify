@@ -1,2 +1,0 @@
-	private CreditCard creditCard = null;
-

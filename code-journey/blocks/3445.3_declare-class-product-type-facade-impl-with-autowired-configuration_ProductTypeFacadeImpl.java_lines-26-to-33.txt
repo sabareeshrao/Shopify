@@ -1,8 +1,0 @@
-public class ProductTypeFacadeImpl implements ProductTypeFacade {
-
-	@Autowired
-	private ProductTypeService productTypeService;
-
-	@Autowired
-	private ReadableProductTypeMapper readableProductTypeMapper;
-

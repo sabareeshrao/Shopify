@@ -1,8 +1,0 @@
-
-      OrderTotalSummary orderTotalSummary = null;
-
-      OrderSummary orderSummary = new OrderSummary();
-      orderSummary.setShippingSummary(shippingSummary);
-      List<ShoppingCartItem> itemsSet =
-          new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
-      orderSummary.setProducts(itemsSet);

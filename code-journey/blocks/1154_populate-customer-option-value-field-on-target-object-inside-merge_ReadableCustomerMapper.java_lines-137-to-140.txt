@@ -1,4 +1,0 @@
-
-				readableAttribute.setCustomerOptionValue(optionValue);
-				target.getAttributes().add(readableAttribute);
-			}

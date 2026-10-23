@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.repositories.user.PermissionRepository;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.model.user.Group;
-import com.salesmanager.core.model.user.Permission;
-import com.salesmanager.core.model.user.PermissionCriteria;
-import com.salesmanager.core.model.user.PermissionList;
-

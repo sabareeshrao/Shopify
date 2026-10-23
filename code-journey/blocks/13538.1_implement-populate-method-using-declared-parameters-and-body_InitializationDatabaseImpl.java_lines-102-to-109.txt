@@ -1,8 +1,0 @@
-	
-	@Transactional
-	public void populate(String contextName) throws ServiceException {
-		this.name =  contextName;
-		
-		createSecurityGroups();
-		createLanguages();
-		createCountries();

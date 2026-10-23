@@ -1,8 +1,0 @@
-		
-		//create a product with attributes
-
-	    /** CATALOG CREATION **/
-	    
-	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
-
-	    /**

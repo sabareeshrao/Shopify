@@ -1,8 +1,0 @@
-			 * 
-			 * @ApiIgnore MerchantStore merchantStore) {
-			 * contentFacade.deletePage(merchantStore, id); }
-			 */
-
-	/**
-	 * Deletes a file from CMS
-	 *

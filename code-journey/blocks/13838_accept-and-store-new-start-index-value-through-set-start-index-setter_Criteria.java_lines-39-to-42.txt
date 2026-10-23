@@ -1,4 +1,0 @@
-	public void setStartIndex(int startIndex) {
-		this.startIndex = startIndex;
-	}
-

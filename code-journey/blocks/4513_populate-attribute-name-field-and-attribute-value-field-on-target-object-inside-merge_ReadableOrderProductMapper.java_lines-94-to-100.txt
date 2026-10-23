@@ -1,7 +1,0 @@
-
-				readableAttribute.setAttributeName(attr.getProductAttributeName());
-				readableAttribute.setAttributeValue(attr.getProductAttributeValueName());
-				attributes.add(readableAttribute);
-			}
-			target.setAttributes(attributes);
-		}

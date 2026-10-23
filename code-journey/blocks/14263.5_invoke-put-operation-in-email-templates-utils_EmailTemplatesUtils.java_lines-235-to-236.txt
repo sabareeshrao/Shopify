@@ -1,2 +1,0 @@
-		        	   templateTokens.put(EmailConstants.ADDRESS_DELIVERY, "");
-		           }

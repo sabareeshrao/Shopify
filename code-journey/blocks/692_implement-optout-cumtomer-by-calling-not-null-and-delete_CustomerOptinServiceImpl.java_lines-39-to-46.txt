@@ -1,8 +1,0 @@
-	@Override
-	public void optoutCumtomer(CustomerOptin optin) throws ServiceException {
-		Validate.notNull(optin,"CustomerOptin must not be null");
-		
-		customerOptinRepository.delete(optin);
-
-	}
-

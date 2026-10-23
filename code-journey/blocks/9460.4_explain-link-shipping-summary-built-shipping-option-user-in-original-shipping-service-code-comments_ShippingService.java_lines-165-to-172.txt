@@ -1,8 +1,0 @@
-
-	/**
-	 * The {@link ShippingSummary} is built from the ShippingOption the user has selected
-	 * The ShippingSummary is used for order calculation
-	 * @param store
-	 * @param shippingQuote
-	 * @param selectedShippingOption
-	 * @return

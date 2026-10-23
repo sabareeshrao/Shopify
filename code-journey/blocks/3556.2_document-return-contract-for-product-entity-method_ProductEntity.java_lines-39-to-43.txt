@@ -1,5 +1,0 @@
-	 * RENTAL additional fields
-	 * 
-	 * @return
-	 */
-

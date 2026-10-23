@@ -1,4 +1,0 @@
-			} catch (ServiceException e) {
-				logger.error("Cannot get Country", e);
-			}
-		}

@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.services.catalog.product.ProductService;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.order.OrderSummary;
-import com.salesmanager.core.model.order.OrderTotal;
-import com.salesmanager.core.model.order.OrderTotalVariation;
-import com.salesmanager.core.model.order.RebatesOrderTotalVariation;

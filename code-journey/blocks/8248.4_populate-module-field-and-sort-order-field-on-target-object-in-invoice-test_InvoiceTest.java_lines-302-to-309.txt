@@ -1,8 +1,0 @@
-		total.setModule("total" );		
-		total.setSortOrder(2);
-		total.setText("Total" );
-		total.setTitle("Total" );
-		total.setValue(new BigDecimal(23.99) );
-		total.setOrder(order);
-		
-		order.getOrderTotal().add(total);

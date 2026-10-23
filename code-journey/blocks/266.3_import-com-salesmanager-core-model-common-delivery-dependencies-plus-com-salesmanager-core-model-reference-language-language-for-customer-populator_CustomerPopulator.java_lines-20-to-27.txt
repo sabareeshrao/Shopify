@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.common.Delivery;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.customer.attribute.CustomerAttribute;
-import com.salesmanager.core.model.customer.attribute.CustomerOption;
-import com.salesmanager.core.model.customer.attribute.CustomerOptionValue;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.country.Country;
-import com.salesmanager.core.model.reference.language.Language;

@@ -1,8 +1,0 @@
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.salesmanager.core.model.common.Billing;
-import com.salesmanager.core.model.common.Delivery;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.order.attributes.OrderAttribute;
-import com.salesmanager.core.model.order.orderproduct.OrderProduct;
-import com.salesmanager.core.model.order.orderstatus.OrderStatus;

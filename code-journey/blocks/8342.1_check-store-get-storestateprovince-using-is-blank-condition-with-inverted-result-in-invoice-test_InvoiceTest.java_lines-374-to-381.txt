@@ -1,8 +1,0 @@
-				}
-				
-			} else {
-				if(!StringUtils.isBlank(store.getStorestateprovince())) {
-					storeProvince = new StringBuilder();
-					storeProvince.append(store.getStorestateprovince());
-				}
-			}

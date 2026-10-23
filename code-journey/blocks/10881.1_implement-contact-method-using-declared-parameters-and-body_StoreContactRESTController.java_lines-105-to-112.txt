@@ -1,8 +1,0 @@
-	
-	
-	@RequestMapping( value="/public/{store}/contact", method=RequestMethod.POST)
-	@ResponseStatus(HttpStatus.ACCEPTED)
-	@ResponseBody
-	public AjaxResponse contact(@PathVariable final String store, @Valid @RequestBody ContactForm contact, HttpServletRequest request, HttpServletResponse response) {
-		
-		AjaxResponse ajaxResponse = new AjaxResponse();

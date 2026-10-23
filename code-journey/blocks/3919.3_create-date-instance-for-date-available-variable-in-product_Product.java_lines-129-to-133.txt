@@ -1,5 +1,0 @@
-	
-	@Column(name="DATE_AVAILABLE")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dateAvailable = new Date();
-	

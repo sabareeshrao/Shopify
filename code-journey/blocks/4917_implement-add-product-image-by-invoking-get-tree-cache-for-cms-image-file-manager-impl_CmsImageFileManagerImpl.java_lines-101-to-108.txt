@@ -1,8 +1,0 @@
-  @Override
-  public void addProductImage(ProductImage productImage, ImageContentFile contentImage)
-      throws ServiceException {
-
-    if (cacheManager.getTreeCache() == null) {
-      throw new ServiceException(
-          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
-    }

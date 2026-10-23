@@ -1,5 +1,0 @@
-		
-		if(criteria.getCustomerId()!=null) {
-			countQ.setParameter("cid", criteria.getCustomerId());
-			objectQ.setParameter("cid",criteria.getCustomerId());
-		}

@@ -1,9 +1,0 @@
-  @Override
-  public List<Group> listGroup(GroupType groupType) throws ServiceException {
-    try {
-      return groupRepository.findByType(groupType);
-    } catch (Exception e) {
-      throw new ServiceException(e);
-    }
-  }
-

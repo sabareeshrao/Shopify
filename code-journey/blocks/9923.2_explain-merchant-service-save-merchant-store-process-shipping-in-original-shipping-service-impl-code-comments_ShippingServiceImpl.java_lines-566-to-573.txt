@@ -1,8 +1,0 @@
-/*				merchantLogService.save(
-						new MerchantLog(store,
-								"Can't process " + shippingModule.getModule()
-								+ " -> "
-								+ e.getMessage()));
-				shippingQuote.setQuoteError(e.getMessage());
-				shippingQuote.setShippingReturnCode(ShippingQuote.ERROR);
-				return shippingQuote;*/

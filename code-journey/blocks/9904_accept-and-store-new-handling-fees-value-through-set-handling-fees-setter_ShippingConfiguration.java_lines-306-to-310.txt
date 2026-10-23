@@ -1,5 +1,0 @@
-	public void setHandlingFees(BigDecimal handlingFees) {
-		this.handlingFees = handlingFees;
-	}
-
-

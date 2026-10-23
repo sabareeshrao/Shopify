@@ -1,7 +1,0 @@
-
-            customer.setUserName(customer.getEmailAddress());
-            
-			if(customerFacade.checkIfUserExists(customer.getUserName(),  merchantStore)) {
-				//409 Conflict
-				throw new GenericRuntimeException("409", "Customer with email [" + customer.getEmailAddress() + "] is already registered");
-			}

@@ -1,8 +1,0 @@
-	@JsonIgnore
-	@ManyToOne
-	@JoinColumn(name = "ORDER_PRODUCT_ID", nullable = false)
-	private OrderProduct orderProduct; 
-
-	@Column(name = "ORDER_PRODUCT_FILENAME", nullable = false)
-	private String orderProductFilename;
-	

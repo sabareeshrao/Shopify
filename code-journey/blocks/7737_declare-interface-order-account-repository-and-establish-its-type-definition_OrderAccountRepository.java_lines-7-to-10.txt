@@ -1,4 +1,0 @@
-public interface OrderAccountRepository extends JpaRepository<OrderAccount, Long> {
-
-
-}

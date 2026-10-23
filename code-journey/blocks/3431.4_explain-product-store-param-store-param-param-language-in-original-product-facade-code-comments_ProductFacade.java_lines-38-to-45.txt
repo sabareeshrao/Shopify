@@ -1,8 +1,0 @@
-  /**
-   * Get a product by sku and store
-   *
-   * @param store
-   * @param sku
-   * @param language
-   * @return
-   * @throws Exception

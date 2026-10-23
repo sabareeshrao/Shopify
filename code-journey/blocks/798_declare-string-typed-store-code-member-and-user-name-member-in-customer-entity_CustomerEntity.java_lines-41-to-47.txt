@@ -1,7 +1,0 @@
-	private String storeCode;
-	
-	//@ApiModelProperty(notes = "Username (use email address)")
-	//@NotEmpty(message="{NotEmpty.customer.userName}")
-	//can be email or anything else
-	private String userName;
-	

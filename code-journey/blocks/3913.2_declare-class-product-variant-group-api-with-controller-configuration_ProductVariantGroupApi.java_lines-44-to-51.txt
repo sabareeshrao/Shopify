@@ -1,8 +1,0 @@
-@Controller
-@RequestMapping("/api/v2")
-@Api(tags = { "Product instances group api" })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Product instances group allows attaching property and images to a group of instances", description = "Manage product instances group") })
-public class ProductVariantGroupApi {
-
-	@Autowired

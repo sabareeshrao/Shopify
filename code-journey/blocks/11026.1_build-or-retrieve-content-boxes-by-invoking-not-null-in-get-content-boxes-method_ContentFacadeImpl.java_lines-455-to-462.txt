@@ -1,8 +1,0 @@
-
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Override
-	public ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, MerchantStore store,
-			Language language, int page, int count) {
-
-		Validate.notNull(store, "MerchantStore cannot be null");
-

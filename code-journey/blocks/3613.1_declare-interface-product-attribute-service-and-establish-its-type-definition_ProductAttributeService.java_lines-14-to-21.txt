@@ -1,8 +1,0 @@
-public interface ProductAttributeService extends
-		SalesManagerEntityService<Long, ProductAttribute> {
-
-	ProductAttribute saveOrUpdate(ProductAttribute productAttribute)
-			throws ServiceException;
-	
-	List<ProductAttribute> getByOptionId(MerchantStore store,
-			Long id) throws ServiceException;

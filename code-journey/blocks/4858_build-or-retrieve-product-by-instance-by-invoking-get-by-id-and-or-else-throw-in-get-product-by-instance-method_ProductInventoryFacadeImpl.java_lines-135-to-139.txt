@@ -1,5 +1,0 @@
-	private ProductVariant getProductByInstance(Long instanceId, MerchantStore store) {
-		return productVariantService.getById(instanceId, store).orElseThrow(() -> new ResourceNotFoundException("Product with instance [" + instanceId + "] not found"));
-
-	}
-

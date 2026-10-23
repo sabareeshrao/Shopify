@@ -1,8 +1,0 @@
-
-        
-        final ResponseEntity<ReadableCategory> readableQuery = testRestTemplate.exchange(String.format("/api/v1//category/" +  description.getFriendlyUrl()), HttpMethod.GET,
-            httpEntity, ReadableCategory.class);
-        
-        assertThat(readableQuery.getStatusCode(), is(OK));
-        
-        ReadableCategory readableCategory = readableQuery.getBody();

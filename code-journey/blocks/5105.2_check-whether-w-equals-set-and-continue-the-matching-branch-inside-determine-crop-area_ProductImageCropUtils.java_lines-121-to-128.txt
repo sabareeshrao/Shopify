@@ -1,8 +1,0 @@
-			factor = new Integer(height).doubleValue()
-					/ new Integer(specificationsHeight).doubleValue();
-		}*/
-
-		double w = factor * specificationsWidth;
-		double h = factor * specificationsHeight;
-		
-		if(w==h) {

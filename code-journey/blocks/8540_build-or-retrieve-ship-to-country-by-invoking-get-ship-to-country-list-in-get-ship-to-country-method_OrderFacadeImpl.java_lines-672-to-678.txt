@@ -1,7 +1,0 @@
-	@Override
-	public List<Country> getShipToCountry(MerchantStore store, Language language) throws Exception {
-
-		List<Country> shippingCountriesList = shippingService.getShipToCountryList(store, language);
-		return shippingCountriesList;
-
-	}

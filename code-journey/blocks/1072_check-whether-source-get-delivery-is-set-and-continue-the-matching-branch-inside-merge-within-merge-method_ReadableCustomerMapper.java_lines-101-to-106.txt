@@ -1,6 +1,0 @@
-			if(source.getDelivery().getZone()!=null) {
-				address.setZone(source.getDelivery().getZone().getCode());
-			}
-			if(source.getDelivery().getState()!=null) {
-				address.setStateProvince(source.getDelivery().getState());
-			}

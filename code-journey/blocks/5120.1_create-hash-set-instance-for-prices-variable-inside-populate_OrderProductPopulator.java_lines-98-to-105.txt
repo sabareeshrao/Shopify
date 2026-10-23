@@ -1,8 +1,0 @@
-			//Default price
-			OrderProductPrice orderProductPrice = orderProductPrice(finalPrice);
-			orderProductPrice.setOrderProduct(target);
-			
-			Set<OrderProductPrice> prices = new HashSet<OrderProductPrice>();
-			prices.add(orderProductPrice);
-
-			//Other prices

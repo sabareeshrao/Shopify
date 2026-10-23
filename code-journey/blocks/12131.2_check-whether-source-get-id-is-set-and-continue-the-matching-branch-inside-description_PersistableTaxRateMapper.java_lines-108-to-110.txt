@@ -1,3 +1,0 @@
-	    if(source.getId() != null && source.getId().longValue()>0) {
-	      desc.setId(source.getId());
-	    }

@@ -1,5 +1,0 @@
-
-      Path path = Paths.get(merchantPath.toString());
-
-      Files.deleteIfExists(path);
-

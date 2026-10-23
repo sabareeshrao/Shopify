@@ -1,7 +1,0 @@
-	void update(Long id, PersistableProductOptionSet optionSet, MerchantStore store, Language language);
-	void delete(Long id, MerchantStore store);
-	
-	
-	
-
-}

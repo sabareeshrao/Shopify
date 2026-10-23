@@ -1,4 +1,0 @@
-	public void setOrderProductFilename(String orderProductFilename) {
-		this.orderProductFilename = orderProductFilename;
-	}
-

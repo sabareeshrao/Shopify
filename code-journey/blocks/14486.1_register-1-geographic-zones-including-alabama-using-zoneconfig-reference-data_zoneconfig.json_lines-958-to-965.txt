@@ -1,8 +1,0 @@
-]  ,
-
-  "fr":[
-	{
-		"zoneCode": "AL",
-		"zoneName": "Alabama",
-		"countryCode": "US"
-	},

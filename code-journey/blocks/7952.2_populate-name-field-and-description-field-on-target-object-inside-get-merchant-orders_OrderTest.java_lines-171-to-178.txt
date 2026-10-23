@@ -1,8 +1,0 @@
-	    whiteDescription.setName("White");
-	    whiteDescription.setDescription("White color");
-	    whiteDescription.setProductOptionValue(white);
-	    
-	    white.getDescriptions().add(whiteDescription);
-	    
-	    productOptionValueService.saveOrUpdate(white);
-	    

@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.catalog.product.variant.ProductVariantGroup;
-import com.salesmanager.core.model.content.FileContentType;
-import com.salesmanager.core.model.content.InputContentFile;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.catalog.product.PersistableProductVariantGroupMapper;
-import com.salesmanager.shop.mapper.catalog.product.ReadableProductVariantGroupMapper;
-import com.salesmanager.shop.model.catalog.product.product.variantGroup.PersistableProductVariantGroup;

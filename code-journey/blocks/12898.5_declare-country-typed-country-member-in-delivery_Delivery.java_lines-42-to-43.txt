@@ -1,2 +1,0 @@
-	private Country country;
-	

@@ -1,8 +1,0 @@
-
-        Category parent = new Category();
-
-        newCategory.setParent(parent);
-
-        CategoryDescription description = new CategoryDescription();
-        description.setLanguage("en");
-        description.setName("Javascript");

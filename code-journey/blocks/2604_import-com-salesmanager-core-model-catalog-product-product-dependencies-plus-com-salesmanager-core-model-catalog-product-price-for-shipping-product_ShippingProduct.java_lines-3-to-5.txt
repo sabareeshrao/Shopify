@@ -1,3 +1,0 @@
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.catalog.product.price.FinalPrice;
-

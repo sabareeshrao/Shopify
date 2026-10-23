@@ -1,8 +1,0 @@
-
-  /**
-   * Determines request language based on store rules
-   * 
-   * @param request
-   * @return
-   */
-  public Language getRequestLanguage(HttpServletRequest request, HttpServletResponse response) {

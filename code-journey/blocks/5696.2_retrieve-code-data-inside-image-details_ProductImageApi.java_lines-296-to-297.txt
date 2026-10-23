@@ -1,2 +1,0 @@
-						+ "] and merchant [" + merchantStore.getCode() + "]");
-			}

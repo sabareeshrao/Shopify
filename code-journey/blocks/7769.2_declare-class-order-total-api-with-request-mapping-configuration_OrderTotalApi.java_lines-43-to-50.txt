@@ -1,8 +1,0 @@
-@RequestMapping("/api/v1")
-@Api(tags = {"Order Total calculation for a given shopping cart (Order Total Api)"})
-@SwaggerDefinition(tags = {
-    @Tag(name = "Order Total resource", description = "Calculates order total for a giben shopping cart")
-})
-public class OrderTotalApi {
-
-  @Inject private ShoppingCartFacade shoppingCartFacade;

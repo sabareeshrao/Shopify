@@ -1,8 +1,0 @@
-
-module.shipping.canadapost.INT.XP=Xpresspost International
-module.shipping.canadapost.INT.IP.AIR=Colis-avion du régime international
-module.shipping.canadapost.INT.IP.SURF=Colis de surface du régime international
-module.shipping.canadapost.INT.PW.ENV=Enveloppe Priorité Mondial – International
-module.shipping.canadapost.INT.PW.PAK=Paquet Priorité Mondial – International 
-module.shipping.canadapost.INT.PW.PARCEL=Colis Prioritié Mondial – International
-module.shipping.canadapost.INT.SP.AIR=Petits paquets-avion du régime international

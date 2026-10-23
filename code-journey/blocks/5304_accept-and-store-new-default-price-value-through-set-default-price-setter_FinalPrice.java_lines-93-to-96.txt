@@ -1,4 +1,0 @@
-	public void setDefaultPrice(boolean defaultPrice) {
-		this.defaultPrice = defaultPrice;
-	}
-

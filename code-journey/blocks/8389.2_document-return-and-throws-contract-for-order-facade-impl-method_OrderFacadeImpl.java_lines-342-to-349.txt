@@ -1,8 +1,0 @@
-	 * @return
-	 * @throws ServiceException
-	 */
-	private Order processOrderModel(ShopOrder order, Customer customer, Transaction transaction, MerchantStore store,
-			Language language) throws ServiceException {
-
-		try {
-

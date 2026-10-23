@@ -1,5 +1,0 @@
-	@Override
-	public List<ProductVariant> getByProductId(MerchantStore store, Product product, Language language) {
-		return productVariantRepository.findByProductId(store.getId(), product.getId());
-	}
-

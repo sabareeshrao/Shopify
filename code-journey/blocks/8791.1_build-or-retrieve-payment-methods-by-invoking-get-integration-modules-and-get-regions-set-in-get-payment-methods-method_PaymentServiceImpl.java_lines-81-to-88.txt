@@ -1,8 +1,0 @@
-	@Override
-	public List<IntegrationModule> getPaymentMethods(MerchantStore store) throws ServiceException {
-		
-		List<IntegrationModule> modules =  moduleConfigurationService.getIntegrationModules(Constants.PAYMENT_MODULES);
-		List<IntegrationModule> returnModules = new ArrayList<IntegrationModule>();
-		
-		for(IntegrationModule module : modules) {
-			if(module.getRegionsSet().contains(store.getCountry().getIsoCode())

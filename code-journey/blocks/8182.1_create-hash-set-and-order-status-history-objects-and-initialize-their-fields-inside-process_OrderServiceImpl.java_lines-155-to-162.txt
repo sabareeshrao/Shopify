@@ -1,8 +1,0 @@
-    		Set<OrderStatusHistory> statusHistorySet = new HashSet<OrderStatusHistory>();
-    		OrderStatusHistory statusHistory = new OrderStatusHistory();
-    		statusHistory.setStatus(status);
-    		statusHistory.setDateAdded(new Date());
-    		statusHistory.setOrder(order);
-    		statusHistorySet.add(statusHistory);
-    		order.setOrderHistory(statusHistorySet);
-

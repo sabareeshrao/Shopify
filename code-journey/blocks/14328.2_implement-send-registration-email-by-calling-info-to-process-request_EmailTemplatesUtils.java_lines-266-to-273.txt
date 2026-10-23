@@ -1,8 +1,0 @@
-	 * @param customerLocale
-	 */
-	@Async
-	public void sendRegistrationEmail(
-		PersistableCustomer customer, MerchantStore merchantStore,
-			Locale customerLocale, String contextPath) {
-		   /** issue with putting that elsewhere **/ 
-	       LOGGER.info( "Sending welcome email to customer" );

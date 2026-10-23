@@ -1,4 +1,0 @@
-	public void setStorephone(String storephone) {
-		this.storephone = storephone;
-	}
-

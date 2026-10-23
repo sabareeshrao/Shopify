@@ -1,5 +1,0 @@
-	public void setEmailAddress(final String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
-	
-

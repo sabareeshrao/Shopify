@@ -1,8 +1,0 @@
-				//if (doCaptureResponse.getAck().getValue()
-				//		.equalsIgnoreCase("success")) {
-					
-					// Authorization identification number
-					//logger.info("Authorization ID:"
-					//		+ doCaptureResponse.getDoCaptureResponseDetails()
-					//				.getAuthorizationID());
-				//}

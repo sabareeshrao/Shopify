@@ -1,6 +1,0 @@
-			
-			//12
-			if(!StringUtils.isBlank(customer.getBilling().getPostalCode())) {
-				sheet.setValueAt(customer.getBilling().getPostalCode(), 0, billToCell);
-				billToCell ++;
-			}

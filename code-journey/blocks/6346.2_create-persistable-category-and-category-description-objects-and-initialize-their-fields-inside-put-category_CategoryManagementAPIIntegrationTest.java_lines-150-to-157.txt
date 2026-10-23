@@ -1,8 +1,0 @@
-        
-        newCategory = new PersistableCategory();
-        newCategory.setCode("angular");
-        newCategory.setVisible(true);
-        newCategory.setDepth(4);
-        newCategory.setSortOrder(2);
-        description = new CategoryDescription();
-        description.setLanguage("en");

@@ -1,4 +1,0 @@
-				shippingSummary = shippingQuoteService.getShippingSummary(order.getShippingQuote(), store);
-				if (shippingSummary != null) {
-					modelOrder.setShippingModuleCode(shippingSummary.getShippingModule());
-				}

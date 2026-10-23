@@ -1,2 +1,0 @@
-package com.salesmanager.shop.model.catalog.product.variation;
-

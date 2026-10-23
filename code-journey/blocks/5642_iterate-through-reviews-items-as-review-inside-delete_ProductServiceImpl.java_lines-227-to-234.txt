@@ -1,8 +1,0 @@
-
-		product.setImages(null);
-
-		// delete reviews
-		List<ProductReview> reviews = productReviewService.getByProductNoCustomers(product);
-		for (ProductReview review : reviews) {
-			productReviewService.delete(review);
-		}

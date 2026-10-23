@@ -1,4 +1,0 @@
-	private DatabaseReader reader = null;
-	private static final Logger LOGGER = LoggerFactory.getLogger( GeoLocationImpl.class );
-
-

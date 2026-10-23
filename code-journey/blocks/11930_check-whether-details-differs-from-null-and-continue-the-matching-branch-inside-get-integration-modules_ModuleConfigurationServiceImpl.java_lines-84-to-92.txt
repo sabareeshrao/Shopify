@@ -1,9 +1,0 @@
-					}
-
-					String details = mod.getConfigDetails();
-					if (details != null) {
-
-						Map<String, String> objDetails = (Map<String, String>) JSONValue.parse(details);
-						mod.setDetails(objDetails);
-
-					}

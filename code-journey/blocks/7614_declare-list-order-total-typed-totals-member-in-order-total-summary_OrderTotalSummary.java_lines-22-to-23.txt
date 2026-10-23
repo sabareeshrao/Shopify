@@ -1,2 +1,0 @@
-	private List<OrderTotal> totals;//all other fees (tax, shipping ....)
-

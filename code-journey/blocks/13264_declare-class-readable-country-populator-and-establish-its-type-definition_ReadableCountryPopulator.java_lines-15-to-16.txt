@@ -1,2 +1,0 @@
-public class ReadableCountryPopulator extends AbstractDataPopulator<Country, ReadableCountry> {
-

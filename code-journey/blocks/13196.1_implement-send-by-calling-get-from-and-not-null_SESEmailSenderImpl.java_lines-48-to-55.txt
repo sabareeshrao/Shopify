@@ -1,8 +1,0 @@
-  @Override
-  public void send(Email email) throws Exception {
-
-
-
-      //String eml = email.getFrom();
-
-      Validate.notNull(region,"AWS region is null");

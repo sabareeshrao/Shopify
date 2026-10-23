@@ -1,4 +1,0 @@
-	public void setPaymentMetaData(Map<String,String> paymentMetaData) {
-		this.paymentMetaData = paymentMetaData;
-	}
-

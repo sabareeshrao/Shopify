@@ -1,8 +1,0 @@
-        sizeDescription.setName("Size");
-        sizeDescription.setDescription("Size of an item");
-        sizeDescription.setProductOption(size);
-        
-        size.getDescriptions().add(sizeDescription);
-        
-        //create option
-        productOptionService.saveOrUpdate(size);

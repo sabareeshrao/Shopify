@@ -1,2 +1,0 @@
-          m = manufacturerService.listByStore(store, criteria.getName(), page, count);
-        }

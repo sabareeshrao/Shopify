@@ -1,8 +1,0 @@
-	@Override
-    public ShoppingCart populate(ShoppingCartData shoppingCart,ShoppingCart cartMdel,final MerchantStore store, Language language)
-    {
-
-
-        // if id >0 get the original from the database, override products
-       try{
-        if ( shoppingCart.getId() > 0  && StringUtils.isNotBlank( shoppingCart.getCode()))

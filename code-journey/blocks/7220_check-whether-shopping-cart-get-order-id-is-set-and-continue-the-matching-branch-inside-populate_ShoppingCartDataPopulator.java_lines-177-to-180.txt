@@ -1,4 +1,0 @@
-            
-            if(shoppingCart.getOrderId() != null) {
-            	cart.setOrderId(shoppingCart.getOrderId());
-            }

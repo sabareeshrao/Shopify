@@ -1,8 +1,0 @@
-	private void addFile(final String merchantStoreCode, InputContentFile contentImage) throws ServiceException {
-
-		try {
-			LOG.info("Adding content file for merchant id {}", merchantStoreCode);
-			// staticContentFileManager.addFile(merchantStoreCode,
-			// contentImage);
-
-			String p = null;

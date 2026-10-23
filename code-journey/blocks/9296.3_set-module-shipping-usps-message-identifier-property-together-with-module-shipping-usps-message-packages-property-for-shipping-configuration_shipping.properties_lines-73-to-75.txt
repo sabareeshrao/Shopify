@@ -1,3 +1,0 @@
-module.shipping.usps.message.identifier=USPS account identifier required
-module.shipping.usps.message.packages=You must select one package type
-

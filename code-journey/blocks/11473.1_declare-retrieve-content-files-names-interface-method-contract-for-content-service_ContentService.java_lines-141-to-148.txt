@@ -1,8 +1,0 @@
-	
-    List<String> getContentFilesNames(String merchantStoreCode,
-			FileContentType fileContentType) throws ServiceException;
-
-    /**
-     * Add the store logo
-     * @param merchantStoreCode
-     * @param cmsContentImage

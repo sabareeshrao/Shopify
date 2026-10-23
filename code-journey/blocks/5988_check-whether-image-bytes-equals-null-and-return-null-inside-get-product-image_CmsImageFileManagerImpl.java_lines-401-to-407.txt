@@ -1,7 +1,0 @@
-
-      byte[] imageBytes = (byte[]) productNode.get(imageName);
-
-      if (imageBytes == null) {
-        LOGGER.warn("Image " + imageName + " does not exist");
-        return null;// no post processing will occur
-      }

@@ -1,3 +1,0 @@
-	@Inject
-	private IntegrationModulesLoader integrationModulesLoader;
-	

@@ -1,4 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(CmsStaticContentFileManagerImpl.class);
-	private static CmsStaticContentFileManagerImpl fileManager = null;
-	private static final String ROOT_NAME = "static-merchant-";
-

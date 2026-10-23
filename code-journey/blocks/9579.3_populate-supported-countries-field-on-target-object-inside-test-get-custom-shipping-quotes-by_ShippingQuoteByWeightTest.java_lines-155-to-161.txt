@@ -1,7 +1,0 @@
-	    supportedCountries.add("CA");
-	    supportedCountries.add("US");
-	    supportedCountries.add("UK");
-	    supportedCountries.add("FR");
-	    
-	    shippingService.setSupportedCountries(store, supportedCountries);
-	    

@@ -1,2 +1,0 @@
-package com.salesmanager.core.business.services.catalog.product.type;
-

@@ -1,6 +1,0 @@
-			//check if exist
-			Optional<IntegrationModule> checkIfExist = modules.stream().filter(m -> m.getCode().equals(code)).findAny();
-			
-			if(!checkIfExist.isPresent()) {
-				throw new ResourceNotFoundException("Shipping module [" + code + "] not found");
-			}

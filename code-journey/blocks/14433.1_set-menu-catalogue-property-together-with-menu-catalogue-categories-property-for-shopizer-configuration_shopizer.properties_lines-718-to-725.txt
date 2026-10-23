@@ -1,8 +1,0 @@
-menu.catalogue=Catalogue
-menu.store=Store
-menu.storeDetails=Store
-menu.storeLanding=Store home page
-menu.storeBranding=Store branding
-menu.catalogue-products=Products
-menu.catalogue-products-create=Create product
-menu.catalogue-categories=Categories

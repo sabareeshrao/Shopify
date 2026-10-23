@@ -1,8 +1,0 @@
-			//need this
-			target.setStatus(OrderStatus.ORDERED);
-			target.setPaymentModuleCode(source.getPayment().getPaymentModule());
-			target.setPaymentType(PaymentType.valueOf(source.getPayment().getPaymentType()));
-			
-			target.setCustomerAgreement(source.isCustomerAgreement());
-			target.setConfirmedAddress(true);//force this to true, cannot perform this activity from the API
-

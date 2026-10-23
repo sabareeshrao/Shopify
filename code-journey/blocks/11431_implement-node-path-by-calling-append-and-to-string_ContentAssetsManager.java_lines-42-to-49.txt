@@ -1,8 +1,0 @@
-
-    default String nodePath(String store) {
-
-        StringBuilder builder = new StringBuilder();
-        builder.append(ROOT_NAME).append(Constants.SLASH).append(store).append(Constants.SLASH);
-        return builder.toString();
-
-    }

@@ -1,8 +1,0 @@
-
-			Order modelOrder = new Order();
-			modelOrder.setDatePurchased(new Date());
-			modelOrder.setBilling(customer.getBilling());
-			modelOrder.setDelivery(customer.getDelivery());
-			modelOrder.setPaymentModuleCode(order.getPaymentModule());
-			modelOrder.setPaymentType(PaymentType.valueOf(order.getPaymentMethodType()));
-			modelOrder.setShippingModuleCode(order.getShippingModule());

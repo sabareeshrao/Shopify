@@ -1,8 +1,0 @@
-
-			if (!DateUtil.dateBeforeEqualsDate(p.getDateAvailable(), new Date())) {
-				throw new Exception("Item with id " + p.getId() + " is not available");
-			}
-			// end qty & availablility checks
-
-			// set attributes
-			List<com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute> attributes = shoppingCartItem

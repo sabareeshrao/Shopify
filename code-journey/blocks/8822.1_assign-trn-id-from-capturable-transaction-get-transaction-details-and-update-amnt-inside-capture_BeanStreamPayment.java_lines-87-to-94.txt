@@ -1,8 +1,0 @@
-
-				
-				//authorize a preauth 
-
-		
-				String trnID = capturableTransaction.getTransactionDetails().get("TRANSACTIONID");
-				
-				String amnt = productPriceUtils.getAdminFormatedAmount(store, order.getTotal());

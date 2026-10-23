@@ -1,4 +1,0 @@
-	public void setAccountedDate(Date accountedDate) {
-		this.accountedDate = CloneUtils.clone(accountedDate);
-	}
-

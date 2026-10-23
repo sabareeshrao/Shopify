@@ -1,8 +1,0 @@
-
-								optName = optionDescriptions.get(0).getName();
-								optValue = optionValueDescriptions.get(0).getName();
-
-								for (ProductOptionDescription optionDescription : optionDescriptions) {
-									if (optionDescription.getLanguage() != null && optionDescription.getLanguage()
-											.getId().intValue() == language.getId().intValue()) {
-										optName = optionDescription.getName();

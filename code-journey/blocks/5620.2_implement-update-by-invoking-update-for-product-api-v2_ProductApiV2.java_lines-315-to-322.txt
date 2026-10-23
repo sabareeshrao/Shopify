@@ -1,8 +1,0 @@
-	public void update(
-			@PathVariable String sku, 
-			@Valid @RequestBody 
-			LightPersistableProduct product,
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-		productCommonFacade.update(sku, product, merchantStore, language);
-		return;

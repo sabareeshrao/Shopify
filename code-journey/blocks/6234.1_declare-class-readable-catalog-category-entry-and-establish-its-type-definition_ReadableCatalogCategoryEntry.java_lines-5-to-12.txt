@@ -1,8 +1,0 @@
-public class ReadableCatalogCategoryEntry extends CatalogEntryEntity {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String creationDate;
-	//private ReadableProduct product;

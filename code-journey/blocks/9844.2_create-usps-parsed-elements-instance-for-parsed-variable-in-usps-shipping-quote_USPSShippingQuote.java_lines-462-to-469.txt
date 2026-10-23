@@ -1,8 +1,0 @@
-			}*/
-			//data = httpget.getResponseBodyAsString();
-			LOGGER.debug("usps quote response " + data);
-
-			USPSParsedElements parsed = new USPSParsedElements();
-
-			/**
-			 * <RateV3Response> <Package ID="1ST">

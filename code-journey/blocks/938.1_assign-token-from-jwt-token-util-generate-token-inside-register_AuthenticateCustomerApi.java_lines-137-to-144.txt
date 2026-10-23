@@ -1,8 +1,0 @@
-
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-
-            // Reload password post-security so we can generate token
-            final JWTUser userDetails = (JWTUser)jwtCustomerDetailsService.loadUserByUsername(customer.getUserName());
-            final String token = jwtTokenUtil.generateToken(userDetails);
-
-            // Return the token

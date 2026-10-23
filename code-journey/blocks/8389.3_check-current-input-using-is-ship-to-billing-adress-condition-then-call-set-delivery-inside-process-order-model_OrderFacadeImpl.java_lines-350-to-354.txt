@@ -1,5 +1,0 @@
-			if (order.isShipToBillingAdress()) {// customer shipping is billing
-				PersistableCustomer orderCustomer = order.getCustomer();
-				Address billing = orderCustomer.getBilling();
-				orderCustomer.setDelivery(billing);
-			}

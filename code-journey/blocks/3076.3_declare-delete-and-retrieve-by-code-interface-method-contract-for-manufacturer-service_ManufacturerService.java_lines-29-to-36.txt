@@ -1,8 +1,0 @@
-	
-	void delete(Manufacturer manufacturer) throws ServiceException;
-	
-	Manufacturer getByCode(MerchantStore store, String code);
-
-	/**
-	 * List manufacturers by products from a given list of categories
-	 * @param store

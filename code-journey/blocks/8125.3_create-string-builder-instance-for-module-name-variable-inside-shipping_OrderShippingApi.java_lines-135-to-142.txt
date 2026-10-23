@@ -1,8 +1,0 @@
-          StringBuilder moduleName = new StringBuilder();
-          moduleName.append("module.shipping.").append(shipOption.getShippingModuleCode());
-
-          String carrier =
-              messages.getMessage(
-                  moduleName.toString(), new String[] {merchantStore.getStorename()}, locale);
-
-          String note = messages.getMessage(moduleName.append(".note").toString(), locale, "");

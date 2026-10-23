@@ -1,4 +1,0 @@
-	public Date getOptionShippingDate() {
-		return optionShippingDate;
-	}
-

@@ -1,3 +1,0 @@
-			if(desc.isPresent()) {
-				readableType.setDescription(desc.get());
-			}

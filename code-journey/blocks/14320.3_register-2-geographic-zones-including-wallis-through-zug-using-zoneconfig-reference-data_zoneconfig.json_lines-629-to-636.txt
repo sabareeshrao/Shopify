@@ -1,8 +1,0 @@
-		"zoneCode": "VS",
-		"zoneName": "Wallis",
-		"countryCode": "CH"
-	},
-	{
-		"zoneCode": "ZG",
-		"zoneName": "Zug",
-		"countryCode": "CH"

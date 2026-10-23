@@ -1,8 +1,0 @@
-	public BigDecimal getMinPrice() {
-		return minPrice;
-	}
-	public void setMinPrice(BigDecimal minPrice) {
-		this.minPrice = minPrice;
-	}
-	public BigDecimal getMaxPrice() {
-		return maxPrice;

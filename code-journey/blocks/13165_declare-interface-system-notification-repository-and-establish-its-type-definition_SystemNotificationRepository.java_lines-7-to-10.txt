@@ -1,4 +1,0 @@
-public interface SystemNotificationRepository extends JpaRepository<SystemNotification, Long> {
-
-
-}

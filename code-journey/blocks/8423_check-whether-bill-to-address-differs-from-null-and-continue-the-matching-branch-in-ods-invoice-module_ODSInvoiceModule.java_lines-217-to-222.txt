@@ -1,6 +1,0 @@
-				billToAddress.append(order.getBilling().getCity());
-			}
-			if(billToAddress!=null) {
-				sheet.setValueAt(billToAddress.toString(), 0, billToCell);
-				billToCell ++;
-			}

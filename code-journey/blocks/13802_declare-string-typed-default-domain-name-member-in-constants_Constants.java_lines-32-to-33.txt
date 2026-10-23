@@ -1,2 +1,0 @@
-	public final static String DEFAULT_DOMAIN_NAME = "localhost:8080";
-

@@ -1,8 +1,0 @@
-
-label.checkout.text={0} vous remercie d'avoir acheté chez nous.
-label.checkout.orderid=Votre numéro de commande est {0}.
-label.checkout.email=Un courriel contenant le détail de la commande a été envoyé à {0}.
-label.checkout.additionaltext=Si vous avez des commentaires ou suggestions à nous envoyez vous pouvez le faire par courriel en prenant le soin de mentionner le numéro de votre commande.
-label.checkout.downloads.completed=Voici le(s) fichier(s) à télécharger.
-label.checkout.downloads.processing=Un courriel contenant un lien vers le(s) fichier(s) à télécharger vous sera envoyé dès que le paiement pour cette commande sera complété.
-

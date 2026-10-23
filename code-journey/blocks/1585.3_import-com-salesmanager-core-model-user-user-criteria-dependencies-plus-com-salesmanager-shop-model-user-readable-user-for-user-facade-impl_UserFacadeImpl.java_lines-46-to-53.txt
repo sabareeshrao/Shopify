@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.user.UserCriteria;
-import com.salesmanager.shop.constants.Constants;
-import com.salesmanager.shop.constants.EmailConstants;
-import com.salesmanager.shop.model.security.PersistableGroup;
-import com.salesmanager.shop.model.security.ReadableGroup;
-import com.salesmanager.shop.model.security.ReadablePermission;
-import com.salesmanager.shop.model.user.PersistableUser;
-import com.salesmanager.shop.model.user.ReadableUser;

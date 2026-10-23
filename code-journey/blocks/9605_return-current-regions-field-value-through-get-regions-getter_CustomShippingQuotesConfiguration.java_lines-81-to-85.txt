@@ -1,5 +1,0 @@
-	public List<CustomShippingQuotesRegion> getRegions() {
-		return regions;
-	}
-
-}

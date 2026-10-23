@@ -1,6 +1,0 @@
-	@Autowired
-	private ReadableProductAttributeMapper readableProductAttributeMapper;
-
-	@Autowired
-	private ProductService productService;
-

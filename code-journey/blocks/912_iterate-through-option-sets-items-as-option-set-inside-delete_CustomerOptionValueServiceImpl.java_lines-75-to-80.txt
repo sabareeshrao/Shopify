@@ -1,6 +1,0 @@
-		
-		List<CustomerOptionSet> optionSets = customerOptionSetService.listByOptionValue(customerOptionValue, customerOptionValue.getMerchantStore());
-		
-		for(CustomerOptionSet optionSet : optionSets) {
-			customerOptionSetService.delete(optionSet);
-		}

@@ -1,4 +1,0 @@
-	public ProductService getProductService() {
-		return productService;
-	}
-

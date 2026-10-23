@@ -1,8 +1,0 @@
-
-	@Column(name="RENTAL_DURATION", nullable = true)
-	private Integer rentalDuration;
-	
-	@Column(name="RENTAL_PERIOD", nullable = true)
-	private Integer rentalPeriod;
-
-	

@@ -1,4 +1,0 @@
-
-		if (count != null) {
-			criteria.setMaxCount(count);
-		}

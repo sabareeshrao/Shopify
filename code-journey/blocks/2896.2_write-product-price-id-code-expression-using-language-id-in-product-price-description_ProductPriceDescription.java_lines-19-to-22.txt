@@ -1,4 +1,0 @@
-			"PRODUCT_PRICE_ID",
-			"LANGUAGE_ID"
-		})
-	}

@@ -1,8 +1,0 @@
-		//create options
-		PersistableProductOption color = new PersistableProductOption();
-		color.setCode("color");
-		ProductOptionDescription colorEn = new ProductOptionDescription();
-		colorEn.setName("Color");
-		colorEn.setLanguage("en");
-		color.getDescriptions().add(colorEn);
-		

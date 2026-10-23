@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(MerchantRepositoryImpl.class);
-  
-
-  @SuppressWarnings({"rawtypes", "unchecked"})
-  @Override
-  public GenericEntityList listByCriteria(MerchantStoreCriteria criteria) throws ServiceException {
-    try {
-      StringBuilder req = new StringBuilder();

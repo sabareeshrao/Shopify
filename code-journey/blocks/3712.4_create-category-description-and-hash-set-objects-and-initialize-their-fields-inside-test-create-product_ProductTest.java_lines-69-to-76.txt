@@ -1,8 +1,0 @@
-	    CategoryDescription bookFrenchDescription = new CategoryDescription();
-	    bookFrenchDescription.setName("Livre");
-	    bookFrenchDescription.setCategory(book);
-	    bookFrenchDescription.setLanguage(fr);
-
-	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
-	    descriptions.add(bookEnglishDescription);
-	    descriptions.add(bookFrenchDescription);

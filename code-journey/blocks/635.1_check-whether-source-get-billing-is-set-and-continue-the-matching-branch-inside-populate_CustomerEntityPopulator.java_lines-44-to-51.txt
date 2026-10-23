@@ -1,8 +1,0 @@
-            
-          
-
-            if ( source.getBilling() != null )
-            {
-                Address address = new Address();
-                address.setCity( source.getBilling().getCity() );
-                address.setAddress(source.getBilling().getAddress());

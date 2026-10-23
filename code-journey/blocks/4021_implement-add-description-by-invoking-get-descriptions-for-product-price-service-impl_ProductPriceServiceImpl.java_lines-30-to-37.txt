@@ -1,8 +1,0 @@
-	@Override
-	public void addDescription(ProductPrice price,
-			ProductPriceDescription description) throws ServiceException {
-		price.getDescriptions().add(description);
-		update(price);
-	}
-	
-	

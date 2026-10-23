@@ -1,3 +1,0 @@
-	@Column(name = "PRICE_APPENDER")
-	private String priceAppender;
-

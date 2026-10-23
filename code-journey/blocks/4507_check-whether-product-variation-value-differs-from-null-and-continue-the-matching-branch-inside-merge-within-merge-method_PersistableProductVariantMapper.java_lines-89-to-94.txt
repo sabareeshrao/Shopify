@@ -1,6 +1,0 @@
-		
-		StringBuilder instanceCode = new StringBuilder();
-		instanceCode.append(variation.get().getCode());
-		if(productVariationValue != null && variationValue.get()!=null) {
-			instanceCode.append(":").append(variationValue.get().getCode());
-		}

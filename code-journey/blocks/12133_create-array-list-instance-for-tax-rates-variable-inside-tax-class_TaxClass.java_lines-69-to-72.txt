@@ -1,4 +1,0 @@
-	
-	@OneToMany(mappedBy = "taxClass")
-	private List<TaxRate> taxRates = new ArrayList<TaxRate>();
-	

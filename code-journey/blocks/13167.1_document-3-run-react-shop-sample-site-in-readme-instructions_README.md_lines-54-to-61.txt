@@ -1,8 +1,0 @@
-
-3. Run react shop sample site
-
-⋅⋅⋅ Requires the java backend to be running
-
-```
-docker run \
- -e "APP_MERCHANT=DEFAULT"

@@ -1,5 +1,0 @@
-	    brown.getDescriptions().add(brownd);
-
-	    manufacturerService.create(brown);
-	    //
-

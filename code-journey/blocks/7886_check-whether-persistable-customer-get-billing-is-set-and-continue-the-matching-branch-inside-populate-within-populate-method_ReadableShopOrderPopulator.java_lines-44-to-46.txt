@@ -1,3 +1,0 @@
-				if(persistableCustomer.getBilling().getZone()!=null) {
-					address.setZone(persistableCustomer.getBilling().getZone());
-				}

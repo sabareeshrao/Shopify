@@ -1,8 +1,0 @@
-	public String buildProductImageUtils(MerchantStore store, String sku, String imageName);
-	
-	/**
-	 * Builds a large product image file path that can be used by the image servlet
-	 * @param store
-	 * @param sku
-	 * @param imageName
-	 * @return

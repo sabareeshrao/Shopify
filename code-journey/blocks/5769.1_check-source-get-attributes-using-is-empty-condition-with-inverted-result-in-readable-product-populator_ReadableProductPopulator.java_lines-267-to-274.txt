@@ -1,8 +1,0 @@
-
-			if(!CollectionUtils.isEmpty(source.getAttributes())) {
-
-				Set<ProductAttribute> attributes = source.getAttributes();
-
-
-				//split read only and options
-				//Map<Long,ReadableProductAttribute> readOnlyAttributes = null;

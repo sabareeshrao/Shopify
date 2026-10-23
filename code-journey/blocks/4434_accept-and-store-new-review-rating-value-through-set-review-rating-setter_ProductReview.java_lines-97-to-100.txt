@@ -1,4 +1,0 @@
-	public void setReviewRating(Double reviewRating) {
-		this.reviewRating = reviewRating;
-	}
-

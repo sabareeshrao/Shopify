@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(OrderApi.class);
-
-	@Inject
-	private CustomerService customerService;
-
-	@Inject
-	private OrderFacade orderFacade;
-

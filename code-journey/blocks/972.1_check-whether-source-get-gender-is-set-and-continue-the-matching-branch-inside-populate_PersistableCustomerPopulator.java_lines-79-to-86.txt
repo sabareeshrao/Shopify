@@ -1,8 +1,0 @@
-			
-			target.setId(source.getId());
-			target.setEmailAddress(source.getEmailAddress());
-			if(source.getGender()!=null) {
-				target.setGender(source.getGender().name());
-			}
-			if(source.getDefaultLanguage()!=null) {
-				target.setLanguage(source.getDefaultLanguage().getCode());

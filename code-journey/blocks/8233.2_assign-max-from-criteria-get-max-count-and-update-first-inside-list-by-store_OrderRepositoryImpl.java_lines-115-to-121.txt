@@ -1,7 +1,0 @@
-        
-		//TO BE USED
-        int max = criteria.getMaxCount();
-        int first = criteria.getStartIndex();
-        
-        objectQ.setFirstResult(first);
-        

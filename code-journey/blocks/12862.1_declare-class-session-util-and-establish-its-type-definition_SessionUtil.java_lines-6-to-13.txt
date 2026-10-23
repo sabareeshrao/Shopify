@@ -1,8 +1,0 @@
-import javax.servlet.http.HttpServletRequest;
-
-/**
- * @author Umesh Awasthi
- *
- */
-public class SessionUtil
-{

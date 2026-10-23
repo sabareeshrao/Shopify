@@ -1,8 +1,0 @@
-	 * shoppingCartRepository.findByCustomer(customer.getId()); if (shoppingCart ==
-	 * null) { return null; } return getPopulatedShoppingCart(shoppingCart);
-	 * 
-	 * } catch (Exception e) { throw new ServiceException(e); } }
-	 */
-
-	@Transactional(noRollbackFor = { org.springframework.dao.EmptyResultDataAccessException.class })
-	private ShoppingCart getPopulatedShoppingCart(final ShoppingCart shoppingCart, MerchantStore store) throws Exception {

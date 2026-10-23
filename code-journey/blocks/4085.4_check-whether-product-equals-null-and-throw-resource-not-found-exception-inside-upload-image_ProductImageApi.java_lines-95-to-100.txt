@@ -1,6 +1,0 @@
-
-			// get the product
-			Product product = productService.getById(id);
-			if (product == null) {
-				throw new ResourceNotFoundException("Product not found");
-			}

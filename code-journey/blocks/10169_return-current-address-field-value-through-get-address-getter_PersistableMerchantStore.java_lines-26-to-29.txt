@@ -1,4 +1,0 @@
-	public PersistableAddress getAddress() {
-		return address;
-	}
-

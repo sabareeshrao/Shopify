@@ -1,3 +1,0 @@
-	public void setAttributeCode(String attributeCode) {
-		this.attributeCode = attributeCode;
-	}

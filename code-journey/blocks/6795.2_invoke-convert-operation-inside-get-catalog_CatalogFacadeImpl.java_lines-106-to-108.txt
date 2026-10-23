@@ -1,3 +1,0 @@
-        return readableCatalogMapper.convert(catalog, store, language);
-    }
-

@@ -1,8 +1,0 @@
-	@Column(name = "QUANTITY_ORDERED")
-	private Integer productOrdered;
-	
-	@Column(name = "SORT_ORDER")
-	private Integer sortOrder = new Integer(0);
-
-	@NotEmpty
-	@Pattern(regexp="^[a-zA-Z0-9_]*$")

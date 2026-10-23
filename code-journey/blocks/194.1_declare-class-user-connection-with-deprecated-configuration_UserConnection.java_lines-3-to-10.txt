@@ -1,8 +1,0 @@
-import javax.persistence.Entity;
-
-@Deprecated
-@Entity
-public class UserConnection extends AbstractUserConnectionWithCompositeKey {
-
-	/**
-	 * 

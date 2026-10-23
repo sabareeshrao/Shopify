@@ -1,7 +1,0 @@
-				TaxClass defaultTaxClass = taxClassService.getByCode(TaxClass.DEFAULT_TAX_CLASS);
-				//taxClasses.put(defaultTaxClass.getId(), defaultTaxClass);
-				BigDecimal amnt = taxClassAmountMap.get(defaultTaxClass.getId());
-				if(amnt==null) {
-					amnt = new BigDecimal(0);
-					amnt.setScale(2, RoundingMode.HALF_UP);
-				}

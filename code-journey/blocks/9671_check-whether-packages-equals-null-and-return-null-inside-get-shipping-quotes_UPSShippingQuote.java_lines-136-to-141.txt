@@ -1,6 +1,0 @@
-
-		BigDecimal total = orderTotal;
-
-		if (packages == null) {
-			return null;
-		}

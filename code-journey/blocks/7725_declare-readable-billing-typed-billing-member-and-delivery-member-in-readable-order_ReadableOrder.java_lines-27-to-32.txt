@@ -1,6 +1,0 @@
-	private ReadableBilling billing;
-	private ReadableDelivery delivery;
-	private ReadableMerchantStore store;
-	
-	
-	

@@ -1,8 +1,0 @@
-
-    Customer cust = customerService.getById(customer.getId());
-
-    try{
-      customerPopulator.populate(customer, cust, store, store.getDefaultLanguage());
-    } catch (ConversionException e) {
-      throw new ConversionRuntimeException(e);
-    }

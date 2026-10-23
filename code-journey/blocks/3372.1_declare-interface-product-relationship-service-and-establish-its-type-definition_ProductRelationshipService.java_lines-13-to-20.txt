@@ -1,8 +1,0 @@
-public interface ProductRelationshipService extends
-		SalesManagerEntityService<Long, ProductRelationship> {
-
-	void saveOrUpdate(ProductRelationship relationship) throws ServiceException;
-
-	/**
-	 * Get product relationship List for a given type (RELATED, FEATURED...) and language allows
-	 * to return the product description in the appropriate language

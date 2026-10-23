@@ -1,5 +1,0 @@
-	@Override
-	public List<ProductReview> getByProduct(Product product) {
-		return productReviewRepository.findByProduct(product.getId());
-	}
-	

@@ -1,7 +1,0 @@
-			} else {
-				throw new ResourceNotFoundException("Product with id [" + productId + "] and inventory id [" +  inventoryId + "] not found for store id [" + store.getId() + "]");
-			}
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while deleting inventory", e);
-		}
-	}

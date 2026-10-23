@@ -1,5 +1,0 @@
-	public ShippingDescription getShippingDescription() {
-		return shippingDescription;
-	}
-
-

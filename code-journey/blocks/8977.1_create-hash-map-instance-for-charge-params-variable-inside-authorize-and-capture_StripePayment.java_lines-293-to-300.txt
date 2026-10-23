@@ -1,8 +1,0 @@
-		
-			String strAmount = String.valueOf(amnt);
-			strAmount = strAmount.replace(".","");
-			
-			Map<String, Object> chargeParams = new HashMap<String, Object>();
-			chargeParams.put("amount", strAmount);
-			chargeParams.put("capture", true);
-			chargeParams.put("currency", store.getCurrency().getCode());

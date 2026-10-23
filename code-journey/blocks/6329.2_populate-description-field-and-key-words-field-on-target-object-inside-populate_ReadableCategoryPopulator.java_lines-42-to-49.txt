@@ -1,8 +1,0 @@
-                desc.setDescription(description.getDescription());
-                desc.setKeyWords(description.getMetatagKeywords());
-                desc.setHighlights(description.getCategoryHighlight());
-                desc.setTitle(description.getMetatagTitle());
-                desc.setMetaDescription(description.getMetatagDescription());
-
-                target.setDescription(desc);
-            }

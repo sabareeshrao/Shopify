@@ -1,2 +1,0 @@
-	void setOrderId(String code, Long orderId, MerchantStore store) throws Exception;
-	

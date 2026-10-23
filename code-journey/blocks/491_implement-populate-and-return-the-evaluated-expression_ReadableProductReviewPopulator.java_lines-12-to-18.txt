@@ -1,7 +1,0 @@
-	@Override
-	public ReadableCustomerReview populate(CustomerReview source, ReadableCustomerReview target, MerchantStore store,
-			Language language) throws ConversionException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-

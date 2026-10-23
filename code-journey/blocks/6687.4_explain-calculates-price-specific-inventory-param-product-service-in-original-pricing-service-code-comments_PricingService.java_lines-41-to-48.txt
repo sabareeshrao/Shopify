@@ -1,8 +1,0 @@
-	
-	/**
-	 * Calculates the price on a specific inventory
-	 * @param product
-	 * @return
-	 * @throws ServiceException
-	 */
-	FinalPrice calculateProductPrice(ProductAvailability product) throws ServiceException;

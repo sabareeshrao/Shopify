@@ -1,7 +1,0 @@
-						cc.setCcNumber(maskedNumber);
-						modelOrder.setCreditCard(cc);
-					}
-
-				}
-
-			}

@@ -1,8 +1,0 @@
-	private TaxRateRepository taxRateRepository;
-	
-	@Inject
-	public TaxRateServiceImpl(TaxRateRepository taxRateRepository) {
-		super(taxRateRepository);
-		this.taxRateRepository = taxRateRepository;
-	}
-

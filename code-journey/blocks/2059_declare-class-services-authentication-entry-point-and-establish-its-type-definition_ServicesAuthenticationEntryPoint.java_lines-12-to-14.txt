@@ -1,3 +1,0 @@
-public class ServicesAuthenticationEntryPoint implements AuthenticationEntryPoint, InitializingBean, Ordered {
-
-	

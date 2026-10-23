@@ -1,4 +1,0 @@
-			
-			if(!StringUtils.isBlank(source.getEmailAddress())) {
-				target.setEmailAddress(source.getEmailAddress());
-			}

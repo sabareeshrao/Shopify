@@ -1,4 +1,0 @@
-	public BigDecimal getProductPriceSpecial() {
-		return productPriceSpecial;
-	}
-

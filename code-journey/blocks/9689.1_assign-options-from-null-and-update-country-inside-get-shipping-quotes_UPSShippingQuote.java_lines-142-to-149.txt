@@ -1,8 +1,0 @@
-		
-		List<ShippingOption> options = null;
-
-		// only applies to Canada and US
-		Country country = delivery.getCountry();
-		
-
-		

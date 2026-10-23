@@ -1,4 +1,0 @@
-				currency = currencyService.getByCode(source.getCurrency());
-			} catch(Exception e) {
-				throw new ConversionException("Currency not found for code " + source.getCurrency());
-			}

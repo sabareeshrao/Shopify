@@ -1,5 +1,0 @@
-	    private Boolean isTokenExpired(String token) {
-	        final Date expiration = getExpirationDateFromToken(token);
-	        return expiration.before(DateUtil.getDate());
-	    }
-	    

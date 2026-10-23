@@ -1,8 +1,0 @@
-	@Override
-	public ReadableShippingSummary populate(ShippingSummary source,
-			ReadableShippingSummary target, MerchantStore store,
-			Language language) throws ConversionException {
-		
-		Validate.notNull(pricingService,"PricingService must be set");
-		Validate.notNull(source,"ShippingSummary cannot be null");
-	

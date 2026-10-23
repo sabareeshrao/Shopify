@@ -1,4 +1,0 @@
-    	    	
-    	    } else {
-    	    	language = languageService.defaultLanguage();
-    	    }

@@ -1,8 +1,0 @@
-  @Override
-  public void unSuccessfullAuthentication(HttpServletRequest request, HttpServletResponse response)
-      throws AuthenticationException {
-    // TODO Auto-generated method stub
-
-  }
-
-}

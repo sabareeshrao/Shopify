@@ -1,6 +1,0 @@
-		
-		/** which destinations are supported by this module **/
-		
-		if(delivery.getZone()==null) {
-			return;
-		}

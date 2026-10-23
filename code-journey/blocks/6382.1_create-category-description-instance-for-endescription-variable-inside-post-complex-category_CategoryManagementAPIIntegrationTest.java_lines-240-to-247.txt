@@ -1,8 +1,0 @@
-
-        bench.setParent(diningParent);
-
-        endescription = new CategoryDescription();
-        endescription.setLanguage("en");
-        endescription.setName("Benches");
-        endescription.setFriendlyUrl("benches");
-        endescription.setTitle("Benches");

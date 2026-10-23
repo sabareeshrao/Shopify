@@ -1,9 +1,0 @@
-	public String getShippingOption() {
-		return shippingOption;
-	}
-	public void setShippingOption(String shippingOption) {
-		this.shippingOption = shippingOption;
-	}
-	public boolean isFreeShipping() {
-		return freeShipping;
-	}

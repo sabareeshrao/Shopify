@@ -1,9 +1,0 @@
-  @Override
-  @SuppressWarnings("unchecked")
-  public List<ProductRelationship> getByGroup(MerchantStore store, String group) {
-    return entityManager.createQuery(HQL_GET_GROUP_BY_CODE_AND_STORE_ID)
-        .setParameter("code", group)
-        .setParameter("storeId", store.getId())
-        .getResultList();
-  }
-

@@ -1,7 +1,0 @@
-		product.setId(null);
-		Long id = productDefinitionFacade.saveProductDefinition(merchantStore, product, language);
-		Entity returnEntity = new Entity();
-		returnEntity.setId(id);
-		return returnEntity;
-
-	}

@@ -1,8 +1,0 @@
-label.generic.title=Titre
-label.generic.keywords=Mots clés
-label.generic.amount=Montant
-label.generic.changepassword=Change password
-
-label.generic.confirm=Veuillez confirmer!
-label.generic.firstname=Prénom
-label.generic.lastname=Nom

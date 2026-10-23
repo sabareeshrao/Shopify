@@ -1,6 +1,0 @@
-
-	@JsonIgnore
-	@ManyToOne(targetEntity = ShoppingCartItem.class)
-	@JoinColumn(name = "SHP_CART_ITEM_ID", nullable = false)
-	private ShoppingCartItem shoppingCartItem;
-	

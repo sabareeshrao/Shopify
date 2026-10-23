@@ -1,8 +1,0 @@
-	  
-	  /**
-	   * 
-	   * @param id
-	   * @param store
-	   * @return
-	   */
-	  Product getProduct(Long id, MerchantStore store);

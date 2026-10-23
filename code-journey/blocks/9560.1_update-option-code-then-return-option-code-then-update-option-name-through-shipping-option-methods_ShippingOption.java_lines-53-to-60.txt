@@ -1,8 +1,0 @@
-	public void setOptionCode(String optionCode) {
-		this.optionCode = optionCode;
-	}
-	public String getOptionCode() {
-		return optionCode;
-	}
-	public void setOptionName(String optionName) {
-		this.optionName = optionName;

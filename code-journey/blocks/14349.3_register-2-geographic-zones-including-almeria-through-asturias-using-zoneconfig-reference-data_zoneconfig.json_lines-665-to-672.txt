@@ -1,8 +1,0 @@
-		"zoneName": "Almeria",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Asturias",
-		"zoneName": "Asturias",
-		"countryCode": "ES"
-	},

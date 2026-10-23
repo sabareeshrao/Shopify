@@ -1,7 +1,0 @@
-	public ReadableCategory getByfriendlyUrl(
-								@PathVariable(name = "friendlyUrl") String friendlyUrl,
-								@ApiIgnore MerchantStore merchantStore,
-								@ApiIgnore Language language) throws Exception {
-		ReadableCategory category = categoryFacade.getCategoryByFriendlyUrl(merchantStore, friendlyUrl, language);
-		return category;
-	}

@@ -1,6 +1,0 @@
-	ProductPrice findById(Long priceId, String sku, MerchantStore store);
-	
-	List<ProductPrice> findByInventoryId(Long productInventoryId, String sku, MerchantStore store);
-	
-
-}

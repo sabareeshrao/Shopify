@@ -1,3 +1,0 @@
-			if (destination == null) {
-				destination = new ProductPrice();
-			}

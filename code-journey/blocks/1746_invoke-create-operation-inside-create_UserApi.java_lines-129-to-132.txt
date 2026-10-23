@@ -1,4 +1,0 @@
-		}
-
-		return userFacade.create(user, merchantStore);
-	}

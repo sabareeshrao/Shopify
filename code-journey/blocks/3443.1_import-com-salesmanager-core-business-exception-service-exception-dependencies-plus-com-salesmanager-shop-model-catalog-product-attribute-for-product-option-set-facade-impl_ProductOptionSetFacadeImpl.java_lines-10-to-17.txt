@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.services.catalog.product.attribute.ProductOptionSetService;
-import com.salesmanager.core.model.catalog.product.attribute.ProductOptionSet;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.catalog.PersistableProductOptionSetMapper;
-import com.salesmanager.shop.mapper.catalog.ReadableProductOptionSetMapper;
-import com.salesmanager.shop.model.catalog.product.attribute.optionset.PersistableProductOptionSet;

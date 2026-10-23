@@ -1,8 +1,0 @@
-	@Override
-	public ProductImage populate(PersistableImage source, ProductImage target, MerchantStore store, Language language)
-			throws ConversionException {
-		
-		Validate.notNull(product,"Must set a product setProduct(Product)");
-		Validate.notNull(product.getId(),"Product must have an id not null");
-		Validate.notNull(source.getContentType(),"Content type must be set on persistable image");
-

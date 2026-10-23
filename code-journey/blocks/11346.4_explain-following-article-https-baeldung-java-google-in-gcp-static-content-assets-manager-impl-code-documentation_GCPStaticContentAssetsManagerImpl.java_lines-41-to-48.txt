@@ -1,8 +1,0 @@
- * 
- * following this article: https://www.baeldung.com/java-google-cloud-storage
- * 
- * gsutil ls -L -b gs://shopizer-content
- * 
- * 
- * @author carlsamson
- *

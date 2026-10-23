@@ -1,2 +1,0 @@
-	private static ThreadLocal<UserContext> instance = new ThreadLocal<>();
-

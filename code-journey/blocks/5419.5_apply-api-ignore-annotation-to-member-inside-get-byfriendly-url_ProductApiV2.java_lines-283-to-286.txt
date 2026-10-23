@@ -1,4 +1,0 @@
-			// per
-			// page
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-

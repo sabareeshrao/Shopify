@@ -1,8 +1,0 @@
-
-	/**
-	 * Implementation for getContentImages method defined in
-	 * {@link ContentService} interface. Methods will return list of all Content
-	 * image associated with given Merchant store or will return empty list if
-	 * no image is associated with given Merchant Store in Infinispan tree
-	 * cache.
-	 * 

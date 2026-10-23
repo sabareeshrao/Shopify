@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.ReadableMinimalProduct;
-import com.salesmanager.shop.model.catalog.product.variation.ReadableProductVariation;
-
-/**
- * compatible with v1 version
- * @author c.samson
- *
- */

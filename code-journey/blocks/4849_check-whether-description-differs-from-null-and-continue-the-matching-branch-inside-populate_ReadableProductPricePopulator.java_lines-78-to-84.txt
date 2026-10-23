@@ -1,7 +1,0 @@
-               }
-
-               
-               if (description != null) {
-                   com.salesmanager.shop.model.catalog.product.ProductPriceDescription d = populateDescription(description);
-                   target.setDescription(d);
-               }

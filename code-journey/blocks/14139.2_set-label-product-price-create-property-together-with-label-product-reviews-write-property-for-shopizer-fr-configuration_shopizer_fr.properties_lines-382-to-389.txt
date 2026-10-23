@@ -1,8 +1,0 @@
-label.product.price.create=Créer un prix
-label.product.attribute.create=Créer une option / attribut
-label.product.attribute.specifications=Spécifications
-label.product.category.association=Associer le produit aux catégories
-label.product.customer.reviews=Revues du client
-label.product.reviews=Revue(s) du produit
-label.product.reviews.rating=Évaluation
-label.product.reviews.write=Évaluer ce produit

@@ -1,8 +1,0 @@
-
-			List<Product> products = productService.getProducts(categoryIds);
-			// org.hibernate.Session session =
-			// em.unwrap(org.hibernate.Session.class);// need to refresh the
-			// session to update
-			// all product
-			// categories
-

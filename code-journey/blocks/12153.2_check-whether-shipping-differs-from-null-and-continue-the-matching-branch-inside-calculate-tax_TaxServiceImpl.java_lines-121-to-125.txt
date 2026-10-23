@@ -1,5 +1,0 @@
-			if(shipping!=null) {
-				country = shipping.getCountry();
-				zone = shipping.getZone();
-				stateProvince = shipping.getState();
-			}

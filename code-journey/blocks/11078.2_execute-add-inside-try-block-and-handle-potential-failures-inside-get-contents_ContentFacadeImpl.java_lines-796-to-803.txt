@@ -1,8 +1,0 @@
-		types.add(ContentType.PAGE);
-		types.add(ContentType.SECTION);
-
-		try {
-			return contentService.listByType(types, store, language).stream()
-					.map(content -> convertContentToReadableContentEntity(store, language, content))
-					.collect(Collectors.toList());
-

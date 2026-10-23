@@ -1,8 +1,0 @@
-
-		target.setId(source.getId());
-		target.setOrderedQuantity(source.getProductQuantity());
-		try {
-			target.setPrice(pricingService.getDisplayAmount(source.getOneTimeCharge(), store));
-		} catch (Exception e) {
-			throw new ConversionRuntimeException("Cannot convert price", e);
-		}

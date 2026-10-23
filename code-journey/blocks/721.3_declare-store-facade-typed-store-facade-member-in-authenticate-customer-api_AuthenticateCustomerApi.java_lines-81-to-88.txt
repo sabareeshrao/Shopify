@@ -1,8 +1,0 @@
-    
-    @Inject
-    private StoreFacade storeFacade;
-
-    @Autowired
-    AuthorizationUtils authorizationUtils;
-    
-    @Autowired

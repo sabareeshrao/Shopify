@@ -1,7 +1,0 @@
-			public ImageFilePath getimageUtils() {
-				return imageUtils;
-			}
-		
-		
-		
-		

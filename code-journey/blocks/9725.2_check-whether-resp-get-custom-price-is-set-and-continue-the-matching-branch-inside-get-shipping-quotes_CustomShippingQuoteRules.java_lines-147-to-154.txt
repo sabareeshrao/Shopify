@@ -1,8 +1,0 @@
-		DecisionResponse resp = new DecisionResponse();
-		
-        kieSession.insert(inputParameters);
-        kieSession.setGlobal("decision",resp);
-        kieSession.fireAllRules();
-        //System.out.println(resp.getCustomPrice());
-
-		if(resp.getCustomPrice() != null) {

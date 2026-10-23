@@ -1,8 +1,0 @@
-	@Inject
-	protected CustomerOptionSetService customerOptionSetService;
-	
-	@Inject
-	protected OrderService orderService;
-	
-	@Inject
-	protected PaymentService paymentService;

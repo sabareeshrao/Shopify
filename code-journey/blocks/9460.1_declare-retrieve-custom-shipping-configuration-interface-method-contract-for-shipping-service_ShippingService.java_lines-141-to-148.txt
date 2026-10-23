@@ -1,8 +1,0 @@
-
-	CustomIntegrationConfiguration getCustomShippingConfiguration(
-			String moduleCode, MerchantStore store) throws ServiceException;
-
-	/**
-	 * Weight based configuration
-	 * @param moduleCode
-	 * @param shippingConfiguration

@@ -1,2 +1,0 @@
-			throw new ServiceRuntimeException("Error while getting taxRate [" +  code + "] for store [" + store.getCode() + "]", e);
-		}

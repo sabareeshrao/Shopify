@@ -1,9 +1,0 @@
-
-				// ## Accessing response parameters
-				// You can access the response parameters using getter methods in
-				// response object as shown below
-				// ### Success values
-				if(!"Success".equals(doCaptureResponse.getAck().getValue())) {
-							LOGGER.error("Wrong value from transaction commit " + doCaptureResponse.getAck().getValue());
-							throw new IntegrationException("Wrong paypal ack from refund transaction " + doCaptureResponse.getAck().getValue());
-				}

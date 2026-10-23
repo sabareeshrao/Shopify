@@ -1,7 +1,0 @@
-module.shipping.canadapost.USA.PW.PAK=Priority Worldwide pak USA
-module.shipping.canadapost.USA.PW.PARCEL=Priority Worldwide Parcel USA
-module.shipping.canadapost.USA.SP.AIR=Small Packet USA Air 
-module.shipping.canadapost.USA.TP=Tracked Packet - USA
-module.shipping.canadapost.USA.TP.LVM=Tracked Packet - USA -  (LVM - large volume mailers)
-module.shipping.canadapost.USA.XP=Xpresspost USA
-

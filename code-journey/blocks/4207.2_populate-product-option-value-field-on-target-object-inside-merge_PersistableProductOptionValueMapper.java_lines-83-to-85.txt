@@ -1,3 +1,0 @@
-				          description.setProductOptionValue(destination);
-				          destination.getDescriptions().add(description);
-			          }

@@ -1,3 +1,0 @@
-	private int endRow;
-	private int totalRow;
-	

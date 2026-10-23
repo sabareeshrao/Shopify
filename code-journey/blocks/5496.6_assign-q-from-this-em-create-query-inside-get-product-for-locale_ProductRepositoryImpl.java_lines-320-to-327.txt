@@ -1,8 +1,0 @@
-		Query q = this.em.createQuery(hql);
-
-		q.setParameter("pid", productId);
-		q.setParameter("lid", regionList);
-		q.setParameter("dt", new Date());
-		q.setParameter("lang", language.getId());
-
-		@SuppressWarnings("unchecked")

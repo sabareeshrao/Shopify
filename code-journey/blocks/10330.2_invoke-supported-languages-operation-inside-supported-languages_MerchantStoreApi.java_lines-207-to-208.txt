@@ -1,2 +1,0 @@
-		return storeFacade.supportedLanguages(merchantStore);
-	}

@@ -1,4 +1,0 @@
-	public void setAllowPurchaseItems(boolean allowPurchaseItems) {
-		this.allowPurchaseItems = allowPurchaseItems;
-	}
-

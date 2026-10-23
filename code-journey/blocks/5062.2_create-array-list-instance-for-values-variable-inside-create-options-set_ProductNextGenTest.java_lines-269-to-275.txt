@@ -1,7 +1,0 @@
-		
-		List<ProductOptionValue> values = new ArrayList<ProductOptionValue>();
-		values.add(nine);
-		values.add(ten);
-		
-		possibleSizes.setValues(values);
-		

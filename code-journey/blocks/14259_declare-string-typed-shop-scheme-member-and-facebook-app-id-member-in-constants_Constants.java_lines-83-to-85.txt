@@ -1,3 +1,0 @@
-	public final static String SHOP_SCHEME = "SHOP_SCHEME";
-	public final static String FACEBOOK_APP_ID = "shopizer.facebook-appid";
-

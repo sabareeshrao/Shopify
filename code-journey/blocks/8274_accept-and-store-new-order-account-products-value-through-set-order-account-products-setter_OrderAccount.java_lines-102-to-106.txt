@@ -1,5 +1,0 @@
-	public void setOrderAccountProducts(
-			Set<OrderAccountProduct> orderAccountProducts) {
-		this.orderAccountProducts = orderAccountProducts;
-	}
-}

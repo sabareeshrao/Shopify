@@ -1,3 +1,0 @@
-			
-			String xmlhead = xmlreqbuffer.toString();
-			

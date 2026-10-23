@@ -1,5 +1,0 @@
-	    	module.setImage((String)object.get("image"));
-	    	
-	    	if(object.get("type")!=null) {
-	    		module.setType((String)object.get("type"));
-	    	}

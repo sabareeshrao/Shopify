@@ -1,7 +1,0 @@
-			@PathVariable final String code,//shopping cart
-			@Valid @RequestBody PersistableAnonymousOrder order,//order
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		Validate.notNull(order.getCustomer(), "Customer must not be null");
-

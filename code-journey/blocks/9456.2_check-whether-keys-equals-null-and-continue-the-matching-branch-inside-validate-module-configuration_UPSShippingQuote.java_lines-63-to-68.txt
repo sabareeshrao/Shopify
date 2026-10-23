@@ -1,6 +1,0 @@
-		//validate integrationKeys['accessKey']
-		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
-		if(keys==null || StringUtils.isBlank(keys.get("accessKey"))) {
-			errorFields = new ArrayList<String>();
-			errorFields.add("accessKey");
-		}

@@ -1,8 +1,0 @@
-		final ArrayList<Category> categories = new ArrayList<>();
-		categories.add(cat);
-		product.setCategories(categories);
-		ProductSpecification specifications = new ProductSpecification();
-		specifications.setManufacturer(
-				com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer.DEFAULT_MANUFACTURER);
-		product.setProductSpecifications(specifications);
-		product.setAvailable(true);

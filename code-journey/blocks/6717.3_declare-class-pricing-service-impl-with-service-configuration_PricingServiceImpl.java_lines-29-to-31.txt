@@ -1,3 +1,0 @@
-@Service("pricingService")
-public class PricingServiceImpl implements PricingService {
-	

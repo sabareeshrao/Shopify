@@ -1,4 +1,0 @@
-	public Set<MerchantStore> getStores() {
-		return stores;
-	}
-

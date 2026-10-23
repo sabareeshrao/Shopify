@@ -1,8 +1,0 @@
- * @author c.samson
- *
- */
-
-@Controller
-@RequestMapping("/api/v1")
-public class SearchToolsApi {
-

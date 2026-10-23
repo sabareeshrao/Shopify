@@ -1,6 +1,0 @@
-	@Inject
-	private CacheUtils cache;
-	
-	@Inject
-	private GeoLocation geoLoaction;
-	

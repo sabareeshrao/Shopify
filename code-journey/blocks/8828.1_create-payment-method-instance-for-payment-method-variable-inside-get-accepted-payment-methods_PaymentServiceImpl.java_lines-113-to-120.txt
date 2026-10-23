@@ -1,8 +1,0 @@
-				PaymentMethod paymentMethod = new PaymentMethod();
-				
-				paymentMethod.setDefaultSelected(config.isDefaultSelected());
-				paymentMethod.setPaymentMethodCode(config.getModuleCode());
-				paymentMethod.setModule(md);
-				paymentMethod.setInformations(config);
-
-				PaymentType type = PaymentType.fromString(md.getType());

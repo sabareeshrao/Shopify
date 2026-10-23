@@ -1,4 +1,0 @@
-	public void setDescriptions(Set<ProductOptionDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-

@@ -1,8 +1,0 @@
-
-		@Autowired
-		JWTAdminServicesImpl jwtUserDetailsService;
-
-		@Bean("jwtAdminAuthenticationManager")
-		@Override
-		public AuthenticationManager authenticationManagerBean() throws Exception {
-			AuthenticationManager mgr = super.authenticationManagerBean();

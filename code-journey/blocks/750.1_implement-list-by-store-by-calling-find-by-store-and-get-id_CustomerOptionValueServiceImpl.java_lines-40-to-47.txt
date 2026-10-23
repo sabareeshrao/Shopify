@@ -1,8 +1,0 @@
-	@Override
-	public List<CustomerOptionValue> listByStore(MerchantStore store, Language language) throws ServiceException {
-		
-		return customerOptionValueRepository.findByStore(store.getId(), language.getId());
-	}
-	
-
-

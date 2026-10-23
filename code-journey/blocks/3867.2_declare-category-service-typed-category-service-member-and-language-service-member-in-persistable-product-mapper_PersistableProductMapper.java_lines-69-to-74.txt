@@ -1,6 +1,0 @@
-	
-	@Autowired
-	private CategoryService categoryService;
-	@Autowired
-	private LanguageService languageService;
-

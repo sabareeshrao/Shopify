@@ -1,8 +1,0 @@
-
-		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
-		shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
-		shoppingCartDataPopulator.setPricingService(pricingService);
-		shoppingCartDataPopulator.setimageUtils(imageUtils);
-
-		return shoppingCartDataPopulator.populate(cartModel, store, language);
-	}

@@ -1,6 +1,0 @@
-		
-		//remove option
-		super.delete(option);
-		
-	}
-	

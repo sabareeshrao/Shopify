@@ -1,8 +1,0 @@
-module.payment.stripe=Stripe
-module.payment.braintree=Braintree
-
-module.payment.transactiontype=Type de transaction
-module.payment.transactiontype.preauth=Pré-authorization
-module.payment.transactiontype.capture=Capture
-module.payment.transactiontype.sale=Vente
-module.payment.transactiontype.refund=Remboursement

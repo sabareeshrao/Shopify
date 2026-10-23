@@ -1,3 +1,0 @@
-public interface CountryFacade {
-  List<ReadableCountry> getListCountryZones(Language language, MerchantStore merchantStore);
-}

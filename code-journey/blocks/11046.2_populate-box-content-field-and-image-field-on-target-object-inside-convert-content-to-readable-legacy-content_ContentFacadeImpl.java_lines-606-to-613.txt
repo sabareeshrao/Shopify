@@ -1,8 +1,0 @@
-		 * box.setBoxContent(contentDescription.get().getDescription()); }
-		 * String staticImageFilePath = imageUtils.buildStaticImageUtils(store,
-		 * content.getCode() + ".jpg"); box.setImage(staticImageFilePath);
-		 * return box;
-		 */
-
-		return null;
-	}

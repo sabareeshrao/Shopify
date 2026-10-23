@@ -1,8 +1,0 @@
-			
-			destination.setCatalog(catalogModel);
-
-/*			Product productModel = productFacade.getProduct(source.getProductCode(), store);
-			if(productModel == null) {
-				throw new ConversionRuntimeException("Error while converting CatalogEntry product [" + source.getProductCode() + "] not found");
-			}*/
-

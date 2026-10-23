@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.user.UserPassword;
-
-/**
- * Access to all methods for managing users
- * 
- * @author carlsamson
- *
- */

@@ -1,3 +1,0 @@
-  @JoinColumn(name = "PRODUCT_TYPE_ID", nullable = false)
-  private ProductType productType;
-

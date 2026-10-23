@@ -1,8 +1,0 @@
-      this.createDirectoryIfNorExist(merchantPath);
-
-      // product path
-      nodePath.append(Constants.SLASH).append(productImage.getProduct().getSku())
-          .append(Constants.SLASH);
-      Path dirPath = Paths.get(nodePath.toString());
-      this.createDirectoryIfNorExist(dirPath);
-

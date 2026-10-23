@@ -1,8 +1,0 @@
-		readableStore.ifPresent(destination::setStore);
-		
-		destination.setDefaultCatalog(source.isDefaultCatalog());
-
-		Optional<String> formattedCreationDate = Optional.ofNullable(source.getAuditSection())
-				.map(AuditSection::getDateCreated)
-				.map(DateUtil::formatDate);
-		formattedCreationDate.ifPresent(destination::setCreationDate);

@@ -1,8 +1,0 @@
-						 * (!zonesMap.containsKey(zoneCode)) { zone = new
-						 * Zone(); Country country =
-						 * countriesMap.get(e.get("countryCode")); if (country
-						 * == null) { LOGGER.warn("Country is null for " +
-						 * zoneCode + " and country code " +
-						 * e.get("countryCode")); continue; }
-						 * zone.setCountry(country); zonesMap.put(zoneCode,
-						 * zone); zone.setCode(zoneCode);

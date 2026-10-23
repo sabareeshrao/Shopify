@@ -1,8 +1,0 @@
-	@Override
-	public ReadableUser findByUserName(String userName) {
-		Validate.notNull(userName, "userName cannot be null");
-		User user;
-		try {
-			user = userService.getByUserName(userName);
-			if (user == null) {
-				throw new ResourceNotFoundException("User [" + userName + "] not found");

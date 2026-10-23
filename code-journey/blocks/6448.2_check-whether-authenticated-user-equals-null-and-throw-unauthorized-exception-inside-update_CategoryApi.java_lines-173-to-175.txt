@@ -1,3 +1,0 @@
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();
-		}

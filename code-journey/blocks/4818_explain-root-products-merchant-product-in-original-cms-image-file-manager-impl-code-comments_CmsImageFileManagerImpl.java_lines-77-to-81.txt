@@ -1,5 +1,0 @@
-
-  /**
-   * root/products/<merchant id>/<product id>/1.jpg
-   */
-

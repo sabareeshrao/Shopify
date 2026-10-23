@@ -1,5 +1,0 @@
-  private Customer getByNick(String userName) {
-    return Optional.ofNullable(customerService.getByNick(userName))
-        .orElseThrow(() -> new ResourceNotFoundException("No Customer found for ID : " + userName));
-  }
-

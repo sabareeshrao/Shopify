@@ -1,9 +1,0 @@
-	
-	@ManyToOne(targetEntity = Currency.class)
-	@JoinColumn(name = "CURRENCY_ID")
-	private Currency currency;
-	
-	@Type(type="locale")  
-	@Column (name ="LOCALE")
-	private Locale locale; 
-	

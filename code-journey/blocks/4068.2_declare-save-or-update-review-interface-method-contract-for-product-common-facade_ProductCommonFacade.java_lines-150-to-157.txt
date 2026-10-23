@@ -1,8 +1,0 @@
-	  void saveOrUpdateReview(PersistableProductReview review, MerchantStore store, Language language)
-	      throws Exception;
-
-	  /**
-	   * Deletes a product review
-	   *
-	   * @param review
-	   * @param store

@@ -1,2 +1,0 @@
-	ShoppingCart getByCode(String code, MerchantStore store) throws ServiceException;
-

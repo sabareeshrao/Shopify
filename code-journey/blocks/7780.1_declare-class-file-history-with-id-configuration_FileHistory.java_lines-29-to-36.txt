@@ -1,8 +1,0 @@
-		)
-	}
-)
-public class FileHistory implements Serializable {
-	private static final long serialVersionUID = 1321251632883237664L;
-	
-	@Id
-	@Column(name = "FILE_HISTORY_ID", unique = true, nullable = false)

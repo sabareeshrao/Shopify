@@ -1,9 +1,0 @@
-	public void setValues(List<ProductOptionValue> values) {
-		this.values = values;
-	}
-	public MerchantStore getStore() {
-		return store;
-	}
-	public void setStore(MerchantStore store) {
-		this.store = store;
-	}

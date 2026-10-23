@@ -1,8 +1,0 @@
-
-# Formulaire général
-button.label.close = Fermer
-button.label.esc = Touche Esc
-button.label.submit=Sauvegarder
-button.label.submit2=Soumettre
-button.label.submitorder=Passer la commande
-button.label.ok=Ok

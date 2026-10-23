@@ -1,8 +1,0 @@
-	      //System.out.println(new String(responseBody));
-	      
-	      String json = new String(responseBody);
-	      
-	      Map<String,String> map = new HashMap<String,String>();
-	  	  ObjectMapper mapper = new ObjectMapper();
-	  	  
-	  	  map = mapper.readValue(json, 

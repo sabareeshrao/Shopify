@@ -1,8 +1,0 @@
-	@Override
-	public List<Category> listByParent(Category category, Language language) {
-		Assert.notNull(category, "Category cannot be null");
-		Assert.notNull(language, "Language cannot be null");
-		Assert.notNull(category.getMerchantStore(), "category.merchantStore cannot be null");
-
-		return categoryRepository.findByParent(category.getId(), language.getId());
-	}

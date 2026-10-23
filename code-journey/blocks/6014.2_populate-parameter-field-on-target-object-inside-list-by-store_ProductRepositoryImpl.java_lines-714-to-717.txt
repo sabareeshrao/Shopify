@@ -1,4 +1,0 @@
-				countQ.setParameter("val" + count + attributeCriteria.getAttributeCode(),
-						"%" + attributeCriteria.getAttributeValue() + "%");
-				count++;
-			}

@@ -1,4 +1,0 @@
-import com.salesmanager.core.model.order.orderstatus.OrderStatusHistory;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-

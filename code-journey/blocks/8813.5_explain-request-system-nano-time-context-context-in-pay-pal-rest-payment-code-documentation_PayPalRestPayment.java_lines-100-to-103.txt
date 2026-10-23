@@ -1,4 +1,0 @@
-			
-			 * String requestId = Long.toString(System.nanoTime(); APIContext
-			 * apiContext = new APIContext(accessToken, requestId ));
-			 

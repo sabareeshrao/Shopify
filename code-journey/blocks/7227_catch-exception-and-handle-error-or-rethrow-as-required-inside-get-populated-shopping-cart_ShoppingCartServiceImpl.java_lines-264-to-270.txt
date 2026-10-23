@@ -1,7 +1,0 @@
-				return shoppingCart;
-			}
-
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage());
-			throw new ServiceException(e);
-		}

@@ -1,8 +1,0 @@
-
-    @Test
-    public void deleteCategory() throws Exception {
-
-        final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
-
-        testRestTemplate.exchange("/services/DEFAULT/category/100", HttpMethod.DELETE, httpEntity, Category.class);
-    }

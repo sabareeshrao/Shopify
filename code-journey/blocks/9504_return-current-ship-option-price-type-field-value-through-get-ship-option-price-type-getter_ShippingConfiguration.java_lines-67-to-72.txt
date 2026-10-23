@@ -1,6 +1,0 @@
-	public String getShipOptionPriceType() {
-		return shipOptionPriceType;
-	}
-
-
-

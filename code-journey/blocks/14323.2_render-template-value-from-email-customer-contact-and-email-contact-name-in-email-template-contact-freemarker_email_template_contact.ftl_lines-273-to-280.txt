@@ -1,8 +1,0 @@
-			<table>
-				<tr>
-					<td>
-						<p class="lead">
-							${EMAIL_CUSTOMER_CONTACT}
-						</p>
-						<p>
-    							${EMAIL_CONTACT_NAME_LABEL}: ${EMAIL_CONTACT_NAME}<br />

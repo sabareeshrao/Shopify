@@ -1,5 +1,0 @@
-
-	/**
-	 * Filters on otion, optionValues and other criterias
-	 */
-

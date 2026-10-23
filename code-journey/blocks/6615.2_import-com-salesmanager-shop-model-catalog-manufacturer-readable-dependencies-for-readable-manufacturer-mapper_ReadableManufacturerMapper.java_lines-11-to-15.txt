@@ -1,5 +1,0 @@
-import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;
-
-@Component
-public class ReadableManufacturerMapper implements Mapper<Manufacturer, ReadableManufacturer> {
-

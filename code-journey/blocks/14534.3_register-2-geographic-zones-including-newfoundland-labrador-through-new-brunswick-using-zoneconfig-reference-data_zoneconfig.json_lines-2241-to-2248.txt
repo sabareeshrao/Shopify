@@ -1,8 +1,0 @@
-			"zoneName": "Newfoundland - Labrador",
-			"countryCode": "CA"
-		},
-		{
-			"zoneCode": "NB",
-			"zoneName": "New Brunswick",
-			"countryCode": "CA"
-		},

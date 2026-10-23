@@ -1,2 +1,0 @@
-	private String taxTotal;//total of taxes
-	

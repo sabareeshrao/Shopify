@@ -1,4 +1,0 @@
-	public void setProductIds(List<Long> productIds) {
-		this.productIds = productIds;
-	}
-

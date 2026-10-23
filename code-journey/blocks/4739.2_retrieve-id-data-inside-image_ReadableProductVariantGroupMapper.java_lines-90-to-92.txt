@@ -1,3 +1,0 @@
-			finalList.put(img.getId(), readable);
-			
-		}

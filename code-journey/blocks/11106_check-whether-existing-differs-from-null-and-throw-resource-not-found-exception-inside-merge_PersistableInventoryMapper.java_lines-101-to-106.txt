@@ -1,6 +1,0 @@
-			if(existing != null) {
-				if(existing.getMerchantStore().getId() != store.getId()) {
-					throw new ResourceNotFoundException("Product Inventory with id [" + source.getId() + "] not found for store [" + store.getCode() + "]");
-				}
-				destination = existing;
-			}

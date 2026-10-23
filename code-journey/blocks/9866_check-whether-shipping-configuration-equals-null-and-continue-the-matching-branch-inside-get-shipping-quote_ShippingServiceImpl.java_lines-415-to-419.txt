@@ -1,5 +1,0 @@
-			
-			
-			if(shippingConfiguration==null) {
-				shippingConfiguration = new ShippingConfiguration();
-			}

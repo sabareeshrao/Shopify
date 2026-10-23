@@ -1,8 +1,0 @@
-import static com.salesmanager.shop.constants.Constants.ADMIN_URI;
-import static com.salesmanager.shop.constants.Constants.BLANK;
-import static com.salesmanager.shop.constants.Constants.CATEGORY_URI;
-import static com.salesmanager.shop.constants.Constants.DEFAULT_DOMAIN_NAME;
-import static com.salesmanager.shop.constants.Constants.FILES_URI;
-import static com.salesmanager.shop.constants.Constants.HTTP_SCHEME;
-import static com.salesmanager.shop.constants.Constants.ORDER_DOWNLOAD_URI;
-import static com.salesmanager.shop.constants.Constants.SHOP_URI;

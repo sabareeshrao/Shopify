@@ -1,8 +1,0 @@
-			@RequestParam(value = "qqfilename", required = true) String qqfilename,
-			@RequestParam(value = "qqtotalfilesize", required = false) Long qqtotalfilesize,
-			@RequestParam(value = "parentPath", required = false) String parentPath,
-			@RequestParam(value = "qqpartindex", required = false) Integer qqpartindex,
-			@RequestParam(value = "qqtotalparts", required = false) Integer qqtotalparts,
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-		

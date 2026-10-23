@@ -1,8 +1,0 @@
-	    		}
-	    		module.setCustomModule(b);
-	    	}
-	    	//module.setRegions(regions)
-	    	if(object.get("details")!=null) {
-	    		
-	    		Map<String,String> details = (Map<String,String>)object.get("details");
-	    		module.setDetails(details);

@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("DOP", "Dominican Peso");
-		CURRENCY_MAP.put("EGP", "Egyptian Pound");
-		CURRENCY_MAP.put("SVC", "El Salvador Colon");
-		CURRENCY_MAP.put("XAF", "CFA Franc BEAC");
-		CURRENCY_MAP.put("ERN", "Nakfa");
-		CURRENCY_MAP.put("ETB", "Ethiopian Birr");
-		CURRENCY_MAP.put("FKP", "Falkland Islands Pound");
-		CURRENCY_MAP.put("DKK", "Danish Krone");

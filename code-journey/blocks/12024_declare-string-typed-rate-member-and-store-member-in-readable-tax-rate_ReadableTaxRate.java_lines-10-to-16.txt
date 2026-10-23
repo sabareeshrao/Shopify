@@ -1,7 +1,0 @@
-	private String rate;
-	private String store;
-	private String zone;
-	private String country;
-	private ReadableTaxRateDescription description;
-	private ReadableTaxClass taxClass;
-	

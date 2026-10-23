@@ -1,8 +1,0 @@
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
-@Controller
-public class FilesController extends AbstractController {
-	

@@ -1,6 +1,0 @@
-	
-	@After("execution(* com.salesmanager.core.business.services.catalog.product.image.ProductImageService.delete(com.salesmanager.core.model.catalog.product.image.ProductImage))")
-	public void logBeforeDeleteProductImage(JoinPoint joinPoint) {
-	   Object[] signatureArgs = joinPoint.getArgs();
-	   eventPublisher.publishEvent(new DeleteProductImageEvent(eventPublisher, (ProductImage)signatureArgs[0], ((ProductImage)signatureArgs[0]).getProduct()));
-	}

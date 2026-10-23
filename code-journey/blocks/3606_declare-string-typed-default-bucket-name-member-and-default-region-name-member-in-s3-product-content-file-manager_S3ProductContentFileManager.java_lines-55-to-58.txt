@@ -1,4 +1,0 @@
-  private static String DEFAULT_BUCKET_NAME = "shopizer-content";
-  private static String DEFAULT_REGION_NAME = "us-east-1";
-  private static final String ROOT_NAME = "products";
-

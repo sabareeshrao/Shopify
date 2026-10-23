@@ -1,8 +1,0 @@
-
-
-module.shipping.ups.package.02=Customer Package
-module.shipping.ups.packagel.01=UPS Letter
-module.shipping.ups.package.03=UPS Tube
-module.shipping.ups.package.04=UPS Pak
-module.shipping.ups.package.21=UPS Express Box
-module.shipping.ups.package.24=UPS 25kg Box

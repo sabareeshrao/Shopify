@@ -1,3 +1,0 @@
-			}
-			data.put("useDefaultSearchConfig", obj);
-		}

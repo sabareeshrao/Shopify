@@ -1,4 +1,0 @@
-			});
-			
-			destination.setCategory(new ArrayList<>(hierarchy.values()));
-		}

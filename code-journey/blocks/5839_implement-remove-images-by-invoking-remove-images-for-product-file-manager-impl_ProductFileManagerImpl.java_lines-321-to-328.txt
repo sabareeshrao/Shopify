@@ -1,8 +1,0 @@
-  @Override
-  public void removeImages(final String merchantStoreCode) throws ServiceException {
-
-    this.removeImage.removeImages(merchantStoreCode);
-
-  }
-
-

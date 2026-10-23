@@ -1,3 +1,0 @@
-						"%" + attributeCriteria.getAttributeValue() + "%");
-				cnt++;
-			}

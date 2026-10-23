@@ -1,4 +1,0 @@
-	public void setOrderService(OrderService orderService) {
-		this.orderService = orderService;
-	}
-

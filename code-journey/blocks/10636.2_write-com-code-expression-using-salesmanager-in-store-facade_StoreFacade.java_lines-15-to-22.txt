@@ -1,8 +1,0 @@
-import com.salesmanager.shop.model.store.ReadableMerchantStoreList;
-
-/**
- * Layer between shop controllers, services and API with sm-core
- * 
- * @author carlsamson
- *
- */

@@ -1,6 +1,0 @@
-	private int getCropeBaseline() {
-		return cropeBaseline;
-	}
-
-
-

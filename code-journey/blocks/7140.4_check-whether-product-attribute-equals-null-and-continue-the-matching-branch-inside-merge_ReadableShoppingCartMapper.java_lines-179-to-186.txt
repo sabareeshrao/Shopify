@@ -1,8 +1,0 @@
-
-							ProductAttribute productAttribute = productAttributeService
-									.getById(attribute.getProductAttributeId());
-
-							if (productAttribute == null) {
-								LOG.warn("Product attribute with ID " + attribute.getId()
-										+ " not found, skipping cart attribute " + attribute.getId());
-								continue;

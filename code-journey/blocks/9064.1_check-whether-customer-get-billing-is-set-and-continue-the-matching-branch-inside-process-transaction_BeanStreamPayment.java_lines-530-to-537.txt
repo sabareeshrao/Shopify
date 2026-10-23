@@ -1,8 +1,0 @@
-		
-		messageString.append("ordName=").append(nm.toString()).append("&");
-		messageString.append("ordAddress1=").append(customer.getBilling().getAddress()).append("&");
-		messageString.append("ordCity=").append(customer.getBilling().getCity()).append("&");
-		
-		String stateProvince = customer.getBilling().getState();
-		if(customer.getBilling().getZone()!=null) {
-			stateProvince = customer.getBilling().getZone().getCode();

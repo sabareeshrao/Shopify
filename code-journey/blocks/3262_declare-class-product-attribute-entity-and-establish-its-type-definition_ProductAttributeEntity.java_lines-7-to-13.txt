@@ -1,7 +1,0 @@
-public class ProductAttributeEntity extends ProductAttribute implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-

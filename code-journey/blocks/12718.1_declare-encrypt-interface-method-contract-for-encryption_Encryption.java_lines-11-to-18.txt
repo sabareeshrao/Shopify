@@ -1,8 +1,0 @@
-
-	/**
-	 * Encrypts a string value
-	 * @param value VALUE
-	 * @return String encrypted string
-	 * @throws Exception cannot encrypt
-	 */
-	public String encrypt(String value) throws Exception;

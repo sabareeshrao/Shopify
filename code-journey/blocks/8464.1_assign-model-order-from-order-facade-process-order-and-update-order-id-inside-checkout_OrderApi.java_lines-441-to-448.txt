@@ -1,8 +1,0 @@
-			}
-
-
-			order.setShoppingCartId(cart.getId());
-
-			Order modelOrder = orderFacade.processOrder(order, customer, merchantStore, language,
-					LocaleUtils.getLocale(language));
-			Long orderId = modelOrder.getId();

@@ -1,8 +1,0 @@
-	@Override
-	public ShoppingCartItem populate(PersistableOrderProduct source, /** TODO: Fix, target not used possible future bug ! **/ShoppingCartItem target,
-									 MerchantStore store, Language language)
-			throws ConversionException {
-		Validate.notNull(productService, "Requires to set productService");
-		Validate.notNull(productAttributeService, "Requires to set productAttributeService");
-		Validate.notNull(shoppingCartService, "Requires to set shoppingCartService");
-

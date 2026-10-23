@@ -1,6 +1,0 @@
-	public ReadableProductVariant getVariant() {
-		return variant;
-	}
-
-
-

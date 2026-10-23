@@ -1,5 +1,0 @@
-    public PricingService getPricingService() {
-        return pricingService;
-    }
-
-

@@ -1,4 +1,0 @@
-	public String getConfigDetails() {
-		return configDetails;
-	}
-

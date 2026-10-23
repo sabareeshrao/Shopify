@@ -1,8 +1,0 @@
-
-
-  /**
-   * <p>
-   * Method to check if given user exists for given username under given store. System treat
-   * username as unique for a given store, customer is not allowed to use same username twice for a
-   * given store, however it can be used for different stores.
-   * </p>

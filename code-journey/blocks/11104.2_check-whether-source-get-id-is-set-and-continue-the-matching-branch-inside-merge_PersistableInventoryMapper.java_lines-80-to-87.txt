@@ -1,8 +1,0 @@
-			 *   match product id, instance id, merchant id and region then set exiting id
-			 * 
-			 */
-			Set<ProductAvailability> existingAvailability = product.getAvailabilities();
-			ProductAvailability existing = null;
-			//determine product availability to be used
-			if(source.getId() != null && source.getId() >0) {
-				existing = destination;

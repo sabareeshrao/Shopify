@@ -1,4 +1,0 @@
-    	${EMAIL_ADMIN_STORE_INFO_LABEL}<br/>
-    	${EMAIL_ADMIN_URL_LABEL}<br /><br />
-    </div>
-</div>

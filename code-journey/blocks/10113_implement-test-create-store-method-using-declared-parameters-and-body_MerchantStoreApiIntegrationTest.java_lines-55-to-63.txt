@@ -1,9 +1,0 @@
-  }
-  
-  /**
-   * Create a new store then delete it
-   * @throws Exception
-   */
-  @Test
-  public void testCreateStore() throws Exception {
-      

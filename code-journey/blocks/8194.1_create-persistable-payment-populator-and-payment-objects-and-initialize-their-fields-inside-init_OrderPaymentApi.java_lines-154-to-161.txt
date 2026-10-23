@@ -1,8 +1,0 @@
-
-			PersistablePaymentPopulator populator = new PersistablePaymentPopulator();
-			populator.setPricingService(pricingService);
-
-			Payment paymentModel = new Payment();
-
-			populator.populate(payment, paymentModel, merchantStore, language);
-

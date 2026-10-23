@@ -1,8 +1,0 @@
-	public ReadableProductType getType() {
-		return type;
-	}
-	public void setType(ReadableProductType type) {
-		this.type = type;
-	}
-	public List<ReadableCategory> getCategories() {
-		return categories;

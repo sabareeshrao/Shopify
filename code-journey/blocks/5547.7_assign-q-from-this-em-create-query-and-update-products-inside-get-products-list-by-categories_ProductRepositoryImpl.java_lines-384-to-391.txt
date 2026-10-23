@@ -1,8 +1,0 @@
-		Query q = this.em.createQuery(hql);
-
-		q.setParameter("cid", categoryIds);
-
-		@SuppressWarnings("unchecked")
-		List<Product> products = q.getResultList();
-
-		return products;

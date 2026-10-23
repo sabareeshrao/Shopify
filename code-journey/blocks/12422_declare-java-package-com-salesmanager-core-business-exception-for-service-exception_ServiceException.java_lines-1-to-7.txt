@@ -1,7 +1,0 @@
-package com.salesmanager.core.business.exception;
-
-/**
- * <p>Exception générée par les services de l'application.</p>
- */
-public class ServiceException extends Exception {
-

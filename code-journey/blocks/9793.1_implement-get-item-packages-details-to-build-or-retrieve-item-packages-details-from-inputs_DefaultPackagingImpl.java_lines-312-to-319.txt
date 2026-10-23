@@ -1,8 +1,0 @@
-	@Override
-	public List<PackageDetails> getItemPackagesDetails(
-			List<ShippingProduct> products, MerchantStore store)
-			throws ServiceException {
-		
-		
-		List<PackageDetails> packages = new ArrayList<PackageDetails>();
-		for(ShippingProduct shippingProduct : products) {

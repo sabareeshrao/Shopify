@@ -1,6 +1,0 @@
-	public void setEndRow(int endRow) {
-		this.endRow = endRow;
-	}
-
-
-

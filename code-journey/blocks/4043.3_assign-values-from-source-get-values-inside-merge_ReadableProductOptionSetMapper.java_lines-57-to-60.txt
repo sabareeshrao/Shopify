@@ -1,4 +1,0 @@
-			List<ReadableProductOptionValue> values = source.getValues().stream().map(val -> optionValue(ids, val, store, language)).collect(Collectors.toList());
-			destination.setValues(values);
-			destination.getValues().removeAll(Collections.singleton(null));
-		}

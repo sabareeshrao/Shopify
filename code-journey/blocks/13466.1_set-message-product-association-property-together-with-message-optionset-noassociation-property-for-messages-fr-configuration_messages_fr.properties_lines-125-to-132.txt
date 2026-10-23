@@ -1,8 +1,0 @@
-
-message.product.association=Cette entité est associée é un ou plusieurs produits. Veuillez détruire les associations et ré-essayer é nouveau.
-message.notexist.customer=Le client n'existe pas
-
-message.optionset.optionassociationexists=Cette association d'options existe déjà
-message.optionset.noassociation=Choisir une option et une valeur d'option
-
-

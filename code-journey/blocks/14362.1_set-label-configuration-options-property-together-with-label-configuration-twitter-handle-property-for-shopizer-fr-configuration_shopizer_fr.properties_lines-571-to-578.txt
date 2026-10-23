@@ -1,8 +1,0 @@
-
-#configuration
-label.configuration.options=Options de configuration
-label.configuration.configurations=Configurations
-label.configuration.google_analytics_url=URL Google Analytics (UC-XXXXXX)
-label.configuration.google_api_key=Clée Google pour API (pour les cartes)
-label.configuration.facebook_page_url=URL de la page FaceBook
-label.configuration.twitter_handle=Compte Twitter

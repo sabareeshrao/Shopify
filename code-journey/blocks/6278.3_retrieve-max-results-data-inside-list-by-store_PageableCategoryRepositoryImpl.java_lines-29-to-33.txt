@@ -1,5 +1,0 @@
-				pageable,
-				countQueryResult.getMaxResults());
-	}
-
-}

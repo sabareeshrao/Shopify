@@ -1,7 +1,0 @@
-		   
-        	HttpServletResponse httpResponse = (HttpServletResponse) response;
-        	
-        	String origin = "*";
-        	if(!StringUtils.isBlank(request.getHeader("origin"))) {
-        		origin = request.getHeader("origin");
-        	}

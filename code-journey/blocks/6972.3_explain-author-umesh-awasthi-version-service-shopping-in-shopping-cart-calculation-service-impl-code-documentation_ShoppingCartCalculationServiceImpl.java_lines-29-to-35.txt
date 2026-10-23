@@ -1,7 +1,0 @@
- *
- * @author Umesh Awasthi
- * @version 1.2
- */
-@Service("shoppingCartCalculationService")
-public class ShoppingCartCalculationServiceImpl implements ShoppingCartCalculationService {
-

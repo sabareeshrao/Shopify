@@ -1,5 +1,0 @@
-	public void setVariant(Long variant) {
-		this.variant = variant;
-	}
-
-}

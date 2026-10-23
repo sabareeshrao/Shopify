@@ -1,6 +1,0 @@
-    @Override
-    public Order getOrder(final Long orderId, MerchantStore store ) {
-    	Validate.notNull(orderId, "Order id cannot be null");
-    	Validate.notNull(store, "Store cannot be null");
-        return orderRepository.findOne(orderId, store.getId());
-    }

@@ -1,4 +1,0 @@
-	public OrderValueType getOrderValueType() {
-		return orderValueType;
-	}
-

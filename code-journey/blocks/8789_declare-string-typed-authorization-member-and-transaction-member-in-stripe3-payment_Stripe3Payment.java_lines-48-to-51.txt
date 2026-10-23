@@ -1,4 +1,0 @@
-	private final static String AUTHORIZATION = "Authorization";
-	private final static String TRANSACTION = "Transaction";
-
-

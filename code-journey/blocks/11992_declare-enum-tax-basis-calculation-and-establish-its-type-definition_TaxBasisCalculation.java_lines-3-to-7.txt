@@ -1,5 +1,0 @@
-public enum TaxBasisCalculation {
-	
-	STOREADDRESS, SHIPPINGADDRESS, BILLINGADDRESS
-
-}

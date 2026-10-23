@@ -1,8 +1,0 @@
-  @Override
-  public void removeProductImage(ProductImage productImage) throws ServiceException {
-    
-    //delete all image sizes
-    Storage storage = StorageOptions.getDefaultInstance().getService();
-
-    List<String> sizes = Arrays.asList(SMALL, LARGE);
-    for(String size : sizes) {

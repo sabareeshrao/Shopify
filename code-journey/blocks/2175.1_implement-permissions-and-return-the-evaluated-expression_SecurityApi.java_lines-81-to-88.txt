@@ -1,8 +1,0 @@
-
-	/**
-	 * Permissions Requires service user authentication
-	 * 
-	 * @return
-	 */
-	@GetMapping("/private/permissions")
-	public List<ReadablePermission> permissions() {

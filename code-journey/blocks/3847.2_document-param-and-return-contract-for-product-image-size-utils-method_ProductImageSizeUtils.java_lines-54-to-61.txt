@@ -1,8 +1,0 @@
-     *  {@code RenderingHints.VALUE_INTERPOLATION_BILINEAR},
-     *  {@code RenderingHints.VALUE_INTERPOLATION_BICUBIC})
-	 * @param higherQuality
-	 * @return
-	 */
-	public static BufferedImage resizeWithHint(BufferedImage img,
-			int targetWidth, int targetHeight, Object hint,
-			boolean higherQuality) {

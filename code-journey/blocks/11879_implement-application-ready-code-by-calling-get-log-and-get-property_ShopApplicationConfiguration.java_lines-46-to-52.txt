@@ -1,7 +1,0 @@
-  protected final Log logger = LogFactory.getLog(getClass());
-
-  @EventListener(ApplicationReadyEvent.class)
-  public void applicationReadyCode() {
-    String workingDir = System.getProperty("user.dir");
-    logger.info("Current working directory : " + workingDir);
-  }

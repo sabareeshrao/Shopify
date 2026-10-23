@@ -1,8 +1,0 @@
-	private LanguageService lamguageService;
-
-	@Autowired
-	private EmailUtils emailUtils;
-
-	@Autowired
-	private EmailService emailService;
-

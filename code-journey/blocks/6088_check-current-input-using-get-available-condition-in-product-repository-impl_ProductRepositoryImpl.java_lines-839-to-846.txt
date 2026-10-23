@@ -1,8 +1,0 @@
-
-		if (criteria.getAvailable() != null) {
-			if (criteria.getAvailable()) {
-				qs.append(" and p.available=true and p.dateAvailable<=:dt");
-			} else {
-				qs.append(" and p.available=false and p.dateAvailable>:dt");
-			}
-		}

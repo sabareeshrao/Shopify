@@ -1,6 +1,0 @@
-public class ContentRepositoryImpl implements ContentRepositoryCustom {
-
-	
-    @PersistenceContext
-    private EntityManager em;
-    

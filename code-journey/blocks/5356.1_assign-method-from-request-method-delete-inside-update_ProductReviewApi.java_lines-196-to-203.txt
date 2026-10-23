@@ -1,8 +1,0 @@
-
-  @RequestMapping(
-      value = {
-        "/private/products/{id}/reviews/{reviewid}",
-        "/auth/products/{id}/reviews/{reviewid}"
-      },
-      method = RequestMethod.DELETE)
-  @ResponseStatus(HttpStatus.OK)

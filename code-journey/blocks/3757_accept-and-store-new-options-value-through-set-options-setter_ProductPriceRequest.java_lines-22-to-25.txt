@@ -1,4 +1,0 @@
-	public void setOptions(List<ProductAttribute> options) {
-		this.options = options;
-	}
-

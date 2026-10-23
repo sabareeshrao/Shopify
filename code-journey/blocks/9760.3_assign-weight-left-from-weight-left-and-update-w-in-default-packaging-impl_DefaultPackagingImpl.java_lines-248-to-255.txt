@@ -1,8 +1,0 @@
-					weightLeft = weightLeft - productWeight;
-					pbox.setWeightLeft(weightLeft);
-
-					assignedProducts.add(p);
-					productCount--;
-
-					double w = pbox.getWeight();
-					w = w + productWeight;

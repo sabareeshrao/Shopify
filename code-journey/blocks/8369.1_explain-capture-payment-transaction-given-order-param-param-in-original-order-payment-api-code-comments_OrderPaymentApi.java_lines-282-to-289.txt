@@ -1,8 +1,0 @@
-
-	/**
-	 * Capture payment transaction for a given order id
-	 *
-	 * @param id
-	 * @param request
-	 * @param response
-	 * @return

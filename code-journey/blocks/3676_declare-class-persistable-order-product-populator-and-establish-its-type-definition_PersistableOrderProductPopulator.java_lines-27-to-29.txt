@@ -1,3 +1,0 @@
-public class PersistableOrderProductPopulator extends
-		AbstractDataPopulator<PersistableOrderProduct, OrderProduct> {
-	

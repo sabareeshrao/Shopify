@@ -1,8 +1,0 @@
-	private ReadableMerchantStoreList getMerchantStoresByCriteria(MerchantStoreCriteria criteria, Language language) {
-		try {
-			GenericEntityList<MerchantStore> stores =  Optional.ofNullable(merchantStoreService.getByCriteria(criteria))
-					.orElseThrow(() -> new ResourceNotFoundException("Criteria did not match any store"));
-			
-			
-			ReadableMerchantStoreList storeList = new ReadableMerchantStoreList();
-			storeList.setData(

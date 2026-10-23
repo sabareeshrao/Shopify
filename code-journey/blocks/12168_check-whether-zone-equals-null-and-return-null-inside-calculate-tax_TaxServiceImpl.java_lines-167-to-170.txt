@@ -1,4 +1,0 @@
-		
-		if(zone == null && StringUtils.isBlank(stateProvince)) {
-			return null;
-		}

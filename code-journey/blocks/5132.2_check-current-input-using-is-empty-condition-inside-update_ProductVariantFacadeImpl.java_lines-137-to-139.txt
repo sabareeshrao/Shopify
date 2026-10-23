@@ -1,3 +1,0 @@
-		if(instanceModel.isEmpty()) {
-			throw new ResourceNotFoundException("productVariant with id [" + instanceId + "] not found for store [" + store.getCode() + "] and productId [" + productId + "]");
-		}

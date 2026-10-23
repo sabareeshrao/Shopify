@@ -1,8 +1,0 @@
-      PersistableMerchantStore createdStore = new PersistableMerchantStore();
-      createdStore.setCode(TEST_STORE_CODE);
-      createdStore.setCurrency(CURRENCY);
-      createdStore.setDefaultLanguage(DEFAULT_LANGUAGE);
-      createdStore.setEmail("test@test.com");
-      createdStore.setName(TEST_STORE_CODE);
-      createdStore.setPhone("444-555-6666");
-      createdStore.setSupportedLanguages(Arrays.asList(DEFAULT_LANGUAGE));

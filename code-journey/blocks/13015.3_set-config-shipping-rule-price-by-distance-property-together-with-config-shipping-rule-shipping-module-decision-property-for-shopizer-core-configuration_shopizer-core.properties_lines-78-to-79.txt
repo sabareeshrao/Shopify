@@ -1,2 +1,0 @@
-config.shipping.rule.priceByDistance=PriceByDistance.drl
-config.shipping.rule.shippingModuleDecision=ShippingDecision.drl

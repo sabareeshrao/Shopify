@@ -1,6 +1,0 @@
-				modules.put(moduleCode, configuration);
-
-				if (object.get("integrationKeys") != null) {
-					Map<String, String> confs = (Map<String, String>) object.get("integrationKeys");
-					configuration.setIntegrationKeys(confs);
-				}

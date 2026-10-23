@@ -1,4 +1,0 @@
-public class ReadableProductPricePopulator extends
-		AbstractDataPopulator<ProductPrice, ReadableProductPrice> {
-	
-	

@@ -1,8 +1,0 @@
-	private IntegrationModuleSummaryEntity integrationModule(IntegrationModule module,
-			Map<String, IntegrationConfiguration> configuredModules) {
-
-		IntegrationModuleSummaryEntity readable = null;
-		readable = new IntegrationModuleSummaryEntity();
-
-		readable.setCode(module.getCode());
-		readable.setImage(module.getImage());

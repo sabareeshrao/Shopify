@@ -1,8 +1,0 @@
-				modelOrder.setOrderAttributes(attrs);
-			}
-
-			// requires Shipping information (need a quote id calculated)
-			ShippingSummary shippingSummary = null;
-
-			// get shipping quote if asked for
-			if (order.getShippingQuote() != null && order.getShippingQuote().longValue() > 0) {

@@ -1,8 +1,0 @@
-  @Override
-  public void updateAddress(Long userId, MerchantStore merchantStore, Address address,
-      final Language language) throws Exception {
-
-    Customer customerModel = customerService.getById(userId);
-    Map<String, Country> countriesMap = countryService.getCountriesMap(language);
-    Country country = countriesMap.get(address.getCountry());
-

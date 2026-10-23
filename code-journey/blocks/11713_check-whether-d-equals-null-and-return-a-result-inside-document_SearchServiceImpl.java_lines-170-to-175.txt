@@ -1,6 +1,0 @@
-		
-		for(Optional<Document> d : documents) {
-			if(d == null) {//not allowed
-				return Collections.emptyList();
-			}
-		}

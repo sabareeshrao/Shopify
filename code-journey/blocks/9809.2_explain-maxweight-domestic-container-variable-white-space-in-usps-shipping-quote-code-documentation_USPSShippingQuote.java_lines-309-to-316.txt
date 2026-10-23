@@ -1,8 +1,0 @@
-			 * //MAXWEIGHT=70 lbs
-			 * 
-			 * 
-			 * //domestic container default=VARIABLE whiteSpace=collapse
-			 * enumeration=VARIABLE enumeration=FLAT RATE BOX enumeration=FLAT
-			 * RATE ENVELOPE enumeration=LG FLAT RATE BOX
-			 * enumeration=RECTANGULAR enumeration=NONRECTANGULAR
-			 * 

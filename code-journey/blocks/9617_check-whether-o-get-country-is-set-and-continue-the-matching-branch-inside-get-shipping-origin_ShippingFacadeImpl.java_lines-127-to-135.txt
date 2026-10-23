@@ -1,9 +1,0 @@
-		
-		ReadableAddress address = new ReadableAddress();
-		address.setAddress(o.getAddress());
-		address.setActive(o.isActive());
-		address.setCity(o.getCity());
-		address.setPostalCode(o.getPostalCode());
-		if(o.getCountry()!=null) {
-			address.setCountry(o.getCountry().getIsoCode());
-		}

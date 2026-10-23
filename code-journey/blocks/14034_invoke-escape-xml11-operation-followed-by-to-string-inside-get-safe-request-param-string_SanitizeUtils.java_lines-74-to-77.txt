@@ -1,4 +1,0 @@
-        }
-    }
-    return StringEscapeUtils.escapeXml11(safe.toString());
-}

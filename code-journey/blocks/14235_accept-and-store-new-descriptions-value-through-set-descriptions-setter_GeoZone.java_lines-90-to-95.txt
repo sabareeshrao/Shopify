@@ -1,6 +1,0 @@
-	public void setDescriptions(List<GeoZoneDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-
-
-}

@@ -1,8 +1,0 @@
-		  
-		  Permission PRODUCTS = new Permission("PRODUCTS");
-		  permissionService.create(PRODUCTS);
-		  permissionKeys.put(PRODUCTS.getPermissionName(), PRODUCTS);
-		  
-		  Permission ORDER = new Permission("ORDER");
-		  permissionService.create(ORDER);
-		  permissionKeys.put(ORDER.getPermissionName(), ORDER);

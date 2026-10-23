@@ -1,5 +1,0 @@
-public interface ShoppingCartFacade {
-	
-	ReadableShoppingCart get(Optional<String> cart, Long customerId, MerchantStore store, Language language);
-
-}

@@ -1,4 +1,0 @@
-
-menu.home=Page d'accueil
-menu.catalogue=Catalogue
-menu.store=Boutique

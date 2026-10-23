@@ -1,5 +1,0 @@
-
-	@Bean
-	public ServicesAuthenticationSuccessHandler servicesAuthenticationSuccessHandler() {
-		return new ServicesAuthenticationSuccessHandler();
-	}

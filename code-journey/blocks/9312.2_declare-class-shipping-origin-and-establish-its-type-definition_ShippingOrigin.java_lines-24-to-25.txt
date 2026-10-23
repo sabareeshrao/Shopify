@@ -1,2 +1,0 @@
-public class ShippingOrigin extends SalesManagerEntity<Long, ShippingOrigin> {
-

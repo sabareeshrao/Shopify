@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ServiceException;
-
-
-/**
- * <p>Service racine pour la gestion des entités.</p>
- *
- * @param <T> type d'entité
- */

@@ -1,8 +1,0 @@
-					
-					if(freeShipping) {
-						q.setFreeShipping(true);
-						q.setPrice(new BigDecimal(0));
-						q.setModule("FREE");
-						q.setOptionCode("FREE");
-						q.setOptionName("FREE");
-					} else {

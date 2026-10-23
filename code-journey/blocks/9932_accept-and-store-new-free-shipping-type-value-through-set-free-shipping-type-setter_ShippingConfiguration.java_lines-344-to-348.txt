@@ -1,5 +1,0 @@
-	public void setFreeShippingType(ShippingType freeShippingType) {
-		this.freeShippingType = freeShippingType;
-	}
-
-

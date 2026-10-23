@@ -1,5 +1,0 @@
-			if (customer != null) {
-				LOG.info("Reteriving customer shopping cart...");
-				cart = shoppingCartService.getShoppingCart(customer, store);
-
-			}

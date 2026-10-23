@@ -1,8 +1,0 @@
-					
-			ReadableProductType readableType = readableProductTypeMapper.convert(type, store, language);
-
-
-			return readableType;
-
-		} catch(Exception e) {
-			throw new ServiceRuntimeException(

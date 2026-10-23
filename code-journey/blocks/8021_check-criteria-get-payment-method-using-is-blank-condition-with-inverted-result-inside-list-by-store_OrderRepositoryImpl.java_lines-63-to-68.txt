@@ -1,6 +1,0 @@
-		
-		if(!StringUtils.isBlank(criteria.getPaymentMethod())) {
-			String paymentQuery =" and o.paymentModuleCode like:pm";
-			countBuilderWhere.append(paymentQuery);
-			objectBuilderWhere.append(paymentQuery);
-		}

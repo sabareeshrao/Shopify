@@ -1,8 +1,0 @@
-
-@Entity
-@EntityListeners(value = AuditListener.class)
-@Table(name = "PRODUCT", uniqueConstraints=
-@UniqueConstraint(columnNames = {"MERCHANT_ID", "SKU"}))
-public class Product extends SalesManagerEntity<Long, Product> implements Auditable {
-	private static final long serialVersionUID = 1L;
-

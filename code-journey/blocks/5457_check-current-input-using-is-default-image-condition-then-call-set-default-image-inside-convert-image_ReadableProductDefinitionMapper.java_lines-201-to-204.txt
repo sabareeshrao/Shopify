@@ -1,4 +1,0 @@
-		
-		if(prdImage.isDefaultImage()) {
-			prdImage.setDefaultImage(true);
-		}

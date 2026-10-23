@@ -1,8 +1,0 @@
-		ReadableProductPropertyValue propertyValue = new ReadableProductPropertyValue();
-
-		if (descriptions != null && descriptions.size() > 0) {
-			for (ProductOptionDescription optionDescription : descriptions) {
-				com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription productOptionValueDescription = new com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription();
-				productOptionValueDescription.setId(optionDescription.getId());
-				productOptionValueDescription.setLanguage(optionDescription.getLanguage().getCode());
-				productOptionValueDescription.setName(optionDescription.getName());

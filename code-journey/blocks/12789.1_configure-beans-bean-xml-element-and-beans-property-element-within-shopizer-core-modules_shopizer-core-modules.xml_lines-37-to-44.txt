@@ -1,8 +1,0 @@
-	<!-- deprecated - now in ProcessorConfiguration -->
-	<!-- Discounts processors processors (defined in shopizer-core-ordertotal-processors.xml) 
-		<beans:bean id="manufacturerShippingCodeOrderTotalModule" class="com.salesmanager.core.business.modules.order.total.ManufacturerShippingCodeOrderTotalModuleImpl"> 
-		<beans:property name="pricingService" ref="pricingService" /> </beans:bean> 
-		End discount processors -->
-
-	<!-- Payment integration modules -->
-	<!-- This will be removed in favor of modules autodetection See https://github.com/shopizer-ecommerce/shopizer-payment-square-starter as an example -->

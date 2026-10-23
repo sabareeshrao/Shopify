@@ -1,8 +1,0 @@
-		qs.append("left join fetch p.images images ");
-		qs.append("left join fetch pavail.prices pavailpr ");
-		qs.append("left join fetch pavailpr.descriptions pavailprdesc ");
-
-		qs.append("left join fetch p.categories categs ");
-		qs.append("left join fetch categs.descriptions categsd ");
-
-		// options

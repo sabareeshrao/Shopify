@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "Girona",
-		"zoneName": "Girona",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Granada",

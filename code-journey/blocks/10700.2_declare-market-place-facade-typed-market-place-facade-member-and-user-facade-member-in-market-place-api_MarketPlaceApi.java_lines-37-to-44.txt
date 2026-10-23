@@ -1,8 +1,0 @@
-
-	@Autowired
-	private MarketPlaceFacade marketPlaceFacade;
-
-	@Autowired
-	private UserFacade userFacade;
-
-	@Inject

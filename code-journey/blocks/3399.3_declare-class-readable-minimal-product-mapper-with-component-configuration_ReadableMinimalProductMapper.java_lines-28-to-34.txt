@@ -1,7 +1,0 @@
-
-@Component
-public class ReadableMinimalProductMapper implements Mapper<Product, ReadableMinimalProduct> {
-
-	@Autowired
-	private PricingService pricingService;
-

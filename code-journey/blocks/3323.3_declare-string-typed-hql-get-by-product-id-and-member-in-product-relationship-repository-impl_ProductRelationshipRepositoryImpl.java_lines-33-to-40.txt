@@ -1,8 +1,0 @@
-  private static final String HQL_GET_BY_PRODUCT_ID_AND_CODE_AVAILABLE =
-      "select distinct pr from ProductRelationship as pr "
-          + "left join fetch pr.product p "
-          + "left join fetch pr.relatedProduct rp "
-          + "left join fetch rp.attributes pattr "
-          + "left join fetch rp.categories rpc "
-          + "left join fetch rpc.descriptions rpcd "
-          + "left join fetch rp.descriptions rpd "

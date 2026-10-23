@@ -1,8 +1,0 @@
-		 * <p>
-		 * children1.children2.children1
-		 */
-
-		/** set lineage * */
-		if (parent != null) {
-			category.setParent(category);
-

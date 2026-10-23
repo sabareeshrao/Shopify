@@ -1,8 +1,0 @@
-	
-	/**
-	 * List products created in a group, for instance FEATURED group
-	 * @param group
-	 * @param store
-	 * @param language
-	 * @return
-	 * @throws Exception

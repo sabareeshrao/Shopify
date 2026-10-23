@@ -1,8 +1,0 @@
-			// "RatingServiceSelectionResponse/RatedShipment", "sequence",
-			// "optionId" );
-			digester
-					.addCallMethod(
-							"RatingServiceSelectionResponse/RatedShipment/Service/Code",
-							"setOptionId", 0);
-			digester
-					.addCallMethod(

@@ -1,8 +1,0 @@
- * @author Umesh A
- */
-
-@Service(value="shoppingCartModelPopulator")
-public class ShoppingCartModelPopulator
-    extends AbstractDataPopulator<ShoppingCartData,ShoppingCart>
-{
-

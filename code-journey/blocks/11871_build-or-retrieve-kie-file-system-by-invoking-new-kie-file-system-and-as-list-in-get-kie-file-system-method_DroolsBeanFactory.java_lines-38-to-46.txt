@@ -1,9 +1,0 @@
-    private  KieFileSystem getKieFileSystem() throws IOException{
-        KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        List<String> rules=Arrays.asList(priceByDistance,shippingDecision);
-        for(String rule:rules){
-            kieFileSystem.write(ResourceFactory.newClassPathResource(rule));
-        }
-        return kieFileSystem;
-    }
-

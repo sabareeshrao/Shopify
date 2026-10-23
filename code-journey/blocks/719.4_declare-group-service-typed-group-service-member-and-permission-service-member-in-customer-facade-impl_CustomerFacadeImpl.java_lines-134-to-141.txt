@@ -1,8 +1,0 @@
-  @Inject
-  private GroupService groupService;
-
-  @Inject
-  private PermissionService permissionService;
-
-  @Inject
-  private ZoneService zoneService;

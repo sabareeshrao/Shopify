@@ -1,4 +1,0 @@
-
-		if (!CollectionUtils.isEmpty(criteria.getCategoryIds())) {
-			qs.append(" and categs.id in (:cid)");
-		}

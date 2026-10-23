@@ -1,8 +1,0 @@
-	void delete(MerchantStore store, String fileName, String fileType);
-	
-	/**
-	 * Delete content page
-	 * @param store
-	 * @param id
-	 */
-	void delete(MerchantStore store, Long id);

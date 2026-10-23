@@ -1,8 +1,0 @@
-    private static final long serialVersionUID = 1L;
-
-    /** The number of results per page.*/
-    private int pageSize;
-    private int currentPage;
-    private int offset ;
-    private int totalCount;
-    private int totalPages;

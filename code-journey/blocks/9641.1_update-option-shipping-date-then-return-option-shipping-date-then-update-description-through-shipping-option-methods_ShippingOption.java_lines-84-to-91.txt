@@ -1,8 +1,0 @@
-	public void setOptionShippingDate(String optionShippingDate) {
-		this.optionShippingDate = optionShippingDate;
-	}
-	public String getOptionShippingDate() {
-		return optionShippingDate;
-	}
-	public void setDescription(String description) {
-		this.description = description;

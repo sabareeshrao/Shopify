@@ -1,4 +1,0 @@
-public class ReadableOrderTotalPopulator extends
-		AbstractDataPopulator<OrderTotal, ReadableOrderTotal> {
-	
-	

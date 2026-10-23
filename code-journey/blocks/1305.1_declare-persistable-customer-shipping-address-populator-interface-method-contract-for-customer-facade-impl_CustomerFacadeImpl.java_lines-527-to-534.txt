@@ -1,8 +1,0 @@
-
-    } else {
-      LOG.info("updating customer shipping address..");
-      PersistableCustomerShippingAddressPopulator shippingAddressPopulator =
-          new PersistableCustomerShippingAddressPopulator();
-      customerModel = shippingAddressPopulator.populate(address, customerModel, merchantStore,
-          merchantStore.getDefaultLanguage());
-      customerModel.getDelivery().setCountry(country);

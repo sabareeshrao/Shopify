@@ -1,4 +1,0 @@
-	public List<CustomShippingQuoteWeightItem> getQuoteItems() {
-		return quoteItems;
-	}
-

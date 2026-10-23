@@ -1,3 +1,0 @@
-                } else {
-                  fulldescriptions.add(populateDescription(desc));
-                }

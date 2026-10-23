@@ -1,8 +1,0 @@
-
-#shipping
-label.shipping.title=Configuration expédition
-label.shipping.national=National
-label.shipping.international=International
-label.shipping.mode=Statut d'expédition
-label.shipping.methods=Méthodes d'expédition
-label.shipping.countries=Pays d'expédition

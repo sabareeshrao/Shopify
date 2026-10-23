@@ -1,3 +1,0 @@
-	private ShippingSummary shippingSummary;
-	private ShippingOption selectedShippingOption = null;//Default selected option
-	

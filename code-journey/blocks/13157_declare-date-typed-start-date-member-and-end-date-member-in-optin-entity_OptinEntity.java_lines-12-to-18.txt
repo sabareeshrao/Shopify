@@ -1,7 +1,0 @@
-	private Date startDate;
-	private Date endDate;
-	private String optinType;
-	private String store;
-	private String code;
-	private String description;
-	

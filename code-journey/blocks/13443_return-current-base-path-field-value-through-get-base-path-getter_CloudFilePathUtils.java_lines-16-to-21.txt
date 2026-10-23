@@ -1,6 +1,0 @@
-	@Override
-	public String getBasePath(MerchantStore store) {
-		//store has no incidence, basepath drives the url
-		return basePath;
-	}
-

@@ -1,8 +1,0 @@
-NotEmpty.customer.billing.stateProvince=L'état / province est requis
-NotEmpty.customer.agreement=Veuillez accepter nos termes et conditions
-
-NotEmpty.customer.shipping.firstName=Le prénom à la livraison ne doit pas être vide
-NotEmpty.customer.shipping.lastName=Le nom de famille à la livraisonne doit pas être vide
-NotEmpty.customer.shipping.address=L'adresse de livraison ne doit pas être vide
-NotEmpty.customer.shipping.city=La ville de livraison ne doit pas être vide
-NotEmpty.customer.shipping.postalCode=Le code postal de livraison ne doit pas être vide

@@ -1,8 +1,0 @@
-	public String getDateAvailable() {
-		return dateAvailable;
-	}
-	public void setDateAvailable(String dateAvailable) {
-		this.dateAvailable = dateAvailable;
-	}
-	public String getCreationDate() {
-		return creationDate;

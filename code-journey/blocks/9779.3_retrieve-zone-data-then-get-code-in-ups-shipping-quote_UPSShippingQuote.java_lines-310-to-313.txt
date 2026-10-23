@@ -1,4 +1,0 @@
-				xmldatabuffer.append("<StateProvinceCode>");
-				xmldatabuffer.append(delivery.getZone().getCode());// zone code
-				xmldatabuffer.append("</StateProvinceCode>");
-			}

@@ -1,4 +1,0 @@
-		
-		if(taxItemsMap.size()==0) {
-			return null;
-		}

@@ -1,8 +1,0 @@
-
-	@Ignore
-	public void createInvoice() throws ServiceException {
-		
-
-	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
-	    
-		//create a product

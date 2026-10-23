@@ -1,6 +1,0 @@
-	public void setAttributes(Set<ProductAttribute> attributes) {
-		this.attributes = attributes;
-	}
-
-
-

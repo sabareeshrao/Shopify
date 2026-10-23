@@ -1,4 +1,0 @@
-	public Long getValue() {
-		return value;
-	}
-

@@ -1,8 +1,0 @@
-			}
-
-			LOGGER.info("Content getFiles");
-			return files;
-		} catch (final Exception e) {
-			LOGGER.error("Error while getting files", e);
-			throw new ServiceException(e);
-

@@ -1,8 +1,0 @@
-
-    try {
-
-
-      StringBuilder nodePath = new StringBuilder();
-      nodePath.append(productImage.getProduct().getMerchantStore().getCode())
-          .append(Constants.SLASH).append(productImage.getProduct().getSku());
-

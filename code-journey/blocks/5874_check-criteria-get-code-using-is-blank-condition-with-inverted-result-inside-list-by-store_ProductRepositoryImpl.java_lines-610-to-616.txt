@@ -1,7 +1,0 @@
-		
-		// todo type
-
-		// sku
-		if (!StringUtils.isBlank(criteria.getCode())) {
-			countBuilderWhere.append(" and lower(p.sku) like :sku");
-		}

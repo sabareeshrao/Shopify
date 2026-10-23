@@ -1,8 +1,0 @@
-	private InputContentFile createInputContentFile(MultipartFile image) {
-
-		InputContentFile cmsContentImage = null;
-
-		try {
-
-			InputStream input = new ByteArrayInputStream(image.getBytes());
-			cmsContentImage = new InputContentFile();

@@ -1,2 +1,0 @@
-	private static final String resetUserLink = "user/%s/reset/%s"; // front
-

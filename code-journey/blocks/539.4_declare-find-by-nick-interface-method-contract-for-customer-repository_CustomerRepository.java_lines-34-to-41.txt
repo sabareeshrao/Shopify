@@ -1,8 +1,0 @@
-			+ "left join fetch cd.zone "
-			+ "left join fetch cb.country "
-			+ "left join fetch cb.zone "
-			+ "where c.nick = ?1 and cm.id = ?2")
-	Customer findByNick(String nick, int storeId);
-	
-	@Query("select c from Customer c "
-			+ "join fetch c.merchantStore cm "

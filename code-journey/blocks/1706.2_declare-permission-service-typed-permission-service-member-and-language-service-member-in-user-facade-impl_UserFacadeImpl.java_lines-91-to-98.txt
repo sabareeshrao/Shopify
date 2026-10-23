@@ -1,8 +1,0 @@
-	@Inject
-	private PermissionService permissionService;
-
-	@Inject
-	private LanguageService languageService;
-
-	@Inject
-	private PersistableUserPopulator persistableUserPopulator;

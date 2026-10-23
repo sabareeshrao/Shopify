@@ -1,4 +1,0 @@
-	public void setCustomRegionName(String customRegionName) {
-		this.customRegionName = customRegionName;
-	}
-

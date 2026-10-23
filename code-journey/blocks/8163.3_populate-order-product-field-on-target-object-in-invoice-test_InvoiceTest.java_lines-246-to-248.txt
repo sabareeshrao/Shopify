@@ -1,3 +1,0 @@
-		orderProductDownload.setOrderProduct(oproduct);
-		order.getOrderProducts().add(oproduct);
-		

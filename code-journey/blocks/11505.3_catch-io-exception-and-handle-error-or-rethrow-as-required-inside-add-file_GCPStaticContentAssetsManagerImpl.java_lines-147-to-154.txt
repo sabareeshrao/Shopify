@@ -1,8 +1,0 @@
-			storage.create(blobInfo, targetArray);
-			LOGGER.info("Content add file");
-		} catch (IOException e) {
-			LOGGER.error("Error while adding file", e);
-			throw new ServiceException(e);
-		}
-	}
-

@@ -1,4 +1,0 @@
-		data.put("shipPackageType", this.getShippingPackageType().name());
-		if(shipFreeType!=null) {
-			data.put("shipFreeType", this.getFreeShippingType().name());
-		}

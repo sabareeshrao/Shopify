@@ -1,8 +1,0 @@
-
-        CategoryDescription description = new CategoryDescription();
-        description.setLanguage("en");
-        description.setName("angular");
-        description.setFriendlyUrl("angular");
-        description.setTitle("angular");
-
-        List<CategoryDescription> descriptions = new ArrayList<>();

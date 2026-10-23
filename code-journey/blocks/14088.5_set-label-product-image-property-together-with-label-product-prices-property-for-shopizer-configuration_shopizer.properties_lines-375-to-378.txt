@@ -1,4 +1,0 @@
-label.product.image=Image
-label.product.uploadfile=Upload file
-label.product.details=Product details
-label.product.prices=Product prices

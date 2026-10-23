@@ -1,6 +1,0 @@
-	public List<CustomerOptionValueDescription> getDescriptionsSettoList() {
-		if(descriptionsList==null || descriptionsList.size()==0) {
-			descriptionsList = new ArrayList<CustomerOptionValueDescription>(this.getDescriptions());
-		} 
-		return descriptionsList;
-	}

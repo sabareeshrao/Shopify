@@ -1,9 +1,0 @@
-		
-		StringBuilder messageString = new StringBuilder();
-		
-		String transactionType = "P";
-		if(type == TransactionType.AUTHORIZE) {
-			transactionType = "PA";
-		} else if(type == TransactionType.AUTHORIZECAPTURE) {
-			transactionType = "P";
-		} 

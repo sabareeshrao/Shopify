@@ -1,9 +1,0 @@
-
-@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-@RunWith(SpringRunner.class)
-public class ProductV2ManagementAPIIntegrationTest extends ServicesTestSupport {
-	
-	
-	@Test
-	public void createProductWithCategory() throws Exception {
-

@@ -1,4 +1,0 @@
-menu.system-configurations=System configurations
-menu.manufacturer-list=List of manufacturers
-menu.manufacturer-create=Create manufacturer
-menu.addaddress=Add a new address

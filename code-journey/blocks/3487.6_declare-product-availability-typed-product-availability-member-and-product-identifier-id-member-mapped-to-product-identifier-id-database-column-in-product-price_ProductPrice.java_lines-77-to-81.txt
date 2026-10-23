@@ -1,5 +1,0 @@
-	private ProductAvailability productAvailability;
-
-	@Column(name = "PRODUCT_IDENTIFIER_ID", nullable = true)
-	private Long productIdentifierId;
-

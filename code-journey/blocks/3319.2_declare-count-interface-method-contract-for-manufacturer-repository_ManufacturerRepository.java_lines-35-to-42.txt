@@ -1,8 +1,0 @@
-	int count(Integer storeId);
-	
-	@Query(value="select distinct manufacturer from Product as p "
-			+ "join p.manufacturer manufacturer "
-			+ "left join manufacturer.descriptions pmd "
-			+ "join fetch manufacturer.merchantStore pms "
-			+ "join p.categories pc "
-			+ "where pms.id = ?1 "

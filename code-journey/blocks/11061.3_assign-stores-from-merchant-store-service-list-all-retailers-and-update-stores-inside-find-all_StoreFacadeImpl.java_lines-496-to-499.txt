@@ -1,4 +1,0 @@
-					stores = merchantStoreService.listAllRetailers(name, page, count);
-				} else {
-					stores = merchantStoreService.listAll(name, page, count);
-				}

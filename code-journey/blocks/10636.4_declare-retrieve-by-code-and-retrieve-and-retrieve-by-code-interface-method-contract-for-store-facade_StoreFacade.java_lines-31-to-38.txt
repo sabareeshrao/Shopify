@@ -1,8 +1,0 @@
-	 */
-	MerchantStore getByCode(HttpServletRequest request);
-
-	MerchantStore get(String code);
-
-	MerchantStore getByCode(String code);
-	
-	List<Language> supportedLanguages(MerchantStore store);

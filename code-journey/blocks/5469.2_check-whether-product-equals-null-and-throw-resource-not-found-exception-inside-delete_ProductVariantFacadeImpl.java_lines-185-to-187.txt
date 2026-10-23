@@ -1,3 +1,0 @@
-		if(product == null) {
-			throw new ResourceNotFoundException("Product with id [" + productId + "] not found for store [" + store.getCode() + "]");
-		}

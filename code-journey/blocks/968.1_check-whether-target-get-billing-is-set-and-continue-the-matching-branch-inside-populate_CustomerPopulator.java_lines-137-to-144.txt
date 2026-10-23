@@ -1,8 +1,0 @@
-				// target.setBilling(billing);
-
-			}
-			if(target.getBilling() ==null && source.getBilling()!=null){
-			    LOG.info( "Setting default values for billing" );
-			    Billing billing = new Billing();
-			    Country billingCountry = null;
-			    if(StringUtils.isNotBlank( source.getBilling().getCountry() )) {

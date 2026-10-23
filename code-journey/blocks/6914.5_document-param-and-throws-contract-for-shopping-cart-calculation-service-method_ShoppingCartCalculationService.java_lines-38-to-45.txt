@@ -1,8 +1,0 @@
-	 * Total and Sub-total for {@link ShoppingCart}.
-	 * 
-	 * @param cartModel
-	 *            ShoopingCart mode representing underlying DB object
-	 * @param store
-	 * @param language
-	 * @throws ServiceException
-	 */

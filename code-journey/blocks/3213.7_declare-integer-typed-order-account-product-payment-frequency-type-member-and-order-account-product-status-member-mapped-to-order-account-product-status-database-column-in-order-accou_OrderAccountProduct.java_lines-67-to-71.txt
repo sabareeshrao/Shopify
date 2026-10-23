@@ -1,5 +1,0 @@
-	private Integer orderAccountProductPaymentFrequencyType;
-
-	@Column (name="ORDER_ACCOUNT_PRODUCT_STATUS" , nullable=false )
-	private Integer orderAccountProductStatus;
-

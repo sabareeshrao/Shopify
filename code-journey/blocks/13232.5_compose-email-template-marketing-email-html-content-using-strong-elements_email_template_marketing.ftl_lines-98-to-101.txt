@@ -1,4 +1,0 @@
-		padding-top: 25px; 
-		color: #000000;
-		font-family: sans-serif;" class="paragraph">
-			We feel blessed to have had the opportunity to work with you in 2020 and can't wait to share with you what we have prepared for <strong>2021!</strong>

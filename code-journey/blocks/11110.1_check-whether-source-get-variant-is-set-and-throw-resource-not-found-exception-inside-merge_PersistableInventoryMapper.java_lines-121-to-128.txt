@@ -1,8 +1,0 @@
-
-			if (source.getVariant() != null && source.getVariant() .longValue()> 0) {
-				Optional<ProductVariant> instance = productVariantService.getById(source.getVariant(), store);
-				if(instance.get() == null) {
-					throw new ResourceNotFoundException("productVariant with id [" + source.getVariant() + "] not found for store [" + store.getCode() + "]");
-				}
-				destination.setSku(instance.get().getSku());
-				destination.setProductVariant(instance.get());

@@ -1,2 +1,0 @@
-	private List<ProductOptionValueDescription> values = new ArrayList<ProductOptionValueDescription>();
-

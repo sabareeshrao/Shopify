@@ -1,7 +1,0 @@
-
-		
-		String module = order.getPaymentModuleCode();
-		Map<String, IntegrationConfiguration> modules = this.getPaymentModulesConfigured(store);
-		if(modules==null){
-			throw new ServiceException("No payment module configured");
-		}

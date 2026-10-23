@@ -1,8 +1,0 @@
-		
-
-		Number count = (Number) countQ.getSingleResult();
-
-		orderList.setTotalCount(count.intValue());
-		
-        if(count.intValue()==0)
-        	return orderList;

@@ -1,8 +1,0 @@
-		
-	    Delivery delivery = new Delivery();
-	    delivery.setAddress("358 Du Languadoc");
-	    delivery.setCity( "Boucherville" );
-	    delivery.setCountry(country);
-//	    delivery.setCountryCode(CA_COUNTRY_CODE);
-	    delivery.setFirstName("First" );
-	    delivery.setLastName("Last" );

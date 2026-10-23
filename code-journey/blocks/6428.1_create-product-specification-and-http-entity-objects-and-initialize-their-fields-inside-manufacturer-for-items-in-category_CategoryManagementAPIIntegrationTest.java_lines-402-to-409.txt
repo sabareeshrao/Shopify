@@ -1,8 +1,0 @@
-      
-      specifications = new ProductSpecification();
-      specifications.setManufacturer("BRAND2");
-      product2.setProductSpecifications(specifications);
-      
-      json = writer.writeValueAsString(product2);
-      entity = new HttpEntity<>(json, getHeader());
-

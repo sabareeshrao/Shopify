@@ -1,2 +1,0 @@
-	private Set<OrderAccountProduct> orderAccountProducts = new HashSet<OrderAccountProduct>();
-

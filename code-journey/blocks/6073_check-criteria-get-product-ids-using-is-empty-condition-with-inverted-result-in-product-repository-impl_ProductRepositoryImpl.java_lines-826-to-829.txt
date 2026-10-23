@@ -1,4 +1,0 @@
-
-		if (!CollectionUtils.isEmpty(criteria.getProductIds())) {
-			qs.append(" and p.id in (:pId)");
-		}

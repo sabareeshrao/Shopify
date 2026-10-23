@@ -1,8 +1,0 @@
-        smallDescription.setName("Small");
-        smallDescription.setDescription("Small size");
-        smallDescription.setProductOptionValue(small);
-        
-        small.getDescriptions().add(smallDescription);
-        
-        //create an option value
-        productOptionValueService.saveOrUpdate(small);

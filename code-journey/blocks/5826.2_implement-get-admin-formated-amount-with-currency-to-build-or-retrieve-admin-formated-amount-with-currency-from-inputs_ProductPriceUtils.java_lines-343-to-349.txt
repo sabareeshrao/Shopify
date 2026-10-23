@@ -1,7 +1,0 @@
-	 * @throws Exception
-	 */
-	@Deprecated
-	public String getAdminFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount) throws Exception {
-		if (amount == null) {
-			return "";
-		}

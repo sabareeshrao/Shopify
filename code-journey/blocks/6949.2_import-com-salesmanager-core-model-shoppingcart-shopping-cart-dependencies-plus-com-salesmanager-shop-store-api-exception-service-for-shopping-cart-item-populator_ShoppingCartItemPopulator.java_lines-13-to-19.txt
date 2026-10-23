@@ -1,7 +1,0 @@
-import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
-import com.salesmanager.core.business.services.shoppingcart.ShoppingCartService;
-import com.salesmanager.core.business.utils.AbstractDataPopulator;
-import com.salesmanager.shop.model.order.PersistableOrderProduct;
-import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
-import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
-

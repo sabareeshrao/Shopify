@@ -1,8 +1,0 @@
-
-		<!-- Payment dependencies -->
-
-		<!-- Paypal -->
-		<dependency>
-			<groupId>com.paypal.sdk</groupId>
-			<artifactId>merchantsdk</artifactId>
-		</dependency>

@@ -1,4 +1,0 @@
-		
-		if(desc == null) {
-			desc = new com.salesmanager.core.model.catalog.product.type.ProductTypeDescription();
-		}

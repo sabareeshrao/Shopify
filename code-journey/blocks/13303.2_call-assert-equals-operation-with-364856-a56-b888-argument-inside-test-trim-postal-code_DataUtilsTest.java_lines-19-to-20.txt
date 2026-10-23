@@ -1,2 +1,0 @@
-        assertEquals("364856A56B888", result);
-    }

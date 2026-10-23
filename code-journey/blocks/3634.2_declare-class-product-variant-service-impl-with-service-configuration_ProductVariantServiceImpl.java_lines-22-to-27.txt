@@ -1,6 +1,0 @@
-
-@Service("productVariantService")
-public class ProductVariantServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductVariant>
-		implements ProductVariantService {
-	
-

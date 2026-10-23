@@ -1,7 +1,0 @@
-/**
- * This application is maintained by CSTI consulting (www.csticonsulting.com).
- * Licensed under LGPL - Feel free to use it and modify it to your needs !
- *
- */
-package com.salesmanager.test.common;
-

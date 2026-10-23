@@ -1,4 +1,0 @@
-	public void setVariation(ProductVariation variation) {
-		this.variation = variation;
-	}
-

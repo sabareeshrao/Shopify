@@ -1,5 +1,0 @@
-
-@Service("productAttributeService")
-public class ProductAttributeServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductAttribute>
-		implements ProductAttributeService {
-

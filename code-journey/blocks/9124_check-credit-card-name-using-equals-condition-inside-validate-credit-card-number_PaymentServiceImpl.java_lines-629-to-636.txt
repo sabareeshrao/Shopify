@@ -1,8 +1,0 @@
-		}
-		
-		if(CreditCardType.VISA.equals(creditCard.name())) {
-			if ((number.length() != 13 && number.length() != 16)
-					|| Integer.parseInt(number.substring(0, 1)) != 4) {
-				throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
-			}
-		}

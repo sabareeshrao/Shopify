@@ -1,4 +1,0 @@
- */
-@Configuration
-public class ModulesConfiguration {
-	

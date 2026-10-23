@@ -1,7 +1,0 @@
-
-		final String manufacturer = "temple";
-		final Manufacturer collection = new Manufacturer();
-		collection.setCode(manufacturer);
-
-		// core properties
-

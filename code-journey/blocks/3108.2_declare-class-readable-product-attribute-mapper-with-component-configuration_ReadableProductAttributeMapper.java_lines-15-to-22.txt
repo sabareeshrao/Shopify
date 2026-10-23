@@ -1,8 +1,0 @@
-import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
-
-@Component
-public class ReadableProductAttributeMapper implements Mapper<ProductAttribute, ReadableProductAttributeEntity> {
-
-	@Autowired
-	private ReadableProductOptionMapper readableProductOptionMapper;
-	

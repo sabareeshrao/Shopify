@@ -1,8 +1,0 @@
-
-#Infinispan configuration
-config.cms.store.location=/tmp/store
-config.cms.files.location=/tmp/repos
-
-
-# Which CMS method to use
-# default = infinispan

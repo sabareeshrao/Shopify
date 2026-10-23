@@ -1,4 +1,0 @@
-  public UnauthorizedException(String message) {
-    super(ERROR_CODE, message);
-  }
-}

@@ -1,7 +1,0 @@
-	
-	ReadableCountry convert(Country country, MerchantStore store, Language lang) throws ConversionException {
-		ReadableCountryPopulator countryPopulator = new ReadableCountryPopulator();
-		return countryPopulator.populate(country, store, lang);
-	}
-
-}

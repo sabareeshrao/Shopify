@@ -1,8 +1,0 @@
-	public BigDecimal getFreeShippingAmount() {
-		return freeShippingAmount;
-	}
-	public void setHandlingFees(BigDecimal handlingFees) {
-		this.handlingFees = handlingFees;
-	}
-	public BigDecimal getHandlingFees() {
-		return handlingFees;

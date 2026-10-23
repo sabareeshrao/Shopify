@@ -1,8 +1,0 @@
-label.shipping.freeshippingandhandling=Livraison et manutention gratuits
-label.shipping.origin.title=Adresse source de la livraison
-label.shipping.origin.description=L'adresse source de la livraison sert à calculer la distance entre l'origine et la destination d'une livraison. Si elle n'est pas populée, le système utilisera l'adresse de la boutique comme adresse d'origine.
-
-
-#order
-label.order.title=Commandes
-label.order.total=Total

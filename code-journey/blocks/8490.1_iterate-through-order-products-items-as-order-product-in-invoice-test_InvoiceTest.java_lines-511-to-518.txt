@@ -1,8 +1,0 @@
-			
-			//products
-			Set<OrderProduct> orderProducts = order.getOrderProducts();
-			int productCell = 16;
-			for(OrderProduct orderProduct : orderProducts) {
-				
-				//product name
-				String pName = orderProduct.getProductName();

@@ -1,8 +1,0 @@
-#shipping
-label.shipping.title=Shipping configuration
-label.shipping.national=National
-label.shipping.international=International
-label.shipping.mode=Shipping mode
-label.shipping.methods=Shipping methods
-label.shipping.countries=Ship to countries
-label.shipping.options=Shipping options

@@ -1,6 +1,0 @@
-			
-			//9
-			if(!StringUtils.isBlank(customer.getBilling().getCompany())) {
-				sheet.setValueAt(customer.getBilling().getCompany(), 0, billToCell);
-				billToCell ++;
-			}

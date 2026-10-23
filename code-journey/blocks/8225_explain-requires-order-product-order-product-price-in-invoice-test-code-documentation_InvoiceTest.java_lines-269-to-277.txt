@@ -1,9 +1,0 @@
-		
-		
-		
-
-		//requires 
-		//OrderProduct
-		//OrderProductPrice
-		//OrderTotal
-		

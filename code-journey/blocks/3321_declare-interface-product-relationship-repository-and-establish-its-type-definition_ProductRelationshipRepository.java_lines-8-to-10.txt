@@ -1,3 +1,0 @@
-public interface ProductRelationshipRepository extends JpaRepository<ProductRelationship, Long>, ProductRelationshipRepositoryCustom {
-
-}

@@ -1,8 +1,0 @@
-
-		try {
-
-			if (parent == null) {
-
-				// assign to root
-				child.setParent(null);
-				child.setDepth(0);

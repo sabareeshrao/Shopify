@@ -1,3 +1,0 @@
-				response.sendError(503, "Error while getting capturable payments " + e.getMessage());
-			} catch (Exception ignore) {
-			}

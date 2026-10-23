@@ -1,7 +1,0 @@
-					ContentDescription contentDescription = new ContentDescription();
-					contentDescription.setName(name);
-					contentDescription.setSeUrl(url);
-					contentDescription.setContent(c);
-					descriptions.add(contentDescription);
-					
-			}

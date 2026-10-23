@@ -1,5 +1,0 @@
-	@Override
-	public AuditSection getAuditSection() {
-		return this.auditSection;
-	}
-

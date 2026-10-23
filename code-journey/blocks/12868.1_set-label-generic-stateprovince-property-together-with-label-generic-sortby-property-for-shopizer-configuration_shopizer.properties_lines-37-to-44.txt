@@ -1,8 +1,0 @@
-label.generic.stateprovince=State / province
-label.generic.postalcode=Postal code
-label.generic.item=item
-label.generic.item.title=Item
-label.generic.items=items
-label.generic.displayonly=Display only
-label.generic.url=URL
-label.generic.sortby=Sort by

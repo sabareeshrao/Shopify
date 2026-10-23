@@ -1,4 +1,0 @@
-  private Bucket createBucket(Storage storage, String bucketName) {
-    return storage.create(BucketInfo.of(bucketName));
-  }
-  

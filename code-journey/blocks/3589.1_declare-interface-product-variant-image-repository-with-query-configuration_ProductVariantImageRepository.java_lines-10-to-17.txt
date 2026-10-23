@@ -1,8 +1,0 @@
-public interface ProductVariantImageRepository extends JpaRepository<ProductVariantImage, Long> {
-
-	@Query("select p from ProductVariantImage p"
-			+ " left join fetch p.descriptions pd"
-			+ " join fetch p.productVariantGroup pg"
-			+ " where p.id = ?1")
-	ProductVariantImage findOne(Long id);
-	

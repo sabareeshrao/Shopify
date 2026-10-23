@@ -1,8 +1,0 @@
-		Currency currency = store.getCurrency().getCurrency();
-
-		nf = NumberFormat.getInstance(locale);
-		nf.setCurrency(currency);
-		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
-		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
-
-		return nf.format(amount);

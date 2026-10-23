@@ -1,4 +1,0 @@
-	public void setType(ReadableProductType type) {
-		this.type = type;
-	}
-

@@ -1,8 +1,0 @@
-		
-		try {
-			GeocodingResult[] originAdressResult =  GeocodingApi.geocode(context,
-					originAddress.toString()).await();
-
-			GeocodingResult[] destinationAdressResult =  GeocodingApi.geocode(context,
-					destinationAddress.toString()).await();
-

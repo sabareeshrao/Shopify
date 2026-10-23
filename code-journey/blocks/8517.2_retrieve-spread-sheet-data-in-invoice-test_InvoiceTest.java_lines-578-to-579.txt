@@ -1,2 +1,0 @@
-			OOUtils.open(sheet.getSpreadSheet().saveAs(outputFile));
-			

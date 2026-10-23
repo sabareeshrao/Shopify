@@ -1,8 +1,0 @@
-import com.salesmanager.shop.populator.catalog.ReadableProductPopulator;
-import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
-import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
-import com.salesmanager.shop.store.controller.product.facade.ProductFacade;
-import com.salesmanager.shop.utils.ImageFilePath;
-import com.salesmanager.shop.utils.LocaleUtils;
-
-@Service("productFacade")

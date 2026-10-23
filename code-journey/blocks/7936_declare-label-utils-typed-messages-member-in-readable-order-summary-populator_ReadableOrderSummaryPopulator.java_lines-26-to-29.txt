@@ -1,4 +1,0 @@
-	private LabelUtils messages;
-	
-
-

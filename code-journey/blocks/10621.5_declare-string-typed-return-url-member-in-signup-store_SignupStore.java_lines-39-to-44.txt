@@ -1,6 +1,0 @@
-	
-	@NotEmpty
-	private String returnUrl;
-	
-	
-	

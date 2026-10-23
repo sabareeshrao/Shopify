@@ -1,4 +1,0 @@
-       - run:
-           name: list files in shop/target
-           command: ls -al
-           working_directory: ./sm-shop/target

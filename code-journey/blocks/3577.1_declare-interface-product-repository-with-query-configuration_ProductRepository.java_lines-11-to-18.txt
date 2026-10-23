@@ -1,8 +1,0 @@
-public interface ProductRepository extends JpaRepository<Product, Long>, ProductRepositoryCustom {
-
-
-	@Query(value="SELECT " +
-			"CASE WHEN COUNT(*) > 0 THEN true ELSE false END " +
-			"FROM " +
-			"Product p " +
-			"JOIN MerchantStore m ON m.id = ?2 " +

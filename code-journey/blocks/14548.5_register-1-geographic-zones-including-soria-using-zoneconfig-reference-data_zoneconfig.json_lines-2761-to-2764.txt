@@ -1,4 +1,0 @@
-			"zoneName": "Soria",
-			"countryCode": "ES"
-		},
-		{

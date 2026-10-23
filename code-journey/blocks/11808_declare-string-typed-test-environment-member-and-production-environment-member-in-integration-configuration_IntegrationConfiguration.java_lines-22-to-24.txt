@@ -1,3 +1,0 @@
-  public final static String TEST_ENVIRONMENT = "TEST";
-  public final static String PRODUCTION_ENVIRONMENT = "PRODUCTION";
-

@@ -1,6 +1,0 @@
-import com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription;
-import com.salesmanager.shop.model.catalog.product.product.PersistableProduct;
-import com.salesmanager.shop.model.catalog.product.product.ProductSpecification;
-import com.salesmanager.shop.model.catalog.product.variation.PersistableProductVariation;
-import com.salesmanager.test.shop.common.ServicesTestSupport;
-

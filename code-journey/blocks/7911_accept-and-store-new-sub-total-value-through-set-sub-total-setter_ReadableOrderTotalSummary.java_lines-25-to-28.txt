@@ -1,4 +1,0 @@
-	public void setSubTotal(String subTotal) {
-		this.subTotal = subTotal;
-	}
-

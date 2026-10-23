@@ -1,8 +1,0 @@
-		
-		if(!StringUtils.isBlank(source.getStoreLogo())) {
-			ReadableImage image = new ReadableImage();
-			image.setName(source.getStoreLogo());
-			if(filePath!=null) {
-				image.setPath(filePath.buildStoreLogoFilePath(source));
-			}
-			target.setLogo(image);

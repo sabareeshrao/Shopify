@@ -1,7 +1,0 @@
-      
-      //assertFalse(manufacturerList.isEmpty());
-      
-
-      
-      
-    }

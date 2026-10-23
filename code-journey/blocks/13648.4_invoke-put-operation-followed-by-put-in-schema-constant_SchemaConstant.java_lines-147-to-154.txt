@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("HKD", "Hong Kong Dollar");
-		CURRENCY_MAP.put("HUF", "Forint");
-		CURRENCY_MAP.put("ISK", "Iceland Krona");
-		CURRENCY_MAP.put("INR", "Indian Rupee");
-		CURRENCY_MAP.put("IDR", "Rupiah");
-		CURRENCY_MAP.put("XDR", "SDR (Special Drawing Right)");
-		CURRENCY_MAP.put("IRR", "Iranian Rial");
-		CURRENCY_MAP.put("IQD", "Iraqi Dinar");

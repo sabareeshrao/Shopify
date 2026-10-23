@@ -1,8 +1,0 @@
-
-			//invoke module
-			List<ShippingOption> shippingOptions = null;
-					
-			try {
-				shippingOptions = shippingQuoteModule.getShippingQuotes(shippingQuote, packages, orderTotal, delivery, shippingOrigin, store, configuration, shippingModule, shippingConfiguration, locale);
-			} catch(Exception e) {
-				LOGGER.error("Error while calculating shipping : " + e.getMessage(), e);

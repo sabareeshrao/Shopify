@@ -1,8 +1,0 @@
-label.generic.comments=Comments
-label.generic.subject=Subject
-label.generic.minimum=Minimum
-label.generic.maximum=Maximum
-label.generic.pictures=Pictures
-label.generic.videos=Videos
-label.generic.imageType=Media type
-label.generic.today=Today

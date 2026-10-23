@@ -1,4 +1,0 @@
-	public void setDelivery(Delivery delivery) {
-		this.delivery = delivery;
-	}
-

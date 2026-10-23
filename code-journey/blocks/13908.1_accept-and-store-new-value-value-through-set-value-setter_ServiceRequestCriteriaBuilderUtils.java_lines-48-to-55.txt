@@ -1,8 +1,0 @@
-	private static void setValue(Criteria criteria, HttpServletRequest request, String parameterName, String setterValue) throws Exception {
-		
-		
-		try {
-			
-			PropertyAccessor criteriaAccessor = PropertyAccessorFactory.forDirectFieldAccess(criteria);
-			
-			

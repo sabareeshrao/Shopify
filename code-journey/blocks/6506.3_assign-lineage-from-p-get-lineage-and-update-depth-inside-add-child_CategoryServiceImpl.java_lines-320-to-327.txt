@@ -1,8 +1,0 @@
-				String lineage = p.getLineage();
-				int depth = p.getDepth();
-
-				child.setParent(p);
-				child.setDepth(depth + 1);
-				child.setLineage(new StringBuilder().append(lineage).append(Constants.SLASH).append(child.getId())
-						.append(Constants.SLASH).toString());
-
