@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/build_shopizer_code_journey.py'
       - 'scripts/rebuild_shopizer_code_journey.py'
+      - 'scripts/refine_shopizer_code_journey_names.py'
       - '.github/workflows/shopizer-code-journey.yml'
   workflow_dispatch:
 
@@ -52,6 +53,15 @@ jobs:
             --checkout .shopizer-source \
             --output code-journey \
             --zip code-journey/Shopizer-Code-Journey.zip
+          cat code-journey/AUDIT.json
+
+      - name: Improve every parent and child filename using actual source statements
+        shell: bash
+        run: |
+          python scripts/refine_shopizer_code_journey_names.py \
+            --zip code-journey/Shopizer-Code-Journey.zip \
+            --output code-journey/Shopizer-Code-Journey-refined.zip \
+            --folder code-journey
           cat code-journey/AUDIT.json
 
       - name: Verify that the archive recreates all original files
