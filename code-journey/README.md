@@ -5,7 +5,8 @@ Source: https://github.com/shopizer-ecommerce/shopizer at `6a4a0a65a3408ee8f6259
 Walk through the parent TXT files in **numeric sequence order**, not lexicographic filename order.
 Each parent is a distinct, contiguous, exact range of the original source file; only parents should be used when reconstructing. Children are up-to-eight-line exact duplicates of a parent, for teaching purposes. Some tasks are only one line.
 
-Filenames contain grounded automated descriptors, but those descriptions are heuristics; refer to the source and index for exact intent. Some original code fragments are not standalone compilable until subsequent tasks are applied.
+Filenames explain code-specific operations, identifiers, keys and values wherever extractable.
+They are machine-generated and should be reviewed against source; refer to the source and index for exact intent. Some original code fragments are not standalone compilable until subsequent tasks are applied.
 
 ## Rebuild and verification
 
@@ -14,3 +15,7 @@ Use `python rebuild.py --journey path/to/code-journey --output rebuilt` after un
 The historical task/edit order is **not** recoverable from a snapshot; the task sequence is a modeled educational development journey.
 
 Data files: `MASTER_INDEX.csv`, `SOURCE_MANIFEST.csv`, `AUDIT.json`.
+
+## Filename quality audit
+
+All generated TXT basenames and sequence identifiers are unique, and the old generic description templates are rejected. Source bytes are never rewritten by renaming.
