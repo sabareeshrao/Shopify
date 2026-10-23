@@ -1,0 +1,8 @@
+	 */
+	Long saveProductDefinition(MerchantStore store, PersistableProductDefinition product, Language language);
+
+	/**
+	 * 
+	 * @param productId
+	 * @param product
+	 * @param merchant

@@ -1,0 +1,4 @@
+	public void setPreOrder(boolean preOrder) {
+		this.preOrder = preOrder;
+	}
+

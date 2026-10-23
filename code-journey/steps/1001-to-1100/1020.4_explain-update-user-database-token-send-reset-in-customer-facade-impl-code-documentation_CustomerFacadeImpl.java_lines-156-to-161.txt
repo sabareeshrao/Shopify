@@ -1,0 +1,6 @@
+		 * Update User in the database with token
+		 * 
+		 * Send reset token email
+		 */
+
+	}

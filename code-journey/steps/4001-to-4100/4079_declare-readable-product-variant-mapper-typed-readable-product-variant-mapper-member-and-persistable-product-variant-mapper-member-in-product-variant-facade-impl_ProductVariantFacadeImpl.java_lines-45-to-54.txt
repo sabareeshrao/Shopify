@@ -1,0 +1,10 @@
+	
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper; 
+	
+	@Autowired
+	private PersistableProductVariantMapper persistableProductVariantMapper; 
+	
+	@Autowired
+	private ProductVariantService productVariantService;
+	

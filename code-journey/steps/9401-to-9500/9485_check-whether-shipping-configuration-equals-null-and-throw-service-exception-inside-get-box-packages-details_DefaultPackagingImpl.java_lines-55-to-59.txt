@@ -1,0 +1,5 @@
+		
+		ShippingConfiguration shippingConfiguration = shippingService.getShippingConfiguration(store);
+		if(shippingConfiguration==null) {
+			throw new ServiceException("ShippingConfiguration not found for merchant " + store.getCode());
+		}

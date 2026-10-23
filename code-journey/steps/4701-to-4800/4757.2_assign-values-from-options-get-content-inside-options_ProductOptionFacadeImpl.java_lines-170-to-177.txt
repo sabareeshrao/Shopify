@@ -1,0 +1,8 @@
+		valueList.setNumber(options.getNumber());
+
+		List<ReadableProductOptionEntity> values = options.getContent().stream()
+				.map(option -> readableMapper.convert(option, store, null)).collect(Collectors.toList());
+
+		valueList.setOptions(values);
+
+		return valueList;

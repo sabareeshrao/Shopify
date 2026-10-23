@@ -1,0 +1,8 @@
+
+		
+		Page<Product> modelProductList = productService.listByStore(store, language, criterias, criterias.getStartPage(), criterias.getMaxCount());
+		
+		List<Product> products = modelProductList.getContent();
+		ReadableProductList productList = new ReadableProductList();
+
+		

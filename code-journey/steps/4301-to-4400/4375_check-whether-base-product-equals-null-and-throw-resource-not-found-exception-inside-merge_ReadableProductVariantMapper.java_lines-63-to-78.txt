@@ -1,0 +1,16 @@
+		
+		destination.setSortOrder(source.getSortOrder() != null ? source.getSortOrder().intValue():0);
+		destination.setAvailable(source.isAvailable());
+		destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+		destination.setId(source.getId());
+		destination.setDefaultSelection(source.isDefaultSelection());
+		destination.setProductId(source.getProduct().getId());
+		destination.setSku(source.getSku());
+		destination.setSortOrder(source.getSortOrder());
+		destination.setCode(source.getCode());
+		
+		//get product
+		Product baseProduct = source.getProduct();
+		if(baseProduct == null) {
+			throw new ResourceNotFoundException("Product instances do not include the parent product [" + destination.getSku() + "]");
+		}

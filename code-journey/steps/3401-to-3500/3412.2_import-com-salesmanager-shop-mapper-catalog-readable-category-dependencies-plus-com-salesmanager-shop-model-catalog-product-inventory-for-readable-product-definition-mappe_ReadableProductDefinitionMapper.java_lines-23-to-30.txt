@@ -1,0 +1,8 @@
+import com.salesmanager.shop.mapper.catalog.ReadableCategoryMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableManufacturerMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductTypeMapper;
+import com.salesmanager.shop.mapper.inventory.ReadableInventoryMapper;
+import com.salesmanager.shop.model.catalog.category.ReadableCategory;
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;
+import com.salesmanager.shop.model.catalog.product.ReadableImage;
+import com.salesmanager.shop.model.catalog.product.inventory.ReadableInventory;

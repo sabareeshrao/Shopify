@@ -1,0 +1,9 @@
+public interface ShippingFacade {
+	
+	ExpeditionConfiguration getExpeditionConfiguration(MerchantStore store, Language language);
+	void saveExpeditionConfiguration(ExpeditionConfiguration expedition, MerchantStore store);
+	
+	
+	ReadableAddress getShippingOrigin(MerchantStore store);
+	void saveShippingOrigin(PersistableAddress address, MerchantStore store);
+	

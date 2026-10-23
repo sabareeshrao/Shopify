@@ -1,0 +1,15 @@
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+    
+    //delete all image sizes
+    Storage storage = StorageOptions.getDefaultInstance().getService();
+
+    List<String> sizes = Arrays.asList(SMALL, LARGE);
+    for(String size : sizes) {
+      String filePath = filePath(productImage.getProduct().getMerchantStore().getCode(), productImage.getProduct().getSku(), size, productImage.getProductImage());
+      BlobId blobId = BlobId.of(bucketName(), filePath);
+      if(blobId==null) {
+        LOGGER.info("Image path " + filePath + " does not exist");
+        return;
+        //throw new ServiceException("Image not found " + productImage.getProductImage());
+      }

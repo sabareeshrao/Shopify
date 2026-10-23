@@ -1,0 +1,8 @@
+
+	@Inject
+	private ContentService contentService;
+
+	@Inject
+	private PersistableMerchantStorePopulator persistableMerchantStorePopulator;
+
+	@Inject

@@ -1,0 +1,4 @@
+	public List<Integer> getStoreIds() {
+		return storeIds;
+	}
+

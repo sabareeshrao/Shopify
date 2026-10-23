@@ -1,0 +1,15 @@
+
+	List<ProductOption> listReadOnly(MerchantStore store, Language language)
+			throws ServiceException;
+
+
+	ProductOption getByCode(MerchantStore store, String optionCode);
+	
+	ProductOption getById(MerchantStore store, Long optionId);
+	
+	Page<ProductOption> getByMerchant(MerchantStore store, Language language, String name, int page, int count);
+	
+
+
+
+}

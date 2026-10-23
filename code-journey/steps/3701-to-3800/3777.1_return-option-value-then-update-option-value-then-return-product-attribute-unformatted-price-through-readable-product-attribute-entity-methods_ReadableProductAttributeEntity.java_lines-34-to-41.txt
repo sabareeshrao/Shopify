@@ -1,0 +1,8 @@
+	public ReadableProductOptionValue getOptionValue() {
+		return optionValue;
+	}
+	public void setOptionValue(ReadableProductOptionValue optionValue) {
+		this.optionValue = optionValue;
+	}
+	public String getProductAttributeUnformattedPrice() {
+		return productAttributeUnformattedPrice;

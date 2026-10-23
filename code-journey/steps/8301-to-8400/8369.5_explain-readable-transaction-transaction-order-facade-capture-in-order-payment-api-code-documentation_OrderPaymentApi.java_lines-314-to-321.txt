@@ -1,0 +1,8 @@
+		 * ReadableTransaction transaction =
+		 * orderFacade.captureOrder(merchantStore, order, customer, language);
+		 * 
+		 * return transaction;
+		 * 
+		 * } catch (Exception e) { LOGGER.error("Error while capturing payment",
+		 * e); try { response.sendError(503, "Error while capturing payment " +
+		 * e.getMessage()); } catch (Exception ignore) { } return null; }

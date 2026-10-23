@@ -1,0 +1,8 @@
+	public SystemConfiguration getByKey(String key) throws ServiceException {
+		return systemConfigurationReposotory.findByKey(key);
+	}
+	
+
+
+
+}

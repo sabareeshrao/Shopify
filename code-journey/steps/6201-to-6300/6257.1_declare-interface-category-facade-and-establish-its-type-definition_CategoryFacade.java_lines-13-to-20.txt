@@ -1,0 +1,8 @@
+public interface CategoryFacade {
+
+
+    /**
+     * Returns a list of ReadableCategory ordered and built according to a given depth
+     * @param store
+     * @param depth
+     * @param language

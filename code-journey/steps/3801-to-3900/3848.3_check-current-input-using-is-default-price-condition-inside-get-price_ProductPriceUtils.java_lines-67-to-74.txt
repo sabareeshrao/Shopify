@@ -1,0 +1,8 @@
+		for (ProductAvailability availability : availabilities) {
+
+			Set<ProductPrice> prices = availability.getPrices();
+			for (ProductPrice price : prices) {
+
+				if (price.isDefaultPrice()) {
+					defaultPrice = price.getProductPriceAmount();
+				}

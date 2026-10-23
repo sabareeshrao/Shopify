@@ -1,0 +1,8 @@
+	<beans:beans profile="default">
+		<beans:bean
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+			<beans:property name="ignoreUnresolvablePlaceholders"
+				value="false" />
+			<beans:property name="locations">
+				<beans:list>
+					<beans:value>classpath:database.properties</beans:value>

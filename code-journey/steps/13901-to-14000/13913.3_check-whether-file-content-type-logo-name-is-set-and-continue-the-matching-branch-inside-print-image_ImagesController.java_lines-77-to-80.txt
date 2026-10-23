@@ -1,0 +1,4 @@
+		
+		if(FileContentType.LOGO.name().equals(imageType)) {
+			imgType = FileContentType.LOGO;
+		}

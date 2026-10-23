@@ -1,0 +1,4 @@
+  public String getUnique() {
+    return unique;
+  }
+

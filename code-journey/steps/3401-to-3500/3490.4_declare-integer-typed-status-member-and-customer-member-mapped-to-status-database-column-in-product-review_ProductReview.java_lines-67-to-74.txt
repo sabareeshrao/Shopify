@@ -1,0 +1,8 @@
+	@Column(name = "STATUS")
+	private Integer status;
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="CUSTOMERS_ID")
+	private Customer customer;
+	

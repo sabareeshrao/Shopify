@@ -1,0 +1,4 @@
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+public class TaxRateIntegrationTest extends ServicesTestSupport {
+	

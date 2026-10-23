@@ -1,0 +1,8 @@
+	 * @param amount
+	 * @return
+	 * @throws Exception
+	 */
+	@Deprecated
+	public String getAdminFormatedAmount(MerchantStore store, BigDecimal amount) throws Exception {
+
+		if (amount == null) {

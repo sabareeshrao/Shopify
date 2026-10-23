@@ -1,0 +1,8 @@
+					.getPaymentModulesConfigured(merchantStore);
+			return modules.stream().map(m -> integrationModule(m, configuredModules)).collect(Collectors.toList());
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error getting payment modules", e);
+			throw new ServiceRuntimeException("Error getting payment modules", e);
+		}
+

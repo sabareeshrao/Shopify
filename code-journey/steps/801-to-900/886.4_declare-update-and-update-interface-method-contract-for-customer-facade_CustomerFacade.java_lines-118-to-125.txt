@@ -1,0 +1,8 @@
+	 * @param customer
+	 * @param store
+	 * @throws Exception
+	 */
+	PersistableCustomer update(PersistableCustomer customer, MerchantStore store);
+	
+	PersistableCustomer update(String userName, PersistableCustomer customer, MerchantStore store);
+	

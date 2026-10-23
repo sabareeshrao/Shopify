@@ -1,0 +1,24 @@
+
+        mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+        InternetAddress inetAddress = new InternetAddress();
+
+        inetAddress.setPersonal(eml);
+        inetAddress.setAddress(from);
+
+        mimeMessage.setFrom(inetAddress);
+        mimeMessage.setSubject(subject);
+
+        Multipart mp = new MimeMultipart("alternative");
+
+        // Create a "text" Multipart message
+        BodyPart textPart = new MimeBodyPart();
+        freemarkerMailConfiguration.setClassForTemplateLoading(DefaultEmailSenderImpl.class, "/");
+        Template textTemplate = freemarkerMailConfiguration.getTemplate(
+            new StringBuilder(TEMPLATE_PATH).append("/").append(tmpl).toString());
+        final StringWriter textWriter = new StringWriter();
+        try {
+          textTemplate.process(templateTokens, textWriter);
+        } catch (TemplateException e) {
+          throw new MailPreparationException("Can't generate text mail", e);
+        }

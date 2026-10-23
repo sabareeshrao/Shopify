@@ -1,0 +1,18 @@
+public class ProductReviewEntity extends ShopEntity implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@NotEmpty
+	private String description;
+	private Long productId;
+	private String date;
+	
+	@NotNull
+	@Min(1)
+	@Max(5)
+	private Double rating;
+	public String getDescription() {
+		return description;
+	}

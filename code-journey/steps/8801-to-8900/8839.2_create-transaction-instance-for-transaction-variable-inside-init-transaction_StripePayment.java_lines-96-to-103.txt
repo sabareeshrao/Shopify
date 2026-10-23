@@ -1,0 +1,8 @@
+
+      Transaction transaction = new Transaction();
+      transaction.setAmount(amount);
+      transaction.setDetails(publicKey);
+      transaction.setPaymentType(payment.getPaymentType());
+      transaction.setTransactionDate(new Date());
+      transaction.setTransactionType(payment.getTransactionType());
+      

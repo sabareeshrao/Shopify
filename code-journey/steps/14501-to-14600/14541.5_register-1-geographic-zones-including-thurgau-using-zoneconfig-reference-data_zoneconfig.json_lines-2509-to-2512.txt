@@ -1,0 +1,4 @@
+		{
+			"zoneCode": "TG",
+			"zoneName": "Thurgau",
+			"countryCode": "CH"

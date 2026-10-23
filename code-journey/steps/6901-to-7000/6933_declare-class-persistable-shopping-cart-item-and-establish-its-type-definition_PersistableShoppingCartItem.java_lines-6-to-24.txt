@@ -1,0 +1,19 @@
+import com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute;
+
+/**
+ * Compatible with v1
+ * @author c.samson
+ *
+ */
+public class PersistableShoppingCartItem implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String product;// or product sku (instance or product)
+	private int quantity;
+	private String promoCode;
+	private List<ProductAttribute> attributes;
+	
+	

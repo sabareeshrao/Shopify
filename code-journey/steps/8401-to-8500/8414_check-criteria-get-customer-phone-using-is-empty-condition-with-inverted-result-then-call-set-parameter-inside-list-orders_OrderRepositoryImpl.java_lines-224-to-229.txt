@@ -1,0 +1,6 @@
+		
+		//phone
+		if(!StringUtils.isEmpty(criteria.getCustomerPhone())) {
+			countQ.setParameter("phone", like(criteria.getCustomerPhone()));
+			objectQ.setParameter("phone", like(criteria.getCustomerPhone()));
+		}

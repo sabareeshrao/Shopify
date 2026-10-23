@@ -1,0 +1,8 @@
+
+		List<Product> wrongStoreProducts = products.stream().filter(p -> p.getMerchantStore().getId() != store.getId())
+				.collect(Collectors.toList());
+		if (wrongStoreProducts.size() > 0) {
+			throw new ResourceNotFoundException("One or more of the items with id's "
+					+ wrongStoreProducts.stream().map(s -> Long.valueOf(s.getId())).collect(Collectors.toList())
+					+ " does not belong to merchant " + store.getId());
+		}

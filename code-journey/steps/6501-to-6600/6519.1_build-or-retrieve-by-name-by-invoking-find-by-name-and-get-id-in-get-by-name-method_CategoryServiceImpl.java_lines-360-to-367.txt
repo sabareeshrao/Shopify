@@ -1,0 +1,8 @@
+	@Override
+	public List<Category> getByName(MerchantStore store, String name, Language language) throws ServiceException {
+
+		try {
+			return categoryRepository.findByName(store.getId(), name, language.getId());
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}

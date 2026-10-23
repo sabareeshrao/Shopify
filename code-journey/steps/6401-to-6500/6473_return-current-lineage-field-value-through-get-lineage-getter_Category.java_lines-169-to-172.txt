@@ -1,0 +1,4 @@
+    public String getLineage() {
+        return lineage;
+    }
+

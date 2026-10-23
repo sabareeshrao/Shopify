@@ -1,0 +1,8 @@
+	 * Get ShoppingCart
+	 * This method is used by the API
+	 * @param customer
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */

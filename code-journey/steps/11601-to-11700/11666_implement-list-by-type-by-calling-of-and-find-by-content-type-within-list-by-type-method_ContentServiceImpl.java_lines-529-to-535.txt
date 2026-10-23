@@ -1,0 +1,7 @@
+	@Override
+	public Page<Content> listByType(ContentType contentType, MerchantStore store, Language language, int page,
+			int count) throws ServiceException {
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageContentRepository.findByContentType(contentType, store.getId(), language.getId(), pageRequest);
+	}
+

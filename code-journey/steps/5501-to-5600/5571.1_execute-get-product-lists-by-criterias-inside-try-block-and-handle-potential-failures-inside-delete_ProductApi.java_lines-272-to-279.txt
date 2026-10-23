@@ -1,0 +1,8 @@
+
+		// TODO
+		// RENTAL add filter by owner
+		// REPOSITORY to use the new filters
+
+		try {
+			return productFacade.getProductListsByCriterias(merchantStore, language, criteria);
+

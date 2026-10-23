@@ -1,0 +1,8 @@
+	public void setPaymentType(PaymentType paymentType) {
+		this.paymentType = paymentType;
+	}
+	public String getPaymentModule() {
+		return paymentModule;
+	}
+	public void setPaymentModule(String paymentModule) {
+		this.paymentModule = paymentModule;

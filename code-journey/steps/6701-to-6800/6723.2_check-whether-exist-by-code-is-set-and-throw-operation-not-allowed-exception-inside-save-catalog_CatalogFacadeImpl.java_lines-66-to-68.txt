@@ -1,0 +1,3 @@
+        if (existByCode) {
+            throw new OperationNotAllowedException("Catalog [" + catalog.getCode() + "] already exists");
+        }

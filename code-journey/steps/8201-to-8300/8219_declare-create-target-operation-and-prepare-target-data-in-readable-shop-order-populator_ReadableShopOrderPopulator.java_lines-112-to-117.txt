@@ -1,0 +1,6 @@
+	@Override
+	protected ReadableShopOrder createTarget() {
+		return null;
+	}
+
+}

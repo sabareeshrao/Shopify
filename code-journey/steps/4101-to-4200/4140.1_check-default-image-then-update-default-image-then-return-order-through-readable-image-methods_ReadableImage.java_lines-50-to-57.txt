@@ -1,0 +1,8 @@
+	public boolean isDefaultImage() {
+		return defaultImage;
+	}
+	public void setDefaultImage(boolean defaultImage) {
+		this.defaultImage = defaultImage;
+	}
+	public int getOrder() {
+		return order;

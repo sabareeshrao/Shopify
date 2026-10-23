@@ -1,0 +1,8 @@
+        String mimetype = URLConnection.guessContentTypeFromName(os.getKey());
+        if (!StringUtils.isBlank(mimetype)) {
+          S3Object o = s3.getObject(bucketName, os.getKey());
+          byte[] byteArray = IOUtils.toByteArray(o.getObjectContent());
+          ByteArrayOutputStream baos = new ByteArrayOutputStream(byteArray.length);
+          baos.write(byteArray, 0, byteArray.length);
+          OutputContentFile ct = new OutputContentFile();
+          ct.setFile(baos);

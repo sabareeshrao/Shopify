@@ -1,0 +1,4 @@
+	public String getStorephone() {
+		return storephone;
+	}
+

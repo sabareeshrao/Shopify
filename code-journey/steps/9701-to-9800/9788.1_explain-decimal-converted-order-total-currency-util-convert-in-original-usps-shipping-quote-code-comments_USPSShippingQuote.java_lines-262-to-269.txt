@@ -1,0 +1,8 @@
+
+/*			BigDecimal convertedOrderTotal = CurrencyUtil.convertToCurrency(
+					orderTotal, store.getCurrency(),
+					Constants.CURRENCY_CODE_USD);*/
+
+			// calculate total shipping volume
+
+			// ship date is 3 days from here

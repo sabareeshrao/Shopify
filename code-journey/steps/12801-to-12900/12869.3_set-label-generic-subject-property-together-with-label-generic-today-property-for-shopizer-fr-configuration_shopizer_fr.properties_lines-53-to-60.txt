@@ -1,0 +1,8 @@
+label.generic.subject=Sujet
+label.generic.minimum=Minimum
+label.generic.maximum=Maximum
+label.generic.pictures=Photos
+label.generic.videos=Vidéos
+label.generic.imageType=Type de média
+label.generic.today=Aujourd'hui
+

@@ -1,0 +1,8 @@
+	@Override
+	public ContentDescription getBySeUrl(MerchantStore store,String seUrl) {
+
+			StringBuilder qs = new StringBuilder();
+
+			qs.append("select c from Content c ");
+			qs.append("left join fetch c.descriptions cd join fetch c.merchantStore cm ");
+			qs.append("where cm.id =:cm ");

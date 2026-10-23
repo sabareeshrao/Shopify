@@ -1,0 +1,8 @@
+
+	/**
+	 * Returns all product attributes
+	 */
+	@Override
+	public Page<ProductAttribute> getByProductId(MerchantStore store, Product product, Language language, int page,
+			int count) throws ServiceException {
+

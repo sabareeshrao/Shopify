@@ -1,0 +1,8 @@
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getCountry())) {
+					FieldError error = new FieldError("customer.delivery.country", "customer.delivery.country",
+							messages.getMessage("NotEmpty.customer.shipping.country", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.country",
+							messages.getMessage("NotEmpty.customer.shipping.country", locale));
+				}

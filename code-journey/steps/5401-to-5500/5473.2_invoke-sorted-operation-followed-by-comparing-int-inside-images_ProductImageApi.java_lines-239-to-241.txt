@@ -1,0 +1,3 @@
+						.sorted(Comparator.comparingInt(ReadableImage::getOrder))
+						.collect(Collectors.toList());
+	

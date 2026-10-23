@@ -1,0 +1,4 @@
+	public final static String CONTENT_IMAGE = "CONTENT";
+	public final static String CONTENT_LANDING_PAGE = "LANDING_PAGE";
+	public final static String CONTENT_CONTACT_US = "contact";
+

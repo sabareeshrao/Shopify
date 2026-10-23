@@ -1,0 +1,8 @@
+	
+	//@Test
+	@Ignore
+	public void testCurrency() throws Exception {
+		
+		Currency currency = currencyService.getByCode("BGN");
+		
+		java.util.Currency c = currency.getCurrency();

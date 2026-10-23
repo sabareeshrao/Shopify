@@ -1,0 +1,15 @@
+
+
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    } finally {
+      try {
+        productImage.getImage().close();
+      } catch (Exception ignore) {
+      }
+    }
+
+  }
+
+

@@ -1,0 +1,8 @@
+            	    
+            	    List<ZoneDescription> zoneDescriptions = value.getDescriptions();
+            	    value.setDescriptons(null);
+
+            	    zoneService.create(value);
+            	    
+            	    for(ZoneDescription description : zoneDescriptions) {
+            	    	description.setZone(value);

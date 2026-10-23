@@ -1,0 +1,8 @@
+    public void setShoppingCartCalculationService(final ShoppingCartCalculationService shoppingCartCalculationService) {
+        this.shoppingCartCalculationService = shoppingCartCalculationService;
+    }
+
+
+
+
+}

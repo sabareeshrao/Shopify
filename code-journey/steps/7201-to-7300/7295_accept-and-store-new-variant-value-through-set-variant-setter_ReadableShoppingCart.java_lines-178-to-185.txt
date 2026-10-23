@@ -1,0 +1,8 @@
+	public void setVariant(ReadableProductVariant variant) {
+		this.variant = variant;
+	}
+
+
+
+
+}

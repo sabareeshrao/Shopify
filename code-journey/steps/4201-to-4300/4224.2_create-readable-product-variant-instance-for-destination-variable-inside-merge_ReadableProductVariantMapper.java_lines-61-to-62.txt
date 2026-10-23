@@ -1,0 +1,2 @@
+			destination = new ReadableProductVariant();
+		}

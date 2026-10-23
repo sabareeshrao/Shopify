@@ -1,0 +1,8 @@
+			 
+			 PdfWriter writer = PdfWriter.getInstance(pdf, outputStream);
+			 pdf.addWriter(writer);
+
+			 document.open();
+
+			 // Create a template and a Graphics2D object 
+			 Rectangle pageSize = document.getPageSize();

@@ -1,0 +1,8 @@
+
+
+	/**
+	 * Creates a Customer entity ready to be saved
+	 */
+	@Override
+	public Customer populate(PersistableCustomer source, Customer target,
+			MerchantStore store, Language language) throws ConversionException {

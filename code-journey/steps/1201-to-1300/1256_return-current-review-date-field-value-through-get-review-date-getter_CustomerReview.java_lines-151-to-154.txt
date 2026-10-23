@@ -1,0 +1,4 @@
+	public Date getReviewDate() {
+		return reviewDate;
+	}
+

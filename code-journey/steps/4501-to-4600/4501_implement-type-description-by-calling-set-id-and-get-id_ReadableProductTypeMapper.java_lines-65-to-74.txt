@@ -1,0 +1,10 @@
+	private ProductTypeDescription typeDescription(com.salesmanager.core.model.catalog.product.type.ProductTypeDescription description) {
+		ProductTypeDescription desc = new ProductTypeDescription();
+		desc.setId(description.getId());
+		desc.setName(description.getName());
+		desc.setDescription(description.getDescription());
+		desc.setLanguage(description.getLanguage().getCode());
+		return desc;
+	}
+
+}

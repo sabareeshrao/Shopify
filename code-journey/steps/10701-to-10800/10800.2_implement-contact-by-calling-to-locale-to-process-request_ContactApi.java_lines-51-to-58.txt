@@ -1,0 +1,8 @@
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public ResponseEntity<Void> contact(
+      @Valid @RequestBody ContactForm contact,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request) {
+    Locale locale = languageService.toLocale(language, merchantStore);

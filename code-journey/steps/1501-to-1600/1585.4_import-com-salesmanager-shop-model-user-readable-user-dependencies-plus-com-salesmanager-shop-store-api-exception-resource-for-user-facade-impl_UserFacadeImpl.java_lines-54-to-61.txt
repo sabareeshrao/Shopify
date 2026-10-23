@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.user.ReadableUserList;
+import com.salesmanager.shop.model.user.UserPassword;
+import com.salesmanager.shop.populator.user.PersistableUserPopulator;
+import com.salesmanager.shop.populator.user.ReadableUserPopulator;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+import com.salesmanager.shop.store.api.exception.GenericRuntimeException;
+import com.salesmanager.shop.store.api.exception.OperationNotAllowedException;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;

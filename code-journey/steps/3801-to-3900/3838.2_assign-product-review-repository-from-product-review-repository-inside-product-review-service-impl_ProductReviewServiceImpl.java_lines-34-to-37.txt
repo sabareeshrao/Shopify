@@ -1,0 +1,4 @@
+			super(productReviewRepository);
+			this.productReviewRepository = productReviewRepository;
+	}
+

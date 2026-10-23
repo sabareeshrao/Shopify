@@ -1,0 +1,5 @@
+
+	@AfterReturning(value = "entityCreationMethods()", returning = "entity")
+	public void createProductEvent(JoinPoint jp, Object entity) throws Throwable {
+		eventPublisher.publishEvent(new SaveProductEvent(eventPublisher, (Product)entity));
+	}

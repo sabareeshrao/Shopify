@@ -1,0 +1,8 @@
+    	}
+
+    	List<ShoppingCartItem> itemList = new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
+    	//filter out unavailable
+    	itemList = itemList.stream().filter(p -> p.getProduct().isAvailable()).collect(Collectors.toList());
+    	orderSummary.setProducts(itemList);
+
+

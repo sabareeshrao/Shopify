@@ -1,0 +1,15 @@
+
+	// edit packaging
+	@ApiOperation(httpMethod = "PUT", value = "Edit package specification", notes = "", produces = "application/json", response = Void.class)
+	@RequestMapping(value = { "/private/shipping/package/{code}" }, method = RequestMethod.PUT)
+	@ResponseStatus(HttpStatus.OK)
+	public void updatePackage(@PathVariable String code, @RequestBody PackageDetails details,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_SHIPPING, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		shippingFacade.updatePackage(code, details, merchantStore);
+
+	}

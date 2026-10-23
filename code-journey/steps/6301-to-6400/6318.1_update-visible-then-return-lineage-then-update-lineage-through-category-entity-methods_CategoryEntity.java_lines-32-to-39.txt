@@ -1,0 +1,8 @@
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+	public String getLineage() {
+		return lineage;
+	}
+	public void setLineage(String lineage) {
+		this.lineage = lineage;

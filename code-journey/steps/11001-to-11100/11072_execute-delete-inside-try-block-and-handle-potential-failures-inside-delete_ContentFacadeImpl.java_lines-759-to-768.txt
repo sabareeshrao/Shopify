@@ -1,0 +1,10 @@
+		}
+
+		try {
+			contentService.delete(content);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while deleting content " + e.getMessage(), e);
+		}
+
+	}
+

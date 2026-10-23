@@ -1,0 +1,8 @@
+import javax.inject.Inject;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Map;
+
+
+@Component
+public class EmailTemplatesUtils {

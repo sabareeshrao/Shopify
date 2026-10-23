@@ -1,0 +1,9 @@
+
+        if (!StringUtils.isBlank(configuration.getProperty(CROP_UPLOADED_IMAGES))
+            && configuration.getProperty(CROP_UPLOADED_IMAGES).equals(Constants.TRUE)) {
+          // crop image
+          ProductImageCropUtils utils =
+              new ProductImageCropUtils(bufferedImage, largeImageWidth, largeImageHeight);
+          if (utils.isCropeable()) {
+            bufferedImage = utils.getCroppedImage();
+          }

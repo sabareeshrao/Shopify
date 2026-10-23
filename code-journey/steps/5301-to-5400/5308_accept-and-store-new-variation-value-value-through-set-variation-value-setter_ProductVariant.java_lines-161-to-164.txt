@@ -1,0 +1,4 @@
+	public void setVariationValue(ProductVariation variationValue) {
+		this.variationValue = variationValue;
+	}
+

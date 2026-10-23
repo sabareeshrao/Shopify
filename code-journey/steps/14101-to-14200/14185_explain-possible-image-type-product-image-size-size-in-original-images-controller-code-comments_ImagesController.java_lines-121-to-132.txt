@@ -1,0 +1,12 @@
+		
+		/**
+		 * List of possible imageType
+		 * 
+		 */
+		
+
+		ProductImageSize size = ProductImageSize.SMALL;
+		
+		if(imageType.equals(FileContentType.PRODUCTLG.name())) {
+			size = ProductImageSize.LARGE;
+		} 

@@ -1,0 +1,3 @@
+            final List<ReadableCategory> categories = response.getBody().getCategories();
+            assertNotNull(categories);
+        }

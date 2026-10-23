@@ -1,0 +1,8 @@
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1172536723717691214L;
+
+
+	@Id

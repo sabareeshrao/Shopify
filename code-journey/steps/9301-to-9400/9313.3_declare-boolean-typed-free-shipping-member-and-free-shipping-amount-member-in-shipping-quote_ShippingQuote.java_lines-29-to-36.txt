@@ -1,0 +1,8 @@
+	/** indicates if this quote is configured with free shipping **/
+	private boolean freeShipping;
+	/** the threshold amount for being free shipping **/
+	private BigDecimal freeShippingAmount;
+	/** handling fees to be added on top of shipping fees **/
+	private BigDecimal handlingFees;
+	/** apply tax on shipping **/
+	private boolean applyTaxOnShipping;

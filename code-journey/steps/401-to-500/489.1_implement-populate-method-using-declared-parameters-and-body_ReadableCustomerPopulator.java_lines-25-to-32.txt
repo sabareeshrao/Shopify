@@ -1,0 +1,8 @@
+	@Override
+	public ReadableCustomer populate(Customer source, ReadableCustomer target,
+			MerchantStore store, Language language) throws ConversionException {
+
+		try {
+			
+			if(target == null) {
+				target = new ReadableCustomer();

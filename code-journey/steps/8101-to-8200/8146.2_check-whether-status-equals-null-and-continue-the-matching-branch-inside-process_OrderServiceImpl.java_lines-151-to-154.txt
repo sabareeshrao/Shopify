@@ -1,0 +1,4 @@
+    		if(status==null) {
+    			status = OrderStatus.ORDERED;
+    			order.setStatus(status);
+    		}

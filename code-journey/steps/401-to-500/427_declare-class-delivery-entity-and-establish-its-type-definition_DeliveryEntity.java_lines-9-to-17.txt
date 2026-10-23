@@ -1,0 +1,9 @@
+public class DeliveryEntity extends Address implements Serializable {
+	
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+

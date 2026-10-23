@@ -1,0 +1,4 @@
+	public void setRegionsSet(Set<String> regionsSet) {
+		this.regionsSet = regionsSet;
+	}
+

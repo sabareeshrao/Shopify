@@ -1,0 +1,4 @@
+
+:OkJHome
+if exist "%JAVA_HOME%\bin\java.exe" goto init
+

@@ -1,0 +1,8 @@
+		target.setFeatured(source.isFeatured());
+
+		//children
+		if(!CollectionUtils.isEmpty(source.getChildren())) {
+		  //no modifications to children category
+		} else {
+		  target.getCategories().clear();
+		}

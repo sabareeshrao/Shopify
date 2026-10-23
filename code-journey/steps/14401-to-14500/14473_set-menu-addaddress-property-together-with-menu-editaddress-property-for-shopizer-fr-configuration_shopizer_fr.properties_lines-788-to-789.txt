@@ -1,0 +1,2 @@
+menu.addaddress=Ajouter une nouvelle adresse
+menu.editaddress=Changer l'adresse

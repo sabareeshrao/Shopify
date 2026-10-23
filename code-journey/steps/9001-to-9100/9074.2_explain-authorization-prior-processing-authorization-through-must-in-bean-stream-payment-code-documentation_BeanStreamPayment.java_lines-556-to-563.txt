@@ -1,0 +1,8 @@
+		
+			pre authorization (PA)
+			----------------------
+
+			Prior to processing a pre-authorization through the API, you must modify the transaction settings in your Beanstream merchant member area to allow for this transaction type.
+			- Log in to the Beanstream online member area at www.beanstream.com/admin/sDefault.asp.
+			- Navigate to administration - account admin - order settings in the left menu.
+			Under the heading �Restrict Internet Transaction Processing Types,� select either of the last two options. The �Purchases or Pre-Authorization Only� option will allow you to process both types of transaction through your web interface. De-selecting the �Restrict Internet Transaction Processing Types� checkbox will allow you to process all types of transactions including returns, voids and pre-auth completions.

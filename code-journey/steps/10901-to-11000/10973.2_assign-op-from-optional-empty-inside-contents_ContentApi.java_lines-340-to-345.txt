@@ -1,0 +1,6 @@
+		Optional<String> op = Optional.empty();
+		return contentFacade.getContents(op, merchantStore, language);
+
+	}
+	
+	

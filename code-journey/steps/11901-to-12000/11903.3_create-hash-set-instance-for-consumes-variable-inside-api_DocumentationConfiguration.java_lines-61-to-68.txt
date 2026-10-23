@@ -1,0 +1,8 @@
+		produces.add("application/json");
+
+		Set<String> consumes = new HashSet<>();
+		consumes.add("application/json");
+
+		return new Docket(DocumentationType.SWAGGER_2)
+				.host(HOST)
+				.select()

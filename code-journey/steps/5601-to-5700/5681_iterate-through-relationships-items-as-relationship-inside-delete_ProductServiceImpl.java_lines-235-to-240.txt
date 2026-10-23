@@ -1,0 +1,6 @@
+
+		// related - featured
+		List<ProductRelationship> relationships = productRelationshipService.listByProduct(product);
+		for (ProductRelationship relationship : relationships) {
+			productRelationshipService.deleteRelationship(relationship);
+		}

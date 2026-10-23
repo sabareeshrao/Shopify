@@ -1,0 +1,8 @@
+  public void deleteGroup(
+      @PathVariable final String code,
+	  @ApiIgnore MerchantStore merchantStore,
+	  @ApiIgnore Language language,
+      HttpServletResponse response) {
+	  
+	  productItemsFacade.deleteGroup(code, merchantStore);
+

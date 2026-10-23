@@ -1,0 +1,21 @@
+	private ReadableContentPage contentDescriptionToReadableContent(MerchantStore store, Content content,
+			ContentDescription contentDescription) {
+
+		ReadableContentPage page = new ReadableContentPage();
+
+		ContentDescription desc = new ContentDescription();
+
+		desc.setName(contentDescription.getName());
+		desc.setDescription(contentDescription.getDescription());
+
+		page.setId(content.getId());
+		desc.setSeUrl(contentDescription.getSeUrl());
+		page.setLinkToMenu(content.isLinkToMenu());
+		desc.setTitle(contentDescription.getTitle());
+		desc.setMetatagDescription(contentDescription.getMetatagDescription());
+		page.setContentType(ContentType.PAGE.name());
+		page.setCode(content.getCode());
+		page.setPath(fileUtils.buildStaticFilePath(store.getCode(), contentDescription.getSeUrl()));
+		return page;
+
+	}

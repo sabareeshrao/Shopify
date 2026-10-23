@@ -1,0 +1,7 @@
+	@Override
+	public void removeFolder(String merchantStoreCode, String folderName, Optional<String> folderPath) throws ServiceException {
+		// TODO Auto-generated method stub
+
+	}
+
+

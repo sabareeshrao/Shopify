@@ -1,0 +1,8 @@
+	 * @return
+	 */
+	List<ReadableCustomerReview> getAllCustomerReviewsByReviewed(Long customerId, MerchantStore store, Language language);
+	
+	/**
+	 * Deletes a customer review
+	 * @param review
+	 * @param store

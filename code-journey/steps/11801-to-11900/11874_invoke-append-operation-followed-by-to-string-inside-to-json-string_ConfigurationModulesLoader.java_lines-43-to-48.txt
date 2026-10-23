@@ -1,0 +1,6 @@
+		}
+		jsonModules.append("]");
+		return jsonModules.toString();
+		
+		
+	}

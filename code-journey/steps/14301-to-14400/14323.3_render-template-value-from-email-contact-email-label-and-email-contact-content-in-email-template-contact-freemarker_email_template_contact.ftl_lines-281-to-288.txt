@@ -1,0 +1,8 @@
+    							${EMAIL_CONTACT_EMAIL_LABEL}: ${EMAIL_CONTACT_EMAIL}<br />
+
+						</p>
+						<!-- Callout Panel -->
+						<p class="callout">
+							${EMAIL_CONTACT_CONTENT}
+						</p><!-- /Callout Panel -->					
+												

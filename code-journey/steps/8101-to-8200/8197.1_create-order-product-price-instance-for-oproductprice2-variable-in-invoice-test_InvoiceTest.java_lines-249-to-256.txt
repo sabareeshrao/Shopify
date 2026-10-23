@@ -1,0 +1,8 @@
+		
+		//product #2
+		OrderProductPrice oproductprice2 = new OrderProductPrice();
+		oproductprice2.setDefaultPrice(true);	
+		oproductprice2.setProductPrice(new BigDecimal(9.99) );
+		oproductprice2.setProductPriceCode("baseprice" );
+		oproductprice2.setProductPriceName("Base Price" );
+

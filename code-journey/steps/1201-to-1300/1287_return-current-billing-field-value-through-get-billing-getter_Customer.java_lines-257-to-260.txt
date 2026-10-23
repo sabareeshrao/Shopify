@@ -1,0 +1,4 @@
+	public Billing getBilling() {
+		return billing;
+	}
+

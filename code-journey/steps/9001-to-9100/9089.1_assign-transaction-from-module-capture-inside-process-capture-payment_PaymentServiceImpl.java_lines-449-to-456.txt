@@ -1,0 +1,8 @@
+		Transaction transaction = module.capture(store, customer, order, trx, configuration, integrationModule);
+		transaction.setOrder(order);
+		
+		
+
+		transactionService.create(transaction);
+		
+		

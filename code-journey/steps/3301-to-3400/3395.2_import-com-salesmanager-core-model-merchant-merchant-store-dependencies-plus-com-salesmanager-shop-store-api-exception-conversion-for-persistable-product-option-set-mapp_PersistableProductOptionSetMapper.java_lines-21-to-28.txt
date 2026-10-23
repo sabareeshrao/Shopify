@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.model.catalog.product.attribute.optionset.PersistableProductOptionSet;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+
+@Component
+public class PersistableProductOptionSetMapper implements Mapper<PersistableProductOptionSet, ProductOptionSet> {

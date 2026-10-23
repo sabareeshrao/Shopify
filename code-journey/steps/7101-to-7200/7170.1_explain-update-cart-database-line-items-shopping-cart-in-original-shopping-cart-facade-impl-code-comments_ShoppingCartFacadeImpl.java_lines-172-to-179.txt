@@ -1,0 +1,8 @@
+
+		/** Update cart in database with line items **/
+		shoppingCartService.saveOrUpdate(cartModel);
+
+		// refresh cart
+		cartModel = shoppingCartService.getById(cartModel.getId(), store);
+
+		shoppingCartCalculationService.calculate(cartModel, store, language);

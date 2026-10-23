@@ -1,0 +1,3 @@
+
+				cache.putInCache(modules, "INTEGRATION_M" + module);
+			}

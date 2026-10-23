@@ -1,0 +1,8 @@
+	@Override
+	public void createOrderStatus(PersistableOrderStatusHistory status, Long id, MerchantStore store) {
+		Validate.notNull(status, "OrderStatusHistory must not be null");
+		Validate.notNull(id, "Order id must not be null");
+		Validate.notNull(store, "MerchantStore must not be null");
+
+		// retrieve original order
+		Order order = orderService.getOrder(id, store);

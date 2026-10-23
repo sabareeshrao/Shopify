@@ -1,0 +1,4 @@
+	public ProductType getType() {
+		return type;
+	}
+

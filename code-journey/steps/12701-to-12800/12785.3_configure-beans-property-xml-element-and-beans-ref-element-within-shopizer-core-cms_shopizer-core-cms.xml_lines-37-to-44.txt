@@ -1,0 +1,8 @@
+		</beans:property>
+		<beans:property name="removeImage">
+				<beans:ref bean="${config.cms.method}ProductAssetsManager" />
+		</beans:property>
+		<!-- *** Don't remove, required for this bean only *** -->
+		<beans:property name="configuration">
+				<beans:ref bean="coreConfiguration" />
+		</beans:property>

@@ -1,0 +1,8 @@
+	    item.setItemPrice(price.getFinalPrice());
+	    item.setQuantity(1);
+	    
+	    /** user selects black **/
+	    ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,blackAttribute);
+	    item.getAttributes().add(attributeItem);
+	    
+	    shoppingCart.getLineItems().add(item);

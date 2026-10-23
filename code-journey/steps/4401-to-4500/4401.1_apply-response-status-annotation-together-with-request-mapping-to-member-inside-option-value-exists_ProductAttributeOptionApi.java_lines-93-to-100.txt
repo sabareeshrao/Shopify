@@ -1,0 +1,8 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/option/value" }, method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody ReadableProductOptionValue createOptionValue(
+			@Valid @RequestBody PersistableProductOptionValue optionValue,
+			//@RequestParam(name = "file", required = false) MultipartFile file, 

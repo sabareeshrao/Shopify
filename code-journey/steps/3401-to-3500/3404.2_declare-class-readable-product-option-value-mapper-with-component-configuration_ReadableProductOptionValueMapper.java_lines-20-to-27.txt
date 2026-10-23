@@ -1,0 +1,8 @@
+
+@Component
+public class ReadableProductOptionValueMapper implements Mapper<ProductOptionValue, ReadableProductOptionValue> {
+
+  @Autowired
+  @Qualifier("img")
+  private ImageFilePath imageUtils;
+

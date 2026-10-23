@@ -1,0 +1,8 @@
+label.manufacturer.image=Image
+label.manufactureredit.manufacturerorder=Sequence
+
+#product
+label.sefurl=Lien convivial
+label.metatags.description = (Meta tags) Description
+label.metatags.keywords = (Meta tags) Mots-clés
+label.product.sku=Sku

@@ -1,0 +1,4 @@
+				qs.append(" and povd.description like :").append("val").append(cnt)
+						.append(attributeCriteria.getAttributeCode());
+				cnt++;
+			}

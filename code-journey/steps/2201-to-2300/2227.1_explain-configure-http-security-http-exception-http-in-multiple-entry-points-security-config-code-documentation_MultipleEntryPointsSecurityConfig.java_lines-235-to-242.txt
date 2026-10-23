@@ -1,0 +1,8 @@
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+			.antMatcher("/admin/**")
+					.authorizeRequests()
+					.antMatchers("/admin/logon*").permitAll()
+					.antMatchers("/admin/resources/**").permitAll()
+					.antMatchers("/admin/layout/**").permitAll()

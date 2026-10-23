@@ -1,0 +1,8 @@
+public class MerchantConfig implements Serializable, JSONAware {
+	
+
+	/**
+	 * TODO
+	 * Add a generic key value in order to allow the creation of configuration
+	 * on the fly from the client application and read from a key value map
+	 */

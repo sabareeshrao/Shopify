@@ -1,0 +1,8 @@
+	 */
+	@Configuration
+	@Order(1)
+	public static class CustomerConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Bean("customerAuthenticationManager")
+		@Override
+		public AuthenticationManager authenticationManagerBean() throws Exception {

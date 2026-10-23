@@ -1,0 +1,4 @@
+			ProductCriteria criteria);
+	
+	boolean exists(String sku, MerchantStore store);
+	

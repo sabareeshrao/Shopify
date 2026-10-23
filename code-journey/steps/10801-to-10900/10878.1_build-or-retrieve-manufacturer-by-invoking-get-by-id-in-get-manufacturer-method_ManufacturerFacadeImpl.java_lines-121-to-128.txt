@@ -1,0 +1,8 @@
+  @Override
+  public ReadableManufacturer getManufacturer(Long id, MerchantStore store, Language language)
+      throws Exception {
+    Manufacturer manufacturer = manufacturerService.getById(id);
+    
+    
+
+    if (manufacturer == null) {

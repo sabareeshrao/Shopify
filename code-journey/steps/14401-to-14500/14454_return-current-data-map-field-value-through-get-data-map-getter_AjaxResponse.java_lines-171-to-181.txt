@@ -1,0 +1,11 @@
+		
+		returnString.append("}}");
+
+		
+		return returnString.toString();
+
+		
+	}
+	public Map<String,String> getDataMap() {
+		return dataMap;
+	}

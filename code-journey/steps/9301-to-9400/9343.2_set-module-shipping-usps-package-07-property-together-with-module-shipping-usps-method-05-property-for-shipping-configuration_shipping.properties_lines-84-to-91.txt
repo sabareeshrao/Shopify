@@ -1,0 +1,8 @@
+module.shipping.usps.package.07=Envelope
+module.shipping.usps.package.08=Package
+
+module.shipping.usps.method.01=First-Class Mail
+module.shipping.usps.method.02=Priority Mail
+module.shipping.usps.method.03=Express Mail
+module.shipping.usps.method.04=Express SH
+module.shipping.usps.method.05=Express HFP

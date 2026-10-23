@@ -1,0 +1,5 @@
+  private Optional<String> catalogFilter(HttpServletRequest request) {
+
+	    return Optional.ofNullable((String)request.getAttribute("code"));
+  }
+

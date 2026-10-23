@@ -1,0 +1,3 @@
+		boolean isCategoryExist = categoryFacade.existByCode(merchantStore, code);
+		return new ResponseEntity<EntityExists>(new EntityExists(isCategoryExist), HttpStatus.OK);
+	}

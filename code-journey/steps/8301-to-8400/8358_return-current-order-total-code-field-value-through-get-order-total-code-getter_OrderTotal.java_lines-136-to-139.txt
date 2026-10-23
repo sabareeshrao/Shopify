@@ -1,0 +1,4 @@
+	public String getOrderTotalCode() {
+		return orderTotalCode;
+	}
+

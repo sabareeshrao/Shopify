@@ -1,0 +1,8 @@
+
+		OrderCriteria orderCriteria = new OrderCriteria();
+		orderCriteria.setPageSize(count);
+		orderCriteria.setStartPage(page);
+
+		orderCriteria.setCustomerName(name);
+		orderCriteria.setCustomerPhone(phone);
+		orderCriteria.setStatus(status);

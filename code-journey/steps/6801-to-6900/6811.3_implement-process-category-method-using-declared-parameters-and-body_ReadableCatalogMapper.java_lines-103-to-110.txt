@@ -1,0 +1,8 @@
+
+	//TODO it needs to cover by unit tests
+	private void processCategory(Category c, MerchantStore store, Language language, Map<Long, ReadableCategory> hierarchy, Map<Long, ReadableCategory> processed ) {
+		
+		//build category hierarchy
+		
+		ReadableCategory rc = null;
+		ReadableCategory rp = null;

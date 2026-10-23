@@ -1,0 +1,10 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ModulesConfiguration.class);
+	
+	
+	/**
+	 * Goes along with
+	 * shipping-canadapost-spring-boot-starter
+	 */
+    @Autowired
+    private ShippingQuoteModule canadapost;
+    

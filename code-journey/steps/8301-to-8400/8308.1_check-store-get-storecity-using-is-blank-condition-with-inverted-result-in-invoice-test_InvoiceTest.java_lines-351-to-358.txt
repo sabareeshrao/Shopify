@@ -1,0 +1,8 @@
+			if(!StringUtils.isBlank(store.getStorecity())) {
+				if(storeAddress==null) {
+					storeAddress = new StringBuilder();
+				} else {
+					storeAddress.append(", ");
+				}
+				storeAddress.append(store.getStorecity());
+			}

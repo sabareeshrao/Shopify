@@ -1,0 +1,8 @@
+@Controller
+@RequestMapping("/api/v1")
+@Api(tags = { "Product attributes and options / options values management resource (Product Option Management Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product attributes and options / options values management resource", description = "Edit product attributes / options and product option values") })
+public class ProductAttributeOptionApi {
+
+	@Autowired

@@ -1,0 +1,8 @@
+			 * 
+			 * International <Package ID="1ST"> <Machinable>true</Machinable>
+			 * <MailType>Envelope</MailType> <Country>Canada</Country>
+			 * <Length>0</Length> <Width>0</Width> <Height>0</Height>
+			 * <ValueOfContents>250</ValueOfContents> </Package>
+			 * 
+			 * <Package ID="2ND"> <Pounds>4</Pounds> <Ounces>3</Ounces>
+			 * <MailType>Package</MailType> <GXG> <Length>46</Length>

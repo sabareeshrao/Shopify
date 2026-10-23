@@ -1,0 +1,4 @@
+public interface CurrencyFacade {
+
+  List<Currency> getList();
+}

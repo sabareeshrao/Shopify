@@ -1,0 +1,16 @@
+	    
+	    /** first option value **/
+	    ProductOptionValue white = new ProductOptionValue();
+	    white.setMerchantStore(merchant);
+	    white.setCode("white");
+	    
+	    ProductOptionValueDescription whiteDescription = new ProductOptionValueDescription();
+	    whiteDescription.setLanguage(en);
+	    whiteDescription.setName("White");
+	    whiteDescription.setDescription("White color");
+	    whiteDescription.setProductOptionValue(white);
+	    
+	    white.getDescriptions().add(whiteDescription);
+	    
+	    productOptionValueService.saveOrUpdate(white);
+	    

@@ -1,0 +1,4 @@
+label.product.shipeable=Le produit doit être livré
+label.product.outofstock=Non disponible
+label.product.defaultImage.message=En choisissant l'option défaut, cette image sera affichée comme image principale dans le page de produit
+

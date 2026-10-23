@@ -1,0 +1,8 @@
+	@Override
+	public String toJSONString() {
+		
+		if(this.getTransactionDetails()!=null && this.getTransactionDetails().size()>0) {
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+				return mapper.writeValueAsString(this.getTransactionDetails());
+			} catch (Exception e) {

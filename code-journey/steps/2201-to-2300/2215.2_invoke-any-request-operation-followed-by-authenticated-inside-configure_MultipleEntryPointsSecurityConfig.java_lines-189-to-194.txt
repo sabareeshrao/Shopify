@@ -1,0 +1,6 @@
+					.anyRequest().authenticated()
+					.and().httpBasic().authenticationEntryPoint(servicesAuthenticationEntryPoint())
+					.and().formLogin()
+					.successHandler(servicesAuthenticationSuccessHandler);
+
+		}

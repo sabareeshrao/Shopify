@@ -1,0 +1,4 @@
+#You need an AWS access key ID and AWS secret access key to access Amazon SES using an SDK
+#AWS keys need to be specified in environment variables, see above
+#default is using smtp and requires configurations from admin console
+#Email implementation [default | ses]

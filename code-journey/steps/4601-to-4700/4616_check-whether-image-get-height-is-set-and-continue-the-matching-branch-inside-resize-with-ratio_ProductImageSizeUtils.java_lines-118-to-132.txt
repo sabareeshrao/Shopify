@@ -1,0 +1,15 @@
+
+            int fHeight = destinationHeight;
+            int fWidth = destinationWidth;
+
+            //Work out the resized width/height
+            if (image.getHeight() > destinationHeight || image.getWidth() > destinationWidth) {
+				if (image.getHeight() > image.getWidth()) {
+					fHeight = destinationHeight;
+					float sum = (float) image.getWidth() / (float) image.getHeight();
+					fWidth = Math.round(destinationWidth * sum);
+				} else if (image.getWidth() > image.getHeight()) {
+					fWidth = destinationWidth;
+					float sum = (float) image.getHeight() / (float) image.getWidth();
+					fHeight = Math.round(destinationHeight * sum);
+				}

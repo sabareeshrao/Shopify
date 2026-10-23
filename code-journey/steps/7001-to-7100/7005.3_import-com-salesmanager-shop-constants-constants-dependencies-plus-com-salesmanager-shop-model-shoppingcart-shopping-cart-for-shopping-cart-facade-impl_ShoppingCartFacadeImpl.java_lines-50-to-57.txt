@@ -1,0 +1,8 @@
+import com.salesmanager.shop.constants.Constants;
+import com.salesmanager.shop.mapper.cart.ReadableShoppingCartMapper;
+import com.salesmanager.shop.model.shoppingcart.CartModificationException;
+import com.salesmanager.shop.model.shoppingcart.PersistableShoppingCartItem;
+import com.salesmanager.shop.model.shoppingcart.ReadableShoppingCart;
+import com.salesmanager.shop.model.shoppingcart.ShoppingCartAttribute;
+import com.salesmanager.shop.model.shoppingcart.ShoppingCartData;
+import com.salesmanager.shop.model.shoppingcart.ShoppingCartItem;

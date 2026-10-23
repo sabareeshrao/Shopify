@@ -1,0 +1,8 @@
+
+		ByteArrayOutputStream baos = image.getFile();
+		baos.writeTo(outputStream);
+
+		// remove image
+		contentService.removeFile(store.getCode(), FileContentType.LOGO, store.getStoreLogo());
+
+	}

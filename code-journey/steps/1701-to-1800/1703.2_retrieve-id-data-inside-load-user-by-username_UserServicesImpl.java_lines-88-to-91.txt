@@ -1,0 +1,4 @@
+				
+				groupsId.add(group.getId());
+				
+			}

@@ -1,0 +1,23 @@
+		
+	}
+	
+	@Async
+	public void sendContactEmail(
+			ContactForm contact, MerchantStore merchantStore,
+				Locale storeLocale, String contextPath) {
+			   /** issue with putting that elsewhere **/ 
+		       LOGGER.info( "Sending email to store owner" );
+		       try {
+
+		           Map<String, String> templateTokens = emailUtils.createEmailObjectsMap(contextPath, merchantStore, messages, storeLocale);
+		           
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_NAME, contact.getName());
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_EMAIL, contact.getEmail());
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_CONTENT, contact.getComment());
+		           
+		           String[] contactSubject = {contact.getSubject()};
+		           
+		           templateTokens.put(EmailConstants.EMAIL_CUSTOMER_CONTACT, messages.getMessage("email.contact",contactSubject, storeLocale));
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_NAME_LABEL, messages.getMessage("label.entity.name",storeLocale));
+		           templateTokens.put(EmailConstants.EMAIL_CONTACT_EMAIL_LABEL, messages.getMessage("label.generic.email",storeLocale));
+

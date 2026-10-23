@@ -1,0 +1,8 @@
+
+		/** not required at list level **/
+		//qs.append(" left join fetch p.relationships pr");
+
+		qs.append(" where merch.id=:mId");
+		if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+			qs.append(" and pd.language.code=:lang");
+		}

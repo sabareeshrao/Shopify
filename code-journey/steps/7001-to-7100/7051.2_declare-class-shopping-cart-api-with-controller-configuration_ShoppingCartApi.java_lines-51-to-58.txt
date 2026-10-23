@@ -1,0 +1,8 @@
+@Controller
+@RequestMapping("/api/v1")
+@Api(tags = { "Shopping cart api" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Shopping cart resource", description = "Add, remove and retrieve shopping carts") })
+public class ShoppingCartApi {
+
+	@Inject

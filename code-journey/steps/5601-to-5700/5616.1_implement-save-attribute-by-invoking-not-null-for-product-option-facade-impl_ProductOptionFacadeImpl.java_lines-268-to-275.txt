@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductAttributeEntity saveAttribute(Long productId, PersistableProductAttribute attribute,
+			MerchantStore store, Language language) {
+		Validate.notNull(productId, "Product id cannot be null");
+		Validate.notNull(attribute, "ProductAttribute cannot be null");
+		Validate.notNull(attribute.getOption(), "ProductAttribute option cannot be null");
+		Validate.notNull(attribute.getOptionValue(), "ProductAttribute option value cannot be null");
+		Validate.notNull(store, "Store cannot be null");

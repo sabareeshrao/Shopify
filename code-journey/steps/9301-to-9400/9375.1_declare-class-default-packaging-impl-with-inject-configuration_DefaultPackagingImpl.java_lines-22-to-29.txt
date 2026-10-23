@@ -1,0 +1,8 @@
+public class DefaultPackagingImpl implements Packaging {
+
+	
+	@Inject
+	private ShippingService shippingService;
+	
+	@Inject
+	private MerchantLogService merchantLogService;

@@ -1,0 +1,5 @@
+import com.salesmanager.shop.model.catalog.product.product.variantGroup.PersistableProductVariantGroup;
+
+@Component
+public class PersistableProductVariantGroupMapper implements Mapper<PersistableProductVariantGroup, ProductVariantGroup>{
+

@@ -1,0 +1,8 @@
+			}
+			
+			
+			target.setCustomerEmailAddress(customer.getEmailAddress());
+			
+			Delivery delivery = customer.getDelivery();
+			target.setDelivery(delivery);
+			

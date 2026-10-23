@@ -1,0 +1,38 @@
+
+@Service("productFacadeV2")
+@Profile({ "default", "cloud", "gcp", "aws", "mysql" , "local" })
+public class ProductFacadeV2Impl implements ProductFacade {
+	
+
+	@Autowired
+	private ProductService productService;
+	
+	@Inject
+	private CategoryService categoryService;
+	
+	@Inject
+	private ProductRelationshipService productRelationshipService;
+	
+	@Autowired
+	private ReadableProductMapper readableProductMapper;
+	
+	@Autowired
+	private ProductVariantService productVariantService;
+	
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper;
+	
+	@Autowired
+	private ProductAvailabilityService productAvailabilityService;
+	
+	@Autowired
+	private ProductAttributeService productAttributeService;
+	
+	@Inject
+	private PricingService pricingService;
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+

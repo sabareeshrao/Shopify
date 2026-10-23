@@ -1,0 +1,4 @@
+	public String getStoreTemplate() {
+		return storeTemplate;
+	}
+

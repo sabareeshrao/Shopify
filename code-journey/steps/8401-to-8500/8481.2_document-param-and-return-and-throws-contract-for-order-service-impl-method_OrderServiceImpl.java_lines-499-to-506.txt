@@ -1,0 +1,8 @@
+     * line items.
+     * </p>
+     * @param shoppingCart
+     * @param store
+     * @param language
+     * @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     *

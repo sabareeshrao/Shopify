@@ -1,0 +1,4 @@
+
+		if (cart == null) {
+			return null;
+		}

@@ -1,0 +1,5 @@
+	private String discountEndDate;
+	private boolean defaultPrice = true;
+	private BigDecimal price;
+	private BigDecimal discountedPrice;
+	

@@ -1,0 +1,4 @@
+  public List<ReadableProductOptionEntity> getOptions() {
+    return options;
+  }
+

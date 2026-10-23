@@ -1,0 +1,4 @@
+	public void setTaxPriority(Integer taxPriority) {
+		this.taxPriority = taxPriority;
+	}
+

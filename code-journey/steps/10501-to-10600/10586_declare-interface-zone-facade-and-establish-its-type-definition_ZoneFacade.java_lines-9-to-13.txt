@@ -1,0 +1,5 @@
+public interface ZoneFacade {
+
+  List<ReadableZone> getZones(String countryCode, Language language, MerchantStore merchantStore);
+
+}

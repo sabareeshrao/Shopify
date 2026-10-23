@@ -1,0 +1,8 @@
+    
+    Content getById( Long id, MerchantStore store, Language language )
+            throws ServiceException;
+    
+    Content getById( Long id, MerchantStore store)
+            throws ServiceException;
+
+    /**

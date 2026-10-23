@@ -1,0 +1,8 @@
+
+			}
+
+			userModel = converPersistabletUserToUser(store, languageService.defaultLanguage(), userModel, user);
+
+			// if superadmin set original permissions, prevent removing super
+			// admin
+			if (superadmin != null) {

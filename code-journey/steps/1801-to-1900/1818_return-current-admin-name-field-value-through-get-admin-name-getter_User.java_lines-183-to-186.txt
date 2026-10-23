@@ -1,0 +1,4 @@
+	public String getAdminName() {
+		return adminName;
+	}
+

@@ -1,0 +1,4 @@
+	public void setFreeShipping(boolean freeShipping) {
+		this.freeShipping = freeShipping;
+	}
+	

@@ -1,0 +1,8 @@
+
+		ReadableProduct readableProduct = new ReadableProduct();
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		try {
+			readableProduct = populator.populate(product, readableProduct, store, language);
+		} catch (ConversionException e) {

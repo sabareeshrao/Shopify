@@ -1,0 +1,4 @@
+    protected void removeAttribute(final String key, HttpServletRequest request) {
+    	com.salesmanager.shop.utils.SessionUtil.removeSessionAttribute(key, request);
+	}
+    

@@ -1,0 +1,6 @@
+	private ProductAvailability getProductAvailabilityToSave(PersistableInventory inventory, MerchantStore store) {
+		
+		return productInventoryMapper.convert(inventory, store, store.getDefaultLanguage());
+
+	}
+

@@ -1,0 +1,8 @@
+	private String sku;
+	private String image;
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}

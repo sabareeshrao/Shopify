@@ -1,0 +1,2 @@
+module.shipping.usps.message.packages=Vous devez choisir un type d'emballage
+

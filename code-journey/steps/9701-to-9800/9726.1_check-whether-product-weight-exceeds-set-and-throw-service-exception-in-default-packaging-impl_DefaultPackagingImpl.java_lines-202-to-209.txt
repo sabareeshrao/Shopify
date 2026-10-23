@@ -1,0 +1,8 @@
+
+			if (productWeight > maxweight) {
+				merchantLogService.save(new MerchantLog(store,"shipping","Product "
+						+ p.getSku()
+						+ " has a weight larger than the box maximum weight specified. Will use per item calculation."));
+				
+				throw new ServiceException("Product configuration exceeds box configuraton");
+

@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SearchToolsApi.class);
+
+	@Inject
+	private SearchFacade searchFacade;
+
+	@Inject
+	private UserFacade userFacade;
+

@@ -1,0 +1,4 @@
+    public ServiceRuntimeException(Throwable exception) {
+        super(exception);
+    }
+

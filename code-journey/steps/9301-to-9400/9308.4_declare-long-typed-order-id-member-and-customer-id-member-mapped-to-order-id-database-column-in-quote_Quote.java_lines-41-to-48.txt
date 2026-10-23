@@ -1,0 +1,8 @@
+
+	@Column(name = "ORDER_ID", nullable = true)
+	private Long orderId;
+	
+	@Column(name = "CUSTOMER_ID", nullable = true)
+	private Long customerId;
+	
+	@Column(name = "CART_ID", nullable = true)

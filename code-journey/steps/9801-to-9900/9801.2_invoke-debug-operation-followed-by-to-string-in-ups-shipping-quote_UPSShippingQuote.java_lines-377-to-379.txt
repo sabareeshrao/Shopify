@@ -1,0 +1,3 @@
+
+			LOGGER.debug("UPS QUOTE REQUEST " + xmlbuffer.toString());
+

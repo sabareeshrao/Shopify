@@ -1,0 +1,4 @@
+      htmlTemplate.process(email.getTemplateTokens(), htmlWriter);
+    } catch (TemplateException e) {
+      throw new MailPreparationException("Can't generate HTML mail", e);
+    }

@@ -1,0 +1,5 @@
+	public Customer getCustomer() {
+		return customer;
+	}
+
+

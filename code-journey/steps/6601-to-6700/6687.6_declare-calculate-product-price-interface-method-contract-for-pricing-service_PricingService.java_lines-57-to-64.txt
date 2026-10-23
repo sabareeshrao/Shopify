@@ -1,0 +1,8 @@
+	 * @throws ServiceException
+	 */
+	FinalPrice calculateProductPrice(Product product, Customer customer)
+			throws ServiceException;
+
+	/**
+	 * Calculates the FinalPrice of a Product taking into account
+	 * all defined prices and possible rebates. This method should be used to calculate

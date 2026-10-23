@@ -1,0 +1,7 @@
+			 * - Set item price as default instance price
+			 * - Set default image as default instance image
+			 */
+			
+			//get default instance
+			defaultInstance = instances.stream().filter(i -> i.isDefaultSelection()).findAny().orElse(null);
+			

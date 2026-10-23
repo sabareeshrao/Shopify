@@ -1,0 +1,9 @@
+
+                            orderTotalValue = orderTotalValue.add(price.getFinalPrice());
+                            itemSubTotal.setValue(orderTotalValue);
+                            if(price.getProductPrice().getProductPriceType().name().equals(OrderValueType.ONE_TIME)) {
+                                subTotal = subTotal.add(price.getFinalPrice());
+                            }
+                        }
+                    }
+                }

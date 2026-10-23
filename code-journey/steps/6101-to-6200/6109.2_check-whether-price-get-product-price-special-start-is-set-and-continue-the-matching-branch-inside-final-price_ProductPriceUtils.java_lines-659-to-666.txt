@@ -1,0 +1,8 @@
+		boolean hasDiscount = false;
+		if (price.getProductPriceSpecialStartDate() != null || price.getProductPriceSpecialEndDate() != null) {
+
+			if (price.getProductPriceSpecialStartDate() != null) {
+				if (price.getProductPriceSpecialStartDate().before(today)) {
+					if (price.getProductPriceSpecialEndDate() != null) {
+						if (price.getProductPriceSpecialEndDate().after(today)) {
+							hasDiscount = true;

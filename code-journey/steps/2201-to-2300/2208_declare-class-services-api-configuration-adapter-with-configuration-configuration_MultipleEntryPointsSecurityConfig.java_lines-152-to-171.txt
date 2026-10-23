@@ -1,0 +1,20 @@
+
+	}
+	
+	/**
+	 * services api v0
+	 * 
+	 * @author dur9213
+	 * @deprecated
+	 *
+	 */
+	@Configuration
+	@Order(2)
+	public static class ServicesApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Autowired
+		private WebUserServices userDetailsService;
+
+		@Autowired
+		private ServicesAuthenticationSuccessHandler servicesAuthenticationSuccessHandler;
+

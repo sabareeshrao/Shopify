@@ -1,0 +1,9 @@
+	public void setOptionPriceText(String optionPriceText) {
+		this.optionPriceText = optionPriceText;
+	}
+	public String getOptionPriceText() {
+		return optionPriceText;
+	}
+	public void setOptionId(String optionId) {
+		this.optionId = optionId;
+	}

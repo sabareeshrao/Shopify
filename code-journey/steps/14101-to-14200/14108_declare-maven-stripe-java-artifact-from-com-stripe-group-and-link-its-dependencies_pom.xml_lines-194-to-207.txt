@@ -1,0 +1,14 @@
+
+		<!-- Payment dependencies -->
+
+		<!-- Paypal -->
+		<dependency>
+			<groupId>com.paypal.sdk</groupId>
+			<artifactId>merchantsdk</artifactId>
+		</dependency>
+
+		<!-- Stripe -->
+		<dependency>
+			<groupId>com.stripe</groupId>
+			<artifactId>stripe-java</artifactId>
+		</dependency>

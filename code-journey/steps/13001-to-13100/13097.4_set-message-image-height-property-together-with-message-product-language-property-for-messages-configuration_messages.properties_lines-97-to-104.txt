@@ -1,0 +1,8 @@
+message.image.height=Image height too large
+message.image.width=Image width too large
+message.image.size=Image too big
+message.number.invalid=Must be a valid number (eg 5)
+message.productoption.required=A product attribute/option is required
+message.productoptionvalue.required=A product attribute/option value is required
+message.product.language=The product has not been configured with this language. Edit the product and configure it with this language.
+

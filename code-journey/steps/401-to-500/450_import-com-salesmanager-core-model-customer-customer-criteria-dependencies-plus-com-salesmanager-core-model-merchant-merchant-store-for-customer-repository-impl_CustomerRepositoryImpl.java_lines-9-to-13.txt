@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.customer.CustomerCriteria;
+import com.salesmanager.core.model.customer.CustomerList;
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+

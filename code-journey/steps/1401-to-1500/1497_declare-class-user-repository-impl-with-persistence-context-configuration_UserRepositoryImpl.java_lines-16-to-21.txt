@@ -1,0 +1,6 @@
+public class UserRepositoryImpl implements UserRepositoryCustom {
+  
+
+  @PersistenceContext
+  private EntityManager em;
+

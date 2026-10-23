@@ -1,0 +1,8 @@
+    @Inject
+    private JWTTokenUtil jwtTokenUtil;
+
+    @Inject
+    private UserDetailsService jwtCustomerDetailsService;
+    
+    @Inject
+    private CustomerFacade customerFacade;

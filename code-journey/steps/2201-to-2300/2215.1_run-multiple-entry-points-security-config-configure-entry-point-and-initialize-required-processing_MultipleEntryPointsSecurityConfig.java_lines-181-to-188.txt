@@ -1,0 +1,8 @@
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+			.antMatcher("/services/**")
+			.csrf().disable()
+					.authorizeRequests()
+					.antMatchers("/services/public/**").permitAll()
+					.antMatchers("/services/private/**").hasRole("AUTH")

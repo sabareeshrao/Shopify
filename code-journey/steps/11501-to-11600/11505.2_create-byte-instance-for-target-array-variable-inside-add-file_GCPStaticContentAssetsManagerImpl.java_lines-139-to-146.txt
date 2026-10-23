@@ -1,0 +1,8 @@
+	  
+			Storage storage = StorageOptions.getDefaultInstance().getService();
+	  
+			BlobId blobId = BlobId.of(bucketName, nodePath + inputStaticContentData.getFileName());
+			BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType(inputStaticContentData.getFileContentType().name())
+				.build();
+			byte[] targetArray = new byte[inputStaticContentData.getFile().available()];
+			inputStaticContentData.getFile().read(targetArray);

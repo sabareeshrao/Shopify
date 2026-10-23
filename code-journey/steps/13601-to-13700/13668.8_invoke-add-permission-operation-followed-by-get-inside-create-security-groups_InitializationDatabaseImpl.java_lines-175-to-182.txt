@@ -1,0 +1,8 @@
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("SUPERADMIN"))
+		  .addPermission(permissionKeys.get("ADMIN"))
+		  .addPermission(permissionKeys.get("PRODUCTS"))
+		  .addPermission(permissionKeys.get("ORDER"))
+		  .addPermission(permissionKeys.get("CONTENT"))
+		  .addPermission(permissionKeys.get("STORE"))
+		  .addPermission(permissionKeys.get("TAX"))

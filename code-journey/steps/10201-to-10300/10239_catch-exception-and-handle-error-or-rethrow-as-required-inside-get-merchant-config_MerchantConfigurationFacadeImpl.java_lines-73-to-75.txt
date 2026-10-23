@@ -1,0 +1,3 @@
+    } catch(Exception e) {
+      LOGGER.error("Cannot parse value of " + displayShipping);
+    }

@@ -1,0 +1,10 @@
+	private List<ReadableCategory> category = new ArrayList<ReadableCategory>();
+
+	
+/*	public List<ReadableCatalogCategoryEntry> getEntry() {
+		return entry;
+	}
+	public void setEntry(List<ReadableCatalogCategoryEntry> entry) {
+		this.entry = entry;
+	}*/
+

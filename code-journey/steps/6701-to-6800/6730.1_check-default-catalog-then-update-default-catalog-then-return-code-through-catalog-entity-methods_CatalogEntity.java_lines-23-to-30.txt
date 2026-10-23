@@ -1,0 +1,8 @@
+	public boolean isDefaultCatalog() {
+		return defaultCatalog;
+	}
+	public void setDefaultCatalog(boolean defaultCatalog) {
+		this.defaultCatalog = defaultCatalog;
+	}
+	public String getCode() {
+		return code;

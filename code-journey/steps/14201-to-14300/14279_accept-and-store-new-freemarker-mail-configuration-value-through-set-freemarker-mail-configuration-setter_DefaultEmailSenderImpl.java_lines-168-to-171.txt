@@ -1,0 +1,4 @@
+  public void setFreemarkerMailConfiguration(Configuration freemarkerMailConfiguration) {
+    this.freemarkerMailConfiguration = freemarkerMailConfiguration;
+  }
+

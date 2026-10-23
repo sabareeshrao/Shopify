@@ -1,0 +1,8 @@
+	/**
+	 * This describes the availability of a product variant
+	 */
+	@ManyToOne(targetEntity = ProductVariant.class)
+	@JoinColumn(name = "PRODUCT_VARIANT", nullable = true)
+	private ProductVariant productVariant;
+	
+	@Pattern(regexp="^[a-zA-Z0-9_]*$")

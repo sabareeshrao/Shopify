@@ -1,0 +1,4 @@
+		if (customer.getDelivery() == null || StringUtils.isBlank(customer.getDelivery().getPostalCode())) {
+			if(customer.getBilling()!=null) {
+				billing = customer.getBilling();
+			}

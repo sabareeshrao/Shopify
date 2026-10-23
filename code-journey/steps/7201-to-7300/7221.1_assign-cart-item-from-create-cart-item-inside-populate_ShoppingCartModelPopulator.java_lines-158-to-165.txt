@@ -1,0 +1,8 @@
+                            newItems.add( dbItem );
+                        }
+                    }
+                }
+                else
+                {// create new item
+                    com.salesmanager.core.model.shoppingcart.ShoppingCartItem cartItem =
+                        createCartItem( cartMdel, item, store );

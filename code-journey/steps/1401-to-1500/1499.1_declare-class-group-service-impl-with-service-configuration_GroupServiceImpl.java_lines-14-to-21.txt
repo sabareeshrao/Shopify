@@ -1,0 +1,8 @@
+
+@Service("groupService")
+public class GroupServiceImpl extends SalesManagerEntityServiceImpl<Integer, Group>
+    implements GroupService {
+
+  GroupRepository groupRepository;
+
+

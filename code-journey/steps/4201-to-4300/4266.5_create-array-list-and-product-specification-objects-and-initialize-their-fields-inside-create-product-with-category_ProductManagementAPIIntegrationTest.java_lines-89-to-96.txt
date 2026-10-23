@@ -1,0 +1,8 @@
+		assertThat(categoryResponse.getStatusCode(), is(CREATED));
+		assertNotNull(cat.getId());
+
+		final PersistableProduct product = super.product("PRODUCT12");
+		final ArrayList<Category> categories = new ArrayList<>();
+		categories.add(cat);
+		product.setCategories(categories);
+		ProductSpecification specifications = new ProductSpecification();

@@ -1,0 +1,5 @@
+	private String postalCode;
+	private String stateProvince;
+	private String zone;//code
+	private String country;//code
+

@@ -1,0 +1,8 @@
+	@Override
+	public void addStoreLogo(String code, InputContentFile cmsContentImage) {
+		MerchantStore store = getByCode(code);
+		store.setStoreLogo(cmsContentImage.getFileName());
+		saveMerchantStore(store);
+		addLogoToStore(code, cmsContentImage);
+	}
+

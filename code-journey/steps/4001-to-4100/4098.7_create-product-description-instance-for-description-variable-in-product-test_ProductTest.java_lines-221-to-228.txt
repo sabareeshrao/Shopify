@@ -1,0 +1,8 @@
+	    product.setSku("CT12345");
+	    product.setManufacturer(oreilley);
+	    product.setType(generalType);
+	    product.setMerchantStore(store);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Spring in Action");

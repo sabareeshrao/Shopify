@@ -1,0 +1,4 @@
+NotEmpty.customer.shipping.stateProvince=Shipping State / Province is required
+
+NotEmpty.order.creditcard.number=A valid credit card number is required
+NotEmpty.order.creditcard.name=Credit card holder's name is required

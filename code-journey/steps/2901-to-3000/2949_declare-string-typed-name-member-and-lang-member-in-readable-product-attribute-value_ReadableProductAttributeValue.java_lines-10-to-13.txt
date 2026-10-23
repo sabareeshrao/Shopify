@@ -1,0 +1,4 @@
+	private String name;
+	private String lang;
+	private String description;
+

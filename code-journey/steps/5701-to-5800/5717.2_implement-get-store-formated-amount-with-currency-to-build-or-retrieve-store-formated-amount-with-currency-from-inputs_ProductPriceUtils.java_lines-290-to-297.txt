@@ -1,0 +1,8 @@
+	 * @return String
+	 * @throws Exception
+	 */
+	// Utility
+	public String getStoreFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}

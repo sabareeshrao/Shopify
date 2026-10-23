@@ -1,0 +1,4 @@
+	public BigDecimal getPrice() {
+		return price;
+	}
+

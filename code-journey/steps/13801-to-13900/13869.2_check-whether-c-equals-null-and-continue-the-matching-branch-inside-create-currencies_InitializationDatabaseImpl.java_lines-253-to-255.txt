@@ -1,0 +1,3 @@
+            	if(c==null) {
+            		LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            	}

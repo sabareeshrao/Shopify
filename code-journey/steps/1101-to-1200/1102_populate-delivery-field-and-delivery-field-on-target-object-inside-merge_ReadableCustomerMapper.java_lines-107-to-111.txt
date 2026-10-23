@@ -1,0 +1,5 @@
+
+			target.setDelivery(address);
+		} else {
+			target.setDelivery(target.getBilling());
+		}

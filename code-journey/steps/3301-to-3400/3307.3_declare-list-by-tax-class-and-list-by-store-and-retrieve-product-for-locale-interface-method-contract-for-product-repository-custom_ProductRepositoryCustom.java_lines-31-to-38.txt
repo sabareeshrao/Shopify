@@ -1,0 +1,8 @@
+
+		List<Product> listByTaxClass(TaxClass taxClass);
+
+		List<Product> listByStore(MerchantStore store);
+
+		Product getProductForLocale(long productId, Language language,
+				Locale locale);
+

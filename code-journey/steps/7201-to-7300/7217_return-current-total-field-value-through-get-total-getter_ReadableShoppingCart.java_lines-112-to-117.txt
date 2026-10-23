@@ -1,0 +1,6 @@
+	public BigDecimal getTotal() {
+		return total;
+	}
+
+
+

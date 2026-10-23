@@ -1,0 +1,8 @@
+			"zoneName": "Oklahoma",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "OR",
+			"zoneName": "Oregon",
+			"countryCode": "US"
+		},

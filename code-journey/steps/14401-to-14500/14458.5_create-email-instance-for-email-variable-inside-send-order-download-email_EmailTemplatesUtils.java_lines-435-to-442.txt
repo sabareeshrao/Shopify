@@ -1,0 +1,8 @@
+	           String[] orderInfo = {String.valueOf(order.getId())};
+	           
+	           Email email = new Email();
+	           email.setFrom(merchantStore.getStorename());
+	           email.setFromEmail(merchantStore.getStoreEmailAddress());
+	           email.setSubject(messages.getMessage("email.order.download.title", orderInfo, customerLocale));
+	           email.setTo(customer.getEmailAddress());
+	           email.setTemplateName(EmailConstants.EMAIL_ORDER_DOWNLOAD_TPL);

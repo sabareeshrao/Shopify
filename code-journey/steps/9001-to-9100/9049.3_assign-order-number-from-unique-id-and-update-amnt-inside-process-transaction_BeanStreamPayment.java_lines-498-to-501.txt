@@ -1,0 +1,4 @@
+		String orderNumber = uniqueId;
+		
+		String amnt = productPriceUtils.getAdminFormatedAmount(store, amount);
+		

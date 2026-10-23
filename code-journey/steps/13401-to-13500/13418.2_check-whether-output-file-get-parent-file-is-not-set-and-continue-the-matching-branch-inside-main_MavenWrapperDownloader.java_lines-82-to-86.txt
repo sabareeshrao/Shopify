@@ -1,0 +1,5 @@
+        if(!outputFile.getParentFile().exists()) {
+            if(!outputFile.getParentFile().mkdirs()) {
+                System.out.println(
+                        "- ERROR creating output direcrory '" + outputFile.getParentFile().getAbsolutePath() + "'");
+            }

@@ -1,0 +1,4 @@
+	public void setMerchant(String merchant) {
+		this.merchant = merchant;
+	}
+

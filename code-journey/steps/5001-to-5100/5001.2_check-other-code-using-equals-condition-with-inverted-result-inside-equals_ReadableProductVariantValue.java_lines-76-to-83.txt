@@ -1,0 +1,8 @@
+		ReadableProductVariantValue other = (ReadableProductVariantValue) obj;
+		if (code == null) {
+			if (other.code != null)
+				return false;
+		} else if (!code.equals(other.code))
+			return false;
+		if (name == null) {
+			if (other.name != null)

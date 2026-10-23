@@ -1,0 +1,8 @@
+public interface ProductVariantImageService extends SalesManagerEntityService<Long, ProductVariantImage> {
+
+	
+	List<ProductVariantImage> list(Long productVariantId, MerchantStore store);
+	List<ProductVariantImage> listByProduct(Long productId, MerchantStore store);
+	List<ProductVariantImage> listByProductVariantGroup(Long productVariantGroupId, MerchantStore store);
+	
+}

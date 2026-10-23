@@ -1,0 +1,10 @@
+		
+		
+		ProductCriteria productCriteria = new ProductCriteria();
+		productCriteria.setMaxCount(maxCount);
+		productCriteria.setStartIndex(startCount);
+		productCriteria.setProductIds(ids);
+		
+
+		com.salesmanager.core.model.catalog.product.ProductList products = productService.listByStore(store, language, productCriteria);
+

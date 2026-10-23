@@ -1,0 +1,8 @@
+import com.salesmanager.shop.mapper.catalog.product.PersistableProductVariantMapper;
+import com.salesmanager.shop.mapper.catalog.product.ReadableProductVariantMapper;
+import com.salesmanager.shop.model.catalog.product.ReadableProduct;
+import com.salesmanager.shop.model.catalog.product.product.variant.PersistableProductVariant;
+import com.salesmanager.shop.model.catalog.product.product.variant.ReadableProductVariant;
+import com.salesmanager.shop.model.entity.ReadableEntityList;
+import com.salesmanager.shop.store.api.exception.ConstraintException;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;

@@ -1,0 +1,24 @@
+
+	}
+
+	/**
+	 * Get merchant payment module details
+	 * 
+	 * @param code
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/payment/{code}")
+	@ApiOperation(httpMethod = "GET", value = "Payment module by code", produces = "application/json", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public IntegrationModuleConfiguration paymentModule(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		try {
+			
+			// get module
+			IntegrationModule integrationModule = paymentService.getPaymentMethodByCode(merchantStore, code);
+			if (integrationModule == null) {
+				throw new ResourceNotFoundException("Payment module [" + code + "] not found");
+			}

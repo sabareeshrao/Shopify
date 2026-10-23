@@ -1,0 +1,8 @@
+@Table(name = "SM_GROUP", indexes = {
+		@Index(name = "SM_GROUP_GROUP_TYPE", columnList = "GROUP_TYPE") })
+public class Group extends SalesManagerEntity<Integer, Group> implements Auditable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

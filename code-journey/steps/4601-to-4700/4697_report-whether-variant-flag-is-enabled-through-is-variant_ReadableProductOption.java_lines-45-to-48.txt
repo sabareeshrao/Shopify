@@ -1,0 +1,4 @@
+	public boolean isVariant() {
+		return variant;
+	}
+

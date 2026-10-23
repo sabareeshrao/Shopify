@@ -1,0 +1,3 @@
+	public void setDescription(CustomerOptionDescription description) {
+		this.description = description;
+	}

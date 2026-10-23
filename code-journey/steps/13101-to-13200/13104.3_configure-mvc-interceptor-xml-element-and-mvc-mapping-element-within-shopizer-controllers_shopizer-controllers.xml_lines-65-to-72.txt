@@ -1,0 +1,8 @@
+ 		<mvc:interceptor>
+  			<mvc:mapping path="/services/**"/>
+  			<bean class="com.salesmanager.shop.filter.CorsFilter"/>
+ 		</mvc:interceptor>
+ 		
+ 		<!-- customer section filter -->
+ 		<mvc:interceptor>
+  			<mvc:mapping path="/customer/**"/>

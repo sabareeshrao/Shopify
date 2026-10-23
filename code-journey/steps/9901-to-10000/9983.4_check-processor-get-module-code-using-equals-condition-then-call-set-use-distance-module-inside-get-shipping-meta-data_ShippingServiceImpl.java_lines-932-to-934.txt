@@ -1,0 +1,3 @@
+				if(SHIPPING_DISTANCE.equals(processor.getModuleCode())) {
+					metaData.setUseDistanceModule(true);
+				}

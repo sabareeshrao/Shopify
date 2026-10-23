@@ -1,0 +1,8 @@
+	public void setTotal(String total) {
+		this.total = total;
+	}
+	public boolean isDiscounted() {
+		return discounted;
+	}
+	public void setDiscounted(boolean discounted) {
+		this.discounted = discounted;

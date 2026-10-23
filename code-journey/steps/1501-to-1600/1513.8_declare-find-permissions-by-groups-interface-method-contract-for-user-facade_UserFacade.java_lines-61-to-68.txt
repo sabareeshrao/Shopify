@@ -1,0 +1,8 @@
+  List<ReadablePermission> findPermissionsByGroups(List<Integer> ids);
+
+  /**
+   * Determines if a user is authorized to perform an action on a specific store
+   * 
+   * @param userName
+   * @param merchantStoreCode
+   * @return

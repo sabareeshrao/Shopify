@@ -1,0 +1,4 @@
+
+		return categoryFacade.listByProduct(merchantStore, id, lang);
+
+	}

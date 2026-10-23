@@ -1,0 +1,20 @@
+/*			if (options != null) {
+
+				Map selectedintlservices = (Map) config
+						.getConfiguration("service-global-upsxml");
+
+				Iterator i = options.iterator();
+				while (i.hasNext()) {
+					ShippingOption option = (ShippingOption) i.next();
+					// option.setCurrency(store.getCurrency());
+					StringBuffer description = new StringBuffer();
+
+					String code = option.getOptionCode();
+					option.setOptionCode(code);
+					// get description
+					String label = (String) serviceMap.get(code);
+					if (label == null) {
+						log
+								.warn("UPSXML cannot find description for service code "
+										+ code);
+					}

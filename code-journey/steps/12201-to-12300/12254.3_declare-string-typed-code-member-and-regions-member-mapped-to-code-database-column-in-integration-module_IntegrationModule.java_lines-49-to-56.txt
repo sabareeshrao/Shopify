@@ -1,0 +1,8 @@
+	@Column(name = "CODE", nullable = false)
+	private String code;
+
+	@Column(name = "REGIONS")
+	private String regions;
+
+	@Column(name = "CONFIGURATION", length=4000)
+	private String configuration;

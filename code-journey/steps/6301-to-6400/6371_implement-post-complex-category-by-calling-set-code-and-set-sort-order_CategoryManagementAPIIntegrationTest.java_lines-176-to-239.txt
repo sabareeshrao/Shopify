@@ -1,0 +1,64 @@
+     **/
+
+    @Test
+    public void postComplexCategory() throws Exception {
+
+        /** Dining room **/
+        final PersistableCategory dining = new PersistableCategory();
+        dining.setCode("diningroom");
+        dining.setSortOrder(0);
+        dining.setVisible(true);
+
+        CategoryDescription endescription = new CategoryDescription();
+        endescription.setLanguage("en");
+        endescription.setName("Dining room");
+        endescription.setFriendlyUrl("dining-room");
+        endescription.setTitle("Dining room");
+
+        CategoryDescription frdescription = new CategoryDescription();
+        frdescription.setLanguage("fr");
+        frdescription.setName("Salle à manger");
+        frdescription.setFriendlyUrl("salle-a-manger");
+        frdescription.setTitle("Salle à manger");
+
+        List<CategoryDescription> descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+
+        dining.setDescriptions(descriptions);
+
+        final Category diningParent = new Category();
+        diningParent.setCode(dining.getCode());
+
+        /** armoire **/
+        final PersistableCategory armoire = new PersistableCategory();
+        armoire.setCode("armoire");
+        armoire.setSortOrder(1);
+        armoire.setVisible(true);
+
+        armoire.setParent(diningParent);
+
+        endescription = new CategoryDescription();
+        endescription.setLanguage("en");
+        endescription.setName("Armoires");
+        endescription.setFriendlyUrl("armoires");
+        endescription.setTitle("Armoires");
+
+        frdescription = new CategoryDescription();
+        frdescription.setLanguage("fr");
+        frdescription.setName("Armoire");
+        frdescription.setFriendlyUrl("armoires");
+        frdescription.setTitle("Armoires");
+
+        descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+
+        armoire.setDescriptions(descriptions);
+        dining.getChildren().add(armoire);
+
+        /** benches **/
+        final PersistableCategory bench = new PersistableCategory();
+        bench.setCode("bench");
+        bench.setSortOrder(4);
+        bench.setVisible(true);

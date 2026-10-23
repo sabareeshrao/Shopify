@@ -1,0 +1,8 @@
+				if (CreditCardType.AMEX.name().equalsIgnoreCase(cardType)) {
+					creditCardType = CreditCardType.AMEX;
+				} else if (CreditCardType.VISA.name().equalsIgnoreCase(cardType)) {
+					creditCardType = CreditCardType.VISA;
+				} else if (CreditCardType.MASTERCARD.name().equalsIgnoreCase(cardType)) {
+					creditCardType = CreditCardType.MASTERCARD;
+				} else if (CreditCardType.DINERS.name().equalsIgnoreCase(cardType)) {
+					creditCardType = CreditCardType.DINERS;

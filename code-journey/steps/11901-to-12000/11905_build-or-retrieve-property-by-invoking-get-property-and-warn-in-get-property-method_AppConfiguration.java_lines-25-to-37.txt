@@ -1,0 +1,13 @@
+	public String getProperty(String propertyKey) {
+		
+		if(properties!=null) {
+			return properties.getProperty(propertyKey);
+		} else {
+			LOGGER.warn("Application properties are not loaded");
+			return null;
+		}
+		
+		
+	}
+
+}

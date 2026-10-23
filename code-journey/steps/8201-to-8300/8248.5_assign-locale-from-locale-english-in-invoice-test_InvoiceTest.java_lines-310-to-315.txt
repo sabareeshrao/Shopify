@@ -1,0 +1,6 @@
+		
+		orderService.create(order);
+		Assert.assertTrue(orderService.count() == 1);
+		
+		Locale locale = Locale.ENGLISH;
+		

@@ -1,0 +1,4 @@
+	private String query;
+	private int count = DEFAULT_COUNT;
+	private int start = START_COUNT;
+

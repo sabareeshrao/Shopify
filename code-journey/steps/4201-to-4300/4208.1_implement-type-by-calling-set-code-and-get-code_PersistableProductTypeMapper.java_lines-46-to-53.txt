@@ -1,0 +1,8 @@
+	private ProductType type (PersistableProductType type, ProductType destination) throws ServiceException {
+		if(destination == null) {
+			destination = new ProductType();
+		}
+		destination.setCode(type.getCode());
+		destination.setId(type.getId());
+		destination.setAllowAddToCart(type.isAllowAddToCart());
+		destination.setVisible(type.isVisible());

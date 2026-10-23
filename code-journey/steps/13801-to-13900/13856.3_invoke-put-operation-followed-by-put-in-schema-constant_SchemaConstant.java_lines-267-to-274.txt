@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("VEF", "Bolivar Fuerte");
+		CURRENCY_MAP.put("VND", "Dong");
+		CURRENCY_MAP.put("USD", "US Dollar");
+		CURRENCY_MAP.put("XPF", "CFP Franc");
+		CURRENCY_MAP.put("MAD", "Moroccan Dirham");
+		CURRENCY_MAP.put("YER", "Yemeni Rial");
+		CURRENCY_MAP.put("ZMK", "Zambian Kwacha");
+		//CURRENCY_MAP.put("ZWL", "Zimbabwe Dollar");

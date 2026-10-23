@@ -1,0 +1,6 @@
+	private Optional<ReadableProductOptionValue> optionValue(ProductOptionValue optionValue, MerchantStore store,
+			Language language) {
+
+		if (optionValue == null) {
+			return Optional.empty();
+		}

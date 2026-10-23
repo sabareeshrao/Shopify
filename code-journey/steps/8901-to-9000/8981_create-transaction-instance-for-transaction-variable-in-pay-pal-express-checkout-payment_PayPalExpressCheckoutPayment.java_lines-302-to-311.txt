@@ -1,0 +1,10 @@
+			
+			Transaction transaction = new Transaction();
+			transaction.setAmount(summary.getTotal());
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.INIT);
+			transaction.setPaymentType(PaymentType.PAYPAL);
+			transaction.getTransactionDetails().put("TOKEN", token);
+			transaction.getTransactionDetails().put("CORRELATION", correlationID);
+			

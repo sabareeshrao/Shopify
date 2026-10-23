@@ -1,0 +1,8 @@
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();

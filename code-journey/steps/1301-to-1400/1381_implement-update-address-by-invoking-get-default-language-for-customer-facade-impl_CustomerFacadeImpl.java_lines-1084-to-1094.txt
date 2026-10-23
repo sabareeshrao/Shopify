@@ -1,0 +1,11 @@
+  @Override
+  public void updateAddress(String userName, PersistableCustomer customer, MerchantStore store) {
+    
+    ReadableCustomer customerModel = getByUserName(userName, store, store.getDefaultLanguage());
+    customer.setId(customerModel.getId());
+    customer.setUserName(userName);
+    updateAddress(customer, store);
+    
+  }
+
+

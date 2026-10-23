@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.services.reference.currency.CurrencyService;
+import com.salesmanager.core.business.services.reference.language.LanguageService;
+import com.salesmanager.core.business.services.reference.loader.IntegrationModulesLoader;
+import com.salesmanager.core.business.services.reference.loader.ZonesLoader;
+import com.salesmanager.core.business.services.reference.zone.ZoneService;
+import com.salesmanager.core.business.services.system.ModuleConfigurationService;
+import com.salesmanager.core.business.services.system.optin.OptinService;
+import com.salesmanager.core.business.services.tax.TaxClassService;

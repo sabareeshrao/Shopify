@@ -1,0 +1,8 @@
+        orderTotal.setSortOrder(500);
+        orderTotal.setValue(grandTotal);
+        orderTotals.add(orderTotal);
+
+        totalSummary.setTotal(grandTotal);
+        totalSummary.setTotals(orderTotals);
+        return totalSummary;
+

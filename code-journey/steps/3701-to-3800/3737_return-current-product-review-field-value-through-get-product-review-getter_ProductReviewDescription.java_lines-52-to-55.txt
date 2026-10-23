@@ -1,0 +1,4 @@
+	public ProductReview getProductReview() {
+		return productReview;
+	}
+

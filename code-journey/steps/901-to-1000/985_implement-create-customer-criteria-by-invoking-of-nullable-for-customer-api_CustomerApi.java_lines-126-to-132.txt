@@ -1,0 +1,7 @@
+	private CustomerCriteria createCustomerCriteria(Integer start, Integer count) {
+		CustomerCriteria customerCriteria = new CustomerCriteria();
+		Optional.ofNullable(start).ifPresent(customerCriteria::setStartIndex);
+		Optional.ofNullable(count).ifPresent(customerCriteria::setMaxCount);
+		return customerCriteria;
+	}
+

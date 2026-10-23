@@ -1,0 +1,5 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(LanguageServiceImpl.class);
+	
+	@Inject
+	private CacheUtils cache;
+	

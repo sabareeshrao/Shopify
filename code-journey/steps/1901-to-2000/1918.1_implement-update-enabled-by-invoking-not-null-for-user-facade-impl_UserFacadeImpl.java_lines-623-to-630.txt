@@ -1,0 +1,8 @@
+	@Override
+	public void updateEnabled(MerchantStore store, PersistableUser user) {
+		Validate.notNull(user, "User cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(user.getId(), "User.id cannot be null");
+
+		try {
+			User modelUser = userService.findByStore(user.getId(), store.getCode());

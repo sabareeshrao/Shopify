@@ -1,0 +1,3 @@
+			readableGroup.setType(group.getGroupType().name());
+			readableGroups.add(readableGroup);
+		}

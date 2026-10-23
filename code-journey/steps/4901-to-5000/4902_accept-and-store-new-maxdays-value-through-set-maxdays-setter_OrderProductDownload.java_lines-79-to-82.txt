@@ -1,0 +1,4 @@
+	public void setMaxdays(Integer maxdays) {
+		this.maxdays = maxdays;
+	}
+

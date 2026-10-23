@@ -1,0 +1,8 @@
+
+		Validate.notNull(cartModel, "cart cannot be null");
+		Validate.notNull(cartModel.getLineItems(), "Cart should have line items.");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(customer, "Customer cannot be null");
+		OrderTotalSummary orderTotalSummary = orderService.calculateShoppingCartTotal(cartModel, customer, store,
+				language);
+		updateCartModel(cartModel);

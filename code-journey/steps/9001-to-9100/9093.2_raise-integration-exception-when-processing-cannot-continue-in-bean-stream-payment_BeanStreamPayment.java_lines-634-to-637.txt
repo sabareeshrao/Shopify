@@ -1,0 +1,4 @@
+			throw new IntegrationException("Error while processing BeanStream transaction",e);
+
+		} finally {
+			

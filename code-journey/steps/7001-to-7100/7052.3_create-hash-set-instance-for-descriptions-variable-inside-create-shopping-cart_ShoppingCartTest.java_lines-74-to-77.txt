@@ -1,0 +1,4 @@
+
+	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
+	    descriptions.add(shirtsEnglishDescription);
+

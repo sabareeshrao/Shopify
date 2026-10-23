@@ -1,0 +1,8 @@
+		/**
+		 * br -> if availabilities is null, it may be bcz a variant is a decorated product with no specific inventory.
+		 * in this case it should display the parent product inventory
+		 * 
+		 */
+		
+		if(availabilities.isEmpty()) {
+			//get parent product

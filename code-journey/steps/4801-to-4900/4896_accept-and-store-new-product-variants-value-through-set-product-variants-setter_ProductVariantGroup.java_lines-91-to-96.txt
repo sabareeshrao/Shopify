@@ -1,0 +1,6 @@
+	public void setProductVariants(Set<ProductVariant> productVariants) {
+		this.productVariants = productVariants;
+	}
+
+
+}

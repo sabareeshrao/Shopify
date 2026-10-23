@@ -1,0 +1,14 @@
+
+/**
+ * Custom authautentication provider for admin api
+ * @author carlsamson
+ *
+ */
+public class JWTAdminAuthenticationProvider extends DaoAuthenticationProvider {
+	
+    @Autowired
+    private UserDetailsService jwtAdminDetailsService;
+    
+    @Inject
+    private PasswordEncoder passwordEncoder;
+

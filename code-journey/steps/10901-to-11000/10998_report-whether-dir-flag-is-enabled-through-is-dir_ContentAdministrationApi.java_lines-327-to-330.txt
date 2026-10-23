@@ -1,0 +1,4 @@
+		public boolean isDir() {
+			return dir;
+		}
+

@@ -1,0 +1,6 @@
+	@Override
+	public void setModuleCode(String moduleCode) {
+		this.moduleCode = moduleCode;
+		
+	}
+

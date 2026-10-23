@@ -1,0 +1,8 @@
+		    	   
+		    	   //format order
+		    	   //String storeUri = FilePathUtils.buildStoreUri(merchantStore, contextPath);
+		    	   StringBuilder orderTable = new StringBuilder();
+		    	   orderTable.append(TABLE);
+		    	   for(OrderProduct product : order.getOrderProducts()) {
+		    		   //Product productModel = productService.getByCode(product.getSku(), language);
+		    		   orderTable.append(TR);

@@ -1,0 +1,5 @@
+		taxClass.setId(id);
+		taxFacade.updateTaxClass(id, taxClass, merchantStore, language);
+
+	}
+

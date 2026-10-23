@@ -1,0 +1,8 @@
+   *
+   * @param store
+   * @param language
+   * @param criterias
+   * @return
+   * @throws Exception
+   */
+  ReadableProductList getProductListsByCriterias(MerchantStore store, Language language,

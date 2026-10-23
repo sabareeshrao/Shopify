@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "Sevilla",
+		"zoneName": "Sevilla",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Soria",
+		"zoneName": "Soria",

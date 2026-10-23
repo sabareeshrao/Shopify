@@ -1,0 +1,16 @@
+
+
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/property/set/{id}" }, method = RequestMethod.PUT)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void update(
+			@Valid @RequestBody PersistableProductOptionSet option, 
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		option.setId(id);
+		productOptionSetFacade.update(id, option, merchantStore, language);
+
+	}

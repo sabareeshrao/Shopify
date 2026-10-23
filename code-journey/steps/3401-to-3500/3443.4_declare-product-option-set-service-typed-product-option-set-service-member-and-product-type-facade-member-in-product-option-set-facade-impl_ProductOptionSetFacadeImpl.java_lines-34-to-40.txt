@@ -1,0 +1,7 @@
+
+	@Autowired
+	private ProductOptionSetService productOptionSetService;
+
+	@Autowired
+	private ProductTypeFacade productTypeFacade;;
+

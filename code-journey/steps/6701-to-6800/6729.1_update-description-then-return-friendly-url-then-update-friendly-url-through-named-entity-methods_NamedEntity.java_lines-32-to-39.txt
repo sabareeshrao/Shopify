@@ -1,0 +1,8 @@
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getFriendlyUrl() {
+		return friendlyUrl;
+	}
+	public void setFriendlyUrl(String friendlyUrl) {
+		this.friendlyUrl = friendlyUrl;

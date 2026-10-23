@@ -1,0 +1,8 @@
+label.currency=Currency
+label.bgcolorcode=Background Color
+label.storelogo=Store Logo
+label.storebanner=Store Banner
+label.storephone=Store Phone
+label.accepteddomains=Accepted Domains
+label.storeaddress=Store Address
+label.storecity=Store City

@@ -1,0 +1,8 @@
+		"zoneName": "Yukon Territory",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NDS",
+		"zoneName": "Niedersachsen",
+		"countryCode": "DE"
+	},

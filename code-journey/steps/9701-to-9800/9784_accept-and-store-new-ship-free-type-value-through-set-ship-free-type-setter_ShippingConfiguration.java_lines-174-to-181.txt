@@ -1,0 +1,8 @@
+	public void setShipFreeType(String shipFreeType) {
+		this.shipFreeType = shipFreeType;
+		ShippingType sType = ShippingType.NATIONAL;
+		if(shipFreeType.equals(ShippingType.INTERNATIONAL.name())) {
+			sType = ShippingType.INTERNATIONAL;
+		}
+		setFreeShippingType(sType);
+	}

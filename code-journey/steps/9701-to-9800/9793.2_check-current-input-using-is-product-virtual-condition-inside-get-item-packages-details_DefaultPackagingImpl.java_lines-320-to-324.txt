@@ -1,0 +1,5 @@
+			Product product = shippingProduct.getProduct();
+
+			if (product.isProductVirtual()) {
+				continue;
+			}

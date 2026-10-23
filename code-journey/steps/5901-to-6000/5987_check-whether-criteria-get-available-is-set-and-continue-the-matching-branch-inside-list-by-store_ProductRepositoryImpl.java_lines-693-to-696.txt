@@ -1,0 +1,4 @@
+
+		if (criteria.getAvailable() != null) {
+			countQ.setParameter("dt", new Date());
+		}

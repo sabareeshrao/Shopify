@@ -1,0 +1,6 @@
+	public List<ReadableOrderTotal> getTotals() {
+		return totals;
+	}
+
+
+

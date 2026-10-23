@@ -1,0 +1,8 @@
+        catch (final Exception ex)
+        {
+            LOG.info( "Error while getting values from object", ex );
+            return false;
+           
+        }
+       
+    }

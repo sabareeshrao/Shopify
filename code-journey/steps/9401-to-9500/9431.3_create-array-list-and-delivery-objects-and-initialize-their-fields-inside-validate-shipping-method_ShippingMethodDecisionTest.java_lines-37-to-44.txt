@@ -1,0 +1,8 @@
+		pDetail.setShippingWidth(78);
+		List<PackageDetails> details = new ArrayList<PackageDetails>();
+		details.add(pDetail);
+
+		Delivery delivery = new Delivery();
+		delivery.setAddress("358 Du Languedoc");
+		delivery.setCity("Boucherville");
+		delivery.setPostalCode("J4B 8J9");

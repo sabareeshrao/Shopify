@@ -1,0 +1,15 @@
+		
+
+		Number count = (Number) countQ.getSingleResult();
+
+		orderList.setTotalCount(count.intValue());
+		
+        if(count.intValue()==0)
+        	return orderList;
+        
+		//TO BE USED
+        int max = criteria.getMaxCount();
+        int first = criteria.getStartIndex();
+        
+        objectQ.setFirstResult(first);
+        

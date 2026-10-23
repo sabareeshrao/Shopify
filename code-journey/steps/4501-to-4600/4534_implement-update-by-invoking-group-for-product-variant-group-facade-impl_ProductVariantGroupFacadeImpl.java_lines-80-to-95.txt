@@ -1,0 +1,16 @@
+	@Override
+	public void update(Long productVariantGroup, PersistableProductVariantGroup instance, MerchantStore store,
+			Language language) {
+		ProductVariantGroup group = this.group(productVariantGroup, store);
+		instance.setId(productVariantGroup);
+		
+		group = persistableProductIntanceGroupMapper.merge(instance, group, store, language);
+		
+		try {
+			productVariantGroupService.saveOrUpdate(group);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot save product instance group [" + productVariantGroup + "] for store [" + store.getCode() + "]"); 
+		}
+		
+	}
+

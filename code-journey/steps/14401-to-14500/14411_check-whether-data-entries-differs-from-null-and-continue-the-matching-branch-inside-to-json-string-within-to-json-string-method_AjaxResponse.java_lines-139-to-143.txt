@@ -1,0 +1,5 @@
+
+			if(dataEntries!=null) {
+				returnString.append(",").append(dataEntries.toString());
+			}
+		}

@@ -1,0 +1,8 @@
+	public Map<String,String> getQuoteInformations() {
+		return quoteInformations;
+	}
+	public void setQuoteInformations(Map<String,String> quoteInformations) {
+		this.quoteInformations = quoteInformations;
+	}
+	public Address getDelivery() {
+		return delivery;

@@ -1,0 +1,8 @@
+	     */
+		@Deprecated
+		Product getByCode(String productCode, Language language);
+		
+	    /**
+	     * Get product by code
+	     * @deprecated
+	     * This method is no longer acceptable to get product by code.

@@ -1,0 +1,4 @@
+	public Set<OrderProduct> getOrderProducts() {
+		return orderProducts;
+	}
+

@@ -1,0 +1,4 @@
+	public ProductCondition getCondition() {
+		return condition;
+	}
+

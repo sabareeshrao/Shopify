@@ -1,0 +1,22 @@
+{
+	"properties": {
+		"id": {
+			"type": "long"
+		},
+		"inventory": {
+			"type": "nested"
+		},
+		"description": {
+			"type": "text"
+		},
+		"name": {
+			"type": "text",
+			"analyzer": "name_analyzer"
+		},
+		"category": {
+			"type": "keyword",
+			"normalizer": "custom_normalizer",
+			"fields": {
+        		"raw": {
+            		"type": "text" 
+        		}

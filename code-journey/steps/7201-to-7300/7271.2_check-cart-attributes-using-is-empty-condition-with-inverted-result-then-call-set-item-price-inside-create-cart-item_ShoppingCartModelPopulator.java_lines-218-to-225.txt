@@ -1,0 +1,8 @@
+        item.setItemPrice( shoppingCartItem.getProductPrice() );
+        item.setShoppingCart( cart );
+        item.setSku(shoppingCartItem.getSku());
+
+        // attributes
+        List<ShoppingCartAttribute> cartAttributes = shoppingCartItem.getShoppingCartAttributes();
+        if ( !CollectionUtils.isEmpty( cartAttributes ) )
+        {

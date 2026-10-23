@@ -1,0 +1,7 @@
+	private void settings(SearchConfiguration config, String language) throws Exception{
+		Validate.notEmpty(language, "Configuration requires language");
+		String settings = loadClassPathResource(SETTINGS + "_DEFAULT.json");
+		//specific settings
+		if(language.equals("en")) {
+			settings = loadClassPathResource(SETTINGS+ "_" + language +".json");
+		}

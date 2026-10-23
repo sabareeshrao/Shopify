@@ -1,0 +1,8 @@
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/payment/{code}")
+	@ApiOperation(httpMethod = "GET", value = "Payment module by code", produces = "application/json", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public IntegrationModuleConfiguration paymentModule(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {

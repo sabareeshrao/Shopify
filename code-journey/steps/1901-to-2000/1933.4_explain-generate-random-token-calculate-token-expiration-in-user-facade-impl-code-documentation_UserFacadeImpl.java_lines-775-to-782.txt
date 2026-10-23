@@ -1,0 +1,8 @@
+		 * 
+		 * Generate random token
+		 * 
+		 * Calculate token expiration date
+		 * 
+		 * Now + 48 hours
+		 * 
+		 * How to update User in the database with token

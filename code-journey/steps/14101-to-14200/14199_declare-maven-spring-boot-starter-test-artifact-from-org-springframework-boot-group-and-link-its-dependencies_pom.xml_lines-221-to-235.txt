@@ -1,0 +1,15 @@
+
+		<!-- google cloud storage -->
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<!-- Up to date for GCP storage issue -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+
+		<!-- tests dependencies -->
+		<!-- http://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>

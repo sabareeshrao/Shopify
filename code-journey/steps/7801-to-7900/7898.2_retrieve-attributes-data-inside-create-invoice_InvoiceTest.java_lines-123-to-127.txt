@@ -1,0 +1,5 @@
+
+	    product.getAttributes().add(colorAttribute);
+	    
+	    productService.createProduct(product);
+	    

@@ -1,0 +1,33 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProductReviewApi.class);
+
+  @RequestMapping(
+      value = {
+        "/private/products/{id}/reviews",
+        "/auth/products/{id}/reviews",
+        "/auth/products/{id}/reviews",
+        "/auth/products/{id}/reviews"
+      },
+      method = RequestMethod.POST)
+  @ResponseStatus(HttpStatus.CREATED)
+  @ResponseBody
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public PersistableProductReview create(
+      @PathVariable final Long id,
+      @Valid @RequestBody PersistableProductReview review,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+
+    try {
+      // rating already exist
+      ProductReview prodReview =
+          productReviewService.getByProductAndCustomer(
+              review.getProductId(), review.getCustomerId());
+      if (prodReview != null) {
+        response.sendError(500, "A review already exist for this customer and product");
+        return null;
+      }

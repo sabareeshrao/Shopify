@@ -1,0 +1,8 @@
+		
+		
+			if(zones==null) {
+				zones = new HashMap<String, Zone>();
+				List<Zone> zns = zoneRepository.listByLanguage(language.getId());
+			
+				//set names
+				for(Zone zone : zns) {

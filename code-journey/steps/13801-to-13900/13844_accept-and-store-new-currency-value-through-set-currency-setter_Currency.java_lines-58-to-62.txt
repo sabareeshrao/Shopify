@@ -1,0 +1,5 @@
+	public void setCurrency(java.util.Currency currency) {
+		this.currency = currency;
+		this.code = currency.getCurrencyCode();
+	}
+

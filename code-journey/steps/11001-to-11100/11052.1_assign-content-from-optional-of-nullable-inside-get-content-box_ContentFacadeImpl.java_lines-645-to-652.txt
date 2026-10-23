@@ -1,0 +1,8 @@
+				
+				return box;
+				
+			} else {
+
+				content = 	Optional.ofNullable(contentService.getByCode(code, store))
+						.orElseThrow(() -> new ResourceNotFoundException(
+								"Resource not found [" + code + "] for store [" + store.getCode() + "]"));

@@ -1,0 +1,9 @@
+
+				List<ReadableOrderTotal> totals = new ArrayList<ReadableOrderTotal>();
+				for (com.salesmanager.core.model.order.OrderTotal t : orderSummary.getTotals()) {
+					ReadableOrderTotal total = new ReadableOrderTotal();
+					total.setCode(t.getOrderTotalCode());
+					total.setValue(t.getValue());
+					total.setText(t.getText());
+					totals.add(total);
+				}

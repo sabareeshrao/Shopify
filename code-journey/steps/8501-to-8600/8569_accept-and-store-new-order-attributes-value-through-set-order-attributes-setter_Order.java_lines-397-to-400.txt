@@ -1,0 +1,4 @@
+	public void setOrderAttributes(Set<OrderAttribute> orderAttributes) {
+		this.orderAttributes = orderAttributes;
+	}
+	

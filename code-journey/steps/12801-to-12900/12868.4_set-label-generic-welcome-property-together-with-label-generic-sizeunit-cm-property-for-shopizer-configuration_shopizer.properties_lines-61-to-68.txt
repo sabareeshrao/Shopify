@@ -1,0 +1,8 @@
+
+label.generic.welcome=Welcome
+label.generic.weightunit.LB=Pounds
+label.generic.weightunit.KG=Kilograms
+label.generic.language=Language
+label.generic.search=Search
+
+label.generic.sizeunit.CM=Centimeters

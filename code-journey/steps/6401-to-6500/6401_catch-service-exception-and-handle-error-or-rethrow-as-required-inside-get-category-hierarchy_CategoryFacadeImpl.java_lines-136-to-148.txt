@@ -1,0 +1,13 @@
+			
+			returnList.setCategories(filteredList);
+
+			
+			
+			return returnList;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}
+

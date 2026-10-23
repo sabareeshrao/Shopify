@@ -1,0 +1,8 @@
+
+	/**
+	 * Adds a status to an order status history
+	 * @param status
+	 * @param id
+	 * @param store
+	 */
+	void createOrderStatus(PersistableOrderStatusHistory status, Long id, MerchantStore store);

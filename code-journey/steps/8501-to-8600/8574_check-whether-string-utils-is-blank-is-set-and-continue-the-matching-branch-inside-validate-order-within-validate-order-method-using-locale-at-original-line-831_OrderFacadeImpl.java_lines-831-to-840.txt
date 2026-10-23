@@ -1,0 +1,10 @@
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getZone())
+						&& StringUtils.isBlank(order.getCustomer().getDelivery().getStateProvince())) {
+					FieldError error = new FieldError("customer.delivery.stateProvince",
+							"customer.delivery.stateProvince",
+							messages.getMessage("NotEmpty.customer.shipping.stateProvince", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.stateProvince",
+							messages.getMessage("NotEmpty.customer.shipping.stateProvince", locale));
+				}

@@ -1,0 +1,4 @@
+module.shipping.canadapost.message.identifier=Identifiant Postes Canada requis
+module.shipping.canadapost.message.packages=Au moins un type d'emballage
+module.shipping.canadapost.message.apikey=Clé API requise
+

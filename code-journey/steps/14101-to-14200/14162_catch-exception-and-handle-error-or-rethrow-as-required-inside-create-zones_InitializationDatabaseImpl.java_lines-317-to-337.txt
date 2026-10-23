@@ -1,0 +1,21 @@
+              }*/
+              
+              //lookup additional zones
+              //iterate configured languages
+      		  LOGGER.info("Populating additional zones");
+
+              //load reference/zones/* (zone config for additional country)
+              //example in.json and in-fr.son
+              //will load es zones and use a specific file for french es zones
+      		  List<Map<String, Zone>> loadIndividualZones = zonesLoader.loadIndividualZones();
+      		  
+      		loadIndividualZones.forEach(this::addZonesToDb);
+
+  		} catch (Exception e) {
+  		    
+  			throw new ServiceException(e);
+  		}
+
+	}
+
+	

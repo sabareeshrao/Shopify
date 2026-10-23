@@ -1,0 +1,6 @@
+	protected final Log logger = LogFactory.getLog(getClass());
+	
+    @Value("${authToken.header}")
+    private String tokenHeader;
+
+	

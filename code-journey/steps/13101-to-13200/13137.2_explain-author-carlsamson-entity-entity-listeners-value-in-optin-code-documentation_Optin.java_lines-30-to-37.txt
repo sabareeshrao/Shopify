@@ -1,0 +1,8 @@
+ * @author carlsamson
+ *
+ */
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "OPTIN",uniqueConstraints=
+@UniqueConstraint(columnNames = {"MERCHANT_ID", "CODE"}))
+public class Optin extends SalesManagerEntity<Long, Optin> implements Serializable {

@@ -1,0 +1,8 @@
+ * @author Carl Samson
+ *
+ */
+public class FinalPrice implements Serializable {
+	
+	/**
+	 * 
+	 */

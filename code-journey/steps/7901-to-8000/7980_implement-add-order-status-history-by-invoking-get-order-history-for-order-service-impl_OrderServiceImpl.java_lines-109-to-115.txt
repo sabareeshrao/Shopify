@@ -1,0 +1,7 @@
+    @Override
+    public void addOrderStatusHistory(Order order, OrderStatusHistory history) throws ServiceException {
+        order.getOrderHistory().add(history);
+        history.setOrder(order);
+        update(order);
+    }
+

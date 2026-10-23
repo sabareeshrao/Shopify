@@ -1,0 +1,8 @@
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * Serves as the order total summary calculation
+ * @author c.samson
+ *
+ */

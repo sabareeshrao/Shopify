@@ -1,0 +1,8 @@
+	protected CustomerService customerService;
+	
+	@Inject
+	protected CustomerOptionService customerOptionService;
+	
+	@Inject
+	protected CustomerOptionValueService customerOptionValueService;
+	

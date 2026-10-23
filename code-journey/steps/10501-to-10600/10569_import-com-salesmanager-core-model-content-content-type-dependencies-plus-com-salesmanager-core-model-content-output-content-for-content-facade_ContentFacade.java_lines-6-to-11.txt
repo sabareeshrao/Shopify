@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.content.ContentType;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.OutputContentFile;
+
+//TODO above deprecation, use shop model instead of core model
+

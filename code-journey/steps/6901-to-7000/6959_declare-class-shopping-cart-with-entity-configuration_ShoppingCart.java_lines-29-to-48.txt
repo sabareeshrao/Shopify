@@ -1,0 +1,20 @@
+import com.salesmanager.core.model.common.audit.AuditListener;
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+/**
+ * <p>Shopping cart is responsible for storing and carrying
+ * shopping cart information.Shopping Cart consists of {@link ShoppingCartItem}
+ * which represents individual lines items associated with the shopping cart</p> 
+ * @author Umesh Awasthi
+ * version 2.0
+ *
+ */
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "SHOPPING_CART", indexes= { @Index(name = "SHP_CART_CODE_IDX", columnList = "SHP_CART_CODE"), @Index(name = "SHP_CART_CUSTOMER_IDX", columnList = "CUSTOMER_ID")})
+public class ShoppingCart extends SalesManagerEntity<Long, ShoppingCart> implements Auditable{
+
+	

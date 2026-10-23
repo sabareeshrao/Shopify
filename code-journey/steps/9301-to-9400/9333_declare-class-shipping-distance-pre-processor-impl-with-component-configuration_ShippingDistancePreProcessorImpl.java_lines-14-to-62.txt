@@ -1,0 +1,49 @@
+import com.google.maps.DistanceMatrixApi;
+import com.google.maps.GeoApiContext;
+import com.google.maps.GeocodingApi;
+import com.google.maps.model.Distance;
+import com.google.maps.model.DistanceMatrix;
+import com.google.maps.model.DistanceMatrixRow;
+import com.google.maps.model.GeocodingResult;
+import com.google.maps.model.LatLng;
+import com.salesmanager.core.model.common.Delivery;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.shipping.PackageDetails;
+import com.salesmanager.core.model.shipping.ShippingConfiguration;
+import com.salesmanager.core.model.shipping.ShippingOrigin;
+import com.salesmanager.core.model.shipping.ShippingQuote;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+import com.salesmanager.core.modules.constants.Constants;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.shipping.model.ShippingQuotePrePostProcessModule;
+
+/**
+ * Uses google api to get lng, lat and distance in km for a given delivery address
+ * The route will be displayed on a map to the end user and available
+ * from the admin section
+ * 
+ * The module can be configured to use miles by changing distance.inMeters
+ * 
+ * To use this pre-processor you will need a google api-key
+ * 
+ * Access google developers console
+ * https://console.developers.google.com/project
+ * 
+ * Geocoding
+ * Distance Matrix
+ * Directions
+ * 
+ * Create new key for server application
+ * Copy API key
+ * https://console.developers.google.com
+ * 
+ * https://developers.google.com/maps/documentation/webservices/client-library
+ * https://github.com/googlemaps/google-maps-services-java/tree/master/src/test/java/com/google/maps
+ * 
+ * @author carlsamson
+ *
+ */
+@Component("shippingDistancePreProcessor")
+public class ShippingDistancePreProcessorImpl implements ShippingQuotePrePostProcessModule {
+	

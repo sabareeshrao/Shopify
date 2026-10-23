@@ -1,0 +1,8 @@
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public ReadableShippingSummary shipping(
+      @PathVariable final String code,
+      @RequestBody AddressLocation address,
+      @ApiIgnore MerchantStore merchantStore,

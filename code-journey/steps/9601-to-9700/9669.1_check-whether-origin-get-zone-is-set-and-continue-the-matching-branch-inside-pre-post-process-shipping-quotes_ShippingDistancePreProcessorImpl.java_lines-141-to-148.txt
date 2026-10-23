@@ -1,0 +1,8 @@
+		if(origin.getZone()!=null) {
+			originAddress.append(origin.getZone().getCode()).append(" ");
+		}
+		originAddress.append(origin.getCountry().getIsoCode());
+
+		
+		//build destination address
+		StringBuilder destinationAddress = new StringBuilder();

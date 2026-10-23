@@ -1,0 +1,14 @@
+			
+/*			List<MerchantStore> children = merchantStoreService.listChildren(code);
+			List<ReadableMerchantStore> readableStores = new ArrayList<ReadableMerchantStore>();
+			if (!CollectionUtils.isEmpty(children)) {
+				for (MerchantStore store : children)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}
+			return readableStores;*/
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}
+

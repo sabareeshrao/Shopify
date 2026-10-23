@@ -1,0 +1,8 @@
+				|| (cartAttributes != null && cartAttributes.size() > 0)) {
+			if (cartAttributes != null) {
+				for (ShoppingCartAttributeItem attribute : cartAttributes) {
+					long attributeId = attribute.getProductAttributeId();
+					boolean existingAttribute = false;
+					for (ProductAttribute productAttribute : productAttributes) {
+
+						if (productAttribute.getId().equals(attributeId)) {

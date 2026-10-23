@@ -1,0 +1,3 @@
+				//q.setParameter("mid", merchant.getId());
+				q.setParameter("mid", ids);
+			}

@@ -1,0 +1,4 @@
+						//.getById(shoppingCartItem.getProductId());
+				if (product == null) {
+					throw new Exception("Item with sku " + shoppingCartItem.getSku() + " does not exist");
+				}

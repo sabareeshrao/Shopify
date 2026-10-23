@@ -1,0 +1,5 @@
+		
+		String sTransactionType = configuration.getIntegrationKeys().get("transaction");
+		if(sTransactionType==null) {
+			sTransactionType = TransactionType.AUTHORIZECAPTURE.name();
+		}

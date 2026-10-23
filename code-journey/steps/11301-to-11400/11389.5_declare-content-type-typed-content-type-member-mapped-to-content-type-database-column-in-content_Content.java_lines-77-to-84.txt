@@ -1,0 +1,8 @@
+	
+	//Used for grouping
+	//BOX, SECTION, PAGE
+	@Column(name = "CONTENT_TYPE", length=10, nullable=true)
+	@Enumerated(value = EnumType.STRING)
+	private ContentType contentType; 
+	
+	@Column(name = "SORT_ORDER")

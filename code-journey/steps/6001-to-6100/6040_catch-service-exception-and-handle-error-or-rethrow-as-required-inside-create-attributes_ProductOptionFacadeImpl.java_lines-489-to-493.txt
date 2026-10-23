@@ -1,0 +1,5 @@
+		
+			productService.save(product);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while saving product with attributes", e);
+		}

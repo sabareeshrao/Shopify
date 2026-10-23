@@ -1,0 +1,6 @@
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);
+		
+		customerService.create(customer);
+		customer = customerService.getById(customer.getId());
+		

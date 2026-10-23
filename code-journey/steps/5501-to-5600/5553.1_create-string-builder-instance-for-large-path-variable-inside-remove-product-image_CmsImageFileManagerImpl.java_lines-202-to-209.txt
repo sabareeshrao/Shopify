@@ -1,0 +1,8 @@
+
+      Path path = Paths.get(smallPath.toString());
+
+      Files.deleteIfExists(path);
+
+      // delete large
+      StringBuilder largePath = new StringBuilder(nodePath);
+      largePath.append(Constants.SLASH).append(LARGE).append(Constants.SLASH)

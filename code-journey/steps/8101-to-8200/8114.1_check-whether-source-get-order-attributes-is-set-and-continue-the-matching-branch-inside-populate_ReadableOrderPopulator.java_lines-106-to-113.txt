@@ -1,0 +1,8 @@
+		
+		if(source.getOrderAttributes()!=null && source.getOrderAttributes().size()>0) {
+			for(OrderAttribute attr : source.getOrderAttributes()) {
+				com.salesmanager.shop.model.order.OrderAttribute a = new com.salesmanager.shop.model.order.OrderAttribute();
+				a.setKey(attr.getKey());
+				a.setValue(attr.getValue());
+				target.getAttributes().add(a);
+			}

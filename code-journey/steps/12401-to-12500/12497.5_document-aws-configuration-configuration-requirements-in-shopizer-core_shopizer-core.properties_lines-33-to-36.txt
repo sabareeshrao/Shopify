@@ -1,0 +1,4 @@
+#AWS S3 configuration
+#Name of bucket files
+#See regions here https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
+#Credentials must be set as environment variables when launching Shopizer

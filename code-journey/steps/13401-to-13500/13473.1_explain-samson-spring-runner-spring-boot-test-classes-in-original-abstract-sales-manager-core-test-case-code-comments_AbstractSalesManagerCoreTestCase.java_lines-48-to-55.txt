@@ -1,0 +1,8 @@
+
+/**
+ * @author c.samson
+ *
+ */
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes=ConfigurationTest.class)

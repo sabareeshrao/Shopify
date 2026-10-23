@@ -1,0 +1,8 @@
+				
+				DistanceMatrix  distanceRequest = DistanceMatrixApi.newRequest(context)
+		 		.origins(new LatLng(originLatLng.lat, originLatLng.lng))
+		 		
+		 		.destinations(new LatLng(destinationLatLng.lat, destinationLatLng.lng))
+		 				.awaitIgnoreError();
+				
+				

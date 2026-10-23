@@ -1,0 +1,8 @@
+	 */
+	ReadableProductList listItemsByGroup(String group, MerchantStore store, Language language) throws Exception;
+
+	/**
+	 * Add product to a group
+	 * @param product
+	 * @param group
+	 * @param store

@@ -1,0 +1,5 @@
+public interface CurrencyRepository extends JpaRepository <Currency, Long> {
+
+	
+	Currency getByCode(String code);
+}

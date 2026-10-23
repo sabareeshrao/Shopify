@@ -1,0 +1,8 @@
+
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name = "PARENT_ID")
+	private MerchantStore parent;

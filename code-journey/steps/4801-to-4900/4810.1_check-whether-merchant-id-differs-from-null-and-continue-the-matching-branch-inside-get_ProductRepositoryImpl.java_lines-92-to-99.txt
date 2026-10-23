@@ -1,0 +1,8 @@
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);
+
+			q.setParameter("pid", productId);
+
+
+			if(merchantId != null) {

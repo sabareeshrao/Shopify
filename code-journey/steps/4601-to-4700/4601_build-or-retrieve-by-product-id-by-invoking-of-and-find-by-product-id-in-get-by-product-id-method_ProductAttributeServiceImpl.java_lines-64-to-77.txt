@@ -1,0 +1,14 @@
+
+	/**
+	 * Returns all product attributes
+	 */
+	@Override
+	public Page<ProductAttribute> getByProductId(MerchantStore store, Product product, Language language, int page,
+			int count) throws ServiceException {
+
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableProductAttributeRepository.findByProductId(store.getId(), product.getId(), language.getId(),
+				pageRequest);
+
+	}
+

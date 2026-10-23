@@ -1,0 +1,8 @@
+	@JoinColumn(name="MERCHANT_ID",nullable=false)  
+	private MerchantStore store;
+	
+	@ManyToOne(targetEntity = Product.class)
+	@JoinColumn(name="PRODUCT_ID",updatable=false,nullable=true) 
+	private Product product = null;
+	
+	@ManyToOne(targetEntity = Product.class)

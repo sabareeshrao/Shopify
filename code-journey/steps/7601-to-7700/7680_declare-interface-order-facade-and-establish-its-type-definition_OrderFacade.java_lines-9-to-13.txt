@@ -1,0 +1,5 @@
+public interface OrderFacade {
+	
+	ReadableOrderConfirmation orderConfirmation(Order order, Customer customer, MerchantStore store, Language language);
+
+}

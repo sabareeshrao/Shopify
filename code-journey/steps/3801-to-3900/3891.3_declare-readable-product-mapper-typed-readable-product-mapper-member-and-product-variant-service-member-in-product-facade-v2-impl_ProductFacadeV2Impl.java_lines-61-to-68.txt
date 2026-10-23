@@ -1,0 +1,8 @@
+	private ReadableProductMapper readableProductMapper;
+	
+	@Autowired
+	private ProductVariantService productVariantService;
+	
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper;
+	

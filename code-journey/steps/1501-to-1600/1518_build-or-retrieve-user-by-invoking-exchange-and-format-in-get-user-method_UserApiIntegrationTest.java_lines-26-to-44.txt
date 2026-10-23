@@ -1,0 +1,19 @@
+  private static Long DEFAULT_USER_ID = 1L;
+  private static String CREATED_PASSWORD = "Password1";
+  private static String NEW_CREATED_PASSWORD = "Password2";
+  
+  @Inject
+  private TestRestTemplate testRestTemplate;
+  
+  @Test
+  public void getUser() throws Exception {
+      final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
+
+      final ResponseEntity<ReadableUser> response = testRestTemplate.exchange(String.format("/api/v1/private/users/" + DEFAULT_USER_ID), HttpMethod.GET,
+              httpEntity, ReadableUser.class);
+      if (response.getStatusCode() != HttpStatus.OK) {
+          throw new Exception(response.toString());
+      } else {
+          final ReadableUser user = response.getBody();
+          assertNotNull(user);
+      }

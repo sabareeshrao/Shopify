@@ -1,0 +1,7 @@
+ * @author Carl Samson
+ * @version 3.2.0
+ * @since 1.0
+ */
+@Service(value = "shoppingCartFacade")
+public class ShoppingCartFacadeImpl implements ShoppingCartFacade {
+

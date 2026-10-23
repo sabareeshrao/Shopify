@@ -1,0 +1,4 @@
+
+	@Pointcut("serviceMethods() && saveProductVariantMethod()")
+	public void entityProductVariantCreationMethods() {
+	}

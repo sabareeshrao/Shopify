@@ -1,0 +1,8 @@
+	private ReadableImage image(Map<Long,ReadableImage> finalList , ProductVariantImage img, MerchantStore store, Language language) {
+		ReadableImage readable = null;
+		if(!finalList.containsKey(img.getId())) {
+			readable = new ReadableImage();
+			readable.setId(img.getId());
+			readable.setImageName(img.getProductImage());
+			readable.setImageUrl(imageUtils.buildCustomTypeImageUtils(store, img.getProductImage(), FileContentType.VARIANT));
+			readable.setDefaultImage(img.isDefaultImage());

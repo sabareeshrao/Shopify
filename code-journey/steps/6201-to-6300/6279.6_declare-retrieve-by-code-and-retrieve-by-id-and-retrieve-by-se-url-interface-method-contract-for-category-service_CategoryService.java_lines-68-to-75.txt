@@ -1,0 +1,8 @@
+			throws ServiceException;
+
+	Category getByCode(String storeCode, String code) throws ServiceException;
+	
+	Category getById(MerchantStore store, Long id) throws ServiceException;
+
+	Category getBySeUrl(MerchantStore store, String seUrl, Language language);
+

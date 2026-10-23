@@ -1,0 +1,4 @@
+
+		if (!userFacade.userInRoles(authenticatedUser, Arrays.asList(Constants.GROUP_SUPERADMIN))) {
+			userFacade.authorizedStore(authenticatedUser, merchantStore.getCode());
+		}

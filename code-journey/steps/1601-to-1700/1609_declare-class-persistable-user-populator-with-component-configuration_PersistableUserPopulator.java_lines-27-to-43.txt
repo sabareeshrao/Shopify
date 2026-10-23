@@ -1,0 +1,17 @@
+
+@Component
+public class PersistableUserPopulator extends AbstractDataPopulator<PersistableUser, User> {
+
+  @Inject
+  private LanguageService languageService;
+  
+  @Inject
+  private GroupService groupService;
+  
+  @Inject
+  private MerchantStoreService merchantStoreService;
+  
+  @Inject
+  @Named("passwordEncoder")
+  private PasswordEncoder passwordEncoder;
+  

@@ -1,0 +1,3 @@
+	public static final int ERROR_VALIDATION_SAVE = 100;
+	public static final int TRANSACTION_EXCEPTION = 99;
+	

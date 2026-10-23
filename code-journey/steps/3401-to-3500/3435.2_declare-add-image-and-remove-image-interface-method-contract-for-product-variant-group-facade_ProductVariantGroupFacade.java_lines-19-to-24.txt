@@ -1,0 +1,6 @@
+	void addImage(MultipartFile image, Long instanceGroupId,
+			MerchantStore store, Language language);
+	
+	void removeImage(Long imageId, Long instanceGroupId, MerchantStore store);
+
+}

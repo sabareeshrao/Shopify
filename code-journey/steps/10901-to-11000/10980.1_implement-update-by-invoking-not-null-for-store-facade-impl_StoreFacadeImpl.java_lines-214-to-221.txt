@@ -1,0 +1,8 @@
+	@Override
+	public void update(PersistableMerchantStore store) {
+
+		Validate.notNull(store);
+
+		MerchantStore mStore = mergePersistableMerchantStoreToMerchantStore(store, store.getCode(),
+				languageService.defaultLanguage());
+

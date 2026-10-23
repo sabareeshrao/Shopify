@@ -1,0 +1,4 @@
+	public void setTransactionDetails(Map<String, String> transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+

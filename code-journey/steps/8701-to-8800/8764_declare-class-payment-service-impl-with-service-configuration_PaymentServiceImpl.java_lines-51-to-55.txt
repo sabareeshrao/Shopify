@@ -1,0 +1,5 @@
+
+@Service("paymentService")
+public class PaymentServiceImpl implements PaymentService {
+	
+	

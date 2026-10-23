@@ -1,0 +1,7 @@
+	private double maxWeight = 0;	
+	//private int shippingQuantity;
+	private int treshold;
+	private ShippingPackageType shipPackageType;
+	private boolean defaultPackaging;
+
+}

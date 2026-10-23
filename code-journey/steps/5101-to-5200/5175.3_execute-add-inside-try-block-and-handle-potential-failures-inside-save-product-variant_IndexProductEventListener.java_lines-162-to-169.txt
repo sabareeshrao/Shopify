@@ -1,0 +1,8 @@
+
+		filteredVariants.add(variant);
+
+		Set<ProductVariant> allVariants = new HashSet<ProductVariant>(filteredVariants);
+		product.setVariants(allVariants);
+
+		try {
+			searchService.index(store, product);

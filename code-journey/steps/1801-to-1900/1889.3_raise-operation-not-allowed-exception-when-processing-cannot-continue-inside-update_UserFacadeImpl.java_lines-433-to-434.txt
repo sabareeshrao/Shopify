@@ -1,0 +1,2 @@
+					throw new OperationNotAllowedException("User [" + adminName + "] cannot change owning store");
+				}

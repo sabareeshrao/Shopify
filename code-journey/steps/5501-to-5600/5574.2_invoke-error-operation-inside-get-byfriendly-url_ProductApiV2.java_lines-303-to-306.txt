@@ -1,0 +1,4 @@
+			LOGGER.error("Error while filtering products product", e);
+			throw new ServiceRuntimeException(e);
+
+		}

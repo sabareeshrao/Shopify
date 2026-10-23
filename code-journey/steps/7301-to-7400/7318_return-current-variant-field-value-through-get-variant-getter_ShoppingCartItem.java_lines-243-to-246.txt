@@ -1,0 +1,4 @@
+	public Long getVariant() {
+		return variant;
+	}
+

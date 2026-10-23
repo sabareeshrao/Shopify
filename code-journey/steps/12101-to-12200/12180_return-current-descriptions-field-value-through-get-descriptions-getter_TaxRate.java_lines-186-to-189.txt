@@ -1,0 +1,4 @@
+	public List<TaxRateDescription> getDescriptions() {
+		return descriptions;
+	}
+

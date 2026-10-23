@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerReviewApi.class);
+
+	@Inject
+	private CustomerFacade customerFacade;
+	
+	@Inject
+	private StoreFacade storeFacade;
+	

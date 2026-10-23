@@ -1,0 +1,8 @@
+						readableProductPrice.setOriginalPrice(target.getOriginalPrice());
+
+						Optional<ProductPrice> pr = prices.stream().filter(p -> p.getCode().equals(ProductPrice.DEFAULT_PRICE_CODE))
+								.findFirst();
+
+						target.setProductPrice(readableProductPrice);
+
+						if(pr.isPresent()) {

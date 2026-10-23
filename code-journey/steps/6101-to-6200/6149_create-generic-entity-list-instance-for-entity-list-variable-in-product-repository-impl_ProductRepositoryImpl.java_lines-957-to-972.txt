@@ -1,0 +1,16 @@
+
+	    @SuppressWarnings("rawtypes")
+	    GenericEntityList entityList = new GenericEntityList();
+	    entityList.setTotalCount(count.intValue());
+
+		q = RepositoryHelper.paginateQuery(q, count, entityList, criteria);
+
+
+		@SuppressWarnings("unchecked")
+		List<Product> products = q.getResultList();
+		productList.setProducts(products);
+
+		return productList;
+
+	}
+

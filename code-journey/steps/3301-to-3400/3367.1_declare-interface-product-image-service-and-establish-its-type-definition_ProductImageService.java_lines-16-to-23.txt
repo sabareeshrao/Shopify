@@ -1,0 +1,8 @@
+public interface ProductImageService extends SalesManagerEntityService<Long, ProductImage> {
+	
+	
+	
+	/**
+	 * Add a ProductImage to the persistence and an entry to the CMS
+	 * @param product
+	 * @param productImage

@@ -1,0 +1,8 @@
+
+		if (source.getImageType() == 1 && source.getProductImageUrl()!=null) {
+			destination.setImageUrl(source.getProductImageUrl());
+		} else {
+			StringBuilder imgPath = new StringBuilder();
+			imgPath.append(contextPath).append(imageUtils.buildProductImageUtils(store, source.getProduct().getSku(), source.getProductImage()));
+			destination.setImageUrl(imgPath.toString());
+		}

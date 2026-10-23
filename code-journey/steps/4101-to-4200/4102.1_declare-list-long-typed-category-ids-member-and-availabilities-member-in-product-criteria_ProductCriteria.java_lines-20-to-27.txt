@@ -1,0 +1,8 @@
+	private List<Long> categoryIds;
+	private List<String> availabilities;
+	private List<Long> productIds;
+	private List<Long> optionValueIds;
+	private String sku;
+	
+	//V2
+	private List<String> optionValueCodes;

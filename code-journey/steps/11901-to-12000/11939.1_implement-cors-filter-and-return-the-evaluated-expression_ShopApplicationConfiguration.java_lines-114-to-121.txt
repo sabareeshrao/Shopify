@@ -1,0 +1,8 @@
+
+	/*
+	 * @Bean public StoreFilter storeFilter() { return new StoreFilter(); }
+	 */
+
+  @Bean
+  public CorsFilter corsFilter() {
+    return new CorsFilter();

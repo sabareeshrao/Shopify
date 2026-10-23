@@ -1,0 +1,8 @@
+			Map<String, IntegrationModule> map = modules.stream()
+					.collect(Collectors.toMap(IntegrationModule::getCode, module -> module));
+
+			IntegrationModule config = map.get(configuration.getCode());
+
+			if (config == null) {
+				throw new ResourceNotFoundException("Shipping module [" + configuration.getCode() + "] not found");
+			}

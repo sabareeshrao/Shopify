@@ -1,0 +1,5 @@
+		}
+		
+		if(order.getPaymentType() != null) {
+			orderConfirmation.setPayment(order.getPaymentType().name());
+		}

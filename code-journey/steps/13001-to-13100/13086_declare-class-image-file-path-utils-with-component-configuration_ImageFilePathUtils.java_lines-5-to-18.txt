@@ -1,0 +1,14 @@
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.shop.constants.Constants;
+
+/**
+ * To be used when using an external web server for managing images
+ * 	<beans:bean id="img" class="com.salesmanager.shop.utils.LocalImageFilePathUtils">
+		<beans:property name="basePath" value="/static" />
+	</beans:bean>
+ * @author c.samson
+ *
+ */
+@Component
+public class ImageFilePathUtils extends AbstractimageFilePath{
+	

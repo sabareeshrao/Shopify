@@ -1,0 +1,4 @@
+	public void setOptionCode(String optionCode) {
+		this.optionCode = optionCode;
+	}
+

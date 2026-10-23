@@ -1,0 +1,8 @@
+			return box;
+		} else {
+			ReadableContentBoxFull box = new ReadableContentBoxFull();
+			List<com.salesmanager.shop.model.content.common.ContentDescription> descriptions = content.getDescriptions()
+					.stream().map(d -> this.contentDescription(d)).collect(Collectors.toList());
+			this.setDescription(content, box, store.getDefaultLanguage());
+			box.setDescriptions(descriptions);
+			box.setCode(content.getCode());

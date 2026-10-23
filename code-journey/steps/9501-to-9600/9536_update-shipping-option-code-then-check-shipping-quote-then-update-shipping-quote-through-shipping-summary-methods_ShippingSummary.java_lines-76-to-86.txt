@@ -1,0 +1,11 @@
+	public void setShippingOptionCode(String shippingOptionCode) {
+		this.shippingOptionCode = shippingOptionCode;
+	}
+	public boolean isShippingQuote() {
+		return shippingQuote;
+	}
+	public void setShippingQuote(boolean shippingQuote) {
+		this.shippingQuote = shippingQuote;
+	}
+
+}

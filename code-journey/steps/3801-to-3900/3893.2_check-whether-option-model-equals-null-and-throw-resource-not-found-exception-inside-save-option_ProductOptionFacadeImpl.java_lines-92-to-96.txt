@@ -1,0 +1,5 @@
+			optionModel = productOptionService.getById(store, option.getId());
+			if (optionModel == null) {
+				throw new ResourceNotFoundException(
+						"ProductOption not found for if [" + option.getId() + "] and store [" + store.getCode() + "]");
+			}

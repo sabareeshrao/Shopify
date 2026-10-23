@@ -1,0 +1,8 @@
+NotEmpty.customer.billingCountry=Billing country should not be empty
+NotEmpty.customer.billingPostCode=Billing postal code should not be empty
+
+NotEmpty.customer.shippingCountry=Shipping country should not be empty
+
+NotEmpty.taxClass.code=Tax Class code is required
+NotEmpty.taxClass.title=Tax Class name is required
+message.taxclass.alreadyexist=Tax Class code already exist

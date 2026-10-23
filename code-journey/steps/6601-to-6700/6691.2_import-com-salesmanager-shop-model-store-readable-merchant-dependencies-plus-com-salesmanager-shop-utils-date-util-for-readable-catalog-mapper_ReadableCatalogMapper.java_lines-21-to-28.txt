@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.store.ReadableMerchantStore;
+import com.salesmanager.shop.store.controller.store.facade.StoreFacade;
+import com.salesmanager.shop.utils.DateUtil;
+
+@Component
+public class ReadableCatalogMapper implements Mapper<Catalog, ReadableCatalog> {
+	
+	@Autowired

@@ -1,0 +1,15 @@
+
+  @PutMapping("/newsletter/{email}")
+  @ApiOperation(
+      httpMethod = "PUT",
+      value = "Updates a customer",
+      notes = "Requires administration access",
+      produces = "application/json",
+      response = PersistableCustomer.class)
+  public void update(
+      @PathVariable String email,
+      @Valid @RequestBody PersistableCustomer customer,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+    throw new UnsupportedOperationException();
+  }

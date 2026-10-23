@@ -1,0 +1,4 @@
+					if(totals==null) {
+						totals = new ArrayList<OrderTotal>();
+						variation.setVariations(totals);
+					}

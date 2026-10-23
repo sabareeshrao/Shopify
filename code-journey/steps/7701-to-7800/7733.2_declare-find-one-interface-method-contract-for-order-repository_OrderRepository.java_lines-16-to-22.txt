@@ -1,0 +1,7 @@
+    		+ "join fetch o.orderHistory oh left "
+    		+ "join fetch op.downloads opd left "
+    		+ "join fetch op.orderAttributes opa "
+    		+ "left join fetch op.prices opp where o.id = ?1 and om.id = ?2")
+	Order findOne(Long id, Integer merchantId);
+    
+}

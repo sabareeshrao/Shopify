@@ -1,0 +1,20 @@
+
+	}
+
+	/**
+	 * admin
+	 * 
+	 * @author dur9213
+	 *
+	 */
+	/**
+	@Configuration
+	@Order(3)
+	public static class AdminConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Autowired
+		private WebUserServices userDetailsService;
+
+		@Autowired
+		private UserAuthenticationSuccessHandler userAuthenticationSuccessHandler;
+

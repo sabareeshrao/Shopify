@@ -1,0 +1,4 @@
+	public void setBilling(Billing billing) {
+		this.billing = billing;
+	}
+

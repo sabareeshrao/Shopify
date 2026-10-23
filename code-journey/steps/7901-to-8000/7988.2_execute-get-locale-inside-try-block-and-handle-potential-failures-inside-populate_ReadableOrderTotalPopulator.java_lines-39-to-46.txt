@@ -1,0 +1,8 @@
+			Locale locale = LocaleUtils.getLocale(language);
+		
+			try {
+				
+				target.setCode(source.getOrderTotalCode());
+				target.setId(source.getId());
+				target.setModule(source.getModule());
+				target.setOrder(source.getSortOrder());

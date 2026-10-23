@@ -1,0 +1,10 @@
+	}
+
+	@Test
+	@Ignore
+	public void putProduct() throws Exception {
+		restTemplate = new RestTemplate();
+
+		// TODO: Put Product
+
+	}

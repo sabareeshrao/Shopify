@@ -1,0 +1,4 @@
+    	
+    	if(authentication == null) {
+    		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    	}

@@ -1,0 +1,6 @@
+        color_blue.setProductOptionValue(blue);
+        
+        productAttributeService.create(color_blue);
+        
+        product.getAttributes().add(color_blue);
+        

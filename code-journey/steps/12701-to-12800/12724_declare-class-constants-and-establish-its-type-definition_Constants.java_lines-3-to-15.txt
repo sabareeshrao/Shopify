@@ -1,0 +1,13 @@
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.Currency;
+import java.util.Locale;
+
+/**
+ * Constants used for sm-core
+ * 
+ * @author carlsamson
+ *
+ */
+public class Constants {
+

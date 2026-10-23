@@ -1,0 +1,8 @@
+    	${EMAIL_CONTACT_OWNER}
+    </div>
+</div>
+
+</div>
+
+  <!-- Footer Section -->
+  <div class="footer">

@@ -1,0 +1,8 @@
+		 * config.getProductMappings().put("id", "long");
+		 
+		config.getKeywordsMappings().put("store", "keyword");
+		*/
+
+		return config;
+
+	}

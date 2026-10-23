@@ -1,0 +1,8 @@
+public class ShippingDistanceProcessorTest {
+	
+	@Inject
+	ShippingQuotePrePostProcessModule shippingDecisionTablePreProcessor;
+
+	@Ignore
+	public void testDistance() throws Exception {
+		

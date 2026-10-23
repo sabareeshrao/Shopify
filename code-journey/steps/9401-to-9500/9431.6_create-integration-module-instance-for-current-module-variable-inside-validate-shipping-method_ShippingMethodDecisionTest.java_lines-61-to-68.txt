@@ -1,0 +1,8 @@
+		
+		delivery.setZone(zone);
+		
+		IntegrationModule currentModule = new IntegrationModule();
+		currentModule.setCode("canadapost");
+		quote.setCurrentShippingModule(currentModule);
+		quote.setShippingModuleCode(currentModule.getCode());
+		

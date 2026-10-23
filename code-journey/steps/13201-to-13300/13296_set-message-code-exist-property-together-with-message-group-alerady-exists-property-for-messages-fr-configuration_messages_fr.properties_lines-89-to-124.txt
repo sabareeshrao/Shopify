@@ -1,0 +1,36 @@
+
+message.code.exist=Ce code existe déjà
+message.name.exist=Ce nom existe déjà
+message.invalid.amount=Montant invalide
+message.region.exists=cette région existe déjà
+message.region.null=La région ne peut être vide
+message.invalid.price=Le format du prix est invalide
+message.invalid.rate=Le format du taux est invalide
+message.invalid.date=Format de la date invalide
+message.maximumWeight.null=Poids maximum ne peut être vide
+message.maximumWeight.invalid=Poids maximum doit être supérieur é 0
+message.unauthorized=Cette transaction ne peut être complétée
+message.code.available=Ce code est disponible
+message.image.height=Hauteur de l'image trop grande
+message.image.width=Largeur de l'image trop grande
+message.image.size=Image trop volumineuse
+message.number.invalid=Doit être un nombre valide (ex 5)
+
+message.password.required=Un mot de passe est requis
+message.password.repeat.required=Le mot de passe répété est requis
+message.username.required=Le code d'usager est requis
+message.username.notfound=Le code d'usager n'existe pas
+message.price.cents=SVP entrer un maximum de 99 sous
+message.security.cannotrevoke.superadmin=Le groupe Super Admin ne peut être révoqué
+message.cannot.empty=ne peut être vide
+message.password.different=Le nouveau mot de passe et le mot de passe répété doivent être identiques
+message.password.invalid=Mot de passe invalide
+message.password.length=Le mot de passe doit avoir au moins 6 caractéres
+message.password.reset=Le mot de passe a été ré-initialisé
+message.password.checkpassword.identical=Les deux mots de passe doivent être identiques
+message.credentials.reset=Le données d'authentification ont été changées
+message.address.enter=Entrez votre addresse
+
+message.security.caanotremovesuperadmin=Il n'est pas possible de détruire un usager super admin
+
+message.group.alerady.exists=Le groupe {0} existe déjà

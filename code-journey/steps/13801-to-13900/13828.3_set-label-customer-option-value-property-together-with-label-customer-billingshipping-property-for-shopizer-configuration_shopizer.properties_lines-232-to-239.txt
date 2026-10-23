@@ -1,0 +1,8 @@
+label.customer.option.value=Customer option value
+
+label.customer.billinginformation=Billing information
+label.customer.shippinginformation=Shipping information
+label.customer.shippingaddress=Shipping Address
+label.customer.billingaddress=Billing Address
+label.customer.billingshipping=Billing & shipping information
+

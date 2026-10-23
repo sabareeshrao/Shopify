@@ -1,0 +1,8 @@
+				InputStream inputStream = productImage.getImage();
+				ImageContentFile cmsContentImage = new ImageContentFile();
+				cmsContentImage.setFileName(productImage.getProductImage());
+				cmsContentImage.setFile(inputStream);
+				cmsContentImage.setFileContentType(FileContentType.PRODUCT);
+
+				addProductImage(product, productImage, cmsContentImage);
+			}

@@ -1,0 +1,8 @@
+	public ReadableTaxClass getTaxClass() {
+		return taxClass;
+	}
+	public void setTaxClass(ReadableTaxClass taxClass) {
+		this.taxClass = taxClass;
+	}
+	public ReadableTaxRateDescription getDescription() {
+		return description;

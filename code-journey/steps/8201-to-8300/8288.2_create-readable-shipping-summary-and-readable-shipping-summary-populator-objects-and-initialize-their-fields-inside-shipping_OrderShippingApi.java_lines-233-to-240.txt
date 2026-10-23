@@ -1,0 +1,8 @@
+
+      ShippingSummary summary = orderFacade.getShippingSummary(quote, merchantStore, language);
+
+      ReadableShippingSummary shippingSummary = new ReadableShippingSummary();
+      ReadableShippingSummaryPopulator populator = new ReadableShippingSummaryPopulator();
+      populator.setPricingService(pricingService);
+      populator.populate(summary, shippingSummary, merchantStore, language);
+

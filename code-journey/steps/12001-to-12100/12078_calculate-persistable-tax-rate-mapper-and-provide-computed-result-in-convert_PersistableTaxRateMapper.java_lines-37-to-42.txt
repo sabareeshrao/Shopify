@@ -1,0 +1,6 @@
+	@Override
+	public TaxRate convert(PersistableTaxRate source, MerchantStore store, Language language) {
+		TaxRate rate = new TaxRate();
+		return this.merge(source, rate, store, language);
+	}
+

@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("NGN", "Naira");
+		CURRENCY_MAP.put("NZD", "New Zealand Dollar");
+		CURRENCY_MAP.put("AUD", "Australian Dollar");
+		CURRENCY_MAP.put("NOK", "Norwegian Krone");
+		CURRENCY_MAP.put("OMR", "Rial Omani");
+		CURRENCY_MAP.put("PKR", "Pakistan Rupee");
+		CURRENCY_MAP.put("PAB", "Balboa");
+		CURRENCY_MAP.put("PGK", "Kina");

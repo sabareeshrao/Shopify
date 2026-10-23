@@ -1,0 +1,8 @@
+
+		// RENTAL
+		/**
+		if (!StringUtils.isBlank(criteria.getStatus())) {
+			qs.append(" and p.rentalStatus = :status");
+		}
+		**/
+

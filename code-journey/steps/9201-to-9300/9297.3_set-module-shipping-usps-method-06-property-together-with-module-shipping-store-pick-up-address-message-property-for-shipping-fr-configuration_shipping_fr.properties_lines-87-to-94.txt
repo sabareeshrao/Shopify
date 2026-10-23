@@ -1,0 +1,8 @@
+module.shipping.usps.method.06=BPM
+module.shipping.usps.method.07=Parcel Post
+module.shipping.canadapost.packages.package=Paquet
+module.shipping.canadapost.packages.envelope=Enveloppe
+
+#store pick up
+module.shipping.storePickUp.address=Adresse de ramassage affichée au client
+module.shipping.storePickUp.address.message=L'Adresse de ramassage est un champ requis

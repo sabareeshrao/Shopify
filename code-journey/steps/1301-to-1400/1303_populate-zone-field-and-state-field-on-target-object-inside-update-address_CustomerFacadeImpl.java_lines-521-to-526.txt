@@ -1,0 +1,6 @@
+        customerModel.getBilling().setZone(zone);
+        customerModel.getBilling().setState(null);
+
+      } else {
+        customerModel.getBilling().setZone(null);
+      }

@@ -1,0 +1,11 @@
+    public InputStream getFile()
+    {
+        return file;
+    }
+    public void setFile( InputStream file )
+    {
+        this.file = file;
+    }
+	public String getPath() {
+		return path;
+	}

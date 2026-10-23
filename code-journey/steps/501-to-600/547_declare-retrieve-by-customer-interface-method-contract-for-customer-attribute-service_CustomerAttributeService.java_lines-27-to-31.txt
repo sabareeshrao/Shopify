@@ -1,0 +1,5 @@
+
+	List<CustomerAttribute> getByCustomer(MerchantStore store, Customer customer);
+	
+
+}

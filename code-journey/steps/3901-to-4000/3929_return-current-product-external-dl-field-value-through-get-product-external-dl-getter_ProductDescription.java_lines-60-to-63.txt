@@ -1,0 +1,4 @@
+	public String getProductExternalDl() {
+		return productExternalDl;
+	}
+

@@ -1,0 +1,7 @@
+public class ReadableMerchantStore extends MerchantStoreEntity implements ReadableAuditable, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+

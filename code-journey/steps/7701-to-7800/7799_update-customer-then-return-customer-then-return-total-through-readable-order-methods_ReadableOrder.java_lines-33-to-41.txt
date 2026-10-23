@@ -1,0 +1,9 @@
+	public void setCustomer(ReadableCustomer customer) {
+		this.customer = customer;
+	}
+	public ReadableCustomer getCustomer() {
+		return customer;
+	}
+	public OrderTotal getTotal() {
+		return total;
+	}

@@ -1,0 +1,60 @@
+		
+		PersistableProductInventory inventory = new PersistableProductInventory();
+		inventory.setQuantity(5);
+		inventory.setSku(code);
+		
+
+
+		final PersistableProductPrice productPrice = new PersistableProductPrice();
+		productPrice.setDefaultPrice(true);
+
+		productPrice.setPrice(new BigDecimal(250));
+		productPrice.setDiscountedPrice(new BigDecimal(125));
+
+		final List<PersistableProductPrice> productPriceList = new ArrayList<>();
+		productPriceList.add(productPrice);
+		
+		inventory.setPrice(productPrice);
+		product.setInventory(inventory);
+
+		final List<ProductDescription> descriptions = new ArrayList<>();
+
+		// add english description
+		ProductDescription description = new ProductDescription();
+		description.setLanguage("en");
+		description.setTitle("Statue Head");
+		description.setName("Statue Head");
+		description.setDescription("Statue Head");
+		description.setFriendlyUrl("Statue-head");
+
+		descriptions.add(description);
+
+		// add french description
+		description = new ProductDescription();
+		description.setLanguage("fr");
+		description.setTitle("Tête de Statue");
+		description.setName("Tête de Statue");
+		description.setDescription(description.getName());
+		description.setFriendlyUrl("tete-de-Statue");
+		//
+
+		descriptions.add(description);
+
+		product.setDescriptions(descriptions);
+
+		final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+		final String json = writer.writeValueAsString(product);
+
+		System.out.println(json);
+
+		final HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
+
+		// post to create category web service
+		final ResponseEntity response = restTemplate.postForEntity("http://localhost:8080/api/v1/product", entity,
+				PersistableProduct.class);
+
+		final PersistableProduct prod = (PersistableProduct) response.getBody();
+
+		System.out.println("---------------------");
+
+	}

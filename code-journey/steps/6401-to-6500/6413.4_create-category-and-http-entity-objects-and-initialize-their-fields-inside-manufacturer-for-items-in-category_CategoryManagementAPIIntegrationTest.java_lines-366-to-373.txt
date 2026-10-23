@@ -1,0 +1,8 @@
+      //create category
+      PersistableCategory category = super.category("TEST");
+      Category cat = new Category();//to be used in product
+      cat.setCode("TEST");
+      
+      json = writer.writeValueAsString(category);
+      entity = new HttpEntity<>(json, getHeader());
+

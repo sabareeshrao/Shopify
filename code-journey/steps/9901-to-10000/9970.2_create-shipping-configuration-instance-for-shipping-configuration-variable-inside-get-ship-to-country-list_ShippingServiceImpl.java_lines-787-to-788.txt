@@ -1,0 +1,2 @@
+			shippingConfiguration = new ShippingConfiguration();
+		}

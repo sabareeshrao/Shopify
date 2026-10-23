@@ -1,0 +1,25 @@
+
+			PersistablePaymentPopulator populator = new PersistablePaymentPopulator();
+			populator.setPricingService(pricingService);
+
+			Payment paymentModel = new Payment();
+
+			populator.populate(payment, paymentModel, merchantStore, language);
+
+			Transaction transactionModel = paymentService.initTransaction(customer, paymentModel, merchantStore);
+
+			ReadableTransaction transaction = new ReadableTransaction();
+			ReadableTransactionPopulator trxPopulator = new ReadableTransactionPopulator();
+			trxPopulator.setOrderService(orderService);
+			trxPopulator.setPricingService(pricingService);
+
+			trxPopulator.populate(transactionModel, transaction, merchantStore, language);
+
+			return transaction;
+
+		} catch (Exception e) {
+			LOGGER.error("Error while initializing the payment", e);
+			try {
+				response.sendError(503, "Error while initializing the payment " + e.getMessage());
+			} catch (Exception ignore) {
+			}

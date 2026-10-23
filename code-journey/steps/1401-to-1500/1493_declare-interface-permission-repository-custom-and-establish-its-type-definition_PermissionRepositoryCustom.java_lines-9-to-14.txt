@@ -1,0 +1,6 @@
+public interface PermissionRepositoryCustom {
+
+	PermissionList listByCriteria(PermissionCriteria criteria);
+
+
+}

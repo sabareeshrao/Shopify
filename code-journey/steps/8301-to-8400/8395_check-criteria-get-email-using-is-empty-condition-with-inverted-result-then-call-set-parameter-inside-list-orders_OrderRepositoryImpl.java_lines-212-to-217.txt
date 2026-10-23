@@ -1,0 +1,6 @@
+		
+		//email
+		if(!StringUtils.isEmpty(criteria.getEmail())) {
+			countQ.setParameter("email", like(criteria.getEmail()));
+			objectQ.setParameter("email", like(criteria.getEmail()));			
+		}

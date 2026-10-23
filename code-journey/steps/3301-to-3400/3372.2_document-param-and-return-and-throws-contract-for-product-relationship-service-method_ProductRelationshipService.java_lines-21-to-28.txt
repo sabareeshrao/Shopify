@@ -1,0 +1,8 @@
+	 * @param store
+	 * @param product
+	 * @param type
+	 * @param language
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<ProductRelationship> getByType(MerchantStore store, Product product,

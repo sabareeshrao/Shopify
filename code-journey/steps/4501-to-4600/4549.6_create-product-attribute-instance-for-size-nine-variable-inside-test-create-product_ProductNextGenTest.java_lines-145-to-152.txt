@@ -1,0 +1,8 @@
+	    
+	    // --- create attributes (available options)
+	    /**
+	     * Add options to product
+	     * Those are attributes
+	     */
+        
+        ProductAttribute size_nine = new ProductAttribute();

@@ -1,0 +1,55 @@
+		
+		//create a customer option to be used
+		CustomerOption hasReturnedItems = new CustomerOption();
+		hasReturnedItems.setActive(true);
+		hasReturnedItems.setPublicOption(true);
+		hasReturnedItems.setCode("hasReturnedItems");
+		hasReturnedItems.setMerchantStore(store);
+		
+		CustomerOptionDescription hasReturnedItemsDesciption= new CustomerOptionDescription();
+		hasReturnedItemsDesciption.setName("Has returned items");
+		hasReturnedItemsDesciption.setDescription("Has returned items");
+		hasReturnedItemsDesciption.setLanguage(en);
+		hasReturnedItemsDesciption.setCustomerOption(hasReturnedItems);
+		
+		Set<CustomerOptionDescription> hasReturnedItemsList = new HashSet<CustomerOptionDescription>();
+		hasReturnedItemsList.add(hasReturnedItemsDesciption);
+		hasReturnedItems.setDescriptions(hasReturnedItemsList);
+
+		customerOptionService.create(hasReturnedItems);
+		
+		subscribedToMailingList.setSortOrder(3);
+		
+		customerOptionService.update(subscribedToMailingList);
+		
+		//--
+		//now create an option set (association of a customer option with possible customer option values)
+		//--
+		
+		//possible yes
+		CustomerOptionSet mailingListSetYes = new CustomerOptionSet();
+
+		mailingListSetYes.setSortOrder(0);
+		mailingListSetYes.setCustomerOption(subscribedToMailingList);
+		mailingListSetYes.setCustomerOptionValue(yes);
+		
+		customerOptionSetService.create(mailingListSetYes);
+
+		//possible no
+		CustomerOptionSet mailingListSetNo = new CustomerOptionSet();
+		//mailingListSetNo.setPk(mailingListSetNoId);
+		mailingListSetNo.setSortOrder(1);
+		mailingListSetNo.setCustomerOption(subscribedToMailingList);
+		mailingListSetNo.setCustomerOptionValue(no);
+		
+		customerOptionSetService.create(mailingListSetNo);
+		
+		//possible has returned items
+		
+		CustomerOptionSet hasReturnedItemsYes = new CustomerOptionSet();
+		hasReturnedItemsYes.setSortOrder(0);
+		hasReturnedItemsYes.setCustomerOption(hasReturnedItems);
+		hasReturnedItemsYes.setCustomerOptionValue(yes);
+		
+		customerOptionSetService.create(hasReturnedItemsYes);
+		

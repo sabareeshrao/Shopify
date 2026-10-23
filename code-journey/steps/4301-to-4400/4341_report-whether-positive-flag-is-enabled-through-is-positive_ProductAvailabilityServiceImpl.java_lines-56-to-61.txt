@@ -1,0 +1,6 @@
+	private boolean isPositive(Long id) {
+		return Objects.nonNull(id) && id > 0;
+	}
+
+
+

@@ -1,0 +1,8 @@
+    private UserFacade userFacade;
+
+    /**
+     * Create new customer for a given MerchantStore, then authenticate that customer
+     */
+    @RequestMapping( value={"/customer/register"}, method=RequestMethod.POST, produces ={ "application/json" })
+    @ResponseStatus(HttpStatus.CREATED)
+    @ApiOperation(httpMethod = "POST", value = "Registers a customer to the application", notes = "Used as self-served operation",response = AuthenticationResponse.class)

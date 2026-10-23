@@ -1,0 +1,11 @@
+        
+     
+    /**
+     * Creates a new pagination object representing the next page
+     * 
+     * @return new pagination object with offset shifted by offset+limit
+     */
+    public PaginationData getNext()
+    {
+        return new PaginationData( offset + pageSize, pageSize );
+    }

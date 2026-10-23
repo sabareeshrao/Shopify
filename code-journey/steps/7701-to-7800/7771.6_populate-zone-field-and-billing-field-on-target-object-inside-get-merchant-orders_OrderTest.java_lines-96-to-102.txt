@@ -1,0 +1,7 @@
+	    delivery.setZone(zone);	    
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);
+	    
+		customerService.create(customer);	
+		

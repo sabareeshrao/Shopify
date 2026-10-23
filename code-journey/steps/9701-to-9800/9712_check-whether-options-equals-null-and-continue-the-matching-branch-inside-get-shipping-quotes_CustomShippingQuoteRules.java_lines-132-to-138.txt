@@ -1,0 +1,7 @@
+		
+		List<ShippingOption> options = quote.getShippingOptions();
+		
+		if(options == null) {
+			options = new ArrayList<ShippingOption>();
+			quote.setShippingOptions(options);
+		}

@@ -1,0 +1,8 @@
+	 * @param response
+	 * @return ReadableOrderList
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/private/orders/payment/capturable" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),

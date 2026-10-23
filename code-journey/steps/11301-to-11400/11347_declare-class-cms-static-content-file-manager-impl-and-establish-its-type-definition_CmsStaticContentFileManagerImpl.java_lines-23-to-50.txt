@@ -1,0 +1,28 @@
+import com.salesmanager.core.business.constants.Constants;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.modules.cms.content.ContentAssetsManager;
+import com.salesmanager.core.business.modules.cms.impl.CMSManager;
+import com.salesmanager.core.business.modules.cms.impl.CacheManager;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.content.OutputContentFile;
+
+/**
+ * Manages - Images - Files (js, pdf, css...) on infinispan
+ * 
+ * @author Umesh Awasthi
+ * @since 1.2
+ *
+ */
+public class CmsStaticContentFileManagerImpl
+		// implements FilePut,FileGet,FileRemove
+		implements ContentAssetsManager {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Logger LOGGER = LoggerFactory.getLogger(CmsStaticContentFileManagerImpl.class);
+	private static CmsStaticContentFileManagerImpl fileManager = null;
+	private static final String ROOT_NAME = "static-merchant-";
+

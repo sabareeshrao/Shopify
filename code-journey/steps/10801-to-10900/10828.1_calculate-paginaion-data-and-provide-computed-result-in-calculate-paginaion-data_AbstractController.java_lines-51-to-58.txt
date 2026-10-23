@@ -1,0 +1,8 @@
+    protected PaginationData calculatePaginaionData( final PaginationData paginationData, final int pageSize, final int resultCount){
+        
+    	int currentPage = paginationData.getCurrentPage();
+
+
+    	int count = Math.min((currentPage * pageSize), resultCount);  
+    	paginationData.setCountByPage(count);
+

@@ -1,0 +1,8 @@
+                    billing.setCountry(billingCountry);
+                    target.setBilling( billing );
+                }
+			}
+			Address sourceShipping = source.getDelivery();
+			if(sourceShipping!=null) {
+				Delivery delivery = new Delivery();
+				delivery.setAddress(sourceShipping.getAddress());

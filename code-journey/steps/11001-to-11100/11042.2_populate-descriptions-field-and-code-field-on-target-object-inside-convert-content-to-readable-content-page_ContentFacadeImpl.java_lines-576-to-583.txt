@@ -1,0 +1,8 @@
+			page.setDescriptions(descriptions);
+			page.setCode(content.getCode());
+			page.setId(content.getId());
+			page.setVisible(content.isVisible());
+			return page;
+		}
+
+	}

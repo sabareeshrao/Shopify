@@ -1,0 +1,8 @@
+	
+	@Column(name = "FILE_ID")
+	private Long fileId;
+
+	@Column ( name="FILESIZE", nullable=false )
+	private Integer filesize;
+	
+	@Temporal(TemporalType.TIMESTAMP )

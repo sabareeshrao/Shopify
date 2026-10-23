@@ -1,0 +1,4 @@
+	private ReadableCategory category;
+	public String getCreationDate() {
+		return creationDate;
+	}

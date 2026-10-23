@@ -1,0 +1,8 @@
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.utils.ImageFilePath;
+import com.salesmanager.shop.utils.LanguageUtils;
+
+@Service("storeFacade")
+public class StoreFacadeImpl implements StoreFacade {
+

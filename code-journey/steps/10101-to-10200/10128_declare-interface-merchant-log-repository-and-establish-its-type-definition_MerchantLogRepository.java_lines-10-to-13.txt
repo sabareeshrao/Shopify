@@ -1,0 +1,4 @@
+public interface MerchantLogRepository extends JpaRepository<MerchantLog, Long> {
+
+	List<MerchantLog> findByStore(MerchantStore store);
+}

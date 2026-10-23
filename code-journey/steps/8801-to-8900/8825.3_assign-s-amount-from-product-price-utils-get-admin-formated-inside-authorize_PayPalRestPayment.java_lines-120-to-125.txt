@@ -1,0 +1,6 @@
+
+			// ###Amount
+			// Let's you specify a payment amount.
+			
+			String sAmount = productPriceUtils.getAdminFormatedAmount(store, amount);
+			

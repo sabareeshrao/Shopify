@@ -1,0 +1,5 @@
+	private Content convertContentBoxToContent(MerchantStore store, Content model, PersistableContentBox content) throws Exception {
+		Content contentModel = new Content();
+		if(model != null) {
+			contentModel = model;
+		}

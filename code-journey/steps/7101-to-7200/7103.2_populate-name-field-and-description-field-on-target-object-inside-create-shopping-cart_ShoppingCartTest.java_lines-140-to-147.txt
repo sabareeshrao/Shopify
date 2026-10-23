@@ -1,0 +1,8 @@
+	    blackDesc.setName("Black");
+	    blackDesc.setDescription("Black color");
+	    blackDesc.setProductOptionValue(black);
+	    
+	    black.getDescriptions().add(blackDesc);
+
+	    productOptionValueService.saveOrUpdate(black);
+	    

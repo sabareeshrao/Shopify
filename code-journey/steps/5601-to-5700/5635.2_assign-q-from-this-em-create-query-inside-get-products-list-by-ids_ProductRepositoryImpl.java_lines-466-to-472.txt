@@ -1,0 +1,7 @@
+		Query q = this.em.createQuery(hql);
+
+		q.setParameter("pid", productds);
+		q.setParameter("dt", new Date());
+
+		return q.getResultList();
+	}

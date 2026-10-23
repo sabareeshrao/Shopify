@@ -1,0 +1,2 @@
+				expeditionConfiguration.setTaxOnShipping(config.isTaxOnShipping());
+			}

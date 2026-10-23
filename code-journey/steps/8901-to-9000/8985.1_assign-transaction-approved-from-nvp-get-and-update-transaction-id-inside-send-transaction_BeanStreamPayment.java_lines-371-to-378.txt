@@ -1,0 +1,8 @@
+			
+			//check
+			//trnApproved=1&trnId=10003067&messageId=1&messageText=Approved&trnOrderNumber=E40089&authCode=TEST&errorType=N&errorFields=
+
+			String transactionApproved = nvp.get("TRNAPPROVED");
+			String transactionId = nvp.get("TRNID");
+			String messageId = nvp.get("MESSAGEID");
+			String messageText = (String)nvp.get("MESSAGETEXT");

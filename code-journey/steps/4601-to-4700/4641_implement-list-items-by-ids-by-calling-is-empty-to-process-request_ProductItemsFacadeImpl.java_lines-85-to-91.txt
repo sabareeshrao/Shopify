@@ -1,0 +1,7 @@
+	@Override
+	public ReadableProductList listItemsByIds(MerchantStore store, Language language, List<Long> ids, int startCount,
+			int maxCount) throws Exception {
+		
+		if(CollectionUtils.isEmpty(ids)) {
+			return new ReadableProductList();
+		}

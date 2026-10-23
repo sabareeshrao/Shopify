@@ -1,0 +1,8 @@
+
+		// PersistableImage persistableImage = new PersistableImage();
+
+		// persistableImage.setBytes(this.extractBytes(imgPath));
+		// persistableImage.setImageName(imgPath.getName());
+
+		// List<PersistableImage> images = new ArrayList<PersistableImage>();
+		// images.add(persistableImage);

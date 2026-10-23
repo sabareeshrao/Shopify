@@ -1,0 +1,17 @@
+	List<ReadableOrderStatusHistory> getReadableOrderHistory(Long orderId, MerchantStore store, Language language);
+
+
+	/**
+     * <p>Method used to fetch all orders associated with customer customer.
+     * It will used current customer ID to fetch all orders which has been
+     * placed by customer for current store.</p>
+     *
+     * @param customer currently logged in customer
+     * @param store store associated with current customer
+     * @return ReadableOrderList
+     * @throws Exception
+     */
+
+	com.salesmanager.shop.model.order.v0.ReadableOrderList getReadableOrderList(MerchantStore store, Customer customer, int start,
+			int maxCount, Language language) throws Exception;
+

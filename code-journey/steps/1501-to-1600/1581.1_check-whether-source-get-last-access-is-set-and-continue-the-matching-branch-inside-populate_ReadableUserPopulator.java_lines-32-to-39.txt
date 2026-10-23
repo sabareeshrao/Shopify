@@ -1,0 +1,8 @@
+
+    target.setFirstName(source.getFirstName());
+    target.setLastName(source.getLastName());
+    target.setEmailAddress(source.getAdminEmail());
+    target.setUserName(source.getAdminName());
+    target.setActive(source.isActive());
+
+    if (source.getLastAccess() != null) {

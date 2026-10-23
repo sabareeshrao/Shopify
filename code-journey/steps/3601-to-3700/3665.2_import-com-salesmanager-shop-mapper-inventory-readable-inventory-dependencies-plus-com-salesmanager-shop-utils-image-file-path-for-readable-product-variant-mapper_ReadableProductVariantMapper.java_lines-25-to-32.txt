@@ -1,0 +1,8 @@
+import com.salesmanager.shop.mapper.inventory.ReadableInventoryMapper;
+import com.salesmanager.shop.model.catalog.product.ReadableImage;
+import com.salesmanager.shop.model.catalog.product.inventory.ReadableInventory;
+import com.salesmanager.shop.model.catalog.product.product.variant.ReadableProductVariant;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.utils.DateUtil;
+import com.salesmanager.shop.utils.ImageFilePath;
+

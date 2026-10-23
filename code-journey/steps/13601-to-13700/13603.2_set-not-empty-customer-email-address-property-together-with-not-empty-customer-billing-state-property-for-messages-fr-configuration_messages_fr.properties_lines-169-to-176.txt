@@ -1,0 +1,8 @@
+NotEmpty.customer.EmailAddress=Le email du client ne doit pas être vide
+
+NotEmpty.customer.billingCompany=Le nom de compagnie ne doit pas être vide
+NotEmpty.customer.billingFirstName=Le prénom de facturation ne doit pas être vide
+NotEmpty.customer.billingLastName=Le nom de facturation ne doit pas être vide
+NotEmpty.customer.billingStreetAddress=L'adresse de facturation ne doit pas être vide
+NotEmpty.customer.billingCity=La ville de facturation ne doit pas être vide
+NotEmpty.customer.billingState=La province de facturation ne doit pas être vide

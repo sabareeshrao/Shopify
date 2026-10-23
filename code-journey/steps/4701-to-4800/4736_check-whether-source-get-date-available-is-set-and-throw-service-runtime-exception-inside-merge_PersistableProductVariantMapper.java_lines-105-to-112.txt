@@ -1,0 +1,8 @@
+		
+		if(source.getDateAvailable()!=null) {
+			try {
+				destination.setDateAvailable(DateUtil.getDate(source.getDateAvailable()));
+			} catch (Exception e) {
+				throw new ServiceRuntimeException("Cant format date [" + source.getDateAvailable() + "]");
+			}
+		}

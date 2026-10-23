@@ -1,0 +1,8 @@
+				throws ServiceException;
+
+	List<TaxRate> listByStore(MerchantStore store, Language language)
+			throws ServiceException;
+
+	TaxRate saveOrUpdate(TaxRate taxRate) throws ServiceException;
+	
+	

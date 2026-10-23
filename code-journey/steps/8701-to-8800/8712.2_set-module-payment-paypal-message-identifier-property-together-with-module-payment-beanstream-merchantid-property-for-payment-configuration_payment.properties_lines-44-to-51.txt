@@ -1,0 +1,8 @@
+
+module.payment.paypal.message.identifier=PayPal API user name required
+module.payment.paypal.message.api=PayPal API user name required
+module.payment.paypal.message.password=PayPal API password required
+module.payment.paypal.message.signature=PayPal API signature required
+
+#Beanstream
+module.payment.beanstream.merchantid=Merchant id

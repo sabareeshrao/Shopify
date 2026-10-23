@@ -1,0 +1,8 @@
+label.customer.billing.postalcode = Code postal de facturation 
+label.customer.billing.city = Ville de facturation 
+label.customer.billing.zone =État / province de facturation 
+label.customer.billing.country = Pays de facturation 
+label.customer.billing.firstname = Prénom sur la facturation 
+label.customer.billing.lastname = Nom de famille sur la facturation 
+label.customer.billing.name=Nom sur la facturation 
+

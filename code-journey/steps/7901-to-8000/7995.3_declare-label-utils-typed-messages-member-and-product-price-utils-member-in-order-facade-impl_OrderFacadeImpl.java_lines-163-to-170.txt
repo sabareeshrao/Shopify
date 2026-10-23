@@ -1,0 +1,8 @@
+	@Inject
+	private LabelUtils messages;
+	
+	@Autowired
+	private ProductPriceUtils productPriceUtils;
+
+	@Inject
+	@Qualifier("img")

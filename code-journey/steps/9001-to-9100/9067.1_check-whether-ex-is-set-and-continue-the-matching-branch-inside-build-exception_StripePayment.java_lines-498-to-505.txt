@@ -1,0 +1,8 @@
+
+		  
+	} else if (ex instanceof InvalidRequestException) {
+		LOGGER.error("InvalidRequest error with stripe", ex.getMessage());
+		InvalidRequestException e =(InvalidRequestException)ex;
+		IntegrationException te = new IntegrationException(
+				"Can't process Stripe, missing invalid payment parameters");
+		te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);

@@ -1,0 +1,8 @@
+	public void setAttributes(List<ReadableCustomerAttribute> attributes) {
+		this.attributes = attributes;
+	}
+	public List<ReadableCustomerAttribute> getAttributes() {
+		return attributes;
+	}
+	public List<ReadableGroup> getGroups() {
+		return groups;

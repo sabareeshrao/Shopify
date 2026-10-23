@@ -1,0 +1,8 @@
+
+      default String getName(String filename) {
+        if (filename == null) {
+          return null;
+        }
+        int index = indexOfLastSeparator(filename);
+        return filename.substring(index + 1);
+      }

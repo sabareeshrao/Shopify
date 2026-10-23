@@ -1,0 +1,4 @@
+              
+              if(StringUtils.isNotBlank( source.getStateProvince())){
+                  delivery.setPostalCode( source.getStateProvince());
+              }

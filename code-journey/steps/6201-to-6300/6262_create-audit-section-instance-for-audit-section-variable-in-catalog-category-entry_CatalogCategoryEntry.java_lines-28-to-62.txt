@@ -1,0 +1,35 @@
+	
+    @Embedded
+    private AuditSection auditSection = new AuditSection();
+	
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE, 
+	generator = "TABLE_GEN")
+	
+	@TableGenerator(name = "TABLE_GEN", 
+	table = "SM_SEQUENCER", 
+	pkColumnName = "SEQ_NAME",
+	valueColumnName = "SEQ_COUNT",
+	allocationSize = SchemaConstant.DESCRIPTION_ID_ALLOCATION_SIZE, 
+	initialValue = SchemaConstant.DESCRIPTION_ID_START_VALUE,
+	pkColumnValue = "CATALOG_ENT_SEQ_NEXT_VAL")
+	private Long id;
+ 
+    @ManyToOne
+    @JoinColumn(name = "CATEGORY_ID", nullable = false)
+    Category category;
+    
+	@ManyToOne
+	@JoinColumn(name = "CATALOG_ID", nullable = false)
+	private Catalog catalog;
+	
+	//TODO d products ????
+	
+    @Column(name = "VISIBLE")
+    private boolean visible;
+

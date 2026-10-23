@@ -1,0 +1,6 @@
+	private ReadableInventory readableInventory(ProductAvailability availability, MerchantStore store, Language language) {
+		return readableInventoryMapper.convert(availability, store, language);
+	}
+	**/
+
+	

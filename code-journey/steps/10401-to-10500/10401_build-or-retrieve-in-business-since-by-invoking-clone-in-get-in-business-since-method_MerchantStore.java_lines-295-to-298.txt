@@ -1,0 +1,4 @@
+	public Date getInBusinessSince() {
+		return CloneUtils.clone(inBusinessSince);
+	}
+

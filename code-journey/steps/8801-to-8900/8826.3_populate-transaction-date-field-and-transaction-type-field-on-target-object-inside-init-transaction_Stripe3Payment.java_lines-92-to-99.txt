@@ -1,0 +1,8 @@
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", intent.getId());
+			transaction.getTransactionDetails().put("TRNAPPROVED", intent.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", intent.getId());
+			transaction.getTransactionDetails().put("INTENTSECRET", intent.getClientSecret());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);

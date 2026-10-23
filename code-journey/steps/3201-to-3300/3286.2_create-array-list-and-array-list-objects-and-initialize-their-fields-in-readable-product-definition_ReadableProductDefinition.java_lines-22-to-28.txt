@@ -1,0 +1,7 @@
+	private ReadableManufacturer manufacturer;
+	private ProductDescription description = null;
+	private List<PersistableProductAttribute> properties = new ArrayList<PersistableProductAttribute>();
+	private List<ReadableImage> images = new ArrayList<ReadableImage>();
+	private ReadableInventory inventory;
+	
+	

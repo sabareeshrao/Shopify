@@ -1,0 +1,13 @@
+	@Override
+	public void addDescription(Zone zone, ZoneDescription description) throws ServiceException {
+		if (zone.getDescriptions()!=null) {
+				if(!zone.getDescriptions().contains(description)) {
+					zone.getDescriptions().add(description);
+					update(zone);
+				}
+		} else {
+			List<ZoneDescription> descriptions = new ArrayList<ZoneDescription>();
+			descriptions.add(description);
+			zone.setDescriptons(descriptions);
+			update(zone);
+		}

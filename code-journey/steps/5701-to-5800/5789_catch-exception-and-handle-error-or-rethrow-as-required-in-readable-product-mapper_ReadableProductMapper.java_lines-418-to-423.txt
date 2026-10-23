@@ -1,0 +1,6 @@
+
+			}
+
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("An error while converting product price", e);
+		}

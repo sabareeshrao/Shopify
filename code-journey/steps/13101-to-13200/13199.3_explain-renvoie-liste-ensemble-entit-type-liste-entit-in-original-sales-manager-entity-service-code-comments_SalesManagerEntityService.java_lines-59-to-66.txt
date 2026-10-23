@@ -1,0 +1,8 @@
+	
+	/**
+	 * Renvoie la liste de l'ensemble des entités de ce type.
+	 * 
+	 * @return liste d'entités
+	 */
+	List<E> list();
+	

@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.constants.Constants;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.order.OrderService;
+import com.salesmanager.core.business.services.reference.loader.ConfigurationModulesLoader;
+import com.salesmanager.core.business.services.system.MerchantConfigurationService;
+import com.salesmanager.core.business.services.system.ModuleConfigurationService;
+import com.salesmanager.core.business.utils.CoreConfiguration;
+import com.salesmanager.core.model.customer.Customer;

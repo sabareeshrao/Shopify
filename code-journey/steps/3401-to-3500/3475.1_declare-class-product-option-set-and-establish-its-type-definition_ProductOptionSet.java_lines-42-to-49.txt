@@ -1,0 +1,8 @@
+)
+public class ProductOptionSet extends SalesManagerEntity<Long, ProductOptionSet> {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

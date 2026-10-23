@@ -1,0 +1,8 @@
+		
+		List<Document> filteredList = documents.stream().filter(Optional::isPresent).map(Optional::get)
+				.collect(Collectors.toList());
+
+		return filteredList;
+
+	}
+

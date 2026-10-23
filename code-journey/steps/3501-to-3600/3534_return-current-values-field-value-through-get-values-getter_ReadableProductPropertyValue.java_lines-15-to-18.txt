@@ -1,0 +1,4 @@
+	public List<ProductOptionValueDescription> getValues() {
+		return values;
+	}
+

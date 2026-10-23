@@ -1,0 +1,8 @@
+
+	    CategoryDescription fictionEnglishDescription = new CategoryDescription();
+	    fictionEnglishDescription.setName("Fiction");
+	    fictionEnglishDescription.setCategory(fiction);
+	    fictionEnglishDescription.setLanguage(en);
+
+	    CategoryDescription fictionFrenchDescription = new CategoryDescription();
+	    fictionFrenchDescription.setName("Sc Fiction");

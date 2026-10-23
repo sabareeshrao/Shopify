@@ -1,0 +1,6 @@
+	private String code = null;
+	private List<AttributeValue> values = null;
+	private AttributeValue readOnlyValue = null;
+	public String getName() {
+		return name;
+	}

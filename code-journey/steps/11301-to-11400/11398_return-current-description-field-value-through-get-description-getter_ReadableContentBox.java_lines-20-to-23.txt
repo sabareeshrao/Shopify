@@ -1,0 +1,4 @@
+	public ContentDescription getDescription() {
+		return description;
+	}
+

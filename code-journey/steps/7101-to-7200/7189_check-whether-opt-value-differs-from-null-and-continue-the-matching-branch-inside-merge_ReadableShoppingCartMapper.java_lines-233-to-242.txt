@@ -1,0 +1,10 @@
+
+							if (optValue != null) {
+								ReadableShoppingCartAttributeOptionValue attributeOptionValue = new ReadableShoppingCartAttributeOptionValue();
+								attributeOptionValue.setCode(optionValue.getCode());
+								attributeOptionValue.setId(optionValue.getId());
+								attributeOptionValue.setName(optValue);
+								cartAttribute.setOptionValue(attributeOptionValue);
+							}
+							shoppingCartItem.getCartItemattributes().add(cartAttribute);
+						}

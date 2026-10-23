@@ -1,0 +1,4 @@
+	public Integer getRentalPeriod() {
+		return rentalPeriod;
+	}
+

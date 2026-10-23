@@ -1,0 +1,14 @@
+
+			
+			Set<OrderProductPrice> prices = new HashSet<OrderProductPrice>();
+			prices.add(orderProductPrice);
+
+			/** DO NOT SUPPORT MUTIPLE PRICES **/
+/*			//Other prices
+			List<FinalPrice> otherPrices = finalPrice.getAdditionalPrices();
+			if(otherPrices!=null) {
+				for(FinalPrice otherPrice : otherPrices) {
+					OrderProductPrice other = orderProductPrice(otherPrice);
+					other.setOrderProduct(target);
+					prices.add(other);
+				}

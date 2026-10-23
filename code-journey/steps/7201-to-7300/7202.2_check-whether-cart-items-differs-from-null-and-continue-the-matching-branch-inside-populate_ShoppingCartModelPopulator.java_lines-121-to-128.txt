@@ -1,0 +1,8 @@
+            for ( ShoppingCartItem item : items )
+            {
+
+                Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartItems = cartMdel.getLineItems();
+                if ( cartItems != null && cartItems.size() > 0 )
+                {
+
+                    for ( com.salesmanager.core.model.shoppingcart.ShoppingCartItem dbItem : cartItems )

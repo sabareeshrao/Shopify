@@ -1,0 +1,36 @@
+label.shipping.packaging.box.maxitems=Maximum items in a box
+label.shipping.addregion=Add region
+label.shipping.region=Region
+label.shipping.allquotes=Display all shipping quotes
+label.shipping.leastexpensivequotes=Display least expensive shipping quotes
+label.shipping.moreexpensivequotes=Display highest expensive shipping quotes
+label.message.region.available=Region available
+label.message.region.exist=Region already exists
+label.shipping.maximumWeight=Maximum weight
+label.shipping.shippingaddress=Shipping address
+label.shipping.billingaddress=Billing address
+label.message.maximumWeight.exist=Maximum weight already exists
+label.shipping.fees=Shipping fees
+label.shipping.freeshipping=Free shipping!
+label.shipping.freeshipping.over=Free shipping for orders over
+label.shipping.freeshippingandhandling=Free shipping and handling
+label.shipping.origin.title=Shipping address origin
+label.shipping.origin.description=Shipping origin will help calculate the distance between the origin to the destination of the delivery. If the origin is not set the system will use the merchant store address as the shipping origin.
+
+#order
+label.order.title=Orders
+label.order.total=Total
+label.order.totals=Totals
+label.order.date=Order date
+label.order.module=Payment module
+label.order.paymentmode=Payment mode
+label.order.shippingmethod=Shipping mode
+label.order.refund=Apply refund
+label.order.capture=Capture transaction
+label.order.item=Item
+label.order.price=Price
+label.order.sendinvoice=Send email invoice
+label.order.printinvoice=Print invoice
+label.order.packing=Print packing slip
+label.order.updatestatus=Send order status email
+label.order.downloademail=Send download email

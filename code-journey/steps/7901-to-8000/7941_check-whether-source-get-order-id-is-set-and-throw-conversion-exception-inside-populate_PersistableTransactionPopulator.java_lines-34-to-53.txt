@@ -1,0 +1,20 @@
+		
+		
+		try {
+			
+
+			target.setAmount(pricingService.getAmount(source.getAmount()));
+			target.setDetails(source.getDetails());
+			target.setPaymentType(PaymentType.valueOf(source.getPaymentType()));
+			target.setTransactionType(TransactionType.valueOf(source.getTransactionType()));
+			target.setTransactionDate(DateUtil.getDate(source.getTransactionDate()));
+			
+			if(source.getOrderId()!=null && source.getOrderId().longValue() > 0) {
+				Order order = orderService.getById(source.getOrderId());
+/*				if(source.getCustomerId() == null) {
+					throw new ConversionException("Cannot add a transaction for an Order without specyfing the customer");
+				}*/
+				
+				if(order == null) {
+					throw new ConversionException("Order with id " + source.getOrderId() + "does not exist");
+				}

@@ -1,0 +1,8 @@
+ * Manages - Product images
+ * 
+ * @author Carl Samson
+ */
+public class CmsImageFileManagerImpl implements ProductAssetsManager {
+
+  /**
+   * 

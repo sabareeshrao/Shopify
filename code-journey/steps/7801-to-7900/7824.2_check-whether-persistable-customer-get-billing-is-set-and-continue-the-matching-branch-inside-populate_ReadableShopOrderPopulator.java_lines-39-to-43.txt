@@ -1,0 +1,5 @@
+				address.setPostalCode(persistableCustomer.getBilling().getPostalCode());
+				address.setPhone(persistableCustomer.getBilling().getPhone());
+				if(persistableCustomer.getBilling().getCountry()!=null) {
+					address.setCountry(persistableCustomer.getBilling().getCountry());
+				}

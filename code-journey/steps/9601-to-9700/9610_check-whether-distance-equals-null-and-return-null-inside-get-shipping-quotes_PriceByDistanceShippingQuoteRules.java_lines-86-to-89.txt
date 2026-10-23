@@ -1,0 +1,4 @@
+		
+		if(distance==null) {
+			return null;
+		}

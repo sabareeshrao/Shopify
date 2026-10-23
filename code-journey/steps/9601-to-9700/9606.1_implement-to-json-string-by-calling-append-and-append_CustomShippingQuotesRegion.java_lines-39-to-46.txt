@@ -1,0 +1,8 @@
+	public String toJSONString() {
+		
+
+		StringBuilder returnString = new StringBuilder();
+		returnString.append("{");
+		returnString.append("\"customRegionName\"").append(":\"").append(this.getCustomRegionName()).append("\"");
+		
+		

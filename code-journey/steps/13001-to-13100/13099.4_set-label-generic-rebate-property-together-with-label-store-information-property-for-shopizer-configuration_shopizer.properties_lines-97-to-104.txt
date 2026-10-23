@@ -1,0 +1,8 @@
+label.generic.rebate=Rebate
+
+label.soldout=Sold out
+
+#merchant store
+label.store.information.title=Information
+label.store.title=Merchant Store
+label.store.information=Store information

@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductManufacturerApi.class);
+
+	@Inject
+	private ManufacturerService manufacturerService;
+
+	@Inject
+	private ManufacturerFacade manufacturerFacade;
+

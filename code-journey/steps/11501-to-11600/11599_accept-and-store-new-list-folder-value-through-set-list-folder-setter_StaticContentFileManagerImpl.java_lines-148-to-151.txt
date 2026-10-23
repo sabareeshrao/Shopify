@@ -1,0 +1,4 @@
+	public void setListFolder(FolderList listFolder) {
+		this.listFolder = listFolder;
+	}
+

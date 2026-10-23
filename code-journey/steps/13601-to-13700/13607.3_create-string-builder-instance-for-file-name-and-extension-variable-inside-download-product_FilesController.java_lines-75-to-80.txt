@@ -1,0 +1,6 @@
+		
+		String fileNameAndExtension = new StringBuilder().append(fileName).append(".").append(extension).toString();
+		
+		// needs to query the new API
+		OutputContentFile file = contentService.getContentFile(storeCode, fileType, fileNameAndExtension);
+		

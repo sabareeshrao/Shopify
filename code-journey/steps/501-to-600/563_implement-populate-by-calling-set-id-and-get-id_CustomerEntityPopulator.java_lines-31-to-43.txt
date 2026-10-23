@@ -1,0 +1,13 @@
+    @Override
+    public CustomerEntity populate( final Customer source, final CustomerEntity target,
+                                    final MerchantStore merchantStore, final Language language )
+        throws ConversionException
+    {
+        try
+        {
+
+            
+            target.setId( source.getId() );
+            if(StringUtils.isNotBlank( source.getEmailAddress() )){
+                target.setEmailAddress( source.getEmailAddress() );
+            }

@@ -1,0 +1,6 @@
+	 @Override
+	 public void destroy() {
+	  LOGGER.debug("(XssFilter) destroy");
+	 }
+
+}

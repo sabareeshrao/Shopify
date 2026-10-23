@@ -1,0 +1,8 @@
+
+    } catch (Exception e) {
+      throw new ServiceRuntimeException("Error while updating customer address");
+    }
+    
+
+  }
+

@@ -1,0 +1,5 @@
+	private ReadableProductVariation variant = null;
+	private ReadableProductVariation variantValue = null;
+
+	
+

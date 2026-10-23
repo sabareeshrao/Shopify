@@ -1,0 +1,8 @@
+							readableProductPrice.setId(pr.get().getId());
+							Optional<ProductPriceDescription> d = pr.get().getDescriptions().stream().filter(desc -> desc.getLanguage().getCode().equals(lang.getCode())).findFirst();
+							if(d.isPresent()) {
+								com.salesmanager.shop.model.catalog.product.ProductPriceDescription priceDescription = new com.salesmanager.shop.model.catalog.product.ProductPriceDescription();
+								priceDescription.setLanguage(language.getCode());
+								priceDescription.setId(d.get().getId());
+								priceDescription.setPriceAppender(d.get().getPriceAppender());
+								readableProductPrice.setDescription(priceDescription);

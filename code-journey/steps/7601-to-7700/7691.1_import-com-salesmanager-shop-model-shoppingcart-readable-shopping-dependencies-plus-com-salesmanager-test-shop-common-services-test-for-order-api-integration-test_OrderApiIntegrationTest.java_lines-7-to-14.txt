@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.shoppingcart.ReadableShoppingCart;
+import com.salesmanager.test.shop.common.ServicesTestSupport;
+
+
+@Ignore
+public class OrderApiIntegrationTest extends ServicesTestSupport {
+	
+    @Autowired

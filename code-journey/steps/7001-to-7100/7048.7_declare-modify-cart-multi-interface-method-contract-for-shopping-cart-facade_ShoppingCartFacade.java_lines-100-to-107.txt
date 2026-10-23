@@ -1,0 +1,8 @@
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableShoppingCart modifyCartMulti(String cartCode, List<PersistableShoppingCartItem> items, MerchantStore store,
+										 Language language) throws Exception;
+
+	/**
+	 * Add item to shopping cart

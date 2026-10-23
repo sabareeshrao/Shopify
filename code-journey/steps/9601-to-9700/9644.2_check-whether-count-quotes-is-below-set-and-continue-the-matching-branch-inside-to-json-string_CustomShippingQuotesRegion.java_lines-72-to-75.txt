@@ -1,0 +1,4 @@
+				countQuotes ++;
+				if(countQuotes<quoteItems.size()) {
+					quotesList.append(",");
+				}

@@ -1,0 +1,8 @@
+label.category.editcategory = Modifier la catégorie 
+label.category.movecategory = Déplacer la catégorie 
+label.category.moveundercategory = Déplacer sous la catégorie 
+label.category.createcategory = Créer une catégorie
+label.category.code=Code de la catégorie 
+label.category.categoryvisible = Catégorie visible
+label.category.categorydescription = Description de la catégorie 
+label.category.parentcategory = Catégorie parent

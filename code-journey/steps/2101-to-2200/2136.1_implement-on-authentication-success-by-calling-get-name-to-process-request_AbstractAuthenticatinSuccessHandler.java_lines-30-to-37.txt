@@ -1,0 +1,8 @@
+	    @Override
+	    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
+		  // last access timestamp
+		  String userName = authentication.getName();
+		  
+		  /**
+		   * Spring Security 4 does not seem to add security context in the session
+		   * creating the authentication to be lost during the login

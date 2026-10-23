@@ -1,0 +1,11 @@
+	@Override
+	public Address getCustomerAddress(MerchantStore store, String ipAddress) throws ServiceException {
+		
+		try {
+			return geoLocation.getAddress(ipAddress);
+		} catch(Exception e) {
+			throw new ServiceException(e);
+		}
+		
+	}
+

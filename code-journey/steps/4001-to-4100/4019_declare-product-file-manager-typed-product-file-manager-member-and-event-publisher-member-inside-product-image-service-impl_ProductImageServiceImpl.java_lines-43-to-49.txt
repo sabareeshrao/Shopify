@@ -1,0 +1,7 @@
+
+	@Inject
+	private ProductFileManager productFileManager;
+	
+	@Autowired
+	private ApplicationEventPublisher eventPublisher;
+

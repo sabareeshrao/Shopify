@@ -1,0 +1,12 @@
+	private String getAccessToken(String clientID, String clientSecret) throws Exception {
+
+		// ###AccessToken
+		// Retrieve the access token from
+		// OAuthTokenCredential by passing in
+		// ClientID and ClientSecret
+
+		return null;
+		//return new OAuthTokenCredential(clientID, clientSecret)
+		//		.getAccessToken();
+	}
+

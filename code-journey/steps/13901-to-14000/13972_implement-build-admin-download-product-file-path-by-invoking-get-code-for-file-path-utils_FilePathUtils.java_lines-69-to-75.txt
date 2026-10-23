@@ -1,0 +1,7 @@
+
+	/**
+	 * Example: /admin/files/downloads/<storeCode>/<product>
+	 */
+	public String buildAdminDownloadProductFilePath(MerchantStore store, DigitalProduct digitalProduct) {
+		return ADMIN_URI + FILES_URI + DOWNLOADS + store.getCode() + SLASH + digitalProduct.getProductFileName();
+	}

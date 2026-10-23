@@ -1,0 +1,9 @@
+	public Map<String,Object> getQuoteInformations() {
+		return quoteInformations;
+	}
+	public void setQuoteInformations(Map<String,Object> quoteInformations) {
+		this.quoteInformations = quoteInformations;
+	}
+	public IntegrationModule getCurrentShippingModule() {
+		return currentShippingModule;
+	}

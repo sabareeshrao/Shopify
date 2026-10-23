@@ -1,0 +1,14 @@
+      
+      TreeCacheFactory f = null;
+      
+      
+/*      @SuppressWarnings("rawtypes")
+      Cache c = manager.getManager().getCache(namedCache);
+      
+      if(c != null) {
+    	  f = new TreeCacheFactory();
+    	  treeCache = f.createTreeCache(c);
+    	  //this.treeCache = (TreeCache)c;
+    	  return;
+      }*/
+      

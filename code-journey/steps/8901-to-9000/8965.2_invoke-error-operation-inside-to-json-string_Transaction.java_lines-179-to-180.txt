@@ -1,0 +1,2 @@
+				LOGGER.error("Cannot parse transactions map",e);
+			}

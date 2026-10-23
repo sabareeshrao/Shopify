@@ -1,0 +1,4 @@
+	public Date getDateAvailable() {
+		return dateAvailable;
+	}
+

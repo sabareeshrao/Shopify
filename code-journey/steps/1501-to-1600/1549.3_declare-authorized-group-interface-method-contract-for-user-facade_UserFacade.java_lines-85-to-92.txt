@@ -1,0 +1,8 @@
+   */
+  void authorizedGroup(String userName, List<String> groupNames);
+  
+  /**
+   * Check if user is in specific list of roles
+   * @param userName
+   * @param groupNames
+   * @return

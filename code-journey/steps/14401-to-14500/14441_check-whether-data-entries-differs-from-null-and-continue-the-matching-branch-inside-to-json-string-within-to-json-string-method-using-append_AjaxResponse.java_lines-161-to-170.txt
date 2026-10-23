@@ -1,0 +1,10 @@
+				count ++;
+			}
+			
+			returnString.append(",").append("\"validations\"").append(":[");
+			if(dataEntries!=null) {
+				returnString.append(dataEntries.toString());
+			}
+			returnString.append("]");
+
+		}

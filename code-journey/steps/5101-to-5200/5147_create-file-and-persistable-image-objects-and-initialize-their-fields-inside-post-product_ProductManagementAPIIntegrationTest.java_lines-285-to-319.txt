@@ -1,0 +1,35 @@
+
+		// product.setManufacturer(collection); //no manufacturer assigned for
+		// now
+		// product.setCategories(categories); //no category assigned for now
+
+		product.setSortOrder(0);// set iterator as sort order
+		product.setAvailable(true);// force availability
+		product.setProductVirtual(false);// force tangible good
+		product.setQuantityOrderMinimum(1);// force to 1 minimum when ordering
+		product.setProductShipeable(true);// all items are shipeable
+
+		/** images **/
+		final String image = "/Users/carlsamson/Documents/csti/IMG_4626.jpg";
+		// String image = "C:/personal/em/pictures-misc/IMG_2675.JPG";
+
+		final File imgPath = new File(image);
+
+		// PersistableImage persistableImage = new PersistableImage();
+
+		// persistableImage.setBytes(this.extractBytes(imgPath));
+		// persistableImage.setImageName(imgPath.getName());
+
+		// List<PersistableImage> images = new ArrayList<PersistableImage>();
+		// images.add(persistableImage);
+
+		// product.setImages(images);
+
+		ProductSpecification specifications = new ProductSpecification();
+		specifications.setHeight(new BigDecimal(20));
+		specifications.setLength(new BigDecimal(21));
+		specifications.setWeight(new BigDecimal(22));
+		specifications.setWidth(new BigDecimal(23));
+
+		product.setProductSpecifications(specifications);
+		

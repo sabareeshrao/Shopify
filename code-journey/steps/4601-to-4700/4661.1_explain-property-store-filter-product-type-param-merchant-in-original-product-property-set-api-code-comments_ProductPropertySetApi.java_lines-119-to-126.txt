@@ -1,0 +1,8 @@
+
+	/**
+	 * Get property set by store
+	 * filter by product type
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */

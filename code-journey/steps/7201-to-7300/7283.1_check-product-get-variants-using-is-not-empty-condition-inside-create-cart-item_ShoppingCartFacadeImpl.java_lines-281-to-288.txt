@@ -1,0 +1,8 @@
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();
+
+		ProductVariant instance = null;
+		if (CollectionUtils.isNotEmpty(product.getVariants())) {
+			instance = product.getVariants().iterator().next();
+			Set<ProductAvailability> instanceAvailabilities = instance.getAvailabilities();
+			if(!CollectionUtils.isEmpty(instanceAvailabilities)) {

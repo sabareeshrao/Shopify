@@ -1,0 +1,8 @@
+
+	/**
+	 * Commit an order
+	 * @param order
+	 * @param customer
+	 * @param transaction
+	 * @param store
+	 * @param language

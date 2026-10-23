@@ -1,0 +1,8 @@
+
+		try {
+			
+			// get module
+			IntegrationModule integrationModule = paymentService.getPaymentMethodByCode(merchantStore, code);
+			if (integrationModule == null) {
+				throw new ResourceNotFoundException("Payment module [" + code + "] not found");
+			}

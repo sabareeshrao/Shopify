@@ -1,0 +1,8 @@
+
+  /**
+   * List files
+   */
+  @Override
+  public List<OutputContentFile> getImages(String merchantStoreCode,
+      FileContentType imageContentType) throws ServiceException {
+    

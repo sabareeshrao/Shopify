@@ -1,0 +1,8 @@
+
+			Map<String, IntegrationConfiguration> configuredModules = shippingService
+					.getShippingModulesConfigured(merchantStore);
+
+			IntegrationConfiguration integrationConfiguration = configuredModules.get(configuration.getCode());
+
+			if (integrationConfiguration == null) {
+				integrationConfiguration = new IntegrationConfiguration();

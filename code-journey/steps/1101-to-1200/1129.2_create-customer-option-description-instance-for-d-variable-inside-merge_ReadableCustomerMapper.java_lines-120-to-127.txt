@@ -1,0 +1,8 @@
+				option.setCode(attribute.getCustomerOption().getCode());
+
+				CustomerOptionDescription d = new CustomerOptionDescription();
+				d.setDescription(attribute.getCustomerOption().getDescriptionsSettoList().get(0).getDescription());
+				d.setName(attribute.getCustomerOption().getDescriptionsSettoList().get(0).getName());
+				option.setDescription(d);
+
+				readableAttribute.setCustomerOption(option);

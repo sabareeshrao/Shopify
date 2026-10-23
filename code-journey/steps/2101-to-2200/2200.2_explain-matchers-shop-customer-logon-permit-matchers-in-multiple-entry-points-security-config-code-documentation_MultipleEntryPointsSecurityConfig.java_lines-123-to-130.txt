@@ -1,0 +1,8 @@
+					.antMatchers("/shop/customer/logon*").permitAll()
+					.antMatchers("/shop/customer/registration*").permitAll()
+					.antMatchers("/shop/customer/logout*").permitAll()
+					.antMatchers("/shop/customer/customLogon*").permitAll()
+					.antMatchers("/shop/customer/denied*").permitAll()
+					.antMatchers("/shop/customer/**").hasRole("AUTH_CUSTOMER")
+					.anyRequest().authenticated()
+					.and()

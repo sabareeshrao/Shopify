@@ -1,0 +1,23 @@
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = MerchantStore.class)
+	@JoinColumn(name="MERCHANTID")
+	private MerchantStore merchant;
+	
+	//@OneToMany(mappedBy = "order")
+	//private Set<OrderAccount> orderAccounts = new HashSet<OrderAccount>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	private Set<OrderProduct> orderProducts = new LinkedHashSet<OrderProduct>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	@OrderBy(clause = "sort_order asc")
+	private Set<OrderTotal> orderTotal = new LinkedHashSet<OrderTotal>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	@OrderBy(clause = "ORDER_STATUS_HISTORY_ID asc")
+	private Set<OrderStatusHistory> orderHistory = new LinkedHashSet<OrderStatusHistory>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	private Set<OrderAttribute> orderAttributes = new LinkedHashSet<OrderAttribute>();
+	

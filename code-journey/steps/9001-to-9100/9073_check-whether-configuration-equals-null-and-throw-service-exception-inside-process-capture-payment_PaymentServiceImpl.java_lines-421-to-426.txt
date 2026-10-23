@@ -1,0 +1,6 @@
+		
+		IntegrationConfiguration configuration = modules.get(order.getPaymentModuleCode());
+		
+		if(configuration==null) {
+			throw new ServiceException("Payment module " + order.getPaymentModuleCode() + " is not configured");
+		}

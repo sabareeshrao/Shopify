@@ -1,0 +1,2 @@
+							attributePrice = new BigDecimal(0);
+						}

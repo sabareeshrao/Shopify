@@ -1,0 +1,8 @@
+ * @author carlsamson
+ *
+ */
+@Configuration
+public class AsynchronousEventsConfiguration {
+	
+	   @Bean(name = "applicationEventMulticaster")
+	   public ApplicationEventMulticaster simpleApplicationEventMulticaster() {

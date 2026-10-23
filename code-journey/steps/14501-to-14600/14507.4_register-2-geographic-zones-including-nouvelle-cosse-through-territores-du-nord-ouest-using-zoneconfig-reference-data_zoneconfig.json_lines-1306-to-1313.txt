@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "NS",
+		"zoneName": "Nouvelle Écosse",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NT",
+		"zoneName": "Territores du Nord-Ouest",

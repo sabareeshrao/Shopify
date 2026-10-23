@@ -1,0 +1,7 @@
+
+			orderTotalSummary = orderService.caculateOrderTotal(summary, customer, store, language);
+		} else {
+			// need Set of ShoppingCartItem
+			// PersistableOrder not implemented
+			throw new Exception("calculateOrderTotal not yet implemented for PersistableOrder");
+		}

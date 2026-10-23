@@ -1,0 +1,5 @@
+indexes = { @Index(name="TAX_CLASS_CODE_IDX",columnList = "TAX_CLASS_CODE")},
+uniqueConstraints=
+    @UniqueConstraint(columnNames = {"MERCHANT_ID", "TAX_CLASS_CODE"}) )
+
+

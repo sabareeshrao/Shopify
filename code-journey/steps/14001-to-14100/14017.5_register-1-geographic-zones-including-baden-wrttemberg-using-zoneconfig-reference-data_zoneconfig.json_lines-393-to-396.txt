@@ -1,0 +1,4 @@
+	{
+		"zoneCode": "BAW",
+		"zoneName": "Baden-Wrttemberg",
+		"countryCode": "DE"

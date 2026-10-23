@@ -1,0 +1,36 @@
+		},
+		{
+			"zoneCode": "TI",
+			"zoneName": "Tessin",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "UR",
+			"zoneName": "Uri",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "VD",
+			"zoneName": "Waadt",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "VS",
+			"zoneName": "Wallis",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "ZG",
+			"zoneName": "Zug",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "ZH",
+			"zoneName": "Zrich",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "ACorua",
+			"zoneName": "A Corua",
+			"countryCode": "ES"
+		},

@@ -1,0 +1,8 @@
+
+    FinalPrice price = pricingService.calculateProductPrice(product, attributes);
+    ReadableProductPrice readablePrice = new ReadableProductPrice();
+    ReadableFinalPricePopulator populator = new ReadableFinalPricePopulator();
+    populator.setPricingService(pricingService);
+    populator.populate(price, readablePrice, merchantStore, language);
+    return readablePrice;
+  }

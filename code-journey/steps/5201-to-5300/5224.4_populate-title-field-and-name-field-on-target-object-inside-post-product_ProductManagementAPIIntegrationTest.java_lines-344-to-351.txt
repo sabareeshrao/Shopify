@@ -1,0 +1,8 @@
+		description.setTitle("Statue Head");
+		description.setName("Statue Head");
+		description.setDescription("Statue Head");
+		description.setFriendlyUrl("Statue-head");
+
+		descriptions.add(description);
+
+		// add french description

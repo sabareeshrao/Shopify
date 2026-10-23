@@ -1,0 +1,8 @@
+			"zoneCode": "OW",
+			"zoneName": "Obwalden",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "SG",
+			"zoneName": "St. Gallen",
+			"countryCode": "CH"

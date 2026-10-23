@@ -1,0 +1,7 @@
+
+		OrderStatus statusEnum = OrderStatus.valueOf(status);
+
+		orderFacade.updateOrderStatus(order, statusEnum, merchantStore);
+		return;
+	}
+}

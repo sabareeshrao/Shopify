@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.order.OrderTotal;
+import com.salesmanager.core.model.order.OrderTotalSummary;
+import com.salesmanager.core.model.order.OrderTotalType;
+import com.salesmanager.core.model.order.OrderTotalVariation;
+import com.salesmanager.core.model.order.OrderValueType;
+import com.salesmanager.core.model.order.orderproduct.OrderProduct;
+import com.salesmanager.core.model.order.orderstatus.OrderStatus;
+import com.salesmanager.core.model.order.orderstatus.OrderStatusHistory;

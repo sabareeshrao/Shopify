@@ -1,0 +1,15 @@
+		
+		//tax on shipping ?
+		//ShippingConfiguration shippingConfiguration = shippingService.getShippingConfiguration(store);	
+		
+		/** always calculate tax on shipping **/
+		//if(shippingConfiguration!=null) {
+			//if(shippingConfiguration.isTaxOnShipping()){
+				//use default tax class for shipping
+				TaxClass defaultTaxClass = taxClassService.getByCode(TaxClass.DEFAULT_TAX_CLASS);
+				//taxClasses.put(defaultTaxClass.getId(), defaultTaxClass);
+				BigDecimal amnt = taxClassAmountMap.get(defaultTaxClass.getId());
+				if(amnt==null) {
+					amnt = new BigDecimal(0);
+					amnt.setScale(2, RoundingMode.HALF_UP);
+				}

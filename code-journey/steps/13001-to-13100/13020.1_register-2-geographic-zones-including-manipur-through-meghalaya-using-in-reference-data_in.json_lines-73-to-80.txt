@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "Manipur",
+		"zoneName": "Manipur",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Meghalaya",
+		"zoneName": "Meghalaya",

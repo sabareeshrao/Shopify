@@ -1,0 +1,5 @@
+
+@Service("customerAttributeService")
+public class CustomerAttributeServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, CustomerAttribute> implements CustomerAttributeService {
+	

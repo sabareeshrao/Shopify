@@ -1,0 +1,4 @@
+	public FilePut getUploadFile() {
+		return uploadFile;
+	}
+

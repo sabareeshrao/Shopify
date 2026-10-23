@@ -1,0 +1,6 @@
+	private String code;
+	private int order;
+	private String module;
+	private BigDecimal value;
+	
+	

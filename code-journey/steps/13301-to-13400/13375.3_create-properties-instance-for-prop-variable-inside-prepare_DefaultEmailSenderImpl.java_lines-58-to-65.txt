@@ -1,0 +1,8 @@
+          impl.setProtocol(emailConfig.getProtocol());
+          impl.setHost(emailConfig.getHost());
+          impl.setPort(Integer.parseInt(emailConfig.getPort()));
+          impl.setUsername(emailConfig.getUsername());
+          impl.setPassword(emailConfig.getPassword());
+
+          Properties prop = new Properties();
+          prop.put("mail.smtp.auth", emailConfig.isSmtpAuth());

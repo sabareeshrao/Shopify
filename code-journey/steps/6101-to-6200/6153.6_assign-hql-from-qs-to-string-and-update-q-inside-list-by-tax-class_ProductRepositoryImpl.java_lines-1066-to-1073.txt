@@ -1,0 +1,8 @@
+
+		String hql = qs.toString();
+		Query q = this.em.createQuery(hql);
+
+		q.setParameter("tid", taxClass.getId());
+
+		@SuppressWarnings("unchecked")
+		List<Product> products = q.getResultList();

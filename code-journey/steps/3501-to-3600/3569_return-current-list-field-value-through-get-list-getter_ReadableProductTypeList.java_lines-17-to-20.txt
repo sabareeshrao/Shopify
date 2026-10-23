@@ -1,0 +1,4 @@
+	public List<ReadableProductType> getList() {
+		return list;
+	}
+

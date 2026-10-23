@@ -1,0 +1,3 @@
+		if (description.isPresent()) {
+			current.setDescription(description.get());
+		}

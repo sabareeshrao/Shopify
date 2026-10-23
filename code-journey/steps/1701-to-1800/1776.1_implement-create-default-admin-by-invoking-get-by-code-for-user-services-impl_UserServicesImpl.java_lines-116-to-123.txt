@@ -1,0 +1,8 @@
+	public void createDefaultAdmin() throws Exception {
+
+		  MerchantStore store = merchantStoreService.getByCode(MerchantStore.DEFAULT_STORE);
+
+		  String password = passwordEncoder.encode(DEFAULT_INITIAL_PASSWORD);
+		  
+		  List<Group> groups = groupService.listGroup(GroupType.ADMIN);
+		  

@@ -1,0 +1,8 @@
+
+label.generic.title=Title
+label.generic.keywords=Keywords
+label.generic.amount=Amount
+
+label.generic.changepassword=Change password
+
+label.generic.confirm=Please confirm!

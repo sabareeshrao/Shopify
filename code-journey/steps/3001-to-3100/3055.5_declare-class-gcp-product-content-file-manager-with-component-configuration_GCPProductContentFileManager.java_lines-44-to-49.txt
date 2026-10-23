@@ -1,0 +1,6 @@
+@Component("gcpProductAssetsManager")
+public class GCPProductContentFileManager implements ProductAssetsManager {
+  
+  @Autowired 
+  private CMSManager gcpAssetsManager;
+  

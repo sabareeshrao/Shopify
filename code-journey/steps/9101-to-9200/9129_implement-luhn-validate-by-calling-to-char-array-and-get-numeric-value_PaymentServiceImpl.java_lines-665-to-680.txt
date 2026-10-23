@@ -1,0 +1,16 @@
+
+	// The Luhn algorithm is basically a CRC type
+	// system for checking the validity of an entry.
+	// All major credit cards use numbers that will
+	// pass the Luhn check. Also, all of them are based
+	// on MOD 10.
+	@Deprecated
+	private void luhnValidate(String numberString)
+			throws ServiceException {
+		char[] charArray = numberString.toCharArray();
+		int[] number = new int[charArray.length];
+		int total = 0;
+	
+		for (int i = 0; i < charArray.length; i++) {
+			number[i] = Character.getNumericValue(charArray[i]);
+		}

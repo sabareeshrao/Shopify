@@ -1,0 +1,8 @@
+		"zoneName": "Appenzell Innerrhoden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "ARCH",
+		"zoneName": "Appenzell Ausserrhoden",
+		"countryCode": "CH"
+	},

@@ -1,0 +1,4 @@
+	public List<TaxRate> getTaxRates() {
+		return taxRates;
+	}
+

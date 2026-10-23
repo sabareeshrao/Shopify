@@ -1,0 +1,4 @@
+	public void setParent(MerchantStore parent) {
+		this.parent = parent;
+	}
+

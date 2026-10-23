@@ -1,0 +1,10 @@
+  @Override
+  public Optin convert(PersistableOptin source, MerchantStore store, Language language) {
+    Optin optinEntity = new Optin();
+    optinEntity.setCode(source.getCode());
+    optinEntity.setDescription(source.getDescription());
+    optinEntity.setOptinType(OptinType.valueOf(source.getOptinType()));
+    optinEntity.setMerchant(store);
+    return optinEntity;
+  }
+

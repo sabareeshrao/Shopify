@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute;
+
+/**
+ * Compatible with v1
+ * @author c.samson
+ *
+ */
+public class PersistableShoppingCartItem implements Serializable {

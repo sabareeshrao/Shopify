@@ -1,0 +1,4 @@
+		
+		if(existList.size()>0) {
+			throw new OperationNotAllowedException("Product with id [" + product.getId() + "] is already in the group");
+		}

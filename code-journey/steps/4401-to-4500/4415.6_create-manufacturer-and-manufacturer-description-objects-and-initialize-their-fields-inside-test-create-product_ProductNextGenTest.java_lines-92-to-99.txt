@@ -1,0 +1,8 @@
+	    Manufacturer brown = new Manufacturer();
+	    brown.setMerchantStore(store);
+	    brown.setCode("brown");
+
+	    ManufacturerDescription brownd = new ManufacturerDescription();
+	    brownd.setLanguage(en);
+	    brownd.setName("Brown's");
+	    brownd.setManufacturer(brown);

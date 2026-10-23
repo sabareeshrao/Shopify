@@ -1,0 +1,4 @@
+	public Integer getTaxPriority() {
+		return taxPriority;
+	}
+

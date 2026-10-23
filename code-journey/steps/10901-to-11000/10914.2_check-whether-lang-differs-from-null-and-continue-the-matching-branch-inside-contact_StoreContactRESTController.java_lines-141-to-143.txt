@@ -1,0 +1,3 @@
+				if(lang!=null) {
+					language = langs.get(language);
+				}

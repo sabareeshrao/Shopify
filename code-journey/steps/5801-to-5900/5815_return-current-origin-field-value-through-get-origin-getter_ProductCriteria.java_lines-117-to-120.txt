@@ -1,0 +1,4 @@
+	public String getOrigin() {
+		return origin;
+	}
+

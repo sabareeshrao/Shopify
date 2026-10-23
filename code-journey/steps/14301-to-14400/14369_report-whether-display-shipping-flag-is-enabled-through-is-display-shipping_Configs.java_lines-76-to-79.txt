@@ -1,0 +1,4 @@
+	public boolean isDisplayShipping() {
+		return displayShipping;
+	}
+

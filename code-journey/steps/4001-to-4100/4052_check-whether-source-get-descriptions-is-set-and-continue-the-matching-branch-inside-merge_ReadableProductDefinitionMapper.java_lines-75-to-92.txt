@@ -1,0 +1,18 @@
+
+		List<com.salesmanager.shop.model.catalog.product.ProductDescription> fulldescriptions = new ArrayList<com.salesmanager.shop.model.catalog.product.ProductDescription>();
+
+		returnDestination.setIdentifier(source.getSku());
+		returnDestination.setId(source.getId());
+		returnDestination.setVisible(source.isAvailable());
+		returnDestination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+		returnDestination.setSku(source.getSku());
+		ProductDescription description = null;
+		if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+			for (ProductDescription desc : source.getDescriptions()) {
+				if (language != null && desc.getLanguage() != null
+						&& desc.getLanguage().getId().intValue() == language.getId().intValue()) {
+					description = desc;
+					break;
+				} else {
+					fulldescriptions.add(populateDescription(desc));
+				}

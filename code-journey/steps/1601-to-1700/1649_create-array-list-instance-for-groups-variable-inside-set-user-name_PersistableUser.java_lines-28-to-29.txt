@@ -1,0 +1,2 @@
+	private List<PersistableGroup> groups = new ArrayList<PersistableGroup>();
+

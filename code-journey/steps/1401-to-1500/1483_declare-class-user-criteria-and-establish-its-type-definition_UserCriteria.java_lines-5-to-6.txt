@@ -1,0 +1,2 @@
+public class UserCriteria extends Criteria {
+	

@@ -1,0 +1,8 @@
+import javax.validation.constraints.NotEmpty;
+
+/**
+ * Search product request
+ * @author c.samson
+ *
+ */
+public class SearchProductRequest implements Serializable {

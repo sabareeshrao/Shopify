@@ -1,0 +1,4 @@
+			  Date lastAccess = user.getLoginTime();
+			  if(lastAccess==null) {
+				  lastAccess = new Date();
+			  }

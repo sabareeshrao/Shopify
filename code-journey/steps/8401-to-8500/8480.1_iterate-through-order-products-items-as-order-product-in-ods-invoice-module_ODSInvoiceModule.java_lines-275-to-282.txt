@@ -1,0 +1,8 @@
+			
+			//products
+			Set<OrderProduct> orderProducts = order.getOrderProducts();
+			int productCell = PRODUCT_ROW_START;
+			for(OrderProduct orderProduct : orderProducts) {
+				
+
+				String orderProductName = ProductUtils.buildOrderProductDisplayName(orderProduct);

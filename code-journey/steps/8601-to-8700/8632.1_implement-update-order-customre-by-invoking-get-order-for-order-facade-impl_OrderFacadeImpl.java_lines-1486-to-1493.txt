@@ -1,0 +1,8 @@
+	@Override
+	public void updateOrderCustomre(Long orderId, PersistableCustomer customer, MerchantStore store) {
+		// TODO Auto-generated method stub
+
+		try {
+
+		//get order by order id
+		Order modelOrder = orderService.getOrder(orderId, store);

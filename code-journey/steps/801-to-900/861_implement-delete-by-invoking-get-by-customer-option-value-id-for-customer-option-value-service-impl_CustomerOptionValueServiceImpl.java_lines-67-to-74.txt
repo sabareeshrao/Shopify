@@ -1,0 +1,8 @@
+	public void delete(CustomerOptionValue customerOptionValue) throws ServiceException {
+		
+		//remove all attributes having this option
+		List<CustomerAttribute> attributes = customerAttributeService.getByCustomerOptionValueId(customerOptionValue.getMerchantStore(), customerOptionValue.getId());
+		
+		for(CustomerAttribute attribute : attributes) {
+			customerAttributeService.delete(attribute);
+		}

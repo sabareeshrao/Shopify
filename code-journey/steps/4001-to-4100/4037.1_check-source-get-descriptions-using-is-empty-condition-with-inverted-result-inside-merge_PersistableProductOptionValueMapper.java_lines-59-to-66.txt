@@ -1,0 +1,8 @@
+
+			if (!CollectionUtils.isEmpty(source.getDescriptions())) {
+				for (com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription desc : source
+						.getDescriptions()) {
+					ProductOptionValueDescription description = null;
+					if (!CollectionUtils.isEmpty(destination.getDescriptions())) {
+						for (ProductOptionValueDescription d : destination.getDescriptions()) {
+							if (!StringUtils.isBlank(desc.getLanguage())

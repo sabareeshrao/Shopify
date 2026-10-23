@@ -1,0 +1,8 @@
+
+
+
+	List<CustomerOptionSet> listByOption(CustomerOption option,
+			MerchantStore store) throws ServiceException;
+	
+
+	List<CustomerOptionSet> listByOptionValue(CustomerOptionValue optionValue,

@@ -1,0 +1,6 @@
+	public BigDecimal getSubtotal() {
+		return subtotal;
+	}
+
+
+

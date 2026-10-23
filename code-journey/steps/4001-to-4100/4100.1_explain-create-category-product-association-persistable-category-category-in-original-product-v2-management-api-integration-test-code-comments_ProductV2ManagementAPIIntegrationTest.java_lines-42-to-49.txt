@@ -1,0 +1,8 @@
+
+		/**
+		 * Create a category for product association
+		 */
+		final PersistableCategory newCategory = new PersistableCategory();
+		newCategory.setCode("test-catv2");
+		newCategory.setSortOrder(1);
+		newCategory.setVisible(true);

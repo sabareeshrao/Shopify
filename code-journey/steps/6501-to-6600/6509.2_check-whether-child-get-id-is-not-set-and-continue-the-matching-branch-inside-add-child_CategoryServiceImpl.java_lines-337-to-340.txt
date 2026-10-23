@@ -1,0 +1,4 @@
+				for (Category subCategory : subCategories) {
+					if (!child.getId().equals(subCategory.getId())) {
+						addChild(child, subCategory);
+					}

@@ -1,0 +1,4 @@
+	public void setUploadFile(FilePut uploadFile) {
+		this.uploadFile = uploadFile;
+	}
+

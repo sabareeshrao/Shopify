@@ -1,0 +1,8 @@
+          + "left join fetch rp.owner rpo "
+          + "left join fetch rp.images pd "
+          + "left join fetch rp.merchantStore rpm "
+          + "left join fetch rpm.currency rpmc "
+          + "left join fetch rp.availabilities pa "
+          + "left join fetch pa.prices pap "
+          + "left join fetch pap.descriptions papd "
+          + "left join fetch rp.manufacturer manuf "

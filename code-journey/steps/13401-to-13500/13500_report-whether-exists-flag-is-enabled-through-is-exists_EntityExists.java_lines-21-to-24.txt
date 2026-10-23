@@ -1,0 +1,4 @@
+	public boolean isExists() {
+		return exists;
+	}
+

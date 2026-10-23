@@ -1,0 +1,8 @@
+  public void updateGroup(
+      @RequestBody ProductGroup group,
+      @PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+	  

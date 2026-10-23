@@ -1,0 +1,8 @@
+			/** post processors **/
+			//invoke pre processors
+			if(!CollectionUtils.isEmpty(shippingModulePostProcessors)) {
+				for(ShippingQuotePrePostProcessModule postProcessor : shippingModulePostProcessors) {
+					//get module info
+					
+					//get module configuration
+					IntegrationConfiguration integrationConfiguration = modules.get(postProcessor.getModuleCode());

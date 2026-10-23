@@ -1,0 +1,6 @@
+
+		ReadableProductOption readable = this.createOption(option, language);
+		selectableOptions.put(readable.getId(), readable);
+		return readable;
+	}
+

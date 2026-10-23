@@ -1,0 +1,8 @@
+		 * A customer attribute is a selected customer option set transformed to an 
+		 * attribute for a given customer
+		 */
+		
+		CustomerAttribute customerAttributeMailingList = new CustomerAttribute();
+		customerAttributeMailingList.setCustomer(customer);
+		customerAttributeMailingList.setCustomerOption(subscribedToMailingList);
+		customerAttributeMailingList.setCustomerOptionValue(no);

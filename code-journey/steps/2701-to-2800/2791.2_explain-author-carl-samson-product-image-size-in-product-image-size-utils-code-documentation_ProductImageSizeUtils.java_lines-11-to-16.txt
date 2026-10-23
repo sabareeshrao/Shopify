@@ -1,0 +1,6 @@
+ * @author Carl Samson
+ *
+ */
+public class ProductImageSizeUtils {
+
+

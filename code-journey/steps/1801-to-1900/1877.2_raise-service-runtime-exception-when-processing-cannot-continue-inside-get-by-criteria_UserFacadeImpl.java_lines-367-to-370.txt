@@ -1,0 +1,4 @@
+			throw new ServiceRuntimeException("Cannot get users by criteria user", e);
+		}
+	}
+

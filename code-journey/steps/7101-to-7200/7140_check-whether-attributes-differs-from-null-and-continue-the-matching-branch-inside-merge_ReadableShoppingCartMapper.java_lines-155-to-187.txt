@@ -1,0 +1,33 @@
+					}
+					
+					
+					
+
+					shoppingCartItem.setPrice(item.getItemPrice());
+					shoppingCartItem.setFinalPrice(pricingService.getDisplayAmount(item.getItemPrice(), store));
+
+					shoppingCartItem.setQuantity(item.getQuantity());
+
+					cartQuantity = cartQuantity + item.getQuantity();
+
+					BigDecimal subTotal = pricingService.calculatePriceQuantity(item.getItemPrice(),
+							item.getQuantity());
+
+					// calculate sub total (price * quantity)
+					shoppingCartItem.setSubTotal(subTotal);
+
+					shoppingCartItem.setDisplaySubTotal(pricingService.getDisplayAmount(subTotal, store));
+
+					Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> attributes = item
+							.getAttributes();
+					if (attributes != null) {
+						for (com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attribute : attributes) {
+
+							ProductAttribute productAttribute = productAttributeService
+									.getById(attribute.getProductAttributeId());
+
+							if (productAttribute == null) {
+								LOG.warn("Product attribute with ID " + attribute.getId()
+										+ " not found, skipping cart attribute " + attribute.getId());
+								continue;
+							}

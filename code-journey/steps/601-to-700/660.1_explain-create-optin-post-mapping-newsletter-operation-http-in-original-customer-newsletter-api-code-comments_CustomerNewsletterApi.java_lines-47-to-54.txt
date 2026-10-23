@@ -1,0 +1,8 @@
+
+  /** Create new optin */
+  @PostMapping("/newsletter")
+  @ApiOperation(
+      httpMethod = "POST",
+      value = "Creates a newsletter optin",
+      notes = "",
+      produces = "application/json")

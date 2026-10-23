@@ -1,0 +1,23 @@
+
+				((CreditCardPayment) payment).setCreditCard(creditCardType);
+
+				if (creditCardType != null) {
+
+					CreditCard cc = new CreditCard();
+					cc.setCardType(creditCardType);
+					cc.setCcCvv(((CreditCardPayment) payment).getCredidCardValidationNumber());
+					cc.setCcOwner(((CreditCardPayment) payment).getCardOwner());
+					cc.setCcExpires(((CreditCardPayment) payment).getExpirationMonth() + "-"
+							+ ((CreditCardPayment) payment).getExpirationYear());
+
+					// hash credit card number
+					if (!StringUtils.isBlank(cc.getCcNumber())) {
+						String maskedNumber = CreditCardUtils
+								.maskCardNumber(order.getPayment().get("creditcard_card_number"));
+						cc.setCcNumber(maskedNumber);
+						modelOrder.setCreditCard(cc);
+					}
+
+				}
+
+			}

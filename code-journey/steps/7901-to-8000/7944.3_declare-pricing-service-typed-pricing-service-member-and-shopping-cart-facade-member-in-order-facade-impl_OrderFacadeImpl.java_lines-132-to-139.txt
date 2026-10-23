@@ -1,0 +1,8 @@
+	@Inject
+	private PricingService pricingService;
+	@Inject
+	private ShoppingCartFacade shoppingCartFacade;
+	@Inject
+	private ShippingQuoteService shippingQuoteService;
+	@Inject
+	private CoreConfiguration coreConfiguration;

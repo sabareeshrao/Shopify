@@ -1,0 +1,8 @@
+label.generic.next=Suivant
+label.generic.genre=Genre
+label.generic.male=Homme
+label.generic.female=Femme
+label.generic.register=Enregistrer
+label.generic.youropinion=Votre opinion
+label.generic.date=Date
+label.generic.comments=Commentaires

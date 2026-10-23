@@ -1,0 +1,5 @@
+			List<ZoneDescription> descriptions = new ArrayList<ZoneDescription>();
+			descriptions.add(description);
+			zone.setDescriptons(descriptions);
+			update(zone);
+		}

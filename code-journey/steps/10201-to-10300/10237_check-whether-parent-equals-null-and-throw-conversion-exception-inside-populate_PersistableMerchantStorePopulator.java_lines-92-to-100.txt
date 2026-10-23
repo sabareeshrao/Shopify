@@ -1,0 +1,9 @@
+		  try {
+            MerchantStore parent = merchantStoreService.getByCode(source.getRetailerStore());
+            if(parent == null) {
+              throw new ConversionException("Parent store [" + source.getRetailerStore() + "] does not exist");
+            }
+            target.setParent(parent);
+          } catch (ServiceException e) {
+              throw new ConversionException(e);
+          }

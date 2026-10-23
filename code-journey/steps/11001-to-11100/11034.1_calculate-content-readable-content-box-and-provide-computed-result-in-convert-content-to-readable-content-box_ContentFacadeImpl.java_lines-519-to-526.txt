@@ -1,0 +1,8 @@
+	private ReadableContentBox convertContentToReadableContentBox(MerchantStore store, Language language,
+			Content content) {
+		if (language != null) {
+			ReadableContentBox box = new ReadableContentBox();
+			this.setDescription(content, box, language);
+			box.setCode(content.getCode());
+			box.setId(content.getId());
+			box.setVisible(content.isVisible());

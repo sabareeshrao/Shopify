@@ -1,0 +1,8 @@
+	public String getPageTitle() {
+		return pageTitle;
+	}
+	public void setPageTitle(String pageTitle) {
+		this.pageTitle = pageTitle;
+	}
+	public String getPageDescription() {
+		return pageDescription;

@@ -1,0 +1,8 @@
+			IntegrationConfiguration c = configurations.get(k);
+			
+			String jsonString = c.toJSONString();
+			jsonModules.append(jsonString);
+			
+			count ++;
+			if(count<configurations.size()) {
+				jsonModules.append(",");

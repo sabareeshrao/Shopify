@@ -1,0 +1,4 @@
+		
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("Exception while product attribute conversion",e);
+		}

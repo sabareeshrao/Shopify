@@ -1,0 +1,8 @@
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getAddress())) {
+					FieldError error = new FieldError("customer.delivery.address", "customer.delivery.address",
+							messages.getMessage("NotEmpty.customer.shipping.address", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.address",
+							messages.getMessage("NotEmpty.customer.shipping.address", locale));
+				}

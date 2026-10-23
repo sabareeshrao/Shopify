@@ -1,0 +1,36 @@
+	{
+		"zoneCode": "WIAT",
+		"zoneName": "Wien",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "NO",
+		"zoneName": "Niederosterreich",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "OO",
+		"zoneName": "Oberosterreich",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "SB",
+		"zoneName": "Salzburg",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "KN",
+		"zoneName": "Karten",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "ST",
+		"zoneName": "Steiermark",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "TIAT",
+		"zoneName": "Tirol",
+		"countryCode": "AT"
+	},
+	{

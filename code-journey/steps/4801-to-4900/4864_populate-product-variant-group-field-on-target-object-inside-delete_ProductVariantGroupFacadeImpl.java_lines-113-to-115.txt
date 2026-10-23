@@ -1,0 +1,3 @@
+				instance.setProductVariantGroup(null);
+				productVariantService.save(instance);
+			}

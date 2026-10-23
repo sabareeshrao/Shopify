@@ -1,0 +1,23 @@
+
+		Customer customer = customerFacade.getCustomerModel(persistableCustomer, store, language);
+
+		Delivery delivery = new Delivery();
+
+		// adjust shipping and billing
+		if (order.isShipToBillingAdress() && !order.isShipToDeliveryAddress()) {
+
+			Billing billing = customer.getBilling();
+
+			String postalCode = billing.getPostalCode();
+			postalCode = validatePostalCode(postalCode);
+
+			delivery.setAddress(billing.getAddress());
+			delivery.setCompany(billing.getCompany());
+			delivery.setCity(billing.getCity());
+			delivery.setPostalCode(billing.getPostalCode());
+			delivery.setState(billing.getState());
+			delivery.setCountry(billing.getCountry());
+			delivery.setZone(billing.getZone());
+		} else {
+			delivery = customer.getDelivery();
+		}

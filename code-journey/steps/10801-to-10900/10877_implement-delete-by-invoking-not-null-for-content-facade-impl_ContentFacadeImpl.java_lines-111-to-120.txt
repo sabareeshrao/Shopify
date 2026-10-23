@@ -1,0 +1,10 @@
+	@Override
+	public void delete(MerchantStore store, String fileName, String fileType) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(fileName, "File name cannot be null");
+		try {
+			FileContentType t = FileContentType.valueOf(fileType);
+			contentService.removeFile(store.getCode(), t, fileName);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}

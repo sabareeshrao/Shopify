@@ -1,0 +1,8 @@
+					pageRequest);
+		} else if (StringUtils.isBlank(criteria.getStoreCode())) {// search for
+																	// a
+																	// specific
+																	// store
+			users = pageableUserRepository.listAll(criteria.getAdminEmail(), pageRequest);
+		} else if (criteria.getStoreCode() != null) {// store code
+			users = pageableUserRepository.listByStore(criteria.getStoreCode(), criteria.getAdminEmail(), pageRequest);

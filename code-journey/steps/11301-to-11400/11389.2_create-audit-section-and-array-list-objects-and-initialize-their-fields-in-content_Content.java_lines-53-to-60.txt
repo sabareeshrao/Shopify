@@ -1,0 +1,8 @@
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+	
+	@Valid
+	@OneToMany(mappedBy="content", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<ContentDescription> descriptions = new ArrayList<ContentDescription>();
+	
+	@ManyToOne(fetch = FetchType.LAZY)

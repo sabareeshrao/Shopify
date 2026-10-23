@@ -1,0 +1,2 @@
+      throw new ResourceNotFoundException("Manufacturer [" + id + "] not found");
+    }

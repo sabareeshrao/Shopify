@@ -1,0 +1,8 @@
+		descriptions.add(description);
+
+		product.setDescriptions(descriptions);
+
+		final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+		final String json = writer.writeValueAsString(product);
+
+		System.out.println(json);

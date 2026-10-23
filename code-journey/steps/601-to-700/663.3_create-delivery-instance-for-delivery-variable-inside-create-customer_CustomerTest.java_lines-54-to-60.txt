@@ -1,0 +1,7 @@
+		customer.setDefaultLanguage(store.getDefaultLanguage());
+		
+	    Delivery delivery = new Delivery();
+	    delivery.setAddress("Shipping address");
+	    delivery.setCountry(country);
+	    delivery.setZone(zone);
+	    

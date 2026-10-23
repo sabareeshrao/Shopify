@@ -1,0 +1,8 @@
+
+		// RENTAL
+		/**
+		if (!StringUtils.isBlank(criteria.getStatus())) {
+			countBuilderWhere.append(" and p.rentalStatus = :status");
+		}
+		**/
+

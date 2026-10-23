@@ -1,0 +1,8 @@
+	 * @param extension
+	 * @param request
+	 * @return
+	 * @throws IOException
+	 */
+	@RequestMapping(value="/static/products/{storeCode}/{productCode}/{imageSize}/{imageName}.{extension}",
+			produces = {"image/gif", "image/jpg", "image/png", "application/octet-stream"})
+	public @ResponseBody byte[] printImage(@PathVariable final String storeCode, @PathVariable final String productCode, @PathVariable final String imageSize, @PathVariable final String imageName, @PathVariable final String extension, HttpServletRequest request) throws IOException {

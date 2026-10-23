@@ -1,0 +1,4 @@
+	public List<OrderTotal> getVariations() {
+		return variations;
+	}
+

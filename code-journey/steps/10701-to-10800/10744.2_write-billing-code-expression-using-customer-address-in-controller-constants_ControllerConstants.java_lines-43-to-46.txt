@@ -1,0 +1,4 @@
+            final static String Billing="customerAddress";
+            final static String EditAddress="editCustomerAddress";
+        }
+        

@@ -1,0 +1,8 @@
+/**
+ * Tax class management
+ * 
+ * @author carlsamson
+ *
+ */
+
+@RestController

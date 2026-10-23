@@ -1,0 +1,4 @@
+    public RestApiException(String message) {
+        super(message);
+    }
+

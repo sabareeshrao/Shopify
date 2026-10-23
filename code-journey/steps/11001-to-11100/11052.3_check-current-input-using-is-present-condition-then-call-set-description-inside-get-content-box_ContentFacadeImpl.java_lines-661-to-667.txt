@@ -1,0 +1,7 @@
+						content.getDescriptions(), store.getDefaultLanguage());
+				
+				if(contentDescription.isPresent()) {
+					com.salesmanager.shop.model.content.common.ContentDescription desc = this
+							.contentDescription(contentDescription.get());
+					full.setDescription(desc);
+				}

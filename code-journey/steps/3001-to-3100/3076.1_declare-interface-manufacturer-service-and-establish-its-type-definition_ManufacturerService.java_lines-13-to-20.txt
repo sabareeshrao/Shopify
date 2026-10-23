@@ -1,0 +1,8 @@
+public interface ManufacturerService extends SalesManagerEntityService<Long, Manufacturer> {
+
+	List<Manufacturer> listByStore(MerchantStore store, Language language)
+			throws ServiceException;
+
+	List<Manufacturer> listByStore(MerchantStore store) throws ServiceException;
+	
+	Page<Manufacturer> listByStore(MerchantStore store, Language language, int page, int count) throws ServiceException;

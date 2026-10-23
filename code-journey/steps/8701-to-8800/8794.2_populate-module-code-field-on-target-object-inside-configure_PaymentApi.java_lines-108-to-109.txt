@@ -1,0 +1,2 @@
+				integrationConfiguration.setModuleCode(configuration.getCode());
+			}

@@ -1,0 +1,15 @@
+	private CustomerRepository customerRepository;
+	
+	@Inject
+	private CustomerAttributeService customerAttributeService;
+	
+	@Inject
+	private GeoLocation geoLocation;
+
+	
+	@Inject
+	public CustomerServiceImpl(CustomerRepository customerRepository) {
+		super(customerRepository);
+		this.customerRepository = customerRepository;
+	}
+

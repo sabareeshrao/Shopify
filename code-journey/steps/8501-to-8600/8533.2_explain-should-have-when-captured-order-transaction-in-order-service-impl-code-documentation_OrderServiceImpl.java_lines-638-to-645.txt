@@ -1,0 +1,8 @@
+			 */
+
+			//should have when not captured
+			/**
+			 * Order id  Transaction type
+			 * 2          AUTHORIZE
+			 */
+

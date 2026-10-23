@@ -1,0 +1,8 @@
+
+	@Inject
+	private SecurityFacade securityFacade;
+
+	@Autowired
+	private FilePathUtils filePathUtils;
+
+	@Autowired

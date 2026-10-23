@@ -1,0 +1,8 @@
+		
+		
+		// crop factor
+/*		double factor = 1;
+		if (this.getCropeBaseline() == 0) {// width
+			factor = new Integer(width).doubleValue()
+					/ new Integer(specificationsWidth).doubleValue();
+		} else {// height

@@ -1,0 +1,4 @@
+	public double getCropAreaWidth() {
+		return cropAreaWidth;
+	}
+

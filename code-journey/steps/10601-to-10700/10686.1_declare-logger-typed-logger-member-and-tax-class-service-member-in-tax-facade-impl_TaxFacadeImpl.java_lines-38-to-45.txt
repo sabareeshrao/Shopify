@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(TaxFacadeImpl.class);
+	
+	
+	@Autowired
+	private TaxClassService taxClassService;
+	
+	@Autowired
+	private TaxRateService taxRateService;

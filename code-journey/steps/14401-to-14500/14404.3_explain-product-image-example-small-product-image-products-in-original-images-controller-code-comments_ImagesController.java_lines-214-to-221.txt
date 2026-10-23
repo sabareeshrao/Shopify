@@ -1,0 +1,8 @@
+
+		// product image
+		// example small product image -> /static/products/DEFAULT/TB12345/product1.jpg?size=small
+		
+		// example large product image -> /static/products/DEFAULT/TB12345/product1.jpg
+		// or
+		//example large product image -> /static/products/DEFAULT/TB12345/product1.jpg?size=large
+		

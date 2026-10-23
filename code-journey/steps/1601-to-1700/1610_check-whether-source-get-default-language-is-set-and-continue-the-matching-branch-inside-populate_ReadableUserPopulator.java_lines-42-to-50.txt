@@ -1,0 +1,9 @@
+
+    // set default language
+    target.setDefaultLanguage(Constants.DEFAULT_LANGUAGE);
+
+    if (source.getDefaultLanguage() != null)
+      target.setDefaultLanguage(source.getDefaultLanguage().getCode());
+    target.setMerchant(store.getCode());
+    target.setId(source.getId());
+

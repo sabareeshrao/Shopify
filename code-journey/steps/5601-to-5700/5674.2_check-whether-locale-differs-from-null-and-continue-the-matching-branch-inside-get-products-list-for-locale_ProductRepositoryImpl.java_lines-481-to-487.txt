@@ -1,0 +1,7 @@
+			int first, int max) {
+
+		List regionList = new ArrayList();
+		regionList.add(Constants.ALL_REGIONS);
+		if (locale != null) {
+			regionList.add(locale.getCountry());
+		}

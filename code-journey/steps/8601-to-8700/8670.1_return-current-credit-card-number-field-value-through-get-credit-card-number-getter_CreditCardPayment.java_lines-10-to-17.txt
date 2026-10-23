@@ -1,0 +1,8 @@
+	private String creditCardNumber;
+	private String credidCardValidationNumber;
+	private String expirationMonth;
+	private String expirationYear;
+	private String cardOwner;
+	private CreditCardType creditCard;
+	public String getCreditCardNumber() {
+		return creditCardNumber;

@@ -1,0 +1,2 @@
+public class PersistableTransactionPopulator extends AbstractDataPopulator<PersistableTransaction, Transaction> {
+

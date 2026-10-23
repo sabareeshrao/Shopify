@@ -1,0 +1,3 @@
+			if(this.existsTaxClass(taxClass.getCode(), store, language)) {
+				throw new OperationNotAllowedException("Tax class [" + taxClass.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}

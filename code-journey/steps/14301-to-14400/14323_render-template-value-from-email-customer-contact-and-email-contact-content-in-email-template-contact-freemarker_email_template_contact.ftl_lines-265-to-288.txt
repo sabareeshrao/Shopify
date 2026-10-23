@@ -1,0 +1,24 @@
+
+<!-- BODY -->
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						<p class="lead">
+							${EMAIL_CUSTOMER_CONTACT}
+						</p>
+						<p>
+    							${EMAIL_CONTACT_NAME_LABEL}: ${EMAIL_CONTACT_NAME}<br />
+    							${EMAIL_CONTACT_EMAIL_LABEL}: ${EMAIL_CONTACT_EMAIL}<br />
+
+						</p>
+						<!-- Callout Panel -->
+						<p class="callout">
+							${EMAIL_CONTACT_CONTENT}
+						</p><!-- /Callout Panel -->					
+												

@@ -1,0 +1,6 @@
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "productOptionValue")
+	private Set<ProductOptionValueDescription> descriptions = new HashSet<ProductOptionValueDescription>();
+	
+	@Transient
+	private MultipartFile image = null;
+	

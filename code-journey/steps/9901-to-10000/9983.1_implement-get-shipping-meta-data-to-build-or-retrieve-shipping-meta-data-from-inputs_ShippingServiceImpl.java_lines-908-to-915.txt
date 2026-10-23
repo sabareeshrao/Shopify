@@ -1,0 +1,8 @@
+	@Override
+	public ShippingMetaData getShippingMetaData(MerchantStore store)
+			throws ServiceException {
+		
+		
+		try {
+		
+		ShippingMetaData metaData = new ShippingMetaData();

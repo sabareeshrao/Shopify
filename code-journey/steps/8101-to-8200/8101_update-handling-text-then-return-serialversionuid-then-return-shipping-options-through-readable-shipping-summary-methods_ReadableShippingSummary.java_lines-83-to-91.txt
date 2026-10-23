@@ -1,0 +1,9 @@
+	public void setHandlingText(String handlingText) {
+		this.handlingText = handlingText;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public List<ShippingOption> getShippingOptions() {
+		return shippingOptions;
+	}

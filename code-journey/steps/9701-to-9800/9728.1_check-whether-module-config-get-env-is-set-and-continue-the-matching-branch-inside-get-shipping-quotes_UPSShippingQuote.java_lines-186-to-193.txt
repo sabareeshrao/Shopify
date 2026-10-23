@@ -1,0 +1,8 @@
+			
+			Map<String, ModuleConfig> moduleConfigsMap = module.getModuleConfigs();
+			for(String key : moduleConfigsMap.keySet()) {
+				
+				ModuleConfig moduleConfig = moduleConfigsMap.get(key);
+				if(moduleConfig.getEnv().equals(env)) {
+					host = moduleConfig.getHost();
+					protocol = moduleConfig.getScheme();

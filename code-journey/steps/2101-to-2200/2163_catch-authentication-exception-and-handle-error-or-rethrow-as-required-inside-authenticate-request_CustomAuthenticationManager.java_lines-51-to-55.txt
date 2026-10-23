@@ -1,0 +1,5 @@
+		} catch (AuthenticationException failed) {
+			// Authentication failed
+			unsuccess(request, response);
+			return;
+		}

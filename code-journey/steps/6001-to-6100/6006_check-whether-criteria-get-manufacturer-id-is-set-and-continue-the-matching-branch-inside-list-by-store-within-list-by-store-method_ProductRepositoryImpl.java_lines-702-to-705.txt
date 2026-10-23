@@ -1,0 +1,4 @@
+
+		if (criteria.getManufacturerId() != null) {
+			countQ.setParameter("manufid", criteria.getManufacturerId());
+		}

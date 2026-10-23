@@ -1,0 +1,4 @@
+	public Category getCategory() {
+		return category;
+	}
+

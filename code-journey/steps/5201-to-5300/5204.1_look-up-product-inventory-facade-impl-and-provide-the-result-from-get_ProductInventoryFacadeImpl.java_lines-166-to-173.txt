@@ -1,0 +1,8 @@
+	@Override
+	public ReadableInventory get(Long inventoryId, MerchantStore store, Language language) {
+
+
+		ProductAvailability availability = productAvailabilityService.getById(inventoryId, store)
+				.orElseThrow(() -> new ResourceNotFoundException("Inventory with id [" + inventoryId + "] not found"));
+		return readableInventoryMapper.convert(availability, store, language);
+	}

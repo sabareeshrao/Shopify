@@ -1,0 +1,5 @@
+
+	@Column(name="LOG")
+	@Type(type = "org.hibernate.type.TextType")
+	private String log;
+	

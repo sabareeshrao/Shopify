@@ -1,0 +1,5 @@
+
+		if (attr.getProduct().getId().longValue() != productId) {
+			throw new ResourceNotFoundException(
+					"ProductAttribute not found for [" + attributeId + "] and product [" + productId + "]");
+		}

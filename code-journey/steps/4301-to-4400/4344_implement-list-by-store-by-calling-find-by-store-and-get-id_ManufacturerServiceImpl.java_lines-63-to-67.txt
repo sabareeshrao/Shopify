@@ -1,0 +1,5 @@
+  @Override
+  public List<Manufacturer> listByStore(MerchantStore store) throws ServiceException {
+    return manufacturerRepository.findByStore(store.getId());
+  }
+

@@ -1,0 +1,4 @@
+	public String getCcExpires() {
+		return ccExpires;
+	}
+

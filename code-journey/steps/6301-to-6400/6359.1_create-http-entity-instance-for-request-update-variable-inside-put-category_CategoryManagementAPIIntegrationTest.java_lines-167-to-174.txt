@@ -1,0 +1,8 @@
+        
+        HttpEntity<PersistableCategory> requestUpdate = new HttpEntity<>(newCategory, getHeader());
+        
+        ResponseEntity resp = testRestTemplate.exchange("/api/v1/private/category/" + cat.getId(), HttpMethod.PUT,   requestUpdate, Void.class);
+        assertThat(resp.getStatusCode(), is(OK));
+        
+        //update
+

@@ -1,0 +1,5 @@
+			
+			productVariantGroupService.saveOrUpdate(group);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Exception while adding instance group image", e);
+		}

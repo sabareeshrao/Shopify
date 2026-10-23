@@ -1,0 +1,8 @@
+		   */
+		  SecurityContext securityContext = SecurityContextHolder.getContext();
+		  HttpSession session = request.getSession(true);
+		  session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
+		  
+		  try {
+			  User user = userService.getByUserName(userName);
+			  

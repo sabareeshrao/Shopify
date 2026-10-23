@@ -1,0 +1,8 @@
+	@Override
+	public void saveOrUpdate(ProductRelationship relationship) throws ServiceException {
+		
+		if(relationship.getId()!=null && relationship.getId()>0) {
+			
+			this.update(relationship);
+			
+		} else {

@@ -1,0 +1,19 @@
+
+
+	@Inject
+	private ProductService productService;
+
+
+	@Autowired
+	private PersistableProductDefinitionMapper persistableProductDefinitionMapper;
+	
+	@Autowired
+	private ReadableProductDefinitionMapper readableProductDefinitionMapper;
+	
+	@Autowired
+	private ProductVariantFacade productVariantFacade;
+
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

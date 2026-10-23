@@ -1,0 +1,8 @@
+	@Override
+	public List<CodeEntity> createAttributes(List<PersistableProductAttribute> attributes, Long productId,
+			MerchantStore store) {
+		Validate.notNull(productId,"Product id must not be null");
+		Validate.notNull(store,"Merchant cannot be null");
+
+		//convert to model
+		

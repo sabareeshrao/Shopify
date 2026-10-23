@@ -1,0 +1,8 @@
+		
+		com.salesmanager.shop.model.order.total.OrderTotal taxTotal = null;
+		com.salesmanager.shop.model.order.total.OrderTotal shippingTotal = null;
+		
+		
+		if(source.getBilling()!=null) {
+			ReadableBilling address = new ReadableBilling();
+			address.setEmail(source.getCustomerEmailAddress());

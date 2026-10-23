@@ -1,0 +1,4 @@
+           
+           if(StringUtils.isNotBlank( source.getCompany())){
+               target.getBilling().setCompany( source.getCompany() );
+           }

@@ -1,0 +1,8 @@
+	 * @throws Exception
+	 */
+	com.salesmanager.shop.model.order.v0.ReadableOrderList getCapturableOrderList(MerchantStore store, Date startDate, Date endDate,
+			Language language) throws Exception;
+
+	/**
+	 * Capture a pre-authorized transaction. Candidate order ids can be obtained from
+	 * getCapturableOrderList

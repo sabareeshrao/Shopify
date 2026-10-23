@@ -1,0 +1,8 @@
+	
+	/**
+	 * Get a MarketPlace from store code
+	 * @param store
+	 * @param lang
+	 * @return
+	 * @throws Exception
+	 */

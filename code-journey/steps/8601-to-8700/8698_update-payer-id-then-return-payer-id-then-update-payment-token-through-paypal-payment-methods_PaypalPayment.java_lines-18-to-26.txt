@@ -1,0 +1,9 @@
+	public void setPayerId(String payerId) {
+		this.payerId = payerId;
+	}
+	public String getPayerId() {
+		return payerId;
+	}
+	public void setPaymentToken(String paymentToken) {
+		this.paymentToken = paymentToken;
+	}

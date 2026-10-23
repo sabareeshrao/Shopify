@@ -1,0 +1,8 @@
+
+		// if cart has been completed return null
+		if (cart.getOrderId() != null && cart.getOrderId().longValue() > 0) {
+			if (StringUtils.isNotBlank(shoppingCartId) && !(shoppingCartId.equals(cart.getShoppingCartCode()))) {
+				cart = shoppingCartService.getByCode(shoppingCartId, store);
+			} else {
+				return null;
+			}

@@ -1,0 +1,8 @@
+  @Override
+  public void optinCustomer(PersistableCustomerOptin optin, MerchantStore store) {
+    // check if customer optin exists
+    Optin optinDef = getOptinByCode(store);
+
+    CustomerOptin customerOptin = getCustomerOptinByEmailAddress(optin.getEmail(), store, OptinType.NEWSLETTER);
+
+    if (customerOptin != null) {

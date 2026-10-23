@@ -1,0 +1,8 @@
+	valueColumnName = "SEQ_COUNT",
+	allocationSize = SchemaConstant.DESCRIPTION_ID_ALLOCATION_SIZE, 
+	initialValue = SchemaConstant.DESCRIPTION_ID_START_VALUE,
+	pkColumnValue = "CATALOG_ENT_SEQ_NEXT_VAL")
+	private Long id;
+ 
+    @ManyToOne
+    @JoinColumn(name = "CATEGORY_ID", nullable = false)

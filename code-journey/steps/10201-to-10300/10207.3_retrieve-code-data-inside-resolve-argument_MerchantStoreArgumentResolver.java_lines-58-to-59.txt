@@ -1,0 +1,2 @@
+			throw new UnauthorizedException("Cannot authorize user for store " + storeModel.getCode());
+		}

@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.common.Delivery;
+
+/**
+ * Contains shipping fees according to user selections
+ * @author casams1
+ *
+ */
+public class ShippingSummary implements Serializable {

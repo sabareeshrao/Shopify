@@ -1,0 +1,4 @@
+	public boolean getAttributeDefault() {
+		return attributeDefault;
+	}
+

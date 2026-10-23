@@ -1,0 +1,8 @@
+label.configuration.pinterest=Pinterest
+label.configuration.instagram=Instagram
+label.social.connect=Connect with us
+label.social.facebook=FaceBook
+label.social.twitter=Twitter
+label.configuration.useglobalsearch_suggestions=Use global pre-defined search suggestions
+label.configuration.globalsearch_suggestions_path=Global pre-defined search suggestions file path
+

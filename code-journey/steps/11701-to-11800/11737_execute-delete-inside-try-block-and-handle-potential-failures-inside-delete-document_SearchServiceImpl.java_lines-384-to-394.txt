@@ -1,0 +1,11 @@
+
+		List<String> languages = languages(product);
+
+		try {
+			searchModule.delete(languages, product.getId());
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}
+

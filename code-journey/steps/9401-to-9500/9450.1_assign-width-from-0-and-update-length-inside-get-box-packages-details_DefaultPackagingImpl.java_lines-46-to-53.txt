@@ -1,0 +1,8 @@
+
+		double width = 0;
+		double length = 0;
+		double height = 0;
+		double weight = 0;
+		double maxweight = 0;
+
+		//int treshold = 0;

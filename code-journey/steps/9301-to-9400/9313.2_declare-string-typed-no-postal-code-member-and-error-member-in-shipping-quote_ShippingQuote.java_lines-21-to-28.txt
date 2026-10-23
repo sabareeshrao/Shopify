@@ -1,0 +1,8 @@
+	public final static String NO_POSTAL_CODE= "NO_POSTAL_CODE";
+	public final static String ERROR= "ERROR";
+
+	/** shipping module used **/
+	private String shippingModuleCode;
+	private List<ShippingOption> shippingOptions = null;
+	/** if an error occurs, this field will be populated from constants defined above **/
+	private String shippingReturnCode = null;//NO_SHIPPING... or NO_SHIPPING_MODULE... or NO_POSTAL_...

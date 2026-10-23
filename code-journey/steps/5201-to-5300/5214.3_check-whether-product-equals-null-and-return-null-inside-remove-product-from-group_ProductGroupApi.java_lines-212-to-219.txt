@@ -1,0 +1,8 @@
+
+    try {
+      // get the product
+      Product product = productService.getById(productId);
+
+      if (product == null) {
+        response.sendError(404, "Product not fount for id " + productId);
+        return null;

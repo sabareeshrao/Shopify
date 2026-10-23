@@ -1,0 +1,15 @@
+		destination.setProductOption(option);
+		
+		ProductOptionValue optionValue = productOptionValueService.getById(store, source.getOptionValue());
+		if(optionValue == null) {
+			throw new ConversionRuntimeException("ProductOptionValue [" + source.getOptionValue() + "] does not exists");
+		}
+		destination.setProductOptionValue(optionValue);
+				
+		
+		return destination;
+		
+		
+	}
+
+}

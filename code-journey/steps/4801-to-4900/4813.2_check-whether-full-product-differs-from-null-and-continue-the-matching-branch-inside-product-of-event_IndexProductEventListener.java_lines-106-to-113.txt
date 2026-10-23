@@ -1,0 +1,8 @@
+			 */
+
+			Product fullProduct = productService.findOne(product.getId(), store);
+			
+			if(fullProduct != null) {
+				product = fullProduct;
+			} else {
+				System.out.println("Product not loaded");

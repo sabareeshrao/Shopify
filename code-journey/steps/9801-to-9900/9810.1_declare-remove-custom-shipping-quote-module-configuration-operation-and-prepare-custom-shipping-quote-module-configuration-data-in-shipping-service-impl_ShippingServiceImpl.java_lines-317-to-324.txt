@@ -1,0 +1,8 @@
+	@Override
+	public void removeCustomShippingQuoteModuleConfiguration(String moduleCode, MerchantStore store) throws ServiceException {
+		
+		
+
+		try {
+			
+			removeShippingQuoteModuleConfiguration(moduleCode,store);

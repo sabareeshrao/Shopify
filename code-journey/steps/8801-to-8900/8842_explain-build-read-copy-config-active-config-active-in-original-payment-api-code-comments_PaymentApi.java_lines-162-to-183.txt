@@ -1,0 +1,22 @@
+
+
+			/**
+			 * Build return object for now this is a read copy
+			 */
+
+			
+			returnConfig.setActive(config.isActive());
+			returnConfig.setDefaultSelected(config.isDefaultSelected());
+			returnConfig.setCode(code);
+			returnConfig.setIntegrationKeys(config.getIntegrationKeys());
+			returnConfig.setIntegrationOptions(config.getIntegrationOptions());
+
+			return returnConfig;
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error getting payment module [" + code + "]", e);
+			throw new ServiceRuntimeException("Error getting payment module [" + code + "]", e);
+		}
+
+	}
+

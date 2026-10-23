@@ -1,0 +1,31 @@
+
+label.customer.edit.billingaddress=Modifier l'adresse de facturation
+label.customer.edit.shippinginformation=Modifier l'adresse de livraison
+
+
+label.customer.billing.company=Nom de l'entreprise
+label.customer.billing.streetaddress = Adresse de facturation 
+label.customer.billing.suburb = Banlieue de facturation 
+label.customer.billing.postalcode = Code postal de facturation 
+label.customer.billing.city = Ville de facturation 
+label.customer.billing.zone =État / province de facturation 
+label.customer.billing.country = Pays de facturation 
+label.customer.billing.firstname = Prénom sur la facturation 
+label.customer.billing.lastname = Nom de famille sur la facturation 
+label.customer.billing.name=Nom sur la facturation 
+
+label.customer.shipping.company=Company de livraison 
+label.customer.shipping.streetaddress=Adresse de livraison 
+label.customer.shipping.suburb=Banlieue de livraison 
+label.customer.shipping.postalcode=Code postal de livraison 
+label.customer.shipping.city=Ville de livraison 
+label.customer.shipping.zone=État / province de livraison
+label.customer.shipping.country=Pays de livraison 
+label.customer.shipping.firstname=Prénom à la livraison 
+label.customer.shipping.lastname=Nom de famille à la livraison 
+label.customer.shipping.name=Nom à la livraison 
+label.customer.shipping.shipaddress=Livrer à cette adresse
+label.customer.shipping.shipdifferentaddress=Livrer à une adresse différente ?
+
+label.customer.confirmshippingaddress=Confirmation de l'adresse de livraison
+

@@ -1,0 +1,8 @@
+  @Column(name = "LENGTH")
+  private BigDecimal length;
+
+  @Column(name = "WIDTH")
+  private BigDecimal width;
+
+  @Column(name = "HEIGHT")
+  private BigDecimal height;

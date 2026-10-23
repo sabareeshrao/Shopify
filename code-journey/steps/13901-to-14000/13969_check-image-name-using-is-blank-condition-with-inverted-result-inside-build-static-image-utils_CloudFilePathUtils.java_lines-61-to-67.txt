@@ -1,0 +1,7 @@
+		if(!StringUtils.isBlank(imageName)) {
+			imgName.append(imageName);
+		}
+		return imgName.toString();
+
+	}
+

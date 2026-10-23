@@ -1,0 +1,8 @@
+				orderTotal = new OrderTotal();
+				orderTotal.setOrderTotalCode(Constants.OT_DISCOUNT_TITLE);
+				orderTotal.setOrderTotalType(OrderTotalType.SUBTOTAL);
+				orderTotal.setTitle(Constants.OT_SUBTOTAL_MODULE_CODE);
+				
+				//calculate discount that will be added as a negative value
+				FinalPrice productPrice = pricingService.calculateProductPrice(product);
+				

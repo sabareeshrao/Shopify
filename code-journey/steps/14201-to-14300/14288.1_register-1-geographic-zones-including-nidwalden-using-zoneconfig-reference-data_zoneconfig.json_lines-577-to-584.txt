@@ -1,0 +1,8 @@
+	},
+	{
+		"zoneCode": "NW",
+		"zoneName": "Nidwalden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "OW",

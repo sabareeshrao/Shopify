@@ -1,0 +1,8 @@
+	public String getModified() {
+		return modified;
+	}
+	public void setModified(String modified) {
+		this.modified = modified;
+	}
+	public String getUser() {
+		return user;

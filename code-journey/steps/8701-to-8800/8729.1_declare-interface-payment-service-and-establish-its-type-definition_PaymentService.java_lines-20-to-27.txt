@@ -1,0 +1,8 @@
+public interface PaymentService {
+
+	List<IntegrationModule> getPaymentMethods(MerchantStore store)
+			throws ServiceException;
+
+	Map<String, IntegrationConfiguration> getPaymentModulesConfigured(
+			MerchantStore store) throws ServiceException;
+	

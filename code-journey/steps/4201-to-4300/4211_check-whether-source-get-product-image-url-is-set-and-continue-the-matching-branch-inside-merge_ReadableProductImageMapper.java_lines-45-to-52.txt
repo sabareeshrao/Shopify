@@ -1,0 +1,8 @@
+		destination.setId(source.getId());
+		destination.setImageType(source.getImageType());
+		if(source.getProductImageUrl()!=null){
+			destination.setExternalUrl(source.getProductImageUrl());
+		}
+		if(source.getImageType()==1 && source.getProductImageUrl()!=null) {//video
+			destination.setVideoUrl(source.getProductImageUrl());
+		}

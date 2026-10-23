@@ -1,0 +1,4 @@
+
+@Service("orderService")
+public class OrderServiceImpl  extends SalesManagerEntityServiceImpl<Long, Order> implements OrderService {
+

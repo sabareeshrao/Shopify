@@ -1,0 +1,5 @@
+
+	@Bean
+	public UserAuthenticationSuccessHandler userAuthenticationSuccessHandler() {
+		return new UserAuthenticationSuccessHandler();
+	}

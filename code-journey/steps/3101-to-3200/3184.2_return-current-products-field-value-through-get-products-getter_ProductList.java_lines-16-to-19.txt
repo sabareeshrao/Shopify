@@ -1,0 +1,4 @@
+	private List<Product> products = new ArrayList<Product>();
+	public List<Product> getProducts() {
+		return products;
+	}

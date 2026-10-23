@@ -1,0 +1,31 @@
+		
+	    Delivery delivery = new Delivery();
+	    delivery.setAddress("358 Du Languadoc");
+	    delivery.setCity( "Boucherville" );
+	    delivery.setCountry(country);
+//	    delivery.setCountryCode(CA_COUNTRY_CODE);
+	    delivery.setFirstName("First" );
+	    delivery.setLastName("Last" );
+	    delivery.setPostalCode("J4B-8J9" );
+	    delivery.setZone(zone);	    
+	    
+	    Billing billing = new Billing();
+	    billing.setAddress("358 Du Languadoc");
+	    billing.setCity("Boucherville");
+	    billing.setCompany("CSTI Consulting");
+	    billing.setCountry(country);
+//	    billing.setCountryCode(CA_COUNTRY_CODE);
+	    billing.setFirstName("Carl" );
+	    billing.setLastName("Samson" );
+	    billing.setPostalCode("J4B-8J9");
+	    billing.setZone(zone);
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);		
+		customerService.create(customer);
+		
+		Currency currency = currencyService.getByCode(CAD_CURRENCY_CODE);
+		
+		//1.3 create an order
+		OrderStatusHistory orderStatusHistory = new OrderStatusHistory();
+		

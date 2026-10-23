@@ -1,0 +1,8 @@
+	 * @throws Exception
+	 */
+	// Utility
+	public String getFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount, Locale locale)
+			throws Exception {
+
+		NumberFormat nf = null;
+

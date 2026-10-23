@@ -1,0 +1,8 @@
+	public void setShipDescription(String shipDescription) {
+		this.shipDescription = shipDescription;
+		ShippingDescription sType = ShippingDescription.SHORT_DESCRIPTION;
+		if(shipDescription.equals(ShippingDescription.LONG_DESCRIPTION.name())) {
+			sType = ShippingDescription.LONG_DESCRIPTION;
+		}
+		this.setShippingDescription(sType);
+	}

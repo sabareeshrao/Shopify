@@ -1,0 +1,14 @@
+  @Override
+  public Customer populateCustomerModel(Customer customerModel, PersistableCustomer customer,
+      MerchantStore merchantStore, Language language) throws Exception {
+      LOG.info("Starting to populate customer model from customer data");
+
+
+    customerModel = customerPopulator.populate(customer, customerModel, merchantStore, language);
+
+    LOG.info("About to persist customer to database.");
+    customerService.saveOrUpdate(customerModel);
+    return customerModel;
+  }
+
+

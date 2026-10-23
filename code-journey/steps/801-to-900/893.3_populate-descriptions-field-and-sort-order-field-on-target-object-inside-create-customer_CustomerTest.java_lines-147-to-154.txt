@@ -1,0 +1,8 @@
+		hasReturnedItems.setDescriptions(hasReturnedItemsList);
+
+		customerOptionService.create(hasReturnedItems);
+		
+		subscribedToMailingList.setSortOrder(3);
+		
+		customerOptionService.update(subscribedToMailingList);
+		

@@ -1,0 +1,11 @@
+		  }
+
+		  user.setMerchantStore(store);		  
+		  userService.create(user);
+		
+		
+	}
+
+
+
+}

@@ -1,0 +1,4 @@
+
+		if (!StringUtils.isBlank(criteria.getProductName())) {
+			countBuilderWhere.append(" and lower(pd.name) like:nm");
+		}

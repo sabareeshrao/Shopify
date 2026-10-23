@@ -1,0 +1,8 @@
+	public String getCartCode() {
+		return cartCode;
+	}
+	public void setCartCode(String cartCode) {
+		this.cartCode = cartCode;
+	}
+
+

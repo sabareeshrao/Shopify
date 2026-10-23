@@ -1,0 +1,17 @@
+	private void instanceToOption(TreeMap<Long, ReadableProductOption> selectableOptions, ProductVariant instance,
+			MerchantStore store, Language language) {
+
+
+		ReadableProductOption option = this.option(selectableOptions, instance.getVariation().getProductOption(), language);
+		option.setVariant(true);
+
+
+		// take care of option value
+		Optional<ReadableProductOptionValue> optionOptionValue = this
+				.optionValue(instance.getVariation().getProductOptionValue(), store, language);
+
+		if (optionOptionValue.isPresent()) {
+			optionOptionValue.get().setId(instance.getId());
+			if (instance.isDefaultSelection()) {
+				optionOptionValue.get().setDefaultValue(true);
+			}

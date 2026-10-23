@@ -1,0 +1,12 @@
+
+
+        int largeImageHeight = Integer.parseInt(slargeImageHeight);
+        int largeImageWidth = Integer.parseInt(slargeImageWidth);
+
+        if (largeImageHeight <= 0 || largeImageWidth <= 0) {
+          String sizeMsg =
+              "Image configuration set to an invalid value [PRODUCT_IMAGE_HEIGHT_SIZE] "
+                  + largeImageHeight + " , [PRODUCT_IMAGE_WIDTH_SIZE] " + largeImageWidth;
+          LOGGER.error(sizeMsg);
+          throw new ServiceException(sizeMsg);
+        }

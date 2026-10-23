@@ -1,0 +1,8 @@
+	private final static String TAX_CONFIGURATION = "TAX_CONFIG";
+	private final static String DEFAULT_TAX_CLASS = "DEFAULT";
+	
+	@Inject
+	private MerchantConfigurationService merchantConfigurationService;
+	
+	@Inject
+	private TaxRateService taxRateService;

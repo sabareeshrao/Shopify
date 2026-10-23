@@ -1,0 +1,2 @@
+	public final static String HTTP_SCHEME= "http";
+	

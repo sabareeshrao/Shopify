@@ -1,0 +1,6 @@
+			
+			TaxItem item = taxItemsMap.get(taxRate.getCode());
+			BigDecimal amount = item.getItemPrice();
+			amount = amount.add(taxItem.getItemPrice());			
+			
+		}

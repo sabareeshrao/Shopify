@@ -1,0 +1,2 @@
+public class Stripe3Payment implements PaymentModule {
+

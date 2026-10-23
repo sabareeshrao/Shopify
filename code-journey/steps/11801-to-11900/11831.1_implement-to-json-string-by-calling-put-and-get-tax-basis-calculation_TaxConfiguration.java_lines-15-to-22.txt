@@ -1,0 +1,8 @@
+	private boolean collectTaxIfDifferentProvinceOfStoreCountry = true;
+	private boolean collectTaxIfDifferentCountryOfStoreCountry = false;
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public String toJSONString() {
+		JSONObject data = new JSONObject();
+		data.put("taxBasisCalculation", this.getTaxBasisCalculation().name());

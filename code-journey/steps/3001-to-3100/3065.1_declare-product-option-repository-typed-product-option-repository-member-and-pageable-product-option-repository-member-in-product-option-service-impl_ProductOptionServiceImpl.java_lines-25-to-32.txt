@@ -1,0 +1,8 @@
+	private ProductOptionRepository productOptionRepository;
+	
+	@Autowired
+	private PageableProductOptionRepository pageableProductOptionRepository;
+	
+	@Inject
+	private ProductAttributeService productAttributeService;
+	

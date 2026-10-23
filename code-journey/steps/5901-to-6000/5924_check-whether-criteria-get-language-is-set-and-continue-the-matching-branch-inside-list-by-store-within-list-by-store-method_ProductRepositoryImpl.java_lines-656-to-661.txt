@@ -1,0 +1,6 @@
+					count++;
+				}
+				if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+					countBuilderWhere.append(" and povd.language.code=:lang");
+				}
+			}

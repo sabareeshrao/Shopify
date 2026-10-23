@@ -1,0 +1,8 @@
+ * @author Umesh Awasthi
+ *
+ */
+public class StaticContentFileManagerImpl extends StaticContentFileManager {
+
+	/**
+	 * 
+	 */

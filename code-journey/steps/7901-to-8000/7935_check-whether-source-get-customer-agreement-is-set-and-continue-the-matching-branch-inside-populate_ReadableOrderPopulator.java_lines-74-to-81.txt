@@ -1,0 +1,8 @@
+		
+		
+		if(source.getCustomerAgreement()!=null) {
+			target.setCustomerAgreed(source.getCustomerAgreement());
+		}
+		if(source.getConfirmedAddress()!=null) {
+			target.setConfirmedAddress(source.getConfirmedAddress());
+		}

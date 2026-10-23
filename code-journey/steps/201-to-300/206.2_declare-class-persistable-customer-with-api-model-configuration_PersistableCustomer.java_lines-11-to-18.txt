@@ -1,0 +1,8 @@
+@ApiModel(value="Customer", description="Customer model object")
+public class PersistableCustomer extends CustomerEntity {
+
+	/**
+	 * 
+	 */
+    @ApiModelProperty(notes = "Customer password")
+	private String password = null;

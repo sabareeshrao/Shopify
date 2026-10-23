@@ -1,0 +1,8 @@
+	 * @param item
+	 * @param store
+	 * @param language
+	 */
+	ReadableShoppingCart addToCart(PersistableShoppingCartItem item, MerchantStore store,
+			Language language);
+
+	/**

@@ -1,0 +1,8 @@
+menu.customer-create=Créer un client
+menu.customer-options=Options du client
+menu.customer-options-list=Liste des options du client
+menu.customer-options-create=Créer une option de client
+menu.customer-options-values-list=Liste de valeurs des options du client
+menu.customer-options-values-create=Créer une valeur option d'option du client
+menu.customer-options-set=Gérer les options possibles du client
+menu.content=Gestion du contenu

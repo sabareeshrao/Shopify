@@ -1,0 +1,8 @@
+
+      // contentImage.setBufferedImage(bufferedImage);
+      contentImage.setFile(is1);
+
+
+      // upload original -- L
+      contentImage.setFileContentType(FileContentType.PRODUCTLG);
+      uploadImage.addProductImage(productImage, contentImage);

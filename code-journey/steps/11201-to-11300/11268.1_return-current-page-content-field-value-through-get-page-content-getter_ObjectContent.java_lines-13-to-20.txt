@@ -1,0 +1,8 @@
+  private String slug;
+  private String metaDetails;
+  private String title;
+  private String pageContent;
+  private String language;
+  public String getPageContent() {
+      return pageContent;
+  }

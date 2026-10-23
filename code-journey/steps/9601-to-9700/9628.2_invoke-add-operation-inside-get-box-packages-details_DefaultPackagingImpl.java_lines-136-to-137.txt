@@ -1,0 +1,2 @@
+				individualProducts.add(temp);
+			}

@@ -1,0 +1,5 @@
+				cart.setOrderId(modelOrder.getId());
+				shoppingCartFacade.saveOrUpdateShoppingCart(cart);
+			} catch (Exception e) {
+				LOGGER.error("Cannot delete cart " + cart.getId(), e);
+			}

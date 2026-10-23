@@ -1,0 +1,4 @@
+	private Long customerId;
+	public Long getCustomerId() {
+		return customerId;
+	}

@@ -1,0 +1,11 @@
+public class AttributeCriteria implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String attributeCode;
+	private String attributeValue;
+	public void setAttributeCode(String attributeCode) {
+		this.attributeCode = attributeCode;
+	}

@@ -1,0 +1,6 @@
+			return categoryProxy;
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException(e);
+		}
+	}
+

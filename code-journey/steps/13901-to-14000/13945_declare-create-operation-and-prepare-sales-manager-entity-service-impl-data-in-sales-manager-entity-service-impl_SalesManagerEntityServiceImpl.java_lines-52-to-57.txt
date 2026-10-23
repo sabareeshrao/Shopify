@@ -1,0 +1,6 @@
+	public void create(E entity) throws ServiceException {
+		save(entity);
+	}
+
+	
+	

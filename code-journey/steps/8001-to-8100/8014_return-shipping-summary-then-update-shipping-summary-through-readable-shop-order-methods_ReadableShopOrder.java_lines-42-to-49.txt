@@ -1,0 +1,8 @@
+	public ReadableShippingSummary getShippingSummary() {
+		return shippingSummary;
+	}
+	public void setShippingSummary(ReadableShippingSummary shippingSummary) {
+		this.shippingSummary = shippingSummary;
+	}
+
+}

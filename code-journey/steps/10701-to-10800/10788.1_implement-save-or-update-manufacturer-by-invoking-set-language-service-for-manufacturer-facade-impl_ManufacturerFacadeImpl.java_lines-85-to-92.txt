@@ -1,0 +1,8 @@
+  @Override
+  public void saveOrUpdateManufacturer(PersistableManufacturer manufacturer, MerchantStore store,
+      Language language) throws Exception {
+
+    PersistableManufacturerPopulator populator = new PersistableManufacturerPopulator();
+    populator.setLanguageService(languageService);
+
+

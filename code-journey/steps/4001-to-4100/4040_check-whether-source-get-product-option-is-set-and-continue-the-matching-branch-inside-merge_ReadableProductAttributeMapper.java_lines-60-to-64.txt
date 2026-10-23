@@ -1,0 +1,5 @@
+			
+			if(source.getProductOption()!=null) {
+				ReadableProductOptionEntity option = readableProductOptionMapper.convert(source.getProductOption(), store, language);
+				attr.setOption(option);
+			}

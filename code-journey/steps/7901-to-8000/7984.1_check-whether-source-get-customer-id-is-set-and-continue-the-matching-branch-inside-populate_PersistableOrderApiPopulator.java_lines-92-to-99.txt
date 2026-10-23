@@ -1,0 +1,8 @@
+			
+			//Customer
+			Customer customer = null;
+			if(source.getCustomerId() != null && source.getCustomerId().longValue() >0) {
+			  Long customerId = source.getCustomerId();
+			  customer = customerService.getById(customerId);
+
+			  if(customer == null) {

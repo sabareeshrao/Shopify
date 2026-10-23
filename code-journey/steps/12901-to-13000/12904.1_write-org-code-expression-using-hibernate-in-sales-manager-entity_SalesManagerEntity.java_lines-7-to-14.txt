@@ -1,0 +1,8 @@
+import org.hibernate.Hibernate;
+
+
+/**
+ * <p>Entité racine pour la persistence des objets via JPA.</p>
+ *
+ * @param <E> type de l'entité
+ */

@@ -1,0 +1,8 @@
+
+module.shipping.usps.package.01=Variable
+module.shipping.usps.package.02=Flat Rate Box
+module.shipping.usps.package.03=Flat Rate Envelope
+module.shipping.usps.package.04=Rectangular
+module.shipping.usps.package.05=Non Rectangular
+module.shipping.usps.package.06=LG Flat Rate Box
+

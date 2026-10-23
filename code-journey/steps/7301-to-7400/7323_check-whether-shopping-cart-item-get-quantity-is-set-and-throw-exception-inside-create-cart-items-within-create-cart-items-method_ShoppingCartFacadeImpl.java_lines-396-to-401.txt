@@ -1,0 +1,6 @@
+
+			for (ProductAvailability availability : availabilities) {
+				if (shoppingCartItem.getQuantity() > 0 && availability.getProductQuantity() == null || availability.getProductQuantity().intValue() == 0) {
+					throw new Exception("Item with id " + p.getId() + " is not available");
+				}
+			}

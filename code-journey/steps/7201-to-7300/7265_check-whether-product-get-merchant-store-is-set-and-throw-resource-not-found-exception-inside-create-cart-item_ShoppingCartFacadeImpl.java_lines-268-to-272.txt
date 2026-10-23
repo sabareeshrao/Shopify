@@ -1,0 +1,5 @@
+
+		if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+			throw new ResourceNotFoundException(
+					"Item with id " + shoppingCartItem.getProduct() + " does not belong to merchant " + store.getId());
+		}

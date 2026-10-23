@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProduct merge(Product source, ReadableProduct destination, MerchantStore store, Language language) {
+
+		Validate.notNull(source, "Product cannot be null");
+		Validate.notNull(destination, "Product destination cannot be null");
+
+
+		// read only product values

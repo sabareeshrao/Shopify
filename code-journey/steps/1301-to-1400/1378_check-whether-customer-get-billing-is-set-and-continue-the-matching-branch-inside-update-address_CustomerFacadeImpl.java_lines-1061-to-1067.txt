@@ -1,0 +1,7 @@
+    
+    try {
+      //update billing
+      if(customer.getBilling() != null) {
+    	  customer.getBilling().setBillingAddress(true);
+    	  updateAddress(customer.getId(), store, customer.getBilling(), store.getDefaultLanguage());
+      }

@@ -1,0 +1,8 @@
+	@UniqueConstraint(columnNames = {"MERCHANT_ID", "CUSTOMER_OPT_VAL_CODE"}))
+public class CustomerOptionValue extends SalesManagerEntity<Long, CustomerOptionValue> {
+	private static final long serialVersionUID = 3736085877929910891L;
+
+	@Id
+	@Column(name="CUSTOMER_OPTION_VALUE_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "CUSTOMER_OPT_VAL_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")

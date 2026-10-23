@@ -1,0 +1,3 @@
+		        } else {
+		        	LOGGER.warn("couldn't find any authorization token, will ignore the header");
+		        }

@@ -1,0 +1,3 @@
+			if (shoppingCartItem.getQuantity() > 0 && !p.isAvailable()) {
+				throw new Exception("Item with id " + p.getId() + " is not available");
+			}

@@ -1,0 +1,15 @@
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-rng-simple -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-rng-simple</artifactId>
+			<version>${commons-rng-simple.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.owasp.antisamy/antisamy -->
+		<!-- xss filter complement -->
+		<dependency>
+			<groupId>org.owasp.antisamy</groupId>
+			<artifactId>antisamy</artifactId>
+			<version>1.6.7</version>
+		</dependency>

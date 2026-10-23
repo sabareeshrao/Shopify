@@ -1,0 +1,4 @@
+import com.salesmanager.core.model.customer.attribute.CustomerOptionValue;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+

@@ -1,0 +1,4 @@
+	public void setOrderAccountProductStatus(Integer orderAccountProductStatus) {
+		this.orderAccountProductStatus = orderAccountProductStatus;
+	}
+}

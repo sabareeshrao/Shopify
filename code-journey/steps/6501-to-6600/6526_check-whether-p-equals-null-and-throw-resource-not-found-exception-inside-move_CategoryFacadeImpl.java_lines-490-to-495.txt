@@ -1,0 +1,6 @@
+
+			Category p = categoryService.getById(parent, store.getId());
+
+			if(p == null) {
+				throw new ResourceNotFoundException("Category with id [" + parent + "] for store [" + store.getCode() + "]");
+			}

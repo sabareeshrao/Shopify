@@ -1,0 +1,8 @@
+			"zoneCode": "Tarragona",
+			"zoneName": "Tarragona",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Teruel",
+			"zoneName": "Teruel",
+			"countryCode": "ES"

@@ -1,0 +1,6 @@
+	@Override
+	public ReadableMerchantStore getByCode(String code, Language language) {
+		MerchantStore store = getMerchantStoreByCode(code);
+		return convertMerchantStoreToReadableMerchantStore(language, store);
+	}
+

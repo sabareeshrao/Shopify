@@ -1,0 +1,7 @@
+	@Override
+	public List<TaxRate> listByStore(MerchantStore store, Language language)
+			throws ServiceException {
+		return taxRateRepository.findByStoreAndLanguage(store.getId(), language.getId());
+	}
+	
+	

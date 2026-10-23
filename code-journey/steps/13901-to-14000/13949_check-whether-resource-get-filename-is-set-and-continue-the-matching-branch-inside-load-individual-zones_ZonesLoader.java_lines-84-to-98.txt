@@ -1,0 +1,15 @@
+				Map<String, Object> data = mapper.readValue(in, Map.class);
+				
+				if(resource.getFilename().contains("_")) {
+					for (Language l : languages) {
+						if (resource.getFilename().contains("_" + l.getCode())) {// lead for this
+							// language
+							List langList = (List) data.get(l.getCode());
+							if (langList != null) {
+								/**
+								 * submethod
+								 */
+								for (Object z : langList) {
+									Map<String, String> e = (Map<String, String>) z;
+									mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
+								}

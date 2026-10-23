@@ -1,0 +1,3 @@
+	 */
+	ReadableContentBox getContentBox(String code, MerchantStore store, Language language);
+	

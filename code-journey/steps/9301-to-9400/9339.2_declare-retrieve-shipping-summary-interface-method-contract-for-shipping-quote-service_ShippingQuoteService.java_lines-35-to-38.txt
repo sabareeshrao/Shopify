@@ -1,0 +1,4 @@
+	 */
+	ShippingSummary getShippingSummary(Long quoteId, MerchantStore store) throws ServiceException;
+
+}

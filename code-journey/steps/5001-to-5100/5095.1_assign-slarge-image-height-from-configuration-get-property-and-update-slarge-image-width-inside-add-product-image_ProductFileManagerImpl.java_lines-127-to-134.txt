@@ -1,0 +1,8 @@
+
+      // get template properties file
+
+      String slargeImageHeight = configuration.getProperty(PRODUCT_IMAGE_HEIGHT_SIZE);
+      String slargeImageWidth = configuration.getProperty(PRODUCT_IMAGE_WIDTH_SIZE);
+
+      // String ssmallImageHeight = configuration.getProperty("SMALL_IMAGE_HEIGHT_SIZE");
+      // String ssmallImageWidth = configuration.getProperty("SMALL_IMAGE_WIDTH_SIZE");

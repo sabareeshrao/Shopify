@@ -1,0 +1,3 @@
+    void removeCatalogEntry(Long catalogId, Long catalogEntryId, MerchantStore store, Language language);
+
+}

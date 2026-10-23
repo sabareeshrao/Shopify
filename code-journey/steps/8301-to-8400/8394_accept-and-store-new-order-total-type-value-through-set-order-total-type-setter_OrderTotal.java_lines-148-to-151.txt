@@ -1,0 +1,4 @@
+	public void setOrderTotalType(OrderTotalType orderTotalType) {
+		this.orderTotalType = orderTotalType;
+	}
+

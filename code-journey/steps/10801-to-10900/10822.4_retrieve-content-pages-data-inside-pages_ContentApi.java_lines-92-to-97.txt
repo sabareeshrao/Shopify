@@ -1,0 +1,6 @@
+			@ApiIgnore Language language,
+			int page,
+			int count) {
+		return contentFacade
+				.getContentPages(merchantStore, language, page, count);
+	}

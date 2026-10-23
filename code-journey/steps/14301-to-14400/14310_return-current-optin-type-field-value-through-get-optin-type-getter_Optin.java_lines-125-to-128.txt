@@ -1,0 +1,4 @@
+	public OptinType getOptinType() {
+		return optinType;
+	}
+

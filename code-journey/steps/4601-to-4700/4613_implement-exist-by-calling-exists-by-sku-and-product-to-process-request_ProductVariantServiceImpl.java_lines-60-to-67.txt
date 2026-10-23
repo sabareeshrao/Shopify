@@ -1,0 +1,8 @@
+	@Override
+	public boolean exist(String sku, Long productId) {
+
+		ProductVariant instance = productVariantRepository.existsBySkuAndProduct(sku, productId);
+		return instance != null? true:false;
+
+	}
+

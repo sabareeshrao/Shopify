@@ -1,0 +1,18 @@
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.shop.constants.Constants;
+import com.salesmanager.shop.store.api.exception.UnauthorizedException;
+import com.salesmanager.shop.store.controller.user.facade.UserFacade;
+
+/**
+ * Performs authorization check for REST Api
+ * - check if user is in role
+ * - check if user can perform actions on marchant
+ * @author carlsamson
+ *
+ */
+@Component
+public class AuthorizationUtils {
+	
+	@Inject
+	private UserFacade userFacade;
+	

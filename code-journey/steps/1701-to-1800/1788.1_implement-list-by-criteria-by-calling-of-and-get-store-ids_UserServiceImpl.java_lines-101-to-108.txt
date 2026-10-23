@@ -1,0 +1,8 @@
+	@Override
+	public Page<User> listByCriteria(UserCriteria criteria, int page, int count) throws ServiceException {
+
+		Pageable pageRequest = PageRequest.of(page, count);
+		Page<User> users = null;
+		if (criteria.getStoreIds() != null) {// search within a predefined list
+												// of stores
+			users = pageableUserRepository.listByStoreIds(criteria.getStoreIds(), criteria.getAdminEmail(),

@@ -1,0 +1,8 @@
+	    
+	    fiction.setParent(novell);
+
+	    categoryService.create(fiction);
+	    categoryService.addChild(book, fiction);
+
+	    Manufacturer oreilley = new Manufacturer();
+	    oreilley.setMerchantStore(store);

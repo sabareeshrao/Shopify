@@ -1,0 +1,4 @@
+  // The email body for recipients with non-HTML email clients.
+  static final String TEXTBODY =
+      "This email was sent through Amazon SES " + "using the AWS SDK for Java.";
+

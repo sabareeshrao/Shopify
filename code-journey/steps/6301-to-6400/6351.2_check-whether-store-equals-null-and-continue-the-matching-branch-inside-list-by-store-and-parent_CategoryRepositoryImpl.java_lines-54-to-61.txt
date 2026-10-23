@@ -1,0 +1,8 @@
+		if (store == null) {
+			if (category == null) {
+				//query.from(qCategory)
+				queryBuilder.append(" where c.parent IsNull ");
+					//.where(qCategory.parent.isNull())
+					//.orderBy(qCategory.sortOrder.asc(),qCategory.id.desc());
+			} else {
+				//query.from(qCategory)

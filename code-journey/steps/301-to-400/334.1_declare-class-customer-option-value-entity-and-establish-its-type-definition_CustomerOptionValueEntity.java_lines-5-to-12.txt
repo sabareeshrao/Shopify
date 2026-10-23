@@ -1,0 +1,8 @@
+public class CustomerOptionValueEntity extends CustomerOptionValue implements
+		Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int order;

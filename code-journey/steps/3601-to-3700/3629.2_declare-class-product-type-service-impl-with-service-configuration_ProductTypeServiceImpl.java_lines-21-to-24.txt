@@ -1,0 +1,4 @@
+@Service("productTypeService")
+public class ProductTypeServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductType>
+		implements ProductTypeService {
+

@@ -1,0 +1,4 @@
+	public String getRefreshToken() {
+		return refreshToken;
+	}
+

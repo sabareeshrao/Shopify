@@ -1,0 +1,4 @@
+
+    	@SuppressWarnings("unchecked")
+		List<Category> c =  q.getResultList();
+

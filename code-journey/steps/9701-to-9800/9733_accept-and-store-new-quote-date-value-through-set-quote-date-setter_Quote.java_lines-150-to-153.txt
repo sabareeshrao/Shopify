@@ -1,0 +1,4 @@
+	public void setQuoteDate(Date quoteDate) {
+		this.quoteDate = quoteDate;
+	}
+

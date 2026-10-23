@@ -1,0 +1,8 @@
+
+			/**
+			 * variants options list variation color
+			 */
+
+			/**
+			 * Returns a list of ReadableProductOptions
+			 * 

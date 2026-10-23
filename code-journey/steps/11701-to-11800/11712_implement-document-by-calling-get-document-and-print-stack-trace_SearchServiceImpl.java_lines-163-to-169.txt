@@ -1,0 +1,7 @@
+	private List<Document> document(Long id, List<String> languages, RequestOptions options) throws Exception {
+		List<Optional<Document>> documents = null;
+		try {
+			documents = searchModule.getDocument(id, languages, options);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}

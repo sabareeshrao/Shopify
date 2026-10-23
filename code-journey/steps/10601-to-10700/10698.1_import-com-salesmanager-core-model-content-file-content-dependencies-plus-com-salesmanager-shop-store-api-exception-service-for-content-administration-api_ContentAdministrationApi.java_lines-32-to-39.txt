@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.model.content.Content;
+import com.salesmanager.shop.model.content.ContentFile;
+import com.salesmanager.shop.model.content.ContentFolder;
+import com.salesmanager.shop.store.api.exception.RestApiException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;

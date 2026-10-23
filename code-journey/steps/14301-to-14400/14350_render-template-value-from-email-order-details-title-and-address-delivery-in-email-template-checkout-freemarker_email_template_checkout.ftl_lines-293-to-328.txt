@@ -1,0 +1,36 @@
+				
+						<p>
+							<h4>${EMAIL_ORDER_DETAILS_TITLE}</h4> 
+						</p>
+						<p>
+							${ORDER_PRODUCTS_DETAILS}
+						</p>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+				<table>
+				<tr>
+					<td valign="top">											
+						<ul class="sidebar">
+							<li>
+								<a>
+									<h5>${ADDRESS_BILLING_TITLE} &raquo;</h5>
+									<p>
+										${ADDRESS_BILLING}
+									</p>
+								</a>
+							</li>
+						  </ul>
+					  </td>
+					  <td valign="top">											
+						<ul class="sidebar">
+							<li>
+								<a>
+									<h5>${ADDRESS_DELIVERY_TITLE} &raquo;</h5>
+									<p>
+										${ADDRESS_DELIVERY}
+									</p>

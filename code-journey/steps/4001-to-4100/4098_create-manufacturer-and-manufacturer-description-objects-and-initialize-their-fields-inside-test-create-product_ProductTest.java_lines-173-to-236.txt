@@ -1,0 +1,64 @@
+	    
+	    fiction.setParent(novell);
+
+	    categoryService.create(fiction);
+	    categoryService.addChild(book, fiction);
+
+	    Manufacturer oreilley = new Manufacturer();
+	    oreilley.setMerchantStore(store);
+	    oreilley.setCode("oreilley");
+
+	    ManufacturerDescription oreilleyd = new ManufacturerDescription();
+	    oreilleyd.setLanguage(en);
+	    oreilleyd.setName("O\'reilley");
+	    oreilleyd.setManufacturer(oreilley);
+	    oreilley.getDescriptions().add(oreilleyd);
+
+	    manufacturerService.create(oreilley);
+
+	    Manufacturer packed = new Manufacturer();
+	    packed.setMerchantStore(store);
+	    packed.setCode("packed");
+
+	    ManufacturerDescription packedd = new ManufacturerDescription();
+	    packedd.setLanguage(en);
+	    packedd.setManufacturer(packed);
+	    packedd.setName("Packed publishing");
+	    packed.getDescriptions().add(packedd);
+
+	    manufacturerService.create(packed);
+
+	    Manufacturer novells = new Manufacturer();
+	    novells.setMerchantStore(store);
+	    novells.setCode("novells");
+
+	    ManufacturerDescription novellsd = new ManufacturerDescription();
+	    novellsd.setLanguage(en);
+	    novellsd.setManufacturer(novells);
+	    novellsd.setName("Novells publishing");
+	    novells.getDescriptions().add(novellsd);
+
+	    manufacturerService.create(novells);
+
+	    // PRODUCT 1
+
+	    Product product = new Product();
+	    product.setProductHeight(new BigDecimal(4));
+	    product.setProductLength(new BigDecimal(3));
+	    product.setProductWidth(new BigDecimal(1));
+	    product.setSku("CT12345");
+	    product.setManufacturer(oreilley);
+	    product.setType(generalType);
+	    product.setMerchantStore(store);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Spring in Action");
+	    description.setLanguage(en);
+	    description.setProduct(product);
+
+	    product.getDescriptions().add(description);
+
+	    //add category
+	    product.getCategories().add(tech);
+

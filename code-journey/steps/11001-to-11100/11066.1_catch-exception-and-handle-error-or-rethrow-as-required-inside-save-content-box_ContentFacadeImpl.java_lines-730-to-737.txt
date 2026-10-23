@@ -1,0 +1,8 @@
+
+			content = convertContentBoxToContent(merchantStore, content, box);
+			contentService.saveOrUpdate(content);
+			return content.getId();
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(e);
+		}
+

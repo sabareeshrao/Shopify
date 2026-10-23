@@ -1,0 +1,9 @@
+
+@Service("customerOptionValueService")
+public class CustomerOptionValueServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, CustomerOptionValue> implements
+		CustomerOptionValueService {
+
+	@Inject
+	private CustomerAttributeService customerAttributeService;
+	

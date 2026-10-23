@@ -1,0 +1,7 @@
+	@Override
+	public boolean customerExists(String userName, MerchantStore store) {
+	    return Optional.ofNullable(customerService.getByNick(userName, store.getId()))
+	            .isPresent();
+	}
+
+}

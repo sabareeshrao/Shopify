@@ -1,0 +1,6 @@
+	@Override
+	public ReadableProductAttributeEntity convert(ProductAttribute source, MerchantStore store, Language language) {
+		ReadableProductAttributeEntity productAttribute = new ReadableProductAttributeEntity();
+		return merge(source, productAttribute, store, language);
+	}
+

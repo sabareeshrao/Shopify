@@ -1,0 +1,8 @@
+		
+        kieSession.insert(inputParameters);
+        kieSession.setGlobal("total",resp);
+        kieSession.fireAllRules();
+
+		if(resp.getDiscount() != null) {
+			
+			OrderTotal orderTotal = null;

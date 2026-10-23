@@ -1,0 +1,8 @@
+  private static final String ALL_LANGUALES = "_all";
+
+  @Inject
+  LanguageService languageService;
+  
+  @Autowired
+  private StoreFacade storeFacade;
+

@@ -1,0 +1,5 @@
+	public void setOrderAccountProductLastTransactionStatus(
+			Integer orderAccountProductLastTransactionStatus) {
+		this.orderAccountProductLastTransactionStatus = orderAccountProductLastTransactionStatus;
+	}
+

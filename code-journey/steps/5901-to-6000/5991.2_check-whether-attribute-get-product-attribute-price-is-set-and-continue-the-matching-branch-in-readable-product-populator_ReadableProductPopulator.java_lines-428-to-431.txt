@@ -1,0 +1,4 @@
+								if(attribute.getProductAttributePrice()!=null && attribute.getProductAttributePrice().doubleValue()>0) {
+									String formatedPrice = pricingService.getDisplayAmount(attribute.getProductAttributePrice(), store);
+									optValue.setPrice(formatedPrice);
+								}

@@ -1,0 +1,4 @@
+	public void setTokenHeader(String tokenHeader) {
+		this.tokenHeader = tokenHeader;
+	}
+

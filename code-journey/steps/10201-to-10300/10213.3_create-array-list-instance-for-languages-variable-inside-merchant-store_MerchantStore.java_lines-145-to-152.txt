@@ -1,0 +1,8 @@
+	private Language defaultLanguage;
+
+	@JsonIgnore
+	@NotEmpty
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "MERCHANT_LANGUAGE")
+	private List<Language> languages = new ArrayList<Language>();
+

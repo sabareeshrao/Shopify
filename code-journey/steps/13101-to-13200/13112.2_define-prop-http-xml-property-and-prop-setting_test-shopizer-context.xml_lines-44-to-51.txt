@@ -1,0 +1,8 @@
+    			<beans:prop key="SHOP_SCHEME">http</beans:prop>
+				<beans:prop key="CONTEXT_PATH">sm-shop</beans:prop>
+				<!-- Images -->
+				<beans:prop key="PRODUCT_IMAGE_WIDTH_SIZE">350</beans:prop>
+				<beans:prop key="PRODUCT_IMAGE_HEIGHT_SIZE">375</beans:prop>
+				<beans:prop key="CROP_UPLOADED_IMAGES">false</beans:prop>
+				
+				<!-- upload image validations -->

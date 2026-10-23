@@ -1,0 +1,6 @@
+    // set groups
+    if (!StringUtils.isBlank(customerModel.getPassword())
+        && !StringUtils.isBlank(customerModel.getNick())) {
+      customerModel.setPassword(passwordEncoder.encode(customer.getPassword()));
+      setCustomerModelDefaultProperties(customerModel, merchantStore);
+    }

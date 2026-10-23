@@ -1,0 +1,8 @@
+		List<String> errorFields = null;
+		
+		//validate integrationKeys['account']
+		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
+		//if(keys==null || StringUtils.isBlank(keys.get("price"))) {
+		if(keys==null) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("price");

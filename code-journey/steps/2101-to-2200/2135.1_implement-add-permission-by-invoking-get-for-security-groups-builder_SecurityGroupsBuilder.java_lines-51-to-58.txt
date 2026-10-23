@@ -1,0 +1,8 @@
+	public SecurityGroupsBuilder addPermission(Permission permission) {
+		
+		if(this.lastGroup == null) {
+			Group g = this.groups.get(0);
+			if(g == null) {
+				g = new Group();
+				g.setGroupName("UNDEFINED");
+				g.setGroupType(GroupType.ADMIN);

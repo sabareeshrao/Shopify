@@ -1,0 +1,8 @@
+          sesEmailSender.setEmailConfig(emailConfig);
+            break; 
+        default: 
+ 
+    }
+    
+  }
+

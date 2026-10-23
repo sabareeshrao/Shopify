@@ -1,0 +1,12 @@
+	@Override
+	public void delete(Long id, MerchantStore store, Language language) {
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(id,"id cannot be empty");
+
+		try {
+
+			ProductType t = productTypeService.getById(id, store, language);
+			if(t == null) {
+				throw new ResourceNotFoundException(
+						"Product type [" + id + "] does not exist for store [" + store.getCode() + "]");
+			}

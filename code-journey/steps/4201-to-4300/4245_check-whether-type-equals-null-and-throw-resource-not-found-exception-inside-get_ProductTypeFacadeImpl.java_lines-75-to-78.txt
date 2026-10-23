@@ -1,0 +1,4 @@
+			
+			if(type == null) {
+				throw new ResourceNotFoundException("Product type [" + id + "] not found for store [" + store.getCode() + "]");
+			}

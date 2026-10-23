@@ -1,0 +1,8 @@
+	    
+	    /** first option value **/
+	    ProductOptionValue white = new ProductOptionValue();
+	    white.setMerchantStore(store);
+	    white.setCode("white");
+	    
+	    ProductOptionValueDescription whiteDescription = new ProductOptionValueDescription();
+	    whiteDescription.setLanguage(en);

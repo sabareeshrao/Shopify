@@ -1,0 +1,8 @@
+
+	/**
+	 * Calculates the FinalPrice of a Product taking into account
+	 * all defined prices and possible rebates. It also applies other calculation
+	 * based on the customer
+	 * @param product
+	 * @param customer
+	 * @return

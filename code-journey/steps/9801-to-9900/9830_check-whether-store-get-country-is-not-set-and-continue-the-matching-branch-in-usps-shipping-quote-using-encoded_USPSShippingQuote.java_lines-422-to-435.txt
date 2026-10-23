@@ -1,0 +1,14 @@
+
+			StringBuilder xmlbuffer = new StringBuilder().append(xmlheader.toString()).append(
+					xmldatabuffer.toString()).append(xmlfooter);
+
+			LOGGER.debug("USPS QUOTE REQUEST " + xmlbuffer.toString());
+			//HttpClient client = new HttpClient();
+			try(CloseableHttpClient httpclient = HttpClients.createDefault()) {
+			@SuppressWarnings("deprecation")
+			String encoded = java.net.URLEncoder.encode(xmlbuffer.toString());
+
+			String completeUri = url + "?API=RateV3&XML=" + encoded;
+			if(!store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+				completeUri = url + "?API=IntlRate&XML=" + encoded;
+			}

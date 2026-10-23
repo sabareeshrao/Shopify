@@ -1,0 +1,8 @@
+	        		
+	        		String env = (String)values.get("env");
+	        		
+	        		ModuleConfig config = new ModuleConfig();
+	        		config.setScheme((String)values.get("scheme"));
+	        		config.setHost((String)values.get("host"));
+	        		config.setPort((String)values.get("port"));
+	        		config.setUri((String)values.get("uri"));

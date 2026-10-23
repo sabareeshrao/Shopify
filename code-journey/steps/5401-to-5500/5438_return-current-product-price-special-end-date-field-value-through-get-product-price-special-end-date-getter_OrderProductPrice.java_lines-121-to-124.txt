@@ -1,0 +1,4 @@
+	public Date getProductPriceSpecialEndDate() {
+		return productPriceSpecialEndDate;
+	}
+

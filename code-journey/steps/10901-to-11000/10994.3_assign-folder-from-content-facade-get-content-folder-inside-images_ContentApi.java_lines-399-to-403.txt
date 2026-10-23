@@ -1,0 +1,5 @@
+
+		//String decodedPath = decodeContentPath(path);
+		ContentFolder folder = contentFacade.getContentFolder(path, merchantStore);
+		return folder;
+	}

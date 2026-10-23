@@ -1,0 +1,3 @@
+	ReadableShoppingCart readableCart(ShoppingCart cart, MerchantStore store, Language language);
+
+}

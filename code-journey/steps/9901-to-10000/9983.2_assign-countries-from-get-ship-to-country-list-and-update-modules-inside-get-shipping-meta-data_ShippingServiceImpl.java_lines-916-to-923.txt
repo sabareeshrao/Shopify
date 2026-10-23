@@ -1,0 +1,8 @@
+
+		// configured country
+		List<Country> countries = getShipToCountryList(store, store.getDefaultLanguage());
+		metaData.setShipToCountry(countries);
+		
+		// configured modules
+		Map<String,IntegrationConfiguration> modules = Optional.ofNullable(getShippingModulesConfigured(store))
+				.orElse(Collections.emptyMap());

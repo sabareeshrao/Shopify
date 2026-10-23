@@ -1,0 +1,8 @@
+@Override
+public ReadableManufacturerList listByStore(MerchantStore store, Language language, ListCriteria criteria, int page,
+		int count) {
+	
+	ReadableManufacturerList readableList = new ReadableManufacturerList();
+
+    try {
+        /**

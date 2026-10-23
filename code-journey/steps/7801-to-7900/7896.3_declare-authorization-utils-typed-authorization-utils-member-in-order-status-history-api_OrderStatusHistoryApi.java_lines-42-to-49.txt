@@ -1,0 +1,8 @@
+	@Inject
+	private AuthorizationUtils authorizationUtils;
+
+	@RequestMapping(value = { "private/orders/{id}/history" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public List<ReadableOrderStatusHistory> list(@PathVariable final Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {

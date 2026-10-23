@@ -1,0 +1,8 @@
+	private double cropAreaWidth = 0;
+	private double cropAreaHeight = 0;
+	
+	//private InputStream originalFile = null;
+	private BufferedImage originalFile = null;
+
+
+

@@ -1,0 +1,4 @@
+	public String getStoreLogo() {
+		return storeLogo;
+	}
+

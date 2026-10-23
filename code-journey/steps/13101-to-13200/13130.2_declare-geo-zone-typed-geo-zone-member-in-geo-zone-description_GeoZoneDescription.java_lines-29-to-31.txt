@@ -1,0 +1,3 @@
+	@JoinColumn(name = "GEOZONE_ID")
+	private GeoZone geoZone;
+	

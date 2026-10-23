@@ -1,0 +1,8 @@
+				target.setShipping(totalTotal);
+				totals.add(totalTotal);
+			}
+			else if(t.getOrderTotalType().name().equals(OrderTotalType.SUBTOTAL.name())) {
+				com.salesmanager.shop.model.order.total.OrderTotal subTotal = createTotal(t);
+				totals.add(subTotal);
+				
+			}

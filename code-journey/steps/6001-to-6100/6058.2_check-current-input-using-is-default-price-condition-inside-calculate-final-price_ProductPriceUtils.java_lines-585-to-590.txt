@@ -1,0 +1,6 @@
+					if (price.isDefaultPrice()) {
+						finalPrice = p;
+					} else {
+						if (otherPrices == null) {
+							otherPrices = new ArrayList<FinalPrice>();
+						}

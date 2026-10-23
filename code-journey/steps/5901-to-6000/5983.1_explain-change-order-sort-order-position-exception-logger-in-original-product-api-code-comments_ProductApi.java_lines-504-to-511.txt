@@ -1,0 +1,8 @@
+
+			/**
+			 * Change order
+			 */
+			p.setSortOrder(position);
+
+		} catch (Exception e) {
+			LOGGER.error("Error while updating Product position", e);

@@ -1,0 +1,6 @@
+			    	   Country deliveryCountry = countries.get(order.getDelivery().getCountry().getIsoCode());
+			    	   if(country!=null) {
+			    		   shipping.append(deliveryCountry.getName()).append(" ");
+			    	   }
+			    	   shipping.append(order.getDelivery().getPostalCode());
+		    	   }

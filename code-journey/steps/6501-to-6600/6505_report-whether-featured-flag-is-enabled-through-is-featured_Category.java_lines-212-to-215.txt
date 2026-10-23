@@ -1,0 +1,4 @@
+    public boolean isFeatured() {
+        return featured;
+    }
+

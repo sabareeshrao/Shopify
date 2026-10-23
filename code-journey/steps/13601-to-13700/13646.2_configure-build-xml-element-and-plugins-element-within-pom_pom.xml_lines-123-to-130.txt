@@ -1,0 +1,8 @@
+
+		<build>
+		<plugins>
+
+		</plugins>
+
+	</build>
+

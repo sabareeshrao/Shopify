@@ -1,0 +1,8 @@
+					}
+
+					if (!existingAttribute) {
+						removeAttributesList.add(attribute);
+					}
+
+				}
+			}

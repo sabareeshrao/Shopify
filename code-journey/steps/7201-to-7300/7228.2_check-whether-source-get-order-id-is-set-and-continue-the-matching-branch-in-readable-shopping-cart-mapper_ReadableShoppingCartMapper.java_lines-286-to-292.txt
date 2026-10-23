@@ -1,0 +1,7 @@
+
+			destination.setQuantity(cartQuantity);
+			destination.setId(source.getId());
+
+			if (source.getOrderId() != null) {
+				destination.setOrder(source.getOrderId());
+			}

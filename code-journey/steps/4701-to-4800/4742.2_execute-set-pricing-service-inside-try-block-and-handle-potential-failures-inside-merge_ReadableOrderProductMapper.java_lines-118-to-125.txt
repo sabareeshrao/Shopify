@@ -1,0 +1,8 @@
+				// TODO autowired
+				ReadableProductPopulator populator = new ReadableProductPopulator();
+				populator.setPricingService(pricingService);
+				populator.setimageUtils(imageUtils);
+
+				ReadableProduct productProxy;
+				try {
+					productProxy = populator.populate(product, new ReadableProduct(), store, language);

@@ -1,0 +1,2 @@
+	private List<ReadableProductAttributeValue> attributeValues = new ArrayList<ReadableProductAttributeValue>();
+	

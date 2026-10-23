@@ -1,0 +1,8 @@
+label.generic.item=article
+label.generic.item.title=Article
+label.generic.items=articles
+label.generic.displayonly=Affichage seulement
+label.generic.url=URL
+label.generic.sortby=Ordonner par
+label.generic.default=Défaut
+label.generic.name=Nom

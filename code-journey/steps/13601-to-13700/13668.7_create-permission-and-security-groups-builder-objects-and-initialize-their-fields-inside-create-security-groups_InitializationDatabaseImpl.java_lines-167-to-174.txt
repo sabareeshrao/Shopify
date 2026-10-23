@@ -1,0 +1,8 @@
+		  
+		  Permission AUTH_CUSTOMER = new Permission("AUTH_CUSTOMER");
+		  permissionService.create(AUTH_CUSTOMER);
+		  permissionKeys.put(AUTH_CUSTOMER.getPermissionName(), AUTH_CUSTOMER);
+		
+		  SecurityGroupsBuilder groupBuilder = new SecurityGroupsBuilder();
+		  groupBuilder
+		  .addGroup("SUPERADMIN", GroupType.ADMIN)

@@ -1,0 +1,2 @@
+		@Index(name = "MODULE_CONFIGURATION_MODULE", columnList = "MODULE") })
+

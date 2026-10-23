@@ -1,0 +1,19 @@
+
+			/**
+			 * variants options list variation color
+			 */
+
+			/**
+			 * Returns a list of ReadableProductOptions
+			 * 
+			 * name lang type code List ReadableProductOptionValueEntity name description
+			 * image order default
+			 */
+
+			/**
+			 * Create options from instance Create a list of option values
+			 */
+
+			for (ProductVariant instance : source.getVariants()) {
+				instanceToOption(selectableOptions, instance, store, language);
+			}

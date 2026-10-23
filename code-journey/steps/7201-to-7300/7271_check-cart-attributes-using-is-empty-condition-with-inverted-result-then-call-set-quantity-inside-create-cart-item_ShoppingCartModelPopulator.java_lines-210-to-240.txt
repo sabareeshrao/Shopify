@@ -1,0 +1,31 @@
+
+
+
+
+
+        com.salesmanager.core.model.shoppingcart.ShoppingCartItem item =
+            new com.salesmanager.core.model.shoppingcart.ShoppingCartItem( cart, product );
+        item.setQuantity( shoppingCartItem.getQuantity() );
+        item.setItemPrice( shoppingCartItem.getProductPrice() );
+        item.setShoppingCart( cart );
+        item.setSku(shoppingCartItem.getSku());
+
+        // attributes
+        List<ShoppingCartAttribute> cartAttributes = shoppingCartItem.getShoppingCartAttributes();
+        if ( !CollectionUtils.isEmpty( cartAttributes ) )
+        {
+            Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> newAttributes =
+                new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem>();
+            for ( ShoppingCartAttribute attribute : cartAttributes )
+            {
+                ProductAttribute productAttribute = productAttributeService.getById( attribute.getAttributeId() );
+                if ( productAttribute != null
+                    && productAttribute.getProduct().getId().longValue() == product.getId().longValue() )
+                {
+                    com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attributeItem =
+                        new com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem( item,
+                                                                                                         productAttribute );
+                    if ( attribute.getAttributeId() > 0 )
+                    {
+                        attributeItem.setId( attribute.getId() );
+                    }

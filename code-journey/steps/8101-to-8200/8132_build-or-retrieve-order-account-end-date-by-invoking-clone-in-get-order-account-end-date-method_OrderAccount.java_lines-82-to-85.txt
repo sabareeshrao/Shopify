@@ -1,0 +1,4 @@
+	public Date getOrderAccountEndDate() {
+		return CloneUtils.clone(orderAccountEndDate);
+	}
+

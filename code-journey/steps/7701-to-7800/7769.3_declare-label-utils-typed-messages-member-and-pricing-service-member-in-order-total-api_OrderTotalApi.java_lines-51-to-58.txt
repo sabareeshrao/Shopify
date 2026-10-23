@@ -1,0 +1,8 @@
+
+  @Inject private LabelUtils messages;
+
+  @Inject private PricingService pricingService;
+
+  @Inject private CustomerService customerService;
+
+  @Inject private ShippingQuoteService shippingQuoteService;

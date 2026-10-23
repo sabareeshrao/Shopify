@@ -1,0 +1,8 @@
+
+@Service("productFacadeV2")
+@Profile({ "default", "cloud", "gcp", "aws", "mysql" , "local" })
+public class ProductFacadeV2Impl implements ProductFacade {
+	
+
+	@Autowired
+	private ProductService productService;

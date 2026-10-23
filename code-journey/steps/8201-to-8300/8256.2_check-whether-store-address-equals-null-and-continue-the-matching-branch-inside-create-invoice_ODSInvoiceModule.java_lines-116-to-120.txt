@@ -1,0 +1,5 @@
+				if(storeAddress==null) {
+					storeAddress = new StringBuilder();
+				} else {
+					storeAddress.append(", ");
+				}

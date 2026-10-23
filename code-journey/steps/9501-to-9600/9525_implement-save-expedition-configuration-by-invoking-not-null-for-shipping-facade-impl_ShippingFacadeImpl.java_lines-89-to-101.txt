@@ -1,0 +1,13 @@
+	@Override
+	public void saveExpeditionConfiguration(ExpeditionConfiguration expedition, MerchantStore store) {
+		Validate.notNull(expedition, "ExpeditionConfiguration cannot be null");
+		try {
+			
+			//get original configuration
+			ShippingConfiguration config = getDbConfig(store);
+			config.setTaxOnShipping(expedition.isTaxOnShipping());
+			config.setShippingType(expedition.isIternationalShipping()?ShippingType.INTERNATIONAL:ShippingType.NATIONAL);
+			this.saveShippingConfiguration(config, store);
+			
+			shippingService.setSupportedCountries(store, expedition.getShipToCountry());
+

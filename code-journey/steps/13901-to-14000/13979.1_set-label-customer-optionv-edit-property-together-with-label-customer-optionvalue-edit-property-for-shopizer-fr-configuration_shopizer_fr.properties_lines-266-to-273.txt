@@ -1,0 +1,8 @@
+
+
+label.customer.optionv.edit=Éditer une option
+label.customer.option.name=Nom de l'option
+label.customer.option.code=Code de l'option
+label.customer.option.type=Type d'affichage
+
+label.customer.optionvalue.edit=Éditer la valeur d'option

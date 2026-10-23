@@ -1,0 +1,14 @@
+	
+	@Autowired
+	private PersistableProductAvailabilityMapper persistableProductAvailabilityMapper;
+	
+	@Autowired
+	private PersistableProductVariantMapper persistableProductVariantMapper;
+	
+
+	
+	@Autowired
+	private CategoryService categoryService;
+	@Autowired
+	private LanguageService languageService;
+

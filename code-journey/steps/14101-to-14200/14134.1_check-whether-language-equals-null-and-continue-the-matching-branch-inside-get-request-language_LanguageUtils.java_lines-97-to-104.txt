@@ -1,0 +1,8 @@
+
+        }
+
+      } catch (Exception e) {
+        if (language == null) {
+          try {
+            language = languageService.getByCode(Constants.DEFAULT_LANGUAGE);
+          } catch (Exception ignore) {

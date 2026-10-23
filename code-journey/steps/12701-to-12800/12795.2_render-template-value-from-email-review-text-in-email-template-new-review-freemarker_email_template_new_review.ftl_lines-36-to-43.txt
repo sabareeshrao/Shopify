@@ -1,0 +1,8 @@
+	${EMAIL_REVIEW_TEXT}<br/>
+    </div>
+</div>
+
+</div>
+
+  <!-- Footer Section -->
+  <div class="footer">

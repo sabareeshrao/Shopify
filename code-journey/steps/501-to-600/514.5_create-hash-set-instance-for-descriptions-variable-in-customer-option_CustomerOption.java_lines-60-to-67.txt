@@ -1,0 +1,8 @@
+	@Column(name="CUSTOMER_OPT_PUBLIC")
+	private boolean publicOption;
+	
+	@Valid
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customerOption")
+	private Set<CustomerOptionDescription> descriptions = new HashSet<CustomerOptionDescription>();
+	
+	@Transient

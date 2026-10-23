@@ -1,0 +1,8 @@
+# httpd = requires http server
+# aws = AWS S3 -> See AWS S3 configuration below
+config.cms.method=default
+
+config.cms.static.path=/static
+
+#httpd configuration
+#Specifies where htdocs repository is located

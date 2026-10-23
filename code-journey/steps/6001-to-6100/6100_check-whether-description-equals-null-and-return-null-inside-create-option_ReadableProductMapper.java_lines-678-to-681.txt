@@ -1,0 +1,4 @@
+
+		if (description == null) {
+			return null;
+		}

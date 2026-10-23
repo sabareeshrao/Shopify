@@ -1,0 +1,6 @@
+  public StoreCacheManagerImpl(String location, String root) {
+    super.init(NAMED_CACHE, location);
+    this.root = root;
+  }
+
+

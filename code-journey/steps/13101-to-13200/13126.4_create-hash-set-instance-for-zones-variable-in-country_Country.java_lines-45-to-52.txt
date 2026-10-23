@@ -1,0 +1,8 @@
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "country")
+	private Set<Zone> zones = new HashSet<Zone>();
+	
+	@ManyToOne(targetEntity = GeoZone.class)
+	@JoinColumn(name = "GEOZONE_ID")
+	private GeoZone geoZone;
+	
+	@Column(name = "COUNTRY_SUPPORTED")

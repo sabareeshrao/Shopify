@@ -1,0 +1,4 @@
+  public void setDateModified(Date dateModified) {
+    this.dateModified = CloneUtils.clone(dateModified);
+  }
+

@@ -1,0 +1,6 @@
+  @Override
+  public Optin merge(PersistableOptin source, Optin destination, MerchantStore store,
+                     Language language) {
+    return destination;
+  }
+}

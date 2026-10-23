@@ -1,0 +1,8 @@
+
+        // IOUtils.copy(isLarge, output);
+
+
+        ImageContentFile largeContentImage = new ImageContentFile();
+        largeContentImage.setFileContentType(FileContentType.PRODUCT);
+        largeContentImage.setFileName(productImage.getProductImage());
+        largeContentImage.setFile(isLarge);

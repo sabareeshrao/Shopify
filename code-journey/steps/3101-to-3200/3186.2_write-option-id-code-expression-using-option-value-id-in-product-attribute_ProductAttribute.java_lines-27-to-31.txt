@@ -1,0 +1,5 @@
+				"OPTION_ID",
+				"OPTION_VALUE_ID",
+				"PRODUCT_ID"
+			})
+	}

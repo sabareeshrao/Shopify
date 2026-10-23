@@ -1,0 +1,8 @@
+	@Override
+	public void renameFile(MerchantStore store, FileContentType fileType, String originalName, String newName) {
+		Optional<String> path = Optional.ofNullable(null);
+		try {
+			contentService.renameFile(store.getCode(), fileType, path, originalName, newName);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while renaming file " + e.getMessage(), e);
+		}

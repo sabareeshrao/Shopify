@@ -1,0 +1,8 @@
+         * smallContentImage.setFile(output); smallContentImage.setDefaultImage(false);
+         * smallContentImage.setImageName(new
+         * StringBuilder().append("S-").append(productImage.getProductImage()).toString());
+         *
+         * uploadImage.uploadProductImage(configuration, productImage, smallContentImage);
+         *
+         * output.flush(); output.close();
+         *

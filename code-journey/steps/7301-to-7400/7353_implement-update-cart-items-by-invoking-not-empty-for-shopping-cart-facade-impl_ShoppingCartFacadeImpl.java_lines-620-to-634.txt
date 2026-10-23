@@ -1,0 +1,15 @@
+
+	// TODO promoCode request parameter
+	// @Override
+	// DELETE
+	public ShoppingCartData updateCartItems(Optional<String> promoCode, final List<ShoppingCartItem> shoppingCartItems,
+			final MerchantStore store, final Language language) throws Exception {
+
+		Validate.notEmpty(shoppingCartItems, "shoppingCartItems null or empty");
+		ShoppingCart cartModel = null;
+		Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
+		for (ShoppingCartItem item : shoppingCartItems) {
+
+			if (item.getQuantity() < 1) {
+				throw new CartModificationException("Quantity must not be less than one");
+			}

@@ -1,0 +1,28 @@
+
+	/**
+	 * Sends an email to the customer after a completed order
+	 * @param customer
+	 * @param order
+	 * @param customerLocale
+	 * @param language
+	 * @param merchantStore
+	 * @param contextPath
+	 */
+	@Async
+	public void sendOrderEmail(String toEmail, Customer customer, Order order, Locale customerLocale, Language language, MerchantStore merchantStore, String contextPath) {
+			   /** issue with putting that elsewhere **/ 
+		       LOGGER.info( "Sending welcome email to customer" );
+		       try {
+		    	   
+		    	   Map<String,Zone> zones = zoneService.getZones(language);
+		    	   
+		    	   Map<String,Country> countries = countryService.getCountriesMap(language);
+		    	   
+		    	   //format Billing address
+		    	   StringBuilder billing = new StringBuilder();
+		    	   if(StringUtils.isBlank(order.getBilling().getCompany())) {
+		    		   billing.append(order.getBilling().getFirstName()).append(" ")
+		    		   .append(order.getBilling().getLastName()).append(LINE_BREAK);
+		    	   } else {
+		    		   billing.append(order.getBilling().getCompany()).append(LINE_BREAK);
+		    	   }

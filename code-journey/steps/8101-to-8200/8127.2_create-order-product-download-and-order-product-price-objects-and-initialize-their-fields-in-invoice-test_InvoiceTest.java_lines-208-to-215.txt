@@ -1,0 +1,8 @@
+		OrderProductDownload orderProductDownload = new OrderProductDownload();
+		orderProductDownload.setDownloadCount(1);
+		orderProductDownload.setMaxdays(31);		
+		orderProductDownload.setOrderProductFilename("Your digital file name");
+		
+		//OrderProductPrice
+		OrderProductPrice oproductprice = new OrderProductPrice();
+		oproductprice.setDefaultPrice(true);	

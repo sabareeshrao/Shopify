@@ -1,0 +1,2 @@
+import com.salesmanager.core.model.user.User;
+

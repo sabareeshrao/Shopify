@@ -1,0 +1,8 @@
+
+	/**
+	 * Deletes a content from CMS
+	 *
+	 * @param name
+	 */
+	@Deprecated
+	@DeleteMapping(value = "/private/content/{id}")

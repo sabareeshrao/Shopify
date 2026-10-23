@@ -1,0 +1,4 @@
+
+	@Column(name="MODULE", length=25, nullable=true)
+	private String module;
+	

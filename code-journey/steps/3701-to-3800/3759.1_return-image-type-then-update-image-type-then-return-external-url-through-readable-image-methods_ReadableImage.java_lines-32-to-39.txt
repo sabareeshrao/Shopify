@@ -1,0 +1,8 @@
+	public int getImageType() {
+		return imageType;
+	}
+	public void setImageType(int imageType) {
+		this.imageType = imageType;
+	}
+	public String getExternalUrl() {
+		return externalUrl;

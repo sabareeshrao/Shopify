@@ -1,0 +1,8 @@
+
+		} catch (Exception e) {
+			if(e instanceof CredentialsException) {
+				throw new GenericRuntimeException("412","Credentials creation Failed [" + e.getMessage() + "]");
+			}
+			String message = e.getMessage();
+			if(StringUtils.isBlank(message)) {//exception type
+				message = "APP-BACKEND";

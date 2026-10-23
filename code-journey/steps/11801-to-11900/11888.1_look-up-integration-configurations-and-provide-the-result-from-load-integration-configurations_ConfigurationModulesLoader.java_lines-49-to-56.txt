@@ -1,0 +1,8 @@
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static Map<String,IntegrationConfiguration> loadIntegrationConfigurations(String value) throws Exception {
+		
+		
+		Map<String,IntegrationConfiguration> modules = new HashMap<String,IntegrationConfiguration>();
+		
+		ObjectMapper mapper = new ObjectMapper();

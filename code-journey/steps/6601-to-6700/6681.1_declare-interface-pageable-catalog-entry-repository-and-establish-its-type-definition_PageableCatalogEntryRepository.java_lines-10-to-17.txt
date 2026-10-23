@@ -1,0 +1,8 @@
+public interface PageableCatalogEntryRepository extends PagingAndSortingRepository<CatalogCategoryEntry, Long> {
+
+	
+/*	  @Query(value = "select distinct c from CatalogEntry c join fetch c.product cp "
+	  		+ "join fetch c.category cc "
+	  		+ "join fetch c.catalog cl "
+	  		+ "join fetch cl.merchantStore clm "
+	  		+ "left join fetch cp.descriptions cpd "

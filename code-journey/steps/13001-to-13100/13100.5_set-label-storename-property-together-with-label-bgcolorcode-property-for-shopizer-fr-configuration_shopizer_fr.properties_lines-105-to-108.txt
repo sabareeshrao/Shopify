@@ -1,0 +1,4 @@
+label.storename = Nom de la boutique
+label.storecode=Code unique de la boutique
+label.currency = Devise
+label.bgcolorcode = Couleur de fond

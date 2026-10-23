@@ -1,0 +1,4 @@
+	public List<CatalogDescription> getDescriptions() {
+		return descriptions;
+	}
+

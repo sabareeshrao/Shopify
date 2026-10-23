@@ -1,0 +1,8 @@
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	
+	/**
+	 * Builds generic html email information
+	 * @param store
+	 * @param messages
+	 * @param locale

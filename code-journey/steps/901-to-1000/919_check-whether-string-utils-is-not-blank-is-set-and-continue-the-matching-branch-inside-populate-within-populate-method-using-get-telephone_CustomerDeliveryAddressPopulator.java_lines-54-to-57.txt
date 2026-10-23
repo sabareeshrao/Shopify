@@ -1,0 +1,4 @@
+        
+        if(StringUtils.isNotBlank( source.getDelivery().getTelephone() )){
+            target.setPhone(source.getDelivery().getTelephone());
+        }

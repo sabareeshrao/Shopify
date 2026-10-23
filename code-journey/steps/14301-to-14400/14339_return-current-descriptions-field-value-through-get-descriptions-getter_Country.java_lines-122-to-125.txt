@@ -1,0 +1,4 @@
+	public Set<CountryDescription> getDescriptions() {
+		return descriptions;
+	}
+

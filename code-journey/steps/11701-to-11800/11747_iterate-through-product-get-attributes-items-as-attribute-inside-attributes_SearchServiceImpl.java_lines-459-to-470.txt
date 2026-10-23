@@ -1,0 +1,12 @@
+	private Map<String, String> attributes(Product product, String language) {
+
+		/**
+		 * ProductAttribute ProductOption ProductOptionValue
+		 */
+
+		Map<String, String> allAttributes = new HashMap<String, String>();
+
+		for (ProductAttribute attribute : product.getAttributes()) {
+			Map<String, String> attr = attribute(attribute, language);
+			allAttributes.putAll(attr);
+		}

@@ -1,0 +1,7 @@
+    try {
+      userGroups = groupService.listGroupByNames(groups);
+
+      List<Integer> ids = new ArrayList<Integer>();
+      for (Group g : userGroups) {
+        ids.add(g.getId());
+      }

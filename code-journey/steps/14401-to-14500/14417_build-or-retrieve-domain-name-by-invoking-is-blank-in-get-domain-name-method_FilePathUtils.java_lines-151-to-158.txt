@@ -1,0 +1,8 @@
+	private String getDomainName(String domainName) {
+		if (StringUtils.isBlank(domainName)) {
+			return DEFAULT_DOMAIN_NAME;
+		} else {
+			return domainName;
+		}
+	}
+

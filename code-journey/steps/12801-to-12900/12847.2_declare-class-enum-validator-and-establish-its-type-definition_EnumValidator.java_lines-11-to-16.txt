@@ -1,0 +1,6 @@
+ *
+ */
+public class EnumValidator implements ConstraintValidator<Enum, String>
+{
+    private Enum annotation;
+ 

@@ -1,0 +1,30 @@
+
+NotEmpty.customer.FirstName=Le prenom du client ne doit pas être vide
+NotEmpty.customer.LastName=Le nom de famille du client ne doit pas être vide
+NotEmpty.customer.StreetAddress=L'adresse du client ne doit pas être vide
+NotEmpty.customer.City=La ville du client ne doit pas être vide
+NotEmpty.customer.PostCode=Le code postal du client ne doit pas être vide
+NotEmpty.customer.Telephone=Le numero de telephone du client ne doit pas être vide
+Email.customer.EmailAddress=Le email du client est invalide
+NotEmpty.customer.EmailAddress=Le email du client ne doit pas être vide
+
+NotEmpty.customer.billingCompany=Le nom de compagnie ne doit pas être vide
+NotEmpty.customer.billingFirstName=Le prénom de facturation ne doit pas être vide
+NotEmpty.customer.billingLastName=Le nom de facturation ne doit pas être vide
+NotEmpty.customer.billingStreetAddress=L'adresse de facturation ne doit pas être vide
+NotEmpty.customer.billingCity=La ville de facturation ne doit pas être vide
+NotEmpty.customer.billingState=La province de facturation ne doit pas être vide
+NotEmpty.customer.billingCountry=Le pays de facturation ne doit pas être vide
+NotEmpty.customer.billingPostCode=Le code postal de facturation ne doit pas être vide
+
+NotEmpty.customer.shippingCountry=Le pays de livraison ne doit pas être vide
+
+NotEmpty.taxClass.code=Le code de la classe de taxe est requis
+NotEmpty.taxClass.title=Le nom de la classe de taxe est requis
+message.taxclass.alreadyexist=Le code de classe existe déjà
+NotEmpty.taxRate.code=Le code du taux de taxation est requis
+NotEmpty.taxRate.unique.code=Le code du taux de taxation doit être unique
+NotEmpty.taxRate.rateText=Le taux de taxation est requis
+NotEmpty.taxRateDescription.name=Le nom du taux de taxation est requis
+NotNull.taxRate.parent=Le taux de taxation parent doit être sélectionné
+

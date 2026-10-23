@@ -1,0 +1,6 @@
+ * @author c.samson
+ *
+ */
+@Component
+public class ImageFilePathUtils extends AbstractimageFilePath{
+	

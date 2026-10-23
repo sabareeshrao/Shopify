@@ -1,0 +1,8 @@
+			
+			/**
+			 * Inventory
+			 */
+			
+			/**
+			 * SKU, QTY, PRICE, DISCOUNT
+			 */

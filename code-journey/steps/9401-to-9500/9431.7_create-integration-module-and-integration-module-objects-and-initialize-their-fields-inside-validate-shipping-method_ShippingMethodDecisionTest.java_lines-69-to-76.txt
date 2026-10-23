@@ -1,0 +1,8 @@
+		IntegrationModule canadapost = new IntegrationModule();
+		canadapost.setCode("canadapost");
+		
+		IntegrationModule ups = new IntegrationModule();
+		ups.setCode("ups");
+		
+		IntegrationModule inhouse = new IntegrationModule();
+		inhouse.setCode("customQuotesRules");

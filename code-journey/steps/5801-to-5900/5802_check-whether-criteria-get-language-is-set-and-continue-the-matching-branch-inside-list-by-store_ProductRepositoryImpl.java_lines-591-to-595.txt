@@ -1,0 +1,5 @@
+
+		countBuilderSelect.append(" inner join p.descriptions pd");
+		if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+			countBuilderWhere.append(" and pd.language.code=:lang");
+		}

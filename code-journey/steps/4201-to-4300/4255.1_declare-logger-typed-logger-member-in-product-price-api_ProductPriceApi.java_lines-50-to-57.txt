@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductApi.class);
+
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/{sku}/inventory/{inventoryId}/price"},
+			method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody Entity save(

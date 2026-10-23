@@ -1,0 +1,8 @@
+	 */
+	ShippingMetaData getShippingMetaData(MerchantStore store) throws ServiceException;
+	
+	/**
+	 * Based on merchant configurations will return if tax must be calculated on shipping
+	 * @param store
+	 * @return
+	 * @throws ServiceException

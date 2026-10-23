@@ -1,0 +1,7 @@
+
+        ReleaseId krDefaultReleaseId = kieRepository.getDefaultReleaseId();
+
+        KieContainer kieContainer = kieServices.newKieContainer(krDefaultReleaseId);
+
+        return kieContainer.newKieSession();
+    }

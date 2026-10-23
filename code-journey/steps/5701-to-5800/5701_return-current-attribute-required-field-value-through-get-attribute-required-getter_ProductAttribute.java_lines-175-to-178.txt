@@ -1,0 +1,4 @@
+	public boolean getAttributeRequired() {
+		return attributeRequired;
+	}
+

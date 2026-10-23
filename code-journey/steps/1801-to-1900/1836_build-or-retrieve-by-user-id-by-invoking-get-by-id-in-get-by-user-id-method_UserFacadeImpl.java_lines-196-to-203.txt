@@ -1,0 +1,8 @@
+	private User getByUserId(Long id) {
+		try {
+			return userService.getById(id);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}
+

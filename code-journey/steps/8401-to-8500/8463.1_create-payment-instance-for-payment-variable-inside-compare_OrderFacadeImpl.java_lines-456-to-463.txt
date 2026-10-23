@@ -1,0 +1,8 @@
+
+			String paymentType = order.getPaymentMethodType();
+			Payment payment = new Payment();
+			payment.setPaymentType(PaymentType.valueOf(paymentType));
+			payment.setAmount(order.getOrderTotalSummary().getTotal());
+			payment.setModuleName(order.getPaymentModule());
+			payment.setCurrency(modelOrder.getCurrency());
+

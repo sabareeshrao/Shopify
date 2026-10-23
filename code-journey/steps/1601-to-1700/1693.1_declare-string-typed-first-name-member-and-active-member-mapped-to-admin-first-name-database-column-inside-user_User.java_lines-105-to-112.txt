@@ -1,0 +1,8 @@
+	
+	@Column(name="ADMIN_FIRST_NAME")
+	private String firstName;
+	
+	@Column(name="ACTIVE")
+	private boolean active = true;
+	
+	

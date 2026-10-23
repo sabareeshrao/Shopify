@@ -1,0 +1,12 @@
+		
+		
+
+		Query countQ = this.em.createQuery(countBuilderSelect.toString() + countBuilderWhere.toString());
+
+		countQ.setParameter("mId", store.getId());
+
+		/**/
+		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
+				&& !CollectionUtils.isEmpty(criteria.getCategoryIds())) {
+			countQ.setParameter("cid", criteria.getCategoryIds());
+		}

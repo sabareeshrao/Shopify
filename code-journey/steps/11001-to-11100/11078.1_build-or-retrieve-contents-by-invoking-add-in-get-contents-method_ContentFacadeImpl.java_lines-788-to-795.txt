@@ -1,0 +1,8 @@
+	@Override
+	public List<ReadableContentEntity> getContents(Optional<String> type, MerchantStore store, Language language) {
+
+		/**
+		 * get all types
+		 */
+		List<ContentType> types = new ArrayList<ContentType>();
+		types.add(ContentType.BOX);

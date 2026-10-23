@@ -1,0 +1,10 @@
+    
+    
+    /**
+    * The offset for this pagination object. The offset determines what index (0 index) to start retrieving results from.
+    *
+    * @return the offset
+    */
+        public int getOffset() {
+            return (currentPage - 1) * pageSize + 1;
+        }

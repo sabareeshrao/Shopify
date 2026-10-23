@@ -1,0 +1,8 @@
+		order.setCreditCard(creditCard);
+		
+		/** order core attributes **/
+		order.setDatePurchased(new Date());
+		order.setCurrency(currency);
+		order.setMerchant(merchant);
+		order.setLastModified(new Date());
+		order.setCurrencyValue(new BigDecimal(1));//no price variation because of the currency

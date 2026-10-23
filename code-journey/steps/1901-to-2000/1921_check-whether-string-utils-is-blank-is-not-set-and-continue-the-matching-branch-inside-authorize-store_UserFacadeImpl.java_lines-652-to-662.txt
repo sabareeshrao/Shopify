@@ -1,0 +1,11 @@
+
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		
+
+		if (!StringUtils.isBlank(path) && path.contains(PRIVATE_PATH)) {
+			
+			Validate.notNull(authentication, "Don't call ths method if a user is not authenticated");
+
+			try {
+				

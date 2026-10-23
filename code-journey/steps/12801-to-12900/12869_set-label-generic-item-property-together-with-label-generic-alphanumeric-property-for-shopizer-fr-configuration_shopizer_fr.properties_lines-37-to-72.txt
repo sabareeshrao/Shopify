@@ -1,0 +1,36 @@
+label.generic.item=article
+label.generic.item.title=Article
+label.generic.items=articles
+label.generic.displayonly=Affichage seulement
+label.generic.url=URL
+label.generic.sortby=Ordonner par
+label.generic.default=Défaut
+label.generic.name=Nom
+label.generic.next=Suivant
+label.generic.genre=Genre
+label.generic.male=Homme
+label.generic.female=Femme
+label.generic.register=Enregistrer
+label.generic.youropinion=Votre opinion
+label.generic.date=Date
+label.generic.comments=Commentaires
+label.generic.subject=Sujet
+label.generic.minimum=Minimum
+label.generic.maximum=Maximum
+label.generic.pictures=Photos
+label.generic.videos=Vidéos
+label.generic.imageType=Type de média
+label.generic.today=Aujourd'hui
+
+label.generic.welcome=Bonjour
+label.generic.weightunit.LB = Livres
+label.generic.weightunit.KG = Kilogrammes
+label.generic.language=Langue
+label.generic.search=Recherche
+
+label.generic.sizeunit.CM = Centimètres
+label.generic.sizeunit.IN = Pouces
+label.generic.remove=Retirer
+label.generic.yes=Oui
+label.generic.no=Non
+label.generic.alphanumeric=Alpha numérique

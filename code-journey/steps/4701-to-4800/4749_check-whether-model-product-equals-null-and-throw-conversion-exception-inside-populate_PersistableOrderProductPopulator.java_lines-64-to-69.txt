@@ -1,0 +1,6 @@
+		
+		try {
+			Product modelProduct = productService.getById(source.getProduct().getId());
+			if(modelProduct==null) {
+				throw new ConversionException("Cannot get product with id (productId) " + source.getProduct().getId());
+			}

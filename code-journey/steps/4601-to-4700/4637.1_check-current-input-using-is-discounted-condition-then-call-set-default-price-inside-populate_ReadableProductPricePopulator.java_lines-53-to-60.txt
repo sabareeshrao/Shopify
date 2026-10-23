@@ -1,0 +1,8 @@
+		    
+		    target.setDefaultPrice(source.isDefaultPrice());
+			
+			FinalPrice finalPrice = pricingService.calculateProductPrice(source.getProductAvailability().getProduct());
+			
+			target.setOriginalPrice(pricingService.getDisplayAmount(source.getProductPriceAmount(), store));
+			if(finalPrice.isDiscounted()) {
+				target.setDiscounted(true);

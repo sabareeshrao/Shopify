@@ -1,0 +1,8 @@
+	   * @param language
+	   * @throws Exception
+	   */
+	  void deleteReview(ProductReview review, MerchantStore store, Language language) throws Exception;
+
+	  /**
+	   * Get reviews for a given product
+	   *

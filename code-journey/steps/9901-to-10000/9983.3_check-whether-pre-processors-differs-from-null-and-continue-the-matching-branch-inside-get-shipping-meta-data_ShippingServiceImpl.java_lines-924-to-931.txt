@@ -1,0 +1,8 @@
+		metaData.setModules(new ArrayList<>(modules.keySet()));
+		
+		// pre processors
+		List<ShippingQuotePrePostProcessModule> preProcessors = this.shippingModulePreProcessors;
+		List<String> preProcessorKeys = new ArrayList<String>();
+		if(preProcessors!=null) {
+			for(ShippingQuotePrePostProcessModule processor : preProcessors) {
+				preProcessorKeys.add(processor.getModuleCode());

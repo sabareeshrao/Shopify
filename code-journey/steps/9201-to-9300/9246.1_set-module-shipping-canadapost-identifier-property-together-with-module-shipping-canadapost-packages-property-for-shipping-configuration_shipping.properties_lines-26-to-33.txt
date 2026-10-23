@@ -1,0 +1,8 @@
+
+
+#Canada Post
+module.shipping.canadapost.identifier=Canada Post identifier (CPC number)
+module.shipping.canadapost.username=Canada Post user name (first part of the API key before semi column)
+module.shipping.canadapost.password=Canada Post password (second part of the API key after semi column)
+module.shipping.canadapost.apikey=Canada Post API key
+module.shipping.canadapost.packages=Package type

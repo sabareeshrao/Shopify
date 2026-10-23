@@ -1,0 +1,8 @@
+	@Override
+	public void addCategoryDescription(Category category, CategoryDescription description) throws ServiceException {
+
+		try {
+			category.getDescriptions().add(description);
+			description.setCategory(category);
+			update(category);
+		} catch (Exception e) {

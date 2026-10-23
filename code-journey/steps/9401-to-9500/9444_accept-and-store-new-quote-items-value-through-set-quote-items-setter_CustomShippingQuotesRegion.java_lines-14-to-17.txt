@@ -1,0 +1,4 @@
+	public void setQuoteItems(List<CustomShippingQuoteWeightItem> quoteItems) {
+		this.quoteItems = quoteItems;
+	}
+

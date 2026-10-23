@@ -1,0 +1,8 @@
+	private ReadableConfiguration configuration(IntegrationConfiguration source, MerchantStore store) {
+		
+		ReadableConfiguration config = new ReadableConfiguration();
+		config.setActive(source.isActive());
+		config.setCode(source.getModuleCode());
+		config.setKeys(source.getIntegrationKeys());
+		config.setIntegrationOptions(source.getIntegrationOptions());
+		

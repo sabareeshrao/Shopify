@@ -1,0 +1,27 @@
+	    
+	    /**
+	     * Create product
+	     */
+	    productService.saveProduct(product);
+	    
+	    
+	    /**
+	     * Creates a review
+	     * TODO requires customer
+	     */
+	    //testReview(product);
+
+	    List<Product> products = productService.listByStore(store);
+	    
+	    System.out.println("Total number of items " + products.size());
+	    
+	    //count products by category
+		String lineage = new StringBuilder().append(book.getLineage()).toString();
+		
+		List<Category> categories = categoryService.getListByLineage(store, lineage);
+		
+		List<Long> ids = new ArrayList<Long>();
+		if(categories!=null && categories.size()>0) {
+			for(Category c : categories) {
+				ids.add(c.getId());
+			}

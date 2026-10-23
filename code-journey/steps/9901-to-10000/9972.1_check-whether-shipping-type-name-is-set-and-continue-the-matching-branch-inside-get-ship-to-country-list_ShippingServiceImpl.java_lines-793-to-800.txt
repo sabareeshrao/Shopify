@@ -1,0 +1,8 @@
+
+		
+		if(shippingType.name().equals(ShippingType.NATIONAL.name())){
+			
+			supportedCountries.add(store.getCountry().getIsoCode());
+			
+		} else {
+

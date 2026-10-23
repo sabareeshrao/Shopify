@@ -1,0 +1,8 @@
+label.generic.firstname=First name
+label.generic.lastname=Last name
+label.generic.streetaddress=Street address
+label.generic.postalcode=Postal code
+label.generic.city=City
+label.generic.country=Country
+label.generic.hi=Hi
+label.generic.send=Send

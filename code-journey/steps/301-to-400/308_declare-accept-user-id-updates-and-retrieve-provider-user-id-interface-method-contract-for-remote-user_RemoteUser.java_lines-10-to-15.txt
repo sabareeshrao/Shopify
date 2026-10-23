@@ -1,0 +1,6 @@
+	public void setUserId(String id);
+	/*
+	 * Provider identifier: Facebook, Twitter, LinkedIn etc
+	 */
+	public String getProviderUserId();
+

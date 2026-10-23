@@ -1,0 +1,8 @@
+		
+		CustomerOptionValueDescription yes_sir = new CustomerOptionValueDescription();
+		yes_sir.setCustomerOptionValue(yes);
+		yes_sir.setDescription("Yes sir!");
+		yes_sir.setName("Yes sir!");
+		yes_sir.setLanguage(en);
+		yes.getDescriptions().add(yes_sir);
+		

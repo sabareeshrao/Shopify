@@ -1,0 +1,8 @@
+			Map<String,String> metadata = new HashMap<String,String>();
+			metadata.put("paymentToken", source.getPaymentToken());
+			target.setPaymentMetaData(metadata);
+			
+			return target;
+		
+		} catch(Exception e) {
+			throw new ConversionException(e);

@@ -1,0 +1,8 @@
+																					// id
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletResponse response)
+			throws Exception {
+
+		return manufacturerFacade.getByProductInCategory(merchantStore, language, id);
+
+	}
+

@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.customer.optin.PersistableCustomerOptin;
+import com.salesmanager.shop.populator.customer.CustomerBillingAddressPopulator;
+import com.salesmanager.shop.populator.customer.CustomerDeliveryAddressPopulator;
+import com.salesmanager.shop.populator.customer.CustomerEntityPopulator;
+import com.salesmanager.shop.populator.customer.CustomerPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerBillingAddressPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerReviewPopulator;

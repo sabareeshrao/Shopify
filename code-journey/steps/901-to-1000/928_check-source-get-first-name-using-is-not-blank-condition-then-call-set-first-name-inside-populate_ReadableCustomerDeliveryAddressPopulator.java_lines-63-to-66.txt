@@ -1,0 +1,4 @@
+        
+        if(StringUtils.isNotBlank( source.getFirstName() )){
+            target.setFirstName(source.getFirstName());
+        }

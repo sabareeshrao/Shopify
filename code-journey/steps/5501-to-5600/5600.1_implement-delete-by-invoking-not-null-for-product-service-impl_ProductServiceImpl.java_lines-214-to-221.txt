@@ -1,0 +1,8 @@
+	@Override
+	public void delete(Product product) throws ServiceException {
+		Validate.notNull(product, "Product cannot be null");
+		Validate.notNull(product.getMerchantStore(), "MerchantStore cannot be null in product");
+		product = this.getById(product.getId());// Prevents detached entity
+												// error
+		product.setCategories(null);
+

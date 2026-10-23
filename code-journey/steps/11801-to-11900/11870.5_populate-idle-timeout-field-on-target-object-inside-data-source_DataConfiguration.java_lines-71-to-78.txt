@@ -1,0 +1,8 @@
+    	.driverClassName(driverClassName)
+    	.url(url)
+    	.username(user)
+    	.password(password)
+    	.build();
+    	
+    	/** Datasource config **/
+    	dataSource.setIdleTimeout(minPoolSize);

@@ -1,0 +1,4 @@
+    public boolean isCategoryStatus() {
+        return categoryStatus;
+    }
+

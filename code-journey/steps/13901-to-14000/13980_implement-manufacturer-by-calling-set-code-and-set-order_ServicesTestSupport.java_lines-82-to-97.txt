@@ -1,0 +1,16 @@
+	protected PersistableManufacturer manufacturer(String code) {
+
+		PersistableManufacturer m = new PersistableManufacturer();
+		m.setCode(code);
+		m.setOrder(0);
+
+		ManufacturerDescription desc = new ManufacturerDescription();
+		desc.setLanguage("en");
+		desc.setName(code);
+
+		m.getDescriptions().add(desc);
+
+		return m;
+
+	}
+

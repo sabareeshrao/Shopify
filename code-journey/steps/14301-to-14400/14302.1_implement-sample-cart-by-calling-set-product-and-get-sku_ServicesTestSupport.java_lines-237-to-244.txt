@@ -1,0 +1,8 @@
+	protected ReadableShoppingCart sampleCart() {
+
+		ReadableProduct product = sampleProduct("sampleCart");
+		assertNotNull(product);
+
+		PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();
+		cartItem.setProduct(product.getSku());
+		cartItem.setQuantity(1);

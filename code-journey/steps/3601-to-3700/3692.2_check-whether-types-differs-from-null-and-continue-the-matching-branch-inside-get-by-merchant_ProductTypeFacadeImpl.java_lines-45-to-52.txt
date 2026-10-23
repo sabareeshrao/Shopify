@@ -1,0 +1,8 @@
+			Page<ProductType> types = productTypeService.getByMerchant(store, language, page, count);
+
+			if(types != null) {
+				returnList.setList(types.getContent().stream().map(t -> readableProductTypeMapper.convert(t, store, language)).collect(Collectors.toList()));
+				returnList.setTotalPages(types.getTotalPages());
+				returnList.setRecordsTotal(types.getTotalElements());
+				returnList.setRecordsFiltered(types.getSize());
+			}

@@ -1,0 +1,8 @@
+
+
+module.shipping.ups.method.01=UPS Next Day Air
+module.shipping.ups.method.02=UPS Second Day Air
+module.shipping.ups.method.03=UPS Ground
+module.shipping.ups.method.07=UPS Worldwide Express
+module.shipping.ups.method.08=UPS Worldwide Expedited
+module.shipping.ups.method.11=UPS Standard

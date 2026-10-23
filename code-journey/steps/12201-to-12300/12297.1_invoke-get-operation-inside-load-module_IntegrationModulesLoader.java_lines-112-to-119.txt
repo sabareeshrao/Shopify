@@ -1,0 +1,8 @@
+	    	
+	    	
+	    	List confs = (List)object.get("configuration");
+	    	
+	    	//convert to json
+	    	
+	    	
+	    	

@@ -1,0 +1,6 @@
+		
+		if(CollectionUtils.isNotEmpty(c.getCategories())) {
+			c.getCategories().stream().forEach(element -> {
+				processCategory(element, store, language, hierarchy, processed);
+			});
+		}

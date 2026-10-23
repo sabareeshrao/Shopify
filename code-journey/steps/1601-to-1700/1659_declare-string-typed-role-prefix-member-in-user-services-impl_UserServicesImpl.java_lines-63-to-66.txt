@@ -1,0 +1,4 @@
+	public final static String ROLE_PREFIX = "ROLE_";
+	
+	
+	

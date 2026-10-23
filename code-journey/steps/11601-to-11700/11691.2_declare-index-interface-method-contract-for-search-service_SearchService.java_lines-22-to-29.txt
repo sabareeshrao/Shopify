@@ -1,0 +1,8 @@
+	 */
+	void index(MerchantStore store, Product product) throws ServiceException;
+
+	/**
+	 * Deletes a document in the appropriate language. Must be invoked when a product is deleted
+	 * @param store
+	 * @param product
+	 * @throws ServiceException

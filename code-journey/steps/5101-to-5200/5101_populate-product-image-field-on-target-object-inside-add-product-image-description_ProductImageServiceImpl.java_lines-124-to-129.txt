@@ -1,0 +1,6 @@
+
+		productImage.getDescriptions().add(description);
+		description.setProductImage(productImage);
+		update(productImage);
+
+	}

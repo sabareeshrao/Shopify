@@ -1,0 +1,5 @@
+	public ShoppingCartItem(ShoppingCart shoppingCart, Product product) {
+		this(product);
+		this.shoppingCart = shoppingCart;
+	}
+

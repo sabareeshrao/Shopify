@@ -1,0 +1,3 @@
+        if (Objects.isNull(c)) {
+            throw new ResourceNotFoundException("Catalog with id [" + catalogId + "] not found");
+        }

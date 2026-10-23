@@ -1,0 +1,4 @@
+	public void setDateLastClick(Date dateLastClick) {
+		this.dateLastClick = dateLastClick;
+	}
+

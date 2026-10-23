@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.zone.Zone;
+
+@Embeddable
+public class Delivery {
+	
+	@Column (name ="DELIVERY_LAST_NAME", length=64)
+	private String lastName;

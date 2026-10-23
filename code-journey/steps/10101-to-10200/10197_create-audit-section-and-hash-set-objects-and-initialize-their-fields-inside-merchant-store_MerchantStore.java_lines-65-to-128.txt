@@ -1,0 +1,64 @@
+
+
+
+	@Id
+	@Column(name = "MERCHANT_ID", unique = true, nullable = false)
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "STORE_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Integer id;
+
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name = "PARENT_ID")
+	private MerchantStore parent;
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE)
+	private Set<MerchantStore> stores = new HashSet<MerchantStore>();
+
+	@Column(name = "IS_RETAILER")
+	private Boolean retailer = false;
+
+	@NotEmpty
+	@Column(name = "STORE_NAME", nullable = false, length = 100)
+	private String storename;
+
+	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z0-9_]*$")
+	@Column(name = "STORE_CODE", nullable = false, unique = true, length = 100)
+	private String code;
+	
+    @Column(name = "LINEAGE")
+    private String lineage;
+
+	@NotEmpty
+	@Column(name = "STORE_PHONE", length = 50)
+	private String storephone;
+
+	@Column(name = "STORE_ADDRESS")
+	private String storeaddress;
+
+	@NotEmpty
+	@Column(name = "STORE_CITY", length = 100)
+	private String storecity;
+
+	@NotEmpty
+	@Column(name = "STORE_POSTAL_CODE", length = 15)
+	private String storepostalcode;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
+	@JoinColumn(name = "COUNTRY_ID", nullable = false, updatable = true)
+	private Country country;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Zone.class)
+	@JoinColumn(name = "ZONE_ID", nullable = true, updatable = true)
+	private Zone zone;
+
+	@Column(name = "STORE_STATE_PROV", length = 100)
+	private String storestateprovince;
+

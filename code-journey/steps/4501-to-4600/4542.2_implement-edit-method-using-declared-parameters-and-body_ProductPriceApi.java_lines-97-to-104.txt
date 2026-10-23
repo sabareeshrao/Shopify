@@ -1,0 +1,8 @@
+	public void edit(
+			@PathVariable String sku,
+			@PathVariable Long inventoryId,
+			@PathVariable Long priceId,
+			@Valid @RequestBody PersistableProductPrice price,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		

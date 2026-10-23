@@ -1,0 +1,8 @@
+	public static final String EMAIL_ORDER_CONFIRMATION_TITLE ="EMAIL_ORDER_CONFIRMATION_TITLE";
+	public static final String EMAIL_ORDER_NUMBER ="EMAIL_ORDER_NUMBER";
+	public static final String EMAIL_ORDER_DATE ="EMAIL_ORDER_DATE";
+	public static final String EMAIL_ORDER_THANKS ="EMAIL_ORDER_THANKS";
+	public static final String EMAIL_ORDER_STATUS_TEXT ="EMAIL_ORDER_STATUS_TEXT";
+	public static final String EMAIL_ORDER_STATUS ="EMAIL_ORDER_STATUS";
+	public static final String ADDRESS_BILLING_TITLE ="ADDRESS_BILLING_TITLE";
+	public static final String ADDRESS_BILLING ="ADDRESS_BILLING";

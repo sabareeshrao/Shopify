@@ -1,0 +1,9 @@
+  public String getRegionVariant() {
+    return regionVariant;
+  }
+  public void setRegionVariant(String regionVariant) {
+    this.regionVariant = regionVariant;
+  }
+  public String getOwner() {
+    return owner;
+  }

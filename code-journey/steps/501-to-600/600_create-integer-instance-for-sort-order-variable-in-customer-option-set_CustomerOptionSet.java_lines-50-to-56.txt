@@ -1,0 +1,7 @@
+
+
+	@Column(name="SORT_ORDER")
+	private Integer sortOrder = new Integer(0);
+	
+
+

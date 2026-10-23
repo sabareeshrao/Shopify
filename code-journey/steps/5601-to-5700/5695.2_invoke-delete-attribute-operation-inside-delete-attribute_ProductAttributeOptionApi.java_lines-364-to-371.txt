@@ -1,0 +1,8 @@
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		productOptionFacade.deleteAttribute(id, attributeId, merchantStore);
+		return;
+
+	}
+
+}

@@ -1,0 +1,8 @@
+						summary.setPromoCode(shoppingCart.getPromoCode());
+					} else {
+						// clear promo
+						shoppingCart.setPromoCode(null);
+						shoppingCartService.saveOrUpdate(shoppingCart);
+					}
+				}
+

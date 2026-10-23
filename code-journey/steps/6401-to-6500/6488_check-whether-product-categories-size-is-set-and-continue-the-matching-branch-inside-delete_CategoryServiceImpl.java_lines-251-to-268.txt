@@ -1,0 +1,18 @@
+
+			List<Product> products = productService.getProducts(categoryIds);
+			// org.hibernate.Session session =
+			// em.unwrap(org.hibernate.Session.class);// need to refresh the
+			// session to update
+			// all product
+			// categories
+
+			for (Product product : products) {
+				// session.evict(product);// refresh product so we get all
+				// product categories
+				Product dbProduct = productService.getById(product.getId());
+				Set<Category> productCategories = dbProduct.getCategories();
+				if (productCategories.size() > 1) {
+					for (Category c : categories) {
+						productCategories.remove(c);
+						productService.update(dbProduct);
+					}

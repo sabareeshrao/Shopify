@@ -1,0 +1,8 @@
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			@RequestParam(defaultValue = "false") boolean body) throws Exception {
+
+		ReadableShoppingCart updatedCart = shoppingCartFacade.removeShoppingCartItem(cartCode, sku, merchantStore,
+				language, body);
+		if (body) {
+			return new ResponseEntity<>(updatedCart, HttpStatus.OK);
+		}

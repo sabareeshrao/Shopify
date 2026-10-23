@@ -1,0 +1,2 @@
+				throw new ConversionException("Object final price not populated in shoppingCartItem (source)");
+			}

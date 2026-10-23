@@ -1,0 +1,4 @@
+  jsr250Enabled = true)
+public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+
+}

@@ -1,0 +1,4 @@
+	public boolean isDefaultCatalog() {
+		return defaultCatalog;
+	}
+

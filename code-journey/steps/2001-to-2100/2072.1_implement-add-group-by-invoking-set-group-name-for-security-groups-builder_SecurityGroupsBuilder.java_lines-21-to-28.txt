@@ -1,0 +1,8 @@
+	public SecurityGroupsBuilder addGroup(String name, GroupType type) {
+		
+		Group g = new Group();
+		g.setGroupName(name);
+		g.setGroupType(type);
+		groups.add(g);
+		this.lastGroup = g;
+		

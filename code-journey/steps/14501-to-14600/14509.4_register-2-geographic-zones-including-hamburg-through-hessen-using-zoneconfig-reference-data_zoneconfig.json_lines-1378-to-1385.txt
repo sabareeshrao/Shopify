@@ -1,0 +1,8 @@
+		"zoneName": "Hamburg",
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "HES",
+		"zoneName": "Hessen",
+		"countryCode": "DE"
+	},

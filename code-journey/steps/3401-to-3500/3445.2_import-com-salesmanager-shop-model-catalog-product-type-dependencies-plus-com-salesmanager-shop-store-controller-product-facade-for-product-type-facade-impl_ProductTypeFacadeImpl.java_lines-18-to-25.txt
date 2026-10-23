@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.type.ReadableProductType;
+import com.salesmanager.shop.model.catalog.product.type.ReadableProductTypeList;
+import com.salesmanager.shop.store.api.exception.OperationNotAllowedException;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.store.controller.product.facade.ProductTypeFacade;
+
+@Service("productTypeFacade")

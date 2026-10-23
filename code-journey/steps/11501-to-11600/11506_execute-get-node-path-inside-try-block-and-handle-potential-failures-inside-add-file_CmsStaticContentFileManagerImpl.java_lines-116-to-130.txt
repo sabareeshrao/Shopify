@@ -1,0 +1,15 @@
+		try {
+
+			String nodePath = this.getNodePath(merchantStoreCode, inputStaticContentData.getFileContentType());
+
+			final Node<String, Object> merchantNode = this.getNode(nodePath);
+
+			merchantNode.put(inputStaticContentData.getFileName(),
+					IOUtils.toByteArray(inputStaticContentData.getFile()));
+
+			LOGGER.info("Content data added successfully.");
+		} catch (final Exception e) {
+			LOGGER.error("Error while saving static content data", e);
+			throw new ServiceException(e);
+
+		}

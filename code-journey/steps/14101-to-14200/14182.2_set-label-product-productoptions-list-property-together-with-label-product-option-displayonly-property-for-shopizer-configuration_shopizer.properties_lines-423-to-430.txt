@@ -1,0 +1,8 @@
+label.product.productoptions.list=Options list
+
+label.product.productoption.type.text=Text
+label.product.productoption.type.radio=Radio
+label.product.productoption.type.select=Select
+label.product.productoption.type.checkbox=Checkbox
+
+label.product.option.displayonly=Option for display only

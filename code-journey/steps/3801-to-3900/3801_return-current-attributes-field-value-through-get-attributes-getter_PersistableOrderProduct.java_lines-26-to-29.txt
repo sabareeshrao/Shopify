@@ -1,0 +1,4 @@
+	public List<ProductAttribute> getAttributes() {
+		return attributes;
+	}
+

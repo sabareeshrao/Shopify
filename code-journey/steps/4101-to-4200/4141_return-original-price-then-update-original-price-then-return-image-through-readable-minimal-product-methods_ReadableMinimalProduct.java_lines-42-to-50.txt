@@ -1,0 +1,9 @@
+	public String getOriginalPrice() {
+		return originalPrice;
+	}
+	public void setOriginalPrice(String originalPrice) {
+		this.originalPrice = originalPrice;
+	}
+	public ReadableImage getImage() {
+		return image;
+	}

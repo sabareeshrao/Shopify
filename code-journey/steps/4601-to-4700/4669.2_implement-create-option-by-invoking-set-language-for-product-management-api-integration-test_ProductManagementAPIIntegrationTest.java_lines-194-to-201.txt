@@ -1,0 +1,8 @@
+	public void createOption() throws Exception {
+
+		final ProductOptionDescription description = new ProductOptionDescription();
+		description.setLanguage("en");
+		description.setName("Color");
+
+		final List<ProductOptionDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);

@@ -1,0 +1,8 @@
+
+  @Async
+  private void notifyNewCustomer(PersistableCustomer customer, MerchantStore store, Language lang) {
+		System.out.println("Customer notification");
+		long startTime = System.nanoTime();
+	Locale customerLocale = LocaleUtils.getLocale(lang);
+    String shopSchema = coreConfiguration.getProperty("SHOP_SCHEME");
+    emailTemplatesUtils.sendRegistrationEmail(customer, store, customerLocale, shopSchema);

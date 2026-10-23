@@ -1,0 +1,4 @@
+	private static final String FEATURED_CATEGORY = "featured";
+	private static final String VISIBLE_CATEGORY = "visible";
+	private static final String ADMIN_CATEGORY = "admin";
+

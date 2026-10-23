@@ -1,0 +1,4 @@
+	public Set<CustomerAttribute> getAttributes() {
+		return attributes;
+	}
+

@@ -1,0 +1,3 @@
+		return contentFileManager.getFile(merchantStoreCode, path, fileContentType, fileName);
+
+	}

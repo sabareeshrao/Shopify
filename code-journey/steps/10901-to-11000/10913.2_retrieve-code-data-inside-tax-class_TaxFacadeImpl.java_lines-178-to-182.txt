@@ -1,0 +1,5 @@
+			throw new ServiceRuntimeException("Error while getting taxClass [" +  code + "] for store [" + store.getCode() + "]", e);
+		}
+
+	}
+	

@@ -1,0 +1,4 @@
+  public PersistableCustomer getCustomer() {
+    return customer;
+  }
+

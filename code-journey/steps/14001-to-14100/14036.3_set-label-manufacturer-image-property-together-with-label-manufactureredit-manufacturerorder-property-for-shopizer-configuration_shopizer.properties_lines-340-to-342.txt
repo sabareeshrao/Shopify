@@ -1,0 +1,3 @@
+label.manufacturer.image=Image
+label.manufactureredit.manufacturerorder=Order
+

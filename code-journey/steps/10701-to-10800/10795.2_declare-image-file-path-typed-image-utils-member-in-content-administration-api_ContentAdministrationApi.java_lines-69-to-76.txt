@@ -1,0 +1,8 @@
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	
+	/**
+	 * Works with ng-file-man client
+	 * 

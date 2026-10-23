@@ -1,0 +1,4 @@
+	public void setProductReview(ProductReview productReview) {
+		this.productReview = productReview;
+	}
+}

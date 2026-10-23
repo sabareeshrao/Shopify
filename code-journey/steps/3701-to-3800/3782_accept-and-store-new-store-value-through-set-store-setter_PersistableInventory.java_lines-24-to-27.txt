@@ -1,0 +1,4 @@
+	public void setStore(String store) {
+		this.store = store;
+	}
+

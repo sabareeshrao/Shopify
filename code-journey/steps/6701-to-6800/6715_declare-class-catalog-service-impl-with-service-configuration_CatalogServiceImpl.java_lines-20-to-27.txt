@@ -1,0 +1,8 @@
+import java.util.Optional;
+
+@Service("catalogService")
+public class CatalogServiceImpl 
+extends SalesManagerEntityServiceImpl<Long, Catalog> 
+implements CatalogService {
+	
+	

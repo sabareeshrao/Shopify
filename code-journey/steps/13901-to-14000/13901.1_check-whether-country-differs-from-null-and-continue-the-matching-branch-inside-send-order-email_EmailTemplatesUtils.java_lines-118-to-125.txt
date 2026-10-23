@@ -1,0 +1,8 @@
+		    	   Country country = countries.get(order.getBilling().getCountry().getIsoCode());
+		    	   if(country!=null) {
+		    		   billing.append(country.getName()).append(" ");
+		    	   }
+		    	   billing.append(order.getBilling().getPostalCode());
+		    	   
+		    	   
+		    	   //format shipping address

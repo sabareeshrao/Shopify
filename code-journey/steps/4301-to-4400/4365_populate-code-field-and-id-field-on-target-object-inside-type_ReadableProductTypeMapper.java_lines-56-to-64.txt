@@ -1,0 +1,9 @@
+		
+		readableType.setCode(type.getCode());
+		readableType.setId(type.getId());
+		readableType.setVisible(type.getVisible() != null && type.getVisible().booleanValue() ? true:false);
+		readableType.setAllowAddToCart(type.getAllowAddToCart() != null && type.getAllowAddToCart().booleanValue() ? true:false);
+		
+		return readableType;
+	}
+	

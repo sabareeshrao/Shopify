@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductApi.class);
+
+	/**
+	 * Create product
+	 * @param product
+	 * @param merchantStore
+	 * @param language
+	 * @return Entity

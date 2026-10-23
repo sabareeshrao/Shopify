@@ -1,0 +1,8 @@
+	@Inject
+	private LanguageUtils languageUtils;
+
+	@Inject
+	private CustomerService customerService;
+	
+	@Inject
+	private CustomerReviewService customerReviewService;

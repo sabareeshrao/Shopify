@@ -1,0 +1,4 @@
+	  productItemsFacade.updateProductGroup(code, group, merchantStore);
+
+  }
+  

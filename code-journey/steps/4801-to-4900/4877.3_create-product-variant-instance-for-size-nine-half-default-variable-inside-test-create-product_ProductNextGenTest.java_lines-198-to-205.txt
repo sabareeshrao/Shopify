@@ -1,0 +1,8 @@
+	    //availability.getVariants().add(size_nine_DEFAULT);
+	    
+	    //30 of 9.5
+/*	    ProductVariant size_nine_half_DEFAULT = new ProductVariant();
+	    size_nine_half_DEFAULT.setAttribute(size_nine_half);
+	    size_nine_half_DEFAULT.setProductQuantity(30);
+	    size_nine_half_DEFAULT.setProductAvailability(availability);*/
+	    

@@ -1,0 +1,4 @@
+  public List<ObjectContent> getDescriptions() {
+    return descriptions;
+  }
+

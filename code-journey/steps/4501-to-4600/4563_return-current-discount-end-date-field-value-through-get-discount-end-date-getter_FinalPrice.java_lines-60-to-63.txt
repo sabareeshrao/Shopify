@@ -1,0 +1,4 @@
+	public Date getDiscountEndDate() {
+		return discountEndDate;
+	}
+

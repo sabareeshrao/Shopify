@@ -1,0 +1,19 @@
+  @Override
+  public void setEmailConfig(EmailConfig emailConfig) {
+    switch(emailSender) 
+    { 
+        case "default": 
+          defaultEmailSender.setEmailConfig(emailConfig);
+            break; 
+        case "ses": 
+          sesEmailSender.setEmailConfig(emailConfig);
+            break; 
+        default: 
+ 
+    }
+    
+  }
+
+
+
+}

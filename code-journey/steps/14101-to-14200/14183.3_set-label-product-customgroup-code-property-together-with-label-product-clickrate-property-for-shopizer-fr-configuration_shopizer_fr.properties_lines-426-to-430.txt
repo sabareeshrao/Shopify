@@ -1,0 +1,5 @@
+label.product.customgroup.code=Code du groupe de produit (doit être unique)
+
+label.product.rate=Évaluer ce produit
+label.product.clickrate=Évaluation du produit (cliquez sur les images pour activer l'évaluation)
+

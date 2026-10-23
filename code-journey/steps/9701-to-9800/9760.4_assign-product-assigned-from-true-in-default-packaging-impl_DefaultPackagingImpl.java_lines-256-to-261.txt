@@ -1,0 +1,6 @@
+					pbox.setWeight(w);
+					productAssigned = true;
+					maxBox--;
+					break;
+
+				}

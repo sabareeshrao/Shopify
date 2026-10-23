@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.modules.order.total.OrderTotalInputParameters;
+
+global com.salesmanager.core.business.modules.order.total.OrderTotalResponse total;
+
+dialect  "mvel"
+
+
+rule "Bam0520"

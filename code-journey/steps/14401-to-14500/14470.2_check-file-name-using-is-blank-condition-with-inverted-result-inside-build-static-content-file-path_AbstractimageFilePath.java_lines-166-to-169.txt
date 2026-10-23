@@ -1,0 +1,4 @@
+		StringBuilder sb = new StringBuilder().append(getBasePath(store)).append(Constants.FILES_URI).append(Constants.SLASH).append(store.getCode()).append(Constants.SLASH);
+		if(!StringUtils.isBlank(fileName)) {
+			sb.append(fileName);
+		}

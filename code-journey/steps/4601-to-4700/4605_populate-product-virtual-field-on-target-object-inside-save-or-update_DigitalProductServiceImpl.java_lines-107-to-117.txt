@@ -1,0 +1,11 @@
+		
+		digitalProduct.getProduct().setProductVirtual(true);
+		productService.update(digitalProduct.getProduct());
+		
+		
+	}
+	
+
+	
+
+}

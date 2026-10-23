@@ -1,0 +1,21 @@
+			
+			//products
+			Set<OrderProduct> orderProducts = order.getOrderProducts();
+			int productCell = PRODUCT_ROW_START;
+			for(OrderProduct orderProduct : orderProducts) {
+				
+
+				String orderProductName = ProductUtils.buildOrderProductDisplayName(orderProduct);
+				
+				sheet.setValueAt(orderProductName.toString(), 0, productCell);
+				
+				int quantity = orderProduct.getProductQuantity();
+				sheet.setValueAt(quantity, 1, productCell);
+				String amount = priceUtil.getStoreFormatedAmountWithCurrency(store, orderProduct.getOneTimeCharge());
+				sheet.setValueAt(amount, 2, productCell);
+				String t = priceUtil.getStoreFormatedAmountWithCurrency(store, priceUtil.getOrderProductTotalPrice(store, orderProduct));
+				sheet.setValueAt(t, 3, productCell);
+
+				productCell++;
+				
+			}

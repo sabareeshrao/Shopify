@@ -1,0 +1,4 @@
+	public String getMerchant() {
+		return merchant;
+	}
+

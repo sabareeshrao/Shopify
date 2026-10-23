@@ -1,0 +1,8 @@
+#cart
+label.emptycart=Aucun item dans le panier d'achat
+label.cart=Panier d'achat
+label.mycart=Mes achats
+label.cart.revieworder=Revoir votre commande
+label.cart.placeorder=Passez votre commande
+
+#checkout

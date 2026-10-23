@@ -1,0 +1,8 @@
+
+	}
+	
+	/**
+	 * Create multiple attributes
+	 * @param id
+	 * @param attributeId
+	 * @param merchantStore

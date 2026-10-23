@@ -1,0 +1,8 @@
+		data.put("displayPagesMenu", this.isDisplayPagesMenu());
+		data.put("displayCustomerAgreement", this.isDisplayCustomerAgreement());
+		data.put("allowPurchaseItems", this.isAllowPurchaseItems());
+		data.put("displaySearchBox", this.displaySearchBox);
+		data.put("testMode", this.isTestMode());
+		data.put("debugMode", this.isDebugMode());
+		
+		if(useDefaultSearchConfig!=null) {

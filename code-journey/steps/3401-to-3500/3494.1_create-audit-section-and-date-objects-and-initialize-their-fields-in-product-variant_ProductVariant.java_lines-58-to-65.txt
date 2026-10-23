@@ -1,0 +1,8 @@
+
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+
+	@Column(name = "DATE_AVAILABLE")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dateAvailable = new Date();
+	

@@ -1,0 +1,17 @@
+	private Product productOfEvent(ProductEvent event) {
+		
+		Product product = event.getProduct();
+		MerchantStore store = product.getMerchantStore();
+		try {
+
+			/**
+			 * Refresh product
+			 */
+
+			Product fullProduct = productService.findOne(product.getId(), store);
+			
+			if(fullProduct != null) {
+				product = fullProduct;
+			} else {
+				System.out.println("Product not loaded");
+			}

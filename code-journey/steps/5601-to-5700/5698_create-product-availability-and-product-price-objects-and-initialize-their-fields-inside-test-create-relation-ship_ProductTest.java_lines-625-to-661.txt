@@ -1,0 +1,37 @@
+	    
+
+	    // Availability
+	    ProductAvailability availability = new ProductAvailability();
+	    availability.setProductDateAvailable(date);
+	    availability.setProductQuantity(200);
+	    availability.setRegion("*");
+	    availability.setProduct(related);// associate with product
+
+	    //productAvailabilityService.create(availability);
+	    related.getAvailabilities().add(availability);
+
+	    ProductPrice dprice = new ProductPrice();
+	    dprice.setDefaultPrice(true);
+	    dprice.setProductPriceAmount(new BigDecimal(39.99));
+	    dprice.setProductAvailability(availability);
+
+	    ProductPriceDescription dpd = new ProductPriceDescription();
+	    dpd.setName("Base price");
+	    dpd.setProductPrice(dprice);
+	    dpd.setLanguage(en);
+
+	    dprice.getDescriptions().add(dpd);
+	    availability.getPrices().add(dprice);
+	    
+	    related.getAvailabilities().add(availability);
+	    
+	    productService.save(related);
+	    
+	    ProductRelationship relationship = new ProductRelationship();
+	    
+	    relationship.setActive(true);
+	    relationship.setCode("spring");
+	    relationship.setProduct(product);
+	    relationship.setRelatedProduct(related);
+	    relationship.setStore(store);
+	    

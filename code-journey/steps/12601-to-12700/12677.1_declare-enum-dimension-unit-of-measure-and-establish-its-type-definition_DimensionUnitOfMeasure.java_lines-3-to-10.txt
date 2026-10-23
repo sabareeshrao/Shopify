@@ -1,0 +1,8 @@
+public enum DimensionUnitOfMeasure {
+  /*
+   * cm = centimeter
+   * cu = cubic
+   * ft = feet
+   * in = inch
+   * m = meter
+   */

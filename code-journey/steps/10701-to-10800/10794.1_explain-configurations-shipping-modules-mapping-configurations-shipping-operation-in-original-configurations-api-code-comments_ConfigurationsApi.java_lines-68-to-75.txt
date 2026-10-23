@@ -1,0 +1,8 @@
+	  
+	  
+	  
+	  
+	  /** Configurations of shipping modules */
+	  @GetMapping("/private/configurations/shipping")
+	  @ApiOperation(
+	      httpMethod = "GET",

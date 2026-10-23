@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+        })
+        @JoinTable(name = "PERMISSION_GROUP",
+            joinColumns = @JoinColumn(name = "GROUP_ID"),

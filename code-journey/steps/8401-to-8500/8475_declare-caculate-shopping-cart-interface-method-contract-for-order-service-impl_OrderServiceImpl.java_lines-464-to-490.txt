@@ -1,0 +1,27 @@
+
+
+    /**
+     * <p>Method will be used to calculate Shopping cart total as well will update price for each
+     * line items.
+     * </p>
+     * @param shoppingCart
+     * @param customer
+     * @param store
+     * @param language
+     * @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     *
+     */
+    @Override
+    public OrderTotalSummary calculateShoppingCartTotal(
+                                                        final ShoppingCart shoppingCart, final Customer customer, final MerchantStore store,
+                                                        final Language language) throws ServiceException {
+        Validate.notNull(shoppingCart,"Order summary cannot be null");
+        Validate.notNull(customer,"Customery cannot be null");
+        Validate.notNull(store,"MerchantStore cannot be null.");
+        try {
+            return caculateShoppingCart(shoppingCart, customer, store, language);
+        } catch (Exception e) {
+            LOGGER.error( "Error while calculating shopping cart total" +e );
+            throw new ServiceException(e);
+        }

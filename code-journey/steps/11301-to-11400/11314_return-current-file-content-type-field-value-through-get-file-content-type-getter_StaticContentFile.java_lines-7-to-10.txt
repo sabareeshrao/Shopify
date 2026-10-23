@@ -1,0 +1,4 @@
+	public FileContentType getFileContentType() {
+		return fileContentType;
+	}
+

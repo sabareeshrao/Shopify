@@ -1,0 +1,13 @@
+	private CustomerReviewRepository customerReviewRepository;
+	
+	@Inject
+	private CustomerService customerService;
+	
+	@Inject
+	public CustomerReviewServiceImpl(
+			CustomerReviewRepository customerReviewRepository) {
+			super(customerReviewRepository);
+			this.customerReviewRepository = customerReviewRepository;
+	}
+	
+	

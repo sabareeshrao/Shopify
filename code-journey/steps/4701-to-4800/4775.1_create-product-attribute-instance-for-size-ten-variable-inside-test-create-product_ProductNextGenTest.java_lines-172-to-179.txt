@@ -1,0 +1,8 @@
+
+	    ProductAttribute size_ten = new ProductAttribute();
+	    size_ten.setProduct(summerShoes);
+	    size_ten.setProductOption(size);
+	    size_ten.setProductAttributePrice(new BigDecimal(0));//no price variation
+	    size_ten.setProductAttributeWeight(new BigDecimal(0));//weight variation
+	    size_ten.setProductOptionValue(ten);
+	    

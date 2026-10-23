@@ -1,0 +1,4 @@
+	public void setProductAvailability(ProductAvailability productAvailability) {
+		this.productAvailability = productAvailability;
+	}
+

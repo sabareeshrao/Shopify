@@ -1,0 +1,2 @@
+  private final static String NAMED_CACHE = "FilesRepository";
+

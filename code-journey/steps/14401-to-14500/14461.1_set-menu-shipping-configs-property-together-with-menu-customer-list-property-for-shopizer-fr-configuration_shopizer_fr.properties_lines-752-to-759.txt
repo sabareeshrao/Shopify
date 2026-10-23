@@ -1,0 +1,8 @@
+menu.shipping-configs=Configurations de l'expédition
+menu.shipping-methods=Méthodes d'expédition
+menu.shipping-options=Options d'expédition
+menu.shipping-packages=Emballage
+menu.shipping-origin=Adresse d'origine de la livraison
+menu.cache=Gestion de la cache
+menu.configuration=Configurations
+menu.customer-list=Liste des clients

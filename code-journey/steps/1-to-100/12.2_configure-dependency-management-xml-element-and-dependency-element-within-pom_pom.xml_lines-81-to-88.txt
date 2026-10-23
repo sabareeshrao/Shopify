@@ -1,0 +1,8 @@
+
+	</properties>
+
+	<!--BOM -->
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>

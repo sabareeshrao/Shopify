@@ -1,0 +1,36 @@
+label.payment.creditcard.cardnumber=Card number
+label.payment.creditcard.cardexpiry=Card expiry date
+label.payment.creditcard.cardexpiry.month=Card expiry month
+label.payment.creditcard.cardexpiry.year=Card expiry year
+label.payment.creditcard.cardcvv=Card validation number
+label.payment.creditcard.whatiscvv=What is a credit card validation number?
+
+
+#tax
+label.tax.taxclass.title=Tax classes
+label.tax.taxclass=Tax class
+label.tax.taxclass.name=Tax class name
+label.tax.taxconfiguration=Tax basis calculation
+label.tax.storeaddress=Store address
+label.tax.piggyback=Piggy back
+label.tax.compound=Compound
+
+#configuration
+label.configuration.options=Configuration options
+label.configuration.configurations=Configurations
+label.configuration.google_analytics_url=Google Analytics URL (UC-XXXXXX)
+label.configuration.google_api_key=Google API key (For maps)
+label.configuration.facebook_page_url=FaceBook Page
+label.configuration.twitter_handle=Twitter handle
+label.configuration.pinterest=Pinterest
+label.configuration.instagram=Instagram
+label.social.connect=Connect with us
+label.social.facebook=FaceBook
+label.social.twitter=Twitter
+label.configuration.useglobalsearch_suggestions=Use global pre-defined search suggestions
+label.configuration.globalsearch_suggestions_path=Global pre-defined search suggestions file path
+
+#cart
+label.emptycart=No items in your shopping cart
+label.cart=Shopping cart
+label.mycart=My cart

@@ -1,0 +1,8 @@
+			modelOrder.setCustomerAgreement(order.isCustomerAgreed());
+			modelOrder.setLocale(LocaleUtils.getLocale(store));// set the store
+																// locale based
+																// on the
+																// country for
+																// order $
+																// formatting
+

@@ -1,0 +1,25 @@
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public List<IntegrationModule> getIntegrationModules(String module) {
+
+		List<IntegrationModule> modules = null;
+		try {
+
+			/**
+			 * Modules are loaded using
+			 */
+			modules = (List<IntegrationModule>) cache.getFromCache("INTEGRATION_M" + module); // PAYMENT_MODULES
+																								// SHIPPING_MODULES
+			if (modules == null) {
+				modules = moduleConfigurationRepository.findByModule(module);
+				// set json objects
+				for (IntegrationModule mod : modules) {
+
+					String regions = mod.getRegions();
+					if (regions != null) {
+						Object objRegions = JSONValue.parse(regions);
+						JSONArray arrayRegions = (JSONArray) objRegions;
+						for (Object arrayRegion : arrayRegions) {
+							mod.getRegionsSet().add((String) arrayRegion);
+						}

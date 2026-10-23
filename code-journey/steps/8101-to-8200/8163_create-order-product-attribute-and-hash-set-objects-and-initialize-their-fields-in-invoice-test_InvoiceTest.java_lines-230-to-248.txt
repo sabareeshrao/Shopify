@@ -1,0 +1,19 @@
+		
+		//an attribute to the OrderProduct
+		OrderProductAttribute orderAttribute = new OrderProductAttribute();
+		orderAttribute.setOrderProduct(oproduct);
+		orderAttribute.setProductAttributeName(colorDescription.getName());
+		orderAttribute.setProductAttributeValueName(redDescription.getName());
+		orderAttribute.setProductOptionId(color.getId());
+		orderAttribute.setProductOptionValueId(red.getId());
+		orderAttribute.setProductAttributePrice(colorAttribute.getProductAttributePrice());
+		
+		Set<OrderProductAttribute> orderAttributes = new HashSet<OrderProductAttribute>();
+		orderAttributes.add(orderAttribute);
+		
+		oproduct.setOrderAttributes(orderAttributes);
+		
+		oproductprice.setOrderProduct(oproduct);		
+		orderProductDownload.setOrderProduct(oproduct);
+		order.getOrderProducts().add(oproduct);
+		

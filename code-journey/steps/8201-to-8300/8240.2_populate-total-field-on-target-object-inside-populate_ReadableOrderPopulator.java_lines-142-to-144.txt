@@ -1,0 +1,3 @@
+				target.setTotal(totalTotal);
+				totals.add(totalTotal);
+			}

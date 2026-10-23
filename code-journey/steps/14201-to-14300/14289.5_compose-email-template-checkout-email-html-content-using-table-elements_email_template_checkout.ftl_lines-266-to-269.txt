@@ -1,0 +1,4 @@
+<table class="body-wrap">
+
+	<tr>
+		<td colspan="2">

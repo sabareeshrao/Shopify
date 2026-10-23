@@ -1,0 +1,4 @@
+	public void setCropeable(boolean cropeable) {
+		this.cropeable = cropeable;
+	}
+

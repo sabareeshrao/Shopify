@@ -1,0 +1,10 @@
+	@Override
+	public ReadableUser update(Long id, String authenticatedUser, MerchantStore store, PersistableUser user) {
+		Validate.notNull(user, "User cannot be null");
+		Validate.notNull(store, "store cannot be null");
+
+		try {
+			User userModel = userService.getById(id);
+			if (userModel == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + user.getUserName() + "]");
+			}

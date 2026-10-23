@@ -1,0 +1,8 @@
+		final Category parent = new Category();
+
+		newCategory.setParent(parent);
+
+		final CategoryDescription description = new CategoryDescription();
+		description.setLanguage("en");
+		description.setName("test-cat");
+		description.setFriendlyUrl("test-cat");

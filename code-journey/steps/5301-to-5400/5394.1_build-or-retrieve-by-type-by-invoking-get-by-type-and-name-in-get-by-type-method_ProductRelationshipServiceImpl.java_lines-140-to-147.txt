@@ -1,0 +1,8 @@
+	@Override
+	public List<ProductRelationship> getByType(MerchantStore store, Product product, ProductRelationshipType type) throws ServiceException {
+		
+
+		return productRelationshipRepository.getByType(store, type.name(), product);
+				
+		
+	}

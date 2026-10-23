@@ -1,0 +1,3 @@
+@Component
+public class ReadableProductVariantMapper implements Mapper<ProductVariant, ReadableProductVariant> {
+

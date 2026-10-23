@@ -1,0 +1,7 @@
+		
+
+		PaymentModule module = this.paymentModules.get(payment.getModuleName());
+		
+		if(module==null) {
+			throw new ServiceException("Payment module " + payment.getModuleName() + " does not exist");
+		}

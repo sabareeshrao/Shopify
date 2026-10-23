@@ -1,0 +1,8 @@
+ * Test content with CMS store logo
+ * 
+ * @author Carl Samson
+ *
+ */
+@Ignore
+public class ContentImagesTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+

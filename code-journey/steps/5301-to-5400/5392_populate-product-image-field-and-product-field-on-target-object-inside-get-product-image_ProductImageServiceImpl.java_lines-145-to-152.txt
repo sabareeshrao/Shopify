@@ -1,0 +1,8 @@
+
+		pi.setProductImage(imageName);
+		pi.setProduct(productImage.getProduct());
+
+		return productFileManager.getProductImage(pi);
+
+	}
+

@@ -1,0 +1,19 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProductGroupApi.class);
+
+  @ResponseStatus(HttpStatus.OK)
+  @PostMapping("/private/products/group")
+  @ApiOperation(httpMethod = "POST", value = "Create product group", notes = "", response = ProductGroup.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public @ResponseBody ProductGroup creteGroup(
+      @RequestBody ProductGroup group,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+	  
+	  return productItemsFacade.createProductGroup(group, merchantStore);
+
+  }

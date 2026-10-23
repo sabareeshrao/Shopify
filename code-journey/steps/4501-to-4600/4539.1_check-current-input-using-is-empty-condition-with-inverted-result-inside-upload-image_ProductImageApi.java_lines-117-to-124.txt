@@ -1,0 +1,8 @@
+				}
+			}
+
+			List<ProductImage> contentImagesList = new ArrayList<ProductImage>();
+			int sortOrder = position;
+			for (MultipartFile multipartFile : files) {
+				if (!multipartFile.isEmpty()) {
+					ProductImage productImage = new ProductImage();

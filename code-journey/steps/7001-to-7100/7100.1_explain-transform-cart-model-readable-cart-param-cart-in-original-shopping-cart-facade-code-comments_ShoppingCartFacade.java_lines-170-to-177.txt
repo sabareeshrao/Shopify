@@ -1,0 +1,8 @@
+	
+	/**
+	 * Transform cart model to readable cart
+	 * @param cart
+	 * @param store
+	 * @param language
+	 * @return
+	 */

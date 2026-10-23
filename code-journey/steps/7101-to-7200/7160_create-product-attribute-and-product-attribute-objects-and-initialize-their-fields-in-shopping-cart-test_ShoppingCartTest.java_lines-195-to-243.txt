@@ -1,0 +1,49 @@
+	    
+	    //attributes
+	    //white
+	    ProductAttribute whiteAttribute = new ProductAttribute();
+	    whiteAttribute.setProduct(product);
+	    whiteAttribute.setProductOption(option);
+	    whiteAttribute.setAttributeDefault(true);
+	    whiteAttribute.setProductAttributePrice(new BigDecimal(0));//no price variation
+	    whiteAttribute.setProductAttributeWeight(new BigDecimal(0));//no weight variation
+	    whiteAttribute.setProductOption(option);
+	    whiteAttribute.setProductOptionValue(white);
+	    
+	    product.getAttributes().add(whiteAttribute);
+	    //black
+	    ProductAttribute blackAttribute = new ProductAttribute();
+	    blackAttribute.setProduct(product);
+	    blackAttribute.setProductOption(option);
+	    blackAttribute.setProductAttributePrice(new BigDecimal(5));//5 + dollars
+	    blackAttribute.setProductAttributeWeight(new BigDecimal(0));//no weight variation
+	    blackAttribute.setProductOption(option);
+	    blackAttribute.setProductOptionValue(black);
+	    
+	    product.getAttributes().add(blackAttribute);
+
+	    productService.saveProduct(product);
+	    
+	    /** Create Shopping cart **/
+	    
+	    ShoppingCart shoppingCart = new ShoppingCart();
+	    shoppingCart.setMerchantStore(store);
+	    
+	    UUID cartCode = UUID.randomUUID();
+	    shoppingCart.setShoppingCartCode(cartCode.toString());
+
+	    ShoppingCartItem item = new ShoppingCartItem(shoppingCart,product);
+	    item.setSku(product.getSku());
+	    item.setShoppingCart(shoppingCart);
+	    
+	    FinalPrice price = pricingService.calculateProductPrice(product);
+
+	    item.setItemPrice(price.getFinalPrice());
+	    item.setQuantity(1);
+	    
+	    /** user selects black **/
+	    ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,blackAttribute);
+	    item.getAttributes().add(attributeItem);
+	    
+	    shoppingCart.getLineItems().add(item);
+

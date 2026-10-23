@@ -1,0 +1,12 @@
+	@Override
+	public CustomIntegrationConfiguration getCustomShippingConfiguration(String moduleCode, MerchantStore store) throws ServiceException {
+
+		
+		ShippingQuoteModule quoteModule = shippingModules.get(moduleCode);
+		if(quoteModule==null) {
+			return null;
+		}
+		return quoteModule.getCustomModuleConfiguration(store);
+		
+	}
+	

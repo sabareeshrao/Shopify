@@ -1,0 +1,20 @@
+	
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = "/auth/customer/cart", method = RequestMethod.GET)
+	@ApiOperation(httpMethod = "GET", value = "Get a shopping cart by authenticated customer", notes = "", produces = "application/json", response = ReadableShoppingCart.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody ReadableShoppingCart getByCustomer(
+			@RequestParam Optional<String> cart, // cart code
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language, 
+			HttpServletRequest request,
+			HttpServletResponse response) {
+
+		Principal principal = request.getUserPrincipal();
+		Customer customer = null;
+		try {
+			customer = customerFacade.getCustomerByUserName(principal.getName(), merchantStore);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Exception while getting customer [ " + principal.getName() + "]");
+		}

@@ -1,0 +1,64 @@
+	private final String IMAGE_NAME = "icon.png";
+
+	/**
+	 * This method creates multiple products using multiple catalog APIs
+	 * @throws ServiceException
+	 */
+	@Test
+	public void testCreateProduct() throws Exception {
+
+	    Language en = languageService.getByCode("en");
+	    Language fr = languageService.getByCode("fr");
+
+	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
+	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
+
+	    Category book = new Category();
+	    book.setMerchantStore(store);
+	    book.setCode("book");
+
+	    CategoryDescription bookEnglishDescription = new CategoryDescription();
+	    bookEnglishDescription.setName("Book");
+	    bookEnglishDescription.setCategory(book);
+	    bookEnglishDescription.setLanguage(en);
+
+	    CategoryDescription bookFrenchDescription = new CategoryDescription();
+	    bookFrenchDescription.setName("Livre");
+	    bookFrenchDescription.setCategory(book);
+	    bookFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
+	    descriptions.add(bookEnglishDescription);
+	    descriptions.add(bookFrenchDescription);
+
+	    book.setDescriptions(descriptions);
+
+	    categoryService.create(book);
+
+	    Category music = new Category();
+	    music.setMerchantStore(store);
+	    music.setCode("music");
+
+	    CategoryDescription musicEnglishDescription = new CategoryDescription();
+	    musicEnglishDescription.setName("Music");
+	    musicEnglishDescription.setCategory(music);
+	    musicEnglishDescription.setLanguage(en);
+
+	    CategoryDescription musicFrenchDescription = new CategoryDescription();
+	    musicFrenchDescription.setName("Musique");
+	    musicFrenchDescription.setCategory(music);
+	    musicFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> descriptions2 = new HashSet<CategoryDescription>();
+	    descriptions2.add(musicEnglishDescription);
+	    descriptions2.add(musicFrenchDescription);
+
+	    music.setDescriptions(descriptions2);
+
+	    categoryService.create(music);
+
+	    Category novell = new Category();
+	    novell.setMerchantStore(store);
+	    novell.setCode("novell");
+
+	    CategoryDescription novellEnglishDescription = new CategoryDescription();

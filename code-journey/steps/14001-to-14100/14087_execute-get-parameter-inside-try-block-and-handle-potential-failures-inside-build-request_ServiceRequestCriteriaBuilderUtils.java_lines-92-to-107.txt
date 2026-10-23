@@ -1,0 +1,16 @@
+    
+    String storeName = request.getParameter("storeName");
+    criteria.setName(storeName);
+    
+    String retailers = request.getParameter("retailers");
+    String stores = request.getParameter("stores");
+    
+    try {
+    	boolean retail = Boolean.valueOf(retailers);
+    	boolean sto = Boolean.valueOf(stores);
+
+        criteria.setRetailers(retail);
+        criteria.setStores(sto);
+    } catch(Exception e) {
+    	LOGGER.error("Error parsing boolean values",e);
+    }

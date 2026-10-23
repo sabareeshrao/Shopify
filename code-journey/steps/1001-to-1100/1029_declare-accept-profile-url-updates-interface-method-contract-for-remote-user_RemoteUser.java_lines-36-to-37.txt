@@ -1,0 +1,2 @@
+	public void setProfileUrl(String profileUrl);
+

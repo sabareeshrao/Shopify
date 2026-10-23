@@ -1,0 +1,8 @@
+    
+    /**
+     * Method to get list of all images associated with a given merchant store.In case of no image method will return an empty list.
+     * @param merchantStoreCode
+     * @param imageContentType
+     * @return list of {@link OutputContentImage}
+     * @throws ServiceException
+     */

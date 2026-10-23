@@ -1,0 +1,7 @@
+		ShoppingCart cartModel = null;
+		Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
+		for (ShoppingCartItem item : shoppingCartItems) {
+
+			if (item.getQuantity() < 1) {
+				throw new CartModificationException("Quantity must not be less than one");
+			}

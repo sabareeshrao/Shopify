@@ -1,0 +1,23 @@
+
+	      // Read the response body.
+            HttpEntity entity = httpResponse.getEntity();
+            byte[] responseBody =EntityUtils.toByteArray(entity);
+
+
+	      // Deal with the response.
+	      // Use caution: ensure correct character encoding and is not binary data
+	      //System.out.println(new String(responseBody));
+	      
+	      String json = new String(responseBody);
+	      
+	      Map<String,String> map = new HashMap<String,String>();
+	  	  ObjectMapper mapper = new ObjectMapper();
+	  	  
+	  	  map = mapper.readValue(json, 
+			    new TypeReference<HashMap<String,String>>(){});
+	  	  
+	  	  String successInd = map.get(SUCCESS_INDICATOR);
+	  	  
+	  	  if(StringUtils.isBlank(successInd)) {
+	  		  throw new Exception("Unreadable response from reCaptcha " + json);
+	  	  }

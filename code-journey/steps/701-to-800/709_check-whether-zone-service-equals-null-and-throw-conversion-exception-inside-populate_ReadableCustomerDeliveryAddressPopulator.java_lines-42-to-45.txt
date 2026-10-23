@@ -1,0 +1,4 @@
+		
+		if(zoneService==null) {
+			throw new ConversionException("zoneService must be set");
+		}

@@ -1,0 +1,3 @@
+				statusHistory.setComments(order.getComments());
+				modelOrder.getOrderHistory().add(statusHistory);
+			}

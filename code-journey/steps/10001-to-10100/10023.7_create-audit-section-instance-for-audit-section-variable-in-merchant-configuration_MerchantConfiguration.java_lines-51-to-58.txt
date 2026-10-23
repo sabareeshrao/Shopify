@@ -1,0 +1,8 @@
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "MERCHANT_ID", nullable = true)
+  private MerchantStore merchantStore;
+
+  @Embedded
+  private AuditSection auditSection = new AuditSection();
+

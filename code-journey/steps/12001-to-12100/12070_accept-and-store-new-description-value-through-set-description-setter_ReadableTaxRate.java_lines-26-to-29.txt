@@ -1,0 +1,4 @@
+	public void setDescription(ReadableTaxRateDescription description) {
+		this.description = description;
+	}
+

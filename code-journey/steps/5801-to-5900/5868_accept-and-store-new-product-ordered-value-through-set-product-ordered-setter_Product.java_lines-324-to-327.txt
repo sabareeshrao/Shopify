@@ -1,0 +1,4 @@
+	public void setProductOrdered(Integer productOrdered) {
+		this.productOrdered = productOrdered;
+	}
+

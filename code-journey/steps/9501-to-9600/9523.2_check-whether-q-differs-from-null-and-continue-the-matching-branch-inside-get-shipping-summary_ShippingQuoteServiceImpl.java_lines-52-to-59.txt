@@ -1,0 +1,8 @@
+		ShippingSummary quote = null;
+		
+		if(q != null) {
+			
+			quote = new ShippingSummary();
+			quote.setDeliveryAddress(q.getDelivery());
+			quote.setShipping(q.getPrice());
+			quote.setShippingModule(q.getModule());

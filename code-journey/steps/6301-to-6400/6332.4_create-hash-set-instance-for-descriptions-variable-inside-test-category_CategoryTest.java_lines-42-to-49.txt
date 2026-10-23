@@ -1,0 +1,8 @@
+	    bookFrenchDescription.setName("Livre");
+	    bookFrenchDescription.setCategory(materingstuff);
+	    bookFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
+	    descriptions.add(bookEnglishDescription);
+	    descriptions.add(bookFrenchDescription);
+	    materingstuff.setDescriptions(descriptions);

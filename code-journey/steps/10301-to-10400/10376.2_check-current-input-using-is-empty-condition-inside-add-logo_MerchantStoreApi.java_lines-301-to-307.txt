@@ -1,0 +1,7 @@
+		String userName = getUserFromRequest(request);
+
+		validateUserPermission(userName, code);
+
+		if (uploadfile.isEmpty()) {
+			throw new RestApiException("Upload file is empty");
+		}

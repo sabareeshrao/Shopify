@@ -1,0 +1,4 @@
+		    		   billing.append(LINE_BREAK);
+		    	   } else if(!StringUtils.isBlank(order.getBilling().getState())) {
+		    		   billing.append(order.getBilling().getState()).append(LINE_BREAK); 
+		    	   }

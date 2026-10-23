@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+@Entity
+@EntityListeners(value = com.salesmanager.core.model.common.audit.AuditListener.class)
+@Table(name = "CATEGORY",

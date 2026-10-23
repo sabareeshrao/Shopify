@@ -1,0 +1,8 @@
+				
+				String encrypted = encryption.encrypt(configs);
+				merchantConfiguration.setValue(encrypted);
+				merchantConfigurationService.saveOrUpdate(merchantConfiguration);
+				
+			} catch (Exception e) {
+				throw new ServiceException(e);
+			}

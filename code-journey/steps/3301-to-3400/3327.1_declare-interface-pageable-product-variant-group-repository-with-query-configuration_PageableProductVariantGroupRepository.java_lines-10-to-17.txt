@@ -1,0 +1,8 @@
+public interface PageableProductVariantGroupRepository extends PagingAndSortingRepository<ProductVariantGroup, Long> {
+
+	
+	
+	
+	@Query(value = "select p from ProductVariantGroup p " 
+			+ "join fetch p.productVariants pi " 
+			+ "join fetch pi.product pip "

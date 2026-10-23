@@ -1,0 +1,4 @@
+	public Zone getZone() {
+		return zone;
+	}
+

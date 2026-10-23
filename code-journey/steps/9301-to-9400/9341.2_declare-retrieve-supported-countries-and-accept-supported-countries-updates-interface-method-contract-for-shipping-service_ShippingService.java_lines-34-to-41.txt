@@ -1,0 +1,8 @@
+	 * @throws ServiceException
+	 */
+	List<String> getSupportedCountries(MerchantStore store)
+			throws ServiceException;
+
+	void setSupportedCountries(MerchantStore store,
+			List<String> countryCodes) throws ServiceException;
+

@@ -1,0 +1,5 @@
+	private ReadableProductType productType(ProductType type, MerchantStore store, Language language) {
+		return readableProductTypeMapper.convert(type, store, language);
+	}
+
+}

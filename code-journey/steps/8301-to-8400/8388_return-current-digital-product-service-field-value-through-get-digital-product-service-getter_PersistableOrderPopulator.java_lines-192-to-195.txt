@@ -1,0 +1,4 @@
+	public DigitalProductService getDigitalProductService() {
+		return digitalProductService;
+	}
+

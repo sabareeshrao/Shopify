@@ -1,0 +1,8 @@
+  @Override
+  public ReadableOptin convert(Optin source, MerchantStore store, Language language) {
+    ReadableOptin optinEntity = new ReadableOptin();
+    optinEntity.setCode(source.getCode());
+    optinEntity.setDescription(source.getDescription());
+    optinEntity.setOptinType(source.getOptinType().name());
+    return optinEntity;
+  }

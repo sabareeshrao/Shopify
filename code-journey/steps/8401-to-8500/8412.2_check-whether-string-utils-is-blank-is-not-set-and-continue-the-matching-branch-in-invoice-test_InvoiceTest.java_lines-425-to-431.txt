@@ -1,0 +1,7 @@
+			//bill to
+			//count bill to address cell
+			int billToCell = 8;
+			if(!StringUtils.isBlank(customer.getBilling().getFirstName())) {
+				sheet.setValueAt(customer.getBilling().getFirstName() + " " + customer.getBilling().getLastName(), 0, billToCell);
+				billToCell ++;
+			}

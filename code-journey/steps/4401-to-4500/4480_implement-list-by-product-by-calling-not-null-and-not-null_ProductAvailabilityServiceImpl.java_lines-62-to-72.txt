@@ -1,0 +1,11 @@
+	@Override
+	public Page<ProductAvailability> listByProduct(Long productId, MerchantStore store, int page,
+			int count) {
+		Validate.notNull(productId, "Product cannot be null");
+		Validate.notNull(store, "MercantStore cannot be null");
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableProductAvailabilityRepository.getByProductId(productId, store.getCode(), pageRequest);
+	}
+
+
+

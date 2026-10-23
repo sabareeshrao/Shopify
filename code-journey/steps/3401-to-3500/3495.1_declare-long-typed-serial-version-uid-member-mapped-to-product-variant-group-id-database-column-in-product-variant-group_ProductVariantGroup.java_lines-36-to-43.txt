@@ -1,0 +1,8 @@
+	private static final long serialVersionUID = 1L;
+
+
+	@Id
+	@Column(name = "PRODUCT_VARIANT_GROUP_ID", unique=true, nullable=false)
+	@TableGenerator(name = "TABLE_GEN", 
+	table = "SM_SEQUENCER", 
+	pkColumnName = "SEQ_NAME", 

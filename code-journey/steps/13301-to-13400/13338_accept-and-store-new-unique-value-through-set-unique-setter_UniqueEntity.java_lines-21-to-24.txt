@@ -1,0 +1,4 @@
+  public void setUnique(String unique) {
+    this.unique = unique;
+  }
+

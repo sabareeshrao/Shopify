@@ -1,0 +1,10 @@
+	public boolean checkCaptcha(String gRecaptchaResponse) throws Exception {
+
+		HttpClient client = HttpClientBuilder.create().build();
+	    
+	    String url = configuration.getProperty(ApplicationConstants.RECAPTCHA_URL);;
+
+        List<NameValuePair> data = new ArrayList<NameValuePair>();
+        data.add(new BasicNameValuePair("secret",  secretKey));
+        data.add(new BasicNameValuePair("response",  gRecaptchaResponse));
+

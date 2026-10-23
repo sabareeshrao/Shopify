@@ -1,0 +1,6 @@
+	@Override
+	public Optional<ProductVariant> getById(Long id, MerchantStore store) {
+
+		return productVariantRepository.findOne(id,store.getId());
+	}
+

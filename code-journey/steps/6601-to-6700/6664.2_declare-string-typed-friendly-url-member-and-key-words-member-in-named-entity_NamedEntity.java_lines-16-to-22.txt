@@ -1,0 +1,7 @@
+	private String friendlyUrl;
+	private String keyWords;
+	private String highlights;
+	private String metaDescription;
+	private String title;
+	
+	

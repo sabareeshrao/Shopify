@@ -1,0 +1,7 @@
+
+		//todo filter sku and store
+		for (ProductAvailability availability : availabilities) {
+			if (availability.getProductQuantity() == null || availability.getProductQuantity().intValue() == 0) {
+				throw new Exception("Product with id " + product.getId() + " is not available");
+			}
+		}

@@ -1,0 +1,5 @@
+			if (variants.isPresent()) {
+				availabilities = variants.get().getAvailabilities();
+				availabilities = this.applicableAvailabilities(availabilities);
+
+			}

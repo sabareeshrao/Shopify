@@ -1,0 +1,3 @@
+					port = moduleConfig.getPort();
+					url = moduleConfig.getUri();
+				}

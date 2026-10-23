@@ -1,0 +1,10 @@
+
+/**
+ * @author Umesh A
+ *
+ */
+
+@Deprecated
+public class ShoppingCartDataPopulator extends AbstractDataPopulator<ShoppingCart,ShoppingCartData>
+{
+

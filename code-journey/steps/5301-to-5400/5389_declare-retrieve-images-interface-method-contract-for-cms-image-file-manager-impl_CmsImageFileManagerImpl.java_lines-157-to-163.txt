@@ -1,0 +1,7 @@
+  public List<OutputContentFile> getImages(MerchantStore store, FileContentType imageContentType)
+      throws ServiceException {
+
+    return getImages(store.getCode(), imageContentType);
+
+  }
+

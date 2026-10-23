@@ -1,0 +1,4 @@
+						shoppingCartItem.setVariant(readableProductVariationMapper.convert(productVariant.get().getVariation(), store, language));
+						if(productVariant.get().getVariationValue() != null) {
+							shoppingCartItem.setVariantValue(readableProductVariationMapper.convert(productVariant.get().getVariationValue(), store, language));
+						}

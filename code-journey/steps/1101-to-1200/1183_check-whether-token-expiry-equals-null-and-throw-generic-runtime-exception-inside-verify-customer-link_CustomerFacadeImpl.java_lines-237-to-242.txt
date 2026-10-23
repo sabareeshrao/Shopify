@@ -1,0 +1,6 @@
+
+		Date tokenExpiry = customer.getCredentialsResetRequest().getCredentialsRequestExpiry();
+
+		if (tokenExpiry == null) {
+			throw new GenericRuntimeException("No expiry date configured for token [" + token + "]");
+		}

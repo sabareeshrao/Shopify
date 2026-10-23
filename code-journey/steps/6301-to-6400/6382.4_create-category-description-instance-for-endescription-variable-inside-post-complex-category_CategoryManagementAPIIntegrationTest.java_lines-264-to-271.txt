@@ -1,0 +1,8 @@
+        living.setCode("livingroom");
+        living.setSortOrder(2);
+        living.setVisible(true);
+
+        endescription = new CategoryDescription();
+        endescription.setLanguage("en");
+        endescription.setName("Living room");
+        endescription.setFriendlyUrl("living-room");

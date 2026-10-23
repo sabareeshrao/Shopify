@@ -1,0 +1,15 @@
+	private final static String OUTPUT_FOLDER = "/Users/carlsamson/Documents/test/";
+	
+	
+    @Test
+    public void createImage()
+        throws ServiceException, FileNotFoundException, IOException
+    {
+
+        MerchantStore store = merchantService.getByCode( MerchantStore.DEFAULT_STORE );
+        final File file1 = new File( IMAGE_FILE);
+
+        if ( !file1.exists() || !file1.canRead() )
+        {
+            throw new ServiceException( "Can't read" + file1.getAbsolutePath() );
+        }

@@ -1,0 +1,27 @@
+
+    /**
+     * Can be used to calculates the final prices of all items contained in checkout page
+     * @param shoppingCart
+     * @param customer
+     * @param store
+     * @param language
+     * @return  @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     */
+    OrderTotalSummary calculateShoppingCartTotal(final ShoppingCart shoppingCart,final Customer customer, final MerchantStore store, final Language language) throws ServiceException;
+
+    /**
+     * Can be used to calculates the final prices of all items contained in a ShoppingCart
+     * @param shoppingCart
+     * @param store
+     * @param language
+     * @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     */
+    OrderTotalSummary calculateShoppingCartTotal(final ShoppingCart shoppingCart,final MerchantStore store, final Language language) throws ServiceException;
+
+    ByteArrayOutputStream generateInvoice(MerchantStore store, Order order,
+                                          Language language) throws ServiceException;
+
+    Order getOrder(Long id, MerchantStore store);
+

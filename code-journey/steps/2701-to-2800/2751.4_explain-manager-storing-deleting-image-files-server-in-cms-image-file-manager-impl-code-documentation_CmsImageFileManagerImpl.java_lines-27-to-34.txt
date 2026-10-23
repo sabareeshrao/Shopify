@@ -1,0 +1,8 @@
+ * Manager for storing and deleting image files from the CMS which is a web server
+ * 
+ * Manages - Product images
+ * 
+ * @author Carl Samson
+ */
+public class CmsImageFileManagerImpl
+    implements ProductAssetsManager {

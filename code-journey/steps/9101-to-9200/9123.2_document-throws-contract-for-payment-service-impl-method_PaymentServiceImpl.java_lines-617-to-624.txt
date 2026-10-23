@@ -1,0 +1,8 @@
+	 * @throws ServiceException
+	 */
+	private void validateCreditCardNumber(String number, CreditCardType creditCard)
+	throws ServiceException {
+
+		//TODO implement
+		if(CreditCardType.MASTERCARD.equals(creditCard.name())) {
+			if (number.length() != 16

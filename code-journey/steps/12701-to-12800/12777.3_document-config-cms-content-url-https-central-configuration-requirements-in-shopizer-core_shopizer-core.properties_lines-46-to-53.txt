@@ -1,0 +1,8 @@
+#config.cms.contentUrl=https://s3.ca-central-1.amazonaws.com/shopizer-lightsail
+#config.cms.aws.bucket=shopizer-lightsail
+#config.cms.aws.region=ca-central-1
+
+#config.cms.gcp.bucket=
+
+#You need an AWS access key ID and AWS secret access key to access Amazon SES using an SDK
+#AWS keys need to be specified in environment variables, see above

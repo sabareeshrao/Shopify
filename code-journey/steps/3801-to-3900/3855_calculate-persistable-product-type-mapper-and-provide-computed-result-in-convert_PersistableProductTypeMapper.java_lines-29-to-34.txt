@@ -1,0 +1,6 @@
+	@Override
+	public ProductType convert(PersistableProductType source, MerchantStore store, Language language) {
+		ProductType type = new ProductType();
+		return this.merge(source, type, store, language);
+	}
+

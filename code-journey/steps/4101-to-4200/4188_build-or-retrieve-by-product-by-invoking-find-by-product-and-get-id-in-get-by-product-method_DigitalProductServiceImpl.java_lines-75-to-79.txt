@@ -1,0 +1,5 @@
+	@Override
+	public DigitalProduct getByProduct(MerchantStore store, Product product) throws ServiceException {
+		return digitalProductRepository.findByProduct(store.getId(), product.getId());
+	}
+	

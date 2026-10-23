@@ -1,0 +1,10 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(JWTAdminServicesImpl.class);
+	
+	
+	@Inject
+	private UserService userService;
+	@Inject
+	private PermissionService  permissionService;
+	@Inject
+	private GroupService   groupService;
+	

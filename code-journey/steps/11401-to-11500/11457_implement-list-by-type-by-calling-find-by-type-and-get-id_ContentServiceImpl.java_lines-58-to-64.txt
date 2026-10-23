@@ -1,0 +1,7 @@
+	@Override
+	public List<Content> listByType(ContentType contentType, MerchantStore store, Language language)
+			throws ServiceException {
+
+		return contentRepository.findByType(contentType, store.getId(), language.getId());
+	}
+

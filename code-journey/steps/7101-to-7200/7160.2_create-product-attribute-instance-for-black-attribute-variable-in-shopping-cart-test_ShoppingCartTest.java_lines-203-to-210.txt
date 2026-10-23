@@ -1,0 +1,8 @@
+	    whiteAttribute.setProductAttributeWeight(new BigDecimal(0));//no weight variation
+	    whiteAttribute.setProductOption(option);
+	    whiteAttribute.setProductOptionValue(white);
+	    
+	    product.getAttributes().add(whiteAttribute);
+	    //black
+	    ProductAttribute blackAttribute = new ProductAttribute();
+	    blackAttribute.setProduct(product);

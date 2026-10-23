@@ -1,0 +1,3 @@
+import com.salesmanager.core.model.catalog.product.attribute.AttributeCriteria;
+import com.salesmanager.core.model.common.Criteria;
+

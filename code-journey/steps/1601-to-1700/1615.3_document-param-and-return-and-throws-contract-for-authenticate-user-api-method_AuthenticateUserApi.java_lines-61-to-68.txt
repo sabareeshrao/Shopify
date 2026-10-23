@@ -1,0 +1,8 @@
+	 * @param authenticationRequest
+	 * @param device
+	 * @return
+	 * @throws AuthenticationException
+	 */
+    @RequestMapping(value = "/private/login", method = RequestMethod.POST)
+    public ResponseEntity<?> authenticate(@RequestBody @Valid AuthenticationRequest authenticationRequest) throws AuthenticationException {
+

@@ -1,0 +1,6 @@
+		
+		if(criteria.getCustomerId()!=null) {
+			String customerQuery =" and o.customerId =:cid";
+			countBuilderWhere.append(customerQuery);
+			objectBuilderWhere.append(customerQuery);
+		}

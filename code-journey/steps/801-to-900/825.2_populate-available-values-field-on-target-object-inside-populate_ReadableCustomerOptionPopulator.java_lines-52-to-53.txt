@@ -1,0 +1,2 @@
+			customerOption.setAvailableValues(values);
+		}

@@ -1,0 +1,8 @@
+
+	/**
+	 * This is the final price calculated from all configured prices and all
+	 * possibles discounts. This price does not calculate the attributes or other
+	 * prices than the default one
+	 * 
+	 * @param store
+	 * @param product

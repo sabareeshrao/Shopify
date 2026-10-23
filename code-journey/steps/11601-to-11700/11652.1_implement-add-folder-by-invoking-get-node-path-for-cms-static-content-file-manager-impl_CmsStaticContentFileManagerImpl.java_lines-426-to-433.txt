@@ -1,0 +1,8 @@
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void addFolder(String merchantStoreCode, String folderName, Optional<String> path) throws ServiceException {
+		
+		
+		String nodePath = this.getNodePath(merchantStoreCode, FileContentType.IMAGE);
+		

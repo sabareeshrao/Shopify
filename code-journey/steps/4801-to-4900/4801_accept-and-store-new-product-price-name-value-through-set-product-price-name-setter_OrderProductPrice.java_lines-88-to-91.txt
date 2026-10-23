@@ -1,0 +1,4 @@
+	public void setProductPriceName(String productPriceName) {
+		this.productPriceName = productPriceName;
+	}
+

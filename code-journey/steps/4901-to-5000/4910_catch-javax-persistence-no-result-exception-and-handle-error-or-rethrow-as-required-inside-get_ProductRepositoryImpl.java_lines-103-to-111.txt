@@ -1,0 +1,9 @@
+
+			return (Product) q.getSingleResult();
+
+		} catch (javax.persistence.NoResultException ers) {
+			return null;
+		}
+
+	}
+

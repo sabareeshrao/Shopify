@@ -1,0 +1,8 @@
+	public boolean validFileName(String fileName) {
+		
+		boolean validName = true;
+		
+		//has an extention
+		if(StringUtils.isEmpty(FilenameUtils.getExtension(fileName))) {
+			validName = false;
+		}

@@ -1,0 +1,8 @@
+				}
+			}
+			if(transaction.getTransactionType().name().equals(TransactionType.CAPTURE.name())) {
+				break;
+			}
+			if(transaction.getTransactionType().name().equals(TransactionType.REFUND.name())) {
+				break;
+			}

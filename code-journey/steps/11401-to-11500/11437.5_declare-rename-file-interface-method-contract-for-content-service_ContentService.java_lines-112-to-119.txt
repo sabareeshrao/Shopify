@@ -1,0 +1,8 @@
+     * @param originalName
+     * @param newName
+     */
+    void renameFile( String merchantStoreCode, FileContentType fileContentType, Optional<String> path, String originalName, String newName) throws ServiceException;
+    
+    /**
+     * Method responsible for fetching particular content image for a given merchant store. Requested image will be
+     * search in Infinispan tree cache and OutputContentImage will be sent, in case no image is found null will

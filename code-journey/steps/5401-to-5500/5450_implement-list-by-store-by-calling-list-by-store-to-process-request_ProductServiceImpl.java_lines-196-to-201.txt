@@ -1,0 +1,6 @@
+	@Override
+	public ProductList listByStore(MerchantStore store, Language language, ProductCriteria criteria) {
+
+		return productRepository.listByStore(store, language, criteria);
+	}
+

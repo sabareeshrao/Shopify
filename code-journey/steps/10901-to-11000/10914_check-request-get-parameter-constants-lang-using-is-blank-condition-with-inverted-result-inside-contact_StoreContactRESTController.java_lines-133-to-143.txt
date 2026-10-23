@@ -1,0 +1,11 @@
+			
+			Language language = merchantStore.getDefaultLanguage();
+			
+			Map<String,Language> langs = languageService.getLanguagesMap();
+
+			
+			if(!StringUtils.isBlank(request.getParameter(Constants.LANG))) {
+				String lang = request.getParameter(Constants.LANG);
+				if(lang!=null) {
+					language = langs.get(language);
+				}

@@ -1,0 +1,4 @@
+	public List<ProductReview> getReviews() {
+		return reviews;
+	}
+

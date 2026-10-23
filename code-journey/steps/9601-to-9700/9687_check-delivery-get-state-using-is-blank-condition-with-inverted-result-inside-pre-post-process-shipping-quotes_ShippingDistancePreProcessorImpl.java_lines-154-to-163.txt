@@ -1,0 +1,10 @@
+		destinationAddress.append(delivery.getPostalCode()).append(BLANK);
+		
+		if(!StringUtils.isBlank(delivery.getState())) {
+			destinationAddress.append(delivery.getState()).append(" ");
+		}
+		if(delivery.getZone()!=null) {
+			destinationAddress.append(delivery.getZone().getCode()).append(" ");
+		}
+		destinationAddress.append(delivery.getCountry().getIsoCode());
+		

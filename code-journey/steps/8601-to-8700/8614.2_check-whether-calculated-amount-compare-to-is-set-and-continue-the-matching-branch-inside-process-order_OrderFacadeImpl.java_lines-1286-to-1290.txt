@@ -1,0 +1,5 @@
+			String strCalculatedTotal = calculatedAmount.toPlainString();
+
+			// compare both prices
+			if (calculatedAmount.compareTo(formattedSubmittedAmount) != 0) {
+

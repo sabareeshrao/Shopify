@@ -1,0 +1,8 @@
+		"zoneCode":"VIC",
+		"zoneName":"Victoria",
+		"countryCode":"AU"
+	},
+	{
+		"zoneCode":"TAS",
+		"zoneName":"Tasmanie",
+		"countryCode":"AU"

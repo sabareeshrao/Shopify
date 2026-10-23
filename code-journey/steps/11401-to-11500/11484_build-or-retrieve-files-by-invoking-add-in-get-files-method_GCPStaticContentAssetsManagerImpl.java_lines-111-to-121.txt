@@ -1,0 +1,11 @@
+	@Override
+	public List<OutputContentFile> getFiles(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType)
+			throws ServiceException {
+		try {
+
+			List<String> fileNames = getFileNames(merchantStoreCode, folderPath, fileContentType);
+			List<OutputContentFile> files = new ArrayList<OutputContentFile>();
+		
+			for (String fileName : fileNames) {
+				files.add(getFile(merchantStoreCode, folderPath, fileContentType, fileName));
+			}

@@ -1,0 +1,8 @@
+
+	/**
+	 * Calculate processors
+	 * @return
+	 */
+	@Bean
+	public List<OrderTotalPostProcessorModule> orderTotalsPostProcessors() {
+		

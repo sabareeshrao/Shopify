@@ -1,0 +1,8 @@
+
+			Zone storeZone = (Zone) zonesMap.get(sZone);
+			Zone customerZone = (Zone) zonesMap.get(customer
+					.getCustomerZoneId());**/
+					
+				
+
+			xmldatabuffer.append("<PickupType><Code>03</Code></PickupType>");

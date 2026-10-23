@@ -1,0 +1,8 @@
+	@Override
+	public Order populate(PersistableOrder source, Order target,
+			MerchantStore store, Language language) throws ConversionException {
+		
+		
+		Validate.notNull(productService,"productService must be set");
+		Validate.notNull(digitalProductService,"digitalProductService must be set");
+		Validate.notNull(productAttributeService,"productAttributeService must be set");

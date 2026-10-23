@@ -1,0 +1,3 @@
+	    availability.getPrices().add(dprice);
+	    product.getAvailabilities().add(availability);
+	    

@@ -1,0 +1,3 @@
+	@JoinColumn(name = "PRODUCT_OPTION_VALUE_ID")
+	private ProductOptionValue productOptionValue;
+	

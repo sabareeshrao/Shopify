@@ -1,0 +1,20 @@
+			xmldatabuffer.append("<CountryCode>");
+			xmldatabuffer.append(store.getCountry().getIsoCode());
+			xmldatabuffer.append("</CountryCode>");
+			xmldatabuffer.append("<PostalCode>");
+			xmldatabuffer.append(DataUtils
+					.trimPostalCode(store.getStorepostalcode()));
+			xmldatabuffer.append("</PostalCode></Address></Shipper>");
+
+			// ship to
+			xmldatabuffer.append("<ShipTo>");
+			xmldatabuffer.append("<Address>");
+			xmldatabuffer.append("<City>");
+			xmldatabuffer.append(delivery.getCity());
+			xmldatabuffer.append("</City>");
+			// if(!StringUtils.isBlank(customer.getCustomerState())) {
+			if (delivery.getZone() != null) {
+				xmldatabuffer.append("<StateProvinceCode>");
+				xmldatabuffer.append(delivery.getZone().getCode());// zone code
+				xmldatabuffer.append("</StateProvinceCode>");
+			}

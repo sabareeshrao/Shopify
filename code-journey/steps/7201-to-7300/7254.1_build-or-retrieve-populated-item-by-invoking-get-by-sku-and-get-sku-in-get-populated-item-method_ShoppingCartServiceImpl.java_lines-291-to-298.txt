@@ -1,0 +1,8 @@
+
+	@Transactional
+	private void getPopulatedItem(final ShoppingCartItem item, MerchantStore store) throws Exception {
+
+		Product product = productService.getBySku(item.getSku(), store, store.getDefaultLanguage());
+
+		if (product == null) {
+			item.setObsolete(true);

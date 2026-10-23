@@ -1,0 +1,6 @@
+	public void setPromoCode(String promoCode) {
+		this.promoCode = promoCode;
+	}
+
+
+

@@ -1,0 +1,8 @@
+                                    }
+                                }
+                                
+                                dbItem.setAttributes( newAttributes );
+                            }
+                            else
+                            {
+                                dbItem.removeAllAttributes();

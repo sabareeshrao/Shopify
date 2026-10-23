@@ -1,0 +1,8 @@
+
+		// need to put items individually
+		for(ShippingProduct shippingProduct : products){
+
+			Product product = shippingProduct.getProduct();
+			if (product.isProductVirtual()) {
+				continue;
+			}

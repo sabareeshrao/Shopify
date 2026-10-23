@@ -1,0 +1,8 @@
+	    oreilley.setCode("oreilley");
+
+	    ManufacturerDescription oreilleyd = new ManufacturerDescription();
+	    oreilleyd.setLanguage(en);
+	    oreilleyd.setName("O\'reilley");
+	    oreilleyd.setManufacturer(oreilley);
+	    oreilley.getDescriptions().add(oreilleyd);
+

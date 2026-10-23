@@ -1,0 +1,11 @@
+	@Override
+	@Transactional
+	public void deleteShoppingCartItem(Long id) {
+
+		ShoppingCartItem item = shoppingCartItemRepository.findOne(id);
+		if (item != null) {
+
+			if (item.getAttributes() != null) {
+				item.getAttributes().forEach(a -> shoppingCartAttributeItemRepository.deleteById(a.getId()));
+				item.getAttributes().clear();
+			}

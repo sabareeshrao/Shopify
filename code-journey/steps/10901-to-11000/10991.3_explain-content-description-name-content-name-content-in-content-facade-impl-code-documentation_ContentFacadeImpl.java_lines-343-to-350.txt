@@ -1,0 +1,8 @@
+	 * contentDescription.setName(objectContent.getName());
+	 * contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+	 * contentDescription.setDescription(objectContent.getDescription());
+	 * contentDescription.setMetatagTitle(objectContent.getTitle());
+	 * descriptions.add(contentDescription); } return descriptions; }
+	 */
+	private List<ContentDescription> buildDescriptions(Content contentModel,
+			List<com.salesmanager.shop.model.content.common.ContentDescription> persistableDescriptions)

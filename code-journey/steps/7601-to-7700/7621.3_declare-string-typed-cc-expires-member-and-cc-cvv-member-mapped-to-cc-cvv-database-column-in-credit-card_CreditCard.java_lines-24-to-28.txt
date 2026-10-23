@@ -1,0 +1,5 @@
+	private String ccExpires;
+	
+	@Column (name ="CC_CVV")
+	private String ccCvv;
+

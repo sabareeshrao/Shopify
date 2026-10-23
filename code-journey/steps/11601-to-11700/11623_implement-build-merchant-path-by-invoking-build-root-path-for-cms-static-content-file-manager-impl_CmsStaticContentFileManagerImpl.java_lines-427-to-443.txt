@@ -1,0 +1,17 @@
+	private Path buildMerchantPath(String merchantCode) throws IOException {
+		
+		String rootPath = this.buildRootPath();
+		Path confDir = Paths.get(rootPath);
+		
+		// node path
+		StringBuilder nodePath = new StringBuilder();
+		nodePath
+		.append(confDir.toString())
+		.append(rootPath).append(merchantCode);
+		Path merchantPath = Paths.get(nodePath.toString());
+		this.createDirectoryIfNorExist(merchantPath);
+		
+		return merchantPath;
+		
+	}
+

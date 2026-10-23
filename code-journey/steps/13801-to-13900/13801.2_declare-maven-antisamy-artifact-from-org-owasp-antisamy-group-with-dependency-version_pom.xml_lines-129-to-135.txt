@@ -1,0 +1,7 @@
+		<!-- https://mvnrepository.com/artifact/org.owasp.antisamy/antisamy -->
+		<!-- xss filter complement -->
+		<dependency>
+			<groupId>org.owasp.antisamy</groupId>
+			<artifactId>antisamy</artifactId>
+			<version>1.6.7</version>
+		</dependency>

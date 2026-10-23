@@ -1,0 +1,20 @@
+	@Override
+	public ReadableShoppingCart merge(ShoppingCart source, ReadableShoppingCart destination, MerchantStore store,
+			Language language) {
+		Validate.notNull(source, "ShoppingCart cannot be null");
+		Validate.notNull(destination, "ReadableShoppingCart cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+
+		destination.setCode(source.getShoppingCartCode());
+		int cartQuantity = 0;
+
+		destination.setCustomer(source.getCustomerId());
+
+		try {
+
+			if (!StringUtils.isBlank(source.getPromoCode())) {
+				Date promoDateAdded = source.getPromoAdded();// promo valid 1 day
+				if (promoDateAdded == null) {
+					promoDateAdded = new Date();
+				}

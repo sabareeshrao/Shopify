@@ -1,0 +1,5 @@
+	@Override
+	public void setUserId(String userId) {
+		primaryKey.setUserId(userId);
+	}
+

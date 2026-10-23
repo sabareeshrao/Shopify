@@ -1,0 +1,8 @@
+		},
+		{
+			"zoneCode": "SH",
+			"zoneName": "Schaffhausen",
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "SO",

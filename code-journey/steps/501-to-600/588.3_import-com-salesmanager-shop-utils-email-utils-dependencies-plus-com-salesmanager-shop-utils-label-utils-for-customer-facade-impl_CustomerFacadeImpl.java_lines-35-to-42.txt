@@ -1,0 +1,8 @@
+import com.salesmanager.shop.utils.EmailUtils;
+import com.salesmanager.shop.utils.FilePathUtils;
+import com.salesmanager.shop.utils.ImageFilePath;
+import com.salesmanager.shop.utils.LabelUtils;
+
+@Service("customerFacadev1")
+public class CustomerFacadeImpl implements CustomerFacade {
+

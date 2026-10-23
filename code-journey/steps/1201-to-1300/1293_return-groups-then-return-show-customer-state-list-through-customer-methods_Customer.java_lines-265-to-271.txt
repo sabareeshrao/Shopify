@@ -1,0 +1,7 @@
+	public List<Group> getGroups() {
+		return groups;
+	}
+	public String getShowCustomerStateList() {
+		return showCustomerStateList;
+	}
+

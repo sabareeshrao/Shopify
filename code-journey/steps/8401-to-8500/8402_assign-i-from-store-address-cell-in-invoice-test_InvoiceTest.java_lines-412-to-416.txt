@@ -1,0 +1,5 @@
+			
+			//delete address blank lines
+			for(int i = storeAddressCell; i<5; i++) {
+				sheet.setValueAt("", 0, i);
+			}

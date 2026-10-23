@@ -1,0 +1,8 @@
+		
+		//an attribute to the OrderProduct
+		OrderProductAttribute orderAttribute = new OrderProductAttribute();
+		orderAttribute.setOrderProduct(oproduct);
+		orderAttribute.setProductAttributeName(colorDescription.getName());
+		orderAttribute.setProductAttributeValueName(redDescription.getName());
+		orderAttribute.setProductOptionId(color.getId());
+		orderAttribute.setProductOptionValueId(red.getId());

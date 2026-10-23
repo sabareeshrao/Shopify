@@ -1,0 +1,8 @@
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	/**
+	 * Will be used to fetch shopping cart model from the controller
+	 * this is a unique code that should be attributed from the client (UI)
+	 * 
+	 */

@@ -1,0 +1,8 @@
+		"zoneCode": "SD",
+		"zoneName": "South Dakota",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "TN",
+		"zoneName": "Tennessee",
+		"countryCode": "US"

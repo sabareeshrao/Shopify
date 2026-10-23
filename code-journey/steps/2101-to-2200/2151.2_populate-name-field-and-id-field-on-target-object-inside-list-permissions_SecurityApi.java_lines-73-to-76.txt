@@ -1,0 +1,4 @@
+			readablePermission.setName(permission.getPermissionName());
+			readablePermission.setId(permission.getId());
+			readablePermissions.add(readablePermission);
+		}

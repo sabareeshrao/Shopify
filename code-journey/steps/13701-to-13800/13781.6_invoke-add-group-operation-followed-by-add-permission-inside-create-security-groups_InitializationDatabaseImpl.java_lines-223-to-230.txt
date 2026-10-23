@@ -1,0 +1,8 @@
+		  
+		  .addGroup("ADMIN_ORDER", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("ORDER"))
+		  
+		  .addGroup("ADMIN_CONTENT", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("CONTENT"))

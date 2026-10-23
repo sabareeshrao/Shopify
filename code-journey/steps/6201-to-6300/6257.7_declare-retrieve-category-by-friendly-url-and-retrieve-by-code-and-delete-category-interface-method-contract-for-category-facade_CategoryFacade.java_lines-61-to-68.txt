@@ -1,0 +1,8 @@
+	 * @return
+	 */
+	ReadableCategory getCategoryByFriendlyUrl(MerchantStore merchantStore, String friendlyUrl, Language language) throws Exception;
+
+	Category getByCode(String code, MerchantStore store);
+
+	void deleteCategory(Long categoryId, MerchantStore store);
+

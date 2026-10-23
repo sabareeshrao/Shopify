@@ -1,0 +1,8 @@
+
+		final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
+
+		String apiUrl = "/api/v2/product/" + code;
+
+		ResponseEntity<ReadableProduct> readableProduct = testRestTemplate.exchange(apiUrl, HttpMethod.GET, httpEntity,
+				ReadableProduct.class);
+		assertThat(readableProduct.getStatusCode(), is(OK));

@@ -1,0 +1,8 @@
+Build application according to steps provided above
+
+
+Create new branch in your repository
+-------------------
+
+	   $ git checkout -b branch-name
+

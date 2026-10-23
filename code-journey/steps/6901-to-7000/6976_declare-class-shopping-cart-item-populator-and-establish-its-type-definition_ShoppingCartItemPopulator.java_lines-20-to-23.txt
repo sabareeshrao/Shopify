@@ -1,0 +1,4 @@
+public class ShoppingCartItemPopulator extends
+		AbstractDataPopulator<PersistableOrderProduct, ShoppingCartItem> {
+
+

@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("PYG", "Guarani");
+		CURRENCY_MAP.put("PEN", "Nuevo Sol");
+		CURRENCY_MAP.put("PHP", "Philippine Peso");
+		CURRENCY_MAP.put("NZD", "New Zealand Dollar");
+		CURRENCY_MAP.put("PLN", "Zloty");
+		CURRENCY_MAP.put("USD", "US Dollar");
+		CURRENCY_MAP.put("QAR", "Qatari Rial");
+		CURRENCY_MAP.put("RON", "New Romanian Leu");

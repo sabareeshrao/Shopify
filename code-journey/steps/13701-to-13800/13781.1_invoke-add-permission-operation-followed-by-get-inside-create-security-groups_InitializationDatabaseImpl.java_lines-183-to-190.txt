@@ -1,0 +1,8 @@
+		  .addPermission(permissionKeys.get("PAYMENT"))
+		  .addPermission(permissionKeys.get("CUSTOMER"))
+		  .addPermission(permissionKeys.get("SHIPPING"))
+		  
+		  .addGroup("ADMIN", GroupType.ADMIN)
+		  .addPermission(permissionKeys.get("AUTH"))
+		  .addPermission(permissionKeys.get("ADMIN"))
+		  .addPermission(permissionKeys.get("PRODUCTS"))

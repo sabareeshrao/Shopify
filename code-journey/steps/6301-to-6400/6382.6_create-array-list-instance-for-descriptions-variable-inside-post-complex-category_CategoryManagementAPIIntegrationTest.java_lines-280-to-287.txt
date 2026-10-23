@@ -1,0 +1,8 @@
+        descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+
+        living.setDescriptions(descriptions);
+
+        /** lounge **/
+

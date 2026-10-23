@@ -1,0 +1,8 @@
+	
+	@Column (name ="TITLE", nullable=true)
+	private String title;
+	
+	@Column (name ="TEXT", nullable=true)
+	@Type(type = "org.hibernate.type.TextType")
+	private String text;
+	

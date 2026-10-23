@@ -1,0 +1,5 @@
+		try {
+			mStore = persistableMerchantStorePopulator.populate(store, mStore, language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException(e);
+		}

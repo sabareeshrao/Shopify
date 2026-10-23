@@ -1,0 +1,8 @@
+	@Override
+	public Transaction processCapturePayment(Order order, Customer customer,
+			MerchantStore store)
+			throws ServiceException {
+
+
+		Validate.notNull(customer);
+		Validate.notNull(store);

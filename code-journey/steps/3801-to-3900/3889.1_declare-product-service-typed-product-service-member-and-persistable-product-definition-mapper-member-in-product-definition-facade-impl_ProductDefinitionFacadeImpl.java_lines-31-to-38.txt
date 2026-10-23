@@ -1,0 +1,8 @@
+
+
+	@Inject
+	private ProductService productService;
+
+
+	@Autowired
+	private PersistableProductDefinitionMapper persistableProductDefinitionMapper;

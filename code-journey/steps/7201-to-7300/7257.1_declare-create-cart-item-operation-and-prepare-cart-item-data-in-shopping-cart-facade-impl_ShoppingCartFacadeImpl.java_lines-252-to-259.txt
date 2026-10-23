@@ -1,0 +1,8 @@
+
+	// KEEP -- ENTRY
+	private com.salesmanager.core.model.shoppingcart.ShoppingCartItem createCartItem(ShoppingCart cartModel,
+			PersistableShoppingCartItem shoppingCartItem, MerchantStore store) throws Exception {
+
+		// USE Product sku
+		Product product = null;
+

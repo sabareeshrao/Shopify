@@ -1,0 +1,4 @@
+	public Date getAccountedDate() {
+		return CloneUtils.clone(accountedDate);
+	}
+

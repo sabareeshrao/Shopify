@@ -1,0 +1,8 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/variation" }, method = RequestMethod.POST)
+	@ApiOperation(
+		      httpMethod = "POST",
+		      value = "Creates a new product variant",
+		      notes = "",
+		      produces = "application/json",

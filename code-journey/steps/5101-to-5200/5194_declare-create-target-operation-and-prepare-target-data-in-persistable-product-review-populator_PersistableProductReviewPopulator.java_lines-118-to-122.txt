@@ -1,0 +1,5 @@
+	@Override
+	protected ProductReview createTarget() {
+		return null;
+	}
+	

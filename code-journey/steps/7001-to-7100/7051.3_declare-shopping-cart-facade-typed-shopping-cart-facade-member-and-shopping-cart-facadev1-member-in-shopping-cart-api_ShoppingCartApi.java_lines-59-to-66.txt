@@ -1,0 +1,8 @@
+	private ShoppingCartFacade shoppingCartFacade;
+
+	@Inject
+	private com.salesmanager.shop.store.controller.shoppingCart.facade.v1.ShoppingCartFacade shoppingCartFacadev1;
+
+	@Inject
+	private CustomerService customerService;
+

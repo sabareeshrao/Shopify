@@ -1,0 +1,4 @@
+				if (isPositive(priceEntity.getId())) {
+					price = new ProductPrice();
+					price.setId(priceEntity.getId());
+				}

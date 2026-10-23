@@ -1,0 +1,18 @@
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+/**
+ * A catalog is used to classify products of a given merchant
+ * to be displayed in a specific marketplace
+ * @author c.samson
+ *
+ */
+public class Catalog extends SalesManagerEntity<Long, Catalog> implements Auditable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+

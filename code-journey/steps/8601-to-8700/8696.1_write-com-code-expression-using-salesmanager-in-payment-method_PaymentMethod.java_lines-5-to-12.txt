@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+
+/**
+ * Object to be used in store front with meta data and configuration
+ * informations required to display to the end user
+ * @author Carl Samson
+ *

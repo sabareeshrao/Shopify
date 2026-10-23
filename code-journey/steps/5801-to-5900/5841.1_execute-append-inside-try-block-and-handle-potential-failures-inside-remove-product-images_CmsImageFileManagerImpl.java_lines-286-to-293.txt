@@ -1,0 +1,8 @@
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(product.getMerchantStore().getCode());
+
+

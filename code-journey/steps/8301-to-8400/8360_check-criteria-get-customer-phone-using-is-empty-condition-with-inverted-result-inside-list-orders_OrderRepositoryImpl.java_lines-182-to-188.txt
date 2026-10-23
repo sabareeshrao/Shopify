@@ -1,0 +1,7 @@
+		
+		//phone
+		if(!StringUtils.isEmpty(criteria.getCustomerPhone())) {
+			String nameQuery =  " and o.billing.telephone like:phone or o.delivery.telephone like:phone";
+			objectBuilderWhere.append(nameQuery);
+			countBuilderSelect.append(nameQuery);
+		}

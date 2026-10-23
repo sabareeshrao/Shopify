@@ -1,0 +1,6 @@
+public class PersistableProductReviewPopulator extends
+		AbstractDataPopulator<PersistableProductReview, ProductReview> {
+	
+	
+	
+

@@ -1,0 +1,6 @@
+	@Override
+	public Product getById(Long productId) {
+		return get(productId, null);
+	}
+
+

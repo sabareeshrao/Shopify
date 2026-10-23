@@ -1,0 +1,8 @@
+			
+
+			return newTransaction;
+			
+			
+		} catch(Exception e) {
+			if(e instanceof IntegrationException) {
+				throw (IntegrationException)e;

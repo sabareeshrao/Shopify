@@ -1,0 +1,4 @@
+  public String getRetailerStore() {
+    return retailerStore;
+  }
+

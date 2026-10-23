@@ -1,0 +1,8 @@
+
+		OrderTotalInputParameters inputParameters = new OrderTotalInputParameters();
+		inputParameters.setItemManufacturerCode(product.getManufacturer().getCode());
+		
+		
+		inputParameters.setShippingMethod(summary.getShippingSummary().getShippingOptionCode());
+		
+		LOGGER.debug("Setting input parameters " + inputParameters.toString());

@@ -1,0 +1,7 @@
+    @Override
+    protected CustomerEntity createTarget()
+    {
+        return new CustomerEntity();
+    }
+
+}

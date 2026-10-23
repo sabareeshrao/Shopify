@@ -1,0 +1,2 @@
+	protected static final String CONTEXT_PATH = "CONTEXT_PATH";
+	

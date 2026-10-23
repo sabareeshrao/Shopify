@@ -1,0 +1,13 @@
+				**/
+				
+				
+
+				if (destination.getPrices() != null) {
+					for (ProductPrice pp : destination.getPrices()) {
+						if (isPositive(priceEntity.getId()) && priceEntity.getId().longValue() == pp.getId().longValue()) {
+							price = pp;
+							prices.add(pp);
+						} else if (pp.isDefaultPrice() && priceEntity.isDefaultPrice()) {
+							if(price == null) {
+								price = pp;
+							}

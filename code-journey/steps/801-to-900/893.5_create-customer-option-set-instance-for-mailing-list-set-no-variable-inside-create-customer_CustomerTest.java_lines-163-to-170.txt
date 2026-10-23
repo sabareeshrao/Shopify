@@ -1,0 +1,8 @@
+		mailingListSetYes.setCustomerOption(subscribedToMailingList);
+		mailingListSetYes.setCustomerOptionValue(yes);
+		
+		customerOptionSetService.create(mailingListSetYes);
+
+		//possible no
+		CustomerOptionSet mailingListSetNo = new CustomerOptionSet();
+		//mailingListSetNo.setPk(mailingListSetNoId);

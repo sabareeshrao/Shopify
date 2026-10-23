@@ -1,0 +1,8 @@
+			SetExpressCheckoutResponseType setExpressCheckoutResponse = service.setExpressCheckout(setExpressCheckoutReq);
+			
+			String token = setExpressCheckoutResponse.getToken();
+			String correlationID = setExpressCheckoutResponse.getCorrelationID();
+			String ack = setExpressCheckoutResponse.getAck().getValue();
+			
+			if(!"Success".equals(ack)) {
+				LOGGER.error("Wrong value from init transaction " + ack);

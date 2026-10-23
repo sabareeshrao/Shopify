@@ -1,0 +1,4 @@
+		
+		<!-- admin panel filter -->
+ 		<mvc:interceptor>
+  			<mvc:mapping path="/admin/**"/>

@@ -1,0 +1,14 @@
+	private Map<String, String> attribute(ProductAttribute attribute, String language) {
+		Map<String, String> attributeValue = new HashMap<String, String>();
+
+		ProductOptionDescription optionDescription = attribute.getProductOption().getDescriptions().stream()
+				.filter(a -> a.getLanguage().getCode().equals(language)).findFirst().get();		
+				
+		ProductOptionValueDescription value = attribute.getProductOptionValue().getDescriptions().stream()
+				.filter(a -> a.getLanguage().getCode().equals(language)).findFirst().get();
+
+		attributeValue.put(optionDescription.getName(), value.getName());
+
+		return attributeValue;
+	}
+	

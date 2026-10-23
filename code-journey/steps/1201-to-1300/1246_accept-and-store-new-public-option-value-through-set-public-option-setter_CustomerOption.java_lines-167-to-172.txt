@@ -1,0 +1,6 @@
+	public void setPublicOption(boolean publicOption) {
+		this.publicOption = publicOption;
+	}
+
+
+

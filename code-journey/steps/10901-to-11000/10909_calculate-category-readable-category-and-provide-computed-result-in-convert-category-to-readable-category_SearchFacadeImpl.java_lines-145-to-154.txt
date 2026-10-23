@@ -1,0 +1,10 @@
+	private ReadableCategory convertCategoryToReadableCategory(MerchantStore merchantStore, Language language,
+			Map<String, Long> productCategoryCount, Category category) {
+		ReadableCategoryPopulator populator = new ReadableCategoryPopulator();
+		try {
+			ReadableCategory categoryProxy = populator.populate(category, new ReadableCategory(), merchantStore,
+					language);
+			Long total = productCategoryCount.get(categoryProxy.getCode());
+			if (total != null) {
+				categoryProxy.setProductCount(total.intValue());
+			}

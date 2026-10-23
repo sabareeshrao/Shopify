@@ -1,0 +1,8 @@
+
+	}
+	
+	
+	/**
+	
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/{id}/{variantId}/image" }, method = RequestMethod.POST)

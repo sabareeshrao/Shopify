@@ -1,0 +1,6 @@
+  @Inject private ProductCommonFacade productCommonFacade;
+
+  @Inject private ProductService productService;
+
+  @Inject private ProductReviewService productReviewService;
+

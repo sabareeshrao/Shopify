@@ -1,0 +1,8 @@
+		String userName = principal.getName();
+		
+		Customer customer;
+		try {
+			customer = customerFacade.getCustomerByUserName(userName, merchantStore);
+			if(customer == null) {
+				throw new ResourceNotFoundException("Customer [" + userName + "] not found");
+			}

@@ -1,0 +1,19 @@
+
+			/**
+			 * Build return object for now this is a read copy
+			 */
+
+			integrationConfiguration.setActive(configuration.isActive());
+			integrationConfiguration.setDefaultSelected(configuration.isDefaultSelected());
+			integrationConfiguration.setIntegrationKeys(configuration.getIntegrationKeys());
+			integrationConfiguration.setIntegrationOptions(configuration.getIntegrationOptions());
+
+			shippingService.saveShippingQuoteModuleConfiguration(integrationConfiguration, merchantStore);
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error saving shipping modules", e);
+			throw new ServiceRuntimeException("Error saving shipping module", e);
+		}
+
+	}
+

@@ -1,0 +1,6 @@
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	
+	@Inject
+	private ProductRelationshipService productRelationshipService;
+

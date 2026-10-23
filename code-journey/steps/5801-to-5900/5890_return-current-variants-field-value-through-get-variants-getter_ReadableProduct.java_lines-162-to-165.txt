@@ -1,0 +1,4 @@
+	public List<ReadableProductVariant> getVariants() {
+		return variants;
+	}
+

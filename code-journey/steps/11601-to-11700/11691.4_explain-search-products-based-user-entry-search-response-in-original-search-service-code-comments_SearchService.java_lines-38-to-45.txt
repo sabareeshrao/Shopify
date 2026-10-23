@@ -1,0 +1,8 @@
+
+	/**
+	 * Search products based on user entry
+	 */
+
+	SearchResponse search(MerchantStore store, String language, SearchRequest search,
+					int entriesCount, int startIndex) throws ServiceException;
+

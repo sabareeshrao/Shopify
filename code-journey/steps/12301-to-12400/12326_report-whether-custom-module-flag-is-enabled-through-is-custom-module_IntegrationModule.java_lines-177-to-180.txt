@@ -1,0 +1,4 @@
+	public boolean isCustomModule() {
+		return customModule;
+	}
+

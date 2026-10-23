@@ -1,0 +1,7 @@
+				target.setRatingCount(source.getProductReviewCount().intValue());
+			}*/
+			if(description!=null) {
+			    com.salesmanager.shop.model.catalog.product.ProductDescription tragetDescription = populateDescription(description);
+				target.setDescription(tragetDescription);
+
+			}

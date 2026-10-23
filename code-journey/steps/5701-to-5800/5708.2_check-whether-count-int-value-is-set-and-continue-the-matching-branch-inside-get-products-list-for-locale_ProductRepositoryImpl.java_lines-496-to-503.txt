@@ -1,0 +1,8 @@
+		countQ.setParameter("dt", new Date());
+		countQ.setParameter("mId", store.getId());
+
+		Number count = (Number) countQ.getSingleResult();
+
+		productList.setTotalCount(count.intValue());
+
+		if (count.intValue() == 0)

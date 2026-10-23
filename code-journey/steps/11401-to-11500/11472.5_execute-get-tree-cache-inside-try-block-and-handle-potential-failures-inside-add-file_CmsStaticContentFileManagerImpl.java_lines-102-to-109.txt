@@ -1,0 +1,8 @@
+		 * new ServiceException(
+		 * "CmsStaticContentFileManagerInfinispanImpl has a null cacheManager.getTreeCache()"
+		 * ); }
+		 */
+		try {
+
+			// base path
+			String rootPath = this.buildRootPath();

@@ -1,0 +1,8 @@
+NotEmpty.customer.shipping.phone=Le numéro de telephone de livraison ne doit pas être vide
+NotEmpty.customer.shipping.stateProvince=L'état / province de la livraison est requis
+
+NotEmpty.order.creditcard.number=Un numéro de carte de crédit valide est requis
+NotEmpty.order.creditcard.name=Le nom aparaissant sur la carte de crédit est requis
+NotEmpty.order.creditcard.cvv=Les numéros de vérification aparaisasant sur la carte de crédit sont requis
+NotEmpty.contact.name=Le nom de la personne contact est requis
+NotEmpty.contact.subject=Le sujet du formulaire de contact est requis

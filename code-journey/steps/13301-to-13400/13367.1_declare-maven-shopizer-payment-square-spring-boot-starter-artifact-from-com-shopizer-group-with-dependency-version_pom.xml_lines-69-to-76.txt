@@ -1,0 +1,8 @@
+		
+
+		<!--
+		Want to use Square Payment Module ?
+        <dependency>
+            <groupId>com.shopizer</groupId>
+            <artifactId>shopizer-payment-square-spring-boot-starter</artifactId>
+            <version>1.0.0</version>

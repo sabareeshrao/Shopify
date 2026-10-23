@@ -1,0 +1,8 @@
+				if (object.get("defaultSelected") != null) {
+					configuration.setDefaultSelected((Boolean) object.get("defaultSelected"));
+				}
+				if (object.get("environment") != null) {
+					configuration.setEnvironment((String) object.get("environment"));
+				}
+				configuration.setModuleCode(moduleCode);
+

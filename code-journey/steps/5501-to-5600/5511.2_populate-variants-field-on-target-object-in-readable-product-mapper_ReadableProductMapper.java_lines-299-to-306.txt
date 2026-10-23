@@ -1,0 +1,8 @@
+					.getVariants().stream()
+					.map(i -> readableProductVariantMapper.convert(i, store, language)).collect(Collectors.toList());
+			destination.setVariants(instances);
+			
+			/**
+			 * When an item has instances
+			 * Take default instance
+			 * 

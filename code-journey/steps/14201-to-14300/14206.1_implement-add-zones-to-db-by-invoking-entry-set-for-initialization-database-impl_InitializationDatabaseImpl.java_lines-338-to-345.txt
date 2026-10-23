@@ -1,0 +1,8 @@
+	private void addZonesToDb(Map<String,Zone> zonesMap) throws RuntimeException {
+		
+		try {
+		
+	        for (Map.Entry<String, Zone> entry : zonesMap.entrySet()) {
+	    	    String key = entry.getKey();
+	    	    Zone value = entry.getValue();
+

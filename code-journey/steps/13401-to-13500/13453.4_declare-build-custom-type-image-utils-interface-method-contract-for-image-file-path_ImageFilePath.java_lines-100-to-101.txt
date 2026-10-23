@@ -1,0 +1,2 @@
+	String buildCustomTypeImageUtils(MerchantStore store, String imageName, FileContentType type);
+	

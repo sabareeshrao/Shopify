@@ -1,0 +1,4 @@
+		
+		if(storeModel.isRetailer() != null && storeModel.isRetailer() && storeModel.getParent() == null) {
+			return storeModel;
+		}

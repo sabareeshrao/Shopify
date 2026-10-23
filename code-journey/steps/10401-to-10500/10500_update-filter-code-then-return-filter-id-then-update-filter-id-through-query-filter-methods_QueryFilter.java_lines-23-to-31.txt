@@ -1,0 +1,9 @@
+	public void setFilterCode(String filterCode) {
+		this.filterCode = filterCode;
+	}
+	public Long getFilterId() {
+		return filterId;
+	}
+	public void setFilterId(Long filterId) {
+		this.filterId = filterId;
+	}

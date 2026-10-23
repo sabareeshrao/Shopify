@@ -1,0 +1,8 @@
+		
+
+		target.setLatitude(source.getLatitude());
+		target.setLongitude(source.getLongitude());
+
+		
+		if(StringUtils.isNotBlank( source.getCity() )){
+            target.setCity(source.getCity());

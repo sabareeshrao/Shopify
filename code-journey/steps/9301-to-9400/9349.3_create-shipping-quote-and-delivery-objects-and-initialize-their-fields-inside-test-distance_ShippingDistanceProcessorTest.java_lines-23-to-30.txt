@@ -1,0 +1,8 @@
+		ShippingQuote shippingQuote = new ShippingQuote();
+		
+		Delivery delivery = new Delivery();
+		delivery.setAddress("2055 Peel Street");
+		delivery.setCity("Montreal");
+		delivery.setPostalCode("H3A 1V4");
+		
+		Country country = new Country();

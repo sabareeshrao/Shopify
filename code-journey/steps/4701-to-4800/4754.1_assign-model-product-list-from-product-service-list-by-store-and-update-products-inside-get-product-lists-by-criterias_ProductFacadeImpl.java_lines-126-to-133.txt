@@ -1,0 +1,8 @@
+
+		
+		Page<Product> modelProductList = productService.listByStore(store, language, criterias, criterias.getStartPage(), criterias.getMaxCount());
+		
+		List<Product> products = modelProductList.getContent();
+		
+		List<Product> prds = products.stream().sorted(Comparator.comparing(Product::getSortOrder)).collect(Collectors.toList());
+		products = prds;

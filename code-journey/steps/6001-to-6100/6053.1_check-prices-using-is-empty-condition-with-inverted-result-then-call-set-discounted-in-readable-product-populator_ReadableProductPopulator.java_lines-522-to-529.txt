@@ -1,0 +1,8 @@
+
+				//price appender
+				if(availability != null) {
+					Set<ProductPrice> prices = availability.getPrices();
+					if(!CollectionUtils.isEmpty(prices)) {
+						ReadableProductPrice readableProductPrice = new ReadableProductPrice();
+						readableProductPrice.setDiscounted(target.isDiscounted());
+						readableProductPrice.setFinalPrice(target.getFinalPrice());

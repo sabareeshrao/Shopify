@@ -1,0 +1,8 @@
+
+			} else {
+			  for(CategoryDescription d : source.getDescriptions()) {
+                com.salesmanager.core.model.catalog.category.CategoryDescription t = new com.salesmanager.core.model.catalog.category.CategoryDescription();
+
+			    this.buildDescription(d, t);
+			    t.setCategory(target);
+			    descriptions.add(t);

@@ -1,0 +1,6 @@
+	@Override
+	@Cacheable("zoneByCode")
+	public Zone getByCode(String code) {
+		return zoneRepository.findByCode(code);
+	}
+

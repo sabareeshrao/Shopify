@@ -1,0 +1,7 @@
+	@Override
+	public ProductAttribute getById(Long id) {
+
+		return productAttributeRepository.findOne(id);
+
+	}
+

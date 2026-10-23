@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(PayPalExpressCheckoutPayment.class);
+	
+	
+	@Inject
+	private PricingService pricingService;
+	
+	@Inject
+	private CoreConfiguration coreConfiguration;

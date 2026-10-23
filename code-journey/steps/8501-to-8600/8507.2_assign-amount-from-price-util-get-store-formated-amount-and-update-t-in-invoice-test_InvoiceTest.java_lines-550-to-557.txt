@@ -1,0 +1,8 @@
+				String amount = priceUtil.getStoreFormatedAmountWithCurrency(store, orderProduct.getOneTimeCharge());
+				sheet.setValueAt(amount, 2, productCell);
+				String t = priceUtil.getStoreFormatedAmountWithCurrency(store, priceUtil.getOrderProductTotalPrice(store, orderProduct));
+				sheet.setValueAt(t, 3, productCell);
+
+				productCell++;
+				
+			}

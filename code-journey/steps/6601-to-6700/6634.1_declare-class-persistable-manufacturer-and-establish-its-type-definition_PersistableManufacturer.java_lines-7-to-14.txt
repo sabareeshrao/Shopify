@@ -1,0 +1,8 @@
+public class PersistableManufacturer extends ManufacturerEntity implements
+		Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<ManufacturerDescription> descriptions = new ArrayList<ManufacturerDescription>();

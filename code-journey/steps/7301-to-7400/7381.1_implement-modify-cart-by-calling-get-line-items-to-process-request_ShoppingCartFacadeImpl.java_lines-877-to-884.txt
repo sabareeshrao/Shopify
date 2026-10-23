@@ -1,0 +1,8 @@
+	private ReadableShoppingCart modifyCart(ShoppingCart cartModel, PersistableShoppingCartItem item,
+			MerchantStore store, Language language) throws Exception {
+
+		com.salesmanager.core.model.shoppingcart.ShoppingCartItem itemModel = createCartItem(cartModel, item, store);
+
+		boolean itemModified = false;
+		// check if existing product
+		Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> items = cartModel.getLineItems();

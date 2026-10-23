@@ -1,0 +1,8 @@
+				   if(!CollectionUtils.isEmpty(destination.getDescriptions())) {
+				      for(ProductDescription desc : destination.getDescriptions()) {
+				        if(desc.getLanguage().getCode().equals(description.getLanguage())) {
+				          productDescription = desc;
+				          break;
+				        }
+				      }
+				    }

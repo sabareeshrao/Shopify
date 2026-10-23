@@ -1,0 +1,8 @@
+@Api(tags = { "Order status history api" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Order status history resource", description = "Related to OrderManagement api") })
+public class OrderStatusHistoryApi {
+
+	@Inject
+	private OrderFacade orderFacade;
+

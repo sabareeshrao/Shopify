@@ -1,0 +1,4 @@
+		
+		oproductprice2.setOrderProduct(oproduct2);		
+		order.getOrderProducts().add(oproduct2);
+		

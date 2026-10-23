@@ -1,0 +1,15 @@
+	
+	    static final int GRACE_PERIOD = 200;
+	
+	
+	
+	 	static final String CLAIM_KEY_USERNAME = "sub";
+	    static final String CLAIM_KEY_AUDIENCE = "aud";
+	    static final String CLAIM_KEY_CREATED = "iat";
+
+	    static final String AUDIENCE_UNKNOWN = "unknown";
+	    static final String AUDIENCE_API = "api";
+	    static final String AUDIENCE_WEB = "web";
+	    static final String AUDIENCE_MOBILE = "mobile";
+	    static final String AUDIENCE_TABLET = "tablet";
+

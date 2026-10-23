@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.catalog.product.type.ProductType;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.mapper.catalog.PersistableProductAttributeMapper;
+import com.salesmanager.shop.model.catalog.product.PersistableImage;
+import com.salesmanager.shop.model.catalog.product.ProductPriceEntity;

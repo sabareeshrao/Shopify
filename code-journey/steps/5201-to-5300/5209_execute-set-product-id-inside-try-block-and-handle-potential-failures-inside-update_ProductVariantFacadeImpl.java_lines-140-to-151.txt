@@ -1,0 +1,12 @@
+		
+		productVariant.setProductId(productId);
+		
+		ProductVariant mergedModel = persistableProductVariantMapper.merge(productVariant, instanceModel.get(), store, language);
+		try {
+			productVariantService.saveProductVariant(mergedModel);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot save product instance for store [" + store.getCode() + "] and productId [" + productId + "]", e);
+		}
+		
+	}
+	

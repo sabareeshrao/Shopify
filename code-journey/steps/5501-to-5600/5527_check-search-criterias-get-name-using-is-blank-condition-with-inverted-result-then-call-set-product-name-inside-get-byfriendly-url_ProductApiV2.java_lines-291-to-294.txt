@@ -1,0 +1,4 @@
+		
+		if (!StringUtils.isBlank(searchCriterias.getName())) {
+			searchCriterias.setProductName(searchCriterias.getName());
+		}

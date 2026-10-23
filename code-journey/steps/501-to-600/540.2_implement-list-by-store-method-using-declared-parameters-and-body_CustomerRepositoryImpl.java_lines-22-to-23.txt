@@ -1,0 +1,2 @@
+	public CustomerList listByStore(MerchantStore store, CustomerCriteria criteria) {
+		

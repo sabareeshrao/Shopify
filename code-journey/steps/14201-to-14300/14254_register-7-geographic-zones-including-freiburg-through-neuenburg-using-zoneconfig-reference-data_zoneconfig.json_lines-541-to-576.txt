@@ -1,0 +1,36 @@
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "FR",
+		"zoneName": "Freiburg",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "GE",
+		"zoneName": "Genf",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "GL",
+		"zoneName": "Glarus",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "GR",
+		"zoneName": "Graubnden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "JU",
+		"zoneName": "Jura",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "LU",
+		"zoneName": "Luzern",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "NECH",
+		"zoneName": "Neuenburg",
+		"countryCode": "CH"

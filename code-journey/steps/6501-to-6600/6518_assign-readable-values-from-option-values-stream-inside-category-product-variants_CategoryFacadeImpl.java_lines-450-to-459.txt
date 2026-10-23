@@ -1,0 +1,10 @@
+
+					
+					//sort by name
+					// remove duplicates
+					readableValues = optionValues.stream().distinct().collect(Collectors.toList());
+					readableValues.sort(Comparator.comparing(ReadableProductVariantValue::getName));
+					
+					productVariant.setOptions(readableValues);
+					variants.add(productVariant);
+				}

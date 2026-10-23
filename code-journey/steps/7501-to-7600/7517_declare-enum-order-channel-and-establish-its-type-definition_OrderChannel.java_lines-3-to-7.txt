@@ -1,0 +1,5 @@
+public enum OrderChannel {
+	
+	ONLINE, API
+
+}

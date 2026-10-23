@@ -1,0 +1,8 @@
+	 * the administration tool. Here is an example of configuration accepted
+	 * 
+	 * 	{
+		"module": "PAYMENT",
+		"code": "paypal-express-checkout",
+		"type":"paypal",
+		"version":"104.0",
+		"regions": ["*"],

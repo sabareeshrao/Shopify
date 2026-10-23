@@ -1,0 +1,3 @@
+		if (option == null) {
+			throw new ResourceNotFoundException("Option id [" + optionId + "] not found");
+		}

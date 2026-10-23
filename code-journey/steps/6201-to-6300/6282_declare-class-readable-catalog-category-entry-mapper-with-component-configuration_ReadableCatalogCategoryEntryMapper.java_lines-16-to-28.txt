@@ -1,0 +1,13 @@
+import java.util.Optional;
+
+@Component
+public class ReadableCatalogCategoryEntryMapper implements Mapper<CatalogCategoryEntry, ReadableCatalogCategoryEntry> {
+	
+	
+	@Autowired
+	private ReadableCategoryMapper readableCategoryMapper;
+	
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

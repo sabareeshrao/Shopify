@@ -1,0 +1,12 @@
+public class Package implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	public int getTreshold() {
+		return treshold;
+	}

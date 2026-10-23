@@ -1,0 +1,5 @@
+			
+			//13
+			if(!StringUtils.isBlank(order.getBilling().getTelephone())) {
+				sheet.setValueAt(order.getBilling().getTelephone(), 0, billToCell);
+			}

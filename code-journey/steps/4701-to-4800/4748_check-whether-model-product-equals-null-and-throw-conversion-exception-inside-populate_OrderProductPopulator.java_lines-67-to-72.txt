@@ -1,0 +1,6 @@
+		
+		try {
+			Product modelProduct = productService.getBySku(source.getSku(), store, language);
+			if(modelProduct==null) {
+				throw new ConversionException("Cannot get product with sku " + source.getSku());
+			}

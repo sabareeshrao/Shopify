@@ -1,0 +1,7 @@
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		try {
+			TaxRate model = taxRateService.getById(id, store);
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxRate not found [" + id + "]");
+			} 

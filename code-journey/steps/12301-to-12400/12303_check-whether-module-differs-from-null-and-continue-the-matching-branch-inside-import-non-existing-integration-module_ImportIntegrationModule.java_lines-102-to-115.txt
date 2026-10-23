@@ -1,0 +1,14 @@
+
+			//get the module to be loaded
+			for (Map o : objects) {
+				//get module object
+				IntegrationModule module = integrationModulesLoader.loadModule(o);
+
+				if (module != null) {
+					IntegrationModule m = moduleCongigurationService.getByCode(module.getCode());
+					if (m == null) {
+						moduleCongigurationService.create(module);
+					}
+				}
+
+			}

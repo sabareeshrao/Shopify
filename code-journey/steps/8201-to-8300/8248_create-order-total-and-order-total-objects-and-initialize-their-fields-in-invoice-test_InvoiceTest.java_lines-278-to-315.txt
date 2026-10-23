@@ -1,0 +1,38 @@
+
+		
+		//OrderTotal
+		OrderTotal subtotal = new OrderTotal();	
+		subtotal.setModule("summary" );		
+		subtotal.setSortOrder(0);
+		subtotal.setText("Summary" );
+		subtotal.setTitle("Summary" );
+		subtotal.setValue(new BigDecimal(19.99 ) );
+		subtotal.setOrder(order);
+		
+		order.getOrderTotal().add(subtotal);
+		
+		OrderTotal tax = new OrderTotal();	
+		tax.setModule("tax" );		
+		tax.setSortOrder(1);
+		tax.setText("Tax" );
+		tax.setTitle("Tax" );
+		tax.setValue(new BigDecimal(4) );
+		tax.setOrder(order);
+		
+		order.getOrderTotal().add(tax);
+		
+		OrderTotal total = new OrderTotal();	
+		total.setModule("total" );		
+		total.setSortOrder(2);
+		total.setText("Total" );
+		total.setTitle("Total" );
+		total.setValue(new BigDecimal(23.99) );
+		total.setOrder(order);
+		
+		order.getOrderTotal().add(total);
+		
+		orderService.create(order);
+		Assert.assertTrue(orderService.count() == 1);
+		
+		Locale locale = Locale.ENGLISH;
+		

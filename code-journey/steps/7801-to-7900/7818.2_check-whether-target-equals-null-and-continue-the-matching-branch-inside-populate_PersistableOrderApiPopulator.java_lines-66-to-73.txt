@@ -1,0 +1,8 @@
+		Validate.notNull(productService,"productService must be set");
+		Validate.notNull(productAttributeService,"productAttributeService must be set");
+		Validate.notNull(digitalProductService,"digitalProductService must be set");*/
+		Validate.notNull(source.getPayment(),"Payment cannot be null");
+		
+		try {
+			
+			if(target == null) {

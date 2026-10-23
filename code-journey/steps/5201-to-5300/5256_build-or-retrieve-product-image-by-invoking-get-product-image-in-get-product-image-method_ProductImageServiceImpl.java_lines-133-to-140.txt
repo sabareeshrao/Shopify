@@ -1,0 +1,8 @@
+	@Override
+	public OutputContentFile getProductImage(ProductImage productImage, ProductImageSize size) throws ServiceException {
+
+		ProductImage pi = new ProductImage();
+		String imageName = productImage.getProductImage();
+		if (size == ProductImageSize.LARGE) {
+			imageName = "L-" + imageName;
+		}

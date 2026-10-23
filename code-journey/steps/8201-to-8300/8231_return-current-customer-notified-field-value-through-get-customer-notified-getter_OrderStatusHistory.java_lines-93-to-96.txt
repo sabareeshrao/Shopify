@@ -1,0 +1,4 @@
+	public java.lang.Integer getCustomerNotified() {
+		return customerNotified;
+	}
+

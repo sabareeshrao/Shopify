@@ -1,0 +1,8 @@
+	private SystemConfigurationService systemConfigurationService;
+	
+	@Inject
+	private WebUserServices userDetailsService;
+
+	@Inject
+	protected PermissionService  permissionService;
+	

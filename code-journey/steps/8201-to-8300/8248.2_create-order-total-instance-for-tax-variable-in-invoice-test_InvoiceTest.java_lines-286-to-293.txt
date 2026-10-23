@@ -1,0 +1,8 @@
+		subtotal.setValue(new BigDecimal(19.99 ) );
+		subtotal.setOrder(order);
+		
+		order.getOrderTotal().add(subtotal);
+		
+		OrderTotal tax = new OrderTotal();	
+		tax.setModule("tax" );		
+		tax.setSortOrder(1);

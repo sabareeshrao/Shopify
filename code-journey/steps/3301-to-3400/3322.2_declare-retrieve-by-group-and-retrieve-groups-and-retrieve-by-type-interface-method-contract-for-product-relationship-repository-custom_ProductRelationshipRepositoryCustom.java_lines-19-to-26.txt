@@ -1,0 +1,8 @@
+	List<ProductRelationship> getByGroup(MerchantStore store, String group);
+
+	List<ProductRelationship> getGroups(MerchantStore store);
+
+	List<ProductRelationship> getByType(MerchantStore store, String type);
+	
+	List<ProductRelationship> getGroupByType(MerchantStore store, String type);
+

@@ -1,0 +1,7 @@
+            //resolve zone name
+            try {
+				Map<String,Zone> zones = zoneService.getZones(language);
+				Zone z = zones.get(source.getZone().getCode());
+				if(z!=null) {
+					target.setProvinceName(z.getName());
+				}

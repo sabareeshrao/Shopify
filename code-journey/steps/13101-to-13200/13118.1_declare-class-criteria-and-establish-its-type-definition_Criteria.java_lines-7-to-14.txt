@@ -1,0 +1,8 @@
+public class Criteria {
+
+	// legacy pagination
+	private int startIndex = 0;
+	private int maxCount = 0;
+	// new pagination
+	private int startPage = 0;
+	private int pageSize = 10;

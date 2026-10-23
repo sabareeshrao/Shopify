@@ -1,0 +1,8 @@
+menu.users=Users
+menu.user=User
+menu.myprofile=My profile
+menu.change-password=Change password
+menu.create-user=Create a user
+menu.create-store=Create a store
+menu.store-list=Stores
+menu.security=Security

@@ -1,0 +1,8 @@
+	@Override
+	public void delete(Long id, MerchantStore store) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(id, "id cannot be null");
+		ProductOptionSet opt = productOptionSetService.getById(id);
+		if (opt == null) {
+			throw new ResourceNotFoundException(
+					"ProductOptionSet not found for id [" + id + "] and store [" + store.getCode() + "]");

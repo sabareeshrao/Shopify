@@ -1,0 +1,4 @@
+	public SecurityDataAccessException(String msg) {
+		super(msg);
+	}
+	

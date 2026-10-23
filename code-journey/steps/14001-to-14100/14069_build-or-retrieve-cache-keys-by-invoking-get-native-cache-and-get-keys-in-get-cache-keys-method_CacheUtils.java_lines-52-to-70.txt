@@ -1,0 +1,19 @@
+	public List<String> getCacheKeys(MerchantStore store) throws Exception {
+		
+		  net.sf.ehcache.Cache cacheImpl = (net.sf.ehcache.Cache) cache.getNativeCache();
+		  List<String> returnKeys = new ArrayList<String>();
+		  for (Object key: cacheImpl.getKeys()) {
+		    
+			  
+				try {
+					String sKey = (String)key;
+					
+					// a key should be <storeId>_<rest of the key>
+					int delimiterPosition = sKey.indexOf(KEY_DELIMITER);
+					
+					if(delimiterPosition>0 && Character.isDigit(sKey.charAt(0))) {
+					
+						String keyRemaining = sKey.substring(delimiterPosition+1);
+						returnKeys.add(keyRemaining);
+					
+					}

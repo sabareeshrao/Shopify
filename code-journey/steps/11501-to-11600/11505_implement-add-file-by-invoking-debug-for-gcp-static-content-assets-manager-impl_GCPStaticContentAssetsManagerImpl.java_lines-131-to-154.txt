@@ -1,0 +1,24 @@
+	@Override
+	public void addFile(String merchantStoreCode, Optional<String> folderPath, InputContentFile inputStaticContentData) throws ServiceException {
+
+		try {
+			LOGGER.debug("Adding file " + inputStaticContentData.getFileName());
+			String bucketName = bucketName();
+	  
+			String nodePath = nodePath(merchantStoreCode, inputStaticContentData.getFileContentType());
+	  
+			Storage storage = StorageOptions.getDefaultInstance().getService();
+	  
+			BlobId blobId = BlobId.of(bucketName, nodePath + inputStaticContentData.getFileName());
+			BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType(inputStaticContentData.getFileContentType().name())
+				.build();
+			byte[] targetArray = new byte[inputStaticContentData.getFile().available()];
+			inputStaticContentData.getFile().read(targetArray);
+			storage.create(blobInfo, targetArray);
+			LOGGER.info("Content add file");
+		} catch (IOException e) {
+			LOGGER.error("Error while adding file", e);
+			throw new ServiceException(e);
+		}
+	}
+

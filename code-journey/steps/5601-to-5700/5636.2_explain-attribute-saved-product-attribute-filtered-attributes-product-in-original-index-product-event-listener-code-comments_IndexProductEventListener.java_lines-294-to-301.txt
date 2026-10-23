@@ -1,0 +1,8 @@
+
+		/**
+		 * add new attribute to be saved
+		 **/
+
+		List<ProductAttribute> filteredAttributes = product.getAttributes().stream()
+				.filter(i -> i.getId().longValue() != i.getId().longValue()).collect(Collectors.toList());
+

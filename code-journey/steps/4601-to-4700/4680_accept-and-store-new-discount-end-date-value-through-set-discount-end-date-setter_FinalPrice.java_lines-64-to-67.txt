@@ -1,0 +1,4 @@
+	public void setDiscountEndDate(Date discountEndDate) {
+		this.discountEndDate = discountEndDate;
+	}
+

@@ -1,0 +1,9 @@
+  @Override
+  public ReadableCustomer getByUserName(String userName, MerchantStore merchantStore, Language language) {
+    Validate.notNull(userName,"Username cannot be null");
+    Validate.notNull(merchantStore,"MerchantStore cannot be null");
+
+    Customer customerModel = getCustomerByNickAndStoreId(userName, merchantStore);
+    return convertCustomerToReadableCustomer(customerModel, merchantStore, language);
+  }
+

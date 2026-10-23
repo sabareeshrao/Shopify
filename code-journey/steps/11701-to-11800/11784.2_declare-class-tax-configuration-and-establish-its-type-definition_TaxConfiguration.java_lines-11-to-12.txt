@@ -1,0 +1,2 @@
+public class TaxConfiguration implements JSONAware {
+	

@@ -1,0 +1,5 @@
+			// check if user exists
+			user = userFacade.findByUserName(store.getEmail());
+
+		} catch (ResourceNotFoundException ignore) {//that is what will happen if user does not exists
+		}

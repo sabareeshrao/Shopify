@@ -1,0 +1,8 @@
+    public void deleteCartItemWithBody() throws Exception {
+
+        final ResponseEntity<ReadableShoppingCart> response =
+                testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() + "/product/" + String.valueOf(data.getProducts().get(1).getSku()) + "?body=true"),
+                        HttpMethod.DELETE,
+                        null,
+                        ReadableShoppingCart.class);
+

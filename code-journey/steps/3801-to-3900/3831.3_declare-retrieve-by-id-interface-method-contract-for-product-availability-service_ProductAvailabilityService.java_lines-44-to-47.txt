@@ -1,0 +1,4 @@
+	Optional<ProductAvailability> getById(Long availabilityId, MerchantStore store);
+
+
+}

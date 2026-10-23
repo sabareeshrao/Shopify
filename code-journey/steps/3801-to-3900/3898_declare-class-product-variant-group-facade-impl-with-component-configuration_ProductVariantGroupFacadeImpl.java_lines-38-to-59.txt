@@ -1,0 +1,22 @@
+
+@Component
+public class ProductVariantGroupFacadeImpl implements ProductVariantGroupFacade {
+	
+	@Autowired
+	private ProductVariantGroupService productVariantGroupService;
+	
+	@Autowired
+	private ProductVariantService productVariantService;
+	
+	@Autowired
+	private ProductVariantImageService productVariantImageService;
+	
+	@Autowired
+	private PersistableProductVariantGroupMapper persistableProductIntanceGroupMapper;
+	
+	@Autowired
+	private ReadableProductVariantGroupMapper readableProductVariantGroupMapper;
+	
+	@Autowired
+	private ContentService contentService; //file management
+

@@ -1,0 +1,8 @@
+	public void validateModuleConfiguration(IntegrationConfiguration integrationConfiguration, MerchantStore store) throws IntegrationException;
+	
+
+	/**
+	 * Returns token-value related to the initialization of the transaction This
+	 * method is invoked for paypal express checkout
+	 * @param store MerchantStore
+	 * @param customer Customer

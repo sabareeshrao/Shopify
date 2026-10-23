@@ -1,0 +1,8 @@
+	     review.setProduct(product);
+	     review.setReviewRating(4d);
+	     Language en = languageService.getByCode("en");
+	        
+	     ProductReviewDescription reviewDescription = new ProductReviewDescription();
+	     reviewDescription.setLanguage(en);
+	     reviewDescription.setDescription("This is a product review");
+	     reviewDescription.setName("A review for you");

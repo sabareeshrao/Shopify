@@ -1,0 +1,8 @@
+      if (groupsId != null && groupsId.size() > 0) {
+        List<Permission> permissions = permissionService.getPermissions(groupsId);
+        for (Permission permission : permissions) {
+          GrantedAuthority auth = new SimpleGrantedAuthority(permission.getPermissionName());
+          authorities.add(auth);
+        }
+      }
+    }

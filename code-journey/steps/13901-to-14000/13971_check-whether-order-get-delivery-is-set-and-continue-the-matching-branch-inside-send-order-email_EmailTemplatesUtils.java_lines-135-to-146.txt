@@ -1,0 +1,12 @@
+			    	   shipping.append(order.getDelivery().getAddress()).append(LINE_BREAK);
+			    	   shipping.append(order.getDelivery().getCity()).append(", ");
+			    	   
+			    	   if(order.getDelivery().getZone()!=null) {
+			    		   Zone zone = zones.get(order.getDelivery().getZone().getCode());
+			    		   if(zone!=null) {
+			    			   shipping.append(zone.getName());
+			    		   }
+			    		   shipping.append(LINE_BREAK);
+			    	   } else if(!StringUtils.isBlank(order.getDelivery().getState())) {
+			    		   shipping.append(order.getDelivery().getState()).append(LINE_BREAK); 
+			    	   }

@@ -1,0 +1,28 @@
+		
+		destination.setCode(source.getCode());
+		destination.setDefaultCatalog(source.isDefaultCatalog());
+		destination.setVisible(source.isVisible());
+
+		Optional<ReadableMerchantStore> readableStore = Optional.ofNullable(source.getMerchantStore())
+				.map(MerchantStore::getCode)
+				.map(code -> storeFacade.getByCode(code, language));
+		readableStore.ifPresent(destination::setStore);
+		
+		destination.setDefaultCatalog(source.isDefaultCatalog());
+
+		Optional<String> formattedCreationDate = Optional.ofNullable(source.getAuditSection())
+				.map(AuditSection::getDateCreated)
+				.map(DateUtil::formatDate);
+		formattedCreationDate.ifPresent(destination::setCreationDate);
+		
+		if(CollectionUtils.isNotEmpty(source.getEntry())) {
+			
+			//hierarchy temp object
+			Map<Long, ReadableCategory> hierarchy = new HashMap<Long, ReadableCategory>();
+
+			source.getEntry().forEach(entry -> {
+				processCategory(entry.getCategory(), store, language, hierarchy, new HashMap<>());
+			});
+			
+			destination.setCategory(new ArrayList<>(hierarchy.values()));
+		}

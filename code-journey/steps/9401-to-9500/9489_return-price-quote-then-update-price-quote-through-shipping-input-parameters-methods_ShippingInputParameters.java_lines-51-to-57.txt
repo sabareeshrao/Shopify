@@ -1,0 +1,7 @@
+	public String getPriceQuote() {
+		return priceQuote;
+	}
+	public void setPriceQuote(String priceQuote) {
+		this.priceQuote = priceQuote;
+	}
+	

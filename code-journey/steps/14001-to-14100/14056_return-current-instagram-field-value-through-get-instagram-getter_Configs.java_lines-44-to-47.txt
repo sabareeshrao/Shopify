@@ -1,0 +1,4 @@
+	public String getInstagram() {
+		return instagram;
+	}
+

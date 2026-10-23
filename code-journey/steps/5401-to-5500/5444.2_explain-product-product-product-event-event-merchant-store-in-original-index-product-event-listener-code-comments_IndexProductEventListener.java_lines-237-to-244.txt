@@ -1,0 +1,8 @@
+		/**
+
+		Product product = productOfEvent(event);
+
+		MerchantStore store = product.getMerchantStore();
+
+		List<ProductImage> filteredImages = product.getImages().stream()
+				.filter(i -> i.getId().longValue() != i.getId().longValue()).collect(Collectors.toList());

@@ -1,0 +1,8 @@
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Summer shoes");
+	    description.setLanguage(en);
+	    description.setProduct(summerShoes);
+
+	    summerShoes.getDescriptions().add(description);

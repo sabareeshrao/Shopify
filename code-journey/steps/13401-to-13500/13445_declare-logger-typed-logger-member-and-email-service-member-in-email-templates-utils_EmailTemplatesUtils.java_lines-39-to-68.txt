@@ -1,0 +1,30 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(EmailTemplatesUtils.class);
+	
+	@Inject
+	private EmailService emailService;
+
+	@Inject
+	private LabelUtils messages;
+	
+	@Inject
+	private CountryService countryService;
+	
+	@Inject
+	private ProductService productService;
+	
+	@Inject
+	private ZoneService zoneService;
+	
+	@Inject
+	private PricingService pricingService;
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	
+	@Inject
+	private EmailUtils emailUtils;
+	
+	@Inject
+	private FilePathUtils filePathUtils;
+	

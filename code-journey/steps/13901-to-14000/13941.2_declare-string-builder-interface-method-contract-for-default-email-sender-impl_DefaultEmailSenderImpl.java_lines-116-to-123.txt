@@ -1,0 +1,8 @@
+        BodyPart htmlPage = new MimeBodyPart();
+        freemarkerMailConfiguration.setClassForTemplateLoading(DefaultEmailSenderImpl.class, "/");
+        Template htmlTemplate = freemarkerMailConfiguration.getTemplate(
+            new StringBuilder(TEMPLATE_PATH).append("/").append(tmpl).toString());
+        final StringWriter htmlWriter = new StringWriter();
+        try {
+          htmlTemplate.process(templateTokens, htmlWriter);
+        } catch (TemplateException e) {

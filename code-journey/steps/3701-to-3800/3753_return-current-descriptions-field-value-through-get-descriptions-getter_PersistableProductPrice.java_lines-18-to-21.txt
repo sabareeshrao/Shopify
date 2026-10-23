@@ -1,0 +1,4 @@
+	public List<ProductPriceDescription> getDescriptions() {
+		return descriptions;
+	}
+

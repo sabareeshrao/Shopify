@@ -1,0 +1,3 @@
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("Error while populating MerchantStore " + e.getMessage());
+		}

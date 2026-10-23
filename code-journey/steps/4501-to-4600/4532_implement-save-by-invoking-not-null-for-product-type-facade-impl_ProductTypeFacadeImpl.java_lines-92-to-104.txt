@@ -1,0 +1,13 @@
+	@Override
+	public Long save(PersistableProductType type, MerchantStore store, Language language) {
+
+		Validate.notNull(type,"ProductType cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(type.getCode(),"ProductType code cannot be empty");
+
+		try {
+
+			if(this.exists(type.getCode(), store, language)) {
+				throw new OperationNotAllowedException(
+						"Product type [" + type.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}

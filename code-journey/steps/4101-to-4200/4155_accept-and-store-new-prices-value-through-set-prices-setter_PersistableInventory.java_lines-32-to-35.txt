@@ -1,0 +1,4 @@
+	public void setPrices(List<PersistableProductPrice> prices) {
+		this.prices = prices;
+	}
+

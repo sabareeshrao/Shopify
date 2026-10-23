@@ -1,0 +1,7 @@
+public class ReadableProductPriceFull extends ReadableProductPrice {
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;
+  

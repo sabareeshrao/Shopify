@@ -1,0 +1,8 @@
+NotEmpty.order.customerStreetAddress=L'adresse du client ne doit pas être vide
+NotEmpty.order.customerCity=La ville du client ne doit pas être vide
+NotEmpty.order.customerPostCode=Le code postal du client ne doit pas être vide
+NotEmpty.order.customerTelephone=Le numero de telephone du client ne doit pas être vide
+Email.order.customerEmailAddress=Le email du client est invalide
+NotEmpty.order.customerEmailAddress=Le email du client ne doit pas être vide
+
+NotEmpty.order.billingName=Le nom de facturation ne doit pas être vide

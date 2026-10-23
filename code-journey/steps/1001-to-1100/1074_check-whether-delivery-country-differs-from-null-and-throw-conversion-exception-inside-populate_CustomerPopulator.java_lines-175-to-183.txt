@@ -1,0 +1,9 @@
+				
+				if(deliveryCountry!=null && !StringUtils.isBlank(sourceShipping.getZone())) {
+					Zone zone = zoneService.getByCode(sourceShipping.getZone());
+					if(zone==null) {
+						throw new ConversionException("Unsuported zone code " + sourceShipping.getZone());
+					}
+					Zone zoneDescription = zones.get(zone.getCode());
+					delivery.setZone(zoneDescription);
+				}

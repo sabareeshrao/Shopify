@@ -1,0 +1,8 @@
+	@Inject
+	private Encryption encryption;
+
+	@Inject
+	private ShippingOriginService shippingOriginService;
+	
+	@Inject
+	private ShippingQuoteService shippingQuoteService;

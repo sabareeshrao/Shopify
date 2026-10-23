@@ -1,0 +1,30 @@
+
+	/**
+	 * B
+	 * 	1
+	 * 	  D
+	 * 	2
+	 * C
+	 * 	1
+	 * 	4
+	 * A
+	 * @param parent
+	 * @param c
+	 * @param store
+	 * @param language
+	 * @param hierarchy
+	 */
+
+	//TODO it needs to cover by unit tests
+	private void processCategory(Category c, MerchantStore store, Language language, Map<Long, ReadableCategory> hierarchy, Map<Long, ReadableCategory> processed ) {
+		
+		//build category hierarchy
+		
+		ReadableCategory rc = null;
+		ReadableCategory rp = null;
+		
+		if(CollectionUtils.isNotEmpty(c.getCategories())) {
+			c.getCategories().stream().forEach(element -> {
+				processCategory(element, store, language, hierarchy, processed);
+			});
+		}

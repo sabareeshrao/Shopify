@@ -1,0 +1,8 @@
+		 * new ResourceNotFoundException( "MerchantStore [" + child +
+		 * "] is not a store of retailer [" + store.getCode() + "]"); }
+		 * 
+		 * ProductAvailability availability =
+		 * productAvailabilityService.getByStore(product, store) .orElseThrow(() -> new
+		 * ResourceNotFoundException("Inventory with not found"));
+		 * 
+		 * return this.readableInventory(availability, store, language);

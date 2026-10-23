@@ -1,0 +1,4 @@
+	public void setProductWidth(BigDecimal productWidth) {
+		this.productWidth = productWidth;
+	}
+

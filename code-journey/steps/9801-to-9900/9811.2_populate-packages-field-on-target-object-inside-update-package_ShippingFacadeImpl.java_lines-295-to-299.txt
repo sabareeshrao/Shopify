@@ -1,0 +1,5 @@
+		config.setPackages(packs);
+		this.saveShippingConfiguration(config, store);
+		
+	}
+

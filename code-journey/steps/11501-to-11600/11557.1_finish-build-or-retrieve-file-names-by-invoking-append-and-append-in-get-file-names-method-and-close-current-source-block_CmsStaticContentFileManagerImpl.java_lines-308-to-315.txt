@@ -1,0 +1,8 @@
+
+	}
+
+	/**
+	 * Queries the CMS to retrieve all static content files. Only the name of
+	 * the file will be returned to the client
+	 * 
+	 * @param merchantStoreCode

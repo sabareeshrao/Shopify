@@ -1,0 +1,8 @@
+	    Manufacturer addidas = new Manufacturer();
+	    addidas.setMerchantStore(merchant);
+	    addidas.setCode("addidas");
+
+	    ManufacturerDescription addidasDesc = new ManufacturerDescription();
+	    addidasDesc.setLanguage(en);
+	    addidasDesc.setManufacturer(addidas);
+	    addidasDesc.setName("Addidas");

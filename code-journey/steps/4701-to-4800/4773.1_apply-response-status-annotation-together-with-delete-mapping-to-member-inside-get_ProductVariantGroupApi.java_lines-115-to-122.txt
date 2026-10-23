@@ -1,0 +1,8 @@
+
+	// delete
+
+	@ResponseStatus(HttpStatus.OK)
+	@DeleteMapping(value = { "/private/product/productVariantGroup/{id}" })
+	@ApiOperation(httpMethod = "DELETE", value = "Delete product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody void delete(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {

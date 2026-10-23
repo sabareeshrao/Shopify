@@ -1,0 +1,40 @@
+
+	@Embedded
+	private Delivery delivery = null;
+	
+	@Valid
+	@Embedded
+	private Billing billing = null;
+	
+	@JsonIgnore
+	@ManyToMany(fetch=FetchType.LAZY, cascade = {CascadeType.REFRESH})
+	@JoinTable(name = "CUSTOMER_GROUP", joinColumns = { 
+			@JoinColumn(name = "CUSTOMER_ID", nullable = false, updatable = false) }
+			, 
+			inverseJoinColumns = { @JoinColumn(name = "GROUP_ID", 
+					nullable = false, updatable = false) }
+	)
+	@Cascade({
+		org.hibernate.annotations.CascadeType.DETACH,
+		org.hibernate.annotations.CascadeType.LOCK,
+		org.hibernate.annotations.CascadeType.REFRESH,
+		org.hibernate.annotations.CascadeType.REPLICATE
+		
+	})
+	private List<Group> groups = new ArrayList<Group>();
+	
+	@JsonIgnore
+	@Transient
+	private String showCustomerStateList;
+	
+	@JsonIgnore
+	@Transient
+	private String showBillingStateList;
+	
+	@JsonIgnore
+	@Transient
+	private String showDeliveryStateList;
+
+	@Embedded
+	private CredentialsReset credentialsResetRequest = null;
+

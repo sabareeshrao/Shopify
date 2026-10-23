@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacadeImpl.class);
+	
+	
+	@Autowired
+	private ReadableCustomerMapper readableCustomerMapper;
+	
+	@Autowired
+	private ReadableOrderTotalMapper readableOrderTotalMapper;

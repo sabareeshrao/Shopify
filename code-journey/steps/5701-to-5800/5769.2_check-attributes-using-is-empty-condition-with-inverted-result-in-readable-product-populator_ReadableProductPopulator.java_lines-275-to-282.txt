@@ -1,0 +1,8 @@
+				Map<Long,ReadableProductProperty> properties = null;
+				Map<Long,ReadableProductOption> selectableOptions = null;
+
+				if(!CollectionUtils.isEmpty(attributes)) {
+
+					for(ProductAttribute attribute : attributes) {
+							ReadableProductOption opt = null;
+							ReadableProductAttribute attr = null;

@@ -1,0 +1,16 @@
+	@Override
+	public TaxConfiguration getTaxConfiguration(MerchantStore store) throws ServiceException {
+		
+		
+		
+		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(TAX_CONFIGURATION, store);
+		TaxConfiguration taxConfiguration = null;
+		if(configuration!=null) {
+			String value = configuration.getValue();
+			
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+				taxConfiguration = mapper.readValue(value, TaxConfiguration.class);
+			} catch(Exception e) {
+				throw new ServiceException("Cannot parse json string " + value);
+			}

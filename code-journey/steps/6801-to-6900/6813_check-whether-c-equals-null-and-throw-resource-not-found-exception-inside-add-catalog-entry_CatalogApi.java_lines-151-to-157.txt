@@ -1,0 +1,7 @@
+
+
+	  ReadableCatalog c = catalogFacade.getCatalog(id, merchantStore, language);
+
+	  if(c == null) {
+		  throw new ResourceNotFoundException("Catalog id [" + id + "] not found");
+	  }

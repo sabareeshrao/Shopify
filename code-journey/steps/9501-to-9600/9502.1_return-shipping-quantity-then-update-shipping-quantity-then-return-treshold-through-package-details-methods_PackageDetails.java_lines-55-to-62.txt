@@ -1,0 +1,8 @@
+	public int getShippingQuantity() {
+		return shippingQuantity;
+	}
+	public void setShippingQuantity(int shippingQuantity) {
+		this.shippingQuantity = shippingQuantity;
+	}
+	public int getTreshold() {
+		return treshold;

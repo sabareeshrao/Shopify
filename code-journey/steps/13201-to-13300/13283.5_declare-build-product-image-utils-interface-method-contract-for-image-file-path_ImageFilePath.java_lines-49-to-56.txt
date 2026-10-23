@@ -1,0 +1,8 @@
+	 * utility for getting the physical image
+	 * @param store
+	 * @param product
+	 * @param imageName
+	 * @return
+	 */
+	public String buildProductImageUtils(MerchantStore store, Product product, String imageName);
+	

@@ -1,0 +1,4 @@
+	public TaxBasisCalculation getTaxBasisCalculation() {
+		return taxBasisCalculation;
+	}
+

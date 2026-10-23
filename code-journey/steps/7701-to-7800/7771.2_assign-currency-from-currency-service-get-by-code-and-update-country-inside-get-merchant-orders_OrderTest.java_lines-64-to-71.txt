@@ -1,0 +1,8 @@
+		Currency currency = currencyService.getByCode(USD_CURRENCY_CODE);
+		Country country = countryService.getByCode("US");
+		Zone zone = zoneService.getByCode("VT");
+		Language en = languageService.getByCode("en");
+		
+		MerchantStore merchant = merchantService.getByCode( MerchantStore.DEFAULT_STORE );	
+	
+		/** Create a customer **/

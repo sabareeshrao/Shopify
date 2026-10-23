@@ -1,0 +1,5 @@
+
+			if(this.exists(type.getCode(), store, language)) {
+				throw new OperationNotAllowedException(
+						"Product type [" + type.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}

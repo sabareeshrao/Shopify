@@ -1,0 +1,6 @@
+  @Override
+  public void delete(Manufacturer manufacturer) throws ServiceException {
+    manufacturer = this.getById(manufacturer.getId());
+    super.delete(manufacturer);
+  }
+

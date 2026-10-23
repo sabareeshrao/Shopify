@@ -1,0 +1,8 @@
+	ProductAvailabilityService productAvailabilityService;
+
+	@Inject
+	ProductPriceService productPriceService;
+
+	@Inject
+	ProductOptionService productOptionService;
+

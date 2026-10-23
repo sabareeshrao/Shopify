@@ -1,0 +1,6 @@
+				language, store, coreConfiguration.getProperty("CONTEXT_PATH"));
+
+		if (orderService.hasDownloadFiles(order)) {
+			emailTemplatesUtils.sendOrderDownloadEmail(customer, order, store, locale,
+					coreConfiguration.getProperty("CONTEXT_PATH"));
+		}

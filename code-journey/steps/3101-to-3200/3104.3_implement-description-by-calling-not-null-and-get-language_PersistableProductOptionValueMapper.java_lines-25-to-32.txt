@@ -1,0 +1,8 @@
+
+	ProductOptionValueDescription description(
+			com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription description)
+			throws Exception {
+		Validate.notNull(description.getLanguage(), "description.language should not be null");
+		ProductOptionValueDescription desc = new ProductOptionValueDescription();
+		desc.setId(null);
+		desc.setDescription(description.getDescription());

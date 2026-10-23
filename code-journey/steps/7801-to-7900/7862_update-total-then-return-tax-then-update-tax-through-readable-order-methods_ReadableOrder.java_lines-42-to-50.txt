@@ -1,0 +1,9 @@
+	public void setTotal(OrderTotal total) {
+		this.total = total;
+	}
+	public OrderTotal getTax() {
+		return tax;
+	}
+	public void setTax(OrderTotal tax) {
+		this.tax = tax;
+	}

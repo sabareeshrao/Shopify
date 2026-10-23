@@ -1,0 +1,4 @@
+	}*/
+	public ReadableCategory getCategory() {
+		return category;
+	}

@@ -1,0 +1,8 @@
+	public List<PersistableImage> getImages() {
+		return images;
+	}
+	public void setImages(List<PersistableImage> images) {
+		this.images = images;
+	}
+	public List<Category> getCategories() {
+		return categories;

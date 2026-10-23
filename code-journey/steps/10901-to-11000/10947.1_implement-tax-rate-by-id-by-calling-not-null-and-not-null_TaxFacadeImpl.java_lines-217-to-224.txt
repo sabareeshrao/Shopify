@@ -1,0 +1,8 @@
+		
+	}
+	
+	//get by id
+	private TaxRate taxRateById(Long id, MerchantStore store, Language language) {
+		
+		Validate.notNull(id,"TaxRate id cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");

@@ -1,0 +1,8 @@
+	@Override
+	public void setSupportedCountries(MerchantStore store, List<String> countryCodes) throws ServiceException {
+		
+		
+		//transform a list of string to json entry
+		ObjectMapper mapper = new ObjectMapper();
+		
+		try {

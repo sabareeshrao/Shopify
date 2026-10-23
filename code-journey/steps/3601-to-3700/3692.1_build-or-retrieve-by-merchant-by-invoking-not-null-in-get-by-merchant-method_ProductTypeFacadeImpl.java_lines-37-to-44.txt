@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductTypeList getByMerchant(MerchantStore store, Language language,  int count, int page) {
+
+		Validate.notNull(store, "MerchantStore cannot be null");
+		ReadableProductTypeList returnList = new ReadableProductTypeList();
+
+		try {
+

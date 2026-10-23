@@ -1,0 +1,5 @@
+
+				// user can be in parent
+				if (parent != null && parent.getCode().equals(store.getCode())) {
+					authorized = true;
+				}

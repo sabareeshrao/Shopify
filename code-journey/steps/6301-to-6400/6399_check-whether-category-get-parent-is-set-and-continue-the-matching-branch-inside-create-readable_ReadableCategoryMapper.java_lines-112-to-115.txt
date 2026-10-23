@@ -1,0 +1,4 @@
+
+		if (category.getParent() != null) {
+			current.setParent(this.createReadable(category.getParent(), language));
+		}

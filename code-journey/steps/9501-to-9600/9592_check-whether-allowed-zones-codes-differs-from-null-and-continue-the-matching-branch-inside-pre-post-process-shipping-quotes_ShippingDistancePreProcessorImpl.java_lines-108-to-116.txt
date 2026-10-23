@@ -1,0 +1,9 @@
+		
+		boolean zoneAllowed = false;
+		if(allowedZonesCodes!=null) {
+			for(String zoneCode : allowedZonesCodes) {
+				if(zoneCode.equals(delivery.getZone().getCode())) {
+					zoneAllowed = true;
+					break;
+				}
+			}

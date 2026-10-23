@@ -1,0 +1,2 @@
+		Language lang = store.getDefaultLanguage();
+		

@@ -1,0 +1,8 @@
+	    
+	    //another option value
+	    ProductOptionValue blue = new ProductOptionValue();
+	    blue.setMerchantStore(store);
+	    blue.setCode("blue");
+	    
+	    ProductOptionValueDescription blueDescription = new ProductOptionValueDescription();
+	    blueDescription.setLanguage(en);

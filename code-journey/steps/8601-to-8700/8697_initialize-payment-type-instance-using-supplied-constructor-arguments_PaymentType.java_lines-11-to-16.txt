@@ -1,0 +1,6 @@
+	private String paymentType;
+
+	PaymentType(String type) {
+		paymentType = type;
+	}
+

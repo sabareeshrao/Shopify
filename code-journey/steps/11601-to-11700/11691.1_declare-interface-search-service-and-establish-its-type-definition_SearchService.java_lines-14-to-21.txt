@@ -1,0 +1,8 @@
+public interface SearchService {
+	
+	/**
+	 * The indexing service for products. The index service must be invoked when a product is
+	 * created or updated
+	 * @param store
+	 * @param product
+	 * @throws ServiceException

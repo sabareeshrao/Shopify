@@ -1,0 +1,8 @@
+ * - Payment events (payment, refund)
+ * 
+ * - Change Order status
+ * 
+ * @author carlsamson
+ *
+ */
+@Configuration

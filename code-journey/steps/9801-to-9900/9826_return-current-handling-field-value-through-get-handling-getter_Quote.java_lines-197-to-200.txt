@@ -1,0 +1,4 @@
+	public BigDecimal getHandling() {
+		return handling;
+	}
+

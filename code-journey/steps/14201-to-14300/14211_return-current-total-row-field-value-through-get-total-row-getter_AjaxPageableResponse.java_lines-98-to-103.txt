@@ -1,0 +1,6 @@
+	public int getTotalRow() {
+		return totalRow;
+	}
+
+
+

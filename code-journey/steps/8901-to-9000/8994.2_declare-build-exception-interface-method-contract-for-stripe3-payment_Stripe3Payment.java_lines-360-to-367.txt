@@ -1,0 +1,8 @@
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", paymentIntent.getId());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			throw buildException(e);

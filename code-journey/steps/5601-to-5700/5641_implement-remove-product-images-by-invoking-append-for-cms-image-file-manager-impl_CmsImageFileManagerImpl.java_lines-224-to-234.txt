@@ -1,0 +1,11 @@
+  @Override
+  public void removeProductImages(Product product) throws ServiceException {
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(buildRootPath()).append(Constants.SLASH)
+          .append(product.getMerchantStore().getCode()).append(Constants.SLASH)
+          .append(product.getSku());
+

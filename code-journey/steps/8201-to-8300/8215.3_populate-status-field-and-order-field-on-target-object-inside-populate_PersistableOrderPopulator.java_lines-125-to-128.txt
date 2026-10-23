@@ -1,0 +1,4 @@
+					statusHistory.setStatus(status);
+					statusHistory.setOrder(target);
+					target.getOrderHistory().add(statusHistory);
+				}

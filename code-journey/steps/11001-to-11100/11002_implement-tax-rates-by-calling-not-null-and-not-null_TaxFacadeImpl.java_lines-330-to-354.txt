@@ -1,0 +1,25 @@
+	@Override
+	public ReadableEntityList<ReadableTaxRate> taxRates(MerchantStore store, Language language) {
+		
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		try {
+			List<TaxRate> rates = taxRateService.listByStore(store, language);
+			List<ReadableTaxRate> readableRates = rates.stream().map(r -> readableTaxRateMapper.convert(r, store, language)).collect(Collectors.toList());
+			
+			ReadableEntityList<ReadableTaxRate> returnRates = new ReadableEntityList<ReadableTaxRate>();
+			returnRates.setItems(readableRates);
+			returnRates.setTotalPages(1);
+			returnRates.setNumber(readableRates.size());
+			returnRates.setRecordsTotal(readableRates.size());
+			
+			return returnRates;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxRates for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxRates for store [" + store.getCode() + "]", e);
+		}
+
+	}
+
+}

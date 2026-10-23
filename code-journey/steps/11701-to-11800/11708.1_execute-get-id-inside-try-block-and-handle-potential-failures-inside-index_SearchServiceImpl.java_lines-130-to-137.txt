@@ -1,0 +1,8 @@
+
+		List<String> languages = languages(product);
+
+		// existing documents
+		List<Document> documents;
+		List<Map<String, String>> variants = null;
+		try {
+			documents = document(product.getId(), languages, RequestOptions.DO_NOT_FAIL_ON_NOT_FOUND);

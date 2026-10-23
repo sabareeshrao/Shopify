@@ -1,0 +1,8 @@
+		
+	}
+	
+	/**
+	 * edit availability
+	 */
+	private void setAvailability(ProductAvailability availability, LightPersistableProduct product) {
+		availability.setProductQuantity(product.getQuantity());

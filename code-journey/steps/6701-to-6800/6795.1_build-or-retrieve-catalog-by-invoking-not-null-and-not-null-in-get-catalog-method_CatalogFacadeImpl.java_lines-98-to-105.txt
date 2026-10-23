@@ -1,0 +1,8 @@
+    @Override
+    public ReadableCatalog getCatalog(String code, MerchantStore store, Language language) {
+        Validate.notNull(code, "Catalog code cannot be null");
+        Validate.notNull(store, "MerchantStore cannot be null");
+        Validate.notNull(language, "Language cannot be null");
+
+        Catalog catalog = catalogService.getByCode(code, store)
+                .orElseThrow(() -> new ResourceNotFoundException("Catalog with code [" + code + "] not found"));

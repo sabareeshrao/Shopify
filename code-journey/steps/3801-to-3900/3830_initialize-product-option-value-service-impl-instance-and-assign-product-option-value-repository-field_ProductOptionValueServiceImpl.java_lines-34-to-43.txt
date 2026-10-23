@@ -1,0 +1,10 @@
+	private ProductOptionValueRepository productOptionValueRepository;
+	
+	@Inject
+	public ProductOptionValueServiceImpl(
+			ProductOptionValueRepository productOptionValueRepository) {
+			super(productOptionValueRepository);
+			this.productOptionValueRepository = productOptionValueRepository;
+	}
+	
+	

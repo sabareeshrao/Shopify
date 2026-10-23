@@ -1,0 +1,8 @@
+			qs.append("left join fetch pinstg.images pinstgimg ");
+			qs.append("left join fetch pinstgimg.descriptions ");
+			//end variants
+
+			qs.append("where p.id=:productId and pm.id=:id");
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);

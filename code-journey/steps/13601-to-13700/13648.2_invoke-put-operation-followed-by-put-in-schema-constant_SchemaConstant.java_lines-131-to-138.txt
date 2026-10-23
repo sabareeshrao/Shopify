@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("FJD", "Fiji Dollar");
+		CURRENCY_MAP.put("XPF", "CFP Franc");
+		CURRENCY_MAP.put("XAF", "CFA Franc BEAC");
+		CURRENCY_MAP.put("GMD", "Dalasi");
+		CURRENCY_MAP.put("GEL", "Lari");
+		CURRENCY_MAP.put("GHS", "Ghana Cedi");
+		CURRENCY_MAP.put("GIP", "Gibraltar Pound");
+		CURRENCY_MAP.put("DKK", "Danish Krone");

@@ -1,0 +1,12 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/product/productVariantGroup/{id}" })
+	@ApiOperation(httpMethod = "GET", value = "Get product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody ReadableProductVariantGroup get(
+			@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

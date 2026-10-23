@@ -1,0 +1,9 @@
+	private ProductInventory inventory(ProductAvailability availability, FinalPrice price) {
+		ProductInventory inventory = new ProductInventory();
+		inventory.setQuantity(availability.getProductQuantity());
+		inventory.setPrice(price);
+		
+		return inventory;
+	}
+
+}

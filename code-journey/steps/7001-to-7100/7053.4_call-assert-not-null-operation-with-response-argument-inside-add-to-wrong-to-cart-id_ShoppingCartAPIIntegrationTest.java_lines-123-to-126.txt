@@ -1,0 +1,4 @@
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(NOT_FOUND));
+        data.getProducts().remove(product);
+    }

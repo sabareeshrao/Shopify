@@ -1,0 +1,8 @@
+	
+	List<MerchantStore> findAllStoreNames(String code) throws ServiceException;
+
+	List<MerchantStore> findAllStoreCodeNameEmail() throws ServiceException;
+
+	Page<MerchantStore> listAll(Optional<String> storeName, int page, int count) throws ServiceException;
+	
+	Page<MerchantStore> listByGroup(Optional<String> storeName, String code, int page, int count) throws ServiceException;

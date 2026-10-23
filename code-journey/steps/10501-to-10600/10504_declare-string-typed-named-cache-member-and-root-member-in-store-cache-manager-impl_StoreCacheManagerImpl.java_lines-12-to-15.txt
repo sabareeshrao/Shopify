@@ -1,0 +1,4 @@
+  private final static String NAMED_CACHE = "StoreRepository";
+  private String root;
+
+

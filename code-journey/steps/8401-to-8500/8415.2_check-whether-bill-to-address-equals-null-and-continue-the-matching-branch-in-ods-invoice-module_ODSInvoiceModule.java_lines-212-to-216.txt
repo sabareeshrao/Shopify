@@ -1,0 +1,5 @@
+				if(billToAddress==null) {
+					billToAddress = new StringBuilder();
+				} else {
+					billToAddress.append(", ");
+				}

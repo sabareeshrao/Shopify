@@ -1,0 +1,7 @@
+	public void setValues(List<ProductOptionValueDescription> values) {
+		this.values = values;
+	}
+
+	
+
+}

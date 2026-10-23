@@ -1,0 +1,4 @@
+      if (prodReview == null) {
+        response.sendError(404, "Product review with id " + reviewId + " does not exist");
+        return null;
+      }

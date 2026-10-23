@@ -1,0 +1,8 @@
+
+			cartModel.setLineItems(newItems);
+		} else {
+			// new item
+			if (item.getQuantity() > 0) {
+				cartModel.getLineItems().add(itemModel);
+			}
+		}

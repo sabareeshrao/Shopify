@@ -1,0 +1,8 @@
+		} else {
+			//validate it can be parsed to BigDecimal
+			try {
+				BigDecimal price = new BigDecimal(keys.get("price"));
+			} catch(Exception e) {
+				errorFields = new ArrayList<String>();
+				errorFields.add("price");
+			}

@@ -1,0 +1,8 @@
+	@Override
+	public PersistableCategory saveCategory(MerchantStore store, PersistableCategory category) {
+		try {
+
+			Long categoryId = category.getId();
+			Category target = Optional.ofNullable(categoryId)
+					.filter(merchant -> store !=null)
+					.filter(id -> id > 0)

@@ -1,0 +1,8 @@
+				            	  description = d;
+				            	  break;
+
+							}
+						}
+					} //else {
+			          if(description == null) {
+				          description = description(desc);

@@ -1,0 +1,4 @@
+	public void setProductVariantGroup(ProductVariantGroup productVariantGroup) {
+		this.productVariantGroup = productVariantGroup;
+	}
+

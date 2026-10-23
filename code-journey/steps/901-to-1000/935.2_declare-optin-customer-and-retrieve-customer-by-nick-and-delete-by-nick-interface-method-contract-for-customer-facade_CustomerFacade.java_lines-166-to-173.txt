@@ -1,0 +1,8 @@
+	 * @throws Exception
+	 */
+	void optinCustomer(PersistableCustomerOptin optin, MerchantStore store);
+
+    ReadableCustomer getCustomerByNick(String userName, MerchantStore merchantStore, Language language);
+
+	void deleteByNick(String nick);
+	

@@ -1,0 +1,8 @@
+	
+	Optional<ProductVariation> getByCode(MerchantStore store, String code);
+	
+	Page<ProductVariation> getByMerchant(MerchantStore store, Language language, String code, int page, int count);
+	
+	List<ProductVariation> getByIds(List<Long> ids, MerchantStore store);
+
+}

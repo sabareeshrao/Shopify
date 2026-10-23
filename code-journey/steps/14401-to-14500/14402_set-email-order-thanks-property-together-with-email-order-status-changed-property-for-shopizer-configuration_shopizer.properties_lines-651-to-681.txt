@@ -1,0 +1,31 @@
+email.order.thanks=Thanks for your purchase!
+email.order.download.title=Download your files - Order confirmation: {0}
+email.order.download.text=Your download files will be available for {0} days. You should have received an email with your login information to the system. Once logged in the system, navigate to the order details <strong>{1}</strong> and click on 'Download files'. You can get access to the customer section by clicking on the following link {2}. If you are having any difficulty with acceding to the customer section please send an email to {3}.
+
+email.contact=A new contact email - {0}
+email.contact.title=Email contact form
+label.checkout.logon=Logon or signup to simplify the online purchase process!
+
+label.checkout.text=Thank you for ordering from {0}.
+label.checkout.orderid=Your order id is {0}.
+label.checkout.email=An email with your order details has been sent to {0}.
+label.checkout.additionaltext=If you have any comments or suggestions for us, please send us an email with your order id. We value your feedback.
+label.checkout.downloads.completed=Here are your download files.
+label.checkout.downloads.processing=An email with your file(s) download instructions will be sent once the payment for this order will be completed.
+
+label.entitylist.paging=Showing {0} - {1} of {2} result(s)
+
+label.checkout.moneyorder=Please make your check or money order payable to:
+
+email.user.resetpassword.text=A request has been made to reset you password. You will find herein your new password.
+email.customer.resetpassword.text=A request has been made to reset you password. You will find herein your new password.
+email.disclaimer=This email address was given to us by you or by one of our customers. If you feel that you have received this email in error, please send an email to {0} for de-activation
+email.contactowner=If you have any questions on this request, please send an email to {0} in order to receive more details.
+email.spam.disclaimer=This email is sent in accordance with the US CAN-SPAM Law in effect 2004-01-01. Removal requests can be sent to this address and will be honored and respected.
+email.copyright=Copyright @ {0} {1}, All Rights Reserved
+email.message.from=Message from {0}
+email.greeting=Hi {0},
+email.customer.greeting=Thanks for joining {0}, you will be able to get access to the customer section by clicking on the following link {1}. Log on to the system and navigate to your order details. Informations to log in are included in this email. If you are having any difficulty with acceding to the customer section please send an email to {2}.
+email.order.statustext=An update on the status has been made on order {0} ordered on {1}
+email.order.status.changed=Order status changed:  {0} -> {1}
+

@@ -1,0 +1,2 @@
+		return customerFacade.update(customer, merchantStore);
+	}

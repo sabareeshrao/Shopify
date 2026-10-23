@@ -1,0 +1,3 @@
+public class ReadableProductPopulator extends
+		AbstractDataPopulator<Product, ReadableProduct> {
+

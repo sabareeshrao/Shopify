@@ -1,0 +1,8 @@
+
+label.product.option.displayonly=Option pour affichage seulement
+label.product.option.code=Code de l'option
+label.product.option.codehelp=Code de l'option requis pour effectuer des recherches de produits par attribut
+
+
+#options values
+label.product.productoptionsvalues.title=Valeurs des options de produit

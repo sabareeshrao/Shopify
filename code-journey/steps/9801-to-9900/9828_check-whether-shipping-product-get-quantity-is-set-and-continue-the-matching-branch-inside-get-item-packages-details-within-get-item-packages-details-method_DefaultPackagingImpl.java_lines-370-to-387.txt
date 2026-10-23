@@ -1,0 +1,18 @@
+				detail.setItemName(description);
+	
+				packages.add(detail);
+			} else if (shippingProduct.getQuantity() > 1) {
+				for (int i = 0; i < shippingProduct.getQuantity(); i++) {
+					PackageDetails detail = new PackageDetails();
+					detail.setShippingHeight(h
+							.doubleValue());
+					detail.setShippingLength(l
+							.doubleValue());
+					detail.setShippingWeight(w.doubleValue());
+					detail.setShippingWidth(wd
+							.doubleValue());
+					detail.setShippingQuantity(1);//issue seperate shipping
+					String description = "item";
+					if(product.getDescriptions().size()>0) {
+						description = product.getDescriptions().iterator().next().getName();
+					}

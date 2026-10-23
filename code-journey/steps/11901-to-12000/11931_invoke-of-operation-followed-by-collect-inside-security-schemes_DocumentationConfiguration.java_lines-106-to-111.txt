@@ -1,0 +1,6 @@
+	private static ArrayList<? extends SecurityScheme> securitySchemes() {
+		return (ArrayList<? extends SecurityScheme>) Stream.of(new ApiKey("Bearer", "Authorization", "header"))
+				.collect(Collectors.toList());
+	}
+
+}

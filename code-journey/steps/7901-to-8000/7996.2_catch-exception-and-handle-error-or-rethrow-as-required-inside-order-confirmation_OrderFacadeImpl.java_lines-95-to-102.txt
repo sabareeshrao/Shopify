@@ -1,0 +1,8 @@
+	          optionCodeBuilder
+	              .append("module.shipping.")
+	              .append(order.getShippingModuleCode());
+	          String shippingName = messages.getMessage(optionCodeBuilder.toString(), new String[]{store.getStorename()},languageService.toLocale(language, store));
+	          orderConfirmation.setShipping(shippingName);
+	        } catch (Exception e) { // label not found
+	          LOGGER.warn("No shipping code found for " + optionCodeBuilder.toString());
+	        }

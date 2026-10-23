@@ -1,0 +1,8 @@
+import java.io.Serializable;
+
+/**
+ * Lightweight version of Persistable product
+ * @author carlsamson
+ *
+ */
+public class LightPersistableProduct implements Serializable {

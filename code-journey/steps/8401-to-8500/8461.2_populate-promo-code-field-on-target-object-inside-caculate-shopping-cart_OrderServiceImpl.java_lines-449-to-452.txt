@@ -1,0 +1,4 @@
+    			//clear promo
+    			shoppingCart.setPromoCode(null);
+    			shoppingCartService.saveOrUpdate(shoppingCart);
+    		}

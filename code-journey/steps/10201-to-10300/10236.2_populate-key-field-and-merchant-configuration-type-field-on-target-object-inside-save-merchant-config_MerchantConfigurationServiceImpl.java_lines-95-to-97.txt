@@ -1,0 +1,3 @@
+			configuration.setKey(MerchantConfigurationType.CONFIG.name());
+			configuration.setMerchantConfigurationType(MerchantConfigurationType.CONFIG);
+		}

@@ -1,0 +1,15 @@
+	
+	com.salesmanager.shop.model.catalog.product.ProductPriceDescription populateDescription(
+	      ProductPriceDescription description) {
+	    if (description == null) {
+	      return null;
+	    }
+	    com.salesmanager.shop.model.catalog.product.ProductPriceDescription d =
+	        new com.salesmanager.shop.model.catalog.product.ProductPriceDescription();
+	    d.setName(description.getName());
+	    d.setDescription(description.getDescription());
+	    d.setId(description.getId());
+	    d.setTitle(description.getTitle());
+	    if (description.getLanguage() != null) {
+	      d.setLanguage(description.getLanguage().getCode());
+	    }

@@ -1,0 +1,8 @@
+      <organization>Shopizer</organization>
+      <organizationUrl>http://www.shopizer.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <dependencies>
+  
+    <!-- sm-core-model -->

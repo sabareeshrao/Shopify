@@ -1,0 +1,8 @@
+            try {
+
+              optionCodeBuilder
+                  .append("module.shipping.")
+                  .append(shipOption.getShippingModuleCode());
+              String optionName = messages.getMessage(optionCodeBuilder.toString(), locale);
+              shipOption.setOptionName(optionName);
+            } catch (Exception e) { // label not found

@@ -1,0 +1,8 @@
+			config.setIntegrationOptions(config.getIntegrationOptions());
+
+			return config;
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error getting shipping module [" + code + "]", e);
+			throw new ServiceRuntimeException("Error getting shipping module [" + code + "]", e);
+		}

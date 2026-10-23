@@ -1,0 +1,9 @@
+
+	
+	/** JSON bindding **/
+	public void setShipType(String shipType) {
+		this.shipType = shipType;
+		ShippingType sType = ShippingType.NATIONAL;
+		if(shipType.equals(ShippingType.INTERNATIONAL.name())) {
+			sType = ShippingType.INTERNATIONAL;
+		}

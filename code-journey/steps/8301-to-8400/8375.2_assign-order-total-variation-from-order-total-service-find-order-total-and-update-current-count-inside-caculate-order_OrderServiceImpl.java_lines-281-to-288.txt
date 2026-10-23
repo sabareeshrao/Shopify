@@ -1,0 +1,8 @@
+        		) {
+
+	        //Post processing order total variation modules for sub total calculation - drools, custom modules
+	        //may affect the sub total
+	        OrderTotalVariation orderTotalVariation = orderTotalService.findOrderTotalVariation(summary, customer, store, language);
+
+	        int currentCount = 10;
+

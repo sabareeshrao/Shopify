@@ -1,0 +1,8 @@
+	@Override
+	public void update(Long variationId, PersistableProductVariation var, MerchantStore store, Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+		Validate.notNull(var, "PersistableProductVariation cannot be null");
+		
+		Optional<ProductVariation> p =  productVariationService.getById(store, variationId, language);
+		if(p.isEmpty()) {

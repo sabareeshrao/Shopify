@@ -1,0 +1,5 @@
+	
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

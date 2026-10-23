@@ -1,0 +1,8 @@
+		"zoneCode": "SB",
+		"zoneName": "Salzburg",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "KN",
+		"zoneName": "Karten",
+		"countryCode": "AT"

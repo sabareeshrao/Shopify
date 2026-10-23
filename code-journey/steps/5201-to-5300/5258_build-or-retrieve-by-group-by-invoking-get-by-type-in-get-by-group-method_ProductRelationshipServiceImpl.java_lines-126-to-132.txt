@@ -1,0 +1,7 @@
+	@Override
+	public List<ProductRelationship> getByGroup(MerchantStore store, String groupName) throws ServiceException {
+
+		return productRelationshipRepository.getByType(store, groupName);
+
+	}
+	

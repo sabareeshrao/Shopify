@@ -1,0 +1,8 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/option/value/{id}" }, method = RequestMethod.PUT)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void updateOptionValue(
+			@PathVariable Long id,
+			@Valid @RequestBody PersistableProductOptionValue optionValue,

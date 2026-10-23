@@ -1,0 +1,5 @@
+	@Override
+	public String getModuleCode() {
+		return moduleCode;
+	}
+

@@ -1,0 +1,3 @@
+		    		   		orderTable.append(CLOSING_TD);
+		    		   orderTable.append(CLOSING_TR);
+		    	   }

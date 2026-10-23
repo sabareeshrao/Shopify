@@ -1,0 +1,4 @@
+label.storeadministration=Store administration
+label.storeadministrator=Store administrator
+label.storename=Store Name
+label.storecode=Unique Store Code

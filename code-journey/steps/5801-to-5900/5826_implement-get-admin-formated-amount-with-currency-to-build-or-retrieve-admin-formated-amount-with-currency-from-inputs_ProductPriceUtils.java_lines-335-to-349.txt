@@ -1,0 +1,15 @@
+
+	/**
+	 * This method will return the required formated amount with the appropriate
+	 * currency
+	 * 
+	 * @param store
+	 * @param amount
+	 * @return
+	 * @throws Exception
+	 */
+	@Deprecated
+	public String getAdminFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}

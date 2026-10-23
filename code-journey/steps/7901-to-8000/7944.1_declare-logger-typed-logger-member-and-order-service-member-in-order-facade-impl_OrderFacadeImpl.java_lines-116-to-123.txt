@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacadeImpl.class);
+
+	@Inject
+	private OrderService orderService;
+	@Inject
+	private ProductService productService;
+	@Inject
+	private ProductAttributeService productAttributeService;

@@ -1,0 +1,7 @@
+
+	    static final String AUDIENCE_UNKNOWN = "unknown";
+	    static final String AUDIENCE_API = "api";
+	    static final String AUDIENCE_WEB = "web";
+	    static final String AUDIENCE_MOBILE = "mobile";
+	    static final String AUDIENCE_TABLET = "tablet";
+

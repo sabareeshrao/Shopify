@@ -1,0 +1,4 @@
+      Node<String, Object> merchantNode = this.getNode(nodePath.toString());
+
+      merchantNode.remove(product.getSku());
+

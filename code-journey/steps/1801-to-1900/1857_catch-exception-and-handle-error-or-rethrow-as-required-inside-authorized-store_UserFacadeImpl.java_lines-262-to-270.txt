@@ -1,0 +1,9 @@
+			}
+
+			return authorized;
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Cannot authorize user " + userName + " for store " + merchantStoreCode,
+					e.getMessage());
+		}
+	}
+

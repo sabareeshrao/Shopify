@@ -1,0 +1,8 @@
+
+
+    /**
+     * Read - GET a category by id
+     *
+     * @throws Exception
+     */
+    @Test

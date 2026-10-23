@@ -1,0 +1,8 @@
+		
+		destination.setId(source.getId());
+		
+		Set<ProductVariant> instances = source.getProductVariants();
+		destination.setproductVariants(instances.stream().map(i -> this.instance(i, store, language)).collect(Collectors.toList()));
+		
+		//image id should be unique in the list
+		

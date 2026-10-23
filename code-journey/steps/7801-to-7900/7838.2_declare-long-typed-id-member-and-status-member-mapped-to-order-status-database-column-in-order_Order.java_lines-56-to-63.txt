@@ -1,0 +1,8 @@
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT",
+		pkColumnValue = "ORDER_ID_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	@Column (name ="ORDER_STATUS")
+	@Enumerated(value = EnumType.STRING)
+	private OrderStatus status;

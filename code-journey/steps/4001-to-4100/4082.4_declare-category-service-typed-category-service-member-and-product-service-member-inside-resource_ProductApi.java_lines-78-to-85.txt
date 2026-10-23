@@ -1,0 +1,8 @@
+	private CategoryService categoryService;
+
+	@Inject
+	private ProductService productService;
+
+	@Autowired
+	private ProductFacade productFacade;
+

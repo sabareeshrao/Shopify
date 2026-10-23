@@ -1,0 +1,6 @@
+	public void setShippingType(ShippingType shippingType) {
+		this.shippingType = shippingType;
+		this.shipType = this.shippingType.name();
+	}
+
+

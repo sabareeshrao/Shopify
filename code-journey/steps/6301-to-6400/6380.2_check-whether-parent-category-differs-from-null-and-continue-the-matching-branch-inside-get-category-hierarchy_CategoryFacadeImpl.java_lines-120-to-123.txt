@@ -1,0 +1,4 @@
+						ReadableCategory parentCategory = readableCategoryMap.get(readableCategory.getParent().getId());
+						if (parentCategory != null) {
+							parentCategory.getChildren().add(readableCategory);
+						}

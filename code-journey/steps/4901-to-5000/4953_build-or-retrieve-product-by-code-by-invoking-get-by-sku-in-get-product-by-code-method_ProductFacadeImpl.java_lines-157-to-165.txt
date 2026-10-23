@@ -1,0 +1,9 @@
+	@Override
+	public ReadableProduct getProductByCode(MerchantStore store, String uniqueCode, Language language) {
+
+		Product product = null;
+		try {
+			product = productService.getBySku(uniqueCode, store, language);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}

@@ -1,0 +1,13 @@
+	@Override
+	public void updatePackage(String code, PackageDetails packaging, MerchantStore store) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(packaging, "PackageDetails cannot be null");
+		Validate.notEmpty(code,"Packaging unique code cannot be empty");
+		
+		ShippingConfiguration config = getDbConfig(store);
+		
+		com.salesmanager.core.model.shipping.Package p = this.packageDetails(config, code);
+		
+		if(p == null) {
+			throw new ResourceNotFoundException("Package with unique code [" + packaging.getCode() + "] not found");
+		}

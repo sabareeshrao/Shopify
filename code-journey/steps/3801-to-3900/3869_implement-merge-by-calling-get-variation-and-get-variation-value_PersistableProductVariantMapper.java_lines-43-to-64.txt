@@ -1,0 +1,22 @@
+	@Override
+	public ProductVariant merge(PersistableProductVariant source, ProductVariant destination, MerchantStore store,
+			Language language) {
+		
+		//
+		Long productVariation = source.getVariation();
+		Long productVariationValue = source.getVariationValue();
+		
+		String productVariationCode = source.getVariationCode();
+		String productVariationValueCode = source.getVariationValueCode();
+		
+		Optional<ProductVariation> variation = null;
+		Optional<ProductVariation> variationValue = null;
+		
+		if(StringUtils.isEmpty(productVariationCode)) {
+		
+			variation = productVariationService.getById(store, productVariation);
+			if(productVariationValue != null) {
+				variationValue = productVariationService.getById(store, productVariationValue);
+				if(variationValue.isEmpty()) {
+					throw new ResourceNotFoundException("ProductVaritionValue [" + productVariationValue + "] + not found for store [" + store.getCode() + "]");
+				}

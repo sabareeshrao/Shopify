@@ -1,0 +1,8 @@
+	   *
+	   * @param store
+	   * @param id
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */
+	  ReadableProduct getProduct(MerchantStore store, Long id, Language language) throws Exception;

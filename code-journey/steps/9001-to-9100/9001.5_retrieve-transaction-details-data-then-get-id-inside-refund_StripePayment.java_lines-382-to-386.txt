@@ -1,0 +1,5 @@
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", re.getId());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+
+			return transaction;
+

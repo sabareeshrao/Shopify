@@ -1,0 +1,8 @@
+    LOG.info("Fetching customer with userName" + userName);
+    Customer customer = customerService.getByNick(userName);
+
+    if (customer != null) {
+      LOG.info("Found customer, converting to CustomerEntity");
+      try {
+        CustomerEntityPopulator customerEntityPopulator = new CustomerEntityPopulator();
+        return customerEntityPopulator.populate(customer, store, language); // store, language

@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.user.ReadableUser;
+import com.salesmanager.shop.utils.DateUtil;
+
+/**
+ * Converts user model to readable user
+ * 
+ * @author carlsamson
+ *

@@ -1,0 +1,7 @@
+	public ShoppingCart getByCode(final String code, final MerchantStore store) throws ServiceException {
+
+		try {
+			ShoppingCart shoppingCart = shoppingCartRepository.findByCode(store.getId(), code);
+			if (shoppingCart == null) {
+				return null;
+			}

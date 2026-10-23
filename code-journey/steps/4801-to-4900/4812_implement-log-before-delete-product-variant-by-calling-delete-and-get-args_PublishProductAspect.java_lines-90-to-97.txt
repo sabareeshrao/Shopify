@@ -1,0 +1,8 @@
+	
+	// delete product variant
+	
+	@After("execution(* com.salesmanager.core.business.services.catalog.product.variant.ProductVariantService.delete(com.salesmanager.core.model.catalog.product.variant.ProductVariant))")
+	public void logBeforeDeleteProductVariant(JoinPoint joinPoint) {
+	   Object[] signatureArgs = joinPoint.getArgs();
+	   eventPublisher.publishEvent(new DeleteProductVariantEvent(eventPublisher, (ProductVariant)signatureArgs[0], ((ProductVariant)signatureArgs[0]).getProduct()));
+	}

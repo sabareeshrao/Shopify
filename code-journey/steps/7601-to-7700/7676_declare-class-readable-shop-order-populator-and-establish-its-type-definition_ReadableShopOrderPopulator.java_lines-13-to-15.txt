@@ -1,0 +1,3 @@
+public class ReadableShopOrderPopulator extends
+		AbstractDataPopulator<ShopOrder, ReadableShopOrder> {
+

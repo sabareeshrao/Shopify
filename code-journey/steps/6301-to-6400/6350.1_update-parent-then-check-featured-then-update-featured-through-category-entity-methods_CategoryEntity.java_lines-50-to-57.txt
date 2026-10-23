@@ -1,0 +1,8 @@
+	public void setParent(Category parent) {
+		this.parent = parent;
+	}
+	public boolean isFeatured() {
+		return featured;
+	}
+	public void setFeatured(boolean featured) {
+		this.featured = featured;

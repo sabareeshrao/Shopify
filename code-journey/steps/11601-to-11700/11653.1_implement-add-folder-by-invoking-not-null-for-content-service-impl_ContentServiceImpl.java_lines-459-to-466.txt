@@ -1,0 +1,8 @@
+	@Override
+	public void addFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(folderName, "Folder name cannot be null");
+		
+		if(path.isPresent()) {
+			if(!this.isValidLinuxDirectory(path.get())) {
+				throw new ServiceException("Path format [" + path.get() + "] not a valid directory format");

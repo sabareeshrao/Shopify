@@ -1,0 +1,4 @@
+	private List<ProductAttribute> attributes;//may have attributes
+
+
+

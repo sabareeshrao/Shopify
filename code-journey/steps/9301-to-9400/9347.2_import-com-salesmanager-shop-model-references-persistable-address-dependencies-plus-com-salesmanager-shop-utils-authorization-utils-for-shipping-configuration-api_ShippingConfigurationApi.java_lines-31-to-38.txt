@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.references.PersistableAddress;
+import com.salesmanager.shop.model.references.ReadableAddress;
+import com.salesmanager.shop.model.system.IntegrationModuleConfiguration;
+import com.salesmanager.shop.model.system.IntegrationModuleSummaryEntity;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.store.controller.shipping.facade.ShippingFacade;
+import com.salesmanager.shop.utils.AuthorizationUtils;

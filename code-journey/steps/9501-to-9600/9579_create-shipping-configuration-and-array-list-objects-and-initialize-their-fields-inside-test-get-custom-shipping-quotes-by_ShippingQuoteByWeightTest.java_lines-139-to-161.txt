@@ -1,0 +1,23 @@
+	    
+
+	    
+	    //configure shipping
+	    ShippingConfiguration shippingConfiguration = new ShippingConfiguration();
+	    shippingConfiguration.setShippingBasisType(ShippingBasisType.SHIPPING);//based on shipping or billing address
+	    shippingConfiguration.setShippingType(ShippingType.INTERNATIONAL);
+	    shippingConfiguration.setShippingPackageType(ShippingPackageType.ITEM);//individual item pricing or box packaging (see unit test above)
+	    //only if package type is package
+	    shippingConfiguration.setBoxHeight(5);
+	    shippingConfiguration.setBoxLength(5);
+	    shippingConfiguration.setBoxWidth(5);
+	    shippingConfiguration.setBoxWeight(1);
+	    shippingConfiguration.setMaxWeight(10);
+	    
+	    List<String> supportedCountries = new ArrayList<String>();
+	    supportedCountries.add("CA");
+	    supportedCountries.add("US");
+	    supportedCountries.add("UK");
+	    supportedCountries.add("FR");
+	    
+	    shippingService.setSupportedCountries(store, supportedCountries);
+	    

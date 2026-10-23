@@ -1,0 +1,9 @@
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
+	}
+	public String getCurrency() {
+		return currency;
+	}

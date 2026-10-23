@@ -1,0 +1,31 @@
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+			.antMatcher("/admin/**")
+					.authorizeRequests()
+					.antMatchers("/admin/logon*").permitAll()
+					.antMatchers("/admin/resources/**").permitAll()
+					.antMatchers("/admin/layout/**").permitAll()
+					.antMatchers("/admin/denied*").permitAll()
+					.antMatchers("/admin/unauthorized*").permitAll()
+					.antMatchers("/admin/users/resetPassword*").permitAll()
+					.antMatchers("/admin/").hasRole("AUTH")
+					.antMatchers("/admin/**").hasRole("AUTH")
+					.antMatchers("/admin/**").hasRole("AUTH")
+					.antMatchers("/admin/users/resetPasswordSecurityQtn*").permitAll()
+					.anyRequest()
+					.authenticated()
+					.and()
+					.httpBasic()
+					.authenticationEntryPoint(adminAuthenticationEntryPoint())
+					.and()
+					.formLogin().usernameParameter("username").passwordParameter("password")
+					.loginPage("/admin/logon.html")
+					.loginProcessingUrl("/admin/performUserLogin")
+					.successHandler(userAuthenticationSuccessHandler)
+					.failureUrl("/admin/logon.html?login_error=true")
+					.and()
+					.csrf().disable()
+					.logout().logoutUrl("/admin/logout").logoutSuccessUrl("/admin/home.html")
+					.invalidateHttpSession(true).and().exceptionHandling().accessDeniedPage("/admin/denied.html");
+			

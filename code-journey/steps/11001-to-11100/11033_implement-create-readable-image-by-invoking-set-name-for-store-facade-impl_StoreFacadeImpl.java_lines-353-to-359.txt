@@ -1,0 +1,7 @@
+	private ReadableImage createReadableImage(String storeLogo, String imagePath) {
+		ReadableImage image = new ReadableImage();
+		image.setName(storeLogo);
+		image.setPath(imagePath);
+		return image;
+	}
+

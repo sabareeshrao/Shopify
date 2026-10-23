@@ -1,0 +1,8 @@
+	@Override
+	public List<Object[]> countProductsByCategories(MerchantStore store, List<Long> categoryIds) {
+
+		
+		StringBuilder qs = new StringBuilder();
+		qs.append("select category.id, count(product.id) from Product product ");
+		qs.append("inner join product.categories category ");
+		qs.append("where category.id in (:cid) ");

@@ -1,0 +1,6 @@
+				
+			}
+			if(billToProvince!=null) {
+				sheet.setValueAt(billToProvince.toString(), 0, billToCell);
+				billToCell ++;
+			}

@@ -1,0 +1,4 @@
+  public void setLength(BigDecimal length) {
+    this.length = length;
+  }
+

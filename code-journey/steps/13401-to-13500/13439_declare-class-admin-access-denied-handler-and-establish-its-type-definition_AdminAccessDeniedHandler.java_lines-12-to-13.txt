@@ -1,0 +1,2 @@
+public class AdminAccessDeniedHandler implements AccessDeniedHandler {
+

@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.reference.zone.ZoneDescription;
+
+@Service("zoneService")
+public class ZoneServiceImpl extends SalesManagerEntityServiceImpl<Long, Zone> implements
+		ZoneService {
+	

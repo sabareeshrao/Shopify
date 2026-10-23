@@ -1,0 +1,9 @@
+	public void setShoppingCartAttributes(List<ShoppingCartAttribute> shoppingCartAttributes) {
+		this.shoppingCartAttributes = shoppingCartAttributes;
+	}
+	public void setProductPrice(BigDecimal productPrice) {
+		this.productPrice = productPrice;
+	}
+	public BigDecimal getProductPrice() {
+		return productPrice;
+	}

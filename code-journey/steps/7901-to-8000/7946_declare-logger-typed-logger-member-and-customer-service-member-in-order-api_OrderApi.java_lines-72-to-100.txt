@@ -1,0 +1,29 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrderApi.class);
+
+	@Inject
+	private CustomerService customerService;
+
+	@Inject
+	private OrderFacade orderFacade;
+
+	@Inject
+	private OrderService orderService;
+
+	@Inject
+	private com.salesmanager.shop.store.controller.order.facade.v1.OrderFacade orderFacadeV1;
+
+	@Inject
+	private ShoppingCartService shoppingCartService;
+
+	@Autowired
+	private CustomerFacade customerFacade;
+
+	@Autowired
+	private CustomerFacade customerFacadev1; //v1 version
+
+	@Inject
+	private AuthorizationUtils authorizationUtils;
+
+	@Inject
+	private CredentialsService credentialsService;
+

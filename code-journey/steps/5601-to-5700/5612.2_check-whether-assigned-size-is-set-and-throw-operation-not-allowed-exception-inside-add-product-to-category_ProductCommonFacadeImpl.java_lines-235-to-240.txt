@@ -1,0 +1,6 @@
+				.filter(cat -> cat.getId().longValue() == category.getId().longValue()).collect(Collectors.toList());
+
+		if (assigned.size() > 0) {
+			throw new OperationNotAllowedException("Category with id [" + category.getId()
+					+ "] already attached to product [" + product.getId() + "]");
+		}

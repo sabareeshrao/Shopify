@@ -1,0 +1,8 @@
+/**
+ * Merchant configuration information
+ * 
+ * @author Carl Samson
+ *
+ */
+@Entity
+@EntityListeners(value = AuditListener.class)

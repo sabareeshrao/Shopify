@@ -1,0 +1,35 @@
+  
+  
+  /**
+   * Query for a product group public/product/group/{code}?lang=fr|en no lang it will take session
+   * lang or default store lang code can be any code used while creating product group, defeult
+   * being FEATURED
+   *
+   * @param store
+   * @param language
+   * @param groupCode
+   * @param request
+   * @param response
+   * @return
+   * @throws Exception
+   */
+  @ResponseStatus(HttpStatus.OK)
+  @GetMapping("/products/group/{code}")
+  @ApiOperation(httpMethod = "GET", value = "Get products by group code", notes = "", response = ReadableProductList.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public @ResponseBody ReadableProductList getProductItemsByGroup(
+      @PathVariable final String code,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+    try {
+      ReadableProductList list = productItemsFacade.listItemsByGroup(code, merchantStore, language);
+
+      if (list == null) {
+        response.sendError(404, "Group not fount for code " + code);
+        return null;
+      }

@@ -1,0 +1,8 @@
+	@Override
+	public void addFile(String merchantStoreCode, Optional<String> folderPath, InputContentFile inputStaticContentData) throws ServiceException {
+
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			String nodePath = nodePath(merchantStoreCode, inputStaticContentData.getFileContentType());

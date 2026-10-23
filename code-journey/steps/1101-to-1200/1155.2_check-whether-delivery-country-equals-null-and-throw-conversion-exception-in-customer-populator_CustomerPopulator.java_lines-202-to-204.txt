@@ -1,0 +1,3 @@
+                    if(deliveryCountry==null) {
+                        throw new ConversionException("Unsuported country code " + sourceShipping.getCountry());
+                    }

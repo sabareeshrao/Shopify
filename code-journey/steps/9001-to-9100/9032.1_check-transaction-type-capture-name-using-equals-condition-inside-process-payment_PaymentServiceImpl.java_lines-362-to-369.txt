@@ -1,0 +1,8 @@
+		
+		IntegrationModule integrationModule = getPaymentMethodByCode(store,payment.getModuleName());
+		TransactionType transactionType = TransactionType.valueOf(sTransactionType);
+		if(transactionType==null) {
+			transactionType = payment.getTransactionType();
+			if(transactionType.equals(TransactionType.CAPTURE.name())) {
+				throw new ServiceException("This method does not allow to process capture transaction. Use processCapturePayment");
+			}

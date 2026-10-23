@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@Transient
+	private BigDecimal subTotal;//item final price * quantity
+
+	@JsonIgnore
+	@Transient
+	private FinalPrice finalPrice;//contains price details (raw prices)

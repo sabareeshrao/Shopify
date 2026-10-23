@@ -1,0 +1,2 @@
+			//Now get the subImage using the value of clip.
+

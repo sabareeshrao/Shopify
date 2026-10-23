@@ -1,0 +1,3 @@
+  public static final Charset ISO_8859_1 = StandardCharsets.ISO_8859_1;
+  public static final Charset UTF_8 = StandardCharsets.UTF_8;
+

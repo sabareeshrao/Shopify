@@ -1,0 +1,4 @@
+	
+			if (event instanceof DeleteProductEvent) {
+				deleteProduct((DeleteProductEvent) event);
+			}

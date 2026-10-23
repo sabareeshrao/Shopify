@@ -1,0 +1,8 @@
+		
+		ModelAndView modelAndView = null;
+
+			
+		modelAndView = new ModelAndView("error/generic_error");
+ 
+		return modelAndView;
+ 

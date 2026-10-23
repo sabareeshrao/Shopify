@@ -1,0 +1,6 @@
+	@Override
+	public ReadableShoppingCart convert(ShoppingCart source, MerchantStore store, Language language) {
+		ReadableShoppingCart destination = new ReadableShoppingCart();
+		return this.merge(source, destination, store, language);
+	}
+	

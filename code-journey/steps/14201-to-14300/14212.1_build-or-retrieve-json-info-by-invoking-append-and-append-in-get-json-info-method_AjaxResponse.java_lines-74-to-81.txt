@@ -1,0 +1,8 @@
+	protected String getJsonInfo() {
+		
+		StringBuilder returnString = new StringBuilder();
+		returnString.append("{");
+		returnString.append("\"response\"").append(":");
+		returnString.append("{");
+		returnString.append("\"status\"").append(":").append(this.getStatus());
+		if(this.getStatusMessage()!=null && this.getStatus()!=0) {

@@ -1,0 +1,7 @@
+- Merchant
+- Order
+- Customer
+- User
+
+Shopizer Headless commerce consists of the following components:
+

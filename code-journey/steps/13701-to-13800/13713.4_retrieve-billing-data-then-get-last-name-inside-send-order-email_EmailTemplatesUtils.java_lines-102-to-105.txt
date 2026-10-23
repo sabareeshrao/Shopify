@@ -1,0 +1,4 @@
+		    		   .append(order.getBilling().getLastName()).append(LINE_BREAK);
+		    	   } else {
+		    		   billing.append(order.getBilling().getCompany()).append(LINE_BREAK);
+		    	   }

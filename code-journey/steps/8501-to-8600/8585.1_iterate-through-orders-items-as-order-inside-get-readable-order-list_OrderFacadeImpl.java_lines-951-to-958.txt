@@ -1,0 +1,8 @@
+
+			List<com.salesmanager.shop.model.order.v0.ReadableOrder> readableOrders = new ArrayList<com.salesmanager.shop.model.order.v0.ReadableOrder>();
+			for (Order order : orders) {
+				com.salesmanager.shop.model.order.v0.ReadableOrder readableOrder = new com.salesmanager.shop.model.order.v0.ReadableOrder();
+				readableOrderPopulator.populate(order, readableOrder, null, null);
+				readableOrders.add(readableOrder);
+
+			}

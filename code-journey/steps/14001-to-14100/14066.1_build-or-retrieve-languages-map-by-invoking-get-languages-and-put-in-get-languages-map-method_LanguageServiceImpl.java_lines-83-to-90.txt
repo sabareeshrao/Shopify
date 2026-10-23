@@ -1,0 +1,8 @@
+	@Override
+	public Map<String,Language> getLanguagesMap() throws ServiceException {
+		
+		List<Language> langs = this.getLanguages();
+		Map<String,Language> returnMap = new LinkedHashMap<String,Language>();
+		
+		for(Language lang : langs) {
+			returnMap.put(lang.getCode(), lang);

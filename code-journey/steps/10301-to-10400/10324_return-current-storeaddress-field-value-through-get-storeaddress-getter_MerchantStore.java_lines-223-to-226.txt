@@ -1,0 +1,4 @@
+	public String getStoreaddress() {
+		return storeaddress;
+	}
+

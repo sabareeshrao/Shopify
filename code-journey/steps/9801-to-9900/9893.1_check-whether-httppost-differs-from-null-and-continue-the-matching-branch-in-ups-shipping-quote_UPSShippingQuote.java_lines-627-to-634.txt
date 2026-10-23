@@ -1,0 +1,8 @@
+			}
+
+			if (httppost != null) {
+				httppost.releaseConnection();
+			}
+		}
+}
+

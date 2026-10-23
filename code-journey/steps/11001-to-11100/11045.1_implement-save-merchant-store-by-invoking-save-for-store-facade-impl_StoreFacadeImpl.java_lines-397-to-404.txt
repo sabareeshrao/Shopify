@@ -1,0 +1,8 @@
+	private void saveMerchantStore(MerchantStore store) {
+		try {
+			merchantStoreService.save(store);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

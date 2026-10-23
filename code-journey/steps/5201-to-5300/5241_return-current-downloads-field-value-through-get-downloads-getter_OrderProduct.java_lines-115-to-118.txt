@@ -1,0 +1,4 @@
+	public Set<OrderProductDownload> getDownloads() {
+		return downloads;
+	}
+

@@ -1,0 +1,7 @@
+public class PersistableProductDefinition extends ProductDefinition {
+
+	/**
+	 * type and manufacturer are String type corresponding to the unique code
+	 */
+	private static final long serialVersionUID = 1L;
+	

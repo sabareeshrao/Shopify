@@ -1,0 +1,4 @@
+label.customer.lastname=Customer last name
+label.customer.firstname=Customer first name
+label.customer.id=Customer id
+label.customer.companyname=Company name

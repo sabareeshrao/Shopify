@@ -1,0 +1,4 @@
+	public void setStores(Set<MerchantStore> stores) {
+		this.stores = stores;
+	}
+

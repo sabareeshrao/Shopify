@@ -1,0 +1,6 @@
+	@Override
+	public boolean authorizeStore(MerchantStore store, String path) {
+		
+		if(store == null) {
+			throw new ResourceNotFoundException("MerchantStore is not found");
+		}

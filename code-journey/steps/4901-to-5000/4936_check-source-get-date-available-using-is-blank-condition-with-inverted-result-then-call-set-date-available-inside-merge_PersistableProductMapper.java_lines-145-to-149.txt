@@ -1,0 +1,5 @@
+
+			
+			if(!StringUtils.isBlank(source.getDateAvailable())) {
+				destination.setDateAvailable(DateUtil.getDate(source.getDateAvailable()));
+			}

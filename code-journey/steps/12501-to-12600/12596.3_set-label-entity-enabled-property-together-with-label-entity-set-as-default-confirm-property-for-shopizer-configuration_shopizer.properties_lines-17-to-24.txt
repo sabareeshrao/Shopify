@@ -1,0 +1,8 @@
+label.entity.enabled=Enabled
+label.entity.featured=Featured
+label.entity.active=Active
+label.entity.public=Public
+label.entity.details=Details
+label.entity.type=Type
+label.entity.remove.confirm=Do you really want to remove this entity?
+label.entity.setAsDefault.confirm=Do you really want to set this entity as default?

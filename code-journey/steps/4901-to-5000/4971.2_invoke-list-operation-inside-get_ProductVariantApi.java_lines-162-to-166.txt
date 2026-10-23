@@ -1,0 +1,5 @@
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+
+		return productVariantFacade.list(id, merchantStore, language, page, count);
+
+	}

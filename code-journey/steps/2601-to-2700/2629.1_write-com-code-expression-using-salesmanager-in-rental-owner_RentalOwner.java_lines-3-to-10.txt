@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.entity.Entity;
+
+/**
+ * RENTAL customer
+ * @author c.samson
+ *
+ */

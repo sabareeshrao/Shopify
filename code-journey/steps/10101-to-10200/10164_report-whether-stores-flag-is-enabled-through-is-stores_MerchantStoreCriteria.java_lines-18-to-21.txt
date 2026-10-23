@@ -1,0 +1,4 @@
+	public boolean isStores() {
+		return stores;
+	}
+

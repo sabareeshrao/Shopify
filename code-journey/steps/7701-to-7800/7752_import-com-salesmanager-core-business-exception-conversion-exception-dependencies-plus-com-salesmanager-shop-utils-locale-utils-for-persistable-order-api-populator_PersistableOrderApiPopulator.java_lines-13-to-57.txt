@@ -1,0 +1,45 @@
+import com.salesmanager.core.business.exception.ConversionException;
+import com.salesmanager.core.business.services.customer.CustomerService;
+import com.salesmanager.core.business.services.reference.currency.CurrencyService;
+import com.salesmanager.core.business.utils.AbstractDataPopulator;
+import com.salesmanager.core.model.common.Billing;
+import com.salesmanager.core.model.common.Delivery;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.order.Order;
+import com.salesmanager.core.model.order.OrderChannel;
+import com.salesmanager.core.model.order.attributes.OrderAttribute;
+import com.salesmanager.core.model.order.orderstatus.OrderStatus;
+import com.salesmanager.core.model.order.orderstatus.OrderStatusHistory;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.reference.currency.Currency;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.model.customer.PersistableCustomer;
+import com.salesmanager.shop.model.order.v1.PersistableAnonymousOrder;
+import com.salesmanager.shop.model.order.v1.PersistableOrder;
+import com.salesmanager.shop.populator.customer.CustomerPopulator;
+import com.salesmanager.shop.utils.LocaleUtils;
+
+@Component
+public class PersistableOrderApiPopulator extends AbstractDataPopulator<PersistableOrder, Order> {
+
+	@Autowired
+	private CurrencyService currencyService;
+	@Autowired
+	private CustomerService customerService;
+/*	@Autowired
+	private ShoppingCartService shoppingCartService;
+	@Autowired
+	private ProductService productService;
+	@Autowired
+	private ProductAttributeService productAttributeService;
+	@Autowired
+	private DigitalProductService digitalProductService;*/
+	@Autowired
+	private CustomerPopulator customerPopulator;
+	
+	
+
+	
+
+

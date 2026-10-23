@@ -1,0 +1,18 @@
+	@Override
+	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+			NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+		String storeValue = Optional.ofNullable(webRequest.getParameter(REQUEST_PARAMATER_STORE))
+				.filter(StringUtils::isNotBlank).orElse(DEFAULT_STORE);
+		// todo get from cache
+		MerchantStore storeModel = storeFacade.get(storeValue);
+
+		HttpServletRequest httpServletRequest = webRequest.getNativeRequest(HttpServletRequest.class);
+
+		// TODO Move to an api filter
+		// authorize request
+		boolean authorized = userFacade.authorizeStore(storeModel, httpServletRequest.getRequestURI());
+		LOGGER.debug("is request authorized {} for {} and store {}", authorized, httpServletRequest.getRequestURI(),
+				storeModel.getCode());
+		if(!authorized){
+			throw new UnauthorizedException("Cannot authorize user for store " + storeModel.getCode());
+		}

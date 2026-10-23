@@ -1,0 +1,4 @@
+				stores = merchantStoreService.findAllStoreNames().stream()
+						.map(s -> convertStoreName(s))
+						.collect(Collectors.toList());
+			}

@@ -1,0 +1,21 @@
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.customer.optin.PersistableCustomerOptin;
+import com.salesmanager.shop.populator.customer.CustomerBillingAddressPopulator;
+import com.salesmanager.shop.populator.customer.CustomerDeliveryAddressPopulator;
+import com.salesmanager.shop.populator.customer.CustomerEntityPopulator;
+import com.salesmanager.shop.populator.customer.CustomerPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerBillingAddressPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerReviewPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerShippingAddressPopulator;
+import com.salesmanager.shop.populator.customer.ReadableCustomerList;
+import com.salesmanager.shop.populator.customer.ReadableCustomerPopulator;
+import com.salesmanager.shop.populator.customer.ReadableCustomerReviewPopulator;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.utils.EmailTemplatesUtils;
+import com.salesmanager.shop.utils.EmailUtils;
+import com.salesmanager.shop.utils.ImageFilePath;
+import com.salesmanager.shop.utils.LabelUtils;
+import com.salesmanager.shop.utils.LocaleUtils;
+

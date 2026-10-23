@@ -1,0 +1,5 @@
+
+		if (!StringUtils.isBlank(criteria.getProductName())) {
+			countQ.setParameter("nm", new StringBuilder().append("%").append(criteria.getProductName().toLowerCase())
+					.append("%").toString());
+		}

@@ -1,0 +1,6 @@
+
+      Customer customer = customerService.getByNick(userName);
+
+      if (customer == null) {
+        response.sendError(503, "Error while getting user details to calculate shipping quote");
+      }

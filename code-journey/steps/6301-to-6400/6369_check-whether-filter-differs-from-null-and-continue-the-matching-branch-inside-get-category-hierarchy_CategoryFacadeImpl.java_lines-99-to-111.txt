@@ -1,0 +1,13 @@
+
+
+
+			List<ReadableCategory> readableCategories = null;
+			if (filter != null && filter.contains(VISIBLE_CATEGORY)) {
+				readableCategories = categories.stream().filter(Category::isVisible)
+						.map(cat -> readableCategoryMapper.convert(cat, store, language))
+						.collect(Collectors.toList());
+			} else {
+				readableCategories = categories.stream()
+						.map(cat -> readableCategoryMapper.convert(cat, store, language))
+						.collect(Collectors.toList());
+			}

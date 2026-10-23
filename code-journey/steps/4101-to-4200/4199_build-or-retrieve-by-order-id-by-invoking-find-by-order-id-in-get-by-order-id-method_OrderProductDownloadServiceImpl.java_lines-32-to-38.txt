@@ -1,0 +1,7 @@
+    @Override
+    public List<OrderProductDownload> getByOrderId(Long orderId) {
+    	return orderProductDownloadRepository.findByOrderId(orderId);
+    }
+
+
+}

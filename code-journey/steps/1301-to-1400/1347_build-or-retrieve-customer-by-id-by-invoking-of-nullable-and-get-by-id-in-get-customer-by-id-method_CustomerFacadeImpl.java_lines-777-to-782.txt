@@ -1,0 +1,6 @@
+  private Customer getCustomerById(Long customerId) {
+    return Optional.ofNullable(customerService.getById(customerId))
+          .orElseThrow(() -> new ResourceNotFoundException("Customer id " + customerId + " does not exists"));
+  }
+
+

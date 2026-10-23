@@ -1,0 +1,8 @@
+label.product.attributes=Product options / attributes
+label.product.attribute=Option / attribute
+label.product.attribute.default=Default option
+label.product.attribute.required=Required option
+label.product.attribute.display=Use attribute for display only
+label.product.attribute.otherweight=Additional weight
+label.product.attribute.option.name=Option / attribute name
+label.product.attribute.value=Attribute value

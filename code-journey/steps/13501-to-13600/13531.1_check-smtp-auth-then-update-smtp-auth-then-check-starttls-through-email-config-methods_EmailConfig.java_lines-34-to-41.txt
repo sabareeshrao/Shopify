@@ -1,0 +1,8 @@
+	public boolean isSmtpAuth() {
+		return smtpAuth;
+	}
+	public void setSmtpAuth(boolean smtpAuth) {
+		this.smtpAuth = smtpAuth;
+	}
+	public boolean isStarttls() {
+		return starttls;

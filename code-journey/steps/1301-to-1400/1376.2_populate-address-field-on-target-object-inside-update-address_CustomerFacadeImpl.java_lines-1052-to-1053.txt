@@ -1,0 +1,2 @@
+    	  customer.getDelivery().setAddress(customer.getBilling().getCity());
+      }

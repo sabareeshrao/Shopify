@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(StoreContactRESTController.class);
+	
+
+	
+	@RequestMapping( value="/public/{store}", method=RequestMethod.GET)
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	@ResponseBody
+	public AjaxResponse store(@PathVariable final String store, HttpServletRequest request, HttpServletResponse response) {

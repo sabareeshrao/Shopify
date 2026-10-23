@@ -1,0 +1,3 @@
+        cartItem2.setProduct(data.getProducts().get(1).getSku());
+        cartItem2.setQuantity(2);
+

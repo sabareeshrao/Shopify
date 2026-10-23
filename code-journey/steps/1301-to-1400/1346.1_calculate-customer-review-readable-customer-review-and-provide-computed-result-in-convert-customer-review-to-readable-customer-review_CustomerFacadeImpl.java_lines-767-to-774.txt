@@ -1,0 +1,8 @@
+  private ReadableCustomerReview convertCustomerReviewToReadableCustomerReview(
+      CustomerReview customerReview, MerchantStore store, Language language) {
+    try{
+      ReadableCustomerReviewPopulator populator = new ReadableCustomerReviewPopulator();
+      return populator.populate(customerReview, new ReadableCustomerReview(), store, language);
+    } catch (ConversionException e){
+      throw new ConversionRuntimeException(e);
+    }

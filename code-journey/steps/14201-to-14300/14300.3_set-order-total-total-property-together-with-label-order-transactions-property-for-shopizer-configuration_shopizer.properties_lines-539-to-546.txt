@@ -1,0 +1,8 @@
+order.total.total=Total
+order.total.shipping=Shipping
+order.total.handling=Handling
+order.total.discount=Rebate
+
+label.order.recalculate=Recalculate
+
+label.order.transactions=Transactions list

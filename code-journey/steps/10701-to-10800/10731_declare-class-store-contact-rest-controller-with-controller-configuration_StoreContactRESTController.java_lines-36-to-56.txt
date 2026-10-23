@@ -1,0 +1,21 @@
+
+/**
+ * Rest services for sending contact
+ * @author Carl Samson
+ *
+ */
+@Controller
+@RequestMapping("/services")
+public class StoreContactRESTController {
+	
+	@Inject
+	private LanguageService languageService;
+	
+	@Inject
+	private MerchantStoreService merchantStoreService;
+	
+	@Inject
+	private EmailTemplatesUtils emailTemplatesUtils;
+	
+
+	

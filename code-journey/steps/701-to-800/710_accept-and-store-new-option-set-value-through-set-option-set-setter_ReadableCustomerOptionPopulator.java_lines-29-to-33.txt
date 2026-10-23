@@ -1,0 +1,5 @@
+	public void setOptionSet(CustomerOptionSet optionSet) {
+		this.optionSet = optionSet;
+	}
+	
+

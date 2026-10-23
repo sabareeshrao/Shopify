@@ -1,0 +1,8 @@
+			target.setDownloadExpiryDays(source.getMaxdays());
+			target.setId(source.getId());
+			target.setFileName(source.getOrderProductFilename());
+			target.setOrderId(source.getOrderProduct().getOrder().getId());
+			
+			return target;
+			
+		} catch(Exception e) {

@@ -1,0 +1,8 @@
+
+        mimeMessage.setContent(mp);
+
+        // if(attachment!=null) {
+        // MimeMessageHelper messageHelper = new
+        // MimeMessageHelper(mimeMessage, true);
+        // messageHelper.addAttachment(attachmentFileName, attachment);
+        // }

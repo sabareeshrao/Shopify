@@ -1,0 +1,8 @@
+	public void setProvince(String province) {
+		this.province = province;
+	}
+	public long getDistance() {
+		return distance;
+	}
+	public void setDistance(long distance) {
+		this.distance = distance;

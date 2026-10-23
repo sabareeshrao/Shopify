@@ -1,0 +1,4 @@
+
+		if (CollectionUtils.isNotEmpty(optionValueIds)) {
+			criteria.setOptionValueIds(optionValueIds);
+		}

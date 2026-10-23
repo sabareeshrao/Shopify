@@ -1,0 +1,9 @@
+    
+    for (Blob blob : blobs.iterateAll()) {
+      // do something with the blob
+      storage.delete(blob.getBlobId());
+    }
+    
+
+  }
+

@@ -1,0 +1,6 @@
+  public void setModel(String model) {
+    this.model = model;
+  }
+  private com.salesmanager.shop.model.references.DimensionUnitOfMeasure dimensionUnitOfMeasure;
+  private com.salesmanager.shop.model.references.WeightUnitOfMeasure weightUnitOfMeasure;
+  

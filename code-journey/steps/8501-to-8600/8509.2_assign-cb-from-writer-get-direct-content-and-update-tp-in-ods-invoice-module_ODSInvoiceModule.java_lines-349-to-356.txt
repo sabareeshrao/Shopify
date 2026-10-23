@@ -1,0 +1,8 @@
+			 int w = (int) (pageSize.getWidth() * 0.9);
+			 int h = (int) (pageSize.getHeight() * 0.95);
+			 PdfContentByte cb = writer.getDirectContent();
+			 PdfTemplate tp = cb.createTemplate(w, h);
+
+			 Graphics2D g2 = tp.createPrinterGraphics(w, h, null);
+			 // If you want to prevent copy/paste, you can use
+			 // g2 = tp.createGraphicsShapes(w, h, true, 0.9f);

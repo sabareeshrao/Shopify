@@ -1,0 +1,4 @@
+	public List<ReadableProductPrice> getPrices() {
+		return prices;
+	}
+

@@ -1,0 +1,4 @@
+	public Set<ProductReviewDescription> getDescriptions() {
+		return descriptions;
+	}
+

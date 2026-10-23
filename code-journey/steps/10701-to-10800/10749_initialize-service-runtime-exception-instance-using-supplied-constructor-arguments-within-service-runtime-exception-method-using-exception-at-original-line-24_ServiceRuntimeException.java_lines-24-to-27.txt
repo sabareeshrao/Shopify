@@ -1,0 +1,4 @@
+    public ServiceRuntimeException(String message, Throwable exception) {
+        super(message, exception);
+    }
+

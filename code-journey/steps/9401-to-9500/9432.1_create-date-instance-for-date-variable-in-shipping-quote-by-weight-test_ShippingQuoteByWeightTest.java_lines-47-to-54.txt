@@ -1,0 +1,8 @@
+	private static final Date date = new Date(System.currentTimeMillis());
+	
+	@Inject
+	private ShippingService shippingService;
+	
+	@Inject
+	private LanguageService languageService;
+	

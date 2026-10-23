@@ -1,0 +1,8 @@
+
+    @RequestMapping(value = "/auth/refresh", method = RequestMethod.GET)
+    public ResponseEntity<AuthenticationResponse> refreshAndGetAuthenticationToken(HttpServletRequest request) {
+        String token = request.getHeader(tokenHeader);
+
+        if(token != null && token.contains("Bearer")) {
+          token = token.substring("Bearer ".length(),token.length());
+        }

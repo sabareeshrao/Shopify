@@ -1,0 +1,8 @@
+label.product.productoptionsvalues.list=Liste des valeurs des options de produit
+label.product.productoptiosvalue.title=Valeur d'option
+label.product.productoptionvalue.edit.title=Modifier une valeur d'option
+label.product.productoptionvalue.create.title=Créer une valeur d'option
+label.product.productoptionvalue=Image de valeur d'option
+
+#content Images - Files
+label.page=Page

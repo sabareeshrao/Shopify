@@ -1,0 +1,8 @@
+	 *            Merchant store
+	 * @param contentFileName
+	 *            name of file being requested
+	 * @return {@link OutputStaticContentData}
+	 * @throws ServiceException
+	 */
+	@Override
+	public OutputContentFile getFile(final String merchantStoreCode, Optional<String> folderPath,

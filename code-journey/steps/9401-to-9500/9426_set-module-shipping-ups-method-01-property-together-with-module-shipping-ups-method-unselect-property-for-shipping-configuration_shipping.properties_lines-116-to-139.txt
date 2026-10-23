@@ -1,0 +1,24 @@
+
+
+module.shipping.ups.method.01=UPS Next Day Air
+module.shipping.ups.method.02=UPS Second Day Air
+module.shipping.ups.method.03=UPS Ground
+module.shipping.ups.method.07=UPS Worldwide Express
+module.shipping.ups.method.08=UPS Worldwide Expedited
+module.shipping.ups.method.11=UPS Standard
+module.shipping.ups.method.12=UPS Three-Day Select
+module.shipping.ups.method.13=UPS Next Day Air Saver
+module.shipping.ups.method.14=UPS Next Day Air Early A.M.
+module.shipping.ups.method.54=UPS Worldwide Express Plus
+module.shipping.ups.method.59=UPS Second Day Air A.M.
+module.shipping.ups.method.65=UPS Saver
+
+#module.shipping.ups.method.68=UPS Express
+#module.shipping.ups.method.69=UPS Worldwide Expedited
+#module.shipping.ups.method.70=UPS Standard
+#module.shipping.ups.method.71=UPS Worldwide Express Plus
+#module.shipping.ups.method.72=UPS Saver
+module.shipping.ups.method=UPS shipping methods
+module.shipping.ups.method.select=Select a specific UPS shipping method
+module.shipping.ups.method.unselect=Let UPS propose all available shipping methods
+

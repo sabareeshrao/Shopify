@@ -1,0 +1,4 @@
+	public Set<Integer> getGroupIds() {
+		return groupIds;
+	}
+

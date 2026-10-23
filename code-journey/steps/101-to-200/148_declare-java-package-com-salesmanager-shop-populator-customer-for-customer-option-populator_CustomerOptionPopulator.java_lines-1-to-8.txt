@@ -1,0 +1,8 @@
+package com.salesmanager.shop.populator.customer;
+
+/**
+ * Used in the admin section
+ * @author c.samson
+ *
+ */
+

@@ -1,0 +1,8 @@
+			} else {
+				existing = existingAvailability.stream()
+						.filter(a -> 
+						(
+								source.getProductId() != null && (a.getProduct().getId().longValue() == source.getProductId().longValue())
+								&&
+								a.getMerchantStore().getId() == store.getId()
+								&&

@@ -1,0 +1,8 @@
+public interface CustomerOptionSetService extends SalesManagerEntityService<Long, CustomerOptionSet> {
+
+
+
+	void saveOrUpdate(CustomerOptionSet entity) throws ServiceException;
+
+
+

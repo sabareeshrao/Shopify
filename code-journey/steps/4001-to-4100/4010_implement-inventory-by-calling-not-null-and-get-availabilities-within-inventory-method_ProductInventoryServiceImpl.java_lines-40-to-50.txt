@@ -1,0 +1,11 @@
+	@Override
+	public ProductInventory inventory(ProductVariant variant) throws ServiceException {
+		Validate.notNull(variant.getAvailabilities());
+		Validate.notNull(variant.getProduct());
+		
+		ProductAvailability availability = null;
+		if(!CollectionUtils.isEmpty(variant.getAvailabilities())) {
+			availability = defaultAvailability(variant.getAvailabilities());
+		} else {
+			availability = defaultAvailability(variant.getProduct().getAvailabilities());
+		}

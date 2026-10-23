@@ -1,0 +1,8 @@
+label.storelogo = Logo de la boutique
+label.storebanner = Banniére de la boutique
+label.storephone = Téléphone de la boutique
+label.accepteddomains = Domaines acceptÈs
+label.storeaddress = Adresse de la boutique
+label.storecity = Ville de la boutique
+label.storepostalcode = Code postal de la boutique
+label.storecountry = Pays de la boutique

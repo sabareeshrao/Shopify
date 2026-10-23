@@ -1,0 +1,4 @@
+  public List<ReadableProductVariantValue> getOptions() {
+    return options;
+  }
+

@@ -1,0 +1,8 @@
+	private String key;
+	
+	@Column(name="VALUE")
+	private String value;
+	
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+

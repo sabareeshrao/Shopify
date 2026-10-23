@@ -1,0 +1,4 @@
+
+			if (!CollectionUtils.isEmpty(variants)) {
+				item.setVariants(variants);
+			}

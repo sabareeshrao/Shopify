@@ -1,0 +1,7 @@
+		}).collect(Collectors.toList());
+		
+		return returnPrices;
+		
+		
+	}
+

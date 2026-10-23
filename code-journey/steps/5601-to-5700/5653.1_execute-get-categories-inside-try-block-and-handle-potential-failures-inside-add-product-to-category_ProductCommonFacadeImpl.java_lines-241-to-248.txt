@@ -1,0 +1,8 @@
+
+		product.getCategories().add(category);
+		ReadableProduct readableProduct = new ReadableProduct();
+		
+		try {
+
+			productService.saveProduct(product);
+	

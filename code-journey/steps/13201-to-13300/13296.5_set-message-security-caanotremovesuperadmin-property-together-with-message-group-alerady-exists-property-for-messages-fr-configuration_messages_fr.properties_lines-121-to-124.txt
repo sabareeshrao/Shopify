@@ -1,0 +1,4 @@
+
+message.security.caanotremovesuperadmin=Il n'est pas possible de détruire un usager super admin
+
+message.group.alerady.exists=Le groupe {0} existe déjà

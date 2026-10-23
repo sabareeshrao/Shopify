@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProduct removeProductFromCategory(Category category, Product product, Language language)
+			throws Exception {
+
+		Validate.notNull(category, "Category cannot be null");
+		Validate.notNull(product, "Product cannot be null");
+
+		product.getCategories().remove(category);

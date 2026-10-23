@@ -1,0 +1,8 @@
+              // give it to the customer
+              sessionShoppingCart.setCustomerId(customerModel.getId());
+              shoppingCartService.saveOrUpdate(sessionShoppingCart);
+              customerCart = shoppingCartService.getById(sessionShoppingCart.getId(), store);
+              return customerCart;
+              // return populateShoppingCartData(customerCart,store,language);
+            } else {
+              return null;

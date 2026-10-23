@@ -1,0 +1,8 @@
+import java.io.Serializable;
+
+/**
+ *  POJO representation of pagination
+ * @author Umesh Awasthi
+ *
+ */
+public class PaginationData implements Serializable

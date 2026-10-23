@@ -1,0 +1,10 @@
+
+    	
+    	@SuppressWarnings("unchecked")
+		List<Object[]> counts =  q.getResultList();
+
+    	
+    	return counts;
+		
+		
+	}

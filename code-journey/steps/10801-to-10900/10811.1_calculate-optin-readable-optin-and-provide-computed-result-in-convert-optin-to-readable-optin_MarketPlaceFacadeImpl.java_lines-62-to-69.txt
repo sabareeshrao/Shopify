@@ -1,0 +1,8 @@
+  private ReadableOptin convertOptinToReadableOptin(MerchantStore store, Optin optin) {
+	  try{
+      ReadableOptinPopulator populator = new ReadableOptinPopulator();
+      return populator.populate(optin, null, store, null);
+    } catch (ConversionException e) {
+	    throw new ConversionRuntimeException(e);
+    }
+

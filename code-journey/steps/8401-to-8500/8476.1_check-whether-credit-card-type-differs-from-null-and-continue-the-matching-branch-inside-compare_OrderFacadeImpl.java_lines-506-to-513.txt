@@ -1,0 +1,8 @@
+
+				((CreditCardPayment) payment).setCreditCard(creditCardType);
+
+				if (creditCardType != null) {
+
+					CreditCard cc = new CreditCard();
+					cc.setCardType(creditCardType);
+					cc.setCcCvv(((CreditCardPayment) payment).getCredidCardValidationNumber());

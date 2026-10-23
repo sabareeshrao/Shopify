@@ -1,0 +1,8 @@
+		
+		KieSession kieSession=droolsBeanFactory.getKieSession(ResourceFactory.newClassPathResource("com/salesmanager/drools/rules/PromoCoupon.drl"));
+		
+		OrderTotalResponse resp = new OrderTotalResponse();
+		
+		OrderTotalInputParameters inputParameters = new OrderTotalInputParameters();
+		inputParameters.setPromoCode(summary.getPromoCode());
+		inputParameters.setDate(new Date());

@@ -1,0 +1,8 @@
+	    color.setCode("COLOR");
+	    color.setProductOptionType(ProductOptionType.Radio.name());
+	    
+	    ProductOptionDescription optionDescription = new ProductOptionDescription();
+	    optionDescription.setLanguage(en);
+	    optionDescription.setName("Color");
+	    optionDescription.setDescription("Color of an item");
+	    optionDescription.setProductOption(color);

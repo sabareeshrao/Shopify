@@ -1,0 +1,8 @@
+						</p><!-- /Callout Panel -->
+			</div>
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<!-- FOOTER -->

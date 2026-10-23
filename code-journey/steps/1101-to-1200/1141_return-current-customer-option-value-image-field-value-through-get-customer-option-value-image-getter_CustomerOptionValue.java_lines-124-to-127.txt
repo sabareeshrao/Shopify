@@ -1,0 +1,4 @@
+	public String getCustomerOptionValueImage() {
+		return customerOptionValueImage;
+	}
+

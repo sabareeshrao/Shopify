@@ -1,0 +1,8 @@
+	private ShippingQuoteRepository shippingQuoteRepository;
+	
+	@Inject
+	private ShippingService shippingService;
+	
+	@Inject
+	public ShippingQuoteServiceImpl(ShippingQuoteRepository repository) {
+		super(repository);

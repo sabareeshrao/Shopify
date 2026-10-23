@@ -1,0 +1,8 @@
+	private List<MerchantConfigEntity> getMerchantConfigEntities(MerchantStore mStore) {
+		List<MerchantConfiguration> configurations = getMergeConfigurationsByStore(MerchantConfigurationType.SOCIAL,
+				mStore);
+
+		return configurations.stream().map(config -> convertToMerchantConfigEntity(config))
+				.collect(Collectors.toList());
+	}
+

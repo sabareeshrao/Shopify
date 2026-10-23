@@ -1,0 +1,8 @@
+			+ "left join fetch p.variationValue pvv "
+			+ "left join fetch pvv.productOption pvvpo "
+			+ "left join fetch pvv.productOptionValue pvvpov "
+			+ "left join fetch pvvpo.descriptions povvpod "
+			+ "left join fetch pvpov.descriptions povvpovd "			
+			
+			+ "left join fetch pr.merchantStore prm "
+			+ "where p.id = ?1 and pr.id = ?2 and prm.id = ?3")

@@ -1,0 +1,8 @@
+@Component("sesEmailSender")
+public class SESEmailSenderImpl implements EmailModule {
+
+  @Inject
+  private Configuration freemarkerMailConfiguration;
+  
+  @Value("${config.emailSender.region}")
+  private String region;

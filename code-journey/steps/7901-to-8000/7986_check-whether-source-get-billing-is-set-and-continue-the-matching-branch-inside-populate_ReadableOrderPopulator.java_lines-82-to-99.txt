@@ -1,0 +1,18 @@
+		
+		com.salesmanager.shop.model.order.total.OrderTotal taxTotal = null;
+		com.salesmanager.shop.model.order.total.OrderTotal shippingTotal = null;
+		
+		
+		if(source.getBilling()!=null) {
+			ReadableBilling address = new ReadableBilling();
+			address.setEmail(source.getCustomerEmailAddress());
+			address.setCity(source.getBilling().getCity());
+			address.setAddress(source.getBilling().getAddress());
+			address.setCompany(source.getBilling().getCompany());
+			address.setFirstName(source.getBilling().getFirstName());
+			address.setLastName(source.getBilling().getLastName());
+			address.setPostalCode(source.getBilling().getPostalCode());
+			address.setPhone(source.getBilling().getTelephone());
+			if(source.getBilling().getCountry()!=null) {
+				address.setCountry(source.getBilling().getCountry().getIsoCode());
+			}

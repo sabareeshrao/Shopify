@@ -1,0 +1,8 @@
+    @Override
+    public ReadableCategory populate(final Category source,
+            final ReadableCategory target,
+            final MerchantStore store,
+            final Language language) throws ConversionException {
+
+        Validate.notNull(source, "Category must not be null");
+

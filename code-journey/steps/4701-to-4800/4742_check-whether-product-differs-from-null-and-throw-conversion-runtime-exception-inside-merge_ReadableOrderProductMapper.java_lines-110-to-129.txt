@@ -1,0 +1,20 @@
+			if (product != null) {
+				
+				
+				ReadableProduct productProxy = readableProductMapper.convert(product, store, language);
+				target.setProduct(productProxy);
+				
+				/**
+
+				// TODO autowired
+				ReadableProductPopulator populator = new ReadableProductPopulator();
+				populator.setPricingService(pricingService);
+				populator.setimageUtils(imageUtils);
+
+				ReadableProduct productProxy;
+				try {
+					productProxy = populator.populate(product, new ReadableProduct(), store, language);
+					target.setProduct(productProxy);
+				} catch (ConversionException e) {
+					throw new ConversionRuntimeException("Cannot convert product", e);
+				}

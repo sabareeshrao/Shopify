@@ -1,0 +1,41 @@
+
+	  /**
+	   * Sets a new price to an existing product
+	   *
+	   * @param product
+	   * @param price
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */
+	  ReadableProduct updateProductPrice(ReadableProduct product, ProductPriceEntity price,
+	      Language language) throws Exception;
+
+	  /**
+	   * Sets a new price to an existing product
+	   *
+	   * @param product
+	   * @param quantity
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */
+	  ReadableProduct updateProductQuantity(ReadableProduct product, int quantity, Language language)
+	      throws Exception;
+
+	  /**
+	   * Deletes a product for a given product id
+	   *
+	   * @param product
+	   * @throws Exception
+	   */
+	  void deleteProduct(Product product) throws Exception;
+
+	  /**
+	   * Delete product
+	   * @param id
+	   * @param store
+	   * @throws Exception
+	   */
+	  void deleteProduct(Long id, MerchantStore store);
+

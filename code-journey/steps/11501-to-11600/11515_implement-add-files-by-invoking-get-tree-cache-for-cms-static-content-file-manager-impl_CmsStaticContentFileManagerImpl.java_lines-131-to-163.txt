@@ -1,0 +1,33 @@
+
+	}
+
+	/**
+	 * <p>
+	 * Method to add files for given store.Files will be stored in Infinispan
+	 * and will be retrieved based on the storeID. Following steps will be
+	 * performed to store static content files
+	 * </p>
+	 * <li>Merchant Node will be retrieved from the cacheTree if it exists else
+	 * new node will be created.</li>
+	 * <li>Files will be stored in StaticContentCacheAttribute , which
+	 * eventually will be stored in Infinispan</li>
+	 * 
+	 * @param merchantStoreCode
+	 *            Merchant store for which files are getting stored in
+	 *            Infinispan.
+	 * @param inputStaticContentDataList
+	 *            input static content file list which will get
+	 *            {@link InputContentImage} stored
+	 * @throws ServiceException
+	 *             if content file storing process fail.
+	 * @see InputStaticContentData
+	 * @see StaticContentCacheAttribute
+	 */
+	@Override
+	public void addFiles(final String merchantStoreCode, Optional<String> path, final List<InputContentFile> inputStaticContentDataList)
+			throws ServiceException {
+		if (cacheManager.getTreeCache() == null) {
+			LOGGER.error("Unable to find cacheManager.getTreeCache() in Infinispan..");
+			throw new ServiceException(
+					"CmsStaticContentFileManagerInfinispanImpl has a null cacheManager.getTreeCache()");
+		}

@@ -1,0 +1,8 @@
+#build informations
+application-description=@project.description@
+application-version=@project.version@
+build.timestamp=@maven.build.timestamp@
+
+#actuator
+management.endpoints.web.exposure.include=*
+

@@ -1,0 +1,8 @@
+		"zoneName": "Salzburg",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "KN",
+		"zoneName": "Katen",
+		"countryCode": "AT"
+	},

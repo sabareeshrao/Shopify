@@ -1,0 +1,16 @@
+	@Override
+	public void validateModuleConfiguration(
+			IntegrationConfiguration integrationConfiguration,
+			MerchantStore store) throws IntegrationException {
+		
+		
+		List<String> errorFields = null;
+		
+		
+		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
+		
+		//validate integrationKeys['merchantid']
+		if(keys==null || StringUtils.isBlank(keys.get("merchantid"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("merchantid");
+		}

@@ -1,0 +1,4 @@
+	public boolean isRetailer() {
+		return retailer;
+	}
+

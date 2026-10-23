@@ -1,0 +1,8 @@
+    
+    //build filename
+    StringBuilder fileName = new StringBuilder()
+        .append(filePath(productImage.getProduct().getMerchantStore().getCode(), productImage.getProduct().getSku(), contentImage.getFileContentType()))
+        .append(productImage.getProductImage());
+    
+    
+      try {

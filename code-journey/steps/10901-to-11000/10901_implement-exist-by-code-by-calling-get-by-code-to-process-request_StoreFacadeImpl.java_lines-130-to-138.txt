@@ -1,0 +1,9 @@
+	@Override
+	public boolean existByCode(String code) {
+		try {
+			return merchantStoreService.getByCode(code) != null;
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}
+

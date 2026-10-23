@@ -1,0 +1,8 @@
+	    
+	    //option value 9.5
+	    nineHalf = new ProductOptionValue();
+	    nineHalf.setMerchantStore(store);
+	    nineHalf.setCode("nineHalf");
+	    
+	    ProductOptionValueDescription nineHalfDescription = new ProductOptionValueDescription();
+	    nineHalfDescription.setLanguage(en);

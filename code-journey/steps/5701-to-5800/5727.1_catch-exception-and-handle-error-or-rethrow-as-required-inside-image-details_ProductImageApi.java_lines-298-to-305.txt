@@ -1,0 +1,8 @@
+			
+			
+
+		} catch (Exception e) {
+			LOGGER.error("Error while deleting ProductImage", e);
+			throw new ServiceRuntimeException("ProductImage [" + imageId + "] cannot be edited");
+		}
+	}

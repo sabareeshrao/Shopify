@@ -1,0 +1,10 @@
+	@Override
+	public ReadableTaxClass convert(TaxClass source, MerchantStore store, Language language) {
+		ReadableTaxClass taxClass = new ReadableTaxClass();
+		taxClass.setId(source.getId());
+		taxClass.setCode(source.getCode());
+		taxClass.setName(source.getTitle());
+		taxClass.setStore(store.getCode());
+		return taxClass;
+	}
+

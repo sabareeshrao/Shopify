@@ -1,0 +1,6 @@
+ * http://dev.maxmind.com/geoip/geoip2/geolite2/#Databases
+ * @author c.samson
+ *
+ */
+public class GeoLocationImpl implements GeoLocation {
+	

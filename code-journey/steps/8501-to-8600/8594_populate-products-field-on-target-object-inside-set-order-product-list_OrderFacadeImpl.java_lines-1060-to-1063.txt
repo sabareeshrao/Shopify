@@ -1,0 +1,4 @@
+
+		readableOrder.setProducts(orderProducts);
+	}
+

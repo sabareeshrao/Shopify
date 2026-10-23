@@ -1,0 +1,8 @@
+
+			Date eDate = null;
+
+			if (endDate != null) {
+				eDate = Date.from(endDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+			} else {
+				eDate = new Date();
+			}

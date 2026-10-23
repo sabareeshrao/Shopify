@@ -1,0 +1,9 @@
+	public void setDelivery(ReadableDelivery delivery) {
+		this.delivery = delivery;
+	}
+	public ReadablePayment getPayment() {
+		return payment;
+	}
+	public void setPayment(ReadablePayment payment) {
+		this.payment = payment;
+	}

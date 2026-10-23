@@ -1,0 +1,7 @@
+    			        if(d.getLanguage().equals(description.getLanguage().getCode())) {
+            				description.setCategory(target);
+            				description = buildDescription(d, description);
+            				descriptions.add(description);
+    			        }
+    			    }
+    			}

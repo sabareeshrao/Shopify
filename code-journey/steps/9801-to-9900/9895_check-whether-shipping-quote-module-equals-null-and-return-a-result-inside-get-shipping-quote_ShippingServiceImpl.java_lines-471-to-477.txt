@@ -1,0 +1,7 @@
+				}
+			}
+			
+			if(shippingQuoteModule==null){
+				shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_MODULE_CONFIGURED);
+				return shippingQuote;
+			}

@@ -1,0 +1,8 @@
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/private/orders/customers/{id}" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })

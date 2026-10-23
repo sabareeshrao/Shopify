@@ -1,0 +1,8 @@
+    @Override
+    public ReadableCatalog getCatalog(Long id, MerchantStore store, Language language) {
+        Validate.notNull(id, "Catalog id cannot be null");
+        Validate.notNull(store, "MerchantStore cannot be null");
+
+        Catalog catalog = catalogService.getById(id, store)
+                .orElseThrow(() -> new ResourceNotFoundException("Catalog with id [" + id + "] not found"));
+        return readableCatalogMapper.convert(catalog, store, language);

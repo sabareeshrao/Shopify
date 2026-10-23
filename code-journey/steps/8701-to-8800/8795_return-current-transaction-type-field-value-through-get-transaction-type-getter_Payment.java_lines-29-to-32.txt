@@ -1,0 +1,4 @@
+	public TransactionType getTransactionType() {
+		return transactionType;
+	}
+

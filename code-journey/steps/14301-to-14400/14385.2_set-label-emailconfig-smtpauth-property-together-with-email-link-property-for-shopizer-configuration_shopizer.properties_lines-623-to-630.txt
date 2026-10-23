@@ -1,0 +1,8 @@
+label.emailconfig.smtpauth=Requires authentication
+label.emailconfig.starttls=STARTTLS
+label.emailconfig.requiresauthentication=Email server requires authentication (should be true)
+label.emailconfig.requiresstarttls=Some email servers such as Google mail requires starttls encryption
+
+label.adminurl=Administration url
+
+email.link=Link

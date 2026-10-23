@@ -1,0 +1,8 @@
+
+				CreditCardType creditCardType = null;
+				String cardType = order.getPayment().get("creditcard_card_type");
+
+				if (cardType.equalsIgnoreCase(CreditCardType.AMEX.name())) {
+					creditCardType = CreditCardType.AMEX;
+				} else if (cardType.equalsIgnoreCase(CreditCardType.VISA.name())) {
+					creditCardType = CreditCardType.VISA;

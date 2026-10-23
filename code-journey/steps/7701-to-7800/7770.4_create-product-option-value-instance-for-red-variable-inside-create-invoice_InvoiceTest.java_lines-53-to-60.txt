@@ -1,0 +1,8 @@
+	    
+	    productOptionService.create(color);
+	    
+	    //create an option value
+	    ProductOptionValue red = new ProductOptionValue();
+	    red.setMerchantStore(store);
+	    red.setCode("red");
+	    

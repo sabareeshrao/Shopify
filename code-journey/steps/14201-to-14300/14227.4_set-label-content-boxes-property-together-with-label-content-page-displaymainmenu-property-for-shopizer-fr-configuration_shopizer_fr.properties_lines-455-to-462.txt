@@ -1,0 +1,8 @@
+label.content.boxes=Boîtes de contenu
+label.content.boxes.position=Position de la boîte
+label.content.boxes.name=Nom de la boîte
+label.content.sections=Sections de contenu
+label.content.friendlyurl=URL simplifié
+label.content.metatag.description=Méta donnée de description
+label.content.page.displaymainmenu=Afficher un line vers cette page dans le menu principal
+

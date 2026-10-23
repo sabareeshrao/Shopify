@@ -1,0 +1,9 @@
+	public ShippingSummary getShippingSummary() {
+		return shippingSummary;
+	}
+	public void setShippingSummary(ShippingSummary shippingSummary) {
+		this.shippingSummary = shippingSummary;
+	}
+	public ShippingOption getSelectedShippingOption() {
+		return selectedShippingOption;
+	}

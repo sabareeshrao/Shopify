@@ -1,0 +1,6 @@
+	public Product getRelatedProduct() {
+		return relatedProduct;
+	}
+
+
+

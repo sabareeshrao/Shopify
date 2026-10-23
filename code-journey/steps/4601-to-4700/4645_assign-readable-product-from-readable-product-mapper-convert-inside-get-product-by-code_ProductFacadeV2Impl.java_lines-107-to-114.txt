@@ -1,0 +1,8 @@
+		
+
+		ReadableProduct readableProduct = readableProductMapper.convert(product, store, language);
+
+		return readableProduct;
+		
+	}
+	

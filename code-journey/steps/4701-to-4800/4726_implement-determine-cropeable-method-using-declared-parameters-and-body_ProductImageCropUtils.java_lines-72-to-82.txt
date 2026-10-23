@@ -1,0 +1,11 @@
+	private void determineCropeable(int width, int specificationsWidth,
+			int height, int specificationsHeight) {
+		/*** determine if image can be cropped ***/
+		// height
+		int y = height - specificationsHeight;
+		// width
+		int x = width - specificationsWidth;
+
+		if (x < 0 || y < 0) {
+			setCropeable(false);
+		}

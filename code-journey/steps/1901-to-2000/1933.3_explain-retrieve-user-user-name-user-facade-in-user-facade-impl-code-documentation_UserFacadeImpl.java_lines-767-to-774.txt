@@ -1,0 +1,8 @@
+		 * How to retrieve a User from userName
+		 * 
+		 * userFacade.findByUserName
+		 * 
+		 * How to send an email
+		 * 
+		 * 
+		 * How to generate a token

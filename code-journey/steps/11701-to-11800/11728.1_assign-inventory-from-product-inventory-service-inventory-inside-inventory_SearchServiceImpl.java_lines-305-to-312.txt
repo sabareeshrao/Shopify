@@ -1,0 +1,8 @@
+	private Map<String, String> inventory(Product product) throws Exception {
+		
+		
+		/**
+		 * Default inventory
+		 */
+		
+		ProductInventory inventory = productInventoryService.inventory(product);

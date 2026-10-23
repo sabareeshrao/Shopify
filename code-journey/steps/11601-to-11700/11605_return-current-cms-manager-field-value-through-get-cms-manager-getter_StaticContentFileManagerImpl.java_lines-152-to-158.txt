@@ -1,0 +1,7 @@
+	@Override
+	public CMSManager getCmsManager() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,8 @@
+	@Override
+	public void delete(Long priceId, String sku, MerchantStore store) {
+		Validate.notNull(priceId, "Product Price id cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(sku, "Product sku cannot be null");
+		ProductPrice productPrice = productPriceService.findById(priceId, sku, store);
+		if(productPrice == null) {
+			throw new ServiceRuntimeException("An exception occured while getting product price [" + priceId + "] for product sku [" + sku + "] and Store [" + store.getCode() + "]");

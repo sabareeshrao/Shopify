@@ -1,0 +1,8 @@
+#groups
+label.groups.title=Groupes
+label.group.editgroup=éditer un groupe
+label.group.creategroup=Créer un groupe
+label.group.root=Racine
+label.group.groupId=Identifiant du groupe
+
+#category

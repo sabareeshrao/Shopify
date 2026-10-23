@@ -1,0 +1,4 @@
+	public MeasureUnit getDimension() {
+		return dimension;
+	}
+

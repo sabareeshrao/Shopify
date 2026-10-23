@@ -1,0 +1,8 @@
+		CategoryDescription description = new CategoryDescription();
+		description.setLanguage("en");
+		description.setName(code);
+
+		List<CategoryDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);
+
+		newCategory.setDescriptions(descriptions);

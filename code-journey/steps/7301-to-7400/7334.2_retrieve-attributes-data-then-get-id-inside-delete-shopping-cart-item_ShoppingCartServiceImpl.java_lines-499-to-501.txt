@@ -1,0 +1,3 @@
+				item.getAttributes().forEach(a -> shoppingCartAttributeItemRepository.deleteById(a.getId()));
+				item.getAttributes().clear();
+			}

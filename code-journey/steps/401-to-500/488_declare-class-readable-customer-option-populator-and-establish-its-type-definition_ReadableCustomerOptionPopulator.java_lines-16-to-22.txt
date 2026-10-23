@@ -1,0 +1,7 @@
+public class ReadableCustomerOptionPopulator {
+
+	/**
+extends
+		AbstractDataPopulator<com.salesmanager.core.model.customer.attribute.CustomerOption, com.salesmanager.shop.admin.model.customer.attribute.CustomerOption> {
+
+	

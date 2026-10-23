@@ -1,0 +1,7 @@
+		if(this.getData().size()>0) {
+			StringBuilder dataEntries = null;
+			int count = 0;
+			for(Map keyValue : this.getData()) {
+				if(dataEntries == null) {
+					dataEntries = new StringBuilder();
+				}

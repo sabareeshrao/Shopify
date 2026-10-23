@@ -1,0 +1,4 @@
+	public String getCurrentUserLanguage() {
+		return currentUserLanguage;
+	}
+

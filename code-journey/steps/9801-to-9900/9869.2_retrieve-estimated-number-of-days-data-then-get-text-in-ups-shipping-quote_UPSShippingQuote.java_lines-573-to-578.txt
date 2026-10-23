@@ -1,0 +1,6 @@
+									option.getEstimatedNumberOfDays()).append(
+									" ").append(
+									labelUtil.getText(locale,
+											"label.generic.days.lowercase"))
+									.append(")");
+						}

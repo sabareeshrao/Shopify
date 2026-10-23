@@ -1,0 +1,14 @@
+	
+	@Inject
+	ProductService productService;
+	
+	@Inject
+	PricingService pricingService;
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	
+	@Inject
+	private ProductRelationshipService productRelationshipService;
+

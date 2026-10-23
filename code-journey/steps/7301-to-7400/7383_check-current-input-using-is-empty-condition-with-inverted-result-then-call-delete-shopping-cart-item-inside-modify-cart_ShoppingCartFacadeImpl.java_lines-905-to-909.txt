@@ -1,0 +1,5 @@
+
+			if (!removeItems.isEmpty()) {
+				for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem emptyItem : removeItems) {
+					shoppingCartService.deleteShoppingCartItem(emptyItem.getId());
+				}

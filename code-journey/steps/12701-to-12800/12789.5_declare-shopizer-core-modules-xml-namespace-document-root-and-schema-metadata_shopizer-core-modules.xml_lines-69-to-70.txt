@@ -1,0 +1,2 @@
+		class="com.salesmanager.core.business.modules.integration.shipping.impl.CustomShippingQuoteRules" />
+

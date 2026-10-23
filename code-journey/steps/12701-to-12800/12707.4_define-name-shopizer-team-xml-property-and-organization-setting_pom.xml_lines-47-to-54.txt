@@ -1,0 +1,8 @@
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Shopizer Team</name>
+			<email>contact@shopizer.com</email>
+			<organization>Shopizer</organization>

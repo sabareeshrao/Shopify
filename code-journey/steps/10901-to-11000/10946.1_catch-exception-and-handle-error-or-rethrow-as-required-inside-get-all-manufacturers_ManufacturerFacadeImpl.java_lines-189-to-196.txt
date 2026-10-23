@@ -1,0 +1,8 @@
+
+      readableList.setManufacturers(returnList);
+      return readableList;
+      
+    } catch (Exception e) {
+      throw new ServiceRuntimeException("Error while get manufacturers",e);
+    }
+  }

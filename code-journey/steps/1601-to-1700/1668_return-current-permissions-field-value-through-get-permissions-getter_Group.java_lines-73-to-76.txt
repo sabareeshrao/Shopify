@@ -1,0 +1,4 @@
+	public Set<Permission> getPermissions() {
+		return permissions;
+	}
+

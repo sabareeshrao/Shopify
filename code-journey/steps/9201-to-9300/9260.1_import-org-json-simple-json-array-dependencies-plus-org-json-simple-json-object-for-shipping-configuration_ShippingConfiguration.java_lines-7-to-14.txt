@@ -1,0 +1,8 @@
+import org.json.simple.JSONArray;
+import org.json.simple.JSONAware;
+import org.json.simple.JSONObject;
+
+/**
+ * Object saved in the database maintaining various shipping options
+ * @author casams1
+ *

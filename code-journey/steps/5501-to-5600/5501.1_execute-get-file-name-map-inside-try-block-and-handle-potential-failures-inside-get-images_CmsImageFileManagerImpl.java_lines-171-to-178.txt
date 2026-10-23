@@ -1,0 +1,8 @@
+
+    List<OutputContentFile> images = new ArrayList<OutputContentFile>();
+
+
+    try {
+
+
+      FileNameMap fileNameMap = URLConnection.getFileNameMap();

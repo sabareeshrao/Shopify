@@ -1,0 +1,8 @@
+	
+
+	/**
+	 * 
+	 * Patch image (change position)
+	 * 
+	 * @param id
+	 * @param files

@@ -1,0 +1,32 @@
+
+label.product.option.displayonly=Option pour affichage seulement
+label.product.option.code=Code de l'option
+label.product.option.codehelp=Code de l'option requis pour effectuer des recherches de produits par attribut
+
+
+#options values
+label.product.productoptionsvalues.title=Valeurs des options de produit
+label.product.productoptionsvalues.list=Liste des valeurs des options de produit
+label.product.productoptiosvalue.title=Valeur d'option
+label.product.productoptionvalue.edit.title=Modifier une valeur d'option
+label.product.productoptionvalue.create.title=Créer une valeur d'option
+label.product.productoptionvalue=Image de valeur d'option
+
+#content Images - Files
+label.page=Page
+label.contentImages.store=Boutique marchand
+label.content.images=Librairie d'images
+label.content.files=Librairie de fichiers
+label.content.pages=Pages de contenu
+label.content.pages.manage.content=Gestion du contenu des pages
+label.content.manage.content=Gestion du contenu
+label.content.pages.page.name=Nom de la page
+label.content.pages.page.content=Contenu de la page
+label.content.boxes=Boîtes de contenu
+label.content.boxes.position=Position de la boîte
+label.content.boxes.name=Nom de la boîte
+label.content.sections=Sections de contenu
+label.content.friendlyurl=URL simplifié
+label.content.metatag.description=Méta donnée de description
+label.content.page.displaymainmenu=Afficher un line vers cette page dans le menu principal
+

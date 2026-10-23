@@ -1,0 +1,3 @@
+	private String paymentModule;//stripe|paypal|braintree|moneyorder ...
+	private String amount;
+	

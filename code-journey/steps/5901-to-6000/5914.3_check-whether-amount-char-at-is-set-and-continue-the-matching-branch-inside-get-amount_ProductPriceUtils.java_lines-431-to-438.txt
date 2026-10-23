@@ -1,0 +1,8 @@
+		 * 
+		 * String.replaceAll(decimalPoint, ""); String.replaceAll(thousandPoint, "");
+		 * 
+		 * Should be able to parse to Integer
+		 */
+		StringBuilder newAmount = new StringBuilder();
+		for (int i = 0; i < amount.length(); i++) {
+			if (amount.charAt(i) != DECIMALPOINT && amount.charAt(i) != THOUSANDPOINT) {

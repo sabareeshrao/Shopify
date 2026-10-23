@@ -1,0 +1,9 @@
+			}
+			
+			if(!StringUtils.isBlank(source.getComments())) {
+				OrderStatusHistory statusHistory = new OrderStatusHistory();
+				statusHistory.setStatus(null);
+				statusHistory.setOrder(target);
+				statusHistory.setComments(source.getComments());
+				target.getOrderHistory().add(statusHistory);
+			}

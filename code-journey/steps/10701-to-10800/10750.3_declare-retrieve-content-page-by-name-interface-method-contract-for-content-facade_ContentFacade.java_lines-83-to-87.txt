@@ -1,0 +1,5 @@
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableContentPage getContentPageByName(String name, MerchantStore store, Language language);
+

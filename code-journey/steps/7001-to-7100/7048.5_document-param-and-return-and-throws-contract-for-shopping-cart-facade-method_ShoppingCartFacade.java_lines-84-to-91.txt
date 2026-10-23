@@ -1,0 +1,8 @@
+	 * @param cartCode
+	 * @param promo
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableShoppingCart modifyCart(String cartCode, String promo, MerchantStore store,

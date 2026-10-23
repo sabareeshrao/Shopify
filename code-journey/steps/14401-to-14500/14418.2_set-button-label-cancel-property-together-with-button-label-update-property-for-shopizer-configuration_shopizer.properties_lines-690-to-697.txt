@@ -1,0 +1,8 @@
+button.label.cancel=Cancel
+button.label.edit=Edit
+button.label.crop=Crop
+button.label.reset=Reset
+button.label.clear=Clear
+button.label.clear.all=Clear all
+button.label.add=Add
+button.label.update=Update

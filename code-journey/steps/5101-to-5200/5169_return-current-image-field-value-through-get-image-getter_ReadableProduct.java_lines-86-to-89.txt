@@ -1,0 +1,4 @@
+	public ReadableImage getImage() {
+		return image;
+	}
+

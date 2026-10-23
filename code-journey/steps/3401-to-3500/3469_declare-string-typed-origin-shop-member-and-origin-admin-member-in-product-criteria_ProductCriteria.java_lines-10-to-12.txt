@@ -1,0 +1,3 @@
+	public static final String ORIGIN_SHOP = "shop";
+	public static final String ORIGIN_ADMIN = "admin";
+	

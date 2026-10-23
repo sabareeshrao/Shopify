@@ -1,0 +1,12 @@
+
+			//email management
+			if ("true".equals(coreConfiguration.getProperty("ORDER_EMAIL_API"))) {
+				// send email
+				try {
+
+					notify(modelOrder, customer, store, language, locale);
+
+
+				} catch (Exception e) {
+					LOGGER.error("Cannot send order confirmation email", e);
+				}

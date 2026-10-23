@@ -1,0 +1,3 @@
+			MerchantStore store) throws ServiceException;
+
+}

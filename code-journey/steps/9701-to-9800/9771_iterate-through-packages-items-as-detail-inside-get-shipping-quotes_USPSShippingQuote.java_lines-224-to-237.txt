@@ -1,0 +1,14 @@
+
+
+
+			StringBuilder xmldatabuffer = new StringBuilder();
+
+
+			double totalW = 0;
+			double totalH = 0;
+			double totalL = 0;
+			double totalG = 0;
+			double totalP = 0;
+
+			for (PackageDetails detail : packages) {
+

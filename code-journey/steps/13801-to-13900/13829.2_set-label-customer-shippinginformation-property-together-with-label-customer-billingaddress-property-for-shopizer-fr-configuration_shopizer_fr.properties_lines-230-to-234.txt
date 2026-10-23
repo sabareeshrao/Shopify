@@ -1,0 +1,5 @@
+label.customer.shippinginformation =Informations sur la facturation et la livraison
+label.customer.billingshipping=Informations de facturation et de livraison
+label.customer.shippingaddress=Adresse de livraison
+label.customer.billingaddress=Adresse de facturation
+

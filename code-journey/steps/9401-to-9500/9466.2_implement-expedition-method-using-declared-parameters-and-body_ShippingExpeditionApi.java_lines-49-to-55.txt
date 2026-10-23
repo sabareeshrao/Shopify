@@ -1,0 +1,7 @@
+	@RequestMapping(value = { "/private/shipping/expedition" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public ExpeditionConfiguration expedition(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+

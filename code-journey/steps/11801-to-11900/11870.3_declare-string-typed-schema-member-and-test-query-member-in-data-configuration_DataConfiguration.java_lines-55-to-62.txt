@@ -1,0 +1,8 @@
+    
+    @Value("${db.schema}")
+    private String schema;
+    
+    @Value("${db.preferredTestQuery}")
+    private String testQuery;
+    
+    @Value("${db.minPoolSize}")

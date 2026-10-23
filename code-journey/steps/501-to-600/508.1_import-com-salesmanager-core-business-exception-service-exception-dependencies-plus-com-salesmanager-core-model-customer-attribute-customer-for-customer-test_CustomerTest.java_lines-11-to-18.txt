@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.model.common.Billing;
+import com.salesmanager.core.model.common.Delivery;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.customer.CustomerGender;
+import com.salesmanager.core.model.customer.attribute.CustomerAttribute;
+import com.salesmanager.core.model.customer.attribute.CustomerOption;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionDescription;

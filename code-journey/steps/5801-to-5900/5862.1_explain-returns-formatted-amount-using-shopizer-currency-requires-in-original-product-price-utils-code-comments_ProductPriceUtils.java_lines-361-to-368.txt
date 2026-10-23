@@ -1,0 +1,8 @@
+
+	/**
+	 * Returns a formatted amount using Shopizer Currency requires internal
+	 * java.util.Currency populated
+	 * 
+	 * @param currency
+	 * @param amount
+	 * @return

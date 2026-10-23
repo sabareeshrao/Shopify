@@ -1,0 +1,2 @@
+        q.setParameter("code", "%" + criteria.getCode().toLowerCase() + "%");
+      }

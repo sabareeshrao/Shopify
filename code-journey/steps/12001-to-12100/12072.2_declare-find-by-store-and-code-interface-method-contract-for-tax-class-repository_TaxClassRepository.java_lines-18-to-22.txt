@@ -1,0 +1,5 @@
+	@Query("select t from TaxClass t left join fetch t.merchantStore tm where tm.id=?1 and t.code=?2")
+	TaxClass findByStoreAndCode(Integer id, String code);
+
+
+}

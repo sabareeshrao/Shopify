@@ -1,0 +1,4 @@
+	private ProductPropertyOption option;
+	private PersistableProductOptionValue optionValue;
+
+

@@ -1,0 +1,4 @@
+label.generic.sizeunit.IN=Inches
+label.generic.remove=Remove
+label.generic.yes=Yes
+label.generic.no=No

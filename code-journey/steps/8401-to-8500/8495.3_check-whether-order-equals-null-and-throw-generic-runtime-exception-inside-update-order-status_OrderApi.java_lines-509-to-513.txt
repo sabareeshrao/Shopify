@@ -1,0 +1,5 @@
+
+		Order order = orderService.getOrder(id, merchantStore);
+		if (order == null) {
+			throw new GenericRuntimeException("412", "Order not found [" + id + "]");
+		}

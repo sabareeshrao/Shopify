@@ -1,0 +1,10 @@
+		}
+
+		value = persistableOptionValueMapper.merge(optionValue, value, store, language);
+
+
+		try {
+			productOptionValueService.saveOrUpdate(value);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while saving option value", e);
+		}

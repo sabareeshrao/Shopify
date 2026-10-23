@@ -1,0 +1,8 @@
+			if (criterias.getCategoryIds().size() == 1) {
+
+				com.salesmanager.core.model.catalog.category.Category category = categoryService
+						.getById(criterias.getCategoryIds().get(0));
+
+				if (category != null) {
+					String lineage = new StringBuilder().append(category.getLineage())
+							.toString();

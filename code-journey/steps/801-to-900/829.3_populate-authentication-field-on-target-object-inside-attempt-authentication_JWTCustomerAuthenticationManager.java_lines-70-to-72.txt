@@ -1,0 +1,3 @@
+                logger.info("authenticated user " + username + ", setting security context");
+                //SecurityContextHolder.getContext().setAuthentication(authentication);
+            }

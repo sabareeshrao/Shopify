@@ -1,0 +1,4 @@
+	private ReadableTaxClass convertToReadableTaxClass(TaxClass t, MerchantStore store, Language language) {
+		return readableTaxClassMapper.convert(t, store, language);
+	}
+	

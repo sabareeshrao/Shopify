@@ -1,0 +1,4 @@
+	public void setProductExternalDl(String productExternalDl) {
+		this.productExternalDl = productExternalDl;
+	}
+

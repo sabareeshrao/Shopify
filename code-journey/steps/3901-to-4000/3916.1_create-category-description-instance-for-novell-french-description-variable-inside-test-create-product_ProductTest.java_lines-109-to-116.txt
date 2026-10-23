@@ -1,0 +1,8 @@
+	    novellEnglishDescription.setName("Novell");
+	    novellEnglishDescription.setCategory(novell);
+	    novellEnglishDescription.setLanguage(en);
+
+	    CategoryDescription novellFrenchDescription = new CategoryDescription();
+	    novellFrenchDescription.setName("Roman");
+	    novellFrenchDescription.setCategory(novell);
+	    novellFrenchDescription.setLanguage(fr);

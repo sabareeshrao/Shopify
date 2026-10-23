@@ -1,0 +1,4 @@
+	public List<FinalPrice> getAdditionalPrices() {
+		return additionalPrices;
+	}
+

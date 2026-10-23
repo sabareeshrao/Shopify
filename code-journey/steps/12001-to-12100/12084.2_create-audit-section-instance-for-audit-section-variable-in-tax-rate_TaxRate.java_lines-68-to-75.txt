@@ -1,0 +1,8 @@
+	private Long id;
+	
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+	
+	@Column(name = "TAX_PRIORITY")
+	private Integer taxPriority = 0;
+	

@@ -1,0 +1,8 @@
+	
+	@Inject
+	protected ProductImageService productImageService;
+	
+	@Inject
+	protected ProductRelationshipService productRelationshipService;
+	
+	@Inject

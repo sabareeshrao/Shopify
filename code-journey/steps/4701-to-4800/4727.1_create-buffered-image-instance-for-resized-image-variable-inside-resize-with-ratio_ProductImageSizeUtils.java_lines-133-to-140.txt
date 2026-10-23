@@ -1,0 +1,8 @@
+				// else sides are equal and is set to destination size at initialization of
+			}
+
+            BufferedImage resizedImage = new BufferedImage(fWidth, fHeight, type);
+            Graphics2D g = resizedImage.createGraphics();
+            g.setComposite(AlphaComposite.Src);
+
+            g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);

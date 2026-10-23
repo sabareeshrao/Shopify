@@ -1,0 +1,8 @@
+	@Column(name = "STORE_ADDRESS")
+	private String storeaddress;
+
+	@NotEmpty
+	@Column(name = "STORE_CITY", length = 100)
+	private String storecity;
+
+	@NotEmpty

@@ -1,0 +1,8 @@
+	private Optional<ReadableTaxRateDescription> convertDescription(List<TaxRateDescription> descriptions, Language language) {
+		Validate.notEmpty(descriptions,"List of TaxRateDescriptions should not be empty");
+		
+	    Optional<TaxRateDescription> description = descriptions.stream()
+	            .filter(desc -> desc.getLanguage().getCode().equals(language.getCode())).findAny();
+	        if (description.isPresent()) {
+	          return Optional.of(convertDescription(description.get()));
+	        } else {

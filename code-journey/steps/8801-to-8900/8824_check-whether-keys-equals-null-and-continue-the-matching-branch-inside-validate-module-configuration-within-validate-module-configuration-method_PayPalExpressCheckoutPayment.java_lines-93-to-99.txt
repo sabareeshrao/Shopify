@@ -1,0 +1,7 @@
+		
+		if(keys==null || StringUtils.isBlank(keys.get("signature"))) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("signature");
+		}

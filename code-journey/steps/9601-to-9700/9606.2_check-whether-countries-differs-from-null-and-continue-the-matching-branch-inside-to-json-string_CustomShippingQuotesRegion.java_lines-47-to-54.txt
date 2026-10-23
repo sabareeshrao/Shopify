@@ -1,0 +1,8 @@
+		
+		if(countries!=null) {
+			returnString.append(",");
+			StringBuilder coutriesList = new StringBuilder();
+			int countCountry = 0;
+			coutriesList.append("[");
+			for(String country : countries) {
+				coutriesList.append("\"").append(country).append("\"");

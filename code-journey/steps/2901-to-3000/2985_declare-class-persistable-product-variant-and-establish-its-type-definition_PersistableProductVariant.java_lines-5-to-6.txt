@@ -1,0 +1,2 @@
+public class PersistableProductVariant extends ProductVariant {
+

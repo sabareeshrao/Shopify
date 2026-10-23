@@ -1,0 +1,8 @@
+		
+		if(!CollectionUtils.isEmpty((source.getOptionValue().getDescriptions()))) {
+			productOptionValue =  persistableProductOptionValueMapper.merge(source.getOptionValue(),productOptionValue, store, language);
+			try {
+				productOptionValueService.saveOrUpdate(productOptionValue);
+			} catch (ServiceException e) {
+				throw new ConversionRuntimeException("Error converting ProductOptionValue",e); 
+			}

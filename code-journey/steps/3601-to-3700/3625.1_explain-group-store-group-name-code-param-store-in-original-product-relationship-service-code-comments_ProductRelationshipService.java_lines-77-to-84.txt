@@ -1,0 +1,8 @@
+	
+	/**
+	 * Get group by store and group name (code)
+	 * @param store
+	 * @param name
+	 * @return
+	 */
+	List<ProductRelationship> getGroupDefinition(MerchantStore store, String name);

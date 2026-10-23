@@ -1,0 +1,8 @@
+
+		// get the logo
+		String logo = store.getStoreLogo();
+
+		OutputContentFile image = contentService.getContentFile(store.getCode(), FileContentType.LOGO, logo);
+
+		// print image
+		OutputStream outputStream = new FileOutputStream("C:/doc/logo-" + image.getFileName());

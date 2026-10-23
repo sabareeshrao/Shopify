@@ -1,0 +1,4 @@
+	public void setAttributeDisplayOnly(boolean attributeDisplayOnly) {
+		this.attributeDisplayOnly = attributeDisplayOnly;
+	}
+

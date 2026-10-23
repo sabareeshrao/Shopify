@@ -1,0 +1,6 @@
+	@Override
+	public List<Category> getByProductId(Long productId, MerchantStore store) {
+		return categoryRepository.listByProduct(store, productId);
+	}
+
+}

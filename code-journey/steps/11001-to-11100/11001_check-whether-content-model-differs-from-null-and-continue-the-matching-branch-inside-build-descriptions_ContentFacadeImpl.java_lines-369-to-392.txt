@@ -1,0 +1,24 @@
+			
+			//if (contentModel != null) {
+			//	setContentDescriptionToContentModel(contentModel, contentDescription, lang);
+			//}
+			contentDescription.setMetatagDescription(objectContent.getMetaDescription());
+			contentDescription.setTitle(objectContent.getTitle());
+			contentDescription.setName(objectContent.getName());
+			contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+			contentDescription.setDescription(objectContent.getDescription());
+			contentDescription.setMetatagTitle(objectContent.getTitle());
+			contentDescription.setContent(contentModel);
+			contentDescription.setLanguage(lang);
+			descriptions.add(contentDescription);
+			//contentDescription.setId(objectContent.getId());
+			/**
+			contentDescription.setMetatagDescription(objectContent.getMetaDescription());
+			contentDescription.setTitle(objectContent.getTitle());
+			contentDescription.setName(objectContent.getName());
+			contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+			contentDescription.setDescription(objectContent.getDescription());
+			contentDescription.setMetatagTitle(objectContent.getTitle());
+			descriptions.add(contentDescription);
+			**/
+		}

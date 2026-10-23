@@ -1,0 +1,9 @@
+
+		} catch (Exception e) {
+			LOGGER.error("Error while deleting manufacturer id " + id, e);
+			try {
+				response.sendError(503, "Error while deleting manufacturer id " + id + " - " + e.getMessage());
+			} catch (Exception ignore) {
+			}
+		}
+	}

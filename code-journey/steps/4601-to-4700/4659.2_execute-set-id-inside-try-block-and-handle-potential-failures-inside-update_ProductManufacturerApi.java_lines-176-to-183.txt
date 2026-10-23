@@ -1,0 +1,8 @@
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		try {
+			manufacturer.setId(id);
+			manufacturerFacade.saveOrUpdateManufacturer(manufacturer, merchantStore, language);
+		} catch (Exception e) {
+			LOGGER.error("Error while creating manufacturer", e);
+			try {

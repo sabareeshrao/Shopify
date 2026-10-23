@@ -1,0 +1,5 @@
+		
+		return productPriceFacade.list(sku, merchantStore, language);
+
+		
+	}

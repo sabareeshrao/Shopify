@@ -1,0 +1,2 @@
+			String price = globalShippingConfiguration.getIntegrationKeys().get("price");
+	

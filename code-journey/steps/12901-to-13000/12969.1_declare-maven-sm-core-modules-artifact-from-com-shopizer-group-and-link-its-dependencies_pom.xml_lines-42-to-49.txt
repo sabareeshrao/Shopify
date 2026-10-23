@@ -1,0 +1,8 @@
+
+		<!-- sm-core-modules -->
+		<dependency>
+			<groupId>com.shopizer</groupId>
+			<artifactId>sm-core-modules</artifactId>
+		</dependency>
+
+		<!-- canadapost -->

@@ -1,0 +1,4 @@
+  public List<ReadableUser> getData() {
+    return data;
+  }
+

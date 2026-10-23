@@ -1,0 +1,8 @@
+	    blueDescription.setName("Blue");
+	    blueDescription.setDescription("Color blue");
+	    blueDescription.setProductOptionValue(blue);
+	    
+	    blue.getDescriptions().add(blueDescription);
+
+	    //create another option value
+	    productOptionValueService.saveOrUpdate(blue);

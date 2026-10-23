@@ -1,0 +1,4 @@
+		
+		if(volume!=null) {
+			inputParameters.setVolume((long)volume.doubleValue());
+		}

@@ -1,0 +1,8 @@
+public interface TaxRateService extends SalesManagerEntityService<Long, TaxRate> {
+
+	List<TaxRate> listByStore(MerchantStore store) throws ServiceException;
+
+	List<TaxRate> listByCountryZoneAndTaxClass(Country country, Zone zone,
+			TaxClass taxClass, MerchantStore store, Language language)
+			throws ServiceException;
+

@@ -1,0 +1,8 @@
+		try {
+
+			//core properties
+			
+			if(StringUtils.isBlank(source.getIdentifier())) {
+				destination.setSku(source.getSku());
+			} else {
+				destination.setSku(source.getIdentifier());

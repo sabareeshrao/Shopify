@@ -1,0 +1,6 @@
+		for(PackageDetails pack : packages) {
+			weight = weight + pack.getShippingWeight();
+			Double tmpVolume = pack.getShippingHeight() * pack.getShippingLength() * pack.getShippingWidth();
+			if(volume == null || tmpVolume > volume) { //take the largest volume
+				volume = tmpVolume;
+			} 

@@ -1,0 +1,8 @@
+	private ShippingOriginRepository shippingOriginRepository;
+
+	
+
+	@Inject
+	public ShippingOriginServiceImpl(ShippingOriginRepository shippingOriginRepository) {
+		super(shippingOriginRepository);
+		this.shippingOriginRepository = shippingOriginRepository;

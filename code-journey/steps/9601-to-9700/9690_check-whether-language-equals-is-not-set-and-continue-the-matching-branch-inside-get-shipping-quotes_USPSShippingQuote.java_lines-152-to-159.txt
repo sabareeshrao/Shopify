@@ -1,0 +1,8 @@
+
+
+		// supports en and fr
+		String language = locale.getLanguage();
+		if (!language.equals(Locale.FRENCH.getLanguage())
+				&& !language.equals(Locale.ENGLISH.getLanguage())) {
+			language = Locale.ENGLISH.getLanguage();
+		}

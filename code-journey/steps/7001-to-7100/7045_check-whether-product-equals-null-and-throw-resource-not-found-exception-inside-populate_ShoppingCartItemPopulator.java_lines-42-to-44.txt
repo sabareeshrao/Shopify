@@ -1,0 +1,3 @@
+		if(product==null ) {
+			throw new ResourceNotFoundException("No product found for sku [" + source.getSku() +"]");
+		}

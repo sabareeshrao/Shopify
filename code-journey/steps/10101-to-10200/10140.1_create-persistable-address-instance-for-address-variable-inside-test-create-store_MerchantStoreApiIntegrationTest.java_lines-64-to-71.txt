@@ -1,0 +1,8 @@
+      
+      PersistableAddress address = new PersistableAddress();
+      address.setAddress("121212 simple address");
+      address.setPostalCode("12345");
+      address.setCountry("US");
+      address.setCity("FT LD");
+      address.setStateProvince("FL");
+

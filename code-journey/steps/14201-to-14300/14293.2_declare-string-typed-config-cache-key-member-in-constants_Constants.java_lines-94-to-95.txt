@@ -1,0 +1,2 @@
+	public final static String CONFIG_CACHE_KEY = "CONFIG";
+

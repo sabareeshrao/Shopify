@@ -1,0 +1,8 @@
+		OutputContentFile outputStaticContentData = new OutputContentFile();
+		InputStream input = null;
+		try {
+
+			String nodePath = this.getNodePath(merchantStoreCode, fileContentType);
+
+			final Node<String, Object> merchantNode = this.getNode(nodePath);
+

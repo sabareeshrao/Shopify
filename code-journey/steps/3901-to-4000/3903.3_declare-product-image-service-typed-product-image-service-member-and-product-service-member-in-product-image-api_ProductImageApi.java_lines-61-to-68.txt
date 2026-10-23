@@ -1,0 +1,8 @@
+
+	@Inject
+	private ProductImageService productImageService;
+
+	@Inject
+	private ProductService productService;
+	
+	@Autowired

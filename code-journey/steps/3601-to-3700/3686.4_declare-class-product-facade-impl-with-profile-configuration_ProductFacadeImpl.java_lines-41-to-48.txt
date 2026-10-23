@@ -1,0 +1,8 @@
+@Profile({ "default", "cloud", "gcp", "aws", "mysql" , "local" })
+public class ProductFacadeImpl implements ProductFacade {
+
+	@Inject
+	private CategoryService categoryService;
+	
+	@Inject
+	private ProductAttributeService productAttributeService;

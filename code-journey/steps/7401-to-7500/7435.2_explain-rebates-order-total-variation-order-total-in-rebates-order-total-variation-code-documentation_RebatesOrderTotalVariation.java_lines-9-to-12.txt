@@ -1,0 +1,4 @@
+ */
+public class RebatesOrderTotalVariation extends OrderTotalVariation {
+
+}

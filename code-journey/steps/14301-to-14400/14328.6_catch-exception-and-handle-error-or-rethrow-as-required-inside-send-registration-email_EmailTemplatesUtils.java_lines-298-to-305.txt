@@ -1,0 +1,8 @@
+	           email.setTemplateName(EmailConstants.EMAIL_CUSTOMER_TPL);
+	           email.setTemplateTokens(templateTokens);
+
+	           LOGGER.debug( "Sending email to {} on their  registered email id {} ",customer.getBilling().getFirstName(),customer.getEmailAddress() );
+	           emailService.sendHtmlEmail(merchantStore, email);
+
+	       } catch (Exception e) {
+	           LOGGER.error("Error occured while sending welcome email ",e);

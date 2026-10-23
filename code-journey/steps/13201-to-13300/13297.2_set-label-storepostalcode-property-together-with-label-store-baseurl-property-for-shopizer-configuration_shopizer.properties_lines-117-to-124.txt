@@ -1,0 +1,8 @@
+label.storepostalcode=Store Postal Code
+label.storecountry=Store Country
+label.storezone=Store State / Province
+label.supportedlanguages=Supported languages
+label.storeemailaddress=Store email address
+label.storesetup=Store setup
+label.store.template=Theme
+label.store.baseurl=Store base url (domain)

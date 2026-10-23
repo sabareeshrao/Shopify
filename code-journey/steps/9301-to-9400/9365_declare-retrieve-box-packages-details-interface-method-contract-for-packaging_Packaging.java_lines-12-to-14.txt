@@ -1,0 +1,3 @@
+	public List<PackageDetails> getBoxPackagesDetails(
+			List<ShippingProduct> products, MerchantStore store) throws ServiceException;
+	

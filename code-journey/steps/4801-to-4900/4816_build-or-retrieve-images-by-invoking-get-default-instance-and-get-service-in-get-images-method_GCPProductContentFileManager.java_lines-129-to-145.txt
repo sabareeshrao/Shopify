@@ -1,0 +1,17 @@
+
+  /**
+   * List files
+   */
+  @Override
+  public List<OutputContentFile> getImages(String merchantStoreCode,
+      FileContentType imageContentType) throws ServiceException {
+    
+    InputStream inputStream = null;
+    try {
+      Storage storage = StorageOptions.getDefaultInstance().getService();
+      
+      String bucketName = bucketName();
+      
+      if(!this.bucketExists(storage, bucketName)) {
+        return null;
+      }

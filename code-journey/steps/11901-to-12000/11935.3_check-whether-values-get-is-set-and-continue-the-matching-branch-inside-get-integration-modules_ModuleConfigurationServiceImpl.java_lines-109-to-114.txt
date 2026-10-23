@@ -1,0 +1,6 @@
+							config.setPort((String) values.get("port"));
+							config.setUri((String) values.get("uri"));
+							config.setEnv((String) values.get("env"));
+							if (values.get("config1") != null) {
+								config.setConfig1((String) values.get("config1"));
+							}

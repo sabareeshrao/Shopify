@@ -1,0 +1,8 @@
+    @Override
+    public ShoppingCartData populate(final ShoppingCart shoppingCart,
+                                     final ShoppingCartData cart, final MerchantStore store, final Language language) {
+
+    	Validate.notNull(shoppingCart, "Requires ShoppingCart");
+    	Validate.notNull(language, "Requires Language not null");
+    	int cartQuantity = 0;
+        cart.setCode(shoppingCart.getShoppingCartCode());

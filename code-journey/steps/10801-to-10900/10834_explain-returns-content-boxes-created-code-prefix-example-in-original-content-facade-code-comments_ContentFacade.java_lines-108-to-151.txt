@@ -1,0 +1,44 @@
+	
+	/**
+	 * Returns content boxes created with code prefix
+	 * for example return boxes with code starting with <code>_
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, String codePrefix, MerchantStore store, Language language, int start, int count);
+
+	ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, MerchantStore store, Language language, int start, int count);
+
+	void addContentFile(ContentFile file, String merchantStoreCode);
+	
+	/**
+	 * Add multiple files
+	 * @param file
+	 * @param merchantStoreCode
+	 */
+	void addContentFiles(List<ContentFile> file, String merchantStoreCode);
+	
+	/**
+	 * Creates content page
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 */
+	Long saveContentPage(PersistableContentPage page, MerchantStore merchantStore, Language language);
+	
+	void updateContentPage(Long id, PersistableContentPage page, MerchantStore merchantStore, Language language);
+	
+	void deleteContent(Long id, MerchantStore merchantStore);
+	
+	/**
+	 * Creates content box
+	 * @param box
+	 * @param merchantStore
+	 * @param language
+	 */
+	Long saveContentBox(PersistableContentBox box, MerchantStore merchantStore, Language language);
+	
+	void updateContentBox(Long id, PersistableContentBox box, MerchantStore merchantStore, Language language);
+

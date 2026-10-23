@@ -1,0 +1,8 @@
+module.shipping.canadapost.DOM.XP=Xpresspost
+module.shipping.canadapost.DOM.XP.CERT=Xpresspost Certified
+module.shipping.canadapost.DOM.PC=Priority
+module.shipping.canadapost.DOM.DT=Delivered Tonight
+module.shipping.canadapost.DOM.LIB=Library Books
+
+module.shipping.canadapost.USA.EP=Expedited Parcel USA
+module.shipping.canadapost.USA.PW.ENV=Priority Worldwide Envelope USA

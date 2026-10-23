@@ -1,0 +1,4 @@
+	public List<ReadableImage> getImages() {
+		return images;
+	}
+

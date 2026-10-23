@@ -1,0 +1,4 @@
+				
+				if(prdImage.isDefaultImage()) {
+					destination.setImage(prdImage);
+				}

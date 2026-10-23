@@ -1,0 +1,4 @@
+
+	<beans:bean id="messages" class="com.salesmanager.shop.utils.LabelUtils"/>
+
+	<!-- 

@@ -1,0 +1,11 @@
+	@Override
+	public void addProductImage(Product product, ProductImage productImage, ImageContentFile inputImage)
+			throws ServiceException {
+
+		productImage.setProduct(product);
+
+		try {
+			if (productImage.getImageType() == 0) {
+				Assert.notNull(inputImage.getFile(), "ImageContentFile.file cannot be null");
+				productFileManager.addProductImage(productImage, inputImage);
+			}

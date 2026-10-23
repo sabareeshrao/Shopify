@@ -1,0 +1,15 @@
+import org.jsoup.helper.Validate;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.user.GroupService;
+import com.salesmanager.core.business.services.user.PermissionService;
+import com.salesmanager.core.model.user.Group;
+import com.salesmanager.core.model.user.PermissionCriteria;
+import com.salesmanager.core.model.user.PermissionList;
+import com.salesmanager.shop.model.security.ReadablePermission;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+
+@Service("securityFacade")
+public class SecurityFacadeImpl implements SecurityFacade {
+  

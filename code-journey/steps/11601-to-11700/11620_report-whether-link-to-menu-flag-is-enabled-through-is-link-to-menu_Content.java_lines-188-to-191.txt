@@ -1,0 +1,4 @@
+	public boolean isLinkToMenu() {
+		return linkToMenu;
+	}
+

@@ -1,0 +1,11 @@
+
+		if (source.getOrderAttributes() != null) {
+			List<ReadableOrderProductAttribute> attributes = new ArrayList<ReadableOrderProductAttribute>();
+			for (OrderProductAttribute attr : source.getOrderAttributes()) {
+				ReadableOrderProductAttribute readableAttribute = new ReadableOrderProductAttribute();
+				try {
+					String price = pricingService.getDisplayAmount(attr.getProductAttributePrice(), store);
+					readableAttribute.setAttributePrice(price);
+				} catch (ServiceException e) {
+					throw new ConversionRuntimeException("Cannot format price", e);
+				}

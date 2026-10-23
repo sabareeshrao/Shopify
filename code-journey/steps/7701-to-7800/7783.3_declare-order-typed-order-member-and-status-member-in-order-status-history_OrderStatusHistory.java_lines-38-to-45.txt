@@ -1,0 +1,8 @@
+	
+	@JsonIgnore
+	@ManyToOne(targetEntity = Order.class)
+	@JoinColumn(name = "ORDER_ID", nullable = false)
+	private Order order;
+	
+	@Enumerated(value = EnumType.STRING)
+	private OrderStatus status;

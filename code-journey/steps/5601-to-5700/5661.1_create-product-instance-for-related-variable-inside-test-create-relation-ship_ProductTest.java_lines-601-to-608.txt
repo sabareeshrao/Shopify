@@ -1,0 +1,8 @@
+		
+		//create new related product
+	    // PRODUCT 1
+
+	    Product related = new Product();
+	    related.setProductHeight(new BigDecimal(4));
+	    related.setProductLength(new BigDecimal(3));
+	    related.setProductWidth(new BigDecimal(1));

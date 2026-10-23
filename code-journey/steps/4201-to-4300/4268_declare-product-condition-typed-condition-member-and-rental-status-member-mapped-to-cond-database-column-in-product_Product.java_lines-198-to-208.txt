@@ -1,0 +1,11 @@
+	
+	@Column(name="COND", nullable = true)
+	private ProductCondition condition;
+	
+	/**
+	 * RENTAL ADDITIONAL FIELDS
+	 */
+
+	@Column(name="RENTAL_STATUS", nullable = true)
+	private RentalStatus rentalStatus;
+	

@@ -1,0 +1,12 @@
+
+
+    } catch (Exception e) {
+      LOGGER.error("Error while instantiating CmsImageFileManager", e);
+    } finally {
+
+    }
+
+
+
+  }
+

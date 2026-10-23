@@ -1,0 +1,5 @@
+				
+				if(description != null) {
+					target.setDescription(description.getDescription());
+					target.setLanguage(description.getLanguage().getCode());
+				}

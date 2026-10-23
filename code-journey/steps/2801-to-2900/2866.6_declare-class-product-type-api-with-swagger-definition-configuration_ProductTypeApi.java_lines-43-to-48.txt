@@ -1,0 +1,6 @@
+@SwaggerDefinition(tags = { @Tag(name = "Product type resource", description = "Manage product types") })
+public class ProductTypeApi {
+
+	@Inject
+	private ProductTypeFacade productTypeFacade;
+

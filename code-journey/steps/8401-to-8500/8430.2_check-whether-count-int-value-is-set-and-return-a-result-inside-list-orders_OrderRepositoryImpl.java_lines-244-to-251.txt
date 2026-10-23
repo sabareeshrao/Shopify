@@ -1,0 +1,8 @@
+		if(count.intValue()==0)
+			return orderList;
+
+	    @SuppressWarnings("rawtypes")
+		GenericEntityList entityList = new GenericEntityList();
+	    entityList.setTotalCount(count.intValue());
+		
+		objectQ = RepositoryHelper.paginateQuery(objectQ, count, entityList, criteria);

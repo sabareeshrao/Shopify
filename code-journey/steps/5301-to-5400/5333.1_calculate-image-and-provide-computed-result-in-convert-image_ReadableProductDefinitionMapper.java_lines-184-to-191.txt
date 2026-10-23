@@ -1,0 +1,8 @@
+	private ReadableImage convertImage(Product product, ProductImage image, MerchantStore store) {
+		ReadableImage prdImage = new ReadableImage();
+		prdImage.setImageName(image.getProductImage());
+		prdImage.setDefaultImage(image.isDefaultImage());
+
+		StringBuilder imgPath = new StringBuilder();
+		imgPath.append(imageUtils.getContextPath()).append(imageUtils.buildProductImageUtils(store, product.getSku(), image.getProductImage()));
+

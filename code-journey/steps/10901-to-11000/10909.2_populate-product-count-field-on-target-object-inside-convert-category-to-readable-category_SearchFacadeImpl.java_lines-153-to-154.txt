@@ -1,0 +1,2 @@
+				categoryProxy.setProductCount(total.intValue());
+			}

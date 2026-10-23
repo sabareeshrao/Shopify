@@ -1,0 +1,8 @@
+      populator.populate(summary, shippingSummary, merchantStore, language);
+
+      List<ShippingOption> options = quote.getShippingOptions();
+
+      if (!CollectionUtils.isEmpty(options)) {
+
+        for (ShippingOption shipOption : options) {
+

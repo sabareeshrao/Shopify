@@ -1,0 +1,4 @@
+	public void setProductAvailabilityId(Long productAvailabilityId) {
+		this.productAvailabilityId = productAvailabilityId;
+	}
+

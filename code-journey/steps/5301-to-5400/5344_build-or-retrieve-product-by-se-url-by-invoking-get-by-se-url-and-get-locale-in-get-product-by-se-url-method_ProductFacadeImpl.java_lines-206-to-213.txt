@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProduct getProductBySeUrl(MerchantStore store, String friendlyUrl, Language language) throws Exception {
+
+		Product product = productService.getBySeUrl(store, friendlyUrl, LocaleUtils.getLocale(language));
+
+		if (product == null) {
+			return null;
+		}

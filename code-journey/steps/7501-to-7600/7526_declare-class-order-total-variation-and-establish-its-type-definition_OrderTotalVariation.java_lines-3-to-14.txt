@@ -1,0 +1,12 @@
+import java.util.List;
+
+/**
+ * Contains a list of negative OrderTotal variation
+ * that will be shown in the order summary
+ * @author carlsamson
+ *
+ */
+public abstract class OrderTotalVariation {
+	
+	List<OrderTotal> variations = null;
+

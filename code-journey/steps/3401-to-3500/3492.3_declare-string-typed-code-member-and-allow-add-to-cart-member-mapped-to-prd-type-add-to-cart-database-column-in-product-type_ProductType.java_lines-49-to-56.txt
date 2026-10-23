@@ -1,0 +1,8 @@
+  private String code;
+
+  @Column(name = "PRD_TYPE_ADD_TO_CART")
+  private Boolean allowAddToCart;
+  
+  @Column(name = "PRD_TYPE_VISIBLE")
+  private Boolean visible;
+

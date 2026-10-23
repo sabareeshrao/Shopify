@@ -1,0 +1,5 @@
+	private String productName;
+	private List<AttributeCriteria> attributeCriteria;
+	private String origin = ORIGIN_SHOP;
+
+	

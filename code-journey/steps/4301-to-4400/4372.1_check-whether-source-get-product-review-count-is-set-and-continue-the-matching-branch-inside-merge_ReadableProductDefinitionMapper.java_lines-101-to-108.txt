@@ -1,0 +1,8 @@
+
+		if (source.getProductReviewCount() != null) {
+			returnDestination.setRatingCount(source.getProductReviewCount().intValue());
+		}*/
+		
+		if (description != null) {
+			com.salesmanager.shop.model.catalog.product.ProductDescription tragetDescription = populateDescription(
+					description);

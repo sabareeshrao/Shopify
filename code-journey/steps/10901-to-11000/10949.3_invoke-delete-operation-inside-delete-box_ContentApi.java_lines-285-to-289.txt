@@ -1,0 +1,5 @@
+			@ApiIgnore Language language) {
+
+		contentFacade.delete(merchantStore, id);
+
+	}

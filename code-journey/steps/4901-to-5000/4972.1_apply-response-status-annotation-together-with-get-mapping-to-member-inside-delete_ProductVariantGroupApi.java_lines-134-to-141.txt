@@ -1,0 +1,8 @@
+
+	// list
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/product/{id}/productVariantGroup" })
+	@ApiOperation(httpMethod = "GET", value = "Delete product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody ReadableEntityList<ReadableProductVariantGroup> list(
+			@PathVariable final Long id,
+			@ApiIgnore MerchantStore merchantStore,

@@ -1,0 +1,22 @@
+	private void addFile(final String merchantStoreCode, InputContentFile contentImage) throws ServiceException {
+
+		try {
+			LOG.info("Adding content file for merchant id {}", merchantStoreCode);
+			// staticContentFileManager.addFile(merchantStoreCode,
+			// contentImage);
+
+			String p = null;
+			Optional<String> path = Optional.ofNullable(p);
+
+			contentFileManager.addFile(merchantStoreCode, path, contentImage);
+
+		} catch (Exception e) {
+			LOG.error("Error while trying to convert input stream to buffered image", e);
+			throw new ServiceException(e);
+
+		} finally {
+
+			try {
+				if (contentImage.getFile() != null) {
+					contentImage.getFile().close();
+				}

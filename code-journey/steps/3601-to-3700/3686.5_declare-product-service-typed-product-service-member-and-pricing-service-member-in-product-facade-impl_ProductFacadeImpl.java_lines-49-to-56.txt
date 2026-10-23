@@ -1,0 +1,8 @@
+
+	@Inject
+	private ProductService productService;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject

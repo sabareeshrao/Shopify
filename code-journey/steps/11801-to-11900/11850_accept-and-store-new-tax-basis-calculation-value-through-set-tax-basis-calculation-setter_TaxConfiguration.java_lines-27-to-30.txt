@@ -1,0 +1,4 @@
+	public void setTaxBasisCalculation(TaxBasisCalculation taxBasisCalculation) {
+		this.taxBasisCalculation = taxBasisCalculation;
+	}
+

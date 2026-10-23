@@ -1,0 +1,4 @@
+	public void setProductHeight(BigDecimal productHeight) {
+		this.productHeight = productHeight;
+	}
+

@@ -1,0 +1,8 @@
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	private Set<OrderProduct> orderProducts = new LinkedHashSet<OrderProduct>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	@OrderBy(clause = "sort_order asc")
+	private Set<OrderTotal> orderTotal = new LinkedHashSet<OrderTotal>();
+	

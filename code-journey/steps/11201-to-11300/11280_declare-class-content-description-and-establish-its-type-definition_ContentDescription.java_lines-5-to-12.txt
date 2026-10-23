@@ -1,0 +1,8 @@
+public class ContentDescription extends NamedEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

@@ -1,0 +1,8 @@
+	
+	@Query("select p from ProductVariant p join fetch p.product pr "
+			+ "left join fetch p.variation pv "
+			+ "left join fetch pv.productOption pvpo "
+			+ "left join fetch pv.productOptionValue pvpov "
+			+ "left join fetch pvpo.descriptions pvpod "
+			+ "left join fetch pvpov.descriptions pvpovd "
+			

@@ -1,0 +1,7 @@
+			@ApiIgnore Language language, HttpServletRequest request, 
+			HttpServletResponse response) {
+
+		productOptionFacade.deleteOptionValue(id, merchantStore);
+		return;
+
+	}

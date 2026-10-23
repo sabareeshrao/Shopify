@@ -1,0 +1,8 @@
+	private ProductVariation variation;
+
+	@ManyToOne(targetEntity = Product.class)
+	@JoinColumn(name = "PRODUCT_ID", nullable = false)
+	private Product product;
+	
+	@Column(name = "CODE", nullable = true)
+	private String code;

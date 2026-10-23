@@ -1,0 +1,64 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.catalog.pricing.PricingService;
+import com.salesmanager.core.model.catalog.category.Category;
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOption;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionDescription;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValue;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValueDescription;
+import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
+import com.salesmanager.core.model.catalog.product.description.ProductDescription;
+import com.salesmanager.core.model.catalog.product.image.ProductImage;
+import com.salesmanager.core.model.catalog.product.price.FinalPrice;
+import com.salesmanager.core.model.catalog.product.price.ProductPrice;
+import com.salesmanager.core.model.catalog.product.price.ProductPriceDescription;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.mapper.catalog.ReadableCategoryMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableManufacturerMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductTypeMapper;
+import com.salesmanager.shop.model.catalog.category.ReadableCategory;
+import com.salesmanager.shop.model.catalog.manufacturer.ReadableManufacturer;
+import com.salesmanager.shop.model.catalog.product.ReadableImage;
+import com.salesmanager.shop.model.catalog.product.ReadableProduct;
+import com.salesmanager.shop.model.catalog.product.ReadableProductPrice;
+import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductAttribute;
+import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductAttributeValue;
+import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductOption;
+import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductProperty;
+import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductPropertyValue;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionValue;
+import com.salesmanager.shop.model.catalog.product.product.ProductSpecification;
+import com.salesmanager.shop.model.catalog.product.product.variant.ReadableProductVariant;
+import com.salesmanager.shop.model.catalog.product.type.ReadableProductType;
+import com.salesmanager.shop.model.references.DimensionUnitOfMeasure;
+import com.salesmanager.shop.model.references.WeightUnitOfMeasure;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+import com.salesmanager.shop.utils.DateUtil;
+import com.salesmanager.shop.utils.ImageFilePath;
+
+/**
+ * Works for product v2 model
+ * 
+ * @author carlsamson
+ *
+ */
+@Component
+public class ReadableProductMapper implements Mapper<Product, ReadableProduct> {
+
+	// uses code that is similar to ProductDefinition
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+	@Autowired
+	private ReadableCategoryMapper readableCategoryMapper;
+
+	@Autowired
+	private ReadableProductTypeMapper readableProductTypeMapper;
+
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper;

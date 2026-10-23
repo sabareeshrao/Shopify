@@ -1,0 +1,26 @@
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
+import springfox.documentation.annotations.ApiIgnore;
+
+/**
+ * API to manage product variant
+ * 
+ * The flow is the following
+ * 
+ * - create a product definition
+ * - create a product variant
+ *
+ * @author Carl Samson
+ */
+@Controller
+@RequestMapping("/api/v2")
+@Api(tags = {"Product variation resource (Product variant Api)"})
+@SwaggerDefinition(tags = {
+    @Tag(name = "Product variation resource", description = "List variations of products by different grouping")
+})
+public class ProductVariationApi {
+

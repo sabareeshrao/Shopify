@@ -1,0 +1,8 @@
+    InputStream inputStream = null;
+    try {
+      Storage storage = StorageOptions.getDefaultInstance().getService();
+      
+      String bucketName = bucketName();
+      
+      if(!this.bucketExists(storage, bucketName)) {
+        return null;

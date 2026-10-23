@@ -1,0 +1,8 @@
+	    packedd.setManufacturer(packed);
+	    packedd.setName("Packed publishing");
+	    packed.getDescriptions().add(packedd);
+
+	    manufacturerService.create(packed);
+
+	    Manufacturer novells = new Manufacturer();
+	    novells.setMerchantStore(store);

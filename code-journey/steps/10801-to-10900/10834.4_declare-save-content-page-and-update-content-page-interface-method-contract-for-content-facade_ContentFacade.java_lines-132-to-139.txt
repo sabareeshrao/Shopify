@@ -1,0 +1,8 @@
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 */
+	Long saveContentPage(PersistableContentPage page, MerchantStore merchantStore, Language language);
+	
+	void updateContentPage(Long id, PersistableContentPage page, MerchantStore merchantStore, Language language);
+	

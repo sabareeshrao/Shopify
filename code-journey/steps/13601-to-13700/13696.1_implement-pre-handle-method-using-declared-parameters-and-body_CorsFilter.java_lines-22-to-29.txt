@@ -1,0 +1,8 @@
+
+		/**
+		 * Allows public web services to work from remote hosts
+		 */
+	   public boolean preHandle(
+	            HttpServletRequest request,
+	            HttpServletResponse response,
+	            Object handler) throws Exception {

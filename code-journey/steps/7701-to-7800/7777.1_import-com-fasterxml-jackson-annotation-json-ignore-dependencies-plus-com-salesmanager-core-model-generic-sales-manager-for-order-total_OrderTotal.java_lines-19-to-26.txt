@@ -1,0 +1,8 @@
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+
+
+/**
+ * Order line items related to an order.
+ * @author casams1

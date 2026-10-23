@@ -1,0 +1,10 @@
+			
+			throw new IntegrationException("Error while processing BeanStream transaction",e);
+
+		} finally {
+			if (is != null) {
+				try {
+					is.close();
+				} catch (Exception ignore) {
+					// TODO: handle exception
+				}

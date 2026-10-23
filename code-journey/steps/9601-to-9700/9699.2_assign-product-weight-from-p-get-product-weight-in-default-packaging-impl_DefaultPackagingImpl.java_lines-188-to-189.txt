@@ -1,0 +1,2 @@
+			double productWeight = p.getProductWeight().doubleValue();
+

@@ -1,0 +1,5 @@
+        Optional.ofNullable(resultMessage)
+                .ifPresent(errorEntity::setMessage);
+        return errorEntity;
+    }
+}

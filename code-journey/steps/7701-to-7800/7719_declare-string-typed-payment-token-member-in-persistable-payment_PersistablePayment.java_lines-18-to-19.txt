@@ -1,0 +1,2 @@
+	private String paymentToken;//any token after doing init
+	

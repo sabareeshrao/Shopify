@@ -1,0 +1,8 @@
+	private void validateCreditCardDate(int m, int y) throws ServiceException {
+		java.util.Calendar cal = new java.util.GregorianCalendar();
+		int monthNow = cal.get(java.util.Calendar.MONTH) + 1;
+		int yearNow = cal.get(java.util.Calendar.YEAR);
+		if (yearNow > y) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid date format","messages.error.creditcard.dateformat");
+		}
+		// OK, change implementation

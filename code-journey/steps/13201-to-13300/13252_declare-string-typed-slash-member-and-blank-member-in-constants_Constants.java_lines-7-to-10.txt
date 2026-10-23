@@ -1,0 +1,4 @@
+	public final static String SLASH = "/";
+	public final static String BLANK = "";
+	public final static String EQUALS = "=";
+

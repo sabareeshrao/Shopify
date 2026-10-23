@@ -1,0 +1,8 @@
+
+	@Deprecated
+	private ContentDescriptionEntity create(ContentDescription description) {
+
+		ContentDescriptionEntity contentDescription = new ContentDescriptionEntity();
+		contentDescription.setLanguage(description.getLanguage().getCode());
+		contentDescription.setTitle(description.getTitle());
+		contentDescription.setName(description.getName());

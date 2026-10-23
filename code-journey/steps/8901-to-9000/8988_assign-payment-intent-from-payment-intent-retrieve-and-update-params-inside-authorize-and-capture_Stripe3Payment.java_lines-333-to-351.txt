@@ -1,0 +1,19 @@
+
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					token
+		  	);
+
+			PaymentIntentCaptureParams params =
+					PaymentIntentCaptureParams.builder()
+							.setAmountToCapture(Long.parseLong(strAmount))
+							.setStatementDescriptor(
+									store.getStorename().length() > 22 ?
+											store.getStorename().substring(0, 22) :
+											store.getStorename()
+							)
+					.build();
+
+			paymentIntent = paymentIntent.capture(params);
+	
+			//Map<String,String> metadata = ch.getMetadata();
+			

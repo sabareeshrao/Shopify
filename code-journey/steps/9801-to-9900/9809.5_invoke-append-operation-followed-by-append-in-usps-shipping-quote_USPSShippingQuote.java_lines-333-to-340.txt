@@ -1,0 +1,8 @@
+			 * <Width>14</Width> <Height>15</Height> <POBoxFlag>N</POBoxFlag>
+			 * <GiftFlag>N</GiftFlag> </GXG>
+			 * <ValueOfContents>250</ValueOfContents> <Country>Japan</Country>
+			 * </Package>
+			 */
+
+			xmldatabuffer.append("<Package ID=\"").append(i).append("\">");
+

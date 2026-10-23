@@ -1,0 +1,8 @@
+ * variant null
+ * regionVariant null
+ * 
+ * @author carlsamson
+ *
+ */
+public class ProductAvailability extends SalesManagerEntity<Long, ProductAvailability> implements Auditable {
+

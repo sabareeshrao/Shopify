@@ -1,0 +1,8 @@
+            	
+            		//check if it exist
+            		
+	            	Currency currency = new Currency();
+	            	currency.setName(c.getCurrencyCode());
+	            	currency.setCurrency(c);
+	            	currencyService.create(currency);
+

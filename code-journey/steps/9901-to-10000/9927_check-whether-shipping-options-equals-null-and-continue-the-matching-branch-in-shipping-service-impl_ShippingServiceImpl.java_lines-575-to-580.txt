@@ -1,0 +1,6 @@
+			
+			if(shippingOptions==null && !StringUtils.isBlank(delivery.getPostalCode())) {
+				
+				//absolutely need to use in this case store pickup or other default shipping quote
+				shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_TO_SELECTED_COUNTRY);
+			}

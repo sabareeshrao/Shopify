@@ -1,0 +1,4 @@
+    
+    if(category == null) {
+      throw new ResourceNotFoundException("Category with id [" + categoryId + "] not found");
+    }

@@ -1,0 +1,8 @@
+		.append(confDir.toString())
+		.append(rootPath).append(merchantCode);
+		Path merchantPath = Paths.get(nodePath.toString());
+		this.createDirectoryIfNorExist(merchantPath);
+		
+		return merchantPath;
+		
+	}

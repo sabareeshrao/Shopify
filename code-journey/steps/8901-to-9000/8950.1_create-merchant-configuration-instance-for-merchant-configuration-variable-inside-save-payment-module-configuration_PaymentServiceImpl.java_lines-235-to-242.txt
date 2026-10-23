@@ -1,0 +1,8 @@
+			} else {
+				merchantConfiguration = new MerchantConfiguration();
+				merchantConfiguration.setMerchantStore(store);
+				merchantConfiguration.setKey(Constants.PAYMENT_MODULES);
+			}
+			modules.put(configuration.getModuleCode(), configuration);
+			
+			String configs =  ConfigurationModulesLoader.toJSONString(modules);

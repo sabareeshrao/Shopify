@@ -1,0 +1,4 @@
+                  + largeImageHeight + " , [PRODUCT_IMAGE_WIDTH_SIZE] " + largeImageWidth;
+          LOGGER.error(sizeMsg);
+          throw new ServiceException(sizeMsg);
+        }

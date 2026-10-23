@@ -1,0 +1,9 @@
+	public ReadableDescription getDescription() {
+		return description;
+	}
+	public void setDescription(ReadableDescription description) {
+		this.description = description;
+	}
+	public ReadableProductPrice getProductPrice() {
+		return productPrice;
+	}

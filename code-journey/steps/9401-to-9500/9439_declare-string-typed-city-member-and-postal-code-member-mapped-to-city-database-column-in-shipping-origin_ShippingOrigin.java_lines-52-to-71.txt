@@ -1,0 +1,20 @@
+
+	@NotEmpty
+	@Column (name ="CITY", length=100)
+	private String city;
+	
+	@NotEmpty
+	@Column (name ="POSTCODE", length=20)
+	private String postalCode;
+	
+	@Column (name ="STATE", length=100)
+	private String state;
+
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = Country.class)
+	@JoinColumn(name="COUNTRY_ID", nullable=true)
+	private Country country;
+	
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = Zone.class)
+	@JoinColumn(name="ZONE_ID", nullable=true)
+	private Zone zone;
+

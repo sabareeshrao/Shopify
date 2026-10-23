@@ -1,0 +1,2 @@
+    		q.setParameter("cid", criteria.getGroupIds());
+    	}

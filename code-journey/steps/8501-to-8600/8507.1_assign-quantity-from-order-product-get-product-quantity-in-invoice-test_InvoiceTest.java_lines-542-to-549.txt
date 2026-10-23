@@ -1,0 +1,8 @@
+				
+				
+				
+				
+				sheet.setValueAt(productName.toString(), 0, productCell);
+				
+				int quantity = orderProduct.getProductQuantity();
+				sheet.setValueAt(quantity, 1, productCell);

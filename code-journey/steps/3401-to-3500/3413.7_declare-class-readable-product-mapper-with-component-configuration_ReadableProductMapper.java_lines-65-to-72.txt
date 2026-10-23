@@ -1,0 +1,8 @@
+@Component
+public class ReadableProductMapper implements Mapper<Product, ReadableProduct> {
+
+	// uses code that is similar to ProductDefinition
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

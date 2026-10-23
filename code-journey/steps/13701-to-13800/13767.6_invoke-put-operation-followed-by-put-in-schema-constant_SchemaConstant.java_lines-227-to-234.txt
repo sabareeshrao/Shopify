@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("RSD", "Serbian Dinar");
+		CURRENCY_MAP.put("SCR", "Seychelles Rupee");
+		CURRENCY_MAP.put("SLL", "Leone");
+		CURRENCY_MAP.put("SGD", "Singapore Dollar");
+		CURRENCY_MAP.put("ANG", "Netherlands Antillean Guilder");
+		//CURRENCY_MAP.put("XSU", "Sucre");
+		CURRENCY_MAP.put("SBD", "Solomon Islands Dollar");
+		CURRENCY_MAP.put("SOS", "Somali Shilling");

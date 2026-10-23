@@ -1,0 +1,4 @@
+	public void setTaxRates(List<TaxRate> taxRates) {
+		this.taxRates = taxRates;
+	}
+

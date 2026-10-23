@@ -1,0 +1,8 @@
+
+	/**
+	 * Store might be alone (known as retailer)
+	 * A retailer can have multiple child attached
+	 * 
+	 * This method from a store code is able to retrieve parent and childs.
+	 * Method can also filter on storeName
+	 */

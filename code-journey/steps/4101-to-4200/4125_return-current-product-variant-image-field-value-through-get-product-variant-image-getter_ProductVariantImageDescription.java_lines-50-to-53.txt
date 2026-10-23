@@ -1,0 +1,4 @@
+	public ProductVariantImage getProductVariantImage() {
+		return productVariantImage;
+	}
+

@@ -1,0 +1,5 @@
+import java.util.Properties;
+
+@Component
+public class AppConfiguration {
+	

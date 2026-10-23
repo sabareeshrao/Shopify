@@ -1,0 +1,4 @@
+	public ReadableAudit getReadableAudit() {
+		return this.audit;
+	}
+

@@ -1,0 +1,3 @@
+	public @Resource(name="shopizer-properties") Properties properties = new Properties();//shopizer-properties
+
+	

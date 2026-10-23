@@ -1,0 +1,7 @@
+						if(TransactionType.CAPTURE.name().equals(t.getTransactionType().name())) {
+							capturable = false;
+						} else if(TransactionType.AUTHORIZECAPTURE.name().equals(t.getTransactionType().name())) {
+							capturable = false;
+						} else if(TransactionType.REFUND.name().equals(t.getTransactionType().name())) {
+							capturable = false;
+						}

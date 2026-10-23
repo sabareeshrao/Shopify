@@ -1,0 +1,10 @@
+	private String optionName = null;
+	private String optionCode = null;
+	private String optionDeliveryDate = null;
+	private String optionShippingDate = null;
+	private String optionPriceText = null;
+	private String optionId = null;
+	private String description = null;
+	private String shippingModuleCode = null;
+	private String note = null;
+	

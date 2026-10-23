@@ -1,0 +1,2 @@
+	private String basePath = Constants.STATIC_URI;
+	

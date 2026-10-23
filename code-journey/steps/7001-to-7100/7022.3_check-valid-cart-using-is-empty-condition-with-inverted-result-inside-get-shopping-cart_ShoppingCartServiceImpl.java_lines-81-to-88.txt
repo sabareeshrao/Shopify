@@ -1,0 +1,8 @@
+			ShoppingCart shoppingCart = null;
+
+			if (!CollectionUtils.isEmpty(validCart)) {
+				shoppingCart = validCart.get(0);
+				getPopulatedShoppingCart(shoppingCart, store);
+				if (shoppingCart != null && shoppingCart.isObsolete()) {
+					delete(shoppingCart);
+					shoppingCart = null;

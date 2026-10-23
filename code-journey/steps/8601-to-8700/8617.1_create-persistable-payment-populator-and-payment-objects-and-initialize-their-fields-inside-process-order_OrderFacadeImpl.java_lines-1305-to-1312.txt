@@ -1,0 +1,8 @@
+			}
+			modelOrder.setOrderTotal(set);
+
+			PersistablePaymentPopulator paymentPopulator = new PersistablePaymentPopulator();
+			paymentPopulator.setPricingService(pricingService);
+			Payment paymentModel = new Payment();
+			paymentPopulator.populate(order.getPayment(), paymentModel, store, language);
+

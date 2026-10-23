@@ -1,0 +1,6 @@
+	@Override
+	public ProductOptionSet getCode(MerchantStore store, String code) {
+		return productOptionSetRepository.findByCode(store.getId(), code);
+	}
+
+

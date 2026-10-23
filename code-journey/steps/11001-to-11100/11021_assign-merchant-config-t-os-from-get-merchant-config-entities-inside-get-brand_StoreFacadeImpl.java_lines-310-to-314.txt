@@ -1,0 +1,5 @@
+		List<MerchantConfigEntity> merchantConfigTOs = getMerchantConfigEntities(mStore);
+		readableBrand.getSocialNetworks().addAll(merchantConfigTOs);
+		return readableBrand;
+	}
+

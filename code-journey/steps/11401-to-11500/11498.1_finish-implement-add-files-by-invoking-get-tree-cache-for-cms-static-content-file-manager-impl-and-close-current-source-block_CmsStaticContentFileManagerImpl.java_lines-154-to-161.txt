@@ -1,0 +1,8 @@
+
+	}
+
+	/**
+	 * <p>
+	 * Method to add files for given store.Files will be stored in Infinispan
+	 * and will be retrieved based on the storeID. Following steps will be
+	 * performed to store static content files

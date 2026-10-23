@@ -1,0 +1,6 @@
+	@Override
+	public ReadableConfiguration configuration(String module, MerchantStore store) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+

@@ -1,0 +1,13 @@
+		
+		List<TaxItem> taxItems = new ArrayList<TaxItem>();
+		
+		//iterate through the tax class and get appropriate rates
+		for(Long taxClassId : taxClassAmountMap.keySet()) {
+			
+			//get taxRate by tax class
+			List<TaxRate> taxRates = null; 
+			if(!StringUtils.isBlank(stateProvince)&& zone==null) {
+				taxRates = taxRateService.listByCountryStateProvinceAndTaxClass(country, stateProvince, taxClasses.get(taxClassId), store, language);
+			} else {
+				taxRates = taxRateService.listByCountryZoneAndTaxClass(country, zone, taxClasses.get(taxClassId), store, language);
+			}

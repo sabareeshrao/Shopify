@@ -1,0 +1,6 @@
+		
+		if(!StringUtils.isBlank(criteria.getCountry())) {
+			String country = new StringBuilder().append("%").append(criteria.getCountry()).append("%").toString();
+			countQ.setParameter("country",country);
+			objectQ.setParameter("country",country);
+		}

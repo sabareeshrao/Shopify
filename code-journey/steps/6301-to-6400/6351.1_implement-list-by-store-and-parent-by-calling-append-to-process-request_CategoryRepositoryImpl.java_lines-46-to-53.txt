@@ -1,0 +1,8 @@
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Category> listByStoreAndParent(MerchantStore store, Category category) {
+		
+		StringBuilder queryBuilder = new StringBuilder();
+		queryBuilder.append("select c from Category c join fetch c.merchantStore cm ");
+		

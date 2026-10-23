@@ -1,0 +1,8 @@
+	@Override
+	public boolean userInRoles(String userName, List<String> groupNames) {
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+		List<String> roles = authentication.getAuthorities().stream().filter(x -> groupNames.contains(x.getAuthority()))
+				.map(r -> r.getAuthority()).collect(Collectors.toList());
+

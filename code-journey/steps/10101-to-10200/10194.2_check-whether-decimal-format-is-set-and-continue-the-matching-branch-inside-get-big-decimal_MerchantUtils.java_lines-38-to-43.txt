@@ -1,0 +1,6 @@
+		if(decimalFormat instanceof DecimalFormat) {
+			((DecimalFormat) decimalFormat).setParseBigDecimal(true);
+			value = (BigDecimal) decimalFormat.parse(bigDecimal);
+		} else {
+			value = new BigDecimal(bigDecimal);
+		}

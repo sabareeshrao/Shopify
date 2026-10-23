@@ -1,0 +1,4 @@
+	public void setProductPriceSpecialEndDate(Date productPriceSpecialEndDate) {
+		this.productPriceSpecialEndDate = productPriceSpecialEndDate;
+	}
+

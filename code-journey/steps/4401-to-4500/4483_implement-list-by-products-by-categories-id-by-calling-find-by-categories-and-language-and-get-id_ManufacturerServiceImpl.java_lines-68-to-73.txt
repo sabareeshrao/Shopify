@@ -1,0 +1,6 @@
+  @Override
+  public List<Manufacturer> listByProductsByCategoriesId(MerchantStore store, List<Long> ids,
+      Language language) throws ServiceException {
+    return manufacturerRepository.findByCategoriesAndLanguage(ids, language.getId());
+  }
+

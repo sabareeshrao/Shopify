@@ -1,0 +1,6 @@
+			// lookup customer
+			Customer customer = customerService.getById(customerId);
+
+			if (customer == null) {
+				throw new ResourceNotFoundException("No Customer found for id [" + customerId + "]");
+			}

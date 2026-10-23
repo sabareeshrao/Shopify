@@ -1,0 +1,4 @@
+	public void setRegions(String regions) {
+		this.regions = regions;
+	}
+

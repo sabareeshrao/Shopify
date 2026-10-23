@@ -1,0 +1,8 @@
+security.question.9=Quel surnom aviez-vous dans votre enfance ?
+
+security.questions.differentmessages=Choisir 3 questions différentes
+
+security.question1=Question 1
+security.question2=Question 2
+security.question3=Question 3
+security.answer.question1.message=Veuillez répondre à la question de sécurité 1

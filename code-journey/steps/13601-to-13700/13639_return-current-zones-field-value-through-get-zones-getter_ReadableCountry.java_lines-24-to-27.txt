@@ -1,0 +1,4 @@
+	public List<ReadableZone> getZones() {
+		return zones;
+	}
+

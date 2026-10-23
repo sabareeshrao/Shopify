@@ -1,0 +1,3 @@
+		listCriteria.setName(name);
+		return manufacturerFacade.listByStore(merchantStore, language, listCriteria, page, count);
+	}

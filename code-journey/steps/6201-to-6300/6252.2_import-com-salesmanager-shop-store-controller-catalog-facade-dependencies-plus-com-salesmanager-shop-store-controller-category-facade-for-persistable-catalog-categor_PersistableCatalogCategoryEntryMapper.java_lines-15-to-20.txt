@@ -1,0 +1,6 @@
+import com.salesmanager.shop.store.controller.catalog.facade.CatalogFacade;
+import com.salesmanager.shop.store.controller.category.facade.CategoryFacade;
+
+@Component
+public class PersistableCatalogCategoryEntryMapper implements Mapper<PersistableCatalogCategoryEntry, CatalogCategoryEntry> {
+

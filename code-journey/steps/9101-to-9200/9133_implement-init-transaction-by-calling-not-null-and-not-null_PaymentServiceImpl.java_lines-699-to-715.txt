@@ -1,0 +1,17 @@
+	@Override
+	public Transaction initTransaction(Order order, Customer customer, Payment payment, MerchantStore store) throws ServiceException {
+		
+		Validate.notNull(store);
+		Validate.notNull(payment);
+		Validate.notNull(order);
+		Validate.notNull(order.getTotal());
+		
+		payment.setCurrency(store.getCurrency());
+		
+		BigDecimal amount = order.getTotal();
+
+		//must have a shipping module configured
+		Map<String, IntegrationConfiguration> modules = this.getPaymentModulesConfigured(store);
+		if(modules==null){
+			throw new ServiceException("No payment module configured");
+		}

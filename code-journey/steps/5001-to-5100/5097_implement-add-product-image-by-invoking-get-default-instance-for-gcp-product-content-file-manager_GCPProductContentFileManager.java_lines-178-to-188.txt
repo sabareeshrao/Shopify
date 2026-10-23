@@ -1,0 +1,11 @@
+  @Override
+  public void addProductImage(ProductImage productImage, ImageContentFile contentImage)
+      throws ServiceException {
+    
+    Storage storage = StorageOptions.getDefaultInstance().getService();
+    
+    String bucketName = bucketName();
+
+    if(!this.bucketExists(storage, bucketName)) {
+      createBucket(storage, bucketName);
+    }

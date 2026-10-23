@@ -1,0 +1,4 @@
+			
+			if(product.getSku() != null && product.getSku().equals(source.getSku())) {
+				throw new OperationNotAllowedException("Product variant sku [" + source.getSku() + "] + must be different than product instance sku [" + product.getSku() + "]");
+			}

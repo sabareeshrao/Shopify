@@ -1,0 +1,8 @@
+
+	//public Currency getCurrencyModel() {
+	//	return currencyModel;
+	//}
+	public void setCurrencyModel(Currency currencyModel) {
+		this.currencyModel = currencyModel;
+	}
+

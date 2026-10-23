@@ -1,0 +1,3 @@
+			+ "join fetch r.reviewedCustomer rr join fetch rc.merchantStore rrm "
+			+ "left join fetch r.descriptions rd ";
+

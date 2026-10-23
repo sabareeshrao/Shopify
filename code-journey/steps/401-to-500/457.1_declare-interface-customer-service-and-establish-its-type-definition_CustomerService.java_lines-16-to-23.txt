@@ -1,0 +1,8 @@
+public interface CustomerService  extends SalesManagerEntityService<Long, Customer> {
+
+	List<Customer> getByName(String firstName);
+
+	List<Customer> getListByStore(MerchantStore store);
+
+	Customer getByNick(String nick);
+

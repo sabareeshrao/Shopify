@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.OutputContentFile;
+
+
+/**
+ * Methods to retrieve the static content from the CMS
+ * 

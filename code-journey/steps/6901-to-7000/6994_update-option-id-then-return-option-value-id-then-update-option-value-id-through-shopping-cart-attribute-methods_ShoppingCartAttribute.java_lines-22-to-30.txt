@@ -1,0 +1,9 @@
+	public void setOptionId(long optionId) {
+		this.optionId = optionId;
+	}
+	public long getOptionValueId() {
+		return optionValueId;
+	}
+	public void setOptionValueId(long optionValueId) {
+		this.optionValueId = optionValueId;
+	}

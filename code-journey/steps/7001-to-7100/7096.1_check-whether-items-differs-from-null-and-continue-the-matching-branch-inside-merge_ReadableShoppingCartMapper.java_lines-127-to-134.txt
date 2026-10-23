@@ -1,0 +1,8 @@
+
+			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> items = source.getLineItems();
+
+			if (items != null) {
+
+				for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem item : items) {
+					ReadableShoppingCartItem shoppingCartItem = new ReadableShoppingCartItem();
+					readableMinimalProductMapper.merge(item.getProduct(), shoppingCartItem, store, language);

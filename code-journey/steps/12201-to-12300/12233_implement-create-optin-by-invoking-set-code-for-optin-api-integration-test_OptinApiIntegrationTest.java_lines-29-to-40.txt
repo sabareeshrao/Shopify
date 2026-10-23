@@ -1,0 +1,12 @@
+  
+  @Test
+  public void createOptin() throws Exception {
+
+      PersistableOptin optin = new PersistableOptin();
+      optin.setCode(OptinType.PROMOTIONS.name());
+      optin.setOptinType(OptinType.PROMOTIONS.name());
+     
+      
+      final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+      final String json = writer.writeValueAsString(optin);
+ 

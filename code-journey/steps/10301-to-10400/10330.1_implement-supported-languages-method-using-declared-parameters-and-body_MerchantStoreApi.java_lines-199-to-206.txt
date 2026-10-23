@@ -1,0 +1,8 @@
+	
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/store/languages" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get list of store supported languages.", notes = "", response = ReadableMerchantStore.class)
+	public List<Language> supportedLanguages(
+			@ApiIgnore MerchantStore merchantStore,
+			HttpServletRequest request) {
+

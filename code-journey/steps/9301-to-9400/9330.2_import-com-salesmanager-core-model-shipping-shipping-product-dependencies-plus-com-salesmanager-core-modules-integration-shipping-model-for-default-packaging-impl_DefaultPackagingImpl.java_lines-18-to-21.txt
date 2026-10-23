@@ -1,0 +1,4 @@
+import com.salesmanager.core.model.shipping.ShippingProduct;
+import com.salesmanager.core.model.system.MerchantLog;
+import com.salesmanager.core.modules.integration.shipping.model.Packaging;
+

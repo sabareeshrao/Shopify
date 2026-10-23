@@ -1,0 +1,8 @@
+
+		//int boxCount = 1;
+		List<Product> assignedProducts = new ArrayList<Product>();
+
+		// calculate the volume for the next object
+		if (assignedProducts.size() > 0) {
+			individualProducts.removeAll(assignedProducts);
+			assignedProducts = new ArrayList<Product>();

@@ -1,0 +1,8 @@
+	@Query("select distinct p from ProductOptionSet p "
+			+ "join fetch p.store pm left join fetch p.productTypes pt "
+			+ "left join fetch p.option po "
+			+ "left join fetch po.descriptions pod "
+			+ "left join fetch p.values pv "
+			+ "left join fetch pv.descriptions pvd where pt.id= ?1 and pm.id = ?2 and pod.language.id = ?3")
+	List<ProductOptionSet> findByProductType(Long typeId, Integer storeId, Integer language);
+	

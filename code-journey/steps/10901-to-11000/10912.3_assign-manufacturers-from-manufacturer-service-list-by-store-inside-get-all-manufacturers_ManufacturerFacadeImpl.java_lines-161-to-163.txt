@@ -1,0 +1,3 @@
+        } else {
+          manufacturers = manufacturerService.listByStore(store);
+        }

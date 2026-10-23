@@ -1,0 +1,12 @@
+
+		// RENTAL
+		/**
+		if (!StringUtils.isBlank(criteria.getStatus())) {
+			qs.append(" and p.rentalStatus = :status");
+		}
+		**/
+
+		/**
+		if (criteria.getOwnerId() != null) {
+			qs.append(" and owner.id = :ownerid");
+		}

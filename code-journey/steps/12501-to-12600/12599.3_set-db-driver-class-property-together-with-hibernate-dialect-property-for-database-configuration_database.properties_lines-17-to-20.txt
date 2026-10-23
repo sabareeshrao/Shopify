@@ -1,0 +1,4 @@
+#db.password=shopizer_db_password
+db.driverClass=com.mysql.cj.jdbc.Driver
+hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+

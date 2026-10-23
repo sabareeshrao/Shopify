@@ -1,0 +1,9 @@
+    private ErrorEntity createErrorEntity(String errorCode, String message, String detailMessage) {
+        ErrorEntity errorEntity = new ErrorEntity();
+        Optional.ofNullable(errorCode)
+                .ifPresent(errorEntity::setErrorCode);
+
+        String resultMessage = (message != null && detailMessage !=null)  ? new StringBuilder().append(message).append(", ").append(detailMessage).toString() : detailMessage;
+        if(StringUtils.isBlank(resultMessage)) {
+        	resultMessage = message;
+        }

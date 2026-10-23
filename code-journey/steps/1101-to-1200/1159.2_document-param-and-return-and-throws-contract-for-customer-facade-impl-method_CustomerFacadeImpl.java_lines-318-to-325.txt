@@ -1,0 +1,8 @@
+   * 
+   * @param userName Customer slected userName
+   * @param store store for which customer want to register
+   * @return boolean flag indicating if user exists for given store or not
+   * @throws Exception
+   * 
+   */
+  @Override

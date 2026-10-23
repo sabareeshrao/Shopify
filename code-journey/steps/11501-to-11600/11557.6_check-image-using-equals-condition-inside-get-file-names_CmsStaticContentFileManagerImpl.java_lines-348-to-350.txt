@@ -1,0 +1,3 @@
+								if (type.equals("image")) {
+									fileNames.add(fileName);
+								}

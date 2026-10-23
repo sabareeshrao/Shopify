@@ -1,0 +1,2 @@
+public class DeleteProductEvent extends ProductEvent {
+

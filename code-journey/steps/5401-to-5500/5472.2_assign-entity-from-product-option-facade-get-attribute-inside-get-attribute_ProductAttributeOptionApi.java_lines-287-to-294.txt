@@ -1,0 +1,8 @@
+			@PathVariable Long id,
+			@PathVariable Long attributeId,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		ReadableProductAttributeEntity entity = productOptionFacade.getAttribute(id, attributeId, merchantStore, language);
+		return entity;
+

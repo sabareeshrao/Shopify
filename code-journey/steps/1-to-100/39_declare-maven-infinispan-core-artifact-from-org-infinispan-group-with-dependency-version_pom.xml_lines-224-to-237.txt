@@ -1,0 +1,14 @@
+			<!--spring integration -->
+			<dependency>
+				<groupId>org.kie</groupId>
+				<artifactId>kie-spring</artifactId>
+				<version>${drools.version}</version>
+			</dependency>
+			<!-- end rules engine -->
+
+			<!-- Infinispan -->
+			<dependency>
+				<groupId>org.infinispan</groupId>
+				<artifactId>infinispan-core</artifactId>
+				<version>${infinispan.version}</version>
+			</dependency>

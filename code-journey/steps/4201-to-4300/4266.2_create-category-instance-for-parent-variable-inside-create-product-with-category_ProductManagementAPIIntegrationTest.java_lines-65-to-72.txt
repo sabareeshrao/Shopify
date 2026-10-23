@@ -1,0 +1,8 @@
+		newCategory.setSortOrder(1);
+		newCategory.setVisible(true);
+		newCategory.setDepth(4);
+
+		final Category parent = new Category();
+
+		newCategory.setParent(parent);
+

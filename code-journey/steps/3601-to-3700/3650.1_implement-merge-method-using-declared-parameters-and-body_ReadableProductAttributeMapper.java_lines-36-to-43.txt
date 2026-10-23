@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductAttributeEntity merge(ProductAttribute source, ReadableProductAttributeEntity destination,
+												MerchantStore store, Language language) {
+
+		ReadableProductAttributeEntity attr = new ReadableProductAttributeEntity();
+		if(destination !=null) {
+			attr = destination;
+		}

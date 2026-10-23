@@ -1,0 +1,8 @@
+
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					trnID
+			);
+
+			Map<String, Object> params = new HashMap<>();
+			params.put("payment_intent", paymentIntent.getId());
+			params.put("amount", strAmount);

@@ -1,0 +1,4 @@
+
+		if (source.getGender()!= null) {
+			target.setGender(source.getGender().name());
+		}

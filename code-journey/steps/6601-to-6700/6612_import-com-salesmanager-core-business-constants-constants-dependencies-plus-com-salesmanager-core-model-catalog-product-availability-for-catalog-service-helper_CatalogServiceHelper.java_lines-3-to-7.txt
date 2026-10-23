@@ -1,0 +1,5 @@
+import com.salesmanager.core.business.constants.Constants;
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.catalog.product.attribute.*;
+import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
+

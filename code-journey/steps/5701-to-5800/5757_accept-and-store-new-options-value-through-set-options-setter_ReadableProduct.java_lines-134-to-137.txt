@@ -1,0 +1,4 @@
+	public void setOptions(List<ReadableProductOption> options) {
+		this.options = options;
+	}
+

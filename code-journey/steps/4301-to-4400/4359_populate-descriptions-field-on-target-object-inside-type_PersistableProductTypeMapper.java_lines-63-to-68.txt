@@ -1,0 +1,6 @@
+				
+			}
+			
+			destination.setDescriptions(new HashSet<com.salesmanager.core.model.catalog.product.type.ProductTypeDescription>(descriptions));
+			
+		}	

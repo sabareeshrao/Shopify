@@ -1,0 +1,13 @@
+
+			ProductType model = persistableProductTypeMapper.convert(type, store, language);
+			model.setMerchantStore(store);
+			ProductType saved = productTypeService.saveOrUpdate(model);
+			return saved.getId();
+
+		} catch(Exception e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while saving product type",e);
+		}
+
+	}
+

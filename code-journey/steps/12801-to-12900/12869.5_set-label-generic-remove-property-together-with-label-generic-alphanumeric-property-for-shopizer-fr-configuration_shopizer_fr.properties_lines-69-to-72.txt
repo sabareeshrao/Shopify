@@ -1,0 +1,4 @@
+label.generic.remove=Retirer
+label.generic.yes=Oui
+label.generic.no=Non
+label.generic.alphanumeric=Alpha numérique

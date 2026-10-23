@@ -1,0 +1,8 @@
+
+		try {
+			return searchModule.getDocument(productId, language, RequestOptions.DEFAULT);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+	}
+

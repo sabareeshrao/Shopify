@@ -1,0 +1,8 @@
+		destination.setSortOrder(source.getSortOrder());
+		destination.setCode(source.getCode());
+		
+		//get product
+		Product baseProduct = source.getProduct();
+		if(baseProduct == null) {
+			throw new ResourceNotFoundException("Product instances do not include the parent product [" + destination.getSku() + "]");
+		}

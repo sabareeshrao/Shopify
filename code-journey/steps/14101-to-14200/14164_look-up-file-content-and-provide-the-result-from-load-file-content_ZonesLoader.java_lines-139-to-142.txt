@@ -1,0 +1,4 @@
+	private InputStream loadFileContent(String fileName) throws Exception {
+		return this.getClass().getClassLoader().getResourceAsStream("classpath:/reference/zones/" + fileName);
+	}
+

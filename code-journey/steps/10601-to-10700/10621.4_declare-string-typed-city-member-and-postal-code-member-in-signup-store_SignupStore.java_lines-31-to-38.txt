@@ -1,0 +1,8 @@
+	@NotEmpty
+	private String city;
+	@NotEmpty
+	private String postalCode;
+	@NotEmpty
+	private String stateProvince;
+	@NotEmpty
+	private String country;

@@ -1,0 +1,5 @@
+			attributeName.append(oProductAttribute.getProductAttributeName())
+			.append(": ")
+			.append(oProductAttribute.getProductAttributeValueName());
+			
+		}

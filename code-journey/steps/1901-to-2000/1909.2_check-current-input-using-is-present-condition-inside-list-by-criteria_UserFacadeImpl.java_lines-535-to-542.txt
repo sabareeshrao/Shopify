@@ -1,0 +1,8 @@
+			Optional<String> storeCode = Optional.ofNullable(criteria.getStoreCode());
+			if (storeCode.isPresent()) {
+				// get store
+				MerchantStore store = merchantStoreService.getByCode(storeCode.get());
+				if (store != null && (store.isRetailer() != null)) {
+					if (store.isRetailer().booleanValue()) {
+						// get group stores
+						List<MerchantStore> stores = merchantStoreService.findAllStoreNames(store.getCode());

@@ -1,0 +1,2 @@
+	private ProductTypeService productTypeService;
+

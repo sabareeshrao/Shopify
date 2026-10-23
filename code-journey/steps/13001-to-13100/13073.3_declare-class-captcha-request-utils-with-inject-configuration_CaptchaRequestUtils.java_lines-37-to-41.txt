@@ -1,0 +1,5 @@
+public class CaptchaRequestUtils {
+	
+	@Inject
+	private CoreConfiguration configuration; //for reading public and secret key
+	

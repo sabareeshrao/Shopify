@@ -1,0 +1,4 @@
+    public ServiceRuntimeException(String errorCode, String message) {
+        super(errorCode, message);
+    }
+

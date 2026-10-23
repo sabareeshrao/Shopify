@@ -1,0 +1,5 @@
+	@Override
+	public Optional<Product> retrieveById(Long id, MerchantStore store) {
+		return Optional.ofNullable(findOne(id,store));
+	}
+

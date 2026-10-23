@@ -1,0 +1,8 @@
+
+	/**
+	 * <p>
+	 * Method to add static content data for given merchant.Static content data
+	 * can be of following type
+	 * 
+	 * <pre>
+	 * 1. CSS and JS files

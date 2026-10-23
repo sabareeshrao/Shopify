@@ -1,0 +1,8 @@
+	 * Get a ShippingQuote based on merchant configuration and items to be shipped
+	 * @param cart
+	 * @param order
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */

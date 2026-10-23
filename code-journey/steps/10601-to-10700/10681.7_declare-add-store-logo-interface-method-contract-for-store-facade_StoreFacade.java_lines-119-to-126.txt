@@ -1,0 +1,8 @@
+	 * @param code
+	 * @param cmsContentImage
+	 */
+	void addStoreLogo(String code, InputContentFile cmsContentImage);
+
+	/**
+	 * Returns store id, code and name only
+	 * 

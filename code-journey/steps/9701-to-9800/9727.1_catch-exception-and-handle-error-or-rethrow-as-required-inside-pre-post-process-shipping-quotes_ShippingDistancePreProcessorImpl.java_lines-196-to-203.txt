@@ -1,0 +1,8 @@
+
+			}
+		
+		} catch (Exception e) {
+			LOGGER.error("Exception while calculating the shipping distance",e);
+		}
+
+	}

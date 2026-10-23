@@ -1,0 +1,11 @@
+				
+				String chargeId = capturableTransaction.getTransactionDetails().get("TRNORDERNUMBER");
+				
+				if(StringUtils.isBlank(chargeId)) {
+					IntegrationException te = new IntegrationException(
+							"Can't process Stripe capture, missing TRNORDERNUMBER");
+					te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+					te.setMessageCode("message.payment.error");
+					te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+					throw te;
+				}

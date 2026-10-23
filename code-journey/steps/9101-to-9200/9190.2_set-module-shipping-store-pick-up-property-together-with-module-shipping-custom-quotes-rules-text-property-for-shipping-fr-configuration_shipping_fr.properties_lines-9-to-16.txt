@@ -1,0 +1,8 @@
+module.shipping.storePickUp=Ramassage en magasin
+module.shipping.priceByDistance=Livraison par {0}
+
+module.shipping.storePickUp.note=Cette option vous permet de réserver votre commande via le système web et de ramasser par vous même l'item ou les items en magasin. Cette option est également offerte lorsque aucune autre option de livraison est disponible dans votre secteur.
+
+#custom
+module.shipping.customQuotesRules.title=Vous pouvez produire vos propre règles de coûts d'expédition
+module.shipping.customQuotesRules.text=Utilisez le système de règles d'affaires afin de créer votre propre table de décision des coûts d'expédition. Le fichier de règles d'affaires des coûts d'expédition peut être édité sous sm-core/src/main/resources/rules/shipping-custom-rules.xls

@@ -1,0 +1,8 @@
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
+	}
+	public void setAttributes(List<PersistableProductAttribute> attributes) {
+		this.attributes = attributes;
+	}
+	public List<PersistableProductAttribute> getAttributes() {
+		return attributes;

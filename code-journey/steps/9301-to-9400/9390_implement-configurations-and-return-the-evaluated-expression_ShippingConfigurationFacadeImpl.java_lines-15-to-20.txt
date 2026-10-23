@@ -1,0 +1,6 @@
+	@Override
+	public List<ReadableConfiguration> configurations(MerchantStore store) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+

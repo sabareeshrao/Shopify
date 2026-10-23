@@ -1,0 +1,4 @@
+
+			if (StringUtils.isNotEmpty(source.getProvider())) {
+				target.setProvider(source.getProvider());
+			}

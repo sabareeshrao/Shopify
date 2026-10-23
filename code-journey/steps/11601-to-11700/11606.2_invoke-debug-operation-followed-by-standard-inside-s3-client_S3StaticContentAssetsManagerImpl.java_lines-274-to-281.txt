@@ -1,0 +1,8 @@
+		LOGGER.debug("AWS CMS Using region " + region);
+
+		return AmazonS3ClientBuilder.standard().withRegion(region) // The
+																			// first
+																			// region
+																			// to
+																			// try
+																			// your

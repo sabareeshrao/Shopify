@@ -1,0 +1,12 @@
+
+      Path path = Paths.get(nodePath.toString());
+
+      Files.deleteIfExists(path);
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    }
+
+  }
+
+

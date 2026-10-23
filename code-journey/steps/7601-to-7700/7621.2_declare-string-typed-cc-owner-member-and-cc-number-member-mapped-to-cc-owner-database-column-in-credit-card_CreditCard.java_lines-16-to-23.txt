@@ -1,0 +1,8 @@
+	
+	@Column (name ="CC_OWNER")
+	private String ccOwner;
+	
+	@Column (name ="CC_NUMBER")
+	private String ccNumber;
+	
+	@Column (name ="CC_EXPIRES")

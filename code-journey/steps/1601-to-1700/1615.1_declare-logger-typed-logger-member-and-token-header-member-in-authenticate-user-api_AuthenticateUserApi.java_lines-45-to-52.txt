@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticateUserApi.class);
+
+    @Value("${authToken.header}")
+    private String tokenHeader;
+
+    @Inject
+    private AuthenticationManager jwtAdminAuthenticationManager;
+    

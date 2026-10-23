@@ -1,0 +1,11 @@
+
+		ProductDescription description = new ProductDescription();
+		description.setName(code);
+		description.setLanguage("en");
+
+		product.getDescriptions().add(description);
+
+		return product;
+
+	}
+

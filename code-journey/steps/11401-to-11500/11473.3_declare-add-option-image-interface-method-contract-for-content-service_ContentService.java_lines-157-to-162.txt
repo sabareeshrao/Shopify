@@ -1,0 +1,6 @@
+	 * @param cmsContentImage
+	 * @throws ServiceException
+	 */
+	void addOptionImage(String merchantStoreCode, InputContentFile cmsContentImage)
+			throws ServiceException;
+

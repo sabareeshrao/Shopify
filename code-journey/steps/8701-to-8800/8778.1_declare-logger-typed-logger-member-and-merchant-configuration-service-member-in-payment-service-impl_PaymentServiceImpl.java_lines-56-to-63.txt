@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(PaymentServiceImpl.class);
+	
+
+	@Inject
+	private MerchantConfigurationService merchantConfigurationService;
+	
+	@Inject
+	private ModuleConfigurationService moduleConfigurationService;

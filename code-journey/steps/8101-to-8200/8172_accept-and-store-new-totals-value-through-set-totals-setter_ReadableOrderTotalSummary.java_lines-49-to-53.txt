@@ -1,0 +1,5 @@
+	public void setTotals(List<ReadableOrderTotal> totals) {
+		this.totals = totals;
+	}
+
+}

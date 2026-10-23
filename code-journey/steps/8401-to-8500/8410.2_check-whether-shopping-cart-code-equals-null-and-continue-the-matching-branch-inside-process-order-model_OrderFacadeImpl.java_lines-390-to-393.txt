@@ -1,0 +1,4 @@
+
+				if(shoppingCartCode == null && item.getShoppingCart()!=null) {
+					shoppingCartCode = item.getShoppingCart().getShoppingCartCode();
+				}

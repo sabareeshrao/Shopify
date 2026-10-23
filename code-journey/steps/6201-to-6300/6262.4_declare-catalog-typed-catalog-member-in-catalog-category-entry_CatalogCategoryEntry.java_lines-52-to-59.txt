@@ -1,0 +1,8 @@
+    Category category;
+    
+	@ManyToOne
+	@JoinColumn(name = "CATALOG_ID", nullable = false)
+	private Catalog catalog;
+	
+	//TODO d products ????
+	

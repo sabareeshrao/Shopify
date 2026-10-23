@@ -1,0 +1,8 @@
+	 */
+	List<ShippingProduct> createShippingProduct(ShoppingCart cart) throws ServiceException;
+
+	/**
+	 * Populates a ShoppingCartItem from a Product and attributes if any. Calculate price based on availability
+	 * 
+	 * @param product
+	 * @return

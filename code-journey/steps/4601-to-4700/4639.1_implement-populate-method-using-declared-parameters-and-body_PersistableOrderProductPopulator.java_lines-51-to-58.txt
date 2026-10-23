@@ -1,0 +1,8 @@
+
+	/**
+	 * Converts a ShoppingCartItem carried in the ShoppingCart to an OrderProduct
+	 * that will be saved in the system
+	 */
+	@Override
+	public OrderProduct populate(PersistableOrderProduct source, OrderProduct target,
+			MerchantStore store, Language language) throws ConversionException {

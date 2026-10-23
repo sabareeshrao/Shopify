@@ -1,0 +1,4 @@
+	private ProductService productService;
+	@Inject
+	private PersistableProductOptionValueMapper persistableProductOptionValueMapper;
+	

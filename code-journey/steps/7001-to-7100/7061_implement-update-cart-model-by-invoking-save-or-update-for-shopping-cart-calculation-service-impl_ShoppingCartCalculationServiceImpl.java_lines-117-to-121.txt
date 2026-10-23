@@ -1,0 +1,5 @@
+	private void updateCartModel(final ShoppingCart cartModel) throws ServiceException {
+		shoppingCartService.saveOrUpdate(cartModel);
+	}
+
+}

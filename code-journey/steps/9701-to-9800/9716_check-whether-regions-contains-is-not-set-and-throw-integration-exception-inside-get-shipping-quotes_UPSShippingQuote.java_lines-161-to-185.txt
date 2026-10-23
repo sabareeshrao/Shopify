@@ -1,0 +1,25 @@
+		
+		String pack = configuration.getIntegrationOptions().get("packages").get(0);
+		Map<String,String> keys = configuration.getIntegrationKeys();
+		
+		String accessKey = keys.get("accessKey");
+		String userId = keys.get("userId");
+		String password = keys.get("password");
+		
+		
+		String host = null;
+		String protocol = null;
+		String port = null;
+		String url = null;
+		
+		StringBuilder xmlbuffer = new StringBuilder();
+		HttpPost httppost = null;
+		BufferedReader reader = null;
+
+		try {
+			String env = configuration.getEnvironment();
+			
+			Set<String> regions = module.getRegionsSet();
+			if(!regions.contains(store.getCountry().getIsoCode())) {
+				throw new IntegrationException("Can't use the service for store country code ");
+			}

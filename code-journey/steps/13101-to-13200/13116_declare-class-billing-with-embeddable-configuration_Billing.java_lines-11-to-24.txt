@@ -1,0 +1,14 @@
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.zone.Zone;
+
+@Embeddable
+public class Billing {
+	
+	@NotEmpty
+	@Column (name ="BILLING_LAST_NAME", length=64, nullable=false)
+	private String lastName;
+
+	@NotEmpty
+	@Column (name ="BILLING_FIRST_NAME", length=64, nullable=false)
+	private String firstName;
+	

@@ -1,0 +1,4 @@
+	public boolean isProductVirtual() {
+		return productVirtual;
+	}
+

@@ -1,0 +1,8 @@
+	 * <p>
+	 * This method is backbone method for all price calculation related to
+	 * shopping cart.
+	 * </p>
+	 *
+	 * @see OrderServiceImpl
+	 *
+	 * @param cartModel

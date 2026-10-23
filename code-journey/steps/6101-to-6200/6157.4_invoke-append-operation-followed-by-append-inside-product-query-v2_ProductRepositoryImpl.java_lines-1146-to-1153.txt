@@ -1,0 +1,8 @@
+		qs.append("left join fetch manuf.descriptions manufd ");
+		qs.append("left join fetch p.type type ");
+		
+		//variants
+		qs.append("left join fetch p.variants pinst ");
+		qs.append("left join fetch pinst.variation pv ");
+		qs.append("left join fetch pv.productOption pvpo ");
+		qs.append("left join fetch pv.productOptionValue pvpov ");

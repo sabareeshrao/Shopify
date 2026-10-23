@@ -1,0 +1,4 @@
+	        
+			if(content!=null) {
+				return content.getDescription();
+			}

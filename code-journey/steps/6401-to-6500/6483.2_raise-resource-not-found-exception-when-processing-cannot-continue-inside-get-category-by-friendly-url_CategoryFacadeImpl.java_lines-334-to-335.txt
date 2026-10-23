@@ -1,0 +1,2 @@
+			throw new ResourceNotFoundException("Category with friendlyUrl [" + friendlyUrl + "] was not found");
+		}

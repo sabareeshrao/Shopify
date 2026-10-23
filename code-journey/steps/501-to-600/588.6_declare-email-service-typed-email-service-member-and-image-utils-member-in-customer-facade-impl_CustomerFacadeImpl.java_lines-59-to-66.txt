@@ -1,0 +1,8 @@
+	private EmailService emailService;
+
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+	@Inject
+	private LabelUtils messages;

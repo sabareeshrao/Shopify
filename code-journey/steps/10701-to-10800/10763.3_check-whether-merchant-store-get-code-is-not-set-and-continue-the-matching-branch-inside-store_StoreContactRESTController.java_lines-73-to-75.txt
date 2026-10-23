@@ -1,0 +1,3 @@
+				if(!merchantStore.getCode().equals(store)) {
+					merchantStore = null;
+				}

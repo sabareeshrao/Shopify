@@ -1,0 +1,6 @@
+
+			
+		} catch (Exception e) {
+			LOGGER.error("Can't load temporary default image", e);
+		}
+	}

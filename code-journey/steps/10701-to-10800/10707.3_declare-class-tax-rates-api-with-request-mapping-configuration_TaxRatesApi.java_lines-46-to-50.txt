@@ -1,0 +1,5 @@
+@RequestMapping(value = "/api/v1")
+@Api(tags = { "Tax rates management resource (Tax rates management Api)" })
+@SwaggerDefinition(tags = { @Tag(name = "Tax rates management resource", description = "Manage tax rates") })
+public class TaxRatesApi {
+

@@ -1,0 +1,4 @@
+	public Integer getUrlClicked() {
+		return urlClicked;
+	}
+

@@ -1,0 +1,4 @@
+    			    for(CategoryDescription d : source.getDescriptions()) {
+    			        if(StringUtils.isBlank(d.getLanguage())) {
+    			          throw new ConversionException("Source category description has no language");
+    			        }

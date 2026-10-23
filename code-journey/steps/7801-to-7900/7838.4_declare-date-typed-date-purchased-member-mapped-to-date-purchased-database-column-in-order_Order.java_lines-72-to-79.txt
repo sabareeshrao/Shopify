@@ -1,0 +1,8 @@
+	
+	@Temporal(TemporalType.DATE)
+	@Column (name ="DATE_PURCHASED")
+	private Date datePurchased;
+	
+	//used for an order payable on multiple installment
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="ORDER_DATE_FINISHED")

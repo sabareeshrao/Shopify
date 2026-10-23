@@ -1,0 +1,16 @@
+	private void createZones() throws ServiceException {
+		LOGGER.info(String.format("%s : Populating Zones ", name));
+        try {
+
+    		  Map<String,Zone> zonesMap = new HashMap<String,Zone>();
+    		  zonesMap = zonesLoader.loadZones("reference/zoneconfig.json");
+    		  
+    		  this.addZonesToDb(zonesMap);
+/*              
+              for (Map.Entry<String, Zone> entry : zonesMap.entrySet()) {
+            	    String key = entry.getKey();
+            	    Zone value = entry.getValue();
+            	    if(value.getDescriptions()==null) {
+            	    	LOGGER.warn("This zone " + key + " has no descriptions");
+            	    	continue;
+            	    }

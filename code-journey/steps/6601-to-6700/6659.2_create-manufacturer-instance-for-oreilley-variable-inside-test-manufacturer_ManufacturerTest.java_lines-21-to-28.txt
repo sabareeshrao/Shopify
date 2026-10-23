@@ -1,0 +1,8 @@
+
+	    Language en = languageService.getByCode("en");
+
+	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
+
+	    Manufacturer oreilley = new Manufacturer();
+	    oreilley.setMerchantStore(store);
+	    oreilley.setCode("oreilley2");

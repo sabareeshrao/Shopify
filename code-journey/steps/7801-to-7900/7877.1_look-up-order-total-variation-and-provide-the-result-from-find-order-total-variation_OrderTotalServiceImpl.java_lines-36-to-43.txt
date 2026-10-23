@@ -1,0 +1,8 @@
+	@Override
+	public OrderTotalVariation findOrderTotalVariation(OrderSummary summary, Customer customer, MerchantStore store, Language language)
+			throws Exception {
+	
+		RebatesOrderTotalVariation variation = new RebatesOrderTotalVariation();
+		
+		List<OrderTotal> totals = null;
+		

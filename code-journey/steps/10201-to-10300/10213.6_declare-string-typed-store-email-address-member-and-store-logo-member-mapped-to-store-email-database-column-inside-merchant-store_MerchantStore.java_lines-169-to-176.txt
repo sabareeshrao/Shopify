@@ -1,0 +1,8 @@
+	@Email
+	@NotEmpty
+	@Column(name = "STORE_EMAIL", length = 60, nullable = false)
+	private String storeEmailAddress;
+
+	@JsonIgnore
+	@Column(name = "STORE_LOGO", length = 100)
+	private String storeLogo;

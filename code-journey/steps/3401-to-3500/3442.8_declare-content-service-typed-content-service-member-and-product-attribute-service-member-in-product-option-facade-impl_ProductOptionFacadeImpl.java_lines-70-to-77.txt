@@ -1,0 +1,8 @@
+	private ContentService contentService;
+
+	@Autowired
+	private ProductAttributeService productAttributeService;
+
+	@Autowired
+	private PersistableProductAttributeMapper persistableProductAttributeMapper;
+

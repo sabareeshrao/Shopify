@@ -1,0 +1,5 @@
+    public void setDescriptions(Set<CategoryDescription> descriptions) {
+      this.descriptions = descriptions;
+    }
+
+}

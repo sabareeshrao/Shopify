@@ -1,0 +1,8 @@
+	private ReadableProductOption createOption(ProductAttribute productAttribute, Language language) {
+
+
+		ReadableProductOption option = new ReadableProductOption();
+		option.setId(productAttribute.getProductOption().getId());//attribute of the option
+		option.setType(productAttribute.getProductOption().getProductOptionType());
+		option.setCode(productAttribute.getProductOption().getCode());
+		List<ProductOptionDescription> descriptions = productAttribute.getProductOption().getDescriptionsSettoList();

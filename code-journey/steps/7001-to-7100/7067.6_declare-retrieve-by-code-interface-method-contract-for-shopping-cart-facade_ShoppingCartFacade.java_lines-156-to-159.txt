@@ -1,0 +1,4 @@
+	 * @throws Exception
+	 */
+	ReadableShoppingCart getByCode(String code, MerchantStore store, Language language) throws Exception;
+

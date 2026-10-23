@@ -1,0 +1,11 @@
+	@Override
+	public ReadableEntityList<ReadableProductVariant> list(Long productId, MerchantStore store, Language language,
+			int page, int count) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(productId, "Product id cannot be null");
+		
+		Product product = productFacade.getProduct(productId, store);
+		
+		if(product == null) {
+			throw new ResourceNotFoundException("Product with id [" + productId + "] not found for store [" + store.getCode() + "]");
+		}

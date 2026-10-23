@@ -1,0 +1,8 @@
+	        		
+	        		String jsonConfigString = mapper.writeValueAsString(config);
+	        		configString.append(jsonConfigString);
+	        		
+	        		moduleConfigs.put(env, config);
+	        		
+	        		if(count<(confs.size()-1)) {
+	        			configString.append(",");

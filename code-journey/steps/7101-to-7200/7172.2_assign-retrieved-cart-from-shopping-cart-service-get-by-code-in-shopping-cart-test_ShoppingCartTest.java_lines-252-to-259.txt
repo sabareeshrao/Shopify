@@ -1,0 +1,8 @@
+	    
+	    Assert.assertNotNull(retrievedCart);
+	    
+	    /** Delete cart **/
+	    shoppingCartService.delete(retrievedCart);
+	    
+	    /** Check if cart has been deleted **/
+	    retrievedCart = shoppingCartService.getByCode(cartCode.toString(), store);

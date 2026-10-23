@@ -1,0 +1,4 @@
+	public Long getProductOptionId() {
+		return productOptionId;
+	}
+

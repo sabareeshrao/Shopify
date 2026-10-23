@@ -1,0 +1,8 @@
+	private List<ReadableOrderTotal> totals;
+	private String grandTotal;
+	public List<ReadableOrderTotal> getTotals() {
+		return totals;
+	}
+	public void setTotals(List<ReadableOrderTotal> totals) {
+		this.totals = totals;
+	}

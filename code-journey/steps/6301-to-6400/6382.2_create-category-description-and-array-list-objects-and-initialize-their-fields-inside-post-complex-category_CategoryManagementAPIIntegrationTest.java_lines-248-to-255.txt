@@ -1,0 +1,8 @@
+
+        frdescription = new CategoryDescription();
+        frdescription.setLanguage("fr");
+        frdescription.setName("Bancs");
+        frdescription.setFriendlyUrl("bancs");
+        frdescription.setTitle("Bancs");
+
+        descriptions = new ArrayList<>();

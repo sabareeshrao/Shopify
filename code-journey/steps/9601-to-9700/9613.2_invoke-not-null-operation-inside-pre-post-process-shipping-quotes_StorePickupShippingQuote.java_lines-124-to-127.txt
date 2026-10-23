@@ -1,0 +1,4 @@
+			throws IntegrationException {
+		
+		Validate.notNull(globalShippingConfiguration, "IntegrationConfiguration must not be null for StorePickUp");
+		

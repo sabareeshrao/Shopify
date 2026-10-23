@@ -1,0 +1,11 @@
+	
+	
+	/**
+	 * Returns page names and urls configured for a given MerchantStore
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableEntityList<ReadableContentPage> getContentPages(MerchantStore store, Language language, int page, int count);
+	

@@ -1,0 +1,13 @@
+
+			// <?xml
+			// version="1.0"?><AddressValidationResponse><Response><TransactionReference><CustomerContext>SalesManager
+			// Data</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>10002</ErrorCode><ErrorDescription>The
+			// XML document is well formed but the document is not
+			// valid</ErrorDescription><ErrorLocation><ErrorLocationElementName>AddressValidationRequest</ErrorLocationElementName></ErrorLocation></Error></Response></AddressValidationResponse>
+
+
+			//<?xml version="1.0"?>
+			//<IntlRateResponse><Package ID="1"><Error><Number>-2147218046</Number>
+			//<Source>IntlPostage;clsIntlPostage.GetCountryAndRestirctedServiceId;clsIntlPostage.CalcAllPostageDimensionsXML;IntlRate.ProcessRequest</Source>
+			//<Description>Invalid Country Name</Description><HelpFile></HelpFile><HelpContext>1000440</HelpContext></Error></Package></IntlRateResponse>
+

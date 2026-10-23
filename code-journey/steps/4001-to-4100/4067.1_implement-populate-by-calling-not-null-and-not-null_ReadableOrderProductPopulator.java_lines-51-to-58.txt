@@ -1,0 +1,8 @@
+	@Override
+	public ReadableOrderProduct populate(OrderProduct source,
+			ReadableOrderProduct target, MerchantStore store, Language language)
+			throws ConversionException {
+		
+		Validate.notNull(productService,"Requires ProductService");
+		Validate.notNull(pricingService,"Requires PricingService");
+		Validate.notNull(imageUtils,"Requires imageUtils");

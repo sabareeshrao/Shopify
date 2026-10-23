@@ -1,0 +1,8 @@
+	private ProductVariantService productVariantService;
+	
+	@Autowired
+	private ProductVariantImageService productVariantImageService;
+	
+	@Autowired
+	private PersistableProductVariantGroupMapper persistableProductIntanceGroupMapper;
+	

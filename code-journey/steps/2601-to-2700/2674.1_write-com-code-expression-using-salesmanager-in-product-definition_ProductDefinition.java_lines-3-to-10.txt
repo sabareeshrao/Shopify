@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.product.ProductSpecification;
+import com.salesmanager.shop.model.entity.Entity;
+
+/**
+ * Applies to product version 2 management
+ * @author carlsamson
+ *
+ */

@@ -1,0 +1,8 @@
+			}
+
+			// requires Order Totals, this needs recalculation and then compare
+			// total with the amount sent as part
+			// of process order request. If totals does not match, an error
+			// should be thrown.
+
+			OrderTotalSummary orderTotalSummary = null;

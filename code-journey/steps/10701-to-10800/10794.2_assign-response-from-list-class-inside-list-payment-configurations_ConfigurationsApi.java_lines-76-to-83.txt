@@ -1,0 +1,8 @@
+	      value = "List shipping configurations summary",
+	      notes = "Requires administration access",
+	      produces = "application/json",
+	      response = List.class)
+	  @ApiImplicitParams({
+	      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT")
+	  })
+	  public List<ReadableConfiguration> listShippingConfigurations(

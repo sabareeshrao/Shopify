@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("AUD", "Australian Dollar");
+		CURRENCY_MAP.put("KPW", "North Korean Won");
+		CURRENCY_MAP.put("KRW", "Won");
+		CURRENCY_MAP.put("KWD", "Kuwaiti Dinar");
+		CURRENCY_MAP.put("KGS", "Som");
+		CURRENCY_MAP.put("LAK", "Kip");
+		CURRENCY_MAP.put("LVL", "Latvian Lats");
+		CURRENCY_MAP.put("LBP", "Lebanese Pound");

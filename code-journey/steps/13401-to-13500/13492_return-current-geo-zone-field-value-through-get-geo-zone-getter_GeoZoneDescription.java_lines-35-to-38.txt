@@ -1,0 +1,4 @@
+	public GeoZone getGeoZone() {
+		return geoZone;
+	}
+

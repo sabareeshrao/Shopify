@@ -1,0 +1,4 @@
+	private String zoneCode;
+	private String zoneName;
+	private String countryCode;
+	

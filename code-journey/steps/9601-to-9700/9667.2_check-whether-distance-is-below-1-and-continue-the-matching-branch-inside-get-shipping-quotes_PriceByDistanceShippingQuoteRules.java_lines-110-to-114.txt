@@ -1,0 +1,5 @@
+		BigDecimal total = new BigDecimal(distance).multiply(price);
+		
+		if(distance < 1) { //minimum 1 unit
+			distance = 1D;
+		}

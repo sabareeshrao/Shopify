@@ -1,0 +1,9 @@
+	@Override
+	public void sendHtmlEmail(MerchantStore store, Email email) throws ServiceException, Exception {
+
+		EmailConfig emailConfig = getEmailConfiguration(store);
+		
+		sender.setEmailConfig(emailConfig);
+		sender.send(email);
+	}
+

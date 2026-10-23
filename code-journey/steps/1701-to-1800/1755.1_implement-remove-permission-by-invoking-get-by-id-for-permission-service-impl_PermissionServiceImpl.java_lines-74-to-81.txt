@@ -1,0 +1,8 @@
+	@Override
+	public void removePermission(Permission permission,Group group) throws ServiceException {
+		permission = this.getById(permission.getId());//Prevents detached entity error
+	
+		permission.getGroups().remove(group);
+		
+
+	}

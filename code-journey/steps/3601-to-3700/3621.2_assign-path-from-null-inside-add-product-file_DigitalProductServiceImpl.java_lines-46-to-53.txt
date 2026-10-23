@@ -1,0 +1,8 @@
+			
+			Assert.notNull(inputFile.getFile(),"InputContentFile.file cannot be null");
+			
+			Assert.notNull(product.getMerchantStore(),"Product.merchantStore cannot be null");
+			this.saveOrUpdate(digitalProduct);
+			
+		    String path = null;
+		    

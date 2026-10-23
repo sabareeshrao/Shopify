@@ -1,0 +1,11 @@
+	private void createCurrencies() throws ServiceException {
+		LOGGER.info(String.format("%s : Populating Currencies ", name));
+
+		for (String code : SchemaConstant.CURRENCY_MAP.keySet()) {
+  
+            try {
+            	java.util.Currency c = java.util.Currency.getInstance(code);
+            	
+            	if(c==null) {
+            		LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            	}

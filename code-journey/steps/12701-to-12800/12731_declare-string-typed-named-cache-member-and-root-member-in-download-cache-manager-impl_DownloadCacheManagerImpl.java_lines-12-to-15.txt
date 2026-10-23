@@ -1,0 +1,4 @@
+  private final static String NAMED_CACHE = "DownlaodRepository";
+  private String root;
+
+

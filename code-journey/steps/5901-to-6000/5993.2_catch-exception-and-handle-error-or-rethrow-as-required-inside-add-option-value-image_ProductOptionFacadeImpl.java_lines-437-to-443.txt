@@ -1,0 +1,7 @@
+
+			contentService.addOptionImage(store.getCode(), cmsContentImage);
+			value.setProductOptionValueImage(imageName);
+			productOptionValueService.saveOrUpdate(value);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Exception while adding option value image", e);
+		}

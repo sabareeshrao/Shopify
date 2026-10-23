@@ -1,0 +1,8 @@
+/**
+ * Api for searching shopizer catalog based on search term when filtering products based on product
+ * attribute is required, see /api/v1/product
+ *
+ * @author c.samson
+ */
+@RestController
+@RequestMapping("/api/v1")

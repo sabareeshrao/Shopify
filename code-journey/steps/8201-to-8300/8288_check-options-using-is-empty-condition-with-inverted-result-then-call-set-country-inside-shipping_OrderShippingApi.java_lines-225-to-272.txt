@@ -1,0 +1,48 @@
+      addr.setCountry(c);
+
+      
+      Customer temp = new Customer();
+      temp.setAnonymous(true);
+      temp.setDelivery(addr);
+      
+      ShippingQuote quote = orderFacade.getShippingQuote(temp, cart, merchantStore, language);
+
+      ShippingSummary summary = orderFacade.getShippingSummary(quote, merchantStore, language);
+
+      ReadableShippingSummary shippingSummary = new ReadableShippingSummary();
+      ReadableShippingSummaryPopulator populator = new ReadableShippingSummaryPopulator();
+      populator.setPricingService(pricingService);
+      populator.populate(summary, shippingSummary, merchantStore, language);
+
+      List<ShippingOption> options = quote.getShippingOptions();
+
+      if (!CollectionUtils.isEmpty(options)) {
+
+        for (ShippingOption shipOption : options) {
+
+          StringBuilder moduleName = new StringBuilder();
+          moduleName.append("module.shipping.").append(shipOption.getShippingModuleCode());
+
+          String carrier =
+              messages.getMessage(
+                  moduleName.toString(), new String[] {merchantStore.getStorename()}, locale);
+
+          String note = messages.getMessage(moduleName.append(".note").toString(), locale, "");
+
+          shipOption.setDescription(carrier);
+          shipOption.setNote(note);
+
+          // option name
+          if (!StringUtils.isBlank(shipOption.getOptionCode())) {
+            // try to get the translate
+            StringBuilder optionCodeBuilder = new StringBuilder();
+            try {
+
+              optionCodeBuilder
+                  .append("module.shipping.")
+                  .append(shipOption.getShippingModuleCode());
+              String optionName = messages.getMessage(optionCodeBuilder.toString(), new String[]{merchantStore.getStorename()},locale);
+              shipOption.setOptionName(optionName);
+            } catch (Exception e) { // label not found
+              LOGGER.warn("No shipping code found for " + optionCodeBuilder.toString());
+            }

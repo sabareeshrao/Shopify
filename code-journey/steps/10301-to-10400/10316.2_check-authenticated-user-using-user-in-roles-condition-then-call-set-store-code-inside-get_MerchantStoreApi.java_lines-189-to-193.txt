@@ -1,0 +1,5 @@
+		if (userFacade.userInRoles(authenticatedUser, Arrays.asList(Constants.GROUP_SUPERADMIN))) {
+			criteria.setStoreCode(null);
+		} else {
+			criteria.setStoreCode(merchantStore.getCode());
+		}

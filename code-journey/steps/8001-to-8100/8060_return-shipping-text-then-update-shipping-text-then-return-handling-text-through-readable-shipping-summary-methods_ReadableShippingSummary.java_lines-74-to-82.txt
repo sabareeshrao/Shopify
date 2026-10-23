@@ -1,0 +1,9 @@
+	public String getShippingText() {
+		return shippingText;
+	}
+	public void setShippingText(String shippingText) {
+		this.shippingText = shippingText;
+	}
+	public String getHandlingText() {
+		return handlingText;
+	}

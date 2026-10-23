@@ -1,0 +1,8 @@
+			ContentDescription contentDescription = Optional.ofNullable(contentService.getBySeUrl(store, name))
+					.orElseThrow(() -> new ResourceNotFoundException("No page found : " + name));
+
+			return this.contentDescriptionToReadableContent(store, contentDescription.getContent(), contentDescription);
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Error while getting page " + e.getMessage(), e);
+		}

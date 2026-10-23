@@ -1,0 +1,8 @@
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+		<!-- Jackson JSON Processor -->
+		<dependency>

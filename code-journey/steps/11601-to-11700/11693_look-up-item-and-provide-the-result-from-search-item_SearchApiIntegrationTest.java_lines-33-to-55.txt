@@ -1,0 +1,23 @@
+
+
+    /**
+     * Add a product then search for it
+     * This tests is disabled since it requires Elastic search server started
+     *
+     * @throws Exception
+     */
+    //@Test
+    @Ignore
+    public void searchItem() throws Exception {
+    	
+    	PersistableProduct product = super.product("TESTPRODUCT");
+    	
+        final HttpEntity<PersistableProduct> entity = new HttpEntity<>(product, getHeader());
+
+        final ResponseEntity<PersistableProduct> response = testRestTemplate.postForEntity("/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, PersistableProduct.class);
+        assertThat(response.getStatusCode(), is(CREATED));
+        
+        SearchProductRequest searchRequest = new SearchProductRequest();
+        searchRequest.setQuery("TEST");
+        final HttpEntity<SearchProductRequest> searchEntity = new HttpEntity<>(searchRequest, getHeader());
+        

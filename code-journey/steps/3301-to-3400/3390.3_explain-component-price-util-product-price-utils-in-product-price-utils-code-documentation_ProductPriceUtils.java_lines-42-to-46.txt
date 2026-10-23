@@ -1,0 +1,5 @@
+ *
+ */
+@Component("priceUtil")
+public class ProductPriceUtils {
+

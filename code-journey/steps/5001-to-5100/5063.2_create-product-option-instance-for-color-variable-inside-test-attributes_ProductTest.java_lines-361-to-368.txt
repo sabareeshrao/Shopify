@@ -1,0 +1,8 @@
+		
+		Language en = languageService.getByCode("en");
+		
+	    /**
+	     * Create size option
+	     */
+	    ProductOption color = new ProductOption();
+	    color.setMerchantStore(store);

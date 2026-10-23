@@ -1,0 +1,8 @@
+public class OrderRepositoryImpl implements OrderRepositoryCustom {
+
+	
+    @PersistenceContext
+    private EntityManager em;
+    
+    /**
+     * @deprecated

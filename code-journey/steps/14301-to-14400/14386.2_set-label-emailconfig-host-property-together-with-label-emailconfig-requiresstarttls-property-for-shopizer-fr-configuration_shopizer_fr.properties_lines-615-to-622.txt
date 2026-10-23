@@ -1,0 +1,8 @@
+label.emailconfig.host=Hôte
+label.emailconfig.port=Port
+label.emailconfig.username=Nom d'usager
+label.emailconfig.password=Mot de passe
+label.emailconfig.smtpauth=Authentication requise
+label.emailconfig.starttls=STARTTLS
+label.emailconfig.requiresauthentication=Le serveur email requiert une authentification (devrait être vrai)
+label.emailconfig.requiresstarttls=Certains serveurs email tels que Google mail requierent l'utilisation de l'encryption STARTTLS

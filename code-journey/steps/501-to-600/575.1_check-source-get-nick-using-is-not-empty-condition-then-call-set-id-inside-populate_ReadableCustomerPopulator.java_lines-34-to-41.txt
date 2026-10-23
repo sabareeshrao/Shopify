@@ -1,0 +1,8 @@
+			
+			if(source.getId()!=null && source.getId()>0) {
+				target.setId(source.getId());
+			}
+			target.setEmailAddress(source.getEmailAddress());
+
+			if (StringUtils.isNotEmpty(source.getNick())) {
+				target.setUserName(source.getNick());

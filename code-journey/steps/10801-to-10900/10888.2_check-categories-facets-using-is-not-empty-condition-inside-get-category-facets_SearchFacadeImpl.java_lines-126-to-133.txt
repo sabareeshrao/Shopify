@@ -1,0 +1,8 @@
+		if (CollectionUtils.isNotEmpty(categoriesFacets)) {
+
+			List<String> categoryCodes = categoriesFacets.stream().map(SearchFacet::getName)
+					.collect(Collectors.toList());
+
+			Map<String, Long> productCategoryCount = categoriesFacets.stream()
+					.collect(Collectors.toMap(SearchFacet::getKey, SearchFacet::getCount));
+

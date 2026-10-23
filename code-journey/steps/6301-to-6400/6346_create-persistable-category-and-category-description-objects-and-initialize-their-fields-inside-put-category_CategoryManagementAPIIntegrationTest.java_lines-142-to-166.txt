@@ -1,0 +1,25 @@
+
+        
+        final ResponseEntity<ReadableCategory> readableQuery = testRestTemplate.exchange(String.format("/api/v1//category/" +  description.getFriendlyUrl()), HttpMethod.GET,
+            httpEntity, ReadableCategory.class);
+        
+        assertThat(readableQuery.getStatusCode(), is(OK));
+        
+        ReadableCategory readableCategory = readableQuery.getBody();
+        
+        newCategory = new PersistableCategory();
+        newCategory.setCode("angular");
+        newCategory.setVisible(true);
+        newCategory.setDepth(4);
+        newCategory.setSortOrder(2);
+        description = new CategoryDescription();
+        description.setLanguage("en");
+        description.setName("angular");
+        description.setFriendlyUrl("angular");
+        description.setTitle("angular");
+
+        descriptions = new ArrayList<>();
+        descriptions.add(description);
+
+        newCategory.setDescriptions(descriptions);
+

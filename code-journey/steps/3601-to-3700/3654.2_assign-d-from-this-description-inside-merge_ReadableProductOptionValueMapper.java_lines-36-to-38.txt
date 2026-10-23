@@ -1,0 +1,3 @@
+          com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription d = this.description(desc);
+          descriptions.add(d);
+      }

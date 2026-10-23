@@ -1,0 +1,8 @@
+			cmsContentImage.setFileName(image.getOriginalFilename());
+			cmsContentImage.setMimeType(image.getContentType());
+			cmsContentImage.setFileContentType(FileContentType.LOGO);
+			cmsContentImage.setFile(input);
+
+		} catch (IOException ioe) {
+			throw new RestApiException(ioe);
+		}

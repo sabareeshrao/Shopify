@@ -1,0 +1,4 @@
+  public Date getDateModified() {
+    return CloneUtils.clone(dateModified);
+  }
+

@@ -1,0 +1,8 @@
+
+		}
+		
+		
+		productVariant.setProductId(productId);
+		productVariant.setId(null);
+		ProductVariant variant = persistableProductVariantMapper.convert(productVariant, store, language);
+		

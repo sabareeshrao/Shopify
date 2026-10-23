@@ -1,0 +1,8 @@
+
+    populator.populate(manufacturer, manuf, store, language);
+
+    manufacturerService.saveOrUpdate(manuf);
+
+    manufacturer.setId(manuf.getId());
+
+  }

@@ -1,0 +1,8 @@
+
+		}
+
+
+		if(!CollectionUtils.isEmpty(source.getDescriptions())) {
+			Set<com.salesmanager.core.model.catalog.category.CategoryDescription> descriptions = new HashSet<com.salesmanager.core.model.catalog.category.CategoryDescription>();
+			if(CollectionUtils.isNotEmpty(target.getDescriptions())) {
+    			for(com.salesmanager.core.model.catalog.category.CategoryDescription description : target.getDescriptions()) {

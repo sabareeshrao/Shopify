@@ -1,0 +1,8 @@
+	</beans:bean>
+
+    <!-- aws -->
+	<beans:bean id="awsAssetsManager" 
+		class="com.salesmanager.core.business.modules.cms.impl.S3CacheManagerImpl">
+		<beans:constructor-arg value="${config.cms.aws.bucket}"/>
+		<beans:constructor-arg value="${config.cms.aws.region}"/>
+	</beans:bean>

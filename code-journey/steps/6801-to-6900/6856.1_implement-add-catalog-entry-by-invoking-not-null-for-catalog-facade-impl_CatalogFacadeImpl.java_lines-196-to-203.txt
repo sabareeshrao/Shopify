@@ -1,0 +1,8 @@
+    @Override
+    public ReadableCatalogCategoryEntry addCatalogEntry(PersistableCatalogCategoryEntry entry, MerchantStore store, Language language) {
+
+        Validate.notNull(entry, "PersistableCatalogEntry cannot be null");
+        Validate.notNull(entry.getCatalog(), "CatalogEntry.catalog cannot be null");
+        Validate.notNull(store, "MerchantStore cannot be null");
+
+        Catalog catalog = catalogService.getByCode(entry.getCatalog(), store)

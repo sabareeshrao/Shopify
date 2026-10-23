@@ -1,0 +1,8 @@
+				
+		
+		
+
+		BigDecimal averageRating = customer.getCustomerReviewAvg();
+		if(averageRating==null) {
+			averageRating = new BigDecimal(0);
+		}

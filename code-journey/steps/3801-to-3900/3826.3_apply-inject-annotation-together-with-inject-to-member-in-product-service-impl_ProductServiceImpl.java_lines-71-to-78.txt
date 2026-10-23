@@ -1,0 +1,8 @@
+	@Inject
+	ProductOptionValueService productOptionValueService;
+
+	@Inject
+	ProductAttributeService productAttributeService;
+
+	@Inject
+	ProductRelationshipService productRelationshipService;

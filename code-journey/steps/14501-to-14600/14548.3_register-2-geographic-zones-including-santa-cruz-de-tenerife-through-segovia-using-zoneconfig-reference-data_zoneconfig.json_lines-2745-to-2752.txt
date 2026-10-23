@@ -1,0 +1,8 @@
+			"zoneCode": "SantaCruzdeTenerife",
+			"zoneName": "Santa Cruz de Tenerife",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Segovia",
+			"zoneName": "Segovia",
+			"countryCode": "ES"

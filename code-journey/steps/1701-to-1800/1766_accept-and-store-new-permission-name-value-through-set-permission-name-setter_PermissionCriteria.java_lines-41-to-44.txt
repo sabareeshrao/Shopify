@@ -1,0 +1,4 @@
+	public void setPermissionName(String permissionName) {
+		this.permissionName = permissionName;
+	}
+

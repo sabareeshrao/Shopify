@@ -1,0 +1,4 @@
+	public boolean isDefaultSelection() {
+		return defaultSelection;
+	}
+

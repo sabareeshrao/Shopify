@@ -1,0 +1,7 @@
+		
+		config.getLanguages().stream().forEach(l -> {
+			try {
+				this.mappings(config,l);
+			} catch (Exception e) {
+				throw new IllegalStateException(e);
+			}

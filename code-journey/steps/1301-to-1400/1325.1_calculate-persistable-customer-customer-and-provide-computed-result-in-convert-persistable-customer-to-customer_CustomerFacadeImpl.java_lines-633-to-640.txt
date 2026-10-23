@@ -1,0 +1,8 @@
+  private Customer convertPersistableCustomerToCustomer(PersistableCustomer customer, MerchantStore store) {
+
+    Customer cust = new Customer();
+
+    try{
+      customerPopulator.populate(customer, cust, store, store.getDefaultLanguage());
+    } catch (ConversionException e) {
+      throw new ConversionRuntimeException(e);

@@ -1,0 +1,5 @@
+	@Override
+	public int count(MerchantStore store) {
+		return categoryRepository.count(store.getId());
+	}
+
