@@ -1,3 +1,7 @@
-# Shopizer code journey — refined child boundaries
+# Shopizer Dependency-Informed TXT Learning Journey
 
-Browse steps/ in ascending task order. Each parent 1.0 contains the complete original block; children 1.1 etc. reconstruct the parent when concatenated. Use children instead of the parent, not both. Each child is 1–11 lines. Some long statements must span children to obey the limit. ZIP contains only 24,055 TXT files. See BOUNDARY_AUDIT.json for changed edges.
+Follow the **numeric** task sequence. Every parent N.0 contains its whole original code block; children N.1, N.2, etc., are the source-order slices (1–11 lines). Use the parent **or** its children, not both.
+
+The ZIP contains only TXT files; mappings and audits are alongside the archive in GitHub. Files have been ordered with internal Java imports as prerequisites where possible. Circular dependencies cannot all appear before their dependants. **This is not the actual historical build sequence, and partial project compilation has not been verified.**
+
+GitHub sorts file names lexicographically, so `.10` may appear before `.2`; use the task index or numeric filename sorting locally.
