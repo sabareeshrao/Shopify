@@ -22,7 +22,7 @@
   "original_source_file_names_unchanged": "YES",
   "filenames_unique": true,
   "parent_description_unique_within_each_source": "YES",
-  "same_source_description_collisions_resolved_with_line_context": 118,
+  "same_source_description_collisions_resolved_with_line_context": 117,
   "filename_description_method": "Source-grounded static lexical and structural analysis; automated explanations may still require review",
   "zip_bytes": "consult archive size: ZIP size changes when descriptive filenames change"
 }
