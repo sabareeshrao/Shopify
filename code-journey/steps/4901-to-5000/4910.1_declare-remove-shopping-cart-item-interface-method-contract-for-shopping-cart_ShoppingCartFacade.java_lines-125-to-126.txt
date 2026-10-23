@@ -1,0 +1,2 @@
+	@Nullable
+	ReadableShoppingCart removeShoppingCartItem(String cartCode, String sku, MerchantStore merchant, Language language, boolean returnCart) throws Exception;

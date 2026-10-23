@@ -1,0 +1,6 @@
+  @Inject private LabelUtils messages;
+
+  @Inject private PricingService pricingService;
+  
+  @Inject private CountryService countryService;
+

@@ -1,8 +1,0 @@
-			@PathVariable Long id,
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-		
-		option.setId(id);
-		productOptionSetFacade.update(id, option, merchantStore, language);
-
-	}

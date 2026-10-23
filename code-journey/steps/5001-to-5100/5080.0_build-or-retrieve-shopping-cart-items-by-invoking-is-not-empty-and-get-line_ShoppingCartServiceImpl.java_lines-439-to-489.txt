@@ -1,0 +1,51 @@
+
+	private Set<ShoppingCartItem> getShoppingCartItems(final ShoppingCart sessionCart, final MerchantStore store,
+			final ShoppingCart cartModel) throws Exception {
+
+		Set<ShoppingCartItem> shoppingCartItemsSet = null;
+		if (CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+			shoppingCartItemsSet = new HashSet<ShoppingCartItem>();
+			for (ShoppingCartItem shoppingCartItem : sessionCart.getLineItems()) {
+				Product product = productService.getBySku(shoppingCartItem.getSku(), store, store.getDefaultLanguage());
+						//.getById(shoppingCartItem.getProductId());
+				if (product == null) {
+					throw new Exception("Item with sku " + shoppingCartItem.getSku() + " does not exist");
+				}
+
+				if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+					throw new Exception("Item with sku " + shoppingCartItem.getSku()
+							+ " does not belong to merchant " + store.getId());
+				}
+
+				ShoppingCartItem item = populateShoppingCartItem(product, store);
+				item.setQuantity(shoppingCartItem.getQuantity());
+				item.setShoppingCart(cartModel);
+
+				List<ShoppingCartAttributeItem> cartAttributes = new ArrayList<ShoppingCartAttributeItem>();
+				if (shoppingCartItem != null && !CollectionUtils.isEmpty(shoppingCartItem.getAttributes())) {
+					cartAttributes.addAll(shoppingCartItem.getAttributes());
+					if (CollectionUtils.isNotEmpty(cartAttributes)) {
+						for (ShoppingCartAttributeItem shoppingCartAttributeItem : cartAttributes) {
+							ProductAttribute productAttribute = productAttributeService
+									.getById(shoppingCartAttributeItem.getId());
+							if (productAttribute != null && productAttribute.getProduct().getId().longValue() == product
+									.getId().longValue()) {
+
+								ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,
+										productAttribute);
+								if (shoppingCartAttributeItem.getId() > 0) {
+									attributeItem.setId(shoppingCartAttributeItem.getId());
+								}
+								item.addAttributes(attributeItem);
+
+							}
+						}
+					}
+				}
+
+				shoppingCartItemsSet.add(item);
+			}
+
+		}
+		return shoppingCartItemsSet;
+	}

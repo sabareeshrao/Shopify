@@ -1,8 +1,0 @@
-							"RatingServiceSelectionResponse/RatedShipment/TotalCharges/MonetaryValue",
-							"setOptionPriceText", 0);
-			//digester
-			//		.addCallMethod(
-			//				"RatingServiceSelectionResponse/RatedShipment/TotalCharges/CurrencyCode",
-			//				"setCurrency", 0);
-			digester
-					.addCallMethod(

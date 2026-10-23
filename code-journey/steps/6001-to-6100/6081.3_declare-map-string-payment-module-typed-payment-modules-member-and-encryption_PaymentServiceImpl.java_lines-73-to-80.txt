@@ -1,0 +1,8 @@
+	
+	@Inject
+	@Resource(name="paymentModules")
+	private Map<String,PaymentModule> paymentModules;
+	
+	@Inject
+	private Encryption encryption;
+	

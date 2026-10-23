@@ -1,0 +1,7 @@
+
+	/**
+	 * Get a product with only MerchantStore object
+	 * @param productId
+	 * @return
+	 */
+	Product getProductWithOnlyMerchantStoreById(Long productId);

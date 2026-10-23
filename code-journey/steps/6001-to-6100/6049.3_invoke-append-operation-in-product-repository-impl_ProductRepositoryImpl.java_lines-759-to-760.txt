@@ -1,2 +1,0 @@
-		qs.append("left join fetch categs.descriptions cd ");
-		

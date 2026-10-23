@@ -1,0 +1,12 @@
+
+			return newTransaction;
+			
+			
+		} catch(Exception e) {
+			throw new IntegrationException(e);
+		}
+		
+		
+	}
+
+}

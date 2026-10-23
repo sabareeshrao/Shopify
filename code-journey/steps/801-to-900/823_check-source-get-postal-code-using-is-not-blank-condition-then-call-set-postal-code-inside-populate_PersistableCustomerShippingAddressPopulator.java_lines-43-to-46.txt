@@ -1,4 +1,0 @@
-              
-              if(StringUtils.isNotBlank( source.getPostalCode())){
-                  delivery.setPostalCode( source.getPostalCode());
-              }

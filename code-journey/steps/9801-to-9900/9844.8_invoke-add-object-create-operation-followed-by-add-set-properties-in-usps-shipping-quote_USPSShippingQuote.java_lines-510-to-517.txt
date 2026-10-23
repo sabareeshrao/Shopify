@@ -1,8 +1,0 @@
-				digester
-						.addObjectCreate(
-								"IntlRateResponse/Package/Service",
-								ShippingOption.class);
-				digester.addSetProperties("IntlRateResponse/Package/Service",
-						"ID", "optionId");
-				digester.addCallMethod(
-						"IntlRateResponse/Package/Service/SvcDescription",

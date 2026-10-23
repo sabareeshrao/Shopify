@@ -1,0 +1,7 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(EmailTemplatesUtils.class);
+	
+	@Inject
+	private EmailService emailService;
+
+	@Inject
+	private LabelUtils messages;

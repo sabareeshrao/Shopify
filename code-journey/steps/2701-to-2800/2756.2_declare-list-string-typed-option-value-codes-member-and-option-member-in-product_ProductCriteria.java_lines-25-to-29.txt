@@ -1,0 +1,5 @@
+	
+	//V2
+	private List<String> optionValueCodes;
+	private String option;
+	

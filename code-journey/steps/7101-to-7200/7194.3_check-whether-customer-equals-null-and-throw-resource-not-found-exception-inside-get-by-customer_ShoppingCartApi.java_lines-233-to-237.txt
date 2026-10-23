@@ -1,5 +1,0 @@
-		Customer customer = customerService.getById(id);
-
-		if (customer == null) {
-			throw new ResourceNotFoundException("No Customer found for id [" + id + "]");
-		}

@@ -1,0 +1,6 @@
+
+	ProductList listByStore(MerchantStore store, Language language,
+			ProductCriteria criteria);
+	
+	boolean exists(String sku, MerchantStore store);
+	

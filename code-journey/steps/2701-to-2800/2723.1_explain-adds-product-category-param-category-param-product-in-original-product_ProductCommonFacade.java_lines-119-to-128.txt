@@ -1,0 +1,10 @@
+
+
+	  /**
+	   * Adds a product to a category
+	   *
+	   * @param category
+	   * @param product
+	   * @return
+	   */
+	  ReadableProduct addProductToCategory(Category category, Product product, Language language);

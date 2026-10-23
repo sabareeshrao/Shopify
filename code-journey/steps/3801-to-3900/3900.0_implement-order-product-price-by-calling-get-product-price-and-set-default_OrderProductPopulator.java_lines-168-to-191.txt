@@ -1,0 +1,24 @@
+	private OrderProductPrice orderProductPrice(FinalPrice price) {
+		
+		OrderProductPrice orderProductPrice = new OrderProductPrice();
+		
+		ProductPrice productPrice = price.getProductPrice();
+		
+		orderProductPrice.setDefaultPrice(productPrice.isDefaultPrice());
+
+		orderProductPrice.setProductPrice(price.getFinalPrice());
+		orderProductPrice.setProductPriceCode(productPrice.getCode());
+		if(productPrice.getDescriptions()!=null && productPrice.getDescriptions().size()>0) {
+			orderProductPrice.setProductPriceName(productPrice.getDescriptions().iterator().next().getName());
+		}
+		if(price.isDiscounted()) {
+			orderProductPrice.setProductPriceSpecial(productPrice.getProductPriceSpecialAmount());
+			orderProductPrice.setProductPriceSpecialStartDate(productPrice.getProductPriceSpecialStartDate());
+			orderProductPrice.setProductPriceSpecialEndDate(productPrice.getProductPriceSpecialEndDate());
+		}
+		
+		return orderProductPrice;
+	}
+
+
+}

@@ -1,3 +1,0 @@
-		Long id = productPriceFacade.save(price, merchantStore);
-		return new Entity(id);
-

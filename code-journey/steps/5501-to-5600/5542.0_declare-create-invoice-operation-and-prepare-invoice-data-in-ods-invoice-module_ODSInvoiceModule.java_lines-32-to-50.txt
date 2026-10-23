@@ -1,0 +1,19 @@
+	private final static int PRODUCT_ROW_START = 16;
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger( ODSInvoiceModule.class );
+	
+	@Inject
+	private ZoneService zoneService;
+	
+	@Inject
+	private CountryService countryService;
+	
+	@Inject
+	private ProductPriceUtils priceUtil;
+
+	@Deprecated
+	@Override
+	public ByteArrayOutputStream createInvoice(MerchantStore store, Order order, Language language) throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Not implemented");
+	}

@@ -1,8 +1,0 @@
-	 * Handling
-	 * @param store
-	 * @return
-	 * @throws ServiceException
-	 */
-	ShippingConfiguration getShippingConfiguration(MerchantStore store)
-			throws ServiceException;
-

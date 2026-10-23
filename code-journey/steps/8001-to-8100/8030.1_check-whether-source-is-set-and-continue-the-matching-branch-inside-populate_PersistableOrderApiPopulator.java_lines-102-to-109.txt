@@ -1,8 +1,0 @@
-			  target.setCustomerId(customerId);
-			
-			} else {
-			  if(source instanceof PersistableAnonymousOrder) {
-			    PersistableCustomer persistableCustomer = ((PersistableAnonymousOrder)source).getCustomer();
-			    customer = new Customer();
-			    customer = customerPopulator.populate(persistableCustomer, customer, store, language);
-			  } else {

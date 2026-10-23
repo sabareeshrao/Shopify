@@ -1,0 +1,9 @@
+
+	/**
+	 * Returns store id, code and name only
+	 * 
+	 * @return
+	 */
+	List<ReadableMerchantStore> getMerchantStoreNames(MerchantStoreCriteria criteria);
+
+}

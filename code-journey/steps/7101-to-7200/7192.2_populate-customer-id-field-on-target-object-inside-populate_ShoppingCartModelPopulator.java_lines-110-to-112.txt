@@ -1,3 +1,0 @@
-            {
-                cartMdel.setCustomerId( customer.getId() );
-            }

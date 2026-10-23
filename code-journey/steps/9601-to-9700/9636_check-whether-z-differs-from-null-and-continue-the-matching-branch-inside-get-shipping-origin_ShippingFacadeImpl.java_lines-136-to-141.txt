@@ -1,6 +1,0 @@
-		Zone z = o.getZone();
-		if(z != null) {
-			address.setStateProvince(z.getCode());
-		} else {
-			address.setStateProvince(o.getState());
-		}

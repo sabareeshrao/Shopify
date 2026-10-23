@@ -1,0 +1,6 @@
+
+	/**
+	 * Creates a new ProductOption
+	 *
+	 * @throws Exception
+	 */

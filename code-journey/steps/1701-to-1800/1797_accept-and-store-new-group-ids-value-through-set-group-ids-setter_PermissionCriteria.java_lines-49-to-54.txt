@@ -1,6 +1,0 @@
-	public void setGroupIds(Set<Integer> groupIds) {
-		this.groupIds = groupIds;
-	}
-
-
-}

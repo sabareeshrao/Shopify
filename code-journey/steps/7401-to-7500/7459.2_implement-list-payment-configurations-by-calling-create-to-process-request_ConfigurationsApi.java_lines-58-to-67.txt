@@ -1,0 +1,10 @@
+	  @ApiImplicitParams({
+	      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT")
+	  })
+	  public List<ReadableConfiguration> listPaymentConfigurations(
+	      @ApiIgnore MerchantStore merchantStore,
+	      @ApiIgnore Language language) {
+	      //return customerFacade.create(customer, merchantStore, language);
+		  return null;
+
+	  }

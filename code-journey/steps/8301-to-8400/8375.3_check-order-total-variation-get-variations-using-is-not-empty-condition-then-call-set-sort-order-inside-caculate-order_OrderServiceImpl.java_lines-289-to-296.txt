@@ -1,8 +1,0 @@
-	        if(CollectionUtils.isNotEmpty(orderTotalVariation.getVariations())) {
-	        	for(OrderTotal variation : orderTotalVariation.getVariations()) {
-	        		variation.setSortOrder(currentCount++);
-	        		orderTotals.add(variation);
-	        		subTotal = subTotal.subtract(variation.getValue());
-	        	}
-	        }
-

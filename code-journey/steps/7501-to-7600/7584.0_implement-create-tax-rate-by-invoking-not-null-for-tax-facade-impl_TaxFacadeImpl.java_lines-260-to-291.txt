@@ -1,0 +1,32 @@
+	@Override
+	public Entity createTaxRate(PersistableTaxRate taxRate, MerchantStore store, Language language) {
+		
+		Validate.notNull(taxRate,"TaxRate cannot be null");
+		Validate.notNull(taxRate.getCode(),"TaxRate code cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+
+		
+		try {
+			
+			TaxRate model = taxRateService.getByCode(taxRate.getCode(), store);
+			if(model!=null) {
+				throw new OperationNotAllowedException("Tax rate [" + taxRate.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}
+
+			
+			model = persistableTaxRateMapper.convert(taxRate, store, language);
+			
+			model = taxRateService.saveOrUpdate(model);
+			
+			Entity id = new Entity();
+			id.setId(model.getId());
+			return id;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while saving taxRate [" +  taxRate.getCode() + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while saving taxRate [" +  taxRate.getCode() + "] for store [" + store.getCode() + "]", e);
+		}
+		
+
+	}

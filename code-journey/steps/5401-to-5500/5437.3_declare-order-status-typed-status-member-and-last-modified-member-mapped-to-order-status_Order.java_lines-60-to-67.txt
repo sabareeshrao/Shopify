@@ -1,0 +1,8 @@
+	
+	@Column (name ="ORDER_STATUS")
+	@Enumerated(value = EnumType.STRING)
+	private OrderStatus status;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="LAST_MODIFIED")
+	private Date lastModified;

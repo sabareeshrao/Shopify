@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
-import com.salesmanager.core.model.catalog.product.price.ProductPrice;
-import com.salesmanager.core.model.catalog.product.price.ProductPriceDescription;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.mapper.Mapper;
-import com.salesmanager.shop.model.catalog.product.product.PersistableProductInventory;

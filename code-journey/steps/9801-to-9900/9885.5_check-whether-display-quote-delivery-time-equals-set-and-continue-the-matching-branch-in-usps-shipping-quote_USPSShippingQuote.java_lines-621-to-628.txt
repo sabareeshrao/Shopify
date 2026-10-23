@@ -1,8 +1,0 @@
-				for(ShippingOption option : shippingOptions) {
-
-					StringBuilder description = new StringBuilder();
-					description.append(option.getOptionName());
-					//if (displayQuoteDeliveryTime == ShippingConstants.DISPLAY_RT_QUOTE_TIME) {
-					if (shippingConfiguration.getShippingDescription()==ShippingDescription.LONG_DESCRIPTION) {
-						if (option.getEstimatedNumberOfDays()>0) {
-							description.append(" (").append(

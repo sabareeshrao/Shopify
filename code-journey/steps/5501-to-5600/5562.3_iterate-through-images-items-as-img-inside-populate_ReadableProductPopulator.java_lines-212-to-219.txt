@@ -1,8 +1,0 @@
-				String contextPath = imageUtils.getContextPath();
-
-				for(ProductImage img : images) {
-					ReadableImage prdImage = new ReadableImage();
-					prdImage.setImageName(img.getProductImage());
-					prdImage.setDefaultImage(img.isDefaultImage());
-					prdImage.setOrder(img.getSortOrder() != null ? img.getSortOrder().intValue() : 0);
-

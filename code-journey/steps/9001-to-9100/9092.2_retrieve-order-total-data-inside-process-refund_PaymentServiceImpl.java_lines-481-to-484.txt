@@ -1,4 +1,0 @@
-		Validate.notNull(amount);
-		Validate.notNull(order);
-		Validate.notNull(order.getOrderTotal());
-		

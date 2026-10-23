@@ -1,4 +1,0 @@
-
-		if (!product.isAvailable()) {
-			throw new Exception("Product with sku " + product.getSku() + " is not available");
-		}

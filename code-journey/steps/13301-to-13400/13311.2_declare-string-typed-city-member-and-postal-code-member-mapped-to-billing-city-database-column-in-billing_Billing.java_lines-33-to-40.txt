@@ -1,8 +1,0 @@
-	
-	@Column (name ="BILLING_CITY", length=100)
-	private String city;
-	
-	@Column (name ="BILLING_POSTCODE", length=20)
-	private String postalCode;
-	
-	@Column(name="BILLING_TELEPHONE", length=32)

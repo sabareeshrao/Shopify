@@ -1,0 +1,17 @@
+	
+/*	public KnowledgeBase getKbase() {
+		return kbase;
+	}
+
+
+	public void setKbase(KnowledgeBase kbase) {
+		this.kbase = kbase;
+	}
+
+	public StatelessKnowledgeSession getOrderTotalMethodDecision() {
+		return orderTotalMethodDecision;
+	}
+
+	public void setOrderTotalMethodDecision(StatelessKnowledgeSession orderTotalMethodDecision) {
+		this.orderTotalMethodDecision = orderTotalMethodDecision;
+	}*/

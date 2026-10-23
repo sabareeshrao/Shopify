@@ -1,2 +1,0 @@
-				throw new IntegrationException("Wrong paypal ack from init transaction " + ack);
-			}

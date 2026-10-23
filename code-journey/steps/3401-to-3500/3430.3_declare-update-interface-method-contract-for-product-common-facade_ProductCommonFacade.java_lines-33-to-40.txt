@@ -1,8 +1,0 @@
-	   * @param merchant
-	   * @param language
-	   */
-	  void update(Long productId, LightPersistableProduct product, MerchantStore merchant, Language language);
-	  
-	  /**
-	   * Patch inventory by sku
-	   * @param sku

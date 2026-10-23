@@ -1,0 +1,9 @@
+
+  /**
+   * Determines if a user is authorized to perform an action on a specific store
+   * 
+   * @param userName
+   * @param merchantStoreCode
+   * @return
+   * @throws Exception
+   */

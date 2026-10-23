@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "Punjab",
-		"zoneName": "Punjab",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "Rajasthan",

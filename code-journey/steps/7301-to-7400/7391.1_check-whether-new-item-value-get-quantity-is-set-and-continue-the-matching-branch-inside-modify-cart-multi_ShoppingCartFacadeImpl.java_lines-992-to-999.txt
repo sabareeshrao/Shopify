@@ -1,8 +1,0 @@
-				if (newItemValue.getQuantity() == 0) {
-					// remove from cart
-					shoppingCartService.deleteShoppingCartItem(oldCartItem.getId());
-					cartModel.getLineItems().remove(oldCartItem);
-					++itemUpdatedCnt;
-					continue;
-				}
-				// update qty

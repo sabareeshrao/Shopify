@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductAttributeEntity getAttribute(Long productId, Long attributeId, MerchantStore store,
-			Language language) {
-
-		ProductAttribute attr = productAttributeService.getById(attributeId);
-
-		if (attr == null) {
-			throw new ResourceNotFoundException(

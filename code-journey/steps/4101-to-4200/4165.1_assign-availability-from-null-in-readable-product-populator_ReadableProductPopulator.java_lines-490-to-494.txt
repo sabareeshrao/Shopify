@@ -1,0 +1,5 @@
+
+			//target.setVisible(isVisible);
+
+			//availability
+			ProductAvailability availability = null;

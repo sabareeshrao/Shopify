@@ -1,8 +1,0 @@
-		inventory.setPrice(productPrice);
-		product.setInventory(inventory);
-
-		final List<ProductDescription> descriptions = new ArrayList<>();
-
-		// add english description
-		ProductDescription description = new ProductDescription();
-		description.setLanguage("en");

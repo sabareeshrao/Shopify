@@ -1,2 +1,0 @@
-	private RequestCache requestCache = new HttpSessionRequestCache();
-

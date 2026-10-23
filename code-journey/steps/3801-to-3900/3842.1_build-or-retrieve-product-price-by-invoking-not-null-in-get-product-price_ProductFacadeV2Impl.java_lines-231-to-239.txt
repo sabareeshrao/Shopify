@@ -1,0 +1,9 @@
+
+
+	/**
+	@Override
+	public ReadableProductPrice getProductPrice(Long id, ProductPriceRequest priceRequest, MerchantStore store,
+			Language language) {
+
+		
+		Validate.notNull(id, "Product id cannot be null");

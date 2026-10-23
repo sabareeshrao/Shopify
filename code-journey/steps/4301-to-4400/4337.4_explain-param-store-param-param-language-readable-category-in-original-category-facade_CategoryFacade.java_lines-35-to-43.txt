@@ -1,0 +1,9 @@
+
+	/**
+	 *
+	 * @param store
+	 * @param id
+	 * @param language
+	 * @return ReadableCategory
+	 */
+	ReadableCategory getById(MerchantStore store, Long id, Language language);

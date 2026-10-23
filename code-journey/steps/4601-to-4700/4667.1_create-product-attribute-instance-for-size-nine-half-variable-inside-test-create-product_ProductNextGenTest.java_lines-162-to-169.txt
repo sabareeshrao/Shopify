@@ -1,8 +1,0 @@
-
-	    ProductAttribute size_nine_half = new ProductAttribute();
-	    size_nine_half.setProduct(summerShoes);
-	    size_nine_half.setProductOption(size);
-	    size_nine_half.setProductAttributePrice(new BigDecimal(0));//no price variation
-	    size_nine_half.setProductAttributeWeight(new BigDecimal(0));//weight variation
-	    size_nine_half.setProductOptionValue(nineHalf);
-	    

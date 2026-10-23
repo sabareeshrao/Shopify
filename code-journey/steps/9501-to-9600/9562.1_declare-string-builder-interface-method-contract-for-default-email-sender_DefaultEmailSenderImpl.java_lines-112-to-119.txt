@@ -1,0 +1,8 @@
+        mp.addBodyPart(textPart);
+
+        // Create a "HTML" Multipart message
+        Multipart htmlContent = new MimeMultipart("related");
+        BodyPart htmlPage = new MimeBodyPart();
+        freemarkerMailConfiguration.setClassForTemplateLoading(DefaultEmailSenderImpl.class, "/");
+        Template htmlTemplate = freemarkerMailConfiguration.getTemplate(
+            new StringBuilder(TEMPLATE_PATH).append("/").append(tmpl).toString());

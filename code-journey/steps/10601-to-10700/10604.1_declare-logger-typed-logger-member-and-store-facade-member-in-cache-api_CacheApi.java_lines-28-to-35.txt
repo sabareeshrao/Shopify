@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(CacheApi.class);
-
-  @Inject
-  private StoreFacade storeFacade;
-
-  @Inject
-  private CacheUtils cache;
-

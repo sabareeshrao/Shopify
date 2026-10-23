@@ -1,0 +1,4 @@
+  @Inject private ProductService productService;
+
+  @Inject private ProductItemsFacade productItemsFacade;
+

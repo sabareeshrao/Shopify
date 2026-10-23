@@ -1,4 +1,0 @@
-@Service("productSearchService")
-@EnableConfigurationProperties(value = ApplicationSearchConfiguration.class)
-public class SearchServiceImpl implements com.salesmanager.core.business.services.search.SearchService {
-	

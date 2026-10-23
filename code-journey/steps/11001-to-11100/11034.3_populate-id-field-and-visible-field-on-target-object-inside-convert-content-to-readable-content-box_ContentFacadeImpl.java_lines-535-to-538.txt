@@ -1,4 +1,0 @@
-			box.setId(content.getId());
-			box.setVisible(content.isVisible());
-			return box;
-		}

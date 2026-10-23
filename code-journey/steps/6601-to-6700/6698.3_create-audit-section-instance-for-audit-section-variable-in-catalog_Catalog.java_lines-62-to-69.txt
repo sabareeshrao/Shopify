@@ -1,8 +1,0 @@
-    	allocationSize = SchemaConstant.DESCRIPTION_ID_ALLOCATION_SIZE, 
-    	initialValue = SchemaConstant.DESCRIPTION_ID_START_VALUE
-  		)
-    private Long id;
-
-    @Embedded
-    private AuditSection auditSection = new AuditSection();
-    

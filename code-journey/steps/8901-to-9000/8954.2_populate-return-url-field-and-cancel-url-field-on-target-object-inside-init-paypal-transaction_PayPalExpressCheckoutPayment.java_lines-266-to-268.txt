@@ -1,3 +1,0 @@
-			setExpressCheckoutRequestDetails.setReturnURL(returnUrl);
-			setExpressCheckoutRequestDetails.setCancelURL(cancelUrl);
-

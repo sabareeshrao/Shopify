@@ -1,6 +1,0 @@
-	    shirtsEnglishDescription.setCategory(shirts);
-	    shirtsEnglishDescription.setLanguage(en);
-
-	    Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();
-	    descriptions.add(shirtsEnglishDescription);
-

@@ -1,0 +1,6 @@
+
+/**
+ * Rest services for sending contact
+ * @author Carl Samson
+ *
+ */

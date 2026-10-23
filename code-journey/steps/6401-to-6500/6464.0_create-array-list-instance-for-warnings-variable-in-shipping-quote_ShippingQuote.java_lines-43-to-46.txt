@@ -1,0 +1,4 @@
+	private List<String> warnings = new ArrayList<String>();
+	
+	private ShippingOption selectedShippingOption = null;
+	

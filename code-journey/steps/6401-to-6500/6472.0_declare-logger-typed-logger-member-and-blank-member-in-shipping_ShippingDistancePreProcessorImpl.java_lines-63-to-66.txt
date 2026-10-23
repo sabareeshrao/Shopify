@@ -1,0 +1,4 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingDistancePreProcessorImpl.class);
+	
+	private final static String BLANK = " ";
+	

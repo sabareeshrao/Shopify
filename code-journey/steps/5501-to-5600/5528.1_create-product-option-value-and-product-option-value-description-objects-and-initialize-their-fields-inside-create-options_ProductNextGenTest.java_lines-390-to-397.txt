@@ -1,8 +1,0 @@
-	    
-	    //option value 10
-	    ten = new ProductOptionValue();
-	    ten.setMerchantStore(store);
-	    ten.setCode("ten");
-	    
-	    ProductOptionValueDescription tenDescription = new ProductOptionValueDescription();
-	    tenDescription.setLanguage(en);

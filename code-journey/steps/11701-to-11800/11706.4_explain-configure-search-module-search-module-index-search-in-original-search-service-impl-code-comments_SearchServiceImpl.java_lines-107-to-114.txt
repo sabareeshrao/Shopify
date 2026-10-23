@@ -1,8 +1,0 @@
-		/**
-		 * Configure search module
-		 */
-
-		if (searchModule != null && !noIndex) {
-
-			SearchConfiguration searchConfiguration = config();
-			try {

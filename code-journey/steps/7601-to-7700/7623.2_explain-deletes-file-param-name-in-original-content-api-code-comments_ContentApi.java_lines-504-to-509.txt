@@ -1,0 +1,6 @@
+
+	/**
+	 * Deletes a file from CMS
+	 *
+	 * @param name
+	 */

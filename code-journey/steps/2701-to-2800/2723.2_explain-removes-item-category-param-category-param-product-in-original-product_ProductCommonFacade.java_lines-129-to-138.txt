@@ -1,0 +1,10 @@
+
+	  /**
+	   * Removes item from a category
+	   *
+	   * @param category
+	   * @param product
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */

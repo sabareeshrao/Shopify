@@ -1,0 +1,12 @@
+		try {
+			FinalPrice price = pricingService.calculateProductPrice(source);
+			if(price != null) {
+
+				destination.setFinalPrice(pricingService.getDisplayAmount(price.getFinalPrice(), store));
+				destination.setPrice(price.getFinalPrice());
+				destination.setOriginalPrice(pricingService.getDisplayAmount(price.getOriginalPrice(), store));
+						
+			}
+		} catch (ServiceException e) {
+			throw new ConversionRuntimeException("An error occured during price calculation", e);
+		}

@@ -1,0 +1,9 @@
+
+@Entity
+@EntityListeners(value = com.salesmanager.core.model.common.audit.AuditListener.class)
+@Table(name = "CATEGORY",
+	indexes = @Index(columnList = "LINEAGE"),
+	uniqueConstraints=
+    @UniqueConstraint(columnNames = {"MERCHANT_ID", "CODE"}) )
+
+

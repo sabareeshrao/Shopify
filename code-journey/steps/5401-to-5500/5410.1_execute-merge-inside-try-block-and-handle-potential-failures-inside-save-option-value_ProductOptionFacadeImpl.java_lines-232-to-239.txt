@@ -1,8 +1,0 @@
-		}
-
-		value = persistableOptionValueMapper.merge(optionValue, value, store, language);
-
-
-		try {
-			productOptionValueService.saveOrUpdate(value);
-		} catch (ServiceException e) {

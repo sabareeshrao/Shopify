@@ -1,0 +1,12 @@
+
+      /*
+       * //default large InputContentImage largeContentImage = new
+       * InputContentImage(ImageContentType.PRODUCT);
+       * largeContentImage.setFile(contentImage.getFile());
+       * largeContentImage.setDefaultImage(productImage.isDefaultImage());
+       * largeContentImage.setImageName(new
+       * StringBuilder().append("L-").append(productImage.getProductImage()).toString());
+       *
+       *
+       * uploadImage.uploadProductImage(configuration, productImage, largeContentImage);
+       */

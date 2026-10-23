@@ -1,0 +1,7 @@
+
+	/**
+	 * Creates a brand new MerchantStore
+	 * 
+	 * @param store
+	 * @throws Exception
+	 */

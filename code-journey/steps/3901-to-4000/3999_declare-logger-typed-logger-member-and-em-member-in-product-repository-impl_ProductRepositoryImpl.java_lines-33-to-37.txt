@@ -1,5 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(ProductRepositoryImpl.class);
-
-	@PersistenceContext
-	private EntityManager em;
-

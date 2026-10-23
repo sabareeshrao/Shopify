@@ -1,0 +1,10 @@
+
+  /**
+   * Get a Manufacturer by id
+   * 
+   * @param id
+   * @param store
+   * @param language
+   * @return
+   * @throws Exception
+   */

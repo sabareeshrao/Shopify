@@ -1,0 +1,5 @@
+	
+	/**
+	 * Save all
+	 */
+	void saveAll(Iterable<E> entities) throws ServiceException;

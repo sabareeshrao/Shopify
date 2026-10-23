@@ -1,8 +1,0 @@
-		Validate.notNull(id, "Product id cannot be null");
-		Validate.notNull(priceRequest, "Product price request cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(language, "Language cannot be null");
-		
-		try {
-			Product model = productService.findOne(id, store);
-			

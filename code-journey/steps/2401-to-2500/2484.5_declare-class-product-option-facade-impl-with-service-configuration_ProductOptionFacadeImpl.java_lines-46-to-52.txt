@@ -1,0 +1,7 @@
+import com.salesmanager.shop.store.controller.product.facade.ProductOptionFacade;
+
+@Service
+public class ProductOptionFacadeImpl implements ProductOptionFacade {
+
+	@Autowired
+	private ProductOptionService productOptionService;

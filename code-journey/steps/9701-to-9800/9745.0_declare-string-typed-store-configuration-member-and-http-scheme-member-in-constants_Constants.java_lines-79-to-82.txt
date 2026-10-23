@@ -1,0 +1,4 @@
+	public final static String STORE_CONFIGURATION = "STORECONFIGURATION";
+
+	public final static String HTTP_SCHEME= "http";
+	

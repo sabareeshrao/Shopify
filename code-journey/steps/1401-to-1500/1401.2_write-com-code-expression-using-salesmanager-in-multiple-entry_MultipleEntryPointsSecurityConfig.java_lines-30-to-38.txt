@@ -1,0 +1,9 @@
+import com.salesmanager.shop.store.security.services.CredentialsService;
+import com.salesmanager.shop.store.security.services.CredentialsServiceImpl;
+
+/**
+ * Main entry point for security - admin - customer - auth - private - services
+ * 
+ * @author dur9213
+ *
+ */

@@ -1,0 +1,5 @@
+
+	/**
+	 * Example: /<baseImagePath>/files/<storeCode>/STATIC_FILE/<fileName> Or
+	 * example: /<shopScheme>://<domainName>/<contextPath>/files/<storeCode>/
+	 */

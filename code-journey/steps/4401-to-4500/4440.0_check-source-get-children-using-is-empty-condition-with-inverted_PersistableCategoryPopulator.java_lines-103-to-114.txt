@@ -1,0 +1,12 @@
+
+
+		if(!CollectionUtils.isEmpty(source.getChildren())) {
+
+			for(PersistableCategory cat : source.getChildren()) {
+
+				Category persistCategory = this.populate(cat, new Category(), store, language);
+				target.getCategories().add(persistCategory);
+
+			}
+
+		}

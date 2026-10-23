@@ -1,0 +1,58 @@
+	    
+	    //1.1 create a product
+	    
+	    //create an option
+	    ProductOption color = new ProductOption();
+	    color.setMerchantStore(store);
+	    color.setCode("color");
+	    color.setProductOptionType("SELECT");
+	    
+	    ProductOptionDescription colorDescription = new ProductOptionDescription();
+	    colorDescription.setDescription("Color");
+	    colorDescription.setName("Color");
+	    colorDescription.setLanguage(en);
+	    colorDescription.setProductOption(color);
+	    
+	    Set<ProductOptionDescription> colorDescriptions = new HashSet<ProductOptionDescription>();
+	    colorDescriptions.add(colorDescription);
+	    
+	    color.setDescriptions(colorDescriptions);
+	    
+	    productOptionService.create(color);
+	    
+	    //create an option value
+	    ProductOptionValue red = new ProductOptionValue();
+	    red.setMerchantStore(store);
+	    red.setCode("red");
+	    
+	    ProductOptionValueDescription redDescription = new ProductOptionValueDescription();
+	    redDescription.setDescription("Red");
+	    redDescription.setLanguage(en);
+	    redDescription.setName("Red");
+	    redDescription.setProductOptionValue(red);
+	    
+	    Set<ProductOptionValueDescription> redDescriptions = new HashSet<ProductOptionValueDescription>();
+	    redDescriptions.add(redDescription);
+	    
+	    red.setDescriptions(redDescriptions);
+	    
+	    productOptionValueService.create(red);
+
+	    //create a product
+	    Product product = new Product();
+	    product.setProductHeight(new BigDecimal(4));
+	    product.setProductLength(new BigDecimal(3));
+	    product.setProductWidth(new BigDecimal(5));
+	    product.setProductWeight(new BigDecimal(8));
+	    product.setSku("TESTSKU");
+	    product.setType(generalType);
+	    product.setMerchantStore(store);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Product 1");
+	    description.setLanguage(en);
+	    description.setProduct(product);
+
+	    product.getDescriptions().add(description);
+	    

@@ -1,0 +1,8 @@
+
+  @Override
+  public void deleteManufacturer(Manufacturer manufacturer, MerchantStore store, Language language)
+      throws Exception {
+    manufacturerService.delete(manufacturer);
+
+  }
+

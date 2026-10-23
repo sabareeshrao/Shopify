@@ -1,4 +1,0 @@
-	</beans:bean>	
-	
-	<!-- infinispan static STARTUP-->
-	<beans:bean id="infinispanStaticAssetsManager" 

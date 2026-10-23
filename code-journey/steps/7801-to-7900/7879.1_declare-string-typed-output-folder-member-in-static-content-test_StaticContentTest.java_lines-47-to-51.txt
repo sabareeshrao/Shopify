@@ -1,0 +1,5 @@
+	private final static String OUTPUT_FOLDER = "/Users/carlsamson/Documents/test/";
+	
+	
+    @Test
+    public void createImage()

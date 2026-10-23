@@ -1,0 +1,15 @@
+	@Override
+	public void deleteLogo(String code) {
+		MerchantStore store = getByCode(code);
+		String image = store.getStoreLogo();
+		store.setStoreLogo(null);
+
+		try {
+			updateMerchantStore(store);
+			if (!StringUtils.isEmpty(image)) {
+				contentService.removeFile(store.getCode(), image);
+			}
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e.getMessage());
+		}
+	}

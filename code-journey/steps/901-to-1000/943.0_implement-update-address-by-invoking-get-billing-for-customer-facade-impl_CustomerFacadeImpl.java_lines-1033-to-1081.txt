@@ -1,0 +1,49 @@
+  @Override
+  public void updateAddress(PersistableCustomer customer, MerchantStore store) {
+
+
+    if(customer.getBilling() != null) {
+        Validate.notNull(customer.getBilling(), "Billing address can not be null");
+        Validate.notNull(customer.getBilling().getAddress(), "Billing address can not be null");
+        Validate.notNull(customer.getBilling().getCity(), "Billing city can not be null");
+        Validate.notNull(customer.getBilling().getPostalCode(), "Billing postal code can not be null");
+        Validate.notNull(customer.getBilling().getCountry(), "Billing country can not be null");
+    }
+    if(customer.getDelivery() == null) {
+      customer.setDelivery(customer.getBilling());
+    } else {
+
+      if(StringUtils.isBlank(customer.getDelivery().getAddress())) {
+    	  customer.getDelivery().setAddress(customer.getBilling().getAddress());
+      }
+      if(StringUtils.isBlank(customer.getDelivery().getCity())) {
+    	  customer.getDelivery().setAddress(customer.getBilling().getCity());
+      }
+      if(StringUtils.isBlank(customer.getDelivery().getPostalCode())) {
+    	  customer.getDelivery().setAddress(customer.getBilling().getPostalCode());
+      }
+      if(StringUtils.isBlank(customer.getDelivery().getCountryCode())) {
+    	  customer.getDelivery().setAddress(customer.getDelivery().getCountryCode());
+      }
+    }
+    
+    try {
+      //update billing
+      if(customer.getBilling() != null) {
+    	  customer.getBilling().setBillingAddress(true);
+    	  updateAddress(customer.getId(), store, customer.getBilling(), store.getDefaultLanguage());
+      }
+
+      
+      //update delivery
+      if(customer.getDelivery() != null) {
+    	  customer.getDelivery().setBillingAddress(false);
+          updateAddress(customer.getId(), store, customer.getDelivery(), store.getDefaultLanguage());
+      }
+
+    } catch (Exception e) {
+      throw new ServiceRuntimeException("Error while updating customer address");
+    }
+    
+
+  }

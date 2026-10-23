@@ -1,0 +1,10 @@
+			
+			/**
+			 * Merging rules
+			 * 
+			 * Create vs update
+			 * - existing product availability 
+			 *   match product id, instance id, merchant id and region then set exiting id
+			 * 
+			 */
+			Set<ProductAvailability> existingAvailability = product.getAvailabilities();

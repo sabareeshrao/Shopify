@@ -1,6 +1,0 @@
-  @Override
-	public ReadableOptin findByMerchantAndType(MerchantStore store, OptinType type) {
-		Optin optin = getOptinByMerchantAndType(store, type);
-    return convertOptinToReadableOptin(store, optin);
-	}
-

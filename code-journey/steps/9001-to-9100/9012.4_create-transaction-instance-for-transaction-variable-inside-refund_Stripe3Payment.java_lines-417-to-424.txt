@@ -1,8 +1,0 @@
-			Refund re = Refund.create(params);
-
-			transaction = new Transaction();
-			transaction.setAmount(order.getTotal());
-			transaction.setOrder(order);
-			transaction.setTransactionDate(new Date());
-			transaction.setTransactionType(TransactionType.CAPTURE);
-			transaction.setPaymentType(PaymentType.CREDITCARD);

@@ -1,8 +1,0 @@
-		
-		ReadableProductType readableType = readableProductTypeMapper.convert(t, store, language);
-		return readableType;
-
-	}
-
-
-}

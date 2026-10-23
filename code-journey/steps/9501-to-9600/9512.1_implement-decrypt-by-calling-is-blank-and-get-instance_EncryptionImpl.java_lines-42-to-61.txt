@@ -1,0 +1,20 @@
+	@Override
+	public String decrypt(String value) throws Exception {
+
+		
+		if (StringUtils.isBlank(value))
+			throw new Exception("Nothing to encrypt");
+
+		// NEED TO UNDERSTAND WHY PKCS5Padding DOES NOT WORK
+		// Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
+		Cipher cipher = Cipher.getInstance(CYPHER_SPEC);
+		SecretKeySpec keySpec = new SecretKeySpec(secretKey.getBytes(), KEY_SPEC);
+		IvParameterSpec ivSpec = new IvParameterSpec(IV_P
+				.getBytes());
+		cipher.init(Cipher.DECRYPT_MODE, keySpec, ivSpec);
+		byte[] outText;
+		outText = cipher.doFinal(hexToBytes(value));
+		return new String(outText);
+		
+		
+	}

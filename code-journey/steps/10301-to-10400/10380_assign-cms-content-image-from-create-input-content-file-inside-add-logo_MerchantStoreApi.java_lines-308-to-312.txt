@@ -1,5 +1,0 @@
-
-		InputContentFile cmsContentImage = createInputContentFile(uploadfile);
-		storeFacade.addStoreLogo(code, cmsContentImage);
-	}
-

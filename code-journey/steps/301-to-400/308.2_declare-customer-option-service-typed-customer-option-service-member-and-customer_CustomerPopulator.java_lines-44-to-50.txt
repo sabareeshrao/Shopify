@@ -1,0 +1,7 @@
+    @Autowired
+	private CustomerOptionService customerOptionService;
+    @Autowired
+    private CustomerOptionValueService customerOptionValueService;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+

@@ -1,8 +1,0 @@
-	private String fileName;
-	private String mimeType;
-	public void setMimeType(String mimeType) {
-		this.mimeType = mimeType;
-	}
-	public String getMimeType() {
-		return mimeType;
-	}

@@ -1,3 +1,0 @@
-				while (((_line = is.readLine()) != null)) {
-					respText = respText + _line;
-				}

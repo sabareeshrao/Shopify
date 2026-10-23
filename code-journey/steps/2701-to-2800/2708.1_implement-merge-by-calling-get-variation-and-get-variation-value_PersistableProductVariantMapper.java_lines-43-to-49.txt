@@ -1,0 +1,7 @@
+	@Override
+	public ProductVariant merge(PersistableProductVariant source, ProductVariant destination, MerchantStore store,
+			Language language) {
+		
+		//
+		Long productVariation = source.getVariation();
+		Long productVariationValue = source.getVariationValue();

@@ -1,0 +1,8 @@
+
+		// List<PersistableImage> images = new ArrayList<PersistableImage>();
+		// images.add(persistableImage);
+
+		// product.setImages(images);
+
+		ProductSpecification specifications = new ProductSpecification();
+		specifications.setHeight(new BigDecimal(20));

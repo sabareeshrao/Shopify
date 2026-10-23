@@ -1,8 +1,0 @@
-
-			String newPasswordEncoded = securityFacade.encodePassword(user.getPassword());
-
-			User userModel = new User();
-			userModel = converPersistabletUserToUser(store, languageService.defaultLanguage(), userModel, user);
-			if (CollectionUtils.isEmpty(userModel.getGroups())) {
-				throw new ServiceRuntimeException("No valid group groups associated with user " + user.getUserName());
-			}

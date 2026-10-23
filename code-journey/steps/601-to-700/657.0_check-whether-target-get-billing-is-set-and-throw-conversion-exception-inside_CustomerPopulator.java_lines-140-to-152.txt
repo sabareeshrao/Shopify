@@ -1,0 +1,13 @@
+			if(target.getBilling() ==null && source.getBilling()!=null){
+			    LOG.info( "Setting default values for billing" );
+			    Billing billing = new Billing();
+			    Country billingCountry = null;
+			    if(StringUtils.isNotBlank( source.getBilling().getCountry() )) {
+                    billingCountry = countries.get(source.getBilling().getCountry());
+                    if(billingCountry==null) {
+                        throw new ConversionException("Unsuported country code " + sourceBilling.getCountry());
+                    }
+                    billing.setCountry(billingCountry);
+                    target.setBilling( billing );
+                }
+			}

@@ -1,0 +1,8 @@
+				Country c = countries.get(order.getBilling().getCountry().getIsoCode());
+				if(c!=null) {
+					billToProvince.append(c.getName());
+				} else {
+					billToProvince.append(order.getBilling().getCountry().getIsoCode());
+				}
+				
+			}

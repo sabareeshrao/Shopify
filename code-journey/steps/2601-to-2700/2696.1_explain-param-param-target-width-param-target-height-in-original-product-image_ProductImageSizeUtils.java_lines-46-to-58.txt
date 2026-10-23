@@ -1,0 +1,13 @@
+
+	/**
+	 *
+	 * @param img
+	 * @param targetWidth
+	 * @param targetHeight
+	 * @param hint
+	 * 	{@code RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR},
+     *  {@code RenderingHints.VALUE_INTERPOLATION_BILINEAR},
+     *  {@code RenderingHints.VALUE_INTERPOLATION_BICUBIC})
+	 * @param higherQuality
+	 * @return
+	 */

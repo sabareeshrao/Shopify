@@ -1,0 +1,9 @@
+	
+	@Query("select c from Category c left join fetch c.descriptions cd join fetch cd.language cdl join fetch c.merchantStore cm where c.code=?2 and cm.id = ?1")
+	Category findByCode(Integer storeId, String code);
+	
+	@Query("select c from Category c left join fetch c.descriptions cd join fetch cd.language cdl join fetch c.merchantStore cm where c.code in (?2) and cdl.id=?3 and cm.id = ?1 order by c.sortOrder asc")
+	List<Category> findByCodes(Integer storeId, List<String> codes, Integer languageId);
+	
+	@Query("select c from Category c left join fetch c.descriptions cd join fetch cd.language cdl join fetch c.merchantStore cm where c.id in (?2) and cdl.id=?3 and cm.id = ?1 order by c.sortOrder asc")
+	List<Category> findByIds(Integer storeId, List<Long> ids, Integer languageId);

@@ -1,0 +1,11 @@
+	@Override
+	public Product getProductForLocale(long productId, Language language, Locale locale) throws ServiceException {
+		Product product = productRepository.getProductForLocale(productId, language, locale);
+		if (product == null) {
+			return null;
+		}
+
+		CatalogServiceHelper.setToAvailability(product, locale);
+		CatalogServiceHelper.setToLanguage(product, language.getId());
+		return product;
+	}

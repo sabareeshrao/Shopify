@@ -1,7 +1,0 @@
-			
-			attr.setProductAttributeWeight(source.getAttributeAdditionalWeight());
-			attr.setAttributeDisplayOnly(source.getAttributeDisplayOnly());
-			attr.setAttributeDefault(source.getAttributeDefault());
-			if(!StringUtils.isBlank(source.getAttributeSortOrder())) {
-				attr.setSortOrder(Integer.parseInt(source.getAttributeSortOrder()));
-			}

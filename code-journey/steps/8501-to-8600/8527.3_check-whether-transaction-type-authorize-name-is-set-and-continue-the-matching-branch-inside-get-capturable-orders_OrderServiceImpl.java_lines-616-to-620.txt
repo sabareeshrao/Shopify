@@ -1,5 +1,0 @@
-			for(Transaction trx : transactions) {
-				Order order = trx.getOrder();
-				if(TransactionType.AUTHORIZE.name().equals(trx.getTransactionType().name())) {
-					preAuthOrders.put(order.getId(), order);
-				}

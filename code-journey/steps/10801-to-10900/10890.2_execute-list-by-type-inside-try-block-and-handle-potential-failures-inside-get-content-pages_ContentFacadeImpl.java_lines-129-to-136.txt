@@ -1,8 +1,0 @@
-		@SuppressWarnings("rawtypes")
-		ReadableEntityList items = new ReadableEntityList();
-		Page<Content> contentPages;
-		try {
-			contentPages = contentService.listByType(ContentType.PAGE, store, page, count);
-
-			items.setTotalPages(contentPages.getTotalPages());
-			items.setNumber(contentPages.getContent().size());

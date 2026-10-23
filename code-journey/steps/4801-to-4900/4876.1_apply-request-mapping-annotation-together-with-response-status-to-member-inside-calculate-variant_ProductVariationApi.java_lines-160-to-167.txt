@@ -1,8 +1,0 @@
-
-  
-  @RequestMapping(value = "/category/{id}/variations", method = RequestMethod.GET)
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(
-      httpMethod = "GET",
-      value = "Get all variation for all items in a given category",
-      notes = "",

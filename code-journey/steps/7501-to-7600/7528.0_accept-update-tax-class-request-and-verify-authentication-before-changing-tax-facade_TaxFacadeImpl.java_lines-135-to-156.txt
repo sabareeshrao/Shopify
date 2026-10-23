@@ -1,0 +1,22 @@
+	@Override
+	public void updateTaxClass(Long id, PersistableTaxClass taxClass, MerchantStore store, Language language) {
+		Validate.notNull(taxClass,"TaxClass cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		try {
+			TaxClass model = taxClassService.getById(id);
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxClass not found [" + id + "] for store [" + store.getCode() + "]");
+			} else {
+				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot update tax class [" + taxClass.getCode() + "]");
+				}
+			}
+			model = persistableTaxClassMapper.convert(taxClass, store, language);
+			taxClassService.saveOrUpdate(model);
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+		}
+	}

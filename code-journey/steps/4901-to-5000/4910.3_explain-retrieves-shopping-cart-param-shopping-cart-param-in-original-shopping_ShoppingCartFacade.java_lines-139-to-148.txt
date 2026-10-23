@@ -1,0 +1,10 @@
+
+	/**
+	 * Retrieves a shopping cart by ID
+	 * @param shoppingCartId
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableShoppingCart getById(Long shoppingCartId, MerchantStore store, Language language) throws Exception;

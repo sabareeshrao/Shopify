@@ -1,0 +1,7 @@
+	
+	@Column (name ="PROMO_CODE")
+	private String promoCode;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "PROMO_ADDED")
+	private Date promoAdded;

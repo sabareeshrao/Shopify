@@ -1,8 +1,0 @@
-  private void createReview(CustomerReview review) {
-    try{
-      customerReviewService.create(review);
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException(e);
-    }
-
-  }

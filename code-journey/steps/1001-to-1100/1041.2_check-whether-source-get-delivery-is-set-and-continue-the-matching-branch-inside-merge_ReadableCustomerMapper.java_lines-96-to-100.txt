@@ -1,5 +1,0 @@
-			address.setPostalCode(source.getDelivery().getPostalCode());
-			address.setPhone(source.getDelivery().getTelephone());
-			if(source.getDelivery().getCountry()!=null) {
-				address.setCountry(source.getDelivery().getCountry().getIsoCode());
-			}

@@ -1,8 +1,0 @@
-	
-	/**
-	 * Generic exception catch allpage
-	 * @param ex
-	 * @return
-	 */
-	@RequestMapping(value="/error", method=RequestMethod.GET)
-	public ModelAndView handleCatchAllException(Model model) {

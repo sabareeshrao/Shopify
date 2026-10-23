@@ -1,0 +1,14 @@
+
+	@Override
+	public List<Country> listCountryZones(Language language) throws ServiceException {
+		try {
+			return countryRepository.listCountryZonesByLanguage(language.getId());
+		} catch(Exception e) {
+			LOGGER.error("listCountryZones", e);
+			throw new ServiceException(e);
+		}
+
+	}
+
+
+}

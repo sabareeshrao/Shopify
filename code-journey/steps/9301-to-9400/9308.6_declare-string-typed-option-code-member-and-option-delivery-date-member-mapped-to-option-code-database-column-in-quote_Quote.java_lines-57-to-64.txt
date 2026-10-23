@@ -1,8 +1,0 @@
-	@Column(name = "OPTION_CODE", nullable = true)
-	private String optionCode = null;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column (name ="OPTION_DELIVERY_DATE")
-	private Date optionDeliveryDate = null;
-	
-	@Temporal(TemporalType.TIMESTAMP)

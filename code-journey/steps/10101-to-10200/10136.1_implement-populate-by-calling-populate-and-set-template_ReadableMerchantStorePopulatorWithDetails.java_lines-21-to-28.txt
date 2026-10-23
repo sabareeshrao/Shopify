@@ -1,8 +1,0 @@
-	@Override
-	public ReadableMerchantStore populate(MerchantStore source,
-			ReadableMerchantStore target, MerchantStore store, Language language)
-			throws ConversionException {
-
-		target = super.populate(source, target, store, language);
-
-		target.setTemplate(source.getStoreTemplate());

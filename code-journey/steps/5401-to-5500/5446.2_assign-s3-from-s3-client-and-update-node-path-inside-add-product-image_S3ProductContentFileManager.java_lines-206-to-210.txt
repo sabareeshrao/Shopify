@@ -1,5 +1,0 @@
-      final AmazonS3 s3 = s3Client();
-
-      String nodePath = this.nodePath(productImage.getProduct().getMerchantStore().getCode(),
-          productImage.getProduct().getSku(), contentImage);
-

@@ -1,8 +1,0 @@
-  private ReadableCountry convertToReadableCountry(Country country, Language language, MerchantStore merchantStore) {
-    try{
-      ReadableCountryPopulator populator = new ReadableCountryPopulator();
-      return populator.populate(country, new ReadableCountry(), merchantStore, language);
-    } catch (ConversionException e) {
-      throw new ConversionRuntimeException(e);
-    }
-  }

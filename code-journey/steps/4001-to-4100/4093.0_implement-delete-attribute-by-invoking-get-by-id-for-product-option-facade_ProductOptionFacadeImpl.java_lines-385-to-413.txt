@@ -1,0 +1,29 @@
+
+	@Override
+	public void deleteAttribute(Long productId, Long attributeId, MerchantStore store) {
+		try {
+
+			ProductAttribute attr = productAttributeService.getById(attributeId);
+			if (attr == null) {
+				throw new ResourceNotFoundException(
+						"ProductAttribute not found for [" + attributeId + "] and store [" + store.getCode() + "]");
+			}
+
+			if (attr.getProduct().getId().longValue() != productId) {
+				throw new ResourceNotFoundException(
+						"ProductAttribute not found for [" + attributeId + "] and product [" + productId + "]");
+			}
+
+			if (attr.getProduct().getMerchantStore().getId().intValue() != store.getId().intValue()) {
+				throw new ResourceNotFoundException("ProductAttribute not found for [" + attributeId + "] and product ["
+						+ productId + "] and store [" + store.getCode() + "]");
+			}
+
+			productAttributeService.delete(attr);
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while deleting ProductAttribute [" + attributeId + "]", e);
+		}
+
+	}

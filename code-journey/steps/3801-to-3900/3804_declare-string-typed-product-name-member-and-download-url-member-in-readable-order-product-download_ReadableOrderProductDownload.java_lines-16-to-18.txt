@@ -1,3 +1,0 @@
-	private String productName;
-	private String downloadUrl;
-	

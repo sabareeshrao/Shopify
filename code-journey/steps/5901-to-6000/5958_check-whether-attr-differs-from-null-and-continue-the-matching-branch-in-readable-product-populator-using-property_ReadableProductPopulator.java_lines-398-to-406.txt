@@ -1,9 +1,0 @@
-								}
-
-								property.setPropertyValue(propertyValue);*/
-
-								//if(attr!=null) {
-								//	attr.getAttributeValues().add(attrValue);
-								//}
-								target.getProperties().add(property);
-

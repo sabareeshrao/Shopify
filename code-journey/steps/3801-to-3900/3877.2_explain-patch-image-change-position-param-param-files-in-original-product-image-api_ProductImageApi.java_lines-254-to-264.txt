@@ -1,0 +1,11 @@
+	/**
+	 * 
+	 * Patch image (change position)
+	 * 
+	 * @param id
+	 * @param files
+	 * @param position
+	 * @param merchantStore
+	 * @param language
+	 * @throws IOException
+	 */

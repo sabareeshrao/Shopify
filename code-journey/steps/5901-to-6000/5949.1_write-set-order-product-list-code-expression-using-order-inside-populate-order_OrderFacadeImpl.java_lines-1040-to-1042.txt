@@ -1,0 +1,3 @@
+
+	private void setOrderProductList(final Order order, final Locale locale, final MerchantStore store,
+			final Language language, final com.salesmanager.shop.model.order.v0.ReadableOrder readableOrder)

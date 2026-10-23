@@ -1,8 +1,0 @@
-
-@Component
-public class ReadableProductDefinitionMapper implements Mapper<Product, ReadableProductDefinition> {
-
-	@Autowired
-	private ReadableCategoryMapper readableCategoryMapper;
-
-	@Autowired

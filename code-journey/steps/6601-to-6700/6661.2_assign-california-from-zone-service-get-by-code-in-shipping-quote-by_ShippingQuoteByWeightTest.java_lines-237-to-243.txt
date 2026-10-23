@@ -1,0 +1,7 @@
+	    
+	    //overwrite delivery to US
+/*	    delivery.setPostalCode("90002");
+	    delivery.setCountry(us);
+	    Zone california = zoneService.getByCode("CA");
+	    delivery.setZone(california);*/
+	    

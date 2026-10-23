@@ -1,4 +1,0 @@
-    public CategoryDescription getDescription() {
-        if(descriptions!=null && descriptions.size()>0) {
-            return descriptions.iterator().next();
-        }

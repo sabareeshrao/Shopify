@@ -1,0 +1,24 @@
+	@Override
+	public void deleteProduct(Long id, MerchantStore store) {
+
+		Validate.notNull(id, "Product id cannot be null");
+		Validate.notNull(store, "store cannot be null");
+
+		Product p = productService.getById(id);
+
+		if (p == null) {
+			throw new ResourceNotFoundException("Product with id [" + id + " not found");
+		}
+
+		if (p.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+			throw new ResourceNotFoundException(
+					"Product with id [" + id + " not found for store [" + store.getCode() + "]");
+		}
+
+		try {
+			productService.delete(p);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while deleting ptoduct with id [" + id + "]", e);
+		}
+
+	}

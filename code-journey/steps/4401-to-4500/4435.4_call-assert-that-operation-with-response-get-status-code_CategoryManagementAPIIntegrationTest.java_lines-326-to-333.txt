@@ -1,0 +1,8 @@
+
+        final PersistableCategory cat = (PersistableCategory) response.getBody();
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertNotNull(cat.getId());
+
+
+
+    }

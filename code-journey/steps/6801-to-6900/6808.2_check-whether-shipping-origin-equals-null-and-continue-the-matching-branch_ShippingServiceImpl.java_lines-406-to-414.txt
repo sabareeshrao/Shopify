@@ -1,0 +1,9 @@
+			if(shippingOrigin == null || !shippingOrigin.isActive()) {
+				shippingOrigin = new ShippingOrigin();
+				shippingOrigin.setAddress(store.getStoreaddress());
+				shippingOrigin.setCity(store.getStorecity());
+				shippingOrigin.setCountry(store.getCountry());
+				shippingOrigin.setPostalCode(store.getStorepostalcode());
+				shippingOrigin.setState(store.getStorestateprovince());
+				shippingOrigin.setZone(store.getZone());
+			}

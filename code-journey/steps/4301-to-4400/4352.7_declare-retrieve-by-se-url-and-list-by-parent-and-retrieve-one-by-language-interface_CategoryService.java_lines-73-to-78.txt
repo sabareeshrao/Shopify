@@ -1,0 +1,6 @@
+
+	Category getBySeUrl(MerchantStore store, String seUrl, Language language);
+
+	List<Category> listByParent(Category category, Language language);
+
+	Category getOneByLanguage(long categoryId, Language language);

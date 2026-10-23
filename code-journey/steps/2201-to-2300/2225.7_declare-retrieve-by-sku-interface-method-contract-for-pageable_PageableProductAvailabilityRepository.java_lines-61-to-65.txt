@@ -1,0 +1,5 @@
+	Page<ProductAvailability> getBySku(String productCode, Pageable pageable);
+
+		
+	
+}

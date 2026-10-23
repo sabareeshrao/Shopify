@@ -1,0 +1,4 @@
+	
+	@Column(name="PRODUCT_ATTRIBUTE_FREE")
+	private boolean productAttributeIsFree;
+	

@@ -1,0 +1,4 @@
+
+  @Transient
+  private String name;
+

@@ -1,8 +1,0 @@
-	@Override
-	public ContentFolder getContentFolder(String folder, MerchantStore store) throws Exception {
-		try {
-			List<String> imageNames = Optional
-					.ofNullable(contentService.getContentFilesNames(store.getCode(), FileContentType.IMAGE))
-					.orElseThrow(() -> new ResourceNotFoundException("No Folder found for path : " + folder));
-
-			// images from CMS

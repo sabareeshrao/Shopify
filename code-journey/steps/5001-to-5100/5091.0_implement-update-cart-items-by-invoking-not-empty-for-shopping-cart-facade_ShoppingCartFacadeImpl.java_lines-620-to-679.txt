@@ -1,0 +1,60 @@
+
+	// TODO promoCode request parameter
+	// @Override
+	// DELETE
+	public ShoppingCartData updateCartItems(Optional<String> promoCode, final List<ShoppingCartItem> shoppingCartItems,
+			final MerchantStore store, final Language language) throws Exception {
+
+		Validate.notEmpty(shoppingCartItems, "shoppingCartItems null or empty");
+		ShoppingCart cartModel = null;
+		Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
+		for (ShoppingCartItem item : shoppingCartItems) {
+
+			if (item.getQuantity() < 1) {
+				throw new CartModificationException("Quantity must not be less than one");
+			}
+
+			if (cartModel == null) {
+				cartModel = getCartModel(item.getCode(), store);
+			}
+
+			com.salesmanager.core.model.shoppingcart.ShoppingCartItem entryToUpdate = getEntryToUpdate(item.getId(),
+					cartModel);
+
+			if (entryToUpdate == null) {
+				throw new CartModificationException("Unknown entry number.");
+			}
+
+			entryToUpdate.getProduct();
+
+			LOG.info("Updating cart entry quantity to" + item.getQuantity());
+			entryToUpdate.setQuantity((int) item.getQuantity());
+
+			List<ProductAttribute> productAttributes = new ArrayList<ProductAttribute>();
+			productAttributes.addAll(entryToUpdate.getProduct().getAttributes());
+
+			final FinalPrice finalPrice = pricingService.calculateProductPrice(entryToUpdate.getProduct(),
+					productAttributes);
+			entryToUpdate.setItemPrice(finalPrice.getFinalPrice());
+
+			cartItems.add(entryToUpdate);
+
+		}
+
+		cartModel.setPromoCode(null);
+		if (promoCode.isPresent()) {
+			cartModel.setPromoCode(promoCode.get());
+			cartModel.setPromoAdded(new Date());
+		}
+
+		cartModel.setLineItems(cartItems);
+		shoppingCartService.saveOrUpdate(cartModel);
+
+		LOG.info("Cart entry updated with desired quantity");
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
+		shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
+		shoppingCartDataPopulator.setPricingService(pricingService);
+		shoppingCartDataPopulator.setimageUtils(imageUtils);
+		return shoppingCartDataPopulator.populate(cartModel, store, language);
+
+	}

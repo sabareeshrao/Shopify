@@ -1,8 +1,0 @@
-
-			List<Category> categories = null;
-			ReadableCategoryList returnList = new ReadableCategoryList();
-			if (!CollectionUtils.isEmpty(filter) && filter.contains(FEATURED_CATEGORY)) {
-				categories = categoryService.getListByDepthFilterByFeatured(parent, depth, language);
-				returnList.setRecordsTotal(categories.size());
-				returnList.setNumber(categories.size());
-				returnList.setTotalPages(1);

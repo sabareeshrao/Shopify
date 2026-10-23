@@ -1,0 +1,20 @@
+
+	@Override
+	public void updateProductGroup(String code, ProductGroup group, MerchantStore store) {
+		try {
+			List<ProductRelationship>  items = productRelationshipService.getGroupDefinition(store, code);
+			if(CollectionUtils.isEmpty(items)) {
+				throw new ResourceNotFoundException("ProductGroup [" + code + "] not found");
+			}
+			
+			if(group.isActive()) {
+				productRelationshipService.activateGroup(store, code);
+			} else {
+				productRelationshipService.deactivateGroup(store, code);
+			}
+			
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while updating product [" + code + "]");
+		}
+		
+	}

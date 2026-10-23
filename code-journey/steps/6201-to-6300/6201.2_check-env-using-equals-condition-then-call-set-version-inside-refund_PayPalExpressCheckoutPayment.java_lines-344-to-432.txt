@@ -1,0 +1,89 @@
+			throws IntegrationException {
+
+
+		try {
+			
+			
+			
+			Validate.notNull(transaction,"Transaction cannot be null");
+			Validate.notNull(transaction.getTransactionDetails().get("TRANSACTIONID"), "Transaction details must contain a TRANSACTIONID");
+			Validate.notNull(order,"Order must not be null");
+			Validate.notNull(order.getCurrency(),"Order nust contain Currency object");
+			
+			String mode = "sandbox";
+			String env = configuration.getEnvironment();
+			if(Constants.PRODUCTION_ENVIRONMENT.equals(env)) {
+				mode = "production";
+			}
+
+			
+			 RefundTransactionRequestType refundTransactionRequest = new RefundTransactionRequestType();
+			 refundTransactionRequest.setVersion("104.0");
+
+			 RefundTransactionReq refundRequest = new RefundTransactionReq();
+			 refundRequest.setRefundTransactionRequest(refundTransactionRequest);
+
+
+			 Map<String,String> configurationMap = new HashMap<String,String>();
+			 configurationMap.put("mode", mode);
+			 configurationMap.put("acct1.UserName", configuration.getIntegrationKeys().get("username"));
+			 configurationMap.put("acct1.Password", configuration.getIntegrationKeys().get("api"));
+			 configurationMap.put("acct1.Signature", configuration.getIntegrationKeys().get("signature"));
+				
+			 
+			 PayPalAPIInterfaceServiceService service = new PayPalAPIInterfaceServiceService(configurationMap);
+			 
+			 
+
+			 RefundType refundType = RefundType.FULL;
+			 if(partial) {
+				 refundType = RefundType.PARTIAL;
+			 }
+			 
+			 refundTransactionRequest.setRefundType(refundType);
+			 
+			 BasicAmountType refundAmount = new BasicAmountType();
+			 refundAmount.setValue(pricingService.getStringAmount(amount, store));
+			 refundAmount.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(order.getCurrency().getCode()));
+
+			 refundTransactionRequest.setAmount(refundAmount);
+			 refundTransactionRequest.setTransactionID(transaction.getTransactionDetails().get("TRANSACTIONID"));
+			 
+			 RefundTransactionResponseType refundTransactionResponse = service.refundTransaction(refundRequest);
+			 
+			 String refundAck = refundTransactionResponse.getAck().getValue();
+			 
+			 
+			 if(!"Success".equals(refundAck)) {
+				LOGGER.error("Wrong value from transaction commit " + refundAck);
+				throw new IntegrationException(ServiceException.EXCEPTION_TRANSACTION_DECLINED,"Paypal refund transaction code [" + refundTransactionResponse.getErrors().get(0).getErrorCode() + "], message-> " + refundTransactionResponse.getErrors().get(0).getShortMessage());
+			 }
+
+			 
+			 Transaction newTransaction = new Transaction();
+			 newTransaction.setAmount(amount);
+			 newTransaction.setTransactionDate(new Date());
+			 newTransaction.setTransactionType(TransactionType.REFUND);
+			 newTransaction.setPaymentType(PaymentType.PAYPAL);
+			 newTransaction.getTransactionDetails().put("TRANSACTIONID", refundTransactionResponse.getRefundTransactionID());
+			 transaction.getTransactionDetails().put("CORRELATION", refundTransactionResponse.getCorrelationID());
+							
+			
+
+			return newTransaction;
+			
+			
+		} catch(Exception e) {
+			if(e instanceof IntegrationException) {
+				throw (IntegrationException)e;
+			} else {
+				throw new IntegrationException(e);
+			}
+		}
+
+		
+		
+		
+		
+		
+	}

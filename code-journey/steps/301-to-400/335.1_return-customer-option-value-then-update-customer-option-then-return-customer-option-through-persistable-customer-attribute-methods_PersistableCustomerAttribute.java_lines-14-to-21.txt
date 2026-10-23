@@ -1,8 +1,0 @@
-	public CustomerOptionValue getCustomerOptionValue() {
-		return customerOptionValue;
-	}
-	public void setCustomerOption(CustomerOption customerOption) {
-		this.customerOption = customerOption;
-	}
-	public CustomerOption getCustomerOption() {
-		return customerOption;

@@ -1,0 +1,7 @@
+			 float offsetY = (float) ((pageSize.getHeight() - h) / 2);
+			 cb.addTemplate(tp, offsetX, offsetY);
+			 // Close the PDF document
+			 document.close();
+			 outputFile.delete();//remove temp file
+			 file.delete();//remove spreadsheet file
+			 is.close();

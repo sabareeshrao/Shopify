@@ -1,8 +1,0 @@
-		description.setTitle("test-cat");
-
-		final List<CategoryDescription> descriptions = new ArrayList<>();
-		descriptions.add(description);
-
-		newCategory.setDescriptions(descriptions);
-
-		final HttpEntity<PersistableCategory> categoryEntity = new HttpEntity<>(newCategory, getHeader());

@@ -1,8 +1,0 @@
-						<br>
-						<p>
-							${EMAIL_ORDER_DATE}<br/>
-							${EMAIL_ORDER_THANKS}
-						</p>
-					</td>
-				</tr>
-			</table>

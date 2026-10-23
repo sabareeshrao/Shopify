@@ -1,0 +1,4 @@
+		subTotal.setValue(dprice.getProductPriceAmount());
+		
+		order.getOrderTotal().add(subTotal);
+		

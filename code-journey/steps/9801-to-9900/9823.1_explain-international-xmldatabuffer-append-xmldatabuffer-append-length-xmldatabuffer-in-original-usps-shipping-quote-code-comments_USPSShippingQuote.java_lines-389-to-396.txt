@@ -1,8 +1,0 @@
-
-			// if international & CXG
-			/*
-			 * xmldatabuffer.append("<CXG>"); xmldatabuffer.append("<Length>");
-			 * xmldatabuffer.append(""); xmldatabuffer.append("</Length>");
-			 * xmldatabuffer.append("<Width>"); xmldatabuffer.append("");
-			 * xmldatabuffer.append("</Width>");
-			 * xmldatabuffer.append("<Height>"); xmldatabuffer.append("");

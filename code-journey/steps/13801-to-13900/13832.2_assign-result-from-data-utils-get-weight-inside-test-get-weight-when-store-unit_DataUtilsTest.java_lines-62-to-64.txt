@@ -1,3 +1,0 @@
-        double result = DataUtils.getWeight(100.789, store, MeasureUnit.KG.name());
-        assertEquals(45.81, result, 0);
-    }

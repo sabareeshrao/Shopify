@@ -1,0 +1,6 @@
+	private Map<String,String> templateTokens = new HashMap<String,String>();
+
+	public String getFrom() {
+		return from;
+	}
+

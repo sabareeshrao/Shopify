@@ -1,0 +1,14 @@
+			throws Exception {
+
+		ShoppingCart cart = shoppingCartService.getByCode(cartCode, store);
+
+		cart.setPromoCode(promo);
+		cart.setPromoAdded(new Date());
+
+		shoppingCartService.save(cart);
+
+		return readableShoppingCartMapper.convert(cart, store, language);
+
+	}
+
+}

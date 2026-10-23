@@ -1,8 +1,0 @@
-	 * @return List of orders
-	 * @throws Exception
-	 */
-	@RequestMapping(value = { "/private/orders" }, method = RequestMethod.GET)
-	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	public ReadableOrderList list(
-			@RequestParam(value = "count", required = false, defaultValue = DEFAULT_ORDER_LIST_COUNT) Integer count,

@@ -1,0 +1,8 @@
+	
+	@Autowired
+	private ProductPriceUtils productPriceUtils;
+
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

@@ -1,0 +1,7 @@
+    private Customer customer;
+
+    public ShoppingCartService getShoppingCartService() {
+		return shoppingCartService;
+	}
+
+

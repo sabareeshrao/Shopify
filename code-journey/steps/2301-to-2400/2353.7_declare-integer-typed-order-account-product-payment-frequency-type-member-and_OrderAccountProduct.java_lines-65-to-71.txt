@@ -1,0 +1,7 @@
+
+	@Column (name="ORDER_ACCOUNT_PRODUCT_PM_FR_TY" , nullable=false )
+	private Integer orderAccountProductPaymentFrequencyType;
+
+	@Column (name="ORDER_ACCOUNT_PRODUCT_STATUS" , nullable=false )
+	private Integer orderAccountProductStatus;
+

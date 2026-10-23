@@ -1,0 +1,63 @@
+			String data = httpclient.execute(httppost, responseHandler);
+
+			//int result = response.getStatusLine().getStatusCode();
+			//int result = client.executeMethod(httppost);
+/*			if (result != 200) {
+				LOGGER.error("Communication Error with ups quote " + result + " "
+						+ protocol + "://" + host + ":" + port + url);
+				throw new Exception("UPS quote communication error " + result);
+			}*/
+
+			LOGGER.debug("ups quote response " + data);
+
+			UPSParsedElements parsed = new UPSParsedElements();
+
+			Digester digester = new Digester();
+			digester.push(parsed);
+			digester.addCallMethod(
+					"RatingServiceSelectionResponse/Response/Error",
+					"setErrorCode", 0);
+			digester.addCallMethod(
+					"RatingServiceSelectionResponse/Response/ErrorDescriprion",
+					"setError", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/Response/ResponseStatusCode",
+							"setStatusCode", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/Response/ResponseStatusDescription",
+							"setStatusMessage", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/Response/Error/ErrorDescription",
+							"setError", 0);
+
+			digester.addObjectCreate(
+					"RatingServiceSelectionResponse/RatedShipment",
+					ShippingOption.class);
+			// digester.addSetProperties(
+			// "RatingServiceSelectionResponse/RatedShipment", "sequence",
+			// "optionId" );
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/RatedShipment/Service/Code",
+							"setOptionId", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/RatedShipment/TotalCharges/MonetaryValue",
+							"setOptionPriceText", 0);
+			//digester
+			//		.addCallMethod(
+			//				"RatingServiceSelectionResponse/RatedShipment/TotalCharges/CurrencyCode",
+			//				"setCurrency", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/RatedShipment/Service/Code",
+							"setOptionCode", 0);
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/RatedShipment/GuaranteedDaysToDelivery",
+							"setEstimatedNumberOfDays", 0);
+			digester.addSetNext("RatingServiceSelectionResponse/RatedShipment",
+					"addOption");

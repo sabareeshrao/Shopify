@@ -1,0 +1,3 @@
+	public final static String PRODUCT_ID_URI= "/productid";
+	public final static String ORDER_DOWNLOAD_URI= "/order/download";
+

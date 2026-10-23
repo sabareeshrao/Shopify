@@ -1,2 +1,0 @@
-	private List<CustomerOptionDescription> descriptionsList = new ArrayList<CustomerOptionDescription>();
-

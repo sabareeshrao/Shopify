@@ -1,8 +1,0 @@
-		if (StringUtils.isNotBlank(cartId)) {
-			ShoppingCart cartModel = getCartModel(cartId, store);
-			if (cartModel != null) {
-				com.salesmanager.core.model.shoppingcart.ShoppingCartItem entryToUpdate = getEntryToUpdate(
-						itemID.longValue(), cartModel);
-
-				if (entryToUpdate == null) {
-					throw new CartModificationException("Unknown entry number.");

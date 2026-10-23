@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "FR",
+			"zoneName": "Freiburg",
+			"countryCode": "CH"
+		},

@@ -1,8 +1,0 @@
-
-			List<Resource> files = geZoneFiles(PATH);
-			List<Language> languages = languageService.list();
-
-			ObjectMapper mapper = new ObjectMapper();
-
-			List<Country> countries = countryService.list();
-			Map<String, Country> countriesMap = new HashMap<String, Country>();

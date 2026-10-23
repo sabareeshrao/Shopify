@@ -1,2 +1,0 @@
-	private int cropeBaseline = 0;// o is width, 1 is height
-

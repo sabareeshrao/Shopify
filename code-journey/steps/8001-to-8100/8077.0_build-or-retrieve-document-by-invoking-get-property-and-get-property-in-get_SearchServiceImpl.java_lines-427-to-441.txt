@@ -1,0 +1,15 @@
+
+	@Override
+	public Optional<Document> getDocument(String language, MerchantStore store, Long productId)
+			throws ServiceException {
+		if (configuration.getProperty(INDEX_PRODUCTS) == null
+				|| configuration.getProperty(INDEX_PRODUCTS).equals(Constants.FALSE) || searchModule == null) {
+			return null;
+		}
+
+		try {
+			return searchModule.getDocument(productId, language, RequestOptions.DEFAULT);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+	}

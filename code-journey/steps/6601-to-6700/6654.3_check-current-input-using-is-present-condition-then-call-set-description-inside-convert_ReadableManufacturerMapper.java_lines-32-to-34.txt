@@ -1,3 +1,0 @@
-    if(description.isPresent()) {
-    	target.setDescription(desc.get());
-    }

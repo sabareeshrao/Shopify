@@ -1,2 +1,0 @@
-	private final static int PRODUCT_ROW_START = 16;
-	

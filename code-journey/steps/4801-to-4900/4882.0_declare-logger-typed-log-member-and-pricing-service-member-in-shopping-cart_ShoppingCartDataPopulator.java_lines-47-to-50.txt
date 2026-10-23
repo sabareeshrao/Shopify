@@ -1,0 +1,4 @@
+    private static final Logger LOG = LoggerFactory.getLogger(ShoppingCartDataPopulator.class);
+
+    private PricingService pricingService;
+

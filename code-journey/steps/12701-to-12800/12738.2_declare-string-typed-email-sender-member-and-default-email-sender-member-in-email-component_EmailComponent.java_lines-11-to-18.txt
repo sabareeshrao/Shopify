@@ -1,8 +1,0 @@
-  private String emailSender;
-
-  @Inject
-  private EmailModule defaultEmailSender;
-
-  @Inject
-  private EmailModule sesEmailSender;
-

@@ -1,8 +1,0 @@
-	public void setTreshold(int treshold) {
-		this.treshold = treshold;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;

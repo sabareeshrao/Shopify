@@ -1,9 +1,0 @@
-	@Override
-	public ReadableProductList listItemsByManufacturer(MerchantStore store,
-			Language language, Long manufacturerId, int startCount, int maxCount) throws Exception {
-		
-		
-		ProductCriteria productCriteria = new ProductCriteria();
-		productCriteria.setMaxCount(maxCount);
-		productCriteria.setStartIndex(startCount);
-		

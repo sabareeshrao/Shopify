@@ -1,0 +1,4 @@
+	@RequestMapping(value = { "/product/{friendlyUrl}",
+			"/product/friendly/{friendlyUrl}" }, method = RequestMethod.GET)
+	@ApiOperation(httpMethod = "GET", value = "Get a product by friendlyUrl (slug)", notes = "For administration and shop purpose. Specifying ?merchant is "
+			+ "required otherwise it falls back to DEFAULT")

@@ -1,2 +1,0 @@
-	public final static String EMAIL_ORDER_DOWNLOAD = "EMAIL_ORDER_DOWNLOAD";
-

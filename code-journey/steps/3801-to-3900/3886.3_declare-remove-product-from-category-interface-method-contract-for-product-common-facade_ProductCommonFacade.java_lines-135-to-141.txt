@@ -1,7 +1,0 @@
-	   * @param language
-	   * @return
-	   * @throws Exception
-	   */
-	  ReadableProduct removeProductFromCategory(Category category, Product product, Language language)
-	      throws Exception;
-

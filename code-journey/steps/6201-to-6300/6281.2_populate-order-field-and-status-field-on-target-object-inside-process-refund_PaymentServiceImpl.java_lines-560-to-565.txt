@@ -1,0 +1,6 @@
+		orderHistory.setOrder(order);
+		orderHistory.setStatus(OrderStatus.REFUNDED);
+		orderHistory.setDateAdded(new Date());
+        order.getOrderHistory().add(orderHistory);
+        
+        orderService.saveOrUpdate(order);

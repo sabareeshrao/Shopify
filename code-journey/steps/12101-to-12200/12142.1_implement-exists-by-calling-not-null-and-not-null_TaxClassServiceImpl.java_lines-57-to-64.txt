@@ -1,8 +1,0 @@
-	@Override
-	public boolean exists(String code, MerchantStore store) throws ServiceException {
-		Validate.notNull(code, "TaxClass code cannot be empty");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		
-		return taxClassRepository.findByStoreAndCode(store.getId(), code) != null;
-
-	}

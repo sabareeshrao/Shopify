@@ -1,8 +1,0 @@
-
-	/**
-	 * Method to remove all images for a given merchant.It will take merchant
-	 * store as an input and will remove all images associated with given
-	 * merchant store.
-	 * 
-	 * @param merchantStoreCode
-	 * @throws ServiceException

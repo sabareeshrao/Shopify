@@ -1,8 +1,0 @@
-
-	@Embedded
-	private Delivery delivery = null;
-	
-	@Valid
-	@Embedded
-	private Billing billing = null;
-	

@@ -1,8 +1,0 @@
-	public void authenticate(Customer customer, String userName, String password) throws Exception;
-
-	Customer getCustomerModel(PersistableCustomer customer,
-			MerchantStore merchantStore, Language language) throws Exception;
-	
-	Customer populateCustomerModel(Customer customerModel, PersistableCustomer customer,
-			MerchantStore merchantStore, Language language) throws Exception;
-	

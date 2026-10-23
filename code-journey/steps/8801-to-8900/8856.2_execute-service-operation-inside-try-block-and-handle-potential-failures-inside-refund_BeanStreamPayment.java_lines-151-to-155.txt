@@ -1,5 +1,0 @@
-		
-		HttpURLConnection conn = null;
-		
-		try {
-			

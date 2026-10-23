@@ -1,6 +1,0 @@
-
-		if (shoppingCart.getId() == null || shoppingCart.getId() == 0) {
-			super.create(shoppingCart);
-		} else {
-			super.update(shoppingCart);
-		}

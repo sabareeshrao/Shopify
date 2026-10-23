@@ -1,7 +1,0 @@
-      if(StringUtils.isBlank(customer.getDelivery().getPostalCode())) {
-    	  customer.getDelivery().setAddress(customer.getBilling().getPostalCode());
-      }
-      if(StringUtils.isBlank(customer.getDelivery().getCountryCode())) {
-    	  customer.getDelivery().setAddress(customer.getDelivery().getCountryCode());
-      }
-    }

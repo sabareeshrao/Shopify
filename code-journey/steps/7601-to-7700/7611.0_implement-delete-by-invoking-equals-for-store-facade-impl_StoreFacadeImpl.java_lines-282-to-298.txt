@@ -1,0 +1,17 @@
+	@Override
+	public void delete(String code) {
+
+		if (MerchantStore.DEFAULT_STORE.equals(code.toUpperCase())) {
+			throw new ServiceRuntimeException("Cannot remove default store");
+		}
+
+		MerchantStore mStore = getMerchantStoreByCode(code);
+
+		try {
+			merchantStoreService.delete(mStore);
+		} catch (Exception e) {
+			LOG.error("Error while deleting MerchantStore", e);
+			throw new ServiceRuntimeException("Error while deleting MerchantStore " + e.getMessage());
+		}
+
+	}

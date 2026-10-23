@@ -1,0 +1,3 @@
+
+	@Override
+	public List<OutputContentFile> getFiles(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType)

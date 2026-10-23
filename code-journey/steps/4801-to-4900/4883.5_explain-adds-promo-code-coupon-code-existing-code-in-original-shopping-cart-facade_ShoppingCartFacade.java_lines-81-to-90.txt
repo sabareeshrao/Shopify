@@ -1,0 +1,10 @@
+	
+	/**
+	 * Adds a promo code / coupon code to an existing code
+	 * @param cartCode
+	 * @param promo
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */

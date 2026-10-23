@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("BYR", "Belarussian Ruble");
-		CURRENCY_MAP.put("BZD", "Belize Dollar");
-		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");
-		CURRENCY_MAP.put("BMD", "Bermudian Dollar");
-		CURRENCY_MAP.put("BTN", "Ngultrum");
-		CURRENCY_MAP.put("INR", "Indian Rupee");
-		CURRENCY_MAP.put("BOB", "Boliviano");
-		CURRENCY_MAP.put("BOV", "Mvdol");

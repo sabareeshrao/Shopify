@@ -1,0 +1,9 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
+	
+	private CustomerRepository customerRepository;
+	
+	@Inject
+	private CustomerAttributeService customerAttributeService;
+	
+	@Inject
+	private GeoLocation geoLocation;

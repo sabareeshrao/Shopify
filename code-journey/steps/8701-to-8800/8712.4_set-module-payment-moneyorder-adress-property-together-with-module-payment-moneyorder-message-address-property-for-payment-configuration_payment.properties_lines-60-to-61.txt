@@ -1,2 +1,0 @@
-module.payment.moneyorder.adress=Cheque to be made to this address
-module.payment.moneyorder.message.address=Address is required

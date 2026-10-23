@@ -1,8 +1,0 @@
-		
-		Page<ProductVariant> instances = productVariantService.getByProductId(store, product, language, page, count);
-		
-		
-		List<ReadableProductVariant> readableInstances = instances.stream()
-				.map(rp -> this.readableProductVariantMapper.convert(rp, store, language)).collect(Collectors.toList());
-
-	    

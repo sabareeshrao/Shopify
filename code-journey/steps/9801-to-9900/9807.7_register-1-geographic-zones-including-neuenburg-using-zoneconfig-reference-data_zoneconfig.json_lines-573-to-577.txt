@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "NECH",
+		"zoneName": "Neuenburg",
+		"countryCode": "CH"
+	},

@@ -1,4 +1,0 @@
-	
-			if (event instanceof SaveProductVariantEvent) {
-				saveProductVariant((SaveProductVariantEvent) event);
-			}

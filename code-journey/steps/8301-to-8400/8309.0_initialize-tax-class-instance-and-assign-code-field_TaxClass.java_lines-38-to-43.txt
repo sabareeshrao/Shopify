@@ -1,0 +1,6 @@
+	public final static String DEFAULT_TAX_CLASS = "DEFAULT";
+	
+	public TaxClass(String code) {
+		this.code = code;
+		this.title = code;
+	}

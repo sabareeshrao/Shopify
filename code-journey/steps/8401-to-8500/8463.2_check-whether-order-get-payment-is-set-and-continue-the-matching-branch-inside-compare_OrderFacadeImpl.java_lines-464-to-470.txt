@@ -1,7 +1,0 @@
-			if (order.getPayment() != null && order.getPayment().get("paymentToken") != null) {// set
-																				// token
-				String paymentToken = order.getPayment().get("paymentToken");
-				Map<String, String> paymentMetaData = new HashMap<String, String>();
-				payment.setPaymentMetaData(paymentMetaData);
-				paymentMetaData.put("paymentToken", paymentToken);
-			}

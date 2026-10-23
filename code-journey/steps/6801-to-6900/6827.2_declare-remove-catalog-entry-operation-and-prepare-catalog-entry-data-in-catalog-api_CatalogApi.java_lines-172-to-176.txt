@@ -1,5 +1,0 @@
-  public void removeCatalogEntry(
-      @PathVariable Long id,
-      @PathVariable Long entryId,
-      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-

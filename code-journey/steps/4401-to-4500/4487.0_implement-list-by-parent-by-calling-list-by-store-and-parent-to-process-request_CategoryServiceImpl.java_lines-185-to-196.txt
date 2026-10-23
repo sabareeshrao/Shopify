@@ -1,0 +1,12 @@
+
+	@Override
+	public List<Category> listByParent(Category category) throws ServiceException {
+
+		try {
+			return categoryRepository.listByStoreAndParent(null, category);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}
+

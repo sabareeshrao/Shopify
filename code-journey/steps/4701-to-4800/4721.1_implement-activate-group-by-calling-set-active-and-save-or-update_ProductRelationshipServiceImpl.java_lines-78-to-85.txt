@@ -1,8 +1,0 @@
-	@Override
-	public void activateGroup(MerchantStore store, String groupName) throws ServiceException {
-		List<ProductRelationship> entities = getGroupDefinition(store, groupName);
-		for(ProductRelationship relation : entities) {
-			relation.setActive(true);
-			this.saveOrUpdate(relation);
-		}
-	}

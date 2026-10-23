@@ -1,3 +1,0 @@
-	void deleteConfiguration(String module, MerchantStore store);
-
-}

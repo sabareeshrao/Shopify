@@ -1,0 +1,6 @@
+
+	/**
+	 * Related items / product groups
+	 */
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
+	private Set<ProductRelationship> relationships = new HashSet<ProductRelationship>();

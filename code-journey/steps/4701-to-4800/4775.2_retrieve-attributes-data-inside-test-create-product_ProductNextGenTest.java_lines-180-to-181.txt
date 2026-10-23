@@ -1,2 +1,0 @@
-	    summerShoes.getAttributes().add(size_ten);	    
-	    

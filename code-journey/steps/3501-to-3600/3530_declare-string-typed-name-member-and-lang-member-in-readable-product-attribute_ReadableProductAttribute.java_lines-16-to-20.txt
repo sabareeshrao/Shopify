@@ -1,5 +1,0 @@
-	private String name;
-	private String lang;
-	private String code;
-	private String type;
-	

@@ -1,8 +1,0 @@
-		languageService.save(en);
-		
-		Language fr = new Language();
-		fr.setCode("fr");
-		fr.setSortOrder(0);
-		
-		languageService.save(fr);
-		

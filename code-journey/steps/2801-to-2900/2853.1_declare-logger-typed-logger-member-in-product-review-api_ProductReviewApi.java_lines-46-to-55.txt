@@ -1,0 +1,10 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProductReviewApi.class);
+
+  @RequestMapping(
+      value = {
+        "/private/products/{id}/reviews",
+        "/auth/products/{id}/reviews",
+        "/auth/products/{id}/reviews",
+        "/auth/products/{id}/reviews"
+      },
+      method = RequestMethod.POST)

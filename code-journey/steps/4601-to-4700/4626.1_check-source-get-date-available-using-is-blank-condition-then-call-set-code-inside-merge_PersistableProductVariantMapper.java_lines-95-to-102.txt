@@ -1,8 +1,0 @@
-		
-		destination.setCode(instanceCode.toString());
-		
-		destination.setAvailable(source.isAvailable());
-		destination.setDefaultSelection(source.isDefaultSelection());
-		destination.setSku(source.getSku());
-		
-		if(StringUtils.isBlank(source.getDateAvailable())) {

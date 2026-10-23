@@ -1,0 +1,23 @@
+			 
+
+
+			 
+			 Transaction newTransaction = new Transaction();
+			 newTransaction.setAmount(order.getTotal());
+			 newTransaction.setTransactionDate(new Date());
+			 newTransaction.setTransactionType(TransactionType.CAPTURE);
+			 newTransaction.setPaymentType(PaymentType.PAYPAL);
+			 newTransaction.getTransactionDetails().put("AUTHORIZATIONID", doCaptureResponse.getDoCaptureResponseDetails().getAuthorizationID());
+			 newTransaction.getTransactionDetails().put("TRANSACTIONID", capturableTransaction.getTransactionDetails().get("TRANSACTIONID"));
+
+			return newTransaction;
+			
+			
+		} catch(Exception e) {
+			throw new IntegrationException(e);
+		}
+		
+		
+	}
+
+}

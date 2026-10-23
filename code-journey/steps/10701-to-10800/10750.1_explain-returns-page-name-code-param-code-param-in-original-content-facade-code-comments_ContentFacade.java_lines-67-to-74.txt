@@ -1,8 +1,0 @@
-	
-	/**
-	 * Returns page name by code
-	 * @param code
-	 * @param store
-	 * @param language
-	 * @return
-	 * @throws Exception

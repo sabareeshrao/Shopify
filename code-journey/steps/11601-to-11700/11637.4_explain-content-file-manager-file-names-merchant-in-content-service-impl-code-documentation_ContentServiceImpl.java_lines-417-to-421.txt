@@ -1,5 +1,0 @@
-		 * contentFileManager.getFileNames(merchantStoreCode, fileContentType);
-		 * }
-		 */
-	}
-

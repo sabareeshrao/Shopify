@@ -1,0 +1,29 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductPriceUtils.class);
+
+	/**
+	 * Get the price without discount
+	 * 
+	 * @param store
+	 * @param product
+	 * @param locale
+	 * @return
+	 */
+	// Pricer
+	public BigDecimal getPrice(MerchantStore store, Product product, Locale locale) {
+
+		BigDecimal defaultPrice = new BigDecimal(0);
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();
+		for (ProductAvailability availability : availabilities) {
+
+			Set<ProductPrice> prices = availability.getPrices();
+			for (ProductPrice price : prices) {
+
+				if (price.isDefaultPrice()) {
+					defaultPrice = price.getProductPriceAmount();
+				}
+			}
+		}
+
+		return defaultPrice;
+	}

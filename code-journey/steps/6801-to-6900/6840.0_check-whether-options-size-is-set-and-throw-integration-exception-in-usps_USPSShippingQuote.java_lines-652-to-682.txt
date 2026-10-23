@@ -1,0 +1,31 @@
+
+				// if(options.size()==0) {
+				// CommonService.logServiceMessage(store.getMerchantId(),
+				// " none of the service code returned by UPS [" +
+				// selectedintlservices.keySet().toArray(new
+				// String[selectedintlservices.size()]) +
+				// "] for this shipping is in your selection list");
+				// }
+
+			}*/
+
+			return shippingOptions;
+			}
+
+		} catch (Exception e1) {
+			LOGGER.error("Error in USPS shipping quote ",e1);
+			throw new IntegrationException(e1);
+		} finally {
+			if (xmlreader != null) {
+				try {
+					xmlreader.close();
+				} catch (Exception ignore) {
+				}
+			}
+			if (httpget != null) {
+				httpget.releaseConnection();
+			}
+		}
+
+
+	}

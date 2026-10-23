@@ -1,8 +1,0 @@
-	@RequestMapping(value = { "/private/orders/{id}" }, method = RequestMethod.GET)
-	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-	public ReadableOrder get(
-			@PathVariable final Long id,
-			@ApiIgnore MerchantStore merchantStore,

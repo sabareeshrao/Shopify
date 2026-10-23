@@ -1,0 +1,21 @@
+
+	@Async
+	private void notify(Order order, Customer customer, MerchantStore store, Language language, Locale locale) throws Exception {
+
+		// send order confirmation email to customer
+		emailTemplatesUtils.sendOrderEmail(customer.getEmailAddress(), customer, order, locale,
+				language, store, coreConfiguration.getProperty("CONTEXT_PATH"));
+
+		if (orderService.hasDownloadFiles(order)) {
+			emailTemplatesUtils.sendOrderDownloadEmail(customer, order, store, locale,
+					coreConfiguration.getProperty("CONTEXT_PATH"));
+		}
+
+		// send customer credentials
+
+		// send order confirmation email to merchant
+		emailTemplatesUtils.sendOrderEmail(store.getStoreEmailAddress(), customer, order, locale,
+				language, store, coreConfiguration.getProperty("CONTEXT_PATH"));
+
+
+	}

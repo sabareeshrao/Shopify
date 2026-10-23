@@ -1,0 +1,8 @@
+
+	@Override
+	public List<String> listFolders(MerchantStore store, Optional<String> path) throws ServiceException {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		
+		return contentFileManager.listFolders(store.getCode(), path);
+	}
+

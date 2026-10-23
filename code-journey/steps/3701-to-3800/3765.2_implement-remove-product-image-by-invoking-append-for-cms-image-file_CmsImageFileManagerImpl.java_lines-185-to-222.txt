@@ -1,0 +1,38 @@
+  @Override
+  public void removeProductImage(ProductImage productImage) throws ServiceException {
+
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(buildRootPath()).append(Constants.SLASH)
+          .append(productImage.getProduct().getMerchantStore().getCode()).append(Constants.SLASH)
+          .append(productImage.getProduct().getSku());
+
+      // delete small
+      StringBuilder smallPath = new StringBuilder(nodePath);
+      smallPath.append(Constants.SLASH).append(SMALL).append(Constants.SLASH)
+          .append(productImage.getProductImage());
+
+
+      Path path = Paths.get(smallPath.toString());
+
+      Files.deleteIfExists(path);
+
+      // delete large
+      StringBuilder largePath = new StringBuilder(nodePath);
+      largePath.append(Constants.SLASH).append(LARGE).append(Constants.SLASH)
+          .append(productImage.getProductImage());
+
+
+      path = Paths.get(largePath.toString());
+
+      Files.deleteIfExists(path);
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    }
+
+
+  }

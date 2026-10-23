@@ -1,4 +1,0 @@
-		
-		if(FileContentType.IMAGE.name().equals(imageType)) {
-			imgType = FileContentType.IMAGE;
-		}

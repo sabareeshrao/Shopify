@@ -1,0 +1,4 @@
+	public abstract String getUserId();
+
+	public abstract void setUserId(String userId);
+

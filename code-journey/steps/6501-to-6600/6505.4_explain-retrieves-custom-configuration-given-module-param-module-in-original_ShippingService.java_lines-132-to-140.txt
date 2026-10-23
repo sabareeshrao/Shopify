@@ -1,0 +1,9 @@
+	
+	/**
+	 * Retrieves the custom configuration for a given module
+	 * @param moduleCode
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */
+

@@ -1,0 +1,8 @@
+
+	@NotNull
+	@Column(name = "QUANTITY")
+	private Integer productQuantity = 0;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "DATE_AVAILABLE")
+	private Date productDateAvailable;

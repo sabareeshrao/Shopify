@@ -1,0 +1,6 @@
+
+	@Autowired
+	private EmailUtils emailUtils;
+
+	@Autowired
+	private EmailService emailService;

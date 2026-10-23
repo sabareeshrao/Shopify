@@ -1,8 +1,0 @@
-	/**
-	 * Delete store logo
-	 */
-	void deleteLogo(String code);
-
-	/**
-	 * Add MerchantStore logo
-	 * 

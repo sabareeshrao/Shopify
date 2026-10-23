@@ -1,5 +1,0 @@
-				try {
-					setValue(criteria, request, p, mappingFields.get(p));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}

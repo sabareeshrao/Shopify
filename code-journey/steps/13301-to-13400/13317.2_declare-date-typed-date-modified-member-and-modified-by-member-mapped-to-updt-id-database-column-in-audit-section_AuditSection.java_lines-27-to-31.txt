@@ -1,5 +1,0 @@
-  private Date dateModified;
-
-  @Column(name = "UPDT_ID", length = 60)
-  private String modifiedBy;
-

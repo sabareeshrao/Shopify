@@ -1,0 +1,7 @@
+    
+    
+    /**
+    * Creates a new pagination object representing the previous page
+    *
+    * @return new pagination object with offset shifted by offset-limit
+    */

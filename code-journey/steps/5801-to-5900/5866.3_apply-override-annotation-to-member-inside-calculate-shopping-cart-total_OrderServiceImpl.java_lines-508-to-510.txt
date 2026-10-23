@@ -1,0 +1,3 @@
+    @Override
+    public OrderTotalSummary calculateShoppingCartTotal(
+                                                        final ShoppingCart shoppingCart, final MerchantStore store, final Language language)

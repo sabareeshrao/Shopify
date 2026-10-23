@@ -1,0 +1,6 @@
+	public void setProductVirtual(boolean productVirtual) {
+		this.productVirtual = productVirtual;
+	}
+
+
+}

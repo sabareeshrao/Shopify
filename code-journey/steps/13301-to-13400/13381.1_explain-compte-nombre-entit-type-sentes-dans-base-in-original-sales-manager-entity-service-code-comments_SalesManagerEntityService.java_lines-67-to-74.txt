@@ -1,8 +1,0 @@
-	
-	/**
-	 * Compte le nombre d'entités de ce type présentes dans la base.
-	 * 
-	 * @return nombre d'entités
-	 */
-	Long count();
-	

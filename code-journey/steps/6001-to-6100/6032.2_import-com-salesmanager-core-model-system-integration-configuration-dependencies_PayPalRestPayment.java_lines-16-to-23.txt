@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+//import com.paypal.core.rest.OAuthTokenCredential;
+//import com.paypal.core.rest.PayPalRESTException;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.payment.model.PaymentModule;
+
+

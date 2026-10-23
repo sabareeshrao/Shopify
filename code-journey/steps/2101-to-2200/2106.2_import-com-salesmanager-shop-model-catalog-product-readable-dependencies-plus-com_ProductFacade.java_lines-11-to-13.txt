@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.catalog.product.ReadableProductList;
+import com.salesmanager.shop.model.catalog.product.ReadableProductPrice;
+

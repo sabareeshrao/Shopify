@@ -1,0 +1,7 @@
+public class DataUtils {
+	
+	/**
+	 * Removes dashes
+	 * @param postalCode
+	 * @return
+	 */

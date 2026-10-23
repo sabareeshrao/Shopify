@@ -1,0 +1,35 @@
+	{
+		"zoneCode": "ON",
+		"zoneName": "Ontario",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "PE",
+		"zoneName": "Prince Edward Island",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "QC",
+		"zoneName": "Quebec",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "SK",
+		"zoneName": "Saskatchewan",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "YT",
+		"zoneName": "Yukon Territory",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NDS",
+		"zoneName": "Niedersachsen",
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "BAW",
+		"zoneName": "Baden-Wrttemberg",
+		"countryCode": "DE"
+	},

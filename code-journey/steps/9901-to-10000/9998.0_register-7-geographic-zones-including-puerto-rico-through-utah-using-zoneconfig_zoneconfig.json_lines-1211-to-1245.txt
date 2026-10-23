@@ -1,0 +1,35 @@
+	{
+		"zoneCode": "PR",
+		"zoneName": "Puerto Rico",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "RI",
+		"zoneName": "Rhode Island",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "SC",
+		"zoneName": "Caroline du Sud",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "SD",
+		"zoneName": "Dakota du Sud",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "TN",
+		"zoneName": "Tennessee",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "TX",
+		"zoneName": "Texas",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "UT",
+		"zoneName": "Utah",
+		"countryCode": "US"
+	},

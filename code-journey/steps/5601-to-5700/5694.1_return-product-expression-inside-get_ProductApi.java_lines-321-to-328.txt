@@ -1,8 +1,0 @@
-
-		return product;
-	}
-	**/
-
-	/**
-	 * Price calculation
-	 * @param id

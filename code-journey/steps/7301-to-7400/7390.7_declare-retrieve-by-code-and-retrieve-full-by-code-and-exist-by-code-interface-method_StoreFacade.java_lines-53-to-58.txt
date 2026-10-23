@@ -1,0 +1,6 @@
+
+	ReadableMerchantStore getByCode(String code, Language lang);
+
+	ReadableMerchantStore getFullByCode(String code, Language language);
+
+	boolean existByCode(String code);

@@ -1,0 +1,6 @@
+
+		<!-- Braintree -->
+		<dependency>
+			<groupId>com.braintreepayments.gateway</groupId>
+			<artifactId>braintree-java</artifactId>
+		</dependency>

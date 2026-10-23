@@ -1,0 +1,16 @@
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public BigDecimal getPrice() {
+		return price;
+	}
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	
+	
+	
+
+
+}

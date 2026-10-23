@@ -1,0 +1,7 @@
+
+/**
+ * A catalog is used to classify products of a given merchant
+ * to be displayed in a specific marketplace
+ * @author c.samson
+ *
+ */

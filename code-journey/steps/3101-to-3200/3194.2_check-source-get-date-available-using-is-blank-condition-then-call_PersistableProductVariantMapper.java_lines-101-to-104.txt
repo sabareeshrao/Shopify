@@ -1,0 +1,4 @@
+		
+		if(StringUtils.isBlank(source.getDateAvailable())) {
+			source.setDateAvailable(DateUtil.formatDate(new Date()));
+		}

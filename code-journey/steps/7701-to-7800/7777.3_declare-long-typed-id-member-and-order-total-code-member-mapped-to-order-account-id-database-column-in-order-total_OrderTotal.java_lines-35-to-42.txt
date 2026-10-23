@@ -1,8 +1,0 @@
-	@Id
-	@Column(name = "ORDER_ACCOUNT_ID", unique=true, nullable=false)
-	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "ORDER_TOTAL_ID_NEXT_VALUE")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
-	private Long id;
-	
-	@Column (name ="CODE", nullable=false)
-	private String orderTotalCode;//SHIPPING, TAX

@@ -1,2 +1,0 @@
-		customerFacade.optinCustomer(optin, merchantStore);
-	}

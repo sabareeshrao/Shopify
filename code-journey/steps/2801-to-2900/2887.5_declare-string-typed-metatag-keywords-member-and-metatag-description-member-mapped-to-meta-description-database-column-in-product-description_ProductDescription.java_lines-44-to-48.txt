@@ -1,5 +1,0 @@
-	private String metatagKeywords;
-
-	@Column(name = "META_DESCRIPTION")
-	private String metatagDescription;
-

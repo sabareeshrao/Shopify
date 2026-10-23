@@ -1,0 +1,9 @@
+
+	@Inject
+	private CustomerService customerService;
+
+	@Inject
+	private ProductReviewService productReviewService;
+	
+	@Autowired
+	private PersistableProductMapper persistableProductMapper;

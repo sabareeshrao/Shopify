@@ -1,0 +1,9 @@
+
+	@Column(name="PRODUCT_ATTRIBUTE_WEIGHT")
+	private BigDecimal productAttributeWeight;
+	
+	@Column(name="PRODUCT_ATTRIBUTE_DEFAULT")
+	private boolean attributeDefault=false;
+	
+	@Column(name="PRODUCT_ATTRIBUTE_REQUIRED")
+	private boolean attributeRequired=false;

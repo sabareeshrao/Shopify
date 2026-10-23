@@ -1,4 +1,0 @@
-		
-		if (customer == null) {
-			throw new ResourceNotFoundException("No Customer found for principal[" + principal.getName() + "]");
-		}

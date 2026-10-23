@@ -1,0 +1,8 @@
+
+	    Product product = new Product();
+	    product.setProductHeight(new BigDecimal(4));
+	    product.setProductLength(new BigDecimal(3));
+	    product.setProductWidth(new BigDecimal(5));
+	    product.setProductWeight(new BigDecimal(8));
+	    product.setSku("TESTSKU");
+	    product.setType(generalType);

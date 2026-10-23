@@ -1,0 +1,9 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProductGroupApi.class);
+
+  @ResponseStatus(HttpStatus.OK)
+  @PostMapping("/private/products/group")
+  @ApiOperation(httpMethod = "POST", value = "Create product group", notes = "", response = ProductGroup.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })

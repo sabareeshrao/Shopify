@@ -1,0 +1,7 @@
+
+  /**
+   * Creates a User
+   * @param user
+   * @param store
+   */
+  ReadableUser create(PersistableUser user, MerchantStore store);

@@ -1,8 +1,0 @@
-			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-	public @ResponseBody Entity create(
-			@Valid @RequestBody PersistableProductVariantGroup instanceGroup,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-
-		String authenticatedUser = userFacade.authenticatedUser();
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();

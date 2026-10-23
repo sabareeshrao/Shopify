@@ -1,8 +1,0 @@
-public interface MarketPlaceService extends SalesManagerEntityService<Long, MarketPlace> {
-	
-	/**
-	 * Creates a MarketPlace
-	 * @param store
-	 * @param code
-	 * @return MarketPlace
-	 * @throws ServiceException

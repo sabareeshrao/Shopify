@@ -1,4 +1,0 @@
-	Optional<ProductVariant> getBySku(String sku, Long productId, MerchantStore store, Language language);
-	
-	List<ProductVariant> getByProductId(MerchantStore store, Product product, Language language);
-	

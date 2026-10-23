@@ -1,8 +1,0 @@
-					// we need to set readonly attributes only
-					if (attribute.getAttributeDisplayOnly()) {// read only attribute = property
-
-						property = createProperty(attribute, language);
-
-						ReadableProductOption readableOption = new ReadableProductOption(); // that is the property
-						ReadableProductPropertyValue readableOptionValue = new ReadableProductPropertyValue();
-

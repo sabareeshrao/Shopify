@@ -1,0 +1,2 @@
+  void saveOrUpdateManufacturer(PersistableManufacturer manufacturer, MerchantStore store,
+      Language language) throws Exception;

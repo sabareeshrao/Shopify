@@ -1,7 +1,0 @@
-	@Inject
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-
-	@Inject
-	private FilePathUtils fileUtils;
-

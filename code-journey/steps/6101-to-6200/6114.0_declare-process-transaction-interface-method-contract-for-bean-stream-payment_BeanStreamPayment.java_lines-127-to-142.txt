@@ -1,0 +1,16 @@
+
+	@Override
+	public Transaction authorizeAndCapture(MerchantStore store, Customer customer,
+			List<ShoppingCartItem> items, BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		return processTransaction(
+				store,
+				customer,
+				TransactionType.AUTHORIZECAPTURE,
+				amount,
+				payment,
+				configuration,
+				module);
+	}
+

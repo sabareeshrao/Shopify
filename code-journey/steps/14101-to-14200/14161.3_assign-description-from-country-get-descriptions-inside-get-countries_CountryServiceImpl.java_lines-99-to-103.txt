@@ -1,5 +1,0 @@
-					
-					CountryDescription description = country.getDescriptions().iterator().next();
-					country.setName(description.getName());
-					
-				}

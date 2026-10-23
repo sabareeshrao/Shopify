@@ -1,8 +1,0 @@
-	
-	@PostConstruct
-	public void init() {
-		
-		try {
-			
-			//Check flag to populate or not the database
-			if(!this.initDefaultData) {

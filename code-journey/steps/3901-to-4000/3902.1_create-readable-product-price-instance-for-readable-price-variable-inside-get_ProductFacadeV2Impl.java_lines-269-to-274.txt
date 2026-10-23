@@ -1,0 +1,6 @@
+			
+			FinalPrice price;
+		
+			//attributes can be null;
+			price = pricingService.calculateProductPrice(model, attributes);
+	    	ReadableProductPrice readablePrice = new ReadableProductPrice();

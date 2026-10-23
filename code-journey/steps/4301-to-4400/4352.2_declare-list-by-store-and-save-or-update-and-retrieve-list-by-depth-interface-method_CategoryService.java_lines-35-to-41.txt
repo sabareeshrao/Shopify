@@ -1,0 +1,7 @@
+
+	List<Category> listByStore(MerchantStore store, Language language)
+			throws ServiceException;
+
+	void saveOrUpdate(Category category) throws ServiceException;
+
+	List<Category> getListByDepth(MerchantStore store, int depth);

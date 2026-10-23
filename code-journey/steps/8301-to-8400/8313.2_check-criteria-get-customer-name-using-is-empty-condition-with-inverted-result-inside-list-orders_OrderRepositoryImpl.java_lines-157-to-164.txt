@@ -1,8 +1,0 @@
-
-		StringBuilder objectBuilderWhere = new StringBuilder();
-
-		String storeQuery =" where o.merchant.code=:mCode";
-		objectBuilderWhere.append(storeQuery);
-		countBuilderSelect.append(storeQuery);
-		
-		if(!StringUtils.isEmpty(criteria.getCustomerName())) {

@@ -1,0 +1,11 @@
+    /**
+     * Returns a list of ReadableCategory ordered and built according to a given depth
+     * @param store
+     * @param depth
+     * @param language
+     * @param filter
+     * @param page
+     * @param count
+     * @return ReadableCategoryList
+     */
+	ReadableCategoryList getCategoryHierarchy(MerchantStore store, ListCriteria criteria, int depth, Language language, List<String> filter, int page, int count);

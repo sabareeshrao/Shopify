@@ -1,8 +1,0 @@
-		
-		target.setId(source.getId());
-		target.setCode(source.getCode());
-		target.setCountryCode(source.getCountry().getIsoCode());
-		
-		if(!CollectionUtils.isEmpty(source.getDescriptions())) {
-			for(ZoneDescription d : source.getDescriptions()) {
-				if(d.getLanguage().getId() == language.getId()) {

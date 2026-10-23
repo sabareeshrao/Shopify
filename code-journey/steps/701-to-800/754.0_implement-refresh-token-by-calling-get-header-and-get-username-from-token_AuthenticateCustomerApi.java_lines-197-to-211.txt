@@ -1,0 +1,15 @@
+
+    @RequestMapping(value = "/auth/customer/refresh", method = RequestMethod.GET, produces ={ "application/json" })
+    public ResponseEntity<?> refreshToken(HttpServletRequest request) {
+        String token = request.getHeader(tokenHeader);
+
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        JWTUser user = (JWTUser) jwtCustomerDetailsService.loadUserByUsername(username);
+
+        if (jwtTokenUtil.canTokenBeRefreshed(token, user.getLastPasswordResetDate())) {
+            String refreshedToken = jwtTokenUtil.refreshToken(token);
+            return ResponseEntity.ok(new AuthenticationResponse(user.getId(),refreshedToken));
+        } else {
+            return ResponseEntity.badRequest().body(null);
+        }
+    }

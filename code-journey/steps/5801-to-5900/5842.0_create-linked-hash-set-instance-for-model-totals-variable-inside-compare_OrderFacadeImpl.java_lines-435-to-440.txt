@@ -1,0 +1,6 @@
+
+			Set<com.salesmanager.core.model.order.OrderTotal> modelTotals = new LinkedHashSet<com.salesmanager.core.model.order.OrderTotal>();
+			for (com.salesmanager.core.model.order.OrderTotal total : totals) {
+				total.setOrder(modelOrder);
+				modelTotals.add(total);
+			}

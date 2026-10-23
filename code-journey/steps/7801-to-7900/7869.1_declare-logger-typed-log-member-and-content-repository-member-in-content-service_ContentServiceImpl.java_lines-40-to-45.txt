@@ -1,0 +1,6 @@
+	private static final Logger LOG = LoggerFactory.getLogger(ContentServiceImpl.class);
+
+	private final ContentRepository contentRepository;
+	
+	@Autowired
+	private PageContentRepository pageContentRepository;

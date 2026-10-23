@@ -1,8 +1,0 @@
-	public final static String SALESMANAGER_SCHEMA = "SALESMANAGER";
-
-	/**
-	 * Languages iso codes
-	 * 
-	 */
-	//public static final String[] LANGUAGE_ISO_CODE = {"en", "fr", "ru", "es", "ar"};
-

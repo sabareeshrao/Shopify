@@ -1,0 +1,8 @@
+	private boolean defaultSelection;
+	
+	public String getStore() {
+		return store;
+	}
+	public void setStore(String store) {
+		this.store = store;
+	}

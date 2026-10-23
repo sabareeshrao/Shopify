@@ -1,0 +1,8 @@
+	
+	/**
+	 * Delete content page
+	 * @param store
+	 * @param id
+	 */
+	void delete(MerchantStore store, Long id);
+

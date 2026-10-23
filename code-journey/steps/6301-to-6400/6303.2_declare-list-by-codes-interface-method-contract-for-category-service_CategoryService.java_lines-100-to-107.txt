@@ -1,8 +1,0 @@
-	 * @param codes
-	 * @param language
-	 * @return
-	 */
-	List<Category> listByCodes(MerchantStore store, List<String> codes,
-			Language language);
-
-	/**

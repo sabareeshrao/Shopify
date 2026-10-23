@@ -1,0 +1,3 @@
+	@Override
+	public ReadableOrderTotal populate(OrderTotal source,
+			ReadableOrderTotal target, MerchantStore store, Language language)

@@ -1,8 +1,0 @@
-	private static final long serialVersionUID = 1L;
-
-	
-	@SuppressWarnings("unchecked")
-	public String toJSONString() {
-		//JSONObject data = new JSONObject();
-		
-		//data.put("active", super.isActive());

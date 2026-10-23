@@ -1,8 +1,0 @@
-	@Override
-	public void saveOrUpdate(CustomerAttribute customerAttribute)
-			throws ServiceException {
-
-			customerAttributeRepository.save(customerAttribute);
-
-		
-	}

@@ -1,0 +1,19 @@
+			if(shippingOptions!=null) {
+				Map<String,String> details = module.getDetails();
+				for(ShippingOption option : shippingOptions) {
+					String name = details.get(option.getOptionCode());
+					option.setOptionName(name);
+					if(option.getOptionPrice()==null) {
+						String priceText = option.getOptionPriceText();
+						if(StringUtils.isBlank(priceText)) {
+							throw new IntegrationException("Price text is null for option " + name);
+						}
+						try {
+							BigDecimal price = new BigDecimal(priceText);
+							option.setOptionPrice(price);
+						} catch(Exception e) {
+							throw new IntegrationException("Can't convert to numeric price " + priceText);
+						}
+					}
+				}
+			}

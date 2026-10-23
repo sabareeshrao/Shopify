@@ -1,0 +1,20 @@
+	
+	@PatchMapping(value = "/private/user/{id}/enabled", produces = { APPLICATION_JSON_VALUE })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void updateEnabled(
+			@PathVariable Long id, 
+			@Valid @RequestBody PersistableUser user,
+			@ApiIgnore MerchantStore merchantStore
+			) {
+		
+		// superadmin, admin and retail_admin
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		user.setId(id);
+		userFacade.updateEnabled(merchantStore, user);
+	}

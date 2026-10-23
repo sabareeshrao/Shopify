@@ -1,8 +1,0 @@
- * 
- * @author Umesh Awasthi
- * 
- */
-
-@Constraint(validatedBy = FieldMatchValidator.class)
-@Documented
-@Target({TYPE, ANNOTATION_TYPE})

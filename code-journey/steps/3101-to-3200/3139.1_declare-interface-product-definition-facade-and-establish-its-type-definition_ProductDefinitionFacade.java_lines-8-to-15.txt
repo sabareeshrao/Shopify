@@ -1,8 +1,0 @@
-public interface ProductDefinitionFacade {
-
-	/**
-	 * 
-	 * @param store
-	 * @param product
-	 * @param language
-	 * @return

@@ -1,8 +1,0 @@
-
-			// check that item exist in persisted cart
-			Optional<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> oOldItem = existingItems.stream()
-					.filter(i -> i.getSku().equals(newItemValue.getSku())
-
-					).findFirst();
-
-			if (oOldItem.isPresent()) {

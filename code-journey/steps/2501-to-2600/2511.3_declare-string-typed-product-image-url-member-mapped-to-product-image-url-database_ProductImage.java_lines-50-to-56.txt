@@ -1,0 +1,7 @@
+	
+	/**
+	 * Refers to images not accessible through the system. It may also be a video.
+	 */
+	@Column(name = "PRODUCT_IMAGE_URL")
+	private String productImageUrl;
+	

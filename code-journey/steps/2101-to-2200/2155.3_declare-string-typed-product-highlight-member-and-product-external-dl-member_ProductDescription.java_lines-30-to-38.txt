@@ -1,0 +1,9 @@
+
+	@Column(name = "PRODUCT_HIGHLIGHT")
+	private String productHighlight;
+
+	@Column(name = "DOWNLOAD_LNK")
+	private String productExternalDl;
+
+	@Column(name = "SEF_URL")
+	private String seUrl;

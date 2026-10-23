@@ -1,0 +1,7 @@
+	
+	/**
+	 * Deletes a file from CMS
+	 * @param store
+	 * @param fileName
+	 */
+	void delete(MerchantStore store, String fileName, String fileType);

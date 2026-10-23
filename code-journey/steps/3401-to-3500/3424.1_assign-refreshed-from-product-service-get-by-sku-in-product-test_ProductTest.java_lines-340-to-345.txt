@@ -1,0 +1,6 @@
+		
+		//test insert, view image
+		testInsertImage(updatableProduct);
+		testViewImage(updatableProduct);
+		
+		Product refreshed = productService.getBySku("CT12345", store, en);

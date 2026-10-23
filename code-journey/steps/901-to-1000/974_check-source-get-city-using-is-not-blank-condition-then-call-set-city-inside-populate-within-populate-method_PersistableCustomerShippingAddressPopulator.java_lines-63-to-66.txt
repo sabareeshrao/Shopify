@@ -1,4 +1,0 @@
-           
-           if(StringUtils.isNotBlank( source.getCity())){
-               target.getDelivery().setCity( source.getCity() );
-           }

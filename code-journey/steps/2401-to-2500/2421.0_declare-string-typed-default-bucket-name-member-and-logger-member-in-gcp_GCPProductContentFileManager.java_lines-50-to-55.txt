@@ -1,0 +1,6 @@
+  private static String DEFAULT_BUCKET_NAME = "shopizer";
+  
+  private static final Logger LOGGER = LoggerFactory.getLogger(GCPProductContentFileManager.class);
+
+  
+

@@ -1,0 +1,6 @@
+  
+  /**
+   * Retrieve authenticated user
+   * @return
+   */
+  String authenticatedUser();

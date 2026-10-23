@@ -1,0 +1,7 @@
+	
+	/**
+	 * Builds product property image url path
+	 * @param store
+	 * @param imageName
+	 * @return
+	 */

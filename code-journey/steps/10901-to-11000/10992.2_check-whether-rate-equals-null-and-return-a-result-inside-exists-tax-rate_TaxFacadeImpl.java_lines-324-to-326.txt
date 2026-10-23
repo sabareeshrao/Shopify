@@ -1,3 +1,0 @@
-		if(rate == null) {
-			return false;
-		}

@@ -1,3 +1,0 @@
-	@Deprecated
-	public static final String[] LANGUAGE_ISO_CODE = {"en", "fr", "es"}; //which descriptions will ve used for reference data
-	

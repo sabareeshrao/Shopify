@@ -1,0 +1,22 @@
+    @Test
+    @Order(1)
+    public void addToCart() throws Exception {
+
+    	ReadableProduct product = sampleProduct("addToCart");
+    	assertNotNull(product);
+    	data.getProducts().add(product);
+
+        PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();
+        cartItem.setProduct(product.getSku());
+        cartItem.setQuantity(1);
+
+        final HttpEntity<PersistableShoppingCartItem> cartEntity = new HttpEntity<>(cartItem, getHeader());
+        final ResponseEntity<ReadableShoppingCart> response = testRestTemplate.postForEntity(String.format("/api/v1/cart/"), cartEntity, ReadableShoppingCart.class);
+
+        data.setCartId(response.getBody().getCode());
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertEquals(response.getBody().getQuantity(), 1);
+
+    }

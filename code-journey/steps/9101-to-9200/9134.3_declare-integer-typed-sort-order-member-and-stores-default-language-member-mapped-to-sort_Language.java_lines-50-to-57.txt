@@ -1,0 +1,8 @@
+
+  @JsonIgnore
+  @Column(name = "SORT_ORDER")
+  private Integer sortOrder;
+
+  @JsonIgnore
+  @OneToMany(mappedBy = "defaultLanguage", targetEntity = MerchantStore.class)
+  private List<MerchantStore> storesDefaultLanguage;

@@ -1,0 +1,9 @@
+
+@Entity
+@Table(name="PRODUCT_VAR_IMAGE_DESCRIPTION", uniqueConstraints={
+		@UniqueConstraint(columnNames={
+			"PRODUCT_VAR_IMAGE_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

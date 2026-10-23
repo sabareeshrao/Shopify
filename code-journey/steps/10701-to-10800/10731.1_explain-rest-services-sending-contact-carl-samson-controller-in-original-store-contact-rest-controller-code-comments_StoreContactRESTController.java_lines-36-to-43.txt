@@ -1,8 +1,0 @@
-
-/**
- * Rest services for sending contact
- * @author Carl Samson
- *
- */
-@Controller
-@RequestMapping("/services")

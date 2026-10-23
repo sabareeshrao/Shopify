@@ -1,0 +1,3 @@
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+

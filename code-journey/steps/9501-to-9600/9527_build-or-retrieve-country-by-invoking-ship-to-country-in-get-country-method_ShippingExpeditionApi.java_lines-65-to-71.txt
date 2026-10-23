@@ -1,7 +1,0 @@
-	 @GetMapping("/shipping/country")
-	  public List<ReadableCountry> 
-	 	getCountry(
-				@ApiIgnore MerchantStore merchantStore,
-				@ApiIgnore Language language) {
-	    return shippingFacade.shipToCountry(merchantStore, language);
-	  }

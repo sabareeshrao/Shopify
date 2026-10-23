@@ -1,8 +1,0 @@
-    	}
-
-        /**
-         * decrement inventory
-         */
-    	LOGGER.debug( "Update inventory" );
-        Set<OrderProduct> products = order.getOrderProducts();
-        for(OrderProduct orderProduct : products) {

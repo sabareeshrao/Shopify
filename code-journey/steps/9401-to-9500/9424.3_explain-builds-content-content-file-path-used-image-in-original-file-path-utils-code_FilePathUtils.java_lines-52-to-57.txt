@@ -1,0 +1,6 @@
+
+	/**
+	 * Builds a static content content file path that can be used by image
+	 * servlet utility for getting the physical image Example:
+	 * /files/<storeCode>/
+	 */

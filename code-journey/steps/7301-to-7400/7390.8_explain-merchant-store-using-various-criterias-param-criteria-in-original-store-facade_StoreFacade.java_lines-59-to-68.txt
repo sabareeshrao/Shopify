@@ -1,0 +1,10 @@
+
+	/**
+	 * List MerchantStore using various criterias
+	 * 
+	 * @param criteria
+	 * @param lang
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableMerchantStoreList getByCriteria(MerchantStoreCriteria criteria, Language lang);

@@ -1,0 +1,3 @@
+    OrderTotalSummary caculateOrderTotal(OrderSummary orderSummary,
+                                         Customer customer, MerchantStore store, Language language)
+                                                         throws ServiceException;

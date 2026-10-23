@@ -1,8 +1,0 @@
-
-/**
- * Content management for a given retailer using GC{ (Google Cloud Platform)
- * Cloud Storage with buckets
- * 
- * 
- * Linux/ Mac export GOOGLE_APPLICATION_CREDENTIALS="/path/to/file" For Windows
- * set GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\file"

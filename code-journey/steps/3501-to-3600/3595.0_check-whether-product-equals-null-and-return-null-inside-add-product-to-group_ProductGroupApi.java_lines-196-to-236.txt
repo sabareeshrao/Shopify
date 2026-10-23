@@ -1,0 +1,41 @@
+
+  @ResponseStatus(HttpStatus.OK)
+  @RequestMapping(
+      value = "/private/products/{productId}/group/{code}",
+      method = RequestMethod.DELETE)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public @ResponseBody ReadableProductList removeProductFromGroup(
+      @PathVariable Long productId,
+      @PathVariable String code,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+
+    try {
+      // get the product
+      Product product = productService.getById(productId);
+
+      if (product == null) {
+        response.sendError(404, "Product not fount for id " + productId);
+        return null;
+      }
+
+      ReadableProductList list =
+          productItemsFacade.removeItemFromGroup(product, code, merchantStore, language);
+
+      return list;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while removing product from category", e);
+      try {
+        response.sendError(503, "Error while removing product from category " + e.getMessage());
+      } catch (Exception ignore) {
+      }
+
+      return null;
+    }
+  }

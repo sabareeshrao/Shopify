@@ -1,0 +1,125 @@
+ 
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap">
+	<tr>
+		<td></td>
+		<td class="header container" >
+				
+				<p>
+				<table>
+					<tr>
+						<td>
+							${LOGOPATH}
+						</td>
+					</tr>
+				</table>
+				</p>
+				
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /HEADER -->
+
+<!-- BODY -->
+<table class="body-wrap">
+
+	<tr>
+		<td colspan="2">
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						<h4>${LABEL_HI} ${EMAIL_CUSTOMER_FIRSTNAME} ${EMAIL_CUSTOMER_LASTNAME}<br/></h4>
+						<p class="lead">
+							${EMAIL_ORDER_NUMBER}
+						</p>
+						<br>
+						<p>
+							${EMAIL_ORDER_DATE}<br/>
+							${EMAIL_ORDER_THANKS}
+						</p>
+					</td>
+				</tr>
+			</table>
+			</div><!-- /content -->
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+			
+				
+						<p>
+							<h4>${EMAIL_ORDER_DETAILS_TITLE}</h4> 
+						</p>
+						<p>
+							${ORDER_PRODUCTS_DETAILS}
+						</p>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+				<table>
+				<tr>
+					<td valign="top">											
+						<ul class="sidebar">
+							<li>
+								<a>
+									<h5>${ADDRESS_BILLING_TITLE} &raquo;</h5>
+									<p>
+										${ADDRESS_BILLING}
+									</p>
+								</a>
+							</li>
+						  </ul>
+					  </td>
+					  <td valign="top">											
+						<ul class="sidebar">
+							<li>
+								<a>
+									<h5>${ADDRESS_DELIVERY_TITLE} &raquo;</h5>
+									<p>
+										${ADDRESS_DELIVERY}
+									</p>
+								</a>
+							</li>
+						  </ul>
+					  </td>
+				</tr>
+				<tr>
+					<td>
+						<ul class="sidebar">
+							<li>
+								<a>
+								<strong>${PAYMENT_METHOD_TITLE}</strong><br>
+								${PAYMENT_METHOD_DETAILS}
+								</a>
+							</li>
+
+						</ul>
+					</td>
+					<td>
+						<ul class="sidebar">
+							<li>
+								<a>
+								<strong>${SHIPPING_METHOD_TITLE}</strong><br>
+								${SHIPPING_METHOD_DETAILS}
+								</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				</table>
+				<div class="clear"></div>
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+

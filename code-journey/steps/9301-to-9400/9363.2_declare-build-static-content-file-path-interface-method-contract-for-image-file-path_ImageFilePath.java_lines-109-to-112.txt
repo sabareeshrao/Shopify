@@ -1,0 +1,4 @@
+	public String buildStaticContentFilePath(MerchantStore store, String fileName);
+
+
+}

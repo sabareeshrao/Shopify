@@ -1,0 +1,8 @@
+	
+	@Column(name="PAYMENT_TYPE")
+	@Enumerated(value = EnumType.STRING)
+	private PaymentType paymentType;
+	
+	@Column(name="DETAILS")
+	@Type(type = "org.hibernate.type.TextType")
+	private String details;

@@ -1,0 +1,21 @@
+@Component
+public class FileNameUtils {
+	
+	public boolean validFileName(String fileName) {
+		
+		boolean validName = true;
+		
+		//has an extention
+		if(StringUtils.isEmpty(FilenameUtils.getExtension(fileName))) {
+			validName = false;
+		}
+		
+		//has a filename
+		if(StringUtils.isEmpty(FilenameUtils.getBaseName(fileName))) {
+			validName = false;
+		}
+		
+		return validName;
+	}
+
+}

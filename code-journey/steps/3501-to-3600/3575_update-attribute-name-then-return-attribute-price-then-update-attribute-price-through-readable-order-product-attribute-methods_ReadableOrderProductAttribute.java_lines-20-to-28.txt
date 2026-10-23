@@ -1,9 +1,0 @@
-	public void setAttributeName(String attributeName) {
-		this.attributeName = attributeName;
-	}
-	public String getAttributePrice() {
-		return attributePrice;
-	}
-	public void setAttributePrice(String attributePrice) {
-		this.attributePrice = attributePrice;
-	}

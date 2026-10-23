@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceRequestCriteriaBuilderUtils.class);
-	
-	/**
-	 * Binds request parameter values to specific request criterias
-	 * @param criteria
-	 * @param mappingFields
-	 * @param request
-	 * @return

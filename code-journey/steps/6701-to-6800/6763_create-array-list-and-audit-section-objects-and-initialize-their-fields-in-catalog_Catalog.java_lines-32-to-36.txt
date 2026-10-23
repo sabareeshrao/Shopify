@@ -1,5 +1,0 @@
-	private List<CatalogDescription> descriptions = new ArrayList<CatalogDescription>();
-	
-	@Embedded
-	private AuditSection auditSection = new AuditSection();
-

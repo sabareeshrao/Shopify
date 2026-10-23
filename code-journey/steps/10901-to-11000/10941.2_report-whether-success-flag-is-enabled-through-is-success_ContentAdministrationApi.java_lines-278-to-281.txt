@@ -1,4 +1,0 @@
-		private boolean preventRetry = true;
-		public boolean isSuccess() {
-			return success;
-		}

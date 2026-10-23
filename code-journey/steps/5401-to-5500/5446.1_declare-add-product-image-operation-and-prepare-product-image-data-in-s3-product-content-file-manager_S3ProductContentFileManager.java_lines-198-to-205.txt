@@ -1,8 +1,0 @@
-  @Override
-  public void addProductImage(ProductImage productImage, ImageContentFile contentImage)
-      throws ServiceException {
-
-
-    try {
-      // get buckets
-      String bucketName = bucketName();

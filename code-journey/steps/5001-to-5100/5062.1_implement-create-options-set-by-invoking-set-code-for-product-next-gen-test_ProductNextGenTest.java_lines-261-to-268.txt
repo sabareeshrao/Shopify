@@ -1,8 +1,0 @@
-	private void createOptionsSet(MerchantStore store) throws Exception {
-		
-		//add a set of option / values for major sizes
-		possibleSizes = new ProductOptionSet();
-		possibleSizes.setCode("majorSizes");
-		possibleSizes.setStore(store);
-		possibleSizes.setOption(size);
-		

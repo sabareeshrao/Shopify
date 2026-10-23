@@ -1,8 +1,0 @@
-	   private MultipartFile[] files;
-	   private byte[] bytes = null;
-	   private String contentType = null;
-	   
-	   
-	   /**
-	    * An external image url
-	    */

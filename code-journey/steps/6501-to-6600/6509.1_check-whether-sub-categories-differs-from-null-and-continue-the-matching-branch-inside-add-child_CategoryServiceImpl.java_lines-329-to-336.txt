@@ -1,8 +1,0 @@
-
-			update(child);
-			StringBuilder childLineage = new StringBuilder();
-			childLineage.append(child.getLineage()).append(child.getId()).append("/");
-			List<Category> subCategories = getListByLineage(child.getMerchantStore(), childLineage.toString());
-
-			// ajust all sub categories lineages
-			if (subCategories != null && subCategories.size() > 0) {

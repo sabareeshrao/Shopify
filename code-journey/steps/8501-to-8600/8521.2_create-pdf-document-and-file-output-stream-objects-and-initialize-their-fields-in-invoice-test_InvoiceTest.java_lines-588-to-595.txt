@@ -1,8 +1,0 @@
-			 PdfDocument pdf = new PdfDocument();
-
-			 document.addDocListener(pdf);
-
-			 FileOutputStream fileOutputStream = new FileOutputStream(outFile);
-			 PdfWriter writer = PdfWriter.getInstance(pdf, fileOutputStream);
-			 pdf.addWriter(writer);
-

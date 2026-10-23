@@ -1,0 +1,6 @@
+			throws ServiceException {
+		@SuppressWarnings({ "unchecked", "rawtypes" })
+		Set ids = new HashSet(groupIds);
+		return permissionRepository.findByGroups(ids);
+	}
+

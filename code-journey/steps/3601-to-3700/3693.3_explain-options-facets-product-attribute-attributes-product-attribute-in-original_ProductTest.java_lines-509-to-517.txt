@@ -1,0 +1,9 @@
+	    
+	    /**
+	     * get options facets
+	     */
+	    
+	    List<ProductAttribute> attributes = productAttributeService.getProductAttributesByCategoryLineage(store, product.getCategories().iterator().next().getLineage(), en);
+	    Assert.assertTrue((long) attributes.size() > 0);
+
+	}

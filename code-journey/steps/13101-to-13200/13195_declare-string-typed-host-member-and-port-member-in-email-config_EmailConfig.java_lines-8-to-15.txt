@@ -1,8 +1,0 @@
-	private String host;
-	private String port;
-	private String protocol;
-	private String username;
-	private String password;
-	private boolean smtpAuth = false;
-	private boolean starttls = false;
-	

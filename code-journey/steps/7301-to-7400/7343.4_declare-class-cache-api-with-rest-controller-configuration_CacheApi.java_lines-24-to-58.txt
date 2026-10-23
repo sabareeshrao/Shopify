@@ -1,0 +1,35 @@
+@RestController
+@RequestMapping(value = "/api/v1")
+public class CacheApi {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(CacheApi.class);
+
+  @Inject
+  private StoreFacade storeFacade;
+
+  @Inject
+  private CacheUtils cache;
+
+  @DeleteMapping(value = "/auth/cache/store/{storeId}/clear")
+  public @ResponseBody ResponseEntity<String> clearCache(@PathVariable("storeId") String storeCode,
+      @RequestParam(name = "cacheKey", required = false) String cacheKey) {
+
+    try {
+      MerchantStore merchantStore = storeFacade.get(storeCode);
+      StringBuilder key =
+          new StringBuilder().append(merchantStore.getId()).append("_").append(cacheKey);
+
+      if (StringUtils.isNotEmpty(cacheKey)) {
+        cache.removeFromCache(key.toString());
+      } else {
+        cache.removeAllFromCache(merchantStore);
+      }
+    } catch (Exception e) {
+      LOGGER.error("Error while clearning cache {}", e.getCause());
+      throw new ServiceRuntimeException("Error while clearing cache");
+    }
+
+    return new ResponseEntity<>(HttpStatus.OK);
+  }
+
+}

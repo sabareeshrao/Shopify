@@ -1,0 +1,8 @@
+
+        lounge.setDescriptions(descriptions);
+        living.getChildren().add(lounge);
+
+        final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        final String json = writer.writeValueAsString(dining);
+
+        //System.out.println(json);

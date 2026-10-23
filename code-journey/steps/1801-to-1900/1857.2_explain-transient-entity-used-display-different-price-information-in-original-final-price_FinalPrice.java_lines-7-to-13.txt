@@ -1,0 +1,7 @@
+
+/**
+ * Transient entity used to display
+ * different price information in the catalogue
+ * @author Carl Samson
+ *
+ */

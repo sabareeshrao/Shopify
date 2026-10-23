@@ -1,0 +1,9 @@
+
+								List<ProductOptionValueDescription> podescriptions = optionValue.getDescriptionsSettoList();
+								ProductOptionValueDescription podescription = null;
+								if(podescriptions!=null && podescriptions.size()>0) {
+									podescription = podescriptions.get(0);
+									if(podescriptions.size()>1) {
+										for(ProductOptionValueDescription optionValueDescription : podescriptions) {
+											if(optionValueDescription.getLanguage().getId().intValue()==language.getId().intValue()) {
+												podescription = optionValueDescription;

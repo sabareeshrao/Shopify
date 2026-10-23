@@ -1,8 +1,0 @@
-			address.setCountry(response.getCountry().getIsoCode());
-			address.setPostalCode(response.getPostal().getCode());
-			address.setZone(response.getMostSpecificSubdivision().getIsoCode());
-			address.setCity(response.getCity().getName());
-			
-			} catch(com.maxmind.geoip2.exception.AddressNotFoundException ne) {
-				LOGGER.debug("Address not fount in DB " + ne.getMessage());
-			} catch(Exception e) {

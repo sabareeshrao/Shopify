@@ -1,3 +1,0 @@
-			if(module==null) {
-				throw new ServiceException("Payment module " + moduleCode + " does not exist");
-			}

@@ -1,0 +1,5 @@
+import java.io.Serializable;
+
+import com.salesmanager.shop.model.catalog.NamedEntity;
+
+

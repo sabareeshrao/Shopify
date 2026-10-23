@@ -1,0 +1,46 @@
+			throws ServiceException {
+		
+		
+		try {
+		
+		ShippingMetaData metaData = new ShippingMetaData();
+
+		// configured country
+		List<Country> countries = getShipToCountryList(store, store.getDefaultLanguage());
+		metaData.setShipToCountry(countries);
+		
+		// configured modules
+		Map<String,IntegrationConfiguration> modules = Optional.ofNullable(getShippingModulesConfigured(store))
+				.orElse(Collections.emptyMap());
+		metaData.setModules(new ArrayList<>(modules.keySet()));
+		
+		// pre processors
+		List<ShippingQuotePrePostProcessModule> preProcessors = this.shippingModulePreProcessors;
+		List<String> preProcessorKeys = new ArrayList<String>();
+		if(preProcessors!=null) {
+			for(ShippingQuotePrePostProcessModule processor : preProcessors) {
+				preProcessorKeys.add(processor.getModuleCode());
+				if(SHIPPING_DISTANCE.equals(processor.getModuleCode())) {
+					metaData.setUseDistanceModule(true);
+				}
+			}
+		}
+		metaData.setPreProcessors(preProcessorKeys);
+		
+		//post processors
+		List<ShippingQuotePrePostProcessModule> postProcessors = this.shippingModulePostProcessors;
+		List<String> postProcessorKeys = new ArrayList<String>();
+		if(postProcessors!=null) {
+			for(ShippingQuotePrePostProcessModule processor : postProcessors) {
+				postProcessorKeys.add(processor.getModuleCode());
+			}
+		}
+		metaData.setPostProcessors(postProcessorKeys);
+		
+		
+		return metaData;
+		
+		} catch(Exception e) {
+			throw new ServiceException("Exception while getting shipping metadata ",e);
+		}
+	}

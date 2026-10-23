@@ -1,8 +1,0 @@
-        target.setLineage(source.getLineage());
-        if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
-
-            CategoryDescription description = source.getDescription();
-            if (source.getDescriptions().size() > 1) {
-                for (final CategoryDescription desc : source.getDescriptions()) {
-                    if (desc.getLanguage().getCode().equals(language.getCode())) {
-                        description = desc;

@@ -1,0 +1,8 @@
+
+	@Override
+	public List<SearchItem> search(MerchantStore store, Language language, SearchProductRequest searchRequest) {
+		SearchResponse response = search(store, language.getCode(), searchRequest.getQuery(), searchRequest.getCount(),
+				searchRequest.getStart());
+		return response.getItems();
+	}
+

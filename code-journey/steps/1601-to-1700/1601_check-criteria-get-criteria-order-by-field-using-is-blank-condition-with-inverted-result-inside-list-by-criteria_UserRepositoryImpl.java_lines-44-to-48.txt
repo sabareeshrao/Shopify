@@ -1,5 +1,0 @@
-      
-      if(!StringUtils.isBlank(criteria.getCriteriaOrderByField())) {
-        req.append(" order by u." + criteria.getCriteriaOrderByField() + " "
-            + criteria.getOrderBy().name().toLowerCase());
-      }

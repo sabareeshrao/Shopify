@@ -1,0 +1,4 @@
+	private RestTemplate restTemplate;
+
+	private Long testCategoryID;
+

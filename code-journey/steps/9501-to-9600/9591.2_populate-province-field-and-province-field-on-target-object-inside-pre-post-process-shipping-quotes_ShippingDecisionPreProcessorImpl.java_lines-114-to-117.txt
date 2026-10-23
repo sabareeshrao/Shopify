@@ -1,4 +1,0 @@
-			inputParameters.setProvince(delivery.getZone().getCode());
-		} else {
-			inputParameters.setProvince(delivery.getState());
-		}

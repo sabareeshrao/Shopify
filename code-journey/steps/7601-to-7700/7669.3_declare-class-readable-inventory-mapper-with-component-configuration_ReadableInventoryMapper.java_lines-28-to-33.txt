@@ -1,0 +1,6 @@
+
+@Component
+public class ReadableInventoryMapper implements Mapper<ProductAvailability, ReadableInventory> {
+
+	@Autowired
+	private PricingService pricingService;

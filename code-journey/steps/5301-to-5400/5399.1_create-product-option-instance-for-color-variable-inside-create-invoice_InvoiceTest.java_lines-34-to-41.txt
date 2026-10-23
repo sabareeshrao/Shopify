@@ -1,0 +1,8 @@
+	    
+	    //1.1 create a product
+	    
+	    //create an option
+	    ProductOption color = new ProductOption();
+	    color.setMerchantStore(store);
+	    color.setCode("color");
+	    color.setProductOptionType("SELECT");

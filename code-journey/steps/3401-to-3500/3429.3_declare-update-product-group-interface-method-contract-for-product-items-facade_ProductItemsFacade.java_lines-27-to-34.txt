@@ -1,8 +1,0 @@
-	 * @param code
-	 * @param group
-	 * @param store
-	 */
-	void updateProductGroup(String code, ProductGroup group, MerchantStore store);
-	
-	/**
-	 * List product items by id

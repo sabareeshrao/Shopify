@@ -1,0 +1,7 @@
+		customer.setEmailAddress("test@test.com");
+		customer.setGender(CustomerGender.M);
+		customer.setDefaultLanguage(en);
+
+		customer.setAnonymous(true);
+		customer.setCompany("ifactory");
+		customer.setDateOfBirth(new Date());

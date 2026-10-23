@@ -1,0 +1,6 @@
+
+	@Inject
+	private CategoryService categoryService;
+
+	@Inject
+	private PricingService pricingService;

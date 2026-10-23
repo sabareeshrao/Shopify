@@ -1,8 +1,0 @@
-		lineage.append(category.getLineage()).append(category.getId()).append(Constants.SLASH);
-		List<Category> categories = this.getListByLineage(category.getMerchantStore(), lineage.toString());
-
-		Category dbCategory = getById(category.getId(), category.getMerchantStore().getId());
-
-		if (dbCategory != null && dbCategory.getId().longValue() == category.getId().longValue()) {
-
-			categories.add(dbCategory);

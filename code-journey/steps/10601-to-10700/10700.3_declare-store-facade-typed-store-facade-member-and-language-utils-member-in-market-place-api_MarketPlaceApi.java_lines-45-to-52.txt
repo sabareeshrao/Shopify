@@ -1,8 +1,0 @@
-	private StoreFacade storeFacade;
-
-	@Inject
-	private LanguageUtils languageUtils;
-
-	/**
-	 * Get a marketplace from storeCode returns market place details and
-	 * merchant store

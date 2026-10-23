@@ -1,0 +1,14 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingDecisionPreProcessorImpl.class);
+	
+	private final static String MODULE_CODE = "shippingDecisionModule";
+	
+	@Inject
+	private DroolsBeanFactory droolsBeanFactory;
+	
+	//private StatelessKnowledgeSession shippingMethodDecision;
+	
+	//private KnowledgeBase kbase;
+	
+	//@Inject
+	//KieContainer kieShippingDecisionContainer;
+	

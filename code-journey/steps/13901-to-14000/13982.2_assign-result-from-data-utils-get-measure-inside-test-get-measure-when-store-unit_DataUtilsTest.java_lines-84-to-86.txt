@@ -1,3 +1,0 @@
-        double result = DataUtils.getMeasure(100.789, store, MeasureUnit.IN.name());
-        assertEquals(256.00, result, 0);
-    }

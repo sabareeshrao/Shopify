@@ -1,8 +1,0 @@
-        mimeMessage.setFrom(inetAddress);
-        mimeMessage.setSubject(subject);
-
-        Multipart mp = new MimeMultipart("alternative");
-
-        // Create a "text" Multipart message
-        BodyPart textPart = new MimeBodyPart();
-        freemarkerMailConfiguration.setClassForTemplateLoading(DefaultEmailSenderImpl.class, "/");

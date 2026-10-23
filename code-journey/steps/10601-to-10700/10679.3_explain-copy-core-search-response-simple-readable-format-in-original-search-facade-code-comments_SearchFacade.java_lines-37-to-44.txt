@@ -1,8 +1,0 @@
-	/**
-	 * Copy sm-core search response to a simple readable format populated with corresponding products
-	 * @param searchResponse
-	 * @return
-	 */
-	//public SearchProductList convertToSearchProductList(SearchResponse searchResponse, MerchantStore store, int start, int count, Language language) throws Exception;
-
-	/**

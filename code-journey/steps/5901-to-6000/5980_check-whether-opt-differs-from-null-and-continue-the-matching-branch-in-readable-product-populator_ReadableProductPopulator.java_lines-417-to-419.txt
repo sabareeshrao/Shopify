@@ -1,3 +1,0 @@
-								if(opt!=null) {
-									selectableOptions.put(attribute.getProductOption().getId(), opt);
-								}

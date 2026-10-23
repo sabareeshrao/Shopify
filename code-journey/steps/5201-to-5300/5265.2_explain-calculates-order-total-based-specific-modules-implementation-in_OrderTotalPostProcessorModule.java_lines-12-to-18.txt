@@ -1,0 +1,7 @@
+
+/**
+ * Calculates order total based on specific
+ * modules implementation
+ * @author carlsamson
+ *
+ */

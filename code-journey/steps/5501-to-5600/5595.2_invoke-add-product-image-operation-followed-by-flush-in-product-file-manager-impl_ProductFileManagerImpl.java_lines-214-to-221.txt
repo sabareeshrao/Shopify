@@ -1,8 +1,0 @@
-
-        uploadImage.addProductImage(productImage, largeContentImage);
-
-        // output.flush();
-        // output.close();
-
-        tempLarge.delete();
-

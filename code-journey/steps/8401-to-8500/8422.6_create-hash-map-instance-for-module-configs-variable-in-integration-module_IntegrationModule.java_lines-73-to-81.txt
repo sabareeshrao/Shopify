@@ -1,0 +1,9 @@
+	
+	@Transient
+	private String binaryImage = null;
+
+	/**
+	 * Contains a map of module config by environment (DEV,PROD)
+	 */
+	@Transient
+	private Map<String, ModuleConfig> moduleConfigs = new HashMap<String, ModuleConfig>();

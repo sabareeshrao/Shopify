@@ -1,0 +1,16 @@
+
+	private com.salesmanager.core.model.shoppingcart.ShoppingCartItem getEntryToUpdate(final long entryId,
+			final ShoppingCart cartModel) {
+		if (CollectionUtils.isNotEmpty(cartModel.getLineItems())) {
+			for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem shoppingCartItem : cartModel
+					.getLineItems()) {
+				if (shoppingCartItem.getId().longValue() == entryId) {
+					LOG.info("Found line item  for given entry id: " + entryId);
+					return shoppingCartItem;
+
+				}
+			}
+		}
+		LOG.info("Unable to find any entry for given Id: " + entryId);
+		return null;
+	}

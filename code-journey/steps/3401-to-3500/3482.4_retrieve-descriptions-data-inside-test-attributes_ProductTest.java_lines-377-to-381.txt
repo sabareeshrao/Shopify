@@ -1,0 +1,5 @@
+	    
+	    color.getDescriptions().add(optionDescription);
+	    
+	    //create option
+	    productOptionService.saveOrUpdate(color);

@@ -1,8 +1,0 @@
-
-			
-			/** uses this module name **/
-			String moduleName = null;
-			IntegrationConfiguration configuration = null;
-			for(String module : modules.keySet()) {
-				moduleName = module;
-				configuration = modules.get(module);

@@ -1,4 +1,0 @@
-		setShippingOptionPriceType(sType);
-	}
-
-

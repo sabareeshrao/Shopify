@@ -1,0 +1,12 @@
+    public String getDrlFromExcel(String excelFile) {
+        DecisionTableConfiguration configuration = KnowledgeBuilderFactory.newDecisionTableConfiguration();
+        configuration.setInputType(DecisionTableInputType.XLS);
+
+        Resource dt = ResourceFactory.newClassPathResource(excelFile, getClass());
+
+        DecisionTableProviderImpl decisionTableProvider = new DecisionTableProviderImpl();
+
+        return decisionTableProvider.loadFromResource(dt, null);
+    }
+
+}

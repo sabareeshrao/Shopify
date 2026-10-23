@@ -1,6 +1,0 @@
-			//destination.setProduct(productModel);
-			
-			Category categoryModel = categoryFacade.getByCode(source.getCategoryCode(), store);
-			if(categoryModel == null) {
-				throw new ConversionRuntimeException("Error while converting CatalogEntry category [" + source.getCategoryCode() + "] not found");
-			}

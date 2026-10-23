@@ -1,4 +1,0 @@
-	public void shutDownCache() throws Exception {
-		
-	}
-	

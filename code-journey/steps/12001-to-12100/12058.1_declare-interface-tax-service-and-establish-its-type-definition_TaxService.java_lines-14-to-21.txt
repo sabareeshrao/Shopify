@@ -1,8 +1,0 @@
-public interface TaxService   {
-
-	/**
-	 * Retrieves tax configurations (TaxConfiguration) for a given MerchantStore
-	 * @param store
-	 * @return
-	 * @throws ServiceException
-	 */

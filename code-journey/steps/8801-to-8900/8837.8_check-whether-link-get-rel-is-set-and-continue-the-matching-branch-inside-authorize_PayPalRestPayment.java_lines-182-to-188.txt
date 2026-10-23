@@ -1,7 +1,0 @@
-				// ###Payment Approval Url
-				Iterator<Links> links = createdPayment.getLinks().iterator();
-				while (links.hasNext()) {
-					Links link = links.next();
-					if (link.getRel().equalsIgnoreCase("approval_url")) {
-						req.setAttribute("redirectURL", link.getHref());
-					}

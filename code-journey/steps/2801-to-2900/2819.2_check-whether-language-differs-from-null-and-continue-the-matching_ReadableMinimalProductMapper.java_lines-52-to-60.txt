@@ -1,0 +1,9 @@
+
+
+		for (ProductDescription desc : source.getDescriptions()) {
+			if (language != null && desc.getLanguage() != null
+					&& desc.getLanguage().getId().intValue() == language.getId().intValue()) {
+				destination.setDescription(this.description(desc));
+				break;
+			}
+		}

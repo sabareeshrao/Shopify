@@ -1,0 +1,10 @@
+    
+    /**
+     * Get Customer using unique username
+     * @param userName
+     * @param merchantStore
+     * @param language
+     * @return
+     * @throws Exception
+     */
+    ReadableCustomer getByUserName(String userName, MerchantStore merchantStore, Language language);

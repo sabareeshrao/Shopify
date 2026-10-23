@@ -1,3 +1,0 @@
- */
-public class ReadableUserPopulator extends AbstractDataPopulator<User, ReadableUser> {
-

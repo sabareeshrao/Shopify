@@ -1,8 +1,0 @@
-		return new ResponseEntity<EntityExists>(new EntityExists(isUserExist), HttpStatus.OK);
-	}
-
-	/**
-	 * Get logged in customer profile
-	 * 
-	 * @param merchantStore
-	 * @param language

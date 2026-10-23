@@ -1,0 +1,7 @@
+		
+		try {
+			
+			String clientID = configuration.getIntegrationKeys().get("client");
+			String secret = configuration.getIntegrationKeys().get("secret");
+			
+			accessToken = getAccessToken(clientID, secret);

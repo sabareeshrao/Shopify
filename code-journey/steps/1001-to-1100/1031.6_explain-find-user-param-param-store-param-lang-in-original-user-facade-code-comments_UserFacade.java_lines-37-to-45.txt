@@ -1,0 +1,9 @@
+  
+  /**
+   * Find user by id
+   * @param id
+   * @param store
+   * @param lang
+   * @return
+   */
+  ReadableUser findById(Long id, MerchantStore store, Language lang);

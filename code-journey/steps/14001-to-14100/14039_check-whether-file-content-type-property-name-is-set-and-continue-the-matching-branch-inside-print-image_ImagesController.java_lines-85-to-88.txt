@@ -1,4 +1,0 @@
-		
-		if(FileContentType.PROPERTY.name().equals(imageType)) {
-			imgType = FileContentType.PROPERTY;
-		}

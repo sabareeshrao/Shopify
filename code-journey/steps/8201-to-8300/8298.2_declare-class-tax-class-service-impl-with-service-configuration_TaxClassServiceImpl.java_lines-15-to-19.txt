@@ -1,0 +1,5 @@
+
+@Service("taxClassService")
+public class TaxClassServiceImpl extends SalesManagerEntityServiceImpl<Long, TaxClass>
+		implements TaxClassService {
+

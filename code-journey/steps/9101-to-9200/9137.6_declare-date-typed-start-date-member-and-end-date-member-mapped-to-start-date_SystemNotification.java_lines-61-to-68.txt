@@ -1,0 +1,8 @@
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "START_DATE")
+	private Date startDate;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "END_DATE")
+	private Date endDate;

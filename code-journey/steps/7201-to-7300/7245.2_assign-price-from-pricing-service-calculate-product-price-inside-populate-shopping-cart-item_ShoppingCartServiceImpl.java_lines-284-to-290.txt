@@ -1,7 +1,0 @@
-
-		// set item price
-		FinalPrice price = pricingService.calculateProductPrice(product);
-		item.setItemPrice(price.getFinalPrice());
-		return item;
-
-	}

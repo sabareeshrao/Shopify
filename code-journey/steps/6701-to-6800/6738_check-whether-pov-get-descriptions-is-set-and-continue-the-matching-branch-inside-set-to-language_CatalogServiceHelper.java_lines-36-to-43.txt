@@ -1,8 +1,0 @@
-
-				ProductOptionValue pov = attribute.getProductOptionValue();
-				if (pov.getDescriptions() != null) {
-					Set<ProductOptionValueDescription> povdDescriptions = pov.getDescriptions().stream().filter(pod -> pod.getLanguage().getId() == language).collect(Collectors.toSet());
-					pov.setDescriptions(povdDescriptions);
-				}
-			}
-		}

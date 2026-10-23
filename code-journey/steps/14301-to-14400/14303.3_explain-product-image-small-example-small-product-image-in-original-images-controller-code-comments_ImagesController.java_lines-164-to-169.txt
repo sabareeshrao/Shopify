@@ -1,6 +1,0 @@
-
-		// product image small
-		// example small product image -> /static/products/DEFAULT/TB12345/SMALL/product1.jpg
-		
-		// example large product image -> /static/products/DEFAULT/TB12345/LARGE/product1.jpg
-

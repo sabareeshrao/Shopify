@@ -1,0 +1,38 @@
+	@Override
+	public void update(PersistableInventory inventory, MerchantStore store, Language language) {
+
+		Validate.notNull(inventory, "Inventory cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+
+		Set<ProductAvailability> originAvailability = null;
+		Product product = null;
+		
+		if(inventory.getProductId()!=null && inventory.getProductId().longValue()>0) {
+			product = this.getProductById(inventory.getProductId(), store);
+			originAvailability = product.getAvailabilities();
+		} else {
+			if(inventory.getVariant() != null && inventory.getId().longValue() > 0) {
+				ProductVariant instance = this.getProductByInstance(inventory.getVariant(), store);
+				originAvailability = instance.getAvailabilities();
+				product = instance.getProduct();
+			}
+		}
+
+		ProductAvailability avail = originAvailability.stream()
+		  .filter(a -> a.getId().longValue() == inventory.getId())
+		  .findAny()
+		  .orElse(null);
+		
+		if (avail == null) {
+			throw new ResourceNotFoundException(
+					"Inventory with id [" + inventory.getId() + "] not found");
+		}
+
+
+		inventory.setProductId(product.getId());
+
+		avail = productInventoryMapper.merge(inventory, avail, store, language);
+		avail.setProduct(product);
+		avail.setMerchantStore(store);
+		saveOrUpdate(avail);
+	}

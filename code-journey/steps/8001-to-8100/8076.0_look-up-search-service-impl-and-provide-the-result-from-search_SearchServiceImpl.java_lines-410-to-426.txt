@@ -1,0 +1,17 @@
+
+	@Override
+	public SearchResponse search(MerchantStore store, String language, SearchRequest search, int entriesCount,
+			int startIndex) throws ServiceException {
+
+		if (configuration.getProperty(INDEX_PRODUCTS) == null
+				|| configuration.getProperty(INDEX_PRODUCTS).equals(Constants.FALSE) || searchModule == null) {
+			return null;
+		}
+
+		try {
+			return searchModule.searchProducts(search);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

@@ -1,0 +1,9 @@
+@Entity
+@Table(name="PRODUCT_OPTION_SET",
+uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"MERCHANT_ID",
+				"PRODUCT_OPTION_SET_CODE"
+			})
+	}
+)

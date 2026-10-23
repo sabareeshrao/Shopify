@@ -1,0 +1,7 @@
+
+	/**
+	 * Get a list of relationship acting as groups of products
+	 * @param store
+	 * @return
+	 */
+	List<ProductRelationship> getGroups(MerchantStore store);

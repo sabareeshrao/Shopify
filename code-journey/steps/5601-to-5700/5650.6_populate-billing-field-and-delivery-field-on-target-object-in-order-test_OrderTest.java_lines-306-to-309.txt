@@ -1,0 +1,4 @@
+		
+		order.setBilling(billing);
+		order.setDelivery(delivery);
+		

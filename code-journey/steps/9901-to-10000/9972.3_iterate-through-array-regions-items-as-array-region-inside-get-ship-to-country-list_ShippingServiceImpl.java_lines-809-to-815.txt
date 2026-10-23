@@ -1,7 +1,0 @@
-					JSONArray arrayRegions=(JSONArray)objRegions;
-					for (Object arrayRegion : arrayRegions) {
-						supportedCountries.add((String) arrayRegion);
-					}
-				}
-				
-			}

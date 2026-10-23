@@ -1,8 +1,0 @@
-		}
-		
-		if(CreditCardType.DISCOVERY.equals(creditCard.name())) {
-			if (number.length() != 16
-					|| Integer.parseInt(number.substring(0, 5)) != 6011) {
-				throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
-			}
-		}

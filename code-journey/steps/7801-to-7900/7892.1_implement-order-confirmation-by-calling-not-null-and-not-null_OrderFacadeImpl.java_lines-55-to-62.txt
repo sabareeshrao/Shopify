@@ -1,8 +1,0 @@
-	@Override
-	public ReadableOrderConfirmation orderConfirmation(Order order, Customer customer, MerchantStore store,
-			Language language) {
-		Validate.notNull(order, "Order cannot be null");
-		Validate.notNull(customer, "Customer cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		
-		ReadableOrderConfirmation orderConfirmation = new ReadableOrderConfirmation();

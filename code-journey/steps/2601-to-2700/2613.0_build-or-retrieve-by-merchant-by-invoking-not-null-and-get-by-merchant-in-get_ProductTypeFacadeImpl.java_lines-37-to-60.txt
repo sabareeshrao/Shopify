@@ -1,0 +1,24 @@
+	@Override
+	public ReadableProductTypeList getByMerchant(MerchantStore store, Language language,  int count, int page) {
+
+		Validate.notNull(store, "MerchantStore cannot be null");
+		ReadableProductTypeList returnList = new ReadableProductTypeList();
+
+		try {
+
+			Page<ProductType> types = productTypeService.getByMerchant(store, language, page, count);
+
+			if(types != null) {
+				returnList.setList(types.getContent().stream().map(t -> readableProductTypeMapper.convert(t, store, language)).collect(Collectors.toList()));
+				returnList.setTotalPages(types.getTotalPages());
+				returnList.setRecordsTotal(types.getTotalElements());
+				returnList.setRecordsFiltered(types.getSize());
+			}
+
+			return returnList;
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while getting product types for merchant[ " + store.getCode() + "]", e);
+		}
+
+	}

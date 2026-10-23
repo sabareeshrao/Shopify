@@ -1,8 +1,0 @@
-		specifications.setLength(source.getProductLength());
-		specifications.setWeight(source.getProductWeight());
-		specifications.setWidth(source.getProductWidth());
-		destination.setProductSpecifications(specifications);
-		
-		destination.setPreOrder(source.isPreOrder());
-		destination.setRefSku(source.getRefSku());
-		destination.setSortOrder(source.getSortOrder());

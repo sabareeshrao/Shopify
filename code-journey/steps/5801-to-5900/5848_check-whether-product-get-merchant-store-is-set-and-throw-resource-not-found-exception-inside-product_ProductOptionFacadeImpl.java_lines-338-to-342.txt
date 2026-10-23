@@ -1,5 +1,0 @@
-
-		if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
-			throw new ResourceNotFoundException(
-					"Productnot found id [" + id + "] for store [" + store.getCode() + "]");
-		}

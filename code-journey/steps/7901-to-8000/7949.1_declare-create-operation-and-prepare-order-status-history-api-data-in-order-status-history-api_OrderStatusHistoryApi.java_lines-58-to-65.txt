@@ -1,8 +1,0 @@
-
-	@RequestMapping(value = { "private/orders/{id}/history" }, method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.CREATED)
-	@ApiOperation(httpMethod = "POST", value = "Add order history", notes = "Adds a new status to an order", produces = "application/json", response = Void.class)
-	@ResponseBody
-	public void create(@PathVariable final Long id, @RequestBody PersistableOrderStatusHistory history,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-

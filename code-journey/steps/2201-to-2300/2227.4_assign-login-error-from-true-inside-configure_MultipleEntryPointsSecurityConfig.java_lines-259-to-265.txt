@@ -1,7 +1,0 @@
-					.successHandler(userAuthenticationSuccessHandler)
-					.failureUrl("/admin/logon.html?login_error=true")
-					.and()
-					.csrf().disable()
-					.logout().logoutUrl("/admin/logout").logoutSuccessUrl("/admin/home.html")
-					.invalidateHttpSession(true).and().exceptionHandling().accessDeniedPage("/admin/denied.html");
-			

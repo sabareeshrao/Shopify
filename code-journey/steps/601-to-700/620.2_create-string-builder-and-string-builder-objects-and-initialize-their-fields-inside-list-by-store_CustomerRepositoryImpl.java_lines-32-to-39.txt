@@ -1,8 +1,0 @@
-		objectBuilderSelect.append(baseQuery);
-		
-		StringBuilder countBuilderWhere = new StringBuilder();
-		StringBuilder objectBuilderWhere = new StringBuilder();
-		String whereQuery = " where c.merchantStore.id=:mId";
-		countBuilderWhere.append(whereQuery);
-		objectBuilderWhere.append(whereQuery);
-

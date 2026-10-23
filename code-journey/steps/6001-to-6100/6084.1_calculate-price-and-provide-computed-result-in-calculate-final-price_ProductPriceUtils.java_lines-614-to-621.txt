@@ -1,8 +1,0 @@
-	private FinalPrice calculateFinalPrice(ProductAvailability availability) throws ServiceException {
-
-		FinalPrice finalPrice = null;
-		List<FinalPrice> otherPrices = null;
-
-		Set<ProductPrice> prices = availability.getPrices();
-		for (ProductPrice price : prices) {
-

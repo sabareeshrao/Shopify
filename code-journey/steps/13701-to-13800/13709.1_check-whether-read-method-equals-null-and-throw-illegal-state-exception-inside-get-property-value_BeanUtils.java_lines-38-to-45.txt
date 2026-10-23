@@ -1,8 +1,0 @@
-
-        Method readMethod = propertyDescriptor.getReadMethod();
-        if ( readMethod == null )
-        {
-            throw new IllegalStateException( "No getter available for property " + property + " on " + beanClass );
-        }
-        return readMethod.invoke( bean );
-    }

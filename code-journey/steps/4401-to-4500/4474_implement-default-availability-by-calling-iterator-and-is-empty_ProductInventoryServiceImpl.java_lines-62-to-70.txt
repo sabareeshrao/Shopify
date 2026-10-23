@@ -1,9 +1,0 @@
-	private ProductAvailability defaultAvailability(Set<ProductAvailability> availabilities) {
-		
-		ProductAvailability defaultAvailability = availabilities.iterator().next();
-		
-		for (ProductAvailability availability : availabilities) {
-			if (!StringUtils.isEmpty(availability.getRegion())
-					&& availability.getRegion().equals(Constants.ALL_REGIONS)) {// TODO REL 2.1 accept a region
-				defaultAvailability = availability;
-			}

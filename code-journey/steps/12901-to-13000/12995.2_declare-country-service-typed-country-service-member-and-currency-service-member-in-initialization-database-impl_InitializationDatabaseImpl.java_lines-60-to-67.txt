@@ -1,8 +1,0 @@
-	
-	@Inject
-	private CountryService countryService;
-	
-	@Inject
-	private CurrencyService currencyService;
-	
-	@Inject

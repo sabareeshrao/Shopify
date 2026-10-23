@@ -1,8 +1,0 @@
-		if (!StringUtils.isBlank(status)) {
-			criteria.setStatus(status);
-		}
-		// Start Category handling
-		List<Long> categoryIds = new ArrayList<Long>();
-		if (slug != null) {
-			Category categoryBySlug = categoryService.getBySeUrl(merchantStore, slug, language);
-			categoryIds.add(categoryBySlug.getId());

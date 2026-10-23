@@ -1,5 +1,0 @@
-		populator.populate(product, readableProduct, product.getMerchantStore(), language);
-
-		return readableProduct;
-	}
-

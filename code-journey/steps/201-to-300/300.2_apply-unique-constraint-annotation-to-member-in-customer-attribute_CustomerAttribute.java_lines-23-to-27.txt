@@ -1,5 +1,0 @@
-		@UniqueConstraint(columnNames={
-				"OPTION_ID",
-				"CUSTOMER_ID"
-			})
-	}

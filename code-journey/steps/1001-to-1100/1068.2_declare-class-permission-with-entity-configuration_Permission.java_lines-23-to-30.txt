@@ -1,0 +1,8 @@
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "PERMISSION")
+public class Permission extends SalesManagerEntity<Integer, Permission> implements Auditable {
+
+	
+

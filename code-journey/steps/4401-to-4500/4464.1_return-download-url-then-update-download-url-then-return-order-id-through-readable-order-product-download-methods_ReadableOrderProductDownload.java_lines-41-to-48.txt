@@ -1,8 +1,0 @@
-	public String getDownloadUrl() {
-		return downloadUrl;
-	}
-	public void setDownloadUrl(String downloadUrl) {
-		this.downloadUrl = downloadUrl;
-	}
-	public long getOrderId() {
-		return orderId;

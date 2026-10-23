@@ -1,8 +1,0 @@
-public interface CategoryService extends SalesManagerEntityService<Long, Category> {
-
-	List<Category> getListByLineage(MerchantStore store, String lineage) throws ServiceException;
-	
-	List<Category> listBySeUrl(MerchantStore store, String seUrl) throws ServiceException;
-	
-	CategoryDescription getDescription(Category category, Language language) throws ServiceException;
-

@@ -1,8 +1,0 @@
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Salamanca",
-		"zoneName": "Salamanca",
-		"countryCode": "ES"
-	},
-	{

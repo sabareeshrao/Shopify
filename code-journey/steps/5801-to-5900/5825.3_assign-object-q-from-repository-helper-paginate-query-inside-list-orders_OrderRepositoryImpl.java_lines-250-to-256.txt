@@ -1,0 +1,7 @@
+		
+		objectQ = RepositoryHelper.paginateQuery(objectQ, count, entityList, criteria);
+		
+		//TODO use GenericEntityList
+
+		orderList.setTotalCount(entityList.getTotalCount());
+		orderList.setTotalPages(entityList.getTotalPages());

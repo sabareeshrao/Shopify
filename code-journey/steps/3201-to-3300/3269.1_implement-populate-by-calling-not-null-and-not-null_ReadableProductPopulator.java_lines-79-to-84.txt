@@ -1,0 +1,6 @@
+	@Override
+	public ReadableProduct populate(Product source,
+			ReadableProduct target, MerchantStore store, Language language)
+			throws ConversionException {
+		Validate.notNull(pricingService, "Requires to set PricingService");
+		Validate.notNull(imageUtils, "Requires to set imageUtils");

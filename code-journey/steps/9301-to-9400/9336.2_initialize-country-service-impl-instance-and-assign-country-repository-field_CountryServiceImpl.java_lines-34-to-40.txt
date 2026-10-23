@@ -1,0 +1,7 @@
+
+	
+	@Inject
+	public CountryServiceImpl(CountryRepository countryRepository) {
+		super(countryRepository);
+		this.countryRepository = countryRepository;
+	}

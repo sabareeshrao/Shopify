@@ -1,27 +1,5 @@
-# Shopizer Code Journey (immutable source snapshot)
+# Shopizer logical code journey
 
-Source: https://github.com/shopizer-ecommerce/shopizer at `6a4a0a65a3408ee8f62597b51d1b3aac24b77dee`.
+Browse **steps/** folders in ascending task order. Parent 1.0 contains the full code block; children 1.1, 1.2 etc. contain sequential original line slices. Use children instead of their parent, not both. Blocks may exceed eight lines to preserve complete statements, methods and markup structures.
 
-Walk through the parent TXT files in **numeric sequence order**, not lexicographic filename order.
-Each parent is a distinct, contiguous, exact range of the original source file; only parents should be used when reconstructing. Children are up-to-eight-line exact duplicates of a parent, for teaching purposes. Some tasks are only one line.
-
-Filenames explain code-specific operations, identifiers, keys and values wherever extractable.
-They are machine-generated and should be reviewed against source; refer to the source and index for exact intent. Some original code fragments are not standalone compilable until subsequent tasks are applied.
-
-## Rebuild and verification
-
-Use `python rebuild.py --journey path/to/code-journey --output rebuilt` after unzipping. This sorts parent ranges by original source line and verifies each text file SHA256. Original binary assets are stored under `original-binaries/` in the ZIP when available. No TXT headers, changed whitespace, or extra newlines.
-
-The historical task/edit order is **not** recoverable from a snapshot; the task sequence is a modeled educational development journey.
-
-Data files: `MASTER_INDEX.csv`, `SOURCE_MANIFEST.csv`, `AUDIT.json`.
-
-## Filename quality audit
-
-All generated TXT basenames and sequence identifiers are unique, and the old generic description templates are rejected. Source bytes are never rewritten by renaming.
-
-## Browse individual TXT files on GitHub
-
-Open [`steps/`](steps/) for the numbered project journey split into 100-parent-task folders, or use [`BROWSE_INDEX.csv`](BROWSE_INDEX.csv) to locate any task. The individual original source lines are preserved exactly, and the ZIP still contains the complete original flat source blocks.
-
-See `BROWSE_AUDIT.json` for folder and file-count verification.
+The ZIP contains only .txt files. The root MASTER_INDEX.csv maps each parent to its original repository path and line range. Descriptions and sequencing are inferred learning aids, not historical developer activity.

@@ -1,8 +1,0 @@
-
-	/**
-	 * Deletes a MerchantStore based on store code
-	 * 
-	 * @param code
-	 */
-	void delete(String code);
-

@@ -1,0 +1,32 @@
+
+
+  @Override
+  public Address getAddress(Long userId, final MerchantStore merchantStore,
+      boolean isBillingAddress) throws Exception {
+    LOG.info("Fetching customer for id {} ", userId);
+    Address address = null;
+    final Customer customerModel = customerService.getById(userId);
+
+    if (customerModel == null) {
+      LOG.error("Customer with ID {} does not exists..", userId);
+      // throw new CustomerNotFoundException( "customer with given id does not exists" );
+      throw new Exception("customer with given id does not exists");
+    }
+
+    if (isBillingAddress) {
+      LOG.info("getting billing address..");
+      CustomerBillingAddressPopulator billingAddressPopulator =
+          new CustomerBillingAddressPopulator();
+      address = billingAddressPopulator.populate(customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());
+      address.setBillingAddress(true);
+      return address;
+    }
+
+    LOG.info("getting Delivery address..");
+    CustomerDeliveryAddressPopulator deliveryAddressPopulator =
+        new CustomerDeliveryAddressPopulator();
+    return deliveryAddressPopulator.populate(customerModel, merchantStore,
+        merchantStore.getDefaultLanguage());
+
+  }

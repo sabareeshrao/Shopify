@@ -1,0 +1,14 @@
+
+/**
+ * A marketplace is the main grouping for the state of product presentation.
+ * MarketPlace belongs to a main MerchantStore
+ * A MerchantStore can have a single MarketPlace
+ * A MarketPlace allows to determine the main MerchantStore allowing determination of content
+ * and configurations of a given MarketPlace. A MarketPlace has a list of Catalog created by each MerchantStore
+ * Each Catalog contains a list of Product. A MarketPlace has also a list of Category that merchant cannot change.
+ * Only the MarketPlace can decide which category are shown and which catalog is part of product offering
+ * @author c.samson
+ *
+ */
+public class MarketPlace extends SalesManagerEntity<Long, MarketPlace> implements Auditable {
+	

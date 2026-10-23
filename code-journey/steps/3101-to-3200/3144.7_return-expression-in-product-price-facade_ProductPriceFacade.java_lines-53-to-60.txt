@@ -1,8 +1,0 @@
-	 * @param productId
-	 * @param inventoryId
-	 * @param store
-	 * @return
-	 */
-	List<ReadableProductPrice> list(String sku, Long inventoryId, MerchantStore store, Language language);
-	
-	/**

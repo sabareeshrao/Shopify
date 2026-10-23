@@ -1,0 +1,17 @@
+
+			String submitedAmount = order.getPayment().getAmount();
+
+			BigDecimal formattedSubmittedAmount = productPriceUtils.getAmount(submitedAmount);
+
+			BigDecimal submitedAmountFormat = productPriceUtils.getAmount(submitedAmount);
+
+			BigDecimal calculatedAmount = orderTotalSummary.getTotal();
+			String strCalculatedTotal = calculatedAmount.toPlainString();
+
+			// compare both prices
+			if (calculatedAmount.compareTo(formattedSubmittedAmount) != 0) {
+
+
+				throw new ConversionException("Payment.amount does not match what the system has calculated "
+						+ strCalculatedTotal + " (received " + submitedAmount + ") please recalculate the order and submit again");
+			}

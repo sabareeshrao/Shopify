@@ -1,8 +1,0 @@
-		valueList.setRecordsTotal(options.getTotalElements());
-		valueList.setNumber(options.getNumber());
-
-		List<ReadableProductOptionValue> values = options.getContent().stream()
-				.map(option -> readableOptionValueMapper.convert(option, store, null)).collect(Collectors.toList());
-
-		valueList.setOptionValues(values);
-

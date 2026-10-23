@@ -1,0 +1,7 @@
+						break;
+					}
+				}
+				
+			} else {
+				if(!StringUtils.isBlank(customer.getBilling().getState())) {
+					billToProvince = new StringBuilder();

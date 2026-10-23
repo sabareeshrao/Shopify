@@ -1,4 +1,0 @@
-
-        clearAuthenticationAttributes(request);
-    }
-

@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductOptionValue getOptionValue(Long optionValueId, MerchantStore store, Language language) {
-
-		Validate.notNull(optionValueId, "OptionValue id cannot be null");
-		Validate.notNull(store, "Store cannot be null");
-
-		ProductOptionValue optionValue = productOptionValueService.getById(store, optionValueId);
-

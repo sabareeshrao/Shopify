@@ -1,8 +1,0 @@
-public interface CatalogFacade {
-
-    ReadableCatalog saveCatalog(PersistableCatalog catalog, MerchantStore store, Language language);
-
-    void updateCatalog(Long catalogId, PersistableCatalog catalog, MerchantStore store, Language language);
-
-    void deleteCatalog(Long catalogId, MerchantStore store, Language language);
-

@@ -1,7 +1,0 @@
-			
-			String baseScheme = store.getDomainName();
-			String scheme = coreConfiguration.getProperty("SHOP_SCHEME");
-			if(!StringUtils.isBlank(scheme)) {
-				baseScheme = new StringBuilder().append(coreConfiguration.getProperty("SHOP_SCHEME", "http")).append("://")
-				.append(store.getDomainName()).toString();
-			}

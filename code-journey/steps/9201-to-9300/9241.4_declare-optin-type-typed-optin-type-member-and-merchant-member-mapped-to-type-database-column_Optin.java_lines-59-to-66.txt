@@ -1,0 +1,8 @@
+	
+	@Column(name="TYPE", nullable=false)
+	@Enumerated(value = EnumType.STRING)
+	private OptinType optinType;
+	
+	@ManyToOne(targetEntity = MerchantStore.class)
+	@JoinColumn(name="MERCHANT_ID")
+	private MerchantStore merchant;

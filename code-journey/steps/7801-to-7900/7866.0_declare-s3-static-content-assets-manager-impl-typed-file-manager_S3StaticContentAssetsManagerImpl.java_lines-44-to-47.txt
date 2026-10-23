@@ -1,0 +1,4 @@
+	private static S3StaticContentAssetsManagerImpl fileManager = null;
+
+	private CMSManager cmsManager;
+

@@ -1,7 +1,0 @@
-		f.setContentType(file.getContentType());
-		f.setName(file.getOriginalFilename());
-		try {
-			f.setFile(file.getBytes());
-		} catch (IOException e) {
-			throw new ServiceRuntimeException("Error while getting file bytes");
-		}

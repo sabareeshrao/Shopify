@@ -1,8 +1,0 @@
-	    
-	    //test product list service
-	    
-	    //list products per category
-	    //list 5 items
-	    ProductCriteria productCriteria = new ProductCriteria();
-	    productCriteria.setCategoryIds(Stream.of(shoes.getId())
-	    	      .collect(Collectors.toList()));

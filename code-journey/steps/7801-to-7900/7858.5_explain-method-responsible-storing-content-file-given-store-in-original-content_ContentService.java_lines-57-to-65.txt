@@ -1,0 +1,9 @@
+
+    /**
+     * Method responsible for storing content file for given Store.Files for given merchant store will be stored in
+     * Infinispan.
+     * 
+     * @param merchantStoreCode merchant store whose content images are being saved.
+     * @param contentFile content image being stored
+     * @throws ServiceException
+     */

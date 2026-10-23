@@ -1,8 +1,0 @@
-	public String getProperty(String propertyKey, String defaultValue) {
-		
-		String prop = defaultValue;
-		try {
-			prop = properties.getProperty(propertyKey);
-		} catch(Exception e) {
-			LOGGER.warn("Cannot find property " + propertyKey);
-		}

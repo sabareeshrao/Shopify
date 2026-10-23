@@ -1,0 +1,7 @@
+
+	<artifactId>sm-core</artifactId>
+	<packaging>jar</packaging>
+
+	<name>sm-core</name>
+	<url>http://www.shopizer.com</url>
+

@@ -1,7 +1,0 @@
-
-			LOGGER.info("Content data added successfully.");
-		} catch (final Exception e) {
-			LOGGER.error("Error while saving static content data", e);
-			throw new ServiceException(e);
-
-		}

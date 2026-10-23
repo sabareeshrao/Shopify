@@ -1,8 +1,0 @@
-				Ce message vous a été envoyé par l'équipe de direction de BAM Wood
-
-		</td>
-	</tr>
-
-<!-- End of WRAPPER -->
-</table>
-

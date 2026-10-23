@@ -1,0 +1,27 @@
+	@Override
+	public void validateCreditCard(String number, CreditCardType creditCard, String month, String date)
+	throws ServiceException {
+
+		try {
+			Integer.parseInt(month);
+			Integer.parseInt(date);
+		} catch (NumberFormatException nfe) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid date format","messages.error.creditcard.dateformat");
+		}
+		
+		if (StringUtils.isBlank(number)) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
+		}
+		
+		Matcher m = Pattern.compile("[^\\d\\s.-]").matcher(number);
+		
+		if (m.find()) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
+		}
+		
+		Matcher matcher = Pattern.compile("[\\s.-]").matcher(number);
+		
+		number = matcher.replaceAll("");
+		validateCreditCardDate(Integer.parseInt(month), Integer.parseInt(date));
+		validateCreditCardNumber(number, creditCard);
+	}

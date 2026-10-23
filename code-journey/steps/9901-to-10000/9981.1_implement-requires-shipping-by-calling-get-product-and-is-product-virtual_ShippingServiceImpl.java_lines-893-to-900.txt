@@ -1,8 +1,0 @@
-	@Override
-	public boolean requiresShipping(List<ShoppingCartItem> items,
-			MerchantStore store) throws ServiceException {
-
-		boolean requiresShipping = false;
-		for(ShoppingCartItem item : items) {
-			Product product = item.getProduct();
-			if(!product.isProductVirtual() && product.isProductShipeable()) {

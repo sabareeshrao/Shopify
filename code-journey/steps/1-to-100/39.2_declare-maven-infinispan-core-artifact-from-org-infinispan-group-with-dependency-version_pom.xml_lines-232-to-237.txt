@@ -1,6 +1,0 @@
-			<!-- Infinispan -->
-			<dependency>
-				<groupId>org.infinispan</groupId>
-				<artifactId>infinispan-core</artifactId>
-				<version>${infinispan.version}</version>
-			</dependency>

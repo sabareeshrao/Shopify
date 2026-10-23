@@ -1,0 +1,8 @@
+	
+	@Override
+	public List<TaxItem> calculateTax(OrderSummary orderSummary, Customer customer, MerchantStore store, Language language) throws ServiceException {
+		
+
+		if(customer==null) {
+			return null;
+		}

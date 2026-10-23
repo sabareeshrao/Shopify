@@ -1,0 +1,6 @@
+
+	@Override
+	protected ReadableOrderTotal createTarget() {
+		return new ReadableOrderTotal();
+	}
+	

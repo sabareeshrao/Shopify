@@ -1,8 +1,0 @@
-	ProductService productService;
-	
-	@Autowired
-	ReadableProductMapper readableProductMapper;
-
-	@Inject
-	@Qualifier("img")
-	private ImageFilePath imageUtils;

@@ -1,8 +1,0 @@
-	public void delete(Customer customer) throws ServiceException {
-		customer = getById(customer.getId());
-		
-		//delete attributes
-		List<CustomerAttribute> attributes =customerAttributeService.getByCustomer(customer.getMerchantStore(), customer);
-		if(attributes!=null) {
-			for(CustomerAttribute attribute : attributes) {
-				customerAttributeService.delete(attribute);

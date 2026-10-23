@@ -1,0 +1,30 @@
+
+	@Override
+	public ReadableCategory getById(MerchantStore store, Long id, Language language) {
+
+			Category categoryModel = null;
+			if (language != null) {
+				categoryModel = getCategoryById(id, language);
+			} else {// all langs
+				categoryModel = getById(store, id);
+			}
+
+			if (categoryModel == null)
+				throw new ResourceNotFoundException("Categori id [" + id + "] not found");
+
+			StringBuilder lineage = new StringBuilder().append(categoryModel.getLineage());
+
+			ReadableCategory readableCategory = readableCategoryMapper.convert(categoryModel, store,
+					language);
+
+			// get children
+			List<Category> children = getListByLineage(store, lineage.toString());
+
+			List<ReadableCategory> childrenCats = children.stream()
+					.map(cat -> readableCategoryMapper.convert(cat, store, language))
+					.collect(Collectors.toList());
+
+			addChildToParent(readableCategory, childrenCats);
+			return readableCategory;
+
+	}

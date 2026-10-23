@@ -1,9 +1,0 @@
-							else {
-								prices.add(pp);
-							}
-						} else {
-							prices.add(pp);
-						}
-						
-					}
-				}

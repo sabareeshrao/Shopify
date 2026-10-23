@@ -1,8 +1,0 @@
-		
-		if(!CollectionUtils.isEmpty(source.getZones())) {
-			for(Zone z : source.getZones()) {
-				ReadableZone readableZone = new ReadableZone();
-				readableZone.setCountryCode(target.getCode());
-				readableZone.setId(z.getId());
-				if(!CollectionUtils.isEmpty(z.getDescriptions())) {
-					for(ZoneDescription d : z.getDescriptions()) {

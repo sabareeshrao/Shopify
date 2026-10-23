@@ -1,3 +1,0 @@
-	private com.salesmanager.shop.store.controller.shoppingCart.facade.ShoppingCartFacade shoppingCartFacade; // legacy
-																												// facade
-

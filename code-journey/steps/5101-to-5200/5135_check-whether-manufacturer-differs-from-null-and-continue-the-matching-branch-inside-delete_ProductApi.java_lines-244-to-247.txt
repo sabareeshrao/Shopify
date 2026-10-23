@@ -1,4 +1,0 @@
-
-		if (manufacturer != null) {
-			criteria.setManufacturerId(manufacturer);
-		}

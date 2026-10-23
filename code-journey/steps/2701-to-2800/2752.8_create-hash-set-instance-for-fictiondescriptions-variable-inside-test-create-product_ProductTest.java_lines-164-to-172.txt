@@ -1,0 +1,9 @@
+	    fictionFrenchDescription.setName("Sc Fiction");
+	    fictionFrenchDescription.setCategory(fiction);
+	    fictionFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> fictiondescriptions = new HashSet<CategoryDescription>();
+	    fictiondescriptions.add(fictionEnglishDescription);
+	    fictiondescriptions.add(fictionFrenchDescription);
+
+	    fiction.setDescriptions(fictiondescriptions);

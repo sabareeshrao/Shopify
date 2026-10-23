@@ -1,8 +1,0 @@
-		  
-			/**
-			 * 
-				invalid_number 	The card number is not a valid credit card number.
-				invalid_expiry_month 	The card's expiration month is invalid.
-				invalid_expiry_year 	The card's expiration year is invalid.
-				invalid_cvc 	The card's security code is invalid.
-				incorrect_number 	The card number is incorrect.

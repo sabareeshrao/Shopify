@@ -1,0 +1,20 @@
+
+	private Content convertContentBoxToContent(MerchantStore store, Content model, PersistableContentBox content) throws Exception {
+		Content contentModel = new Content();
+		if(model != null) {
+			contentModel = model;
+		}
+
+		List<ContentDescription> descriptions = buildDescriptions(contentModel, content.getDescriptions());
+		for(ContentDescription cd : descriptions) {
+			cd.setContent(contentModel);
+		}
+
+		contentModel.setCode(content.getCode());
+		contentModel.setContentType(ContentType.BOX);
+		contentModel.setMerchantStore(store);
+		contentModel.setVisible(content.isVisible());
+		contentModel.setDescriptions(descriptions);
+		contentModel.setId(content.getId());
+		return contentModel;
+	}

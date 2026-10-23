@@ -1,0 +1,5 @@
+	private int shippingQuantity;
+	private int treshold;
+	private String type; //BOX, ITEM
+	
+	

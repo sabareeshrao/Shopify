@@ -1,2 +1,0 @@
-			return null;// products are virtual
-		}

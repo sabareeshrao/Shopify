@@ -1,8 +1,0 @@
-	private String scheme;
-	private String host;
-	private String port;
-	private String uri;
-	private String env;
-	private String config1;
-	private String config2;
-	public String getScheme() {

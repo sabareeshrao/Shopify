@@ -1,7 +1,0 @@
-	public String getProperty(String propertyKey) {
-		
-		return properties.getProperty(propertyKey);
-		
-		
-	}
-	

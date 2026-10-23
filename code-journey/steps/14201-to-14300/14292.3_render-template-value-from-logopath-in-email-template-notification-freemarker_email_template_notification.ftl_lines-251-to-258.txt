@@ -1,8 +1,0 @@
-					<tr>
-						<td>
-							<h3>${LOGOPATH}</h3>
-						</td>
-					</tr>
-				</table>
-				</p>
-				

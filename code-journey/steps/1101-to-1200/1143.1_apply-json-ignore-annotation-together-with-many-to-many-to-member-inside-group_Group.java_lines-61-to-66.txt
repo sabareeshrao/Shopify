@@ -1,0 +1,6 @@
+
+	@JsonIgnore
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+        })

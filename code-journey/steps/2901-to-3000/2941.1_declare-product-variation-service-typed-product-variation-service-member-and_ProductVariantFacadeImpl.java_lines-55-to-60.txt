@@ -1,0 +1,6 @@
+	
+	@Autowired
+	private ProductVariationService productVariationService;
+	
+	@Autowired
+	private ProductFacade productFacade;

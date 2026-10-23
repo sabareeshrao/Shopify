@@ -1,7 +1,0 @@
-				"http://localhost:8080/sm-shop/services/private/DEFAULT/product/optionValue", entity,
-				PersistableProductOptionValue.class);
-
-		final PersistableProductOptionValue opt = (PersistableProductOptionValue) response.getBody();
-		System.out.println("New optionValue ID : " + opt.getId());
-
-	}

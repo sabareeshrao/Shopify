@@ -1,8 +1,0 @@
-			"countryCode": "US"
-		},
-		{
-			"zoneCode": "AC",
-			"zoneName": "Armed Forces Canada",
-			"countryCode": "US"
-		},
-		{

@@ -1,4 +1,0 @@
-
-				if (!userModel.getMerchantStore().getCode().equals(store.getCode()) && adminOrSuperadmin == null) {
-					throw new OperationNotAllowedException("User [" + adminName + "] cannot change owning store");
-				}

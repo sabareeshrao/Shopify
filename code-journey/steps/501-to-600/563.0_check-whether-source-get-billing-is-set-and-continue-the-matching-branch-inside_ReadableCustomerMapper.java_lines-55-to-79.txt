@@ -1,0 +1,25 @@
+
+		if(source.getBilling()!=null) {
+			Address address = new Address();
+			address.setAddress(source.getBilling().getAddress());
+			address.setCity(source.getBilling().getCity());
+			address.setCompany(source.getBilling().getCompany());
+			address.setFirstName(source.getBilling().getFirstName());
+			address.setLastName(source.getBilling().getLastName());
+			address.setPostalCode(source.getBilling().getPostalCode());
+			address.setPhone(source.getBilling().getTelephone());
+			if(source.getBilling().getCountry()!=null) {
+				address.setCountry(source.getBilling().getCountry().getIsoCode());
+			}
+			if(source.getBilling().getZone()!=null) {
+				address.setZone(source.getBilling().getZone().getCode());
+			}
+			if(source.getBilling().getState()!=null) {
+				address.setStateProvince(source.getBilling().getState());
+			}
+
+			target.setFirstName(address.getFirstName());
+			target.setLastName(address.getLastName());
+
+			target.setBilling(address);
+		}

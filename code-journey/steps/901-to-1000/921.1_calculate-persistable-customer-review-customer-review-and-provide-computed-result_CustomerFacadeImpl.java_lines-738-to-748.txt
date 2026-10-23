@@ -1,0 +1,11 @@
+  private CustomerReview convertPersistableCustomerReviewToCustomerReview(
+      PersistableCustomerReview review, MerchantStore store, Language language) {
+    PersistableCustomerReviewPopulator populator = new PersistableCustomerReviewPopulator();
+    populator.setCustomerService(customerService);
+    populator.setLanguageService(languageService);
+    try{
+      return populator.populate(review, new CustomerReview(), store, language);
+    } catch (ConversionException e) {
+      throw new ConversionRuntimeException(e);
+    }
+  }

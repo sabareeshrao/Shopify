@@ -1,5 +1,0 @@
-	    nine.getDescriptions().add(nineDescription);
-	    
-	    //create an option value
-	    productOptionValueService.saveOrUpdate(nine);
-	    

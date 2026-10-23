@@ -1,7 +1,0 @@
-			
-			Customer customer = customerService.getById(source.getCustomerId());
-			
-			//check if customer belongs to store
-			if(customer ==null || customer.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
-				throw new ConversionException("Invalid customer id for the given store");
-			}

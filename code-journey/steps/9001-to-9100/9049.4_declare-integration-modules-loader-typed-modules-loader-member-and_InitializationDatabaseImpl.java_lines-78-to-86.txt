@@ -1,0 +1,9 @@
+	
+	@Inject
+	private IntegrationModulesLoader modulesLoader;
+	
+	@Inject
+	private ManufacturerService manufacturerService;
+	
+	@Inject
+	private ModuleConfigurationService moduleConfigurationService;

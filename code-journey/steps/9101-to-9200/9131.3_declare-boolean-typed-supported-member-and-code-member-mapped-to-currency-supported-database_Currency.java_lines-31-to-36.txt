@@ -1,0 +1,6 @@
+	
+	@Column(name = "CURRENCY_SUPPORTED")
+	private Boolean supported = true;
+	
+	@Column(name = "CURRENCY_CODE", unique = true)
+	private String code;

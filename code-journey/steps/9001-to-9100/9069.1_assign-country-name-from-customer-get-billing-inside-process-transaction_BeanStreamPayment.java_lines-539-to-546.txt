@@ -1,8 +1,0 @@
-		
-		String countryName = customer.getBilling().getCountry().getIsoCode();
-		
-		messageString.append("ordProvince=").append(stateProvince).append("&");
-		messageString.append("ordPostalCode=").append(customer.getBilling().getPostalCode().replaceAll("\\s","")).append("&");
-		messageString.append("ordCountry=").append(countryName).append("&");
-		messageString.append("ordPhoneNumber=").append(customer.getBilling().getTelephone()).append("&");
-		messageString.append("ordEmailAddress=").append(customer.getEmailAddress());

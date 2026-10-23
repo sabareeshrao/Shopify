@@ -1,8 +1,0 @@
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en")
-  })
-  public void create(
-      @Valid @RequestBody PersistableCustomerOptin optin,
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language) {

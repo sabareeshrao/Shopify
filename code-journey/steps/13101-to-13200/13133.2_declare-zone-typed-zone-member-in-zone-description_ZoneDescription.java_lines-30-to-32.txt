@@ -1,3 +1,0 @@
-	@JoinColumn(name = "ZONE_ID", nullable = false)
-	private Zone zone;
-	

@@ -1,0 +1,5 @@
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}

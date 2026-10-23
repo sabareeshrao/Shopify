@@ -1,0 +1,6 @@
+	public String getSubTotal() {
+		return subTotal;
+	}
+	public boolean isProductVirtual() {
+		return productVirtual;
+	}

@@ -1,8 +1,0 @@
-		
-		ReadableProductPopulator populator = new ReadableProductPopulator();
-		populator.setPricingService(pricingService);
-		populator.setimageUtils(imageUtils);
-
-		ReadableProductList productList = new ReadableProductList();
-		for (Product product : products) {
-

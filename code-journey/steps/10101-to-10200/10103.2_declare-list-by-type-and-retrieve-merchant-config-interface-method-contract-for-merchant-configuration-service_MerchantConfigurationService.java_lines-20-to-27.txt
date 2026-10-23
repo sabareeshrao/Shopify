@@ -1,8 +1,0 @@
-			throws ServiceException;
-
-	List<MerchantConfiguration> listByType(MerchantConfigurationType type,
-			MerchantStore store) throws ServiceException;
-
-	MerchantConfig getMerchantConfig(MerchantStore store)
-			throws ServiceException;
-

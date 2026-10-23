@@ -1,8 +1,0 @@
-	public void setDateAvailable(String dateAvailable) {
-		this.dateAvailable = dateAvailable;
-	}
-	public String getIdentifier() {
-		return identifier;
-	}
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;

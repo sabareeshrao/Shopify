@@ -1,0 +1,85 @@
+	private static final String PATH = "classpath:/reference/zones/*.json";
+
+	private static final String ALL_REGIONS = "*";
+
+	//
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List<Map<String, Zone>> loadIndividualZones() throws Exception {
+
+		List<Map<String, Zone>> loadedZones = new ArrayList<Map<String, Zone>>();
+		try {
+
+			List<Resource> files = geZoneFiles(PATH);
+			List<Language> languages = languageService.list();
+
+			ObjectMapper mapper = new ObjectMapper();
+
+			List<Country> countries = countryService.list();
+			Map<String, Country> countriesMap = new HashMap<String, Country>();
+			for (Country country : countries) {
+				countriesMap.put(country.getIsoCode(), country);
+			}
+
+			Map<String, Zone> zonesMap = new LinkedHashMap<String, Zone>();
+			Map<String, List<ZoneDescription>> zonesDescriptionsMap = new LinkedHashMap<String, List<ZoneDescription>>();
+			Map<String, String> zonesMark = new LinkedHashMap<String, String>();
+
+			// load files individually
+			for (Resource resource : files) {
+				InputStream in = resource.getInputStream();
+				if(in == null) {
+					continue;
+				}
+				Map<String, Object> data = mapper.readValue(in, Map.class);
+				
+				if(resource.getFilename().contains("_")) {
+					for (Language l : languages) {
+						if (resource.getFilename().contains("_" + l.getCode())) {// lead for this
+							// language
+							List langList = (List) data.get(l.getCode());
+							if (langList != null) {
+								/**
+								 * submethod
+								 */
+								for (Object z : langList) {
+									Map<String, String> e = (Map<String, String>) z;
+									mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
+								}
+							}
+						}
+					}
+				} else {
+					List langList = (List) data.get(ALL_REGIONS);
+					if (langList != null) {
+						/**
+						 * submethod
+						 */
+						for (Language l : languages) {
+							for (Object z : langList) {
+								Map<String, String> e = (Map<String, String>) z;
+								mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
+							}
+						}
+					}
+				}
+				
+				for (Map.Entry<String, Zone> entry : zonesMap.entrySet()) {
+					String key = entry.getKey();
+					Zone value = entry.getValue();
+
+					// get descriptions
+					List<ZoneDescription> descriptions = zonesDescriptionsMap.get(key);
+					if (descriptions != null) {
+						value.setDescriptons(descriptions);
+					}
+				}
+
+				loadedZones.add(zonesMap);
+			}
+			return loadedZones;
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

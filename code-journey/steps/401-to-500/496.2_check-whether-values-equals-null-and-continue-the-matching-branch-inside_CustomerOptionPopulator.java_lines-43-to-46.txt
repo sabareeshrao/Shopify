@@ -1,0 +1,4 @@
+		if(values==null) {
+			values = new ArrayList<CustomerOptionValue>();
+			customerOption.setAvailableValues(values);
+		}

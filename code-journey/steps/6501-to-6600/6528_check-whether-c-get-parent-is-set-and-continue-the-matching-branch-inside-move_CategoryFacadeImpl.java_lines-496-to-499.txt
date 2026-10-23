@@ -1,4 +1,0 @@
-
-			if (c.getParent() != null && c.getParent().getId() == parent) {
-				return;
-			}

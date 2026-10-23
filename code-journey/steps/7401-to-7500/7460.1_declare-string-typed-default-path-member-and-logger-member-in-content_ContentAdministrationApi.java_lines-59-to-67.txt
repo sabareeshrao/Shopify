@@ -1,0 +1,9 @@
+	private static final String DEFAULT_PATH = "/";
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContentAdministrationApi.class);
+
+	@Inject
+	private ContentFacade contentFacade;
+	
+	@Autowired
+	private FileNameUtils fileNameUtils;

@@ -1,4 +1,0 @@
-			customer = customerFacade.getCustomerByUserName(principal.getName(), merchantStore);
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("Exception while getting customer [ " + principal.getName() + "]");
-		}

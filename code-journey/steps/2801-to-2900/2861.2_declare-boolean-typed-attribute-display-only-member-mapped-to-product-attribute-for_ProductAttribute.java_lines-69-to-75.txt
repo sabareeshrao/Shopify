@@ -1,0 +1,7 @@
+	
+	/**
+	 * a read only attribute is considered as a core attribute addition
+	 */
+	@Column(name="PRODUCT_ATTRIBUTE_FOR_DISP")
+	private boolean attributeDisplayOnly=false;
+	

@@ -1,8 +1,0 @@
-			String value  = mapper.writeValueAsString(countryCodes);
-			
-			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(SUPPORTED_COUNTRIES, store);
-			
-			if(configuration==null) {
-				configuration = new MerchantConfiguration();
-				configuration.
-				setKey(SUPPORTED_COUNTRIES);

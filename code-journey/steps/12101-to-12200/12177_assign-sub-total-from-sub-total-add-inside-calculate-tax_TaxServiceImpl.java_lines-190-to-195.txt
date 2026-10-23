@@ -1,6 +1,0 @@
-					
-				subTotal = subTotal.add(itemPrice);
-				taxClassAmountMap.put(taxClass.getId(), subTotal);
-				taxClasses.put(taxClass.getId(), taxClass);
-				
-		}

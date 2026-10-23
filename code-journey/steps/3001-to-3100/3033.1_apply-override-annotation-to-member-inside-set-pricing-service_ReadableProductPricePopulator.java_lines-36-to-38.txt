@@ -1,0 +1,3 @@
+	@Override
+	public ReadableProductPrice populate(ProductPrice source,
+			ReadableProductPrice target, MerchantStore store, Language language)

@@ -1,8 +1,0 @@
-	public UserDetails loadUserByUsername(String userName)
-			throws UsernameNotFoundException, DataAccessException {
-
-		com.salesmanager.core.model.user.User user = null;
-		Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		
-		try {
-

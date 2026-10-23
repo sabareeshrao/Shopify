@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger( ODSInvoiceModule.class );
-	
-	@Inject
-	private ZoneService zoneService;
-	
-	@Inject
-	private CountryService countryService;
-	

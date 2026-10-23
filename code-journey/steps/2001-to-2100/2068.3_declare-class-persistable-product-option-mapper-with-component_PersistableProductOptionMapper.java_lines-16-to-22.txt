@@ -1,0 +1,7 @@
+
+@Component
+public class PersistableProductOptionMapper implements Mapper<PersistableProductOptionEntity, ProductOption> {
+
+  @Autowired
+  private LanguageService languageService;
+

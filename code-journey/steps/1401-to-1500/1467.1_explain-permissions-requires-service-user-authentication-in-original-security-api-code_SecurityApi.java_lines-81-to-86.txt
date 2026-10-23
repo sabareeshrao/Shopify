@@ -1,0 +1,6 @@
+
+	/**
+	 * Permissions Requires service user authentication
+	 * 
+	 * @return
+	 */

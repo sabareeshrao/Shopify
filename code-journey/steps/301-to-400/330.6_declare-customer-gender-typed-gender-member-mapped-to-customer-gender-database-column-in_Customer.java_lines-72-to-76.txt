@@ -1,0 +1,5 @@
+	
+	@Column(name="CUSTOMER_GENDER", length=1, nullable=true)
+	@Enumerated(value = EnumType.STRING)
+	private CustomerGender gender;
+

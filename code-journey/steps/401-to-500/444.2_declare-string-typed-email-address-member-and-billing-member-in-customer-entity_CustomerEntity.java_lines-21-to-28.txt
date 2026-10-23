@@ -1,0 +1,8 @@
+
+	@ApiModelProperty(notes = "Customer email address. Required for registration")
+	@Email (message="{messages.invalid.email}")
+    @NotEmpty(message="{NotEmpty.customer.emailAddress}")
+	private String emailAddress;
+	@Valid
+	@ApiModelProperty(notes = "Customer billing address")
+	private Address billing;

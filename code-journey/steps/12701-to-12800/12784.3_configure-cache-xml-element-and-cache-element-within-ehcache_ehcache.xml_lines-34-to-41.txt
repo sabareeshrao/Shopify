@@ -1,8 +1,0 @@
-    	overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
-    	
-     <cache name="zoneByCode" maxElementsInMemory="800" eternal="false"
-    	overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
-    	
-     <cache name="languageByCode" maxElementsInMemory="50" eternal="false"
-    	overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
-

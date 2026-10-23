@@ -1,5 +1,0 @@
-				Constants.GROUP_SHIPPING, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
-
-		shippingFacade.saveShippingOrigin(address, merchantStore);
-
-	}

@@ -1,0 +1,5 @@
+public class ProductFileManagerImpl extends ProductFileManager {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProductFileManagerImpl.class);
+
+

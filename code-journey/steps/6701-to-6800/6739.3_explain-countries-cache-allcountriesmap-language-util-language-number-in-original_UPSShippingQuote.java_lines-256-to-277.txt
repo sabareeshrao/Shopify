@@ -1,0 +1,22 @@
+
+			/**Map countriesMap = (Map) RefCache.getAllcountriesmap(LanguageUtil
+					.getLanguageNumberCode(locale.getLanguage()));
+			Map zonesMap = (Map) RefCache.getAllZonesmap(LanguageUtil
+					.getLanguageNumberCode(locale.getLanguage()));
+
+			Country storeCountry = (Country) countriesMap.get(store
+					.getCountry());
+
+			Country customerCountry = (Country) countriesMap.get(customer
+					.getCustomerCountryId());
+
+			int sZone = -1;
+			try {
+				sZone = Integer.parseInt(store.getZone());
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+
+			Zone storeZone = (Zone) zonesMap.get(sZone);
+			Zone customerZone = (Zone) zonesMap.get(customer
+					.getCustomerZoneId());**/

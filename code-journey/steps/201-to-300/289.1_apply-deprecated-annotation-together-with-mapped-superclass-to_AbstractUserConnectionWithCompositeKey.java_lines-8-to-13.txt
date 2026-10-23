@@ -1,0 +1,6 @@
+import com.salesmanager.core.constants.SchemaConstant;
+
+@Deprecated
+@MappedSuperclass
+@Table(name="USERCONNECTION", uniqueConstraints = { @UniqueConstraint(columnNames = { "userId",
+		"providerId", "userRank" }) })

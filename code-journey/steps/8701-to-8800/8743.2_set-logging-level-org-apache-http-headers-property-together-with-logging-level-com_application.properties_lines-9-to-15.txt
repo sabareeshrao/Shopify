@@ -1,0 +1,7 @@
+logging.level.org.apache.http.headers=ERROR
+logging.level.org.apache.http.client=ERROR
+logging.level.org.apache.http.impl=ERROR
+logging.level.org.apache.http.wire=ERROR
+logging.level.com.salesmanager=ERROR
+
+#default database schema

@@ -1,3 +1,0 @@
-				
-				cache.putInCache(countries, "COUNTRIES_" + language.getCode());
-			}

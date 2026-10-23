@@ -1,0 +1,35 @@
+	{
+		"zoneCode": "MH",
+		"zoneName": "Marshall Islands",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MD",
+		"zoneName": "Maryland",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MA",
+		"zoneName": "Massachusetts",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MI",
+		"zoneName": "Michigan",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MN",
+		"zoneName": "Minnesota",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MS",
+		"zoneName": "Mississippi",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MO",
+		"zoneName": "Missouri",
+		"countryCode": "US"
+	},

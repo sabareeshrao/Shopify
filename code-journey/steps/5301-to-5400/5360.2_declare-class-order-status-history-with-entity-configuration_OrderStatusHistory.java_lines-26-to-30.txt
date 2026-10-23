@@ -1,0 +1,5 @@
+
+@Entity
+@Table (name="ORDER_STATUS_HISTORY" )
+public class OrderStatusHistory implements Serializable {
+	private static final long serialVersionUID = 3438730310126102187L;

@@ -1,0 +1,4 @@
+	private static final String ROOT_CONTAINER = "files";
+
+	private String rootName = ROOT_NAME;
+

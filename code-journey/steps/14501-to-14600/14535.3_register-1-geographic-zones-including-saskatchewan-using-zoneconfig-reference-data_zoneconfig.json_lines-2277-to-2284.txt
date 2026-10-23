@@ -1,8 +1,0 @@
-			"countryCode": "CA"
-		},
-		{
-			"zoneCode": "SK",
-			"zoneName": "Saskatchewan",
-			"countryCode": "CA"
-		},
-		{

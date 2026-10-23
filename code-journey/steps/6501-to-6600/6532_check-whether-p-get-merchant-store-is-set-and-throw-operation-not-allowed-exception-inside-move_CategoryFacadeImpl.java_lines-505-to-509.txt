@@ -1,5 +1,0 @@
-
-			if (p.getMerchantStore().getId().intValue() != store.getId().intValue()) {
-				throw new OperationNotAllowedException(
-						"Invalid identifiers for Merchant [" + c.getMerchantStore().getCode() + "]");
-			}

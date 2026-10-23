@@ -1,8 +1,0 @@
-
-			/**
-			 * Build return object for now this is a read copy
-			 */
-
-			integrationConfiguration.setActive(configuration.isActive());
-			integrationConfiguration.setDefaultSelected(configuration.isDefaultSelected());
-			integrationConfiguration.setIntegrationKeys(configuration.getIntegrationKeys());

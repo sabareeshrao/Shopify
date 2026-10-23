@@ -1,8 +1,0 @@
-		    	   StringBuilder shipping = null;
-		    	   if(order.getDelivery()!=null && !StringUtils.isBlank(order.getDelivery().getFirstName())) {
-		    		   shipping = new StringBuilder();
-			    	   if(StringUtils.isBlank(order.getDelivery().getCompany())) {
-			    		   shipping.append(order.getDelivery().getFirstName()).append(" ")
-			    		   .append(order.getDelivery().getLastName()).append(LINE_BREAK);
-			    	   } else {
-			    		   shipping.append(order.getDelivery().getCompany()).append(LINE_BREAK);

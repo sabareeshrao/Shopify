@@ -1,8 +1,0 @@
-	@Column(name = "SKU", nullable = true)
-	private String sku;
-
-	@Embedded
-	private ProductDimensions dimensions;
-
-	@NotNull
-	@Column(name = "QUANTITY")

@@ -1,5 +1,0 @@
-    if (contentImage.getFileContentType().name().equals(FileContentType.PRODUCT.name())) {
-      sb.append(SMALL);
-    } else if (contentImage.getFileContentType().name().equals(FileContentType.PRODUCTLG.name())) {
-      sb.append(LARGE);
-    }

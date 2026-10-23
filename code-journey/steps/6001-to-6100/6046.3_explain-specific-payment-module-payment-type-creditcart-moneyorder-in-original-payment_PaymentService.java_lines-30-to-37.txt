@@ -1,0 +1,8 @@
+
+	/**
+	 * Get a specific Payment module by payment type CREDITCART, MONEYORDER ...
+	 * @param store
+	 * @param type (payment type)
+	 * @return IntegrationModule
+	 * @throws ServiceException
+	 */

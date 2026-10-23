@@ -1,0 +1,6 @@
+
+@Entity
+@Table(name = "COUNTRY")
+@Cacheable
+public class Country extends SalesManagerEntity<Integer, Country> {
+	private static final long serialVersionUID = 1L;

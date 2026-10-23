@@ -1,8 +1,0 @@
-	@Override
-	public Map<String,IntegrationConfiguration> getShippingModulesConfigured(MerchantStore store) throws ServiceException {
-		try {
-			
-
-			Map<String,IntegrationConfiguration> modules = new HashMap<String,IntegrationConfiguration>();
-			MerchantConfiguration merchantConfiguration = merchantConfigurationService.getMerchantConfiguration(SHIPPING_MODULES, store);
-			if(merchantConfiguration!=null) {

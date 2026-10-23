@@ -1,8 +1,0 @@
-	 * @return
-	 */
-	// Pricer
-	public BigDecimal getPrice(MerchantStore store, Product product, Locale locale) {
-
-		BigDecimal defaultPrice = new BigDecimal(0);
-
-		Set<ProductAvailability> availabilities = product.getAvailabilities();

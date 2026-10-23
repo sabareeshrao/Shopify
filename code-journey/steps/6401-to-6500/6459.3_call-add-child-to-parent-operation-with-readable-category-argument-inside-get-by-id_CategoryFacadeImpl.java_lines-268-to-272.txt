@@ -1,5 +1,0 @@
-			addChildToParent(readableCategory, childrenCats);
-			return readableCategory;
-
-	}
-

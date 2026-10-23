@@ -1,5 +1,0 @@
-		//determine if the system has to use BOX or ITEM
-		ShippingPackageType shippingPackageType = ShippingPackageType.ITEM;
-		if(shippingConfiguration!=null) {
-			shippingPackageType = shippingConfiguration.getShippingPackageType();
-		}

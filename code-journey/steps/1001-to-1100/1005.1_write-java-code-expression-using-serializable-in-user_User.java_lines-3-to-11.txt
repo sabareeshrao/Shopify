@@ -1,0 +1,9 @@
+import java.io.Serializable;
+
+import com.salesmanager.shop.model.entity.Entity;
+
+/**
+ * Admin users
+ * @author carlsamson
+ *
+ */

@@ -1,8 +1,0 @@
-	    musicFrenchDescription.setCategory(music);
-	    musicFrenchDescription.setLanguage(fr);
-
-	    Set<CategoryDescription> descriptions2 = new HashSet<CategoryDescription>();
-	    descriptions2.add(musicEnglishDescription);
-	    descriptions2.add(musicFrenchDescription);
-
-	    music.setDescriptions(descriptions2);

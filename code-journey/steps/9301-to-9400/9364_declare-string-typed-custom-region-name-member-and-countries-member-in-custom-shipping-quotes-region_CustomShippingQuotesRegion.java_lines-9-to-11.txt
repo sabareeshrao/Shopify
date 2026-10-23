@@ -1,3 +1,0 @@
-	private String customRegionName;//a name given by the merchant for this custom region
-	private List<String> countries;//a list of country code for this region
-	

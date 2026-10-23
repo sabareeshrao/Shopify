@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "SH",
+		"zoneName": "Schaffhausen",
+		"countryCode": "CH"
+	},

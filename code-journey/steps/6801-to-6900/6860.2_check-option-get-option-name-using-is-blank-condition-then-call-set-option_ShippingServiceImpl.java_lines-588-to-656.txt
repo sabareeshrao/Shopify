@@ -1,0 +1,69 @@
+			
+			if(shippingOptions!=null) {
+				
+				for(ShippingOption option : shippingOptions) {
+					if(selectedOption==null) {
+						selectedOption = option;
+					}
+					//set price text
+					String priceText = pricingService.getDisplayAmount(option.getOptionPrice(), store);
+					option.setOptionPriceText(priceText);
+					option.setShippingModuleCode(moduleName);
+				
+					if(StringUtils.isBlank(option.getOptionName())) {
+						
+						String countryName = delivery.getCountry().getName();
+						if(countryName == null) {
+							Map<String,Country> deliveryCountries = countryService.getCountriesMap(language);
+							Country dCountry = deliveryCountries.get(delivery.getCountry().getIsoCode());
+							if(dCountry!=null) {
+								countryName = dCountry.getName();
+							} else {
+								countryName = delivery.getCountry().getIsoCode();
+							}
+						}
+							option.setOptionName(countryName);		
+					}
+				
+					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.HIGHEST.name())) {
+
+						if (option.getOptionPrice()
+								.longValue() > selectedOption
+								.getOptionPrice()
+								.longValue()) {
+							selectedOption = option;
+						}
+					}
+
+				
+					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.LEAST.name())) {
+
+						if (option.getOptionPrice()
+								.longValue() < selectedOption
+								.getOptionPrice()
+								.longValue()) {
+							selectedOption = option;
+						}
+					}
+					
+				
+					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.ALL.name())) {
+	
+						if (option.getOptionPrice()
+								.longValue() < selectedOption
+								.getOptionPrice()
+								.longValue()) {
+							selectedOption = option;
+						}
+					}
+
+				}
+				
+				shippingQuote.setSelectedShippingOption(selectedOption);
+				
+				if(selectedOption!=null && !shippingOptionPriceType.name().equals(ShippingOptionPriceType.ALL.name())) {
+					shippingOptions = new ArrayList<ShippingOption>();
+					shippingOptions.add(selectedOption);
+				}
+
+			}

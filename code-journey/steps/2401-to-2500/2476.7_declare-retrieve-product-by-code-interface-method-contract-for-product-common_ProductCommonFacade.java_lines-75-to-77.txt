@@ -1,0 +1,3 @@
+	  ReadableProduct getProductByCode(MerchantStore store, String uniqueCode, Language language)
+	      throws Exception;
+

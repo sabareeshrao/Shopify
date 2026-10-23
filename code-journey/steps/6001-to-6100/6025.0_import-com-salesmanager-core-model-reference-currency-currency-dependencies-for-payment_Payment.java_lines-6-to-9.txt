@@ -1,0 +1,4 @@
+import com.salesmanager.core.model.reference.currency.Currency;
+
+public class Payment {
+	

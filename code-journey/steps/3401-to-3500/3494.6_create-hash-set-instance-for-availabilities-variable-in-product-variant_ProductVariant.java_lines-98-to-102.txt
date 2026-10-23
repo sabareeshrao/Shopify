@@ -1,5 +1,0 @@
-	
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="productVariant")
-	private Set<ProductAvailability> availabilities = new HashSet<ProductAvailability>();
-
-

@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "NW",
+		"zoneName": "Nidwalden",
+		"countryCode": "CH"
+	},

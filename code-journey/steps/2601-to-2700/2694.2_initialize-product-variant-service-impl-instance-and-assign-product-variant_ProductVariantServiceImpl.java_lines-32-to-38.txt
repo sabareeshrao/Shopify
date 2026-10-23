@@ -1,0 +1,7 @@
+
+	@Inject
+	public ProductVariantServiceImpl(ProductVariantRepository productVariantRepository) {
+		super(productVariantRepository);
+		this.productVariantRepository = productVariantRepository;
+	}
+

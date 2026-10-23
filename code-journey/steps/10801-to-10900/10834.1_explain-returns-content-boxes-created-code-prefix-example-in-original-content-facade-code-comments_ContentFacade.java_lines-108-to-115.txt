@@ -1,8 +1,0 @@
-	
-	/**
-	 * Returns content boxes created with code prefix
-	 * for example return boxes with code starting with <code>_
-	 * @param store
-	 * @param language
-	 * @return
-	 * @throws Exception

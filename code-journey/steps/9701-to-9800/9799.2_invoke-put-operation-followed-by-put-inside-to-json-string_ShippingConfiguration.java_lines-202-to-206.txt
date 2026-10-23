@@ -1,5 +1,0 @@
-		data.put("freeShippingEnabled", this.freeShippingEnabled);
-		data.put("orderTotalFreeShipping", this.orderTotalFreeShipping);
-		data.put("handlingFees", this.handlingFees);
-		data.put("taxOnShipping", this.taxOnShipping);
-		

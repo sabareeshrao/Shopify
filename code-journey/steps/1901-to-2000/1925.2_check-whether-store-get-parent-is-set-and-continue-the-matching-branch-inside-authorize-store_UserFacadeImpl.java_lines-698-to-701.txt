@@ -1,4 +1,0 @@
-						
-				if(store.getParent()!=null) {
-					parent=merchantStoreService.getParent(merchant);
-				}

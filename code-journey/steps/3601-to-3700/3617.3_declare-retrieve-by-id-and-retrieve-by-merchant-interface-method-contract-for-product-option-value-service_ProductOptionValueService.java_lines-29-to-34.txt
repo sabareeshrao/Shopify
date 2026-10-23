@@ -1,6 +1,0 @@
-	ProductOptionValue getById(MerchantStore store, Long optionValueId);
-	
-	Page<ProductOptionValue> getByMerchant(MerchantStore store, Language language, String name, int page, int count);
-	
-
-}

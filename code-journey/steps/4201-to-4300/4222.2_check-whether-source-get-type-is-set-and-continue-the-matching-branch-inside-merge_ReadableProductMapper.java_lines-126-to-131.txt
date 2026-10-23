@@ -1,6 +1,0 @@
-		destination.setSortOrder(source.getSortOrder());
-
-		if (source.getType() != null) {
-			ReadableProductType readableType = readableProductTypeMapper.convert(source.getType(), store, language);
-			destination.setType(readableType);
-		}

@@ -1,0 +1,8 @@
+
+	@Column (name ="CHANNEL")
+	@Enumerated(value = EnumType.STRING)
+	private OrderChannel channel;
+
+	@Column (name ="ORDER_TYPE")
+	@Enumerated(value = EnumType.STRING)
+	private OrderType orderType = OrderType.ORDER;

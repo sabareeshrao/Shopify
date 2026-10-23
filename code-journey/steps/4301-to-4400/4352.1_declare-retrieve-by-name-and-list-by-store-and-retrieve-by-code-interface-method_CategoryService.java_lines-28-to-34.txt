@@ -1,0 +1,7 @@
+	
+	List<Category> getByName(MerchantStore store, String name, Language language) throws ServiceException;
+	
+	List<Category> listByStore(MerchantStore store) throws ServiceException;
+
+	Category getByCode(MerchantStore store, String code)
+			throws ServiceException;

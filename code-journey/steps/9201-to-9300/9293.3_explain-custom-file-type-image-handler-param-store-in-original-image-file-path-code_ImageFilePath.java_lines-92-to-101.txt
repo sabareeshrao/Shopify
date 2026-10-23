@@ -1,0 +1,10 @@
+	
+	/**
+	 * A custom file type image handler
+	 * @param store
+	 * @param imageName
+	 * @param type
+	 * @return
+	 */
+	String buildCustomTypeImageUtils(MerchantStore store, String imageName, FileContentType type);
+	

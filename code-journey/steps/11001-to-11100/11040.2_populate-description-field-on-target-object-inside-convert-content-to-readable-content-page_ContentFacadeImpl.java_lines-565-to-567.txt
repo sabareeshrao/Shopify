@@ -1,3 +1,0 @@
-						.contentDescription(contentDescription.get());
-				page.setDescription(desc);
-			}

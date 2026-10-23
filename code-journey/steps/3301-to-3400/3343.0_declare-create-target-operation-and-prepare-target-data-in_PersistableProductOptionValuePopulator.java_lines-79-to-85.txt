@@ -1,0 +1,7 @@
+
+	@Override
+	protected ProductOptionValue createTarget() {
+		return null;
+	}
+
+}

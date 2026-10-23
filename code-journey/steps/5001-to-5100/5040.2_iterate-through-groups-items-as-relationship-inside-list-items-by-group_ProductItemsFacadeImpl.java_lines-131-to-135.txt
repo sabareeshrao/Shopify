@@ -1,5 +1,0 @@
-			List<Long> ids = new ArrayList<Long>();
-			for(ProductRelationship relationship : groups) {
-				Product product = relationship.getRelatedProduct();
-				ids.add(product.getId());
-			}

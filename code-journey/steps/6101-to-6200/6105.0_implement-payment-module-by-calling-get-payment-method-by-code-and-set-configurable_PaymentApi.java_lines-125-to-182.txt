@@ -1,0 +1,58 @@
+
+	/**
+	 * Get merchant payment module details
+	 * 
+	 * @param code
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/payment/{code}")
+	@ApiOperation(httpMethod = "GET", value = "Payment module by code", produces = "application/json", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public IntegrationModuleConfiguration paymentModule(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		try {
+			
+			// get module
+			IntegrationModule integrationModule = paymentService.getPaymentMethodByCode(merchantStore, code);
+			if (integrationModule == null) {
+				throw new ResourceNotFoundException("Payment module [" + code + "] not found");
+			}
+			
+			IntegrationModuleConfiguration returnConfig = new IntegrationModuleConfiguration();
+			returnConfig.setConfigurable(integrationModule.getConfigurable());
+			returnConfig.setActive(false);
+			returnConfig.setDefaultSelected(false);
+			returnConfig.setCode(code);
+			
+			
+
+			// configured modules
+			IntegrationConfiguration config = paymentService.getPaymentConfiguration(code, merchantStore);
+			
+			if(config == null) {
+				return returnConfig;
+			}
+
+
+			/**
+			 * Build return object for now this is a read copy
+			 */
+
+			
+			returnConfig.setActive(config.isActive());
+			returnConfig.setDefaultSelected(config.isDefaultSelected());
+			returnConfig.setCode(code);
+			returnConfig.setIntegrationKeys(config.getIntegrationKeys());
+			returnConfig.setIntegrationOptions(config.getIntegrationOptions());
+
+			return returnConfig;
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error getting payment module [" + code + "]", e);
+			throw new ServiceRuntimeException("Error getting payment module [" + code + "]", e);
+		}
+
+	}

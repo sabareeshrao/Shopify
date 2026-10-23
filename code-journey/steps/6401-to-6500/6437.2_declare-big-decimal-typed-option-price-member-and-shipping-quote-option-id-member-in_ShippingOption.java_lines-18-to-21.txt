@@ -1,0 +1,4 @@
+	private BigDecimal optionPrice;
+	private Long shippingQuoteOptionId;
+
+

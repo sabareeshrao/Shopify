@@ -1,8 +1,0 @@
-	@Override
-	public List<Product> getProductsListByCategories(Set<Long> categoryIds, Language language) {
-
-		// List regionList = new ArrayList();
-		// regionList.add("*");
-		// regionList.add(locale.getCountry());
-
-		// TODO Test performance

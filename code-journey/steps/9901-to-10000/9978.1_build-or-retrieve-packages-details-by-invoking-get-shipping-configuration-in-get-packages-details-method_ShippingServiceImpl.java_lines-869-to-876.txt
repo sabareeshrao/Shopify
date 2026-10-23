@@ -1,8 +1,0 @@
-	@Override
-	public List<PackageDetails> getPackagesDetails(
-			List<ShippingProduct> products, MerchantStore store)
-			throws ServiceException {
-		
-		List<PackageDetails> packages = null;
-		
-		ShippingConfiguration shippingConfiguration = this.getShippingConfiguration(store);

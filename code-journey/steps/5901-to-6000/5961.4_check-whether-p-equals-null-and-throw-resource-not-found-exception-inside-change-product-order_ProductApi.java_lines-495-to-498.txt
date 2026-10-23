@@ -1,4 +1,0 @@
-			if (p == null) {
-				throw new ResourceNotFoundException(
-						"Product [" + id + "] not found for merchant [" + merchantStore.getCode() + "]");
-			}

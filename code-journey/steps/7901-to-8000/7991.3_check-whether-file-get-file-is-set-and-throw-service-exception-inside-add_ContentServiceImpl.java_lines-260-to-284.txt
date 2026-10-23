@@ -1,0 +1,25 @@
+			throws ServiceException {
+
+		Assert.notNull(merchantStoreCode, "Merchant store ID can not be null");
+		Assert.notEmpty(contentFilesList, "File list can not be empty");
+		LOG.info("Adding total {} images for given merchant", contentFilesList.size());
+
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+
+		LOG.info("Adding content images for merchant....");
+		contentFileManager.addFiles(merchantStoreCode, path, contentFilesList);
+		// staticContentFileManager.addFiles(merchantStoreCode,
+		// contentFilesList);
+
+		try {
+			for (InputContentFile file : contentFilesList) {
+				if (file.getFile() != null) {
+					file.getFile().close();
+				}
+			}
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

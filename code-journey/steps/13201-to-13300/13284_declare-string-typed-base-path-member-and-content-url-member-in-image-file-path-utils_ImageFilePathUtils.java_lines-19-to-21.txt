@@ -1,3 +1,0 @@
-	private String basePath = Constants.STATIC_URI;
-	private String contentUrl = null;
-

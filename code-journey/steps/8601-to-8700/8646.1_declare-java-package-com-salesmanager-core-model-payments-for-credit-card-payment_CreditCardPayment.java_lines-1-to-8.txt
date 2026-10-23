@@ -1,8 +1,0 @@
-package com.salesmanager.core.model.payments;
-
-/**
- * When the user performs a payment using a credit card
- * @author Carl Samson
- *
- */
-public class CreditCardPayment extends Payment {

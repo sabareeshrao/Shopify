@@ -1,4 +1,0 @@
-        
-        if(StringUtils.isNotBlank( source.getDelivery().getCompany() )){
-            target.setCompany(source.getDelivery().getCompany());
-        }

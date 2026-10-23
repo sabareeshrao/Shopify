@@ -1,0 +1,21 @@
+
+	@Deprecated
+	private ReadableContentEntity convertContentToReadableContentEntity(MerchantStore store, Language language,
+			Content content) {
+
+		ReadableContentEntity contentEntity = new ReadableContentEntity();
+
+		ContentDescriptionEntity description = this.create(content.getDescription());
+
+		contentEntity.setDescription(description);
+		contentEntity.setId(content.getId());
+		contentEntity.setDisplayedInMenu(content.isLinkToMenu());
+		contentEntity.setContentType(content.getContentType().name());
+		contentEntity.setCode(content.getCode());
+		contentEntity.setId(content.getId());
+		contentEntity.setVisible(content.isVisible());
+
+		return contentEntity;
+
+	}
+

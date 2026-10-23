@@ -1,0 +1,10 @@
+
+@Entity
+@Table(name = "PRODUCT_AVAILABILITY",
+uniqueConstraints= @UniqueConstraint(columnNames = {"MERCHANT_ID", "PRODUCT_ID", "PRODUCT_VARIANT", "REGION_VARIANT"}),
+indexes = 
+	{ 
+		@Index(name="PRD_AVAIL_STORE_PRD_IDX", columnList = "PRODUCT_ID,MERCHANT_ID"),
+		@Index(name="PRD_AVAIL_PRD_IDX", columnList = "PRODUCT_ID")
+	}
+)

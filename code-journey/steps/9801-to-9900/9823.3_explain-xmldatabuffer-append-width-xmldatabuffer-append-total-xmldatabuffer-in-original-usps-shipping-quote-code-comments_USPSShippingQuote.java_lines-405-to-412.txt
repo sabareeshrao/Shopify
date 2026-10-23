@@ -1,8 +1,0 @@
-			/*
-			 * xmldatabuffer.append("<Width>"); xmldatabuffer.append(totalW);
-			 * xmldatabuffer.append("</Width>");
-			 * xmldatabuffer.append("<Length>"); xmldatabuffer.append(totalL);
-			 * xmldatabuffer.append("</Length>");
-			 * xmldatabuffer.append("<Height>"); xmldatabuffer.append(totalH);
-			 * xmldatabuffer.append("</Height>");
-			 * xmldatabuffer.append("<Girth>"); xmldatabuffer.append(totalG);

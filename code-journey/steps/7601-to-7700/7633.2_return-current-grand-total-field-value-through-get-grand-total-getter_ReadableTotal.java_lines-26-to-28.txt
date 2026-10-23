@@ -1,3 +1,0 @@
-	public String getGrandTotal() {
-		return grandTotal;
-	}

@@ -1,7 +1,0 @@
-			int firstResult = ((criteria.getStartPage()==0?0:criteria.getStartPage())) * criteria.getPageSize();
-			q.setFirstResult(firstResult);
-			q.setMaxResults(criteria.getPageSize());
-			int lastPageNumber = (count.intValue() / criteria.getPageSize()) + 1;
-			entityList.setTotalPages(lastPageNumber);
-			entityList.setTotalCount(count.intValue());
-		}

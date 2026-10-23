@@ -1,0 +1,19 @@
+	@Override
+	public void removeProductImage(ProductImage productImage) throws ServiceException {
+
+		if (!StringUtils.isBlank(productImage.getProductImage())) {
+			productFileManager.removeProductImage(productImage);// managed internally
+		}
+		ProductImage p = getById(productImage.getId());
+		
+		Product product = p.getProduct();
+		
+		
+		delete(p);
+		/**
+		 * workaround for aspect
+		 */
+		eventPublisher.publishEvent(new DeleteProductImageEvent(eventPublisher, p, product));
+
+
+	}

@@ -1,8 +1,0 @@
-	private Content convertContentPageToContent(MerchantStore store, Content model, PersistableContentPage content) throws Exception {
-		
-		
-		
-		Content contentModel = new Content();
-		if(model != null) {
-			contentModel = model;
-		}

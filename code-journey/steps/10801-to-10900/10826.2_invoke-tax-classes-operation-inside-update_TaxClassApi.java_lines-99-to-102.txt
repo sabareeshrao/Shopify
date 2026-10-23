@@ -1,4 +1,0 @@
-		return taxFacade.taxClasses(merchantStore, language);
-
-	}
-	

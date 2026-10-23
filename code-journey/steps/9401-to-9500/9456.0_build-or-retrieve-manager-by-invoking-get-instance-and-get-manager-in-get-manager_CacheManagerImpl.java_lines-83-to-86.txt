@@ -1,0 +1,4 @@
+
+  public EmbeddedCacheManager getManager() {
+    return VendorCacheManager.getInstance().getManager();
+  }

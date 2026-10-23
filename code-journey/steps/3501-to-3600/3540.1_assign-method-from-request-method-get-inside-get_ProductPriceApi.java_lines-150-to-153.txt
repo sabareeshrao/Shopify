@@ -1,0 +1,4 @@
+	
+	
+	@RequestMapping(value = { "/private/product/{sku}/prices"},
+			method = RequestMethod.GET)

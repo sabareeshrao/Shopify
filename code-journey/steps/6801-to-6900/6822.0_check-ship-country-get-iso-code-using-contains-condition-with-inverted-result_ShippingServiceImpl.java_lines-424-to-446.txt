@@ -1,0 +1,23 @@
+
+			//look if customer country code excluded
+			Country shipCountry = delivery.getCountry();
+			
+			//a ship to country is required
+			Validate.notNull(shipCountry,"Ship to Country cannot be null");
+			Validate.notNull(store.getCountry(), "Store Country canot be null");
+			
+			if(shippingType.name().equals(ShippingType.NATIONAL.name())){
+				//customer country must match store country
+				if(!shipCountry.getIsoCode().equals(store.getCountry().getIsoCode())) {
+					shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_TO_SELECTED_COUNTRY + " " + shipCountry.getIsoCode());
+					return shippingQuote;
+				}
+			} else if(shippingType.name().equals(ShippingType.INTERNATIONAL.name())){
+				
+				//customer shipping country code must be in accepted list
+				List<String> supportedCountries = this.getSupportedCountries(store);
+				if(!supportedCountries.contains(shipCountry.getIsoCode())) {
+					shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_TO_SELECTED_COUNTRY + " " + shipCountry.getIsoCode());
+					return shippingQuote;
+				}
+			}

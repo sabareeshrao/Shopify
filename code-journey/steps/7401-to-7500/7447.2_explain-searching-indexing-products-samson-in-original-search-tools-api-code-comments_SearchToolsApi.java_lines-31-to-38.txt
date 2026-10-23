@@ -1,0 +1,8 @@
+
+/**
+ * Searching and indexing products
+ * 
+ * @author c.samson
+ *
+ */
+

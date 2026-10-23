@@ -1,8 +1,0 @@
-public abstract class ReadableList implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private int totalPages;//totalPages
-	private int number;//number of record in current page

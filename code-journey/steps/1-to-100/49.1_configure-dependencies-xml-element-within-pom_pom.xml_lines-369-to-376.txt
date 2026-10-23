@@ -1,8 +1,0 @@
-
-		</dependencies>
-
-	</dependencyManagement>
-
-	<!--general dependencies -->
-	<dependencies>
-

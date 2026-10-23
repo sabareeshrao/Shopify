@@ -1,8 +1,0 @@
-		"zoneCode": "ArunachalPradesh",
-		"zoneName": "Arunachal Pradesh",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "Assam",
-		"zoneName": "Assam",
-		"countryCode": "IN"

@@ -1,4 +1,0 @@
-      criteria.setCriteriaOrderByField(overwriteField);
-      criteria.setOrderBy(
-          CriteriaOrderBy.valueOf(request.getParameter("order[0][dir]").toUpperCase()));
-    }

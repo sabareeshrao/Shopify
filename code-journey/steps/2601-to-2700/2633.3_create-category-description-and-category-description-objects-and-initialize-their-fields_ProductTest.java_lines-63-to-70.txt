@@ -1,0 +1,8 @@
+
+	    CategoryDescription bookEnglishDescription = new CategoryDescription();
+	    bookEnglishDescription.setName("Book");
+	    bookEnglishDescription.setCategory(book);
+	    bookEnglishDescription.setLanguage(en);
+
+	    CategoryDescription bookFrenchDescription = new CategoryDescription();
+	    bookFrenchDescription.setName("Livre");

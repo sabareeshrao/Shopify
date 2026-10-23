@@ -1,0 +1,33 @@
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void addFolder(String merchantStoreCode, String folderName, Optional<String> path) throws ServiceException {
+		
+		
+		String nodePath = this.getNodePath(merchantStoreCode, FileContentType.IMAGE);
+		
+		StringBuilder appender = new StringBuilder();
+		appender.append(nodePath).append(Constants.SLASH);
+
+		path.ifPresent(appender::append);
+		
+		
+		//Put logic in a method
+		
+		Fqn folderFqn = Fqn.fromString(appender.toString());
+
+		Node<String, Object> nd = cacheManager.getTreeCache().getRoot().getChild(folderFqn);
+
+		if (nd == null) {
+
+			cacheManager.getTreeCache().getRoot().addChild(folderFqn);
+			nd = cacheManager.getTreeCache().getRoot().getChild(folderFqn);
+
+		}
+		
+		appender.append(Constants.SLASH).append(folderName);
+		
+		Fqn newFolderFqn = Fqn.fromString(appender.toString());
+		cacheManager.getTreeCache().getRoot().addChild(newFolderFqn);
+
+	}

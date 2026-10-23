@@ -1,0 +1,6 @@
+
+/**
+ * Populates MerchantStore core entity model object with more complete details than the traditional ReadableMerchantStorePopulator
+ * @author rui pereira
+ *
+ */

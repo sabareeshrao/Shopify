@@ -1,8 +1,0 @@
-	public void setTransactionType(String transactionType) {
-		this.transactionType = transactionType;
-	}
-	public String getPaymentToken() {
-		return paymentToken;
-	}
-	public void setPaymentToken(String paymentToken) {
-		this.paymentToken = paymentToken;

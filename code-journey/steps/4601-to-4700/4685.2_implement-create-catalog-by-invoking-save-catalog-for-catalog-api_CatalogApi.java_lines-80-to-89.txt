@@ -1,0 +1,10 @@
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")})
+  public ReadableCatalog createCatalog(
+      @RequestBody @Valid PersistableCatalog catalog,
+      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+	  return catalogFacade.saveCatalog(catalog, merchantStore, language);
+
+  }

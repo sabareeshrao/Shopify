@@ -1,3 +1,0 @@
-	private boolean available;
-	private boolean visible = true;
-

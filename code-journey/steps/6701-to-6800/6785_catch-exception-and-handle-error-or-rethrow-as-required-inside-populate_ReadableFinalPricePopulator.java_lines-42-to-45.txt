@@ -1,4 +1,0 @@
-			
-		} catch(Exception e) {
-			throw new ConversionException("Exception while converting to ReadableProductPrice",e);
-		}

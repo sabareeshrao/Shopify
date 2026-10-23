@@ -1,8 +1,0 @@
-    
-    
-    target.setActive(source.isActive());
-    
-    Language lang = null;
-    try {
-      lang = languageService.getByCode(source.getDefaultLanguage());
-    } catch(Exception e) {

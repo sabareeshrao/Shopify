@@ -1,0 +1,7 @@
+				if(billingZone!=null) {
+						billToProvince.append(billingZone.getName());
+				}
+				
+			} else {
+				if(!StringUtils.isBlank(order.getBilling().getState())) {
+					billToProvince = new StringBuilder();

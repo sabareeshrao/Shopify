@@ -1,9 +1,0 @@
-	@Override
-	public ReadableProduct updateProductPrice(ReadableProduct product, ProductPriceEntity price, Language language)
-			throws Exception {
-
-		Product persistable = productService.getById(product.getId());
-
-		if (persistable == null) {
-			throw new Exception("product is null for id " + product.getId());
-		}

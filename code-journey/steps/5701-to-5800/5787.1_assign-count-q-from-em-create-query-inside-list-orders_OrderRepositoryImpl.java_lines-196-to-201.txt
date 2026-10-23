@@ -1,0 +1,6 @@
+	
+		objectBuilderWhere.append(orderByCriteria);
+
+		//count query
+		Query countQ = em.createQuery(
+				countBuilderSelect.toString());

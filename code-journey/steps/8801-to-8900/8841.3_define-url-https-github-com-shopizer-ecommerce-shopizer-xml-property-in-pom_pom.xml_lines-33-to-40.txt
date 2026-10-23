@@ -1,0 +1,8 @@
+
+  <scm>
+    <connection>scm:git:git://github.com:shopizer-ecommerce/shopizer-sm-core-modules.git
+    </connection>
+    <developerConnection>scm:git:ssh://github.com:shopizer-ecommerce/shopizer-sm-core-modules.git
+    </developerConnection>
+    <url>https://github.com/shopizer-ecommerce/shopizer-sm-core-modules</url>
+  </scm>

@@ -1,8 +1,0 @@
-		return readablePermissions;
-	}
-
-	/**
-	 * Load groups Requires service user authentication
-	 * 
-	 * @return
-	 */

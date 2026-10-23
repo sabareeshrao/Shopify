@@ -1,0 +1,5 @@
+	<beans:bean id="infinispanStaticAssetsManager" 
+		class="com.salesmanager.core.business.modules.cms.impl.StaticContentCacheManagerImpl" >
+		<beans:constructor-arg value="${config.cms.files.location}"/><!-- location -->
+		<beans:constructor-arg value="store-merchant"/><!-- root -->
+	</beans:bean>

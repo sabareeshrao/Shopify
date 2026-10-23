@@ -1,4 +1,0 @@
-	private Long productId;
-	private Long variant;
-	private List<PersistableProductPrice> prices;
-

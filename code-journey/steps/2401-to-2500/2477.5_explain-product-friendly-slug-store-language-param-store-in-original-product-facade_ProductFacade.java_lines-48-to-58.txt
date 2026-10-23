@@ -1,0 +1,11 @@
+
+  /**
+   * Get a Product by friendlyUrl (slug), store and language
+   *
+   * @param store
+   * @param friendlyUrl
+   * @param language
+   * @return
+   * @throws Exception
+   */
+  ReadableProduct getProductBySeUrl(MerchantStore store, String friendlyUrl, Language language) throws Exception;

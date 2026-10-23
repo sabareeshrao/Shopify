@@ -1,8 +1,0 @@
-	private Set<ShoppingCartAttributeItem> attributes = new HashSet<ShoppingCartAttributeItem>();
-	
-	@Column(name="PRODUCT_VARIANT", nullable=true)
-	private Long variant;
-
-	@JsonIgnore
-	@Transient
-	private BigDecimal itemPrice;//item final price including all rebates

@@ -1,8 +1,0 @@
-
-		/**
-		 * Check if product quantity is 0 Check if product is available Check if date
-		 * available <= now
-		 */
-
-		// use a mapper
-		com.salesmanager.core.model.shoppingcart.ShoppingCartItem item = shoppingCartService

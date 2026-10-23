@@ -1,8 +1,0 @@
-										}
-									}
-								}
-								attrValue.setName(podescription.getName());
-								attrValue.setDescription(podescription.getDescription());
-
-								if(attr!=null) {
-									attr.getAttributeValues().add(attrValue);

@@ -1,0 +1,13 @@
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.common.description.Description;
+import com.salesmanager.core.model.reference.language.Language;
+
+@Entity
+@Table(name="ZONE_DESCRIPTION", uniqueConstraints={
+		@UniqueConstraint(columnNames={
+			"ZONE_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

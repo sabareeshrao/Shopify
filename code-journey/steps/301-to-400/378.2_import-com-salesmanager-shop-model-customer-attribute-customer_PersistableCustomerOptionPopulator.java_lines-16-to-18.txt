@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.customer.attribute.CustomerOptionDescription;
+import com.salesmanager.shop.model.customer.attribute.PersistableCustomerOption;
+

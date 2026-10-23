@@ -1,0 +1,6 @@
+	
+	@Column(name="PRODUCT_OPT_VAL_IMAGE")
+	private String productOptionValueImage;
+	
+	@Column(name="PRODUCT_OPT_FOR_DISP")
+	private boolean productOptionDisplayOnly=false;

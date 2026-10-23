@@ -1,3 +1,0 @@
-			LOGGER.error("Error while deleting content image for {} merchant ", merchantStoreCode);
-			throw new ServiceException(e);
-		}

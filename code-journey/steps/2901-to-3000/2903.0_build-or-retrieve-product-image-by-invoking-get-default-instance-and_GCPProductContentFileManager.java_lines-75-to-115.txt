@@ -1,0 +1,41 @@
+  @Override
+  public OutputContentFile getProductImage(String merchantStoreCode, String productCode,
+      String imageName, ProductImageSize size) throws ServiceException {
+    InputStream inputStream = null;
+    try {
+      Storage storage = StorageOptions.getDefaultInstance().getService();
+      
+      String bucketName = bucketName();
+      
+      if(!this.bucketExists(storage, bucketName)) {
+        return null;
+      }
+
+      Blob blob = storage.get(BlobId.of(bucketName, filePath(merchantStoreCode,productCode, size.name(), imageName)));
+
+      ReadChannel reader = blob.reader();
+      
+      inputStream = Channels.newInputStream(reader);
+      ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+      IOUtils.copy(inputStream, outputStream);
+      OutputContentFile ct = new OutputContentFile();
+      ct.setFile(outputStream);
+      ct.setFileName(blob.getName());
+
+      
+
+      return ct;
+    } catch (final Exception e) {
+      LOGGER.error("Error while getting files", e);
+      throw new ServiceException(e);
+  
+    } finally {
+      if(inputStream!=null) {
+        try {
+          inputStream.close();
+        } catch(Exception ignore) {}
+      }
+      
+    }
+  
+  }

@@ -1,8 +1,0 @@
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language,
-      HttpServletResponse response) {
-
-    try {
-      ProductReview prodReview = productReviewService.getById(reviewId);
-      if (prodReview == null) {
-        response.sendError(404, "Product review with id " + reviewId + " does not exist");

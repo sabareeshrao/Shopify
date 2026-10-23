@@ -1,8 +1,0 @@
-
-			S3Object o = s3.getObject(bucketName, nodePath(merchantStoreCode, fileContentType) + contentName);
-
-			LOGGER.info("Content getFile");
-			return getOutputContentFile(IOUtils.toByteArray(o.getObjectContent()));
-		} catch (final Exception e) {
-			LOGGER.error("Error while getting file", e);
-			throw new ServiceException(e);

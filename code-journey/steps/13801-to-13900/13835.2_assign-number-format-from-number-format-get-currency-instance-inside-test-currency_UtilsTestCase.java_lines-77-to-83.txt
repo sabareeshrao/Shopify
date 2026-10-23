@@ -1,7 +1,0 @@
-		
-		NumberFormat numberFormat = NumberFormat.getCurrencyInstance(Locale.US);
-		numberFormat.setCurrency(c);
-		
-		System.out.println("Done");
-		
-	}

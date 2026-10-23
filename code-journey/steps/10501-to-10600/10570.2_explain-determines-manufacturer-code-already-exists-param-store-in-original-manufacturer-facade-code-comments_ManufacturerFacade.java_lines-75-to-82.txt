@@ -1,8 +1,0 @@
-  
-  /**
-   * Determines if manufacturer code already exists
-   * @param store
-   * @param manufacturerCode
-   * @return
-   */
-  boolean manufacturerExist(MerchantStore store, String manufacturerCode);

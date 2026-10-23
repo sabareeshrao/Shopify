@@ -1,2 +1,0 @@
-				RETURN_URL.append(Constants.SLASH);
-			}

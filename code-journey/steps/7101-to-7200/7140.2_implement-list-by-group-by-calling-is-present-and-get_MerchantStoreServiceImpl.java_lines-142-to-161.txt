@@ -1,0 +1,20 @@
+	@Override
+	public Page<MerchantStore> listByGroup(Optional<String> storeName, String code, int page, int count) throws ServiceException {
+		
+		String name = null;
+		if (storeName != null && storeName.isPresent()) {
+			name = storeName.get();
+		}
+
+		
+		MerchantStore store = getByCode(code);//if exist
+		Optional<Integer> id = Optional.ofNullable(store.getId());
+
+		
+		Pageable pageRequest = PageRequest.of(page, count);
+
+
+		return pageableMerchantRepository.listByGroup(code, id.get(), name, pageRequest);
+		
+		
+	}

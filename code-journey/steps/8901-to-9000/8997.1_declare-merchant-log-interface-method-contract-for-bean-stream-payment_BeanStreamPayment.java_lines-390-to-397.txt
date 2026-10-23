@@ -1,8 +1,0 @@
-			
-			//errors
-			if(transactionApproved.equals("0")) {
-
-				merchantLogService.save(
-						new MerchantLog(store,
-						"Can't process BeanStream message "
-								 + messageText + " return code id " + messageId));

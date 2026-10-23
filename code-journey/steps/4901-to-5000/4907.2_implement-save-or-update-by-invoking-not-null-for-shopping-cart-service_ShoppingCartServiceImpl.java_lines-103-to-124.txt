@@ -1,0 +1,22 @@
+	@Override
+	public void saveOrUpdate(ShoppingCart shoppingCart) throws ServiceException {
+
+		Validate.notNull(shoppingCart, "ShoppingCart must not be null");
+		Validate.notNull(shoppingCart.getMerchantStore(), "ShoppingCart.merchantStore must not be null");
+
+		try {
+			UserContext userContext = UserContext.getCurrentInstance();
+			if (userContext != null) {
+				shoppingCart.setIpAddress(userContext.getIpAddress());
+			}
+		} catch (Exception s) {
+			LOGGER.error("Cannot add ip address to shopping cart ", s);
+		}
+
+		if (shoppingCart.getId() == null || shoppingCart.getId() == 0) {
+			super.create(shoppingCart);
+		} else {
+			super.update(shoppingCart);
+		}
+
+	}

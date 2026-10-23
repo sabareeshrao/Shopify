@@ -1,4 +1,0 @@
-	public void setIternationalShipping(boolean iternationalShipping) {
-		this.iternationalShipping = iternationalShipping;
-	}
-

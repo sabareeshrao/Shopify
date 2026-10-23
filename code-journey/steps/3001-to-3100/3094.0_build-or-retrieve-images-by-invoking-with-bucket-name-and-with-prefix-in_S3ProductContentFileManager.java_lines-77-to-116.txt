@@ -1,0 +1,40 @@
+
+  @Override
+  public List<OutputContentFile> getImages(String merchantStoreCode,
+      FileContentType imageContentType) throws ServiceException {
+    try {
+      // get buckets
+      String bucketName = bucketName();
+
+
+
+      ListObjectsV2Request listObjectsRequest = new ListObjectsV2Request()
+          .withBucketName(bucketName).withPrefix(nodePath(merchantStoreCode));
+
+      List<OutputContentFile> files = null;
+      final AmazonS3 s3 = s3Client();
+      ListObjectsV2Result results = s3.listObjectsV2(listObjectsRequest);
+      List<S3ObjectSummary> objects = results.getObjectSummaries();
+      for (S3ObjectSummary os : objects) {
+        if (files == null) {
+          files = new ArrayList<OutputContentFile>();
+        }
+        String mimetype = URLConnection.guessContentTypeFromName(os.getKey());
+        if (!StringUtils.isBlank(mimetype)) {
+          S3Object o = s3.getObject(bucketName, os.getKey());
+          byte[] byteArray = IOUtils.toByteArray(o.getObjectContent());
+          ByteArrayOutputStream baos = new ByteArrayOutputStream(byteArray.length);
+          baos.write(byteArray, 0, byteArray.length);
+          OutputContentFile ct = new OutputContentFile();
+          ct.setFile(baos);
+          files.add(ct);
+        }
+      }
+
+      return files;
+    } catch (final Exception e) {
+      LOGGER.error("Error while getting files", e);
+      throw new ServiceException(e);
+
+    }
+  }

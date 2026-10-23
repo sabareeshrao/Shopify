@@ -1,8 +1,0 @@
-/**
- * API to create, read, update and delete a Product API to create Manufacturer
- *
- * @author Carl Samson
- */
-@RestController
-@RequestMapping("/api/v1")
-@Api(tags = { "Product type resource (Product Type Api)" })

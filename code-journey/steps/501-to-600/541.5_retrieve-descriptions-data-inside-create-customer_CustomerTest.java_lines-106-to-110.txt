@@ -1,0 +1,5 @@
+		no.getDescriptions().add(no_sir);
+		
+		//needs to be saved before using it
+		customerOptionValueService.create(no);
+		

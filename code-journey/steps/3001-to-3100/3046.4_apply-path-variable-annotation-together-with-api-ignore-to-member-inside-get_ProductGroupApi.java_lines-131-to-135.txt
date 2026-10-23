@@ -1,0 +1,5 @@
+  public @ResponseBody ReadableProductList getProductItemsByGroup(
+      @PathVariable final String code,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)

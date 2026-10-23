@@ -1,5 +1,0 @@
-			
-			if(CollectionUtils.isNotEmpty(criteria.getOptionValueIds())) {
-				countBuilderWhere.append(" and pov.id in (:povid)");
-			}
-		}

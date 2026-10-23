@@ -1,0 +1,29 @@
+
+  @Override
+  public void removeProductImages(Product product) throws ServiceException {
+
+    if (cacheManager.getTreeCache() == null) {
+      throw new ServiceException(
+          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+    }
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(product.getMerchantStore().getCode());
+
+
+      Node<String, Object> merchantNode = this.getNode(nodePath.toString());
+
+      merchantNode.remove(product.getSku());
+
+
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    } finally {
+
+    }
+
+  }

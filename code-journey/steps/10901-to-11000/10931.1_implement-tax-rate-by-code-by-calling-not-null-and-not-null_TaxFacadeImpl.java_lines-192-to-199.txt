@@ -1,8 +1,0 @@
-	}
-	
-	
-	//get by code
-	private TaxRate taxRateByCode(String code, MerchantStore store, Language language) {
-		
-		Validate.notNull(code,"TaxRate code cannot be null");
-		Validate.notNull(store,"MerchantStore cannot be null");

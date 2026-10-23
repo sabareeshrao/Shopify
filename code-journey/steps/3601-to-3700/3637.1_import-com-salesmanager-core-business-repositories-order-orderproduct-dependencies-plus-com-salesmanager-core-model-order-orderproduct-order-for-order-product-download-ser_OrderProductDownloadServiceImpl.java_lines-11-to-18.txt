@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.repositories.order.orderproduct.OrderProductDownloadRepository;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.model.order.orderproduct.OrderProductDownload;
-
-
-
-
-@Service("orderProductDownloadService")

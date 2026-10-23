@@ -1,0 +1,4 @@
+
+
+        int largeImageHeight = Integer.parseInt(slargeImageHeight);
+        int largeImageWidth = Integer.parseInt(slargeImageWidth);

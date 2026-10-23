@@ -1,0 +1,8 @@
+	
+	/**
+	 * Updates a Customer
+	 * @param customer
+	 * @param store
+	 * @throws Exception
+	 */
+	PersistableCustomer update(PersistableCustomer customer, MerchantStore store);

@@ -1,0 +1,3 @@
+	void validateOrder(ShopOrder order, BindingResult bindingResult,
+			Map<String, String> messagesResult, MerchantStore store,
+			Locale locale) throws ServiceException;

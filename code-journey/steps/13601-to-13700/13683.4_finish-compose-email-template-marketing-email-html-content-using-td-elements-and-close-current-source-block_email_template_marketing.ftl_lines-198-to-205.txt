@@ -1,8 +1,0 @@
-			font-family: sans-serif;" class="footer">
-
-				This email was sent to&nbsp;you by NAM Wood management team
-
-		</td>
-	</tr>
-
-<!-- End of WRAPPER -->

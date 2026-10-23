@@ -1,8 +1,0 @@
-		//}
-		
-		return new JWTUser(
-        		customer.getId(),
-        		userName,
-        		customer.getBilling().getFirstName(),
-        		customer.getBilling().getLastName(),
-                customer.getEmailAddress(),

@@ -1,8 +1,0 @@
-
-	  /**
-	   * validates if product exists
-	   * @param sku
-	   * @param store
-	   * @return
-	   */
-	  public boolean exists(String sku, MerchantStore store);

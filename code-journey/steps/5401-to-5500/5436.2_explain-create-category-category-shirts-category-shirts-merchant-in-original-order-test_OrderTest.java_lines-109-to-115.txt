@@ -1,0 +1,7 @@
+
+	    /**
+	     * Create the category
+	     */
+	    Category shirts = new Category();
+	    shirts.setMerchantStore(merchant);
+	    shirts.setCode("shirts");

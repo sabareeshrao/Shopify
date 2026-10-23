@@ -1,0 +1,8 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="OPTION_DELIVERY_DATE")
+	private Date optionDeliveryDate = null;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="OPTION_SHIPPING_DATE")
+	private Date optionShippingDate = null;

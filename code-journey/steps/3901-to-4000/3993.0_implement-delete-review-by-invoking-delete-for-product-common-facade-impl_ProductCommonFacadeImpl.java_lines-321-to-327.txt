@@ -1,0 +1,7 @@
+
+	@Override
+	public void deleteReview(ProductReview review, MerchantStore store, Language language) throws Exception {
+		productReviewService.delete(review);
+
+	}
+

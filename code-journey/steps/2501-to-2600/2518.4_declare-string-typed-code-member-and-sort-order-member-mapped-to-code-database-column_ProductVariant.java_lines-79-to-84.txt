@@ -1,0 +1,6 @@
+	
+	@Column(name = "CODE", nullable = true)
+	private String code;
+	
+	@Column(name="SORT_ORDER")
+	private Integer sortOrder = 0;

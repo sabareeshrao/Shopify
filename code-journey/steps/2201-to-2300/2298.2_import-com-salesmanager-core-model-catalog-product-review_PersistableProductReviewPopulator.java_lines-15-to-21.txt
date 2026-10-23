@@ -1,0 +1,7 @@
+import com.salesmanager.core.model.catalog.product.review.ProductReview;
+import com.salesmanager.core.model.catalog.product.review.ProductReviewDescription;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.model.catalog.product.PersistableProductReview;
+import com.salesmanager.shop.utils.DateUtil;

@@ -1,0 +1,9 @@
+import java.io.Serializable;
+
+import com.salesmanager.shop.model.entity.Entity;
+
+/**
+ * Readable version of Transaction entity object
+ * @author c.samson
+ *
+ */

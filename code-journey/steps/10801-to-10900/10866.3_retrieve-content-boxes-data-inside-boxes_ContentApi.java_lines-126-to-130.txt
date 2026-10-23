@@ -1,5 +1,0 @@
-			int page,
-			int count
-			) {
-		return contentFacade.getContentBoxes(ContentType.BOX, merchantStore, language, page, count);
-	}

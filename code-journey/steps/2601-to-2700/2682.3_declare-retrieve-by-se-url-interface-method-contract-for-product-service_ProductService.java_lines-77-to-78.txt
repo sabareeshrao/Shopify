@@ -1,0 +1,2 @@
+
+	Product getBySeUrl(MerchantStore store, String seUrl, Locale locale);

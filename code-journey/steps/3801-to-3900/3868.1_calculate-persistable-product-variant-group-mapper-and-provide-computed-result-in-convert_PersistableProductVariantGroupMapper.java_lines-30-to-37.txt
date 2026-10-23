@@ -1,8 +1,0 @@
-	@Override
-	public ProductVariantGroup convert(PersistableProductVariantGroup source, MerchantStore store,
-			Language language) {
-		Validate.notNull(source, "PersistableproductVariantGroup cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(language, "Language cannot be null");
-		return this.merge(source, new ProductVariantGroup(), store, language);
-	}

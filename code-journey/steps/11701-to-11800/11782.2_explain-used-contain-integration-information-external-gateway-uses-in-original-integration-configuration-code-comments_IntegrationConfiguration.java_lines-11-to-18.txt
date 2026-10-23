@@ -1,8 +1,0 @@
-/**
- * Object used to contain the integration information with an external gateway Uses simple JSON to
- * encode the object in JSON by implementing JSONAware and uses jackson JSON decode to parse JSON
- * String to an Object
- * 
- * @author csamson
- *
- */

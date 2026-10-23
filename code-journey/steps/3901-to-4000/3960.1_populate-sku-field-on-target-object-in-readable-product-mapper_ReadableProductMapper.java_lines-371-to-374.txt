@@ -1,0 +1,4 @@
+		
+		//if default instance
+
+		destination.setSku(source.getSku());

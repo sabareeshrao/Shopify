@@ -1,0 +1,9 @@
+
+  /**
+   * Method used to fetch customer based on the username and storecode. Customer username is unique
+   * to each store.
+   *
+   * @param userName
+   * @param store
+   * @throws ConversionException
+   */

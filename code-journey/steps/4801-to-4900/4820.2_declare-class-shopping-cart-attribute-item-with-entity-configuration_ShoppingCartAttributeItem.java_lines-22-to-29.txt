@@ -1,0 +1,8 @@
+
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "SHOPPING_CART_ATTR_ITEM")
+public class ShoppingCartAttributeItem extends SalesManagerEntity<Long, ShoppingCartAttributeItem> implements Auditable {
+
+

@@ -1,5 +1,0 @@
-	public ProductAttributeEvent(Object source, Product product) {
-		super(source, product);
-	}
-
-}

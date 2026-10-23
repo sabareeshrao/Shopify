@@ -1,2 +1,0 @@
-							optValue.setSortOrder(attribute.getProductOptionSortOrder().intValue());
-						}

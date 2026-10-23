@@ -1,8 +1,0 @@
-public interface PermissionRepository extends JpaRepository<Permission, Integer>, PermissionRepositoryCustom {
-
-	
-	@Query("select p from Permission as p where p.id = ?1")
-	Permission findOne(Integer id);
-	
-	@Query("select p from Permission as p order by p.id")
-	List<Permission> findAll();

@@ -1,0 +1,9 @@
+
+	/**
+	 * Adds a Shipping configuration
+	 * @param configuration
+	 * @param store
+	 * @throws ServiceException
+	 */
+	void saveShippingQuoteModuleConfiguration(IntegrationConfiguration configuration,
+			MerchantStore store) throws ServiceException;

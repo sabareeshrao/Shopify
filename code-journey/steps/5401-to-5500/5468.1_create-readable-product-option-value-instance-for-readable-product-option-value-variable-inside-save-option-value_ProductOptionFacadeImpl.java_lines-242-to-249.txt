@@ -1,8 +1,0 @@
-
-		ProductOptionValue optValue = productOptionValueService.getById(store, value.getId());
-
-		// convert to readable
-		ReadableProductOptionValue readableProductOptionValue = new ReadableProductOptionValue();
-		readableProductOptionValue = readableOptionValueMapper.merge(optValue, readableProductOptionValue, store,
-				language);
-

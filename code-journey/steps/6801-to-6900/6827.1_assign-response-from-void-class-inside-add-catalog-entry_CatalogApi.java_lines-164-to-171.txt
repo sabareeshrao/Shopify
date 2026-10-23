@@ -1,8 +1,0 @@
-
-  @DeleteMapping(value = "/private/catalog/{id}/entry/{entryId}")
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(httpMethod = "DELETE", value = "Remove catalog entry from catalog", notes = "",
-      response = Void.class)
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")})

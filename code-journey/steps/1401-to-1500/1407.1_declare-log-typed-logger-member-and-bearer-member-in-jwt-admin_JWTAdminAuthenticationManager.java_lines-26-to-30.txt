@@ -1,0 +1,5 @@
+  protected final Log logger = LogFactory.getLog(getClass());
+  private static final String BEARER = "Bearer";
+
+  @Inject
+  private JWTTokenUtil jwtTokenUtil;

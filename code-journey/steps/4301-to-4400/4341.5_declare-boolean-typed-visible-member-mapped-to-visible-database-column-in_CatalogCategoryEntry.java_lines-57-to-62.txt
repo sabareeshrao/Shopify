@@ -1,0 +1,6 @@
+	
+	//TODO d products ????
+	
+    @Column(name = "VISIBLE")
+    private boolean visible;
+

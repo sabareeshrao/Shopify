@@ -1,3 +1,0 @@
-	public abstract void unSuccessfullAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException;
-
-}

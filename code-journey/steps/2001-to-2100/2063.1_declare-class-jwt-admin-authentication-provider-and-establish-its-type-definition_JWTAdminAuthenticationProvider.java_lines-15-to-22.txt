@@ -1,8 +1,0 @@
-
-/**
- * Custom authautentication provider for admin api
- * @author carlsamson
- *
- */
-public class JWTAdminAuthenticationProvider extends DaoAuthenticationProvider {
-	

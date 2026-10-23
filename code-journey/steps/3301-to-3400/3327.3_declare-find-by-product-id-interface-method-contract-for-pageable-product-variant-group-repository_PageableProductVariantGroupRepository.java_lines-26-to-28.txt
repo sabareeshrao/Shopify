@@ -1,3 +1,0 @@
-	Page<ProductVariantGroup> findByProductId(Integer storeId, Long productId, Pageable pageable);
-	
-}

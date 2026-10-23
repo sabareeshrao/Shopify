@@ -1,8 +1,0 @@
-
-@Service("catalogEntryService")
-public class CatalogEntryServiceImpl extends SalesManagerEntityServiceImpl<Long, CatalogCategoryEntry> 
-implements CatalogEntryService {
-	
-	@Autowired
-	private PageableCatalogEntryRepository pageableCatalogEntryRepository;
-

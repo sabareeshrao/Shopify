@@ -1,8 +1,0 @@
-
-			for(PackageDetails packageDetail : packages){
-
-				xmldatabuffer.append("<Package>");
-				xmldatabuffer.append("<PackagingType>");
-				xmldatabuffer.append("<Code>");
-				xmldatabuffer.append(pack);
-				xmldatabuffer.append("</Code>");

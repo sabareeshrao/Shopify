@@ -1,0 +1,9 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="PRD_PRICE_SPECIAL_ST_DT" , length=0)
+	private Date productPriceSpecialStartDate;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="PRD_PRICE_SPECIAL_END_DT" , length=0)
+	private Date productPriceSpecialEndDate;
+

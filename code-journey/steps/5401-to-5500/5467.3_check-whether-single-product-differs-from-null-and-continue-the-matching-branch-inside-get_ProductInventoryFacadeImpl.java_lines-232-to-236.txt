@@ -1,5 +1,0 @@
-			try {
-				Product singleProduct = productService.getBySku(sku, store);
-				if(singleProduct!=null) {
-					availabilities = new PageImpl<ProductAvailability>(new ArrayList<ProductAvailability>(singleProduct.getAvailabilities()));
-				}

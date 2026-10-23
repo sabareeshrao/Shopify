@@ -1,0 +1,21 @@
+
+	@Override
+	// KEEP
+	public ReadableShoppingCart addToCart(Customer customer, PersistableShoppingCartItem item, MerchantStore store,
+			Language language) throws Exception {
+
+		Validate.notNull(customer, "Customer cannot be null");
+		Validate.notNull(customer.getId(), "Customer.id cannot be null or empty");
+
+		ShoppingCart cartModel = shoppingCartService.getShoppingCart(customer, store);
+
+		// if cart does not exist create a new one
+		if (cartModel == null) {
+			cartModel = new ShoppingCart();
+			cartModel.setCustomerId(customer.getId());
+			cartModel.setMerchantStore(store);
+			cartModel.setShoppingCartCode(uniqueShoppingCartCode());
+		}
+
+		return readableShoppingCart(cartModel, item, store, language);
+	}

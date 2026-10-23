@@ -1,0 +1,17 @@
+
+			destination.setSubtotal(orderSummary.getSubTotal());
+			destination.setDisplaySubTotal(pricingService.getDisplayAmount(orderSummary.getSubTotal(), store));
+
+			destination.setTotal(orderSummary.getTotal());
+			destination.setDisplayTotal(pricingService.getDisplayAmount(orderSummary.getTotal(), store));
+
+			destination.setQuantity(cartQuantity);
+			destination.setId(source.getId());
+
+			if (source.getOrderId() != null) {
+				destination.setOrder(source.getOrderId());
+			}
+
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("An error occured while converting ReadableShoppingCart", e);
+		}

@@ -1,0 +1,4 @@
+		
+		//Update product
+		productService.update(updatableProduct);
+		

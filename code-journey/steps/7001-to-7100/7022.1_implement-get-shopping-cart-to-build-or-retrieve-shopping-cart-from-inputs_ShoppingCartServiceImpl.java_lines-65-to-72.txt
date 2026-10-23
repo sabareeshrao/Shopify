@@ -1,8 +1,0 @@
-
-	/**
-	 * Retrieve a {@link ShoppingCart} cart for a given customer
-	 */
-	@Override
-	@Transactional
-	public ShoppingCart getShoppingCart(final Customer customer, MerchantStore store) throws ServiceException {
-

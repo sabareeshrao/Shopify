@@ -1,8 +1,0 @@
-				
-				/**
-				merchant_id=123456789&requestType=BACKEND
-				&trnType=PAC&username=user1234&password=pass1234&trnID=1000
-				2115 --> requires also adjId [not documented]
-				**/
-				
-				StringBuilder messageString = new StringBuilder();

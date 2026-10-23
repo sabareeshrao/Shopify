@@ -1,0 +1,4 @@
+	@Override
+	public Transaction authorizeAndCapture(MerchantStore store,
+			Customer customer, List<ShoppingCartItem> items, BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)

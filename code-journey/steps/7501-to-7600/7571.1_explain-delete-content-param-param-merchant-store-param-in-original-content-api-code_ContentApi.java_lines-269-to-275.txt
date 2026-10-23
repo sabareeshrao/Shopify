@@ -1,0 +1,7 @@
+	
+	/**
+	 * Delete content box
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 */

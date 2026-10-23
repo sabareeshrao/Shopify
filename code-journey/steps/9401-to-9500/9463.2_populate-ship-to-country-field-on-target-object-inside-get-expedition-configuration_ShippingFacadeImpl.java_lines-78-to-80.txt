@@ -1,3 +1,0 @@
-				
-				expeditionConfiguration.setShipToCountry(countryCode);
-			}

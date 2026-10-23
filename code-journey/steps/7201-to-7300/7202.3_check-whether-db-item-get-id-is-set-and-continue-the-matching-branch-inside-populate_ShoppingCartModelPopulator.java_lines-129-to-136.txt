@@ -1,8 +1,0 @@
-                    {
-                        if ( dbItem.getId().longValue() == item.getId() )
-                        {
-                            dbItem.setQuantity( item.getQuantity() );
-                            // compare attributes
-                            Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> attributes =
-                                dbItem.getAttributes();
-                            Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> newAttributes =

@@ -1,0 +1,7 @@
+public class Stripe3Payment implements PaymentModule {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(Stripe3Payment.class);
+
+	@Inject
+	private ProductPriceUtils productPriceUtils;
+

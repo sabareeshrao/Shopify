@@ -1,0 +1,18 @@
+
+	private ShippingConfiguration getDbConfig(MerchantStore store) {
+
+		try {
+			//get original configuration
+			ShippingConfiguration config = shippingService.getShippingConfiguration(store);
+			if(config==null) {
+				config = new ShippingConfiguration();
+				config.setShippingType(ShippingType.INTERNATIONAL);
+			}
+
+			return config;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting expedition configuration", e);
+			throw new ServiceRuntimeException("Error while getting Expedition configuration for store[" + store.getCode() + "]", e);
+		}
+		
+	}

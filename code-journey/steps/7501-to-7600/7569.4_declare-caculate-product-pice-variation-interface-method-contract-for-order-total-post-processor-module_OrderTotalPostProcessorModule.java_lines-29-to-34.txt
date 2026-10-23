@@ -1,6 +1,0 @@
-	    * @return OrderTotal OrderTotal
-	    * @throws Exception Exception
-	    */
-	   OrderTotal caculateProductPiceVariation(final OrderSummary summary, final ShoppingCartItem shoppingCartItem, final Product product, final Customer customer, final MerchantStore store) throws Exception;
-
-}

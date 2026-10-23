@@ -1,8 +1,0 @@
-	
-	/**
-	 * Decrypts a string value
-	 * @param value VLUE
-	 * @return String encrypted string
-	 * @throws Exception cannot encrypt
-	 */
-	public String decrypt(String value) throws Exception;

@@ -1,2 +1,0 @@
-	            encodedValues[i] = cleanXSS(values[i]);
-	        }

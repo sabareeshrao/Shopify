@@ -1,0 +1,3 @@
+
+	    product.getDescriptions().add(description);
+	    

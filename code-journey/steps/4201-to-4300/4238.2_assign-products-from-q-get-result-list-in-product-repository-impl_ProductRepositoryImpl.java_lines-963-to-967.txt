@@ -1,0 +1,5 @@
+
+
+		@SuppressWarnings("unchecked")
+		List<Product> products = q.getResultList();
+		productList.setProducts(products);

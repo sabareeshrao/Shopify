@@ -1,0 +1,4 @@
+	public final static String INIT_TRANSACTION_KEY = "init_transaction";
+
+    public final static String LINK_CODE = "LINK_CODE";
+    

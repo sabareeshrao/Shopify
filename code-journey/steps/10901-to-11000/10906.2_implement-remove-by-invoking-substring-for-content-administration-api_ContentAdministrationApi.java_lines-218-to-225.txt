@@ -1,8 +1,0 @@
-	public FileStatus remove(
-			@RequestParam(value = "path", required = true) String path,
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-
-		try {
-			
-			String fileName = path.substring(path.lastIndexOf("/")+1, path.length());

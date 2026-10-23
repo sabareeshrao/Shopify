@@ -1,3 +1,0 @@
-    return searchFacade.search(merchantStore, language, searchRequest);
-  }
-

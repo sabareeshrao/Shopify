@@ -1,0 +1,12 @@
+	{
+	    try
+	    {
+	        URL url = new URL(urlString);
+	        url.toURI();
+	        return true;
+	    } catch (Exception exception)
+	    {
+	        return false;
+	    }
+	}
+}

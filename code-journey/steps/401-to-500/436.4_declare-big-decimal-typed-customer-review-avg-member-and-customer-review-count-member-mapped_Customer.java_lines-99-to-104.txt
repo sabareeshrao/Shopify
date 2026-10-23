@@ -1,0 +1,6 @@
+	
+	@Column(name = "REVIEW_AVG")
+	private BigDecimal customerReviewAvg;
+
+	@Column(name = "REVIEW_COUNT")
+	private Integer customerReviewCount;

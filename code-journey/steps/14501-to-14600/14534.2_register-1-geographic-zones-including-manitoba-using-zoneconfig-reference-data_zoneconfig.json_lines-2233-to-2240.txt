@@ -1,8 +1,0 @@
-		},
-		{
-			"zoneCode": "MB",
-			"zoneName": "Manitoba",
-			"countryCode": "CA"
-		},
-		{
-			"zoneCode": "NF",

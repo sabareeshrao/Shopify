@@ -1,0 +1,11 @@
+
+	/**
+	 * Action for performing a checkout on a given shopping cart
+	 *
+	 * @param id
+	 * @param order
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */

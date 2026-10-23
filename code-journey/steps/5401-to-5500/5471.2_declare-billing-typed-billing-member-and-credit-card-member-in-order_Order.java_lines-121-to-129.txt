@@ -1,0 +1,9 @@
+	
+	@Valid
+	@Embedded
+	private Billing billing = null;
+	
+	@Embedded
+	@Deprecated
+	private CreditCard creditCard = null;
+

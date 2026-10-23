@@ -1,0 +1,2 @@
+	@Override
+	public Page<MerchantStore> listAllRetailers(Optional<String> storeName, int page, int count)

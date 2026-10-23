@@ -1,0 +1,5 @@
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.salesmanager.core.model.catalog.product.relationship.ProductRelationship;
+
+

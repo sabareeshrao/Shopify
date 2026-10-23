@@ -1,0 +1,6 @@
+	public String getCode() {
+		if(StringUtils.isBlank(this.code)) {
+			code = DEFAULT_PRICE_CODE;
+		}
+		return code;
+	}

@@ -1,4 +1,0 @@
-	            .setParameter("storeId", store.getId())
-	            .getResultList();
-	}
-}

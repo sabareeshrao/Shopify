@@ -1,8 +1,0 @@
-	
-	@Ignore
-	public void addFolder() {
-		
-		MerchantStore store;
-		try {
-			store = super.merchantService.getByCode("DEFAULT");
-

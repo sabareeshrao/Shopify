@@ -1,5 +1,0 @@
-
-            }
-            
-            //item.setAttributes( newAttributes );
-        }

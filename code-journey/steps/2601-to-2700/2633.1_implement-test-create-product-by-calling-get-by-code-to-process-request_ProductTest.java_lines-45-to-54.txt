@@ -1,0 +1,10 @@
+	private final String IMAGE_NAME = "icon.png";
+
+	/**
+	 * This method creates multiple products using multiple catalog APIs
+	 * @throws ServiceException
+	 */
+	@Test
+	public void testCreateProduct() throws Exception {
+
+	    Language en = languageService.getByCode("en");

@@ -1,0 +1,9 @@
+
+	/**
+	 * List product options variations for a given category
+	 * @param categoryId
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	List<ReadableProductVariant> categoryProductVariants(Long categoryId, MerchantStore store, Language language);

@@ -1,8 +1,0 @@
-      if (StringUtils.isNotBlank(sessionShoppingCartId)) {
-        ShoppingCart sessionShoppingCart =
-            shoppingCartService.getByCode(sessionShoppingCartId, store);
-        if (sessionShoppingCart != null) {
-          if (customerCart == null) {
-            if (sessionShoppingCart.getCustomerId() == null) {// saved shopping cart does not belong
-                                                              // to a customer
-              LOG.debug("Not able to find any shoppingCart with current customer");

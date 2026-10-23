@@ -1,5 +1,0 @@
-  private Country country;
-
-  @Transient
-  private String name;
-

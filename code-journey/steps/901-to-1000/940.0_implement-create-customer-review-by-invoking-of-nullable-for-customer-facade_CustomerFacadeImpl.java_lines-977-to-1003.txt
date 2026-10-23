@@ -1,0 +1,27 @@
+  @Override
+  public PersistableCustomerReview createCustomerReview(
+      Long customerId,
+      PersistableCustomerReview review,
+      MerchantStore merchantStore,
+      Language language) {
+
+    // rating already exist
+    Optional<CustomerReview> customerReview =
+        Optional.ofNullable(
+            customerReviewService.getByReviewerAndReviewed(review.getCustomerId(), customerId));
+
+    if(customerReview.isPresent()) {
+      throw new ServiceRuntimeException("A review already exist for this customer and product");
+    }
+
+    // rating maximum 5
+    if (review.getRating() > Constants.MAX_REVIEW_RATING_SCORE) {
+      throw new ServiceRuntimeException("Maximum rating score is " + Constants.MAX_REVIEW_RATING_SCORE);
+    }
+
+    review.setReviewedCustomer(customerId);
+
+    saveOrUpdateCustomerReview(review, merchantStore, language);
+
+    return review;
+  }

@@ -1,4 +1,0 @@
-				<groupId>org.infinispan</groupId>
-				<artifactId>infinispan-tree</artifactId>
-				<version>${infinispan.version}</version>
-			</dependency>

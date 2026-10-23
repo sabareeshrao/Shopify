@@ -1,8 +1,0 @@
-  public ConversionException(Throwable t)
-  {
-      super(t);
-  }
-  
-  
-
-}

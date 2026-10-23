@@ -1,0 +1,7 @@
+	
+	@ManyToOne(targetEntity = GeoZone.class)
+	@JoinColumn(name = "GEOZONE_ID")
+	private GeoZone geoZone;
+	
+	@Column(name = "COUNTRY_SUPPORTED")
+	private boolean supported = true;

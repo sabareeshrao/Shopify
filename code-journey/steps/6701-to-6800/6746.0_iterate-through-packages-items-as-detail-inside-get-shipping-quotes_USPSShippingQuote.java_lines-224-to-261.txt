@@ -1,0 +1,38 @@
+
+
+
+			StringBuilder xmldatabuffer = new StringBuilder();
+
+
+			double totalW = 0;
+			double totalH = 0;
+			double totalL = 0;
+			double totalG = 0;
+			double totalP = 0;
+
+			for (PackageDetails detail : packages) {
+
+
+				// need size in inch
+				double w = DataUtils.getMeasure(detail.getShippingWidth(),
+						store, MeasureUnit.IN.name());
+				double h = DataUtils.getMeasure(detail.getShippingHeight(),
+						store, MeasureUnit.IN.name());
+				double l = DataUtils.getMeasure(detail.getShippingLength(),
+						store, MeasureUnit.IN.name());
+	
+				totalW = totalW + w;
+				totalH = totalH + h;
+				totalL = totalL + l;
+	
+				// Girth = Length + (Width x 2) + (Height x 2)
+				double girth = l + (w * 2) + (h * 2);
+		
+				totalG = totalG + girth;
+	
+				// need weight in pounds
+				double p = DataUtils.getWeight(detail.getShippingWeight(), store, MeasureUnit.LB.name());
+	
+				totalP = totalP + p;
+
+			}

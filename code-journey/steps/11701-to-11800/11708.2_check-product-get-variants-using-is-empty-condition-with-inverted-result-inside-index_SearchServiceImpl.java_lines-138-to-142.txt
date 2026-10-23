@@ -1,5 +1,0 @@
-
-				if (!CollectionUtils.isEmpty(product.getVariants())) {
-					variants = new ArrayList<Map<String, String>>();
-					variants = product.getVariants().stream().map(i -> variants(i)).collect(Collectors.toList());
-				}

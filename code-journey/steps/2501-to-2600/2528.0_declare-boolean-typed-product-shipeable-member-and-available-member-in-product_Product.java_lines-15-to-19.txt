@@ -1,0 +1,5 @@
+	private boolean productShipeable = false;
+
+	private boolean available;
+	private boolean visible = true;
+

@@ -1,0 +1,7 @@
+
+	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REFRESH})
+	@JoinColumn(name="TAX_CLASS_ID", nullable=true)
+	private TaxClass taxClass;
+
+	@Column(name = "PRODUCT_VIRTUAL")
+	private boolean productVirtual = false;

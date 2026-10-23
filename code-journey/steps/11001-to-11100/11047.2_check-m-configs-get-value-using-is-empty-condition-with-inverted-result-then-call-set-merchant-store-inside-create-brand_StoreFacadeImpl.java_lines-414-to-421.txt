@@ -1,8 +1,0 @@
-				.collect(Collectors.toList());
-		try {
-			for (MerchantConfiguration mConfigs : configurations) {
-				mConfigs.setMerchantStore(mStore);
-				if (!StringUtils.isEmpty(mConfigs.getValue())) {
-					mConfigs.setMerchantConfigurationType(MerchantConfigurationType.SOCIAL);
-					merchantConfigurationService.saveOrUpdate(mConfigs);
-				} else {// remove if submited blank and exists

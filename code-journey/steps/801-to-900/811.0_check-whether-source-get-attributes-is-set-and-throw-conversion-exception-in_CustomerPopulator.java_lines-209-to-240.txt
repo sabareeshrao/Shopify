@@ -1,0 +1,32 @@
+			
+			if(source.getAttributes()!=null) {
+				for(PersistableCustomerAttribute attr : source.getAttributes()) {
+
+					CustomerOption customerOption = customerOptionService.getById(attr.getCustomerOption().getId());
+					if(customerOption==null) {
+						throw new ConversionException("Customer option id " + attr.getCustomerOption().getId() + " does not exist");
+					}
+					
+					CustomerOptionValue customerOptionValue = customerOptionValueService.getById(attr.getCustomerOptionValue().getId());
+					if(customerOptionValue==null) {
+						throw new ConversionException("Customer option value id " + attr.getCustomerOptionValue().getId() + " does not exist");
+					}
+					
+					if(customerOption.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Invalid customer option id ");
+					}
+					
+					if(customerOptionValue.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Invalid customer option value id ");
+					}
+					
+					CustomerAttribute attribute = new CustomerAttribute();
+					attribute.setCustomer(target);
+					attribute.setCustomerOption(customerOption);
+					attribute.setCustomerOptionValue(customerOptionValue);
+					attribute.setTextValue(attr.getTextValue());
+					
+					target.getAttributes().add(attribute);
+					
+				}
+			}

@@ -1,8 +1,0 @@
-      
-      TreeCacheFactory f = null;
-      
-      
-/*      @SuppressWarnings("rawtypes")
-      Cache c = manager.getManager().getCache(namedCache);
-      
-      if(c != null) {

@@ -1,0 +1,8 @@
+	
+	@Valid
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customerOption")
+	private Set<CustomerOptionDescription> descriptions = new HashSet<CustomerOptionDescription>();
+	
+	@Transient
+	private List<CustomerOptionDescription> descriptionsList = new ArrayList<CustomerOptionDescription>();
+

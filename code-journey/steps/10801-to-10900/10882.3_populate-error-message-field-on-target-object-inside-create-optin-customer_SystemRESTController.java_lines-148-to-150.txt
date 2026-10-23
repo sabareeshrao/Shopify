@@ -1,3 +1,0 @@
-			resp.setErrorMessage(e);
-			response.sendError(503, "Exception while creating uptin " + e.getMessage());
-		}

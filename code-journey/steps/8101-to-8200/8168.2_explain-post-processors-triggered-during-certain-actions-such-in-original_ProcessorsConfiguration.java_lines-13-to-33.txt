@@ -1,0 +1,21 @@
+
+/**
+ * Pre and post processors triggered during certain actions such as
+ * order processing and shopping cart processing
+ * 
+ * 2 types of processors
+ * - functions processors
+ * 		Triggered during defined simple events - ex add to cart checkout
+ * 
+ * - calculation processors
+ * 		Triggered during shopping cart and order total calculation
+ * 
+ * For events see configuratio/events
+ * 
+ * - Payment events (payment, refund)
+ * 
+ * - Change Order status
+ * 
+ * @author carlsamson
+ *
+ */

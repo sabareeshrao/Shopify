@@ -1,5 +1,0 @@
-		private AuthenticationTokenFilter authenticationTokenFilter;
-
-		@Autowired
-		private UserDetailsService jwtCustomerDetailsService;
-

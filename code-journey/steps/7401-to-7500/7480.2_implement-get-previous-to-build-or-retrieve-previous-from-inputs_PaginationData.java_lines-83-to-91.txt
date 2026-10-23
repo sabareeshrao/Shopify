@@ -1,0 +1,9 @@
+        public PaginationData getPrevious() {
+            if (pageSize >= offset) {
+                return new PaginationData(0, pageSize);
+            } else {
+                return new PaginationData(offset - pageSize, pageSize);
+            }
+        }
+
+

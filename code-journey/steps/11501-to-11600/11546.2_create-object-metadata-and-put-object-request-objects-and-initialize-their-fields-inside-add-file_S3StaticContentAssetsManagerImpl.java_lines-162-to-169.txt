@@ -1,8 +1,0 @@
-
-			final AmazonS3 s3 = s3Client();
-
-			ObjectMetadata metadata = new ObjectMetadata();
-			metadata.setContentType(inputStaticContentData.getMimeType());
-			PutObjectRequest request = new PutObjectRequest(bucketName, nodePath + inputStaticContentData.getFileName(),
-					inputStaticContentData.getFile(), metadata);
-			request.setCannedAcl(CannedAccessControlList.PublicRead);

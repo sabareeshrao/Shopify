@@ -1,4 +1,0 @@
-  private boolean isDisplayedInMenu;
-  private String code;
-  private Long id;
-  

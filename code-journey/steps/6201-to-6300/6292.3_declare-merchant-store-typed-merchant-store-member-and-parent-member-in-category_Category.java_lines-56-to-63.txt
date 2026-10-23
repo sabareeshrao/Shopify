@@ -1,8 +1,0 @@
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="MERCHANT_ID", nullable=false)
-    private MerchantStore merchantStore;
-    
-    @ManyToOne
-    @JoinColumn(name = "PARENT_ID")
-    private Category parent;
-    

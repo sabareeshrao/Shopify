@@ -1,0 +1,6 @@
+
+	@Column(name = "PRODUCT_OPTION_VALUE_ID", nullable = false)
+	private Long productOptionValueId;
+	
+	@Column ( name= "PRODUCT_ATTRIBUTE_NAME")
+	private String productAttributeName;

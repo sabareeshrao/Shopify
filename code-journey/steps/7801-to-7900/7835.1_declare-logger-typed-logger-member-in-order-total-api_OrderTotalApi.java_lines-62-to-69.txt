@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(OrderTotalApi.class);
-
-  /**
-   * This service calculates order total for a given shopping cart This method takes in
-   * consideration any applicable sales tax An optional request parameter accepts a quote id that
-   * was received using shipping api
-   *
-   * @param quote

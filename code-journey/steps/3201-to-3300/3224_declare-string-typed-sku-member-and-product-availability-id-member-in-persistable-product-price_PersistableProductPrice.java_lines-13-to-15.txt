@@ -1,3 +1,0 @@
-	private String sku;
-	private Long productAvailabilityId;
-

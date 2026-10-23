@@ -1,0 +1,14 @@
+	@Override
+	public ProductAvailability merge(PersistableInventory source, ProductAvailability destination, MerchantStore store,
+			Language language) {
+		Validate.notNull(destination, "Product availability cannot be null");
+
+		try {
+			Product product = null;
+			if(source.getProductId()!= null && source.getProductId().longValue() > 0) {
+				product = productService.findOne(source.getProductId().longValue(), store);
+				if(product == null) {
+					throw new ResourceNotFoundException("Product with id [" + source.getProductId() + "] not found for store [" + store.getCode() + "]");
+				}
+				destination.setProduct(product);
+			}

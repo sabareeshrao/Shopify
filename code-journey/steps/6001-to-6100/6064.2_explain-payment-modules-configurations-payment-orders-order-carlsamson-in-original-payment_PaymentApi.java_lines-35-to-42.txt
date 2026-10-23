@@ -1,0 +1,8 @@
+
+/**
+ * This API is for payment modules configurations. For payment of orders see
+ * order
+ * 
+ * @author carlsamson
+ *
+ */

@@ -1,8 +1,0 @@
-		
-		
-		try {
-			
-
-			target.setAmount(pricingService.getAmount(source.getAmount()));
-			target.setDetails(source.getDetails());
-			target.setPaymentType(PaymentType.valueOf(source.getPaymentType()));

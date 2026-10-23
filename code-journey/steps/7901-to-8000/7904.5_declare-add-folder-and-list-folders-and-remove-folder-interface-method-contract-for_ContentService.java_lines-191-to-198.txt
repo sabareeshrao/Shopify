@@ -1,0 +1,8 @@
+	
+	void addFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException ;
+	
+	List<String> listFolders(MerchantStore store, Optional<String> path) throws ServiceException ;
+	
+	void removeFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException ;
+
+}

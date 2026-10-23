@@ -1,0 +1,28 @@
+
+	@Override
+	public void update(PersistableProductType type, Long id, MerchantStore store, Language language) {
+		Validate.notNull(type,"ProductType cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(id,"id cannot be empty");
+
+		try {
+
+			ProductType t = productTypeService.getById(id, store, language);
+			if(t == null) {
+				throw new ResourceNotFoundException(
+						"Product type [" + type.getCode() + "] does not exist for store [" + store.getCode() + "]");
+			}
+
+			type.setId(t.getId());
+			type.setCode(t.getCode());
+
+			ProductType model = persistableProductTypeMapper.merge(type, t, store, language);
+			model.setMerchantStore(store);
+			productTypeService.saveOrUpdate(model);
+
+		} catch(Exception e) {
+			throw new ServiceRuntimeException(
+					"An exception occured while saving product type",e);
+		}
+
+	}

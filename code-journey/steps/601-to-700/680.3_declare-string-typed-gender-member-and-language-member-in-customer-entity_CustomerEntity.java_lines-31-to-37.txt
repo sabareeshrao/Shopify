@@ -1,7 +1,0 @@
-	private String gender;
-
-	@ApiModelProperty(notes = "2 letters language code en | fr | ...")
-	private String language;
-	private String firstName;
-	private String lastName;
-	

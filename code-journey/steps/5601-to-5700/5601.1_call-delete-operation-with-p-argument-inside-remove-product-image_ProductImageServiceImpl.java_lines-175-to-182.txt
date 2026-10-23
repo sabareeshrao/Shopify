@@ -1,8 +1,0 @@
-		
-		delete(p);
-		/**
-		 * workaround for aspect
-		 */
-		eventPublisher.publishEvent(new DeleteProductImageEvent(eventPublisher, p, product));
-
-

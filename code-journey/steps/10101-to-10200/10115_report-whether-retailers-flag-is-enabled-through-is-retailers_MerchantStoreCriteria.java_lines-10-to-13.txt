@@ -1,4 +1,0 @@
-	public boolean isRetailers() {
-		return retailers;
-	}
-

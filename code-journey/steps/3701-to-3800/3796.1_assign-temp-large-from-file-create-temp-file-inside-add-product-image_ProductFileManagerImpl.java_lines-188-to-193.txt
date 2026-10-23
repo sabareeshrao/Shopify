@@ -1,0 +1,6 @@
+
+
+        File tempLarge =
+            File.createTempFile(new StringBuilder().append(productImage.getProduct().getId())
+                .append("tmpLarge").toString(), "." + extension);
+        ImageIO.write(largeResizedImage, extension, tempLarge);

@@ -1,0 +1,15 @@
+
+	@Override
+	public boolean isStoreInGroup(String code) throws ServiceException{
+		
+		MerchantStore store = getByCode(code);//if exist
+		Optional<Integer> id = Optional.ofNullable(store.getId());
+		
+		List<MerchantStore> stores = merchantRepository.listByGroup(code, id.get());
+		
+		
+		return stores.size() > 0;
+	}
+
+
+}

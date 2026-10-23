@@ -1,0 +1,9 @@
+    
+    /**
+     * Rename file
+     * @param merchantStoreCode
+     * @param path
+     * @param originalName
+     * @param newName
+     */
+    void renameFile( String merchantStoreCode, FileContentType fileContentType, Optional<String> path, String originalName, String newName) throws ServiceException;

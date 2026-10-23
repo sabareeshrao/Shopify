@@ -1,8 +1,0 @@
-
-	@Column(name = "PRODUCT_WIDTH")
-	private BigDecimal productWidth;
-
-	@Column(name = "PRODUCT_HEIGHT")
-	private BigDecimal productHeight;
-
-	@Column(name = "PRODUCT_WEIGHT")

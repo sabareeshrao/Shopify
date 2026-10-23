@@ -1,0 +1,5 @@
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE, 
+	generator = "TABLE_GEN")
+	

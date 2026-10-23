@@ -1,8 +1,0 @@
-		**/
-		
-		
-
-		/**
-		 * attributes / options values
-		 * origin allows skipping attributes join in admin
-		 */

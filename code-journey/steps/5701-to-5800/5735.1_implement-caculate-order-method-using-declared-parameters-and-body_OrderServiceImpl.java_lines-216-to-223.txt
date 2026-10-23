@@ -1,0 +1,8 @@
+
+    private OrderTotalSummary caculateOrder(OrderSummary summary, Customer customer, final MerchantStore store, final Language language) throws Exception {
+
+        OrderTotalSummary totalSummary = new OrderTotalSummary();
+        List<OrderTotal> orderTotals = new ArrayList<OrderTotal>();
+        Map<String,OrderTotal> otherPricesTotals = new HashMap<String,OrderTotal>();
+
+        ShippingConfiguration shippingConfiguration = null;

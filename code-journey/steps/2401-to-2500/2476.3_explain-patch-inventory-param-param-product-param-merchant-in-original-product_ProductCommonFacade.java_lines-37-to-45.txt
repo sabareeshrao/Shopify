@@ -1,0 +1,9 @@
+	  
+	  /**
+	   * Patch inventory by sku
+	   * @param sku
+	   * @param product
+	   * @param merchant
+	   * @param language
+	   */
+	  void update(String sku, LightPersistableProduct product, MerchantStore merchant, Language language);

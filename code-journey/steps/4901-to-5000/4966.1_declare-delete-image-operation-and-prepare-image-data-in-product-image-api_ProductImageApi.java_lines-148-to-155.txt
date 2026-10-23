@@ -1,8 +1,0 @@
-
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = { "/private/product/image/{id}",
-			"/auth/product/images/{id}" }, method = RequestMethod.DELETE)
-	public void deleteImage(@PathVariable Long id, HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-
-		try {

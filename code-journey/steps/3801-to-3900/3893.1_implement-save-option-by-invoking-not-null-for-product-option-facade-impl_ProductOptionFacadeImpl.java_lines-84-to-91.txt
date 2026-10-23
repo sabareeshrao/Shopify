@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductOptionEntity saveOption(PersistableProductOptionEntity option, MerchantStore store,
-			Language language) {
-		Validate.notNull(option, "ProductOption cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-
-		ProductOption optionModel = new ProductOption();
-		if (option.getId() != null && option.getId().longValue() > 0) {

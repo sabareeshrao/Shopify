@@ -1,8 +1,0 @@
-		} else {
-			// Update product with minimal set
-			modified.setAvailable(product.isAvailable());
-			
-			for (ProductAvailability availability : modified.getAvailabilities()) {
-				this.setAvailability(availability, product);
-			}
-		}

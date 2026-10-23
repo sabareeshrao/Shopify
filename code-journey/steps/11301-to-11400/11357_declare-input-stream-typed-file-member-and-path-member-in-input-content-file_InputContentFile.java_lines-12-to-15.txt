@@ -1,4 +1,0 @@
-    private InputStream file;
-    private String path;
-   
-    

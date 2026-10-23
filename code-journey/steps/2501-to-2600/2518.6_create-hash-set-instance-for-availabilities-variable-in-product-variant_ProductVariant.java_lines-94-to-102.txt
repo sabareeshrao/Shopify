@@ -1,0 +1,9 @@
+	
+	@ManyToOne(targetEntity = ProductVariantGroup.class)
+	@JoinColumn(name = "PRODUCT_VARIANT_GROUP_ID", nullable = true)
+	private ProductVariantGroup productVariantGroup;
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="productVariant")
+	private Set<ProductAvailability> availabilities = new HashSet<ProductAvailability>();
+
+

@@ -1,0 +1,9 @@
+
+	@Column(name = "REVIEW_AVG")
+	private BigDecimal productReviewAvg;
+
+	@Column(name = "REVIEW_COUNT")
+	private Integer productReviewCount;
+
+	@Column(name = "QUANTITY_ORDERED")
+	private Integer productOrdered;

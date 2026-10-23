@@ -1,0 +1,4 @@
+import java.io.Serializable;
+
+import com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute;
+

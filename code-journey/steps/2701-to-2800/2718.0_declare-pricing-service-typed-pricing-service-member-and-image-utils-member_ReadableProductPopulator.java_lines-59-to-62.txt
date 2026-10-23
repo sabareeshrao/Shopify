@@ -1,0 +1,4 @@
+	private PricingService pricingService;
+
+	private ImageFilePath imageUtils;
+

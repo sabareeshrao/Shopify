@@ -1,8 +1,0 @@
-	@Override
-	@Async
-	public void indexAllData(MerchantStore store) throws Exception {
-		List<Product> products = productService.listByStore(store);
-
-		products.stream().forEach(p -> {
-			try {
-				searchService.index(store, p);

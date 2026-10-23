@@ -1,8 +1,0 @@
-		order.setCustomerId(1L);
-		order.setDelivery(delivery);
-		order.setIpAddress("ipAddress" );
-		order.setMerchant(merchant);
-		order.setOrderDateFinished(new Date());		
-
-		order.setPaymentType(PaymentType.CREDITCARD);
-		order.setPaymentModuleCode("payment Module Code");

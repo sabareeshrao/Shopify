@@ -1,0 +1,2 @@
+	@Override
+	public void addFile(final String merchantStoreCode, Optional<String>path, final InputContentFile inputStaticContentData)

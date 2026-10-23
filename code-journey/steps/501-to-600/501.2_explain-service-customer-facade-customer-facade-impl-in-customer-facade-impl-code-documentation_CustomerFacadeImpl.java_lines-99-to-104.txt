@@ -1,6 +1,0 @@
- *
- */
-
-@Service("customerFacade")
-public class CustomerFacadeImpl implements CustomerFacade {
-

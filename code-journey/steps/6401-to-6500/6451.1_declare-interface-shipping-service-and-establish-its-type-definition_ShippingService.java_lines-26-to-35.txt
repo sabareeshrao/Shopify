@@ -1,0 +1,10 @@
+public interface ShippingService {
+
+	/**
+	 * Returns a list of supported countries (ship to country list) configured by merchant
+	 * when the merchant configured shipping National and has saved a list of ship to country
+	 * from the list
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

@@ -1,6 +1,0 @@
-    public void setFile( ByteArrayOutputStream file )
-    {
-        this.file = file;
-    }
-    
-}

@@ -1,0 +1,30 @@
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public ReadableEntityList<ReadableContentPage> getContentPages(MerchantStore store, Language language, int page,
+			int count) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+
+		@SuppressWarnings("rawtypes")
+		ReadableEntityList items = new ReadableEntityList();
+		Page<Content> contentPages;
+		try {
+			contentPages = contentService.listByType(ContentType.PAGE, store, page, count);
+
+			items.setTotalPages(contentPages.getTotalPages());
+			items.setNumber(contentPages.getContent().size());
+			items.setRecordsTotal(contentPages.getNumberOfElements());
+
+			List<ReadableContentBox> boxes = contentPages.getContent().stream()
+					.map(content -> convertContentToReadableContentBox(store, language, content))
+					.collect(Collectors.toList());
+
+			items.setItems(boxes);
+			return items;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while getting content ", e);
+		}
+
+	}
+

@@ -1,0 +1,26 @@
+	@Override
+	public void renameFile(String merchantStoreCode, FileContentType fileContentType, Optional<String> path,
+			String originalName, String newName) throws ServiceException{
+
+		OutputContentFile file = contentFileManager.getFile(merchantStoreCode, path, fileContentType, originalName);
+		
+		if(file == null) {
+			throw new ServiceException("File name [" + originalName + "] not found for merchant [" + merchantStoreCode +"]");
+		}
+		
+		ByteArrayOutputStream os = file.getFile();
+		InputStream is = new ByteArrayInputStream(os.toByteArray());
+		
+		//remove file
+		contentFileManager.removeFile(merchantStoreCode, fileContentType, originalName, path);
+		
+		//recreate file
+		InputContentFile inputFile = new InputContentFile();
+		inputFile.setFileContentType(fileContentType);
+		inputFile.setFileName(newName);
+		inputFile.setMimeType(file.getMimeType());
+		inputFile.setFile(is);
+		
+		contentFileManager.addFile(merchantStoreCode, path, inputFile);
+	
+	}

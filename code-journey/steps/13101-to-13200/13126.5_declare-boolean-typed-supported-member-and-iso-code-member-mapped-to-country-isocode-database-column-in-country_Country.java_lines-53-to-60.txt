@@ -1,8 +1,0 @@
-	private boolean supported = true;
-	
-	@Column(name = "COUNTRY_ISOCODE", unique=true, nullable = false)
-	private String isoCode;
-	
-	@Transient
-	private String name;
-	

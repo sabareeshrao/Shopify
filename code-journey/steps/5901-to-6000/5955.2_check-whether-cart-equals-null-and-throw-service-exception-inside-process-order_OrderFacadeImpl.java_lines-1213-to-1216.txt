@@ -1,0 +1,4 @@
+
+			if (cart == null) {
+				throw new ServiceException("Shopping cart with id " + shoppingCartId + " does not exist");
+			}

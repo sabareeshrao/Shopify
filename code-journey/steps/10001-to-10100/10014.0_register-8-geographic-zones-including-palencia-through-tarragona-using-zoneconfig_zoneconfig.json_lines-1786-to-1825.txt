@@ -1,0 +1,40 @@
+	{
+		"zoneCode": "Palencia",
+		"zoneName": "Palencia",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Pontevedra",
+		"zoneName": "Pontevedra",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Salamanca",
+		"zoneName": "Salamanca",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "SantaCruzdeTenerife",
+		"zoneName": "Santa Cruz de Tenerife",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Segovia",
+		"zoneName": "Segovia",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Sevilla",
+		"zoneName": "Sevilla",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Soria",
+		"zoneName": "Soria",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Tarragona",
+		"zoneName": "Tarragona",
+		"countryCode": "ES"
+	},

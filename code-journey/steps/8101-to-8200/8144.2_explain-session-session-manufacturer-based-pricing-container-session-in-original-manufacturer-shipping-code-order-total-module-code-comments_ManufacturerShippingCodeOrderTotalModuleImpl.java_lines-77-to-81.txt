@@ -1,5 +1,0 @@
-		
-/*        KieSession kieSession = kieManufacturerBasedPricingContainer.newKieSession();
-        kieSession.insert(inputParameters);
-        kieSession.fireAllRules();*/
-		

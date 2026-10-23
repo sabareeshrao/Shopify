@@ -1,16 +1,8 @@
 {
   "status": "PASS",
-  "github_browsable_source": "code-journey/steps/",
-  "folders": 146,
-  "folder_size_in_parent_tasks": 100,
-  "parents": 14552,
-  "children": 14731,
-  "published_txt_files": 29283,
-  "unique_txt_filenames": 29283,
-  "child_lines_maximum": 8,
-  "every_txt_matches_zip_bytes": true,
-  "all_parent_children_concatenate_to_parent_exactly": true,
-  "source_byte_exact_reconstruction": "PASS",
-  "source_commit": "6a4a0a65a3408ee8f62597b51d1b3aac24b77dee",
-  "redundant_flat_blocks_removed": true
+  "folders": 101,
+  "individual_txt_files": 17909,
+  "zip_only_txt": true,
+  "files_match_zip": true,
+  "source_rebuild": "PASS"
 }

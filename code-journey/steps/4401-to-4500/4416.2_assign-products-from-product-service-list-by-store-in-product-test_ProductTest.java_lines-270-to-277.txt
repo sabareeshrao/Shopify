@@ -1,8 +1,0 @@
-	     * Creates a review
-	     * TODO requires customer
-	     */
-	    //testReview(product);
-
-	    List<Product> products = productService.listByStore(store);
-	    
-	    System.out.println("Total number of items " + products.size());

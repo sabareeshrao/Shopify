@@ -1,0 +1,25 @@
+
+	@Override
+	public void updateContentBox(Long id, PersistableContentBox box, MerchantStore merchantStore, Language language) {
+		Validate.notNull(box);
+		Validate.notNull(id, "Content id must not be null");
+		Validate.notNull(merchantStore);
+
+		try {
+			Content content = null;
+
+			content = contentService.getById(id, merchantStore);
+			if (content == null) {
+				throw new ConstraintException("Page with id [" + id + "] does not exist for store ["
+						+ merchantStore.getCode() + "]");
+			}
+
+			box.setId(id);
+			content = convertContentBoxToContent(merchantStore, content, box);
+			contentService.saveOrUpdate(content);
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

@@ -1,0 +1,8 @@
+	    red.setMerchantStore(store);
+	    red.setCode("red");
+	    
+	    ProductOptionValueDescription redDescription = new ProductOptionValueDescription();
+	    redDescription.setDescription("Red");
+	    redDescription.setLanguage(en);
+	    redDescription.setName("Red");
+	    redDescription.setProductOptionValue(red);

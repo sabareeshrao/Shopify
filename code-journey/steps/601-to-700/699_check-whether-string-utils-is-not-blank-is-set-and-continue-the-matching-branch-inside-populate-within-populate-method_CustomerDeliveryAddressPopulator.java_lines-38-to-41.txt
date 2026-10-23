@@ -1,4 +1,0 @@
-        
-        if(StringUtils.isNotBlank( source.getDelivery().getAddress() )){
-            target.setAddress(source.getDelivery().getAddress());
-        }

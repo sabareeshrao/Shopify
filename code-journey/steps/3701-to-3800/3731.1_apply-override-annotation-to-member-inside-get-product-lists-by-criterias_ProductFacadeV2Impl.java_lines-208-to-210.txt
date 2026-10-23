@@ -1,0 +1,3 @@
+
+	@Override
+	public List<ReadableProduct> relatedItems(MerchantStore store, Product product, Language language)

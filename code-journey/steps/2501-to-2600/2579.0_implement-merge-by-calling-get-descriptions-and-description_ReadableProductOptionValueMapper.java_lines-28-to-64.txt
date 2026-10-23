@@ -1,0 +1,37 @@
+  @Override
+  public ReadableProductOptionValue merge(ProductOptionValue source, ReadableProductOptionValue destination,
+                                                MerchantStore store, Language language) {
+    ReadableProductOptionValue readableProductOptionValue = new ReadableProductOptionValue();
+    if(language == null) {
+    	readableProductOptionValue = new ReadableProductOptionValueFull();
+      List<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription> descriptions = new ArrayList<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription>();
+      for(ProductOptionValueDescription desc : source.getDescriptions()) {
+          com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription d = this.description(desc);
+          descriptions.add(d);
+      }
+      ((ReadableProductOptionValueFull)readableProductOptionValue).setDescriptions(descriptions);
+    } else {
+    	readableProductOptionValue = new ReadableProductOptionValue();
+      if(!CollectionUtils.isEmpty(source.getDescriptions())) {
+        for(ProductOptionValueDescription desc : source.getDescriptions()) {
+          if(desc != null && desc.getLanguage()!= null && desc.getLanguage().getId() == language.getId()) {
+            com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription d = this.description(desc);
+            readableProductOptionValue.setDescription(d);
+          }
+        }
+      }
+    }
+    
+    readableProductOptionValue.setCode(source.getCode());
+    if(source.getId()!=null) {
+    	readableProductOptionValue.setId(source.getId().longValue());
+    }
+    if(source.getProductOptionValueSortOrder()!=null) {
+    	readableProductOptionValue.setOrder(source.getProductOptionValueSortOrder().intValue());
+    }
+    if(!StringUtils.isBlank(source.getProductOptionValueImage())) {
+    	readableProductOptionValue.setImage(imageUtils.buildProductPropertyImageUtils(store, source.getProductOptionValueImage()));
+    }
+    
+    return readableProductOptionValue;
+  }

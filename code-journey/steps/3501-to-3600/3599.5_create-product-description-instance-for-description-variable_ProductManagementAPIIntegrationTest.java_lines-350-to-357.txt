@@ -1,0 +1,8 @@
+
+		// add french description
+		description = new ProductDescription();
+		description.setLanguage("fr");
+		description.setTitle("Tête de Statue");
+		description.setName("Tête de Statue");
+		description.setDescription(description.getName());
+		description.setFriendlyUrl("tete-de-Statue");

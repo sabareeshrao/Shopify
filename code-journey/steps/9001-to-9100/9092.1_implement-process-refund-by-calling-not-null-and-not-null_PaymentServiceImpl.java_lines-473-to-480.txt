@@ -1,8 +1,0 @@
-	@Override
-	public Transaction processRefund(Order order, Customer customer,
-			MerchantStore store, BigDecimal amount)
-			throws ServiceException {
-		
-		
-		Validate.notNull(customer);
-		Validate.notNull(store);

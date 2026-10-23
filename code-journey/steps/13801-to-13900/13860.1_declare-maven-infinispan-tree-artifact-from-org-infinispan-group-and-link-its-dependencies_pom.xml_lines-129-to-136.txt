@@ -1,8 +1,0 @@
-
-		<dependency>
-			<groupId>org.infinispan</groupId>
-			<artifactId>infinispan-tree</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
-		<dependency>

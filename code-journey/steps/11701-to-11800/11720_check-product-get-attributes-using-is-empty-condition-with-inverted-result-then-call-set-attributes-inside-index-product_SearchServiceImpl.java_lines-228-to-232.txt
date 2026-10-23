@@ -1,5 +1,0 @@
-
-			if (!CollectionUtils.isEmpty(product.getAttributes())) {
-				Map<String, String> attributes = attributes(product, description.getLanguage().getCode());
-				item.setAttributes(attributes);
-			}

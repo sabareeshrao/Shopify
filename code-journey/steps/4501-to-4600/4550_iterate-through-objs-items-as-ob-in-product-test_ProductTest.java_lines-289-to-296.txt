@@ -1,8 +1,0 @@
-		} 
-		
-		List<Object[]> objs = categoryService.countProductsByCategories(store, ids);
-
-		for(Object[] ob : objs) {
-			Long c = (Long) ob[0];
-			//System.out.println("Category " + c.getCode() + " has " + ob[1] + " items");
-		}

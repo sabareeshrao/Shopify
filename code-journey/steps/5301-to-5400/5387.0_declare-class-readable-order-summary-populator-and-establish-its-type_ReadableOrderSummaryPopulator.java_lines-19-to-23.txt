@@ -1,0 +1,5 @@
+public class ReadableOrderSummaryPopulator extends AbstractDataPopulator<OrderTotalSummary, ReadableOrderTotalSummary> {
+
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(ReadableOrderSummaryPopulator.class);
+	

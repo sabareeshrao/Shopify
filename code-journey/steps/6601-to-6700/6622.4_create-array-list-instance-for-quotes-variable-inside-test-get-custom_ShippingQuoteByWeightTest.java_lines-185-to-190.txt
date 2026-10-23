@@ -1,0 +1,6 @@
+		List<CustomShippingQuoteWeightItem> quotes = new ArrayList<CustomShippingQuoteWeightItem>();
+		quotes.add(caQuote4);
+		quotes.add(caQuote10);
+		quotes.add(caQuote100);
+		
+		northRegion.setQuoteItems(quotes);

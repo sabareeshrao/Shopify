@@ -1,0 +1,8 @@
+public class PackageDetails {
+	
+	private String code;
+	private double shippingWeight;
+	private double shippingMaxWeight;
+	private double shippingLength;
+	private double shippingHeight;
+	private double shippingWidth;

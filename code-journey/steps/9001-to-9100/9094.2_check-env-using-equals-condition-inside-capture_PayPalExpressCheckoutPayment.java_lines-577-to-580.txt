@@ -1,4 +1,0 @@
-			String env = configuration.getEnvironment();
-			if(Constants.PRODUCTION_ENVIRONMENT.equals(env)) {
-				mode = "production";
-			}

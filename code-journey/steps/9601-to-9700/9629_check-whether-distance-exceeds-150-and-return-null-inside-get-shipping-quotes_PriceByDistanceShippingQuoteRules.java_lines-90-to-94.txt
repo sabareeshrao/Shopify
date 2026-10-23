@@ -1,5 +1,0 @@
-		
-		//maximum distance TODO configure from admin
-		if(distance > 150D) {
-			return null;
-		}

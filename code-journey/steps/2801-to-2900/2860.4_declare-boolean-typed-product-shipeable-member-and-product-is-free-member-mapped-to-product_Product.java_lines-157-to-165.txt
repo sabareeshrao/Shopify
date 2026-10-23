@@ -1,0 +1,9 @@
+	
+	@Column(name = "PRODUCT_SHIP")
+	private boolean productShipeable = false;
+
+	@Column(name = "PRODUCT_FREE")
+	private boolean productIsFree;
+
+	@Column(name = "PRODUCT_LENGTH")
+	private BigDecimal productLength;

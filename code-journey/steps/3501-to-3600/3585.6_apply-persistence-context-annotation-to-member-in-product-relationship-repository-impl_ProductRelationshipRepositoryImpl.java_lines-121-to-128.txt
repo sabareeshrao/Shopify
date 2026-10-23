@@ -1,8 +1,0 @@
-          + "left join fetch pr.product p "
-          + "left join fetch pr.relatedProduct rp "
-          + "left join fetch rp.descriptions rpd "
-          + "where pr.code=:code "
-          + "and pr.store.id=:storeId "
-          + "and rpd.language.id=:langId";
-
-  @PersistenceContext

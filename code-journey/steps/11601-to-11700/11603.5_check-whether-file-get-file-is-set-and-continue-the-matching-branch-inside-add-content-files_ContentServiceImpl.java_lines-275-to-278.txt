@@ -1,4 +1,0 @@
-			for (InputContentFile file : contentFilesList) {
-				if (file.getFile() != null) {
-					file.getFile().close();
-				}

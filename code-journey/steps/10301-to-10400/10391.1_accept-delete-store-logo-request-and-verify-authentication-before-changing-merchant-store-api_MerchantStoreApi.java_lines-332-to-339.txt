@@ -1,8 +1,0 @@
-
-	@ResponseStatus(HttpStatus.OK)
-	@DeleteMapping(value = { "/private/store/{code}/marketing/logo" })
-	@ApiOperation(httpMethod = "DELETE", value = "Delete store logo", notes = "", response = Void.class)
-	public void deleteStoreLogo(@PathVariable String code, HttpServletRequest request) {
-
-		// user doing action must be attached to the store being modified
-		String userName = getUserFromRequest(request);

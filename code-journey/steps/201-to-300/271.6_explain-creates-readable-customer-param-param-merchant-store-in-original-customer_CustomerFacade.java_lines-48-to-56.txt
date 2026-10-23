@@ -1,0 +1,9 @@
+
+    /**
+     * Creates a ReadableCustomer
+     * @param id
+     * @param merchantStore
+     * @param language
+     * @return
+     */
+    ReadableCustomer getCustomerById(final Long id, final MerchantStore merchantStore, final Language language);

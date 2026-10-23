@@ -1,8 +1,0 @@
-
-			q.setParameter("productId", id);
-			q.setParameter("id", store.getId());
-
-			return (Product) q.getSingleResult();
-
-		} catch (javax.persistence.NoResultException ers) {
-			return null;

@@ -1,0 +1,29 @@
+	
+	@Inject
+	protected CustomerOptionService customerOptionService;
+	
+	@Inject
+	protected CustomerOptionValueService customerOptionValueService;
+	
+	@Inject
+	protected CustomerOptionSetService customerOptionSetService;
+	
+	@Inject
+	protected OrderService orderService;
+	
+	@Inject
+	protected PaymentService paymentService;
+	
+	@Inject
+	protected ShoppingCartService shoppingCartService;
+	
+	@Inject
+	protected EmailService emailService;
+	
+	@Before
+	public void init() throws ServiceException {
+		if(initializationDatabase.isEmpty()) {
+		  populate();
+		}
+
+	}

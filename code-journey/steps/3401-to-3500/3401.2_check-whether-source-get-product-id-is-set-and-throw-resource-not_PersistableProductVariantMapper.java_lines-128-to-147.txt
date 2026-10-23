@@ -1,0 +1,20 @@
+				
+		if(source.getProductId() != null && source.getProductId().longValue() > 0) {
+			product = productService.findOne(source.getProductId(), store);
+			
+			if(product == null) {
+				throw new ResourceNotFoundException("Product [" + source.getId() + "] + not found for store [" + store.getCode() + "]");
+			}
+
+			if(product.getMerchantStore().getId() != store.getId()) {
+				throw new ResourceNotFoundException("Product [" + source.getId() + "] + not found for store [" + store.getCode() + "]");
+			}
+			
+			if(product.getSku() != null && product.getSku().equals(source.getSku())) {
+				throw new OperationNotAllowedException("Product variant sku [" + source.getSku() + "] + must be different than product instance sku [" + product.getSku() + "]");
+			}
+			
+			destination.setProduct(product);
+			
+			
+		}

@@ -1,0 +1,6 @@
+
+			/**
+			 * Product definition
+			 */
+			ProductAvailability productAvailability = null;
+		    ProductPrice defaultPrice = null;

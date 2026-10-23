@@ -1,0 +1,11 @@
+
+@Entity
+@Table (name="FILE_HISTORY", uniqueConstraints={
+		@UniqueConstraint(
+			columnNames={
+				"MERCHANT_ID",
+				"FILE_ID"
+			}
+		)
+	}
+)

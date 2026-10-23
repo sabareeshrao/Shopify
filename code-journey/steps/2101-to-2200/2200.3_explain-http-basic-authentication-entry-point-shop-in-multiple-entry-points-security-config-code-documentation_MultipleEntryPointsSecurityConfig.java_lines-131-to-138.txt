@@ -1,8 +1,0 @@
-					.httpBasic()
-					.authenticationEntryPoint(shopAuthenticationEntryPoint())
-					.and()
-					.logout()
-					.logoutUrl("/shop/customer/logout")
-					.logoutSuccessUrl("/shop/")
-					.invalidateHttpSession(true)
-					.deleteCookies("JSESSIONID")

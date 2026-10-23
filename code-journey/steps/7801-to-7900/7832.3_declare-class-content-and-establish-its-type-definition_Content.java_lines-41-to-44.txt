@@ -1,0 +1,4 @@
+public class Content extends SalesManagerEntity<Long, Content> implements Serializable {
+
+	
+

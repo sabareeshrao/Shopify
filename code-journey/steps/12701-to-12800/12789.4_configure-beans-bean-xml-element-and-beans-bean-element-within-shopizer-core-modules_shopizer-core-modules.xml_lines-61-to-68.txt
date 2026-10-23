@@ -1,8 +1,0 @@
-		class="com.salesmanager.core.business.modules.integration.shipping.impl.UPSShippingQuote" />
-	<beans:bean id="weightBased"
-		class="com.salesmanager.core.business.modules.integration.shipping.impl.CustomWeightBasedShippingQuote" />
-	<beans:bean id="priceByDistance"
-		class="com.salesmanager.core.business.modules.integration.shipping.impl.PriceByDistanceShippingQuoteRules" />
-	<beans:bean id="storePickUp"
-		class="com.salesmanager.core.business.modules.integration.shipping.impl.StorePickupShippingQuote" />
-	<beans:bean id="customShippingPriceModule"

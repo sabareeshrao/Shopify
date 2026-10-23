@@ -1,0 +1,9 @@
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);
+		
+		customerService.create(customer);
+		
+		Long dummyCartId = 0L;//for correlation
+	    
+	    ShippingQuote shippingQuote = shippingService.getShippingQuote(dummyCartId, store, delivery, shippingProducts, en);

@@ -1,8 +1,0 @@
-	@Override
-	public List<ReadableProductOptionSet> list(MerchantStore store, Language language, String type) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Validate.notNull(language, "Language cannot be null");
-		Validate.notNull(type, "Product type cannot be null");
-
-		// find product type by id
-		ReadableProductType readable = productTypeFacade.get(store, type, language);

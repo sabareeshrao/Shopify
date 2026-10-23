@@ -1,3 +1,0 @@
-			if(source.getDelivery().getZone()!=null) {
-				address.setZone(source.getDelivery().getZone().getCode());
-			}

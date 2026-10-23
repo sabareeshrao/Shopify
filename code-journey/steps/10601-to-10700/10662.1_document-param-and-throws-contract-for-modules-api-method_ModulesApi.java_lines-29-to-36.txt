@@ -1,8 +1,0 @@
-   *
-   * see : shopizer/sm-core/src/main/resources/reference/integrationmodules.json for more samples
-   * @param json
-   * @param request
-   * @param response
-   * @throws Exception
-   */
-/*  @PostMapping(value = "/module", consumes = MediaType.TEXT_PLAIN)

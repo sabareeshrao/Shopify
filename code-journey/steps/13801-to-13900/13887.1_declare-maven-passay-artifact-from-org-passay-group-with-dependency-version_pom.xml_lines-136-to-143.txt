@@ -1,8 +1,0 @@
-
-		<!-- https://mvnrepository.com/artifact/org.passay/passay -->
-		<!-- Password rules library -->
-		<dependency>
-			<groupId>org.passay</groupId>
-			<artifactId>passay</artifactId>
-			<version>1.6.0</version>
-		</dependency>

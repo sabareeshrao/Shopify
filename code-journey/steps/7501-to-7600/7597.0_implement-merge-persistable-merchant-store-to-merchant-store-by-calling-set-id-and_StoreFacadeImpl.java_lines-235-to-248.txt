@@ -1,0 +1,14 @@
+	private MerchantStore mergePersistableMerchantStoreToMerchantStore(PersistableMerchantStore store, String code,
+			Language language) {
+
+		MerchantStore mStore = getMerchantStoreByCode(code);
+
+		store.setId(mStore.getId());
+
+		try {
+			mStore = persistableMerchantStorePopulator.populate(store, mStore, language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException(e);
+		}
+		return mStore;
+	}

@@ -1,0 +1,19 @@
+
+  @Override
+  public PersistableCustomerReview updateCustomerReview(Long id, Long reviewId, PersistableCustomerReview review,
+      MerchantStore store, Language language) {
+
+    CustomerReview customerReview = getCustomerReviewById(reviewId);
+
+    if(! customerReview.getReviewedCustomer().getId().equals(id)) {
+      throw new ResourceNotFoundException("Customer review with id " + reviewId + " does not exist for this customer");
+    }
+
+    //rating maximum 5
+    if(review.getRating()>Constants.MAX_REVIEW_RATING_SCORE) {
+      throw new ServiceRuntimeException("Maximum rating score is " + Constants.MAX_REVIEW_RATING_SCORE);
+    }
+
+    review.setReviewedCustomer(id);
+    return review;
+  }

@@ -1,0 +1,9 @@
+
+	/**
+	 * Get product relationship List for a given type (RELATED, FEATURED...) and a given base product
+	 * @param store
+	 * @param product
+	 * @param type
+	 * @return
+	 * @throws ServiceException
+	 */

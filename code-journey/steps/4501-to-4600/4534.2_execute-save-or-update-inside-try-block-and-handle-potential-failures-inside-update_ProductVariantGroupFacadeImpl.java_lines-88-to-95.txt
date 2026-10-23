@@ -1,8 +1,0 @@
-		try {
-			productVariantGroupService.saveOrUpdate(group);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Cannot save product instance group [" + productVariantGroup + "] for store [" + store.getCode() + "]"); 
-		}
-		
-	}
-

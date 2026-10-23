@@ -1,0 +1,40 @@
+		{
+			"zoneCode": "Alava",
+			"zoneName": "Alava",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Albacete",
+			"zoneName": "Albacete",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Alicante",
+			"zoneName": "Alicante",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Almeria",
+			"zoneName": "Almeria",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Asturias",
+			"zoneName": "Asturias",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Avila",
+			"zoneName": "Avila",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Badajoz",
+			"zoneName": "Badajoz",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Baleares",
+			"zoneName": "Baleares",
+			"countryCode": "ES"
+		},

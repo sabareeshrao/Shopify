@@ -1,0 +1,9 @@
+	/**
+	 * Creates a product price
+	 * @param price
+	 * @param productId
+	 * @param inventoryId
+	 * @param store
+	 * @return
+	 */
+	Long save(PersistableProductPrice price, MerchantStore store);

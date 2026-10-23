@@ -1,0 +1,8 @@
+  private final static String TEMPLATE_PATH = "templates/email";
+
+  @Override
+  public void send(Email email) throws Exception {
+
+    final String eml = email.getFrom();
+    final String from = email.getFromEmail();
+    final String to = email.getTo();

@@ -1,7 +1,0 @@
-	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
-	private List<TaxRate> taxRates = new ArrayList<TaxRate>();
-	
-	@Transient
-	private String rateText;
-	
-	

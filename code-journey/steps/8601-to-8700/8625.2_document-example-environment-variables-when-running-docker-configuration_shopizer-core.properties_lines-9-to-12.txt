@@ -1,0 +1,4 @@
+# example of environment variables when running docker image using aws
+
+# See this git project for more examples https://github.com/shopizer-ecommerce/shopizer-docker-compose
+#

@@ -1,8 +1,0 @@
-	private User converPersistabletUserToUser(MerchantStore store, Language lang, User userModel,
-			PersistableUser user) {
-		try {
-			return persistableUserPopulator.populate(user, userModel, store, lang);
-		} catch (ConversionException e) {
-			throw new ConversionRuntimeException(e);
-		}
-	}

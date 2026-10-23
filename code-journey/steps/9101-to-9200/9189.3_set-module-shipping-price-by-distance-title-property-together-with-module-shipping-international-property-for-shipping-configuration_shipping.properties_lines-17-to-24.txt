@@ -1,8 +1,0 @@
-
-#custom
-module.shipping.priceByDistance.title=Create your own shipping quote based on distance
-module.shipping.priceByDistance.text=Set your shipping price (by kilometer). Requires the pre-processor distance calculator.
-
-module.shipping.canada=Canada
-module.shipping.usa=United states
-module.shipping.international=International

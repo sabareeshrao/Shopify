@@ -1,0 +1,4 @@
+
+  @PersistenceContext
+  private EntityManager entityManager;
+

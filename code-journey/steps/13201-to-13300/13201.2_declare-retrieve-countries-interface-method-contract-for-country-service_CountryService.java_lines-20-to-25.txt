@@ -1,6 +1,0 @@
-	Map<String, Country> getCountriesMap(Language language)
-			throws ServiceException;
-
-	List<Country> getCountries(List<String> isoCodes, Language language)
-			throws ServiceException;
-	

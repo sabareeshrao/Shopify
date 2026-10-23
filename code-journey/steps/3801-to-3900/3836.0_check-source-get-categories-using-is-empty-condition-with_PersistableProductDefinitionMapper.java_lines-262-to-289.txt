@@ -1,0 +1,28 @@
+
+			
+			//categories
+			if(!CollectionUtils.isEmpty(source.getCategories())) {
+				for(com.salesmanager.shop.model.catalog.category.Category categ : source.getCategories()) {
+					
+					Category c = null;
+					if(!StringUtils.isBlank(categ.getCode())) {
+						c = categoryService.getByCode(store, categ.getCode());
+					} else {
+						Validate.notNull(categ.getId(), "Category id nust not be null");
+						c = categoryService.getById(categ.getId(), store.getId());
+					}
+					
+					if(c==null) {
+						if(!StringUtils.isBlank(categ.getCode())) {
+							throw new ConversionException("Category code " + categ.getCode() + " does not exist");
+						} else {
+							throw new ConversionException("Category id " + categ.getId() + " does not exist");
+
+						}
+					}
+					if(c.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Invalid category id");
+					}
+					destination.getCategories().add(c);
+				}
+			}

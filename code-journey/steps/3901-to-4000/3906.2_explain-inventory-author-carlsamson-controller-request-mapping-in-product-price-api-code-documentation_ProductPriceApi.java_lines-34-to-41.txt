@@ -1,8 +1,0 @@
- * Use inventory
- * @author carlsamson
- *
- */
-
-@Controller
-@RequestMapping("/api/v1")
-@Api(tags = { "Product price api" })

@@ -1,0 +1,9 @@
+
+	  /**
+	   * Delete product
+	   * @param id
+	   * @param store
+	   * @throws Exception
+	   */
+	  void deleteProduct(Long id, MerchantStore store);
+

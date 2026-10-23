@@ -1,4 +1,0 @@
-			TaxClass model = taxClassService.getByCode(code, store);
-			if(model == null) {
-				throw new ResourceNotFoundException("TaxClass not found [" + code + "] for store [" + store.getCode() + "]");
-			}

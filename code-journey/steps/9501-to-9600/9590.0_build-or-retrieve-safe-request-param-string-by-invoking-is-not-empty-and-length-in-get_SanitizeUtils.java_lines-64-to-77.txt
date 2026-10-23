@@ -1,0 +1,14 @@
+    public static String getSafeRequestParamString(String value) {
+
+    StringBuilder safe = new StringBuilder();
+    if(StringUtils.isNotEmpty(value)) {
+        // Fastest way for short strings - https://stackoverflow.com/a/11876086/195904
+        for(int i=0; i<value.length(); i++) {
+            char current = value.charAt(i);
+            if(!blackList.contains(current)) {
+                safe.append(current);
+            }
+        }
+    }
+    return StringEscapeUtils.escapeXml11(safe.toString());
+}

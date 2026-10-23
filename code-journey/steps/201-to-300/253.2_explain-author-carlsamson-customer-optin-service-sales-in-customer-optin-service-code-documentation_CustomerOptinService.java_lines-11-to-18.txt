@@ -1,8 +1,0 @@
- * @author carlsamson
- *
- */
-public interface CustomerOptinService extends SalesManagerEntityService<Long, CustomerOptin> {
-	
-	/**
-	 * Optin a given customer. This has no reference to a specific Customer object but contains
-	 * only email, first name and lastname

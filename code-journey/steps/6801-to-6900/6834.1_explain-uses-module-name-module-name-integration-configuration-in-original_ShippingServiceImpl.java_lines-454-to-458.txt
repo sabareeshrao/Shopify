@@ -1,0 +1,5 @@
+
+			
+			/** uses this module name **/
+			String moduleName = null;
+			IntegrationConfiguration configuration = null;

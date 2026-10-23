@@ -1,0 +1,30 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductVariantApi.class);
+
+	@Autowired
+	private ProductVariantFacade productVariantFacade;
+
+	@Inject
+	private UserFacade userFacade;
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/{productId}/variant" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public @ResponseBody Entity create(
+			@Valid @RequestBody PersistableProductVariant variant, 
+			@PathVariable Long productId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_CATALOGUE, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		Long id = productVariantFacade.create(variant, productId, merchantStore, language);
+		return new Entity(id);
+		
+	}

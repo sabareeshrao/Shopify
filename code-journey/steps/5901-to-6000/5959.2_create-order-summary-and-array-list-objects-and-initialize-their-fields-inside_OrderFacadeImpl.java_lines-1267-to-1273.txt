@@ -1,0 +1,7 @@
+
+			OrderSummary orderSummary = new OrderSummary();
+			orderSummary.setShippingSummary(shippingSummary);
+			List<ShoppingCartItem> itemsSet = new ArrayList<ShoppingCartItem>(cart.getLineItems());
+			orderSummary.setProducts(itemsSet);
+
+			orderTotalSummary = orderService.caculateOrderTotal(orderSummary, customer, store, language);

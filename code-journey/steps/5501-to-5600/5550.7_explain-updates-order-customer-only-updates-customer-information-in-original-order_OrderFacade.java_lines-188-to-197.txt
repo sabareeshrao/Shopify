@@ -1,0 +1,10 @@
+
+	/**
+	 * Updates order customer
+	 * Only updates customer information from the order
+	 * It won't update customer object from Customer entity
+	 * @param orderId
+	 * @param customer
+	 * @param store
+	 */
+	void updateOrderCustomre(Long orderId, PersistableCustomer customer, MerchantStore store);

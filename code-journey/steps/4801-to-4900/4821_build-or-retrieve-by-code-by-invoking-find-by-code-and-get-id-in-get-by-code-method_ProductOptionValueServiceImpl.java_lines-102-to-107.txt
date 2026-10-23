@@ -1,6 +1,0 @@
-	@Override
-	public ProductOptionValue getByCode(MerchantStore store, String optionValueCode) {
-		return productOptionValueRepository.findByCode(store.getId(), optionValueCode);
-	}
-
-

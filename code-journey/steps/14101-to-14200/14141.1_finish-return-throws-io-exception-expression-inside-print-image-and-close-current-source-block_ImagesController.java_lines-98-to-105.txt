@@ -1,8 +1,0 @@
-
-	}
-	
-
-	/**
-	 * For product images
-	 * @Deprecated
-	 * @param storeCode

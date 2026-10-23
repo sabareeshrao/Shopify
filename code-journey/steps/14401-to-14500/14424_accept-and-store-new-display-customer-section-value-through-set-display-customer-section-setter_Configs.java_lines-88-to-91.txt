@@ -1,4 +1,0 @@
-	public void setDisplayCustomerSection(boolean displayCustomerSection) {
-		this.displayCustomerSection = displayCustomerSection;
-	}
-

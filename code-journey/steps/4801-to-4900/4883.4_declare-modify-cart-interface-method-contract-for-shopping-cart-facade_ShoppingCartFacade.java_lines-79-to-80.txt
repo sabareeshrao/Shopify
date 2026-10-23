@@ -1,0 +1,2 @@
+	ReadableShoppingCart modifyCart(String cartCode, PersistableShoppingCartItem item, MerchantStore store,
+										 Language language) throws Exception;

@@ -1,0 +1,17 @@
+
+/**
+ * Content management for a given retailer using GC{ (Google Cloud Platform)
+ * Cloud Storage with buckets
+ * 
+ * 
+ * Linux/ Mac export GOOGLE_APPLICATION_CREDENTIALS="/path/to/file" For Windows
+ * set GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\file"
+ * 
+ * following this article: https://www.baeldung.com/java-google-cloud-storage
+ * 
+ * gsutil ls -L -b gs://shopizer-content
+ * 
+ * 
+ * @author carlsamson
+ *
+ */

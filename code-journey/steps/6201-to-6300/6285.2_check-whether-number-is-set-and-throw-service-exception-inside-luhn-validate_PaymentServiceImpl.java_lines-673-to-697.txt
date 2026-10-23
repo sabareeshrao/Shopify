@@ -1,0 +1,25 @@
+			throws ServiceException {
+		char[] charArray = numberString.toCharArray();
+		int[] number = new int[charArray.length];
+		int total = 0;
+	
+		for (int i = 0; i < charArray.length; i++) {
+			number[i] = Character.getNumericValue(charArray[i]);
+		}
+	
+		for (int i = number.length - 2; i > -1; i -= 2) {
+			number[i] *= 2;
+	
+			if (number[i] > 9)
+				number[i] -= 9;
+		}
+
+		for (int j : number) {
+			total += j;
+		}
+	
+		if (total % 10 != 0) {
+			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
+		}
+	
+	}

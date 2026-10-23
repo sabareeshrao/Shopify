@@ -1,0 +1,2 @@
+	ShippingSummary getShippingSummary(MerchantStore store, ShippingQuote shippingQuote, 
+			ShippingOption selectedShippingOption) throws ServiceException;

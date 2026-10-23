@@ -1,8 +1,0 @@
-	public ReadableCustomerOption getCustomerOption() {
-		return customerOption;
-	}
-	public void setCustomerOptionValue(ReadableCustomerOptionValue customerOptionValue) {
-		this.customerOptionValue = customerOptionValue;
-	}
-	public ReadableCustomerOptionValue getCustomerOptionValue() {
-		return customerOptionValue;

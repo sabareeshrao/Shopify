@@ -1,7 +1,0 @@
-			    new TypeReference<HashMap<String,String>>(){});
-	  	  
-	  	  String successInd = map.get(SUCCESS_INDICATOR);
-	  	  
-	  	  if(StringUtils.isBlank(successInd)) {
-	  		  throw new Exception("Unreadable response from reCaptcha " + json);
-	  	  }

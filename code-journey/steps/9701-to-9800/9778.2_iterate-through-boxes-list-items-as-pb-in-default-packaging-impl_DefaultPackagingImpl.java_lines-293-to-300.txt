@@ -1,8 +1,0 @@
-
-		System.out.println("###################################");
-		System.out.println("Number of boxes " + boxesList.size());
-		System.out.println("###################################");
-
-		for(PackingBox pb : boxesList) {
-			PackageDetails details = new PackageDetails();
-			details.setShippingHeight(height);

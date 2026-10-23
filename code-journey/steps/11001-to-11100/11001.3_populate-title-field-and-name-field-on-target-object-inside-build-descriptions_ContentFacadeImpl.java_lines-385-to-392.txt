@@ -1,8 +1,0 @@
-			contentDescription.setTitle(objectContent.getTitle());
-			contentDescription.setName(objectContent.getName());
-			contentDescription.setSeUrl(objectContent.getFriendlyUrl());
-			contentDescription.setDescription(objectContent.getDescription());
-			contentDescription.setMetatagTitle(objectContent.getTitle());
-			descriptions.add(contentDescription);
-			**/
-		}

@@ -1,0 +1,9 @@
+
+  <developers>
+    <developer>
+      <name>Shopizer Team</name>
+      <email>team@shopizer.com</email>
+      <organization>Shopizer</organization>
+      <organizationUrl>http://www.shopizer.com</organizationUrl>
+    </developer>
+  </developers>

@@ -1,0 +1,2 @@
+  basedir="$1"
+  wdir="$1"

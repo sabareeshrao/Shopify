@@ -1,0 +1,6 @@
+        final StringWriter htmlWriter = new StringWriter();
+        try {
+          htmlTemplate.process(templateTokens, htmlWriter);
+        } catch (TemplateException e) {
+          throw new MailPreparationException("Can't generate HTML mail", e);
+        }

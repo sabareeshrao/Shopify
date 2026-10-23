@@ -1,0 +1,7 @@
+	
+	/**
+	 * Create content page
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 */

@@ -1,0 +1,9 @@
+	
+	/**
+	 * Create content box
+	 * 
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 * @param pageCode
+	 */

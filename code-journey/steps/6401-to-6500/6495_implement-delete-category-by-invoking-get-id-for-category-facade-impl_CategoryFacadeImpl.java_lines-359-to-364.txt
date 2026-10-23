@@ -1,6 +1,0 @@
-	@Override
-	public void deleteCategory(Long categoryId, MerchantStore store) {
-		Category category = getOne(categoryId, store.getId());
-		deleteCategory(category);
-	}
-

@@ -1,0 +1,7 @@
+	public final static int DESCRIPTION_ID_ALLOCATION_SIZE = 1;
+	public final static int DESCRIPTION_ID_START_VALUE = 2000;
+	
+	/**
+	 * All regions
+	 */
+	public static final String ALL_REGIONS = "*";

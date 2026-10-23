@@ -1,8 +1,0 @@
-	@Override
-	// KEEP
-	public ReadableShoppingCart getByCode(String code, MerchantStore store, Language language) throws Exception {
-
-		ShoppingCart cart = shoppingCartService.getByCode(code, store);
-		ReadableShoppingCart readableCart = null;
-
-		if (cart != null) {

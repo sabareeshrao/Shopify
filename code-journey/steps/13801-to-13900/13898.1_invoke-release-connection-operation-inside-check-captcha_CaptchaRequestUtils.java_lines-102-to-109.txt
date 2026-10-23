@@ -1,8 +1,0 @@
-	  	  
-	  	  return checkCaptcha;
-
-	    } finally {
-	      // Release the connection.
-	      post.releaseConnection();
-	    }  
-	  }

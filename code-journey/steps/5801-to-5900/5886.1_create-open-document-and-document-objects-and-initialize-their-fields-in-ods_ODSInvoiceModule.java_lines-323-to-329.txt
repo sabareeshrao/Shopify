@@ -1,0 +1,7 @@
+			
+			
+			final OpenDocument doc = new OpenDocument();
+			doc.loadFrom(tempInvoiceName.toString());
+
+			 // Open the PDF document
+			 Document document = new Document(PageSize.A4);

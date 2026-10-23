@@ -1,0 +1,21 @@
+
+	private List<Document> document(Long id, List<String> languages, RequestOptions options) throws Exception {
+		List<Optional<Document>> documents = null;
+		try {
+			documents = searchModule.getDocument(id, languages, options);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		for(Optional<Document> d : documents) {
+			if(d == null) {//not allowed
+				return Collections.emptyList();
+			}
+		}
+		
+		List<Document> filteredList = documents.stream().filter(Optional::isPresent).map(Optional::get)
+				.collect(Collectors.toList());
+
+		return filteredList;
+
+	}

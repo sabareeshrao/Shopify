@@ -1,0 +1,9 @@
+	
+			
+			URL postURL = new URL(server);
+			conn = (HttpURLConnection) postURL.openConnection();
+			
+
+			// Set connection parameters. We need to perform input and output,
+			// so set both as true.
+			conn.setDoInput(true);

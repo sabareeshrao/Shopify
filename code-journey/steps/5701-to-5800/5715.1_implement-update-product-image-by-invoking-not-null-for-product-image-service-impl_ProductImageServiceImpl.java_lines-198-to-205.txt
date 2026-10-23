@@ -1,8 +1,0 @@
-	@Override
-	public void updateProductImage(Product product, ProductImage productImage) {
-		Validate.notNull(product, "Product cannot be null");
-		Validate.notNull(productImage, "ProductImage cannot be null");
-		productImage.setProduct(product);
-		productImageRepository.save(productImage);
-
-	}

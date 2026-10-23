@@ -1,0 +1,56 @@
+
+  @RequestMapping(
+      value = {
+        "/private/products/{id}/reviews/{reviewid}",
+        "/auth/products/{id}/reviews/{reviewid}"
+      },
+      method = RequestMethod.PUT)
+  @ResponseStatus(HttpStatus.OK)
+  @ResponseBody
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public PersistableProductReview update(
+      @PathVariable final Long id,
+      @PathVariable final Long reviewId,
+      @Valid @RequestBody PersistableProductReview review,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response) {
+
+    try {
+      ProductReview prodReview = productReviewService.getById(reviewId);
+      if (prodReview == null) {
+        response.sendError(404, "Product review with id " + reviewId + " does not exist");
+        return null;
+      }
+
+      if (prodReview.getCustomer().getId().longValue() != review.getCustomerId().longValue()) {
+        response.sendError(404, "Product review with id " + reviewId + " does not exist");
+        return null;
+      }
+
+      // rating maximum 5
+      if (review.getRating() > Constants.MAX_REVIEW_RATING_SCORE) {
+        response.sendError(503, "Maximum rating score is " + Constants.MAX_REVIEW_RATING_SCORE);
+        return null;
+      }
+
+      review.setProductId(id);
+
+      productCommonFacade.saveOrUpdateReview(review, merchantStore, language);
+
+      return review;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while saving product review", e);
+      try {
+        response.sendError(503, "Error while saving product review" + e.getMessage());
+      } catch (Exception ignore) {
+      }
+
+      return null;
+    }
+  }

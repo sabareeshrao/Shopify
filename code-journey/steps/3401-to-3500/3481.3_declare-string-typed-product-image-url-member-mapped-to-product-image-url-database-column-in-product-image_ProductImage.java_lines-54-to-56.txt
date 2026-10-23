@@ -1,3 +1,0 @@
-	@Column(name = "PRODUCT_IMAGE_URL")
-	private String productImageUrl;
-	

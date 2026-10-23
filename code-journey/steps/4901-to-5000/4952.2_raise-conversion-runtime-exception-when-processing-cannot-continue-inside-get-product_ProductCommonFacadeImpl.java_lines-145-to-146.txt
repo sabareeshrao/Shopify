@@ -1,2 +1,0 @@
-			throw new ConversionRuntimeException("Error converting product [" + id + "]",e);
-		}

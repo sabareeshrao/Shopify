@@ -1,0 +1,10 @@
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "PRODUCT_VARIATION", uniqueConstraints=
+@UniqueConstraint(columnNames = {"MERCHANT_ID", "PRODUCT_OPTION_ID", "OPTION_VALUE_ID"}))
+public class ProductVariation extends SalesManagerEntity<Long, ProductVariation> implements Optionable, Auditable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

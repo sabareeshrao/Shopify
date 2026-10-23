@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.exception.ConversionException;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.model.store.ReadableMerchantStore;
-
-/**
- * Populates MerchantStore core entity model object with more complete details than the traditional ReadableMerchantStorePopulator
- * @author rui pereira

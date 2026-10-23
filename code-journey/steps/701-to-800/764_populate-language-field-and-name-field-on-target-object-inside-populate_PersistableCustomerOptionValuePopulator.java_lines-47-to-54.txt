@@ -1,8 +1,0 @@
-					description.setLanguage(lang);
-					description.setName(desc.getName());
-					description.setTitle(desc.getTitle());
-					description.setCustomerOptionValue(target);
-					descriptions.add(description);
-				}
-				target.setDescriptions(descriptions);
-			}

@@ -1,8 +1,0 @@
-
-				payment = new com.salesmanager.core.model.payments.PaypalPayment();
-
-				((com.salesmanager.core.model.payments.PaypalPayment) payment)
-						.setPayerId(transaction.getTransactionDetails().get("PAYERID"));
-				((com.salesmanager.core.model.payments.PaypalPayment) payment)
-						.setPaymentToken(transaction.getTransactionDetails().get("TOKEN"));
-

@@ -1,8 +1,0 @@
-
-	{
-		"module": "PAYMENT",
-		"code": "stripe",
-		"type":"creditcard",
-		"version":"",
-		"regions": ["US","CA","GB","AU","FI","DK","IE","NO","SE","ES","PT"],
-		"image":"stripe.png",

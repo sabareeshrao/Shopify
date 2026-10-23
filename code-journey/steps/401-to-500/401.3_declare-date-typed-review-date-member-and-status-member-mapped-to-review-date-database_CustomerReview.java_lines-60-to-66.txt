@@ -1,0 +1,7 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "REVIEW_DATE")
+	private Date reviewDate;
+	
+	@Column(name = "STATUS")
+	private Integer status;

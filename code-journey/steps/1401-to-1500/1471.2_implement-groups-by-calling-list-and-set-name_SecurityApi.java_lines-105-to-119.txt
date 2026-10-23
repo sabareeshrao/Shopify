@@ -1,0 +1,15 @@
+	@GetMapping("/private/groups")
+	public List<ReadableGroup> groups() {
+		List<Group> groups = groupService.list();
+		List<ReadableGroup> readableGroups = new ArrayList<ReadableGroup>();
+		for (Group group : groups) {
+			ReadableGroup readableGroup = new ReadableGroup();
+			readableGroup.setName(group.getGroupName());
+			readableGroup.setId(group.getId().longValue());
+			readableGroup.setType(group.getGroupType().name());
+			readableGroups.add(readableGroup);
+		}
+		return readableGroups;
+	}
+
+}

@@ -1,8 +1,0 @@
-					shoppingCartItem.setQuantity(item.getQuantity());
-
-					cartQuantity = cartQuantity + item.getQuantity();
-
-					BigDecimal subTotal = pricingService.calculatePriceQuantity(item.getItemPrice(),
-							item.getQuantity());
-
-					// calculate sub total (price * quantity)

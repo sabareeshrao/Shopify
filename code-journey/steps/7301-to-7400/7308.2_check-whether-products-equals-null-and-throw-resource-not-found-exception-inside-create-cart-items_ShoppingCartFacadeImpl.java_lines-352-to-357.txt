@@ -1,6 +1,0 @@
-				.collect(Collectors.toList());
-
-		if (products == null || products.size() != shoppingCartItems.size()) {
-			LOG.warn("----------------------- Items with in id-list " + productSkus + " does not exist");
-			throw new ResourceNotFoundException("Item with skus " + productSkus + " does not exist");
-		}

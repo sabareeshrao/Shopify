@@ -1,0 +1,6 @@
+  
+  /**
+   * Update User
+   * @param user
+   */
+  ReadableUser update(Long id, String authenticatedUser, MerchantStore store, PersistableUser user);

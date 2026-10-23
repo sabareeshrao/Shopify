@@ -1,8 +1,0 @@
-		try {
-
-			List<ShoppingCart> shoppingCarts = shoppingCartRepository.findByCustomer(customer.getId());
-
-			// elect valid shopping cart
-			List<ShoppingCart> validCart = shoppingCarts.stream().filter((cart) -> cart.getOrderId() == null)
-					.collect(Collectors.toList());
-

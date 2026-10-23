@@ -1,0 +1,8 @@
+
+    ReadableCustomer getCustomerByNick(String userName, MerchantStore merchantStore, Language language);
+
+	void deleteByNick(String nick);
+	
+	void deleteById(Long id);
+
+	void delete(Customer entity);

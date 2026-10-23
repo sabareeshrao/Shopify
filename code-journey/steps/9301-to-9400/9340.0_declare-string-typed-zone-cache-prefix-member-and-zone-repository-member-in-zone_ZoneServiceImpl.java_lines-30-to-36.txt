@@ -1,0 +1,7 @@
+	private final static String ZONE_CACHE_PREFIX = "ZONES_";
+
+	private ZoneRepository zoneRepository;
+	
+	@Inject
+	private CacheUtils cache;
+	

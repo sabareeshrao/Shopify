@@ -1,8 +1,0 @@
-	@Override
-	public List<Country> getShipToCountryList(MerchantStore store, Language language) throws ServiceException {
-		
-		
-		ShippingConfiguration shippingConfiguration = getShippingConfiguration(store);
-		ShippingType shippingType = ShippingType.INTERNATIONAL;
-		List<String> supportedCountries = new ArrayList<String>();
-		if(shippingConfiguration==null) {

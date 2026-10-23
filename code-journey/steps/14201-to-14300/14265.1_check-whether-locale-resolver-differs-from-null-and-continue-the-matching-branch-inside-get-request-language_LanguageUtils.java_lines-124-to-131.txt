@@ -1,8 +1,0 @@
-
-    LocaleResolver localeResolver = RequestContextUtils.getLocaleResolver(request);
-    if (localeResolver != null) {
-      localeResolver.setLocale(request, response, locale);
-    }
-    response.setLocale(locale);
-    request.getSession().setAttribute(Constants.LANGUAGE, language);
-

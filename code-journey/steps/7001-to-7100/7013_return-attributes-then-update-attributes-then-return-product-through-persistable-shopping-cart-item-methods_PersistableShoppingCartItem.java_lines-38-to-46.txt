@@ -1,9 +1,0 @@
-	public List<ProductAttribute> getAttributes() {
-		return attributes;
-	}
-	public void setAttributes(List<ProductAttribute> attributes) {
-		this.attributes = attributes;
-	}
-	public String getProduct() {
-		return product;
-	}

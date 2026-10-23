@@ -1,0 +1,39 @@
+  @Override
+  public Configs getMerchantConfig(MerchantStore merchantStore, Language language) {
+
+    MerchantConfig configs = getMerchantConfig(merchantStore);
+
+    Configs readableConfig = new Configs();
+    readableConfig.setAllowOnlinePurchase(configs.isAllowPurchaseItems());
+    readableConfig.setDisplaySearchBox(configs.isDisplaySearchBox());
+    readableConfig.setDisplayContactUs(configs.isDisplayContactUs());
+
+    readableConfig.setDisplayCustomerSection(configs.isDisplayCustomerSection());
+    readableConfig.setDisplayAddToCartOnFeaturedItems(configs.isDisplayAddToCartOnFeaturedItems());
+    readableConfig.setDisplayCustomerAgreement(configs.isDisplayCustomerAgreement());
+    readableConfig.setDisplayPagesMenu(configs.isDisplayPagesMenu());
+
+    Optional<String> facebookConfigValue = getConfigValue(KEY_FACEBOOK_PAGE_URL, merchantStore);
+    facebookConfigValue.ifPresent(readableConfig::setFacebook);
+
+    Optional<String> googleConfigValue = getConfigValue(KEY_GOOGLE_ANALYTICS_URL, merchantStore);
+    googleConfigValue.ifPresent(readableConfig::setGa);
+
+    Optional<String> instagramConfigValue = getConfigValue(KEY_INSTAGRAM_URL, merchantStore);
+    instagramConfigValue.ifPresent(readableConfig::setInstagram);
+
+
+    Optional<String> pinterestConfigValue = getConfigValue(KEY_PINTEREST_PAGE_URL, merchantStore);
+    pinterestConfigValue.ifPresent(readableConfig::setPinterest);
+
+    readableConfig.setDisplayShipping(false);
+    try {
+      if(!StringUtils.isBlank(displayShipping)) {
+        readableConfig.setDisplayShipping(Boolean.valueOf(displayShipping));
+      }
+    } catch(Exception e) {
+      LOGGER.error("Cannot parse value of " + displayShipping);
+    }
+
+    return readableConfig;
+  }

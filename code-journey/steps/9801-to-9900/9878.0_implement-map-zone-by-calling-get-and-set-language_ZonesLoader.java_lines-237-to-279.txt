@@ -1,0 +1,43 @@
+
+	// internal complex mapping stuff, don't try this at home ...
+	private void mapZone(Language l, Map<String, List<ZoneDescription>> zonesDescriptionsMap,
+			Map<String, Country> countriesMap, Map<String, Zone> zonesMap, Map<String, String> zonesMark,
+			Map<String, String> list) {
+
+		String zoneCode = list.get("zoneCode");
+		ZoneDescription zoneDescription = new ZoneDescription();
+		zoneDescription.setLanguage(l);
+		zoneDescription.setName(list.get("zoneName"));
+		Zone zone = null;
+		List<ZoneDescription> descriptions = null;
+		if (!zonesMap.containsKey(zoneCode)) {
+			zone = new Zone();
+			Country country = countriesMap.get(list.get("countryCode"));
+			if (country == null) {
+				LOGGER.warn("Country is null for " + zoneCode + " and country code " + list.get("countryCode"));
+				return;
+			}
+			zone.setCountry(country);
+			zone.setCode(zoneCode);
+			zonesMap.put(zoneCode, zone);
+			
+
+		}
+
+		if (zonesMark.containsKey(l.getCode() + "_" + zoneCode)) {
+			LOGGER.warn("This zone seems to be a duplicate !  " + zoneCode + " and language code " + l.getCode());
+			return;
+		}
+
+		zonesMark.put(l.getCode() + "_" + zoneCode, l.getCode() + "_" + zoneCode);
+
+		if (zonesDescriptionsMap.containsKey(zoneCode)) {
+			descriptions = zonesDescriptionsMap.get(zoneCode);
+		} else {
+			descriptions = new ArrayList<ZoneDescription>();
+			zonesDescriptionsMap.put(zoneCode, descriptions);
+		}
+
+		descriptions.add(zoneDescription);
+
+	}

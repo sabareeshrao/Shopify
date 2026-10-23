@@ -1,0 +1,5 @@
+        if(bufferedImage.getWidth() > largeImageWidth ||bufferedImage.getHeight() > largeImageHeight) {
+            largeResizedImage = ProductImageSizeUtils.resizeWithRatio(bufferedImage, largeImageWidth, largeImageHeight);
+        } else {
+            largeResizedImage = bufferedImage;
+        }

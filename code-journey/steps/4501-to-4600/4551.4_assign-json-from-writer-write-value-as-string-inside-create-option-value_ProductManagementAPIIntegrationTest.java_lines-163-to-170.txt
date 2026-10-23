@@ -1,8 +1,0 @@
-		final String json = writer.writeValueAsString(optionValue);
-
-		System.out.println(json);
-
-		/**
-		 * { "descriptions" : [ { "name" : "Red", "description" : null,
-		 * "friendlyUrl" : null, "keyWords" : null, "highlights" : null,
-		 * "metaDescription" : null, "title" : null, "language" : "en", "id" : 0

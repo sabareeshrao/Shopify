@@ -1,5 +1,0 @@
-	public void setKbase(KnowledgeBase kbase) {
-		this.kbase = kbase;
-	}*/
-
-}

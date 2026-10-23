@@ -1,0 +1,12 @@
+	@Override
+	public void addProductDescription(Product product, ProductDescription description) throws ServiceException {
+
+		if (product.getDescriptions() == null) {
+			product.setDescriptions(new HashSet<ProductDescription>());
+		}
+
+		product.getDescriptions().add(description);
+		description.setProduct(product);
+		update(product);
+
+	}

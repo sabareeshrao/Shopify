@@ -1,6 +1,0 @@
-			List<Category> categories = categoryService.listByCodes(merchantStore, categoryCodes, language);
-			return categories.stream().map(category -> convertCategoryToReadableCategory(merchantStore, language,
-					productCategoryCount, category)).collect(Collectors.toList());
-		} else {
-			return Collections.emptyList();
-		}

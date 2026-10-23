@@ -1,5 +1,0 @@
-						otherPrices.add(p);
-					}
-				}
-			}
-		}

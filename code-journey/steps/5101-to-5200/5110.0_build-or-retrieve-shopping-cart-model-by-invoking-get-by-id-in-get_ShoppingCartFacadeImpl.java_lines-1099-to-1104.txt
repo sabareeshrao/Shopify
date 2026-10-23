@@ -1,0 +1,6 @@
+
+	@Override
+	public ShoppingCart getShoppingCartModel(Long id, MerchantStore store) throws Exception {
+		return shoppingCartService.getById(id);
+	}
+

@@ -1,0 +1,6 @@
+	
+	@Column(name = "VISIBLE")
+	private boolean visible;
+	
+	@Column(name = "LINK_TO_MENU")
+	private boolean linkToMenu;

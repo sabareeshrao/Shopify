@@ -1,5 +1,0 @@
-	private String image;
-	private String binaryImage;
-	private List<String> requiredKeys = new ArrayList<String>();
-	private String configurable = null;
-

@@ -1,5 +1,0 @@
-			
-			TaxRate taxRate = taxItem.getTaxRate();
-			if(!taxItemsMap.containsKey(taxRate.getCode())) {
-				taxItemsMap.put(taxRate.getCode(), taxItem);
-			} 

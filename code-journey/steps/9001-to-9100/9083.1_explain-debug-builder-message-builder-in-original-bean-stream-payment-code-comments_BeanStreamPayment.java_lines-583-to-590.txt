@@ -1,8 +1,0 @@
-		
-		/** debug **/
-		
-		
-
-			StringBuilder messageLogString = new StringBuilder();
-			
-			

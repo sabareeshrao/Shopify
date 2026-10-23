@@ -1,8 +1,0 @@
-public class OrderList extends EntityList {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6645927228659963628L;
-	private List<Order> orders;
-

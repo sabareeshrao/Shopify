@@ -1,7 +1,0 @@
-			@RequestBody @Valid PersistableContentBox box,
-			@PathVariable Long id,
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		contentFacade.updateContentBox(id, box, merchantStore, language);
-	}

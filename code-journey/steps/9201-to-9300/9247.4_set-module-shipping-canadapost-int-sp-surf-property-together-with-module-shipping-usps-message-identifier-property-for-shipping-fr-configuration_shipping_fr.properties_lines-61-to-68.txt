@@ -1,8 +1,0 @@
-module.shipping.canadapost.INT.SP.SURF=Petits paquets de surface du régime international
-module.shipping.canadapost.INT.TP=Paquet repérable – International
-
-#USPS
-module.shipping.usps.identifier=Numéro de compte USPS
-module.shipping.usps.packages=Type d'emballage
-module.shipping.usps.shippingmethods=Choisir jusqu'a 3 méthodes d'expédition
-module.shipping.usps.message.identifier=Identifiant USPS requis

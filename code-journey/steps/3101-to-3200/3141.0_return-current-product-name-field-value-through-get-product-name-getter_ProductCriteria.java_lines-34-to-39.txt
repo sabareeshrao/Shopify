@@ -1,0 +1,6 @@
+	private Long ownerId = null;
+
+	public String getProductName() {
+		return productName;
+	}
+

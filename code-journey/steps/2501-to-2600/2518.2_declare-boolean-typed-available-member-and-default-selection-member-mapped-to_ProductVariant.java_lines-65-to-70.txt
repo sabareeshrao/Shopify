@@ -1,0 +1,6 @@
+	
+	@Column(name = "AVAILABLE")
+	private boolean available = true;
+	
+	@Column(name = "DEFAULT_SELECTION")
+	private boolean defaultSelection = true;

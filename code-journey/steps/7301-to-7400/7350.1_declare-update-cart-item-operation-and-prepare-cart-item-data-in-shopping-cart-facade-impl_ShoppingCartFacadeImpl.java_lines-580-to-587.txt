@@ -1,8 +1,0 @@
-
-	// @Override
-	// DELETE
-	public ShoppingCartData updateCartItem(final Long itemID, final String cartId, final long newQuantity,
-			final MerchantStore store, final Language language) throws Exception {
-		if (newQuantity < 1) {
-			throw new CartModificationException("Quantity must not be less than one");
-		}

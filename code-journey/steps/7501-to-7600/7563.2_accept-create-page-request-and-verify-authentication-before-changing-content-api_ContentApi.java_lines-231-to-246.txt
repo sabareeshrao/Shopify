@@ -1,0 +1,16 @@
+	@PostMapping(value = "/private/content/page")
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation(httpMethod = "POST", value = "Create content page", notes = "", response = Entity.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public Entity createPage(
+			@RequestBody @Valid PersistableContentPage page, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		Long id = contentFacade.saveContentPage(page, merchantStore, language);
+		Entity entity = new Entity();
+		entity.setId(id);
+		return entity;
+	}

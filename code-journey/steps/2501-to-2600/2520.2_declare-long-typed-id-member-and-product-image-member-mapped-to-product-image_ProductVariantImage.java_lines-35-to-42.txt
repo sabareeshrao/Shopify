@@ -1,0 +1,8 @@
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+
+	@Column(name = "PRODUCT_IMAGE")
+	private String productImage;
+	
+	@Column(name = "DEFAULT_IMAGE")
+	private boolean defaultImage = true;

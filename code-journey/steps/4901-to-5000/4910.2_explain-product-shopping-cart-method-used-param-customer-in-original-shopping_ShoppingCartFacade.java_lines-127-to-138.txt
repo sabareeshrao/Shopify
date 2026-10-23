@@ -1,0 +1,12 @@
+
+	/**
+	 * Add product to ShoppingCart
+	 * This method is used by the API
+	 * @param customer
+	 * @param item
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableShoppingCart addToCart(Customer customer, PersistableShoppingCartItem item, MerchantStore store, Language language) throws Exception;

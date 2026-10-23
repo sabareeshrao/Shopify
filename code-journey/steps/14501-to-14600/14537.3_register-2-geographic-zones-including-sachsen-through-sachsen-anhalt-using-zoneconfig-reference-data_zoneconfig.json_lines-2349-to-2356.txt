@@ -1,8 +1,0 @@
-		{
-			"zoneCode": "SAS",
-			"zoneName": "Sachsen",
-			"countryCode": "DE"
-		},
-		{
-			"zoneCode": "SAC",
-			"zoneName": "Sachsen-Anhalt",

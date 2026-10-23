@@ -1,3 +1,0 @@
-          prop.put("mail.smtp.starttls.enable", emailConfig.isStarttls());
-          impl.setJavaMailProperties(prop);
-        }

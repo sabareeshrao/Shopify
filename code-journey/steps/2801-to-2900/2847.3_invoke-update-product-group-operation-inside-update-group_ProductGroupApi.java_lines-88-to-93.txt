@@ -1,0 +1,6 @@
+      throws Exception {
+	  
+	  productItemsFacade.updateProductGroup(code, group, merchantStore);
+
+  }
+  

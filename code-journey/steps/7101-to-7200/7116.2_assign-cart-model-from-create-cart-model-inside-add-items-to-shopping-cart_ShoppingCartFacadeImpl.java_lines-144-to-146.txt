@@ -1,3 +1,0 @@
-			cartModel = createCartModel(shoppingCartCode, store, customer);
-
-		}

@@ -1,0 +1,3 @@
+					destination.getProducts().add(shoppingCartItem);
+				}
+			}

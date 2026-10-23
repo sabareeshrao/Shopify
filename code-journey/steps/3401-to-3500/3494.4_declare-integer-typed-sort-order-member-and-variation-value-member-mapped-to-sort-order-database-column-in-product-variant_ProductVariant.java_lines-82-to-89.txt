@@ -1,8 +1,0 @@
-	
-	@Column(name="SORT_ORDER")
-	private Integer sortOrder = 0;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "PRODUCT_VARIATION_VALUE_ID", nullable = true)
-	private ProductVariation variationValue;
-

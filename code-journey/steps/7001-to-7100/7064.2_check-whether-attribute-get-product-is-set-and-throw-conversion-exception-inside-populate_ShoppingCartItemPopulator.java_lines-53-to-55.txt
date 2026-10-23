@@ -1,3 +1,0 @@
-				if(attribute.getProduct().getId().longValue()!=source.getProduct().getId().longValue()) {
-					throw new ConversionException("ProductAttribute with id " + attr.getId() + " is not assigned to Product id " + source.getProduct().getId());
-				}

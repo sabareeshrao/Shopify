@@ -1,0 +1,6 @@
+
+
+	@Test
+	public void createShoppingCart() throws Exception {
+
+        MerchantStore store = merchantService.getByCode( MerchantStore.DEFAULT_STORE );

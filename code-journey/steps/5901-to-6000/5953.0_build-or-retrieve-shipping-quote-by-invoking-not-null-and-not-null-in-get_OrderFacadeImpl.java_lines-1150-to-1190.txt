@@ -1,0 +1,41 @@
+
+	@Override
+	public ShippingQuote getShippingQuote(Customer customer, ShoppingCart cart, MerchantStore store, Language language)
+			throws Exception {
+
+		Validate.notNull(customer, "Customer cannot be null");
+		Validate.notNull(cart, "cart cannot be null");
+
+		// create shipping products
+		List<ShippingProduct> shippingProducts = shoppingCartService.createShippingProduct(cart);
+
+		if (CollectionUtils.isEmpty(shippingProducts)) {
+			return null;// products are virtual
+		}
+
+		Delivery delivery = new Delivery();
+		Billing billing = new Billing();
+		//default value
+		billing.setCountry(store.getCountry());
+
+
+		// adjust shipping and billing
+		if (customer.getDelivery() == null || StringUtils.isBlank(customer.getDelivery().getPostalCode())) {
+			if(customer.getBilling()!=null) {
+				billing = customer.getBilling();
+			}
+			delivery.setAddress(billing.getAddress());
+			delivery.setCity(billing.getCity());
+			delivery.setCompany(billing.getCompany());
+			delivery.setPostalCode(billing.getPostalCode());
+			delivery.setState(billing.getState());
+			delivery.setCountry(billing.getCountry());
+			delivery.setZone(billing.getZone());
+		} else {
+			delivery = customer.getDelivery();
+		}
+
+		ShippingQuote quote = shippingService.getShippingQuote(cart.getId(), store, delivery, shippingProducts,
+				language);
+		return quote;
+	}

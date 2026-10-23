@@ -1,0 +1,30 @@
+			throws ServiceException {
+
+		productImage.setProduct(product);
+
+		try {
+			if (productImage.getImageType() == 0) {
+				Assert.notNull(inputImage.getFile(), "ImageContentFile.file cannot be null");
+				productFileManager.addProductImage(productImage, inputImage);
+			}
+
+			// insert ProductImage
+			ProductImage img = saveOrUpdate(productImage);
+			//manual workaround since aspect is not working
+			eventPublisher.publishEvent(new SaveProductImageEvent(eventPublisher, img, product));
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		} finally {
+			try {
+
+				if (inputImage.getFile() != null) {
+					inputImage.getFile().close();
+				}
+
+			} catch (Exception ignore) {
+
+			}
+		}
+
+	}

@@ -1,0 +1,9 @@
+	
+	/** keyword_en_default **/
+	public String getCollectionName() {
+		StringBuilder qBuilder = new StringBuilder();
+		qBuilder.append(KEYWORD).append(UNDERSCORE).append(getLanguageCode()).append(UNDERSCORE)
+		.append(getMerchantCode());
+		
+		return qBuilder.toString().toLowerCase();
+	}

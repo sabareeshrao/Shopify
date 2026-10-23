@@ -1,8 +1,0 @@
-		
-		//validate integrationKeys['tokenization_key']
-		if(keys==null || StringUtils.isBlank(keys.get("tokenization_key"))) {
-			if(errorFields==null) {
-				errorFields = new ArrayList<String>();
-			}
-			errorFields.add("tokenization_key");
-		}

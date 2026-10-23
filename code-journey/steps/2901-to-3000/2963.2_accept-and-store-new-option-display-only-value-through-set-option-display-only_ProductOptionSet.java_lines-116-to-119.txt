@@ -1,0 +1,4 @@
+	public void setOptionDisplayOnly(boolean optionDisplayOnly) {
+		this.optionDisplayOnly = optionDisplayOnly;
+	}
+	

@@ -1,8 +1,0 @@
-			}
-		
-			Address address = new Address();
-
-			try {
-			
-			CityResponse response = reader.city(InetAddress.getByName(ipAddress));
-

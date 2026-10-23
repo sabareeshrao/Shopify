@@ -1,8 +1,0 @@
-							.toString();
-
-					List<com.salesmanager.core.model.catalog.category.Category> categories = categoryService
-							.getListByLineage(store, lineage);
-
-					List<Long> ids = new ArrayList<Long>();
-					if (categories != null && categories.size() > 0) {
-						for (com.salesmanager.core.model.catalog.category.Category c : categories) {

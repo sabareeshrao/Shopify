@@ -1,8 +1,0 @@
-  public BigDecimal getHeight() {
-    return height;
-  }
-  public void setHeight(BigDecimal height) {
-    this.height = height;
-  }
-  public BigDecimal getWeight() {
-    return weight;

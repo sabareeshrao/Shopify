@@ -1,3 +1,0 @@
-					LOGGER.error("Communication Error with ups quote " + status);
-					throw new ClientProtocolException("UPS quote communication error " + status);
-				}

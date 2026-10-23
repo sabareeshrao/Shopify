@@ -1,0 +1,10 @@
+	
+	/**
+	 * Works with ng-file-man client
+	 * 
+	 * @param path
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */

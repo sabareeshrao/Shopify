@@ -1,0 +1,9 @@
+	
+	@Column(name="CUSTOMER_ATTR_TXT_VAL")
+	private String textValue;
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = Customer.class)
+	@JoinColumn(name = "CUSTOMER_ID", nullable = false)
+	private Customer customer;
+	

@@ -1,0 +1,8 @@
+	
+	//the customer object can be detached. An order can exist and the customer deleted
+	@Column (name ="CUSTOMER_ID")
+	private Long customerId;
+	
+	@Temporal(TemporalType.DATE)
+	@Column (name ="DATE_PURCHASED")
+	private Date datePurchased;

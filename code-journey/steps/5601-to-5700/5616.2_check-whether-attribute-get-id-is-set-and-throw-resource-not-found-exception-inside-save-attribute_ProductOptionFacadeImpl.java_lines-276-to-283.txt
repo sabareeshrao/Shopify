@@ -1,8 +1,0 @@
-
-		attribute.setProductId(productId);
-		ProductAttribute attr = new ProductAttribute();
-		if (attribute.getId() != null && attribute.getId().longValue() > 0) {
-			attr = productAttributeService.getById(attribute.getId());
-			if (attr == null) {
-				throw new ResourceNotFoundException("Product attribute [" + attribute.getId() + "] not found");
-			}

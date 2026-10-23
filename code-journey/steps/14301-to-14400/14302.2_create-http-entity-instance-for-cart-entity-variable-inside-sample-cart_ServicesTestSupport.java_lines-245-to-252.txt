@@ -1,8 +1,0 @@
-
-		final HttpEntity<PersistableShoppingCartItem> cartEntity = new HttpEntity<>(cartItem, getHeader());
-		final ResponseEntity<ReadableShoppingCart> response = testRestTemplate
-				.postForEntity(String.format("/api/v1/cart/"), cartEntity, ReadableShoppingCart.class);
-
-		assertNotNull(response);
-		assertThat(response.getStatusCode(), is(CREATED));
-

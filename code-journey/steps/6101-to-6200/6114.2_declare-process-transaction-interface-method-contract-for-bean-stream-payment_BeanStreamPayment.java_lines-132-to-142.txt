@@ -1,0 +1,11 @@
+			throws IntegrationException {
+		return processTransaction(
+				store,
+				customer,
+				TransactionType.AUTHORIZECAPTURE,
+				amount,
+				payment,
+				configuration,
+				module);
+	}
+

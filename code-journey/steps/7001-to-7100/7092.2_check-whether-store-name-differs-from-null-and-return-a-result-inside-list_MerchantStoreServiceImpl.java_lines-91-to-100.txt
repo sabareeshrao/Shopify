@@ -1,0 +1,10 @@
+			throws ServiceException {
+		String store = null;
+		if (storeName != null && storeName.isPresent()) {
+			store = storeName.get();
+		}
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableMerchantRepository.listAllRetailers(store, pageRequest);
+
+	}
+

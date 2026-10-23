@@ -1,8 +1,0 @@
-	    option.setMerchantStore(store);
-	    option.setCode("color");
-	    option.setProductOptionType(ProductOptionType.Radio.name());
-	    
-	    ProductOptionDescription optionDescription = new ProductOptionDescription();
-	    optionDescription.setLanguage(en);
-	    optionDescription.setName("Color");
-	    optionDescription.setDescription("Item color");

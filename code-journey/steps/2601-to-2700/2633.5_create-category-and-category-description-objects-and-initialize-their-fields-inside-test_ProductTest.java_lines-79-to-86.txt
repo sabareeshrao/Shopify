@@ -1,0 +1,8 @@
+
+	    categoryService.create(book);
+
+	    Category music = new Category();
+	    music.setMerchantStore(store);
+	    music.setCode("music");
+
+	    CategoryDescription musicEnglishDescription = new CategoryDescription();

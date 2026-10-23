@@ -1,0 +1,5 @@
+
+	private Object getKeyValue(final String key) {
+		ServletRequestAttributes reqAttr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		return reqAttr.getRequest().getAttribute(key);
+	}

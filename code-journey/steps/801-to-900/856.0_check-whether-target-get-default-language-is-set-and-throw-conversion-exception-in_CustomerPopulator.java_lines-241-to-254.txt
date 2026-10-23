@@ -1,0 +1,14 @@
+			
+			if(target.getDefaultLanguage()==null) {
+				
+				Language lang = source.getLanguage() == null ?
+						language : languageService.getByCode(source.getLanguage());
+
+				
+				target.setDefaultLanguage(lang);
+			}
+
+		
+		} catch (Exception e) {
+			throw new ConversionException(e);
+		}

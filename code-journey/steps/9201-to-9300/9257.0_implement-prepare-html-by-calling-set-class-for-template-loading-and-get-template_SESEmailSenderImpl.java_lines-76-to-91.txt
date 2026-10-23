@@ -1,0 +1,16 @@
+  private String prepareHtml(Email email) throws Exception {
+
+
+    freemarkerMailConfiguration.setClassForTemplateLoading(DefaultEmailSenderImpl.class, "/");
+    Template htmlTemplate = freemarkerMailConfiguration.getTemplate(new StringBuilder(TEMPLATE_PATH)
+            .append("/").append(email.getTemplateName()).toString());
+    final StringWriter htmlWriter = new StringWriter();
+    try {
+      htmlTemplate.process(email.getTemplateTokens(), htmlWriter);
+    } catch (TemplateException e) {
+      throw new MailPreparationException("Can't generate HTML mail", e);
+    }
+
+    return htmlWriter.toString();
+
+  }

@@ -1,0 +1,4 @@
+import com.salesmanager.core.model.common.Criteria;
+
+public class OrderCriteria extends Criteria {
+	

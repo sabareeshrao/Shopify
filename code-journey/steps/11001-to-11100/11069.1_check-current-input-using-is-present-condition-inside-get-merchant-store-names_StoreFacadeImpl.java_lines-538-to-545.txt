@@ -1,8 +1,0 @@
-			
-			//TODO Pageable
-			if(code.isPresent()) {
-				
-				stores = merchantStoreService.findAllStoreNames(code.get()).stream()
-						.map(s -> convertStoreName(s))
-						.collect(Collectors.toList());
-			} else {

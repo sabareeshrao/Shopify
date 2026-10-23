@@ -1,0 +1,32 @@
+
+	// signup new merchant
+	@PostMapping("/store/signup")
+	@ApiOperation(httpMethod = "POST", value = "Signup store", notes = "", produces = "application/json", response = Void.class)
+	public void signup(@RequestBody SignupStore store, @ApiIgnore Language language) {
+
+		ReadableUser user = null;
+		try {
+			// check if user exists
+			user = userFacade.findByUserName(store.getEmail());
+
+		} catch (ResourceNotFoundException ignore) {//that is what will happen if user does not exists
+		}
+
+		if (user != null) {
+			throw new OperationNotAllowedException(
+					"User [" + store.getEmail() + "] already exist and cannot be registered");
+		}
+
+		// check if store exists
+		if (storeFacade.existByCode(store.getCode())) {
+			throw new OperationNotAllowedException(
+					"Store [" + store.getCode() + "] already exist and cannot be registered");
+		}
+
+		// create user
+
+		// create store
+
+		// send notification
+
+	}

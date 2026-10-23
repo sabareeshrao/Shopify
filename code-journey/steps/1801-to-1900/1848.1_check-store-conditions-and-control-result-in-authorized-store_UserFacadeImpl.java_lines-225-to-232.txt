@@ -1,8 +1,0 @@
-	@Override
-	public boolean authorizedStore(String userName, String merchantStoreCode) {
-
-		try {
-
-			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-			Set<String> roles = authentication.getAuthorities().stream().map(r -> r.getAuthority())

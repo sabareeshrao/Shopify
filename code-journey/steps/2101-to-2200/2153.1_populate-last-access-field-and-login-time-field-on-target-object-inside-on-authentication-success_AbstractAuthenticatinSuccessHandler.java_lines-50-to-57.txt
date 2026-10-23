@@ -1,8 +1,0 @@
-			  user.setLastAccess(lastAccess);
-			  user.setLoginTime(new Date());
-			  
-			  userService.saveOrUpdate(user);
-			  
-			  redirectAfterSuccess(request,response);
-
-		  

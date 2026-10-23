@@ -1,4 +1,0 @@
-
-	@Ignore
-	public void listImages() {	
-	}

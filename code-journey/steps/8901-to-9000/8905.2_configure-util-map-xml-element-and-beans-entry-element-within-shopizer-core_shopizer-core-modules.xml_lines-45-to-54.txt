@@ -1,0 +1,10 @@
+	<util:map id="paymentModules" map-class="java.util.HashMap"
+		key-type="java.lang.String"
+		value-type="com.salesmanager.core.business.modules.integration.payment.model.PaymentModule">
+		<beans:entry key="beanstream" value-ref="beanstream" />
+		<beans:entry key="paypal-express-checkout" value-ref="paypal-ec" />
+		<beans:entry key="moneyorder" value-ref="moneyorder" />
+		<beans:entry key="stripe" value-ref="stripe" />
+		<beans:entry key="stripe3" value-ref="stripe3" />
+		<beans:entry key="braintree" value-ref="braintree" />
+	</util:map>

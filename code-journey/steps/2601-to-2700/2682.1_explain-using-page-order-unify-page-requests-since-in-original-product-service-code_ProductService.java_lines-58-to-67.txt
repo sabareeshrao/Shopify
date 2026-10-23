@@ -1,0 +1,10 @@
+	
+	/**
+	 * List using Page interface in order to unify all page requests (since 2.16.0) 
+	 * @param store
+	 * @param language
+	 * @param criteria
+	 * @param page
+	 * @param count
+	 * @return
+	 */

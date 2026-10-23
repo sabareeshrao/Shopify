@@ -1,0 +1,4 @@
+	public final static String REFERENCE_CACHE = "REF";
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(CacheUtils.class);
+

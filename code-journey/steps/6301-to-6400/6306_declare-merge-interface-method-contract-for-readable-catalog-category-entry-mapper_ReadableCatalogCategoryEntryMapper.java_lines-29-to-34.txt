@@ -1,6 +1,0 @@
-	@Override
-	public ReadableCatalogCategoryEntry convert(CatalogCategoryEntry source, MerchantStore store, Language language) {
-		ReadableCatalogCategoryEntry destination = new ReadableCatalogCategoryEntry();
-		return merge(source, destination, store, language);
-	}
-

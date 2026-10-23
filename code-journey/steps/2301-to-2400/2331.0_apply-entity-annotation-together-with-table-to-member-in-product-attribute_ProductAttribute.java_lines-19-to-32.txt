@@ -1,0 +1,14 @@
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+
+@Entity
+@Table(name="PRODUCT_ATTRIBUTE",
+    indexes = @Index(columnList = "PRODUCT_ID"),
+	uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"OPTION_ID",
+				"OPTION_VALUE_ID",
+				"PRODUCT_ID"
+			})
+	}
+)

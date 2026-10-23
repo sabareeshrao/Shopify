@@ -1,0 +1,26 @@
+
+	/**
+	 * This method will return the required formated amount with the appropriate
+	 * currency
+	 * 
+	 * @param store
+	 * @param amount
+	 * @return
+	 * @throws Exception
+	 */
+	@Deprecated
+	public String getAdminFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}
+
+		NumberFormat nf = null;
+
+		Currency currency = store.getCurrency().getCurrency();
+		nf = NumberFormat.getInstance(Constants.DEFAULT_LOCALE);
+		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setCurrency(currency);
+
+		return nf.format(amount);
+	}

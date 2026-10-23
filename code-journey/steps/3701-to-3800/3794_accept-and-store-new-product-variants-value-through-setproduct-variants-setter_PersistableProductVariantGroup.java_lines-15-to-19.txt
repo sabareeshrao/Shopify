@@ -1,5 +1,0 @@
-	public void setproductVariants(List<Long> productVariants) {
-		this.productVariants = productVariants;
-	}
-
-}

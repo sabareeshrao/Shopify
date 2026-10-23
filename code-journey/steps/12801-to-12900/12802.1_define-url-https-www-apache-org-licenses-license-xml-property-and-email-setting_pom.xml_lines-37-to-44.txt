@@ -1,8 +1,0 @@
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>Shopizer Team</name>
-      <email>team@shopizer.com</email>

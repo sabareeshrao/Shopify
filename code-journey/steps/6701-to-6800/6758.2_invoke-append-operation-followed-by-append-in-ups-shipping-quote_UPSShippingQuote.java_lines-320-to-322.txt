@@ -1,0 +1,3 @@
+			xmldatabuffer.append("</PostalCode></Address></ShipTo>");
+			// xmldatabuffer.append("<Service><Code>11</Code></Service>");//TODO service codes (next day ...)
+

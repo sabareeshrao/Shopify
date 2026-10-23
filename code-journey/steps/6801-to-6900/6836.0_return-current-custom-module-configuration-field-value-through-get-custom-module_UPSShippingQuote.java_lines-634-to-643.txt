@@ -1,0 +1,10 @@
+
+
+	@Override
+	public CustomIntegrationConfiguration getCustomModuleConfiguration(
+			MerchantStore store) throws IntegrationException {
+		//nothing to do
+		return null;
+	}}
+
+

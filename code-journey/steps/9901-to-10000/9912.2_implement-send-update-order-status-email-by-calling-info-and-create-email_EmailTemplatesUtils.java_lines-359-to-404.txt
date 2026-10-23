@@ -1,0 +1,46 @@
+	@Async
+	public void sendUpdateOrderStatusEmail(
+			Customer customer, Order order, OrderStatusHistory lastHistory, MerchantStore merchantStore,
+			Locale customerLocale, String contextPath) {
+		   /** issue with putting that elsewhere **/ 
+	       LOGGER.info( "Sending order status email to customer" );
+	       try {
+
+
+				Map<String, String> templateTokens = emailUtils.createEmailObjectsMap(contextPath, merchantStore, messages, customerLocale);
+				
+		        templateTokens.put(EmailConstants.LABEL_HI, messages.getMessage("label.generic.hi", customerLocale));
+		        templateTokens.put(EmailConstants.EMAIL_CUSTOMER_FIRSTNAME, customer.getBilling().getFirstName());
+		        templateTokens.put(EmailConstants.EMAIL_CUSTOMER_LASTNAME, customer.getBilling().getLastName());
+				
+		        String[] statusMessageText = {String.valueOf(order.getId()),DateUtil.formatDate(order.getDatePurchased())};
+		        String status = messages.getMessage("label.order." + order.getStatus().name(), customerLocale, order.getStatus().name());
+		        String[] statusMessage = {DateUtil.formatDate(lastHistory.getDateAdded()),status};
+		        
+		        String comments = lastHistory.getComments();
+		        if(StringUtils.isBlank(comments)) {
+		        	comments = messages.getMessage("label.order." + order.getStatus().name(), customerLocale, order.getStatus().name());
+		        }
+		        
+				templateTokens.put(EmailConstants.EMAIL_ORDER_STATUS_TEXT, messages.getMessage("email.order.statustext", statusMessageText, customerLocale));
+				templateTokens.put(EmailConstants.EMAIL_ORDER_STATUS, messages.getMessage("email.order.status", statusMessage, customerLocale));
+				templateTokens.put(EmailConstants.EMAIL_TEXT_STATUS_COMMENTS, comments);
+				
+				
+				Email email = new Email();
+				email.setFrom(merchantStore.getStorename());
+				email.setFromEmail(merchantStore.getStoreEmailAddress());
+				email.setSubject(messages.getMessage("email.order.status.title",new String[]{String.valueOf(order.getId())},customerLocale));
+				email.setTo(customer.getEmailAddress());
+				email.setTemplateName(EmailConstants.ORDER_STATUS_TMPL);
+				email.setTemplateTokens(templateTokens);
+	
+	
+				
+				emailService.sendHtmlEmail(merchantStore, email);
+
+	       } catch (Exception e) {
+	           LOGGER.error("Error occured while sending order download email ",e);
+	       }
+		
+	}

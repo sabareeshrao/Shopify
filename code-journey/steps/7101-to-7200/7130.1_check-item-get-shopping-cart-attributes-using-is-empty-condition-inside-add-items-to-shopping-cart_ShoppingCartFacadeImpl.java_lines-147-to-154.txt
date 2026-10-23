@@ -1,8 +1,0 @@
-		com.salesmanager.core.model.shoppingcart.ShoppingCartItem shoppingCartItem = createCartItem(cartModel, item,
-				store);
-
-		boolean duplicateFound = false;
-		if (CollectionUtils.isEmpty(item.getShoppingCartAttributes())) {// increment quantity
-			// get duplicate item from the cart
-			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartModelItems = cartModel.getLineItems();
-			for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem cartItem : cartModelItems) {

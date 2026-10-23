@@ -1,0 +1,5 @@
+  private final static String ROOT_NAME = "product-merchant";
+
+  private final static String SMALL = "SMALL";
+  private final static String LARGE = "LARGE";
+

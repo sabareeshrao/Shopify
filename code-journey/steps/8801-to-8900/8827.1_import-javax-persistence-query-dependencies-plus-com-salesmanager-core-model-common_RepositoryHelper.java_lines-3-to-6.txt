@@ -1,0 +1,4 @@
+import javax.persistence.Query;
+
+import com.salesmanager.core.model.common.Criteria;
+import com.salesmanager.core.model.common.GenericEntityList;

@@ -1,0 +1,4 @@
+
+	ProductGroup createProductGroup(ProductGroup group, MerchantStore store);
+	
+	List<ProductGroup> listProductGroups(MerchantStore store, Language language);

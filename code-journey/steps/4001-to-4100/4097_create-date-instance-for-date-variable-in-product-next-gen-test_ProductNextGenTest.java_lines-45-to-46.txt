@@ -1,2 +1,0 @@
-	private static final Date date = new Date(System.currentTimeMillis());
-	

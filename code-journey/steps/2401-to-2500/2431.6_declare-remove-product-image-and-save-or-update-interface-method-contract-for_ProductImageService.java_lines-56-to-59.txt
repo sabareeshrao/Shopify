@@ -1,0 +1,4 @@
+
+	void removeProductImage(ProductImage productImage) throws ServiceException;
+
+	ProductImage saveOrUpdate(ProductImage productImage) throws ServiceException;

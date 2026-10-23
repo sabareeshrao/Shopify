@@ -1,0 +1,9 @@
+	
+	/**
+	 * Find by product and group name
+	 * @param store
+	 * @param product
+	 * @param name
+	 * @return
+	 * @throws ServiceException
+	 */

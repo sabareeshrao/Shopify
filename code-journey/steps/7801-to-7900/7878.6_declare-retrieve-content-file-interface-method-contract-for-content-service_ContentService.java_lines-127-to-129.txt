@@ -1,0 +1,3 @@
+    OutputContentFile getContentFile( String merchantStoreCode, FileContentType fileContentType, String fileName )
+        throws ServiceException;
+    

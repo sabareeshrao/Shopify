@@ -1,0 +1,33 @@
+	private ReadableProductOption createOption(ProductAttribute productAttribute, Language language) {
+
+
+		ReadableProductOption option = new ReadableProductOption();
+		option.setId(productAttribute.getProductOption().getId());//attribute of the option
+		option.setType(productAttribute.getProductOption().getProductOptionType());
+		option.setCode(productAttribute.getProductOption().getCode());
+		List<ProductOptionDescription> descriptions = productAttribute.getProductOption().getDescriptionsSettoList();
+		ProductOptionDescription description = null;
+		if(descriptions!=null && descriptions.size()>0) {
+			description = descriptions.get(0);
+			if(descriptions.size()>1) {
+				for(ProductOptionDescription optionDescription : descriptions) {
+					if(optionDescription.getLanguage().getCode().equals(language.getCode())) {
+						description = optionDescription;
+						break;
+					}
+				}
+			}
+		}
+
+		if(description==null) {
+			return null;
+		}
+
+		option.setLang(language.getCode());
+		option.setName(description.getName());
+		option.setCode(productAttribute.getProductOption().getCode());
+
+
+		return option;
+
+	}

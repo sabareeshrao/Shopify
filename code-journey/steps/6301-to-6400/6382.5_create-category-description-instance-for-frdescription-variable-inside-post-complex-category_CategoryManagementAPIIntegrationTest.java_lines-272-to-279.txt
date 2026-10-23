@@ -1,8 +1,0 @@
-        endescription.setTitle("Living room");
-
-        frdescription = new CategoryDescription();
-        frdescription.setLanguage("fr");
-        frdescription.setName("Salon");
-        frdescription.setFriendlyUrl("salon");
-        frdescription.setTitle("Salon");
-

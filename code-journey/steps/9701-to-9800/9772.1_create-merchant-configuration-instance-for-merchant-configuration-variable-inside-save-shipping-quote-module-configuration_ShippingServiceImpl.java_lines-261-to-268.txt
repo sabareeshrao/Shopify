@@ -1,8 +1,0 @@
-				} else {
-					merchantConfiguration = new MerchantConfiguration();
-					merchantConfiguration.setMerchantStore(store);
-					merchantConfiguration.setKey(SHIPPING_MODULES);
-				}
-				modules.put(configuration.getModuleCode(), configuration);
-				
-				String configs =  ConfigurationModulesLoader.toJSONString(modules);

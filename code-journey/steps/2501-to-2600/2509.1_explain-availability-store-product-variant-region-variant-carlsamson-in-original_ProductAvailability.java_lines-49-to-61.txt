@@ -1,0 +1,13 @@
+
+/**
+ * Default availability
+ * 
+ * store
+ * product id
+ * 
+ * variant null
+ * regionVariant null
+ * 
+ * @author carlsamson
+ *
+ */

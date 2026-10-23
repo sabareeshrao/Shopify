@@ -1,0 +1,8 @@
+
+	/**
+	 * Method to be used to print a displayable formated amount to the end user
+	 * @param amount
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

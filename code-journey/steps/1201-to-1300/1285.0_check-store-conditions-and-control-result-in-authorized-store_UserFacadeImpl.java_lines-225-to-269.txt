@@ -1,0 +1,45 @@
+	@Override
+	public boolean authorizedStore(String userName, String merchantStoreCode) {
+
+		try {
+
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+			Set<String> roles = authentication.getAuthorities().stream().map(r -> r.getAuthority())
+					.collect(Collectors.toSet());
+
+			ReadableUser readableUser = findByUserName(userName, languageService.defaultLanguage());
+
+			// unless superadmin
+			for (ReadableGroup group : readableUser.getGroups()) {
+				if (Constants.GROUP_SUPERADMIN.equals(group.getName())) {
+					return true;
+				}
+			}
+
+			boolean authorized = false;
+			User user = userService.findByStore(readableUser.getId(), merchantStoreCode);
+			if (user != null) {
+				authorized = true;
+			} else {
+				user = userService.getByUserName(userName);
+			}
+
+			if (user != null && !authorized) {
+
+				// get parent
+				MerchantStore store = merchantStoreService.getParent(merchantStoreCode);
+
+				// user can be in parent
+				MerchantStore st = user.getMerchantStore();
+				if (store != null && st.getCode().equals(store.getCode())) {
+					authorized = true;
+				}
+			}
+
+			return authorized;
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Cannot authorize user " + userName + " for store " + merchantStoreCode,
+					e.getMessage());
+		}
+	}

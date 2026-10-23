@@ -1,0 +1,8 @@
+
+	@ManyToOne(targetEntity = Content.class)
+	@JoinColumn(name = "CONTENT_ID", nullable = false)
+	private Content content;
+
+	@Column(name="SEF_URL", length=120)
+	private String seUrl;
+

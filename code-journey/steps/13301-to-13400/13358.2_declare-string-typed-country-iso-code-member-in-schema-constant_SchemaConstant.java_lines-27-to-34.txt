@@ -1,8 +1,0 @@
-	/**
-	 * Country iso codes
-	 */
-	public static final String[] COUNTRY_ISO_CODE = { "AF","AX","AL","DZ",
-		"AS","AD","AO","AI","AQ","AG","AR","AM","AW","AU","AT","AZ","BS","BH",
-		"BD","BB","BY","BE","BZ","BJ","BM","BT","BO","BA","BW","BV","BR","IO",
-		"BN","BG","BF","BI","KH","CM","CA","CV","KY","CF","TD","CL","CN","CX",
-		"CC","CO","KM","CG","CD","CK","CR","CI","HR","CU","CY","CZ","DK","DJ",

@@ -1,7 +1,0 @@
-			productVariationService.save(model);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Exception while creating ProductVariation", e);
-		}
-
-	}
-

@@ -1,0 +1,16 @@
+
+			if (PaymentType.PAYPAL.name().equals(paymentType)) {
+
+				// check for previous transaction
+				if (transaction == null) {
+					throw new ServiceException("payment.error");
+				}
+
+				payment = new com.salesmanager.core.model.payments.PaypalPayment();
+
+				((com.salesmanager.core.model.payments.PaypalPayment) payment)
+						.setPayerId(transaction.getTransactionDetails().get("PAYERID"));
+				((com.salesmanager.core.model.payments.PaypalPayment) payment)
+						.setPaymentToken(transaction.getTransactionDetails().get("TOKEN"));
+
+			}

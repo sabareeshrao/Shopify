@@ -1,6 +1,0 @@
-		} finally {
-			try {
-
-				if (inputImage.getFile() != null) {
-					inputImage.getFile().close();
-				}

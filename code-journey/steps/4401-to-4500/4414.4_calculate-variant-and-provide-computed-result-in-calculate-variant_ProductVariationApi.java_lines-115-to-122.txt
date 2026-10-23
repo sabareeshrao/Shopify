@@ -1,8 +1,0 @@
-  })
-  public ReadableProductPrice calculateVariant(
-      @PathVariable final Long id,
-      @RequestBody ReadableSelectedProductVariant options,
-      @ApiIgnore MerchantStore merchantStore,
-      @ApiIgnore Language language,
-      HttpServletResponse response)
-      throws Exception {

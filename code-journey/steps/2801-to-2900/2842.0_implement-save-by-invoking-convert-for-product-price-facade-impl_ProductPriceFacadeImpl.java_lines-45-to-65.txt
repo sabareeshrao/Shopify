@@ -1,0 +1,21 @@
+	@Override
+	public Long save(PersistableProductPrice price, MerchantStore store) {
+		
+		
+		ProductPrice productPrice = persistableProductPriceMapper.convert(price, store, store.getDefaultLanguage());
+		try {
+			if(!isPositive(productPrice.getId())) {
+				//avoid detached entity failed to persist
+				productPrice.getProductAvailability().setPrices(null);
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			} else {
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			}
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("An exception occured while creating a ProductPrice");
+		}
+		return productPrice.getId();
+	}

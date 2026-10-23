@@ -1,4 +1,0 @@
-public abstract class OrderTotalVariation {
-	
-	List<OrderTotal> variations = null;
-

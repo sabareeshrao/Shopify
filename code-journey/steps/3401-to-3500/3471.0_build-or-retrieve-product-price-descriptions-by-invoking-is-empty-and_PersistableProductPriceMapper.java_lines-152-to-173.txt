@@ -1,0 +1,22 @@
+	private Set<ProductPriceDescription> getProductPriceDescriptions(ProductPrice price,
+			List<com.salesmanager.shop.model.catalog.product.ProductPriceDescription> descriptions,
+			MerchantStore store) {
+		if (CollectionUtils.isEmpty(descriptions)) {
+			return Collections.emptySet();
+		}
+		Set<ProductPriceDescription> descs = new HashSet<ProductPriceDescription>();
+		for (com.salesmanager.shop.model.catalog.product.ProductPriceDescription desc : descriptions) {
+			ProductPriceDescription description = null;
+			if (CollectionUtils.isNotEmpty(price.getDescriptions())) {
+				for (ProductPriceDescription d : price.getDescriptions()) {
+					if (isPositive(desc.getId()) && desc.getId().equals(d.getId())) {
+						desc.setId(d.getId());
+					}
+				}
+			}
+			description = getDescription(desc);
+			description.setProductPrice(price);
+			descs.add(description);
+		}
+		return descs;
+	}

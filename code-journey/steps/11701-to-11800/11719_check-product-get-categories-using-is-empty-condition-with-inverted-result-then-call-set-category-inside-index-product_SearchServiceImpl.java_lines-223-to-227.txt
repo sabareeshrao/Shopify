@@ -1,5 +1,0 @@
-
-			if (!CollectionUtils.isEmpty(product.getCategories())) {
-				item.setCategory(
-						category(product.getCategories().iterator().next(), description.getLanguage().getCode()));
-			}

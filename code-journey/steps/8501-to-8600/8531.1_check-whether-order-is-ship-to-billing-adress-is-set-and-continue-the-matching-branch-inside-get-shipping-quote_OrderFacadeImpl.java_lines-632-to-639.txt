@@ -1,8 +1,0 @@
-
-		Customer customer = customerFacade.getCustomerModel(persistableCustomer, store, language);
-
-		Delivery delivery = new Delivery();
-
-		// adjust shipping and billing
-		if (order.isShipToBillingAdress() && !order.isShipToDeliveryAddress()) {
-

@@ -1,0 +1,11 @@
+
+	/**
+	 * Removes a shopping cart item
+	 * @param cartCode
+	 * @param sku
+	 * @param merchant
+	 * @param language
+	 * @param returnCart
+	 * @return ReadableShoppingCart or NULL
+	 * @throws Exception
+	 */

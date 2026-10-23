@@ -1,0 +1,5 @@
+	/**
+	 * ReadableProductPrice getProductPrice(Long id, ProductPriceRequest
+	 * priceRequest, MerchantStore store, Language language);
+	 **/
+

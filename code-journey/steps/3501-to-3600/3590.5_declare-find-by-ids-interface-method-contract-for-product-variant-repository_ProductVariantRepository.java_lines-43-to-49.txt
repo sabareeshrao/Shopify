@@ -1,7 +1,0 @@
-			+ "left join fetch pvvpo.descriptions povvpod "
-			+ "left join fetch pvpov.descriptions povvpovd "			
-			
-			+ "left join fetch pv.merchantStore pvm "
-			+ "where p.id in (?1) and pvm.id = ?2")
-	List<ProductVariant> findByIds(List<Long> ids, Integer storeId);
-	

@@ -1,0 +1,5 @@
+
+  @PatchMapping(value = "/private/catalog/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  @ApiOperation(httpMethod = "PATCH", value = "Update catalog", notes = "",
+      response = Void.class)

@@ -1,4 +1,0 @@
-  public void setDescriptions(List<ObjectContent> descriptions) {
-    this.descriptions = descriptions;
-  }
-

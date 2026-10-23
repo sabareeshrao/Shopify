@@ -1,0 +1,4 @@
+
+		if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+			countQ.setParameter("lang", language.getCode());
+		}

@@ -1,8 +1,0 @@
-	 * priceRequest, MerchantStore store, Language language);
-	 **/
-
-	/**
-	 * Creates a product price
-	 * @param price
-	 * @param productId
-	 * @param inventoryId

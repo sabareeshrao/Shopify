@@ -1,0 +1,9 @@
+public interface UserFacade {
+
+  /**
+   * Finds a User by userName
+   * 
+   * @return
+   * @throws Exception
+   */
+  ReadableUser findByUserName(String userName, String storeCode, Language lang);

@@ -1,3 +1,0 @@
-	OrderTotalSummary calculate(final ShoppingCart cartModel, final MerchantStore store, final Language language)
-			throws ServiceException;
-}

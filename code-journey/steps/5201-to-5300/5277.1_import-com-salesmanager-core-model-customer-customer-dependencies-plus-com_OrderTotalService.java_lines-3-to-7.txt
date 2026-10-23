@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.order.OrderSummary;
+import com.salesmanager.core.model.order.OrderTotalVariation;
+import com.salesmanager.core.model.reference.language.Language;

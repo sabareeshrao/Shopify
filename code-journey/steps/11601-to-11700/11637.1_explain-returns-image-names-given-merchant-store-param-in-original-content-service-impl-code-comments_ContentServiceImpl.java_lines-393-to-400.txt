@@ -1,8 +1,0 @@
-
-	/**
-	 * Returns the image names for a given merchant and store
-	 * 
-	 * @param merchantStoreCode
-	 * @param imageContentType
-	 * @return images name list
-	 * @throws ServiceException

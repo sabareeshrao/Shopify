@@ -1,0 +1,6 @@
+
+@Service("digitalProductService")
+public class DigitalProductServiceImpl extends SalesManagerEntityServiceImpl<Long, DigitalProduct> 
+	implements DigitalProductService {
+	
+

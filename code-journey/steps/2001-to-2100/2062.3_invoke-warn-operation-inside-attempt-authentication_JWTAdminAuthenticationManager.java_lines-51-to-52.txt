@@ -1,2 +1,0 @@
-      logger.warn("the token is expired and not valid anymore", e);
-    }

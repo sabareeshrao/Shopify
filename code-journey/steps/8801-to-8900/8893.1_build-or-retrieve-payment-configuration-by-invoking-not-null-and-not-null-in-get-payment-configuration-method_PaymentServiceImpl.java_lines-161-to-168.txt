@@ -1,8 +1,0 @@
-	@Override
-	public IntegrationConfiguration getPaymentConfiguration(String moduleCode, MerchantStore store) throws ServiceException {
-
-		Validate.notNull(moduleCode,"Module code must not be null");
-		Validate.notNull(store,"Store must not be null");
-		
-		String mod = moduleCode.toLowerCase();
-		

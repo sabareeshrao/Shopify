@@ -1,0 +1,8 @@
+
+/**
+ * Decides which shipping method is going to be used based on a decision table
+ * @author carlsamson
+ *
+ */
+public class ShippingDecisionPreProcessorImpl implements ShippingQuotePrePostProcessModule {
+	

@@ -1,0 +1,4 @@
+
+			 //FileOutputStream fileOutputStream = new FileOutputStream(outFile);
+			 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+

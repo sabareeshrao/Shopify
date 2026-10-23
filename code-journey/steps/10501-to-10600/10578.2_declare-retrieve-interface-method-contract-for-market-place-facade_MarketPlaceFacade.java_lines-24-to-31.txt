@@ -1,8 +1,0 @@
-	ReadableMarketPlace get(String store, Language lang) ;
-	
-	/**
-	 * Finds an optin by merchant and type
-	 * @param store
-	 * @param type
-	 * @return
-	 * @throws Exception

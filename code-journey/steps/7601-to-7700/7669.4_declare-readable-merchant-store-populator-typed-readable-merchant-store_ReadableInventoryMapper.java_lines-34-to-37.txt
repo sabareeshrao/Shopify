@@ -1,0 +1,4 @@
+
+	@Autowired
+	private ReadableMerchantStorePopulator readableMerchantStorePopulator;
+

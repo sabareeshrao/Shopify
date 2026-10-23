@@ -1,0 +1,19 @@
+
+  com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription populateDescription(
+      ManufacturerDescription description) {
+    if (description == null) {
+      return null;
+    }
+    com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription d =
+        new com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription();
+    d.setName(description.getName());
+    d.setDescription(description.getDescription());
+    d.setId(description.getId());
+    d.setTitle(description.getTitle());
+    if (description.getLanguage() != null) {
+      d.setLanguage(description.getLanguage().getCode());
+    }
+    return d;
+  }
+
+}

@@ -1,7 +1,0 @@
-
-			 Map<String,String> configurationMap = new HashMap<String,String>();
-			 configurationMap.put("mode", mode);
-			 configurationMap.put("acct1.UserName", configuration.getIntegrationKeys().get("username"));
-			 configurationMap.put("acct1.Password", configuration.getIntegrationKeys().get("api"));
-			 configurationMap.put("acct1.Signature", configuration.getIntegrationKeys().get("signature"));
-				

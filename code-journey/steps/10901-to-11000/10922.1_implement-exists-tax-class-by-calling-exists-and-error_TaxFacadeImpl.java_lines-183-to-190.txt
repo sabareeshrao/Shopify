@@ -1,8 +1,0 @@
-	@Override
-	public boolean existsTaxClass(String code, MerchantStore store, Language language) {
-		try {
-			boolean exist = taxClassService.exists(code, store);
-			return exist;
-		} catch (ServiceException e) {
-			LOGGER.error("Error while getting taxClass [" +  code + "] for store [" + store.getCode() + "]", e);
-			throw new ServiceRuntimeException("Error while saving taxClass [" +  code + "] for store [" + store.getCode() + "]", e);

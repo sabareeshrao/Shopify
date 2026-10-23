@@ -1,0 +1,6 @@
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+@Component("cache")
+public class CacheUtils {
+	
+	

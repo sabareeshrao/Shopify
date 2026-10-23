@@ -1,4 +1,0 @@
-						<p class="callout">
-							${CUSTOMER_ACCESS_LABEL}&nbsp;<a href="${CUSTOMER_ACCESS_URL}">${ACCESS_NOW_LABEL} &raquo;</a>
-						</p><!-- /Callout Panel -->					
-												

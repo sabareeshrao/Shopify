@@ -1,0 +1,9 @@
+
+	/**
+	 * Validates if the credit card input information are correct
+	 * @param number
+	 * @param type
+	 * @param month
+	 * @param date
+	 * @throws ServiceException
+	 */

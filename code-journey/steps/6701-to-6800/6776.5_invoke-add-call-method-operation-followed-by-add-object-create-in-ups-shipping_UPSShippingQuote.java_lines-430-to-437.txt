@@ -1,0 +1,8 @@
+			digester
+					.addCallMethod(
+							"RatingServiceSelectionResponse/Response/Error/ErrorDescription",
+							"setError", 0);
+
+			digester.addObjectCreate(
+					"RatingServiceSelectionResponse/RatedShipment",
+					ShippingOption.class);

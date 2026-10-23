@@ -1,8 +1,0 @@
-
-				if (object.get("integrationKeys") != null) {
-					Map<String, List<String>> options = (Map<String, List<String>>) object.get("integrationOptions");
-					configuration.setIntegrationOptions(options);
-				}
-
-
-			}

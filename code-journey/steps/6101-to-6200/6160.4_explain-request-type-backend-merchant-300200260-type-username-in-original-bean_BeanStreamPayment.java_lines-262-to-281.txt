@@ -1,0 +1,20 @@
+			/**
+			requestType=BACKEND&merchant_id=300200260
+			&trnType=P
+			&username=carlito&password=shopizer001
+			&orderNumber=caa71106-7e3f-4975-a657-a35904dc32a0
+			&trnCardOwner=Carl Samson
+			&trnCardNumber=5100000020002000
+			&trnExpMonth=10
+			&trnExpYear=14
+			&trnCardCvd=123
+			&trnAmount=77.01
+			&ordName=Carl S
+			&ordAddress1=378 Du Languedoc
+			&ordCity=Boucherville
+			&ordProvince=QC
+			&ordPostalCode=J3B8J1
+			&ordCountry=CA
+			&ordPhoneNumber=(444) 555-6666
+			&ordEmailAddress=test@yahoo.com
+			**/

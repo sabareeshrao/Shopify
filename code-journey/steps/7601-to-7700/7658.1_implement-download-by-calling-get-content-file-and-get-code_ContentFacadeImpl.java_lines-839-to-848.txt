@@ -1,0 +1,10 @@
+	@Override
+	public OutputContentFile download(MerchantStore store, FileContentType fileType, String fileName) {
+
+		try {
+			return contentService.getContentFile(store.getCode(), fileType, fileName);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while downloading file " + e.getMessage(), e);
+		}
+
+	}

@@ -1,8 +1,0 @@
-	private String emailTemplatesPath = null;
-	
-	@SuppressWarnings("unchecked")
-	@Override
-	public String toJSONString() {
-		JSONObject data = new JSONObject();
-		data.put("host", this.getHost());
-		data.put("port", this.getPort());

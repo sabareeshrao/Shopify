@@ -1,0 +1,6 @@
+	public void setUnavailables(List<ShoppingCartItem> unavailables) {
+		this.unavailables = unavailables;
+	}
+	public Long getOrderId() {
+		return orderId;
+	}

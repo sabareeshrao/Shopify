@@ -1,0 +1,7 @@
+
+				// DoCaptureRequest which takes mandatory params:
+				// 
+				// Authorization ID - Authorization identification number of the
+				// payment you want to capture. This is the transaction ID
+				DoCaptureRequestType doCaptureRequest = new DoCaptureRequestType(
+						capturableTransaction.getTransactionDetails().get("TRANSACTIONID"), amount, CompleteCodeType.NOTCOMPLETE);

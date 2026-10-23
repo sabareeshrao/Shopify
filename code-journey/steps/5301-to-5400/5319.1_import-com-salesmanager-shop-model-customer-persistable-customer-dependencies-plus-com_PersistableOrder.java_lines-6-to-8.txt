@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.customer.PersistableCustomer;
+import com.salesmanager.shop.model.order.OrderEntity;
+import com.salesmanager.shop.model.order.PersistableOrderProduct;

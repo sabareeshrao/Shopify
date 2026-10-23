@@ -1,8 +1,0 @@
-							.append(configs.getUri()).toString();
-
-			String trnID = transaction.getTransactionDetails().get("TRANSACTIONID");
-			
-			String amnt = productPriceUtils.getAdminFormatedAmount(store, amount);
-			
-			/**
-			merchant_id=123456789&requestType=BACKEND

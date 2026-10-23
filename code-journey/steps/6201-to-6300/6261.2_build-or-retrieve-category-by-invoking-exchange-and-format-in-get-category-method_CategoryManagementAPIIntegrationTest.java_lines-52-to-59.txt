@@ -1,8 +1,0 @@
-    public void getCategory() throws Exception {
-        final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
-
-        final ResponseEntity<ReadableCategoryList> response = testRestTemplate.exchange(String.format("/api/v1/category/"), HttpMethod.GET,
-                httpEntity, ReadableCategoryList.class);
-        if (response.getStatusCode() != HttpStatus.OK) {
-            throw new Exception(response.toString());
-        } else {

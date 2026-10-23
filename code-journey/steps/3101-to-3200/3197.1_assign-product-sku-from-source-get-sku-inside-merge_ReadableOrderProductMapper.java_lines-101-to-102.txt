@@ -1,0 +1,2 @@
+
+		String productSku = source.getSku();

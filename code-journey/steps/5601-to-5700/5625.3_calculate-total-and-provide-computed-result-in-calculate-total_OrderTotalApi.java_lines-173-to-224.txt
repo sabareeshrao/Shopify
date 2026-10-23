@@ -1,0 +1,52 @@
+  public ReadableOrderTotalSummary calculateTotal(
+      @PathVariable final String code,
+      @RequestParam(value = "quote", required = false) Long quote,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,//possible postal code, province and country
+      HttpServletResponse response) {
+
+    try {
+      ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);
+
+      if (shoppingCart == null) {
+
+        response.sendError(404, "Cart code " + code + " does not exist");
+
+        return null;
+      }
+
+      ShippingSummary shippingSummary = null;
+
+      // get shipping quote if asked for
+      if (quote != null) {
+        shippingSummary = shippingQuoteService.getShippingSummary(quote, merchantStore);
+      }
+
+      OrderTotalSummary orderTotalSummary = null;
+
+      OrderSummary orderSummary = new OrderSummary();
+      orderSummary.setShippingSummary(shippingSummary);
+      List<ShoppingCartItem> itemsSet =
+          new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
+      orderSummary.setProducts(itemsSet);
+
+      orderTotalSummary = orderService.caculateOrderTotal(orderSummary, merchantStore, language);
+
+      ReadableOrderTotalSummary returnSummary = new ReadableOrderTotalSummary();
+      ReadableOrderSummaryPopulator populator = new ReadableOrderSummaryPopulator();
+      populator.setMessages(messages);
+      populator.setPricingService(pricingService);
+      populator.populate(orderTotalSummary, returnSummary, merchantStore, language);
+
+      return returnSummary;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while calculating order summary", e);
+      try {
+        response.sendError(503, "Error while calculating order summary " + e.getMessage());
+      } catch (Exception ignore) {
+      }
+      return null;
+    }
+  }
+}

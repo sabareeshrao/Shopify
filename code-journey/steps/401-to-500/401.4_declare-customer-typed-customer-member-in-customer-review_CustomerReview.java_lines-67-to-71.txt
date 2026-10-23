@@ -1,0 +1,5 @@
+
+	@ManyToOne
+	@JoinColumn(name="CUSTOMERS_ID")
+	private Customer customer;
+	

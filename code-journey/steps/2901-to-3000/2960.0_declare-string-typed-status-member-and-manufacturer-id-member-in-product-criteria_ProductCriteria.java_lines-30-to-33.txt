@@ -1,0 +1,4 @@
+	private String status;
+	
+	private Long manufacturerId = null;
+	

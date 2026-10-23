@@ -1,8 +1,0 @@
-	 */
-	PersistableCustomerReview saveOrUpdateCustomerReview(PersistableCustomerReview review, MerchantStore store, Language language);
-	
-	/**
-	 * List all customer reviews by reviewed
-	 * @param customer
-	 * @param store
-	 * @param language

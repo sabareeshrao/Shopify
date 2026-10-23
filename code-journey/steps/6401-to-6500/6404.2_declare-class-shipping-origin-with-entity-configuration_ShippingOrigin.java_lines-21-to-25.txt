@@ -1,0 +1,5 @@
+
+@Entity
+@Table(name = "SHIPING_ORIGIN")
+public class ShippingOrigin extends SalesManagerEntity<Long, ShippingOrigin> {
+

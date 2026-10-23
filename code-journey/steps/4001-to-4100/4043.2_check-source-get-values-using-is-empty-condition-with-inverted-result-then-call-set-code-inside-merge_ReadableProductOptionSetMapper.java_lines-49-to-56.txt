@@ -1,8 +1,0 @@
-		destination.setCode(source.getCode());
-		destination.setReadOnly(source.isOptionDisplayOnly());
-		
-		destination.setOption(this.option(source.getOption(), store, language));
-		
-		List<Long> ids = new ArrayList<Long>();
-
-		if(!CollectionUtils.isEmpty(source.getValues())) {

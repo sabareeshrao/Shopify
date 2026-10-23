@@ -1,8 +1,0 @@
-
-		List<ProductOptionDescription> descriptions = productAttribute.getProductOption().getDescriptionsSettoList();
-
-		ReadableProductPropertyValue propertyValue = new ReadableProductPropertyValue();
-
-
-		if(descriptions!=null && descriptions.size()>0) {
-			for(ProductOptionDescription optionDescription : descriptions) {

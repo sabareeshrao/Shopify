@@ -1,0 +1,9 @@
+
+	@Inject
+	private ShoppingCartService shoppingCartService;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject
+	private PaymentService paymentService;

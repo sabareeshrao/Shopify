@@ -1,8 +1,0 @@
-	@Override
-	public void createBrand(String merchantStoreCode, PersistableBrand brand) {
-		MerchantStore mStore = getMerchantStoreByCode(merchantStoreCode);
-
-		List<MerchantConfigEntity> createdConfigs = brand.getSocialNetworks();
-
-		List<MerchantConfiguration> configurations = createdConfigs.stream()
-				.map(config -> convertToMerchantConfiguration(config, MerchantConfigurationType.SOCIAL))

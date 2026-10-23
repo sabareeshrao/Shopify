@@ -1,0 +1,26 @@
+	@Override
+	public ReadableProduct merge(Product source, ReadableProduct destination, MerchantStore store, Language language) {
+
+		Validate.notNull(source, "Product cannot be null");
+		Validate.notNull(destination, "Product destination cannot be null");
+
+
+		// read only product values
+		// will contain options
+		TreeMap<Long, ReadableProductOption> selectableOptions = new TreeMap<Long, ReadableProductOption>();
+
+		destination.setSku(source.getSku());
+		destination.setRefSku(source.getRefSku());
+		destination.setId(source.getId());
+		destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+
+		ProductDescription description = null;
+		if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+			for (ProductDescription desc : source.getDescriptions()) {
+				if (language != null && desc.getLanguage() != null
+						&& desc.getLanguage().getId().intValue() == language.getId().intValue()) {
+					description = desc;
+					break;
+				}
+			}
+		}

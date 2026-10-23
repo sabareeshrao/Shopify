@@ -1,4 +1,0 @@
-					}
-				} else {
-					description = descriptions.iterator().next();
-				}

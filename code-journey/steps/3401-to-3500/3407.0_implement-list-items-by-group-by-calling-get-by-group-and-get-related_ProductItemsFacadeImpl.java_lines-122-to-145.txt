@@ -1,0 +1,24 @@
+
+	@Override
+	public ReadableProductList listItemsByGroup(String group, MerchantStore store, Language language) throws Exception {
+
+
+		//get product group
+		List<ProductRelationship> groups = productRelationshipService.getByGroup(store, group, language);
+
+		if(group!=null) {
+			List<Long> ids = new ArrayList<Long>();
+			for(ProductRelationship relationship : groups) {
+				Product product = relationship.getRelatedProduct();
+				ids.add(product.getId());
+			}
+			
+			ReadableProductList list = listItemsByIds(store, language, ids, 0, 0);
+			List<ReadableProduct> prds = list.getProducts().stream().sorted(Comparator.comparing(ReadableProduct::getSortOrder)).collect(Collectors.toList());
+			list.setProducts(prds);
+			list.setTotalPages(1);//no paging
+			return list;
+		}
+		
+		return null;
+	}

@@ -1,0 +1,4 @@
+	public abstract String getBasePath(MerchantStore store);
+
+	public abstract void setBasePath(String basePath);
+	

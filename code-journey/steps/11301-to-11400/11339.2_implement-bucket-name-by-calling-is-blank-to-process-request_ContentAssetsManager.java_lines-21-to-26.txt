@@ -1,6 +1,0 @@
-
-    default String bucketName() {
-        String name = getCmsManager().getRootName();
-        if (StringUtils.isBlank(name)) {
-            name = DEFAULT_BUCKET_NAME;
-        }

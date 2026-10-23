@@ -1,0 +1,7 @@
+		messageString.append("orderNumber=").append(orderNumber).append("&");
+		messageString.append("trnCardOwner=").append(creditCardPayment.getCardOwner()).append("&");
+		messageString.append("trnCardNumber=").append(creditCardPayment.getCreditCardNumber()).append("&");
+		messageString.append("trnExpMonth=").append(creditCardPayment.getExpirationMonth()).append("&");
+		messageString.append("trnExpYear=").append(creditCardPayment.getExpirationYear().substring(2)).append("&");
+		messageString.append("trnCardCvd=").append(creditCardPayment.getCredidCardValidationNumber()).append("&");
+		messageString.append("trnAmount=").append(amnt).append("&");

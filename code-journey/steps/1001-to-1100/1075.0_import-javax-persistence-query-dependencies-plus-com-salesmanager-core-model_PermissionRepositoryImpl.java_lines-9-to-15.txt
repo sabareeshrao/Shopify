@@ -1,0 +1,7 @@
+import javax.persistence.Query;
+
+import com.salesmanager.core.model.user.Permission;
+import com.salesmanager.core.model.user.PermissionCriteria;
+import com.salesmanager.core.model.user.PermissionList;
+
+

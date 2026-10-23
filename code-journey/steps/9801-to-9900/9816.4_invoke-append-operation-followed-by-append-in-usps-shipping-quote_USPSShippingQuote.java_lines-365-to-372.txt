@@ -1,8 +1,0 @@
-				xmldatabuffer.append(size);
-				xmldatabuffer.append("</Size>");
-				xmldatabuffer.append("<Machinable>true</Machinable>");//TODO must be changed if not machinable
-				xmldatabuffer.append("<ShipDate>");
-				xmldatabuffer.append(shipDate);
-				xmldatabuffer.append("</ShipDate>");
-			} else {
-				// if international

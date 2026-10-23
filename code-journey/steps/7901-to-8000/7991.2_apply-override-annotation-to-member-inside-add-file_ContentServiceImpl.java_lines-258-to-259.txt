@@ -1,0 +1,2 @@
+	@Override
+	public void addContentFiles(String merchantStoreCode, List<InputContentFile> contentFilesList)

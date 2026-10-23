@@ -1,0 +1,10 @@
+  
+  /**
+   * List manufacturers by a specific store
+   * @param store
+   * @param language
+   * @param criteria
+   * @param page
+   * @param count
+   * @return
+   */

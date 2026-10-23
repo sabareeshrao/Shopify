@@ -1,9 +1,0 @@
-
-			contentService.delete(content);
-
-		} catch (Exception e) {
-			throw new ServiceRuntimeException(e);
-		}
-
-	}
-

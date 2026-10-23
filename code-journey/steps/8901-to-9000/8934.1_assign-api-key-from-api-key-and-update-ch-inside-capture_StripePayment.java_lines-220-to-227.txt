@@ -1,8 +1,0 @@
-				
-
-				Stripe.apiKey = apiKey;
-				
-				Charge ch = Charge.retrieve(chargeId);
-				ch.capture();
-				
-				

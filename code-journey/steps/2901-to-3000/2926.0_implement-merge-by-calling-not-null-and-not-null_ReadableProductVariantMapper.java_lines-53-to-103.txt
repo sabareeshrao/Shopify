@@ -1,0 +1,51 @@
+	@Override
+	public ReadableProductVariant merge(ProductVariant source, ReadableProductVariant destination,
+			MerchantStore store, Language language) {
+		
+		Validate.notNull(source, "Product instance cannot be null");
+		Validate.notNull(source.getProduct(), "Product cannot be null");
+		
+		if(destination == null) {
+			destination = new ReadableProductVariant();
+		}
+		
+		destination.setSortOrder(source.getSortOrder() != null ? source.getSortOrder().intValue():0);
+		destination.setAvailable(source.isAvailable());
+		destination.setDateAvailable(DateUtil.formatDate(source.getDateAvailable()));
+		destination.setId(source.getId());
+		destination.setDefaultSelection(source.isDefaultSelection());
+		destination.setProductId(source.getProduct().getId());
+		destination.setSku(source.getSku());
+		destination.setSortOrder(source.getSortOrder());
+		destination.setCode(source.getCode());
+		
+		//get product
+		Product baseProduct = source.getProduct();
+		if(baseProduct == null) {
+			throw new ResourceNotFoundException("Product instances do not include the parent product [" + destination.getSku() + "]");
+		}
+		
+		destination.setProductShipeable(baseProduct.isProductShipeable());
+		
+		//destination.setStore(null);
+		destination.setStore(store.getCode());
+		destination.setVariation(readableProductVariationMapper.convert(source.getVariation(), store, language));
+		if(source.getVariationValue() != null) {
+			destination.setVariationValue(readableProductVariationMapper.convert(source.getVariationValue(), store, language));
+		}
+
+		if(source.getProductVariantGroup() != null) {
+			Set<String> nameSet = new HashSet<>();
+			List<ReadableImage> instanceImages = source.getProductVariantGroup().getImages().stream().map(i -> this.image(i, store, language))
+					.filter(e -> nameSet.add(e.getImageUrl()))
+					.collect(Collectors.toList());
+			destination.setImages(instanceImages);
+		}
+		
+		if(!CollectionUtils.isEmpty(source.getAvailabilities())) {
+			List<ReadableInventory> inventories = source.getAvailabilities().stream().map(i -> readableInventoryMapper.convert(i, store, language)).collect(Collectors.toList());
+			destination.setInventory(inventories);
+		}
+		
+		return destination;
+	}

@@ -1,0 +1,46 @@
+
+@RestController
+@RequestMapping("/api/v1")
+@Api(tags = { "Order status history api" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Order status history resource", description = "Related to OrderManagement api") })
+public class OrderStatusHistoryApi {
+
+	@Inject
+	private OrderFacade orderFacade;
+
+	@Inject
+	private AuthorizationUtils authorizationUtils;
+
+	@RequestMapping(value = { "private/orders/{id}/history" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public List<ReadableOrderStatusHistory> list(@PathVariable final Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_ORDER, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		return orderFacade.getReadableOrderHistory(id, merchantStore, language);
+
+	}
+
+	@RequestMapping(value = { "private/orders/{id}/history" }, method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation(httpMethod = "POST", value = "Add order history", notes = "Adds a new status to an order", produces = "application/json", response = Void.class)
+	@ResponseBody
+	public void create(@PathVariable final Long id, @RequestBody PersistableOrderStatusHistory history,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_ORDER, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		// TODO validate date format
+
+		orderFacade.createOrderStatus(history, id, merchantStore);
+
+	}
+
+}

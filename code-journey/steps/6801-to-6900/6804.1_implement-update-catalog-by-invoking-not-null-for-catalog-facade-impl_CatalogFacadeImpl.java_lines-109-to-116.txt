@@ -1,8 +1,0 @@
-    @Override
-    public void updateCatalog(Long catalogId, PersistableCatalog catalog, MerchantStore store, Language language) {
-        Validate.notNull(catalogId, "Catalog id cannot be null");
-        Validate.isTrue(catalogId > 0, "Catalog id cannot be null");
-        Validate.notNull(store, "MerchantStore cannot be null");
-        Validate.notNull(language, "Language cannot be null");
-
-        Catalog c = Optional.ofNullable(catalogService.getById(catalogId))

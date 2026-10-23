@@ -1,0 +1,6 @@
+	
+	@Column(name="CUSTOMER_NICK", length=96)
+	private String nick;// unique username per store
+
+	@Column(name="CUSTOMER_COMPANY", length=100)
+	private String company;

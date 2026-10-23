@@ -1,6 +1,0 @@
-
-			content = contentService.getByCode(box.getCode(), merchantStore);
-			if (content != null) {
-				throw new ConstraintException("Content box with code [" + box.getCode() + "] already exist for store ["
-						+ merchantStore.getCode() + "]");
-			}

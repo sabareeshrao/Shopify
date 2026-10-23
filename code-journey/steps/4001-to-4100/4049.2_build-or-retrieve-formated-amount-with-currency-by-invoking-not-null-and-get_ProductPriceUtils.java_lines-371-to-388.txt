@@ -1,0 +1,18 @@
+	// Utility
+	public String getFormatedAmountWithCurrency(com.salesmanager.core.model.reference.currency.Currency currency,
+			BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}
+
+		Validate.notNull(currency.getCurrency(), "Currency must be populated with java.util.Currency");
+		NumberFormat nf = null;
+
+		Currency curr = currency.getCurrency();
+		nf = NumberFormat.getInstance(Constants.DEFAULT_LOCALE);
+		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setCurrency(curr);
+
+		return nf.format(amount);
+	}

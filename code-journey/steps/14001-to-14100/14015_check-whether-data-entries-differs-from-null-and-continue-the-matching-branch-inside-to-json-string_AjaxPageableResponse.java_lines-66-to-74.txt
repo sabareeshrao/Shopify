@@ -1,9 +1,0 @@
-				count ++;
-			}
-			
-			returnString.append(",").append("\"data\"").append(":[");
-			if(dataEntries!=null) {
-				returnString.append(dataEntries.toString());
-			}
-			returnString.append("]");
-		}

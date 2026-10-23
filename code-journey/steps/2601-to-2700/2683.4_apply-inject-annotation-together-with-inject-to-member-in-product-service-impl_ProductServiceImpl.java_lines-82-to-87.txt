@@ -1,0 +1,6 @@
+
+	@Inject
+	CoreConfiguration configuration;
+
+	@Inject
+	ProductReviewService productReviewService;

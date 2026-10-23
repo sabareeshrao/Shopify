@@ -1,8 +1,0 @@
-
-		userFacade.authorizedGroup(authenticatedUser, Stream.of("SUPERADMIN", "ADMIN_RETAILER").collect(Collectors.toList()));
-
-		//ADMIN_RETAILER only see pertaining stores
-		
-		
-		return storeFacade.getChildStores(language, code, page, count);
-	}

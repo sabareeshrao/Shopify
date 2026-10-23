@@ -1,0 +1,2 @@
+	List<ProductRelationship> getByType(MerchantStore store, Product product,
+			String name) throws ServiceException;

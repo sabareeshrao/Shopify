@@ -1,4 +1,0 @@
-				String mimetype = URLConnection.guessContentTypeFromName(blob.getName());
-				if (!StringUtils.isBlank(mimetype)) {
-				fileNames.add(getName(blob.getName()));
-				}

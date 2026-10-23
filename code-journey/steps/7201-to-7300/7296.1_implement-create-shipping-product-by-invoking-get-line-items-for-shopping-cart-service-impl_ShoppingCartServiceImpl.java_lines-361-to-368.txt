@@ -1,8 +1,0 @@
-	@Override
-	public List<ShippingProduct> createShippingProduct(final ShoppingCart cart) throws ServiceException {
-		/**
-		 * Determines if products are virtual
-		 */
-		Set<ShoppingCartItem> items = cart.getLineItems();
-		List<ShippingProduct> shippingProducts = null;
-		for (ShoppingCartItem item : items) {

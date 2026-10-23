@@ -1,8 +1,0 @@
-		if(packages.isEmpty()) {
-			return false;
-		} else {
-			return true;
-		}
-		
-		
-	}

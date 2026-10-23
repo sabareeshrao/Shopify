@@ -1,8 +1,0 @@
-		"zoneCode": "Nagaland",
-		"zoneName": "Nagaland",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "Odisha",
-		"zoneName": "Odisha",
-		"countryCode": "IN"

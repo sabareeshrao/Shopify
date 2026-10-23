@@ -1,0 +1,16 @@
+	@Override
+	public void saveShippingConfiguration(ShippingConfiguration shippingConfiguration, MerchantStore store) throws ServiceException {
+		
+		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(ShippingConstants.SHIPPING_CONFIGURATION, store);
+
+		if(configuration==null) {
+			configuration = new MerchantConfiguration();
+			configuration.setMerchantStore(store);
+			configuration.setKey(ShippingConstants.SHIPPING_CONFIGURATION);
+		}
+		
+		String value = shippingConfiguration.toJSONString();
+		configuration.setValue(value);
+		merchantConfigurationService.saveOrUpdate(configuration);
+		
+	}

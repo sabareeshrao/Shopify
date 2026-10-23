@@ -1,0 +1,21 @@
+	public void delete(CustomerOptionValue customerOptionValue) throws ServiceException {
+		
+		//remove all attributes having this option
+		List<CustomerAttribute> attributes = customerAttributeService.getByCustomerOptionValueId(customerOptionValue.getMerchantStore(), customerOptionValue.getId());
+		
+		for(CustomerAttribute attribute : attributes) {
+			customerAttributeService.delete(attribute);
+		}
+		
+		List<CustomerOptionSet> optionSets = customerOptionSetService.listByOptionValue(customerOptionValue, customerOptionValue.getMerchantStore());
+		
+		for(CustomerOptionSet optionSet : optionSets) {
+			customerOptionSetService.delete(optionSet);
+		}
+		
+		CustomerOptionValue option = super.getById(customerOptionValue.getId());
+		
+		//remove option
+		super.delete(option);
+		
+	}

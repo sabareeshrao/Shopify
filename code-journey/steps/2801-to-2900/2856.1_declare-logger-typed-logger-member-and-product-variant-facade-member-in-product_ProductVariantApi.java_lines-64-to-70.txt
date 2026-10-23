@@ -1,0 +1,7 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductVariantApi.class);
+
+	@Autowired
+	private ProductVariantFacade productVariantFacade;
+
+	@Inject
+	private UserFacade userFacade;

@@ -1,0 +1,45 @@
+
+	private Optional<ReadableProductOptionValue> optionValue(ProductOptionValue optionValue, MerchantStore store,
+			Language language) {
+
+		if (optionValue == null) {
+			return Optional.empty();
+		}
+
+		ReadableProductOptionValue optValue = new ReadableProductOptionValue();
+
+		com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription valueDescription = new com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription();
+		valueDescription.setLanguage(language.getCode());
+
+		if (!StringUtils.isBlank(optionValue.getProductOptionValueImage())) {
+			optValue.setImage(
+					imageUtils.buildProductPropertyImageUtils(store, optionValue.getProductOptionValueImage()));
+		}
+		optValue.setSortOrder(0);
+
+		if (optionValue.getProductOptionValueSortOrder() != null) {
+			optValue.setSortOrder(optionValue.getProductOptionValueSortOrder().intValue());
+		}
+
+		optValue.setCode(optionValue.getCode());
+
+		List<ProductOptionValueDescription> podescriptions = optionValue.getDescriptionsSettoList();
+		ProductOptionValueDescription podescription = null;
+		if (podescriptions != null && podescriptions.size() > 0) {
+			podescription = podescriptions.get(0);
+			if (podescriptions.size() > 1) {
+				for (ProductOptionValueDescription optionValueDescription : podescriptions) {
+					if (optionValueDescription.getLanguage().getId().intValue() == language.getId().intValue()) {
+						podescription = optionValueDescription;
+						break;
+					}
+				}
+			}
+		}
+		valueDescription.setName(podescription.getName());
+		valueDescription.setDescription(podescription.getDescription());
+		optValue.setDescription(valueDescription);
+
+		return Optional.of(optValue);
+
+	}

@@ -1,8 +1,0 @@
-import com.salesmanager.core.business.modules.cms.product.ProductAssetsManager;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.catalog.product.file.ProductImageSize;
-import com.salesmanager.core.model.catalog.product.image.ProductImage;
-import com.salesmanager.core.model.content.FileContentType;
-import com.salesmanager.core.model.content.ImageContentFile;
-import com.salesmanager.core.model.content.OutputContentFile;
-

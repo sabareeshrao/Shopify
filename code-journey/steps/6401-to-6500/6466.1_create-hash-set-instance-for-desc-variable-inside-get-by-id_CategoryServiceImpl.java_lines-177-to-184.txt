@@ -1,8 +1,0 @@
-
-		List<CategoryDescription> descriptions = categoryDescriptionRepository.listByCategoryId(id);
-		Set<CategoryDescription> desc = new HashSet<CategoryDescription>(descriptions);
-		category.setDescriptions(desc);
-
-		return category;
-
-	}

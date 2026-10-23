@@ -1,4 +1,0 @@
-
-			}
-			target.setDescriptions(descriptions);
-		}

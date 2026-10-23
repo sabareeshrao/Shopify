@@ -1,0 +1,7 @@
+import java.util.List;
+
+/**
+ * Saves and retrieves various shipping quotes done by the system
+ * @author c.samson
+ *
+ */

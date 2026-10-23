@@ -1,6 +1,0 @@
-	 */
-	private Long filterId;
-	private QueryFilterType filterType;
-	public String getFilterCode() {
-		return filterCode;
-	}

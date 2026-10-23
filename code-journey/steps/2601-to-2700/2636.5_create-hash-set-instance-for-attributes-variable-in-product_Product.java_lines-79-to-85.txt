@@ -1,0 +1,7 @@
+
+	/**
+	 * Attributes of a product
+	 * Decorates the product with additional properties
+	 */
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
+	private Set<ProductAttribute> attributes = new HashSet<ProductAttribute>();

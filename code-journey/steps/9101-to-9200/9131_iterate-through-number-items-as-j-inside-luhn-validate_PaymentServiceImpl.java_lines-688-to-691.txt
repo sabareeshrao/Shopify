@@ -1,4 +1,0 @@
-
-		for (int j : number) {
-			total += j;
-		}

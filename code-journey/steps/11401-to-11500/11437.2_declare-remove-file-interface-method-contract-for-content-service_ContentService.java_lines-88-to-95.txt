@@ -1,8 +1,0 @@
-     */
-    void removeFile( String merchantStoreCode, FileContentType fileContentType, String fileName) throws ServiceException;
-    
-    /**
-     * Removes static file
-     * FileType is no more important
-     * @param storeCode
-     * @param filename

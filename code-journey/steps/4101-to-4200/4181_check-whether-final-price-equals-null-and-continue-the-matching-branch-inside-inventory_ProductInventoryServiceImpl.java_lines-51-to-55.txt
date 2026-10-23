@@ -1,5 +1,0 @@
-		FinalPrice finalPrice = pricingService.calculateProductPrice(variant);
-		
-		if(finalPrice==null) {
-			finalPrice = pricingService.calculateProductPrice(variant.getProduct());
-		}

@@ -1,0 +1,7 @@
+
+		StringBuilder countBuilderWhere = new StringBuilder();
+		countBuilderWhere.append(" where p.merchantStore.id=:mId");
+
+		if (!CollectionUtils.isEmpty(criteria.getProductIds())) {
+			countBuilderWhere.append(" and p.id in (:pId)");
+		}

@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "BE",
-		"zoneName": "Bern",
-		"countryCode": "CH"
-	},
-	{
-		"zoneCode": "BL",
-		"zoneName": "Basel-Landschaft",

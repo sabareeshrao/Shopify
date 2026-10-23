@@ -1,0 +1,4 @@
+	
+	@Column ( name="DOWNLOAD_COUNT", nullable=false )
+	private Integer downloadCount;
+	

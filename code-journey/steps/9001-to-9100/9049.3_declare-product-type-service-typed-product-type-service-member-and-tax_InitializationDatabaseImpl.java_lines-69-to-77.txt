@@ -1,0 +1,9 @@
+		
+	@Inject
+	protected ProductTypeService productTypeService;
+	
+	@Inject
+	private TaxClassService taxClassService;
+	
+	@Inject
+	private ZonesLoader zonesLoader;

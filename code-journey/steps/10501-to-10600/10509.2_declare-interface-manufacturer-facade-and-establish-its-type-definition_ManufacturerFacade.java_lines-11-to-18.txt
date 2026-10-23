@@ -1,8 +1,0 @@
-
-/**
- * Manufacturer / brand / collection product grouping
- * @author carlsamson
- *
- */
-public interface ManufacturerFacade {
-  

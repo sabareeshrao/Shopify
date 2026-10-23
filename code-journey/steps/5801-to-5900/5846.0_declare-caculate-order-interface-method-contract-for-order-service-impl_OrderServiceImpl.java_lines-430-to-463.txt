@@ -1,0 +1,34 @@
+    private OrderTotalSummary caculateShoppingCart( ShoppingCart shoppingCart, final Customer customer, final MerchantStore store, final Language language) throws Exception {
+
+
+    	OrderSummary orderSummary = new OrderSummary();
+    	orderSummary.setOrderSummaryType(OrderSummaryType.SHOPPINGCART);
+
+    	if(!StringUtils.isBlank(shoppingCart.getPromoCode())) {
+    		Date promoDateAdded = shoppingCart.getPromoAdded();//promo valid 1 day
+    		if(promoDateAdded == null) {
+    			promoDateAdded = new Date();
+    		}
+    		Instant instant = promoDateAdded.toInstant();
+    		ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());
+    		LocalDate date = zdt.toLocalDate();
+    		//date added < date + 1 day
+    		LocalDate tomorrow = LocalDate.now().plusDays(1);
+    		if(date.isBefore(tomorrow)) {
+    			orderSummary.setPromoCode(shoppingCart.getPromoCode());
+    		} else {
+    			//clear promo
+    			shoppingCart.setPromoCode(null);
+    			shoppingCartService.saveOrUpdate(shoppingCart);
+    		}
+    	}
+
+    	List<ShoppingCartItem> itemList = new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
+    	//filter out unavailable
+    	itemList = itemList.stream().filter(p -> p.getProduct().isAvailable()).collect(Collectors.toList());
+    	orderSummary.setProducts(itemList);
+
+
+    	return caculateOrder(orderSummary, customer, store, language);
+
+    }

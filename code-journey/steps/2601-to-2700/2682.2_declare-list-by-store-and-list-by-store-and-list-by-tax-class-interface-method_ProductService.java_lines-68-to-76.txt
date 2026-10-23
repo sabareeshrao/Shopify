@@ -1,0 +1,9 @@
+	Page<Product> listByStore(MerchantStore store, Language language,
+			ProductCriteria criteria, int page, int count);
+
+	List<Product> listByStore(MerchantStore store);
+
+	List<Product> listByTaxClass(TaxClass taxClass);
+
+	List<Product> getProducts(List<Long> categoryIds, Language language)
+			throws ServiceException;

@@ -1,0 +1,5 @@
+        for(OrderTotal total : totals) {
+        	if(total.getModule().equals(Constants.OT_TOTAL_MODULE_CODE)) {
+        		total.setValue(orderTotal);
+        	}
+        }

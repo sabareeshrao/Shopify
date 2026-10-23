@@ -1,0 +1,26 @@
+	@Override
+	public ReadableAddress getShippingOrigin(MerchantStore store) {
+		
+		ShippingOrigin o = shippingOriginService.getByStore(store);
+		
+		if(o == null) {
+			throw new ResourceNotFoundException("Shipping origin does not exists for store [" + store.getCode() + "]");
+		}
+		
+		ReadableAddress address = new ReadableAddress();
+		address.setAddress(o.getAddress());
+		address.setActive(o.isActive());
+		address.setCity(o.getCity());
+		address.setPostalCode(o.getPostalCode());
+		if(o.getCountry()!=null) {
+			address.setCountry(o.getCountry().getIsoCode());
+		}
+		Zone z = o.getZone();
+		if(z != null) {
+			address.setStateProvince(z.getCode());
+		} else {
+			address.setStateProvince(o.getState());
+		}
+
+		return address;
+	}

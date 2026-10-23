@@ -1,0 +1,6 @@
+	public String buildManufacturerImageUtils(MerchantStore store, Manufacturer manufacturer, String imageName) {
+		return new StringBuilder().append(getBasePath(store)).append(Constants.SLASH).append(store.getCode()).append(Constants.SLASH).
+				append(FileContentType.MANUFACTURER.name()).append(Constants.SLASH)
+				.append(manufacturer.getId()).append(Constants.SLASH)
+				.append(imageName).toString();
+	}

@@ -1,8 +1,0 @@
-		CountryDescription us_en = new CountryDescription();
-		us_en.setLanguage(en);
-		us_en.setCountry(us);
-		us_en.setName("United States");
-		
-		us.getDescriptions().add(us_en);
-		
-		CountryDescription us_fr = new CountryDescription();

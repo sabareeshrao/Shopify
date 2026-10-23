@@ -1,0 +1,10 @@
+
+	private String validatePostalCode(String postalCode) {
+
+		String patternString = "__";// this one is set in the template
+		if (postalCode.contains(patternString)) {
+			postalCode = null;
+		}
+		return postalCode;
+	}
+

@@ -1,0 +1,64 @@
+
+	private com.salesmanager.core.model.shoppingcart.ShoppingCartItem createCartItem(final ShoppingCart cartModel,
+			final ShoppingCartItem shoppingCartItem, final MerchantStore store) throws Exception {
+
+		Product product = productService.getBySku(shoppingCartItem.getSku(), store, store.getDefaultLanguage());
+
+		if (product == null) {
+			throw new Exception("Item with sku " + shoppingCartItem.getSku() + " does not exist");
+		}
+
+		if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+			throw new Exception(
+					"Item with sku " + shoppingCartItem.getSku() + " does not belong to merchant " + store.getId());
+		}
+
+		/**
+		 * Check if product quantity is 0 Check if product is available Check if date
+		 * available <= now
+		 */
+
+		Set<ProductAvailability> availabilities = product.getAvailabilities();
+		if (availabilities == null) {
+
+			throw new Exception("Item with id " + product.getId() + " is not properly configured");
+
+		}
+
+		for (ProductAvailability availability : availabilities) {
+			if (availability.getProductQuantity() == null || availability.getProductQuantity().intValue() == 0) {
+				throw new Exception("Item with id " + product.getId() + " is not available");
+			}
+		}
+
+		if (!product.isAvailable()) {
+			throw new Exception("Item with id " + product.getId() + " is not available");
+		}
+
+		if (!DateUtil.dateBeforeEqualsDate(product.getDateAvailable(), new Date())) {
+			throw new Exception("Item with id " + product.getId() + " is not available");
+		}
+
+		com.salesmanager.core.model.shoppingcart.ShoppingCartItem item = shoppingCartService
+				.populateShoppingCartItem(product, store);
+
+		item.setQuantity(shoppingCartItem.getQuantity());
+		item.setShoppingCart(cartModel);
+
+		// attributes
+		List<ShoppingCartAttribute> cartAttributes = shoppingCartItem.getShoppingCartAttributes();
+		if (!CollectionUtils.isEmpty(cartAttributes)) {
+			for (ShoppingCartAttribute attribute : cartAttributes) {
+				ProductAttribute productAttribute = productAttributeService.getById(attribute.getAttributeId());
+				if (productAttribute != null
+						&& productAttribute.getProduct().getId().longValue() == product.getId().longValue()) {
+					com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attributeItem = new com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem(
+							item, productAttribute);
+
+					item.addAttributes(attributeItem);
+				}
+			}
+		}
+		return item;
+
+	}

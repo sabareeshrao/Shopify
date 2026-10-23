@@ -1,0 +1,5 @@
+	
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = Zone.class)
+	@JoinColumn(name="ZONE_ID", nullable=true)
+	private Zone zone;
+

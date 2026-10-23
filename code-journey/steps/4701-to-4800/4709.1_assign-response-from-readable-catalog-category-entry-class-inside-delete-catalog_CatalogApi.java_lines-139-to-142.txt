@@ -1,0 +1,4 @@
+  @PostMapping(value = "/private/catalog/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  @ApiOperation(httpMethod = "POST", value = "Add catalog entry to catalog", notes = "",
+      response = ReadableCatalogCategoryEntry.class)

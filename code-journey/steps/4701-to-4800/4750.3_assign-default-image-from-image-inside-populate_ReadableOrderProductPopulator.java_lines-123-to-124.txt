@@ -1,2 +1,0 @@
-								defaultImage = image;
-							}

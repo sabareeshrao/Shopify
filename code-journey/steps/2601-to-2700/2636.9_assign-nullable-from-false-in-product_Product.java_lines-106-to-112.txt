@@ -1,0 +1,7 @@
+	@ManyToMany(fetch=FetchType.LAZY, cascade = {CascadeType.REFRESH})
+	@JoinTable(name = "PRODUCT_CATEGORY", joinColumns = { 
+			@JoinColumn(name = "PRODUCT_ID", nullable = false, updatable = false) }
+			, 
+			inverseJoinColumns = { @JoinColumn(name = "CATEGORY_ID", 
+					nullable = false, updatable = false) }
+	)

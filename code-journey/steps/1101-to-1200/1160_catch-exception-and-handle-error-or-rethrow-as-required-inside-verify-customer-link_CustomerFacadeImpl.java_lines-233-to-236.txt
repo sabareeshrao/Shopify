@@ -1,4 +1,0 @@
-
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("Cannot verify customer token", e);
-		}

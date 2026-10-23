@@ -1,8 +1,0 @@
-      ((ReadableProductOptionValueFull)readableProductOptionValue).setDescriptions(descriptions);
-    } else {
-    	readableProductOptionValue = new ReadableProductOptionValue();
-      if(!CollectionUtils.isEmpty(source.getDescriptions())) {
-        for(ProductOptionValueDescription desc : source.getDescriptions()) {
-          if(desc != null && desc.getLanguage()!= null && desc.getLanguage().getId() == language.getId()) {
-            com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription d = this.description(desc);
-            readableProductOptionValue.setDescription(d);

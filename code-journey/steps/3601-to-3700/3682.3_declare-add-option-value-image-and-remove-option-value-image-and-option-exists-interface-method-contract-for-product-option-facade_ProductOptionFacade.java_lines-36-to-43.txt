@@ -1,8 +1,0 @@
-  
-  void addOptionValueImage(MultipartFile image, Long optionValueId, MerchantStore store, Language language);
-  
-  void removeOptionValueImage(Long optionValueId, MerchantStore store, Language language);
-  
-  boolean optionExists(String code, MerchantStore store);
-  
-  boolean optionValueExists(String code, MerchantStore store);

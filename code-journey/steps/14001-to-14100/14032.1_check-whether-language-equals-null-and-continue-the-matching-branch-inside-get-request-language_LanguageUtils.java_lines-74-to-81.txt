@@ -1,8 +1,0 @@
-
-
-    if (language == null) {
-      try {
-
-        locale = LocaleContextHolder.getLocale();// should be browser locale
-
-

@@ -1,0 +1,9 @@
+
+			// validate order shipping and billing
+			if (StringUtils.isBlank(order.getCustomer().getBilling().getFirstName())) {
+				FieldError error = new FieldError("customer.billing.firstName", "customer.billing.firstName",
+						messages.getMessage("NotEmpty.customer.firstName", locale));
+				bindingResult.addError(error);
+				messagesResult.put("customer.billing.firstName",
+						messages.getMessage("NotEmpty.customer.firstName", locale));
+			}

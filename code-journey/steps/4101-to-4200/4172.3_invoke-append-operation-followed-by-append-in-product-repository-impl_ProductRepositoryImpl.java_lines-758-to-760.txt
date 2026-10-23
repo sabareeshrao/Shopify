@@ -1,0 +1,3 @@
+		qs.append("left join fetch p.categories categs ");
+		qs.append("left join fetch categs.descriptions cd ");
+		

@@ -1,0 +1,8 @@
+
+/**
+ * Images and files management
+ * @author carlsamson
+ *
+ */
+public interface ContentFacade {
+	

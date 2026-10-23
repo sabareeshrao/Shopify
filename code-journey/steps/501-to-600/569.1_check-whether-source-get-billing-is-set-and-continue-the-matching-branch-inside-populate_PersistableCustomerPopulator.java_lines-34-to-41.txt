@@ -1,8 +1,0 @@
-				address.setAddress(source.getBilling().getAddress());
-				if(source.getBilling().getCountry()!=null) {
-					address.setCountry(source.getBilling().getCountry().getIsoCode());
-				}
-				if(source.getBilling().getZone()!=null) {
-					address.setZone(source.getBilling().getZone().getCode());
-				}
-				if(source.getBilling().getState()!=null) {

@@ -1,0 +1,31 @@
+
+	private com.salesmanager.shop.model.order.v0.ReadableOrderList getReadableOrderList(OrderCriteria criteria,
+			MerchantStore store, Language language) throws Exception {
+
+		OrderList orderList = orderService.listByStore(store, criteria);
+
+		// ReadableOrderPopulator orderPopulator = new ReadableOrderPopulator();
+		Locale locale = LocaleUtils.getLocale(language);
+		readableOrderPopulator.setLocale(locale);
+
+		List<Order> orders = orderList.getOrders();
+		com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();
+
+		if (CollectionUtils.isEmpty(orders)) {
+			returnList.setRecordsTotal(0);
+			// returnList.setMessage("No results for store code " + store);
+			return null;
+		}
+
+		List<com.salesmanager.shop.model.order.v0.ReadableOrder> readableOrders = new ArrayList<com.salesmanager.shop.model.order.v0.ReadableOrder>();
+		for (Order order : orders) {
+			com.salesmanager.shop.model.order.v0.ReadableOrder readableOrder = new com.salesmanager.shop.model.order.v0.ReadableOrder();
+			readableOrderPopulator.populate(order, readableOrder, store, language);
+			readableOrders.add(readableOrder);
+
+		}
+
+		returnList.setRecordsTotal(orderList.getTotalCount());
+		return this.populateOrderList(orderList, store, language);
+
+	}

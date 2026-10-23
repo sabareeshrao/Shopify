@@ -1,0 +1,13 @@
+	@Override
+	public boolean existsTaxRate(String code, MerchantStore store, Language language) {
+
+		Validate.notNull(code,"TaxRate code cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		TaxRate rate = taxRateByCode(code, store, language);
+		if(rate == null) {
+			return false;
+		}
+		return true;
+	}

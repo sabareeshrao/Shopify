@@ -1,8 +1,0 @@
-		
-		OutputContentFile image =contentService.getContentFile(storeCode, imgType, new StringBuilder().append(imageName).append(".").append(extension).toString());
-		
-		
-		if(image!=null) {
-			return image.getFile().toByteArray();
-		} else {
-			return tempImage;

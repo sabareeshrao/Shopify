@@ -1,8 +1,0 @@
- * Geocoding
- * Distance Matrix
- * Directions
- * 
- * Create new key for server application
- * Copy API key
- * https://console.developers.google.com
- * 

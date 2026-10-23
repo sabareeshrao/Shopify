@@ -1,3 +1,0 @@
-				if (isInsideSubFolder(os.getKey())) {
-					continue;
-				}

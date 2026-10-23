@@ -1,0 +1,6 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ImagesController.class);
+	
+
+	
+	@Inject
+	private ContentService contentService;

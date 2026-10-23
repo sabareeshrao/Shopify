@@ -1,8 +1,0 @@
-	 * @throws Exception
-	 */
-	// Utility
-	public String getFormatedAmountWithCurrency(com.salesmanager.core.model.reference.currency.Currency currency,
-			BigDecimal amount) throws Exception {
-		if (amount == null) {
-			return "";
-		}

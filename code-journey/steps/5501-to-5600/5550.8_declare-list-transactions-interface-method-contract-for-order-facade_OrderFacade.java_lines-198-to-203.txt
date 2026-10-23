@@ -1,0 +1,6 @@
+
+	List<ReadableTransaction> listTransactions (Long orderId, MerchantStore store);
+
+	/**
+	 * Update Order status and create order_status_history record
+	 */

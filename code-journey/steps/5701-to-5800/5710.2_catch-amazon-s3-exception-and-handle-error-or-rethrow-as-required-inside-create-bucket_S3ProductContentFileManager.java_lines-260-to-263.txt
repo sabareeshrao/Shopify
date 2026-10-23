@@ -1,4 +1,0 @@
-        b = s3.createBucket(bucket_name);
-      } catch (AmazonS3Exception e) {
-        System.err.println(e.getErrorMessage());
-      }

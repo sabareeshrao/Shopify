@@ -1,8 +1,0 @@
-		"zoneCode": "NS",
-		"zoneName": "Nova Scotia",
-		"countryCode": "CA"
-	},
-	{
-		"zoneCode": "NT",
-		"zoneName": "Northwest Territories",
-		"countryCode": "CA"

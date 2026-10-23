@@ -1,0 +1,10 @@
+	
+	/**
+	 * Create multiple attributes
+	 * @param id
+	 * @param attributeId
+	 * @param merchantStore
+	 * @param language
+	 * @param request
+	 * @param response
+	 */

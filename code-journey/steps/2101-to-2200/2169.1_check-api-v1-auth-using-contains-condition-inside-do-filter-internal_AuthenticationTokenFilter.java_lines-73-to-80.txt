@@ -1,8 +1,0 @@
-    	
-    	String requestUrl = request.getRequestURL().toString();
-
-
-    	if(requestUrl.contains("/api/v1/auth")) {
-    		//setHeader(request,response);   	
-	    	final String requestHeader = request.getHeader(this.tokenHeader);//token
-	    	

@@ -1,0 +1,7 @@
+public class ShippingConfiguration implements JSONAware {
+	
+	//enums
+	private ShippingType shippingType = ShippingType.NATIONAL;
+	private ShippingBasisType shippingBasisType = ShippingBasisType.SHIPPING;
+	private ShippingOptionPriceType shippingOptionPriceType = ShippingOptionPriceType.ALL;
+	private ShippingPackageType shippingPackageType = ShippingPackageType.ITEM;

@@ -1,8 +1,0 @@
-import com.salesmanager.core.model.common.audit.AuditListener;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-import com.salesmanager.core.model.merchant.MerchantStore;
-
-/**
- * Extra properties on a group of variants
- * @author carlsamson
- *

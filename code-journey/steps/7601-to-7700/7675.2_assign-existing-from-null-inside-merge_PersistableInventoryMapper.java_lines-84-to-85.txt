@@ -1,0 +1,2 @@
+			ProductAvailability existing = null;
+			//determine product availability to be used

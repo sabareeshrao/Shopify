@@ -1,8 +1,0 @@
-        
-        ImageContentFile cmsContentImage = new ImageContentFile();
-        cmsContentImage.setFileName( IMAGE_NAME );
-        cmsContentImage.setFile( inputStream );
-        cmsContentImage.setFileContentType(FileContentType.PRODUCT);
-        
-
-        productImage.setProductImage(IMAGE_NAME);

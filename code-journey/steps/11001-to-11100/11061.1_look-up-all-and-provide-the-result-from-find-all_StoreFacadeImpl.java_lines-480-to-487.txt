@@ -1,8 +1,0 @@
-	@Override
-	public ReadableMerchantStoreList findAll(MerchantStoreCriteria criteria, Language language, int page, int count) {
-		
-		try {
-			Page<MerchantStore> stores = null;
-			List<ReadableMerchantStore> readableStores = new ArrayList<ReadableMerchantStore>();
-			ReadableMerchantStoreList readableList = new ReadableMerchantStoreList();
-			

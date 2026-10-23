@@ -1,0 +1,8 @@
+/*	@Autowired
+	private ShoppingCartService shoppingCartService;
+	@Autowired
+	private ProductService productService;
+	@Autowired
+	private ProductAttributeService productAttributeService;
+	@Autowired
+	private DigitalProductService digitalProductService;*/

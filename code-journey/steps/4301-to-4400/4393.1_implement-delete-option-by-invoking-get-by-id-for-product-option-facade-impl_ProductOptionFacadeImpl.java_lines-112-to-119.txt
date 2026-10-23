@@ -1,8 +1,0 @@
-	@Override
-	public void deleteOption(Long optionId, MerchantStore store) {
-		ProductOption optionModel = productOptionService.getById(store, optionId);
-		if (optionModel == null) {
-			throw new ResourceNotFoundException(
-					"ProductOption not found for [" + optionId + "] and store [" + store.getCode() + "]");
-		}
-		try {

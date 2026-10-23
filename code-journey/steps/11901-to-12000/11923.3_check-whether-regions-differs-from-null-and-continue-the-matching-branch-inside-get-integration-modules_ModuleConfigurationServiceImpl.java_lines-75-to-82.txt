@@ -1,8 +1,0 @@
-				for (IntegrationModule mod : modules) {
-
-					String regions = mod.getRegions();
-					if (regions != null) {
-						Object objRegions = JSONValue.parse(regions);
-						JSONArray arrayRegions = (JSONArray) objRegions;
-						for (Object arrayRegion : arrayRegions) {
-							mod.getRegionsSet().add((String) arrayRegion);

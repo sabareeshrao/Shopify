@@ -1,8 +1,0 @@
-
-      ObjectMetadata metadata = new ObjectMetadata();
-      metadata.setContentType(contentImage.getMimeType());
-
-      PutObjectRequest request = new PutObjectRequest(bucketName,
-          nodePath + productImage.getProductImage(), contentImage.getFile(), metadata);
-      request.setCannedAcl(CannedAccessControlList.PublicRead);
-

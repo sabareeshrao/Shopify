@@ -1,8 +1,0 @@
-			customerFacade.delete(customer);
-		} catch (Exception e) {
-			throw new ServiceRuntimeException("An error occured while deleting customer ["+userName+"]");
-		}
-		
-
-	}
-

@@ -1,0 +1,4 @@
+	@Override
+	public Transaction capture(MerchantStore store, Customer customer,
+			Order order, Transaction capturableTransaction,
+			IntegrationConfiguration configuration, IntegrationModule module)

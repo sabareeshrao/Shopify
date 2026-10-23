@@ -1,8 +1,0 @@
-	private com.salesmanager.shop.model.content.common.ContentDescription contentDescription(
-			ContentDescription description) {
-		Validate.notNull(description, "ContentDescription cannot be null");
-		com.salesmanager.shop.model.content.common.ContentDescription desc = new com.salesmanager.shop.model.content.common.ContentDescription();
-		desc.setDescription(description.getDescription());//return description as is
-		desc.setName(description.getName());
-		desc.setTitle(description.getTitle());
-		desc.setFriendlyUrl(description.getSeUrl());

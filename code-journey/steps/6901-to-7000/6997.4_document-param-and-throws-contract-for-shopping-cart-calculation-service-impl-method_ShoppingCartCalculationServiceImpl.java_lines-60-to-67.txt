@@ -1,8 +1,0 @@
-	 * @param customer
-	 * @param store
-	 * @param language
-	 * @throws ServiceException
-	 */
-	@Override
-	public OrderTotalSummary calculate(final ShoppingCart cartModel, final Customer customer, final MerchantStore store,
-			final Language language) throws ServiceException {

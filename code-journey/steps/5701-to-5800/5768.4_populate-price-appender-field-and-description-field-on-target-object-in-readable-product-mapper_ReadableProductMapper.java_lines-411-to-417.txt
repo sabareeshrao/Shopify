@@ -1,7 +1,0 @@
-								priceDescription.setPriceAppender(d.get().getPriceAppender());
-								readableProductPrice.setDescription(priceDescription);
-							}
-						}
-
-					}
-				}

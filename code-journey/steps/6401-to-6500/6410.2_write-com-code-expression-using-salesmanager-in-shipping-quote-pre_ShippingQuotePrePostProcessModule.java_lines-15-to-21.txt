@@ -1,0 +1,7 @@
+import com.salesmanager.core.modules.integration.IntegrationException;
+
+/**
+ * Invoked before or after quote processing
+ * @author carlsamson
+ *
+ */

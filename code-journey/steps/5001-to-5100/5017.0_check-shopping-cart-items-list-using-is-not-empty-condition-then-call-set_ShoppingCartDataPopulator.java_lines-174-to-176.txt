@@ -1,0 +1,3 @@
+            if(CollectionUtils.isNotEmpty(shoppingCartItemsList)){
+                cart.setShoppingCartItems(shoppingCartItemsList);
+            }

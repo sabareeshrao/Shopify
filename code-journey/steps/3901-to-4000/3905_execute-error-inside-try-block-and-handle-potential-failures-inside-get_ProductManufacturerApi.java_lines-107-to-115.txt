@@ -1,9 +1,0 @@
-
-			return manufacturer;
-
-		} catch (Exception e) {
-			LOGGER.error("Error while getting manufacturer", e);
-			try {
-				response.sendError(503, "Error while getting manufacturer " + e.getMessage());
-			} catch (Exception ignore) {
-			}

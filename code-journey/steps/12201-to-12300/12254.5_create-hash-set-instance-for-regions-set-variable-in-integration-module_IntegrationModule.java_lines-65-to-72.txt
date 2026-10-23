@@ -1,8 +1,0 @@
-	@Column(name = "IMAGE")
-	private String image;
-
-	@Column(name = "CUSTOM_IND")
-	private boolean customModule = false;
-
-	@Transient
-	private Set<String> regionsSet = new HashSet<String>();

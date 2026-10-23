@@ -1,8 +1,0 @@
-import springfox.documentation.annotations.ApiIgnore;
-
-/** Api for managing admin users */
-@RestController
-@RequestMapping(value = "/api/v1")
-@Api(tags = { "User management resource (User Management Api)" })
-@SwaggerDefinition(tags = { @Tag(name = "User management resource", description = "Manage administration users") })
-public class UserApi {

@@ -1,0 +1,19 @@
+    
+    
+    private void postFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
+    	
+    	try {
+    		
+    		UserContext userContext = UserContext.getCurrentInstance();
+    		if(userContext!=null) {
+    			userContext.close();
+    		}
+    		
+    	} catch(Exception s) {
+    		LOGGER.error("Error while getting ip address ", s);
+    	}
+    	
+    }
+
+
+}

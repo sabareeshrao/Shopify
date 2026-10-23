@@ -1,0 +1,5 @@
+
+
+  @Column(name = "VALUE")
+  @Type(type = "org.hibernate.type.TextType")
+  private String value;

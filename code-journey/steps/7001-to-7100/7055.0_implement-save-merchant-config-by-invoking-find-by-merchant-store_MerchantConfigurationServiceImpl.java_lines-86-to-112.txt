@@ -1,0 +1,27 @@
+	
+	@Override
+	public void saveMerchantConfig(MerchantConfig config, MerchantStore store) throws ServiceException {
+		
+		MerchantConfiguration configuration = merchantConfigurationRepository.findByMerchantStoreAndKey(store.getId(), MerchantConfigurationType.CONFIG.name());
+
+		if(configuration==null) {
+			configuration = new MerchantConfiguration();
+			configuration.setMerchantStore(store);
+			configuration.setKey(MerchantConfigurationType.CONFIG.name());
+			configuration.setMerchantConfigurationType(MerchantConfigurationType.CONFIG);
+		}
+		
+		String value = config.toJSONString();
+		configuration.setValue(value);
+		if(configuration.getId()!=null && configuration.getId()>0) {
+			super.update(configuration);
+		} else {
+			super.create(configuration);
+
+		}
+		
+	}
+	
+
+
+}

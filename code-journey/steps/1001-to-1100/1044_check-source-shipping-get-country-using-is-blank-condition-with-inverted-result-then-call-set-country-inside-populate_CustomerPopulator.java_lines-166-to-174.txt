@@ -1,9 +1,0 @@
-				
-				
-				if(!StringUtils.isBlank(sourceShipping.getCountry())) {
-					deliveryCountry = countries.get(sourceShipping.getCountry());
-					if(deliveryCountry==null) {
-						throw new ConversionException("Unsuported country code " + sourceShipping.getCountry());
-					}
-					delivery.setCountry(deliveryCountry);
-				}

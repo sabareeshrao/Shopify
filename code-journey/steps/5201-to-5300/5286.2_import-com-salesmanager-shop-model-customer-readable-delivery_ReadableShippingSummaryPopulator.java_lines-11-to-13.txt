@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.customer.ReadableDelivery;
+import com.salesmanager.shop.model.order.shipping.ReadableShippingSummary;
+

@@ -1,8 +1,0 @@
-
-	@Test
-	@Ignore
-	public void postProduct() throws Exception {
-		restTemplate = new RestTemplate();
-		
-		final String code = "abcdef";
-

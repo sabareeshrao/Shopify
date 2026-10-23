@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("BAM", "Convertible Mark");
-		CURRENCY_MAP.put("BWP", "Pula");
-		CURRENCY_MAP.put("NOK", "Norwegian Krone");
-		CURRENCY_MAP.put("BRL", "Brazilian Real");
-		CURRENCY_MAP.put("BND", "Brunei Dollar");
-		CURRENCY_MAP.put("BGN", "Bulgarian Lev");
-		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");
-		CURRENCY_MAP.put("BIF", "Burundi Franc");

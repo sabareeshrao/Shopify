@@ -1,8 +1,0 @@
-     */
-    public CustomerEntity getCustomerDataByUserName(final String userName,final MerchantStore store, final Language language) throws Exception;
-
-    /**
-     * Creates a ReadableCustomer
-     * @param id
-     * @param merchantStore
-     * @param language

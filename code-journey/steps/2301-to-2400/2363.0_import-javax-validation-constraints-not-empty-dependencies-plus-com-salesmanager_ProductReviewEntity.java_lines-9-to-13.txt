@@ -1,0 +1,5 @@
+import javax.validation.constraints.NotEmpty;
+
+import com.salesmanager.shop.model.entity.ShopEntity;
+
+

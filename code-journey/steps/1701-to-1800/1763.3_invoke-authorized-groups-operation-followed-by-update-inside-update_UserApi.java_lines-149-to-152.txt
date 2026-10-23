@@ -1,4 +1,0 @@
-		userFacade.authorizedGroups(authenticatedUser, user);
-
-		return userFacade.update(id, authenticatedUser, merchantStore, user);
-	}

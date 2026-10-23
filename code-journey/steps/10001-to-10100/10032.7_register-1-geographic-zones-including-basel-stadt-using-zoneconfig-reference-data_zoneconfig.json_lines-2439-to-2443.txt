@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "BS",
+			"zoneName": "Basel-Stadt",
+			"countryCode": "CH"
+		},

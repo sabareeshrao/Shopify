@@ -1,8 +1,0 @@
-	public ProductImageCropUtils(BufferedImage file, int largeImageWidth, int largeImageHeight) {
-		
-		
-	
-			try {
-				
-			
-				this.originalFile = file;

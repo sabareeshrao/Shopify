@@ -1,0 +1,9 @@
+	ShippingConfiguration getShippingConfiguration(MerchantStore store)
+			throws ServiceException;
+
+	/**
+	 * Saves ShippingConfiguration for a given MerchantStore
+	 * @param shippingConfiguration
+	 * @param store
+	 * @throws ServiceException
+	 */

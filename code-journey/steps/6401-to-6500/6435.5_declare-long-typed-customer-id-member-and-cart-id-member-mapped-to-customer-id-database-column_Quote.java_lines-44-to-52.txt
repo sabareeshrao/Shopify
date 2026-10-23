@@ -1,0 +1,9 @@
+	
+	@Column(name = "CUSTOMER_ID", nullable = true)
+	private Long customerId;
+	
+	@Column(name = "CART_ID", nullable = true)
+	private Long cartId;
+
+	@Column(name = "MODULE", nullable = false)
+	private String module;

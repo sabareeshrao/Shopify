@@ -1,8 +1,0 @@
-
-			
-			//PRODUCT TYPE
-			if(!StringUtils.isBlank(source.getType())) {
-				ProductType type = productTypeService.getByCode(source.getType(), store, language);
-				if(type == null) {
-					throw new ConversionException("Product type [" + source.getType() + "] does not exist");
-				}

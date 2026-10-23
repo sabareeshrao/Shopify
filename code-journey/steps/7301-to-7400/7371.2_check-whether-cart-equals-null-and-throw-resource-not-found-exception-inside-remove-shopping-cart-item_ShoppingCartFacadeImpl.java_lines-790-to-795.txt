@@ -1,6 +1,0 @@
-		// get cart
-		ShoppingCart cart = getCartModel(cartCode, merchant);
-
-		if (cart == null) {
-			throw new ResourceNotFoundException("Cart code [ " + cartCode + " ] not found");
-		}

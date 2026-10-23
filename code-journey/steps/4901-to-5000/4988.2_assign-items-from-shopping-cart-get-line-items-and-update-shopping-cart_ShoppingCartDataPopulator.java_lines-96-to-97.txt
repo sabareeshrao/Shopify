@@ -1,0 +1,2 @@
+        Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> items = shoppingCart.getLineItems();
+        List<ShoppingCartItem> shoppingCartItemsList=Collections.emptyList();

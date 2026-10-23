@@ -1,8 +1,0 @@
-		try {
-			LOGGER.debug("Adding a customer optin : " + code);
-			//moduleConfigurationService.createOrUpdateModule(json);
-			response.setStatus(200);
-			resp.setStatus(200);
-			
-		} catch(Exception e) {
-			resp.setStatus(500);

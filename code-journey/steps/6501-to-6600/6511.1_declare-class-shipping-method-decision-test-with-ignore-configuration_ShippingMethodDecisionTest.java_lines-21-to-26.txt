@@ -1,0 +1,6 @@
+
+@Ignore
+public class ShippingMethodDecisionTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	
+	@Inject
+	ShippingDecisionPreProcessorImpl shippingMethodDecisionProcess;

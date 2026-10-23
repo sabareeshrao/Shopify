@@ -1,0 +1,4 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SystemRESTController.class);
+	
+	@Inject
+	private ModuleConfigurationService moduleConfigurationService;

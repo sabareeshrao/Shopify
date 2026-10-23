@@ -1,8 +1,0 @@
-      value = "Get public configuration for a given merchant store",
-      notes = "",
-      produces = "application/json",
-      response = Configs.class)
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
-  })

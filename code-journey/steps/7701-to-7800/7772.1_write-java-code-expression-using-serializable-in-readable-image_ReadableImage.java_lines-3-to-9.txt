@@ -1,0 +1,7 @@
+import java.io.Serializable;
+
+/**
+ * Used for defining an image name and its path
+ * @author carlsamson
+ *
+ */

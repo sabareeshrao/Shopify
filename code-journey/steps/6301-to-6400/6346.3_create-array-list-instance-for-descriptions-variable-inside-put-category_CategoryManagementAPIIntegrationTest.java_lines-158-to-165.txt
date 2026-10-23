@@ -1,8 +1,0 @@
-        description.setName("angular");
-        description.setFriendlyUrl("angular");
-        description.setTitle("angular");
-
-        descriptions = new ArrayList<>();
-        descriptions.add(description);
-
-        newCategory.setDescriptions(descriptions);

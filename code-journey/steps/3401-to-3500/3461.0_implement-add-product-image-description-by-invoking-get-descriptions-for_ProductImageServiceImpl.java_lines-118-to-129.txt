@@ -1,0 +1,12 @@
+	public void addProductImageDescription(ProductImage productImage, ProductImageDescription description)
+			throws ServiceException {
+
+		if (productImage.getDescriptions() == null) {
+			productImage.setDescriptions(new ArrayList<ProductImageDescription>());
+		}
+
+		productImage.getDescriptions().add(description);
+		description.setProductImage(productImage);
+		update(productImage);
+
+	}

@@ -1,0 +1,4 @@
+	
+	@Inject
+	private ProductImageService productImageService;
+	

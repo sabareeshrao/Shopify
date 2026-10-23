@@ -1,0 +1,7 @@
+		order.setPaymentModuleCode("payment Module Code");
+		order.setShippingModuleCode("UPS" );
+		order.setStatus( OrderStatus.ORDERED);
+		order.setCustomerAgreement(true);
+		order.setConfirmedAddress(true);
+		order.setTotal(dprice.getProductPriceAmount());
+		order.setCustomerEmailAddress(customer.getEmailAddress());

@@ -1,0 +1,8 @@
+	    musicEnglishDescription.setName("Music");
+	    musicEnglishDescription.setCategory(music);
+	    musicEnglishDescription.setLanguage(en);
+
+	    CategoryDescription musicFrenchDescription = new CategoryDescription();
+	    musicFrenchDescription.setName("Musique");
+	    musicFrenchDescription.setCategory(music);
+	    musicFrenchDescription.setLanguage(fr);

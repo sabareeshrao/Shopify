@@ -1,2 +1,0 @@
-							selectableOptions = new TreeMap<Long, ReadableProductOption>();
-						}

@@ -1,0 +1,22 @@
+		
+		//calculate volume (L x W x H)
+		Double volume = null;
+		Double weight = 0D;
+		Double size = null;
+		//calculate weight
+		for(PackageDetails pack : packages) {
+			weight = weight + pack.getShippingWeight();
+			Double tmpVolume = pack.getShippingHeight() * pack.getShippingLength() * pack.getShippingWidth();
+			if(volume == null || tmpVolume > volume) { //take the largest volume
+				volume = tmpVolume;
+			} 
+			//largest size
+			List<Double> sizeList = new ArrayList<Double>();
+			sizeList.add(pack.getShippingHeight());
+			sizeList.add(pack.getShippingWidth());
+			sizeList.add(pack.getShippingLength());
+			Double maxSize = Collections.max(sizeList);
+			if(size==null || maxSize > size) {
+				size = maxSize;
+			}
+		}

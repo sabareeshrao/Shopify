@@ -1,4 +1,0 @@
-			"ZONE_ID",
-			"LANGUAGE_ID"
-		})
-	}

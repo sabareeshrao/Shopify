@@ -1,4 +1,0 @@
-  @JsonIgnore
-  @ManyToMany(mappedBy = "languages", targetEntity = MerchantStore.class, fetch = FetchType.LAZY)
-  private List<MerchantStore> stores = new ArrayList<MerchantStore>();
-

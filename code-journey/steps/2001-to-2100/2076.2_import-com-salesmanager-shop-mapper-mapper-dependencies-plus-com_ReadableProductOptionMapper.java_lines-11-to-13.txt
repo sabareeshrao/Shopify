@@ -1,0 +1,3 @@
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionFull;

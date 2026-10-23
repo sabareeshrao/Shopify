@@ -1,0 +1,4 @@
+	
+	@Inject
+	protected PermissionService   permissionService;
+

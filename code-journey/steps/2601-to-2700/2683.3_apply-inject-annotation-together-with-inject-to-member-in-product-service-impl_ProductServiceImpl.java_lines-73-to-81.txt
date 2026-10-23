@@ -1,0 +1,9 @@
+
+	@Inject
+	ProductAttributeService productAttributeService;
+
+	@Inject
+	ProductRelationshipService productRelationshipService;
+
+	@Inject
+	ProductImageService productImageService;

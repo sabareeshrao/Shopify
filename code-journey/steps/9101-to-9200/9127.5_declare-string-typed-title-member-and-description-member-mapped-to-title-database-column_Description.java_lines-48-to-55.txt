@@ -1,0 +1,8 @@
+	
+	@Column(name="TITLE", length=100)
+	private String title;
+	
+	@Column(name="DESCRIPTION")
+	@Type(type = "org.hibernate.type.TextType")
+	private String description;
+	

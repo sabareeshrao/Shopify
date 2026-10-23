@@ -1,0 +1,13 @@
+	public ReadableShoppingCart modifyCart(String cartCode, PersistableShoppingCartItem item, MerchantStore store,
+			Language language) throws Exception {
+
+		Validate.notNull(cartCode, "String cart code cannot be null");
+		Validate.notNull(item, "PersistableShoppingCartItem cannot be null");
+
+		ShoppingCart cartModel = getCartModel(cartCode, store);
+		if (cartModel == null) {
+			throw new ResourceNotFoundException("Cart code [" + cartCode + "] not found");
+		}
+
+		return modifyCart(cartModel, item, store, language);
+	}

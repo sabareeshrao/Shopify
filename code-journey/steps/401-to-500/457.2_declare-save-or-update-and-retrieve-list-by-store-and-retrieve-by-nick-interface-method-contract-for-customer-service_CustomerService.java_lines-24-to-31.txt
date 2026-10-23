@@ -1,8 +1,0 @@
-	void saveOrUpdate(Customer customer) throws ServiceException ;
-
-	CustomerList getListByStore(MerchantStore store, CustomerCriteria criteria);
-
-	Customer getByNick(String nick, int storeId);
-	Customer getByNick(String nick, String code);
-	
-	/**

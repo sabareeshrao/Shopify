@@ -1,8 +1,0 @@
-
-</div>
-
-  <!-- Footer Section -->
-  <div class="footer">
-    <div class="copyright">${EMAIL_FOOTER_COPYRIGHT}</div>
-  </div>
-

@@ -1,0 +1,6 @@
+	public void setCanBePurchased(boolean canBePurchased) {
+		this.canBePurchased = canBePurchased;
+	}
+	public String getSku() {
+		return sku;
+	}

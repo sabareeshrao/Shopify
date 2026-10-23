@@ -1,8 +1,0 @@
-
-/**
- * Product instance management facade
- * @author carlsamson
- *
- */
-@Component
-public class ProductVariantFacadeImpl implements ProductVariantFacade {

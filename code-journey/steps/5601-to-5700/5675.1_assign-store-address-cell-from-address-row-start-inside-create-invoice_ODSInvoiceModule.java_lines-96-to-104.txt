@@ -1,0 +1,9 @@
+			
+			//Store name 
+			sheet.setValueAt(store.getStorename(), 0, 0);
+			
+			
+			
+			//Address
+			//count store address cell
+			int storeAddressCell = ADDRESS_ROW_START;

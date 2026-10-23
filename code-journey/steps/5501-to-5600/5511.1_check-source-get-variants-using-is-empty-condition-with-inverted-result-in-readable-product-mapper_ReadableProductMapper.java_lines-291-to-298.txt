@@ -1,8 +1,0 @@
-		
-		ReadableProductVariant defaultInstance = null;
-
-		// variants
-		if (!CollectionUtils.isEmpty(source.getVariants()))
-
-		{
-			List<ReadableProductVariant> instances = source

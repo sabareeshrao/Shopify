@@ -1,9 +1,0 @@
-	private PersistablePayment payment;
-	private Long shippingQuote;
-	@JsonIgnore
-	private Long shoppingCartId;
-	@JsonIgnore
-	private Long customerId;
-	
-	
-	

@@ -1,8 +1,0 @@
-	public int getProductCount() {
-		return productCount;
-	}
-	public void setProductCount(int productCount) {
-		this.productCount = productCount;
-	}
-	public List<ReadableCategory> getChildren() {
-		return children;

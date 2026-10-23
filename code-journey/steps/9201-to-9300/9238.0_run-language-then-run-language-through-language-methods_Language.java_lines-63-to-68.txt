@@ -1,0 +1,6 @@
+  public Language() {}
+
+  public Language(String code) {
+    this.setCode(code);
+  }
+

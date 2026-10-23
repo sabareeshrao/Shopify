@@ -1,0 +1,4 @@
+import java.io.Serializable;
+
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;

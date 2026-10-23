@@ -1,6 +1,0 @@
-
-		/** Must be superadmin or admin */
-		String authenticatedUser = userFacade.authenticatedUser();
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();
-		}

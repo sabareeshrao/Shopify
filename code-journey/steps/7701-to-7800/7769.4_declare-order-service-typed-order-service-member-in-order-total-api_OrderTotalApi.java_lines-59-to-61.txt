@@ -1,3 +1,0 @@
-
-  @Inject private OrderService orderService;
-

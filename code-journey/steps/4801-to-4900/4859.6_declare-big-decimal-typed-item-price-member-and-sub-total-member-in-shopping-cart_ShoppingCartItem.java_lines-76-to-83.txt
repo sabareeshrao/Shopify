@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@Transient
+	private BigDecimal itemPrice;//item final price including all rebates
+
+	@JsonIgnore
+	@Transient
+	private BigDecimal subTotal;//item final price * quantity

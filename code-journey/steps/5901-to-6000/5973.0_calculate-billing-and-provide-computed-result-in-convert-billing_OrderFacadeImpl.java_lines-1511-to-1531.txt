@@ -1,0 +1,21 @@
+
+	private Billing convertBilling(Address source) throws ServiceException {
+		Billing target = new Billing();
+        target.setCity(source.getCity());
+        target.setCompany(source.getCompany());
+        target.setFirstName(source.getFirstName());
+        target.setLastName(source.getLastName());
+        target.setPostalCode(source.getPostalCode());
+        target.setTelephone(source.getPhone());
+        target.setAddress(source.getAddress());
+        if(source.getCountry()!=null) {
+        	target.setCountry(countryService.getByCode(source.getCountry()));
+        }
+
+        if(source.getZone()!=null) {
+            target.setZone(zoneService.getByCode(source.getZone()));
+        }
+        target.setState(source.getBilstateOther());
+
+        return target;
+	}

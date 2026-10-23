@@ -1,3 +1,0 @@
-				orderProductDownload.setMaxdays(ApplicationConstants.MAX_DOWNLOAD_DAYS);
-				target.getDownloads().add(orderProductDownload);
-			}

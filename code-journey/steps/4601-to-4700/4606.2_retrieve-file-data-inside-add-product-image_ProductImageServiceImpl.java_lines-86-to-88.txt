@@ -1,3 +1,0 @@
-				Assert.notNull(inputImage.getFile(), "ImageContentFile.file cannot be null");
-				productFileManager.addProductImage(productImage, inputImage);
-			}

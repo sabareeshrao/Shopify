@@ -1,8 +1,0 @@
-   * @param language
-   * @param groupCode
-   * @param request
-   * @param response
-   * @return
-   * @throws Exception
-   */
-  @ResponseStatus(HttpStatus.OK)

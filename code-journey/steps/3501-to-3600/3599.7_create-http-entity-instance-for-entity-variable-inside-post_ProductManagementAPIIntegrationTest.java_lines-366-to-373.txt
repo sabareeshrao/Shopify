@@ -1,0 +1,8 @@
+
+		System.out.println(json);
+
+		final HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
+
+		// post to create category web service
+		final ResponseEntity response = restTemplate.postForEntity("http://localhost:8080/api/v1/product", entity,
+				PersistableProduct.class);

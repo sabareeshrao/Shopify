@@ -1,4 +1,0 @@
-										productAttribute);
-								if (shoppingCartAttributeItem.getId() > 0) {
-									attributeItem.setId(shoppingCartAttributeItem.getId());
-								}

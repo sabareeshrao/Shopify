@@ -1,8 +1,0 @@
-<table class="footer-wrap">
-	<tr>
-		<td></td>
-		<td class="container">
-			
-				<!-- content -->
-				<div class="content">
-				<p>

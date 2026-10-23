@@ -1,0 +1,7 @@
+		
+			//get configuration
+			ShippingConfiguration shippingConfiguration = getShippingConfiguration(store);
+			ShippingType shippingType = ShippingType.INTERNATIONAL;
+			
+			/** get shipping origin **/
+			ShippingOrigin shippingOrigin = shippingOriginService.getByStore(store);

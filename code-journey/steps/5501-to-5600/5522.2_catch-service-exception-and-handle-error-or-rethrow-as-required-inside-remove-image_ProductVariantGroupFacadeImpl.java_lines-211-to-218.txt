@@ -1,8 +1,0 @@
-			productVariantGroupService.update(group);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("An exception occured while removing instance image [" + imageId + "]",e);
-		}
-			
-	}
-
-}

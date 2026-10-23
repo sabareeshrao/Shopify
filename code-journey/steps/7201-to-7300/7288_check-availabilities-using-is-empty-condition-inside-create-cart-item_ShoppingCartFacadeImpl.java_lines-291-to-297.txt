@@ -1,7 +1,0 @@
-			
-		}
-
-		if (CollectionUtils.isEmpty(availabilities)) {
-			throw new Exception(
-					"Item with id " + product.getId() + " is not properly configured. It contains no inventory");
-		}

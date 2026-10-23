@@ -1,5 +1,0 @@
-      assertThat(manufacturers.getStatusCode(), is(OK));
-      
-      @SuppressWarnings("unchecked")
-      List<ReadableManufacturer> manufacturerList = manufacturers.getBody();
-

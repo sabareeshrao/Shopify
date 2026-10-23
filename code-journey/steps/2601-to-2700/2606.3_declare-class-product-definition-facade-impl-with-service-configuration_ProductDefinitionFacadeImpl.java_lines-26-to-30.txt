@@ -1,0 +1,5 @@
+
+@Service("productDefinitionFacade")
+@Profile({ "default", "cloud", "gcp", "aws", "mysql", "local" })
+public class ProductDefinitionFacadeImpl implements ProductDefinitionFacade {
+	

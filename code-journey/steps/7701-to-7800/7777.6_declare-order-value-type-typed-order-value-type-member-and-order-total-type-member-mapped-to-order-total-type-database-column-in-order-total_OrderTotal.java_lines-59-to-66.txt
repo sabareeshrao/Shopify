@@ -1,8 +1,0 @@
-	private OrderValueType orderValueType = OrderValueType.ONE_TIME;
-	
-	@Column (name ="ORDER_TOTAL_TYPE")
-	@Enumerated(value = EnumType.STRING)
-	private OrderTotalType orderTotalType = null;
-	
-	@Column (name ="SORT_ORDER", nullable=false)
-	private int sortOrder;

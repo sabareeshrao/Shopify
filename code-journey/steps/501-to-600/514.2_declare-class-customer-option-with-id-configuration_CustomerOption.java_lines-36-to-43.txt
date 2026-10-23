@@ -1,8 +1,0 @@
-public class CustomerOption extends SalesManagerEntity<Long, CustomerOption> {
-	private static final long serialVersionUID = -2019269055342226086L;
-	
-	@Id
-	@Column(name="CUSTOMER_OPTION_ID")
-	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "CUSTOMER_OPTION_SEQ_NEXT_VAL")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
-	private Long id;

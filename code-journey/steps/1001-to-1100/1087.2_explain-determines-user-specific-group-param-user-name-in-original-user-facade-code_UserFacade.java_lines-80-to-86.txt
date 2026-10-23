@@ -1,0 +1,7 @@
+  
+  /**
+   * Determines if a user is in a specific group
+   * @param userName
+   * @param groupNames
+   */
+  void authorizedGroup(String userName, List<String> groupNames);

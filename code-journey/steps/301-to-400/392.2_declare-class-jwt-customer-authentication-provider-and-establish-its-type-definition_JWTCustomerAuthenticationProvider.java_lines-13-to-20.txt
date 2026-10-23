@@ -1,8 +1,0 @@
-
-/**
- * Custom authautentication provider for customer api
- * @author carlsamson
- *
- */
-public class JWTCustomerAuthenticationProvider extends DaoAuthenticationProvider {
-	

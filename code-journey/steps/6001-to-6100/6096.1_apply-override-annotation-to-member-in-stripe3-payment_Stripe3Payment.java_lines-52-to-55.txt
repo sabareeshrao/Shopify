@@ -1,0 +1,4 @@
+	@Override
+	public Transaction initTransaction(MerchantStore store, Customer customer,
+									   BigDecimal amount, Payment payment,
+									   IntegrationConfiguration configuration, IntegrationModule module)

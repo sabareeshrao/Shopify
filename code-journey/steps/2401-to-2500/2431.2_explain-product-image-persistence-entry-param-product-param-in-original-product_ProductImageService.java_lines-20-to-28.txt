@@ -1,0 +1,9 @@
+	/**
+	 * Add a ProductImage to the persistence and an entry to the CMS
+	 * @param product
+	 * @param productImage
+	 * @param file
+	 * @throws ServiceException
+	 */
+	void addProductImage(Product product, ProductImage productImage, ImageContentFile inputImage)
+			throws ServiceException;

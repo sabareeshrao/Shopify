@@ -1,3 +1,0 @@
-      if (auditSection.getDateCreated() == null) {
-        auditSection.setDateCreated(new Date());
-      }

@@ -1,8 +1,0 @@
-
-    /**
-     * This methods tests {@link DataUtils#getWeight(double, MerchantStore, String)}
-     */
-    @Test
-    public void testGetWeight_When_StoreUnit_LB_MeasurementUnit_LB(){
-        MerchantStore store = mock(MerchantStore.class);
-        when(store.getWeightunitcode()).thenReturn(MeasureUnit.LB.name());

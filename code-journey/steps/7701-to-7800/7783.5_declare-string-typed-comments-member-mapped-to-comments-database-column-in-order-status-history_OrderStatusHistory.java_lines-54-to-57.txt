@@ -1,4 +1,0 @@
-	@Column(name = "COMMENTS")
-	@Type(type = "org.hibernate.type.TextType")
-	private String comments;
-	

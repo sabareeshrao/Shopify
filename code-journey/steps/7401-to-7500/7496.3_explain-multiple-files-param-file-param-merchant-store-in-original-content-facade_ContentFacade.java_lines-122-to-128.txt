@@ -1,0 +1,7 @@
+	
+	/**
+	 * Add multiple files
+	 * @param file
+	 * @param merchantStoreCode
+	 */
+	void addContentFiles(List<ContentFile> file, String merchantStoreCode);

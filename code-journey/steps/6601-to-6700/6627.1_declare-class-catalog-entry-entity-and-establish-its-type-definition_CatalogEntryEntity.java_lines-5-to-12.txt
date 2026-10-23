@@ -1,8 +1,0 @@
-public class CatalogEntryEntity extends Entity  {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String catalog;
-	private boolean visible;

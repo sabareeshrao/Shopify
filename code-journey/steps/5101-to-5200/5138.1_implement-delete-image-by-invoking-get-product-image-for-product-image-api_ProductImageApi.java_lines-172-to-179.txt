@@ -1,8 +1,0 @@
-
-	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value = { "/private/product/{id}/image/{imageId}" }, method = RequestMethod.DELETE)
-	public void deleteImage(@PathVariable Long id, @PathVariable Long imageId, @Valid NameEntity imageName,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-
-
-			Optional<ProductImage> productImage = productImageService.getProductImage(imageId, id, merchantStore);

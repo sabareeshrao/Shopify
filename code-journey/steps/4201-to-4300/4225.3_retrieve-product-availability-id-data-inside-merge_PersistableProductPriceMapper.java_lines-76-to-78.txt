@@ -1,3 +1,0 @@
-					throw new ConversionRuntimeException(
-							"Product availability with id [" + source.getProductAvailabilityId() + "] was not found");
-				}

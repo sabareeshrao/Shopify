@@ -1,8 +1,0 @@
-							"RatingServiceSelectionResponse/RatedShipment/Service/Code",
-							"setOptionCode", 0);
-			digester
-					.addCallMethod(
-							"RatingServiceSelectionResponse/RatedShipment/GuaranteedDaysToDelivery",
-							"setEstimatedNumberOfDays", 0);
-			digester.addSetNext("RatingServiceSelectionResponse/RatedShipment",
-					"addOption");

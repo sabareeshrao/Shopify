@@ -1,0 +1,10 @@
+
+	/**
+	 * This method will return the required formated amount with the appropriate
+	 * currency
+	 * 
+	 * @param store
+	 * @param amount
+	 * @return
+	 * @throws Exception
+	 */

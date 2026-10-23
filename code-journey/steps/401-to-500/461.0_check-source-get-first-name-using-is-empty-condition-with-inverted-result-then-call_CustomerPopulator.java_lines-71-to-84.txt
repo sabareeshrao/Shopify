@@ -1,0 +1,14 @@
+
+			if(source.getBilling() != null) {
+				target.setBilling(new Billing());
+				if (!StringUtils.isEmpty(source.getFirstName())) {
+					target.getBilling().setFirstName(
+							source.getFirstName()
+					);
+				}
+				if (!StringUtils.isEmpty(source.getLastName())) {
+					target.getBilling().setLastName(
+							source.getLastName()
+					);
+				}
+			}

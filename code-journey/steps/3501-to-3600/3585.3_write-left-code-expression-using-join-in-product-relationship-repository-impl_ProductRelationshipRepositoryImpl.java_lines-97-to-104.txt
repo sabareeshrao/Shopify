@@ -1,8 +1,0 @@
-          + "left join fetch pr.product p "
-          + "left join fetch pr.relatedProduct rp "
-          + "left join fetch rp.attributes pattr "
-          + "left join fetch rp.categories rpc "
-          + "left join fetch rpc.descriptions rpcd "
-          + "left join fetch rp.descriptions rpd "
-          + "left join fetch rp.owner rpo "
-          + "left join fetch rp.images pd "

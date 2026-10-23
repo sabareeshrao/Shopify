@@ -1,5 +1,0 @@
-	public SaveProductAttributeEvent(Object source, ProductAttribute productAttribute, Product product) {
-		super(source, product);
-		this.productAttribute=productAttribute;
-	}
-

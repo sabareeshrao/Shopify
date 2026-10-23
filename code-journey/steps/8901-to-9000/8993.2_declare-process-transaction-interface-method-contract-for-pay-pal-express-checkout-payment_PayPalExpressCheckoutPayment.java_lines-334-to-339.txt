@@ -1,6 +1,0 @@
-		
-		return processTransaction(store, customer, items, amount, paypalPayment, configuration, module);
-
-		
-	}
-

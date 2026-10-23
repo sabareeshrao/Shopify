@@ -1,0 +1,5 @@
+
+@Service("productImage")
+public class ProductImageServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductImage>
+		implements ProductImageService {
+

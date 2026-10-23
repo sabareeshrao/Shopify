@@ -1,8 +1,0 @@
-	@JoinColumn(name="MERCHANT_ID", nullable=false)
-	private MerchantStore merchantStore;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="PRODUCT_OPTION_ID", nullable=false)
-	private ProductOption productOption;
-	
-	@ManyToOne(fetch = FetchType.LAZY)

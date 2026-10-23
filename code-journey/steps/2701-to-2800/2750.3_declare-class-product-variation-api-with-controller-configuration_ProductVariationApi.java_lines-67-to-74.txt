@@ -1,0 +1,8 @@
+@Controller
+@RequestMapping("/api/v2")
+@Api(tags = {"Product variation resource (Product variant Api)"})
+@SwaggerDefinition(tags = {
+    @Tag(name = "Product variation resource", description = "List variations of products by different grouping")
+})
+public class ProductVariationApi {
+

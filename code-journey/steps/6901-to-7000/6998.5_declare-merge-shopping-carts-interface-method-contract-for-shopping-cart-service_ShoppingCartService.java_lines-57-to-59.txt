@@ -1,3 +1,0 @@
-	ShoppingCart mergeShoppingCarts(final ShoppingCart userShoppingCart, final ShoppingCart sessionCart,
-			final MerchantStore store) throws Exception;
-

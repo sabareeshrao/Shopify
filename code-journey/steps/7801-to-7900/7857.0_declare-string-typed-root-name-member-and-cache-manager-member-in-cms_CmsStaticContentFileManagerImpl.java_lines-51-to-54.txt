@@ -1,0 +1,4 @@
+	private String rootName = ROOT_NAME;
+
+	private CacheManager cacheManager;
+

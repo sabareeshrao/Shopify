@@ -1,8 +1,0 @@
-			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
-	public ReadableOrderList listCapturableOrders(
-			@RequestParam(value = "startDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
-			@RequestParam(value = "endDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletRequest request,
-			HttpServletResponse response) {
-
-		try {

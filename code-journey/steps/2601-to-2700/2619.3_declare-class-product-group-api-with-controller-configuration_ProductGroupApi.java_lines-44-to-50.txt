@@ -1,0 +1,7 @@
+@Controller
+@RequestMapping("/api/v1")
+@Api(tags = { "Product groups management resource (Product Groups Management Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product groups management resource", description = "Product groups management") })
+public class ProductGroupApi {
+

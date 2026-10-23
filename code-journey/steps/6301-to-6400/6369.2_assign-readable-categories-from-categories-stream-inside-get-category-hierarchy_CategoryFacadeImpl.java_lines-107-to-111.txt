@@ -1,5 +1,0 @@
-			} else {
-				readableCategories = categories.stream()
-						.map(cat -> readableCategoryMapper.convert(cat, store, language))
-						.collect(Collectors.toList());
-			}

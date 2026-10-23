@@ -1,0 +1,8 @@
+			throws IntegrationException {
+		return processTransaction(store, customer, TransactionType.AUTHORIZE,
+				amount,
+				payment,
+				configuration,
+				module);
+	}
+

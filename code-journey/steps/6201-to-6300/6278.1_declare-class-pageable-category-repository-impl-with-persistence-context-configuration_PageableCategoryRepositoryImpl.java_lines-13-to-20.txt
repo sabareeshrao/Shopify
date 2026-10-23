@@ -1,8 +1,0 @@
-public class PageableCategoryRepositoryImpl implements PageableCategoryRepositoryCustom {
-
-	@PersistenceContext
-	private EntityManager em;
-	@SuppressWarnings("unchecked")
-	@Override
-	public Page<Category> listByStore(Integer storeId, Integer languageId, String name, Pageable pageable) {
-	  Query query = em.createNamedQuery("CATEGORY.listByStore");

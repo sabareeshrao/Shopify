@@ -1,8 +1,0 @@
-	ReadableCategory getByCode(MerchantStore store, String code, Language language) throws Exception;
-
-	/**
-	 * Get a Category by the Search Engine friendly URL slug
-	 *
-	 * @param merchantStore
-	 * @param friendlyUrl
-	 * @param language

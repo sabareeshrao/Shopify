@@ -1,8 +1,0 @@
-
-			/**
-			 * Product definition
-			 */
-			ProductAvailability productAvailability = null;
-		    ProductPrice defaultPrice = null;
-		    if(!CollectionUtils.isEmpty(destination.getAvailabilities())) {
-		      for(ProductAvailability avail : destination.getAvailabilities()) {

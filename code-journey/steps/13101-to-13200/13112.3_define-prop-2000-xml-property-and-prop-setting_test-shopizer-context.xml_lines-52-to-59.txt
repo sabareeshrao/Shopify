@@ -1,8 +1,0 @@
-				<beans:prop key="PRODUCT_IMAGE_MAX_HEIGHT_SIZE">2000</beans:prop>
-				<beans:prop key="PRODUCT_IMAGE_MAX_WIDTH_SIZE">4000</beans:prop>
-				<beans:prop key="PRODUCT_IMAGE_MAX_SIZE">9000000</beans:prop>
-				<beans:prop key="IMAGE_FORMATS">jpg|png|gif</beans:prop>
-				
-				<beans:prop key="POPULATE_TEST_DATA">true</beans:prop>
-
-  </util:properties>

@@ -1,3 +1,0 @@
-	public final static String DISTANCE_KEY = "DISTANCE_KEY";
-
-}

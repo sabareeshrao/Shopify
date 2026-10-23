@@ -1,8 +1,0 @@
- * Orders saved on the website
- * @author Carl Samson
- *
- */
-public class ShopOrder extends PersistableOrder implements Serializable {
-
-	/**
-	 * 

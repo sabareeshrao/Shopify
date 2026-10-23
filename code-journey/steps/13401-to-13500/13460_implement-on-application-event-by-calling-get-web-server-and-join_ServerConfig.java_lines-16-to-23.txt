@@ -1,8 +1,0 @@
-	@Override
-	public void onApplicationEvent(final WebServerInitializedEvent event) {
-	    int port = event.getWebServer().getPort();
-	    final String host = getHost();
-	    setApplicationHost(String.join(":", host, String.valueOf(port)));
-
-	}
-	

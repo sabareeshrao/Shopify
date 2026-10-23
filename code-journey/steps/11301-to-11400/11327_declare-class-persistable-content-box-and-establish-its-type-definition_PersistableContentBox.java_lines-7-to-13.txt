@@ -1,7 +1,0 @@
-public class PersistableContentBox extends ContentBox {
-
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;
-  

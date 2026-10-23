@@ -1,8 +1,0 @@
-  @Override
-  public PersistableCustomerReview createCustomerReview(
-      Long customerId,
-      PersistableCustomerReview review,
-      MerchantStore merchantStore,
-      Language language) {
-
-    // rating already exist

@@ -1,0 +1,7 @@
+
+			// ###Payer
+			// A resource representing a Payer that funds a payment
+			// Payment Method
+			// as 'paypal'
+			Payer payer = new Payer();
+			payer.setPaymentMethod("paypal");

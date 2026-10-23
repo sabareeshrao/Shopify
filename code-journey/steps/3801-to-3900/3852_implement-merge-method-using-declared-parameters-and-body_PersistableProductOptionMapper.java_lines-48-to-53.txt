@@ -1,6 +1,0 @@
-  @Override
-  public ProductOption merge(PersistableProductOptionEntity source, ProductOption destination,
-                             MerchantStore store, Language language) {
-    if(destination == null) {
-      destination = new ProductOption();
-    }

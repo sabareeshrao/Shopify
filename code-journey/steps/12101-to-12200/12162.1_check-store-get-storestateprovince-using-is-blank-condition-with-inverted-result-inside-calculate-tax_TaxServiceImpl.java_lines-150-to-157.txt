@@ -1,8 +1,0 @@
-				}
-				else if(!StringUtils.isBlank(store.getStorestateprovince())) {
-
-					if(!store.getStorestateprovince().equals(stateProvince)) {
-						return null;
-					}
-				}
-			}

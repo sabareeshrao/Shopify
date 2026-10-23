@@ -1,8 +1,0 @@
-	public double getBoxWeight() {
-		return boxWeight;
-	}
-	public void setBoxWeight(double boxWeight) {
-		this.boxWeight = boxWeight;
-	}
-	public double getMaxWeight() {
-		return maxWeight;

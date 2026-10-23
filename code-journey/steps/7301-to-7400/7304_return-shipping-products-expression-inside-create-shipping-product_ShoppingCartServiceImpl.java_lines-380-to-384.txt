@@ -1,5 +1,0 @@
-
-		return shippingProducts;
-
-	}
-

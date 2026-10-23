@@ -1,8 +1,0 @@
-			+ "where pg.id = ?1 and pppm.code = ?2")
-	List<ProductVariantImage> finByProductVariantGroup(Long productVariantGroupId, String storeCode);
-	
-    /**
-	@Query("select p from ProductVariantImage p "
-			+ "left join fetch p.descriptions pd "
-			+ "join fetch p.productVariantGroup pg "
-			+ "join fetch pg.productVariants pi "

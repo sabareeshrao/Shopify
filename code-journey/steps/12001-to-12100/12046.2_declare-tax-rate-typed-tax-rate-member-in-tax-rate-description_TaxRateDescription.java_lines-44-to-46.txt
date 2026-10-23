@@ -1,3 +1,0 @@
-	@JoinColumn(name = "TAX_RATE_ID")
-	private TaxRate taxRate;
-	

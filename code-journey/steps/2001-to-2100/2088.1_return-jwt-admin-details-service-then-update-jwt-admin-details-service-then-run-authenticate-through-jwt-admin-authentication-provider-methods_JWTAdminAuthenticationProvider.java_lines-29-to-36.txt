@@ -1,8 +1,0 @@
-	public UserDetailsService getJwtAdminDetailsService() {
-		return jwtAdminDetailsService;
-	}
-	public void setJwtAdminDetailsService(UserDetailsService jwtAdminDetailsService) {
-		this.jwtAdminDetailsService = jwtAdminDetailsService;
-	}
-	@Override
-    public Authentication authenticate(Authentication authentication) throws AuthenticationException {

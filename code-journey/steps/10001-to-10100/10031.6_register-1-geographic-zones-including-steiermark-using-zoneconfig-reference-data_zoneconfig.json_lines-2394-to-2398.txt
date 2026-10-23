@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "ST",
+			"zoneName": "Steiermark",
+			"countryCode": "AT"
+		},

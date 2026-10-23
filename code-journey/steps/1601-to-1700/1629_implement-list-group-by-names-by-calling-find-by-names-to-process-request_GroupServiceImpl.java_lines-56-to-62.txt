@@ -1,7 +1,0 @@
-  @Override
-  public List<Group> listGroupByNames(List<String> names) throws ServiceException {
-    return groupRepository.findByNames(names);
-  }
-
-
-}

@@ -1,8 +1,0 @@
-	private final static String BOX = "BOX";
-	private final static String PAGE = "PAGE";
-
-	@Inject
-	private ContentFacade contentFacade;
-
-	@Inject
-	@Qualifier("img")

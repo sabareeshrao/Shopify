@@ -1,0 +1,7 @@
+			
+			
+
+			BasicAmountType itemTotal = new BasicAmountType();
+			itemTotal.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(store.getCurrency().getCode()));
+			itemTotal.setValue(pricingService.getStringAmount(summary.getSubTotal(), store));
+			paymentDetails.setItemTotal(itemTotal);

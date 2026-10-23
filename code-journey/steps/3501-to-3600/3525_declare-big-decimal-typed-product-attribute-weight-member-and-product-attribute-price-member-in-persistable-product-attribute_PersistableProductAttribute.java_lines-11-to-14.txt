@@ -1,4 +1,0 @@
-	private BigDecimal productAttributeWeight;
-	private BigDecimal productAttributePrice;
-	private Long productId;
-	

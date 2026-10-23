@@ -1,8 +1,0 @@
-	   * @param product
-	   * @param quantity
-	   * @param language
-	   * @return
-	   * @throws Exception
-	   */
-	  ReadableProduct updateProductQuantity(ReadableProduct product, int quantity, Language language)
-	      throws Exception;

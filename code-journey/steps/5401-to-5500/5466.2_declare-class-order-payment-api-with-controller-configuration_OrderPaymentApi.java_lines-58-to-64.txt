@@ -1,0 +1,7 @@
+
+@Controller
+@RequestMapping("/api/v1")
+@Api(tags = { "Order payment resource (Order payment Api)" })
+@SwaggerDefinition(tags = { @Tag(name = "Order payment resource", description = "Manage order payments") })
+public class OrderPaymentApi {
+

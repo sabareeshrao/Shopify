@@ -1,5 +1,0 @@
-
-		TransactionType transactionType = orderFacade.nextTransaction(id, merchantStore);
-		return "{\"transactionType\":\"" + transactionType.name() + "\"}";
-
-	}

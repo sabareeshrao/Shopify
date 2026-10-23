@@ -1,8 +1,0 @@
-		CURRENCY_MAP.put("AMD", "Armenian Dram");
-		CURRENCY_MAP.put("AWG", "Aruban Florin");
-		CURRENCY_MAP.put("AUD", "Australian Dollar");
-		CURRENCY_MAP.put("AZN", "Azerbaijanian Manat");
-		CURRENCY_MAP.put("BSD", "Bahamian Dollar");
-		CURRENCY_MAP.put("BHD", "Bahraini Dinar");
-		CURRENCY_MAP.put("BDT", "Taka");
-		CURRENCY_MAP.put("BBD", "Barbados Dollar");

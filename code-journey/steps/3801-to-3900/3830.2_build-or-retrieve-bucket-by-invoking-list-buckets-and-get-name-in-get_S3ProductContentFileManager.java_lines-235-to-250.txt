@@ -1,0 +1,16 @@
+  private Bucket getBucket(String bucket_name) {
+    final AmazonS3 s3 = s3Client();
+    Bucket named_bucket = null;
+    List<Bucket> buckets = s3.listBuckets();
+    for (Bucket b : buckets) {
+      if (b.getName().equals(bucket_name)) {
+        named_bucket = b;
+      }
+    }
+
+    if (named_bucket == null) {
+      named_bucket = createBucket(bucket_name);
+    }
+
+    return named_bucket;
+  }

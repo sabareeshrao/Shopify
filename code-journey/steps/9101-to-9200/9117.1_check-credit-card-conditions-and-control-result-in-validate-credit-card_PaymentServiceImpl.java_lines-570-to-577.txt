@@ -1,8 +1,0 @@
-	@Override
-	public void validateCreditCard(String number, CreditCardType creditCard, String month, String date)
-	throws ServiceException {
-
-		try {
-			Integer.parseInt(month);
-			Integer.parseInt(date);
-		} catch (NumberFormatException nfe) {

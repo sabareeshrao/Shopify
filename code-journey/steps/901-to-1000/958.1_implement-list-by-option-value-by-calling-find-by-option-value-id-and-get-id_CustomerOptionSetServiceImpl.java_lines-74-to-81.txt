@@ -1,8 +1,0 @@
-	@Override
-	public List<CustomerOptionSet> listByOptionValue(
-			CustomerOptionValue optionValue, MerchantStore store)
-			throws ServiceException {
-		return customerOptionSetRepository.findByOptionValueId(store.getId(), optionValue.getId());
-	}
-
-

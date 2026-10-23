@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(OptinApi.class);
-
-  @Inject private OptinFacade optinFacade;
-
-
-  /** Create new optin */
-  @PostMapping("/private/optin")
-  @ApiOperation(

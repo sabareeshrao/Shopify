@@ -1,0 +1,6 @@
+	
+	@Autowired
+	private ProductInventoryService productInventoryService;
+
+	@Autowired(required = false)
+	private SearchModule searchModule;

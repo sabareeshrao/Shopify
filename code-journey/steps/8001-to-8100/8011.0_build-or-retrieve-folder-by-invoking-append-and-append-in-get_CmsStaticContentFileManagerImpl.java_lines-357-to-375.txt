@@ -1,0 +1,19 @@
+	
+	
+	/**
+	 * Returns a folder path so it can be used as base node
+	 * @param storeCode
+	 * @param folder
+	 * @return
+	 */
+	private String getFolder(final String storeCode, String folder) {
+
+/*		StringBuilder nodePath = new StringBuilder();
+		nodePath.append(storeCode).append("/").append(contentType.name());
+
+		return nodePath.toString();*/
+		
+		
+		return null;
+
+	}

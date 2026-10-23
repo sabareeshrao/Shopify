@@ -1,7 +1,0 @@
-
-		if (start == null) {
-			start = new Integer(0);
-		}
-		if (count == null) {
-			count = new Integer(100);
-		}

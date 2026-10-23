@@ -1,8 +1,0 @@
-	    //TODO use pre 3.0 variation
-	    
-	    //40 of 9
-/*	    ProductVariant size_nine_DEFAULT = new ProductVariant();
-	    size_nine_DEFAULT.setAttribute(size_nine);
-	    size_nine_DEFAULT.setProductQuantity(40);
-	    size_nine_DEFAULT.setProductAvailability(availability);*/
-	    

@@ -1,5 +1,0 @@
-
-    // rating maximum 5
-    if (review.getRating() > Constants.MAX_REVIEW_RATING_SCORE) {
-      throw new ServiceRuntimeException("Maximum rating score is " + Constants.MAX_REVIEW_RATING_SCORE);
-    }

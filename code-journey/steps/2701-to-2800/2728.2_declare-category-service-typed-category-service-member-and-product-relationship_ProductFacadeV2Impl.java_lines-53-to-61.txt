@@ -1,0 +1,9 @@
+	
+	@Inject
+	private CategoryService categoryService;
+	
+	@Inject
+	private ProductRelationshipService productRelationshipService;
+	
+	@Autowired
+	private ReadableProductMapper readableProductMapper;

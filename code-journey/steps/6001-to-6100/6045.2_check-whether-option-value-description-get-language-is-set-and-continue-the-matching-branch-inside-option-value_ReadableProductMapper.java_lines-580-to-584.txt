@@ -1,5 +1,0 @@
-				for (ProductOptionValueDescription optionValueDescription : podescriptions) {
-					if (optionValueDescription.getLanguage().getId().intValue() == language.getId().intValue()) {
-						podescription = optionValueDescription;
-						break;
-					}

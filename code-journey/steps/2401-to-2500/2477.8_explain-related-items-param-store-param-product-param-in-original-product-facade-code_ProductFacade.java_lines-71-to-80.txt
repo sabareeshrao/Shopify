@@ -1,0 +1,10 @@
+
+  /**
+   * Get related items
+   *
+   * @param store
+   * @param product
+   * @param language
+   * @return
+   * @throws Exception
+   */

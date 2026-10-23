@@ -1,0 +1,34 @@
+			throws ConversionException {
+		
+			Validate.notNull(pricingService,"PricingService must be set");
+			Validate.notNull(messages,"LabelUtils must be set");
+			
+			Locale locale = LocaleUtils.getLocale(language);
+		
+			try {
+				
+				target.setCode(source.getOrderTotalCode());
+				target.setId(source.getId());
+				target.setModule(source.getModule());
+				target.setOrder(source.getSortOrder());
+				
+
+				target.setTitle(messages.getMessage(source.getOrderTotalCode(), locale, source.getOrderTotalCode()));
+				target.setText(source.getText());
+				
+				target.setValue(source.getValue());
+				target.setTotal(pricingService.getDisplayAmount(source.getValue(), store));
+				
+				if(!StringUtils.isBlank(source.getOrderTotalCode())) {
+					if(Constants.OT_DISCOUNT_TITLE.equals(source.getOrderTotalCode())) {
+						target.setDiscounted(true);
+					}
+				}
+				
+			} catch(Exception e) {
+				throw new ConversionException(e);
+			}
+			
+			return target;
+		
+	}

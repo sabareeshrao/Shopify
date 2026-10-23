@@ -1,8 +1,0 @@
-			
-			productDownloadsFileManager.addFile(product.getMerchantStore().getCode(), Optional.of(path), inputFile);
-			
-			product.setProductVirtual(true);
-			productService.update(product);
-		
-		} catch (Exception e) {
-			throw new ServiceException(e);

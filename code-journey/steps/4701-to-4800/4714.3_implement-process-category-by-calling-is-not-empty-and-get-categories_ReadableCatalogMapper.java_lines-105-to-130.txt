@@ -1,0 +1,26 @@
+	private void processCategory(Category c, MerchantStore store, Language language, Map<Long, ReadableCategory> hierarchy, Map<Long, ReadableCategory> processed ) {
+		
+		//build category hierarchy
+		
+		ReadableCategory rc = null;
+		ReadableCategory rp = null;
+		
+		if(CollectionUtils.isNotEmpty(c.getCategories())) {
+			c.getCategories().stream().forEach(element -> {
+				processCategory(element, store, language, hierarchy, processed);
+			});
+		}
+
+		Category parent = c.getParent();
+		if(Objects.nonNull(parent)) {
+			rp = hierarchy.computeIfAbsent(parent.getId(), i -> toReadableCategory(c.getParent(), store, language, processed));
+		}
+
+		rc = toReadableCategory(c, store, language, processed);
+		if(Objects.nonNull(rp)) {
+			rp.getChildren().add(rc);
+		} else {
+			hierarchy.put(c.getId(), rc);
+		}
+
+	}

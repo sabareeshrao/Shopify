@@ -1,0 +1,7 @@
+module.payment.beanstream.username=User name
+module.payment.beanstream.password=Password
+
+module.payment.beanstream.message.merchantid=Merchant id required
+module.payment.beanstream.message.username=Username is required
+module.payment.beanstream.message.password=Password is required
+

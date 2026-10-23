@@ -1,0 +1,9 @@
+			destination.setId(source.getId());
+
+			if (source.getOrderId() != null) {
+				destination.setOrder(source.getOrderId());
+			}
+
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("An error occured while converting ReadableShoppingCart", e);
+		}

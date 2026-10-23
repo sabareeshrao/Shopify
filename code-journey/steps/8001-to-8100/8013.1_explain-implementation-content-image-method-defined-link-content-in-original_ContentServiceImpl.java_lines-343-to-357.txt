@@ -1,0 +1,15 @@
+
+	/**
+	 * Implementation for getContentImage method defined in
+	 * {@link ContentService} interface. Methods will return Content image with
+	 * given image name for the Merchant store or will return null if no image
+	 * with given name found for requested Merchant Store in Infinispan tree
+	 * cache.
+	 * 
+	 * @param store
+	 *            Merchant merchantStoreCode
+	 * @param imageName
+	 *            name of requested image
+	 * @return {@link OutputContentImage}
+	 * @throws ServiceException
+	 */

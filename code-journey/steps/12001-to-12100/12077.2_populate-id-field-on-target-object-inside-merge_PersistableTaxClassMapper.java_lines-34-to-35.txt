@@ -1,2 +1,0 @@
-			destination.setId(source.getId());
-		}

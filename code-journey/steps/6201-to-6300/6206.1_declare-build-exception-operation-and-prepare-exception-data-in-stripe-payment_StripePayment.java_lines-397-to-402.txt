@@ -1,0 +1,6 @@
+	
+	private IntegrationException buildException(Exception ex) {
+		
+		
+	if(ex instanceof CardException) {
+		  CardException e = (CardException)ex;

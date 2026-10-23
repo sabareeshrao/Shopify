@@ -1,0 +1,25 @@
+	@Override
+	public ReadableProduct getProductByCode(MerchantStore store, String sku, Language language) {
+
+		
+		Product product = null;
+		try {
+			product = productService.getBySku(sku, store, language);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+		if (product == null) {
+			throw new ResourceNotFoundException("Product [" + sku + "] not found for merchant [" + store.getCode() + "]");
+		}
+		
+		if (product.getMerchantStore().getId() != store.getId()) {
+			throw new ResourceNotFoundException("Product [" + sku + "] not found for merchant [" + store.getCode() + "]");
+		}
+		
+
+		ReadableProduct readableProduct = readableProductMapper.convert(product, store, language);
+
+		return readableProduct;
+		
+	}

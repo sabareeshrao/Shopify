@@ -1,3 +1,0 @@
-		if(language == null) {
-			language = new Language(Constants.DEFAULT_LANGUAGE);
-		}

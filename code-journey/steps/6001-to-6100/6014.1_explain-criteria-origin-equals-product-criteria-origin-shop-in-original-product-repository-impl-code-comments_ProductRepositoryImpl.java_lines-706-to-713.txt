@@ -1,8 +1,0 @@
-		
-
-		/**/
-		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
-				&& !CollectionUtils.isEmpty(criteria.getAttributeCriteria())) {
-			int count = 0;
-			for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
-				countQ.setParameter(attributeCriteria.getAttributeCode(), attributeCriteria.getAttributeCode());

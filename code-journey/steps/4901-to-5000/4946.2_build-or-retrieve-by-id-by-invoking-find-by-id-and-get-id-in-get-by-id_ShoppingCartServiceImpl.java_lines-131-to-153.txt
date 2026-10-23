@@ -1,0 +1,23 @@
+	@Override
+	@Transactional
+	public ShoppingCart getById(final Long id, final MerchantStore store) throws ServiceException {
+
+		try {
+			ShoppingCart shoppingCart = shoppingCartRepository.findById(store.getId(), id);
+			if (shoppingCart == null) {
+				return null;
+			}
+			getPopulatedShoppingCart(shoppingCart, store);
+
+			if (shoppingCart.isObsolete()) {
+				delete(shoppingCart);
+				return null;
+			} else {
+				return shoppingCart;
+			}
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

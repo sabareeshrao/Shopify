@@ -1,8 +1,0 @@
-	private Long id;
-	
-	@Column(name="CONFIG_KEY")
-	private String key;
-	
-	@Column(name="VALUE")
-	private String value;
-	

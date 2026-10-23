@@ -1,0 +1,2 @@
+	IntegrationConfiguration getShippingConfiguration(String moduleCode,
+			MerchantStore store) throws ServiceException;

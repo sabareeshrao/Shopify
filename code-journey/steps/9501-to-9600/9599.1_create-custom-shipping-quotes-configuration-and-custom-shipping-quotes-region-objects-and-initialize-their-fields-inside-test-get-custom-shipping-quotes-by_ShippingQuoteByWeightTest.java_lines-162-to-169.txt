@@ -1,8 +1,0 @@
-
-	    CustomShippingQuotesConfiguration customConfiguration = new CustomShippingQuotesConfiguration();
-		customConfiguration.setModuleCode("weightBased");
-		customConfiguration.setActive(true);
-		
-		CustomShippingQuotesRegion northRegion = new CustomShippingQuotesRegion();
-		northRegion.setCustomRegionName("NORTH");
-		

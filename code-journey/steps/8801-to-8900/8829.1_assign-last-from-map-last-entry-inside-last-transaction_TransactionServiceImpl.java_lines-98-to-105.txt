@@ -1,8 +1,0 @@
-	    	    		  
-	    	    		  );
-	    
-		  
-	    
-		//get last transaction
-	    Entry<String,Transaction> last = map.lastEntry();
-	    

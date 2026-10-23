@@ -1,8 +1,0 @@
-    @Override
-    public ByteArrayOutputStream generateInvoice(final MerchantStore store, final Order order, final Language language) throws ServiceException {
-
-        Validate.notNull(order.getOrderProducts(),"Order products cannot be null");
-        Validate.notNull(order.getOrderTotal(),"Order totals cannot be null");
-
-        try {
-            return invoiceModule.createInvoice(store, order, language);

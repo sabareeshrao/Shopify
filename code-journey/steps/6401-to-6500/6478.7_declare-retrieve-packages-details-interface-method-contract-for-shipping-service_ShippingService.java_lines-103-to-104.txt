@@ -1,0 +1,2 @@
+	List<PackageDetails> getPackagesDetails(List<ShippingProduct> products,
+			MerchantStore store) throws ServiceException;

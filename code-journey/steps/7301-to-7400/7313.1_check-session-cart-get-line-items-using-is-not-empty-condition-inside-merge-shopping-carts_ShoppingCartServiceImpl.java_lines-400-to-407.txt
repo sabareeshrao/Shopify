@@ -1,8 +1,0 @@
-		}
-
-		LOGGER.info("Starting merging shopping carts");
-		if (CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
-			Set<ShoppingCartItem> shoppingCartItemsSet = getShoppingCartItems(sessionCart, store, userShoppingModel);
-			boolean duplicateFound = false;
-			if (CollectionUtils.isNotEmpty(shoppingCartItemsSet)) {
-				for (ShoppingCartItem sessionShoppingCartItem : shoppingCartItemsSet) {

@@ -1,0 +1,3 @@
+
+	@Override
+	public void addProductImage(Product product, ProductImage productImage, ImageContentFile inputImage)

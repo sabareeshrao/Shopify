@@ -1,4 +1,0 @@
-public abstract class AbstractAuthenticatinSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
-	
-	abstract protected void redirectAfterSuccess(HttpServletRequest request, HttpServletResponse response) throws Exception;
-	

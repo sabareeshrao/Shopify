@@ -1,0 +1,74 @@
+
+	@Override
+	public List<ShippingOption> getShippingQuotes(
+			ShippingQuote shippingQuote,
+			List<PackageDetails> packages, BigDecimal orderTotal,
+			Delivery delivery, ShippingOrigin origin, MerchantStore store,
+			IntegrationConfiguration configuration, IntegrationModule module,
+			ShippingConfiguration shippingConfiguration, Locale locale)
+			throws IntegrationException {
+
+		if(StringUtils.isBlank(delivery.getPostalCode())) {
+			return null;
+		}
+		
+		//get configuration
+		CustomShippingQuotesConfiguration customConfiguration = (CustomShippingQuotesConfiguration)this.getCustomModuleConfiguration(store);
+		
+		
+		List<CustomShippingQuotesRegion> regions = customConfiguration.getRegions();
+		
+		ShippingBasisType shippingType =  shippingConfiguration.getShippingBasisType();
+		ShippingOption shippingOption = null;
+		try {
+			
+
+			for(CustomShippingQuotesRegion region : customConfiguration.getRegions()) {
+	
+				for(String countryCode : region.getCountries()) {
+					if(countryCode.equals(delivery.getCountry().getIsoCode())) {
+						
+						
+						//determine shipping weight
+						double weight = 0;
+						for(PackageDetails packageDetail : packages) {
+							weight = weight + packageDetail.getShippingWeight();
+						}
+						
+						//see the price associated with the width
+						List<CustomShippingQuoteWeightItem> quoteItems = region.getQuoteItems();
+						for(CustomShippingQuoteWeightItem quoteItem : quoteItems) {
+							if(weight<= quoteItem.getMaximumWeight()) {
+								shippingOption = new ShippingOption();
+								shippingOption.setOptionCode(new StringBuilder().append(CUSTOM_WEIGHT).toString());
+								shippingOption.setOptionId(new StringBuilder().append(CUSTOM_WEIGHT).append("_").append(region.getCustomRegionName()).toString());
+								shippingOption.setOptionPrice(quoteItem.getPrice());
+								shippingOption.setOptionPriceText(productPriceUtils.getStoreFormatedAmountWithCurrency(store, quoteItem.getPrice()));
+								break;
+							}
+						}
+						
+					}
+					
+					
+				}
+				
+			}
+			
+			if(shippingOption!=null) {
+				List<ShippingOption> options = new ArrayList<ShippingOption>();
+				options.add(shippingOption);
+				return options;
+			}
+			
+			return null;
+		
+		} catch (Exception e) {
+			throw new IntegrationException(e);
+		}
+
+	}
+
+
+
+}

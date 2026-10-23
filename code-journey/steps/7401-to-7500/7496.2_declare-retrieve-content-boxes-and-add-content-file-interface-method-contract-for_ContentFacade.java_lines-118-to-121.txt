@@ -1,0 +1,4 @@
+
+	ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, MerchantStore store, Language language, int start, int count);
+
+	void addContentFile(ContentFile file, String merchantStoreCode);

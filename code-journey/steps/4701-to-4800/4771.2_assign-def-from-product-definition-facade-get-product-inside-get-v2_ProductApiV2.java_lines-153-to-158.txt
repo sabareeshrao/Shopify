@@ -1,6 +1,0 @@
-			@ApiIgnore Language language) {
-
-		ReadableProductDefinition def = productDefinitionFacade.getProduct(merchantStore, id, language);
-		return def;
-
-	}

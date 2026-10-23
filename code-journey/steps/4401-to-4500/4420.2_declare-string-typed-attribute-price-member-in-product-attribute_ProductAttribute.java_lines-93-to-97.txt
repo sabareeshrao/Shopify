@@ -1,5 +1,0 @@
-	 * is a utility used only to submit from a free text
-	 */
-	@Transient
-	private String attributePrice = "0";
-	

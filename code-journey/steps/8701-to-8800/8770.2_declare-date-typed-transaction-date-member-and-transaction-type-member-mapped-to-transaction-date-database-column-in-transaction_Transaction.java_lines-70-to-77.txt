@@ -1,8 +1,0 @@
-	@Column(name="TRANSACTION_DATE")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date transactionDate;
-	
-	@Column(name="TRANSACTION_TYPE")
-	@Enumerated(value = EnumType.STRING)
-	private TransactionType transactionType;
-	

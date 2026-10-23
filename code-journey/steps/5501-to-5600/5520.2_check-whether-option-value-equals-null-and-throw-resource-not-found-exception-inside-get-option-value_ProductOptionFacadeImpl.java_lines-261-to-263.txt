@@ -1,3 +1,0 @@
-		if (optionValue == null) {
-			throw new ResourceNotFoundException("OptionValue id [" + optionValueId + "] not found");
-		}

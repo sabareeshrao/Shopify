@@ -1,8 +1,0 @@
-
-			if(source.getGroups() != null) {
-				for(Group group : source.getGroups()) {
-					ReadableGroup readableGroup = new ReadableGroup();
-					readableGroup.setId(group.getId().longValue());
-					readableGroup.setName(group.getGroupName());
-					readableGroup.setType(group.getGroupType().name());
-					target.getGroups().add(

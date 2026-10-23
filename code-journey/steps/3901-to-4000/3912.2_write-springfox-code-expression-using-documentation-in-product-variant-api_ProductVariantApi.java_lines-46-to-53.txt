@@ -1,8 +1,0 @@
-import springfox.documentation.annotations.ApiIgnore;
-
-/**
- * Api to manage productVariant
- * 
- * Product variant allows to specify product
- * size, sku and options related to this product variant
- * 

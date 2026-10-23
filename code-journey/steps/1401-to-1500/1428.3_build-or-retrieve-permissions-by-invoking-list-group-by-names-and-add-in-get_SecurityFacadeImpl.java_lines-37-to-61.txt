@@ -1,0 +1,25 @@
+
+  @SuppressWarnings({"rawtypes", "unchecked"})
+  @Override
+  public List<ReadablePermission> getPermissions(List<String> groups) {
+
+    List<Group> userGroups = null;
+    try {
+      userGroups = groupService.listGroupByNames(groups);
+
+      List<Integer> ids = new ArrayList<Integer>();
+      for (Group g : userGroups) {
+        ids.add(g.getId());
+      }
+
+      PermissionCriteria criteria = new PermissionCriteria();
+      criteria.setGroupIds(new HashSet(ids));
+
+      PermissionList permissions = permissionService.listByCriteria(criteria);
+      throw new ServiceRuntimeException("Not implemented");
+    } catch (ServiceException e) {
+      e.printStackTrace();
+    }
+
+    return null;
+  }

@@ -1,0 +1,7 @@
+
+
+    /**
+     * Update cart items with qty 2 (1) on existing items & adding new item with qty 1 which gives result 2x2+1 = 5
+     *
+     * @throws Exception
+     */

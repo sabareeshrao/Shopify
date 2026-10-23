@@ -1,0 +1,7 @@
+  
+  /**
+   * Find user by userName
+   * @param userName
+   * @return
+   */
+  ReadableUser findByUserName(String userName);

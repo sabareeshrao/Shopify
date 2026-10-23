@@ -1,5 +1,0 @@
-	public DeleteProductVariantEvent(Object source, ProductVariant variant, Product product) {
-		super(source, product);
-		this.variant = variant;
-	}
-

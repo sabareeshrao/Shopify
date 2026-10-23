@@ -1,8 +1,0 @@
-	
-	/**
-	 * Authorize
-	 * AuthorizeAndCapture
-	 * Capture
-	 * Refund
-	 * 
-	 * Check transactions

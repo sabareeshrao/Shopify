@@ -1,0 +1,9 @@
+	
+	@Inject
+	private WebUserServices userDetailsService;
+
+	@Inject
+	protected PermissionService  permissionService;
+	
+	@Inject
+	protected GroupService   groupService;

@@ -1,3 +1,0 @@
-    if(!this.bucketExists(storage, bucketName)) {
-      createBucket(storage, bucketName);
-    }

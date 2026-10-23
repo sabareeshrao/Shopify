@@ -1,8 +1,0 @@
-	 * @param language
-	 */
-	void update(Long productId, PersistableProductDefinition product, MerchantStore merchant, Language language);
-
-	/**
-	 * 
-	 * @param store
-	 * @param id

@@ -1,0 +1,4 @@
+	private static final String PRIVATE_PATH = "/private/";
+
+	private static final String resetUserLink = "user/%s/reset/%s"; // front
+

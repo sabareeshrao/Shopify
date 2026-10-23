@@ -1,0 +1,6 @@
+
+		ProductSpecification specifications = new ProductSpecification();
+		specifications.setHeight(source.getProductHeight());
+		specifications.setLength(source.getProductLength());
+		specifications.setWeight(source.getProductWeight());
+		specifications.setWidth(source.getProductWidth());

@@ -1,8 +1,0 @@
-		
-		AjaxResponse ajaxResponse = new AjaxResponse();
-		try {
-			
-			/** default routine **/
-			
-			MerchantStore merchantStore = (MerchantStore)request.getAttribute(Constants.MERCHANT_STORE);
-			if(merchantStore!=null) {

@@ -1,8 +1,0 @@
-	public void setDefaultSelection(boolean defaultSelection) {
-		this.defaultSelection = defaultSelection;
-	}
-	public Long getProductId() {
-		return productId;
-	}
-	public void setProductId(Long productId) {
-		this.productId = productId;

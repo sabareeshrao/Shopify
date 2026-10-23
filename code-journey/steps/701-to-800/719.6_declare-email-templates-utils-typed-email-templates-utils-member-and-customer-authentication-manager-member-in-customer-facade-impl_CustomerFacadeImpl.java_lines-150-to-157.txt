@@ -1,8 +1,0 @@
-  private EmailTemplatesUtils emailTemplatesUtils;
-
-  @Inject
-  private AuthenticationManager customerAuthenticationManager;
-
-  @Inject
-  private CustomerReviewService customerReviewService;
-

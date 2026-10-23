@@ -1,0 +1,59 @@
+	@Override
+	public ReadableInventory merge(ProductAvailability source, ReadableInventory destination, MerchantStore store,
+			Language language) {
+		Validate.notNull(destination, "Destination Product availability cannot be null");
+		Validate.notNull(source, "Source Product availability cannot be null");
+
+		try {
+			destination.setQuantity(source.getProductQuantity() != null ? source.getProductQuantity().intValue() : 0);
+			destination.setProductQuantityOrderMax(
+					source.getProductQuantityOrderMax() != null ? source.getProductQuantityOrderMax().intValue() : 0);
+			destination.setProductQuantityOrderMin(
+					source.getProductQuantityOrderMin() != null ? source.getProductQuantityOrderMin().intValue() : 0);
+			destination.setOwner(source.getOwner());
+			destination.setId(source.getId());
+			destination.setRegion(source.getRegion());
+			destination.setRegionVariant(source.getRegionVariant());
+			destination.setStore(store(store, language));
+			if (source.getAvailable() != null) {
+				if (source.getProductDateAvailable() != null) {
+					boolean isAfter = LocalDate.parse(DateUtil.getPresentDate())
+							.isAfter(LocalDate.parse(DateUtil.formatDate(source.getProductDateAvailable())));
+					if (isAfter && source.getAvailable().booleanValue()) {
+						destination.setAvailable(true);
+					}
+					destination.setDateAvailable(DateUtil.formatDate(source.getProductDateAvailable()));
+				} else {
+					destination.setAvailable(source.getAvailable().booleanValue());
+				}
+			}
+
+			if (source.getAuditSection() != null) {
+				if (source.getAuditSection().getDateCreated() != null) {
+					destination.setCreationDate(DateUtil.formatDate(source.getAuditSection().getDateCreated()));
+				}
+			}
+
+			List<ReadableProductPrice> prices = prices(source, store, language);
+			destination.setPrices(prices);
+
+			if(!StringUtils.isEmpty(source.getSku())) {
+				destination.setSku(source.getSku());
+			} else {
+				destination.setSku(source.getProduct().getSku());
+			}
+
+			FinalPrice price = null;
+			//try {
+				price = pricingService.calculateProductPrice(source);
+				destination.setPrice(price.getStringPrice());
+			//} catch (ServiceException e) {
+			//	throw new ConversionRuntimeException("Unable to get product price", e);
+			//}
+
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("Error while converting Inventory", e);
+		}
+
+		return destination;
+	}

@@ -1,0 +1,3 @@
+
+	CustomIntegrationConfiguration getCustomShippingConfiguration(
+			String moduleCode, MerchantStore store) throws ServiceException;

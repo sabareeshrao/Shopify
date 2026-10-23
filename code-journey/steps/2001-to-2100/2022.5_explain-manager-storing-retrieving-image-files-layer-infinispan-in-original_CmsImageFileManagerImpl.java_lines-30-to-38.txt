@@ -1,0 +1,9 @@
+
+/**
+ * Manager for storing in retrieving image files from the CMS This is a layer on top of Infinispan
+ * https://docs.jboss.org/author/display/ISPN/Tree+API+Module
+ * 
+ * Manages - Product images
+ * 
+ * @author Carl Samson
+ */

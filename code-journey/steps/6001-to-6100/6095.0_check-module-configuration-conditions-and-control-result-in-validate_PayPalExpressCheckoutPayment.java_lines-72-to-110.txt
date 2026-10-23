@@ -1,0 +1,39 @@
+	@Override
+	public void validateModuleConfiguration(
+			IntegrationConfiguration integrationConfiguration,
+			MerchantStore store) throws IntegrationException {
+		
+		
+		List<String> errorFields = null;
+		
+		//validate integrationKeys['account']
+		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
+		if(keys==null || StringUtils.isBlank(keys.get("api"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("api");
+		}
+		
+		if(keys==null || StringUtils.isBlank(keys.get("username"))) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("username");
+		}
+		
+		if(keys==null || StringUtils.isBlank(keys.get("signature"))) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("signature");
+		}
+		
+
+		if(errorFields!=null) {
+			IntegrationException ex = new IntegrationException(IntegrationException.ERROR_VALIDATION_SAVE);
+			ex.setErrorFields(errorFields);
+			throw ex;
+			
+		}
+		
+		
+	}

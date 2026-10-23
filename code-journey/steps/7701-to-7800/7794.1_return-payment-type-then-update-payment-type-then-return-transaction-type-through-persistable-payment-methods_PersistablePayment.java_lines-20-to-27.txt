@@ -1,8 +1,0 @@
-	public String getPaymentType() {
-		return paymentType;
-	}
-	public void setPaymentType(String paymentType) {
-		this.paymentType = paymentType;
-	}
-	public String getTransactionType() {
-		return transactionType;

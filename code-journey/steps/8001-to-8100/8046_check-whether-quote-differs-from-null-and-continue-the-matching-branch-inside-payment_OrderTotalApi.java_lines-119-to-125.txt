@@ -1,7 +1,0 @@
-
-      ShippingSummary shippingSummary = null;
-
-      // get shipping quote if asked for
-      if (quote != null) {
-        shippingSummary = shippingQuoteService.getShippingSummary(quote, merchantStore);
-      }

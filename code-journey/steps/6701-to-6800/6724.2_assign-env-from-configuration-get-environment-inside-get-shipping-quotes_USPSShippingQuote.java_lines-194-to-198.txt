@@ -1,0 +1,5 @@
+		
+			
+			
+			//against which environment are we using the service
+			String env = configuration.getEnvironment();

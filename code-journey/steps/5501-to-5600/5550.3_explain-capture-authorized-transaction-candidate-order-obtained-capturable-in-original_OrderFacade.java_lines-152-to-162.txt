@@ -1,0 +1,11 @@
+
+	/**
+	 * Capture a pre-authorized transaction. Candidate order ids can be obtained from
+	 * getCapturableOrderList
+	 * @param store
+	 * @param order
+	 * @param customer
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableTransaction captureOrder(MerchantStore store, Order order, Customer customer, Language language) throws Exception;

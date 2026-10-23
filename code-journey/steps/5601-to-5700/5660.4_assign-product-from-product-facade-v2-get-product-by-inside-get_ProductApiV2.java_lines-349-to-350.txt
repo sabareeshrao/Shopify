@@ -1,2 +1,0 @@
-		ReadableProduct product = productFacadeV2.getProductByCode(merchantStore, sku, language);
-

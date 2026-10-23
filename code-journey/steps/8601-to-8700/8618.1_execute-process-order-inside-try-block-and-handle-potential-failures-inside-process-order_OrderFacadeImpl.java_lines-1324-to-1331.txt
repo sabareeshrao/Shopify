@@ -1,8 +1,0 @@
-			}
-
-
-			//order service
-			modelOrder = orderService.processOrder(modelOrder, customer, items, orderTotalSummary, paymentModel, store);
-
-			// update cart
-			try {

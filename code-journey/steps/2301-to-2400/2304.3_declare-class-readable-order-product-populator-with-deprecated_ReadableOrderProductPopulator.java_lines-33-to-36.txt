@@ -1,0 +1,4 @@
+@Deprecated
+public class ReadableOrderProductPopulator extends
+		AbstractDataPopulator<OrderProduct, ReadableOrderProduct> {
+	

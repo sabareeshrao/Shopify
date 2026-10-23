@@ -1,0 +1,4 @@
+	private MerchantStore store;
+	
+	private Long id;
+	

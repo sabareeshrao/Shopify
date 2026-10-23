@@ -1,0 +1,8 @@
+		
+		/** ORDER TOTAL **/
+		
+		OrderTotal subTotal = new OrderTotal();
+		subTotal.setOrder(order);
+		subTotal.setOrderTotalCode(Constants.OT_SUBTOTAL_MODULE_CODE);
+		subTotal.setSortOrder(0);
+		subTotal.setTitle("Sub Total");

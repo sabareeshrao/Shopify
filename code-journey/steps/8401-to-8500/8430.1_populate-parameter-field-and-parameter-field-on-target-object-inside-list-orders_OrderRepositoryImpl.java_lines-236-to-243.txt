@@ -1,8 +1,0 @@
-		
-
-		countQ.setParameter("mCode", store.getCode());
-		objectQ.setParameter("mCode", store.getCode());
-
-
-		Number count = (Number) countQ.getSingleResult();
-

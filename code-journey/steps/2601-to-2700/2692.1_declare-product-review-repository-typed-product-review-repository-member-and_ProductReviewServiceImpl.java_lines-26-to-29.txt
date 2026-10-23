@@ -1,0 +1,4 @@
+	private ProductReviewRepository productReviewRepository;
+	
+	@Inject
+	private ProductService productService;

@@ -1,8 +1,0 @@
-	public void addContentFiles(String merchantStoreCode, List<InputContentFile> contentFilesList)
-			throws ServiceException {
-
-		Assert.notNull(merchantStoreCode, "Merchant store ID can not be null");
-		Assert.notEmpty(contentFilesList, "File list can not be empty");
-		LOG.info("Adding total {} images for given merchant", contentFilesList.size());
-
-		String p = null;

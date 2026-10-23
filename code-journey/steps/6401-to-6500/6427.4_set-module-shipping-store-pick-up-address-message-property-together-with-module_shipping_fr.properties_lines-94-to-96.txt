@@ -1,0 +1,3 @@
+module.shipping.storePickUp.address.message=L'Adresse de ramassage est un champ requis
+module.shipping.storePickUp.price=Prix de l'option de ramassage en magasin (normalement 0)
+module.shipping.storePickUp.price.message=Le prix de l'option de ramassage est requis (en format numérique)

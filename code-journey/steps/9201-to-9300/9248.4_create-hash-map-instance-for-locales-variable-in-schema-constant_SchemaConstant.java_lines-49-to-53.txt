@@ -1,0 +1,5 @@
+
+	/**
+	 * Locale per country iso codes
+	 */
+	public static final HashMap<String, Locale> LOCALES = new HashMap<String, Locale>();

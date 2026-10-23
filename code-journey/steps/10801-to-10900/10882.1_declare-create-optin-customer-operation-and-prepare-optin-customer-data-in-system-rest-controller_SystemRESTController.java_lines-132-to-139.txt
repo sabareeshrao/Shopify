@@ -1,8 +1,0 @@
-	
-	@RequestMapping( value="/private/system/optin/{code}/customer", method=RequestMethod.POST, consumes = "application/json")
-	@ResponseBody
-	public AjaxResponse createOptinCustomer(@RequestBody final String code, HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		
-		AjaxResponse resp = new AjaxResponse();
-		

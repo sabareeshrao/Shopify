@@ -1,0 +1,8 @@
+
+			// ###Payment
+			// A Payment Resource; create one using
+			// the above types and intent as 'sale'
+			com.paypal.api.payments.Payment ppayment = new com.paypal.api.payments.Payment();
+			ppayment.setIntent("sale");
+			ppayment.setPayer(payer);
+			ppayment.setTransactions(transactions);

@@ -1,0 +1,14 @@
+	@DeleteMapping(value = "/private/content/box/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(httpMethod = "DELETE", value = "Delete content box", notes = "", response = Void.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void deleteBox(
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		contentFacade.delete(merchantStore, id);
+
+	}

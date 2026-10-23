@@ -1,8 +1,0 @@
-		//destination.set
-
-		List<com.salesmanager.core.model.catalog.product.type.ProductTypeDescription> descriptions = new ArrayList<com.salesmanager.core.model.catalog.product.type.ProductTypeDescription>();
-		if(!CollectionUtils.isEmpty(type.getDescriptions())) {
-			
-			for(ProductTypeDescription d : type.getDescriptions()) {
-				com.salesmanager.core.model.catalog.product.type.ProductTypeDescription desc = typeDescription(d, destination, d.getLanguage());
-				descriptions.add(desc);

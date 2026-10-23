@@ -1,2 +1,0 @@
-	private final static String INDEX_PRODUCTS = "INDEX_PRODUCTS";
-	

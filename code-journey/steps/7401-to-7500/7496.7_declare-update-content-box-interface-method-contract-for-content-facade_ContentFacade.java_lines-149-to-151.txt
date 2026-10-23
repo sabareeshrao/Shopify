@@ -1,0 +1,3 @@
+	
+	void updateContentBox(Long id, PersistableContentBox box, MerchantStore merchantStore, Language language);
+

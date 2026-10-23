@@ -1,8 +1,0 @@
-		target.setStorename(source.getName());
-		target.setStorephone(source.getPhone());
-		target.setStoreEmailAddress(source.getEmail());
-		target.setUseCache(source.isUseCache());
-		target.setRetailer(source.isRetailer());
-		
-		//get parent store
-		if(!StringUtils.isBlank(source.getRetailerStore())) {

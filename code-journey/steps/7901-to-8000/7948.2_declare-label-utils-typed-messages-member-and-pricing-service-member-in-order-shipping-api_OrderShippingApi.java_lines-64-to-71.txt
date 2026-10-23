@@ -1,8 +1,0 @@
-  @Inject private LabelUtils messages;
-
-  @Inject private PricingService pricingService;
-  
-  @Inject private CountryService countryService;
-
-  /**
-   * Get shipping quote for a given shopping cart

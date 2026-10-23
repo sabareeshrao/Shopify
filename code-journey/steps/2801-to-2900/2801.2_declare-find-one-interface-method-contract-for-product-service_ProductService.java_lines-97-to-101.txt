@@ -1,0 +1,5 @@
+	Product findOne(Long id, MerchantStore merchant);
+
+
+}
+

@@ -1,2 +1,0 @@
-    public Customer getCustomerByUserName(final String userName, final MerchantStore store);
-    

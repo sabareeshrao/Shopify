@@ -1,8 +1,0 @@
-		</tx:attributes>
-	</tx:advice>
-
-	<beans:bean id="persistenceExceptionTranslationPostProcessor"
-		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-
-	<!-- in sm-shop -->
-	<beans:bean id="coreConfiguration"

@@ -1,8 +1,0 @@
-					.antMatchers("/admin/denied*").permitAll()
-					.antMatchers("/admin/unauthorized*").permitAll()
-					.antMatchers("/admin/users/resetPassword*").permitAll()
-					.antMatchers("/admin/").hasRole("AUTH")
-					.antMatchers("/admin/**").hasRole("AUTH")
-					.antMatchers("/admin/**").hasRole("AUTH")
-					.antMatchers("/admin/users/resetPasswordSecurityQtn*").permitAll()
-					.anyRequest()

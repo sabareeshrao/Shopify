@@ -1,7 +1,0 @@
-			ids.add(optionValue.getId());
-			return value;
-		} else {
-			return null;
-		}
-	}
-	

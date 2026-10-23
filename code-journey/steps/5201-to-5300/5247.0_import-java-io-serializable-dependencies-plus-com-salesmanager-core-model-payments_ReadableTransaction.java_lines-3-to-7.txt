@@ -1,0 +1,5 @@
+import java.io.Serializable;
+
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.payments.TransactionType;
+

@@ -1,8 +1,0 @@
-		"zoneCode": "ND",
-		"zoneName": "Dakota du Nord",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "MP",
-		"zoneName": "Northern Mariana Islands",
-		"countryCode": "US"

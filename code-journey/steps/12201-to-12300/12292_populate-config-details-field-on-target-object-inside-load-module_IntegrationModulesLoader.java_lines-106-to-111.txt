@@ -1,6 +1,0 @@
-	        		count++;
-	    		}
-	    		detailsStructure.append("}");
-	    		module.setConfigDetails(detailsStructure.toString());
-	    		
-	    	}

@@ -1,0 +1,15 @@
+	
+	private Product product(long id, MerchantStore store) {
+		Product product = productService.getById(id);
+
+		if (product == null) {
+			throw new ResourceNotFoundException("Productnot found for id [" + id + "]");
+		}
+
+		if (product.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+			throw new ResourceNotFoundException(
+					"Productnot found id [" + id + "] for store [" + store.getCode() + "]");
+		}
+		
+		return product;
+	}

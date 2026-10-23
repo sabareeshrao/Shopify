@@ -1,8 +1,0 @@
-		//attribute or option values
-		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
-				&& CollectionUtils.isNotEmpty(criteria.getAttributeCriteria()) 
-				|| CollectionUtils.isNotEmpty(criteria.getOptionValueIds())) {
-
-			countBuilderSelect.append(" INNER JOIN p.attributes pattr");
-			countBuilderSelect.append(" INNER JOIN pattr.productOption po");
-			countBuilderSelect.append(" INNER JOIN pattr.productOptionValue pov ");

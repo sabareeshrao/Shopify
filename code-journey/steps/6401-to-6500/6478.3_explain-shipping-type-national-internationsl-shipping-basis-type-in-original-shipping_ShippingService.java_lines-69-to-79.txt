@@ -1,0 +1,11 @@
+
+	/**
+	 * ShippingType (NATIONAL, INTERNATIONSL)
+	 * ShippingBasisType (SHIPPING, BILLING)
+	 * ShippingPriceOptionType (ALL, LEAST, HIGHEST)
+	 * Packages
+	 * Handling
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

@@ -1,4 +1,0 @@
-		
-		if(readable == null) {
-			throw new ResourceNotFoundException("Can't fing product type [" + type + "] fpr merchand [" + store.getCode() +"]");
-		}

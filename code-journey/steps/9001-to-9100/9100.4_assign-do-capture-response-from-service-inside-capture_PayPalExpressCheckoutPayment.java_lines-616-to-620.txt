@@ -1,5 +1,0 @@
-					// Invoke the appropriate method corresponding to API in service
-					// wrapper object
-					 doCaptureResponse = service
-							.doCapture(doCaptureReq);
-

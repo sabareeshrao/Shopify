@@ -1,0 +1,8 @@
+
+/**
+ * Manages - Images - Files (js, pdf, css...) on a local web server
+ * 
+ * @author Carl Samson
+ * @since 1.0.3
+ *
+ */

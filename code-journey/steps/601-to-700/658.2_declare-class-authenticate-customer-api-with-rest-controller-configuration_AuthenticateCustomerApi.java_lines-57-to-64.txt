@@ -1,8 +1,0 @@
-@RestController
-@RequestMapping("/api/v1")
-@Api(tags = {"Customer authentication resource (Customer Authentication Api)"})
-@SwaggerDefinition(tags = {
-    @Tag(name = "Customer authentication resource", description = "Authenticates customer, register customer and reset customer password")
-})
-public class AuthenticateCustomerApi {
-    

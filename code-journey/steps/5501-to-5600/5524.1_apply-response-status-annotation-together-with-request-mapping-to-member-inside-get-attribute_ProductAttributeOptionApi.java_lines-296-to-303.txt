@@ -1,8 +1,0 @@
-	
-	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value = { "/private/product/{id}/attribute" }, method = RequestMethod.POST)
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
-	public @ResponseBody Entity createAttribute(
-			@PathVariable Long id,
-			@Valid @RequestBody PersistableProductAttribute attribute, 

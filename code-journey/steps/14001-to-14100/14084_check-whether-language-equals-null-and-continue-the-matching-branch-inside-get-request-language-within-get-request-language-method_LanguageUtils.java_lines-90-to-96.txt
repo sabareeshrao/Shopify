@@ -1,7 +1,0 @@
-            request.getSession().setAttribute(Constants.LANGUAGE, language);
-          }
-
-          if (language == null) {
-            language = languageService.toLanguage(locale);
-            request.getSession().setAttribute(Constants.LANGUAGE, language);
-          }

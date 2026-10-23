@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "VD",
+			"zoneName": "Waadt",
+			"countryCode": "CH"
+		},

@@ -1,0 +1,18 @@
+	
+	
+	@Override
+	public void saveTaxConfiguration(TaxConfiguration shippingConfiguration, MerchantStore store) throws ServiceException {
+		
+		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(TAX_CONFIGURATION, store);
+
+		if(configuration==null) {
+			configuration = new MerchantConfiguration();
+			configuration.setMerchantStore(store);
+			configuration.setKey(TAX_CONFIGURATION);
+		}
+		
+		String value = shippingConfiguration.toJSONString();
+		configuration.setValue(value);
+		merchantConfigurationService.saveOrUpdate(configuration);
+		
+	}

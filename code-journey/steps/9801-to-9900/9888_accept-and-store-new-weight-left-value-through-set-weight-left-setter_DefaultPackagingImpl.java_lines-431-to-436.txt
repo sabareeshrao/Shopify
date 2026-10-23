@@ -1,6 +1,0 @@
-	public void setWeightLeft(double weightLeft) {
-		this.weightLeft = weightLeft;
-	}
-
-}
-

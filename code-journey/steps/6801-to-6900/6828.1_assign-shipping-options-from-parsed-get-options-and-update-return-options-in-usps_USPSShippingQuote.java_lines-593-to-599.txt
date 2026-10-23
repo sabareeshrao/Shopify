@@ -1,0 +1,7 @@
+			// Map serviceMap =
+			// com.salesmanager.core.util.ShippingUtil.buildServiceMap("usps",locale);
+
+			@SuppressWarnings("unchecked")
+			List<ShippingOption> shippingOptions = parsed.getOptions();
+
+/*			List<ShippingOption> returnOptions = null;

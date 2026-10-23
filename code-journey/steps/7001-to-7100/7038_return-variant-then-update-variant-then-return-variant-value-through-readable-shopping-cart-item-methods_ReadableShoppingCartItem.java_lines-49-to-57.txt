@@ -1,9 +1,0 @@
-	public ReadableProductVariation getVariant() {
-		return variant;
-	}
-	public void setVariant(ReadableProductVariation variant) {
-		this.variant = variant;
-	}
-	public ReadableProductVariation getVariantValue() {
-		return variantValue;
-	}

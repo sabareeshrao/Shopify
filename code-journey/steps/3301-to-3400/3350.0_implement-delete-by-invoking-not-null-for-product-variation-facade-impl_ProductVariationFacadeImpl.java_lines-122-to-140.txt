@@ -1,0 +1,19 @@
+
+	@Override
+	public void delete(Long variationId, MerchantStore store) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(variationId, "variationId cannot be null");
+		ProductVariation opt =  productVariationService.getById(variationId);
+		if(opt == null) {
+			throw new ResourceNotFoundException("ProductVariation not found for id [" + variationId +"] and store [" + store.getCode() + "]");
+		}
+		if(!opt.getMerchantStore().getCode().equals(store.getCode())) {
+			throw new ResourceNotFoundException("ProductVariation not found for id [" + variationId +"] and store [" + store.getCode() + "]");
+		}
+		try {
+			productVariationService.delete(opt);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while deleting ProductVariation", e);
+		}
+
+	}

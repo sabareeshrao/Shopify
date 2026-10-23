@@ -1,0 +1,6 @@
+
+							if(attribute.getAttributeDisplayOnly()) {//read only attribute = property
+								/*
+								if(readOnlyAttributes==null) {
+									readOnlyAttributes = new TreeMap<Long,ReadableProductAttribute>();
+								}

@@ -1,9 +1,0 @@
-                    lineItems.add( cartItem );
-                    shoppingCartService.update( cartMdel );
-                }
-            }// end for
-        }// end if
-       }catch(ServiceException se){
-           LOG.error( "Error while converting cart data to cart model.."+se );
-           throw new ConversionException( "Unable to create cart model", se ); 
-       }

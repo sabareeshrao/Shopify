@@ -1,0 +1,53 @@
+	private void saveCategory(MerchantStore store, Category category, Category parent) throws ServiceException {
+
+		/**
+		 * c.children1
+		 *
+		 * <p>
+		 * children1.children1 children1.children2
+		 *
+		 * <p>
+		 * children1.children2.children1
+		 */
+
+		/** set lineage * */
+		if (parent != null) {
+			category.setParent(category);
+
+			String lineage = parent.getLineage();
+			int depth = parent.getDepth();
+
+			category.setDepth(depth + 1);
+			category.setLineage(new StringBuilder().append(lineage).toString());// service
+																										// will
+																										// adjust
+																										// lineage
+		}
+
+		category.setMerchantStore(store);
+
+		// remove children
+		List<Category> children = category.getCategories();
+		List<Category> saveAfter = children.stream().filter(c -> c.getId() == null || c.getId().longValue()==0).collect(Collectors.toList());
+		List<Category> saveNow = children.stream().filter(c -> c.getId() != null && c.getId().longValue()>0).collect(Collectors.toList());
+		category.setCategories(saveNow);
+
+		/** set parent * */
+		if (parent != null) {
+			category.setParent(parent);
+		}
+
+		categoryService.saveOrUpdate(category);
+
+		if (!CollectionUtils.isEmpty(saveAfter)) {
+			parent = category;
+			for(Category c: saveAfter) {
+				if(c.getId() == null || c.getId().longValue()==0) {
+					for (Category sub : children) {
+						saveCategory(store, sub, parent);
+					}
+				}
+			}
+		}
+
+	}

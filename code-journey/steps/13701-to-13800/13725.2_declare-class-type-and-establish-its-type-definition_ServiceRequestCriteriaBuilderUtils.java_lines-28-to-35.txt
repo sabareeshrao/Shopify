@@ -1,8 +1,0 @@
-	 * @throws Exception
-	 */
-	public static Criteria buildRequestCriterias(Criteria criteria, Map<String, String> mappingFields, HttpServletRequest request) throws RestApiException {
-		
-			if(criteria == null)
-				throw new RestApiException("A criteria class type must be instantiated");
-	
-			mappingFields.keySet().stream().forEach(p -> {

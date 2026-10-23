@@ -1,3 +1,0 @@
-					parentId = merchant.getParent().getId();
-					ids.add(parentId);
-				}

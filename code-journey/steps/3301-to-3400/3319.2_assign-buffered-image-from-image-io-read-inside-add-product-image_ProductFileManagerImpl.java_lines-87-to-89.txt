@@ -1,0 +1,3 @@
+
+      BufferedImage bufferedImage = ImageIO.read(is2);
+

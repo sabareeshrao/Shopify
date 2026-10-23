@@ -1,8 +1,0 @@
-
-      LOGGER.info("Remove file");
-    } catch (final Exception e) {
-      LOGGER.error("Error while removing file", e);
-      throw new ServiceException(e);
-
-    }
-

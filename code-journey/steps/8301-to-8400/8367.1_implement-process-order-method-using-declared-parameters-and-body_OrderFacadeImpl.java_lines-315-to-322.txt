@@ -1,8 +1,0 @@
-
-	/**
-	 * Submitted object must be valided prior to the invocation of this method
-	 */
-	@Override
-	public Order processOrder(ShopOrder order, Customer customer, MerchantStore store, Language language)
-			throws ServiceException {
-

@@ -1,8 +1,0 @@
-	@Override
-	public void saveShippingQuoteModuleConfiguration(IntegrationConfiguration configuration, MerchantStore store) throws ServiceException {
-		
-			//validate entries
-			try {
-				
-				String moduleCode = configuration.getModuleCode();
-				ShippingQuoteModule quoteModule = (ShippingQuoteModule)shippingModules.get(moduleCode);

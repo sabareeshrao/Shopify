@@ -1,0 +1,7 @@
+
+	List<Category> getListByLineage(String storeCode, String lineage)
+			throws ServiceException;
+
+	Category getByCode(String storeCode, String code) throws ServiceException;
+	
+	Category getById(MerchantStore store, Long id) throws ServiceException;

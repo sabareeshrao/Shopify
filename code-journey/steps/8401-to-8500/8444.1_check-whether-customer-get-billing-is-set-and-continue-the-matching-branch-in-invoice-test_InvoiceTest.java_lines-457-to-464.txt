@@ -1,8 +1,0 @@
-			
-			//11
-			StringBuilder billToProvince = null;
-			if(customer.getBilling().getZone()!=null) {
-				billToProvince = new StringBuilder();
-				List<Zone> zones = zoneService.getZones(customer.getBilling().getCountry(), en);
-				for(Zone z : zones) {
-					if(z.getCode().equals(customer.getBilling().getZone().getCode())) {

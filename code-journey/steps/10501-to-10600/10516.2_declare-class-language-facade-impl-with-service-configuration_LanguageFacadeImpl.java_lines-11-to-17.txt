@@ -1,7 +1,0 @@
-
-@Service
-public class LanguageFacadeImpl implements LanguageFacade {
-
-  @Inject
-  private LanguageService languageService;
-

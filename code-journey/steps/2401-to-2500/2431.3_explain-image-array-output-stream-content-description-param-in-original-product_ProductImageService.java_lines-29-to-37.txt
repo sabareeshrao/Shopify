@@ -1,0 +1,9 @@
+
+	/**
+	 * Get the image ByteArrayOutputStream and content description from CMS
+	 * @param productImage
+	 * @return
+	 * @throws ServiceException
+	 */
+	OutputContentFile getProductImage(ProductImage productImage, ProductImageSize size)
+			throws ServiceException;

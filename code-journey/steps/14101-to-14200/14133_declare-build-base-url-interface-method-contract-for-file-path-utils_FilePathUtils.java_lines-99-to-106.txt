@@ -1,8 +1,0 @@
-	}
-
-	/**
-	 * Example: http[s]://<scheme>/<domainName>/<contextPath>
-	 */
-	public String buildStoreUri(MerchantStore store, HttpServletRequest request) {
-		return buildBaseUrl(request, store);
-	}

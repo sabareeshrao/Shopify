@@ -1,8 +1,0 @@
-		
-		String pack = configuration.getIntegrationOptions().get("packages").get(0);
-		Map<String,String> keys = configuration.getIntegrationKeys();
-		
-		String accessKey = keys.get("accessKey");
-		String userId = keys.get("userId");
-		String password = keys.get("password");
-		

@@ -1,8 +1,0 @@
-					.map(categoryService::getById)
-					.orElse(new Category());
-
-			Category dbCategory = populateCategory(store, category, target);
-			saveCategory(store, dbCategory, null);
-
-			// set category id
-			category.setId(dbCategory.getId());

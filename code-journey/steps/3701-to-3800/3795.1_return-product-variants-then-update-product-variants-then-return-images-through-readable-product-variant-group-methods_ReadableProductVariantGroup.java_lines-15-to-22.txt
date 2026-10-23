@@ -1,8 +1,0 @@
-	private List<ReadableProductVariant> productVariants = new ArrayList<ReadableProductVariant>();
-	public List<ReadableProductVariant> getproductVariants() {
-		return productVariants;
-	}
-	public void setproductVariants(List<ReadableProductVariant> productVariants) {
-		this.productVariants = productVariants;
-	}
-	public List<ReadableImage> getImages() {

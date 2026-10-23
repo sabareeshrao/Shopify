@@ -1,0 +1,7 @@
+
+        /** lounge **/
+
+        final PersistableCategory lounge = new PersistableCategory();
+        lounge.setCode("lounge");
+        lounge.setSortOrder(3);
+        lounge.setVisible(true);

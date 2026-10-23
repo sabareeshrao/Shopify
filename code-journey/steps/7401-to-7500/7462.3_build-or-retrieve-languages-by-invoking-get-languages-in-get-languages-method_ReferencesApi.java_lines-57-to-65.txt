@@ -1,0 +1,9 @@
+  /**
+   * Search languages by language code private/languages returns everything
+   *
+   * @return
+   */
+  @GetMapping("/languages")
+  public List<Language> getLanguages() {
+    return languageFacade.getLanguages();
+  }

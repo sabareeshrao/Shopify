@@ -1,8 +1,0 @@
-	@Column ( name="DATE_ADDED", length=0, nullable=false )
-	private Date dateAdded;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column ( name="DATE_DELETED", length=0 )
-	private Date dateDeleted;
-	
-	@Temporal(TemporalType.TIMESTAMP)

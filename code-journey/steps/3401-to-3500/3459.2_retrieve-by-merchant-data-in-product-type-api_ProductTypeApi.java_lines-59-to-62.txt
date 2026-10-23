@@ -1,4 +1,0 @@
-		return productTypeFacade.getByMerchant(merchantStore, language, count, page);
-
-	}
-

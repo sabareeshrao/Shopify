@@ -1,8 +1,0 @@
-
-      
-      Delivery addr = new Delivery();
-      addr.setPostalCode(address.getPostalCode());
-
-      Country c = countryService.getByCode(address.getCountryCode());
-      
-      if(c==null) {

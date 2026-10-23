@@ -1,8 +1,0 @@
-		  .addPermission(permissionKeys.get("TAX"))
-		  .addPermission(permissionKeys.get("PAYMENT"))
-		  .addPermission(permissionKeys.get("CUSTOMER"))
-		  .addPermission(permissionKeys.get("SHIPPING"))
-		  
-		  .addGroup("ADMIN_CATALOGUE", GroupType.ADMIN)
-		  .addPermission(permissionKeys.get("AUTH"))
-		  .addPermission(permissionKeys.get("PRODUCTS"))

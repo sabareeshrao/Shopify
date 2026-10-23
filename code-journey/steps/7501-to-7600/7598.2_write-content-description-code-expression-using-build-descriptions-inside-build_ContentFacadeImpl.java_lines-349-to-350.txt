@@ -1,0 +1,2 @@
+	private List<ContentDescription> buildDescriptions(Content contentModel,
+			List<com.salesmanager.shop.model.content.common.ContentDescription> persistableDescriptions)

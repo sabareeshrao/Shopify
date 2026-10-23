@@ -1,0 +1,4 @@
+	
+	void updateContentPage(Long id, PersistableContentPage page, MerchantStore merchantStore, Language language);
+	
+	void deleteContent(Long id, MerchantStore merchantStore);

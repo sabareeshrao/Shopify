@@ -1,0 +1,7 @@
+
+    @Embedded
+    private AuditSection auditSection = new AuditSection();
+
+    @Valid
+    @OneToMany(mappedBy="category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<CategoryDescription> descriptions = new HashSet<CategoryDescription>();

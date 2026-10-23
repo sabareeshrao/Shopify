@@ -1,8 +1,0 @@
-		try {
-
-			FileNameMap fileNameMap = URLConnection.getFileNameMap();
-			String nodePath = this.getNodePath(merchantStoreCode, staticContentType);
-
-			final Node<String, Object> merchantNode = this.getNode(nodePath);
-
-			for (String key : merchantNode.getKeys()) {

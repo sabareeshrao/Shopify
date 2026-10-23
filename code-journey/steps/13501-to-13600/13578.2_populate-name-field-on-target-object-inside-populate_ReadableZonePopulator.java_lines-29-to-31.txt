@@ -1,3 +1,0 @@
-					target.setName(d.getName());
-					continue;
-				}

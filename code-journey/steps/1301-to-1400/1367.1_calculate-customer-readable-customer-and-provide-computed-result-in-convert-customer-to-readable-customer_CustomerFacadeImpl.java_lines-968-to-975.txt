@@ -1,8 +1,0 @@
-  private ReadableCustomer convertCustomerToReadableCustomer(Customer customer, MerchantStore merchantStore, Language language) {
-    ReadableCustomerPopulator populator = new ReadableCustomerPopulator();
-    try{
-      return populator.populate(customer, new ReadableCustomer(), merchantStore, language);
-    } catch (ConversionException e) {
-      throw new ConversionRuntimeException(e);
-    }
-  }

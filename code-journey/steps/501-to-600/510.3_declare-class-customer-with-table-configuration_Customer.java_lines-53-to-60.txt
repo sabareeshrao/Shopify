@@ -1,8 +1,0 @@
-@Table(name = "CUSTOMER", 
-	 uniqueConstraints=
-			@UniqueConstraint(columnNames = {"MERCHANT_ID", "CUSTOMER_NICK"}))
-public class Customer extends SalesManagerEntity<Long, Customer> implements Auditable {
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@Column(name = "CUSTOMER_ID", unique=true, nullable=false)

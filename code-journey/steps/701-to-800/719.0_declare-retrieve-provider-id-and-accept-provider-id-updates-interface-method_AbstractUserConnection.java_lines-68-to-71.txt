@@ -1,0 +1,4 @@
+	public abstract String getProviderId();
+
+	public abstract void setProviderId(String providerId);
+

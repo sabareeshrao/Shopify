@@ -1,8 +1,0 @@
-		"image":"moneyorder.gif"
-	},
-	{
-		"module": "PAYMENT",
-		"code": "paypal-express-checkout",
-		"type":"paypal",
-		"version":"104.0",
-		"regions": ["*"],

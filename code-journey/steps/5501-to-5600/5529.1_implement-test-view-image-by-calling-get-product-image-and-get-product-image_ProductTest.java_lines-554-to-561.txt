@@ -1,8 +1,0 @@
-	private void testViewImage(Product product) throws Exception {
-		
-		
-		ProductImage productImage = product.getProductImage();
-
-        //get physical small image
-        OutputContentFile contentFile = productImageService.getProductImage(product.getMerchantStore().getCode(), product.getSku(), productImage.getProductImage(), ProductImageSize.SMALL);
-        

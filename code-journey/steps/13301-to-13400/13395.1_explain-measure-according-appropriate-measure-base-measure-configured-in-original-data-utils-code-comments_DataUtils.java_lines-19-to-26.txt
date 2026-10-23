@@ -1,8 +1,0 @@
-	
-	
-	/**
-	 * Get the measure according to the appropriate measure base. If the measure
-	 * configured in store is LB and it needs KG then the appropriate
-	 * calculation is done
-	 * 
-	 * @param weight

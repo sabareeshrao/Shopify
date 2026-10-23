@@ -1,8 +1,0 @@
-		if (!CollectionUtils.isEmpty(items)) {
-			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> newItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> removeItems = new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartItem>();
-			for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem anItem : items) {// take care of existing
-																							// product
-				if (itemModel.getProduct().getId().longValue() == anItem.getProduct().getId()) {
-					if (item.getQuantity() == 0) {
-						// left aside item to be removed

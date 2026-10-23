@@ -1,0 +1,3 @@
+
+management.endpoint.health.group.global.include=ping
+management.security.enabled=false

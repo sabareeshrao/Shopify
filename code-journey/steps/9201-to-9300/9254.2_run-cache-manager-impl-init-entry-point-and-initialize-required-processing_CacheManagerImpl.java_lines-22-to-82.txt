@@ -1,0 +1,61 @@
+
+  @SuppressWarnings("unchecked")
+  protected void init(String namedCache, String locationFolder) {
+
+
+    try {
+
+      this.location = locationFolder;
+      // manager = new DefaultCacheManager(repositoryFileName);
+
+      VendorCacheManager manager = VendorCacheManager.getInstance();
+
+      if (manager == null) {
+        LOGGER.error("CacheManager is null");
+        return;
+      }
+      
+      TreeCacheFactory f = null;
+      
+      
+/*      @SuppressWarnings("rawtypes")
+      Cache c = manager.getManager().getCache(namedCache);
+      
+      if(c != null) {
+    	  f = new TreeCacheFactory();
+    	  treeCache = f.createTreeCache(c);
+    	  //this.treeCache = (TreeCache)c;
+    	  return;
+      }*/
+      
+      
+      Configuration config = new ConfigurationBuilder()
+    		   .persistence().passivation(false)
+    		   .addSingleFileStore()
+    		   .segmented(false)
+    		   .location(location).async().enable()
+    		   .preload(false).shared(false)
+    		   .invocationBatching().enable()
+    		   .build();
+      
+      manager.getManager().defineConfiguration(namedCache, config);
+
+      final Cache<String, String> cache = manager.getManager().getCache(namedCache);
+      
+      f = new TreeCacheFactory();
+      treeCache = f.createTreeCache(cache);
+      cache.start();
+
+      LOGGER.debug("CMS started");
+
+
+
+    } catch (Exception e) {
+      LOGGER.error("Error while instantiating CmsImageFileManager", e);
+    } finally {
+
+    }
+
+
+
+  }

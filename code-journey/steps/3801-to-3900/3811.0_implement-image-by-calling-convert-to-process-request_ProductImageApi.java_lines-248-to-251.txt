@@ -1,0 +1,4 @@
+
+	private ReadableImage image(ProductImage image, MerchantStore store, Language language) {
+		return readableProductImageMapper.convert(image, store, language);
+	}

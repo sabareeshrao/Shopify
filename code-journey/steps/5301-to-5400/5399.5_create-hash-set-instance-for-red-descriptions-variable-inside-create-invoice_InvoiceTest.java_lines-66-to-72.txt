@@ -1,0 +1,7 @@
+	    
+	    Set<ProductOptionValueDescription> redDescriptions = new HashSet<ProductOptionValueDescription>();
+	    redDescriptions.add(redDescription);
+	    
+	    red.setDescriptions(redDescriptions);
+	    
+	    productOptionValueService.create(red);

@@ -1,0 +1,10 @@
+
+	  /**
+	   * Get reviews for a given product
+	   *
+	   * @param product
+	   * @param store
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */

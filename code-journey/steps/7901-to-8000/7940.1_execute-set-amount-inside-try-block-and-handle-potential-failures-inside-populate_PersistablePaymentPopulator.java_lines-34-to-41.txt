@@ -1,8 +1,0 @@
-		
-		try {
-		
-			target.setAmount(pricingService.getAmount(source.getAmount()));
-			target.setModuleName(source.getPaymentModule());
-			target.setPaymentType(PaymentType.valueOf(source.getPaymentType()));
-			target.setTransactionType(TransactionType.valueOf(source.getTransactionType()));
-			

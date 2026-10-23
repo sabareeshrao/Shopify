@@ -1,3 +1,0 @@
-	@Qualifier("img")
-	private ImageFilePath imageUtils;
-

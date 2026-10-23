@@ -1,8 +1,0 @@
-
-			String cacheKey = ZONE_CACHE_PREFIX + countryCode + Constants.UNDERSCORE + language.getCode();
-			
-			zones = (List<Zone>) cache.getFromCache(cacheKey);
-
-		
-		
-			if(zones==null) {

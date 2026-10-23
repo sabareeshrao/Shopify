@@ -1,0 +1,20 @@
+
+		// now prepare the shipping info
+
+		// number of boxes
+
+		//Iterator ubIt = usedBoxesList.iterator();
+
+		System.out.println("###################################");
+		System.out.println("Number of boxes " + boxesList.size());
+		System.out.println("###################################");
+
+		for(PackingBox pb : boxesList) {
+			PackageDetails details = new PackageDetails();
+			details.setShippingHeight(height);
+			details.setShippingLength(length);
+			details.setShippingWeight(weight + box.getWeight());
+			details.setShippingWidth(width);
+			details.setItemName(store.getCode());
+			boxes.add(details);
+		}

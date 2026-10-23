@@ -1,0 +1,8 @@
+  @RequestMapping(
+      value = {"/cart/{code}/total"},
+      method = RequestMethod.GET)
+  @ResponseBody
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })

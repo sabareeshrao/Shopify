@@ -1,0 +1,4 @@
+
+			modelOrder.setTotal(calculatedAmount);
+			List<com.salesmanager.core.model.order.OrderTotal> totals = orderTotalSummary.getTotals();
+			Set<com.salesmanager.core.model.order.OrderTotal> set = new HashSet<com.salesmanager.core.model.order.OrderTotal>();

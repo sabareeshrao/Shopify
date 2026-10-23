@@ -1,0 +1,10 @@
+
+	/**
+	 * This amount will be displayed to the end user
+	 * 
+	 * @param store
+	 * @param amount
+	 * @param locale
+	 * @return
+	 * @throws Exception
+	 */

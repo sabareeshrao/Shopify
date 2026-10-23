@@ -1,0 +1,2 @@
+	private Set<ProductPriceDescription> getProductPriceDescriptions(ProductPrice price,
+			List<com.salesmanager.shop.model.catalog.product.ProductPriceDescription> descriptions)

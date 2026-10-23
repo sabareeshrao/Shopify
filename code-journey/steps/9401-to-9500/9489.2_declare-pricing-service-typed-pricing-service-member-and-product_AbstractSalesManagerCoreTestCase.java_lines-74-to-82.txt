@@ -1,0 +1,9 @@
+	
+	@Inject
+	protected PricingService pricingService;
+	
+	@Inject
+	protected ProductPriceService productPriceService;
+	
+	@Inject
+	protected ProductAttributeService productAttributeService;

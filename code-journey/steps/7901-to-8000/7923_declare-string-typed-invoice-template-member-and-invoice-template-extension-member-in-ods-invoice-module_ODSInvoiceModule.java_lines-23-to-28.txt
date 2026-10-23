@@ -1,6 +1,0 @@
-	private final static String INVOICE_TEMPLATE = "templates/invoice/Invoice";
-	private final static String INVOICE_TEMPLATE_EXTENSION = ".ods";
-	private final static String TEMP_INVOICE_SUFFIX_NAME = "_invoice.ods";
-	private final static int ADDRESS_ROW_START = 2;
-	private final static int ADDRESS_ROW_END = 5;
-	

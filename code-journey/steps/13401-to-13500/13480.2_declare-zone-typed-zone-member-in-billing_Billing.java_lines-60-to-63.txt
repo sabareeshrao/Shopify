@@ -1,4 +1,0 @@
-	private Zone zone;
-
-
-

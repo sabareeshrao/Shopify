@@ -1,8 +1,0 @@
-	@Override
-	public ReadableOrderTotalSummary populate(OrderTotalSummary source, ReadableOrderTotalSummary target,
-			MerchantStore store, Language language) throws ConversionException {
-		
-		Validate.notNull(pricingService,"PricingService must be set");
-		Validate.notNull(messages,"LabelUtils must be set");
-		
-		if(target==null) {

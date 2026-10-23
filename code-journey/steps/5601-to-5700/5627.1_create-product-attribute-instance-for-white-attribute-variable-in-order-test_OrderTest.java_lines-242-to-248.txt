@@ -1,0 +1,7 @@
+	    
+	    //attributes
+	    //white
+	    ProductAttribute whiteAttribute = new ProductAttribute();
+	    whiteAttribute.setProduct(product);
+	    whiteAttribute.setProductOption(option);
+	    whiteAttribute.setAttributeDefault(true);

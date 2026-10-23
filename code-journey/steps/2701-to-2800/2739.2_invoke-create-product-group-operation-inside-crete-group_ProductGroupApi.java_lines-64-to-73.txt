@@ -1,0 +1,10 @@
+  public @ResponseBody ProductGroup creteGroup(
+      @RequestBody ProductGroup group,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+	  
+	  return productItemsFacade.createProductGroup(group, merchantStore);
+
+  }

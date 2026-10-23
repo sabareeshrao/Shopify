@@ -1,8 +1,0 @@
-      /**
-       * Configure pagination using setMaxResults and setFirstResult method
-       */
-      
-      q = RepositoryHelper.paginateQuery(q, count, entityList, criteria);
-      
-/*      if(criteria.isLegacyPagination()) {
-	      if (criteria.getMaxCount() > 0) {

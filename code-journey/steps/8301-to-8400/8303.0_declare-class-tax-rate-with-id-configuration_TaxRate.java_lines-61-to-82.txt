@@ -1,0 +1,22 @@
+public class TaxRate  extends SalesManagerEntity<Long, TaxRate> implements Auditable {
+	private static final long serialVersionUID = 3356827741612925066L;
+	
+	@Id
+	@Column(name = "TAX_RATE_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "TAX_RATE_ID_NEXT_VALUE")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+	
+	@Column(name = "TAX_PRIORITY")
+	private Integer taxPriority = 0;
+	
+	@Column(name = "TAX_RATE" , nullable= false , precision=7, scale=4)
+	private BigDecimal taxRate;
+	
+	@NotEmpty
+	@Column(name = "TAX_CODE")
+	private String code;
+	

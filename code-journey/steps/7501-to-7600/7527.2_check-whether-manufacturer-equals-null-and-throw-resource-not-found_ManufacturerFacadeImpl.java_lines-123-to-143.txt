@@ -1,0 +1,21 @@
+      throws Exception {
+    Manufacturer manufacturer = manufacturerService.getById(id);
+    
+    
+
+    if (manufacturer == null) {
+      throw new ResourceNotFoundException("Manufacturer [" + id + "] not found");
+    }
+    
+    if(manufacturer.getMerchantStore().getId() != store.getId()) {
+      throw new ResourceNotFoundException("Manufacturer [" + id + "] not found for store [" + store.getId() + "]");
+    }
+
+    ReadableManufacturer readableManufacturer = new ReadableManufacturer();
+
+    ReadableManufacturerPopulator populator = new ReadableManufacturerPopulator();
+    readableManufacturer = populator.populate(manufacturer, readableManufacturer, store, language);
+
+
+    return readableManufacturer;
+  }

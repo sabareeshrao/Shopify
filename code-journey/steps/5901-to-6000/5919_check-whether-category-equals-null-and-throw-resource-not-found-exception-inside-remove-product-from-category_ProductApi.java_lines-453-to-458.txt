@@ -1,6 +1,0 @@
-
-			Category category = categoryService.getById(categoryId);
-
-			if (category == null) {
-				throw new ResourceNotFoundException("Category id [" + categoryId + "] is not found");
-			}

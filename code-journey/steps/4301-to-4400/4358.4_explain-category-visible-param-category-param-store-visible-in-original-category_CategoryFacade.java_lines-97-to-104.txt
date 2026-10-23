@@ -1,0 +1,8 @@
+
+	/**
+	 * Set category visible or not
+	 * @param category
+	 * @param store
+	 */
+	void setVisible(PersistableCategory category, MerchantStore store);
+	

@@ -1,5 +1,0 @@
-	public static CmsStaticContentFileManagerImpl getInstance() {
-
-		if (fileManager == null) {
-			fileManager = new CmsStaticContentFileManagerImpl();
-		}

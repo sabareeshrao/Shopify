@@ -1,0 +1,4 @@
+import com.salesmanager.shop.model.catalog.product.Product;
+
+public class ProductVariant extends Product {
+

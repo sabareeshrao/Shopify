@@ -1,0 +1,6 @@
+			if(!StringUtils.isBlank(customer.getBilling().getCity())) {
+				if(billToAddress==null) {
+					billToAddress = new StringBuilder();
+				} else {
+					billToAddress.append(", ");
+				}

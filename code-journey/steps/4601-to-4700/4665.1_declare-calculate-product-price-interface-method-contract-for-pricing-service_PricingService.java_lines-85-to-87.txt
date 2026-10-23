@@ -1,0 +1,3 @@
+	FinalPrice calculateProductPrice(Product product,
+			List<ProductAttribute> attributes, Customer customer)
+			throws ServiceException;

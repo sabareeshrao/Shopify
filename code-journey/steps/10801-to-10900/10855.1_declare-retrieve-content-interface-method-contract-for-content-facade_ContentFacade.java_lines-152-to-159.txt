@@ -1,8 +1,0 @@
-	
-	@Deprecated
-	ReadableContentFull getContent(String code, MerchantStore store, Language language);
-	
-	/**
-	 * Get all content types
-	 * @param type
-	 * @param store

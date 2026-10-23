@@ -1,0 +1,8 @@
+
+	@ManyToOne
+	@JoinColumn(name = "ORDER_ACCOUNT_ID" , nullable=false)
+	private OrderAccount orderAccount;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ORDER_PRODUCT_ID" , nullable=false)
+	private OrderProduct orderProduct;

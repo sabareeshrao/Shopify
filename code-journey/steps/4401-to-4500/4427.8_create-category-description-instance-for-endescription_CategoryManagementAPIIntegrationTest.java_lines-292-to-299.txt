@@ -1,0 +1,8 @@
+
+        final Category livingParent = living;
+        lounge.setParent(livingParent);
+
+        endescription = new CategoryDescription();
+        endescription.setLanguage("en");
+        endescription.setName("Lounge");
+        endescription.setFriendlyUrl("lounge");

@@ -1,0 +1,7 @@
+	 */
+	@Configuration
+	@Order(6)
+	public static class CustomeApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Autowired
+		private AuthenticationTokenFilter authenticationTokenFilter;

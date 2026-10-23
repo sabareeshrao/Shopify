@@ -1,0 +1,32 @@
+
+	@Override
+	public void authorizedGroups(String authenticatedUser, PersistableUser user) {
+		Validate.notNull(authenticatedUser, "Required authenticated user");
+		Validate.notNull(user, "Required persistable user");
+
+		try {
+			User currentUser = userService.getByUserName(authenticatedUser);
+
+			boolean isSuperAdmin = false;
+
+			for (Group g : currentUser.getGroups()) {
+				if (g.getGroupName().equals("SUPERADMIN")) {
+					isSuperAdmin = true;
+					break;
+				}
+
+			}
+
+			for (PersistableGroup g : user.getGroups()) {
+				if (g.getName().equals("SUPERADMIN")) {
+					if (!isSuperAdmin) {
+						throw new UnauthorizedException("Superadmin group not allowed");
+					}
+				}
+			}
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while looking for authorization", e);
+		}
+
+	}

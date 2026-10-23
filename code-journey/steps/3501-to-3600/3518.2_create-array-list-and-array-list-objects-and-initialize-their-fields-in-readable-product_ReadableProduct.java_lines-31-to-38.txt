@@ -1,8 +1,0 @@
-	private List<ReadableProductAttribute> attributes = new ArrayList<ReadableProductAttribute>();
-	private List<ReadableProductOption> options = new ArrayList<ReadableProductOption>();
-	private List<ReadableProductVariant> variants = new ArrayList<ReadableProductVariant>();
-	private List<ReadableProductProperty> properties = new ArrayList<ReadableProductProperty>();
-	private List<ReadableCategory> categories = new ArrayList<ReadableCategory>();
-	private ReadableProductType type;
-	private boolean canBePurchased = false;
-

@@ -1,8 +1,0 @@
-
-		List<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> items = new ArrayList<>();
-
-		for (Product p : products) {
-			com.salesmanager.core.model.shoppingcart.ShoppingCartItem item = shoppingCartService
-					.populateShoppingCartItem(p, store);
-			Optional<PersistableShoppingCartItem> oShoppingCartItem = shoppingCartItems.stream()
-					.filter(i -> i.getProduct().equals(p.getSku())).findFirst();

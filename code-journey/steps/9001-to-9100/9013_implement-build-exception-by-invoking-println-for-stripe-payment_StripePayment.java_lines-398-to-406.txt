@@ -1,9 +1,0 @@
-	private IntegrationException buildException(Exception ex) {
-		
-		
-	if(ex instanceof CardException) {
-		  CardException e = (CardException)ex;
-		  // Since it's a decline, CardException will be caught
-		  //System.out.println("Status is: " + e.getCode());
-		  //System.out.println("Message is: " + e.getMessage());
-		  

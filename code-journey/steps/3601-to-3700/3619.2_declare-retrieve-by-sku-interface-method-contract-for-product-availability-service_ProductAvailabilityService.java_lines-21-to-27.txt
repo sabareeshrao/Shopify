@@ -1,7 +1,0 @@
-	 * Get by product sku and store
-	 * @param sku
-	 * @param store
-	 * @return
-	 */
-	Page<ProductAvailability> getBySku(String sku, MerchantStore store, int page, int count);
-	

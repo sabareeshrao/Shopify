@@ -1,0 +1,5 @@
+
+@Service("countryService")
+public class CountryServiceImpl extends SalesManagerEntityServiceImpl<Integer, Country>
+		implements CountryService {
+	

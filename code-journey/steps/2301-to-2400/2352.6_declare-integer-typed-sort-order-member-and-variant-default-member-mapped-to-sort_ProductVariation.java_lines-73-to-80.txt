@@ -1,0 +1,8 @@
+    
+	@Column(name="SORT_ORDER")
+	private Integer sortOrder;	
+	
+	@Column(name="VARIANT_DEFAULT")
+	private boolean variantDefault=false;
+
+	

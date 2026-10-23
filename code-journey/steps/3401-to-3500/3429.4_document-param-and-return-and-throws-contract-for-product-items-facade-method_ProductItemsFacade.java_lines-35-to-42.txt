@@ -1,8 +1,0 @@
-	 * @param store
-	 * @param language
-	 * @param ids
-	 * @param startCount
-	 * @param maxCount
-	 * @return
-	 * @throws Exception
-	 */

@@ -1,8 +1,0 @@
-		"zoneName": "Terre-Neuve - Labrador",
-		"countryCode": "CA"
-	},
-	{
-		"zoneCode": "NB",
-		"zoneName": "Nouveau Brunswick",
-		"countryCode": "CA"
-	},

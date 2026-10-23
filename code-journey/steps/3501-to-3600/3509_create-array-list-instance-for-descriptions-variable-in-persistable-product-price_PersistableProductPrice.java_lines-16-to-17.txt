@@ -1,2 +1,0 @@
-	private List<ProductPriceDescription> descriptions = new ArrayList<ProductPriceDescription>();
-

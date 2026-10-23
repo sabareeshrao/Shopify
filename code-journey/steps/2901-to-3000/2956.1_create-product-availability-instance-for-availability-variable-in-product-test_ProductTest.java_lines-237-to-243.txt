@@ -1,0 +1,7 @@
+	    
+
+	    // Availability
+	    ProductAvailability availability = new ProductAvailability();
+	    availability.setProductDateAvailable(date);
+	    availability.setProductQuantity(100);
+	    availability.setRegion("*");

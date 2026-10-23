@@ -1,2 +1,0 @@
-	private List<String> warnings = new ArrayList<String>();
-	

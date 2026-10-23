@@ -1,0 +1,16 @@
+	@ResponseStatus(HttpStatus.OK)
+	@DeleteMapping(value = { "/private/product/productVariantGroup/{id}" })
+	@ApiOperation(httpMethod = "DELETE", value = "Delete product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody void delete(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_CATALOGUE, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		productVariantGroupFacade.delete(id, id, merchantStore);
+	}

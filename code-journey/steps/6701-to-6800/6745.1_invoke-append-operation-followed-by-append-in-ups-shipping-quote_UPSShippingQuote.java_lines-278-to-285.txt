@@ -1,0 +1,8 @@
+					
+				
+
+			xmldatabuffer.append("<PickupType><Code>03</Code></PickupType>");
+			// xmldatabuffer.append("<Description>Daily Pickup</Description>");
+			xmldatabuffer.append("<Shipment><Shipper>");
+			xmldatabuffer.append("<Address>");
+			xmldatabuffer.append("<City>");

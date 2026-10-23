@@ -1,8 +1,0 @@
-public interface CustomerReviewService extends
-	SalesManagerEntityService<Long, CustomerReview> {
-	
-	/**
-	 * All reviews created by a given customer
-	 * @param customer
-	 * @return
-	 */

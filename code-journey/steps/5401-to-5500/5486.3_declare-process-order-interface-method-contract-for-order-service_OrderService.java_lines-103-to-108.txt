@@ -1,0 +1,6 @@
+
+	Order processOrder(Order order, Customer customer,
+			List<ShoppingCartItem> items, OrderTotalSummary summary,
+			Payment payment, Transaction transaction, MerchantStore store)
+			throws ServiceException;
+

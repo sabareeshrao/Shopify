@@ -1,3 +1,0 @@
-public class ProductPriceServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductPrice> 
-	implements ProductPriceService {
-	

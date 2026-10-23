@@ -1,4 +1,0 @@
-				product = productService.findOne(source.getProductId().longValue(), store);
-				if(product == null) {
-					throw new ResourceNotFoundException("Product with id [" + source.getProductId() + "] not found for store [" + store.getCode() + "]");
-				}

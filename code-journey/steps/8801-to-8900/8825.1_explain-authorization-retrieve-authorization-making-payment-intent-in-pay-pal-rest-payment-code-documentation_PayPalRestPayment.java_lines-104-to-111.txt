@@ -1,8 +1,0 @@
-
-			// ###Authorization
-			// Retrieve an Authorization Id
-			// by making a Payment with intent
-			// as 'authorize' and parsing through
-			// the Payment object
-			
-			

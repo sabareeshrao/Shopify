@@ -1,8 +1,0 @@
-
-	@Autowired
-	private PersistableProductOptionValueMapper persistableOptionValueMapper;
-
-	@Autowired
-	private ReadableProductOptionValueMapper readableOptionValueMapper;
-
-	@Autowired

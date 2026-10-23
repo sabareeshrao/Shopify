@@ -1,0 +1,7 @@
+import com.salesmanager.shop.utils.DateUtil;
+
+@Component
+public class PersistableMerchantStorePopulator extends AbstractDataPopulator<PersistableMerchantStore, MerchantStore> {
+
+	@Inject
+	private CountryService countryService;

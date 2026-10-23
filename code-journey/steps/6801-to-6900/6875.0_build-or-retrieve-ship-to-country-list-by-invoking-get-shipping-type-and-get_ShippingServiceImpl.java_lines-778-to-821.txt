@@ -1,0 +1,44 @@
+	
+	@Override
+	public List<Country> getShipToCountryList(MerchantStore store, Language language) throws ServiceException {
+		
+		
+		ShippingConfiguration shippingConfiguration = getShippingConfiguration(store);
+		ShippingType shippingType = ShippingType.INTERNATIONAL;
+		List<String> supportedCountries = new ArrayList<String>();
+		if(shippingConfiguration==null) {
+			shippingConfiguration = new ShippingConfiguration();
+		}
+		
+		if(shippingConfiguration.getShippingType()!=null) {
+				shippingType = shippingConfiguration.getShippingType();
+		}
+
+		
+		if(shippingType.name().equals(ShippingType.NATIONAL.name())){
+			
+			supportedCountries.add(store.getCountry().getIsoCode());
+			
+		} else {
+
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(SUPPORTED_COUNTRIES, store);
+			
+			if(configuration!=null) {
+				
+				String countries = configuration.getValue();
+				if(!StringUtils.isBlank(countries)) {
+
+					Object objRegions=JSONValue.parse(countries); 
+					JSONArray arrayRegions=(JSONArray)objRegions;
+					for (Object arrayRegion : arrayRegions) {
+						supportedCountries.add((String) arrayRegion);
+					}
+				}
+				
+			}
+
+		}
+		
+		return countryService.getCountries(supportedCountries, language);
+
+	}

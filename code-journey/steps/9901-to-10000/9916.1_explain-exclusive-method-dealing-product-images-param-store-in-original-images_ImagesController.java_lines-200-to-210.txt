@@ -1,0 +1,11 @@
+	
+	/**
+	 * Exclusive method for dealing with product images
+	 * @param storeCode
+	 * @param productCode
+	 * @param imageName
+	 * @param extension
+	 * @param request
+	 * @return
+	 * @throws IOException
+	 */

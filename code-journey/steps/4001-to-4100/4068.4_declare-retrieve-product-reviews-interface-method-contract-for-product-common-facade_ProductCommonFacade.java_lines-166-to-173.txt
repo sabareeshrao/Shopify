@@ -1,8 +1,0 @@
-	   * @param product
-	   * @param store
-	   * @param language
-	   * @return
-	   * @throws Exception
-	   */
-	  List<ReadableProductReview> getProductReviews(Product product, MerchantStore store,
-	      Language language) throws Exception;

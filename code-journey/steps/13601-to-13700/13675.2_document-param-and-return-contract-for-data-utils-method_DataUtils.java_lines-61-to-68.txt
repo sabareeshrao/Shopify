@@ -1,8 +1,0 @@
-	 * @param weight
-	 * @param store
-	 * @param base
-	 * @return
-	 */
-	public static double getMeasure(double measure, MerchantStore store,
-			String base) {
-

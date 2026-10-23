@@ -1,8 +1,0 @@
-      "select distinct pr from ProductRelationship as pr "
-          + "left join fetch pr.product p "
-          + "join fetch pr.relatedProduct rp "
-          + "left join fetch rp.descriptions rpd "
-          + "where pr.code=:code "
-          + "and pr.store.id=:storeId ";
-  private static final String HQL_GET_PRODUCT_BY_CODE_AND_STORE_ID_AND_LANG_ID =
-      "select distinct pr from ProductRelationship as pr "

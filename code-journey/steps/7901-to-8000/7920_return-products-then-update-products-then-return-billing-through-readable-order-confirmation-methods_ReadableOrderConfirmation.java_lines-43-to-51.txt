@@ -1,9 +1,0 @@
-	public List<ReadableOrderProduct> getProducts() {
-		return products;
-	}
-	public void setProducts(List<ReadableOrderProduct> products) {
-		this.products = products;
-	}
-	public Address getBilling() {
-		return billing;
-	}

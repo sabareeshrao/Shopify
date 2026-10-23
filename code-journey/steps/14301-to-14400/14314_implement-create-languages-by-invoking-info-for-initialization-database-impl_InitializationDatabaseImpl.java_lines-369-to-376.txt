@@ -1,8 +1,0 @@
-	private void createLanguages() throws ServiceException {
-		LOGGER.info(String.format("%s : Populating Languages ", name));
-		for(String code : SchemaConstant.LANGUAGE_ISO_CODE) {
-			Language language = new Language(code);
-			languageService.create(language);
-		}
-	}
-	

@@ -1,8 +1,0 @@
-  
-  
-  /**
-   * Query for a product group public/product/group/{code}?lang=fr|en no lang it will take session
-   * lang or default store lang code can be any code used while creating product group, defeult
-   * being FEATURED
-   *
-   * @param store

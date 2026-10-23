@@ -1,8 +1,0 @@
-	protected PersistableCategory category(String code, String name) {
-
-		PersistableCategory newCategory = category(code);
-
-
-		CategoryDescription description = new CategoryDescription();
-		description.setLanguage("en");
-		description.setName(name);

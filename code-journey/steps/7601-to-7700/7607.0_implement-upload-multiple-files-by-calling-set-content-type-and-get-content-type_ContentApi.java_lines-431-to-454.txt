@@ -1,0 +1,24 @@
+
+	@PostMapping(value = "/private/files", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiImplicitParams({
+			// @ApiImplicitParam(name = "file[]", value = "File stream object",
+			// required = true,dataType = "MultipartFile",allowMultiple = true),
+			@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void uploadMultipleFiles(@RequestParam(value = "file[]", required = true) MultipartFile[] files,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		for (MultipartFile f : files) {
+			ContentFile cf = new ContentFile();
+			cf.setContentType(f.getContentType());
+			cf.setName(f.getName());
+			try {
+				cf.setFile(f.getBytes());
+				contentFacade.addContentFile(cf, merchantStore.getCode());
+			} catch (IOException e) {
+				throw new ServiceRuntimeException("Error while getting file bytes");
+			}
+		}
+
+	}

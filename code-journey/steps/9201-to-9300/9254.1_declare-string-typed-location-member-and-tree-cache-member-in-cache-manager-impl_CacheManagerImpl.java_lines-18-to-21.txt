@@ -1,0 +1,4 @@
+  protected String location = null;
+
+  @SuppressWarnings("rawtypes")
+  private TreeCache treeCache = null;

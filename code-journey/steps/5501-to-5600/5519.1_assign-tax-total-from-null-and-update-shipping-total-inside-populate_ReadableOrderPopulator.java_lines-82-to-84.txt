@@ -1,0 +1,3 @@
+		
+		com.salesmanager.shop.model.order.total.OrderTotal taxTotal = null;
+		com.salesmanager.shop.model.order.total.OrderTotal shippingTotal = null;

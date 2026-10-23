@@ -1,0 +1,8 @@
+
+        /** armoire **/
+        final PersistableCategory armoire = new PersistableCategory();
+        armoire.setCode("armoire");
+        armoire.setSortOrder(1);
+        armoire.setVisible(true);
+
+        armoire.setParent(diningParent);

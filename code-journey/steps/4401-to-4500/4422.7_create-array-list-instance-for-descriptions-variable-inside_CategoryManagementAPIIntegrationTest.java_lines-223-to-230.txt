@@ -1,0 +1,8 @@
+        frdescription.setLanguage("fr");
+        frdescription.setName("Armoire");
+        frdescription.setFriendlyUrl("armoires");
+        frdescription.setTitle("Armoires");
+
+        descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);

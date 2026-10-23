@@ -1,0 +1,8 @@
+
+	<!--  end of CMS implementation for static content data -->
+
+	<!-- ++++++++++++ -->
+	<!-- CMS managers -->
+	<!-- ************ -->
+	
+	<!-- infinispan product STARTUP-->

@@ -1,0 +1,8 @@
+	private ProductVariantGroup group(Long productOptionGroupId,MerchantStore store) {
+		Optional<ProductVariantGroup> group = productVariantGroupService.getById(productOptionGroupId, store);
+		if(group.isEmpty()) {
+			throw new ResourceNotFoundException("Product instance group [" + productOptionGroupId + "] not found");
+		}
+		
+		return group.get();
+	}

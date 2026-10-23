@@ -1,0 +1,6 @@
+		
+		customerOption.setId(source.getId());
+		customerOption.setType(source.getCustomerOptionType());
+		customerOption.setName(source.getDescriptionsSettoList().get(0).getName());
+
+		List<CustomerOptionValue> values = customerOption.getAvailableValues();

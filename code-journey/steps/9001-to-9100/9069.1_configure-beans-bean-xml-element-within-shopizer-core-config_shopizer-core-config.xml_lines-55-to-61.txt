@@ -1,0 +1,7 @@
+
+	<!-- JDBC User -->
+	<beans:bean id="userService"
+		class="com.salesmanager.core.business.services.user.UserServiceImpl" />
+
+
+	<!-- properties files -->

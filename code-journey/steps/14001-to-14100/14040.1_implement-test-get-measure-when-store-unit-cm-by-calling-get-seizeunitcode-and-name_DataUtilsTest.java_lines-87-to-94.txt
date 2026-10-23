@@ -1,8 +1,0 @@
-
-    /**
-     * This methods tests {@link DataUtils#getMeasure(double, MerchantStore, String)}
-     */
-    @Test
-    public void testGetMeasureWhen_StoreUnit_CM_MeasurementUnit_CM(){
-        MerchantStore store = mock(MerchantStore.class);
-        when(store.getSeizeunitcode()).thenReturn(MeasureUnit.CM.name());

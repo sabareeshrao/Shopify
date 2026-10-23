@@ -1,0 +1,8 @@
+		orderProductAttribute.setProductAttributePrice(new BigDecimal("0.00"));//no extra charge
+		orderProductAttribute.setProductAttributeName(whiteDescription.getName());
+		orderProductAttribute.setProductOptionId(option.getId());
+		orderProductAttribute.setProductOptionValueId(white.getId());
+		
+		oproduct.getOrderAttributes().add(orderProductAttribute);
+		
+		order.getOrderProducts().add(oproduct);

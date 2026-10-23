@@ -1,4 +1,0 @@
-	},
-	{
-		"zoneCode": "Ceuta",
-		"zoneName": "Ceuta",

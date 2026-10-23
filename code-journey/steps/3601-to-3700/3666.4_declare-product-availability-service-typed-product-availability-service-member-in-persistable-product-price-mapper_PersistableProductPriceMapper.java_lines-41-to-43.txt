@@ -1,3 +1,0 @@
-	@Autowired
-	private ProductAvailabilityService productAvailabilityService;
-

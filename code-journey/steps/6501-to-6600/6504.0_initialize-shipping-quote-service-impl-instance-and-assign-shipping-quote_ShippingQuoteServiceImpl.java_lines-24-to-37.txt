@@ -1,0 +1,14 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingQuoteServiceImpl.class);
+	
+	private ShippingQuoteRepository shippingQuoteRepository;
+	
+	@Inject
+	private ShippingService shippingService;
+	
+	@Inject
+	public ShippingQuoteServiceImpl(ShippingQuoteRepository repository) {
+		super(repository);
+		this.shippingQuoteRepository = repository;
+		// TODO Auto-generated constructor stub
+	}
+

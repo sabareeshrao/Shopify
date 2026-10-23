@@ -1,8 +1,0 @@
-		if (category != null) {
-			categoryIds.add(category);
-		}
-		if (categoryIds.size() > 0) {
-			criteria.setCategoryIds(categoryIds);
-		}
-		// End Category handling
-

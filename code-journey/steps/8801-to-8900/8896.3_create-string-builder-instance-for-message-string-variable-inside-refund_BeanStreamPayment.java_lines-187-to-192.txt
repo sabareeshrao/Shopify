@@ -1,6 +1,0 @@
-			&trnType=R&username=user1234&password=pass1234
-			&trnOrderNumber=1234&trnAmount=1.00&adjId=1000
-			2115
-			**/
-			StringBuilder messageString = new StringBuilder();
-

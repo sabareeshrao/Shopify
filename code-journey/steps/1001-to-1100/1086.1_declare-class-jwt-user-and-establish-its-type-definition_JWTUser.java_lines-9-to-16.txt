@@ -1,0 +1,8 @@
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class JWTUser implements UserDetails {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;

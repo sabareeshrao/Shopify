@@ -1,4 +1,0 @@
-	public double getWeightLeft() {
-		return weightLeft;
-	}
-

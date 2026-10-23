@@ -1,8 +1,0 @@
-		/*
-		 * return contentService.getByCodeLike(type, codePrefix, store,
-		 * language).stream() .map(content ->
-		 * convertContentToReadableContentBox(store, language, content))
-		 * .collect(Collectors.toList());
-		 */
-
-		return null;

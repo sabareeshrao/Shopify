@@ -1,0 +1,8 @@
+
+@Configuration
+@ComponentScan({"com.salesmanager.shop"})
+@ServletComponentScan
+@Import({CoreApplicationConfiguration.class}) // import sm-core configurations
+@EnableWebSecurity
+public class ShopApplicationConfiguration implements WebMvcConfigurer {
+

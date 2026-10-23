@@ -1,0 +1,7 @@
+
+@RestController
+@RequestMapping("/api/v1")
+@Api(tags = { "Ordering api (Order Flow Api)" })
+@SwaggerDefinition(tags = { @Tag(name = "Order flow resource", description = "Manage orders (create, list, get)") })
+public class OrderApi {
+

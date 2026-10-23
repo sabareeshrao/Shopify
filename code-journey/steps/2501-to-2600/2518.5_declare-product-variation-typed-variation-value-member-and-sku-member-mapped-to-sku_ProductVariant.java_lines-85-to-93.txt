@@ -1,0 +1,9 @@
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "PRODUCT_VARIATION_VALUE_ID", nullable = true)
+	private ProductVariation variationValue;
+
+	@NotEmpty
+	@Pattern(regexp="^[a-zA-Z0-9_]*$")
+	@Column(name = "SKU")
+	private String sku;

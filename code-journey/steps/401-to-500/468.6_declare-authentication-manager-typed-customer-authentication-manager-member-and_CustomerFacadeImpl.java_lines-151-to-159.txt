@@ -1,0 +1,9 @@
+
+  @Inject
+  private AuthenticationManager customerAuthenticationManager;
+
+  @Inject
+  private CustomerReviewService customerReviewService;
+
+  @Inject
+  private CoreConfiguration coreConfiguration;

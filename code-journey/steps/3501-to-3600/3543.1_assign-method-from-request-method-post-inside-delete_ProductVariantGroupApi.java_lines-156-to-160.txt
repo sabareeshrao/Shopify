@@ -1,0 +1,5 @@
+
+	// add image
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/productVariantGroup/{id}/image" }, consumes = {
+			MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST)

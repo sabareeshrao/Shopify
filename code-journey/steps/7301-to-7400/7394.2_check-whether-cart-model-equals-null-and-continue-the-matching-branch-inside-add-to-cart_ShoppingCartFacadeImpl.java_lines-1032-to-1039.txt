@@ -1,8 +1,0 @@
-		ShoppingCart cartModel = shoppingCartService.getShoppingCart(customer, store);
-
-		// if cart does not exist create a new one
-		if (cartModel == null) {
-			cartModel = new ShoppingCart();
-			cartModel.setCustomerId(customer.getId());
-			cartModel.setMerchantStore(store);
-			cartModel.setShoppingCartCode(uniqueShoppingCartCode());

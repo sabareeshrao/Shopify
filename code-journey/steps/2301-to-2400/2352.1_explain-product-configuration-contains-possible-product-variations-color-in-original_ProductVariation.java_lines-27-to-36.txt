@@ -1,0 +1,10 @@
+
+/**
+ * Product configuration pre 3.0
+ * Contains possible product variations
+ * 
+ * color - red
+ * size - small
+ * @author carlsamson
+ *
+ */

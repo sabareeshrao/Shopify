@@ -1,4 +1,0 @@
-  private int quantity;
-  public String getPrice() {
-    return price;
-  }

@@ -1,0 +1,34 @@
+	
+	@Override
+	public List<PaymentMethod> getAcceptedPaymentMethods(MerchantStore store) throws ServiceException {
+		
+		Map<String,IntegrationConfiguration> modules =  this.getPaymentModulesConfigured(store);
+
+		List<PaymentMethod> returnModules = new ArrayList<PaymentMethod>();
+		
+		for(String module : modules.keySet()) {
+			IntegrationConfiguration config = modules.get(module);
+			if(config.isActive()) {
+				
+				IntegrationModule md = this.getPaymentMethodByCode(store, config.getModuleCode());
+				if(md==null) {
+					continue;
+				}
+				PaymentMethod paymentMethod = new PaymentMethod();
+				
+				paymentMethod.setDefaultSelected(config.isDefaultSelected());
+				paymentMethod.setPaymentMethodCode(config.getModuleCode());
+				paymentMethod.setModule(md);
+				paymentMethod.setInformations(config);
+
+				PaymentType type = PaymentType.fromString(md.getType());
+
+				paymentMethod.setPaymentType(type);
+				returnModules.add(paymentMethod);
+			}
+		}
+		
+		return returnModules;
+		
+		
+	}

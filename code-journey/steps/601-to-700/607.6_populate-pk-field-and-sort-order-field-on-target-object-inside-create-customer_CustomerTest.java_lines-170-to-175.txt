@@ -1,0 +1,6 @@
+		//mailingListSetNo.setPk(mailingListSetNoId);
+		mailingListSetNo.setSortOrder(1);
+		mailingListSetNo.setCustomerOption(subscribedToMailingList);
+		mailingListSetNo.setCustomerOptionValue(no);
+		
+		customerOptionSetService.create(mailingListSetNo);

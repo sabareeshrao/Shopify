@@ -1,8 +1,0 @@
-	private static final Logger LOG = LoggerFactory.getLogger(ReadableShoppingCartMapper.class);
-
-	@Autowired
-	private ShoppingCartCalculationService shoppingCartCalculationService;
-
-	@Autowired
-	private PricingService pricingService;
-

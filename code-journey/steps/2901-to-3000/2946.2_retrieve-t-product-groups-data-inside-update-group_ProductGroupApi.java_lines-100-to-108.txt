@@ -1,0 +1,9 @@
+  public @ResponseBody java.util.List<ProductGroup> list(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+	  
+	  return productItemsFacade.listProductGroups(merchantStore, language);
+
+  }

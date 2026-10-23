@@ -1,8 +1,0 @@
-
-			Charge ch = Charge.retrieve(trnID);
-
-			Map<String, Object> params = new HashMap<>();
-			params.put("charge", ch.getId());
-			params.put("amount", strAmount);
-			Refund re = Refund.create(params);
-

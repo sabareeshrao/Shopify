@@ -1,8 +1,0 @@
-
-		try {
-			Principal principal = request.getUserPrincipal();
-			String userName = principal.getName();
-
-			Customer customer = customerService.getByNick(userName);
-
-			if (customer == null) {

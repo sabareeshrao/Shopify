@@ -1,0 +1,7 @@
+	private DigitalProductRepository digitalProductRepository;
+	
+    @Inject
+    StaticContentFileManager productDownloadsFileManager;
+    
+    @Inject
+    ProductService productService;

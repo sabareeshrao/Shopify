@@ -1,0 +1,23 @@
+	@Override
+	public ReadableProduct getProductBySeUrl(MerchantStore store, String friendlyUrl, Language language)
+			throws Exception {
+		
+		Product product = productService.getBySeUrl(store, friendlyUrl, LocaleUtils.getLocale(language));
+
+		if (product == null) {
+			throw new ResourceNotFoundException("Product [" + friendlyUrl + "] not found for merchant [" + store.getCode() + "]");
+		}
+		
+		ReadableProduct readableProduct = readableProductMapper.convert(product, store, language);
+
+		//get all instances for this product group by option
+		//limit to 15 searches
+		List<ProductVariant> instances = productVariantService.getByProductId(store, product, language);
+		
+		//the above get all possible images
+		List<ReadableProductVariant> readableInstances = instances.stream().map(p -> this.productVariant(p, store, language)).collect(Collectors.toList());
+		readableProduct.setVariants(readableInstances);
+		
+		return readableProduct;
+		
+	}

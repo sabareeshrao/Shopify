@@ -1,8 +1,0 @@
-
-	    Language en = languageService.getByCode("en");
-	    Language fr = languageService.getByCode("fr");
-
-	    MerchantStore store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);
-	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
-
-	    Category book = new Category();

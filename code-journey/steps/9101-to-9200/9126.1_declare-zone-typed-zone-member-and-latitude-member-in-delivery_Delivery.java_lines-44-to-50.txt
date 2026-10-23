@@ -1,0 +1,7 @@
+
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Zone.class)
+	@JoinColumn(name="DELIVERY_ZONE_ID", nullable=true)
+	private Zone zone;
+	
+	@Transient
+	private String latitude = null;

@@ -1,9 +1,0 @@
-				if(source.getDeliveryAddress().getCountry()!=null) {
-					deliveryAddress.setCountry(source.getDeliveryAddress().getCountry().getIsoCode());
-				}
-				deliveryAddress.setLatitude(source.getDeliveryAddress().getLatitude());
-				deliveryAddress.setLongitude(source.getDeliveryAddress().getLongitude());
-				deliveryAddress.setStateProvince(source.getDeliveryAddress().getState());
-				
-				target.setDelivery(deliveryAddress);
-			}

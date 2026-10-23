@@ -1,0 +1,10 @@
+
+	/**
+	 *
+	 * @param store
+	 * @param code
+	 * @param language
+	 * @return ReadableCategory
+	 * @throws Exception
+	 */
+	ReadableCategory getByCode(MerchantStore store, String code, Language language) throws Exception;

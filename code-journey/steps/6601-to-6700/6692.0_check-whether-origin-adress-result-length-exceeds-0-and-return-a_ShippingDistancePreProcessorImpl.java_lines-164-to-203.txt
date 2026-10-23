@@ -1,0 +1,40 @@
+		
+		try {
+			GeocodingResult[] originAdressResult =  GeocodingApi.geocode(context,
+					originAddress.toString()).await();
+
+			GeocodingResult[] destinationAdressResult =  GeocodingApi.geocode(context,
+					destinationAddress.toString()).await();
+
+			if(originAdressResult.length>0 && destinationAdressResult.length>0) {
+				LatLng originLatLng = originAdressResult[0].geometry.location;
+				LatLng destinationLatLng = destinationAdressResult[0].geometry.location;
+				
+				delivery.setLatitude(String.valueOf(destinationLatLng.lat));
+				delivery.setLongitude(String.valueOf(destinationLatLng.lng));
+				
+				//keep latlng for further usage in order to display the map
+	
+				
+				DistanceMatrix  distanceRequest = DistanceMatrixApi.newRequest(context)
+		 		.origins(new LatLng(originLatLng.lat, originLatLng.lng))
+		 		
+		 		.destinations(new LatLng(destinationLatLng.lat, destinationLatLng.lng))
+		 				.awaitIgnoreError();
+				
+				
+				if(distanceRequest!=null) {
+					DistanceMatrixRow distanceMax = distanceRequest.rows[0];
+					Distance distance = distanceMax.elements[0].distance;
+					quote.getQuoteInformations().put(Constants.DISTANCE_KEY, 0.001 * distance.inMeters);
+				} else {
+				  LOGGER.error("Expected distance inner google api to return DistanceMatrix, it returned null. API key might not be working for this request");
+				}
+
+			}
+		
+		} catch (Exception e) {
+			LOGGER.error("Exception while calculating the shipping distance",e);
+		}
+
+	}

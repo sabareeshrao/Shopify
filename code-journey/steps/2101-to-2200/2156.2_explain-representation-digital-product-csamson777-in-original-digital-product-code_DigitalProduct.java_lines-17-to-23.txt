@@ -1,0 +1,7 @@
+
+
+/**
+ * Representation of a digital product
+ * @author csamson777
+ *
+ */

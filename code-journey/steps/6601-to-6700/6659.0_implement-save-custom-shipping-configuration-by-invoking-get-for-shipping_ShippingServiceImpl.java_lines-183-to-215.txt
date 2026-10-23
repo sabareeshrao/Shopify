@@ -1,0 +1,33 @@
+	
+	@Override
+	public void saveCustomShippingConfiguration(String moduleCode, CustomIntegrationConfiguration shippingConfiguration, MerchantStore store) throws ServiceException {
+		
+		
+		ShippingQuoteModule quoteModule = shippingModules.get(moduleCode);
+		if(quoteModule==null) {
+			throw new ServiceException("Shipping module " + moduleCode + " does not exist");
+		}
+		
+		String configurationValue = shippingConfiguration.toJSONString();
+		
+		
+		try {
+
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(moduleCode, store);
+	
+			if(configuration==null) {
+
+				configuration = new MerchantConfiguration();
+				configuration.setKey(moduleCode);
+				configuration.setMerchantStore(store);
+			}
+			configuration.setValue(configurationValue);
+			merchantConfigurationService.saveOrUpdate(configuration);
+		
+		} catch (Exception e) {
+			throw new IntegrationException(e);
+		}
+
+		
+		
+	}

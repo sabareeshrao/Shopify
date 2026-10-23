@@ -1,8 +1,0 @@
-			Path path = Paths.get(merchantPath.toString());
-
-			Files.deleteIfExists(path);
-
-		} catch (final Exception e) {
-			LOGGER.error("Error while deleting content image for {} merchant ", merchantStoreCode);
-			throw new ServiceException(e);
-		}

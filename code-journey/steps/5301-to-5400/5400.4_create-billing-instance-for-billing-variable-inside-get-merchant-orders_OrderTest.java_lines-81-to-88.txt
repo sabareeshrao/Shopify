@@ -1,0 +1,8 @@
+		
+		Billing billing = new Billing();
+	    billing.setAddress("Billing address");
+	    billing.setCity("Billing city");
+	    billing.setCompany("Billing company");
+	    billing.setCountry(country);
+	    billing.setFirstName("Carl");
+	    billing.setLastName("Samson");

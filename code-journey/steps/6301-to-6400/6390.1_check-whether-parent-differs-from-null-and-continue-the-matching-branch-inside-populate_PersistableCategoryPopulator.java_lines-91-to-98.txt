@@ -1,8 +1,0 @@
-
-			if(parent!=null) {
-				target.setParent(parent);
-
-				String lineage = parent.getLineage();
-				int depth = parent.getDepth();
-
-				target.setDepth(depth+1);

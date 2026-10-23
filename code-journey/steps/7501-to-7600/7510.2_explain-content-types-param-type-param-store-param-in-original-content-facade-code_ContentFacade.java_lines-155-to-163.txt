@@ -1,0 +1,9 @@
+	
+	/**
+	 * Get all content types
+	 * @param type
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	List<ReadableContentEntity> getContents(Optional<String> type, MerchantStore store, Language language);

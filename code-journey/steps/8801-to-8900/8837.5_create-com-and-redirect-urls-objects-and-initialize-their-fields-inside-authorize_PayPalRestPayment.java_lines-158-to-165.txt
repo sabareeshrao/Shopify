@@ -1,8 +1,0 @@
-			com.paypal.api.payments.Payment ppayment = new com.paypal.api.payments.Payment();
-			ppayment.setIntent("sale");
-			ppayment.setPayer(payer);
-			ppayment.setTransactions(transactions);
-
-			// ###Redirect URLs
-			RedirectUrls redirectUrls = new RedirectUrls();
-			String guid = UUID.randomUUID().toString().replaceAll("-", "");

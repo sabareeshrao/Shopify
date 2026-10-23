@@ -1,0 +1,9 @@
+	
+	@Inject
+	private Packaging packaging;
+	
+	@Inject
+	private CountryService countryService;
+	
+	@Inject
+	private LanguageService languageService;

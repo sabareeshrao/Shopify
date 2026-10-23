@@ -1,0 +1,7 @@
+	    
+	    
+	    /**
+	     * Creates a review
+	     * TODO requires customer
+	     */
+	    //testReview(product);

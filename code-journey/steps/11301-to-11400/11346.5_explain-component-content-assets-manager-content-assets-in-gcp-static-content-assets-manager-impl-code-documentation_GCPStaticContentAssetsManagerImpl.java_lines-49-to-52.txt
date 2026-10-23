@@ -1,4 +1,0 @@
- */
-@Component("gcpContentAssetsManager")
-public class GCPStaticContentAssetsManagerImpl implements ContentAssetsManager {
-

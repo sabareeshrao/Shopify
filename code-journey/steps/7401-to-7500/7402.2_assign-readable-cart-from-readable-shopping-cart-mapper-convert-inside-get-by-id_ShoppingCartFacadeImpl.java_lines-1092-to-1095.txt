@@ -1,4 +1,0 @@
-
-			readableCart = readableShoppingCartMapper.convert(cart, store, language);
-
-		}

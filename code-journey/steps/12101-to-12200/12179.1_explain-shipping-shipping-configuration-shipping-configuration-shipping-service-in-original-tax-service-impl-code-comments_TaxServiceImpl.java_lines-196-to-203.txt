@@ -1,8 +1,0 @@
-		
-		//tax on shipping ?
-		//ShippingConfiguration shippingConfiguration = shippingService.getShippingConfiguration(store);	
-		
-		/** always calculate tax on shipping **/
-		//if(shippingConfiguration!=null) {
-			//if(shippingConfiguration.isTaxOnShipping()){
-				//use default tax class for shipping

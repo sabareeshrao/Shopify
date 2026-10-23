@@ -1,6 +1,0 @@
-		
-		qs.append("join fetch p.descriptions pd ");
-		qs.append("join fetch p.categories categs ");
-		
-		qs.append("left join fetch pap.descriptions papd ");
-		

@@ -1,4 +1,0 @@
-
-		inventory.setPrice(productPrice);
-		product.setInventory(inventory);
-

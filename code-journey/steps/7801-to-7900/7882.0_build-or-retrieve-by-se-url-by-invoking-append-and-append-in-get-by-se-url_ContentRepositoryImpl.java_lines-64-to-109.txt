@@ -1,0 +1,46 @@
+	
+	@Override
+	public ContentDescription getBySeUrl(MerchantStore store,String seUrl) {
+
+			StringBuilder qs = new StringBuilder();
+
+			qs.append("select c from Content c ");
+			qs.append("left join fetch c.descriptions cd join fetch c.merchantStore cm ");
+			qs.append("where cm.id =:cm ");
+			qs.append("and c.visible =true ");
+			qs.append("and cd.seUrl =:se ");
+
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);
+
+	    	q.setParameter("cm", store.getId());
+	    	q.setParameter("se", seUrl);
+	
+
+	    	Content content = (Content)q.getSingleResult();
+			
+
+			if(content!=null) {
+					return content.getDescription();
+			}
+			
+			@SuppressWarnings("unchecked")
+			List<Content> results = q.getResultList();
+	        if (results.isEmpty()) {
+	        	return null;
+	        } else if (results.size() >= 1) {
+	        		content = results.get(0);
+	        }
+	        
+			if(content!=null) {
+				return content.getDescription();
+			}
+	        
+			
+			return null;
+
+	}
+    
+
+}

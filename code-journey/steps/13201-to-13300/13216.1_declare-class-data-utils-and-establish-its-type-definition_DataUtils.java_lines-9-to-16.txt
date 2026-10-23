@@ -1,8 +1,0 @@
-public class DataUtils {
-	
-	/**
-	 * Removes dashes
-	 * @param postalCode
-	 * @return
-	 */
-	public static String trimPostalCode(String postalCode) {

@@ -1,8 +1,0 @@
-		"zoneCode": "MN",
-		"zoneName": "Minnesota",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "MS",
-		"zoneName": "Mississippi",
-		"countryCode": "US"

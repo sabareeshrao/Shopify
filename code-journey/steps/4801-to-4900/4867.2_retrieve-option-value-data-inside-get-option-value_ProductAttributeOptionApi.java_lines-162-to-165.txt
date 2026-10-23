@@ -1,4 +1,0 @@
-
-		return productOptionFacade.getOptionValue(id, merchantStore, language);
-
-	}

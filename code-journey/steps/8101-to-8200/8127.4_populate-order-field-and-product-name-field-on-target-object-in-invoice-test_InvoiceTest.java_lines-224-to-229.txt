@@ -1,6 +1,0 @@
-		oproduct.setOrder(order);		
-		oproduct.setProductName( "Product name" );
-		oproduct.setProductQuantity(2);
-		oproduct.setSku("TB12345" );		
-		oproduct.getPrices().add(oproductprice ) ;
-		

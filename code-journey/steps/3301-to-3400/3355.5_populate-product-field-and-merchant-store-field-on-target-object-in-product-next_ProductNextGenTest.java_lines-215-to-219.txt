@@ -1,0 +1,5 @@
+	    
+	    //inventory for store DEFAULT and product summerShoes
+	    availability.setProduct(summerShoes);
+	    availability.setMerchantStore(store);
+

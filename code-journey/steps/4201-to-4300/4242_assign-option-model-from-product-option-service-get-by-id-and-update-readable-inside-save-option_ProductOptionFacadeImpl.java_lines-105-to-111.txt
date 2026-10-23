@@ -1,7 +1,0 @@
-
-		optionModel = productOptionService.getById(store, optionModel.getId());
-		ReadableProductOptionEntity readable = readableMapper.convert(optionModel, store, language);
-		return readable;
-
-	}
-

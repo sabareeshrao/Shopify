@@ -1,0 +1,8 @@
+	
+	/**
+	 * Creates content box
+	 * @param box
+	 * @param merchantStore
+	 * @param language
+	 */
+	Long saveContentBox(PersistableContentBox box, MerchantStore merchantStore, Language language);

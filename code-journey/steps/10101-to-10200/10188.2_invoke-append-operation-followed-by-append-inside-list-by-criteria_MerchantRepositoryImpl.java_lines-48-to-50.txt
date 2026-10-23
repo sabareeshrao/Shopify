@@ -1,3 +1,0 @@
-        req.append(" lower(m.storename) like:name");
-        countBuilder.append(" lower(m.storename) like:name");
-      }

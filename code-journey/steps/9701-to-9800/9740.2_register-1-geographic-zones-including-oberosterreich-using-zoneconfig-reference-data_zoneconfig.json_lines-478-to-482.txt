@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "OO",
+		"zoneName": "Oberosterreich",
+		"countryCode": "AT"
+	},

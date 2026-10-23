@@ -1,0 +1,56 @@
+
+			if(store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+
+				digester.addCallMethod("Error/Description",
+						"setError", 0);
+				digester.addCallMethod("RateV3Response/Package/Error/Description",
+						"setError", 0);
+				digester
+						.addObjectCreate(
+								"RateV3Response/Package/Postage",
+								ShippingOption.class);
+				digester.addSetProperties("RateV3Response/Package/Postage",
+						"CLASSID", "optionId");
+				digester.addCallMethod(
+						"RateV3Response/Package/Postage/MailService",
+						"setOptionName", 0);
+				digester.addCallMethod(
+						"RateV3Response/Package/Postage/MailService",
+						"setOptionCode", 0);
+				digester.addCallMethod("RateV3Response/Package/Postage/Rate",
+						"setOptionPriceText", 0);
+				//digester
+				//		.addCallMethod(
+				//				"RateV3Response/Package/Postage/Commitment/CommitmentDate",
+				//				"estimatedNumberOfDays", 0);
+				digester.addSetNext("RateV3Response/Package/Postage",
+						"addOption");
+
+			} else {
+
+				digester.addCallMethod("Error/Description",
+						"setError", 0);
+				digester.addCallMethod("IntlRateResponse/Package/Error/Description",
+						"setError", 0);
+				digester
+						.addObjectCreate(
+								"IntlRateResponse/Package/Service",
+								ShippingOption.class);
+				digester.addSetProperties("IntlRateResponse/Package/Service",
+						"ID", "optionId");
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/SvcDescription",
+						"setOptionName", 0);
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/SvcDescription",
+						"setOptionCode", 0);
+				digester.addCallMethod(
+						"IntlRateResponse/Package/Service/Postage",
+						"setOptionPriceText", 0);
+				//digester.addCallMethod(
+				//		"IntlRateResponse/Package/Service/SvcCommitments",
+				//		"setEstimatedNumberOfDays", 0);
+				digester.addSetNext("IntlRateResponse/Package/Service",
+						"addOption");
+
+			}

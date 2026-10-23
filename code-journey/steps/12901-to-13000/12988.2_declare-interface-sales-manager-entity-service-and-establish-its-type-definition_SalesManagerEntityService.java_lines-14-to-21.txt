@@ -1,8 +1,0 @@
-public interface SalesManagerEntityService<K extends Serializable & Comparable<K>, E extends com.salesmanager.core.model.generic.SalesManagerEntity<K, ?>> extends TransactionalAspectAwareService{
-
-	/**
-	 * Crée l'entité dans la base de données. Mis à part dans les tests pour faire des sauvegardes simples, utiliser
-	 * create() car il est possible qu'il y ait des listeners sur la création d'une entité.
-	 * 
-	 * @param entity entité
-	 */

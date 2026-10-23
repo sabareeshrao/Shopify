@@ -1,6 +1,0 @@
-	@Override
-	public ReadableImage convert(ProductImage source, MerchantStore store, Language language) {
-		ReadableImage destination = new ReadableImage();
-		return merge(source, destination, store, language);
-	}
-

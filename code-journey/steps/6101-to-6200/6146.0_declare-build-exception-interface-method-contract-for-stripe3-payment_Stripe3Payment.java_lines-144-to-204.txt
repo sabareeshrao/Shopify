@@ -1,0 +1,61 @@
+	@Override
+	public Transaction authorize(MerchantStore store, Customer customer,
+			List<ShoppingCartItem> items, BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		
+		Transaction transaction = new Transaction();
+		try {
+			
+
+			String apiKey = configuration.getIntegrationKeys().get("secretKey");
+
+			if(payment.getPaymentMetaData()==null || StringUtils.isBlank(apiKey)) {
+				IntegrationException te = new IntegrationException(
+						"Can't process Stripe, missing payment.metaData");
+				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+				te.setMessageCode("message.payment.error");
+				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+				throw te;
+			}
+			
+			/**
+			 * This is the PaymentIntent ID created on the Frontend, that we will now store.
+			 */
+			String token = payment.getPaymentMetaData().get("stripe_token");
+			
+			if(StringUtils.isBlank(token)) {
+				IntegrationException te = new IntegrationException(
+						"Can't process Stripe, missing stripe token");
+				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+				te.setMessageCode("message.payment.error");
+				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+				throw te;
+			}
+
+			Stripe.apiKey = apiKey;
+			
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					token
+			);
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", token);
+			transaction.getTransactionDetails().put("TRNAPPROVED", paymentIntent.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", paymentIntent.getId());  // <---- We store the PI id here
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+			
+		} catch (Exception e) {
+			
+			throw buildException(e);
+
+		} 
+		
+		return transaction;
+
+		
+	}

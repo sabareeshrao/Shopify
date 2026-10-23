@@ -1,8 +1,0 @@
-
-      Node<String, Object> productNode = this.getNode(nodePath.toString());
-
-
-      InputStream isFile = contentImage.getFile();
-
-      ByteArrayOutputStream output = new ByteArrayOutputStream();
-      IOUtils.copy(isFile, output);

@@ -1,0 +1,4 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/{id}/image/{imageId}",
+			"/auth/product/{id}/image/{id}" }, method = RequestMethod.PATCH)

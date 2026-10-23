@@ -1,0 +1,6 @@
+	
+	@Column(name = "OPTION_NAME", nullable = true)
+	private String optionName = null;
+	
+	@Column(name = "OPTION_CODE", nullable = true)
+	private String optionCode = null;

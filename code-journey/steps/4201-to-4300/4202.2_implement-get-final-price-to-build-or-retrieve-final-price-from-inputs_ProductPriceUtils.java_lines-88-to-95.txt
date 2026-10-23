@@ -1,8 +1,0 @@
-	 * @param List<ProductAttribute>
-	 * @return FinalPrice
-	 */
-	// Pricer
-	public FinalPrice getFinalPrice(Product product, List<ProductAttribute> attributes) throws ServiceException {
-
-		FinalPrice finalPrice = calculateFinalPrice(product);
-

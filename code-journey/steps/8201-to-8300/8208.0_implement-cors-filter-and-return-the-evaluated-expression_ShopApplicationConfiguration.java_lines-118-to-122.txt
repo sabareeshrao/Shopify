@@ -1,0 +1,5 @@
+
+  @Bean
+  public CorsFilter corsFilter() {
+    return new CorsFilter();
+  }

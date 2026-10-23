@@ -1,0 +1,9 @@
+
+	<beans:bean id="persistenceExceptionTranslationPostProcessor"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<!-- in sm-shop -->
+	<beans:bean id="coreConfiguration"
+		class="com.salesmanager.core.business.utils.CoreConfiguration">
+		<beans:property name="properties" ref="shopizer-properties" />
+	</beans:bean>

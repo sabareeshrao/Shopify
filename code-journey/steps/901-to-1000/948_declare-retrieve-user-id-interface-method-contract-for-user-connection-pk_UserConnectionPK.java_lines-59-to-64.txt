@@ -1,6 +1,0 @@
-	public int hashCode() {
-		return getUserId().hashCode() + getProviderId().hashCode()
-				+ getProviderUserId().hashCode();
-	}
-
-}

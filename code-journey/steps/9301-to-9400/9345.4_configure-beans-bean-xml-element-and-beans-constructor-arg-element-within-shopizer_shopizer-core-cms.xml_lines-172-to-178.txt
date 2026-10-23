@@ -1,0 +1,7 @@
+	<beans:bean id="infinispanProductAssetsManager" 
+		class="com.salesmanager.core.business.modules.cms.impl.StoreCacheManagerImpl">
+		<beans:constructor-arg value="${config.cms.store.location}"/><!-- location -->
+		<beans:constructor-arg value="product-merchant"/><!-- root -->
+	</beans:bean>	
+	
+	<!-- infinispan static STARTUP-->

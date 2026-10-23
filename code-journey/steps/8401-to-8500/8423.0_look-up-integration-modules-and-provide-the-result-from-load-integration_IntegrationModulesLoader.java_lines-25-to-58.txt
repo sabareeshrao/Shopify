@@ -1,0 +1,34 @@
+	public List<IntegrationModule> loadIntegrationModules(String jsonFilePath) throws Exception {
+		
+		
+		List<IntegrationModule> modules = new ArrayList<IntegrationModule>();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		
+		try {
+			
+            InputStream in =
+                this.getClass().getClassLoader().getResourceAsStream(jsonFilePath);
+			
+            
+            @SuppressWarnings("rawtypes")
+			Map[] objects = mapper.readValue(in, Map[].class);
+
+			for (Map object : objects) {
+
+				modules.add(this.loadModule(object));
+			}
+            
+            return modules;
+
+  		} catch (Exception e) {
+  			throw new ServiceException(e);
+  		}
+  		
+  		
+
+		
+	
+	
+	
+	}

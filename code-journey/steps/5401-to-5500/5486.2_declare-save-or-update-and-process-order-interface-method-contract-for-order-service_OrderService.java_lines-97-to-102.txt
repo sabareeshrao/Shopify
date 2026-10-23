@@ -1,0 +1,6 @@
+
+    void saveOrUpdate(Order order) throws ServiceException;
+
+	Order processOrder(Order order, Customer customer,
+			List<ShoppingCartItem> items, OrderTotalSummary summary,
+			Payment payment, MerchantStore store) throws ServiceException;

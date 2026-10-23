@@ -1,4 +1,0 @@
-			LOGGER.error("Customer is null for id " + id);
-			response.sendError(404, "Customer is null for id " + id);
-			return null;
-		}

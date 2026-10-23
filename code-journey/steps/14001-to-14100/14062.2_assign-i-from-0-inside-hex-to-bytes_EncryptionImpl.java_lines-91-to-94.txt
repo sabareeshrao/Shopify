@@ -1,4 +1,0 @@
-			for (int i = 0; i < len; i++) {
-				buffer[i] = (byte) Integer.parseInt(str.substring(i * 2,
-						i * 2 + 2), 16);
-			}

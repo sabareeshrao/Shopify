@@ -1,8 +1,0 @@
-	 * any additional prices based on the default attributes or based on the user selected attributes.
-	 * @param product
-	 * @param attributes
-	 * @return
-	 * @throws ServiceException
-	 */
-	FinalPrice calculateProductPrice(Product product,
-			List<ProductAttribute> attributes) throws ServiceException;

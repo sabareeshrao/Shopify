@@ -1,8 +1,0 @@
-    @Test
-    @Order(1)
-    public void addToCart() throws Exception {
-
-    	ReadableProduct product = sampleProduct("addToCart");
-    	assertNotNull(product);
-    	data.getProducts().add(product);
-

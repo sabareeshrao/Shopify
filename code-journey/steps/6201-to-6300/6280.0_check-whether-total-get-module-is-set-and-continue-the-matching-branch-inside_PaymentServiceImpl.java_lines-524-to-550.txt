@@ -1,0 +1,27 @@
+		
+		Transaction transaction = paymentModule.refund(partial, store, refundable, order, amount, configuration, integrationModule);
+		transaction.setOrder(order);
+		transactionService.create(transaction);
+		
+        OrderTotal refund = new OrderTotal();
+        refund.setModule(Constants.OT_REFUND_MODULE_CODE);
+        refund.setText(Constants.OT_REFUND_MODULE_CODE);
+        refund.setTitle(Constants.OT_REFUND_MODULE_CODE);
+        refund.setOrderTotalCode(Constants.OT_REFUND_MODULE_CODE);
+        refund.setOrderTotalType(OrderTotalType.REFUND);
+        refund.setValue(amount);
+        refund.setSortOrder(100);
+        refund.setOrder(order);
+        
+        order.getOrderTotal().add(refund);
+        
+		//update order total
+		orderTotal = orderTotal.subtract(amount);
+        
+        //update ordertotal refund
+        Set<OrderTotal> totals = order.getOrderTotal();
+        for(OrderTotal total : totals) {
+        	if(total.getModule().equals(Constants.OT_TOTAL_MODULE_CODE)) {
+        		total.setValue(orderTotal);
+        	}
+        }

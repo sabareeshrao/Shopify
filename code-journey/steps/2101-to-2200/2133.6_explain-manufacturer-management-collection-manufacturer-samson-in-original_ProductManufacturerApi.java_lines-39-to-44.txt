@@ -1,0 +1,6 @@
+
+/**
+ * Manufacturer management Collection, Manufacturer ...
+ *
+ * @author c.samson
+ */

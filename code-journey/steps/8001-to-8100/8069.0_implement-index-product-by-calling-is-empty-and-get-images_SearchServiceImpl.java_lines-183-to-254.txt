@@ -1,0 +1,72 @@
+
+	private void indexProduct(MerchantStore store, ProductDescription description, Product product,
+			List<Map<String, String>> variants) throws ServiceException {
+
+		try {
+			ProductImage image = null;
+			if (!CollectionUtils.isEmpty(product.getImages())) {
+				image = product.getImages().stream().filter(i -> i.isDefaultImage()).findFirst()
+						.orElse(product.getImages().iterator().next());
+			}
+			
+			/**
+			 * Inventory
+			 */
+			
+			/**
+			 * SKU, QTY, PRICE, DISCOUNT
+			 */
+			
+			List<Map<String, String>> itemInventory = new ArrayList<Map<String, String>>();
+			
+			itemInventory.add(inventory(product));
+			
+			if (!CollectionUtils.isEmpty(product.getVariants())) {
+				for(ProductVariant variant : product.getVariants()) {
+					itemInventory.add(inventory(variant));
+				}
+			}
+
+			IndexItem item = new IndexItem();
+			item.setId(product.getId());
+			item.setStore(store.getCode().toLowerCase());
+			item.setDescription(description.getDescription());
+			item.setName(description.getName());
+			item.setInventory(itemInventory);
+
+
+			if (product.getManufacturer() != null) {
+				item.setBrand(manufacturer(product.getManufacturer(), description.getLanguage().getCode()));
+			}
+
+			if (!CollectionUtils.isEmpty(product.getCategories())) {
+				item.setCategory(
+						category(product.getCategories().iterator().next(), description.getLanguage().getCode()));
+			}
+
+			if (!CollectionUtils.isEmpty(product.getAttributes())) {
+				Map<String, String> attributes = attributes(product, description.getLanguage().getCode());
+				item.setAttributes(attributes);
+			}
+
+			if (image != null) {
+				item.setImage(image.getProductImage());
+			}
+
+			if (product.getProductReviewAvg() != null) {
+				item.setReviews(product.getProductReviewAvg().toString());
+			}
+
+			if (!CollectionUtils.isEmpty(variants)) {
+				item.setVariants(variants);
+			}
+
+			item.setLanguage(description.getLanguage().getCode());
+			item.setLink(description.getSeUrl());
+
+			searchModule.index(item);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

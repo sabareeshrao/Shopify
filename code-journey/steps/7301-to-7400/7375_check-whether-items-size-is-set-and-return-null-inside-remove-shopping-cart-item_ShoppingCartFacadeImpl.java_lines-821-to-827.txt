@@ -1,7 +1,0 @@
-
-		shoppingCartService.saveOrUpdate(cart);// update cart with remaining items
-		if (items.size() > 0 & returnCart) {
-			return this.getByCode(cartCode, merchant, language);
-		}
-		return null;
-	}

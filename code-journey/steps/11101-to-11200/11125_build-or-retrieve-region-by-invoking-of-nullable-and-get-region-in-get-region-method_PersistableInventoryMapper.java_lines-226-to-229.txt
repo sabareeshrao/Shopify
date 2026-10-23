@@ -1,4 +1,0 @@
-	private String getRegion(PersistableInventory source) {
-		return Optional.ofNullable(source.getRegion()).filter(StringUtils::isNotBlank).orElse(Constants.ALL_REGIONS);
-	}
-

@@ -1,8 +1,0 @@
-	{
-		"zoneCode": "Toledo",
-		"zoneName": "Toledo",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Valencia",
-		"zoneName": "Valencia",

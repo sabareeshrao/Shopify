@@ -1,5 +1,0 @@
-    private TransactionService transactionService;
-
-    @Inject
-    private OrderTotalService orderTotalService;
-

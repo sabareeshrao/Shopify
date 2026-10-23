@@ -1,8 +1,0 @@
-	public BigDecimal getSubTotal() {
-		return subTotal;
-	}
-	public void setSubTotal(BigDecimal subTotal) {
-		this.subTotal = subTotal;
-	}
-	public String getDisplaySubTotal() {
-		return displaySubTotal;

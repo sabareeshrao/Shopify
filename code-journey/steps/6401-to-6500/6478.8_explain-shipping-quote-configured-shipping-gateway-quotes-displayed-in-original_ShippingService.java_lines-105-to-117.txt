@@ -1,0 +1,13 @@
+
+	/**
+	 * Get a list of ShippingQuote from a configured
+	 * shipping gateway. The quotes are displayed to the end user so he can pick
+	 * the ShippingOption he wants
+	 * @param store
+	 * @param shoppingCartId
+	 * @param customer
+	 * @param products
+	 * @param language
+	 * @return
+	 * @throws ServiceException
+	 */

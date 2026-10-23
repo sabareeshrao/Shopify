@@ -1,3 +1,0 @@
-		if(!opt.getMerchantStore().getCode().equals(store.getCode())) {
-			throw new ResourceNotFoundException("ProductVariation not found for id [" + variationId +"] and store [" + store.getCode() + "]");
-		}

@@ -1,8 +1,0 @@
-	private void instanceToOption(TreeMap<Long, ReadableProductOption> selectableOptions, ProductVariant instance,
-			MerchantStore store, Language language) {
-
-
-		ReadableProductOption option = this.option(selectableOptions, instance.getVariation().getProductOption(), language);
-		option.setVariant(true);
-
-

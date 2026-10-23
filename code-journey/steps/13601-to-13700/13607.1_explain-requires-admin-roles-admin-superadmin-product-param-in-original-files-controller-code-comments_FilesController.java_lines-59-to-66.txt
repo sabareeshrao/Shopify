@@ -1,8 +1,0 @@
-	
-	/**
-	 * Requires admin with roles admin, superadmin or product
-	 * @param storeCode
-	 * @param fileName
-	 * @param extension
-	 * @param request
-	 * @param response

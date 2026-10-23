@@ -1,8 +1,0 @@
-	 * 
-	 */
-	@Override
-	public void addFile(final String merchantStoreCode, Optional<String>path, final InputContentFile inputStaticContentData)
-			throws ServiceException {
-		if (cacheManager.getTreeCache() == null) {
-			LOGGER.error("Unable to find cacheManager.getTreeCache() in Infinispan..");
-			throw new ServiceException(

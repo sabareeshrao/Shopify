@@ -1,8 +1,0 @@
-	           String customerUrl = filePathUtils.buildStoreUri(merchantStore, contextPath);
-	           templateTokens.put(EmailConstants.CUSTOMER_ACCESS_URL, customerUrl);
-
-	           Email email = new Email();
-	           email.setFrom(merchantStore.getStorename());
-	           email.setFromEmail(merchantStore.getStoreEmailAddress());
-	           email.setSubject(messages.getMessage("email.newuser.title",customerLocale));
-	           email.setTo(customer.getEmailAddress());

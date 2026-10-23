@@ -1,6 +1,0 @@
-	@Override
-	public void addChild(Category parent, Category child) throws ServiceException {
-
-		if (child == null || child.getMerchantStore() == null) {
-			throw new ServiceException("Child category and merchant store should not be null");
-		}

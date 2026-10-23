@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "ARCH",
+			"zoneName": "Appenzell Ausserrhoden",
+			"countryCode": "CH"
+		},

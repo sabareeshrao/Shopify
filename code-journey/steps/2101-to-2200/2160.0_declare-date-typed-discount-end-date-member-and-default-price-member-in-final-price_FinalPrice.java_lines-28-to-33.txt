@@ -1,0 +1,6 @@
+	private Date discountEndDate = null;
+	
+	private boolean defaultPrice;
+	private ProductPrice productPrice;
+	List<FinalPrice> additionalPrices;
+

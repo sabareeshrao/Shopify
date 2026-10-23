@@ -1,0 +1,9 @@
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@ExtendWith(SpringExtension.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class ShoppingCartAPIIntegrationTest extends ServicesTestSupport {
+
+    @Autowired
+    private TestRestTemplate testRestTemplate;
+

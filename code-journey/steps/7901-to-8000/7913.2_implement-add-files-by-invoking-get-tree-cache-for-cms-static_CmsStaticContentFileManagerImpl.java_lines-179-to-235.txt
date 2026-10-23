@@ -1,0 +1,57 @@
+	@Override
+	public void addFiles(final String merchantStoreCode, Optional<String> folderPath,
+			final List<InputContentFile> inputStaticContentDataList) throws ServiceException {
+		/*
+		 * if ( cacheManager.getTreeCache() == null ) { LOGGER.error(
+		 * "Unable to find cacheManager.getTreeCache() in Infinispan.." ); throw
+		 * new ServiceException(
+		 * "CmsStaticContentFileManagerInfinispanImpl has a null cacheManager.getTreeCache()"
+		 * ); }
+		 */
+		try {
+
+			// base path
+			String rootPath = this.buildRootPath();
+			Path confDir = Paths.get(rootPath);
+			this.createDirectoryIfNorExist(confDir);
+
+			// node path
+			StringBuilder nodePath = new StringBuilder();
+			nodePath.append(rootPath).append(merchantStoreCode);
+			Path merchantPath = Paths.get(nodePath.toString());
+			this.createDirectoryIfNorExist(merchantPath);
+
+			for (final InputContentFile inputStaticContentData : inputStaticContentDataList) {
+
+				// file path
+				nodePath.append(Constants.SLASH).append(inputStaticContentData.getFileContentType())
+						.append(Constants.SLASH);
+				Path dirPath = Paths.get(nodePath.toString());
+				this.createDirectoryIfNorExist(dirPath);
+
+				// file creation
+				nodePath.append(Constants.SLASH).append(inputStaticContentData.getFileName());
+
+				Path path = Paths.get(nodePath.toString());
+
+				Files.copy(inputStaticContentData.getFile(), path, StandardCopyOption.REPLACE_EXISTING);
+
+				// String nodePath = this.getNodePath(merchantStoreCode,
+				// inputStaticContentData.getFileContentType());
+
+				// final Node<String, Object> merchantNode =
+				// this.getNode(nodePath);
+				// merchantNode.put(inputStaticContentData.getFileName(),
+				// IOUtils.toByteArray(
+				// inputStaticContentData.getFile() ));
+
+			}
+
+			LOGGER.info("Total {} files added successfully.", inputStaticContentDataList.size());
+
+		} catch (final Exception e) {
+			LOGGER.error("Error while saving content image", e);
+			throw new ServiceException(e);
+
+		}
+	}

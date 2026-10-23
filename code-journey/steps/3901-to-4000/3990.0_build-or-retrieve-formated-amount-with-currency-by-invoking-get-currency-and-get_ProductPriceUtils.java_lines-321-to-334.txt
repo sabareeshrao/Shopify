@@ -1,0 +1,14 @@
+
+	// Utility
+	public String getFormatedAmountWithCurrency(Locale locale,
+			com.salesmanager.core.model.reference.currency.Currency currency, BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}
+
+		Currency curr = currency.getCurrency();
+		NumberFormat currencyInstance = NumberFormat.getCurrencyInstance(locale);
+		currencyInstance.setCurrency(curr);
+		return currencyInstance.format(amount.doubleValue());
+
+	}

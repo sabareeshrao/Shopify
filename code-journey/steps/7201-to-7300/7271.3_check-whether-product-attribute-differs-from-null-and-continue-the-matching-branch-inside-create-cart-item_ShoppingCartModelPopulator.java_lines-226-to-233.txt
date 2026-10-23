@@ -1,8 +1,0 @@
-            Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> newAttributes =
-                new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem>();
-            for ( ShoppingCartAttribute attribute : cartAttributes )
-            {
-                ProductAttribute productAttribute = productAttributeService.getById( attribute.getAttributeId() );
-                if ( productAttribute != null
-                    && productAttribute.getProduct().getId().longValue() == product.getId().longValue() )
-                {

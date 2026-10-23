@@ -1,4 +1,0 @@
-				destination.setPrice(price.getFinalPrice());
-				destination.setOriginalPrice(pricingService.getDisplayAmount(price.getOriginalPrice(), store));
-						
-			}

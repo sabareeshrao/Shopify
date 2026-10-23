@@ -1,0 +1,7 @@
+			xmldatabuffer.append("<CountryCode>");
+			xmldatabuffer.append(store.getCountry().getIsoCode());
+			xmldatabuffer.append("</CountryCode>");
+			xmldatabuffer.append("<PostalCode>");
+			xmldatabuffer.append(DataUtils
+					.trimPostalCode(store.getStorepostalcode()));
+			xmldatabuffer.append("</PostalCode></Address></Shipper>");

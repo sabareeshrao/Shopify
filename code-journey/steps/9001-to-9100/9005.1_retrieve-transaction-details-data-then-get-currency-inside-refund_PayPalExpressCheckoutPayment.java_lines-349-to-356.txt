@@ -1,8 +1,0 @@
-			
-			
-			Validate.notNull(transaction,"Transaction cannot be null");
-			Validate.notNull(transaction.getTransactionDetails().get("TRANSACTIONID"), "Transaction details must contain a TRANSACTIONID");
-			Validate.notNull(order,"Order must not be null");
-			Validate.notNull(order.getCurrency(),"Order nust contain Currency object");
-			
-			String mode = "sandbox";

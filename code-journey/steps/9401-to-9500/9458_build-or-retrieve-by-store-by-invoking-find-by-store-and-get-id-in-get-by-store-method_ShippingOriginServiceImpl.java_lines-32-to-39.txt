@@ -1,8 +1,0 @@
-	@Override
-	public ShippingOrigin getByStore(MerchantStore store) {
-		// TODO Auto-generated method stub
-		return shippingOriginRepository.findByStore(store.getId());
-	}
-	
-
-}

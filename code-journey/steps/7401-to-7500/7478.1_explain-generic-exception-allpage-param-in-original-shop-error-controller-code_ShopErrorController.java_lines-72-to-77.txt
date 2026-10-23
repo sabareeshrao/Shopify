@@ -1,0 +1,6 @@
+	
+	/**
+	 * Generic exception catch allpage
+	 * @param ex
+	 * @return
+	 */

@@ -1,0 +1,5 @@
+    public Address getAddress(final Long userId, final MerchantStore merchantStore,boolean isBillingAddress) throws Exception;
+    
+    public void updateAddress( Long userId, MerchantStore merchantStore, Address address, final Language language )
+                    throws Exception;
+

@@ -1,6 +1,0 @@
-
-			// security validation
-			// product belongs to merchant store
-			if (product.getMerchantStore().getId().intValue() != merchantStore.getId().intValue()) {
-				throw new UnauthorizedException("Resource not authorized for this merchant");
-			}

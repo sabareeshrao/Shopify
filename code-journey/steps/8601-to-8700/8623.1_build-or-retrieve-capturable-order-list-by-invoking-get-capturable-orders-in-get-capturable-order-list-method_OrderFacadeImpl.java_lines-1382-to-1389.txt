@@ -1,8 +1,0 @@
-	@Override
-	public com.salesmanager.shop.model.order.v0.ReadableOrderList getCapturableOrderList(MerchantStore store,
-			Date startDate, Date endDate, Language language) throws Exception {
-
-		// get all transactions for the given date
-		List<Order> orders = orderService.getCapturableOrders(store, startDate, endDate);
-
-		// ReadableOrderPopulator orderPopulator = new ReadableOrderPopulator();

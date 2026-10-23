@@ -1,0 +1,4 @@
+
+			// Read input from the input stream.
+			in = new DataInputStream(conn.getInputStream());
+			int rc = conn.getResponseCode();

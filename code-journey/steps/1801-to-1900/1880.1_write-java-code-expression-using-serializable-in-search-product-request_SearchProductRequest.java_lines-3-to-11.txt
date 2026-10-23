@@ -1,0 +1,9 @@
+import java.io.Serializable;
+
+import javax.validation.constraints.NotEmpty;
+
+/**
+ * Search product request
+ * @author c.samson
+ *
+ */

@@ -1,9 +1,0 @@
-				}
-			}
-			description = getDescription(desc);
-			description.setProductPrice(price);
-			descs.add(description);
-		}
-		return descs;
-	}
-

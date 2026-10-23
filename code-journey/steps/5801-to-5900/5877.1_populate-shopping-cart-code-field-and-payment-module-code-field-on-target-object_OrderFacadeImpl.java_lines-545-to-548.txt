@@ -1,0 +1,4 @@
+
+			modelOrder.setShoppingCartCode(shoppingCartCode);
+			modelOrder.setPaymentModuleCode(order.getPaymentModule());
+			payment.setModuleName(order.getPaymentModule());

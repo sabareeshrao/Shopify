@@ -1,0 +1,3 @@
+
+	@Override
+	public Optional<Document> getDocument(String language, MerchantStore store, Long productId)

@@ -1,3 +1,0 @@
-			 
-			 DoCaptureReq doCaptureReq = new DoCaptureReq();
-

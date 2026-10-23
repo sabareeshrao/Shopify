@@ -1,4 +1,0 @@
-		"zoneCode": "Maharashtra",
-		"zoneName": "Maharashtra",
-		"countryCode": "IN"
-	},

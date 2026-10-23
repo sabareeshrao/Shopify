@@ -1,0 +1,7 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.repositories.catalog.product.variant.PageableProductVariantGroupRepository;
+import com.salesmanager.core.business.repositories.catalog.product.variant.ProductVariantGroupRepository;
+import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariantGroup;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;

@@ -1,7 +1,0 @@
-      int keySize = 0;
-
-      for (String key : keys) {
-        List<String> values = this.getIntegrationOptions().get(key);
-        if (values != null) {
-          keySize++;
-        }

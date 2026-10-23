@@ -1,8 +1,0 @@
-	
-	/**
-	 * yyyy-MM-dd
-	 * 
-	 * @param dt
-	 * @return
-	 */
-	public static String formatDate(Date dt) {

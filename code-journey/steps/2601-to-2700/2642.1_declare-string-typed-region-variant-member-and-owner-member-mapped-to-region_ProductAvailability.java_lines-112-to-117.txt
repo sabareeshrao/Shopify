@@ -1,0 +1,6 @@
+
+	@Column(name = "REGION_VARIANT")
+	private String regionVariant;
+
+	@Column(name = "OWNER")
+	private String owner;

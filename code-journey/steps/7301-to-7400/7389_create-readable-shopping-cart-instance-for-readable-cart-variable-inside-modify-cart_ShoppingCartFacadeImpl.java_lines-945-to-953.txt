@@ -1,9 +1,0 @@
-
-		shoppingCartCalculationService.calculate(cartModel, store, language);
-
-		ReadableShoppingCart readableCart = new ReadableShoppingCart();
-		readableCart = readableShoppingCartMapper.convert(cartModel, store, language);
-
-		return readableCart;
-
-	}

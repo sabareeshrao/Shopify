@@ -1,0 +1,6 @@
+public abstract class CacheManagerImpl implements CacheManager {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(CacheManagerImpl.class);
+
+  //private static final String LOCATION_PROPERTIES = "location";
+

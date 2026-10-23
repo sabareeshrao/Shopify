@@ -1,0 +1,14 @@
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/merchant/{code}/children" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get child stores", notes = "", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableMerchantStoreList children(@PathVariable String code, @ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count,
+			HttpServletRequest request) {
+
+		String userName = getUserFromRequest(request);
+		validateUserPermission(userName, code);
+		return storeFacade.getChildStores(language, code, page, count);
+
+	}

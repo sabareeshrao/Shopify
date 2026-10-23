@@ -1,0 +1,13 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/option" }, method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody ReadableProductOptionEntity createOption(
+			@Valid @RequestBody PersistableProductOptionEntity option, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) {
+
+		ReadableProductOptionEntity entity = productOptionFacade.saveOption(option, merchantStore, language);
+		return entity;
+
+	}

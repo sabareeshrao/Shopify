@@ -1,0 +1,3 @@
+			double totalL = 0;
+			double totalG = 0;
+			double totalP = 0;

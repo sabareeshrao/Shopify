@@ -1,0 +1,6 @@
+		
+		ReadableProductVariant defaultInstance = null;
+
+		// variants
+		if (!CollectionUtils.isEmpty(source.getVariants()))
+

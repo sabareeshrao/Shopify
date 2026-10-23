@@ -1,8 +1,0 @@
-				target.setOrderAttributes(attrs);
-			}
-
-			target.setDatePurchased(new Date());
-			target.setCurrency(currency);
-			target.setCurrencyValue(new BigDecimal(0));
-			target.setMerchant(store);
-			target.setChannel(OrderChannel.API);

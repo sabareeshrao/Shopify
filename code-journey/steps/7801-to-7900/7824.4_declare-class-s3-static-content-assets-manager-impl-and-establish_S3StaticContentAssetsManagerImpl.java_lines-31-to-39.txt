@@ -1,0 +1,9 @@
+
+/**
+ * Static content management with S3
+ * 
+ * @author carlsamson
+ *
+ */
+public class S3StaticContentAssetsManagerImpl implements ContentAssetsManager {
+

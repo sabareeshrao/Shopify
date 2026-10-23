@@ -1,0 +1,6 @@
+  @PostMapping("/private/customers/{id}/reviews")
+  @ResponseStatus(HttpStatus.CREATED)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en")
+  })

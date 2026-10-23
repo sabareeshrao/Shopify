@@ -1,4 +1,0 @@
-					if(descriptionModel.getLanguage().getCode().equals(lang.getCode())) {
-						contentDescription = descriptionModel;
-						break;
-					}

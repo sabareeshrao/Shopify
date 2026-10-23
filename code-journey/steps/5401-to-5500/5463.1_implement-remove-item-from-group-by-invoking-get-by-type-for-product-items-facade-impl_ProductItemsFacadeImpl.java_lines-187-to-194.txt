@@ -1,8 +1,0 @@
-	@Override
-	public ReadableProductList removeItemFromGroup(Product product, String group, MerchantStore store,
-			Language language) throws Exception {
-		
-		List<ProductRelationship> relationships = productRelationshipService
-				.getByType(store, product, group);
-		
-

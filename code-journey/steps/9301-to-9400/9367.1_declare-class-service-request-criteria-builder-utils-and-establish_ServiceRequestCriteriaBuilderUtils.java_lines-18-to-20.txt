@@ -1,0 +1,3 @@
+public class ServiceRequestCriteriaBuilderUtils {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceRequestCriteriaBuilderUtils.class);

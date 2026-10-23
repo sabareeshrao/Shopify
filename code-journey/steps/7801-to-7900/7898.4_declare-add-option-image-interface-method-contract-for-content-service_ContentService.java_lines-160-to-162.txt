@@ -1,0 +1,3 @@
+	void addOptionImage(String merchantStoreCode, InputContentFile cmsContentImage)
+			throws ServiceException;
+

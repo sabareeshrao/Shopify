@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = Order.class)
+	@JoinColumn(name = "ORDER_ID", nullable = false)
+	private Order order;
+
+	@OneToMany(mappedBy = "orderProduct", cascade = CascadeType.ALL)
+	private Set<OrderProductAttribute> orderAttributes = new HashSet<OrderProductAttribute>();

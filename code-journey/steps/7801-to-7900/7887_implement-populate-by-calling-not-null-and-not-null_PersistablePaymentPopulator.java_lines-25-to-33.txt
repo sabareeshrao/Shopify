@@ -1,9 +1,0 @@
-	@Override
-	public Payment populate(PersistablePayment source, Payment target, MerchantStore store, Language language)
-			throws ConversionException {
-		
-		Validate.notNull(source,"PersistablePayment cannot be null");
-		Validate.notNull(pricingService,"pricingService must be set");
-		if(target == null) {
-			target = new Payment();
-		}

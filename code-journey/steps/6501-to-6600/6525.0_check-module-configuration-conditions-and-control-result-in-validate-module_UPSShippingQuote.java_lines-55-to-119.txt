@@ -1,0 +1,65 @@
+	@Override
+	public void validateModuleConfiguration(
+			IntegrationConfiguration integrationConfiguration,
+			MerchantStore store) throws IntegrationException {
+		
+		
+		List<String> errorFields = null;
+		
+		//validate integrationKeys['accessKey']
+		Map<String,String> keys = integrationConfiguration.getIntegrationKeys();
+		if(keys==null || StringUtils.isBlank(keys.get("accessKey"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("accessKey");
+		}
+		
+		if(keys==null || StringUtils.isBlank(keys.get("userId"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("userId");
+		}
+		
+		if(keys==null || StringUtils.isBlank(keys.get("password"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("password");
+		}
+
+		//validate at least one integrationOptions['packages']
+		Map<String,List<String>> options = integrationConfiguration.getIntegrationOptions();
+		if(options==null) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("packages");
+		}
+		
+		List<String> packages = options.get("packages");
+		if(packages==null || packages.size()==0) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("packages");
+		}
+		
+/*		List<String> services = options.get("services");
+		if(services==null || services.size()==0) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("services");
+		}
+		
+		if(services!=null && services.size()>3) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("services");
+		}*/
+		
+		if(errorFields!=null) {
+			IntegrationException ex = new IntegrationException(IntegrationException.ERROR_VALIDATION_SAVE);
+			ex.setErrorFields(errorFields);
+			throw ex;
+			
+		}
+		
+		
+
+	}

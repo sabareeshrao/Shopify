@@ -1,0 +1,7 @@
+	
+	@ManyToOne(targetEntity = MerchantStore.class)
+	@JoinColumn(name = "MERCHANT_ID", nullable = false)
+	private MerchantStore store;
+	
+	@Column(name = "FILE_ID")
+	private Long fileId;

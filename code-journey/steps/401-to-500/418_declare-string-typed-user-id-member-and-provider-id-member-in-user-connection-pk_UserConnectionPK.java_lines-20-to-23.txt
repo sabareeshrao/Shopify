@@ -1,4 +1,0 @@
-	private String userId;
-	private String providerId;
-	private String providerUserId;
-

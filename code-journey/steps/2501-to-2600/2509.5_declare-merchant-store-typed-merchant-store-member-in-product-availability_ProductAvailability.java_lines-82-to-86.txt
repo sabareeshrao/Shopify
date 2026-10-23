@@ -1,0 +1,5 @@
+
+	/** Specific retailer store **/
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "MERCHANT_ID", nullable = true)
+	private MerchantStore merchantStore;

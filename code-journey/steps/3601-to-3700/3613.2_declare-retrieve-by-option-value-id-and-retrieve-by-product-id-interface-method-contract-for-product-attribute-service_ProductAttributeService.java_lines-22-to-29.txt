@@ -1,8 +1,0 @@
-
-	List<ProductAttribute> getByOptionValueId(MerchantStore store,
-			Long id) throws ServiceException;
-
-	Page<ProductAttribute> getByProductId(MerchantStore store, Product product, Language language, int page, int count)
-			throws ServiceException;
-	
-	Page<ProductAttribute> getByProductId(MerchantStore store, Product product, int page, int count)

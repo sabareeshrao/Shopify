@@ -1,0 +1,7 @@
+	@Override
+	public ProductList listByStore(MerchantStore store, Language language, ProductCriteria criteria) {
+
+		ProductList productList = new ProductList();
+
+		StringBuilder countBuilderSelect = new StringBuilder();
+		countBuilderSelect.append("select count(distinct p) from Product as p");

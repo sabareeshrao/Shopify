@@ -1,0 +1,9 @@
+
+/**
+ * Utility class for image resize functions
+ * @author Carl Samson
+ *
+ */
+public class ProductImageSizeUtils {
+
+

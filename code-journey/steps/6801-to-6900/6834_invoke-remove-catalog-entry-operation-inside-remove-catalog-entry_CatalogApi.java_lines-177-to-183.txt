@@ -1,7 +1,0 @@
-
-	  catalogFacade.removeCatalogEntry(id, entryId, merchantStore, language);
-
-
-
-  }
-

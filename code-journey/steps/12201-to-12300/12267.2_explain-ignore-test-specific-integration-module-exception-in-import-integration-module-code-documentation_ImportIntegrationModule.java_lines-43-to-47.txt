@@ -1,5 +1,0 @@
-	 */
-	@Ignore
-	//@Test
-	public void importSpecificIntegrationModule() throws Exception {
-		

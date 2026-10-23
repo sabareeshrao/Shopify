@@ -1,0 +1,3 @@
+	OutputContentFile download(MerchantStore store, FileContentType fileType, String fileName);
+
+}

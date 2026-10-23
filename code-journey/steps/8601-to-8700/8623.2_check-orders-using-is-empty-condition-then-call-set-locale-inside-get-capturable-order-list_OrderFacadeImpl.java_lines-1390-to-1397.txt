@@ -1,8 +1,0 @@
-		Locale locale = LocaleUtils.getLocale(language);
-		readableOrderPopulator.setLocale(locale);
-
-		com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();
-
-		if (CollectionUtils.isEmpty(orders)) {
-			returnList.setRecordsTotal(0);
-			// returnList.setMessage("No results for store code " + store);

@@ -1,0 +1,3 @@
+
+	@Override
+	public SearchResponse searchKeywords(MerchantStore store, String language, SearchRequest search, int entriesCount)

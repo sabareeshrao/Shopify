@@ -1,8 +1,0 @@
-		desc.setDescription(contentDescription.getDescription());
-
-		page.setId(content.getId());
-		desc.setSeUrl(contentDescription.getSeUrl());
-		page.setLinkToMenu(content.isLinkToMenu());
-		desc.setTitle(contentDescription.getTitle());
-		desc.setMetatagDescription(contentDescription.getMetatagDescription());
-		page.setContentType(ContentType.PAGE.name());

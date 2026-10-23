@@ -1,0 +1,3 @@
+	
+	List<Category> listByStoreAndParent(MerchantStore store, Category category) throws ServiceException;
+	

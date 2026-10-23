@@ -1,0 +1,4 @@
+    private  ShoppingCartCalculationService shoppingCartCalculationService;
+    
+    private ImageFilePath imageUtils;
+

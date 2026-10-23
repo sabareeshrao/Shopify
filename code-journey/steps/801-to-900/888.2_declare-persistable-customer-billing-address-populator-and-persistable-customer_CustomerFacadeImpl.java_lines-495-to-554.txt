@@ -1,0 +1,60 @@
+  @Override
+  public void updateAddress(Long userId, MerchantStore merchantStore, Address address,
+      final Language language) throws Exception {
+
+    Customer customerModel = customerService.getById(userId);
+    Map<String, Country> countriesMap = countryService.getCountriesMap(language);
+    Country country = countriesMap.get(address.getCountry());
+
+    if (customerModel == null) {
+      LOG.error("Customer with ID {} does not exists..", userId);
+      // throw new CustomerNotFoundException( "customer with given id does not exists" );
+      throw new Exception("customer with given id does not exists");
+
+    }
+    if (address.isBillingAddress()) {
+      LOG.info("updating customer billing address..");
+      PersistableCustomerBillingAddressPopulator billingAddressPopulator =
+          new PersistableCustomerBillingAddressPopulator();
+      customerModel = billingAddressPopulator.populate(address, customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());
+      customerModel.getBilling().setCountry(country);
+      if (StringUtils.isNotBlank(address.getZone())) {
+        Zone zone = zoneService.getByCode(address.getZone());
+        if (zone == null) {
+          throw new ConversionException("Unsuported zone code " + address.getZone());
+        }
+        customerModel.getBilling().setZone(zone);
+        customerModel.getBilling().setState(null);
+
+      } else {
+        customerModel.getBilling().setZone(null);
+      }
+
+    } else {
+      LOG.info("updating customer shipping address..");
+      PersistableCustomerShippingAddressPopulator shippingAddressPopulator =
+          new PersistableCustomerShippingAddressPopulator();
+      customerModel = shippingAddressPopulator.populate(address, customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());
+      customerModel.getDelivery().setCountry(country);
+      if (StringUtils.isNotBlank(address.getZone())) {
+        Zone zone = zoneService.getByCode(address.getZone());
+        if (zone == null) {
+          throw new ConversionException("Unsuported zone code " + address.getZone());
+        }
+
+        customerModel.getDelivery().setZone(zone);
+        customerModel.getDelivery().setState(null);
+
+      } else {
+        customerModel.getDelivery().setZone(null);
+      }
+
+    }
+
+
+    // same update address with customer model
+    this.customerService.saveOrUpdate(customerModel);
+
+  }

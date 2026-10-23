@@ -1,0 +1,8 @@
+	/** if an error occurs, this field will be populated from constants defined above **/
+	private String shippingReturnCode = null;//NO_SHIPPING... or NO_SHIPPING_MODULE... or NO_POSTAL_...
+	/** indicates if this quote is configured with free shipping **/
+	private boolean freeShipping;
+	/** the threshold amount for being free shipping **/
+	private BigDecimal freeShippingAmount;
+	/** handling fees to be added on top of shipping fees **/
+	private BigDecimal handlingFees;

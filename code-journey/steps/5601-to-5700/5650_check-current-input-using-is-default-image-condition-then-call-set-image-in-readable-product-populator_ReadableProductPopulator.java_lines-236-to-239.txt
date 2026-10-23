@@ -1,4 +1,0 @@
-
-					if(prdImage.isDefaultImage()) {
-						target.setImage(prdImage);
-					}

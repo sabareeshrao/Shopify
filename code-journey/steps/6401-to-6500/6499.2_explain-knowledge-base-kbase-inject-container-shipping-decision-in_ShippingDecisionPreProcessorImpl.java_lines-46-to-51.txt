@@ -1,0 +1,6 @@
+	
+	//private KnowledgeBase kbase;
+	
+	//@Inject
+	//KieContainer kieShippingDecisionContainer;
+	

@@ -1,0 +1,10 @@
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "TAX_RATE" , uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"TAX_CODE",
+				"MERCHANT_ID"
+			})
+		}
+	)

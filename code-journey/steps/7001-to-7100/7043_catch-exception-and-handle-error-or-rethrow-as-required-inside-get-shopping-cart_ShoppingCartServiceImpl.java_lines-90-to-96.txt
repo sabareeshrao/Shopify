@@ -1,7 +1,0 @@
-			}
-
-			return shoppingCart;
-
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}

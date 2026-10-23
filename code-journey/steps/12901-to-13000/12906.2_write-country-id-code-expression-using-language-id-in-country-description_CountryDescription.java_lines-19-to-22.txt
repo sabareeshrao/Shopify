@@ -1,4 +1,0 @@
-			"COUNTRY_ID",
-			"LANGUAGE_ID"
-		})
-	}

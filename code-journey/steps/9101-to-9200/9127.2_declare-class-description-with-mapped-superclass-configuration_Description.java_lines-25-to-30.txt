@@ -1,0 +1,6 @@
+
+@MappedSuperclass
+@EntityListeners(value = AuditListener.class)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public class Description implements Auditable, Serializable {
+	private static final long serialVersionUID = 1L;

@@ -1,0 +1,7 @@
+		
+		oproduct.getPrices().add(orderProductPrice);
+		
+		//order product attribute
+		
+		OrderProductAttribute orderProductAttribute = new OrderProductAttribute();
+		orderProductAttribute.setOrderProduct(oproduct);

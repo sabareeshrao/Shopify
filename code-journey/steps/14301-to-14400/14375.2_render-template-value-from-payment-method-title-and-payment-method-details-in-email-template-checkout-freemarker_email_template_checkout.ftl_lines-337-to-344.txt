@@ -1,8 +1,0 @@
-							<li>
-								<a>
-								<strong>${PAYMENT_METHOD_TITLE}</strong><br>
-								${PAYMENT_METHOD_DETAILS}
-								</a>
-							</li>
-
-						</ul>

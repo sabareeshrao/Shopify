@@ -1,8 +1,0 @@
-	    	try {
-		        if (requestHeader != null && requestHeader.startsWith(BEARER_TOKEN)) {//Bearer
-		        	
-		        	jwtCustomCustomerAuthenticationManager.authenticateRequest(request, response);
-	
-		        } else if(requestHeader != null && requestHeader.startsWith(FACEBOOK_TOKEN)) {
-		        	//Facebook
-		        	//facebookCustomerAuthenticationManager.authenticateRequest(request, response);

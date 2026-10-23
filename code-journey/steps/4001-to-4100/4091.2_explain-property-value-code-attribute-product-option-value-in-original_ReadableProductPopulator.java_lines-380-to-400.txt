@@ -1,0 +1,21 @@
+
+/*								propertyValue.setCode(attribute.getProductOptionValue().getCode());
+								propertyValue.setId(attribute.getProductOptionValue().getId());
+
+
+								propertyValue.setSortOrder(0);
+								if(attribute.getProductOptionSortOrder()!=null) {
+									propertyValue.setSortOrder(attribute.getProductOptionSortOrder().intValue());
+								}
+
+								List<ProductOptionValueDescription> podescriptions = optionValue.getDescriptionsSettoList();
+								if(podescriptions!=null && podescriptions.size()>0) {
+									for(ProductOptionValueDescription optionValueDescription : podescriptions) {
+										com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription desc = new com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription();
+										desc.setId(optionValueDescription.getId());
+										desc.setName(optionValueDescription.getName());
+										propertyValue.getValues().add(desc);
+									}
+								}
+
+								property.setPropertyValue(propertyValue);*/

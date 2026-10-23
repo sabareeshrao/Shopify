@@ -1,0 +1,37 @@
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public String toJSONString() {
+		JSONObject data = new JSONObject();
+		data.put("shipBaseType", this.getShippingBasisType().name());
+		data.put("shipOptionPriceType", this.getShippingOptionPriceType().name());
+		data.put("shipType", this.getShippingType().name());
+		data.put("shipPackageType", this.getShippingPackageType().name());
+		if(shipFreeType!=null) {
+			data.put("shipFreeType", this.getFreeShippingType().name());
+		}
+		data.put("shipDescription", this.getShippingDescription().name());
+		
+		
+		data.put("boxWidth", this.getBoxWidth());
+		data.put("boxHeight", this.getBoxHeight());
+		data.put("boxLength", this.getBoxLength());
+		data.put("boxWeight", this.getBoxWeight());
+		data.put("maxWeight", this.getMaxWeight());
+		data.put("freeShippingEnabled", this.freeShippingEnabled);
+		data.put("orderTotalFreeShipping", this.orderTotalFreeShipping);
+		data.put("handlingFees", this.handlingFees);
+		data.put("taxOnShipping", this.taxOnShipping);
+		
+		
+		JSONArray jsonArray = new JSONArray();
+
+		for(Package p : this.getPackages()) {
+			jsonArray.add(transformPackage(p));
+		}
+		
+		data.put("packages", jsonArray);
+		
+		
+		return data.toJSONString();
+	}

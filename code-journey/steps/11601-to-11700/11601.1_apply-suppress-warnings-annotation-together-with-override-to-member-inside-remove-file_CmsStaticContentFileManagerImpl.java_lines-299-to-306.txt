@@ -1,8 +1,0 @@
-
-	}
-
-	/**
-	 * Removes the data in a given merchant node
-	 */
-	@SuppressWarnings("unchecked")
-	@Override

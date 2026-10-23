@@ -1,8 +1,0 @@
-/**
- * Calculates order total based on specific
- * modules implementation
- * @author carlsamson
- *
- */
-public interface OrderTotalPostProcessorModule extends Module {
-	

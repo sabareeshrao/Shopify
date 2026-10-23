@@ -1,0 +1,9 @@
+	
+	/**
+	 * List all customer reviews by reviewed
+	 * @param customer
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	List<ReadableCustomerReview> getAllCustomerReviewsByReviewed(Long customerId, MerchantStore store, Language language);

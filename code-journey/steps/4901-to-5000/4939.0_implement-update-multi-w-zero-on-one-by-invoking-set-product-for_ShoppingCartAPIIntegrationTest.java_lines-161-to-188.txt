@@ -1,0 +1,28 @@
+
+    /**
+     * Update cart with qnt 0 on one cart item which gives 3 qty left
+     *
+     * @throws Exception
+     */
+    @Test
+    @Order(5)
+    public void updateMultiWZeroOnOneProd() throws Exception {
+
+        PersistableShoppingCartItem cartItem1 = new PersistableShoppingCartItem();
+        cartItem1.setProduct(data.getProducts().get(0).getSku());
+        cartItem1.setQuantity(0);
+
+        PersistableShoppingCartItem[] productsQtyUpdates = {cartItem1};
+
+
+        final HttpEntity<PersistableShoppingCartItem[]> cartEntity = new HttpEntity<>(productsQtyUpdates, getHeader());
+        final ResponseEntity<ReadableShoppingCart> response = testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() +
+                        "/multi"),
+                HttpMethod.POST,
+                cartEntity,
+                ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertEquals(2, response.getBody().getQuantity());
+    }

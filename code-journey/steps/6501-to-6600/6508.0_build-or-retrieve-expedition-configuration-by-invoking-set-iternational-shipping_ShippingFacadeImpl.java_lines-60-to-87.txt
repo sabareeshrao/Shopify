@@ -1,0 +1,28 @@
+	@Override
+	public ExpeditionConfiguration getExpeditionConfiguration(MerchantStore store, Language language) {
+		ExpeditionConfiguration expeditionConfiguration = new ExpeditionConfiguration();
+		try {
+			
+			ShippingConfiguration config = getDbConfig(store);
+			if(config!=null) {
+				expeditionConfiguration.setIternationalShipping(config.getShipType()!=null && config.getShipType().equals(ShippingType.INTERNATIONAL.name())?true:false);
+				expeditionConfiguration.setTaxOnShipping(config.isTaxOnShipping());
+			}
+			
+			List<String> countries = shippingService.getSupportedCountries(store);
+
+			if(!CollectionUtils.isEmpty(countries)) {
+				
+				List<String> countryCode = countries.stream()
+						.sorted(Comparator.comparing(n->n.toString()))
+						.collect(Collectors.toList());
+				
+				expeditionConfiguration.setShipToCountry(countryCode);
+			}
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting expedition configuration", e);
+			throw new ServiceRuntimeException("Error while getting Expedition configuration for store[" + store.getCode() + "]", e);
+		}
+		return expeditionConfiguration;
+	}

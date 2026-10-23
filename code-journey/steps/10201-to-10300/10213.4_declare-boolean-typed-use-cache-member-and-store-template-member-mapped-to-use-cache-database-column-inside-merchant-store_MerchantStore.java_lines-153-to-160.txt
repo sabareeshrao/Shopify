@@ -1,8 +1,0 @@
-	@Column(name = "USE_CACHE")
-	private boolean useCache = false;
-
-	@Column(name = "STORE_TEMPLATE", length = 25)
-	private String storeTemplate;
-
-	@Column(name = "INVOICE_TEMPLATE", length = 25)
-	private String invoiceTemplate;

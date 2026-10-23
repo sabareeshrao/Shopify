@@ -1,8 +1,0 @@
-				availability = avail.get();
-
-			} else {
-
-				// get an existing product availability
-				List<ProductAvailability> existing = productAvailabilityService.getBySku(source.getSku(), store);
-
-				if (!CollectionUtils.isEmpty(existing)) {

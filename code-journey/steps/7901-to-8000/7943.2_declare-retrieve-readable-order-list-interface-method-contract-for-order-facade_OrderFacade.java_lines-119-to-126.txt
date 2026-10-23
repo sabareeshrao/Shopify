@@ -1,8 +1,0 @@
-     * @param customer currently logged in customer
-     * @param store store associated with current customer
-     * @return ReadableOrderList
-     * @throws Exception
-     */
-
-	com.salesmanager.shop.model.order.v0.ReadableOrderList getReadableOrderList(MerchantStore store, Customer customer, int start,
-			int maxCount, Language language) throws Exception;

@@ -1,5 +1,0 @@
-					Auditable entity = (Auditable)result;
-					AuditSection audit = entity.getAuditSection();
-					if(entity.getAuditSection()==null) {
-						audit = new AuditSection();
-					}

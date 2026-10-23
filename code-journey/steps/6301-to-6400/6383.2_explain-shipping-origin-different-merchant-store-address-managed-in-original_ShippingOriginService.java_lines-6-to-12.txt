@@ -1,0 +1,7 @@
+
+/**
+ * ShippingOrigin object if different from MerchantStore address.
+ * Can be managed through this service.
+ * @author carlsamson
+ *
+ */

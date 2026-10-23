@@ -1,0 +1,69 @@
+	// Utility
+	public BigDecimal getAmount(String amount) throws Exception {
+
+		// validations
+		/**
+		 * 1) remove decimal and thousand
+		 * 
+		 * String.replaceAll(decimalPoint, ""); String.replaceAll(thousandPoint, "");
+		 * 
+		 * Should be able to parse to Integer
+		 */
+		StringBuilder newAmount = new StringBuilder();
+		for (int i = 0; i < amount.length(); i++) {
+			if (amount.charAt(i) != DECIMALPOINT && amount.charAt(i) != THOUSANDPOINT) {
+				newAmount.append(amount.charAt(i));
+			}
+		}
+
+		try {
+			Integer.parseInt(newAmount.toString());
+		} catch (Exception e) {
+			throw new Exception("Cannot parse " + amount);
+		}
+
+		if (!amount.contains(Character.toString(DECIMALPOINT)) && !amount.contains(Character.toString(THOUSANDPOINT))
+				&& !amount.contains(" ")) {
+
+			if (matchPositiveInteger(amount)) {
+				BigDecimalValidator validator = CurrencyValidator.getInstance();
+				BigDecimal bdamount = validator.validate(amount, Locale.US);
+				if (bdamount == null) {
+					throw new Exception("Cannot parse " + amount);
+				} else {
+					return bdamount;
+				}
+			} else {
+				throw new Exception("Not a positive integer " + amount);
+			}
+
+		} else {
+			// TODO should not go this path in this current release
+			StringBuilder pat = new StringBuilder();
+
+			if (!StringUtils.isBlank(Character.toString(THOUSANDPOINT))) {
+				pat.append("\\d{1,3}(" + THOUSANDPOINT + "?\\d{3})*");
+			}
+
+			pat.append("(\\" + DECIMALPOINT + "\\d{1," + DECIMALCOUNT + "})");
+
+			Pattern pattern = Pattern.compile(pat.toString());
+			Matcher matcher = pattern.matcher(amount);
+
+			if (matcher.matches()) {
+
+				Locale locale = Constants.DEFAULT_LOCALE;
+				// TODO validate amount using old test case
+				if (DECIMALPOINT == ',') {
+					locale = Locale.GERMAN;
+				}
+
+				BigDecimalValidator validator = CurrencyValidator.getInstance();
+
+				return validator.validate(amount, locale);
+			} else {
+				throw new Exception("Cannot parse " + amount);
+			}
+		}
+
+	}

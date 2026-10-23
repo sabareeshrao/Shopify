@@ -1,2 +1,0 @@
-import io.swagger.annotations.ApiModelProperty;
-

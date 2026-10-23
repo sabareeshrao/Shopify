@@ -1,0 +1,7 @@
+		  
+		  for(Group g : groupBuilder.build()) {
+			  groupService.create(g);
+		  }
+
+		
+	}

@@ -1,0 +1,9 @@
+        
+        
+        ProductAttribute color_blue = new ProductAttribute();
+        color_blue.setProduct(product);
+        color_blue.setProductOption(color);
+        color_blue.setAttributeDefault(true);
+        color_blue.setProductAttributePrice(new BigDecimal(0));//no price variation
+        color_blue.setProductAttributeWeight(new BigDecimal(1));//weight variation
+        color_blue.setProductOptionValue(blue);

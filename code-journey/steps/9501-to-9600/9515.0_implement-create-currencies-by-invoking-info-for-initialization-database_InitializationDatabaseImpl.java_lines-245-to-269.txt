@@ -1,0 +1,25 @@
+	private void createCurrencies() throws ServiceException {
+		LOGGER.info(String.format("%s : Populating Currencies ", name));
+
+		for (String code : SchemaConstant.CURRENCY_MAP.keySet()) {
+  
+            try {
+            	java.util.Currency c = java.util.Currency.getInstance(code);
+            	
+            	if(c==null) {
+            		LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            	}
+            	
+            		//check if it exist
+            		
+	            	Currency currency = new Currency();
+	            	currency.setName(c.getCurrencyCode());
+	            	currency.setCurrency(c);
+	            	currencyService.create(currency);
+
+            //System.out.println(l.getCountry() + "   " + c.getSymbol() + "  " + c.getSymbol(l));
+            } catch (IllegalArgumentException e) {
+            	LOGGER.info(String.format("%s : Populating Currencies : no currency for code : %s", name, code));
+            }
+        }  
+	}

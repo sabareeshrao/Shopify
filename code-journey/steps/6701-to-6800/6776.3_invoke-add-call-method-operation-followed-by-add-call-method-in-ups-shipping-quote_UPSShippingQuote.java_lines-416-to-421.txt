@@ -1,0 +1,6 @@
+			digester.addCallMethod(
+					"RatingServiceSelectionResponse/Response/Error",
+					"setErrorCode", 0);
+			digester.addCallMethod(
+					"RatingServiceSelectionResponse/Response/ErrorDescriprion",
+					"setError", 0);

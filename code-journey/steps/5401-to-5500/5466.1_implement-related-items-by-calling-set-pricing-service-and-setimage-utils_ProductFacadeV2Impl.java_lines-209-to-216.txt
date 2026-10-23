@@ -1,8 +1,0 @@
-	@Override
-	public List<ReadableProduct> relatedItems(MerchantStore store, Product product, Language language)
-			throws Exception {
-		//same as v1
-		ReadableProductPopulator populator = new ReadableProductPopulator();
-		populator.setPricingService(pricingService);
-		populator.setimageUtils(imageUtils);
-

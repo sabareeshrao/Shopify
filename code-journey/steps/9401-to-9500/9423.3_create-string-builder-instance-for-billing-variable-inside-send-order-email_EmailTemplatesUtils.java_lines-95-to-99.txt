@@ -1,0 +1,5 @@
+		    	   
+		    	   Map<String,Country> countries = countryService.getCountriesMap(language);
+		    	   
+		    	   //format Billing address
+		    	   StringBuilder billing = new StringBuilder();

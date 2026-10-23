@@ -1,8 +1,0 @@
-			 * 
-			 * <Package> <PackagingType> <Code>21</Code> </PackagingType>
-			 * <PackageWeight> <UnitOfMeasurement> <Code>LBS</Code>
-			 * </UnitOfMeasurement> <Weight>1.1</Weight> </PackageWeight>
-			 * <PackageServiceOptions> <InsuredValue>
-			 * <CurrencyCode>CAD</CurrencyCode>
-			 * <MonetaryValue>100</MonetaryValue> </InsuredValue>
-			 * </PackageServiceOptions> </Package>

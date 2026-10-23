@@ -1,0 +1,17 @@
+	@Override
+	public ReadableProductVariation merge(ProductVariation source, ReadableProductVariation destination,
+										  MerchantStore store, Language language) {
+		
+		Validate.notNull(source,"ProductVariation must not be null");
+		Validate.notNull(destination,"ReadableProductVariation must not be null");
+		
+		
+		destination.setId(source.getId());
+		destination.setCode(source.getCode());
+
+		
+		destination.setOption(this.option(source.getProductOption(), language));
+		destination.setOptionValue(this.optionValue(source.getProductOptionValue(), store, language));
+
+		return destination;
+	}

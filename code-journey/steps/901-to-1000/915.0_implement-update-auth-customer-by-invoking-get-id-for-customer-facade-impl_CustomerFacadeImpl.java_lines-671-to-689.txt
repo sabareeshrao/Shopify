@@ -1,0 +1,19 @@
+  private PersistableCustomer updateAuthCustomer(PersistableCustomer customer, MerchantStore store) {
+
+	    if (customer.getId() == null || customer.getId() == 0) {
+	      throw new ServiceRuntimeException("Can't update a customer with null id");
+	    }
+
+	    Customer cust = customerService.getById(customer.getId());
+
+	    try{
+	      customerPopulator.populate(customer, cust, store, store.getDefaultLanguage());
+	    } catch (ConversionException e) {
+	      throw new ConversionRuntimeException(e);
+	    }
+
+	    saveCustomer(cust);
+	    customer.setId(cust.getId());
+
+	    return customer;
+	  }

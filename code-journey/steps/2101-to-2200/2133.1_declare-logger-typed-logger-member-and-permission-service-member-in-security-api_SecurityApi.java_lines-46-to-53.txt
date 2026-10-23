@@ -1,8 +1,0 @@
-	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityApi.class);
-
-	@Inject
-	private PermissionService permissionService;
-
-	@Inject
-	private GroupService groupService;
-

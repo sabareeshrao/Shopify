@@ -1,8 +1,0 @@
-      value = "Get product price variation based on selected product",
-      notes = "",
-      produces = "application/json",
-      response = ReadableProductPrice.class)
-  @ResponseBody
-  @ApiImplicitParams({
-      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
-      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")

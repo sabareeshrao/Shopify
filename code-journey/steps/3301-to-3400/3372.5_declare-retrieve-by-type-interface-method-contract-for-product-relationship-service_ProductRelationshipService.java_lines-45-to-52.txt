@@ -1,8 +1,0 @@
-	 * @param product
-	 * @param type
-	 * @return
-	 * @throws ServiceException
-	 */
-	List<ProductRelationship> getByType(MerchantStore store, Product product,
-			ProductRelationshipType type)
-			throws ServiceException;

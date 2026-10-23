@@ -1,8 +1,0 @@
-import javax.validation.Constraint;
-import javax.validation.Payload;
-
-
-/**
- * 
- * Validation annotation to validate that 2 fields have the same value.
- * An array of fields and their matching confirmation fields can be supplied.

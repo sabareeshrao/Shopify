@@ -1,8 +1,0 @@
-	@PostMapping(value = "/private/modules/payment")
-	public void configure(
-			@RequestBody IntegrationModuleConfiguration configuration,
-			@ApiIgnore MerchantStore merchantStore) {
-		
-		try {
-			
-			List<IntegrationModule> modules = paymentService.getPaymentMethods(merchantStore);

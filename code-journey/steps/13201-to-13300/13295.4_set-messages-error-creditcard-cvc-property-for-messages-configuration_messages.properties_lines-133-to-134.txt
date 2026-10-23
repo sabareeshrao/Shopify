@@ -1,2 +1,0 @@
-messages.error.creditcard.cvc=Credit card verification digits are invalid
-

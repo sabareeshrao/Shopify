@@ -1,0 +1,6 @@
+
+/**
+ * Custom authautentication provider for admin api
+ * @author carlsamson
+ *
+ */

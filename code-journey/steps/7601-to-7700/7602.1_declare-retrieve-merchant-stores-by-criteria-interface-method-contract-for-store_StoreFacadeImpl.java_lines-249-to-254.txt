@@ -1,0 +1,6 @@
+
+	@Override
+	public ReadableMerchantStoreList getByCriteria(MerchantStoreCriteria criteria, Language lang) {
+		return  getMerchantStoresByCriteria(criteria, lang);
+
+	}

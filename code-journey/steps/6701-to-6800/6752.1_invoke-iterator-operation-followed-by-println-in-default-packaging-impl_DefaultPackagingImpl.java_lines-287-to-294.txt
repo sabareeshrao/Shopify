@@ -1,0 +1,8 @@
+
+		// now prepare the shipping info
+
+		// number of boxes
+
+		//Iterator ubIt = usedBoxesList.iterator();
+
+		System.out.println("###################################");

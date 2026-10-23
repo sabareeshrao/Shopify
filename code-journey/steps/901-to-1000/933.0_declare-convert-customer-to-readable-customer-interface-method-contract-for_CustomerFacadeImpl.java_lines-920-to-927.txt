@@ -1,0 +1,8 @@
+
+  @Override
+  public ReadableCustomer getCustomerByNick(String userName, MerchantStore merchantStore,
+      Language language) {
+    Customer customer = getByNick(userName);
+    return convertCustomerToReadableCustomer(customer, merchantStore, language);
+  }
+

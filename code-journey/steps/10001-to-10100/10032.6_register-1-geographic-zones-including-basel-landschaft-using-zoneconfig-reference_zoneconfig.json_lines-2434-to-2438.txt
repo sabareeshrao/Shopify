@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "BL",
+			"zoneName": "Basel-Landschaft",
+			"countryCode": "CH"
+		},

@@ -1,8 +1,0 @@
-	
-	@Inject
-	private ModuleConfigurationService moduleCongigurationService;
-	
-	/**
-	 * Import a specific integration module. Will delete and recreate the module
-	 * if it already exists 
-	 * @throws Exception

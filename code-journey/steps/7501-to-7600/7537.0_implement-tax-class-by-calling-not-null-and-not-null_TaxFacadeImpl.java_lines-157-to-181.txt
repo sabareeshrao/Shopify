@@ -1,0 +1,25 @@
+
+	@Override
+	public ReadableTaxClass taxClass(String code, MerchantStore store, Language language) {
+		
+		Validate.notNull(code,"TaxClass code cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		try {
+			TaxClass model = taxClassService.getByCode(code, store);
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxClass not found [" + code + "] for store [" + store.getCode() + "]");
+			}
+			if(model != null) {
+				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot get tax class [" + code + "]");
+				}
+			}
+			return readableTaxClassMapper.convert(model, store, language);
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxClass [" +  code + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxClass [" +  code + "] for store [" + store.getCode() + "]", e);
+		}
+
+	}

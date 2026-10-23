@@ -1,0 +1,18 @@
+
+	@Override
+	public void deleteDocument(MerchantStore store, Product product) throws ServiceException {
+
+		if (configuration.getProperty(INDEX_PRODUCTS) == null
+				|| configuration.getProperty(INDEX_PRODUCTS).equals(Constants.FALSE) || searchModule == null) {
+			return;
+		}
+
+		List<String> languages = languages(product);
+
+		try {
+			searchModule.delete(languages, product.getId());
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

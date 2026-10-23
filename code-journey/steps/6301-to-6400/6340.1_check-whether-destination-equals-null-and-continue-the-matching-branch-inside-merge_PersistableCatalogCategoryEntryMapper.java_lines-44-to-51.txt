@@ -1,8 +1,0 @@
-		
-		
-		if(destination == null) {
-			destination = new CatalogCategoryEntry();
-			
-		}
-		destination.setId(source.getId());
-		destination.setVisible(source.isVisible());

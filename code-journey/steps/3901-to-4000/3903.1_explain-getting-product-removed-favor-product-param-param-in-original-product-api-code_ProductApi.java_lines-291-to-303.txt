@@ -1,0 +1,13 @@
+
+	/**
+	 * API for getting a product
+	 * Removed in 3.2.5 in favor of /product/sku
+	 *
+	 * @param id
+	 * @param lang     ?lang=fr|en|...
+	 * @param response
+	 * @return ReadableProduct
+	 * @throws Exception
+	 *                   <p>
+	 *                   /api/product/123
+	 */

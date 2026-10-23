@@ -1,8 +1,0 @@
-
-			
-			String host = null;
-			String protocol = null;
-			String port = null;
-			String url = null;
-		
-			

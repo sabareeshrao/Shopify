@@ -1,5 +1,0 @@
-						
-						
-						if(StringUtils.isNotBlank(mod.getConfigurable())) {
-							m.setConfigurable(mod.getConfigurable());
-						}

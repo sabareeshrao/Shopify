@@ -1,0 +1,9 @@
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="CUSTOMERS_ID")
+	private Customer customer;
+	
+	@OneToOne
+	@JoinColumn(name="PRODUCT_ID")
+	private Product product;

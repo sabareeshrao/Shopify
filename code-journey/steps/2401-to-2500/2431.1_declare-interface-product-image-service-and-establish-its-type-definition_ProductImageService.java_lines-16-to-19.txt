@@ -1,0 +1,4 @@
+public interface ProductImageService extends SalesManagerEntityService<Long, ProductImage> {
+	
+	
+	

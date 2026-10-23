@@ -1,0 +1,9 @@
+
+	@Inject
+	private MerchantStoreService merchantStoreService;
+
+	@Inject
+	private PersistableCategoryPopulator persistableCatagoryPopulator;
+
+	@Inject
+	private ReadableCategoryMapper readableCategoryMapper;

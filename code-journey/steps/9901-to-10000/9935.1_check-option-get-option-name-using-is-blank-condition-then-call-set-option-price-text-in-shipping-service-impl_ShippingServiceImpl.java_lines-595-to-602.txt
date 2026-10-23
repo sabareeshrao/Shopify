@@ -1,8 +1,0 @@
-					//set price text
-					String priceText = pricingService.getDisplayAmount(option.getOptionPrice(), store);
-					option.setOptionPriceText(priceText);
-					option.setShippingModuleCode(moduleName);
-				
-					if(StringUtils.isBlank(option.getOptionName())) {
-						
-						String countryName = delivery.getCountry().getName();

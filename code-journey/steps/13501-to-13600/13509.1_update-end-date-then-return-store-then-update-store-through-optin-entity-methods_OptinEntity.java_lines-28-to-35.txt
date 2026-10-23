@@ -1,8 +1,0 @@
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
-	}
-	public String getStore() {
-		return store;
-	}
-	public void setStore(String store) {
-		this.store = store;

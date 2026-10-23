@@ -1,0 +1,6 @@
+  
+  /**
+   * Delete user
+   * @param id
+   */
+  void delete(Long id, String storeCode);

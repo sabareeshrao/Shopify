@@ -1,0 +1,35 @@
+@Service("customerDetailsService")
+public class CustomerServicesImpl extends AbstractCustomerServices{
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServicesImpl.class);
+	
+
+	private CustomerService customerService;
+	private PermissionService  permissionService;
+	private GroupService   groupService;
+	
+	@Inject
+	public CustomerServicesImpl(CustomerService customerService, PermissionService permissionService, GroupService groupService) {
+		super(customerService, permissionService, groupService);
+		this.customerService = customerService;
+		this.permissionService = permissionService;
+		this.groupService = groupService;
+	}
+	
+	@Override
+	protected UserDetails userDetails(String userName, Customer customer, Collection<GrantedAuthority> authorities) {
+
+		CustomerDetails authUser = new CustomerDetails(userName, customer.getPassword(), true, true,
+				true, true, authorities);
+		
+		authUser.setEmail(customer.getEmailAddress());
+		authUser.setId(customer.getId());
+		
+		return authUser;
+	}
+	
+
+
+
+
+}

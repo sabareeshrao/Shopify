@@ -1,8 +1,0 @@
-		com.salesmanager.core.model.catalog.product.review.ProductReview rev = new com.salesmanager.core.model.catalog.product.review.ProductReview();
-		populator.populate(review, rev, store, language);
-
-		if (review.getId() == null) {
-			productReviewService.create(rev);
-		} else {
-			productReviewService.update(rev);
-		}

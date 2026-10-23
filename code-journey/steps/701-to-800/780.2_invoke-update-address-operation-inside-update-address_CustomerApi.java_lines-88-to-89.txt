@@ -1,2 +1,0 @@
-		customerFacade.updateAddress(customer, merchantStore);
-	}

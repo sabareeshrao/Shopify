@@ -1,0 +1,6 @@
+		
+		/**/
+		if(criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
+				&& CollectionUtils.isNotEmpty(criteria.getOptionValueIds())) {
+			qs.append(" and pov.id in (:povid)");
+		}

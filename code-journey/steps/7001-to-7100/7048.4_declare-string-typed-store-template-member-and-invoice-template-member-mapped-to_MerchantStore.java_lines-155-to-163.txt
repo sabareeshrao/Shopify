@@ -1,0 +1,9 @@
+
+	@Column(name = "STORE_TEMPLATE", length = 25)
+	private String storeTemplate;
+
+	@Column(name = "INVOICE_TEMPLATE", length = 25)
+	private String invoiceTemplate;
+
+	@Column(name = "DOMAIN_NAME", length = 80)
+	private String domainName;

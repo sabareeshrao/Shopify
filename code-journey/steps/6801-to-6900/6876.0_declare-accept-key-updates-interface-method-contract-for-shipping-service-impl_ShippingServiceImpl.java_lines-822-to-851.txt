@@ -1,0 +1,30 @@
+	
+
+	@Override
+	public void setSupportedCountries(MerchantStore store, List<String> countryCodes) throws ServiceException {
+		
+		
+		//transform a list of string to json entry
+		ObjectMapper mapper = new ObjectMapper();
+		
+		try {
+			String value  = mapper.writeValueAsString(countryCodes);
+			
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(SUPPORTED_COUNTRIES, store);
+			
+			if(configuration==null) {
+				configuration = new MerchantConfiguration();
+				configuration.
+				setKey(SUPPORTED_COUNTRIES);
+				configuration.setMerchantStore(store);
+			} 
+			
+			configuration.setValue(value);
+
+			merchantConfigurationService.saveOrUpdate(configuration);
+			
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+	}

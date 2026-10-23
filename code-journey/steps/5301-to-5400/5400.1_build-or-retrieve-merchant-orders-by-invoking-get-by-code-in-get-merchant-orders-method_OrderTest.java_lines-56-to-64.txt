@@ -1,0 +1,9 @@
+
+	
+
+	@Test
+	public void getMerchantOrders() throws ServiceException {
+		
+
+
+		Currency currency = currencyService.getByCode(USD_CURRENCY_CODE);

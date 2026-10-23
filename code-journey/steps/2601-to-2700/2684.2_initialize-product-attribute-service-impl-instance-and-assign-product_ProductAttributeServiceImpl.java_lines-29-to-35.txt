@@ -1,0 +1,7 @@
+
+	@Inject
+	public ProductAttributeServiceImpl(ProductAttributeRepository productAttributeRepository) {
+		super(productAttributeRepository);
+		this.productAttributeRepository = productAttributeRepository;
+	}
+

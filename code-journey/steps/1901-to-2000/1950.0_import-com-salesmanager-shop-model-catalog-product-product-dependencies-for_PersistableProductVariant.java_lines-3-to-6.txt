@@ -1,0 +1,4 @@
+import com.salesmanager.shop.model.catalog.product.product.PersistableProductInventory;
+
+public class PersistableProductVariant extends ProductVariant {
+

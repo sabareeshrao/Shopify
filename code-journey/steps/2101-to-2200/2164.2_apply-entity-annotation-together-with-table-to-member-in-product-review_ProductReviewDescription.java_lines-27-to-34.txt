@@ -1,0 +1,8 @@
+
+@Entity
+@Table(name = "PRODUCT_REVIEW_DESCRIPTION", uniqueConstraints={
+	@UniqueConstraint(columnNames={
+		"PRODUCT_REVIEW_ID",
+		"LANGUAGE_ID"
+	})
+})

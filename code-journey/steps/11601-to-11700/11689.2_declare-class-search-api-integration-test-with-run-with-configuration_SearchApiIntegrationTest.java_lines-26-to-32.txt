@@ -1,7 +1,0 @@
-@RunWith(SpringRunner.class)
-@Ignore
-public class SearchApiIntegrationTest extends ServicesTestSupport {
-
-    @Autowired
-    private TestRestTemplate testRestTemplate;
-

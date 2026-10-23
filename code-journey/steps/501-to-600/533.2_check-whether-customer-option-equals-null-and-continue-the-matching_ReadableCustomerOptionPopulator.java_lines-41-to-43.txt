@@ -1,0 +1,3 @@
+		if(customerOption==null) {
+			customerOption = new CustomerOption();
+		} 

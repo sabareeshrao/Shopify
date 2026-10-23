@@ -1,8 +1,0 @@
-	public String getSubTotal() {
-		return subTotal;
-	}
-	public boolean isProductVirtual() {
-		return productVirtual;
-	}
-	public void setProductVirtual(boolean productVirtual) {
-		this.productVirtual = productVirtual;

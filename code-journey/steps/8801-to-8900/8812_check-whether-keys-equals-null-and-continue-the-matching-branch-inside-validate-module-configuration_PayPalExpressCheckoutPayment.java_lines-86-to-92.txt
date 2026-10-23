@@ -1,7 +1,0 @@
-		
-		if(keys==null || StringUtils.isBlank(keys.get("username"))) {
-			if(errorFields==null) {
-				errorFields = new ArrayList<String>();
-			}
-			errorFields.add("username");
-		}

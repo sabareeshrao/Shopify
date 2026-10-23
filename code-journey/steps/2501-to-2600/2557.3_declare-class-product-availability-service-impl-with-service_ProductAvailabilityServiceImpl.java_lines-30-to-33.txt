@@ -1,0 +1,4 @@
+@Service("productAvailabilityService")
+public class ProductAvailabilityServiceImpl extends SalesManagerEntityServiceImpl<Long, ProductAvailability>
+		implements ProductAvailabilityService {
+

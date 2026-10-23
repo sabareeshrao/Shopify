@@ -1,0 +1,4 @@
+public class PersistableCustomerReviewPopulator extends AbstractDataPopulator<PersistableCustomerReview, CustomerReview> {
+
+	private CustomerService customerService;
+	

@@ -1,8 +1,0 @@
-				xmldatabuffer.append("</PackagingType>");
-
-				// weight
-				xmldatabuffer.append("<PackageWeight>");
-				xmldatabuffer.append("<UnitOfMeasurement>");
-				xmldatabuffer.append("<Code>");
-				xmldatabuffer.append(weightCode);
-				xmldatabuffer.append("</Code>");

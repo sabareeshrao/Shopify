@@ -1,8 +1,0 @@
-
-	/**
-	 * Removes a shopping cart item
-	 * @param item
-	 */
-	void deleteShoppingCartItem(Long id);
-
-}

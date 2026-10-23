@@ -1,0 +1,29 @@
+	@Override
+	public CustomIntegrationConfiguration getCustomModuleConfiguration(
+			MerchantStore store) throws IntegrationException {
+
+		try {
+
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(MODULE_CODE, store);
+	
+			if(configuration!=null) {
+				String value = configuration.getValue();
+				ObjectMapper mapper = new ObjectMapper();
+				try {
+					return mapper.readValue(value, CustomShippingQuotesConfiguration.class);
+				} catch(Exception e) {
+					throw new ServiceException("Cannot parse json string " + value);
+				}
+	
+			} else {
+				CustomShippingQuotesConfiguration custom = new CustomShippingQuotesConfiguration();
+				custom.setModuleCode(MODULE_CODE);
+				return custom;
+			}
+		
+		} catch (Exception e) {
+			throw new IntegrationException(e);
+		}
+		
+		
+	}

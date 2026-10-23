@@ -1,0 +1,34 @@
+
+	private com.salesmanager.shop.model.order.v0.ReadableOrderList populateOrderList(final OrderList orderList,
+			final MerchantStore store, final Language language) {
+		List<Order> orders = orderList.getOrders();
+		com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();
+		if (CollectionUtils.isEmpty(orders)) {
+			LOGGER.info("Order list if empty..Returning empty list");
+			returnList.setRecordsTotal(0);
+			// returnList.setMessage("No results for store code " + store);
+			return returnList;
+		}
+
+		// ReadableOrderPopulator orderPopulator = new ReadableOrderPopulator();
+		Locale locale = LocaleUtils.getLocale(language);
+		readableOrderPopulator.setLocale(locale);
+
+		List<com.salesmanager.shop.model.order.v0.ReadableOrder> readableOrders = new ArrayList<com.salesmanager.shop.model.order.v0.ReadableOrder>();
+		for (Order order : orders) {
+			com.salesmanager.shop.model.order.v0.ReadableOrder readableOrder = new com.salesmanager.shop.model.order.v0.ReadableOrder();
+			try {
+				readableOrderPopulator.populate(order, readableOrder, store, language);
+				setOrderProductList(order, locale, store, language, readableOrder);
+			} catch (ConversionException ex) {
+				LOGGER.error("Error while converting order to order data", ex);
+
+			}
+			readableOrders.add(readableOrder);
+
+		}
+
+		returnList.setOrders(readableOrders);
+		return returnList;
+
+	}

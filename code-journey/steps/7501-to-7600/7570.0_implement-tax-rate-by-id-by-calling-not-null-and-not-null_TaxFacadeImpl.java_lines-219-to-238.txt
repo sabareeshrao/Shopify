@@ -1,0 +1,20 @@
+	
+	//get by id
+	private TaxRate taxRateById(Long id, MerchantStore store, Language language) {
+		
+		Validate.notNull(id,"TaxRate id cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		
+		try {
+			TaxRate model = taxRateService.getById(id, store);
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxRate not found [" + id + "]");
+			} 
+			return model;
+		} catch (Exception e) {
+			LOGGER.error("Error while getting taxRate [" +  id + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxRate [" +  id + "] for store [" + store.getCode() + "]", e);
+		}
+		
+	}

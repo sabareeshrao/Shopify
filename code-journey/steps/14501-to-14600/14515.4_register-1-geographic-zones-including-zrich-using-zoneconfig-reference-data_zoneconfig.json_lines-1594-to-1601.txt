@@ -1,8 +1,0 @@
-		"countryCode": "CH"
-	},
-	{
-		"zoneCode": "ZH",
-		"zoneName": "Zrich",
-		"countryCode": "CH"
-	},
-	{

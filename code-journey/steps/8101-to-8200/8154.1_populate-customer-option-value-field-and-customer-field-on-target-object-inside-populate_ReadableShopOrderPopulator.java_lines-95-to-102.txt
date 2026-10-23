@@ -1,8 +1,0 @@
-					
-					readableAttribute.setCustomerOptionValue(optionValue);
-					customer.getAttributes().add(readableAttribute);
-				}
-			}*/
-			
-			target.setCustomer(customer);
-		

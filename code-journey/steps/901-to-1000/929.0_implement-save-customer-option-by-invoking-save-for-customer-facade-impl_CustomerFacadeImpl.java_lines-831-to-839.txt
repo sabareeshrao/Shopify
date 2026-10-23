@@ -1,0 +1,9 @@
+
+  private void saveCustomerOption(CustomerOptin customerOptin) {
+    try {
+      customerOptinService.save(customerOptin);
+    } catch (ServiceException e) {
+      throw new ServiceRuntimeException(e);
+    }
+  }
+

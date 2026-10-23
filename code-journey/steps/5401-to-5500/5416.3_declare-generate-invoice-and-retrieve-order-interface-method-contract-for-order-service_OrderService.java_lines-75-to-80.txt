@@ -1,0 +1,6 @@
+
+    ByteArrayOutputStream generateInvoice(MerchantStore store, Order order,
+                                          Language language) throws ServiceException;
+
+    Order getOrder(Long id, MerchantStore store);
+

@@ -1,8 +1,0 @@
-              return customerCart;
-              // return populateShoppingCartData(customerCart,store,language);
-            } else {
-              if (sessionShoppingCart.getCustomerId().longValue() == customerModel.getId()
-                  .longValue()) {
-                if (!customerCart.getShoppingCartCode()
-                    .equals(sessionShoppingCart.getShoppingCartCode())) {
-                  // merge carts

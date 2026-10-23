@@ -1,0 +1,8 @@
+
+			 // Configure the renderer
+			 ODTRenderer renderer = new ODTRenderer(doc);
+			 renderer.setIgnoreMargins(true);
+			 renderer.setPaintMaxResolution(true);
+			            
+			 // Scale the renderer to fit width
+			 renderer.setResizeFactor(renderer.getPrintWidth() / w);

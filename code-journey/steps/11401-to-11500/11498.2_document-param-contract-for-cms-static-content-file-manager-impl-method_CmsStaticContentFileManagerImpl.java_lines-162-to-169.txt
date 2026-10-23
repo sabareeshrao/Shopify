@@ -1,8 +1,0 @@
-	 * </p>
-	 * <li>Merchant Node will be retrieved from the cacheTree if it exists else
-	 * new node will be created.</li>
-	 * <li>Files will be stored in StaticContentCacheAttribute , which
-	 * eventually will be stored in Infinispan</li>
-	 * 
-	 * @param merchantStoreCode
-	 *            Merchant store for which files are getting stored in

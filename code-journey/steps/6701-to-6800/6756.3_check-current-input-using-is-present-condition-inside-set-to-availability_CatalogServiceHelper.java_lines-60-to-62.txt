@@ -1,3 +1,0 @@
-		if (defaultAvailability.isPresent()) {
-			productAvailabilities.add(defaultAvailability.get());
-		}

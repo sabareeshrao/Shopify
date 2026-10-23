@@ -1,0 +1,6 @@
+
+    /**
+     * Delete cartitem from cart with body set to true which gives remaining cart content, should return 200 / ok
+     *
+     * @throws Exception
+     */

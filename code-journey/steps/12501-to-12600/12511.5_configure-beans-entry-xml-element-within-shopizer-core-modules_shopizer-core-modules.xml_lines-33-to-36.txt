@@ -1,4 +1,0 @@
-		<beans:entry key="customQuotesRules" value-ref="customShippingPriceModule" />
-
-	</util:map>
-

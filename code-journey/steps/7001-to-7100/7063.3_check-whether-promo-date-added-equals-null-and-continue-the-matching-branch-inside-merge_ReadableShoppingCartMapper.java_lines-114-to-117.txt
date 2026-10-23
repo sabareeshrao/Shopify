@@ -1,4 +1,0 @@
-				Date promoDateAdded = source.getPromoAdded();// promo valid 1 day
-				if (promoDateAdded == null) {
-					promoDateAdded = new Date();
-				}

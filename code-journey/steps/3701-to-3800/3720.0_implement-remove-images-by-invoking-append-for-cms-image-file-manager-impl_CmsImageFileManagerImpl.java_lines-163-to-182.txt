@@ -1,0 +1,20 @@
+  @Override
+  public void removeImages(final String merchantStoreCode) throws ServiceException {
+
+    try {
+
+
+      StringBuilder merchantPath = new StringBuilder();
+      merchantPath.append(buildRootPath()).append(Constants.SLASH).append(merchantStoreCode);
+
+      Path path = Paths.get(merchantPath.toString());
+
+      Files.deleteIfExists(path);
+
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    }
+
+
+  }

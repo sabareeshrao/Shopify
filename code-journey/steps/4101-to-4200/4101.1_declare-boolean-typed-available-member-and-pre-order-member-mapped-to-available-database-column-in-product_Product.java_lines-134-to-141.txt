@@ -1,8 +1,0 @@
-	
-	@Column(name = "AVAILABLE")
-	private boolean available = true;
-	
-
-	@Column(name = "PREORDER")
-	private boolean preOrder = false;
-	

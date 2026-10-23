@@ -1,8 +1,0 @@
-
-			// cleanup old and new images
-			if (originalProductImages != null) {
-				for (ProductImage image : originalProductImages) {
-
-					if (image.getImage() != null && image.getId() == null) {
-						image.setProduct(product);
-

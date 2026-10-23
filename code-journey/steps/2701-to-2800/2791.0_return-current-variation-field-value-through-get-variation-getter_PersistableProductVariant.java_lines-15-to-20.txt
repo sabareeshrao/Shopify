@@ -1,0 +1,6 @@
+	private PersistableProductInventory inventory;
+
+	public Long getVariation() {
+		return variation;
+	}
+

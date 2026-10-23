@@ -1,3 +1,0 @@
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-		

@@ -1,3 +1,0 @@
-
-				moduleCongigurationService.create(module);
-			}

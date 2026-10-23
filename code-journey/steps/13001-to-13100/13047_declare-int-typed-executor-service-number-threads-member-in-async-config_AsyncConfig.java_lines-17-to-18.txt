@@ -1,2 +1,0 @@
-  private static final int EXECUTOR_SERVICE_NUMBER_THREADS = 5;
-

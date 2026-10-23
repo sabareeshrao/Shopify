@@ -1,8 +1,0 @@
-    private static Policy policy = null;
-    
-    static { 
-		try {
-			ClassLoader loader = Policy.class.getClassLoader();
-	        InputStream configStream = loader.getResourceAsStream(POLICY_FILE);
-			policy = Policy.getInstance(configStream);
-	        

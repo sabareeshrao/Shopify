@@ -1,8 +1,0 @@
-	 * @param path
-	 * @param merchantStore
-	 * @param language
-	 * @return
-	 * @throws Exception
-	 */
-	@GetMapping(value = "/private/content/list", produces = MediaType.APPLICATION_JSON_VALUE)
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),

@@ -1,8 +1,0 @@
-		
-		if(CollectionUtils.isNotEmpty(this.getValidationMessages().values())) {
-			StringBuilder dataEntries = null;
-			int count = 0;
-			for(String key : this.getValidationMessages().keySet()) {
-				if(dataEntries == null) {
-					dataEntries = new StringBuilder();
-				}

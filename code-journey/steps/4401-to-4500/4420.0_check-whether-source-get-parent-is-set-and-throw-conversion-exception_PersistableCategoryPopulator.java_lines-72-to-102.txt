@@ -1,0 +1,31 @@
+
+		//get parent
+
+		if(source.getParent()==null || (StringUtils.isBlank(source.getParent().getCode())) || source.getParent().getId()==null) {
+			target.setParent(null);
+			target.setDepth(0);
+			target.setLineage(new StringBuilder().append("/").append(source.getId()).append("/").toString());
+		} else {
+			Category parent = null;
+			if(!StringUtils.isBlank(source.getParent().getCode())) {
+				 parent = categoryService.getByCode(store.getCode(), source.getParent().getCode());
+			} else if(source.getParent().getId()!=null) {
+				 parent = categoryService.getById(source.getParent().getId(), store.getId());
+			} else {
+				throw new ConversionException("Category parent needs at least an id or a code for reference");
+			}
+			if(parent !=null && parent.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+				throw new ConversionException("Store id does not belong to specified parent id");
+			}
+
+			if(parent!=null) {
+				target.setParent(parent);
+
+				String lineage = parent.getLineage();
+				int depth = parent.getDepth();
+
+				target.setDepth(depth+1);
+				target.setLineage(new StringBuilder().append(lineage).append(target.getId()).append("/").toString());
+			}
+
+		}

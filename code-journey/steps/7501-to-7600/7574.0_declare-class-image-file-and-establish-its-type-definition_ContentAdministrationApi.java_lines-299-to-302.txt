@@ -1,0 +1,4 @@
+	
+	
+	class ImageFile implements Serializable {
+

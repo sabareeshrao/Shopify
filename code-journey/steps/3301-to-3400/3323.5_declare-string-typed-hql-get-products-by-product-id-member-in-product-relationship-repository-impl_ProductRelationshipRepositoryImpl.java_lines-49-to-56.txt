@@ -1,8 +1,0 @@
-          + "left join fetch manuf.descriptions manufd "
-          + "left join fetch rp.type type "
-          + "where pr.code=:code "
-          + "and rp.available=:available "
-          + "and p.id=:pId";
-  private static final String HQL_GET_PRODUCTS_BY_PRODUCT_ID =
-      "select distinct pr from ProductRelationship as pr "
-          + "left join fetch pr.product p "

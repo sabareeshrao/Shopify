@@ -1,4 +1,0 @@
-			MerchantConfiguration merchantConfiguration = merchantConfigurationService.getMerchantConfiguration(moduleCode, store);
-			if(merchantConfiguration!=null) {
-				merchantConfigurationService.delete(merchantConfiguration);
-			} 

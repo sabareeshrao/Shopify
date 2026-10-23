@@ -1,8 +1,0 @@
-	@Override
-	public ReadableCustomerReview populate(CustomerReview source, ReadableCustomerReview target, MerchantStore store,
-			Language language) throws ConversionException {
-
-		try {
-			
-			if(target==null) {
-				target = new ReadableCustomerReview();

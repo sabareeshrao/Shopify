@@ -1,5 +1,0 @@
-
-@ControllerAdvice
-public class FileUploadExceptionAdvice {
-	
-

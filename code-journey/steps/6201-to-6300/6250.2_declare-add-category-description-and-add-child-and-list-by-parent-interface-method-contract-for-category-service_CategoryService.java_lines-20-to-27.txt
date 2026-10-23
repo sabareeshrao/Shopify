@@ -1,8 +1,0 @@
-	void addCategoryDescription(Category category, CategoryDescription description) throws ServiceException;
-
-	void addChild(Category parent, Category child) throws ServiceException;
-
-	List<Category> listByParent(Category category) throws ServiceException;
-	
-	List<Category> listByStoreAndParent(MerchantStore store, Category category) throws ServiceException;
-	

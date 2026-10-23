@@ -1,0 +1,19 @@
+
+	@PostConstruct
+	public void init() throws Exception {
+
+		/**
+		 * Configure search module
+		 */
+
+		if (searchModule != null && !noIndex) {
+
+			SearchConfiguration searchConfiguration = config();
+			try {
+				searchModule.configure(searchConfiguration);
+			} catch (Exception e) {
+				LOGGER.error("SearchModule cannot be configured [" + e.getMessage() + "]", e);
+			}
+		}
+	}
+

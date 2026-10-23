@@ -1,3 +1,0 @@
-					Set<ProductOptionDescription> podDescriptions = po.getDescriptions().stream().filter(pod -> pod.getLanguage().getId() == language).collect(Collectors.toSet());
-					po.setDescriptions(podDescriptions);
-				}

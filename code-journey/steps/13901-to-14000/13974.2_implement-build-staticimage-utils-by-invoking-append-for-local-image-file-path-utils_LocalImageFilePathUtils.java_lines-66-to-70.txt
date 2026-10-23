@@ -1,5 +1,0 @@
-	public String buildStaticimageUtils(MerchantStore store, String type, String imageName) {
-		StringBuilder imgName = new StringBuilder().append(getBasePath(store)).append(Constants.FILES_URI).append(Constants.SLASH).append(store.getCode()).append("/").append(type).append("/");
-		if(!StringUtils.isBlank(imageName)) {
-				imgName.append(imageName);
-		}

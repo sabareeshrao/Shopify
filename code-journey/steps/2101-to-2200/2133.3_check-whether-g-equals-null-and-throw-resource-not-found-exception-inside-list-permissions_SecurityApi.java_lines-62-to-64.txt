@@ -1,3 +1,0 @@
-			if(g == null) {
-				throw new ResourceNotFoundException("Group [" + group + "] does not exist");
-			}

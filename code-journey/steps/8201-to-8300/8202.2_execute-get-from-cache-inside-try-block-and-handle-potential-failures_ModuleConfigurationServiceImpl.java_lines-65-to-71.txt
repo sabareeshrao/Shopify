@@ -1,0 +1,7 @@
+		try {
+
+			/**
+			 * Modules are loaded using
+			 */
+			modules = (List<IntegrationModule>) cache.getFromCache("INTEGRATION_M" + module); // PAYMENT_MODULES
+																								// SHIPPING_MODULES

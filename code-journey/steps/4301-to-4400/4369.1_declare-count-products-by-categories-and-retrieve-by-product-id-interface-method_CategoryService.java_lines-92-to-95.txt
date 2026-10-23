@@ -1,0 +1,4 @@
+	List<Object[]> countProductsByCategories(MerchantStore store,
+			List<Long> categoryIds) throws ServiceException;
+	
+	List<Category> getByProductId(Long productId, MerchantStore store);

@@ -1,0 +1,51 @@
+			throws IntegrationException {
+		
+		Validate.notNull(globalShippingConfiguration, "IntegrationConfiguration must not be null for StorePickUp");
+		
+		
+		try {
+			
+			if(!globalShippingConfiguration.isActive())
+				return;
+
+			String region = null;
+			
+			String price = globalShippingConfiguration.getIntegrationKeys().get("price");
+	
+	
+			if(delivery.getZone()!=null) {
+				region = delivery.getZone().getCode();
+			} else {
+				region = delivery.getState();
+			}
+			
+			ShippingOption shippingOption = new ShippingOption();
+			shippingOption.setShippingModuleCode(MODULE_CODE);
+			shippingOption.setOptionCode(MODULE_CODE);
+			shippingOption.setOptionId(new StringBuilder().append(MODULE_CODE).append("_").append(region).toString());
+			
+			shippingOption.setOptionPrice(productPriceUtils.getAmount(price));
+	
+			shippingOption.setOptionPriceText(productPriceUtils.getStoreFormatedAmountWithCurrency(store, productPriceUtils.getAmount(price)));
+	
+			List<ShippingOption> options = quote.getShippingOptions();
+			
+			if(options == null) {
+				options = new ArrayList<ShippingOption>();
+				quote.setShippingOptions(options);
+			}
+
+			options.add(shippingOption);
+			
+			if(quote.getSelectedShippingOption()==null) {
+				quote.setSelectedShippingOption(shippingOption);
+			}
+
+		
+		} catch (Exception e) {
+			throw new IntegrationException(e);
+		}
+	
+		
+		
+	}

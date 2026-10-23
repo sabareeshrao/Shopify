@@ -1,0 +1,7 @@
+
+  /**
+   * Determines request language based on store rules
+   * 
+   * @param request
+   * @return
+   */

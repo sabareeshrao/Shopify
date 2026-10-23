@@ -1,0 +1,25 @@
+public class CountryDescription extends Description {
+	private static final long serialVersionUID = 1L;
+	
+	@JsonIgnore
+	@ManyToOne(targetEntity = Country.class)
+	@JoinColumn(name = "COUNTRY_ID", nullable = false)
+	private Country country;
+	
+	public CountryDescription() {
+	}
+	
+	public CountryDescription(Language language, String name) {
+		this.setLanguage(language);
+		this.setName(name);
+	}
+	
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+	
+}

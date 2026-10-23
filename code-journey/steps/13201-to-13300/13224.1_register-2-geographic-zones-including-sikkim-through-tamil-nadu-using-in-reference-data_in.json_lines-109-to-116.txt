@@ -1,8 +1,0 @@
-		"zoneCode": "Sikkim",
-		"zoneName": "Sikkim",
-		"countryCode": "IN"
-	},
-	{
-		"zoneCode": "TamilNadu",
-		"zoneName": "Tamil Nadu",
-		"countryCode": "IN"

@@ -1,3 +1,0 @@
-		} else {
-			availability = defaultAvailability(variant.getProduct().getAvailabilities());
-		}

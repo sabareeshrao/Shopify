@@ -1,0 +1,6 @@
+	private CustomerOptionSet optionSet;
+	
+	public CustomerOptionSet getOptionSet() {
+		return optionSet;
+	}
+

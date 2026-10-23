@@ -1,0 +1,45 @@
+
+	@Override
+	public ReadableMerchantStoreList getChildStores(Language language, String code, int page, int count) {
+		try {
+
+			// first check if store is retailer
+			MerchantStore retailer = this.getByCode(code);
+			if (retailer == null) {
+				throw new ResourceNotFoundException("Merchant [" + code + "] not found");
+			}
+
+			if (retailer.isRetailer() == null || !retailer.isRetailer().booleanValue()) {
+				throw new ResourceNotFoundException("Merchant [" + code + "] not a retailer");
+			}
+
+			
+			Page<MerchantStore> children = merchantStoreService.listChildren(code, page, count);
+			List<ReadableMerchantStore> readableStores = new ArrayList<ReadableMerchantStore>();
+			ReadableMerchantStoreList readableList = new ReadableMerchantStoreList();
+			if (!CollectionUtils.isEmpty(children.getContent())) {
+				for (MerchantStore store : children)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}
+			readableList.setData(readableStores);
+			readableList.setRecordsFiltered(children.getSize());
+			readableList.setTotalPages(children.getTotalPages());
+			readableList.setRecordsTotal(children.getTotalElements());
+			readableList.setNumber(children.getNumber());
+			
+			return readableList;
+			
+			
+			
+/*			List<MerchantStore> children = merchantStoreService.listChildren(code);
+			List<ReadableMerchantStore> readableStores = new ArrayList<ReadableMerchantStore>();
+			if (!CollectionUtils.isEmpty(children)) {
+				for (MerchantStore store : children)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}
+			return readableStores;*/
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+	}

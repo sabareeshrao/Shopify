@@ -1,0 +1,9 @@
+import java.io.Serializable;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.payments.TransactionType;
+
+/**
+ * This class is used for writing a transaction in the System
+ * @author c.samson
+ *
+ */

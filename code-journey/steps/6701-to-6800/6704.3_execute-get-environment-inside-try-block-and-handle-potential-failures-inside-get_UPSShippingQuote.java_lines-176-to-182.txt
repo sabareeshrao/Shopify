@@ -1,0 +1,7 @@
+		HttpPost httppost = null;
+		BufferedReader reader = null;
+
+		try {
+			String env = configuration.getEnvironment();
+			
+			Set<String> regions = module.getRegionsSet();

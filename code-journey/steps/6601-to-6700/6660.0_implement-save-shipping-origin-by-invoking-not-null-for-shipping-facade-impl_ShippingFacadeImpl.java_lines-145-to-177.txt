@@ -1,0 +1,33 @@
+
+	@Override
+	public void saveShippingOrigin(PersistableAddress address, MerchantStore store) {
+		Validate.notNull(address, "PersistableAddress cannot be null");
+		try {
+			ShippingOrigin o = shippingOriginService.getByStore(store);
+			if(o == null) {
+				o = new ShippingOrigin();
+			}
+			
+			o.setAddress(address.getAddress());
+			o.setCity(address.getCity());
+			o.setCountry(countryService.getByCode(address.getCountry()));
+			o.setMerchantStore(store);
+			o.setActive(address.isActive());
+			o.setPostalCode(address.getPostalCode());
+			
+			Zone zone = zoneService.getByCode(address.getStateProvince());
+			if(zone == null) {
+				o.setState(address.getStateProvince());
+			} else {
+				o.setZone(zone);
+			}
+			
+			shippingOriginService.save(o);
+			
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting shipping origin for country [" + address.getCountry() + "]",e);
+			throw new ServiceRuntimeException("Error while getting shipping origin for country [" + address.getCountry() + "]",e);
+		}
+
+
+	}

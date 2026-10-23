@@ -1,0 +1,21 @@
+
+
+			return sendTransaction(orderNumber, store, messageString.toString(), transactionType, type, payment.getPaymentType(), amount, configuration, module);
+			
+		} catch(Exception e) {
+			
+			if(e instanceof IntegrationException)
+				throw (IntegrationException)e;
+			throw new IntegrationException("Error while processing BeanStream transaction",e);
+
+		} finally {
+			
+			
+			if (conn != null) {
+				try {
+					conn.disconnect();
+				} catch (Exception ignore) {}
+			}
+		}
+
+	}

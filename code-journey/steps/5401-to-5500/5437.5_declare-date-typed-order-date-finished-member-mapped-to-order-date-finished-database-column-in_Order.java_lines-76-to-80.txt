@@ -1,0 +1,5 @@
+	
+	//used for an order payable on multiple installment
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="ORDER_DATE_FINISHED")
+	private Date orderDateFinished;

@@ -1,0 +1,9 @@
+
+	@NotEmpty
+	@Column(name = "STORE_POSTAL_CODE", length = 15)
+	private String storepostalcode;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
+	@JoinColumn(name = "COUNTRY_ID", nullable = false, updatable = true)
+	private Country country;

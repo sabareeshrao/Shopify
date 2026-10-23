@@ -1,8 +1,0 @@
-
-			//notes
-			//On receipt of the transaction response, the merchant must display order amount, transaction ID number, bank authorization code (authCode), currency, date and �messageText� to the customer on a confirmation page.
-		*/
-		
-
-		//String agent = "Mozilla/4.0";
-		//String respText = "";

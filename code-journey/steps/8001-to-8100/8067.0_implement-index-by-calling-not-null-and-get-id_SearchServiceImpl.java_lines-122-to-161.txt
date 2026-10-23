@@ -1,0 +1,40 @@
+	public void index(MerchantStore store, Product product) throws ServiceException {
+
+		Validate.notNull(product.getId(), "Product.id cannot be null");
+
+		if (configuration.getProperty(INDEX_PRODUCTS) == null
+				|| configuration.getProperty(INDEX_PRODUCTS).equals(Constants.FALSE) || searchModule == null) {
+			return;
+		}
+
+		List<String> languages = languages(product);
+
+		// existing documents
+		List<Document> documents;
+		List<Map<String, String>> variants = null;
+		try {
+			documents = document(product.getId(), languages, RequestOptions.DO_NOT_FAIL_ON_NOT_FOUND);
+
+				if (!CollectionUtils.isEmpty(product.getVariants())) {
+					variants = new ArrayList<Map<String, String>>();
+					variants = product.getVariants().stream().map(i -> variants(i)).collect(Collectors.toList());
+				}
+	
+				if (!CollectionUtils.isEmpty(documents)) {
+					if (documents.iterator().next() != null) {
+						searchModule.delete(languages, product.getId());
+					}
+				}
+
+
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+
+		Set<ProductDescription> descriptions = product.getDescriptions();
+
+		for (ProductDescription description : descriptions) {
+			indexProduct(store, description, product, variants);
+		}
+
+	}

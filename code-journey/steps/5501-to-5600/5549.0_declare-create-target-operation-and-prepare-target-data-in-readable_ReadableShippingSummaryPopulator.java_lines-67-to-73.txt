@@ -1,0 +1,7 @@
+
+	@Override
+	protected ReadableShippingSummary createTarget() {
+		return new 
+				ReadableShippingSummary();
+	}
+

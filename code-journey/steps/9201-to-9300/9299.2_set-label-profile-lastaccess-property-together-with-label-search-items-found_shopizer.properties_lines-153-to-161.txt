@@ -1,0 +1,9 @@
+label.profile.lastaccess=Last access
+label.register.personal.information=Personal information
+label.register.signin.information=Sign-in information
+label.register.createaccount=Create an account
+
+#search
+label.search.searchQuery=Search query
+label.search.items.found=item(s) found
+

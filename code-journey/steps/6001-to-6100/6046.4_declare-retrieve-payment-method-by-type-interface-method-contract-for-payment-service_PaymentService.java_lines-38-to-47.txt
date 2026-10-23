@@ -1,0 +1,10 @@
+	IntegrationModule getPaymentMethodByType(MerchantStore store, String type)
+			throws ServiceException;
+	
+	/**
+	 * Get a specific Payment module by payment code (defined in integrationmoduel.json) paypal, authorizenet ..
+	 * @param store
+	 * @param name
+	 * @return IntegrationModule
+	 * @throws ServiceException
+	 */

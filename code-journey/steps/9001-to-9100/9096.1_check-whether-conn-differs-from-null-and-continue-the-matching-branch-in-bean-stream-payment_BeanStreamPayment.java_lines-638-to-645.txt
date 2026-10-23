@@ -1,8 +1,0 @@
-			
-			if (conn != null) {
-				try {
-					conn.disconnect();
-				} catch (Exception ignore) {}
-			}
-		}
-

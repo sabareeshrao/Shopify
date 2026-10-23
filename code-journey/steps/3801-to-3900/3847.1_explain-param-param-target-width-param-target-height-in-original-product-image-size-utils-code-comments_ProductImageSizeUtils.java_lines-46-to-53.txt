@@ -1,8 +1,0 @@
-
-	/**
-	 *
-	 * @param img
-	 * @param targetWidth
-	 * @param targetHeight
-	 * @param hint
-	 * 	{@code RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR},

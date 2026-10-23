@@ -1,0 +1,65 @@
+	protected static String ENGLISH_LANGUAGE_CODE = "en";
+	protected static String FRENCH_LANGUAGE_CODE = "fr";
+	
+	@Inject
+	protected InitializationDatabase   initializationDatabase;
+	
+	@Inject
+	protected ProductService productService;
+	
+	@Inject
+	protected PricingService pricingService;
+	
+	@Inject
+	protected ProductPriceService productPriceService;
+	
+	@Inject
+	protected ProductAttributeService productAttributeService;
+	
+	@Inject
+	protected ProductOptionService productOptionService;
+	
+	@Inject
+	protected ProductOptionSetService productOptionSetService;
+	
+	@Inject
+	protected ProductOptionValueService productOptionValueService;
+	
+	@Inject
+	protected ProductAvailabilityService productAvailabilityService;
+	
+	@Inject
+	protected ProductReviewService productReviewService;
+	
+	@Inject
+	protected ProductImageService productImageService;
+	
+	@Inject
+	protected ProductRelationshipService productRelationshipService;
+	
+	@Inject
+	protected CategoryService categoryService;
+	
+	@Inject
+	protected MerchantStoreService merchantService;
+	
+	@Inject
+	protected ProductTypeService productTypeService;
+	
+	@Inject
+	protected LanguageService languageService;
+	
+	@Inject
+	protected CountryService countryService;
+	
+	@Inject
+	protected CurrencyService currencyService;
+	
+	@Inject
+	protected ManufacturerService manufacturerService;
+	
+	@Inject
+	protected ZoneService zoneService;
+	
+	@Inject
+	protected CustomerService customerService;

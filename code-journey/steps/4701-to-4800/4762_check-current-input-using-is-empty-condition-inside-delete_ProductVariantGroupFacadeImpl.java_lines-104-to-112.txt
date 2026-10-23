@@ -1,9 +1,0 @@
-		
-		try {
-		
-			//null all group from instances
-			for(ProductVariant instance : group.getProductVariants()) {
-				Optional<ProductVariant> p = productVariantService.getById(instance.getId(), store);
-				if(p.isEmpty()) {
-					throw new ResourceNotFoundException("Product instance [" + instance.getId() + " not found for store [" + store.getCode() + "]");
-				}

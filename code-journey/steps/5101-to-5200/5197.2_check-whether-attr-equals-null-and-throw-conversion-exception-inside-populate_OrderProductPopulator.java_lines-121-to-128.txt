@@ -1,8 +1,0 @@
-				for(ShoppingCartAttributeItem attribute : attributeItems) {
-					OrderProductAttribute orderProductAttribute = new OrderProductAttribute();
-					orderProductAttribute.setOrderProduct(target);
-					Long id = attribute.getProductAttributeId();
-					ProductAttribute attr = productAttributeService.getById(id);
-					if(attr==null) {
-						throw new ConversionException("Attribute id " + id + " does not exists");
-					}

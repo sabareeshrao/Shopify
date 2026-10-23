@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "GE",
+		"zoneName": "Genf",
+		"countryCode": "CH"
+	},

@@ -1,0 +1,21 @@
+	@Override
+	public ProductInventory inventory(ProductVariant variant) throws ServiceException {
+		Validate.notNull(variant.getAvailabilities());
+		Validate.notNull(variant.getProduct());
+		
+		ProductAvailability availability = null;
+		if(!CollectionUtils.isEmpty(variant.getAvailabilities())) {
+			availability = defaultAvailability(variant.getAvailabilities());
+		} else {
+			availability = defaultAvailability(variant.getProduct().getAvailabilities());
+		}
+		FinalPrice finalPrice = pricingService.calculateProductPrice(variant);
+		
+		if(finalPrice==null) {
+			finalPrice = pricingService.calculateProductPrice(variant.getProduct());
+		}
+		
+		ProductInventory inventory = inventory(availability, finalPrice);
+		inventory.setSku(variant.getSku());
+		return inventory;
+	}

@@ -1,5 +1,0 @@
-
-		/** set parent * */
-		if (parent != null) {
-			category.setParent(parent);
-		}

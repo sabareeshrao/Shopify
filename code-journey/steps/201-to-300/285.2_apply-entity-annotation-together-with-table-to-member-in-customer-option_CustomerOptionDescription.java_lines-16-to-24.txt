@@ -1,0 +1,9 @@
+
+@Entity
+@Table(name="CUSTOMER_OPTION_DESC", uniqueConstraints={
+	@UniqueConstraint(columnNames={
+			"CUSTOMER_OPTION_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

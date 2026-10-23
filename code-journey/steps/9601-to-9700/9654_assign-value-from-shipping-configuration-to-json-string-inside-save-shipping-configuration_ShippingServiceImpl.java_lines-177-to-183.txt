@@ -1,7 +1,0 @@
-		
-		String value = shippingConfiguration.toJSONString();
-		configuration.setValue(value);
-		merchantConfigurationService.saveOrUpdate(configuration);
-		
-	}
-	

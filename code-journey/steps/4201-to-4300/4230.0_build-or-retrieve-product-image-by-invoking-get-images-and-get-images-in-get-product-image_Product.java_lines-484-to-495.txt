@@ -1,0 +1,12 @@
+	public ProductImage getProductImage() {
+		ProductImage productImage = null;
+		if(this.getImages()!=null && this.getImages().size()>0) {
+			for(ProductImage image : this.getImages()) {
+				productImage = image;
+				if(productImage.isDefaultImage()) {
+					break;
+				}
+			}
+		}
+		return productImage;
+	}

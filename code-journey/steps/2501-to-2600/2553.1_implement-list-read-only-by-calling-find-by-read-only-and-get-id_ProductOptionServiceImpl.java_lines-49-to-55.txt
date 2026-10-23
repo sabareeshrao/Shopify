@@ -1,0 +1,7 @@
+	@Override
+	public List<ProductOption> listReadOnly(MerchantStore store, Language language) throws ServiceException {
+
+		return productOptionRepository.findByReadOnly(store.getId(), language.getId(), true);
+		
+		
+	}

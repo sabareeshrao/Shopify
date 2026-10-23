@@ -1,5 +1,0 @@
-							attribute.setProductAttribute(productAttribute);
-							attributesList.add(productAttribute);
-							existingAttribute = true;
-							break;
-						}

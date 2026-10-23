@@ -1,8 +1,0 @@
-		 * } ], "order" : 1, "code" : "color-red", "id" : 0 }
-		 */
-
-		restTemplate = new RestTemplate();
-
-		final HttpEntity<String> entity = new HttpEntity<>(json, getHeader());
-
-		final ResponseEntity response = restTemplate.postForEntity(

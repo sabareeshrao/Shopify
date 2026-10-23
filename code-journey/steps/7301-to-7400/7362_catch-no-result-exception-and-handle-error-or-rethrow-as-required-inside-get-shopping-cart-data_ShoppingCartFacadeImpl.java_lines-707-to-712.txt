@@ -1,6 +1,0 @@
-		} catch (NoResultException nre) {
-			// nothing
-
-		} catch (Exception e) {
-			LOG.error("Cannot retrieve cart code " + code, e);
-		}

@@ -1,0 +1,9 @@
+  boolean authorizedStore(String userName, String merchantStoreCode);
+  
+  
+  /**
+   * Method to be used in argument resolver.
+   * @param store
+   * @return
+   */
+  boolean authorizeStore(MerchantStore store, String path);

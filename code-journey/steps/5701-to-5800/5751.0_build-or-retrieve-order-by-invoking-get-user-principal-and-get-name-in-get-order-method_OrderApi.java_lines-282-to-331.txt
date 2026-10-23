@@ -1,0 +1,50 @@
+
+	/**
+	 * Get a given order by id
+	 *
+	 * @param id
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/auth/orders/{id}" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableOrder getOrder(@PathVariable final Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+
+		Customer customer = customerService.getByNick(userName);
+
+		if (customer == null) {
+			response.sendError(401, "Error while performing checkout customer not authorized");
+			return null;
+		}
+
+		ReadableOrder order = orderFacade.getReadableOrder(id, merchantStore, language);
+
+		if (order == null) {
+			LOGGER.error("Order is null for id " + id);
+			response.sendError(404, "Order is null for id " + id);
+			return null;
+		}
+
+		if (order.getCustomer() == null) {
+			LOGGER.error("Order is null for customer " + principal);
+			response.sendError(404, "Order is null for customer " + principal);
+			return null;
+		}
+
+		if (order.getCustomer().getId() != null
+				&& order.getCustomer().getId().longValue() != customer.getId().longValue()) {
+			LOGGER.error("Order is null for customer " + principal);
+			response.sendError(404, "Order is null for customer " + principal);
+			return null;
+		}
+
+		return order;
+	}

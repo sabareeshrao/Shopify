@@ -1,0 +1,9 @@
+public abstract class SalesManagerEntityServiceImpl<K extends Serializable & Comparable<K>, E extends SalesManagerEntity<K, ?>>
+	implements SalesManagerEntityService<K, E> {
+	
+	/**
+	 * Classe de l'entité, déterminé à partir des paramètres generics.
+	 */
+	private Class<E> objectClass;
+
+

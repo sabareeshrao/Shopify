@@ -1,0 +1,6 @@
+	
+	@Autowired
+	private ReadableProductVariationMapper readableProductVariationMapper;
+	
+	@Autowired
+	private ReadableInventoryMapper readableInventoryMapper;

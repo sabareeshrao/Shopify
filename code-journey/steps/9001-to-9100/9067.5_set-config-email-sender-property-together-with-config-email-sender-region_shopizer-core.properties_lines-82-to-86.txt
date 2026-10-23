@@ -1,0 +1,5 @@
+#default=SpringHtmlEmailSender - through SMTP server and requires configurations from admin console
+#ses=AWS SES service
+config.emailSender=default
+config.emailSender.region=US_EAST_1
+

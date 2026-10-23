@@ -1,0 +1,38 @@
+      throws Exception {
+
+    Product product = productService.getById(id);
+
+    if (product == null) {
+      response.sendError(404, "Product not fount for id " + id);
+      return null;
+    }
+
+    List<ReadableProductVariantValue> ids = options.getOptions();
+
+    if (CollectionUtils.isEmpty(ids)) {
+      return null;
+    }
+    
+    List<ReadableProductVariantValue> variants = options.getOptions();
+    List<ProductAttribute> attributes = new ArrayList<ProductAttribute>();
+    
+    Set<ProductAttribute> productAttributes = product.getAttributes();
+    for(ProductAttribute attribute : productAttributes) {
+      Long option = attribute.getProductOption().getId();
+      Long optionValue = attribute.getProductOptionValue().getId();
+      for(ReadableProductVariantValue v : variants) {
+        if(v.getOption().longValue() == option.longValue()
+            && v.getValue().longValue() == optionValue.longValue()) {
+          attributes.add(attribute);
+        }
+      }
+      
+    }
+
+    FinalPrice price = pricingService.calculateProductPrice(product, attributes);
+    ReadableProductPrice readablePrice = new ReadableProductPrice();
+    ReadableFinalPricePopulator populator = new ReadableFinalPricePopulator();
+    populator.setPricingService(pricingService);
+    populator.populate(price, readablePrice, merchantStore, language);
+    return readablePrice;
+  }

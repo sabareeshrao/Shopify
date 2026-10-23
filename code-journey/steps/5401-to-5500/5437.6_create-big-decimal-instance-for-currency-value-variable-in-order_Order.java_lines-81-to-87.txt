@@ -1,0 +1,7 @@
+	
+	//What was the exchange rate
+	@Column (name ="CURRENCY_VALUE")
+	private BigDecimal currencyValue = new BigDecimal(1);//default 1-1
+	
+	@Column (name ="ORDER_TOTAL")
+	private BigDecimal total;

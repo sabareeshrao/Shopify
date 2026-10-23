@@ -1,7 +1,0 @@
-				for(com.salesmanager.shop.model.catalog.product.ProductDescription description : source.getDescriptions()) {
-					
-				  ProductDescription productDescription = new ProductDescription();
-				  Language lang = languageService.getByCode(description.getLanguage());
-	              if(lang==null) {
-	                    throw new ConversionException("Language code " + description.getLanguage() + " is invalid, use ISO code (en, fr ...)");
-	               }

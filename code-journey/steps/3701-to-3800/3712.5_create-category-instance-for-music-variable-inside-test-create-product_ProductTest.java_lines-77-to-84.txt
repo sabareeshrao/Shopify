@@ -1,8 +1,0 @@
-
-	    book.setDescriptions(descriptions);
-
-	    categoryService.create(book);
-
-	    Category music = new Category();
-	    music.setMerchantStore(store);
-	    music.setCode("music");

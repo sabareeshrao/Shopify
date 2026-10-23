@@ -1,6 +1,0 @@
-					productImage.setProduct(destination);
-					productImage.setProductImage(img.getName());
-
-					destination.getImages().add(productImage);
-				}
-			}

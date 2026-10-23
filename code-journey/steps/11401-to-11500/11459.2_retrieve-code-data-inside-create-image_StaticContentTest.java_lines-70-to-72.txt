@@ -1,3 +1,0 @@
-        //Add image
-        contentService.addContentFile(store.getCode(), cmsContentImage);
-

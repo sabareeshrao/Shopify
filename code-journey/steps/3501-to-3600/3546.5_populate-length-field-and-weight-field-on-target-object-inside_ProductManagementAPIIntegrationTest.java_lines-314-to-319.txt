@@ -1,0 +1,6 @@
+		specifications.setLength(new BigDecimal(21));
+		specifications.setWeight(new BigDecimal(22));
+		specifications.setWidth(new BigDecimal(23));
+
+		product.setProductSpecifications(specifications);
+		

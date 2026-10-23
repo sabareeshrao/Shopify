@@ -1,0 +1,6 @@
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public List<IntegrationModule> getIntegrationModules(String module) {
+
+		List<IntegrationModule> modules = null;

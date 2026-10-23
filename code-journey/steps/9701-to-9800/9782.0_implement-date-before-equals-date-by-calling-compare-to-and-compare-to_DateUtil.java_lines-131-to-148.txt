@@ -1,0 +1,18 @@
+	public static boolean dateBeforeEqualsDate(Date firstDate, Date compareDate) {
+		
+        
+		if(firstDate==null || compareDate==null) {
+			return true;
+		}
+		
+		if (firstDate.compareTo(compareDate) > 0) {
+            return false;
+        } else if (firstDate.compareTo(compareDate) < 0) {
+            return true;
+        } else if (firstDate.compareTo(compareDate) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+		
+	}

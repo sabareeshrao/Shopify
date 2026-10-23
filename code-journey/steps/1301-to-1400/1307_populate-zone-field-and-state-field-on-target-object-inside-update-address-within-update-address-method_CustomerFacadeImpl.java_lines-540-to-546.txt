@@ -1,7 +1,0 @@
-
-        customerModel.getDelivery().setZone(zone);
-        customerModel.getDelivery().setState(null);
-
-      } else {
-        customerModel.getDelivery().setZone(null);
-      }

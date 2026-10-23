@@ -1,0 +1,8 @@
+				
+				for(ProductAttribute attribute : attributes) {
+					if(attribute.getProduct().getId().longValue()!= id.longValue()) {
+						//throw unauthorized
+						throw new OperationNotAllowedException("Attribute with id [" + attribute.getId() + "] is not attached to product id [" + id + "]");
+					}
+				}
+			}

@@ -1,0 +1,21 @@
+	
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/product/inventory" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody ReadableEntityList<ReadableInventory> getByProductId(
+			@RequestParam Long productId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+		
+		if(productId == null) {
+			throw new RestApiException("Requires request parameter product id [/product/inventoty?productId");
+		}
+
+		return productInventoryFacade.get(productId, merchantStore, language, page, count);
+
+	}
+
+}

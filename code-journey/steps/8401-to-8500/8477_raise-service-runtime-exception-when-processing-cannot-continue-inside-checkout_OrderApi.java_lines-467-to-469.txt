@@ -1,3 +1,0 @@
-			}
-			throw new ServiceRuntimeException("Error during checkout [" + message + "]", e);
-		}

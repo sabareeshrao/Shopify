@@ -1,8 +1,0 @@
- * from the rules engine and other modules
- * @author carlsamson
- *
- */
-public interface OrderTotalService {
-	
-	OrderTotalVariation findOrderTotalVariation(final OrderSummary summary, final Customer customer, final MerchantStore store, final Language language) throws Exception;
-

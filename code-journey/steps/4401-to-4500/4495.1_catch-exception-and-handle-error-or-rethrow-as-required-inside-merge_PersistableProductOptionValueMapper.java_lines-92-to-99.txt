@@ -1,8 +1,0 @@
-
-			destination.setCode(source.getCode());
-			destination.setMerchantStore(store);
-			destination.setProductOptionValueSortOrder(source.getSortOrder());
-
-
-			return destination;
-		} catch (Exception e) {

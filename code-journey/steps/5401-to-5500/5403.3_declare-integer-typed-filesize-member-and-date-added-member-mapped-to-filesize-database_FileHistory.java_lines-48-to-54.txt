@@ -1,0 +1,7 @@
+
+	@Column ( name="FILESIZE", nullable=false )
+	private Integer filesize;
+	
+	@Temporal(TemporalType.TIMESTAMP )
+	@Column ( name="DATE_ADDED", length=0, nullable=false )
+	private Date dateAdded;

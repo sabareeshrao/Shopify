@@ -1,8 +1,0 @@
-
-			DigitalProduct digitalProduct = digitalProductService.getByProduct(store, modelProduct);
-			
-			if(digitalProduct!=null) {
-				OrderProductDownload orderProductDownload = new OrderProductDownload();	
-				orderProductDownload.setOrderProductFilename(digitalProduct.getProductFileName());
-				orderProductDownload.setOrderProduct(target);
-				orderProductDownload.setDownloadCount(0);

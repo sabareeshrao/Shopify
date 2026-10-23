@@ -1,0 +1,7 @@
+	    shippingConfiguration.setShippingPackageType(ShippingPackageType.ITEM);//individual item pricing or box packaging (see unit test above)
+	    //only if package type is package
+	    shippingConfiguration.setBoxHeight(5);
+	    shippingConfiguration.setBoxLength(5);
+	    shippingConfiguration.setBoxWidth(5);
+	    shippingConfiguration.setBoxWeight(1);
+	    shippingConfiguration.setMaxWeight(10);

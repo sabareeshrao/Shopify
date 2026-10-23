@@ -1,0 +1,6 @@
+	public Transaction initPaypalTransaction(MerchantStore store,
+			List<ShoppingCartItem> items, OrderTotalSummary summary, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		
+			Validate.notNull(configuration, "Configuration must not be null");

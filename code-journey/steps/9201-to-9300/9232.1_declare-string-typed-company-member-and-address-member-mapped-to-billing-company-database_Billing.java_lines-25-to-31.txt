@@ -1,0 +1,7 @@
+
+
+	@Column (name ="BILLING_COMPANY", length=100)
+	private String company;
+	
+	@Column (name ="BILLING_STREET_ADDRESS", length=256)
+	private String address;

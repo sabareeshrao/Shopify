@@ -1,0 +1,26 @@
+
+	/**
+	 * <p>
+	 * Method to add static content data for given merchant.Static content data
+	 * can be of following type
+	 * 
+	 * <pre>
+	 * 1. CSS and JS files
+	 * 2. Digital Data like audio or video
+	 * </pre>
+	 * </p>
+	 * <p>
+	 * Merchant store code will be used to create cache node where merchant data
+	 * will be stored,input data will contain name, file as well type of data
+	 * being stored.
+	 * 
+	 * @see FileContentType
+	 *      </p>
+	 * 
+	 * @param merchantStoreCode
+	 *            merchant store for whom data is being stored
+	 * @param inputStaticContentData
+	 *            data object being stored
+	 * @throws ServiceException
+	 * 
+	 */

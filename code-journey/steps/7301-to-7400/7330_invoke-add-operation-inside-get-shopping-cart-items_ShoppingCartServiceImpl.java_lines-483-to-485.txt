@@ -1,3 +1,0 @@
-
-				shoppingCartItemsSet.add(item);
-			}

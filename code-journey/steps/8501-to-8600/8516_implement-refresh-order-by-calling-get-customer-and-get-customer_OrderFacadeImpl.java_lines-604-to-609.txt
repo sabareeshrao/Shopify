@@ -1,6 +1,0 @@
-	@Override
-	public void refreshOrder(ShopOrder order, MerchantStore store, Customer customer, ShoppingCart shoppingCart,
-			Language language) throws Exception {
-		if (customer == null && order.getCustomer() != null) {
-			order.getCustomer().setId(0L);// reset customer id
-		}

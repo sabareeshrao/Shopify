@@ -1,4 +1,0 @@
-	{ 
-		@Index(name="PRD_AVAIL_STORE_PRD_IDX", columnList = "PRODUCT_ID,MERCHANT_ID"),
-		@Index(name="PRD_AVAIL_PRD_IDX", columnList = "PRODUCT_ID")
-	}

@@ -1,4 +1,0 @@
-					shoppingCart.setObsolete(true);
-					return shoppingCart;
-
-				}

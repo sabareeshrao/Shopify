@@ -1,8 +1,0 @@
-public interface ModuleConfigurationRepository extends JpaRepository<IntegrationModule, Long> {
-
-	List<IntegrationModule> findByModule(String moduleName);
-	
-	IntegrationModule findByCode(String code);
-	
-
-}

@@ -1,8 +1,0 @@
-	    /**
-	     * Category
-	     */
-	    Category shoes = new Category();
-	    shoes.setMerchantStore(store);
-	    shoes.setCode("shoes");
-
-	    CategoryDescription shoesDescription = new CategoryDescription();

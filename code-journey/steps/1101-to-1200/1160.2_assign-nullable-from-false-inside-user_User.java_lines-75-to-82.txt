@@ -1,0 +1,8 @@
+	
+	@ManyToMany(fetch=FetchType.LAZY, cascade = {CascadeType.REFRESH})
+	@JoinTable(name = "USER_GROUP", joinColumns = { 
+			@JoinColumn(name = "USER_ID", nullable = false, updatable = false) }
+			, 
+			inverseJoinColumns = { @JoinColumn(name = "GROUP_ID", 
+					nullable = false, updatable = false) }
+	)

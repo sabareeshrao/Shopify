@@ -1,8 +1,0 @@
-	/**
-	 * Updates an existing store
-	 * 
-	 * @param store
-	 * @throws Exception
-	 */
-	//ReadableMerchantStore update(PersistableMerchantStore store);
-	void update(PersistableMerchantStore store);

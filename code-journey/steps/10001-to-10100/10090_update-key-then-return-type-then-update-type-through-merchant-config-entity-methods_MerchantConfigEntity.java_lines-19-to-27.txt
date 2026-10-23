@@ -1,9 +1,0 @@
-  public void setKey(String key) {
-    this.key = key;
-  }
-  public MerchantConfigurationType getType() {
-    return type;
-  }
-  public void setType(MerchantConfigurationType type) {
-    this.type = type;
-  }

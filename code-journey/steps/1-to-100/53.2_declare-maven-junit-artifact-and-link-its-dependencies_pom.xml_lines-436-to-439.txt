@@ -1,4 +1,0 @@
-					<artifactId>junit</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>

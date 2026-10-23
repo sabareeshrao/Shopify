@@ -1,0 +1,9 @@
+	
+	@Inject
+	@Resource(name="shippingModules")
+	private Map<String,ShippingQuoteModule> shippingModules;
+	
+	//shipping pre-processors
+	@Inject
+	@Resource(name="shippingModulePreProcessors")
+	private List<ShippingQuotePrePostProcessModule> shippingModulePreProcessors;

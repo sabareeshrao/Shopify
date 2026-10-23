@@ -1,3 +1,0 @@
-			+ "and pc.id IN (select c.id from Category c where c.lineage like %?2% and pmd.language.id = ?3)")
-	List<Manufacturer> findByProductInCategoryId(Integer storeId, String lineage, Integer languageId);
-}

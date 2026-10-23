@@ -1,8 +1,0 @@
-		"zoneCode": "Cordoba",
-		"zoneName": "Cordoba",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Cuenca",
-		"zoneName": "Cuenca",
-		"countryCode": "ES"

@@ -1,0 +1,18 @@
+
+	@Override
+	public ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, String codePrefix,
+			MerchantStore store, Language language, int page, int count) {
+
+		Validate.notNull(codePrefix, "content code prefix cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+
+		/*
+		 * return contentService.getByCodeLike(type, codePrefix, store,
+		 * language).stream() .map(content ->
+		 * convertContentToReadableContentBox(store, language, content))
+		 * .collect(Collectors.toList());
+		 */
+
+		return null;
+	}

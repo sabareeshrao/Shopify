@@ -1,0 +1,9 @@
+
+	@Column (name ="DELIVERY_CITY", length=100)
+	private String city;
+	
+	@Column (name ="DELIVERY_POSTCODE", length=20)
+	private String postalCode;
+	
+	@Column (name ="DELIVERY_STATE", length=100)
+	private String state;

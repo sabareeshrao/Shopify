@@ -1,8 +1,0 @@
-		
-			//target.setLocale(LocaleUtils.getLocale(store));
-
-			target.setLocale(LocaleUtils.getLocale(store));
-			
-			
-			Currency currency = null;
-			try {

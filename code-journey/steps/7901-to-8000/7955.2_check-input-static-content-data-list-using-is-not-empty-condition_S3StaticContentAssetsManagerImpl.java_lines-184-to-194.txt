@@ -1,0 +1,11 @@
+			throws ServiceException {
+
+		if (CollectionUtils.isNotEmpty(inputStaticContentDataList)) {
+			for (InputContentFile inputFile : inputStaticContentDataList) {
+				this.addFile(merchantStoreCode, folderPath, inputFile);
+			}
+
+		}
+
+	}
+

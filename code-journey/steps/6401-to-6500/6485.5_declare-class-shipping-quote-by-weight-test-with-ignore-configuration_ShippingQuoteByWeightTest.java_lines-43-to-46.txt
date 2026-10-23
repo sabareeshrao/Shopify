@@ -1,0 +1,4 @@
+
+@Ignore
+public class ShippingQuoteByWeightTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	

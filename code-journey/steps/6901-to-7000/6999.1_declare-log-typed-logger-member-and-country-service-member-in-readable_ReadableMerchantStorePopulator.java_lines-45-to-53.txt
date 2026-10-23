@@ -1,0 +1,9 @@
+	protected final Log logger = LogFactory.getLog(getClass());
+	
+	@Autowired
+	private CountryService countryService;
+	@Autowired
+	private ZoneService zoneService;
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath filePath;

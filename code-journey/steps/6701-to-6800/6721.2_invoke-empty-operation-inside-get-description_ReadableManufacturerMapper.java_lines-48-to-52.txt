@@ -1,5 +1,0 @@
-    } else {
-      return Optional.empty();
-    }
-  }
-

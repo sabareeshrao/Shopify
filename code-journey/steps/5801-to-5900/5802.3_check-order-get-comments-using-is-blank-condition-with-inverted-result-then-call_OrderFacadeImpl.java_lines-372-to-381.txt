@@ -1,0 +1,10 @@
+			Set<OrderProduct> orderProducts = new LinkedHashSet<OrderProduct>();
+
+			if (!StringUtils.isBlank(order.getComments())) {
+				OrderStatusHistory statusHistory = new OrderStatusHistory();
+				statusHistory.setStatus(OrderStatus.ORDERED);
+				statusHistory.setOrder(modelOrder);
+				statusHistory.setDateAdded(new Date());
+				statusHistory.setComments(order.getComments());
+				modelOrder.getOrderHistory().add(statusHistory);
+			}

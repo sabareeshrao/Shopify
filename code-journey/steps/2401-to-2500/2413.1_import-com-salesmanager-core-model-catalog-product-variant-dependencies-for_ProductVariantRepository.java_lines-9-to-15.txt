@@ -1,0 +1,7 @@
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+
+public interface ProductVariantRepository extends JpaRepository<ProductVariant, Long> {
+	
+
+	
+	

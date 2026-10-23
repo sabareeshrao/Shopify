@@ -1,5 +1,0 @@
-			productOption = productOptionService.getByCode(store, source.getOption().getCode());
-		} else {
-			Validate.notNull(source.getOption().getId(),"Product option id is null");
-			productOption = productOptionService.getById(source.getOption().getId());
-		}

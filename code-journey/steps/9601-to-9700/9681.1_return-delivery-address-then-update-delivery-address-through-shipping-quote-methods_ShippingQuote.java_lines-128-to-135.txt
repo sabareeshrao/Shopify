@@ -1,8 +1,0 @@
-	public Delivery getDeliveryAddress() {
-		return deliveryAddress;
-	}
-	public void setDeliveryAddress(Delivery deliveryAddress) {
-		this.deliveryAddress = deliveryAddress;
-	}
-
-	

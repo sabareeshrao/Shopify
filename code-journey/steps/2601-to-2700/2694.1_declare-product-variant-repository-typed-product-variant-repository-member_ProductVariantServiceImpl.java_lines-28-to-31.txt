@@ -1,0 +1,4 @@
+	private ProductVariantRepository productVariantRepository;
+
+	@Autowired
+	private PageableProductVariantRepositoty pageableProductVariantRepositoty;

@@ -1,0 +1,9 @@
+
+	@Autowired
+	private ProductService productService;
+	
+	@Autowired
+	private ProductVariantService productVariantService;
+
+	@Autowired
+	private ReadableInventoryMapper readableInventoryMapper;

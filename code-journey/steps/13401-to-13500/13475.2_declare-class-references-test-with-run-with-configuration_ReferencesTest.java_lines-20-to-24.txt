@@ -1,5 +1,0 @@
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest	(classes = {ConfigurationTest.class})
-@Ignore
-public class ReferencesTest {
-	

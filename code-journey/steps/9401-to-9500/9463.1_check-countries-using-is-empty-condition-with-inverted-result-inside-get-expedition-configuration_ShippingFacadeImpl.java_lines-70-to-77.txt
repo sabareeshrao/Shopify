@@ -1,8 +1,0 @@
-			
-			List<String> countries = shippingService.getSupportedCountries(store);
-
-			if(!CollectionUtils.isEmpty(countries)) {
-				
-				List<String> countryCode = countries.stream()
-						.sorted(Comparator.comparing(n->n.toString()))
-						.collect(Collectors.toList());

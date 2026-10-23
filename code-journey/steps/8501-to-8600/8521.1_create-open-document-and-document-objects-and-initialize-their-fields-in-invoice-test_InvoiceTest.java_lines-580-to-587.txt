@@ -1,8 +1,0 @@
-			
-			final OpenDocument doc = new OpenDocument();
-			doc.loadFrom(order.getId() + "_invoice.ods");
-
-			 // Open the PDF document
-			 Document document = new Document(PageSize.A4);
-			 File outFile = new File("invoice.pdf");
-

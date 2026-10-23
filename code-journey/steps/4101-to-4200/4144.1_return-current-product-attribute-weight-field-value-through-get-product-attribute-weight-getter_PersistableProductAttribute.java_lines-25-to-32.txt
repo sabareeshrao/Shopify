@@ -1,8 +1,0 @@
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	public BigDecimal getProductAttributeWeight() {
-		return productAttributeWeight;
-	}

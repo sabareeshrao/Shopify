@@ -1,8 +1,0 @@
-						"addOption");
-
-			} else {
-
-				digester.addCallMethod("Error/Description",
-						"setError", 0);
-				digester.addCallMethod("IntlRateResponse/Package/Error/Description",
-						"setError", 0);

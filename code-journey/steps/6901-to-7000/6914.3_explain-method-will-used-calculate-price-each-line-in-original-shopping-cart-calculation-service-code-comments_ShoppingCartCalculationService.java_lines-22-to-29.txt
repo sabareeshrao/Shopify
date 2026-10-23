@@ -1,8 +1,0 @@
-	/**
-	 * Method which will be used to calculate price for each line items as well
-	 * Total and Sub-total for {@link ShoppingCart}.
-	 * 
-	 * @param cartModel
-	 *            ShoopingCart mode representing underlying DB object
-	 * @param customer
-	 * @param store

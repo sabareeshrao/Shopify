@@ -1,0 +1,47 @@
+  @Override
+  public ReadableManufacturer populate(
+      com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer source,
+      ReadableManufacturer target, MerchantStore store, Language language)
+      throws ConversionException {
+
+
+    if (language == null) {
+      target = new ReadableManufacturerFull();
+    }
+    target.setOrder(source.getOrder());
+    target.setId(source.getId());
+    target.setCode(source.getCode());
+    if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+
+      List<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> fulldescriptions =
+          new ArrayList<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription>();
+
+      Set<ManufacturerDescription> descriptions = source.getDescriptions();
+      ManufacturerDescription description = null;
+      for (ManufacturerDescription desc : descriptions) {
+        if (language != null && desc.getLanguage().getCode().equals(language.getCode())) {
+          description = desc;
+          break;
+        } else {
+          fulldescriptions.add(populateDescription(desc));
+        }
+      }
+
+
+
+      if (description != null) {
+        com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription d =
+            populateDescription(description);
+        target.setDescription(d);
+      }
+
+      if (target instanceof ReadableManufacturerFull) {
+        ((ReadableManufacturerFull) target).setDescriptions(fulldescriptions);
+      }
+
+    }
+
+
+
+    return target;
+  }

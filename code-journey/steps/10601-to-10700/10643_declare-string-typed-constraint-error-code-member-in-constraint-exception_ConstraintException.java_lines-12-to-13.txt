@@ -1,2 +1,0 @@
-  private static final String CONSTRAINT_ERROR_CODE = "506";
-

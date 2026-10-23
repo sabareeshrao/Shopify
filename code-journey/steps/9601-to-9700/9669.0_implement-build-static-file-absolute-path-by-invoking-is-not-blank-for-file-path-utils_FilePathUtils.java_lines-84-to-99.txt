@@ -1,0 +1,16 @@
+
+	/**
+	 * Example: /<baseImagePath>/files/<storeCode>/STATIC_FILE/<fileName> Or
+	 * example: /<shopScheme>://<domainName>/<contextPath>/files/<storeCode>/
+	 */
+	public String buildStaticFileAbsolutePath(MerchantStore store, String fileName) {
+		if (StringUtils.isNotBlank(imageUtils.getBasePath(store))
+				&& imageUtils.getBasePath(store).startsWith(HTTP_SCHEME)) {
+			return imageUtils.getBasePath(store) + FILES_URI + SLASH + store.getCode() + SLASH
+					+ FileContentType.STATIC_FILE + SLASH + fileName;
+		} else {
+			String scheme = this.getScheme(store);
+			return scheme + SLASH + coreConfiguration.getProperty("CONTEXT_PATH")
+					+ buildStaticFilePath(store.getCode(), fileName);
+		}
+	}

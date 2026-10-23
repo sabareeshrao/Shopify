@@ -1,0 +1,46 @@
+
+			if(source.getAttributes()!=null) {
+				for(CustomerAttribute attribute : source.getAttributes()) {
+					ReadableCustomerAttribute readableAttribute = new ReadableCustomerAttribute();
+					readableAttribute.setId(attribute.getId());
+					readableAttribute.setTextValue(attribute.getTextValue());
+					ReadableCustomerOption option = new ReadableCustomerOption();
+					option.setId(attribute.getCustomerOption().getId());
+					option.setCode(attribute.getCustomerOption().getCode());
+
+					CustomerOptionDescription d = new CustomerOptionDescription();
+					d.setDescription(attribute.getCustomerOption().getDescriptionsSettoList().get(0).getDescription());
+					d.setName(attribute.getCustomerOption().getDescriptionsSettoList().get(0).getName());
+					option.setDescription(d);
+
+					readableAttribute.setCustomerOption(option);
+
+					ReadableCustomerOptionValue optionValue = new ReadableCustomerOptionValue();
+					optionValue.setId(attribute.getCustomerOptionValue().getId());
+					CustomerOptionValueDescription vd = new CustomerOptionValueDescription();
+					vd.setDescription(attribute.getCustomerOptionValue().getDescriptionsSettoList().get(0).getDescription());
+					vd.setName(attribute.getCustomerOptionValue().getDescriptionsSettoList().get(0).getName());
+					optionValue.setCode(attribute.getCustomerOptionValue().getCode());
+					optionValue.setDescription(vd);
+
+
+					readableAttribute.setCustomerOptionValue(optionValue);
+					target.getAttributes().add(readableAttribute);
+				}
+
+				if(source.getGroups() != null) {
+					for(Group group : source.getGroups()) {
+						ReadableGroup readableGroup = new ReadableGroup();
+						readableGroup.setId(group.getId().longValue());
+						readableGroup.setName(group.getGroupName());
+						readableGroup.setType(group.getGroupType().name());
+						target.getGroups().add(
+								readableGroup
+						);
+					}
+				}
+			}
+		
+		} catch (Exception e) {
+			throw new ConversionException(e);
+		}

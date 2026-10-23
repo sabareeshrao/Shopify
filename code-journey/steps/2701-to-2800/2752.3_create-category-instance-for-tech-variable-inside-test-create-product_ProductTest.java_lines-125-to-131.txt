@@ -1,0 +1,7 @@
+
+	    categoryService.create(novell);
+	    categoryService.addChild(book, novell);
+
+	    Category tech = new Category();
+	    tech.setMerchantStore(store);
+	    tech.setCode("tech");

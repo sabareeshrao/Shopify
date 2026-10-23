@@ -1,0 +1,7 @@
+	
+	@Column (name ="MODULE", length=60 , nullable=true )
+	private String module;
+	
+	@Column (name ="ORDER_VALUE_TYPE")
+	@Enumerated(value = EnumType.STRING)
+	private OrderValueType orderValueType = OrderValueType.ONE_TIME;

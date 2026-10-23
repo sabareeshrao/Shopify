@@ -1,0 +1,9 @@
+
+			if (shippingOptions != null && shippingOptions.size() > 0) {
+
+				returnOptions = new ArrayList<ShippingOption>();
+				// Map selectedintlservices =
+				// (Map)config.getConfiguration("service-global-usps");
+				// need to create a Map of LABEL - LABLEL
+				// Iterator servicesIterator =
+				// selectedintlservices.keySet().iterator();

@@ -1,0 +1,2 @@
+	@Override
+	public List<String> getContentFilesNames(String merchantStoreCode, FileContentType fileContentType)

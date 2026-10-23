@@ -1,0 +1,9 @@
+
+	/**
+	 * Get root categories by store for a given language
+	 * @param store
+	 * @param depth
+	 * @param language
+	 * @return
+	 */
+	List<Category> getListByDepth(MerchantStore store, int depth, Language language);

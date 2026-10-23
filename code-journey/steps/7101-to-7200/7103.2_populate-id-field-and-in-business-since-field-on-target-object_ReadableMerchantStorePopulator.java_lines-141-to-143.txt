@@ -1,0 +1,3 @@
+		target.setId(source.getId());
+		target.setInBusinessSince(DateUtil.formatDate(source.getInBusinessSince()));
+		target.setUseCache(source.isUseCache());

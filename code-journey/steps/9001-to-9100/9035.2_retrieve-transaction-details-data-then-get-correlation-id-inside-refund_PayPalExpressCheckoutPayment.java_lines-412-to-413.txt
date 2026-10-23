@@ -1,2 +1,0 @@
-			 transaction.getTransactionDetails().put("CORRELATION", refundTransactionResponse.getCorrelationID());
-							

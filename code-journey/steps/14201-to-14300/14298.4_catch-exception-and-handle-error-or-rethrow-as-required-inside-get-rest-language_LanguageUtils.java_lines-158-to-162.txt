@@ -1,5 +1,0 @@
-    	    	  MerchantStore storeModel = storeFacade.get(storeValue);
-    	    	  language = storeModel.getDefaultLanguage();
-    	      } catch (Exception e) {
-    	    	  logger.warn("Cannot get store with code [" + storeValue + "]");
-    	      }

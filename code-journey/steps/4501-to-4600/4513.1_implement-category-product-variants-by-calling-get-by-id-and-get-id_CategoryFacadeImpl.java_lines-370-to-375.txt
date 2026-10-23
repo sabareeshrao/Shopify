@@ -1,0 +1,6 @@
+	@Override
+	public List<ReadableProductVariant> categoryProductVariants(Long categoryId, MerchantStore store,
+			Language language) {
+		Category category = categoryService.getById(categoryId, store.getId());
+
+		List<ReadableProductVariant> variants = new ArrayList<ReadableProductVariant>();

@@ -1,8 +1,0 @@
-	
-	  /** Configurations of modules */
-	  @PostMapping("/private/configurations/payment")
-	  @ApiOperation(
-	      httpMethod = "POST",
-	      value = "Manages payment configurations",
-	      notes = "Requires administration access",
-	      produces = "application/json",

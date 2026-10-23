@@ -1,8 +1,0 @@
-	public static BufferedImage resizeWithRatio(BufferedImage image, int destinationWidth, int destinationHeight) {
-
-            int type = image.getType() == 0? BufferedImage.TYPE_INT_ARGB : image.getType();
-
-            //*Special* if the width or height is 0 use image src dimensions
-            if (destinationWidth == 0) {
-            	destinationWidth = image.getWidth();
-            }

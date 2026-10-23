@@ -1,0 +1,31 @@
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Country> getCountries(Language language) throws ServiceException {
+		
+		List<Country> countries = null;
+		try {
+
+			countries = (List<Country>) cache.getFromCache("COUNTRIES_" + language.getCode());
+			if(countries==null) {
+			
+				countries = countryRepository.listByLanguage(language.getId());
+			
+				//set names
+				for(Country country : countries) {
+					
+					CountryDescription description = country.getDescriptions().iterator().next();
+					country.setName(description.getName());
+					
+				}
+				
+				cache.putInCache(countries, "COUNTRIES_" + language.getCode());
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("getCountries()", e);
+		}
+		
+		return countries;
+		
+		
+	}

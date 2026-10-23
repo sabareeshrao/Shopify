@@ -1,4 +1,0 @@
-
-		} catch (Exception e) {
-			LOGGER.error("getCountries()", e);
-		}

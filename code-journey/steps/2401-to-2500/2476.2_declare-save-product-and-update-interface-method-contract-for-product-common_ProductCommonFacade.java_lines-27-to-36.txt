@@ -1,0 +1,10 @@
+	  Long saveProduct(MerchantStore store, PersistableProduct product,
+	      Language language);
+
+	  /**
+	   * Update minimal product details
+	   * @param product
+	   * @param merchant
+	   * @param language
+	   */
+	  void update(Long productId, LightPersistableProduct product, MerchantStore merchant, Language language);

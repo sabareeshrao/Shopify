@@ -1,0 +1,4 @@
+@Service("languageService")
+public class LanguageServiceImpl extends SalesManagerEntityServiceImpl<Integer, Language>
+	implements LanguageService {
+	

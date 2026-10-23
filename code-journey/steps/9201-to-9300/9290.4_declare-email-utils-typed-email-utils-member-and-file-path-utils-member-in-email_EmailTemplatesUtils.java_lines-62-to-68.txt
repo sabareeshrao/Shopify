@@ -1,0 +1,7 @@
+	
+	@Inject
+	private EmailUtils emailUtils;
+	
+	@Inject
+	private FilePathUtils filePathUtils;
+	

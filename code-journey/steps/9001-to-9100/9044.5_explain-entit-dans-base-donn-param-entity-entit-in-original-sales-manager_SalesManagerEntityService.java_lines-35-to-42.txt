@@ -1,0 +1,8 @@
+	
+	/**
+	 * Crée l'entité dans la base de données.
+	 * 
+	 * @param entity entité
+	 */
+	void create(E entity) throws ServiceException;
+

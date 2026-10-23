@@ -1,0 +1,4 @@
+		
+		//test attributes
+		this.testAttributes(updatableProduct);
+		

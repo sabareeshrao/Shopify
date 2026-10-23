@@ -1,0 +1,7 @@
+  public ProductType() {}
+
+  @Override
+  public Long getId() {
+    return id;
+  }
+

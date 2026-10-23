@@ -1,0 +1,3 @@
+	    	ReadableFinalPricePopulator populator = new ReadableFinalPricePopulator();
+	    	populator.setPricingService(pricingService);
+	    	

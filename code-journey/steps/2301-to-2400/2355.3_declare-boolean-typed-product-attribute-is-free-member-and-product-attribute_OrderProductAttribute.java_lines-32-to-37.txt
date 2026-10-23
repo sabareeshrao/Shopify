@@ -1,0 +1,6 @@
+
+	@Column ( name= "PRODUCT_ATTRIBUTE_IS_FREE" , nullable=false )
+	private boolean productAttributeIsFree;
+
+	@Column ( name= "PRODUCT_ATTRIBUTE_WEIGHT" , precision=15 , scale=4 )
+	private java.math.BigDecimal productAttributeWeight;

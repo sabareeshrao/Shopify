@@ -1,5 +1,0 @@
-			if(language == null) {
-				type = productTypeService.getById(id, store);
-			} else {
-				type = productTypeService.getById(id, store, language);
-			}

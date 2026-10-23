@@ -1,2 +1,0 @@
-            bucketName, BlobListOption.currentDirectory(), BlobListOption.prefix(merchantStoreCode));
-

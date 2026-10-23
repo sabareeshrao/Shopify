@@ -1,0 +1,6 @@
+	private LanguageService languageService;
+
+	public LanguageService getLanguageService() {
+		return languageService;
+	}
+

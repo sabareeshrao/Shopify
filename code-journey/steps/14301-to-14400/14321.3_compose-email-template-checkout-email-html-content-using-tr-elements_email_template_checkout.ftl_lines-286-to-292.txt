@@ -1,7 +1,0 @@
-			</div><!-- /content -->
-		</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td class="container" bgcolor="#FFFFFF">
-			

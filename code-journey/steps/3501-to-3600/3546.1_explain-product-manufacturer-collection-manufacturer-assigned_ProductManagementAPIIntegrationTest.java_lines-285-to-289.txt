@@ -1,0 +1,5 @@
+
+		// product.setManufacturer(collection); //no manufacturer assigned for
+		// now
+		// product.setCategories(categories); //no category assigned for now
+

@@ -1,8 +1,0 @@
-		List<String> countries = new ArrayList<String>();
-		countries.add("CA");
-		countries.add("US");
-		
-		northRegion.setCountries(countries);
-		
-		CustomShippingQuoteWeightItem caQuote4 = new CustomShippingQuoteWeightItem();
-		caQuote4.setMaximumWeight(4);

@@ -1,0 +1,9 @@
+
+	/**
+	 * Product and or product variant
+	 * @param productCode
+	 * @param merchant
+	 * @return
+	 */
+	Product getBySku(String productCode, MerchantStore merchant, Language language) throws ServiceException;
+	

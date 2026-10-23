@@ -1,0 +1,13 @@
+	@ApiOperation(httpMethod = "GET", value = "Get package details", notes = "", produces = "application/json", response = PackageDetails.class)
+	@RequestMapping(value = { "/private/shipping/package/{code}" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	public PackageDetails getPackage(@PathVariable String code, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_SHIPPING, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		return shippingFacade.getPackage(code, merchantStore);
+
+	}

@@ -1,0 +1,8 @@
+			
+			paymentDetails.setPaymentDetailsItem(lineItems);
+			BasicAmountType orderTotal = new BasicAmountType();
+			orderTotal.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(store.getCurrency().getCode()));
+			orderTotal.setValue(pricingService.getStringAmount(summary.getTotal(), store));
+			//System.out.println(pricingService.getStringAmount(itemsTotal, store));
+			paymentDetails.setOrderTotal(orderTotal);
+			List<PaymentDetailsType> paymentDetailsList = new ArrayList<PaymentDetailsType>();

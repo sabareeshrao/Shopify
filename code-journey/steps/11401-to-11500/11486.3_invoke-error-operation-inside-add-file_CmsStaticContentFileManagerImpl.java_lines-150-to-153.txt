@@ -1,4 +1,0 @@
-			LOGGER.error("Error while saving static content data", e);
-			throw new ServiceException(e);
-
-		}

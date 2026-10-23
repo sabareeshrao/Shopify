@@ -1,0 +1,9 @@
+
+	@Autowired
+	private TransactionService transactionService;
+
+	@Inject
+	private EmailTemplatesUtils emailTemplatesUtils;
+
+	@Inject
+	private LabelUtils messages;

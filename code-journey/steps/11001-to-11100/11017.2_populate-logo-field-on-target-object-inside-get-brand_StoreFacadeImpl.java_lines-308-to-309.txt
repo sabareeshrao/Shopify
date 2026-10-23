@@ -1,2 +1,0 @@
-			readableBrand.setLogo(image);
-		}

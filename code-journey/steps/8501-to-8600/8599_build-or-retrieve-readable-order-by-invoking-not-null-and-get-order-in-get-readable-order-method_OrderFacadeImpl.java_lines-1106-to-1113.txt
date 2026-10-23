@@ -1,8 +1,0 @@
-	@Override
-	public com.salesmanager.shop.model.order.v0.ReadableOrder getReadableOrder(Long orderId, MerchantStore store,
-			Language language) {
-		Validate.notNull(store, "MerchantStore cannot be null");
-		Order modelOrder = orderService.getOrder(orderId, store);
-		if (modelOrder == null) {
-			throw new ResourceNotFoundException("Order not found with id " + orderId);
-		}

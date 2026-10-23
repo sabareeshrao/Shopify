@@ -1,8 +1,0 @@
-		}
-		
-		Permission permission = new Permission();
-		permission.setPermissionName(name);
-		lastGroup.getPermissions().add(permission);
-		
-		return this;
-	}

@@ -1,0 +1,9 @@
+	private String basePath = Constants.STATIC_URI;
+	
+	private static final String SCHEME = "http://";
+	private String contentUrl = null;
+
+	
+	@Autowired
+	private ServerConfig serverConfig;
+

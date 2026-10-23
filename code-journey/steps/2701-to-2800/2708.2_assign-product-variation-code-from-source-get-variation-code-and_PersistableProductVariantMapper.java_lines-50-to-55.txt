@@ -1,0 +1,6 @@
+		
+		String productVariationCode = source.getVariationCode();
+		String productVariationValueCode = source.getVariationValueCode();
+		
+		Optional<ProductVariation> variation = null;
+		Optional<ProductVariation> variationValue = null;

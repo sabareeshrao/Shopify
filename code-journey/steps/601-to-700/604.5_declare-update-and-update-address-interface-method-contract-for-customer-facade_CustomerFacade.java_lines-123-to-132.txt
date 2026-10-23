@@ -1,0 +1,10 @@
+	
+	PersistableCustomer update(String userName, PersistableCustomer customer, MerchantStore store);
+	
+	/**
+	 * Updates only shipping and billing addresses
+	 * @param customer
+	 * @param store
+	 * @return
+	 */
+	void updateAddress(PersistableCustomer customer, MerchantStore store);

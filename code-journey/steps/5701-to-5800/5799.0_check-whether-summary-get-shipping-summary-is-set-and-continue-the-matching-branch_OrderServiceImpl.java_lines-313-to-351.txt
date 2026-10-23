@@ -1,0 +1,39 @@
+
+        //shipping
+        if(summary.getShippingSummary()!=null) {
+
+
+	            OrderTotal shippingSubTotal = new OrderTotal();
+	            shippingSubTotal.setModule(Constants.OT_SHIPPING_MODULE_CODE);
+	            shippingSubTotal.setOrderTotalType(OrderTotalType.SHIPPING);
+	            shippingSubTotal.setOrderTotalCode("order.total.shipping");
+	            shippingSubTotal.setTitle(Constants.OT_SHIPPING_MODULE_CODE);
+	            shippingSubTotal.setSortOrder(100);
+
+	            orderTotals.add(shippingSubTotal);
+
+            if(!summary.getShippingSummary().isFreeShipping()) {
+                shippingSubTotal.setValue(summary.getShippingSummary().getShipping());
+                grandTotal=grandTotal.add(summary.getShippingSummary().getShipping());
+            } else {
+                shippingSubTotal.setValue(new BigDecimal(0));
+                grandTotal=grandTotal.add(new BigDecimal(0));
+            }
+
+            //check handling fees
+            shippingConfiguration = shippingService.getShippingConfiguration(store);
+            if(summary.getShippingSummary().getHandling()!=null && summary.getShippingSummary().getHandling().doubleValue()>0) {
+                if(shippingConfiguration.getHandlingFees()!=null && shippingConfiguration.getHandlingFees().doubleValue()>0) {
+                    OrderTotal handlingubTotal = new OrderTotal();
+                    handlingubTotal.setModule(Constants.OT_HANDLING_MODULE_CODE);
+                    handlingubTotal.setOrderTotalType(OrderTotalType.HANDLING);
+                    handlingubTotal.setOrderTotalCode("order.total.handling");
+                    handlingubTotal.setTitle(Constants.OT_HANDLING_MODULE_CODE);
+                    //handlingubTotal.setText("order.total.handling");
+                    handlingubTotal.setSortOrder(120);
+                    handlingubTotal.setValue(summary.getShippingSummary().getHandling());
+                    orderTotals.add(handlingubTotal);
+                    grandTotal=grandTotal.add(summary.getShippingSummary().getHandling());
+                }
+            }
+        }

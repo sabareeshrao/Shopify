@@ -1,4 +1,0 @@
-	    				b = Boolean.valueOf((String) object.get("customModule"));
-	    			} catch(Exception e) {
-	    				LOGGER.error("Cannot cast " + o.getClass() + " tp a boolean value");
-	    			}

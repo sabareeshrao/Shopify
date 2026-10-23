@@ -1,0 +1,5 @@
+	@Autowired
+	private PersistableProductAttributeMapper persistableProductAttributeMapper;
+	
+	@Autowired
+	private ProductTypeService productTypeService;

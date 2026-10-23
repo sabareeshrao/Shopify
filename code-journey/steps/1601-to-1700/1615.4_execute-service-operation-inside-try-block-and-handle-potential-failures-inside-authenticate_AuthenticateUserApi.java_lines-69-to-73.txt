@@ -1,5 +1,0 @@
-    	//TODO SET STORE in flow
-        // Perform the security
-    	Authentication authentication = null;
-    	try {
-    		

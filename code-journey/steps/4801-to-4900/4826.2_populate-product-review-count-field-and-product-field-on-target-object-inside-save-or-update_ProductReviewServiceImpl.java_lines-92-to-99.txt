@@ -1,8 +1,0 @@
-		product.setProductReviewCount(count);
-		super.save(review);
-		
-		productService.update(product);
-		
-		review.setProduct(product);
-		
-	}

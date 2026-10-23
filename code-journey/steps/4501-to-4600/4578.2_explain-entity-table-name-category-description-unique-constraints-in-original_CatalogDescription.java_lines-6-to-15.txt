@@ -1,0 +1,10 @@
+
+
+/*@Entity
+@Table(name="CATEGORY_DESCRIPTION",uniqueConstraints={
+		@UniqueConstraint(columnNames={
+			"CATEGORY_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)*/

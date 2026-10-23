@@ -1,8 +1,0 @@
-
-	@Inject
-	private OrderFacade orderFacade;
-	
-	@Inject
-	private AuthorizationUtils authorizationUtils;
-
-	@RequestMapping(value = { "/cart/{code}/payment/init" }, method = RequestMethod.POST)

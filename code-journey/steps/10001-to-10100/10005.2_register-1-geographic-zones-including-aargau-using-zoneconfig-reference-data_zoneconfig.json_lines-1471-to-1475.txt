@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "AG",
+		"zoneName": "Aargau",
+		"countryCode": "CH"
+	},

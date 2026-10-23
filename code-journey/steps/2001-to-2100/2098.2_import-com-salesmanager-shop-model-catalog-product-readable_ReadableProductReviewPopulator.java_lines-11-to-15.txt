@@ -1,0 +1,5 @@
+import com.salesmanager.shop.model.catalog.product.ReadableProductReview;
+import com.salesmanager.shop.model.customer.ReadableCustomer;
+import com.salesmanager.shop.populator.customer.ReadableCustomerPopulator;
+import com.salesmanager.shop.utils.DateUtil;
+

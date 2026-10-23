@@ -1,5 +1,0 @@
-                grandTotal=grandTotal.add(summary.getShippingSummary().getShipping());
-            } else {
-                shippingSubTotal.setValue(new BigDecimal(0));
-                grandTotal=grandTotal.add(new BigDecimal(0));
-            }

@@ -1,5 +1,0 @@
-      LOGGER.error("Error while saving product review", e);
-      try {
-        response.sendError(503, "Error while saving product review" + e.getMessage());
-      } catch (Exception ignore) {
-      }

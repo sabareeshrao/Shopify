@@ -1,3 +1,0 @@
-				if (store != null && st.getCode().equals(store.getCode())) {
-					authorized = true;
-				}

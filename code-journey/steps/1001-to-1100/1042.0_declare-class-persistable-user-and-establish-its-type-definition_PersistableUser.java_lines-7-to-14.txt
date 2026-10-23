@@ -1,0 +1,8 @@
+public class PersistableUser extends UserEntity {
+
+	private String password;
+	private String repeatPassword;
+	private String store;
+	private String userName;
+	private boolean active;
+

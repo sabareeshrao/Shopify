@@ -1,2 +1,0 @@
-	private final static String PRODUCT_MAPPING_DEFAULT = "search/MAPPINGS.json";
-	

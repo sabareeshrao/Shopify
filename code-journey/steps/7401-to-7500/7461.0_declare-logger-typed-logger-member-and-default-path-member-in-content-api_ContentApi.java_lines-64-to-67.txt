@@ -1,0 +1,4 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContentApi.class);
+
+	private static final String DEFAULT_PATH = "/";
+	

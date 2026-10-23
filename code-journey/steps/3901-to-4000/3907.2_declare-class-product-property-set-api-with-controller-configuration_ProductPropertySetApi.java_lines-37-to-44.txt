@@ -1,8 +1,0 @@
-@Controller
-@RequestMapping("/api/v1")
-@Api(tags = { "Product property set regroupment management resource (Product Options Set Management Api)" })
-@SwaggerDefinition(tags = {
-		@Tag(name = "Product property set regroupment management resource resource", description = "Edit product property set") })
-public class ProductPropertySetApi {
-
-	@Autowired

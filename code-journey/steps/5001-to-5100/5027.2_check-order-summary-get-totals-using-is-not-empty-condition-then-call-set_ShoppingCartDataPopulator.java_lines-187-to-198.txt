@@ -1,0 +1,12 @@
+
+            if(CollectionUtils.isNotEmpty(orderSummary.getTotals())) {
+            	List<OrderTotal> totals = new ArrayList<OrderTotal>();
+            	for(com.salesmanager.core.model.order.OrderTotal t : orderSummary.getTotals()) {
+            		OrderTotal total = new OrderTotal();
+            		total.setCode(t.getOrderTotalCode());
+            		total.setText(t.getText());
+            		total.setValue(t.getValue());
+            		totals.add(total);
+            	}
+            	cart.setTotals(totals);
+            }

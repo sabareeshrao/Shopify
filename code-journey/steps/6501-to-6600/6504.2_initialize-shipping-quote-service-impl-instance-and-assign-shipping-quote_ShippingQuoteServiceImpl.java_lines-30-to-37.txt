@@ -1,0 +1,8 @@
+	
+	@Inject
+	public ShippingQuoteServiceImpl(ShippingQuoteRepository repository) {
+		super(repository);
+		this.shippingQuoteRepository = repository;
+		// TODO Auto-generated constructor stub
+	}
+

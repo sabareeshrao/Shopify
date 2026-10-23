@@ -1,8 +1,0 @@
-
-			if (categoryModel == null)
-				throw new ResourceNotFoundException("Categori id [" + id + "] not found");
-
-			StringBuilder lineage = new StringBuilder().append(categoryModel.getLineage());
-
-			ReadableCategory readableCategory = readableCategoryMapper.convert(categoryModel, store,
-					language);

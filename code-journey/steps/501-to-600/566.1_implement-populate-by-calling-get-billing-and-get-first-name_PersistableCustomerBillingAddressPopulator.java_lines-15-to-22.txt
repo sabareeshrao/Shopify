@@ -1,8 +1,0 @@
-    @Override
-    public Customer populate( Address source, Customer target, MerchantStore store, Language language )
-        throws ConversionException
-    {
-        
-       
-           target.getBilling().setFirstName( source.getFirstName() );
-           target.getBilling().setLastName( source.getLastName() );

@@ -1,3 +1,0 @@
-					
-					if(delimiterPosition>0 && Character.isDigit(sKey.charAt(0))) {
-					

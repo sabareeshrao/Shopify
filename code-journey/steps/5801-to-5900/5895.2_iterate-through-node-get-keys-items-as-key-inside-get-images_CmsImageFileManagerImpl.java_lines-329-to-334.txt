@@ -1,6 +1,0 @@
-
-      // TODO image sizes
-      for (Node<String, Object> node : childs) {
-
-        for (String key : node.getKeys()) {
-

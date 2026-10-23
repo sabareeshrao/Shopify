@@ -1,0 +1,6 @@
+	/**
+	 * 
+	 */
+	public int getTreshold() {
+		return treshold;
+	}

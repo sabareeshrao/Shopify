@@ -1,0 +1,7 @@
+	
+	@NotEmpty
+	private String name;
+	@NotEmpty
+	private String code;
+	@NotEmpty
+	private String address;

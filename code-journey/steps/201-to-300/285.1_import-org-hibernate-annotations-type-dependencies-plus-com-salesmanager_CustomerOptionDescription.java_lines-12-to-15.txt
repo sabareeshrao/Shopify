@@ -1,0 +1,4 @@
+import org.hibernate.annotations.Type;
+
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.common.description.Description;

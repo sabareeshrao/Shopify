@@ -1,8 +1,0 @@
-	
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customer")
-	private Set<CustomerAttribute> attributes = new HashSet<CustomerAttribute>();
-	
-	@Column(name="CUSTOMER_GENDER", length=1, nullable=true)
-	@Enumerated(value = EnumType.STRING)
-	private CustomerGender gender;
-

@@ -1,4 +1,0 @@
-
-		return modifyCart(cartModel, item, store, language);
-	}
-

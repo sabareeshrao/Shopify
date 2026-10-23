@@ -1,8 +1,0 @@
-		qs.append("left join fetch pap.descriptions papd ");
-
-		// images
-		qs.append("left join fetch p.images images ");
-
-		// options (do not need attributes for listings)
-		qs.append("left join fetch p.attributes pattr ");
-		qs.append("left join fetch pattr.productOption po ");

@@ -1,6 +1,0 @@
-					detail.setItemName(description);
-					
-					packages.add(detail);
-				}
-			}
-		}

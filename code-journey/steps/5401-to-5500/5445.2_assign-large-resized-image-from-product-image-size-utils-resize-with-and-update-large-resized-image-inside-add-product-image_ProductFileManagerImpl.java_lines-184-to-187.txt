@@ -1,4 +1,0 @@
-            largeResizedImage = ProductImageSizeUtils.resizeWithRatio(bufferedImage, largeImageWidth, largeImageHeight);
-        } else {
-            largeResizedImage = bufferedImage;
-        }

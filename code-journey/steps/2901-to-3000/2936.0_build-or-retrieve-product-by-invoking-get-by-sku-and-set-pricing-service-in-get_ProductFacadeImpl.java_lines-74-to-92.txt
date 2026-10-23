@@ -1,0 +1,19 @@
+	@Override
+	public ReadableProduct getProduct(MerchantStore store, String sku, Language language) throws Exception {
+
+		Product product = productService.getBySku(sku, store, language);
+
+		if (product == null) {
+			return null;
+		}
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		populator.populate(product, readableProduct, store, language);
+
+		return readableProduct;
+	}

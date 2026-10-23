@@ -1,0 +1,21 @@
+	
+	/**
+	 * Builds static file url path
+	 * @param store
+	 * @param imageName
+	 * @return
+	 */
+	public String buildStaticContentFilePath(MerchantStore store, String fileName) {
+		StringBuilder sb = new StringBuilder().append(getBasePath(store)).append(Constants.FILES_URI).append(Constants.SLASH).append(store.getCode()).append(Constants.SLASH);
+		if(!StringUtils.isBlank(fileName)) {
+			sb.append(fileName);
+		}
+		return sb.toString();
+	}
+	
+
+	
+	
+
+
+}

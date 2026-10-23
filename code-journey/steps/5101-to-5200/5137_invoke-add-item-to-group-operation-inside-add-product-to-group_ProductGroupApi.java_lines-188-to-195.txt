@@ -1,8 +1,0 @@
-
-      ReadableProductList list =
-          productItemsFacade.addItemToGroup(product, code, merchantStore, language);
-
-      return list;
-
-
-  }

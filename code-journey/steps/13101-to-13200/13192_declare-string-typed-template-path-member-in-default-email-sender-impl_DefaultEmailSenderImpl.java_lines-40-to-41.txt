@@ -1,2 +1,0 @@
-  private final static String TEMPLATE_PATH = "templates/email";
-

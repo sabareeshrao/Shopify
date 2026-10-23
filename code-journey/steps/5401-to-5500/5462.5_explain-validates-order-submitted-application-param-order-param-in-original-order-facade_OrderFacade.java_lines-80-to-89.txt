@@ -1,0 +1,10 @@
+
+	/**
+	 * Validates an order submitted from the web application
+	 * @param order
+	 * @param bindingResult
+	 * @param messagesResult
+	 * @param store
+	 * @param locale
+	 * @throws ServiceException
+	 */

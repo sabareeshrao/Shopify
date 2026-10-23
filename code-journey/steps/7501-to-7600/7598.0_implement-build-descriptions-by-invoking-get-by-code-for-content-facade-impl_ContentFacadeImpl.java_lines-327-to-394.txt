@@ -1,0 +1,68 @@
+
+	/*
+	 * private List<ContentDescription> createContentDescription(
+	 * PersistableContentPage content) throws ServiceException {
+	 * Validate.notNull(contentModel, "Content cannot be null");
+	 * 
+	 * List<ContentDescription> descriptions = new
+	 * ArrayList<ContentDescription>(); for (NamedEntity objectContent :
+	 * content.getDescriptions()) { Language lang =
+	 * languageService.getByCode(objectContent.getLanguage());
+	 * ContentDescription contentDescription = new ContentDescription(); if
+	 * (contentModel != null) {
+	 * setContentDescriptionToContentModel(contentModel, contentDescription,
+	 * lang); } contentDescription.setLanguage(lang);
+	 * contentDescription.setMetatagDescription(objectContent.getMetaDescription
+	 * ()); contentDescription.setTitle(objectContent.getTitle());
+	 * contentDescription.setName(objectContent.getName());
+	 * contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+	 * contentDescription.setDescription(objectContent.getDescription());
+	 * contentDescription.setMetatagTitle(objectContent.getTitle());
+	 * descriptions.add(contentDescription); } return descriptions; }
+	 */
+	private List<ContentDescription> buildDescriptions(Content contentModel,
+			List<com.salesmanager.shop.model.content.common.ContentDescription> persistableDescriptions)
+			throws Exception {
+		List<ContentDescription> descriptions = new ArrayList<ContentDescription>();
+		for (com.salesmanager.shop.model.content.common.ContentDescription objectContent : persistableDescriptions) {
+			Language lang = languageService.getByCode(objectContent.getLanguage());
+			Validate.notNull(lang, "language cannot be null");
+			ContentDescription contentDescription = null;
+			if(!CollectionUtils.isEmpty(contentModel.getDescriptions())) {
+				for(ContentDescription descriptionModel : contentModel.getDescriptions()) {
+					if(descriptionModel.getLanguage().getCode().equals(lang.getCode())) {
+						contentDescription = descriptionModel;
+						break;
+					}
+				}
+			}
+			
+			if(contentDescription == null) {
+				contentDescription = new ContentDescription();
+			}
+			
+			//if (contentModel != null) {
+			//	setContentDescriptionToContentModel(contentModel, contentDescription, lang);
+			//}
+			contentDescription.setMetatagDescription(objectContent.getMetaDescription());
+			contentDescription.setTitle(objectContent.getTitle());
+			contentDescription.setName(objectContent.getName());
+			contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+			contentDescription.setDescription(objectContent.getDescription());
+			contentDescription.setMetatagTitle(objectContent.getTitle());
+			contentDescription.setContent(contentModel);
+			contentDescription.setLanguage(lang);
+			descriptions.add(contentDescription);
+			//contentDescription.setId(objectContent.getId());
+			/**
+			contentDescription.setMetatagDescription(objectContent.getMetaDescription());
+			contentDescription.setTitle(objectContent.getTitle());
+			contentDescription.setName(objectContent.getName());
+			contentDescription.setSeUrl(objectContent.getFriendlyUrl());
+			contentDescription.setDescription(objectContent.getDescription());
+			contentDescription.setMetatagTitle(objectContent.getTitle());
+			descriptions.add(contentDescription);
+			**/
+		}
+		return descriptions;
+	}

@@ -1,8 +1,0 @@
-
-
-	@OneToMany(mappedBy = "taxClass", targetEntity = Product.class)
-	private List<Product> products = new ArrayList<Product>();
-	
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="MERCHANT_ID", nullable=true)

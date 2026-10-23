@@ -1,0 +1,8 @@
+ 
+    @ManyToOne
+    @JoinColumn(name = "CATEGORY_ID", nullable = false)
+    Category category;
+    
+	@ManyToOne
+	@JoinColumn(name = "CATALOG_ID", nullable = false)
+	private Catalog catalog;

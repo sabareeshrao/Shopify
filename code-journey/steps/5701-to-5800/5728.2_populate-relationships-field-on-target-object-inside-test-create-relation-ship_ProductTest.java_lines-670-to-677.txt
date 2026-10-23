@@ -1,8 +1,0 @@
-	    
-	    product.setRelationships(new HashSet<ProductRelationship>(relationships));
-	    
-	    productService.save(product);
-		
-		
-	}
-	

@@ -1,0 +1,8 @@
+	    
+	    tech.setParent(book);
+
+	    categoryService.create(tech);
+	    categoryService.addChild(book, tech);
+
+	    Category fiction = new Category();
+	    fiction.setMerchantStore(store);

@@ -1,0 +1,2 @@
+
+/** Optin a customer to events such s newsletter */

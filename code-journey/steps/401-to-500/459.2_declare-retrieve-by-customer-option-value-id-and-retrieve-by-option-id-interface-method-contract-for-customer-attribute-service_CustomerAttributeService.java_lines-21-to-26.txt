@@ -1,6 +1,0 @@
-
-	List<CustomerAttribute> getByCustomerOptionValueId(MerchantStore store,
-			Long id);
-
-	List<CustomerAttribute> getByOptionId(MerchantStore store, Long id);
-

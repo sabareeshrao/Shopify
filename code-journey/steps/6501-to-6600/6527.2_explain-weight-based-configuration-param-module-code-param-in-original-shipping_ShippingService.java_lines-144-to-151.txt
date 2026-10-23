@@ -1,0 +1,8 @@
+
+	/**
+	 * Weight based configuration
+	 * @param moduleCode
+	 * @param shippingConfiguration
+	 * @param store
+	 * @throws ServiceException
+	 */

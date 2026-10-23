@@ -1,8 +1,0 @@
-	@Override
-	public void removeProductImage(ProductImage productImage) throws ServiceException {
-
-		if (!StringUtils.isBlank(productImage.getProductImage())) {
-			productFileManager.removeProductImage(productImage);// managed internally
-		}
-		ProductImage p = getById(productImage.getId());
-		

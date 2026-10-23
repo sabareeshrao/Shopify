@@ -1,8 +1,0 @@
-			
-		} catch (ResourceNotFoundException rnf) {
-			throw rnf;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			LOGGER.error("Error while getting category by friendlyUrl", e);
-			throw new ServiceRuntimeException(e);
-		}

@@ -1,8 +1,0 @@
-	private PersistableProductAttributeMapper persistableProductAttributeMapper;
-	
-	@Autowired
-	private ProductTypeService productTypeService;
-	
-	@Autowired
-	private ManufacturerService manufacturerService;
-	

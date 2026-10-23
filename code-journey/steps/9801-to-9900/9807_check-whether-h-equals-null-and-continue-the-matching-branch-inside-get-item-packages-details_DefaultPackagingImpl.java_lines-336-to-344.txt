@@ -1,9 +1,0 @@
-			if(h==null) {
-				h = new BigDecimal(defaultHeight);
-			}
-			if(l==null) {
-				l = new BigDecimal(defaultLength);
-			}
-			if(wd==null) {
-				wd = new BigDecimal(defaultWidth);
-			}

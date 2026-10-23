@@ -1,0 +1,8 @@
+
+@Service("productVariationeService")
+public class ProductVariationServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, ProductVariation> implements
+		ProductVariationService {
+
+	@Inject
+	private ProductVariationRepository productVariationRepository;

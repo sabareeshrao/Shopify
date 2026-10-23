@@ -1,8 +1,0 @@
-	private CustomerOptionValueRepository customerOptionValueRepository;
-	
-	@Inject
-	private CustomerOptionSetService customerOptionSetService;
-	
-	@Inject
-	public CustomerOptionValueServiceImpl(
-			CustomerOptionValueRepository customerOptionValueRepository) {

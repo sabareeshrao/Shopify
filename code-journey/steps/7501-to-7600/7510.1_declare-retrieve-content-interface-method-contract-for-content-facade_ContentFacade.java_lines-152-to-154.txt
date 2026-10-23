@@ -1,0 +1,3 @@
+	
+	@Deprecated
+	ReadableContentFull getContent(String code, MerchantStore store, Language language);

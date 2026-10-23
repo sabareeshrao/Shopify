@@ -1,0 +1,9 @@
+	
+	@Inject
+	protected OrderService orderService;
+	
+	@Inject
+	protected PaymentService paymentService;
+	
+	@Inject
+	protected ShoppingCartService shoppingCartService;

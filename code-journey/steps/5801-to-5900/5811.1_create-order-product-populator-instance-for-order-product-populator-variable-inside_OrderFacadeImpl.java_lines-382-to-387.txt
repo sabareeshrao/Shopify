@@ -1,0 +1,6 @@
+
+			OrderProductPopulator orderProductPopulator = new OrderProductPopulator();
+			orderProductPopulator.setDigitalProductService(digitalProductService);
+			orderProductPopulator.setProductAttributeService(productAttributeService);
+			orderProductPopulator.setProductService(productService);
+			String shoppingCartCode = null;

@@ -1,7 +1,0 @@
-		destination.setRate(source.getTaxRate().toString());
-		destination.setCode(source.getCode());
-		destination.setPriority(source.getTaxPriority());
-		Optional<ReadableTaxRateDescription> description = this.convertDescription(source.getDescriptions(), language);
-		if(description.isPresent()) {
-			destination.setDescription(description.get());
-		}

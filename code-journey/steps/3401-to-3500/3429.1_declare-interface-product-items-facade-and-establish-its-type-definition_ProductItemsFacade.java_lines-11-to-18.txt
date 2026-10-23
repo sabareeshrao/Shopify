@@ -1,8 +1,0 @@
-public interface ProductItemsFacade {
-	
-	/**
-	 * List items attached to a Manufacturer
-	 * @param store
-	 * @param language
-	 * @return
-	 */

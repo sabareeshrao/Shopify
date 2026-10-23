@@ -1,0 +1,37 @@
+	@Override
+	public void update(String sku, LightPersistableProduct product, MerchantStore merchant, Language language) {
+		// Get product
+		Product modified = null;
+		try {
+			modified = productService.getBySku(sku, merchant, language);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+		
+		ProductVariant instance = modified.getVariants().stream()
+				  .filter(inst -> sku.equals(inst.getSku()))
+				  .findAny()
+				  .orElse(null);
+		
+		if(instance!=null) {
+			instance.setAvailable(product.isAvailable());
+			
+			for (ProductAvailability availability : instance.getAvailabilities()) {
+				this.setAvailability(availability, product);
+			}
+		} else {
+			// Update product with minimal set
+			modified.setAvailable(product.isAvailable());
+			
+			for (ProductAvailability availability : modified.getAvailabilities()) {
+				this.setAvailability(availability, product);
+			}
+		}
+
+		try {
+			productService.saveProduct(modified);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot update product ", e);
+		}
+		
+	}

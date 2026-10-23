@@ -1,9 +1,0 @@
-
-			return returnList;
-		} catch (Exception e) {
-			throw new ServiceRuntimeException(
-					"An exception occured while getting product types for merchant[ " + store.getCode() + "]", e);
-		}
-
-	}
-

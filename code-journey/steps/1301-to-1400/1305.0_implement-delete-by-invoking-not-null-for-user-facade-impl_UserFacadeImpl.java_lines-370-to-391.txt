@@ -1,0 +1,22 @@
+
+	@Override
+	public void delete(Long id, String merchant) {
+		Validate.notNull(id, "User id cannot be null");
+
+		try {
+			User user = userService.findByStore(id, merchant);
+			if (user == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + id + "]");
+			}
+
+			// cannot delete superadmin
+			if (user.getGroups().contains(Constants.GROUP_SUPERADMIN)) {
+				throw new ServiceRuntimeException("Cannot delete superadmin user [" + id + "]");
+			}
+
+			userService.delete(user);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot find user [" + id + "]", e);
+		}
+
+	}

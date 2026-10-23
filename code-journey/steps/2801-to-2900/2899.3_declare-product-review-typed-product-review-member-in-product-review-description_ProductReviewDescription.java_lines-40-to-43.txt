@@ -1,4 +1,0 @@
-	@ManyToOne(targetEntity = ProductReview.class)
-	@JoinColumn(name="PRODUCT_REVIEW_ID")
-	private ProductReview productReview;
-

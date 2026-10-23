@@ -1,8 +1,0 @@
-	
-				IntegrationException te = new IntegrationException(
-						"Can't process BeanStream message " + messageText);
-				te.setExceptionType(IntegrationException.EXCEPTION_PAYMENT_DECLINED);
-				te.setMessageCode("message.payment.beanstream." + messageId);
-				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-				throw te;
-			}

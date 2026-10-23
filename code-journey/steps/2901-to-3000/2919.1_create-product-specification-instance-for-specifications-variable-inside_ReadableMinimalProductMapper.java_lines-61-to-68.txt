@@ -1,0 +1,8 @@
+		
+		destination.setId(source.getId());
+		destination.setAvailable(source.isAvailable());
+		destination.setProductShipeable(source.isProductShipeable());
+		
+		ProductSpecification specifications = new ProductSpecification();
+		specifications.setHeight(source.getProductHeight());
+		specifications.setLength(source.getProductLength());

@@ -1,4 +1,0 @@
-        ErrorEntity errorEntity = createErrorEntity(exception.getErrorCode()!=null?exception.getErrorCode():"500", exception.getErrorMessage(),
-        		rootCause.getMessage());
-        return errorEntity;
-    }

@@ -1,0 +1,9 @@
+	
+	@Inject
+	protected ProductRelationshipService productRelationshipService;
+	
+	@Inject
+	protected CategoryService categoryService;
+	
+	@Inject
+	protected MerchantStoreService merchantService;

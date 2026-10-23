@@ -1,8 +1,0 @@
-	 * @param max
-	 * @return
-	 */
-	@Override
-	public ProductList listByStore(MerchantStore store, Language language, ProductCriteria criteria) {
-
-		ProductList productList = new ProductList();
-

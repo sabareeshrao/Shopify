@@ -1,4 +1,0 @@
-
-      Node<String, Object> productNode = this.getNode(nodePath.toString());
-      productNode.remove(productImage.getProductImage());
-

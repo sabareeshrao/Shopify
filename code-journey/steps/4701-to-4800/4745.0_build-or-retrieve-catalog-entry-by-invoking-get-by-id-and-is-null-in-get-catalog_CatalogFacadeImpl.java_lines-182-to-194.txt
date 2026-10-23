@@ -1,0 +1,13 @@
+
+    @Override
+    public ReadableCatalogCategoryEntry getCatalogEntry(Long id, MerchantStore store, Language language) {
+        CatalogCategoryEntry entry = catalogEntryService.getById(id);
+        if (Objects.isNull(entry)) {
+            throw new ResourceNotFoundException("catalog entry [" + id + "] not found");
+        }
+
+        if (entry.getCatalog().getMerchantStore().getId().intValue() != store.getId().intValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + id + "] not found");
+        }
+        return readableCatalogEntryMapper.convert(entry, store, language);
+    }

@@ -1,0 +1,9 @@
+    then
+        decision.setCustomPrice("75");
+end
+
+rule "80 kilometers or less"
+    when
+        ShippingInputParameters(distance > 40 && distance <=80)
+    then
+        decision.setCustomPrice("120");

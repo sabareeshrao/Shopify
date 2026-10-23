@@ -1,8 +1,0 @@
-        
-        ProductOptionDescription sizeDescription = new ProductOptionDescription();
-        sizeDescription.setLanguage(en);
-        sizeDescription.setName("Size");
-        sizeDescription.setDescription("Show size");
-        sizeDescription.setProductOption(size);
-        
-        size.getDescriptions().add(sizeDescription);

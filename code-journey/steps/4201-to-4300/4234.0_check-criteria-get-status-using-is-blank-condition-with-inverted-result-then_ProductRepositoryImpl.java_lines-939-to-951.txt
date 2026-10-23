@@ -1,0 +1,13 @@
+
+		// RENTAL
+		/**
+		if (!StringUtils.isBlank(criteria.getStatus())) {
+			q.setParameter("status", criteria.getStatus());
+		}
+		**/
+
+		/**
+		if (criteria.getOwnerId() != null) {
+			q.setParameter("ownerid", criteria.getOwnerId());
+		}
+	    **/

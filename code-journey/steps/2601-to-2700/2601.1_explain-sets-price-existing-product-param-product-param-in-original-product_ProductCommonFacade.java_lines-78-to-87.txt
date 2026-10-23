@@ -1,0 +1,10 @@
+
+	  /**
+	   * Sets a new price to an existing product
+	   *
+	   * @param product
+	   * @param price
+	   * @param language
+	   * @return
+	   * @throws Exception
+	   */

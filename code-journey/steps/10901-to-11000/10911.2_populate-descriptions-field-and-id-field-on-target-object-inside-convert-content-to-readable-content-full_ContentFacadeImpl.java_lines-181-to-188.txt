@@ -1,8 +1,0 @@
-					language);
-
-			contentFull.setDescriptions(descriptions);
-			contentFull.setId(content.getId());
-			contentFull.setDisplayedInMenu(content.isLinkToMenu());
-			contentFull.setContentType(content.getContentType().name());
-			contentFull.setCode(content.getCode());
-			contentFull.setId(content.getId());

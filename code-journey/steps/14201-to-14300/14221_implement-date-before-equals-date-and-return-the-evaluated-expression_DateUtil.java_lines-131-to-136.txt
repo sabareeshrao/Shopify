@@ -1,6 +1,0 @@
-	public static boolean dateBeforeEqualsDate(Date firstDate, Date compareDate) {
-		
-        
-		if(firstDate==null || compareDate==null) {
-			return true;
-		}

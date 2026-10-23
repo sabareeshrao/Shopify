@@ -1,8 +1,0 @@
-	@Test
-	public void createProductReview() throws Exception {
-
-		final PersistableProductReview review = new PersistableProductReview();
-		review.setCustomerId(1L);
-
-		review.setProductId(1L);
-		review.setLanguage("en");

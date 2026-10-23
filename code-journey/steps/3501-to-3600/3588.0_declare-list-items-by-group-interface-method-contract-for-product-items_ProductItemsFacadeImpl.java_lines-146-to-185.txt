@@ -1,0 +1,40 @@
+
+	@Override
+	public ReadableProductList addItemToGroup(Product product, String group, MerchantStore store, Language language) {
+		
+		Validate.notNull(product,"Product must not be null");
+		Validate.notNull(group,"group must not be null");
+		
+		
+		//check if product is already in group
+		List<ProductRelationship> existList = null;
+		try {
+			existList = productRelationshipService.getByGroup(store, group).stream()
+			.filter(prod -> prod.getRelatedProduct() != null && (product.getId().longValue() == prod.getRelatedProduct().getId()))
+			.collect(Collectors.toList());
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("ExceptionWhile getting product group [" + group + "]", e);
+		}
+		
+		if(existList.size()>0) {
+			throw new OperationNotAllowedException("Product with id [" + product.getId() + "] is already in the group");
+		}
+		
+		
+		ProductRelationship relationship = new ProductRelationship();
+		relationship.setActive(true);
+		relationship.setCode(group);
+		relationship.setStore(store);
+		relationship.setRelatedProduct(product);
+
+		try {
+			productRelationshipService.saveOrUpdate(relationship);
+			return listItemsByGroup(group,store,language);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("ExceptionWhile getting product group [" + group + "]", e);
+		}
+		
+		
+		
+		
+	}

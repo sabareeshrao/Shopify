@@ -1,0 +1,6 @@
+
+
+			/** debug **/
+	
+	
+			LOGGER.debug("REQUEST SENT TO BEANSTREAM -> " + messageLogString.toString());

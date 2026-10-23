@@ -1,8 +1,0 @@
-			"countryCode": "AU"
-		},
-		{
-			"zoneCode": "QLD",
-			"zoneName": "Queensland",
-			"countryCode": "AU"
-		},
-		{

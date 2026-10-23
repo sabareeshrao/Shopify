@@ -1,0 +1,3 @@
+
+	ProductOptionValueDescription description(
+			com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValueDescription description)

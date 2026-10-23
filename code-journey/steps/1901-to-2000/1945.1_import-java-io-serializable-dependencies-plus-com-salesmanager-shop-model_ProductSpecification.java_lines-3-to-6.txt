@@ -1,0 +1,4 @@
+import java.io.Serializable;
+import java.math.BigDecimal;
+import com.salesmanager.shop.model.references.DimensionUnitOfMeasure;
+import com.salesmanager.shop.model.references.WeightUnitOfMeasure;

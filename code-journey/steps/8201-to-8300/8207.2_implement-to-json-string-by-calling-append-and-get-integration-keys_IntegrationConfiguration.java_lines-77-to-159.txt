@@ -1,0 +1,83 @@
+  @SuppressWarnings("unchecked")
+  @Override
+  public String toJSONString() {
+
+
+    StringBuilder returnString = new StringBuilder();
+    returnString.append(getJsonInfo());
+
+    if (this.getIntegrationKeys().size() > 0) {
+
+      JSONObject data = new JSONObject();
+      Set<String> keys = this.getIntegrationKeys().keySet();
+      for (String key : keys) {
+        data.put(key, this.getIntegrationKeys().get(key));
+      }
+      String dataField = data.toJSONString();
+
+      returnString.append(",").append("\"integrationKeys\"").append(":");
+      returnString.append(dataField.toString());
+
+
+    }
+
+
+    if (this.getIntegrationOptions() != null && this.getIntegrationOptions().size() > 0) {
+
+      // JSONObject data = new JSONObject();
+      StringBuilder optionDataEntries = new StringBuilder();
+      Set<String> keys = this.getIntegrationOptions().keySet();
+      int countOptions = 0;
+      int keySize = 0;
+
+      for (String key : keys) {
+        List<String> values = this.getIntegrationOptions().get(key);
+        if (values != null) {
+          keySize++;
+        }
+      }
+
+      for (String key : keys) {
+
+        List<String> values = this.getIntegrationOptions().get(key);
+        if (values == null) {
+          continue;
+        }
+        StringBuilder optionsEntries = new StringBuilder();
+        StringBuilder dataEntries = new StringBuilder();
+
+        int count = 0;
+        for (String value : values) {
+
+          dataEntries.append("\"").append(value).append("\"");
+          if (count < values.size() - 1) {
+            dataEntries.append(",");
+          }
+          count++;
+        }
+
+        optionsEntries.append("[").append(dataEntries.toString()).append("]");
+
+        optionDataEntries.append("\"").append(key).append("\":").append(optionsEntries.toString());
+
+        if (countOptions < keySize - 1) {
+          optionDataEntries.append(",");
+        }
+        countOptions++;
+
+      }
+      String dataField = optionDataEntries.toString();
+
+      returnString.append(",").append("\"integrationOptions\"").append(":{");
+      returnString.append(dataField.toString());
+      returnString.append("}");
+
+    }
+
+
+    returnString.append("}");
+
+
+    return returnString.toString();
+
+  }

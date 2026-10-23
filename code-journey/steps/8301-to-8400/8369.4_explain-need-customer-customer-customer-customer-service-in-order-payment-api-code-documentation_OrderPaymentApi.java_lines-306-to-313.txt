@@ -1,8 +1,0 @@
-		 * 
-		 * // need customer Customer customer =
-		 * customerService.getById(order.getCustomerId());
-		 * 
-		 * if (customer == null) { response.sendError(404, "Order id " + id +
-		 * " contains an invalid customer " + order.getCustomerId()); return
-		 * null; }
-		 * 

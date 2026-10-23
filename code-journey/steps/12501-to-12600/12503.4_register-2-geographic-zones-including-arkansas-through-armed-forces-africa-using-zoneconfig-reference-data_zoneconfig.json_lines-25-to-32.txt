@@ -1,8 +1,0 @@
-		"zoneName": "Arkansas",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "AF",
-		"zoneName": "Armed Forces Africa",
-		"countryCode": "US"
-	},

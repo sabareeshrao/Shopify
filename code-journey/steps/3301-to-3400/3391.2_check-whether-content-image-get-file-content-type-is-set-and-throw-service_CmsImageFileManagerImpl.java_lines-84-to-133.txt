@@ -1,0 +1,50 @@
+      throws ServiceException {
+
+
+    try {
+
+      // base path
+      String rootPath = this.buildRootPath();
+      Path confDir = Paths.get(rootPath);
+      this.createDirectoryIfNorExist(confDir);
+
+      // node path
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(rootPath).append(productImage.getProduct().getMerchantStore().getCode());
+      Path merchantPath = Paths.get(nodePath.toString());
+      this.createDirectoryIfNorExist(merchantPath);
+
+      // product path
+      nodePath.append(Constants.SLASH).append(productImage.getProduct().getSku())
+          .append(Constants.SLASH);
+      Path dirPath = Paths.get(nodePath.toString());
+      this.createDirectoryIfNorExist(dirPath);
+
+      // small large
+      if (contentImage.getFileContentType().name().equals(FileContentType.PRODUCT.name())) {
+        nodePath.append(SMALL);
+      } else if (contentImage.getFileContentType().name()
+          .equals(FileContentType.PRODUCTLG.name())) {
+        nodePath.append(LARGE);
+      }
+      Path sizePath = Paths.get(nodePath.toString());
+      this.createDirectoryIfNorExist(sizePath);
+
+
+      // file creation
+      nodePath.append(Constants.SLASH).append(contentImage.getFileName());
+
+
+      Path path = Paths.get(nodePath.toString());
+      InputStream isFile = contentImage.getFile();
+
+      Files.copy(isFile, path, StandardCopyOption.REPLACE_EXISTING);
+
+
+    } catch (Exception e) {
+
+      throw new ServiceException(e);
+
+    }
+
+  }

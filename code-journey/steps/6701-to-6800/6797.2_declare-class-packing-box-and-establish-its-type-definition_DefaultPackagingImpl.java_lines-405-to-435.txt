@@ -1,0 +1,31 @@
+class PackingBox {
+
+	private double volumeLeft;
+	private double weightLeft;
+	private double weight;
+
+	public double getVolumeLeft() {
+		return volumeLeft;
+	}
+
+	public void setVolumeLeft(double volumeLeft) {
+		this.volumeLeft = volumeLeft;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public double getWeightLeft() {
+		return weightLeft;
+	}
+
+	public void setWeightLeft(double weightLeft) {
+		this.weightLeft = weightLeft;
+	}
+
+}

@@ -1,5 +1,0 @@
-	 * @return
-	 */
-	List<ReadableMerchantStore> getMerchantStoreNames(MerchantStoreCriteria criteria);
-
-}

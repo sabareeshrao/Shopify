@@ -1,5 +1,0 @@
-			
-			ajaxResponse.setStatus(AjaxResponse.RESPONSE_STATUS_SUCCESS);
-			
-			return ajaxResponse;
-

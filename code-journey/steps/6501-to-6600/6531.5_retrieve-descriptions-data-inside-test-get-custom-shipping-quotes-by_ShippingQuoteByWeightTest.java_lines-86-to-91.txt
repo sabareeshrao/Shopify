@@ -1,0 +1,6 @@
+
+	    product.getDescriptions().add(description);
+	    
+	    productService.saveProduct(product);
+	    //productService.saveOrUpdate(product);
+	    

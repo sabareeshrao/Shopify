@@ -1,0 +1,18 @@
+
+/*	public StatelessKnowledgeSession getShippingPriceRule() {
+		return shippingPriceRule;
+	}
+
+	public void setShippingPriceRule(StatelessKnowledgeSession shippingPriceRule) {
+		this.shippingPriceRule = shippingPriceRule;
+	}
+
+	public KnowledgeBase getKbase() {
+		return kbase;
+	}
+
+	public void setKbase(KnowledgeBase kbase) {
+		this.kbase = kbase;
+	}*/
+
+}

@@ -1,0 +1,7 @@
+2. Run the administration tool
+
+⋅⋅⋅ Requires the java backend to be running
+
+```
+docker run \
+ -e "APP_BASE_URL=http://localhost:8080/api" \

@@ -1,8 +1,0 @@
-	@Override
-	public void delete(Long productVariantGroup, Long productId, MerchantStore store) {
-
-		ProductVariantGroup group = this.group(productVariantGroup, store);
-		
-		if(group == null) {
-			throw new ResourceNotFoundException("Product instance group [" + group.getId() + " not found for store [" + store.getCode() + "]");
-		}

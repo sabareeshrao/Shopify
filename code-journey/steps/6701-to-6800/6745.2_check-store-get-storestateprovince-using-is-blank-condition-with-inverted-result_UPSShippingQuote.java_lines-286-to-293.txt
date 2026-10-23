@@ -1,0 +1,8 @@
+			xmldatabuffer.append(store.getStorecity());
+			xmldatabuffer.append("</City>");
+			// if(!StringUtils.isBlank(store.getStorestateprovince())) {
+			if (store.getZone() != null) {
+				xmldatabuffer.append("<StateProvinceCode>");
+				xmldatabuffer.append(store.getZone().getCode());// zone code
+				xmldatabuffer.append("</StateProvinceCode>");
+			}

@@ -1,0 +1,16 @@
+			
+			//4
+			StringBuilder storeProvince = null;
+			if(store.getZone()!=null) {
+				storeProvince = new StringBuilder();
+				
+				for(Zone z : zones) {
+					if(z.getCode().equals(store.getZone().getCode())) {
+						storeProvince.append(z.getName());
+						break;
+					}
+				}
+				
+			} else {
+				if(!StringUtils.isBlank(store.getStorestateprovince())) {
+					storeProvince = new StringBuilder();

@@ -1,0 +1,8 @@
+
+	
+	
+	/**
+	 * Generates a time stamp
+	 * yyyymmddhhmmss
+	 * @return
+	 */

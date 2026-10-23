@@ -1,0 +1,3 @@
+        
+        summerShoes.getAttributes().add(size_nine);
+        

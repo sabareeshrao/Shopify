@@ -1,0 +1,8 @@
+	
+	@Column(name="CODE", nullable=false)
+	private String code;
+	
+	@Column(name="DESCRIPTION")
+	private String description;
+
+

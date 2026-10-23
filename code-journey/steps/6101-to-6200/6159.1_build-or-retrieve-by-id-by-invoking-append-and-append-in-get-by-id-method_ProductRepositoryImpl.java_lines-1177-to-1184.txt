@@ -1,8 +1,0 @@
-	@Override
-	public Product getById(Long id, MerchantStore store, Language language) {
-
-		try {
-
-			StringBuilder qs = new StringBuilder();
-			qs.append("select distinct p from Product as p ");
-			qs.append("join fetch p.descriptions pd ");

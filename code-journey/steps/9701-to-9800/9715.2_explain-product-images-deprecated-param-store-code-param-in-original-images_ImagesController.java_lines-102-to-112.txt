@@ -1,0 +1,11 @@
+	/**
+	 * For product images
+	 * @Deprecated
+	 * @param storeCode
+	 * @param productCode
+	 * @param imageType
+	 * @param imageName
+	 * @param extension
+	 * @return
+	 * @throws IOException
+	 */

@@ -1,2 +1,0 @@
-public class ShoppingCartItem extends ShopEntity implements Serializable {
-	

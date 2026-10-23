@@ -1,0 +1,8 @@
+	    product.setType(generalType);
+	    product.setMerchantStore(store);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Product 1");
+	    description.setLanguage(en);
+	    description.setProduct(product);

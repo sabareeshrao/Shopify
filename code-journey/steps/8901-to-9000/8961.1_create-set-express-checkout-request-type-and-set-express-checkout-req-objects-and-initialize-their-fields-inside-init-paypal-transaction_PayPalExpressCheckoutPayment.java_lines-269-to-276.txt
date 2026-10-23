@@ -1,8 +1,0 @@
-			
-			setExpressCheckoutRequestDetails.setPaymentDetails(paymentDetailsList);
-
-			SetExpressCheckoutRequestType setExpressCheckoutRequest = new SetExpressCheckoutRequestType(setExpressCheckoutRequestDetails);
-			setExpressCheckoutRequest.setVersion("104.0");
-
-			SetExpressCheckoutReq setExpressCheckoutReq = new SetExpressCheckoutReq();
-			setExpressCheckoutReq.setSetExpressCheckoutRequest(setExpressCheckoutRequest);

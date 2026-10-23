@@ -1,0 +1,6 @@
+
+	/**
+	 * Load groups Requires service user authentication
+	 * 
+	 * @return
+	 */

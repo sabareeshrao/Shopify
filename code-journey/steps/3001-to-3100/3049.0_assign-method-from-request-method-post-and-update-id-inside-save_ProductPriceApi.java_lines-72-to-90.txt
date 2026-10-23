@@ -1,0 +1,19 @@
+	
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/{sku}/price"},
+			method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody Entity save(
+			@PathVariable String sku,
+			@Valid @RequestBody PersistableProductPrice price,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		
+		price.setSku(sku);
+		
+		Long id = productPriceFacade.save(price, merchantStore);
+		return new Entity(id);
+
+		
+	}

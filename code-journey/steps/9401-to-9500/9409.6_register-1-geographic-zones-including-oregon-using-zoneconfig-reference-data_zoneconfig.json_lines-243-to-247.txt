@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "OR",
+		"zoneName": "Oregon",
+		"countryCode": "US"
+	},

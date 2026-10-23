@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.shop.model.order.PersistableOrderProduct;
+

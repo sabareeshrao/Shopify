@@ -1,0 +1,9 @@
+
+  /**
+   * List permissions by group
+   * 
+   * @param ids
+   * @return
+   * @throws Exception
+   */
+  List<ReadablePermission> findPermissionsByGroups(List<Integer> ids);

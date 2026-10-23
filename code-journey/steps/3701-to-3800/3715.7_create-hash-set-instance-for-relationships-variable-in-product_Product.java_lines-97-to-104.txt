@@ -1,8 +1,0 @@
-	private Set<ProductRelationship> relationships = new HashSet<ProductRelationship>();
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="MERCHANT_ID", nullable=false)
-	private MerchantStore merchantStore;
-	
-	/**
-	 * Product to category

@@ -1,7 +1,0 @@
-
-		
-		if(destination.getId()!=null && destination.getId().longValue()>0) {
-			destination.setId(destination.getId());
-		} else {
-			destination.setId(null);
-		}

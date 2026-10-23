@@ -1,8 +1,0 @@
-
-
-	@ResponseStatus(HttpStatus.OK)
-	@PutMapping(value = { "/private/product/{id}/variant/{variantId}" })
-	@ApiOperation(httpMethod = "PUT", value = "Update product variant", notes = "", produces = "application/json", response = Void.class)
-	public @ResponseBody void update(@PathVariable Long id, @PathVariable Long variantId,
-			@Valid @RequestBody PersistableProductVariant variant, @ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {

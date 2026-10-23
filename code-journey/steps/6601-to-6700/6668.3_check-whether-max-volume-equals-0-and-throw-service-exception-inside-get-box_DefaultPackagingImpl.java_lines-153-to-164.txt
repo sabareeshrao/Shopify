@@ -1,0 +1,12 @@
+
+		if (maxVolume == 0 || maxweight == 0) {
+			
+			merchantLogService.save(new MerchantLog(store,"shipping","Check shipping box configuration, it has a volume of "
+							+ maxVolume + " and a maximum weight of "
+							+ maxweight
+							+ ". Those values must be greater than 0."));
+			
+			throw new ServiceException("Product configuration exceeds box configuraton");
+			
+
+		}

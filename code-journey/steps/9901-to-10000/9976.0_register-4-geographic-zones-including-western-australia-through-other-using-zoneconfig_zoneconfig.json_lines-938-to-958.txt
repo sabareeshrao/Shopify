@@ -1,0 +1,21 @@
+	{
+		"zoneCode": "WAAU",
+		"zoneName": "Western Australia",
+		"countryCode": "AU"
+	} ,
+	  {
+		  "zoneCode": "ASU",
+		  "zoneName": "Asuncion",
+		  "countryCode": "PY"
+	  },
+	  {
+		  "zoneCode": "CEN",
+		  "zoneName": "Central",
+		  "countryCode": "PY"
+	  },
+	  {
+		  "zoneCode": "OTR",
+		  "zoneName": "Other",
+		  "countryCode": "PY"
+	} 
+]  ,

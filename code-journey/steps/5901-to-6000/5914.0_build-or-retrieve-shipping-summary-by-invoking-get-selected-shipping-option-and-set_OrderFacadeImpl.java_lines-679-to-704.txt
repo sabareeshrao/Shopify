@@ -1,0 +1,26 @@
+
+	/**
+	 * ShippingSummary contains the subset of information of a ShippingQuote
+	 */
+	@Override
+	public ShippingSummary getShippingSummary(ShippingQuote quote, MerchantStore store, Language language) {
+
+		ShippingSummary summary = new ShippingSummary();
+		if (quote.getSelectedShippingOption() != null) {
+			summary.setShippingQuote(true);
+			summary.setFreeShipping(quote.isFreeShipping());
+			summary.setTaxOnShipping(quote.isApplyTaxOnShipping());
+			summary.setHandling(quote.getHandlingFees());
+			summary.setShipping(quote.getSelectedShippingOption().getOptionPrice());
+			summary.setShippingOption(quote.getSelectedShippingOption().getOptionName());
+			summary.setShippingModule(quote.getShippingModuleCode());
+			summary.setShippingOptionCode(quote.getSelectedShippingOption().getOptionCode());
+
+			if (quote.getDeliveryAddress() != null) {
+				summary.setDeliveryAddress(quote.getDeliveryAddress());
+			}
+
+		}
+
+		return summary;
+	}

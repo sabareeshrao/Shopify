@@ -1,8 +1,0 @@
-		te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-		return te;
-	}
-
-	}
-	
-	
-

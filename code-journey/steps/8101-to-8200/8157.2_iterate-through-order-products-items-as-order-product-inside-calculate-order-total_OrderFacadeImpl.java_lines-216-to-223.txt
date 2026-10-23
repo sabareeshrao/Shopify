@@ -1,8 +1,0 @@
-		populator.setProductService(productService);
-		populator.setShoppingCartService(shoppingCartService);
-
-		List<ShoppingCartItem> items = new ArrayList<ShoppingCartItem>();
-		for (PersistableOrderProduct orderProduct : orderProducts) {
-			ShoppingCartItem item = populator.populate(orderProduct, new ShoppingCartItem(), store, language);
-			items.add(item);
-		}

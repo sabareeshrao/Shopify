@@ -1,8 +1,0 @@
-public class ValueList implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private List<String> values = new ArrayList<String>();
-	public List<String> getValues() {

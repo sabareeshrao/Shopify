@@ -1,0 +1,10 @@
+	
+	/**
+	 * Builds a manufacturer image file path that can be used by image servlet
+	 * utility for getting the physical image
+	 * @param store
+	 * @param manufacturer
+	 * @param imageName
+	 * @return
+	 */
+	public String buildManufacturerImageUtils(MerchantStore store, Manufacturer manufacturer, String imageName);

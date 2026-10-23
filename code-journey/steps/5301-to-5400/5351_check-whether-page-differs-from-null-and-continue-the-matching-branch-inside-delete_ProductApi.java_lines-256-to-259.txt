@@ -1,4 +1,0 @@
-
-		if (page != null) {
-			criteria.setStartPage(page);
-		}

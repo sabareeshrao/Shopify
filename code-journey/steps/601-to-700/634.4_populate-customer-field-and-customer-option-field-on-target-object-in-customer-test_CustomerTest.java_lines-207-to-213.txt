@@ -1,0 +1,7 @@
+		customerAttributeMailingList.setCustomer(customer);
+		customerAttributeMailingList.setCustomerOption(subscribedToMailingList);
+		customerAttributeMailingList.setCustomerOptionValue(no);
+		
+		customer.getAttributes().add(customerAttributeMailingList);
+		
+		customerService.save(customer);

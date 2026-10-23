@@ -1,8 +1,0 @@
-		
-		
-		Product product = null;
-				
-		if(source.getProductId() != null && source.getProductId().longValue() > 0) {
-			product = productService.findOne(source.getProductId(), store);
-			
-			if(product == null) {

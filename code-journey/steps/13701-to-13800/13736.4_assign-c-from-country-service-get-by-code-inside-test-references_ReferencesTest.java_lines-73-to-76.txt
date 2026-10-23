@@ -1,4 +1,0 @@
-		Country c = countryService.getByCode("US");
-		
-		System.out.println(c.getId());
-		

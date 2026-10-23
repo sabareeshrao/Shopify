@@ -1,8 +1,0 @@
-    if(customer.getDelivery() == null) {
-      customer.setDelivery(customer.getBilling());
-    } else {
-
-      if(StringUtils.isBlank(customer.getDelivery().getAddress())) {
-    	  customer.getDelivery().setAddress(customer.getBilling().getAddress());
-      }
-      if(StringUtils.isBlank(customer.getDelivery().getCity())) {

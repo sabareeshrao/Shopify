@@ -1,4 +1,0 @@
-	},
-	{
-		"zoneCode": "BAW",
-		"zoneName": "Baden-Wrttemberg",

@@ -1,0 +1,50 @@
+	
+
+	/**
+	 * For product images
+	 * @Deprecated
+	 * @param storeCode
+	 * @param productCode
+	 * @param imageType
+	 * @param imageName
+	 * @param extension
+	 * @return
+	 * @throws IOException
+	 */
+	@RequestMapping("/static/{storeCode}/{imageType}/{productCode}/{imageName}.{extension}")
+	public @ResponseBody byte[] printImage(@PathVariable final String storeCode, @PathVariable final String productCode, @PathVariable final String imageType, @PathVariable final String imageName, @PathVariable final String extension) throws IOException {
+
+		// product image
+		// example small product image -> /static/DEFAULT/products/TB12345/product1.jpg
+		
+		// example large product image -> /static/DEFAULT/products/TB12345/product1.jpg
+
+		
+		/**
+		 * List of possible imageType
+		 * 
+		 */
+		
+
+		ProductImageSize size = ProductImageSize.SMALL;
+		
+		if(imageType.equals(FileContentType.PRODUCTLG.name())) {
+			size = ProductImageSize.LARGE;
+		} 
+		
+
+		
+		OutputContentFile image = null;
+		try {
+			image = productImageService.getProductImage(storeCode, productCode, new StringBuilder().append(imageName).append(".").append(extension).toString(), size);
+		} catch (ServiceException e) {
+			LOGGER.error("Cannot retrieve image " + imageName, e);
+		}
+		if(image!=null) {
+			return image.getFile().toByteArray();
+		} else {
+			//empty image placeholder
+			return tempImage;
+		}
+
+	}

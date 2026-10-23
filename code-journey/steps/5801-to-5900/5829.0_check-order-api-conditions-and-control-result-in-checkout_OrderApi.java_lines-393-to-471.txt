@@ -1,0 +1,79 @@
+
+	/**
+	 * Main checkout resource that will complete the order flow
+	 * @param code
+	 * @param order
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@RequestMapping(value = { "/cart/{code}/checkout" }, method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableOrderConfirmation checkout(
+			@PathVariable final String code,//shopping cart
+			@Valid @RequestBody PersistableAnonymousOrder order,//order
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		Validate.notNull(order.getCustomer(), "Customer must not be null");
+
+
+		ShoppingCart cart;
+		try {
+			cart = shoppingCartService.getByCode(code, merchantStore);
+
+			if (cart == null) {
+				throw new ResourceNotFoundException("Cart code " + code + " does not exist");
+			}
+
+			//security password validation
+			PersistableCustomer presistableCustomer = order.getCustomer();
+			if(!StringUtils.isBlank(presistableCustomer.getPassword())) { //validate customer password
+				credentialsService.validateCredentials(presistableCustomer.getPassword(), presistableCustomer.getRepeatPassword(), merchantStore, language);
+			}
+
+			Customer customer = new Customer();
+			customer = customerFacade.populateCustomerModel(customer, order.getCustomer(), merchantStore, language);
+
+			if(!StringUtils.isBlank(presistableCustomer.getPassword())) {
+				//check if customer already exist
+				customer.setAnonymous(false);
+				customer.setNick(customer.getEmailAddress()); //username
+				if(customerFacadev1.checkIfUserExists(customer.getNick(),  merchantStore)) {
+					//409 Conflict
+					throw new GenericRuntimeException("409", "Customer with email [" + customer.getEmailAddress() + "] is already registered");
+				}
+			}
+
+
+			order.setShoppingCartId(cart.getId());
+
+			Order modelOrder = orderFacade.processOrder(order, customer, merchantStore, language,
+					LocaleUtils.getLocale(language));
+			Long orderId = modelOrder.getId();
+			//populate order confirmation
+			order.setId(orderId);
+			// set customer id
+			order.getCustomer().setId(modelOrder.getCustomerId());
+
+			return orderFacadeV1.orderConfirmation(modelOrder, customer, merchantStore, language);
+
+
+		} catch (Exception e) {
+			if(e instanceof CredentialsException) {
+				throw new GenericRuntimeException("412","Credentials creation Failed [" + e.getMessage() + "]");
+			}
+			String message = e.getMessage();
+			if(StringUtils.isBlank(message)) {//exception type
+				message = "APP-BACKEND";
+				if(e.getCause() instanceof com.salesmanager.core.modules.integration.IntegrationException) {
+					message = "Integration problen occured to complete order";
+				}
+			}
+			throw new ServiceRuntimeException("Error during checkout [" + message + "]", e);
+		}
+
+	}

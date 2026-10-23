@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "NC",
-		"zoneName": "North Carolina",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "ND",

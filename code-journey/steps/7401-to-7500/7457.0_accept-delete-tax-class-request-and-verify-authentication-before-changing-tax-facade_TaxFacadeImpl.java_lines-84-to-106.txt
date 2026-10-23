@@ -1,0 +1,23 @@
+
+	@Override
+	public void deleteTaxClass(Long id, MerchantStore store, Language language) {
+		Validate.notNull(id,"TaxClass id cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		try {
+			TaxClass model = taxClassService.getById(id);
+			if(model == null) {
+				throw new ResourceNotFoundException("TaxClass not found [" + id + "] for store [" + store.getCode() + "]");
+			} else {
+				if(!model.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new UnauthorizedException("MerchantStore [" + store.getCode() + "] cannot delete tax class [" + id + "]");
+				}
+			}
+			taxClassService.delete(model);
+				
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxClasse [" + id + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxClasse [" + id + "] for store [" + store.getCode() + "]", e);
+		}
+
+	}

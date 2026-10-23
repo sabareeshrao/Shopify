@@ -1,0 +1,8 @@
+
+	// Move to OrderTotalService
+	public BigDecimal getOrderProductTotalPrice(MerchantStore store, OrderProduct orderProduct) {
+
+		BigDecimal finalPrice = orderProduct.getOneTimeCharge();
+		finalPrice = finalPrice.multiply(new BigDecimal(orderProduct.getProductQuantity()));
+		return finalPrice;
+	}

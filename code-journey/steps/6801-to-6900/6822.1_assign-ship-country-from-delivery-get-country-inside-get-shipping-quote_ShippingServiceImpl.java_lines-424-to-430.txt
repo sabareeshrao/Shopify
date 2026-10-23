@@ -1,0 +1,7 @@
+
+			//look if customer country code excluded
+			Country shipCountry = delivery.getCountry();
+			
+			//a ship to country is required
+			Validate.notNull(shipCountry,"Ship to Country cannot be null");
+			Validate.notNull(store.getCountry(), "Store Country canot be null");

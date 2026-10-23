@@ -1,8 +1,0 @@
-	 * @param productCode
-	 * @param imageType
-	 * @param imageName
-	 * @param extension
-	 * @return
-	 * @throws IOException
-	 */
-	@RequestMapping("/static/{storeCode}/{imageType}/{productCode}/{imageName}.{extension}")

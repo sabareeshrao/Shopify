@@ -1,0 +1,36 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/users" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get list of user", notes = "", response = ReadableUserList.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableUserList list(
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "20") Integer count,
+			@RequestParam(value = "emailAddress", required = false) String emailAddress) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		UserCriteria criteria = new UserCriteria();
+		if(!StringUtils.isBlank(emailAddress)) {
+			criteria.setAdminEmail(emailAddress);
+		}
+		
+		criteria.setStoreCode(merchantStore.getCode());
+
+		if (!userFacade.userInRoles(authenticatedUser, Arrays.asList(Constants.GROUP_SUPERADMIN))) {
+			if (!userFacade.authorizedStore(authenticatedUser, merchantStore.getCode())) {
+				throw new UnauthorizedException("Operation unauthorized for user [" + authenticatedUser
+						+ "] and store [" + merchantStore + "]");
+			}
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+		return userFacade.listByCriteria(criteria, page, count, language);
+	}

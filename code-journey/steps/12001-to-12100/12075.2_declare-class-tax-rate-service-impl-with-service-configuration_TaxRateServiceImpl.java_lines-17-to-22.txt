@@ -1,6 +1,0 @@
-import com.salesmanager.core.model.tax.taxrate.TaxRate;
-
-@Service("taxRateService")
-public class TaxRateServiceImpl extends SalesManagerEntityServiceImpl<Long, TaxRate>
-		implements TaxRateService {
-

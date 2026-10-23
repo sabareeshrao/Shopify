@@ -1,8 +1,0 @@
-		List<ProductAttribute> modelAttributes = attributes.stream().map(attr -> persistableProductAttributeMapper.convert(attr, store, null)).collect(Collectors.toList());
-		
-		try {
-			productAttributeService.saveAll(modelAttributes);
-		
-			//save to a product
-			Product product = this.product(productId, store);
-			product.getAttributes().addAll(modelAttributes);

@@ -1,0 +1,19 @@
+	private Content convertContentPageToContent(MerchantStore store, Content model, PersistableContentPage content) throws Exception {
+		
+		
+		
+		Content contentModel = new Content();
+		if(model != null) {
+			contentModel = model;
+		}
+
+		List<ContentDescription> descriptions = buildDescriptions(contentModel, content.getDescriptions());
+		contentModel.setCode(content.getCode());
+		contentModel.setContentType(ContentType.PAGE);
+		contentModel.setMerchantStore(store);
+		contentModel.setLinkToMenu(content.isLinkToMenu());
+		contentModel.setVisible(content.isVisible());
+		contentModel.setDescriptions(descriptions);
+		contentModel.setId(content.getId());
+		return contentModel;
+	}

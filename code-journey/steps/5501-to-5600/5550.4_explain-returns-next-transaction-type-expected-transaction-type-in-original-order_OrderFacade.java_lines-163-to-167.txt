@@ -1,0 +1,5 @@
+
+	/**
+	 * Returns next TransactionType expected if any.
+	 */
+	TransactionType nextTransaction(Long orderId, MerchantStore store);

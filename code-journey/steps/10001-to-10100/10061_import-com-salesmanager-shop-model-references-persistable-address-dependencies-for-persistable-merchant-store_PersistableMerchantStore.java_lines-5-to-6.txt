@@ -1,2 +1,0 @@
-import com.salesmanager.shop.model.references.PersistableAddress;
-

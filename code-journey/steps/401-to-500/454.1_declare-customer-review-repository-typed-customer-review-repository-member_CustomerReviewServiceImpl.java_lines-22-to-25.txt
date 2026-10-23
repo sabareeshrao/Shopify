@@ -1,0 +1,4 @@
+	private CustomerReviewRepository customerReviewRepository;
+	
+	@Inject
+	private CustomerService customerService;

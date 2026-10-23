@@ -1,8 +1,0 @@
-	@Embedded
-	private AuditSection auditSection = new AuditSection();
-
-	@Deprecated //Use sku
-	@Column(name="PRODUCT_ID", nullable=false) 
-    private Long productId;
-	
-	//SKU

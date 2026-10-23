@@ -1,0 +1,7 @@
+	
+	@Inject
+	private CoreConfiguration configuration;
+	
+	@Inject
+	protected MerchantStoreService merchantService;
+

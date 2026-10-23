@@ -1,4 +1,0 @@
-
-		return contentFacade.getContent(code, merchantStore, language);
-
-	}

@@ -1,0 +1,2 @@
+	String getDisplayAmount(BigDecimal amount, MerchantStore store)
+			throws ServiceException;

@@ -1,7 +1,0 @@
-
-        List<ReadableCatalog> readableList = catalogs.getContent().stream()
-                .map(cat -> readableCatalogMapper.convert(cat, store, language))
-                .collect(Collectors.toList());
-        return createReadableList(catalogs, readableList);
-    }
-

@@ -1,7 +1,0 @@
-		List<IntegrationModule> modules = moduleConfigurationService.getIntegrationModules(Constants.PAYMENT_MODULES);
-		
-		Assert.assertNotNull(modules);
-	}
-	
-
-}

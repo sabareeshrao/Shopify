@@ -1,8 +1,0 @@
-
-		@Bean
-		public AuthenticationEntryPoint apiCustomerAuthenticationEntryPoint() {
-			BasicAuthenticationEntryPoint entryPoint = new BasicAuthenticationEntryPoint();
-			entryPoint.setRealmName("api-customer-realm");
-			return entryPoint;
-		}
-

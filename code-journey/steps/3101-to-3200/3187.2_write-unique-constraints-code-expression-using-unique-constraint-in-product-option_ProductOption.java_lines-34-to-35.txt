@@ -1,2 +1,0 @@
-	uniqueConstraints=@UniqueConstraint(columnNames = {"MERCHANT_ID", "PRODUCT_OPTION_CODE"}))
-

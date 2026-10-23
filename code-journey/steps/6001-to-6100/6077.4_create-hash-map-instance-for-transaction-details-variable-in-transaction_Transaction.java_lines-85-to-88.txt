@@ -1,0 +1,4 @@
+	
+	@Transient
+	private Map<String,String> transactionDetails= new HashMap<String,String>();
+

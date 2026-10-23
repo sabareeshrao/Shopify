@@ -1,0 +1,10 @@
+	
+	private void saveShippingConfiguration(ShippingConfiguration config, MerchantStore store) throws ServiceRuntimeException {
+		try {
+			shippingService.saveShippingConfiguration(config, store);
+		} catch (ServiceException e) {
+			LOGGER.error("Error while saving shipping configuration", e);
+			throw new ServiceRuntimeException("Error while saving shipping configuration for store [" + store.getCode() + "]", e);
+		}
+	}
+

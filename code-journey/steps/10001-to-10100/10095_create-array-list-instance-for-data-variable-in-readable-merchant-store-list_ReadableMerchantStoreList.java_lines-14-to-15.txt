@@ -1,2 +1,0 @@
-  private List<ReadableMerchantStore> data = new ArrayList<ReadableMerchantStore>();
-

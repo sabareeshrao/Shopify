@@ -1,0 +1,19 @@
+    @Override
+    public void updateCatalog(Long catalogId, PersistableCatalog catalog, MerchantStore store, Language language) {
+        Validate.notNull(catalogId, "Catalog id cannot be null");
+        Validate.isTrue(catalogId > 0, "Catalog id cannot be null");
+        Validate.notNull(store, "MerchantStore cannot be null");
+        Validate.notNull(language, "Language cannot be null");
+
+        Catalog c = Optional.ofNullable(catalogService.getById(catalogId))
+                .orElseThrow(() -> new ResourceNotFoundException("Catalog with id [" + catalogId + "] not found"));
+
+        if (Objects.nonNull(c.getMerchantStore()) && !c.getMerchantStore().getCode().equals(store.getCode())) {
+            throw new ResourceNotFoundException("Catalog with id [" + catalogId + "] not found for merchant [" + store.getCode() + "]");
+        }
+
+        c.setDefaultCatalog(catalog.isDefaultCatalog());
+        c.setVisible(catalog.isVisible());
+
+        catalogService.saveOrUpdate(c, store);
+    }

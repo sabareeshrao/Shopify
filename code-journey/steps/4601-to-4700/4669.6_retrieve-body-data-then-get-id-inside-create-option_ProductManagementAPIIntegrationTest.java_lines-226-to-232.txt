@@ -1,7 +1,0 @@
-				"http://localhost:8080/sm-shop/services/private/DEFAULT/product/option", entity,
-				PersistableProductOption.class);
-
-		final PersistableProductOption opt = (PersistableProductOption) response.getBody();
-		System.out.println("New option ID : " + opt.getId());
-
-	}

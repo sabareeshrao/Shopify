@@ -1,8 +1,0 @@
-	 * @param merchantStore
-	 * @param customerLocale
-	 */
-	@Async
-	public void sendUpdateOrderStatusEmail(
-			Customer customer, Order order, OrderStatusHistory lastHistory, MerchantStore merchantStore,
-			Locale customerLocale, String contextPath) {
-		   /** issue with putting that elsewhere **/ 

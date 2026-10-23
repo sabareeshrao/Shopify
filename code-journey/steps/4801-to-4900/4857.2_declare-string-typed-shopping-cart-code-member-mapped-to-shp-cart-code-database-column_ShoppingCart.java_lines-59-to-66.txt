@@ -1,0 +1,8 @@
+	
+	/**
+	 * Will be used to fetch shopping cart model from the controller
+	 * this is a unique code that should be attributed from the client (UI)
+	 * 
+	 */
+	@Column(name = "SHP_CART_CODE", unique=true, nullable=false)
+	private String shoppingCartCode;

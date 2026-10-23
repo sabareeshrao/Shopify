@@ -1,0 +1,8 @@
+
+	/**
+	 * List child stores
+	 * 
+	 * @param code
+	 * @return
+	 */
+	ReadableMerchantStoreList getChildStores(Language language, String code, int start, int count);

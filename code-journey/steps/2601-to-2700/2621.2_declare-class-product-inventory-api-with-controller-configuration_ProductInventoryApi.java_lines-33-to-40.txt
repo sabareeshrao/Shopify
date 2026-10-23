@@ -1,0 +1,8 @@
+
+@Controller
+@RequestMapping("/api/v1")
+@Api(tags = { "Product inventory resource (Product Inventory Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product inventory resource", description = "Manage inventory for a given product") })
+public class ProductInventoryApi {
+

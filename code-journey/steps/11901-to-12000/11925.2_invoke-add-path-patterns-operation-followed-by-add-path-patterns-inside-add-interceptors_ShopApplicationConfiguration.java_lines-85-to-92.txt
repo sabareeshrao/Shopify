@@ -1,8 +1,0 @@
-        // store web front filter
-        .addPathPatterns("/shop/**")
-        // customer section filter
-        .addPathPatterns("/customer/**");
-     **/
-
-    registry
-        .addInterceptor(corsFilter())

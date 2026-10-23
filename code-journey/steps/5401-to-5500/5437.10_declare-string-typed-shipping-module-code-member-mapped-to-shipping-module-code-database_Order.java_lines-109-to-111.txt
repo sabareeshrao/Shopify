@@ -1,0 +1,3 @@
+	
+	@Column (name ="SHIPPING_MODULE_CODE")
+	private String shippingModuleCode;

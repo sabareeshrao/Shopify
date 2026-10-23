@@ -1,0 +1,6 @@
+			messageLogString.append("trnAmount=").append(amnt).append("&");
+
+			messageLogString.append("ordName=").append(nm.toString()).append("&");
+			messageLogString.append("ordAddress1=").append(customer.getBilling().getAddress()).append("&");
+			messageLogString.append("ordCity=").append(customer.getBilling().getCity()).append("&");
+			

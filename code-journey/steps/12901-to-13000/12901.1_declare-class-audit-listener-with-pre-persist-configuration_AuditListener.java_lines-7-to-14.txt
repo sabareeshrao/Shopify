@@ -1,8 +1,0 @@
-public class AuditListener {
-
-  @PrePersist
-  public void onSave(Object o) {
-    if (o instanceof Auditable) {
-      Auditable audit = (Auditable) o;
-      AuditSection auditSection = audit.getAuditSection();
-

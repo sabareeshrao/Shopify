@@ -1,8 +1,0 @@
-{
-	"properties": {
-		"id": {
-			"type": "long"
-		},
-		"inventory": {
-			"type": "nested"
-		},

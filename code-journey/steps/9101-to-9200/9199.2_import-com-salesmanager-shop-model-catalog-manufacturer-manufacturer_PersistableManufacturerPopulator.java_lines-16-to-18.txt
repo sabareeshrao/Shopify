@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription;
+import com.salesmanager.shop.model.catalog.manufacturer.PersistableManufacturer;
+

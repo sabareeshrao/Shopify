@@ -1,0 +1,7 @@
+		qs.append("left join fetch p.taxClass tx ");
+
+		// RENTAL
+		//qs.append("left join fetch p.owner owner ");
+
+		/**/
+		// attributes

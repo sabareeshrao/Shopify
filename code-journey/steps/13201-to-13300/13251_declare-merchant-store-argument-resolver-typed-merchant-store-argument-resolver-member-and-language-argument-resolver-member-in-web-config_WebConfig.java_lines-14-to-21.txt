@@ -1,8 +1,0 @@
-	
-    @Autowired
-    private MerchantStoreArgumentResolver merchantStoreArgumentResolver;
-    
-    @Autowired
-    private LanguageArgumentResolver languageArgumentResolver;
-
-	

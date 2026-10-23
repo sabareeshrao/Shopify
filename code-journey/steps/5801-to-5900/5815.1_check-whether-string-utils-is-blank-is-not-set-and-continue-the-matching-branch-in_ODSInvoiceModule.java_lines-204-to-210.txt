@@ -1,0 +1,7 @@
+			
+			//10
+			StringBuilder billToAddress = null;
+			if(!StringUtils.isBlank(order.getBilling().getAddress())) {
+				billToAddress = new StringBuilder();
+				billToAddress.append(order.getBilling().getAddress());
+			}

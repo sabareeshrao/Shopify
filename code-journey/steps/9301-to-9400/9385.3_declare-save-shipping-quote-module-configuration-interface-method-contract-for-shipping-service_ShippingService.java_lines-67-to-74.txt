@@ -1,8 +1,0 @@
-	void saveShippingQuoteModuleConfiguration(IntegrationConfiguration configuration,
-			MerchantStore store) throws ServiceException;
-
-	/**
-	 * ShippingType (NATIONAL, INTERNATIONSL)
-	 * ShippingBasisType (SHIPPING, BILLING)
-	 * ShippingPriceOptionType (ALL, LEAST, HIGHEST)
-	 * Packages

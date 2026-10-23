@@ -1,0 +1,7 @@
+
+	/**
+	 * Returns a list of available shipping modules
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

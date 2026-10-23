@@ -1,4 +1,0 @@
-		if (criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP) 
-				&& !CollectionUtils.isEmpty(criteria.getCategoryIds())) {
-			countQ.setParameter("cid", criteria.getCategoryIds());
-		}

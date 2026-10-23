@@ -1,2 +1,0 @@
-	public final static String MODULE_CODE = "priceByDistance";
-

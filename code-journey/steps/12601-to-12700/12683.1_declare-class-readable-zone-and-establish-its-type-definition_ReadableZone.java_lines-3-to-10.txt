@@ -1,8 +1,0 @@
-public class ReadableZone extends ZoneEntity {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String name;
-	public String getName() {

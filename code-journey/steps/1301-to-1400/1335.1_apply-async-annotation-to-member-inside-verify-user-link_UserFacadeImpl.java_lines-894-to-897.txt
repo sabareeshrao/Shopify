@@ -1,0 +1,4 @@
+	
+
+	@Async
+	private void resetPasswordRequest(User user, String resetLink, MerchantStore store, Locale locale)

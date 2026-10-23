@@ -1,0 +1,5 @@
+    @Inject
+    @Qualifier("serviceCache")
+    private Cache cache;
+	
+	

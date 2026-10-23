@@ -1,8 +1,0 @@
-		if (base.equals(MeasureUnit.IN.name())) {
-			if (store.getSeizeunitcode().equals(MeasureUnit.IN.name())) {
-				return new BigDecimal(String.valueOf(measure)).setScale(2,
-				RoundingMode.HALF_UP).doubleValue();
-			} else {// centimeter (inch to centimeter)
-				double measureConstant = 2.54;
-
-				double answer = measure * measureConstant;

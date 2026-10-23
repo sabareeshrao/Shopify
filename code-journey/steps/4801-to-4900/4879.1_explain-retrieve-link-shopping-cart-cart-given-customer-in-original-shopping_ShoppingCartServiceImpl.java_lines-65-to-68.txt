@@ -1,0 +1,4 @@
+
+	/**
+	 * Retrieve a {@link ShoppingCart} cart for a given customer
+	 */

@@ -1,8 +1,0 @@
-
-	        ProductDescription description = source.getProductDescription();
-
-	        if(source.getDescriptions()!=null && source.getDescriptions().size()>0) {
-	          for(ProductDescription desc : source.getDescriptions()) {
-                if(language != null && desc.getLanguage()!=null && desc.getLanguage().getId().intValue() == language.getId().intValue()) {
-                    description = desc;
-                    break;

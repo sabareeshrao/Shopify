@@ -1,6 +1,0 @@
-	    **/
-
-		if (!StringUtils.isBlank(criteria.getProductName())) {
-			q.setParameter("nm", new StringBuilder().append("%").append(criteria.getProductName().toLowerCase())
-					.append("%").toString());
-		}

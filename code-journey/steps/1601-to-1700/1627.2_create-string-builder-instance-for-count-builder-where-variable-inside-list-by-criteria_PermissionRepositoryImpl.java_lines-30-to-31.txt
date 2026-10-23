@@ -1,2 +1,0 @@
-		StringBuilder countBuilderWhere = new StringBuilder();
-		

@@ -1,0 +1,26 @@
+
+	@RequestMapping(value = "/private/manufacturer/{id}", method = RequestMethod.DELETE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void delete(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			HttpServletResponse response) {
+
+		try {
+			Manufacturer manufacturer = manufacturerService.getById(id);
+
+			if (manufacturer != null) {
+				manufacturerFacade.deleteManufacturer(manufacturer, merchantStore, language);
+			} else {
+				response.sendError(404, "No Manufacturer found for ID : " + id);
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("Error while deleting manufacturer id " + id, e);
+			try {
+				response.sendError(503, "Error while deleting manufacturer id " + id + " - " + e.getMessage());
+			} catch (Exception ignore) {
+			}
+		}
+	}

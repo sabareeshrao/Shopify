@@ -1,0 +1,10 @@
+	
+	/**
+	 * Initializes a transaction
+	 * @param order
+	 * @param customer
+	 * @param payment
+	 * @param store
+	 * @return Transaction
+	 */
+	Transaction initTransaction(Order order, Customer customer, Payment payment, MerchantStore store) throws ServiceException;

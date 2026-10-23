@@ -1,8 +1,0 @@
-	@Query("select c from Content c left join fetch c.descriptions cd join fetch c.merchantStore cm where c.code = ?1 and cm.id = ?2 and cd.language.id = ?3")
-	Content findByCode(String code, Integer storeId, Integer languageId);
-	
-	@Query("select c from Content c left join fetch c.descriptions cd join fetch c.merchantStore cm where c.id = ?1 and cd.language.id = ?2")
-	Content findByIdAndLanguage(Long contentId, Integer languageId);
-	
-	@Query("select c from Content c left join fetch c.descriptions cd join fetch c.merchantStore cm where c.id = ?1")
-	Content findOne(Long contentId);

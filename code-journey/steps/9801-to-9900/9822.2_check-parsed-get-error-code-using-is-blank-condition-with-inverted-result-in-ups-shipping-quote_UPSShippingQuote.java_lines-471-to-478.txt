@@ -1,8 +1,0 @@
-
-			digester.parse(xmlreader);
-
-			if (!StringUtils.isBlank(parsed.getErrorCode())) {
-
-					LOGGER.error("Can't process UPS statusCode="
-							+ parsed.getErrorCode() + " message= "
-							+ parsed.getError());

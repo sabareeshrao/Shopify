@@ -1,0 +1,5 @@
+	public abstract void successfullAuthentication(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws AuthenticationException;
+
+	public abstract void unSuccessfullAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException;
+
+}

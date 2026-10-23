@@ -1,0 +1,4 @@
+public class ProductImageCropUtils {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductImageCropUtils.class);
+	

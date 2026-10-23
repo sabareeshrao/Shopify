@@ -1,0 +1,4 @@
+  @PostMapping(value = "/private/catalog")
+  @ResponseStatus(HttpStatus.OK)
+  @ApiOperation(httpMethod = "POST", value = "Create catalog", notes = "",
+      response = Void.class)

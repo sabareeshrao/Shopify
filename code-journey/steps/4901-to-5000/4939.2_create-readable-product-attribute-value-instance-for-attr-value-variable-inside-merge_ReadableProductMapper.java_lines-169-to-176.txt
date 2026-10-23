@@ -1,8 +1,0 @@
-					ReadableProductOption opt = null;
-					ReadableProductAttribute attr = null;
-					ReadableProductProperty property = null;
-					ReadableProductPropertyValue propertyValue = null;
-					ReadableProductAttributeValue attrValue = new ReadableProductAttributeValue();
-
-					ProductOptionValue optionValue = attribute.getProductOptionValue();
-

@@ -1,0 +1,43 @@
+	private void saveOrUpdate(CustomerReview review) throws ServiceException {
+		
+
+		Validate.notNull(review,"CustomerReview cannot be null");
+		Validate.notNull(review.getCustomer(),"CustomerReview.customer cannot be null");
+		Validate.notNull(review.getReviewedCustomer(),"CustomerReview.reviewedCustomer cannot be null");
+		
+		
+		//refresh customer
+		Customer customer = customerService.getById(review.getReviewedCustomer().getId());
+		
+		//ajust product rating
+		Integer count = 0;
+		if(customer.getCustomerReviewCount()!=null) {
+			count = customer.getCustomerReviewCount();
+		}
+				
+		
+		
+
+		BigDecimal averageRating = customer.getCustomerReviewAvg();
+		if(averageRating==null) {
+			averageRating = new BigDecimal(0);
+		}
+		//get reviews
+
+		
+		BigDecimal totalRating = averageRating.multiply(new BigDecimal(count));
+		totalRating = totalRating.add(new BigDecimal(review.getReviewRating()));
+		
+		count = count + 1;
+		double avg = totalRating.doubleValue() / count;
+		
+		customer.setCustomerReviewAvg(new BigDecimal(avg));
+		customer.setCustomerReviewCount(count);
+		super.save(review);
+		
+		customerService.update(customer);
+		
+		review.setReviewedCustomer(customer);
+
+		
+	}

@@ -1,0 +1,6 @@
+	private PricingService pricingService;
+
+	public PricingService getPricingService() {
+		return pricingService;
+	}
+

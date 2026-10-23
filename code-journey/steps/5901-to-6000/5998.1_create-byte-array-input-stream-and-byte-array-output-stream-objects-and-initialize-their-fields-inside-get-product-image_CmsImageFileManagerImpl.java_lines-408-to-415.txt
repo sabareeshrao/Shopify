@@ -1,8 +1,0 @@
-
-      input = new ByteArrayInputStream(imageBytes);
-      ByteArrayOutputStream output = new ByteArrayOutputStream();
-      IOUtils.copy(input, output);
-
-      String contentType = fileNameMap.getContentTypeFor(imageName);
-
-      contentImage.setFile(output);

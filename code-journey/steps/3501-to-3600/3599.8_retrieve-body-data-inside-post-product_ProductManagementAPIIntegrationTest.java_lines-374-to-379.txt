@@ -1,0 +1,6 @@
+
+		final PersistableProduct prod = (PersistableProduct) response.getBody();
+
+		System.out.println("---------------------");
+
+	}

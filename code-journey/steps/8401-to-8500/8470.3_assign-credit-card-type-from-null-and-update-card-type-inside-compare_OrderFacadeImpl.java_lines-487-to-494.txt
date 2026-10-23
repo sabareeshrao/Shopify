@@ -1,8 +1,0 @@
-				payment.setAmount(order.getOrderTotalSummary().getTotal());
-				payment.setModuleName(order.getPaymentModule());
-				payment.setCurrency(modelOrder.getCurrency());
-
-				CreditCardType creditCardType = null;
-				String cardType = order.getPayment().get("creditcard_card_type");
-
-				// supported credit cards

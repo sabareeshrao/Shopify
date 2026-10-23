@@ -1,0 +1,5 @@
+		if(source.getInventory() != null) {
+			ProductAvailability availability = persistableProductAvailabilityMapper.convert(source.getInventory(), store, language);
+			availability.setProductVariant(destination);
+			destination.getAvailabilities().add(availability);
+		}

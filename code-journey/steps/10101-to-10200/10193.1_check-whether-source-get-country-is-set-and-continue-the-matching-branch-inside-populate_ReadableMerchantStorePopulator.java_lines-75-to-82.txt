@@ -1,8 +1,0 @@
-
-		target.setCurrency(source.getCurrency().getCode());
-		target.setPhone(source.getStorephone());
-		
-		ReadableAddress address = new ReadableAddress();
-		address.setAddress(source.getStoreaddress());
-		address.setCity(source.getStorecity());
-		if(source.getCountry()!=null) {

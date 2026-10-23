@@ -1,8 +1,0 @@
-	@Override
-	public ReadableConfiguration configuration(String module, MerchantStore store) {
-		
-		try {
-			
-			ReadableConfiguration config = null;
-			List<PaymentMethod> methods = paymentService.getAcceptedPaymentMethods(store);
-			Optional<ReadableConfiguration> configuration = 

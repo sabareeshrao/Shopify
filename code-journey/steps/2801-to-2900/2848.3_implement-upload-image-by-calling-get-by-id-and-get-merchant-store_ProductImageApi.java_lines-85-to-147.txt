@@ -1,0 +1,63 @@
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void uploadImage(
+			@PathVariable Long id, 
+			@RequestParam(value = "file", required = true) MultipartFile[] files,
+			@RequestParam(value = "order", required = false, defaultValue = "0") Integer position,
+			@RequestParam(value = "defaultImage", required = false, defaultValue = "false") boolean defaultImage,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) throws IOException {
+
+		try {
+
+			// get the product
+			Product product = productService.getById(id);
+			if (product == null) {
+				throw new ResourceNotFoundException("Product not found");
+			}
+
+			// security validation
+			// product belongs to merchant store
+			if (product.getMerchantStore().getId().intValue() != merchantStore.getId().intValue()) {
+				throw new UnauthorizedException("Resource not authorized for this merchant");
+			}
+
+			boolean hasDefaultImage = false;
+			Set<ProductImage> images = product.getImages();
+			
+			if (!defaultImage && !CollectionUtils.isEmpty(images)) {
+				for (ProductImage image : images) {
+					if (image.isDefaultImage()) {
+						hasDefaultImage = true;
+						break;
+					}
+				}
+			}
+
+			List<ProductImage> contentImagesList = new ArrayList<ProductImage>();
+			int sortOrder = position;
+			for (MultipartFile multipartFile : files) {
+				if (!multipartFile.isEmpty()) {
+					ProductImage productImage = new ProductImage();
+					productImage.setImage(multipartFile.getInputStream());
+					productImage.setProductImage(multipartFile.getOriginalFilename());
+					productImage.setProduct(product);
+
+					if (!hasDefaultImage) {
+						productImage.setDefaultImage(true);
+						hasDefaultImage = true;
+					}
+					productImage.setSortOrder(sortOrder);
+					position++;
+					contentImagesList.add(productImage);
+				}
+			}
+
+			if (CollectionUtils.isNotEmpty(contentImagesList)) {
+				productImageService.addProductImages(product, contentImagesList);
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("Error while creating ProductImage", e);
+			throw new ServiceRuntimeException("Error while creating image");
+		}
+	}

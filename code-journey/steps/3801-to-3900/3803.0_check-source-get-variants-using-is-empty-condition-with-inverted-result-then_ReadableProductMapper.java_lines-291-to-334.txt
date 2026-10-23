@@ -1,0 +1,44 @@
+		
+		ReadableProductVariant defaultInstance = null;
+
+		// variants
+		if (!CollectionUtils.isEmpty(source.getVariants()))
+
+		{
+			List<ReadableProductVariant> instances = source
+					.getVariants().stream()
+					.map(i -> readableProductVariantMapper.convert(i, store, language)).collect(Collectors.toList());
+			destination.setVariants(instances);
+			
+			/**
+			 * When an item has instances
+			 * Take default instance
+			 * 
+			 * - Set item price as default instance price
+			 * - Set default image as default instance image
+			 */
+			
+			//get default instance
+			defaultInstance = instances.stream().filter(i -> i.isDefaultSelection()).findAny().orElse(null);
+			
+
+			/**
+			 * variants options list variation color
+			 */
+
+			/**
+			 * Returns a list of ReadableProductOptions
+			 * 
+			 * name lang type code List ReadableProductOptionValueEntity name description
+			 * image order default
+			 */
+
+			/**
+			 * Create options from instance Create a list of option values
+			 */
+
+			for (ProductVariant instance : source.getVariants()) {
+				instanceToOption(selectableOptions, instance, store, language);
+			}
+
+		}

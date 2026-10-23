@@ -1,0 +1,9 @@
+	
+	@Inject
+	protected ProductOptionService productOptionService;
+	
+	@Inject
+	protected ProductOptionSetService productOptionSetService;
+	
+	@Inject
+	protected ProductOptionValueService productOptionValueService;

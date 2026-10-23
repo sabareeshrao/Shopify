@@ -1,0 +1,10 @@
+
+  @Override
+  public List<Object[]> countProductsByCategories(MerchantStore store, List<Long> categoryIds)
+      throws ServiceException {
+
+    return categoryRepository.countProductsByCategories(store, categoryIds);
+
+	}
+
+

@@ -1,8 +1,0 @@
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="MERCHANT_ID", nullable=false)
-	private MerchantStore merchantStore;
-	
-	@NotEmpty
-	@Column (name ="STREET_ADDRESS", length=256)
-	private String address;

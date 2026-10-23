@@ -1,8 +1,0 @@
-	@Override
-	public List<ContentDescription> listNameByType(List<ContentType> contentType, MerchantStore store, Language language) {
-		
-
-
-			StringBuilder qs = new StringBuilder();
-
-			qs.append("select c from Content c ");

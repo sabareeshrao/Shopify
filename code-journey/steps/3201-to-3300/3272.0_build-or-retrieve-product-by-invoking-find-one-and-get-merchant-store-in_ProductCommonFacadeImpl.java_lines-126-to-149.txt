@@ -1,0 +1,24 @@
+	@Override
+	public ReadableProduct getProduct(MerchantStore store, Long id, Language language) {
+
+		Product product = productService.findOne(id, store);
+		if (product == null) {
+			throw new ResourceNotFoundException("Product [" + id + "] not found");
+		}
+
+		if (product.getMerchantStore().getId() != store.getId()) {
+			throw new ResourceNotFoundException("Product [" + id + "] not found for store [" + store.getId() + "]");
+		}
+
+		ReadableProduct readableProduct = new ReadableProduct();
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		try {
+			readableProduct = populator.populate(product, readableProduct, store, language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException("Error converting product [" + id + "]",e);
+		}
+
+		return readableProduct;
+	}

@@ -1,8 +1,0 @@
-			<!--spring integration -->
-			<dependency>
-				<groupId>org.kie</groupId>
-				<artifactId>kie-spring</artifactId>
-				<version>${drools.version}</version>
-			</dependency>
-			<!-- end rules engine -->
-

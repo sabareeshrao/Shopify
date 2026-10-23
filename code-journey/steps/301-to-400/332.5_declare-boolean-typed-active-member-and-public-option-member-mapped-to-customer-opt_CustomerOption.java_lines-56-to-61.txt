@@ -1,0 +1,6 @@
+	
+	@Column(name="CUSTOMER_OPT_ACTIVE")
+	private boolean active;
+	
+	@Column(name="CUSTOMER_OPT_PUBLIC")
+	private boolean publicOption;

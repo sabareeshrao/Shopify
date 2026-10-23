@@ -1,5 +1,0 @@
-
-		//return storeFacade.findAll(criteria, language, page, count);
-		ReadableMerchantStoreList readable = storeFacade.findAll(criteria, language, page, count);
-		return readable;
-	}

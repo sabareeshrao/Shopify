@@ -1,8 +1,0 @@
-		"zoneCode": "NSW",
-		"zoneName": "New South Wales",
-		"countryCode": "AU"
-	},
-	{
-		"zoneCode": "NTAU",
-		"zoneName": "Northern Territory",
-		"countryCode": "AU"

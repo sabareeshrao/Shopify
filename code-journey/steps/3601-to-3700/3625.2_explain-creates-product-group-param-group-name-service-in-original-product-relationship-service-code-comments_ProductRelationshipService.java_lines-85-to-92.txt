@@ -1,8 +1,0 @@
-
-	/**
-	 * Creates a product group
-	 * @param groupName
-	 * @throws ServiceException
-	 */
-	void addGroup(MerchantStore store, String groupName) throws ServiceException;
-

@@ -1,0 +1,9 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductServiceImpl.class);
+
+	ProductRepository productRepository;
+
+	@Inject
+	CategoryService categoryService;
+
+	@Inject
+	ProductAvailabilityService productAvailabilityService;

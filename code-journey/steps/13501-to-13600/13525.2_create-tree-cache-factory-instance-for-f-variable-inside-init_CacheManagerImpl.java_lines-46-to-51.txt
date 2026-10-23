@@ -1,6 +1,0 @@
-    	  f = new TreeCacheFactory();
-    	  treeCache = f.createTreeCache(c);
-    	  //this.treeCache = (TreeCache)c;
-    	  return;
-      }*/
-      

@@ -1,8 +1,0 @@
-    @OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE)
-    private List<Category> categories = new ArrayList<Category>();
-    
-    @Column(name = "CATEGORY_IMAGE", length=100)
-    private String categoryImage;
-
-    @Column(name = "SORT_ORDER")
-    private Integer sortOrder = 0;

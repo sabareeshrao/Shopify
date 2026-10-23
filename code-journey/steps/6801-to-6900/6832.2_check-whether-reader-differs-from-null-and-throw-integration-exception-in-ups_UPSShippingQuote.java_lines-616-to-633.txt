@@ -1,0 +1,18 @@
+			return shippingOptions;
+	}
+		} catch (Exception e1) {
+			LOGGER.error("UPS quote error",e1);
+			throw new IntegrationException(e1);
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (Exception ignore) {
+				}
+			}
+
+			if (httppost != null) {
+				httppost.releaseConnection();
+			}
+		}
+}

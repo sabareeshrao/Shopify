@@ -1,8 +1,0 @@
-	}
-
-	/**
-	 * Main checkout resource that will complete the order flow
-	 * @param code
-	 * @param order
-	 * @param merchantStore
-	 * @param language

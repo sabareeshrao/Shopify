@@ -1,0 +1,10 @@
+
+/*		if (source.getProductReviewAvg() != null) {
+			double avg = source.getProductReviewAvg().doubleValue();
+			double rating = Math.round(avg * 2) / 2.0f;
+			returnDestination.setRating(rating);
+		}
+
+		if (source.getProductReviewCount() != null) {
+			returnDestination.setRatingCount(source.getProductReviewCount().intValue());
+		}*/

@@ -1,2 +1,0 @@
-								cartAttribute.setOption(attributeOption);
-							}

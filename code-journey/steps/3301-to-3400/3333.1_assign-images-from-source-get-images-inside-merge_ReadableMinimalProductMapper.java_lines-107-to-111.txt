@@ -1,0 +1,5 @@
+		
+
+		
+		//image
+		Set<ProductImage> images = source.getImages();

@@ -1,8 +1,0 @@
-			"zoneCode": "NJ",
-			"zoneName": "New Jersey",
-			"countryCode": "US"
-		},
-		{
-			"zoneCode": "NM",
-			"zoneName": "New Mexico",
-			"countryCode": "US"

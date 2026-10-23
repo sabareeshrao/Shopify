@@ -1,0 +1,10 @@
+
+	/**
+	 * Get orders for a given store
+	 * @param store
+	 * @param start
+	 * @param maxCount
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */

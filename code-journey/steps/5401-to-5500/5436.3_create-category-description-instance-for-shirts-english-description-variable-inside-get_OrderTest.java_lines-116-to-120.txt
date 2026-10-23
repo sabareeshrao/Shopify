@@ -1,0 +1,5 @@
+
+	    CategoryDescription shirtsEnglishDescription = new CategoryDescription();
+	    shirtsEnglishDescription.setName("Shirts");
+	    shirtsEnglishDescription.setCategory(shirts);
+	    shirtsEnglishDescription.setLanguage(en);

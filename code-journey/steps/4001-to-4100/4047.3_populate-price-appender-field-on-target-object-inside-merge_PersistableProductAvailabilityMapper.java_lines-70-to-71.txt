@@ -1,2 +1,0 @@
-						ppd.setPriceAppender(description.get().getPriceAppender());
-					}

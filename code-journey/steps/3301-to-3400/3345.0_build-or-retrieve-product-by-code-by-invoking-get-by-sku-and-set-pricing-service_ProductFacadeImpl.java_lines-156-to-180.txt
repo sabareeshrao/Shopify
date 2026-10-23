@@ -1,0 +1,25 @@
+	
+	@Override
+	public ReadableProduct getProductByCode(MerchantStore store, String uniqueCode, Language language) {
+
+		Product product = null;
+		try {
+			product = productService.getBySku(uniqueCode, store, language);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		try {
+			populator.populate(product, readableProduct, product.getMerchantStore(), language);
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException("Product with code [" + uniqueCode + "] cannot be converted", e);
+		}
+
+		return readableProduct;
+	}

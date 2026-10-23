@@ -1,0 +1,18 @@
+			throws ServiceException {
+		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");
+
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+
+		return contentFileManager.getFileNames(merchantStoreCode, path, fileContentType);
+
+		/*
+		 * if(fileContentType.name().equals(FileContentType.IMAGE.name()) ||
+		 * fileContentType.name().equals(FileContentType.STATIC_FILE.name())) {
+		 * return contentFileManager.getFileNames(merchantStoreCode,
+		 * fileContentType); } else { return
+		 * contentFileManager.getFileNames(merchantStoreCode, fileContentType);
+		 * }
+		 */
+	}
+

@@ -1,7 +1,0 @@
-		
-		target.setId(new Long(source.getId()));
-		target.setCode(source.getIsoCode());
-		target.setSupported(source.getSupported());
-		if(!CollectionUtils.isEmpty(source.getDescriptions())) {
-			target.setName(source.getDescriptions().iterator().next().getName());
-	    }

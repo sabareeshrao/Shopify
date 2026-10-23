@@ -1,8 +1,0 @@
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@ManyToOne(targetEntity = Content.class)
-	@JoinColumn(name = "CONTENT_ID", nullable = false)
-	private Content content;
-

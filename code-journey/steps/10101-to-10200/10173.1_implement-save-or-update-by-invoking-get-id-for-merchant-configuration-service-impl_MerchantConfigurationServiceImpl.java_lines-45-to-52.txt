@@ -1,8 +1,0 @@
-	@Override
-	public void saveOrUpdate(MerchantConfiguration entity) throws ServiceException {
-		
-
-		
-		if(entity.getId()!=null && entity.getId()>0) {
-			super.update(entity);
-		} else {

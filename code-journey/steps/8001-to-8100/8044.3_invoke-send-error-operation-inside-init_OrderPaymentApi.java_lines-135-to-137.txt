@@ -1,3 +1,0 @@
-				response.sendError(401, "Error while initializing the payment customer not authorized");
-				return null;
-			}

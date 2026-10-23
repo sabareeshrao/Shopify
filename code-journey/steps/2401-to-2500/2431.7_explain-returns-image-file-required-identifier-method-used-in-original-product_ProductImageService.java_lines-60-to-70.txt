@@ -1,0 +1,11 @@
+
+	/**
+	 * Returns an image file from required identifier. This method is
+	 * used by the image servlet
+	 * @param store
+	 * @param product
+	 * @param fileName
+	 * @param size
+	 * @return
+	 * @throws ServiceException
+	 */

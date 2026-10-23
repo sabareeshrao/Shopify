@@ -1,5 +1,0 @@
-	public void setDescriptions(List<ProductTypeDescription> descriptions) {
-		this.descriptions = descriptions;
-	}
-
-}

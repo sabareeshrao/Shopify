@@ -1,8 +1,0 @@
-	@Autowired
-	private ProductAvailabilityService productAvailabilityService;
-	
-	@Autowired
-	private ProductAttributeService productAttributeService;
-	
-	@Inject
-	private PricingService pricingService;

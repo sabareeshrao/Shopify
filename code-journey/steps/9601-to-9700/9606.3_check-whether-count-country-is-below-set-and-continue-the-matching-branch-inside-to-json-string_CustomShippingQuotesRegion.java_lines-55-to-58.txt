@@ -1,4 +1,0 @@
-				countCountry ++;
-				if(countCountry<countries.size()) {
-					coutriesList.append(",");
-				}

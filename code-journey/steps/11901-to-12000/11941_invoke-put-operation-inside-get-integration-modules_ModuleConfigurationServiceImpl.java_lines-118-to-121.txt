@@ -1,4 +1,0 @@
-
-							moduleConfigs.put(env, config);
-
-						}

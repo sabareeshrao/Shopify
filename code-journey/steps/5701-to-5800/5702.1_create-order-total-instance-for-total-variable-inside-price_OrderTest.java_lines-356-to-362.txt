@@ -1,0 +1,7 @@
+		
+		OrderTotal total = new OrderTotal();
+		total.setOrder(order);
+		total.setOrderTotalCode(Constants.OT_TOTAL_MODULE_CODE);
+		total.setSortOrder(1);
+		total.setTitle("Total");
+		total.setValue(dprice.getProductPriceAmount());

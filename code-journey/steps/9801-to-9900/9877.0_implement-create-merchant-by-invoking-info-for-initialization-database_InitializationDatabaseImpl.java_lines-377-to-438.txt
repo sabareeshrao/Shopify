@@ -1,0 +1,62 @@
+	private void createMerchant() throws ServiceException {
+		LOGGER.info(String.format("%s : Creating merchant ", name));
+		
+		Date date = new Date(System.currentTimeMillis());
+		
+		Language en = languageService.getByCode("en");
+		Country ca = countryService.getByCode("CA");
+		Currency currency = currencyService.getByCode("CAD");
+		Zone qc = zoneService.getByCode("QC");
+		
+		List<Language> supportedLanguages = new ArrayList<Language>();
+		supportedLanguages.add(en);
+		
+		//create a merchant
+		MerchantStore store = new MerchantStore();
+		store.setCountry(ca);
+		store.setCurrency(currency);
+		store.setDefaultLanguage(en);
+		store.setInBusinessSince(date);
+		store.setZone(qc);
+		store.setStorename("Shopizer");
+		store.setStorephone("888-888-8888");
+		store.setCode(MerchantStore.DEFAULT_STORE);
+		store.setStorecity("My city");
+		store.setStoreaddress("1234 Street address");
+		store.setStorepostalcode("H2H-2H2");
+		store.setStoreEmailAddress("contact@shopizer.com");
+		store.setDomainName("localhost:8080");
+		store.setStoreTemplate("december");
+		store.setRetailer(true);
+		store.setLanguages(supportedLanguages);
+		
+		merchantService.create(store);
+		
+		
+		TaxClass taxclass = new TaxClass(TaxClass.DEFAULT_TAX_CLASS);
+		taxclass.setMerchantStore(store);
+		
+		taxClassService.create(taxclass);
+		
+		//create default manufacturer
+		Manufacturer defaultManufacturer = new Manufacturer();
+		defaultManufacturer.setCode("DEFAULT");
+		defaultManufacturer.setMerchantStore(store);
+		
+		ManufacturerDescription manufacturerDescription = new ManufacturerDescription();
+		manufacturerDescription.setLanguage(en);
+		manufacturerDescription.setName("DEFAULT");
+		manufacturerDescription.setManufacturer(defaultManufacturer);
+		manufacturerDescription.setDescription("DEFAULT");
+		defaultManufacturer.getDescriptions().add(manufacturerDescription);
+		
+		manufacturerService.create(defaultManufacturer);
+		
+	   Optin newsletter = new Optin();
+	   newsletter.setCode(OptinType.NEWSLETTER.name());
+	   newsletter.setMerchant(store);
+	   newsletter.setOptinType(OptinType.NEWSLETTER);
+	   optinService.create(newsletter);
+		
+		
+	}

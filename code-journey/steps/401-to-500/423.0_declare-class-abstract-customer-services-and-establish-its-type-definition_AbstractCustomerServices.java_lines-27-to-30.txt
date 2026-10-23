@@ -1,0 +1,4 @@
+public abstract class AbstractCustomerServices implements UserDetailsService{
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractCustomerServices.class);
+	

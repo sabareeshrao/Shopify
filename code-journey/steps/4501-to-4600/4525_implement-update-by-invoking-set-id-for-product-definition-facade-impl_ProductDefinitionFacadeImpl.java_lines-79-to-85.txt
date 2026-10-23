@@ -1,7 +1,0 @@
-	@Override
-	public void update(Long id, PersistableProductDefinition product, MerchantStore merchant,
-			Language language) {
-		product.setId(id);
-		this.saveProductDefinition(merchant, product, language);
-	}
-

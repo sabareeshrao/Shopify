@@ -1,0 +1,37 @@
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public Map<String, Zone> getZones(Language language) throws ServiceException {
+		
+		Map<String, Zone> zones = null;
+		try {
+
+			String cacheKey = ZONE_CACHE_PREFIX + language.getCode();
+			
+			zones = (Map<String, Zone>) cache.getFromCache(cacheKey);
+
+		
+		
+			if(zones==null) {
+				zones = new HashMap<String, Zone>();
+				List<Zone> zns = zoneRepository.listByLanguage(language.getId());
+			
+				//set names
+				for(Zone zone : zns) {
+					ZoneDescription description = zone.getDescriptions().get(0);
+					zone.setName(description.getName());
+					zones.put(zone.getCode(), zone);
+					
+				}
+				cache.putInCache(zones, cacheKey);
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("getZones()", e);
+		}
+		return zones;
+		
+		
+	}
+
+}

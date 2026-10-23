@@ -1,0 +1,19 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@PutMapping(value = { "/private/product/productVariantGroup/{id}" })
+	@ApiOperation(httpMethod = "PUT", value = "Update product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody void update(@PathVariable Long id,
+			@Valid @RequestBody PersistableProductVariantGroup instance, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_CATALOGUE, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		productVariantGroupFacade.update(id, instance, merchantStore, language);
+	}

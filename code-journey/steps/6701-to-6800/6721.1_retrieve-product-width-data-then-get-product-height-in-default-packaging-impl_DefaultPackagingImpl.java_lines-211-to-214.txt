@@ -1,0 +1,4 @@
+
+			double productVolume = (p.getProductWidth().doubleValue()
+					* p.getProductHeight().doubleValue() * p
+					.getProductLength().doubleValue());

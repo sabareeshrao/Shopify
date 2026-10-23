@@ -1,0 +1,8 @@
+	
+	/**
+	 * Creates content page
+	 * @param page
+	 * @param merchantStore
+	 * @param language
+	 */
+	Long saveContentPage(PersistableContentPage page, MerchantStore merchantStore, Language language);

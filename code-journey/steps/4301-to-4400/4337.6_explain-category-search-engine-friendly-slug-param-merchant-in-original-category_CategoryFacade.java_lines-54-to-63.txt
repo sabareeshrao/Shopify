@@ -1,0 +1,10 @@
+
+	/**
+	 * Get a Category by the Search Engine friendly URL slug
+	 *
+	 * @param merchantStore
+	 * @param friendlyUrl
+	 * @param language
+	 * @return
+	 */
+	ReadableCategory getCategoryByFriendlyUrl(MerchantStore merchantStore, String friendlyUrl, Language language) throws Exception;

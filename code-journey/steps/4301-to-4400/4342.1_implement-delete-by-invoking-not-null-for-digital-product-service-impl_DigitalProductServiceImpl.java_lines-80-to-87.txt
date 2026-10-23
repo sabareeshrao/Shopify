@@ -1,8 +1,0 @@
-	@Override
-	public void delete(DigitalProduct digitalProduct) throws ServiceException {
-		
-		Assert.notNull(digitalProduct,"DigitalProduct cannot be null");
-		Assert.notNull(digitalProduct.getProduct(),"DigitalProduct.product cannot be null");
-		//refresh file
-		digitalProduct = this.getById(digitalProduct.getId());
-		super.delete(digitalProduct);

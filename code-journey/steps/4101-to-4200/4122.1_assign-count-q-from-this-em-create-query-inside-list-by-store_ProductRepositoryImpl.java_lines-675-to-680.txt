@@ -1,0 +1,6 @@
+		
+		
+
+		Query countQ = this.em.createQuery(countBuilderSelect.toString() + countBuilderWhere.toString());
+
+		countQ.setParameter("mId", store.getId());

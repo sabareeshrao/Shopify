@@ -1,0 +1,6 @@
+
+	static {
+		for (Locale locale : Locale.getAvailableLocales()) {
+			LOCALES.put(locale.getCountry(), locale);
+		}
+	}

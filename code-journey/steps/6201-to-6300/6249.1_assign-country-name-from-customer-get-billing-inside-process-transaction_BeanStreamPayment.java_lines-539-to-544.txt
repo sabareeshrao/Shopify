@@ -1,0 +1,6 @@
+		
+		String countryName = customer.getBilling().getCountry().getIsoCode();
+		
+		messageString.append("ordProvince=").append(stateProvince).append("&");
+		messageString.append("ordPostalCode=").append(customer.getBilling().getPostalCode().replaceAll("\\s","")).append("&");
+		messageString.append("ordCountry=").append(countryName).append("&");

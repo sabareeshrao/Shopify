@@ -1,0 +1,4 @@
+import com.salesmanager.shop.model.system.ReadableOptin;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import javax.inject.Inject;
+import org.springframework.stereotype.Service;

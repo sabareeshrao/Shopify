@@ -1,5 +1,0 @@
-    sb.append(product).append(Constants.SLASH);
-    return sb.toString();
-
-  }
-

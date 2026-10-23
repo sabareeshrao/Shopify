@@ -1,0 +1,9 @@
+			try {
+				Payment createdPayment = payment.create(apiContext);
+				LOGGER.info("Created payment with id = "
+						+ createdPayment.getId() + " and status = "
+						+ createdPayment.getState());
+				// ###Payment Approval Url
+				Iterator<Links> links = createdPayment.getLinks().iterator();
+				while (links.hasNext()) {
+					Links link = links.next();

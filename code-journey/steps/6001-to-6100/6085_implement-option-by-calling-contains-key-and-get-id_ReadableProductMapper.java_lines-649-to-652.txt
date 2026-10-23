@@ -1,4 +1,0 @@
-	private ReadableProductOption option(TreeMap<Long, ReadableProductOption> selectableOptions, ProductOption option, Language language) {
-		if(selectableOptions.containsKey(option.getId())) {
-			return selectableOptions.get(option.getId());
-		}

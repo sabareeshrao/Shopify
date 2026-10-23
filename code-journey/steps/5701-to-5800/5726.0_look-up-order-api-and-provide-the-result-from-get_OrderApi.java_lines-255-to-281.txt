@@ -1,0 +1,27 @@
+
+	/**
+	 * Order details
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@RequestMapping(value = { "/private/orders/{id}" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableOrder get(
+			@PathVariable final Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_ORDER, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+
+		ReadableOrder order = orderFacade.getReadableOrder(id, merchantStore, language);
+
+		return order;
+	}

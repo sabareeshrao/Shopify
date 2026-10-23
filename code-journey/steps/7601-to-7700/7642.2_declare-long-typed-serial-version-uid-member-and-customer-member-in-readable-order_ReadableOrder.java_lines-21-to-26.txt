@@ -1,6 +1,0 @@
-	 */
-	private static final long serialVersionUID = 1L;
-	private ReadableCustomer customer;
-	private List<ReadableOrderProduct> products;
-	private Currency currencyModel;
-	

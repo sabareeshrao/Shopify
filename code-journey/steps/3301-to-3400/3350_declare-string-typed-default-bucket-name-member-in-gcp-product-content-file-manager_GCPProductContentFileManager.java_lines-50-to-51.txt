@@ -1,2 +1,0 @@
-  private static String DEFAULT_BUCKET_NAME = "shopizer";
-  

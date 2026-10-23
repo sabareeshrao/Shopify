@@ -1,0 +1,7 @@
+		
+		
+		
+		LOGGER.debug("Setting input parameters " + inputParameters.toString());
+		
+		
+		KieSession kieSession=droolsBeanFactory.getKieSession(ResourceFactory.newClassPathResource("com/salesmanager/drools/rules/PriceByDistance.drl"));

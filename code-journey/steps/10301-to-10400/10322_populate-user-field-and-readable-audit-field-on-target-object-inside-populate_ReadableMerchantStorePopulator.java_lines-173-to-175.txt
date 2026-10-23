@@ -1,3 +1,0 @@
-			audit.setUser(source.getAuditSection().getModifiedBy());
-			target.setReadableAudit(audit);
-		}

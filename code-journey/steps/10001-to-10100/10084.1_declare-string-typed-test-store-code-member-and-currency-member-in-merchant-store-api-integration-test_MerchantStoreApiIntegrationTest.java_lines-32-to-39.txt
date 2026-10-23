@@ -1,8 +1,0 @@
-  private static final String TEST_STORE_CODE = "test";
-  private static final String CURRENCY = "CAD";
-  private static final String DEFAULT_LANGUAGE = "en";
-
-  @Inject
-  private TestRestTemplate testRestTemplate;
-  
-  /**

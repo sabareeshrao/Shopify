@@ -1,4 +1,0 @@
-					attr.setValue(attribute.getValue());
-					attr.setOrder(target);
-					attrs.add(attr);
-				}

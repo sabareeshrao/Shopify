@@ -1,0 +1,9 @@
+
+	/**
+	 * Get the integration configuration
+	 * for a specific payment module
+	 * @param moduleCode
+	 * @param store
+	 * @return IntegrationConfiguration
+	 * @throws ServiceException
+	 */

@@ -1,0 +1,5 @@
+	public void setShippingQuote(boolean shippingQuote) {
+		this.shippingQuote = shippingQuote;
+	}
+
+}

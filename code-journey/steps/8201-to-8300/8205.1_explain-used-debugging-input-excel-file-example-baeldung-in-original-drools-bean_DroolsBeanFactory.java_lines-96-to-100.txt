@@ -1,0 +1,5 @@
+
+    /*
+     * Can be used for debugging
+     * Input excelFile example: com/baeldung/drools/rules/Discount.xls
+     */

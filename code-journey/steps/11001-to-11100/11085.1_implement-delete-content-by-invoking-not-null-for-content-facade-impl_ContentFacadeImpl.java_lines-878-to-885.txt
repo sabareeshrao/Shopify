@@ -1,8 +1,0 @@
-	@Override
-	public void deleteContent(Long id, MerchantStore merchantStore) {
-		Validate.notNull(id, "Content id must not be null");
-		Validate.notNull(merchantStore);
-		
-		try {
-			Content content = null;
-

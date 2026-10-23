@@ -1,0 +1,8 @@
+
+	/**
+	 * Get available payment modules
+	 * 
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */

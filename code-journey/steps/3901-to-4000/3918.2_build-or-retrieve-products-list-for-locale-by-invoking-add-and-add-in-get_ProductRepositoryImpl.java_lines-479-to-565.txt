@@ -1,0 +1,87 @@
+	@SuppressWarnings({ "rawtypes", "unchecked", "unused" })
+	private ProductList getProductsListForLocale(MerchantStore store, Set categoryIds, Language language, Locale locale,
+			int first, int max) {
+
+		List regionList = new ArrayList();
+		regionList.add(Constants.ALL_REGIONS);
+		if (locale != null) {
+			regionList.add(locale.getCountry());
+		}
+
+		ProductList productList = new ProductList();
+
+		Query countQ = this.em.createQuery(
+				"select count(p) from Product as p INNER JOIN p.availabilities pa INNER JOIN p.categories categs where p.merchantStore.id=:mId and categs.id in (:cid) and pa.region in (:lid) and p.available=1 and p.dateAvailable<=:dt");
+
+		countQ.setParameter("cid", categoryIds);
+		countQ.setParameter("lid", regionList);
+		countQ.setParameter("dt", new Date());
+		countQ.setParameter("mId", store.getId());
+
+		Number count = (Number) countQ.getSingleResult();
+
+		productList.setTotalCount(count.intValue());
+
+		if (count.intValue() == 0)
+			return productList;
+
+		StringBuilder qs = new StringBuilder();
+		qs.append("select p from Product as p ");
+		qs.append("join fetch p.merchantStore merch ");
+		qs.append("join fetch p.availabilities pa ");
+		qs.append("left join fetch pa.prices pap ");
+
+		qs.append("join fetch p.descriptions pd ");
+		qs.append("join fetch p.categories categs ");
+
+		// not necessary
+		// qs.append("join fetch pap.descriptions papd ");
+
+		// images
+		qs.append("left join fetch p.images images ");
+
+		// options (do not need attributes for listings)
+		// qs.append("left join fetch p.attributes pattr ");
+		// qs.append("left join fetch pattr.productOption po ");
+		// qs.append("left join fetch po.descriptions pod ");
+		// qs.append("left join fetch pattr.productOptionValue pov ");
+		// qs.append("left join fetch pov.descriptions povd ");
+
+		// other lefts
+		qs.append("left join fetch p.manufacturer manuf ");
+		qs.append("left join fetch manuf.descriptions manufd ");
+		qs.append("left join fetch p.type type ");
+		qs.append("left join fetch p.taxClass tx ");
+
+		// RENTAL
+		//qs.append("left join fetch p.owner owner ");
+
+		// qs.append("where pa.region in (:lid) ");
+		qs.append("where p.merchantStore.id=mId and categs.id in (:cid) and pa.region in (:lid) ");
+		// qs.append("and p.available=true and p.dateAvailable<=:dt and
+		// pd.language.id=:lang and manufd.language.id=:lang");
+		qs.append("and p.available=true and p.dateAvailable<=:dt and pd.language.id=:lang");
+		qs.append(" order by p.sortOrder asc");
+
+		String hql = qs.toString();
+		Query q = this.em.createQuery(hql);
+
+		q.setParameter("cid", categoryIds);
+		q.setParameter("lid", regionList);
+		q.setParameter("dt", new Date());
+		q.setParameter("lang", language.getId());
+		q.setParameter("mId", store.getId());
+
+		q.setFirstResult(first);
+		if (max > 0) {
+			int maxCount = first + max;
+
+			q.setMaxResults(Math.min(maxCount, count.intValue()));
+		}
+
+		List<Product> products = q.getResultList();
+		productList.setProducts(products);
+
+		return productList;
+
+	}

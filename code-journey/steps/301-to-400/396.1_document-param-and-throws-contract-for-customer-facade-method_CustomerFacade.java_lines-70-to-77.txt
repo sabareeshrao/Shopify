@@ -1,8 +1,0 @@
-     * <li> Merge Customer Shopping Cart with Session Cart if any.</li>
-     * <li> Convert Customer to {@link CustomerEntity} </li>
-     * </p>
-     *
-     * @param customer username of Customer
-     * @param sessionShoppingCartId session shopping cart, if user already have few items in Cart.
-     * @throws Exception
-     */

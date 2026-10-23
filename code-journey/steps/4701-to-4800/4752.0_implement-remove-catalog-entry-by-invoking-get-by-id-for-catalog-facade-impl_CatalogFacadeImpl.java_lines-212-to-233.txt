@@ -1,0 +1,22 @@
+    @Override
+    public void removeCatalogEntry(Long catalogId, Long catalogEntryId, MerchantStore store, Language language) {
+        CatalogCategoryEntry entry = catalogEntryService.getById(catalogEntryId);
+        if (Objects.isNull(entry)) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }
+
+        if (entry.getCatalog().getId().longValue() != catalogId.longValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }
+
+        if (entry.getCatalog().getMerchantStore().getId().intValue() != store.getId().intValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }
+
+        try {
+            catalogEntryService.delete(entry);
+        } catch (ServiceException e) {
+            throw new ServiceRuntimeException("Exception while deleting catalogEntry", e);
+        }
+
+    }

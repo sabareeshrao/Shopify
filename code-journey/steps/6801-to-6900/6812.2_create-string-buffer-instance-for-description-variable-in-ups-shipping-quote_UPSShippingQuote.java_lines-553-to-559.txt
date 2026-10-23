@@ -1,0 +1,7 @@
+					// option.setCurrency(store.getCurrency());
+					StringBuffer description = new StringBuffer();
+
+					String code = option.getOptionCode();
+					option.setOptionCode(code);
+					// get description
+					String label = (String) serviceMap.get(code);

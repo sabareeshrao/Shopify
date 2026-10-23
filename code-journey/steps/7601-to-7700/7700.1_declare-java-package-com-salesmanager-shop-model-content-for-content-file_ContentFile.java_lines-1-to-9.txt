@@ -1,0 +1,9 @@
+package com.salesmanager.shop.model.content;
+
+
+/**
+ * Model object used in webservice
+ * when creatin files
+ * @author carlsamson
+ *
+ */

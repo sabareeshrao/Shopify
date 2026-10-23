@@ -1,8 +1,0 @@
-	 */
-	@Override
-	public List<String> getContentFilesNames(String merchantStoreCode, FileContentType fileContentType)
-			throws ServiceException {
-		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");
-
-		String p = null;
-		Optional<String> path = Optional.ofNullable(p);

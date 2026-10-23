@@ -1,0 +1,26 @@
+	public void authenticateRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		if (logger.isDebugEnabled()) {
+			logger.debug("Processing authentication");
+		}
+		
+		Authentication authResult = null;
+
+		try {
+			authResult = this.attemptAuthentication(request, response);
+			if (authResult == null) {
+				// return immediately as subclass has indicated that it hasn't completed
+				// authentication
+				return;
+			}
+		} catch (AuthenticationException failed) {
+			// Authentication failed
+			unsuccess(request, response);
+			return;
+		}
+
+		this.success(request, response, authResult);
+
+		
+	}

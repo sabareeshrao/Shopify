@@ -1,4 +1,0 @@
-        Zone zone = zoneService.getByCode(address.getZone());
-        if (zone == null) {
-          throw new ConversionException("Unsuported zone code " + address.getZone());
-        }

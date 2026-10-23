@@ -1,8 +1,0 @@
-import com.salesmanager.shop.populator.system.ReadableOptinPopulator;
-import com.salesmanager.shop.store.controller.store.facade.StoreFacade;
-
-@Component
-public class MarketPlaceFacadeImpl implements MarketPlaceFacade {
-
-	@Inject
-	private StoreFacade storeFacade;

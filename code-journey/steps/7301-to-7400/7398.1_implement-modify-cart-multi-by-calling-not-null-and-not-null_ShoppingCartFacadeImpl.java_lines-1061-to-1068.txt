@@ -1,8 +1,0 @@
-	@Override
-	// KEEP
-	public ReadableShoppingCart modifyCartMulti(String cartCode, List<PersistableShoppingCartItem> items,
-			MerchantStore store, Language language) throws Exception {
-		Validate.notNull(cartCode, "String cart code cannot be null");
-		Validate.notNull(items, "PersistableShoppingCartItem cannot be null");
-
-		ShoppingCart cartModel = this.getCartModel(cartCode, store);

@@ -1,8 +1,0 @@
-	public void setShippingOptions(List<ShippingOption> shippingOptions) {
-		this.shippingOptions = shippingOptions;
-	}
-	public ShippingOption getSelectedShippingOption() {
-		return selectedShippingOption;
-	}
-	public void setSelectedShippingOption(ShippingOption selectedShippingOption) {
-		this.selectedShippingOption = selectedShippingOption;

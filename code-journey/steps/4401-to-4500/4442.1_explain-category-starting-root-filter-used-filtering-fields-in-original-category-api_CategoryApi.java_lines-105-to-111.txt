@@ -1,0 +1,7 @@
+
+	/**
+	 * Get all category starting from root filter can be used for filtering on
+	 * fields only featured is supported
+	 *
+	 * @return
+	 */

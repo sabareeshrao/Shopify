@@ -1,4 +1,0 @@
-
-		} catch (Exception e) {
-			throw new ConversionRuntimeException("Error while converting Inventory", e);
-		}

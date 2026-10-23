@@ -1,6 +1,0 @@
-		Map<String,IntegrationConfiguration> configuredModules = getPaymentModulesConfigured(store);
-		if(configuredModules!=null) {
-			for(String key : configuredModules.keySet()) {
-				if(key.equals(mod)) {
-					return configuredModules.get(key);	
-				}

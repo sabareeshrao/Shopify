@@ -1,0 +1,6 @@
+	private List<ReadableLanguage> supportedLanguages;
+
+	public String getCurrentUserLanguage() {
+		return currentUserLanguage;
+	}
+

@@ -1,9 +1,0 @@
-		
-		price.setSku(sku);
-		price.setProductAvailabilityId(inventoryId);
-		price.setId(priceId);
-		productPriceFacade.save(price, merchantStore);
-
-
-		
-	}

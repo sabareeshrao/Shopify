@@ -1,0 +1,8 @@
+
+	    CategoryDescription techEnglishDescription = new CategoryDescription();
+	    techEnglishDescription.setName("Technology");
+	    techEnglishDescription.setCategory(tech);
+	    techEnglishDescription.setLanguage(en);
+
+	    CategoryDescription techFrenchDescription = new CategoryDescription();
+	    techFrenchDescription.setName("Technologie");

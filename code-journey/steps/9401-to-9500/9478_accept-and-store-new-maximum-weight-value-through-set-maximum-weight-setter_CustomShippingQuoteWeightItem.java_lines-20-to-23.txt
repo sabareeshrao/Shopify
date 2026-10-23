@@ -1,4 +1,0 @@
-	public void setMaximumWeight(int maximumWeight) {
-		this.maximumWeight = maximumWeight;
-	}
-

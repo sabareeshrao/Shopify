@@ -1,8 +1,0 @@
-
-	@Autowired
-	private ProductOptionService productOptionService;
-	
-	@Autowired
-	private ProductOptionValueService productOptionValueService;
-	
-	@Autowired

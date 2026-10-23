@@ -1,0 +1,28 @@
+	public void createDefaultAdmin() throws Exception {
+
+		  MerchantStore store = merchantStoreService.getByCode(MerchantStore.DEFAULT_STORE);
+
+		  String password = passwordEncoder.encode(DEFAULT_INITIAL_PASSWORD);
+		  
+		  List<Group> groups = groupService.listGroup(GroupType.ADMIN);
+		  
+		  //creation of the super admin admin:password)
+		  com.salesmanager.core.model.user.User user = new com.salesmanager.core.model.user.User("admin@shopizer.com",password,"admin@shopizer.com");
+		  user.setFirstName("Administrator");
+		  user.setLastName("User");
+		  
+		  for(Group group : groups) {
+			  if(group.getGroupName().equals(Constants.GROUP_SUPERADMIN) || group.getGroupName().equals(Constants.GROUP_ADMIN)) {
+				  user.getGroups().add(group);
+			  }
+		  }
+
+		  user.setMerchantStore(store);		  
+		  userService.create(user);
+		
+		
+	}
+
+
+
+}

@@ -1,0 +1,61 @@
+			throws ConversionException {
+		Validate.notNull(pricingService,"pricingService must be set");
+		Validate.notNull(source.getProductAvailability(),"productPrice.availability cannot be null");
+		Validate.notNull(source.getProductAvailability().getProduct(),"productPrice.availability.product cannot be null");
+		
+		try {
+		  
+		    if(language == null) {
+		      target = new ReadableProductPriceFull();
+		    }
+		    
+		    if(source.getId() != null && source.getId() > 0) {
+		      target.setId(source.getId());
+		    }
+		    
+		    target.setDefaultPrice(source.isDefaultPrice());
+			
+			FinalPrice finalPrice = pricingService.calculateProductPrice(source.getProductAvailability().getProduct());
+			
+			target.setOriginalPrice(pricingService.getDisplayAmount(source.getProductPriceAmount(), store));
+			if(finalPrice.isDiscounted()) {
+				target.setDiscounted(true);
+				target.setFinalPrice(pricingService.getDisplayAmount(source.getProductPriceSpecialAmount(), store));
+			} else {
+				target.setFinalPrice(pricingService.getDisplayAmount(finalPrice.getOriginalPrice(), store));
+			}
+			
+		    if(source.getDescriptions()!=null && source.getDescriptions().size()>0) {
+		       List<com.salesmanager.shop.model.catalog.product.ProductPriceDescription> fulldescriptions = new ArrayList<com.salesmanager.shop.model.catalog.product.ProductPriceDescription>();
+	            
+               Set<ProductPriceDescription> descriptions = source.getDescriptions();
+               ProductPriceDescription description = null;
+               for(ProductPriceDescription desc : descriptions) {
+                   if(language != null && desc.getLanguage().getCode().equals(language.getCode())) {
+                       description = desc;
+                       break;
+                   } else {
+                     fulldescriptions.add(populateDescription(desc));
+                   }
+               }
+
+               
+               if (description != null) {
+                   com.salesmanager.shop.model.catalog.product.ProductPriceDescription d = populateDescription(description);
+                   target.setDescription(d);
+               }
+               
+               if(target instanceof ReadableProductPriceFull) {
+                 ((ReadableProductPriceFull)target).setDescriptions(fulldescriptions);
+               }
+		    }
+
+
+		} catch(Exception e) {
+			throw new ConversionException("Exception while converting to ReadableProductPrice",e);
+		}
+		
+		
+		
+		return target;
+	}

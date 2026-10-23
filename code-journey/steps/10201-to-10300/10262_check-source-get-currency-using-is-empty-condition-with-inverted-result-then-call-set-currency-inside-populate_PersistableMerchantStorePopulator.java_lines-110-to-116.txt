@@ -1,7 +1,0 @@
-			
-			if(!StringUtils.isEmpty(source.getCurrency())) {
-				Currency c = currencyService.getByCode(source.getCurrency());
-				target.setCurrency(c);
-			} else {
-				target.setCurrency(currencyService.getByCode(Constants.DEFAULT_CURRENCY.getCurrencyCode()));
-			}

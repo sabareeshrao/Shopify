@@ -1,0 +1,8 @@
+	
+	@Inject
+	public ProductReviewServiceImpl(
+			ProductReviewRepository productReviewRepository) {
+			super(productReviewRepository);
+			this.productReviewRepository = productReviewRepository;
+	}
+

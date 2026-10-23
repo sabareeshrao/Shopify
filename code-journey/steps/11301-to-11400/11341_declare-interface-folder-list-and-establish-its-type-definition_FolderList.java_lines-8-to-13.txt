@@ -1,6 +1,0 @@
-public interface FolderList {
-	
-	  List<String> listFolders(final String merchantStoreCode, Optional<String> path)
-		      throws ServiceException;
-
-}

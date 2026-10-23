@@ -1,4 +1,0 @@
-	public void addFolder(@RequestParam String parent, @RequestParam String folder,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-
-	}

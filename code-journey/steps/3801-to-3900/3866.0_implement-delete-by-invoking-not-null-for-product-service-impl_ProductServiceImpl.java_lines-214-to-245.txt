@@ -1,0 +1,32 @@
+	@Override
+	public void delete(Product product) throws ServiceException {
+		Validate.notNull(product, "Product cannot be null");
+		Validate.notNull(product.getMerchantStore(), "MerchantStore cannot be null in product");
+		product = this.getById(product.getId());// Prevents detached entity
+												// error
+		product.setCategories(null);
+
+		Set<ProductImage> images = product.getImages();
+
+		for (ProductImage image : images) {
+			productImageService.removeProductImage(image);
+		}
+
+		product.setImages(null);
+
+		// delete reviews
+		List<ProductReview> reviews = productReviewService.getByProductNoCustomers(product);
+		for (ProductReview review : reviews) {
+			productReviewService.delete(review);
+		}
+
+		// related - featured
+		List<ProductRelationship> relationships = productRelationshipService.listByProduct(product);
+		for (ProductRelationship relationship : relationships) {
+			productRelationshipService.deleteRelationship(relationship);
+		}
+
+		super.delete(product);
+		//searchService.deleteIndex(product.getMerchantStore(), product);
+
+	}

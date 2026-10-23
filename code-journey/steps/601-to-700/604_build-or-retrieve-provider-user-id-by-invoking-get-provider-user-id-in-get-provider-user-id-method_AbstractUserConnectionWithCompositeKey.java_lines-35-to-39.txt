@@ -1,5 +1,0 @@
-	@Override
-	public String getProviderUserId() {
-		return primaryKey.getProviderUserId();
-	}
-

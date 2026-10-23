@@ -1,7 +1,0 @@
-
-		String p = null;
-		Optional<String> path = Optional.ofNullable(p);
-
-		contentFileManager.removeFile(storeCode, FileContentType.valueOf(fileType), fileName, path);
-
-	}

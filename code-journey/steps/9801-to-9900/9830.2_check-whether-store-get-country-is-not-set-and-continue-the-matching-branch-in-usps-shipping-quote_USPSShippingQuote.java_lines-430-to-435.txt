@@ -1,6 +1,0 @@
-			String encoded = java.net.URLEncoder.encode(xmlbuffer.toString());
-
-			String completeUri = url + "?API=RateV3&XML=" + encoded;
-			if(!store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
-				completeUri = url + "?API=IntlRate&XML=" + encoded;
-			}

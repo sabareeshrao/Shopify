@@ -1,8 +1,0 @@
-
-		}
-
-		@Bean
-		public AuthenticationEntryPoint adminAuthenticationEntryPoint() {
-			BasicAuthenticationEntryPoint entryPoint = new BasicAuthenticationEntryPoint();
-			entryPoint.setRealmName("admin-realm");
-			return entryPoint;

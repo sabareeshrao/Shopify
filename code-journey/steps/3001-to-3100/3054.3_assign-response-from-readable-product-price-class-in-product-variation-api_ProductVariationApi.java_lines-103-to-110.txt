@@ -1,0 +1,8 @@
+  @RequestMapping(value = "/product/{id}/variation", method = RequestMethod.POST)
+  @ResponseStatus(HttpStatus.OK)
+  @ApiOperation(
+      httpMethod = "POST",
+      value = "Get product price variation based on selected product",
+      notes = "",
+      produces = "application/json",
+      response = ReadableProductPrice.class)

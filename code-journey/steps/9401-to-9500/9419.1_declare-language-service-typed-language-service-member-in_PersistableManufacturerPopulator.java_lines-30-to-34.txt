@@ -1,0 +1,5 @@
+	private LanguageService languageService;
+
+	@Override
+	public Manufacturer populate(PersistableManufacturer source,
+			Manufacturer target, MerchantStore store, Language language)

@@ -1,0 +1,12 @@
+                                                                        throws ServiceException {
+        Validate.notNull(shoppingCart,"Order summary cannot be null");
+        Validate.notNull(store,"MerchantStore cannot be null");
+
+        try {
+            return caculateShoppingCart(shoppingCart, null, store, language);
+        } catch (Exception e) {
+            LOGGER.error( "Error while calculating shopping cart total" +e );
+            throw new ServiceException(e);
+        }
+    }
+

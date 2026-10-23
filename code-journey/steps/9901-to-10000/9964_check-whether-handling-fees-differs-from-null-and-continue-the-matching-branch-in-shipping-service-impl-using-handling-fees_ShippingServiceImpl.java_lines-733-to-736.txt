@@ -1,4 +1,0 @@
-					
-					if(handlingFees != null) {
-						q.setHandling(handlingFees);
-					}

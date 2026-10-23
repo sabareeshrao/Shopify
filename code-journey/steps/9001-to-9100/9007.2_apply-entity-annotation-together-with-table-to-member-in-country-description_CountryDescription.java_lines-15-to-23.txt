@@ -1,0 +1,9 @@
+
+@Entity
+@Table(name = "COUNTRY_DESCRIPTION", uniqueConstraints={
+	@UniqueConstraint(columnNames={
+			"COUNTRY_ID",
+			"LANGUAGE_ID"
+		})
+	}
+)

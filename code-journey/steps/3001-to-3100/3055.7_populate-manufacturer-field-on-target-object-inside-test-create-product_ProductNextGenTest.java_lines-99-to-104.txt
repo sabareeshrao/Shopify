@@ -1,0 +1,6 @@
+	    brownd.setManufacturer(brown);
+	    brown.getDescriptions().add(brownd);
+
+	    manufacturerService.create(brown);
+	    //
+

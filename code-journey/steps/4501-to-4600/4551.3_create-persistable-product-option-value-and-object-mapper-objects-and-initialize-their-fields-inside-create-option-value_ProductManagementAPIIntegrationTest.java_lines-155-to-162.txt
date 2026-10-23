@@ -1,8 +1,0 @@
-		descriptions.add(description);
-
-		final PersistableProductOptionValue optionValue = new PersistableProductOptionValue();
-		optionValue.setOrder(1);
-		optionValue.setCode("colorred");
-		optionValue.setDescriptions(descriptions);
-
-		final ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();

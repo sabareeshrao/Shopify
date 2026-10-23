@@ -1,8 +1,0 @@
-	@Override
-	public void removeFile(String storeCode, String fileName) throws ServiceException {
-
-		String fileType = "IMAGE";
-		String mimetype = URLConnection.guessContentTypeFromName(fileName);
-		String type = mimetype.split("/")[0];
-		if (!type.equals("image"))
-			fileType = "STATIC_FILE";

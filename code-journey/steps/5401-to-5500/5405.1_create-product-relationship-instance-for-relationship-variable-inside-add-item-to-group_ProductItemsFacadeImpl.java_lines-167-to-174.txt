@@ -1,8 +1,0 @@
-		
-		
-		ProductRelationship relationship = new ProductRelationship();
-		relationship.setActive(true);
-		relationship.setCode(group);
-		relationship.setStore(store);
-		relationship.setRelatedProduct(product);
-

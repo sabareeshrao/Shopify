@@ -1,0 +1,2 @@
+  void deleteManufacturer(Manufacturer manufacturer, MerchantStore store, Language language)
+      throws Exception;

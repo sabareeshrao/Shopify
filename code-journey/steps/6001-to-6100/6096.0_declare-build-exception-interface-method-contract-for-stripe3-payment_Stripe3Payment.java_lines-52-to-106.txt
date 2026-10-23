@@ -1,0 +1,55 @@
+	@Override
+	public Transaction initTransaction(MerchantStore store, Customer customer,
+									   BigDecimal amount, Payment payment,
+									   IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+
+
+		String strAmount = String.valueOf(amount);
+		strAmount = strAmount.replace(".","");
+
+		Transaction transaction = new Transaction();
+		try {
+
+
+			String apiKey = configuration.getIntegrationKeys().get("secretKey");
+
+			if (StringUtils.isBlank(apiKey)) {
+				IntegrationException te = new IntegrationException(
+						"Can't process Stripe, missing payment.metaData");
+				te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+				te.setMessageCode("message.payment.error");
+				te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
+				throw te;
+			}
+
+			Stripe.apiKey = apiKey;
+
+			PaymentIntentCreateParams createParams = new PaymentIntentCreateParams.Builder()
+					.setCurrency(store.getCurrency().getCode())
+					.setAmount(Long.parseLong(strAmount))
+					.setCaptureMethod(PaymentIntentCreateParams.CaptureMethod.MANUAL)
+					.build();
+
+			// Create a PaymentIntent with the order amount and currency
+			PaymentIntent intent = PaymentIntent.create(createParams);
+
+			intent.getClientSecret();
+
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", intent.getId());
+			transaction.getTransactionDetails().put("TRNAPPROVED", intent.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", intent.getId());
+			transaction.getTransactionDetails().put("INTENTSECRET", intent.getClientSecret());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+
+		} catch (Exception e) {
+			throw buildException(e);
+		}
+
+		return transaction;
+	}

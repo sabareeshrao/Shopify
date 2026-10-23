@@ -1,0 +1,6 @@
+  public void setDateAvailable(String dateAvailable) {
+    this.dateAvailable = dateAvailable;
+  }
+  
+
+}

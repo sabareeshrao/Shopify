@@ -1,8 +1,0 @@
-			@RequestParam(value = "status", required = false) String status,
-			@RequestParam(value = "owner", required = false) Long owner,
-			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page, // current
-			@RequestParam(value = "origin", required = false, defaultValue = ProductCriteria.ORIGIN_SHOP) String origin,
-			// page
-			// 0
-			// ..
-			// n

@@ -1,0 +1,7 @@
+
+	private ReadableCategory toReadableCategory(Category c, MerchantStore store, Language lang, Map<Long, ReadableCategory> processed) {
+		Long id = c.getId();
+		return processed.computeIfAbsent(id, it -> readableCategoryMapper.convert(c, store, lang));
+	}
+
+}

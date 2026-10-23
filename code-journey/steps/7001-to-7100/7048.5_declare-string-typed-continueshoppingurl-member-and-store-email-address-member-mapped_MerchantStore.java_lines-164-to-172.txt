@@ -1,0 +1,9 @@
+
+	@JsonIgnore
+	@Column(name = "CONTINUESHOPPINGURL", length = 150)
+	private String continueshoppingurl;
+
+	@Email
+	@NotEmpty
+	@Column(name = "STORE_EMAIL", length = 60, nullable = false)
+	private String storeEmailAddress;

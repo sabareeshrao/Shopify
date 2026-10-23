@@ -1,0 +1,5 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="OPTIN_DATE")
+	private Date optinDate;
+

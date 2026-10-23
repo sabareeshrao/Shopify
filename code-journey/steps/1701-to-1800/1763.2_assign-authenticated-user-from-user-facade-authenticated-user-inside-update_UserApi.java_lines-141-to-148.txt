@@ -1,8 +1,0 @@
-
-	) {
-
-		String authenticatedUser = userFacade.authenticatedUser();// requires
-																	// user
-																	// doing
-																	// action
-

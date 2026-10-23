@@ -1,2 +1,0 @@
-			throw new ResourceNotFoundException("Category [" + categoryId + "] not found");
-		}

@@ -1,8 +1,0 @@
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
-	public Entity create(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
-			@Valid @RequestBody PersistableTaxRate taxRate) {
-
-		return taxFacade.createTaxRate(taxRate, merchantStore, language);
-
-	}
-

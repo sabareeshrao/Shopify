@@ -1,0 +1,9 @@
+	private static final String DOWNLOADS = "/downloads/";
+	private static final String DOUBLE_SLASH = "://";
+	private static final String CONTEXT_PATH = "CONTEXT_PATH";
+	public static final String X_FORWARDED_HOST = "X-Forwarded-Host";
+	public static final String HTTP = "http://";
+	public static final String HTTPS = "https://";
+
+	@Inject
+	private CoreConfiguration coreConfiguration;

@@ -1,0 +1,7 @@
+  private CoreConfiguration configuration;
+
+  private final static String PRODUCT_IMAGE_HEIGHT_SIZE = "PRODUCT_IMAGE_HEIGHT_SIZE";
+  private final static String PRODUCT_IMAGE_WIDTH_SIZE = "PRODUCT_IMAGE_WIDTH_SIZE";
+  private final static String CROP_UPLOADED_IMAGES = "CROP_UPLOADED_IMAGES";
+
+

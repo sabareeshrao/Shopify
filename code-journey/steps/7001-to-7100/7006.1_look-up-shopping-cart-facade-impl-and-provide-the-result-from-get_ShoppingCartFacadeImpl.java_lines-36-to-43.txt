@@ -1,8 +1,0 @@
-	@Override
-	public ReadableShoppingCart get(Optional<String> cart, Long customerId, MerchantStore store, Language language) {
-
-		Validate.notNull(customerId, "Customer id cannot be null");
-		Validate.notNull(store, "MerchantStore cannot be null");
-		
-		try {
-

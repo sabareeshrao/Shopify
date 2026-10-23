@@ -1,0 +1,5 @@
+			
+			if(!"Success".equals(ack)) {
+				LOGGER.error("Wrong value from init transaction " + ack);
+				throw new IntegrationException("Wrong paypal ack from init transaction " + ack);
+			}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "text_files": 17909,
+  "parents": 10044,
+  "children": 7865,
+  "exact_source_files": 1325,
+  "source_lines": 132076,
+  "necessary_children_over_8_lines": 1854,
+  "max_child_lines": 122,
+  "atomic_parents_without_redundant_child": 1628,
+  "no_detached_child_closers": "PASS",
+  "no_protected_construct_cut": "PASS",
+  "zip_crc": "PASS",
+  "rebuild_byte_for_byte": "PASS",
+  "original_tabs_and_newlines": "PRESERVED",
+  "only_txt_files": "YES"
+}

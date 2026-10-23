@@ -1,4 +1,0 @@
-	public List<T> getList() {
-		return list;
-	}
-

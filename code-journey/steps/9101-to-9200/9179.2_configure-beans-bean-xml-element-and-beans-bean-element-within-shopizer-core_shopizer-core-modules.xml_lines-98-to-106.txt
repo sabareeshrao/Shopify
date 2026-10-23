@@ -1,0 +1,9 @@
+	<!--Geo Location -->
+	<beans:bean id="geoLocation"
+		class="com.salesmanager.core.business.modules.utils.GeoLocationImpl">
+	</beans:bean>
+
+	<!-- Invoices -->
+	<beans:bean id="invoiceModule"
+		class="com.salesmanager.core.business.modules.order.ODSInvoiceModule">
+	</beans:bean>

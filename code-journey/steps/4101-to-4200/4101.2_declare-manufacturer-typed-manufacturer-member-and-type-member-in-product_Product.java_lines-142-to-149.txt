@@ -1,8 +1,0 @@
-
-	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REFRESH})
-	@JoinColumn(name="MANUFACTURER_ID", nullable=true)
-	private Manufacturer manufacturer;
-
-	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REFRESH})
-	@JoinColumn(name="PRODUCT_TYPE_ID", nullable=true)
-	private ProductType type;

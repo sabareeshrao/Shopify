@@ -1,4 +1,0 @@
-	public ContentName(String name) {
-		super(name);
-	}
-	

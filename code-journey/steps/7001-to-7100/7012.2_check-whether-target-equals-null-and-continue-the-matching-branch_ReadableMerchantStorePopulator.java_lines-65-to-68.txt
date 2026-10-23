@@ -1,0 +1,4 @@
+		
+		if(target == null) {
+			target = new ReadableMerchantStore();
+		}

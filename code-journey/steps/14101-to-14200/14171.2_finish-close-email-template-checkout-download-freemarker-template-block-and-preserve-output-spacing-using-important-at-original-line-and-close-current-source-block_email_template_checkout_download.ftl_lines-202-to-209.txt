@@ -1,8 +1,0 @@
-	float:left;
-}
-.column tr td { padding: 15px; }
-.column-wrap { 
-	padding:0!important; 
-	margin:0 auto; 
-	max-width:600px!important;
-}

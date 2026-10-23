@@ -1,0 +1,7 @@
+
+			//invoice date
+			SimpleDateFormat format = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
+			sheet.setValueAt(format.format(order.getDatePurchased()), 3, 2);
+			
+			//invoice number
+			sheet.setValueAt(order.getId(), 3, 3);

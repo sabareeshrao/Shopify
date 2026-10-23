@@ -1,8 +1,0 @@
-
-	}
-	
-	void deleteProductImage(DeleteProductImageEvent event) {
-		
-		//Product will be updated anyway so there is no need to reindex following an image removal
-		return;
-		

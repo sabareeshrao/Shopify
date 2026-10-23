@@ -1,8 +1,0 @@
- * 
- * create product
- * update product
- * delete product
- * 
- * decorate
- * 	product variant
- * 	product attribute

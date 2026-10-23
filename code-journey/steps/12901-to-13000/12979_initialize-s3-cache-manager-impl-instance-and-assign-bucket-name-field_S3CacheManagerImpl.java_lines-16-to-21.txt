@@ -1,6 +1,0 @@
-  public S3CacheManagerImpl(String bucketName, String regionName) {
-    this.bucketName = bucketName;
-    this.regionName = regionName;
-  }
-
-

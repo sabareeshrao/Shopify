@@ -1,0 +1,4 @@
+	
+	@Column(name = "SORT_ORDER")
+	private Integer sortOrder = 0;
+	

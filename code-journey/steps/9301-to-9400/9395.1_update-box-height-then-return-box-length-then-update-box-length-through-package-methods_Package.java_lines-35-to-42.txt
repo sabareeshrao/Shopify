@@ -1,8 +1,0 @@
-	public void setBoxHeight(double boxHeight) {
-		this.boxHeight = boxHeight;
-	}
-	public double getBoxLength() {
-		return boxLength;
-	}
-	public void setBoxLength(double boxLength) {
-		this.boxLength = boxLength;

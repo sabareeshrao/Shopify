@@ -1,8 +1,0 @@
-         */
-        ProductOption size = new ProductOption();
-        size.setMerchantStore(store);
-        size.setCode("SIZE");
-        size.setProductOptionType(ProductOptionType.Radio.name());
-        
-        ProductOptionDescription sizeDescription = new ProductOptionDescription();
-        sizeDescription.setLanguage(en);

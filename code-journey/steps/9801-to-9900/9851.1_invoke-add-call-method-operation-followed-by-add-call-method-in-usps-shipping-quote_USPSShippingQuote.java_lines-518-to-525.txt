@@ -1,8 +1,0 @@
-						"setOptionName", 0);
-				digester.addCallMethod(
-						"IntlRateResponse/Package/Service/SvcDescription",
-						"setOptionCode", 0);
-				digester.addCallMethod(
-						"IntlRateResponse/Package/Service/Postage",
-						"setOptionPriceText", 0);
-				//digester.addCallMethod(

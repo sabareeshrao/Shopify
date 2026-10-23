@@ -1,0 +1,9 @@
+    
+    @Inject
+    private StoreFacade storeFacade;
+
+    @Autowired
+    AuthorizationUtils authorizationUtils;
+    
+    @Autowired
+    private UserFacade userFacade;

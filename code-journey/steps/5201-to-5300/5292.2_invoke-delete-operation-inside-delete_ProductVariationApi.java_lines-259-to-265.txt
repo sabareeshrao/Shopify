@@ -1,7 +1,0 @@
-			@PathVariable Long variationId,
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		productVariationFacade.delete(variationId, merchantStore);
-
-	}

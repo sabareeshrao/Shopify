@@ -1,3 +1,0 @@
-		if (cartModel == null) {
-			throw new IllegalArgumentException("Cart code not valid");
-		}

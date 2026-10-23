@@ -1,0 +1,5 @@
+
+  @Override
+  protected ReadableManufacturer createTarget() {
+    return null;
+  }

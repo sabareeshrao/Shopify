@@ -1,0 +1,8 @@
+	/** apply tax on shipping **/
+	private boolean applyTaxOnShipping;
+	
+	/**
+	 * final delivery address
+	 */
+	private Delivery deliveryAddress;
+	

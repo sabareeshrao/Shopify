@@ -1,8 +1,0 @@
-
-	@Column(name = "SEF_URL")
-	private String seUrl;
-
-	@Column(name = "META_TITLE")
-	private String metatagTitle;
-
-	@Column(name = "META_KEYWORDS")

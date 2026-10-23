@@ -1,2 +1,0 @@
-				finalPrice.setOriginalPrice(op);
-			}

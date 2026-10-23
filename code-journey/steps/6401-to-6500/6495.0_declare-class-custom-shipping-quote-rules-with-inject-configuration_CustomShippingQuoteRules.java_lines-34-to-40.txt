@@ -1,0 +1,7 @@
+public class CustomShippingQuoteRules implements ShippingQuoteModule {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomShippingQuoteRules.class);
+	
+	@Inject
+	private DroolsBeanFactory droolsBeanFactory;
+

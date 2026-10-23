@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@Transient
+	private boolean obsolete = false;
+
+
+
+

@@ -1,0 +1,3 @@
+				sheet.setValueAt(nm.toString(), 0, billToCell);
+				billToCell ++;
+			}

@@ -1,8 +1,0 @@
-
-			ContentFile cf = new ContentFile();
-			cf.setContentType(qqfile.getContentType());
-			cf.setName(qqfilename);
-			try {
-				cf.setFile(qqfile.getBytes());
-				contentFacade.addContentFile(cf, merchantStore.getCode());
-				return new FileStatus();

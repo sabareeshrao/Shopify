@@ -1,0 +1,28 @@
+		for (ProductAvailability a : source.getAvailabilities()) {
+			// TODO validate region
+			// if(availability.getRegion().equals(Constants.ALL_REGIONS)) {//TODO REL 3.X
+			// accept a region
+			
+			/**
+			 * Default availability
+			 * store
+			 * product
+			 * instance null
+			 * region variant null
+			 */
+			
+			
+			availability = a;
+			destination.setQuantity(availability.getProductQuantity() == null ? 1 : availability.getProductQuantity());
+			destination.setQuantityOrderMaximum(
+					availability.getProductQuantityOrderMax() == null ? 1 : availability.getProductQuantityOrderMax());
+			destination.setQuantityOrderMinimum(
+					availability.getProductQuantityOrderMin() == null ? 1 : availability.getProductQuantityOrderMin());
+			if (availability.getProductQuantity().intValue() > 0 && destination.isAvailable()) {
+				destination.setCanBePurchased(true);
+			}
+			
+			if(a.getProductVariant()==null && StringUtils.isEmpty(a.getRegionVariant())) {
+				break;
+			}
+		}

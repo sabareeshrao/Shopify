@@ -1,0 +1,9 @@
+    
+    @Value("${hibernate.dialect}")
+    private String dialect;
+    
+    @Value("${db.show.sql}")
+    private String showSql;
+    
+    @Value("${db.preferredTestQuery}")
+    private String preferredTestQuery;

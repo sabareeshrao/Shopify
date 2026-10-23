@@ -1,0 +1,22 @@
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/productVariantGroup" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public @ResponseBody Entity create(
+			@Valid @RequestBody PersistableProductVariantGroup instanceGroup,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_CATALOGUE, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		Long id = productVariantGroupFacade.create(instanceGroup, merchantStore, language);
+
+		return new Entity(id);
+
+	}

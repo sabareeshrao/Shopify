@@ -1,0 +1,25 @@
+	@Override
+	public Entity createTaxClass(PersistableTaxClass taxClass, MerchantStore store, Language language) {
+		Validate.notNull(taxClass,"TaxClass cannot be null");
+		Validate.notNull(store,"MerchantStore cannot be null");
+		Validate.notNull(store.getCode(),"MerchantStore code cannot be null");
+		try {
+			
+			
+			if(this.existsTaxClass(taxClass.getCode(), store, language)) {
+				throw new OperationNotAllowedException("Tax class [" + taxClass.getCode() + "] already exist for store [" + store.getCode() + "]");
+			}
+
+			taxClass.setStore(store.getCode());
+			TaxClass model = persistableTaxClassMapper.convert(taxClass, store, language);
+			model = taxClassService.saveOrUpdate(model);;
+			Entity id = new Entity();
+			id.setId(model.getId());
+			return id;
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+		}
+		
+	}

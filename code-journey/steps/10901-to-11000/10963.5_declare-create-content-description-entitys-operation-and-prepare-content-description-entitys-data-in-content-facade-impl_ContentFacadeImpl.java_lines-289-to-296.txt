@@ -1,8 +1,0 @@
-	 */
-
-	@Deprecated
-	private List<ContentDescriptionEntity> createContentDescriptionEntitys(MerchantStore store, Content contentModel,
-			Language language) throws ServiceException {
-
-		List<ContentDescriptionEntity> descriptions = new ArrayList<ContentDescriptionEntity>();
-

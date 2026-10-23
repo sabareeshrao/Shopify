@@ -1,5 +1,0 @@
-  public void setData(List<ReadableUser> data) {
-    this.data = data;
-  }
-
-}

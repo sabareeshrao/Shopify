@@ -1,0 +1,8 @@
+	
+	@NotEmpty
+	@Pattern(regexp="^[a-zA-Z0-9_]*$")
+	@Column(name="PRODUCT_OPTION_VAL_CODE")
+	private String code;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "productOptionValue")
+	private Set<ProductOptionValueDescription> descriptions = new HashSet<ProductOptionValueDescription>();

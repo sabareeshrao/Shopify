@@ -1,9 +1,0 @@
-	public void setProductAttributePrice(String productAttributePrice) {
-		this.productAttributePrice = productAttributePrice;
-	}
-	public ReadableProductOptionEntity getOption() {
-		return option;
-	}
-	public void setOption(ReadableProductOptionEntity option) {
-		this.option = option;
-	}

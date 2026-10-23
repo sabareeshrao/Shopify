@@ -1,0 +1,7 @@
+	
+	/**
+	 * Gets the whole graph
+	 * @param storeId
+	 * @param productId
+	 * @return
+	 */

@@ -1,8 +1,0 @@
-		Query objectQ = em.createQuery(
-				objectBuilderSelect.toString() + objectBuilderWhere.toString());
-		
-		//customer name
-		if(!StringUtils.isEmpty(criteria.getCustomerName())) {
-			countQ.setParameter("name", like(criteria.getCustomerName()));
-			objectQ.setParameter("name", like(criteria.getCustomerName()));
-		}

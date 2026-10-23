@@ -1,0 +1,9 @@
+	
+	@Column(name = "CUSTOMER_ID", nullable = true)
+	private Long customerId;
+	
+	@Column(name = "ORDER_ID", nullable = true)
+	private Long orderId;
+
+	@Column (name ="IP_ADDRESS")
+	private String ipAddress;

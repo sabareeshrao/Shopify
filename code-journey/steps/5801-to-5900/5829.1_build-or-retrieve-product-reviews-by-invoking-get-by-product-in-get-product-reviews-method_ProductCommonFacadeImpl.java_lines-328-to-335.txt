@@ -1,8 +1,0 @@
-	@Override
-	public List<ReadableProductReview> getProductReviews(Product product, MerchantStore store, Language language)
-			throws Exception {
-
-		List<ProductReview> reviews = productReviewService.getByProduct(product);
-
-		ReadableProductReviewPopulator populator = new ReadableProductReviewPopulator();
-

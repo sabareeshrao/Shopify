@@ -1,0 +1,7 @@
+	    
+	    /** create attributes **/
+	    //attributes
+	    ProductAttribute color_red = new ProductAttribute();
+	    color_red.setProduct(product);
+	    color_red.setProductOption(color);
+	    color_red.setAttributeDefault(true);

@@ -1,8 +1,0 @@
-	    summerShoes.setProductWidth(new BigDecimal(4));
-	    summerShoes.setSku("BR12345");
-	    summerShoes.setManufacturer(brown);
-	    summerShoes.setType(generalType);
-	    summerShoes.setMerchantStore(store);
-	    
-	    //is available
-	    summerShoes.setAvailable(true);

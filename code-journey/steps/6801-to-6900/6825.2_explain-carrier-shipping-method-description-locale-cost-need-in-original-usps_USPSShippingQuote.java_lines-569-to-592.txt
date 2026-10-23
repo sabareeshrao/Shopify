@@ -1,0 +1,24 @@
+/*			String carrier = getShippingMethodDescription(locale);
+			// cost is in USD, need to do conversion
+
+			MerchantConfiguration rtdetails = config
+					.getMerchantConfiguration(ShippingConstants.MODULE_SHIPPING_DISPLAY_REALTIME_QUOTES);
+			int displayQuoteDeliveryTime = ShippingConstants.NO_DISPLAY_RT_QUOTE_TIME;
+			if (rtdetails != null) {
+
+				if (!StringUtils.isBlank(rtdetails.getConfigurationValue1())) {// display
+																				// or
+																				// not
+																				// quotes
+					try {
+						displayQuoteDeliveryTime = Integer.parseInt(rtdetails
+								.getConfigurationValue1());
+
+					} catch (Exception e) {
+						log.error("Display quote is not an integer value ["
+								+ rtdetails.getConfigurationValue1() + "]");
+					}
+				}
+			}
+
+			LabelUtil labelUtil = LabelUtil.getInstance();*/

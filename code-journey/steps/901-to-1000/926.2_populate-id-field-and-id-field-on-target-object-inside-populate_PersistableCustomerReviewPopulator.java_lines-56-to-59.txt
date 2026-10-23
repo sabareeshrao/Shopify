@@ -1,4 +1,0 @@
-				source.setId(null);
-			} else {
-				target.setId(source.getId());
-			}

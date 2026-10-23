@@ -1,5 +1,0 @@
-
-  @Inject private LanguageService languageService;
-
-  @Inject private EmailTemplatesUtils emailTemplatesUtils;
-

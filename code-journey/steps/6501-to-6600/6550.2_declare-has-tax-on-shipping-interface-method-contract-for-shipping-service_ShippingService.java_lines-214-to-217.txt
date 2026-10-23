@@ -1,0 +1,4 @@
+	boolean hasTaxOnShipping(MerchantStore store) throws ServiceException;
+
+
+}

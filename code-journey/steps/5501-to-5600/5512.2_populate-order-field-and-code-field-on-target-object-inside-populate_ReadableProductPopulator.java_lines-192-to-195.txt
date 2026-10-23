@@ -1,4 +1,0 @@
-				manufacturerEntity.setOrder(source.getManufacturer().getOrder());
-				manufacturerEntity.setCode(source.getManufacturer().getCode());
-				target.setManufacturer(manufacturerEntity);
-			}

@@ -1,0 +1,3 @@
+import com.salesmanager.shop.model.order.total.ReadableTotal;
+import com.salesmanager.shop.model.order.transaction.ReadablePayment;
+

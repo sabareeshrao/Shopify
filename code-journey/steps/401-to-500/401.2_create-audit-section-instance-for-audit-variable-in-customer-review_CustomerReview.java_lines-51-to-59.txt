@@ -1,0 +1,9 @@
+	
+	@Embedded
+	private AuditSection audit = new AuditSection();
+	
+	@Column(name = "REVIEWS_RATING")
+	private Double reviewRating;
+	
+	@Column(name = "REVIEWS_READ")
+	private Long reviewRead;

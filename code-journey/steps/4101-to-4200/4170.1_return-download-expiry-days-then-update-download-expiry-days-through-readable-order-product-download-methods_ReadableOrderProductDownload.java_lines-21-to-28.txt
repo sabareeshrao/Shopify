@@ -1,8 +1,0 @@
-	private int downloadExpiryDays = 0;
-	private int downloadCount = 0;
-	public int getDownloadExpiryDays() {
-		return downloadExpiryDays;
-	}
-	public void setDownloadExpiryDays(int downloadExpiryDays) {
-		this.downloadExpiryDays = downloadExpiryDays;
-	}

@@ -1,8 +1,0 @@
-	private void saveOrUpdate(CustomerReview review) throws ServiceException {
-		
-
-		Validate.notNull(review,"CustomerReview cannot be null");
-		Validate.notNull(review.getCustomer(),"CustomerReview.customer cannot be null");
-		Validate.notNull(review.getReviewedCustomer(),"CustomerReview.reviewedCustomer cannot be null");
-		
-		

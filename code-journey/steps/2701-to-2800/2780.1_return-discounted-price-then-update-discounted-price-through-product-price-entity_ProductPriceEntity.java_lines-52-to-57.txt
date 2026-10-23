@@ -1,0 +1,6 @@
+	public BigDecimal getDiscountedPrice() {
+		return discountedPrice;
+	}
+	public void setDiscountedPrice(BigDecimal discountedPrice) {
+		this.discountedPrice = discountedPrice;
+	}

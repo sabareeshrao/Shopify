@@ -1,5 +1,0 @@
-						
-						if(CollectionUtils.isNotEmpty(mod.getSupportedCountry())) {
-							m.setRegions(mod.getSupportedCountry().toString());
-							m.setRegionsSet(new HashSet<String>(mod.getSupportedCountry()));
-						}

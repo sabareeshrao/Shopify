@@ -1,0 +1,16 @@
+  public Language getServiceLanguage(String lang) {
+    Language l = null;
+    if (!StringUtils.isBlank(lang)) {
+      try {
+        l = languageService.getByCode(lang);
+      } catch (ServiceException e) {
+        logger.error("Cannot retrieve language " + lang, e);
+      }
+    }
+
+    if (l == null) {
+      l = languageService.defaultLanguage();
+    }
+
+    return l;
+  }

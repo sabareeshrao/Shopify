@@ -1,6 +1,0 @@
-			for(CustomShippingQuotesRegion region : regions) {
-				regionsList.append(region.toJSONString());
-				countRegion ++;
-				if(countRegion<regions.size()) {
-					regionsList.append(",");
-				}

@@ -1,8 +1,0 @@
-	    	
-	    	if(object.get("customModule")!=null) {
-	    		Object o = object.get("customModule");
-	    		Boolean b = false;
-	    		if(o instanceof Boolean) {
-	    			b = (Boolean)object.get("customModule");
-	    		} else {
-	    			try {

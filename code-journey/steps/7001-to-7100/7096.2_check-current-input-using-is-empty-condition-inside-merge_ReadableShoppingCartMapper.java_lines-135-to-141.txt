@@ -1,7 +1,0 @@
-					
-					//variation
-					if(item.getVariant() != null) {
-						Optional<ProductVariant> productVariant = productVariantService.getById(item.getVariant(), store);
-						if(productVariant.isEmpty()) {
-							throw new ConversionRuntimeException("An error occured during shopping cart [" + source.getShoppingCartCode() + "] conversion, productVariant [" + item.getVariant() + "] not found");
-						}

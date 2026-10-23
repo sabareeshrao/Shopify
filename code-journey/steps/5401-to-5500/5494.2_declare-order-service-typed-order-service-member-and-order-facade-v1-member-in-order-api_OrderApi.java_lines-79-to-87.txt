@@ -1,0 +1,9 @@
+
+	@Inject
+	private OrderService orderService;
+
+	@Inject
+	private com.salesmanager.shop.store.controller.order.facade.v1.OrderFacade orderFacadeV1;
+
+	@Inject
+	private ShoppingCartService shoppingCartService;

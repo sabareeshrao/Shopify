@@ -1,0 +1,9 @@
+
+	@Column(name = "STATUS")
+	private boolean productStatus = true; //can be used as flag for variant can be purchase or not
+
+	@Column(name = "FREE_SHIPPING")
+	private boolean productIsAlwaysFreeShipping;
+
+	@Column(name = "AVAILABLE")
+	private Boolean available;

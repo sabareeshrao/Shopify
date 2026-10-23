@@ -1,7 +1,0 @@
-			}
-
-			if (module != null) {
-				IntegrationModule m = moduleCongigurationService.getByCode(module.getCode());
-				if (m != null) {
-					moduleCongigurationService.delete(m);
-				}

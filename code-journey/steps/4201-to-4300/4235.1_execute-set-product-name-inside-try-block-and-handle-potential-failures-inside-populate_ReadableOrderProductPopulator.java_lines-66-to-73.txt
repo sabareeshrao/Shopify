@@ -1,8 +1,0 @@
-		target.setProductName(source.getProductName());
-		target.setSku(source.getSku());
-		
-		//subtotal = price * quantity
-		BigDecimal subTotal = source.getOneTimeCharge();
-		subTotal = subTotal.multiply(new BigDecimal(source.getProductQuantity()));
-		
-		try {

@@ -1,0 +1,6 @@
+
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name = "ORDER_PRODUCT_ID", nullable = false)
+	private OrderProduct orderProduct;
+

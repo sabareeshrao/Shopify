@@ -1,0 +1,6 @@
+	    assertThat(productsByOption,  not(empty()));
+	    
+	    
+
+	}
+	

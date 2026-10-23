@@ -1,8 +1,0 @@
-
-	@RequestMapping(value = { "/private/shipping/origin" }, method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.OK)
-	public void saveShippingOrigin(@RequestBody PersistableAddress address, @ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		String user = authorizationUtils.authenticatedUser();
-		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,

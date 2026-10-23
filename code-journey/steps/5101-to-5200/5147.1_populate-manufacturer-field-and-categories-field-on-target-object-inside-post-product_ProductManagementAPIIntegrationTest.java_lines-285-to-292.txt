@@ -1,8 +1,0 @@
-
-		// product.setManufacturer(collection); //no manufacturer assigned for
-		// now
-		// product.setCategories(categories); //no category assigned for now
-
-		product.setSortOrder(0);// set iterator as sort order
-		product.setAvailable(true);// force availability
-		product.setProductVirtual(false);// force tangible good

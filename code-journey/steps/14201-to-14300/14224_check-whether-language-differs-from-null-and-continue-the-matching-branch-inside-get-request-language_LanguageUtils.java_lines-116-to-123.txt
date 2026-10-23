@@ -1,8 +1,0 @@
-
-    }
-
-    if (language != null) {
-      locale = languageService.toLocale(language, store);
-    } else {
-      language = languageService.toLanguage(locale);
-    }

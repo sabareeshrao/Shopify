@@ -1,3 +1,0 @@
-        assertNotNull(cat.getId());
-
-    }

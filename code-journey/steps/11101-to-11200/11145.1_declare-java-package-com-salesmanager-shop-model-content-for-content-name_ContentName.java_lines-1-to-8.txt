@@ -1,8 +1,0 @@
-package com.salesmanager.shop.model.content;
-
-/**
- * Input Object used in REST request
- * @author carlsamson
- *
- */
-@Deprecated

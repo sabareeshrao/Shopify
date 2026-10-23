@@ -1,0 +1,9 @@
+import com.salesmanager.core.model.reference.zone.Zone;
+import com.salesmanager.shop.model.customer.PersistableCustomer;
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.customer.attribute.PersistableCustomerAttribute;
+
+@Component
+public class CustomerPopulator extends
+		AbstractDataPopulator<PersistableCustomer, Customer> {
+	

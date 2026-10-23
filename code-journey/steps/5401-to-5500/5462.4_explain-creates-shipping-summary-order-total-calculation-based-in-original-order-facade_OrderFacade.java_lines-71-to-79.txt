@@ -1,0 +1,9 @@
+
+	/**
+	 * Creates a ShippingSummary object for OrderTotal calculation based on a ShippingQuote
+	 * @param quote
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	ShippingSummary getShippingSummary(ShippingQuote quote, MerchantStore store, Language language);

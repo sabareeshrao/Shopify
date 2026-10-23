@@ -1,8 +1,0 @@
-	private Date inBusinessSince = new Date();
-
-	@Transient
-	private String dateBusinessSince;
-
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Language.class)
-	@JoinColumn(name = "LANGUAGE_ID", nullable = false)

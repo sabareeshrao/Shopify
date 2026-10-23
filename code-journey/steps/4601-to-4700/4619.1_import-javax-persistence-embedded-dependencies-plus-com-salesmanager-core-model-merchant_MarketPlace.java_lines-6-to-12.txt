@@ -1,0 +1,7 @@
+import javax.persistence.Embedded;
+
+import com.salesmanager.core.model.catalog.catalog.Catalog;
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;

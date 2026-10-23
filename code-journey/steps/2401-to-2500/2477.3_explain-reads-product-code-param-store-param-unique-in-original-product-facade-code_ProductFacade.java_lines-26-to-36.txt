@@ -1,0 +1,11 @@
+
+  /**
+   * Reads a product by code
+   *
+   * @param store
+   * @param uniqueCode
+   * @param language
+   * @return
+   * @throws Exception
+   */
+  ReadableProduct getProductByCode(MerchantStore store, String uniqueCode, Language language);

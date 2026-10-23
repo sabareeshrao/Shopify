@@ -1,0 +1,3 @@
+import javax.persistence.TableGenerator;
+import javax.validation.constraints.NotEmpty;
+

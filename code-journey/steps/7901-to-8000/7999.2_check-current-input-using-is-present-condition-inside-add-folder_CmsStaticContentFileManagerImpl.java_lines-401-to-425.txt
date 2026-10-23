@@ -1,0 +1,25 @@
+			throws ServiceException {
+
+
+		try {
+
+			Path merchantPath = this.buildMerchantPath(merchantStoreCode);
+			
+			StringBuilder nodePath = new StringBuilder();
+			if(folderPath.isPresent()) {
+				nodePath
+				.append(merchantPath.toString())
+				.append(Constants.SLASH).append(folderPath.get()).append(Constants.SLASH);
+			}
+			// add folder
+			nodePath.append(folderName);
+			
+			Path dirPath = Paths.get(nodePath.toString());
+			this.createDirectoryIfNorExist(dirPath);
+
+		} catch (IOException e) {
+			LOGGER.error("Error while creating fiolder for {} merchant ", merchantStoreCode);
+			throw new ServiceException(e);
+		}
+
+	}

@@ -1,8 +1,0 @@
-
-	// delete packaging
-	@ApiOperation(httpMethod = "DELETE", value = "Delete a package specification", notes = "", produces = "application/json", response = Void.class)
-	@RequestMapping(value = { "/private/shipping/package/{code}" }, method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.OK)
-	public void deletePackage(@PathVariable String code, @ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-

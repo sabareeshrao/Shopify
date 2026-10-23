@@ -1,0 +1,4 @@
+public class CustomerEntityPopulator
+    extends AbstractDataPopulator<Customer, CustomerEntity>
+{
+

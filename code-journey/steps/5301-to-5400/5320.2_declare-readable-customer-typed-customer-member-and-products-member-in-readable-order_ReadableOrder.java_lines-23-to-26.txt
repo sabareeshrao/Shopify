@@ -1,0 +1,4 @@
+	private ReadableCustomer customer;
+	private List<ReadableOrderProduct> products;
+	private Currency currencyModel;
+	

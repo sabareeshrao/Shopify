@@ -1,8 +1,0 @@
-<body>
-<div class="holder">
-
-  <!-- Content Section -->
-  <div class="content">
-    <div class="content-line">
-    	${EMAIL_NEW_USER_TEXT}<br /><br />
-    	${EMAIL_STORE_NAME}<br /><br />

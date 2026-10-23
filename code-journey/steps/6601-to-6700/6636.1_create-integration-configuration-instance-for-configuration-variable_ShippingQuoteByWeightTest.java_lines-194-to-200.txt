@@ -1,0 +1,7 @@
+	    
+	    //create an integration configuration - USPS
+	    
+	    IntegrationConfiguration configuration = new IntegrationConfiguration();
+	    configuration.setActive(true);
+	    configuration.setEnvironment(Environment.TEST.name());
+	    configuration.setModuleCode("weightBased");

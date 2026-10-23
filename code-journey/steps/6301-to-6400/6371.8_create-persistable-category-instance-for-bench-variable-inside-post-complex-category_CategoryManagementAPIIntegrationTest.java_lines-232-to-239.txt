@@ -1,8 +1,0 @@
-        armoire.setDescriptions(descriptions);
-        dining.getChildren().add(armoire);
-
-        /** benches **/
-        final PersistableCategory bench = new PersistableCategory();
-        bench.setCode("bench");
-        bench.setSortOrder(4);
-        bench.setVisible(true);

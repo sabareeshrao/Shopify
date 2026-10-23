@@ -1,0 +1,2 @@
+
+	ContentDescription getBySeUrl(MerchantStore store, String seUrl);

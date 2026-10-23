@@ -1,0 +1,9 @@
+  /**
+   * Get shipping quote for a given shopping cart
+   *
+   * @param id
+   * @param request
+   * @param response
+   * @return
+   * @throws Exception
+   */

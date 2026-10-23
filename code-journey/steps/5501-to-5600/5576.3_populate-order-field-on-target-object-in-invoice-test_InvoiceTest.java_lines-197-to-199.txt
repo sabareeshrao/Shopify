@@ -1,0 +1,3 @@
+		orderStatusHistory.setOrder(order);
+		order.getOrderHistory().add( orderStatusHistory );		
+		

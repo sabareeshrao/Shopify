@@ -1,8 +1,0 @@
-	private MerchantConfiguration convertToMerchantConfiguration(MerchantConfigEntity config,
-			MerchantConfigurationType configurationType) {
-		MerchantConfiguration configTO = new MerchantConfiguration();
-		configTO.setId(config.getId());
-		configTO.setKey(config.getKey());
-		configTO.setMerchantConfigurationType(configurationType);
-		configTO.setValue(config.getValue());
-		configTO.setActive(new Boolean(config.isActive()));

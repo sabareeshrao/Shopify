@@ -1,0 +1,21 @@
+
+	public void processPostedDates(HttpServletRequest request) {
+		Date dt = new Date();
+		DateFormat myDateFormat = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
+		Date sDate = null;
+		Date eDate = null;
+		try {
+			if (request.getParameter("startdate") != null) {
+				sDate = myDateFormat.parse(request.getParameter("startdate"));
+			}
+			if (request.getParameter("enddate") != null) {
+				eDate = myDateFormat.parse(request.getParameter("enddate"));
+			}
+			this.startDate = sDate;
+			this.endDate = eDate;
+		} catch (Exception e) {
+			LOGGER.error("",e);
+			this.startDate = new Date(dt.getTime());
+			this.endDate = new Date(dt.getTime());
+		}
+	}

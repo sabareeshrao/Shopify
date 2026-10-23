@@ -1,0 +1,37 @@
+
+	@Override
+	public Long create(PersistableProductVariant productVariant, Long productId, MerchantStore store,
+			Language language) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(productVariant, "productVariant cannot be null");
+		Validate.notNull(productId, "Product id cannot be null");
+
+		//variation and variation value should not be of same product option code
+		if(
+			productVariant.getVariation() != null && productVariant.getVariation().longValue() > 0 &&
+			productVariant.getVariationValue() != null &&  productVariant.getVariationValue().longValue() > 0) 
+		{
+
+			List<ProductVariation> variations = productVariationService.getByIds(Arrays.asList(productVariant.getVariation(),productVariant.getVariationValue()), store);
+			
+			boolean differentOption = variations.stream().map(i -> i.getProductOption().getCode()).distinct().count() > 1;
+
+			if(!differentOption) {
+				throw new ConstraintException("Product option of instance.variant and instance.variantValue must be different");
+			}
+
+		}
+		
+		
+		productVariant.setProductId(productId);
+		productVariant.setId(null);
+		ProductVariant variant = persistableProductVariantMapper.convert(productVariant, store, language);
+		
+		try {
+			productVariantService.saveProductVariant(variant);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot save product instance for store [" + store.getCode() + "] and productId [" + productId + "]", e);
+		}
+		
+		return variant.getId();
+	}

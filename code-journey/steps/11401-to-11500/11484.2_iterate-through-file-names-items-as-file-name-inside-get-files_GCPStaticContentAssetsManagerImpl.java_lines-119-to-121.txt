@@ -1,3 +1,0 @@
-			for (String fileName : fileNames) {
-				files.add(getFile(merchantStoreCode, folderPath, fileContentType, fileName));
-			}

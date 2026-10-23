@@ -1,8 +1,0 @@
-
-  /**
-   * Public api
-   * @param id
-   * @param quote
-   * @param merchantStore
-   * @param language
-   * @param response

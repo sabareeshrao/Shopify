@@ -1,0 +1,74 @@
+
+	@Override
+	public boolean authorizeStore(MerchantStore store, String path) {
+		
+		if(store == null) {
+			throw new ResourceNotFoundException("MerchantStore is not found");
+		}
+
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		
+
+		if (!StringUtils.isBlank(path) && path.contains(PRIVATE_PATH)) {
+			
+			Validate.notNull(authentication, "Don't call ths method if a user is not authenticated");
+
+			try {
+				
+
+				String currentPrincipalName = authentication.getName();
+
+				LOGGER.info("Principal " + currentPrincipalName);
+
+				ReadableUser readableUser = findByUserName(currentPrincipalName, languageService.defaultLanguage());
+				//ReadableUser readableUser =	  findByUserName(currentPrincipalName, store.getCode(), store.getDefaultLanguage());
+				if (readableUser == null) {
+					return false;
+				}
+
+				// current user match;
+				String merchant = readableUser.getMerchant();
+
+				//user store is store request param
+				if (store.getCode().equalsIgnoreCase(merchant)) {
+					return true;
+				}
+
+				//Set<String> roles = authentication.getAuthorities().stream().map(r -> r.getAuthority())
+				//		.collect(Collectors.toSet());
+
+				// is superadmin
+				for (ReadableGroup group : readableUser.getGroups()) {
+					if (Constants.GROUP_SUPERADMIN.equals(group.getName())) {
+						return true;
+					}
+				}
+
+				boolean authorized = false;
+
+				// user store can be parent and requested store is child
+				// get parent
+				// TODO CACHE
+				MerchantStore parent = null;
+						
+				if(store.getParent()!=null) {
+					parent=merchantStoreService.getParent(merchant);
+				}
+
+				// user can be in parent
+				if (parent != null && parent.getCode().equals(store.getCode())) {
+					authorized = true;
+				}
+
+				// else false
+				return authorized;
+			} catch (Exception e) {
+				throw new UnauthorizedException("Cannot authorize user " + authentication.getPrincipal().toString()
+						+ " for store " + store.getCode(), e.getMessage());
+			}
+
+		}
+
+		return true;
+	}

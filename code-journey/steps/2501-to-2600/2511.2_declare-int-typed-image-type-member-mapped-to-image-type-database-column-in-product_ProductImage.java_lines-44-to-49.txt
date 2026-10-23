@@ -1,0 +1,6 @@
+	
+	/**
+	 * default to 0 for images managed by the system
+	 */
+	@Column(name = "IMAGE_TYPE")
+	private int imageType;

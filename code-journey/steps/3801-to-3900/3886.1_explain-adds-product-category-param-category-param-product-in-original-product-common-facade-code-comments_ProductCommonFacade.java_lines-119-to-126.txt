@@ -1,8 +1,0 @@
-
-
-	  /**
-	   * Adds a product to a category
-	   *
-	   * @param category
-	   * @param product
-	   * @return

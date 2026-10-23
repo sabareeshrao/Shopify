@@ -1,4 +1,0 @@
-				.collect(Collectors.toList());
-
-		return files;
-	}

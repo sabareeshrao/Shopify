@@ -1,8 +1,0 @@
-	Page<ProductAvailability> listByStore(Integer storeId, Pageable pageable);
-
-	@Query(value = "select distinct p from ProductAvailability p " + "left join fetch p.merchantStore pm "
-			+ "left join fetch p.prices pp " 
-			+ "left join fetch pp.descriptions ppd " 
-			+ "join fetch p.product ppr "
-			+ "join fetch ppr.merchantStore pprm "
-			+ "left join fetch ppr.variants ppri "

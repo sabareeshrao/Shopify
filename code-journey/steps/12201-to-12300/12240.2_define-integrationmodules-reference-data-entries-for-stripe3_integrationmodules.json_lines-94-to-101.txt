@@ -1,8 +1,0 @@
-		"configuration":[{"env":"TEST","scheme":"https","host":"www.stripe.com","port":"443","uri":"/"},{"env":"PROD","scheme":"https","host":"www.stripe.com","port":"443","uri":"/"}]
-
-	},
-
-	{
-		"module": "PAYMENT",
-		"code": "stripe3",
-		"type":"creditcard",

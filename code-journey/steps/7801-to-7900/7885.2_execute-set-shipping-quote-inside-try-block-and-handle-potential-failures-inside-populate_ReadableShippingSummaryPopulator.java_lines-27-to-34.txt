@@ -1,8 +1,0 @@
-		try {
-			
-			target.setShippingQuote(source.isShippingQuote());
-			target.setFreeShipping(source.isFreeShipping());
-			target.setHandling(source.getHandling());
-			target.setShipping(source.getShipping());
-			target.setShippingModule(source.getShippingModule());
-			target.setShippingOption(source.getShippingOption());

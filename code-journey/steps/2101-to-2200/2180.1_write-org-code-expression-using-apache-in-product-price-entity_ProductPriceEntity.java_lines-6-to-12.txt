@@ -1,0 +1,7 @@
+import org.apache.commons.lang3.StringUtils;
+/**
+ * A product entity is used by services API
+ * to populate or retrieve a Product price entity
+ * @author Carl Samson
+ *
+ */

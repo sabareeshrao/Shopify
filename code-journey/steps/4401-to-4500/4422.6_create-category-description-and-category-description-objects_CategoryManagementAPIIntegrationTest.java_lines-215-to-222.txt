@@ -1,0 +1,8 @@
+
+        endescription = new CategoryDescription();
+        endescription.setLanguage("en");
+        endescription.setName("Armoires");
+        endescription.setFriendlyUrl("armoires");
+        endescription.setTitle("Armoires");
+
+        frdescription = new CategoryDescription();

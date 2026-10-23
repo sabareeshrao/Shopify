@@ -1,8 +1,0 @@
-		           email.setTo(merchantStore.getStoreEmailAddress());
-		           email.setTemplateName(EmailConstants.EMAIL_CONTACT_TMPL);
-		           email.setTemplateTokens(templateTokens);
-
-		           LOGGER.debug( "Sending contact email");
-		           emailService.sendHtmlEmail(merchantStore, email);
-
-		       } catch (Exception e) {

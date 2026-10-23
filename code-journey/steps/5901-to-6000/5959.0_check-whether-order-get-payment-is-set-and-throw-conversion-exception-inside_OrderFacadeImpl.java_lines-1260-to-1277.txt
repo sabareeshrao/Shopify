@@ -1,0 +1,18 @@
+
+			// requires Order Totals, this needs recalculation and then compare
+			// total with the amount sent as part
+			// of process order request. If totals does not match, an error
+			// should be thrown.
+
+			OrderTotalSummary orderTotalSummary = null;
+
+			OrderSummary orderSummary = new OrderSummary();
+			orderSummary.setShippingSummary(shippingSummary);
+			List<ShoppingCartItem> itemsSet = new ArrayList<ShoppingCartItem>(cart.getLineItems());
+			orderSummary.setProducts(itemsSet);
+
+			orderTotalSummary = orderService.caculateOrderTotal(orderSummary, customer, store, language);
+
+			if (order.getPayment().getAmount() == null) {
+				throw new ConversionException("Requires Payment.amount");
+			}

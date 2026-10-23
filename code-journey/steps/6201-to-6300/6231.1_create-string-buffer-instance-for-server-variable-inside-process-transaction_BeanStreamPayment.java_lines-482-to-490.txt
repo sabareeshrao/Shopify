@@ -1,0 +1,9 @@
+
+
+		String server = new StringBuffer().append(
+				
+				configs.getScheme()).append("://")
+				.append(configs.getHost())
+						.append(":")
+						.append(configs.getPort())
+						.append(configs.getUri()).toString();

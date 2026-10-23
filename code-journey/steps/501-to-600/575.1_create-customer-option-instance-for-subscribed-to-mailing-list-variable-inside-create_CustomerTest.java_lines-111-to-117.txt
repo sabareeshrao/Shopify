@@ -1,0 +1,7 @@
+		
+		//create a customer option to be used
+		CustomerOption subscribedToMailingList = new CustomerOption();
+		subscribedToMailingList.setActive(true);
+		subscribedToMailingList.setPublicOption(true);
+		subscribedToMailingList.setCode("subscribedToMailingList");
+		subscribedToMailingList.setMerchantStore(store);

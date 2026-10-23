@@ -1,0 +1,9 @@
+	
+	Product getBySku(String productCode, MerchantStore merchant) throws ServiceException;
+
+	/**
+	 * Find a product for a specific merchant
+	 * @param id
+	 * @param merchant
+	 * @return
+	 */

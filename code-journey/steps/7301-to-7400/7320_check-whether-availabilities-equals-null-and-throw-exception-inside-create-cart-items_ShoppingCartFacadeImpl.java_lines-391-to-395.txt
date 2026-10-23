@@ -1,5 +1,0 @@
-
-			Set<ProductAvailability> availabilities = p.getAvailabilities();
-			if (availabilities == null) {
-				throw new Exception("Item with id " + p.getId() + " is not properly configured");
-			}

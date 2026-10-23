@@ -1,0 +1,7 @@
+	    
+	    /**
+	     * Create product
+	     */
+	    productService.saveProduct(summerShoes);
+
+	    //ObjectMapper mapper = new ObjectMapper();

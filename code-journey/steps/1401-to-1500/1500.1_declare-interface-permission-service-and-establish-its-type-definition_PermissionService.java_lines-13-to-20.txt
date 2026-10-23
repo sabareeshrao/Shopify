@@ -1,8 +1,0 @@
-public interface PermissionService extends SalesManagerEntityService<Integer, Permission> {
-
-  List<Permission> getByName();
-
-  List<Permission> listPermission() throws ServiceException;
-
-  Permission getById(Integer permissionId);
-

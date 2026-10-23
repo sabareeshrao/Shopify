@@ -1,8 +1,0 @@
-	/**
-	 * Create store brand
-	 * 
-	 * @param merchantStoreCode
-	 * @param brand
-	 */
-	void createBrand(String merchantStoreCode, PersistableBrand brand);
-

@@ -1,0 +1,7 @@
+
+	/**
+	 * Returns shipping metadata and how shipping is configured for a given store
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

@@ -1,8 +1,0 @@
-  @Override
-  public List<OutputContentFile> getImages(final String merchantStoreCode,
-      FileContentType imageContentType) throws ServiceException {
-
-    // the web server taks care of the images
-
-    return null;
-  }

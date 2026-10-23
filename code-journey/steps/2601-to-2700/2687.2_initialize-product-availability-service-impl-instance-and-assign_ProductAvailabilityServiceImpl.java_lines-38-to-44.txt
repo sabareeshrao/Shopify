@@ -1,0 +1,7 @@
+
+	@Inject
+	public ProductAvailabilityServiceImpl(ProductAvailabilityRepository productAvailabilityRepository) {
+		super(productAvailabilityRepository);
+		this.productAvailabilityRepository = productAvailabilityRepository;
+	}
+

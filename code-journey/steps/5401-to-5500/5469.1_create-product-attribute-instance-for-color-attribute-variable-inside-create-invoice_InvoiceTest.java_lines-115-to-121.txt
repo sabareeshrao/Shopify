@@ -1,0 +1,7 @@
+	    
+	    //create an attribute
+	    ProductAttribute colorAttribute = new ProductAttribute();
+	    colorAttribute.setProduct(product);
+	    colorAttribute.setProductAttributePrice(new BigDecimal(5));
+	    colorAttribute.setProductOption(color);
+	    colorAttribute.setProductOptionValue(red);

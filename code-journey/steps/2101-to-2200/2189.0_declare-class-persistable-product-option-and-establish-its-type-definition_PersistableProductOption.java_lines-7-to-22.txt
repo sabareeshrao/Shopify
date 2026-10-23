@@ -1,0 +1,16 @@
+public class PersistableProductOption extends ProductOptionEntity implements
+		Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<ProductOptionDescription> descriptions = new ArrayList<ProductOptionDescription>();
+	public void setDescriptions(List<ProductOptionDescription> descriptions) {
+		this.descriptions = descriptions;
+	}
+	public List<ProductOptionDescription> getDescriptions() {
+		return descriptions;
+	}
+
+}

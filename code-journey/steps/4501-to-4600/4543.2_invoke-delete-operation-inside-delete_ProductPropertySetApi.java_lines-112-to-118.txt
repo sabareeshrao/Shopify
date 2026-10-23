@@ -1,7 +1,0 @@
-			@PathVariable Long id,
-			@ApiIgnore MerchantStore merchantStore,
-			@ApiIgnore Language language) {
-
-		productOptionSetFacade.delete(id, merchantStore);
-
-	}

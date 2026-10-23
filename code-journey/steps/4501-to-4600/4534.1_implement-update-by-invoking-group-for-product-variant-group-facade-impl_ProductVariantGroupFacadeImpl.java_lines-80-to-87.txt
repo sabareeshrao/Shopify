@@ -1,8 +1,0 @@
-	@Override
-	public void update(Long productVariantGroup, PersistableProductVariantGroup instance, MerchantStore store,
-			Language language) {
-		ProductVariantGroup group = this.group(productVariantGroup, store);
-		instance.setId(productVariantGroup);
-		
-		group = persistableProductIntanceGroupMapper.merge(instance, group, store, language);
-		

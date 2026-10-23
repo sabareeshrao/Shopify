@@ -1,0 +1,4 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SearchServiceImpl.class);
+
+	private final static String INDEX_PRODUCTS = "INDEX_PRODUCTS";
+	

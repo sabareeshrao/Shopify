@@ -1,5 +1,0 @@
-			}
-			
-			if(descriptions.size()>0) {
-				destination.setDescriptions(descriptions);
-			}

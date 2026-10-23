@@ -1,8 +1,0 @@
-	/**
-	 * Get Logo, social networks and other brand configurations
-	 * 
-	 * @param code
-	 * @return
-	 */
-	ReadableBrand getBrand(String code);
-

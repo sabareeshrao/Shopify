@@ -1,4 +1,0 @@
-					throw new Exception("Cannot parse " + amount);
-				} else {
-					return bdamount;
-				}

@@ -1,0 +1,44 @@
+	@RequestMapping(value = { "/auth/orders" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public ReadableOrderList list(@RequestParam(value = "page", required = false) Integer page,
+			@RequestParam(value = "count", required = false) Integer count, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+
+		Customer customer = customerService.getByNick(userName);
+
+		if (customer == null) {
+			response.sendError(401, "Error while listing orders, customer not authorized");
+			return null;
+		}
+
+		if (page == null) {
+			page = new Integer(0);
+		}
+		if (count == null) {
+			count = new Integer(100);
+		}
+
+		ReadableCustomer readableCustomer = new ReadableCustomer();
+		ReadableCustomerPopulator customerPopulator = new ReadableCustomerPopulator();
+		customerPopulator.populate(customer, readableCustomer, merchantStore, language);
+
+		ReadableOrderList returnList = orderFacade.getReadableOrderList(merchantStore, customer, page, count, language);
+
+		if (returnList == null) {
+			returnList = new ReadableOrderList();
+		}
+
+		List<ReadableOrder> orders = returnList.getOrders();
+		if (!CollectionUtils.isEmpty(orders)) {
+			for (ReadableOrder order : orders) {
+				order.setCustomer(readableCustomer);
+			}
+		}
+		return returnList;
+	}

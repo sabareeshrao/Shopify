@@ -1,5 +1,0 @@
-	private Date promoAdded;
-
-	@Transient
-	private boolean obsolete = false;//when all items are obsolete
-    

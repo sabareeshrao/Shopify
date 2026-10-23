@@ -1,6 +1,0 @@
- * @author csamson
- *
- */
-public class CustomerBillingAddressPopulator extends AbstractDataPopulator<Customer, Address>
-{
-

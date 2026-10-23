@@ -1,8 +1,0 @@
-	@Override
-	public void authorizedGroups(String authenticatedUser, PersistableUser user) {
-		Validate.notNull(authenticatedUser, "Required authenticated user");
-		Validate.notNull(user, "Required persistable user");
-
-		try {
-			User currentUser = userService.getByUserName(authenticatedUser);
-

@@ -1,0 +1,24 @@
+
+	@Override
+	public List<PackageDetails> getPackagesDetails(
+			List<ShippingProduct> products, MerchantStore store)
+			throws ServiceException {
+		
+		List<PackageDetails> packages = null;
+		
+		ShippingConfiguration shippingConfiguration = this.getShippingConfiguration(store);
+		//determine if the system has to use BOX or ITEM
+		ShippingPackageType shippingPackageType = ShippingPackageType.ITEM;
+		if(shippingConfiguration!=null) {
+			shippingPackageType = shippingConfiguration.getShippingPackageType();
+		}
+		
+		if(shippingPackageType.name().equals(ShippingPackageType.BOX.name())){
+			packages = packaging.getBoxPackagesDetails(products, store);
+		} else {
+			packages = packaging.getItemPackagesDetails(products, store);
+		}
+		
+		return packages;
+		
+	}

@@ -1,0 +1,4 @@
+  private static final String ROOT_CONTAINER = "products";
+
+  private String rootName = ROOT_NAME;
+

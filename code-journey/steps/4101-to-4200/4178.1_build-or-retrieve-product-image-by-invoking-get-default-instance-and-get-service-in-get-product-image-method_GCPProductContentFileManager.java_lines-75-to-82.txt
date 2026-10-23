@@ -1,8 +1,0 @@
-  @Override
-  public OutputContentFile getProductImage(String merchantStoreCode, String productCode,
-      String imageName, ProductImageSize size) throws ServiceException {
-    InputStream inputStream = null;
-    try {
-      Storage storage = StorageOptions.getDefaultInstance().getService();
-      
-      String bucketName = bucketName();

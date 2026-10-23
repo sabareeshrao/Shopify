@@ -1,0 +1,43 @@
+	
+	@Override
+	public void addImage(MultipartFile image, Long instanceGroupId,
+			MerchantStore store, Language language) {
+		
+		
+		Validate.notNull(instanceGroupId,"productVariantGroupId must not be null");
+		Validate.notNull(image,"Image must not be null");
+		Validate.notNull(store,"MerchantStore must not be null");
+		//get option group
+		
+		ProductVariantGroup group = this.group(instanceGroupId, store);
+		ProductVariantImage instanceImage = new ProductVariantImage();
+		
+		try {
+			
+			String path = new StringBuilder().append("group").append(Constants.SLASH).append(instanceGroupId).toString();
+			
+			
+			
+			instanceImage.setProductImage(image.getOriginalFilename());
+			instanceImage.setProductVariantGroup(group);
+			String imageName = image.getOriginalFilename();
+			InputStream inputStream = image.getInputStream();
+			InputContentFile cmsContentImage = new InputContentFile();
+			cmsContentImage.setFileName(imageName);
+			cmsContentImage.setMimeType(image.getContentType());
+			cmsContentImage.setFile(inputStream);
+			cmsContentImage.setPath(path);
+			cmsContentImage.setFileContentType(FileContentType.VARIANT);
+
+			contentService.addContentFile(store.getCode(), cmsContentImage);
+
+			group.getImages().add(instanceImage);
+			
+			productVariantGroupService.saveOrUpdate(group);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Exception while adding instance group image", e);
+		}
+
+
+		return;
+	}

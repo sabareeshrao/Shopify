@@ -1,4 +1,0 @@
-    protected Language getLanguage(HttpServletRequest request) {
-    	return (Language)request.getAttribute(Constants.LANGUAGE);
-    }
-

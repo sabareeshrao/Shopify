@@ -1,5 +1,0 @@
-            PropertyDescriptor currentPropertyDescriptor = propertyDescriptors[i];
-            if ( currentPropertyDescriptor.getName().equals( propertyname ) )
-            {
-                propertyDescriptor = currentPropertyDescriptor;
-            }

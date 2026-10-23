@@ -1,0 +1,51 @@
+
+	private OrderTotalSummary calculateOrderTotal(MerchantStore store, Customer customer,
+			com.salesmanager.shop.model.order.v0.PersistableOrder order, Language language) throws Exception {
+
+		OrderTotalSummary orderTotalSummary = null;
+
+		OrderSummary summary = new OrderSummary();
+
+		if (order instanceof ShopOrder) {
+			ShopOrder o = (ShopOrder) order;
+			summary.setProducts(o.getShoppingCartItems());
+
+			if (o.getShippingSummary() != null) {
+				summary.setShippingSummary(o.getShippingSummary());
+			}
+
+			if (!StringUtils.isBlank(o.getCartCode())) {
+
+				ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(o.getCartCode(), store);
+
+				// promo code
+				if (!StringUtils.isBlank(shoppingCart.getPromoCode())) {
+					Date promoDateAdded = shoppingCart.getPromoAdded();// promo
+																		// valid
+																		// 1 day
+					Instant instant = promoDateAdded.toInstant();
+					ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());
+					LocalDate date = zdt.toLocalDate();
+					// date added < date + 1 day
+					LocalDate tomorrow = LocalDate.now().plusDays(1);
+					if (date.isBefore(tomorrow)) {
+						summary.setPromoCode(shoppingCart.getPromoCode());
+					} else {
+						// clear promo
+						shoppingCart.setPromoCode(null);
+						shoppingCartService.saveOrUpdate(shoppingCart);
+					}
+				}
+
+			}
+
+			orderTotalSummary = orderService.caculateOrderTotal(summary, customer, store, language);
+		} else {
+			// need Set of ShoppingCartItem
+			// PersistableOrder not implemented
+			throw new Exception("calculateOrderTotal not yet implemented for PersistableOrder");
+		}
+
+		return orderTotalSummary;
+
+	}

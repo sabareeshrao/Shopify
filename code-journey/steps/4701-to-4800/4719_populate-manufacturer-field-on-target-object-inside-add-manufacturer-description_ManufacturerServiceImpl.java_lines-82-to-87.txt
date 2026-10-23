@@ -1,6 +1,0 @@
-
-    manufacturer.getDescriptions().add(description);
-    description.setManufacturer(manufacturer);
-    update(manufacturer);
-  }
-

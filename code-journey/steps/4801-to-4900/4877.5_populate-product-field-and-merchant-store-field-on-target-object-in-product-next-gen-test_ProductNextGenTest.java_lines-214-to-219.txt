@@ -1,6 +1,0 @@
-	    //availability.getVariants().add(size_ten_DEFAULT);
-	    
-	    //inventory for store DEFAULT and product summerShoes
-	    availability.setProduct(summerShoes);
-	    availability.setMerchantStore(store);
-

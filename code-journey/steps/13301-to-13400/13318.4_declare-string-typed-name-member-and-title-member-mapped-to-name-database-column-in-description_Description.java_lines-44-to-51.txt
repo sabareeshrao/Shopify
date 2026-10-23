@@ -1,8 +1,0 @@
-	
-	@NotEmpty
-	@Column(name="NAME", nullable = false, length=120)
-	private String name;
-	
-	@Column(name="TITLE", length=100)
-	private String title;
-	

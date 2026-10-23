@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "SO",
+			"zoneName": "Solothurn",
+			"countryCode": "CH"
+		},

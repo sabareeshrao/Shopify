@@ -1,0 +1,46 @@
+
+	/*
+	 * @Override public ReadableInventory get(Long inventoryId, MerchantStore store,
+	 * Language language) { ProductAvailability availability =
+	 * getAvailabilityById(store, inventoryId); return
+	 * readableInventoryMapper.convert(availability, store, language); }
+	 */
+
+
+	//public ReadableInventory get(String child, Language language) {
+		/*
+		 * Product product = getProductById(productId); MerchantStore store =
+		 * getMerchantStore(child);
+		 * 
+		 * if (isStoreParentNotExist(store) ||
+		 * store.getParent().getId().equals(product.getMerchantStore().getId())) { throw
+		 * new ResourceNotFoundException( "MerchantStore [" + child +
+		 * "] is not a store of retailer [" + store.getCode() + "]"); }
+		 * 
+		 * ProductAvailability availability =
+		 * productAvailabilityService.getByStore(product, store) .orElseThrow(() -> new
+		 * ResourceNotFoundException("Inventory with not found"));
+		 * 
+		 * return this.readableInventory(availability, store, language);
+		 */
+	//}
+
+	/**
+	private boolean isStoreParentNotExist(MerchantStore store) {
+		return Objects.isNull(store.getParent());
+	}
+	
+
+	private MerchantStore getMerchantStore(String child) {
+		try {
+			return Optional.ofNullable(merchantStoreService.getByCode(child))
+					.orElseThrow(() -> new ResourceNotFoundException("MerchantStore [" + child + "] not found"));
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while getting inventory", e);
+		}
+	}
+	
+	private ReadableInventory readableInventory(ProductAvailability availability, MerchantStore store, Language language) {
+		return readableInventoryMapper.convert(availability, store, language);
+	}
+	**/

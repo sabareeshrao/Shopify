@@ -1,0 +1,54 @@
+
+	// @Override
+	// DELETE
+	public ShoppingCartData getShoppingCartData(final Customer customer, final MerchantStore store,
+			final String shoppingCartId, Language language) throws Exception {
+
+		ShoppingCart cart = null;
+		try {
+			if (customer != null) {
+				LOG.info("Reteriving customer shopping cart...");
+				cart = shoppingCartService.getShoppingCart(customer, store);
+
+			}
+
+			else {
+				if (StringUtils.isNotBlank(shoppingCartId) && cart == null) {
+					cart = shoppingCartService.getByCode(shoppingCartId, store);
+				}
+
+			}
+
+		} catch (ServiceException ex) {
+			LOG.error("Error while retriving cart from customer", ex);
+		} catch (NoResultException nre) {
+			// nothing
+		}
+
+		if (cart == null) {
+			return null;
+		}
+
+		// if cart has been completed return null
+		if (cart.getOrderId() != null && cart.getOrderId().longValue() > 0) {
+			if (StringUtils.isNotBlank(shoppingCartId) && !(shoppingCartId.equals(cart.getShoppingCartCode()))) {
+				cart = shoppingCartService.getByCode(shoppingCartId, store);
+			} else {
+				return null;
+			}
+		}
+
+		LOG.info("Cart model found.");
+
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
+		shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
+		shoppingCartDataPopulator.setPricingService(pricingService);
+		shoppingCartDataPopulator.setimageUtils(imageUtils);
+
+		MerchantStore merchantStore = (MerchantStore) getKeyValue(Constants.MERCHANT_STORE);
+
+		ShoppingCartData shoppingCartData = shoppingCartDataPopulator.populate(cart, merchantStore, language);
+
+		return shoppingCartData;
+
+	}

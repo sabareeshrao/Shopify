@@ -1,4 +1,0 @@
-      auditSection.setDateModified(new Date());
-      if (auditSection.getDateCreated() == null) {
-        auditSection.setDateCreated(new Date());
-      }

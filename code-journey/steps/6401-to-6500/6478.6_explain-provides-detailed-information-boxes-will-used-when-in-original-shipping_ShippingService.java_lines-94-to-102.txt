@@ -1,0 +1,9 @@
+
+	/**
+	 * Provides detailed information on boxes that will be used
+	 * when getting a ShippingQuote
+	 * @param products
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */

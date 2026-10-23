@@ -1,0 +1,27 @@
+	private User verifyUserLink(String token, String store) {
+
+		User user = null;
+		try {
+			user = userService.getByPasswordResetToken(store, token);
+			if (user == null) {
+				throw new ResourceNotFoundException(
+						"Customer not fount for store [" + store + "] and token [" + token + "]");
+			}
+
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Cannot verify customer token", e);
+		}
+
+		Date tokenExpiry = user.getCredentialsResetRequest().getCredentialsRequestExpiry();
+
+		if (tokenExpiry == null) {
+			throw new GenericRuntimeException("No expiry date configured for token [" + token + "]");
+		}
+
+		if (!DateUtil.dateBeforeEqualsDate(new Date(), tokenExpiry)) {
+			throw new GenericRuntimeException("Ttoken [" + token + "] has expired");
+		}
+
+		return user;
+
+	}

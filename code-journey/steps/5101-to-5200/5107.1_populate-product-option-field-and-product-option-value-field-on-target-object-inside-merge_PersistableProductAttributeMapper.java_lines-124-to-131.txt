@@ -1,8 +1,0 @@
-
-		destination.setProductOption(productOption);
-		destination.setProductOptionValue(productOptionValue);
-		destination.setProductAttributePrice(source.getProductAttributePrice());
-		destination.setProductAttributeWeight(source.getProductAttributeWeight());
-		destination.setProductAttributePrice(source.getProductAttributePrice());
-		destination.setAttributeDisplayOnly(source.isAttributeDisplayOnly());
-

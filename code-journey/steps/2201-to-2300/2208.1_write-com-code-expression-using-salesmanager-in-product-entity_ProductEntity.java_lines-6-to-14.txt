@@ -1,0 +1,9 @@
+import com.salesmanager.shop.model.catalog.product.Product;
+
+/**
+ * A product entity is used by services API to populate or retrieve a Product
+ * entity
+ * 
+ * @author Carl Samson
+ *
+ */

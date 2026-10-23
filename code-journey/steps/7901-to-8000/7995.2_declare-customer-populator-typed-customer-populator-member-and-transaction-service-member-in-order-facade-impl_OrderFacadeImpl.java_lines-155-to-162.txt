@@ -1,8 +1,0 @@
-	private CustomerPopulator customerPopulator;
-
-	@Autowired
-	private TransactionService transactionService;
-
-	@Inject
-	private EmailTemplatesUtils emailTemplatesUtils;
-

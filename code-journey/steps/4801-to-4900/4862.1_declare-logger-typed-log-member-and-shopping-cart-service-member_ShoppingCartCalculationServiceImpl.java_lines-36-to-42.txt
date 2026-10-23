@@ -1,0 +1,7 @@
+	protected final Logger LOG = LoggerFactory.getLogger(getClass());
+
+	@Inject
+	private ShoppingCartService shoppingCartService;
+
+	@Inject
+	private OrderService orderService;

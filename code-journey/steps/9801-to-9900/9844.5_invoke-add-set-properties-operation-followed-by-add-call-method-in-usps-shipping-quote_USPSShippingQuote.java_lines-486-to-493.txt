@@ -1,8 +1,0 @@
-								ShippingOption.class);
-				digester.addSetProperties("RateV3Response/Package/Postage",
-						"CLASSID", "optionId");
-				digester.addCallMethod(
-						"RateV3Response/Package/Postage/MailService",
-						"setOptionName", 0);
-				digester.addCallMethod(
-						"RateV3Response/Package/Postage/MailService",

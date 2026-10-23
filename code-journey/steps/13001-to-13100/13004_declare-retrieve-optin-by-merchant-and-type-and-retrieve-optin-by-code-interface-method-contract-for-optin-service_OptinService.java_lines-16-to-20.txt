@@ -1,5 +1,0 @@
-	
-	Optin getOptinByMerchantAndType(MerchantStore store, OptinType type) throws ServiceException;
-	Optin getOptinByCode(MerchantStore store, String code) throws ServiceException;
-
-}

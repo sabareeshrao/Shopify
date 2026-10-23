@@ -1,8 +1,0 @@
-
-		if (finalPrice != null) {
-			finalPrice.setAdditionalPrices(otherPrices);
-		} else {
-			if (otherPrices != null) {
-				finalPrice = otherPrices.get(0);
-			}
-		}

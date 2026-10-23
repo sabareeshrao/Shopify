@@ -1,8 +1,0 @@
-	 * @param contentImage
-	 * @param merchantStoreCode
-	 *            merchant store
-	 * @throws ServiceException
-	 */
-	@Override
-	public void removeFile(String merchantStoreCode, FileContentType fileContentType, String fileName)
-			throws ServiceException {

@@ -1,0 +1,35 @@
+		{
+			"zoneCode": "Teruel",
+			"zoneName": "Teruel",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Toledo",
+			"zoneName": "Toledo",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Valencia",
+			"zoneName": "Valencia",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Valladolid",
+			"zoneName": "Valladolid",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Vizcaya",
+			"zoneName": "Vizcaya",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Zamora",
+			"zoneName": "Zamora",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Zaragoza",
+			"zoneName": "Zaragoza",
+			"countryCode": "ES"
+		},

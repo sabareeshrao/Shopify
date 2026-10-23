@@ -1,4 +1,0 @@
-
-  @Column(name = "WEIGHT")
-  private BigDecimal weight;
-

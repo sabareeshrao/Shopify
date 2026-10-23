@@ -1,8 +1,0 @@
-			
-		} catch (IOException e) {
-			LOGGER.error("Error while creating fiolder for {} merchant ", merchantStoreCode);
-			throw new ServiceException(e);
-		}
-
-	}
-

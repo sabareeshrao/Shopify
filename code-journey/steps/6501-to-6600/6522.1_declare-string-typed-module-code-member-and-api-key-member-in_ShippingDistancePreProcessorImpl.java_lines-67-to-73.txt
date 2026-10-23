@@ -1,0 +1,7 @@
+	private final static String MODULE_CODE = "shippingDistanceModule";
+
+	@Value("${config.shippingDistancePreProcessor.apiKey}")
+	private String apiKey;
+
+	@Value("#{'${config.shippingDistancePreProcessor.acceptedZones}'.split(',')}") 
+	private List<String> allowedZonesCodes = null;

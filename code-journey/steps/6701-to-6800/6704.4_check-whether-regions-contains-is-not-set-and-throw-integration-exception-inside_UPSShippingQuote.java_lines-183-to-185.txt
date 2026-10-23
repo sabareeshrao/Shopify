@@ -1,0 +1,3 @@
+			if(!regions.contains(store.getCountry().getIsoCode())) {
+				throw new IntegrationException("Can't use the service for store country code ");
+			}

@@ -1,8 +1,0 @@
-		
-		
-		target.setDimension(MeasureUnit.valueOf(source.getSeizeunitcode()));
-		target.setWeight(WeightUnit.valueOf(source.getWeightunitcode()));
-		
-		if(source.getZone()!=null) {
-			address.setStateProvince(source.getZone().getCode());
-			try {

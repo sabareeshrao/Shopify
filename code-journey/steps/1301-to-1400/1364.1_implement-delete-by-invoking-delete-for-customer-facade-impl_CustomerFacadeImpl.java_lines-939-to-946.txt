@@ -1,8 +1,0 @@
-  @Override
-  public void delete(Customer entity) {
-    try{
-      customerService.delete(entity);
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException(e);
-    }
-  }

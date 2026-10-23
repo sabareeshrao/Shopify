@@ -1,0 +1,4 @@
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "productImage", cascade = CascadeType.ALL)
+	private List<ProductImageDescription> descriptions = new ArrayList<ProductImageDescription>();
+

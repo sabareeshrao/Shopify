@@ -1,0 +1,12 @@
+    /**
+     * Method used to fetch customer based on the username and storecode.
+     * Customer username is unique to each store.
+     *
+     * @param userName
+     * @param store
+     * @param store
+     * @param language
+     * @throws Exception
+     *
+     */
+    public CustomerEntity getCustomerDataByUserName(final String userName,final MerchantStore store, final Language language) throws Exception;

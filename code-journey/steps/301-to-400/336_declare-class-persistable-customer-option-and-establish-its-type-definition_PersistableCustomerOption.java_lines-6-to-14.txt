@@ -1,9 +1,0 @@
-public class PersistableCustomerOption extends CustomerOptionEntity
-		implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private List<CustomerOptionDescription> descriptions;
-

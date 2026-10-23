@@ -1,8 +1,0 @@
-		</dependency>
-
-
-	</dependencies>
-
-	<repositories>
-		<!-- Sonatype snapshot repo -->
-		<repository>

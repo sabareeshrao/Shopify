@@ -1,5 +1,0 @@
-      customerOptin.setLastName(optin.getLastName());
-      customerOptin.setOptinDate(new Date());
-      customerOptin.setOptin(optinDef);
-      customerOptin.setMerchantStore(store);
-    }

@@ -1,0 +1,38 @@
+	
+	@Override
+	public ReadableProductList listItemsByIds(MerchantStore store, Language language, List<Long> ids, int startCount,
+			int maxCount) throws Exception {
+		
+		if(CollectionUtils.isEmpty(ids)) {
+			return new ReadableProductList();
+		}
+		
+		
+		ProductCriteria productCriteria = new ProductCriteria();
+		productCriteria.setMaxCount(maxCount);
+		productCriteria.setStartIndex(startCount);
+		productCriteria.setProductIds(ids);
+		
+
+		com.salesmanager.core.model.catalog.product.ProductList products = productService.listByStore(store, language, productCriteria);
+
+		
+		ReadableProductPopulator populator = new ReadableProductPopulator();
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		
+		
+		ReadableProductList productList = new ReadableProductList();
+		for(Product product : products.getProducts()) {
+
+			//create new proxy product
+			ReadableProduct readProduct = populator.populate(product, new ReadableProduct(), store, language);
+			productList.getProducts().add(readProduct);
+			
+		}
+		
+		productList.setNumber(Math.toIntExact(products.getTotalCount()));
+		productList.setRecordsTotal(new Long(products.getTotalCount()));
+
+		return productList;
+	}

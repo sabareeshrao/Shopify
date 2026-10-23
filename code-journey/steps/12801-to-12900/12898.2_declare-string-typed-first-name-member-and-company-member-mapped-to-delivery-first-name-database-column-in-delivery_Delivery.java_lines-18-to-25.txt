@@ -1,8 +1,0 @@
-
-	@Column (name ="DELIVERY_FIRST_NAME", length=64)
-	private String firstName;
-
-	@Column (name ="DELIVERY_COMPANY", length=100)
-	private String company;
-	
-	@Column (name ="DELIVERY_STREET_ADDRESS", length=256)

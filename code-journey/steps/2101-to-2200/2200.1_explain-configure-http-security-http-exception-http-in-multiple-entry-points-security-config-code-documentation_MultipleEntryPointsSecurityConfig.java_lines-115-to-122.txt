@@ -1,8 +1,0 @@
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http
-			.antMatcher("/shop/**")
-			.csrf().disable()			
-			.authorizeRequests()
-					.antMatchers("/shop/").permitAll()
-					.antMatchers("/shop/**").permitAll()

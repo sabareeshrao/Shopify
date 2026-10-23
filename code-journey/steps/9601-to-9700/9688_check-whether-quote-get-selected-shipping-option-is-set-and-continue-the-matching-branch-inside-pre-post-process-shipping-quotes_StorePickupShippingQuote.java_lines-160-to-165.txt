@@ -1,6 +1,0 @@
-
-			options.add(shippingOption);
-			
-			if(quote.getSelectedShippingOption()==null) {
-				quote.setSelectedShippingOption(shippingOption);
-			}

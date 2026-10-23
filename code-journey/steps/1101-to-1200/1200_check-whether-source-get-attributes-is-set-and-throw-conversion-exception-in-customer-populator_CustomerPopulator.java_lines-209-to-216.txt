@@ -1,8 +1,0 @@
-			
-			if(source.getAttributes()!=null) {
-				for(PersistableCustomerAttribute attr : source.getAttributes()) {
-
-					CustomerOption customerOption = customerOptionService.getById(attr.getCustomerOption().getId());
-					if(customerOption==null) {
-						throw new ConversionException("Customer option id " + attr.getCustomerOption().getId() + " does not exist");
-					}

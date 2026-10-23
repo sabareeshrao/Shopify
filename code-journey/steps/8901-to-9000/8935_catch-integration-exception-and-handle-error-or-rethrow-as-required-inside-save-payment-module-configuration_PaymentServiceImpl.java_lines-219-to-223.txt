@@ -1,5 +1,0 @@
-			module.validateModuleConfiguration(configuration, store);
-			
-		} catch (IntegrationException ie) {
-			throw ie;
-		}

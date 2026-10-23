@@ -1,0 +1,9 @@
+
+/**
+ * Manufacturer / brand / collection product grouping
+ * @author carlsamson
+ *
+ */
+public interface ManufacturerFacade {
+  
+  List<ReadableManufacturer> getByProductInCategory(MerchantStore store, Language language, Long categoryId);

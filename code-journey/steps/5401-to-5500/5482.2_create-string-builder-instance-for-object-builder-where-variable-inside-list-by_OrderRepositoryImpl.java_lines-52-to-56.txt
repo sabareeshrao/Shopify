@@ -1,0 +1,5 @@
+		StringBuilder objectBuilderWhere = new StringBuilder();
+		String whereQuery = " where o.merchant.id=:mId";
+		countBuilderWhere.append(whereQuery);
+		objectBuilderWhere.append(whereQuery);
+		

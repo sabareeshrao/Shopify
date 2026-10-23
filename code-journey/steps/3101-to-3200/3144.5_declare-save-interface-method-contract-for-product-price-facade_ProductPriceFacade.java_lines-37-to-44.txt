@@ -1,8 +1,0 @@
-	 * @param store
-	 * @return
-	 */
-	Long save(PersistableProductPrice price, MerchantStore store);
-
-	/**
-	 * Product price deletion
-	 * @param priceId

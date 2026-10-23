@@ -1,8 +1,0 @@
-			 * 
-			 * 
-			 * </Shipment>
-			 * 
-			 * <CustomerClassification> <Code>03</Code>
-			 * </CustomerClassification> </RatingServiceSelectionRequest>
-			 * **/
-

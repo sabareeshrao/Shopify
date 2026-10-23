@@ -1,6 +1,0 @@
-
-		destination.setImages(new ArrayList<ReadableImage>(finalList.values()));
-		
-		return destination;
-	}
-	

@@ -1,8 +1,0 @@
-    private ReadableCatalogMapper readableCatalogMapper;
-
-    @Autowired
-    private Mapper<PersistableCatalogCategoryEntry, CatalogCategoryEntry> persistableCatalogEntryMapper;
-
-    @Autowired
-    private ReadableCatalogCategoryEntryMapper readableCatalogEntryMapper;
-

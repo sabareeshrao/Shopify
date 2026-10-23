@@ -1,2 +1,0 @@
-              LOGGER.warn("No shipping code found for " + optionCodeBuilder.toString());
-            }

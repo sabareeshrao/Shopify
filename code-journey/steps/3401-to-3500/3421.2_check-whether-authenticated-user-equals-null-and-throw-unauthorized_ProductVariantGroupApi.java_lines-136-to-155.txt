@@ -1,0 +1,20 @@
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/product/{id}/productVariantGroup" })
+	@ApiOperation(httpMethod = "GET", value = "Delete product instance group", notes = "", produces = "application/json", response = Void.class)
+	public @ResponseBody ReadableEntityList<ReadableProductVariantGroup> list(
+			@PathVariable final Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+	@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+
+		userFacade.authorizedGroup(authenticatedUser, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_ADMIN_CATALOGUE, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()));
+
+		return productVariantGroupFacade.list(id, merchantStore, language, page, count);
+	}

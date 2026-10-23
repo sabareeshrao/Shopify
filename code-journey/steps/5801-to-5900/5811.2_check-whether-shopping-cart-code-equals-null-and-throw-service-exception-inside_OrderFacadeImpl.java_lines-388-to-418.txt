@@ -1,0 +1,31 @@
+
+			for (ShoppingCartItem item : shoppingCartItems) {
+
+				if(shoppingCartCode == null && item.getShoppingCart()!=null) {
+					shoppingCartCode = item.getShoppingCart().getShoppingCartCode();
+				}
+
+				/**
+				 * Before processing order quantity of item must be > 0
+				 */
+
+				Product product = productService.getBySku(item.getSku(), store, language);
+				if (product == null) {
+					throw new ServiceException(ServiceException.EXCEPTION_INVENTORY_MISMATCH);
+				}
+
+				LOGGER.debug("Validate inventory");
+				for (ProductAvailability availability : product.getAvailabilities()) {
+					if (availability.getRegion().equals(Constants.ALL_REGIONS)) {
+						int qty = availability.getProductQuantity();
+						if (qty < item.getQuantity()) {
+							throw new ServiceException(ServiceException.EXCEPTION_INVENTORY_MISMATCH);
+						}
+					}
+				}
+
+				OrderProduct orderProduct = new OrderProduct();
+				orderProduct = orderProductPopulator.populate(item, orderProduct, store, language);
+				orderProduct.setOrder(modelOrder);
+				orderProducts.add(orderProduct);
+			}

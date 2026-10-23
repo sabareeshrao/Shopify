@@ -1,0 +1,12 @@
+
+      /*
+       * //default small InputContentImage smallContentImage = new
+       * InputContentImage(ImageContentType.PRODUCT);
+       * smallContentImage.setFile(contentImage.getFile());
+       * smallContentImage.setDefaultImage(productImage.isDefaultImage());
+       * smallContentImage.setImageName(new
+       * StringBuilder().append("S-").append(productImage.getProductImage()).toString());
+       *
+       * uploadImage.uploadProductImage(configuration, productImage, smallContentImage);
+       */
+

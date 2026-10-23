@@ -1,8 +1,0 @@
-
-			return this.convertContentToReadableContentFull(store, language, content);
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Error while getting content [" + code + "]", e);
-		}
-
-	}
-

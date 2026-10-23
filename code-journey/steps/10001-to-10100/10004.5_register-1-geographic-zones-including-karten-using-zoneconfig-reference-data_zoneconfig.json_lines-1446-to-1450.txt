@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "KN",
+		"zoneName": "Karten",
+		"countryCode": "AT"
+	},

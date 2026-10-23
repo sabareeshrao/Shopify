@@ -1,8 +1,0 @@
-	 * @param store
-	 * @param language
-	 * @return
-	 * @throws Exception
-	 */
-	// KEEP
-	private ReadableShoppingCart modifyCartMulti(ShoppingCart cartModel, List<PersistableShoppingCartItem> cartItems,
-			MerchantStore store, Language language) throws Exception {

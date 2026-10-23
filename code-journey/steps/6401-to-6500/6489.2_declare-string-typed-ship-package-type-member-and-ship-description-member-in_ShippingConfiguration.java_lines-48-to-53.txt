@@ -1,0 +1,6 @@
+	private String shipPackageType;
+	private String shipDescription;
+	private String shipFreeType;
+	
+	//Transient
+	private String orderTotalFreeShippingText = null;

@@ -1,8 +1,0 @@
-
-		// productList.setTotalPages(products.getTotalCount());
-		productList.setRecordsTotal(modelProductList.getTotalElements());
-		productList.setNumber(productList.getProducts().size());
-
-		productList.setTotalPages(modelProductList.getTotalPages());
-
-		return productList;

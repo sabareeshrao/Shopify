@@ -1,8 +1,0 @@
-		
-		try {
-		
-			if(source.getSubTotal() != null) {
-				target.setSubTotal(pricingService.getDisplayAmount(source.getSubTotal(), store));
-			}
-			if(source.getTaxTotal()!=null) {
-				target.setTaxTotal(pricingService.getDisplayAmount(source.getTaxTotal(), store));

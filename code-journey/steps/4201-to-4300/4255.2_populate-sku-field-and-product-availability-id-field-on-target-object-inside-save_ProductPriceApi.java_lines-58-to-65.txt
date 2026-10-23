@@ -1,8 +1,0 @@
-			@PathVariable String sku,
-			@PathVariable Long inventoryId,
-			@Valid @RequestBody PersistableProductPrice price,
-			@ApiIgnore MerchantStore merchantStore, 
-			@ApiIgnore Language language) {
-		
-		price.setSku(sku);
-		price.setProductAvailabilityId(inventoryId);

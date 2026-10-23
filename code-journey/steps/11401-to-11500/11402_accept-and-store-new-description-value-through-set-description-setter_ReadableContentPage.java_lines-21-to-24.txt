@@ -1,4 +1,0 @@
-	public void setDescription(ContentDescription description) {
-		this.description = description;
-	}
-

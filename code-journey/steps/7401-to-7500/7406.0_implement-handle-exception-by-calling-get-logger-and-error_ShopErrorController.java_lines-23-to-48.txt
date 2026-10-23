@@ -1,0 +1,26 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShopErrorController.class);
+	
+    
+	@ExceptionHandler(Exception.class)
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+	@Produces({MediaType.APPLICATION_JSON})
+	public ModelAndView handleException(Exception ex) {
+		
+		LOGGER.error("Error page controller",ex);
+
+		ModelAndView model = null;
+		if(ex instanceof AccessDeniedException) {
+			
+			model = new ModelAndView("error/access_denied");
+			
+		} else {
+			
+			model = new ModelAndView("error/generic_error");
+			model.addObject("stackError", ExceptionUtils.getStackTrace(ex));
+			model.addObject("errMsg", ex.getMessage());
+			
+		}
+
+		return model;
+ 
+	}

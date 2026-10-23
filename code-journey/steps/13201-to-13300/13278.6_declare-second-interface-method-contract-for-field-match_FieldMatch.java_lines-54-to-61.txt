@@ -1,8 +1,0 @@
-     * @return The second field
-     */
-    String second();
-
-    /**
-     * Defines several <code>@FieldMatch</code> annotations on the same element
-     *
-     * @see FieldMatch

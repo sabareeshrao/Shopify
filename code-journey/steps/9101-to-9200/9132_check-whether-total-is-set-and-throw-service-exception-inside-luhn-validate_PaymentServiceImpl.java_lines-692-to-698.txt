@@ -1,7 +1,0 @@
-	
-		if (total % 10 != 0) {
-			throw new ServiceException(ServiceException.EXCEPTION_VALIDATION,"Invalid card number","messages.error.creditcard.number");
-		}
-	
-	}
-

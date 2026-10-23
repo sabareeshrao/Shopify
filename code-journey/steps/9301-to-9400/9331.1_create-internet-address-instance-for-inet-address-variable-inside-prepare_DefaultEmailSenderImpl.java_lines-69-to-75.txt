@@ -1,0 +1,7 @@
+
+        mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+        InternetAddress inetAddress = new InternetAddress();
+
+        inetAddress.setPersonal(eml);
+        inetAddress.setAddress(from);

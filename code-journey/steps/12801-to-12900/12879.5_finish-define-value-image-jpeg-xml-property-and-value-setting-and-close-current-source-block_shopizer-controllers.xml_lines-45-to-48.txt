@@ -1,4 +1,0 @@
-    	</mvc:message-converters>
-
-	</mvc:annotation-driven>
-	

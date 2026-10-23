@@ -1,0 +1,8 @@
+    
+    /**
+     * Removes static file
+     * FileType is no more important
+     * @param storeCode
+     * @param filename
+     */
+    void removeFile(String storeCode, String filename) throws ServiceException;

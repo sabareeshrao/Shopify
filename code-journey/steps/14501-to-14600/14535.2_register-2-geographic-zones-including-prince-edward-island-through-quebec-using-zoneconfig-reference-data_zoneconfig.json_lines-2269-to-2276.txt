@@ -1,8 +1,0 @@
-		{
-			"zoneCode": "PE",
-			"zoneName": "Prince Edward Island",
-			"countryCode": "CA"
-		},
-		{
-			"zoneCode": "QC",
-			"zoneName": "Quebec",

@@ -1,0 +1,8 @@
+	<parent>
+		<groupId>com.shopizer</groupId>
+		<artifactId>shopizer</artifactId>
+		<version>3.2.5</version>
+	</parent>
+
+	<artifactId>sm-shop</artifactId>
+	<name>sm-shop</name>

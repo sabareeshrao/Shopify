@@ -1,0 +1,9 @@
+label.security.loggedinas=Vous êtes authentifié avec
+label.security.nologinacces.store=Impossible de s'authentifier dans cette section.
+
+#customer
+label.customer.registered=Client enregistré
+label.customer.new=Nouveau client
+label.customer.registered.signinemail=Si vous avez déjà un compte veuillez vous enregistrer avec votre addresse de courriel
+label.customer.signin.social=Encore plus simple, connectez-vous avec votre compte {0} !
+label.customer.signin.social.system=Connectez-vous avec {0}

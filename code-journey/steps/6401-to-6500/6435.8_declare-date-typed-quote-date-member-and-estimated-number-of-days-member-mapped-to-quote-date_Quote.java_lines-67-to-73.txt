@@ -1,0 +1,7 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="QUOTE_DATE")
+	private Date quoteDate;
+	
+	@Column(name = "SHIPPING_NUMBER_DAYS")
+	private Integer estimatedNumberOfDays;

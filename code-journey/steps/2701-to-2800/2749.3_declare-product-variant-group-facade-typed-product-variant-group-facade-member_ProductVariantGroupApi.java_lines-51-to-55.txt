@@ -1,0 +1,5 @@
+	@Autowired
+	private ProductVariantGroupFacade productVariantGroupFacade;
+
+	@Autowired
+	private UserFacade userFacade;

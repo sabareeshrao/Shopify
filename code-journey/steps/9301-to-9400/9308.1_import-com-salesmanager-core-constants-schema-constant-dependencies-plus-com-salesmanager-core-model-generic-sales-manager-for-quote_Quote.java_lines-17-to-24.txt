@@ -1,8 +1,0 @@
-import com.salesmanager.core.constants.SchemaConstant;
-import com.salesmanager.core.model.common.Delivery;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-
-
-/**
- * Shipping quote received from external shipping quote module or calculated internally
- * @author c.samson

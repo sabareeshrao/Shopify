@@ -1,8 +1,0 @@
-				xmldatabuffer.append("</Pounds>");
-				xmldatabuffer.append("<Ounces>");
-				xmldatabuffer.append(ounces);
-				xmldatabuffer.append("</Ounces>");
-				xmldatabuffer.append("<Container>");
-				xmldatabuffer.append(pack);
-				xmldatabuffer.append("</Container>");
-				xmldatabuffer.append("<Size>");

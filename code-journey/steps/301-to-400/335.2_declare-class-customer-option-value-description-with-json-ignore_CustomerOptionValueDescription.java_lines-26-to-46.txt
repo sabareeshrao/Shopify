@@ -1,0 +1,21 @@
+public class CustomerOptionValueDescription extends Description {
+	private static final long serialVersionUID = 1L;
+	
+	@JsonIgnore
+	@ManyToOne(targetEntity = CustomerOptionValue.class)
+	@JoinColumn(name = "CUSTOMER_OPT_VAL_ID")
+	private CustomerOptionValue customerOptionValue;
+	
+	
+	public CustomerOptionValueDescription() {
+	}
+
+	public CustomerOptionValue getCustomerOptionValue() {
+		return customerOptionValue;
+	}
+
+	public void setCustomerOptionValue(CustomerOptionValue customerOptionValue) {
+		this.customerOptionValue = customerOptionValue;
+	}
+
+}

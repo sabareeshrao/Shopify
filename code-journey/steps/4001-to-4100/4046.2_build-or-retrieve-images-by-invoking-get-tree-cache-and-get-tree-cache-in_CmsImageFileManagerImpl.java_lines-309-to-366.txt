@@ -1,0 +1,58 @@
+  @Override
+  public List<OutputContentFile> getImages(final String merchantStoreCode,
+      FileContentType imageContentType) throws ServiceException {
+    if (cacheManager.getTreeCache() == null) {
+      throw new ServiceException(
+          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+    }
+    List<OutputContentFile> images = new ArrayList<OutputContentFile>();
+    FileNameMap fileNameMap = URLConnection.getFileNameMap();
+
+    try {
+
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(merchantStoreCode);
+
+
+      Node<String, Object> merchantNode = this.getNode(nodePath.toString());
+
+      Set<Node<String, Object>> childs = merchantNode.getChildren();
+
+      // TODO image sizes
+      for (Node<String, Object> node : childs) {
+
+        for (String key : node.getKeys()) {
+
+
+          byte[] imageBytes = (byte[]) merchantNode.get(key);
+
+          OutputContentFile contentImage = new OutputContentFile();
+
+          InputStream input = new ByteArrayInputStream(imageBytes);
+          ByteArrayOutputStream output = new ByteArrayOutputStream();
+          IOUtils.copy(input, output);
+
+          String contentType = fileNameMap.getContentTypeFor(key);
+
+          contentImage.setFile(output);
+          contentImage.setMimeType(contentType);
+          contentImage.setFileName(key);
+
+          images.add(contentImage);
+
+
+        }
+
+      }
+
+
+
+    } catch (Exception e) {
+      throw new ServiceException(e);
+    } finally {
+
+    }
+
+    return images;
+  }

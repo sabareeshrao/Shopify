@@ -1,8 +1,0 @@
-
-    review.setReviewedCustomer(customerId);
-
-    saveOrUpdateCustomerReview(review, merchantStore, language);
-
-    return review;
-  }
-

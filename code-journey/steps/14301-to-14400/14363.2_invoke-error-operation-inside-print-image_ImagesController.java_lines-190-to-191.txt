@@ -1,2 +1,0 @@
-			LOGGER.error("Cannot retrieve image " + imageName, e);
-		}

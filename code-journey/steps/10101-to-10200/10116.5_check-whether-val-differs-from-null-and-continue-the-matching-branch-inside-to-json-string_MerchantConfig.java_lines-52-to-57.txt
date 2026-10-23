@@ -1,6 +1,0 @@
-			JSONObject obj = new JSONObject();
-			for(String key : useDefaultSearchConfig.keySet()) {
-				Boolean val = (Boolean)useDefaultSearchConfig.get(key);
-				if(val!=null) {
-					obj.put(key,val);
-				}

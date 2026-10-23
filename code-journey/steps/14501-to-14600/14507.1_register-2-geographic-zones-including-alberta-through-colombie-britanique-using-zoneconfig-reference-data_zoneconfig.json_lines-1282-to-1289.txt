@@ -1,8 +1,0 @@
-		"zoneCode": "AB",
-		"zoneName": "Alberta",
-		"countryCode": "CA"
-	},
-	{
-		"zoneCode": "BC",
-		"zoneName": "Colombie Britanique",
-		"countryCode": "CA"

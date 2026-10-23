@@ -1,0 +1,3 @@
+
+	@Override
+	public ShippingMetaData getShippingMetaData(MerchantStore store)

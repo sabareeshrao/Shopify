@@ -1,0 +1,60 @@
+			
+			if(shippingQuote!=null && CollectionUtils.isNotEmpty(shippingQuote.getShippingOptions())) {
+				//save SHIPPING OPTIONS
+				List<ShippingOption> finalShippingOptions = shippingQuote.getShippingOptions();
+				for(ShippingOption option : finalShippingOptions) {
+					
+					//transform to Quote
+					Quote q = new Quote();
+					q.setCartId(shoppingCartId);
+					q.setDelivery(delivery);
+					if(!StringUtils.isBlank(ipAddress)) {
+						q.setIpAddress(ipAddress);
+					}
+					if(!StringUtils.isBlank(option.getEstimatedNumberOfDays())) {
+						try {
+							q.setEstimatedNumberOfDays(Integer.valueOf(option.getEstimatedNumberOfDays()));
+						} catch(Exception e) {
+							LOGGER.error("Cannot cast to integer " + option.getEstimatedNumberOfDays());
+						}
+					}
+					
+					if(freeShipping) {
+						q.setFreeShipping(true);
+						q.setPrice(new BigDecimal(0));
+						q.setModule("FREE");
+						q.setOptionCode("FREE");
+						q.setOptionName("FREE");
+					} else {
+						q.setModule(option.getShippingModuleCode());
+						q.setOptionCode(option.getOptionCode());
+						if(!StringUtils.isBlank(option.getOptionDeliveryDate())) {
+							try {
+							//q.setOptionDeliveryDate(DateUtil.formatDate(option.getOptionDeliveryDate()));
+							} catch(Exception e) {
+								LOGGER.error("Cannot transform to date " + option.getOptionDeliveryDate());
+							}
+						}
+						q.setOptionName(option.getOptionName());
+						q.setOptionShippingDate(new Date());
+						q.setPrice(option.getOptionPrice());
+						
+					}
+					
+					if(handlingFees != null) {
+						q.setHandling(handlingFees);
+					}
+					
+					q.setQuoteDate(new Date());
+					shippingQuoteService.save(q);
+					option.setShippingQuoteOptionId(q.getId());
+					
+				}
+			}
+			
+			
+			
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+			throw new ServiceException(e);
+		}

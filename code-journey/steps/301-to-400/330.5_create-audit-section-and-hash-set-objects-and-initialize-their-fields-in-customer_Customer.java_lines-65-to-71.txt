@@ -1,0 +1,7 @@
+	
+	@JsonIgnore
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customer")
+	private Set<CustomerAttribute> attributes = new HashSet<CustomerAttribute>();

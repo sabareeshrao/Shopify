@@ -1,0 +1,6 @@
+    
+    @Inject
+    private UserDetailsService jwtAdminDetailsService;
+
+    @Inject
+    private JWTTokenUtil jwtTokenUtil;

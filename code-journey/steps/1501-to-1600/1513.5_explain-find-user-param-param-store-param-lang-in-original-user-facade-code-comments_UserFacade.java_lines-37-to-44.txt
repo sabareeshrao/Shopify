@@ -1,8 +1,0 @@
-  
-  /**
-   * Find user by id
-   * @param id
-   * @param store
-   * @param lang
-   * @return
-   */

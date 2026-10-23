@@ -1,0 +1,6 @@
+
+			<dependency>
+				<groupId>org.infinispan</groupId>
+				<artifactId>infinispan-cachestore-jdbc</artifactId>
+				<version>${infinispan.tree.version}</version>
+			</dependency>

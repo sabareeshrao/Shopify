@@ -1,0 +1,8 @@
+			messageLogString.append("merchant_id=").append(configuration.getIntegrationKeys().get("merchantid")).append("&");
+			messageLogString.append("trnType=").append(type).append("&");
+			messageLogString.append("orderNumber=").append(orderNumber).append("&");
+			messageLogString.append("trnCardOwner=").append(creditCardPayment.getCardOwner()).append("&");
+			messageLogString.append("trnCardNumber=").append(CreditCardUtils.maskCardNumber(creditCardPayment.getCreditCardNumber())).append("&");
+			messageLogString.append("trnExpMonth=").append(creditCardPayment.getExpirationMonth()).append("&");
+			messageLogString.append("trnExpYear=").append(creditCardPayment.getExpirationYear()).append("&");
+			messageLogString.append("trnCardCvd=").append(creditCardPayment.getCredidCardValidationNumber()).append("&");

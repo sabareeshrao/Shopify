@@ -1,3 +1,0 @@
-	private List<Long> productTypes;
-	private Long option;
-	

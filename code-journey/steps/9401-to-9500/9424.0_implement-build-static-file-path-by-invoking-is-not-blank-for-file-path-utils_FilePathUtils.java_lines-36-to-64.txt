@@ -1,0 +1,29 @@
+	private static final String DOWNLOADS = "/downloads/";
+	private static final String DOUBLE_SLASH = "://";
+	private static final String CONTEXT_PATH = "CONTEXT_PATH";
+	public static final String X_FORWARDED_HOST = "X-Forwarded-Host";
+	public static final String HTTP = "http://";
+	public static final String HTTPS = "https://";
+
+	@Inject
+	private CoreConfiguration coreConfiguration;
+
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+	@Resource(name = "shopizer-properties")
+	public Properties properties = new Properties();
+
+	/**
+	 * Builds a static content content file path that can be used by image
+	 * servlet utility for getting the physical image Example:
+	 * /files/<storeCode>/
+	 */
+	public String buildStaticFilePath(String storeCode, String fileName) {
+		String path = FILES_URI + SLASH + storeCode + SLASH;
+		if (StringUtils.isNotBlank(fileName)) {
+			return path + fileName;
+		}
+		return path;
+	}

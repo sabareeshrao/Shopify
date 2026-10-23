@@ -1,2 +1,0 @@
-		merchantService.create(store);
-		

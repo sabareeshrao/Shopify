@@ -1,0 +1,8 @@
+	    colorDescriptions.add(colorDescription);
+	    
+	    color.setDescriptions(colorDescriptions);
+	    
+	    productOptionService.create(color);
+	    
+	    //create an option value
+	    ProductOptionValue red = new ProductOptionValue();

@@ -1,0 +1,7 @@
+
+	<!-- Shipping -->
+	<!-- Moving to com.salesmanager.core.business.configuration.ModulesConfiguration -->
+	<beans:bean id="usps"
+		class="com.salesmanager.core.business.modules.integration.shipping.impl.USPSShippingQuote" />
+	<beans:bean id="ups"
+		class="com.salesmanager.core.business.modules.integration.shipping.impl.UPSShippingQuote" />

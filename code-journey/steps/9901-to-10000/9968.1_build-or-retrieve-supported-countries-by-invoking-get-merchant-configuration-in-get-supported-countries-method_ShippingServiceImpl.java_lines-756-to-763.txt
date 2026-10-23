@@ -1,8 +1,0 @@
-	@Override
-	public List<String> getSupportedCountries(MerchantStore store) throws ServiceException {
-		
-		List<String> supportedCountries = new ArrayList<String>();
-		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(SUPPORTED_COUNTRIES, store);
-		
-		if(configuration!=null) {
-			

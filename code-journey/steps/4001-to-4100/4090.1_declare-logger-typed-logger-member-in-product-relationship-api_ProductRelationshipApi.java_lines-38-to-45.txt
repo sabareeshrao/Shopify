@@ -1,8 +1,0 @@
-  private static final Logger LOGGER = LoggerFactory.getLogger(ProductRelationshipApi.class);
-
-
-  @RequestMapping(value = "/product/{id}/related", method = RequestMethod.GET)
-  @ResponseStatus(HttpStatus.OK)
-  @ApiOperation(
-      httpMethod = "GET",
-      value =

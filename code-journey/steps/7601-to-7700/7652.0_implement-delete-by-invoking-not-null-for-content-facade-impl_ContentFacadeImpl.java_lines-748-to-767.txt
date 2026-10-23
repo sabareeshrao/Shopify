@@ -1,0 +1,20 @@
+	@Override
+	public void delete(MerchantStore store, Long id) {
+		Validate.notNull(store, "MerchantStore not null");
+		Validate.notNull(id, "Content id must not be null");
+		// select content first
+		Content content = contentService.getById(id);
+		if (content != null) {
+			if (content.getMerchantStore().getId().intValue() != store.getId().intValue()) {
+				throw new ResourceNotFoundException(
+						"No content found with id [" + id + "] for store [" + store.getCode() + "]");
+			}
+		}
+
+		try {
+			contentService.delete(content);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while deleting content " + e.getMessage(), e);
+		}
+
+	}

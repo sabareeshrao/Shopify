@@ -1,5 +1,0 @@
-				BigDecimal subTotal = taxClassAmountMap.get(taxClass.getId());
-				if(subTotal==null) {
-					subTotal = new BigDecimal(0);
-					subTotal.setScale(2, RoundingMode.HALF_UP);
-				}

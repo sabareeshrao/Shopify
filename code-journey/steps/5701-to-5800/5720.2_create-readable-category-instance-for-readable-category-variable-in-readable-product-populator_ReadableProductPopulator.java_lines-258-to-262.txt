@@ -1,5 +1,0 @@
-					ReadableCategory readableCategory = new ReadableCategory();
-					categoryPopulator.populate(category, readableCategory, store, language);
-					categoryList.add(readableCategory);
-
-				}

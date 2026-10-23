@@ -1,0 +1,6 @@
+
+	@Override
+	public Customer getByNick(String nick, String code) {
+		return customerRepository.findByNick(nick, code);
+	}
+

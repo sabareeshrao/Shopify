@@ -1,0 +1,9 @@
+	
+	@Inject
+	private CountryService countryService;
+	
+	@Inject
+	private ProductService productService;
+	
+	@Inject
+	private ZoneService zoneService;

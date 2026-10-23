@@ -1,0 +1,9 @@
+	
+	@Inject
+	protected ProductTypeService productTypeService;
+	
+	@Inject
+	protected LanguageService languageService;
+	
+	@Inject
+	protected CountryService countryService;

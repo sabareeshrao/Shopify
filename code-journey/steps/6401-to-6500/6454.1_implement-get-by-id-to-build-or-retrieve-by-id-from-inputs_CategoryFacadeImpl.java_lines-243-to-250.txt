@@ -1,8 +1,0 @@
-	@Override
-	public ReadableCategory getById(MerchantStore store, Long id, Language language) {
-
-			Category categoryModel = null;
-			if (language != null) {
-				categoryModel = getCategoryById(id, language);
-			} else {// all langs
-				categoryModel = getById(store, id);

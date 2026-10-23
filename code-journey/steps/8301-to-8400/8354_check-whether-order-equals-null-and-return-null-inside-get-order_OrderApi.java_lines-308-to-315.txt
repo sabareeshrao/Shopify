@@ -1,8 +1,0 @@
-
-		ReadableOrder order = orderFacade.getReadableOrder(id, merchantStore, language);
-
-		if (order == null) {
-			LOGGER.error("Order is null for id " + id);
-			response.sendError(404, "Order is null for id " + id);
-			return null;
-		}

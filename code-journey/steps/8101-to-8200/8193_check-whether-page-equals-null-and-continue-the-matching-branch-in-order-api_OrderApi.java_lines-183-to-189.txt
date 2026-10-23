@@ -1,7 +1,0 @@
-
-		if (page == null) {
-			page = new Integer(0);
-		}
-		if (count == null) {
-			count = new Integer(100);
-		}

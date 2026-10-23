@@ -1,0 +1,62 @@
+
+			if (!order.isShipToBillingAdress()) {
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getFirstName())) {
+					FieldError error = new FieldError("customer.delivery.firstName", "customer.delivery.firstName",
+							messages.getMessage("NotEmpty.customer.shipping.firstName", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.firstName",
+							messages.getMessage("NotEmpty.customer.shipping.firstName", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getLastName())) {
+					FieldError error = new FieldError("customer.delivery.lastName", "customer.delivery.lastName",
+							messages.getMessage("NotEmpty.customer.shipping.lastName", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.lastName",
+							messages.getMessage("NotEmpty.customer.shipping.lastName", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getAddress())) {
+					FieldError error = new FieldError("customer.delivery.address", "customer.delivery.address",
+							messages.getMessage("NotEmpty.customer.shipping.address", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.address",
+							messages.getMessage("NotEmpty.customer.shipping.address", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getCity())) {
+					FieldError error = new FieldError("customer.delivery.city", "customer.delivery.city",
+							messages.getMessage("NotEmpty.customer.shipping.city", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.city",
+							messages.getMessage("NotEmpty.customer.shipping.city", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getCountry())) {
+					FieldError error = new FieldError("customer.delivery.country", "customer.delivery.country",
+							messages.getMessage("NotEmpty.customer.shipping.country", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.country",
+							messages.getMessage("NotEmpty.customer.shipping.country", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getZone())
+						&& StringUtils.isBlank(order.getCustomer().getDelivery().getStateProvince())) {
+					FieldError error = new FieldError("customer.delivery.stateProvince",
+							"customer.delivery.stateProvince",
+							messages.getMessage("NotEmpty.customer.shipping.stateProvince", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.stateProvince",
+							messages.getMessage("NotEmpty.customer.shipping.stateProvince", locale));
+				}
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getPostalCode())) {
+					FieldError error = new FieldError("customer.delivery.postalCode", "customer.delivery.postalCode",
+							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.postalCode",
+							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));
+				}
+
+			}

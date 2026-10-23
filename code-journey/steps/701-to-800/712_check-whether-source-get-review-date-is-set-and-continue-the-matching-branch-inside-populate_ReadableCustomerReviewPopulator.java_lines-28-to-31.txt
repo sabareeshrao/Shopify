@@ -1,4 +1,0 @@
-			
-			if(source.getReviewDate() != null) {
-				target.setDate(DateUtil.formatDate(source.getReviewDate()));
-			}

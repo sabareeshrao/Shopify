@@ -1,0 +1,5 @@
+			
+			if(!CollectionUtils.isEmpty(priceRequest.getOptions())) {
+				List<Long> attrinutesIds = priceRequest.getOptions().stream().map(p -> p.getId()).collect(Collectors.toList());
+				
+				attributes = productAttributeService.getByAttributeIds(store, model, attrinutesIds);      

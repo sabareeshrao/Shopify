@@ -1,7 +1,0 @@
-                    com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem attributeItem =
-                        new com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem( item,
-                                                                                                         productAttribute );
-                    if ( attribute.getAttributeId() > 0 )
-                    {
-                        attributeItem.setId( attribute.getId() );
-                    }

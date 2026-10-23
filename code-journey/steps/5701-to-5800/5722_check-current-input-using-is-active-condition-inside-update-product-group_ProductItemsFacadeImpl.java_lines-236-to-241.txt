@@ -1,6 +1,0 @@
-			
-			if(group.isActive()) {
-				productRelationshipService.activateGroup(store, code);
-			} else {
-				productRelationshipService.deactivateGroup(store, code);
-			}

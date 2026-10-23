@@ -1,8 +1,0 @@
-	public void setDiscountStartDate(String discountStartDate) {
-		this.discountStartDate = discountStartDate;
-	}
-	public String getDiscountEndDate() {
-		return discountEndDate;
-	}
-	public void setDiscountEndDate(String discountEndDate) {
-		this.discountEndDate = discountEndDate;

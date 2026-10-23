@@ -1,0 +1,7 @@
+
+/**
+ * Access to all methods for managing users
+ * 
+ * @author carlsamson
+ *
+ */

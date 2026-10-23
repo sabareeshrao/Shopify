@@ -1,0 +1,9 @@
+
+		order.setPaymentType(PaymentType.PAYPAL);
+		order.setPaymentModuleCode("paypal");
+		order.setStatus( OrderStatus.DELIVERED);
+		order.setTotal(new BigDecimal(23.99));
+		
+		
+		//OrderProductDownload - Digital download
+		OrderProductDownload orderProductDownload = new OrderProductDownload();

@@ -1,0 +1,2 @@
+	@Override
+	public List<Content> listByType(List<ContentType> contentType, MerchantStore store, Language language)

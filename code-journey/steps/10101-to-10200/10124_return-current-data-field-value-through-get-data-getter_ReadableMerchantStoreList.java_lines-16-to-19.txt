@@ -1,4 +1,0 @@
-  public List<ReadableMerchantStore> getData() {
-    return data;
-  }
-

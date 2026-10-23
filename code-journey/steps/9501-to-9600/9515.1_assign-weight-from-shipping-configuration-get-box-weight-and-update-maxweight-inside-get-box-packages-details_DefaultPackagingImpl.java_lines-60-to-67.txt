@@ -1,8 +1,0 @@
-		
-		width = (double) shippingConfiguration.getBoxWidth();
-		length = (double) shippingConfiguration.getBoxLength();
-		height = (double) shippingConfiguration.getBoxHeight();
-		weight = shippingConfiguration.getBoxWeight();
-		maxweight = shippingConfiguration.getMaxWeight();
-		
-

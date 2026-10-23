@@ -1,8 +1,0 @@
-					.addCallMethod(
-							"RatingServiceSelectionResponse/Response/ResponseStatusCode",
-							"setStatusCode", 0);
-			digester
-					.addCallMethod(
-							"RatingServiceSelectionResponse/Response/ResponseStatusDescription",
-							"setStatusMessage", 0);
-			digester

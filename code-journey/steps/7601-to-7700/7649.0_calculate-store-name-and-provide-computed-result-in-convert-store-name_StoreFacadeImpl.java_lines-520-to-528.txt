@@ -1,0 +1,9 @@
+	
+	private ReadableMerchantStore convertStoreName(MerchantStore store) {
+		ReadableMerchantStore convert = new ReadableMerchantStore();
+		convert.setId(store.getId());
+		convert.setCode(store.getCode());
+		convert.setName(store.getStorename());
+		return convert;
+	}
+

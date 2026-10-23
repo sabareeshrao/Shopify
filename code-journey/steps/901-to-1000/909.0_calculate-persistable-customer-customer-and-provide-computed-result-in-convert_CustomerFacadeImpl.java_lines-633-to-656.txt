@@ -1,0 +1,24 @@
+  private Customer convertPersistableCustomerToCustomer(PersistableCustomer customer, MerchantStore store) {
+
+    Customer cust = new Customer();
+
+    try{
+      customerPopulator.populate(customer, cust, store, store.getDefaultLanguage());
+    } catch (ConversionException e) {
+      throw new ConversionRuntimeException(e);
+    }
+
+
+    List<Group> groups = getListOfGroups(GroupType.CUSTOMER);
+    cust.setGroups(groups);
+
+    String password = customer.getPassword();
+    if (StringUtils.isBlank(password)) {
+      password = new String(UUID.generateRandomBytes());
+      customer.setPassword(password);
+    }
+
+
+    return cust;
+
+  }

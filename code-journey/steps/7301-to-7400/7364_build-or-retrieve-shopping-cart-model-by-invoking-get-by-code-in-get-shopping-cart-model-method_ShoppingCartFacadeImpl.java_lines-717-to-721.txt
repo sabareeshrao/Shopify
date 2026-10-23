@@ -1,5 +1,0 @@
-	@Override
-	public ShoppingCart getShoppingCartModel(String shoppingCartCode, MerchantStore store) throws Exception {
-		return shoppingCartService.getByCode(shoppingCartCode, store);
-	}
-

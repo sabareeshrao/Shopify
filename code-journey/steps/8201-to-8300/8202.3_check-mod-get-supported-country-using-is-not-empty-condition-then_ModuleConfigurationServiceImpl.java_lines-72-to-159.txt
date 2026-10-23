@@ -1,0 +1,88 @@
+			if (modules == null) {
+				modules = moduleConfigurationRepository.findByModule(module);
+				// set json objects
+				for (IntegrationModule mod : modules) {
+
+					String regions = mod.getRegions();
+					if (regions != null) {
+						Object objRegions = JSONValue.parse(regions);
+						JSONArray arrayRegions = (JSONArray) objRegions;
+						for (Object arrayRegion : arrayRegions) {
+							mod.getRegionsSet().add((String) arrayRegion);
+						}
+					}
+
+					String details = mod.getConfigDetails();
+					if (details != null) {
+
+						Map<String, String> objDetails = (Map<String, String>) JSONValue.parse(details);
+						mod.setDetails(objDetails);
+
+					}
+
+					String configs = mod.getConfiguration();
+					if (configs != null) {
+
+						Object objConfigs = JSONValue.parse(configs);
+						JSONArray arrayConfigs = (JSONArray) objConfigs;
+
+						Map<String, ModuleConfig> moduleConfigs = new HashMap<String, ModuleConfig>();
+
+						for (Object arrayConfig : arrayConfigs) {
+
+							Map values = (Map) arrayConfig;
+							String env = (String) values.get("env");
+							ModuleConfig config = new ModuleConfig();
+							config.setScheme((String) values.get("scheme"));
+							config.setHost((String) values.get("host"));
+							config.setPort((String) values.get("port"));
+							config.setUri((String) values.get("uri"));
+							config.setEnv((String) values.get("env"));
+							if (values.get("config1") != null) {
+								config.setConfig1((String) values.get("config1"));
+							}
+							if (values.get("config2") != null) {
+								config.setConfig1((String) values.get("config2"));
+							}
+
+							moduleConfigs.put(env, config);
+
+						}
+
+						mod.setModuleConfigs(moduleConfigs);
+
+					}
+
+				}
+
+				if (this.payments != null) {
+					for (ModuleStarter mod : this.payments) {
+						IntegrationModule m = new IntegrationModule();
+						m.setCode(mod.getUniqueCode());
+						m.setModule(Constants.PAYMENT_MODULES);
+						
+						
+						if(CollectionUtils.isNotEmpty(mod.getSupportedCountry())) {
+							m.setRegions(mod.getSupportedCountry().toString());
+							m.setRegionsSet(new HashSet<String>(mod.getSupportedCountry()));
+						}
+						
+						if(!StringUtils.isBlank(mod.getLogo())) {
+							m.setBinaryImage(mod.getLogo());//base 64
+						}
+						
+						
+						if(StringUtils.isNotBlank(mod.getConfigurable())) {
+							m.setConfigurable(mod.getConfigurable());
+						}
+
+						modules.add(m);
+					}
+				}
+
+				cache.putInCache(modules, "INTEGRATION_M" + module);
+			}
+
+		} catch (Exception e) {
+			LOGGER.error("getIntegrationModules()", e);
+		}

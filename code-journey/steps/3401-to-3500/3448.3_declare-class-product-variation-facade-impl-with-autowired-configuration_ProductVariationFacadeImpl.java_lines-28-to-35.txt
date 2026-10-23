@@ -1,8 +1,0 @@
-public class ProductVariationFacadeImpl implements ProductVariationFacade {
-	
-	@Autowired
-	private PersistableProductVariationMapper persistableProductVariationMapper;
-	
-	@Autowired
-	private ReadableProductVariationMapper readableProductVariationMapper;
-	

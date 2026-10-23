@@ -1,0 +1,8 @@
+		
+		
+		box.setVolumeLeft(maxVolume);
+		box.setWeightLeft(maxweight);
+
+		boxesList.add(box);//assign first box
+
+		//int boxCount = 1;

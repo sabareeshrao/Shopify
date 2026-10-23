@@ -1,0 +1,49 @@
+	@Override
+	public ShoppingCart mergeShoppingCarts(final ShoppingCart userShoppingModel, final ShoppingCart sessionCart,
+			final MerchantStore store) throws Exception {
+		if (sessionCart.getCustomerId() != null
+				&& sessionCart.getCustomerId().equals(userShoppingModel.getCustomerId())) {
+			LOGGER.info("Session Shopping cart belongs to same logged in user");
+			if (CollectionUtils.isNotEmpty(userShoppingModel.getLineItems())
+					&& CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+				return userShoppingModel;
+			}
+		}
+
+		LOGGER.info("Starting merging shopping carts");
+		if (CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {
+			Set<ShoppingCartItem> shoppingCartItemsSet = getShoppingCartItems(sessionCart, store, userShoppingModel);
+			boolean duplicateFound = false;
+			if (CollectionUtils.isNotEmpty(shoppingCartItemsSet)) {
+				for (ShoppingCartItem sessionShoppingCartItem : shoppingCartItemsSet) {
+					if (CollectionUtils.isNotEmpty(userShoppingModel.getLineItems())) {
+						for (ShoppingCartItem cartItem : userShoppingModel.getLineItems()) {
+							if (cartItem.getProduct().getId().longValue() == sessionShoppingCartItem.getProduct()
+									.getId().longValue()) {
+								if (CollectionUtils.isNotEmpty(cartItem.getAttributes())) {
+									if (!duplicateFound) {
+										LOGGER.info("Dupliate item found..updating exisitng product quantity");
+										cartItem.setQuantity(
+												cartItem.getQuantity() + sessionShoppingCartItem.getQuantity());
+										duplicateFound = true;
+										break;
+									}
+								}
+							}
+						}
+					}
+					if (!duplicateFound) {
+						LOGGER.info("New item found..adding item to Shopping cart");
+						userShoppingModel.getLineItems().add(sessionShoppingCartItem);
+					}
+				}
+
+			}
+
+		}
+		LOGGER.info("Shopping Cart merged successfully.....");
+		saveOrUpdate(userShoppingModel);
+		removeShoppingCart(sessionCart);
+
+		return userShoppingModel;
+	}

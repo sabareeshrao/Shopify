@@ -1,8 +1,0 @@
-			}
-			
-			FinalPrice price;
-		
-			price = pricingService.calculateProductPrice(model, attributes);
-	    	ReadableProductPrice readablePrice = new ReadableProductPrice();
-	    	ReadableFinalPricePopulator populator = new ReadableFinalPricePopulator();
-	    	populator.setPricingService(pricingService);

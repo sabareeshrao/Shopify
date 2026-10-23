@@ -1,0 +1,5 @@
+        
+        productAttributeService.create(color_blue);
+        
+        product.getAttributes().add(color_blue);
+        

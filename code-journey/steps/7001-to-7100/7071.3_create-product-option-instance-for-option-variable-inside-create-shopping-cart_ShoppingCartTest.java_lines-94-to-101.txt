@@ -1,8 +1,0 @@
-	    addidas.getDescriptions().add(addidasDesc);
-
-	    manufacturerService.create(addidas);
-	    
-	    /**
-	     * Create an option
-	     */
-	    ProductOption option = new ProductOption();

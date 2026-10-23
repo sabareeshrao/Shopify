@@ -1,8 +1,0 @@
-
-			pat.append("(\\" + DECIMALPOINT + "\\d{1," + DECIMALCOUNT + "})");
-
-			Pattern pattern = Pattern.compile(pat.toString());
-			Matcher matcher = pattern.matcher(amount);
-
-			if (matcher.matches()) {
-

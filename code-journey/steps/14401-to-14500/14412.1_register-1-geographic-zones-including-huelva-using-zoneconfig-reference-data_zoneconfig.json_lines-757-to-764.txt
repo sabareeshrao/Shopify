@@ -1,8 +1,0 @@
-	},
-	{
-		"zoneCode": "Huelva",
-		"zoneName": "Huelva",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Huesca",

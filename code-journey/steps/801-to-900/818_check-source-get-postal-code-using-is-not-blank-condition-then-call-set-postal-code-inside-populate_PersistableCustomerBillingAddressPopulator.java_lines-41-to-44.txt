@@ -1,4 +1,0 @@
-           
-           if(StringUtils.isNotBlank( source.getPostalCode())){
-               target.getBilling().setPostalCode( source.getPostalCode());
-           }
