@@ -1,0 +1,25 @@
+name: Export current Shopizer index for reconstruction audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/shopizer-index-export.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package exact current index
+        run: |
+          mkdir -p audit-export
+          cp code-journey/MASTER_INDEX.csv audit-export/MASTER_INDEX.csv
+          cp code-journey/SOURCE_MANIFEST.csv audit-export/SOURCE_MANIFEST.csv
+          cp code-journey/AUDIT.json audit-export/AUDIT.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shopizer-current-index
+          path: audit-export/
+          retention-days: 3
