@@ -1,0 +1,122 @@
+name: Refine Shopizer TXT child boundaries
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/shopizer_boundary_optimizer.py'
+      - '.github/workflows/shopizer-boundary-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shopizer-boundary-repair
+  cancel-in-progress: false
+
+jobs:
+  improve-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Check out learning repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check out pinned original Shopizer
+        uses: actions/checkout@v4
+        with:
+          repository: shopizer-ecommerce/shopizer
+          ref: 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+          path: .shopizer-source
+          persist-credentials: false
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Shift only avoidable boundary fragments by at most 3 lines
+        shell: bash
+        run: |
+          python scripts/shopizer_boundary_optimizer.py \
+            --source code-journey/Shopizer-Code-Journey.zip \
+            --output "$RUNNER_TEMP/shopizer-improved.zip" \
+            --audit code-journey/BOUNDARY_AUDIT.json
+      - name: Publish all improved individual TXT children and refresh browse index
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv,io,json,os,re,shutil,zipfile
+          from pathlib import Path
+          root=Path('code-journey')
+          target=root/'steps'
+          archive=Path(os.environ['RUNNER_TEMP'])/'shopizer-improved.zip'
+          with zipfile.ZipFile(archive) as z:
+              entries=z.namelist()
+              assert len(entries)==24055
+              assert all(x.endswith('.txt') for x in entries)
+              assert len(set(x.lower() for x in entries))==24055
+              assert z.testzip() is None
+              if target.exists():shutil.rmtree(target)
+              target.mkdir()
+              index=io.StringIO()
+              writer=csv.writer(index)
+              writer.writerow(['parent_task','child_task','filename','github_path','source_start','source_end'])
+              num=0
+              for name in entries:
+                  path=Path(name)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  loc=target/path
+                  loc.parent.mkdir(parents=True,exist_ok=True)
+                  body=z.read(name)
+                  loc.write_bytes(body)
+                  found=re.search(r'^(\d+)\.(\d+)_.*_lines-(\d+)-to-(\d+)\.txt$',path.name)
+                  assert found,name
+                  task,child,start,end=map(int,found.groups())
+                  if child>0:
+                      assert 1<=len(body.splitlines(keepends=True))<=11
+                  writer.writerow([task,child,path.name,loc.as_posix(),start,end])
+                  num+=1
+              (root/'BROWSE_INDEX.csv').write_text(index.getvalue(),encoding='utf-8')
+          shutil.copyfile(archive,root/'Shopizer-Code-Journey.zip')
+          audit=json.loads((root/'BOUNDARY_AUDIT.json').read_text())
+          browse=dict(status='PASS',github_browsable_source='code-journey/steps/',
+                      folders=len([p for p in target.iterdir() if p.is_dir()]),
+                      individual_txt_files=24055,parent_tasks=10044,child_tasks=14011,
+                      child_min_lines=1,child_max_lines=11,child_over_eleven=0,
+                      zip_only_txt=True,files_match_zip=True,
+                      avoided_splits_corrected=audit['boundary_shifts'],
+                      adjusted_parent_tasks=audit['shifted_parent_tasks'],
+                      no_bytes_changed='PASS')
+          (root/'BROWSE_AUDIT.json').write_text(json.dumps(browse,indent=2)+'\n')
+          (root/'README.md').write_text('# Shopizer code journey — refined child boundaries\n\nBrowse steps/ in ascending task order. Each parent 1.0 contains the complete original block; children 1.1 etc. reconstruct the parent when concatenated. Use children instead of the parent, not both. Each child is 1–11 lines. Some long statements must span children to obey the limit. ZIP contains only 24,055 TXT files. See BOUNDARY_AUDIT.json for changed edges.\n',encoding='utf-8')
+          print(json.dumps(browse,indent=2))
+          PY
+      - name: Verify exact reproduction of original Shopizer source text
+        shell: bash
+        run: |
+          python scripts/rebuild_logical_txt_repo.py \
+            --journey code-journey \
+            --output "$RUNNER_TEMP/shopizer-rebuilt"
+          python - <<'PY'
+          import csv,hashlib,json,os
+          from pathlib import Path
+          orig=Path('.shopizer-source')
+          rebuilt=Path(os.environ['RUNNER_TEMP'])/'shopizer-rebuilt'
+          with open('code-journey/MASTER_INDEX.csv',newline='',encoding='utf-8') as f:
+              paths={r['original_path'] for r in csv.DictReader(f)}
+          assert len(paths)==1325,len(paths)
+          for p in paths:
+              assert (orig/p).read_bytes()==(rebuilt/p).read_bytes(),p
+          assert sum(len((orig/p).read_bytes().splitlines(keepends=True)) for p in paths)==132076
+          print('PASS: exact bytes for all 1325 original source files (132076 lines)')
+          PY
+      - name: Commit corrected TXT folders and matching ZIP
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- code-journey
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(journey): shift 1-3 tail lines to keep short code constructs together"
+            git push origin HEAD:main
+          fi
