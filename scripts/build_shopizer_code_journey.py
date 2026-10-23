@@ -377,9 +377,17 @@ def build(checkout: Path, output: Path, zipout: Path, expected_pin: str, full_bi
     zipout.parent.mkdir(parents=True,exist_ok=True)
     if zipout.exists(): zipout.unlink()
     with zipfile.ZipFile(zipout,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as z:
+        # Only package the immutable parent/child source collection and its
+        # reconstruction metadata. Existing steps/ is a separately published
+        # GitHub navigation layer; including it here would duplicate all 29k
+        # TXT files and cause the ZIP to grow on every rebuild.
+        packaged_metadata = {'MASTER_INDEX.csv','SOURCE_MANIFEST.csv','AUDIT.json','README.md','rebuild.py'}
         for file in sorted(output.rglob('*')):
-            if file.is_file() and file.resolve()!=zipout:
-                z.write(file,arcname='code-journey/'+file.relative_to(output).as_posix())
+            if not file.is_file() or file.resolve()==zipout:
+                continue
+            rel=file.relative_to(output)
+            if (rel.parts[0]=='blocks' and len(rel.parts)==2) or (len(rel.parts)==1 and rel.name in packaged_metadata):
+                z.write(file,arcname='code-journey/'+rel.as_posix())
         if full_binary_in_zip:
             for name,content in sorted(binaries.items()):
                 z.writestr('code-journey/original-binaries/'+name,content,compress_type=zipfile.ZIP_STORED)
