@@ -1,0 +1,140 @@
+name: Enforce Shopizer maximum 11 lines per TXT child
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/enforce_shopizer_child_11.py'
+      - '.github/workflows/shopizer-child-11.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shopizer-child-11-cap
+  cancel-in-progress: false
+
+jobs:
+  audit-and-republish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    steps:
+      - name: Check out Shopify learning repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check out exact reference Shopizer commit
+        uses: actions/checkout@v4
+        with:
+          repository: shopizer-ecommerce/shopizer
+          ref: 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+          path: .shopizer-source
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regenerate all TXT children with hard 11-line cap
+        run: |
+          python scripts/enforce_shopizer_child_11.py \
+            --source code-journey/Shopizer-Code-Journey.zip \
+            --output code-journey/Shopizer-Code-Journey-Max-11.zip \
+            --audit code-journey/CHILD_LINE_AUDIT.json \
+            --manifest code-journey/SOURCE_MANIFEST.csv
+      - name: Replace only individual task files and ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,json,os,shutil
+          root=Path('code-journey')
+          zipped=root/'Shopizer-Code-Journey-Max-11.zip'
+          steps=root/'steps'
+          assert steps.is_dir()
+          shutil.rmtree(steps)
+          steps.mkdir()
+          with zipfile.ZipFile(zipped) as z:
+              assert z.testzip() is None
+              entries=z.namelist()
+              assert all(x.endswith('.txt') for x in entries)
+              assert len(set(x.lower() for x in entries))==len(entries)
+              for name in entries:
+                  rel=Path(name)
+                  assert not rel.is_absolute() and '..' not in rel.parts
+                  tgt=steps/rel
+                  tgt.parent.mkdir(parents=True,exist_ok=True)
+                  tgt.write_bytes(z.read(name))
+          os.replace(zipped,root/'Shopizer-Code-Journey.zip')
+          audit=json.loads((root/'CHILD_LINE_AUDIT.json').read_text())
+          assert audit['child_max_lines']<=11
+          assert audit['child_over_eleven']==0
+          assert audit['only_txt_files']
+          overview=json.loads((root/'AUDIT.json').read_text())
+          overview.update(audit)
+          (root/'AUDIT.json').write_text(json.dumps(overview,indent=2)+'\n')
+          (root/'BROWSE_AUDIT.json').write_text(json.dumps({
+              'status':'PASS',
+              'github_browsable_source':'code-journey/steps/',
+              'folders':len([x for x in steps.iterdir() if x.is_dir()]),
+              'individual_txt_files':len(entries),
+              'parent_tasks':audit['parents'],
+              'child_tasks':audit['children'],
+              'child_min_lines':audit['child_min_lines'],
+              'child_max_lines':audit['child_max_lines'],
+              'child_over_eleven':0,
+              'zip_only_txt':True,
+              'files_match_zip':True,
+              'parent_child_content_exact':'PASS'
+          },indent=2)+'\n')
+          (root/'README.md').write_text(
+              '# Shopizer Code Journey — maximum 11 lines per child\n\n'
+              'Read the **steps/** folders in numerical task order. '
+              'Every parent ends in .0 and contains the original full source block. '
+              'Children .1, .2, .3 and so on contain its original contiguous line slices. '
+              'Children normally contain 1–8 lines and **never exceed 11 lines**. '
+              'For long methods, follow multiple children: method code may cross child boundaries. '
+              'Never paste both parent and children. The ZIP contains ONLY TXT files. '
+              'MASTER_INDEX.csv records original paths and exact positions. '
+              'The numbering approximates a plausible learning sequence, not historical developer commits.\n'
+          )
+          print(json.dumps(audit,indent=2))
+          PY
+      - name: Verify every original Shopizer text file byte-for-byte
+        shell: bash
+        run: |
+          python scripts/rebuild_logical_txt_repo.py \
+            --journey code-journey \
+            --output "$RUNNER_TEMP/shopizer-rebuilt"
+          python - <<'PY'
+          import csv,os,json,hashlib,zipfile
+          from pathlib import Path
+          root=Path('code-journey')
+          reference=Path('.shopizer-source')
+          rebuilt=Path(os.environ['RUNNER_TEMP'])/'shopizer-rebuilt'
+          with (root/'MASTER_INDEX.csv').open(encoding='utf-8',newline='') as f:
+              paths={row['original_path'] for row in csv.DictReader(f)}
+          assert len(paths)==1325,len(paths)
+          for p in paths:
+              assert (reference/p).read_bytes()==(rebuilt/p).read_bytes(),p
+          with zipfile.ZipFile(root/'Shopizer-Code-Journey.zip') as z:
+              assert z.testzip() is None
+              names=z.namelist()
+              assert len(names)==24055,(len(names),24055)
+              assert all(n.endswith('.txt') for n in names)
+              for name in names:
+                  assert z.read(name)==(root/'steps'/name).read_bytes(),name
+          audit=json.loads((root/'CHILD_LINE_AUDIT.json').read_text())
+          assert audit['child_max_lines']==11
+          assert audit['child_over_eleven']==0
+          print('PASS: all 1325 Shopizer text files match original; 24055 TXT archive members and GitHub files identical.')
+          PY
+      - name: Publish corrected children to GitHub folders
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- code-journey
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(journey): enforce 11-line maximum for every child TXT across Shopizer"
+            git push origin HEAD:main
+          fi
