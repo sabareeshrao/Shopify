@@ -6,6 +6,7 @@ on:
       - 'scripts/build_shopizer_code_journey.py'
       - 'scripts/rebuild_shopizer_code_journey.py'
       - 'scripts/refine_shopizer_code_journey_names.py'
+      - 'scripts/publish_shopizer_code_journey_files.py'
       - '.github/workflows/shopizer-code-journey.yml'
   workflow_dispatch:
 
@@ -19,7 +20,7 @@ concurrency:
 jobs:
   generate-and-verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 80
     steps:
       - name: Check out the learning repository
         uses: actions/checkout@v4
@@ -63,6 +64,15 @@ jobs:
             --output code-journey/Shopizer-Code-Journey-refined.zip \
             --folder code-journey
           cat code-journey/AUDIT.json
+
+      - name: Publish 29,283 TXT files in numeric task-range folders
+        shell: bash
+        run: |
+          python scripts/publish_shopizer_code_journey_files.py \
+            --zip code-journey/Shopizer-Code-Journey.zip \
+            --output code-journey \
+            --group-size 100
+          cat code-journey/BROWSE_AUDIT.json
 
       - name: Verify that the archive recreates all original files
         shell: bash
