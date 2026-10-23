@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse,collections,csv,hashlib,io,json,os,re,tempfile,zipfile
 from pathlib import Path
 
-BAD={'the-next','related-code-path','associated-application-data','for-the-caller','related-runtime-application-settings','corresponding-workflow-or-application-settings','and-its-associated-members','remaining-java-logic','process-the-related-code-path','continue-processing','handle-statement','define-the-next-settings','preserve-original-code-comments'}
+BAD={'declare-or-process','the-next','related-code-path','associated-application-data','for-the-caller','related-runtime-application-settings','corresponding-workflow-or-application-settings','and-its-associated-members','remaining-java-logic','process-the-related-code-path','continue-processing','handle-statement','define-the-next-settings','preserve-original-code-comments'}
 KEYWORDS={'true','false','null','this','super','new','return','throw','throws','final','public','private','protected','static','class','interface','enum','if','else','while','for','var','int','long','short','void','string','list','set','map','boolean','object','override','try','catch','extends','implements','import','package','default','abstract','synchronized','instanceof','assert','char','float','double','byte','finally'}
 
 def dash(s):
@@ -66,6 +66,21 @@ def java_action(code:str,full:str,begin:int,path:str):
     if clazz:
         annotations=re.findall(r'(?m)^\s*@([\w.]+)',code)
         return f'declare-{clazz.group(1).strip("@")}--{snip(clazz.group(2))}-with-{snip(annotations[0])}-configuration' if annotations else f'declare-{clazz.group(1).strip("@")}--{snip(clazz.group(2))}-and-establish-its-type-definition'
+    # Interfaces and abstract classes declare method contracts ending in ';'.
+    # There is no implementation body in these lines, so say 'declare contract',
+    # not that the operation has already been implemented.
+    signatures=re.findall(r'(?m)^\s*(?:(?:public|protected|private|abstract|static|default)\s+)*(?:[A-Za-z_][\w<>?,.\[\]]*)\s+([a-zA-Z_$][\w$]*)\s*\([^;{}]*?\)\s*(?:throws\s+[\w,.\s]+)?;',code)
+    signatures=[x for x in signatures if x not in KEYWORDS]
+    if signatures:
+        operations=[]
+        for meth in signatures[:3]:
+            if meth.startswith('get'): operations.append('retrieve-'+snip(meth[3:]))
+            elif meth.startswith('set'): operations.append('accept-'+snip(meth[3:])+'-updates')
+            elif meth.startswith('list'): operations.append('list-'+snip(meth[4:]))
+            elif meth.startswith('find'): operations.append('find-'+snip(meth[4:]))
+            elif meth.startswith('is'): operations.append('check-'+snip(meth[2:]))
+            else: operations.append(snip(meth))
+        return 'declare-'+('-and-'.join(operations))+'-interface-method-contract'+('-for-'+base_slug)
     # Find method/constructor signatures with an opening brace, allowing annotations.
     declaration=re.search(r'(?m)^\s*(?:(?:public|protected|private|static|final|synchronized|default|abstract|native)\s+)*(?:<[^>]+>\s+)?(?:[\w<>?,.\[\]]+\s+)?([A-Za-z_$][\w$]*)\s*\(([^;{}]*?)\)\s*(?:throws\s+[\w,.\s]+)?\s*\{',code)
     if declaration and declaration.group(1) in KEYWORDS: declaration=None
@@ -139,6 +154,10 @@ def java_action(code:str,full:str,begin:int,path:str):
             a,b=fields[0];return f'assign-{snip(a)}-from-{snip(b)}'+(f'-and-update-{snip(fields[1][0])}' if len(fields)>1 else '')+cx
     setters=re.findall(r'\.\s*(set[A-Z][\w]*)\s*\(',code)
     if setters:return f'populate-{snip(setters[0][3:])}-field'+(f'-and-{snip(setters[1][3:])}-field' if len(setters)>1 else '')+f'-on-target-object{cx}'
+    standalone_call=re.search(r'(?m)^\s*([a-zA-Z_]\w*)\s*\(([^;\n]*)\)\s*;',code)
+    if standalone_call:
+        method=standalone_call.group(1);args=[x.strip() for x in standalone_call.group(2).split(',') if x.strip()]
+        return f'call-{snip(method)}-operation'+(f'-with-{snip(args[0])}-argument' if args else '')+cx
     getters=re.findall(r'\.\s*((?:get|find|load|fetch|read|list)[A-Z][\w]*)\s*\(',code)
     if getters:return f'retrieve-{snip(getters[0][3:])}-data'+(f'-then-{snip(getters[1])}' if len(getters)>1 else '')+cx
     call=re.findall(r'\.\s*([A-Za-z_]\w*)\s*\(',code)
@@ -147,7 +166,7 @@ def java_action(code:str,full:str,begin:int,path:str):
     if ret:return f'return-{snip(ret.group(1),7)}-expression{cx}'
     throws=re.search(r'\bthrow\s+new\s+([A-Za-z_]\w*)',code)
     if throws:return f'raise-{snip(throws.group(1))}-when-processing-cannot-continue{cx}'
-    fields=re.findall(r'\b(?:private|protected|public)\s+(?:static\s+)?(?:final\s+)?([\w<>?,.\[\]]+)\s+([a-zA-Z_]\w*)\s*[;=]',code)
+    fields=re.findall(r'\b(?:private|protected|public)\s+(?:(?:static|final|volatile|transient)\s+)*([\w<>?,.\[\]]+)\s+([a-zA-Z_]\w*)\s*[;=]',code)
     if fields:
         return f'declare-{snip(fields[0][0])}-typed-{snip(fields[0][1])}-member'+(f'-and-{snip(fields[1][1])}-member' if len(fields)>1 else '')+cx
     annot=re.findall(r'(?m)^\s*@([\w.]+)',code)
@@ -158,7 +177,7 @@ def java_action(code:str,full:str,begin:int,path:str):
         toks=[x for x in re.findall(r'[A-Za-z_][\w]{2,}',s) if x.lower() not in KEYWORDS]
         if toks:candidates.extend(toks[:3])
         if len(candidates)>3:break
-    if candidates:return f'declare-or-process-{snip(candidates[0])}-statement'+(f'-with-{snip(candidates[1])}' if len(candidates)>1 else '')+cx
+    if candidates:return f'write-{snip(candidates[0])}-code-expression'+(f'-using-{snip(candidates[1])}' if len(candidates)>1 else '')+cx
     return f'close-{base_slug}-{snip(context) if context else "type"}-block-and-its-nested-scope'
 
 def xml_action(code,path):
@@ -262,7 +281,33 @@ def other_action(code,path,full,start):
 def detail(code:bytes,full:bytes,path:str,start:int,end:int,parent_context:str=''):
     try: s=code.decode('utf-8');f=full.decode('utf-8')
     except UnicodeDecodeError:raise ValueError(f'Unexpected non-utf8 source: {path}')
-    text=other_action(s,path,f,start)
+    # Inside a multi-line Java comment, every fragment is documentation, not
+    # an executable 'statement'. Distinguish license, warranty, and API docs.
+    in_comment=False
+    if path.endswith(('.java','.js','.ts')):
+        line_prefix='\n'.join(f.splitlines()[:start-1])
+        comment_open=line_prefix.rfind('/*')
+        comment_close=line_prefix.rfind('*/')
+        in_comment=comment_open>=0 and comment_open>comment_close
+        # The source can contain an unmatched opener inside a Java string or a
+        # mixed section. Executable semicolon-terminated statements win.
+        if any(line.strip().endswith(';') and not line.strip().startswith(('//','*','/*')) for line in s.splitlines()):
+            in_comment=False
+    if in_comment:
+        low=s.lower()
+        base=snip(Path(path).stem)
+        if 'warranty' in low or 'as is' in low:
+            text=f'document-license-disclaimer-of-software-warranties-and-liability-for-{base}'
+        elif 'apache' in low or 'http://www.apache.org' in low or 'license' in low:
+            text=f'document-apache-license-terms-and-official-license-reference-for-{base}'
+        elif '@param' in low or '@return' in low or '@throws' in low:
+            tags=[x for x in ('param','return','throws') if '@'+x in low]
+            text=f'document-{snip("-and-".join(tags))}-contract-for-{base}-method'
+        else:
+            terms=[w for w in significant(s) if len(w)>3 and w not in {'under','therefore','there','these','their','which','with','from','more','this','that'}]
+            text=f'explain-{snip("-".join(terms[:6]) or base,7)}-in-{base}-code-documentation'
+    else:
+        text=other_action(s,path,f,start)
     text=dash(text)
     if parent_context:
         # If the 8-line child is only punctuation or has no independent explanatory
