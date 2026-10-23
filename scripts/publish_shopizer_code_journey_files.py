@@ -98,6 +98,21 @@ def main():
         'source_byte_exact_reconstruction':audit['source_text_byte_for_byte_reconstruction'],
         'source_commit':audit['source_commit']
     }
+    # The archive is the only required flat blocks/ store. GitHub exposes the
+    # organized steps/ copies instead of 29,283 extra unbrowsable flat files.
+    # This runs ONLY after every nested TXT is checked against ZIP bytes.
+    flat_blocks=args.output/'blocks'
+    if flat_blocks.is_dir():
+        shutil.rmtree(flat_blocks)
+    result['redundant_flat_blocks_removed']=not flat_blocks.exists()
+    with (args.output/'README.md').open('a',encoding='utf8') as readme:
+        readme.write('\n## Browse individual TXT files on GitHub\n\n'
+                     'Open [`steps/`](steps/) for the numbered project journey '
+                     'split into 100-parent-task folders, or use '
+                     '[`BROWSE_INDEX.csv`](BROWSE_INDEX.csv) to locate any task. '
+                     'The individual original source lines are preserved exactly, '
+                     'and the ZIP still contains the complete original flat source blocks.\n\n'
+                     'See `BROWSE_AUDIT.json` for folder and file-count verification.\n')
     (args.output/'BROWSE_AUDIT.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
     print(json.dumps(result,indent=2))
 
