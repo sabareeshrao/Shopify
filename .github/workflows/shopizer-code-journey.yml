@@ -83,7 +83,7 @@ jobs:
             --journey "$RUNNER_TEMP/shopizer-extracted/code-journey" \
             --output "$RUNNER_TEMP/shopizer-rebuilt"
           git -C .shopizer-source diff --exit-code --quiet HEAD
-          test "$(find code-journey/blocks -type f -name '*.txt' | wc -l)" -gt 1000
+          test "$(find code-journey/steps -type f -name '*.txt' | wc -l)" -eq 29283
 
       - name: Also store ZIP as a downloadable workflow artifact
         uses: actions/upload-artifact@v4
