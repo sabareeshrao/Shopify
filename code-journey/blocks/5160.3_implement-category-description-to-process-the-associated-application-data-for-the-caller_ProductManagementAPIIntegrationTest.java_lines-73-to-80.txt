@@ -1,0 +1,8 @@
+		final CategoryDescription description = new CategoryDescription();
+		description.setLanguage("en");
+		description.setName("test-cat");
+		description.setFriendlyUrl("test-cat");
+		description.setTitle("test-cat");
+
+		final List<CategoryDescription> descriptions = new ArrayList<>();
+		descriptions.add(description);

@@ -1,0 +1,18 @@
+	private Transaction parseResponse(TransactionType transactionType,
+			PaymentType paymentType, Map<String,String> nvp,
+			BigDecimal amount) throws Exception {
+		
+		
+		Transaction transaction = new Transaction();
+		transaction.setAmount(amount);
+		//transaction.setOrder(order);
+		transaction.setTransactionDate(new Date());
+		transaction.setTransactionType(transactionType);
+		transaction.setPaymentType(PaymentType.CREDITCARD);
+		transaction.getTransactionDetails().put("TRANSACTIONID", (String)nvp.get("TRNID"));
+		transaction.getTransactionDetails().put("TRNAPPROVED", (String)nvp.get("TRNAPPROVED"));
+		transaction.getTransactionDetails().put("TRNORDERNUMBER", (String)nvp.get("TRNORDERNUMBER"));
+		transaction.getTransactionDetails().put("MESSAGETEXT", (String)nvp.get("MESSAGETEXT"));
+		if(nvp.get("INTERNALORDERID")!=null) {
+			transaction.getTransactionDetails().put("INTERNALORDERID", (String)nvp.get("INTERNALORDERID"));
+		}

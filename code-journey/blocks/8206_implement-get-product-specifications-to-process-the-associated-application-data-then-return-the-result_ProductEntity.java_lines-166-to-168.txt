@@ -1,0 +1,3 @@
+	public ProductSpecification getProductSpecifications() {
+		return productSpecifications;
+	}

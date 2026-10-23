@@ -1,0 +1,25 @@
+	
+	ContentFolder getContentFolder(String folder, MerchantStore store) throws Exception;
+	
+	/**
+	 * File pth
+	 * @param store
+	 * @param file
+	 * @return
+	 */
+	String absolutePath(MerchantStore store, String file);
+	
+	/**
+	 * Deletes a file from CMS
+	 * @param store
+	 * @param fileName
+	 */
+	void delete(MerchantStore store, String fileName, String fileType);
+	
+	/**
+	 * Delete content page
+	 * @param store
+	 * @param id
+	 */
+	void delete(MerchantStore store, Long id);
+

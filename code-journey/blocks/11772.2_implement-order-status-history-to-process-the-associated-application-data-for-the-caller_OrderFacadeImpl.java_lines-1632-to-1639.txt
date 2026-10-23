@@ -1,0 +1,8 @@
+		order.setStatus(newStatus);
+		OrderStatusHistory history = new OrderStatusHistory();
+
+		history.setComments( messages.getMessage("email.order.status.changed", new String[] {oldStatus.name(),
+				newStatus.name()}, LocaleUtils.getLocale(store)));
+		history.setCustomerNotified(0);
+		history.setStatus(newStatus);
+		history.setDateAdded(new Date() );

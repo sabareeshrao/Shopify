@@ -1,0 +1,8 @@
+import modules.commons.search.request.Aggregation;
+import modules.commons.search.request.SearchItem;
+import modules.commons.search.request.SearchRequest;
+import modules.commons.search.request.SearchResponse;
+
+@Service("searchFacade")
+public class SearchFacadeImpl implements SearchFacade {
+

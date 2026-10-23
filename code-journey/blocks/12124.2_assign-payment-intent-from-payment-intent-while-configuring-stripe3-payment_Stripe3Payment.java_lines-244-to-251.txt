@@ -1,0 +1,8 @@
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					chargeId
+			);
+
+			PaymentIntentCaptureParams params =
+					PaymentIntentCaptureParams.builder()
+							.setAmountToCapture(Long.parseLong(strAmount))
+							.setStatementDescriptor(

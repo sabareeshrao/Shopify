@@ -1,0 +1,3 @@
+	public void setStorecity(String storecity) {
+		this.storecity = storecity;
+	}

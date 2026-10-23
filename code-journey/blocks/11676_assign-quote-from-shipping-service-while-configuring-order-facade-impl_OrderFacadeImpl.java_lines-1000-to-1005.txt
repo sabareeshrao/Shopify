@@ -1,0 +1,6 @@
+
+		ShippingQuote quote = shippingService.getShippingQuote(cart.getId(), store, delivery, shippingProducts,
+				language);
+
+		return quote;
+	}

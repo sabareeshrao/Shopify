@@ -1,0 +1,3 @@
+    public ShoppingCartService getShoppingCartService() {
+		return shoppingCartService;
+	}

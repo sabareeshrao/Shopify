@@ -1,0 +1,8 @@
+ * @author c.samson
+ *
+ */
+public class Catalog extends SalesManagerEntity<Long, Catalog> implements Auditable {
+	
+	/**
+	 * 
+	 */

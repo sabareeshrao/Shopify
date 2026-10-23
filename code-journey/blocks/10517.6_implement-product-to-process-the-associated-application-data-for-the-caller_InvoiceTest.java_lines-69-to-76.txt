@@ -1,0 +1,8 @@
+	    
+	    red.setDescriptions(redDescriptions);
+	    
+	    productOptionValueService.create(red);
+
+	    //create a product
+	    Product product = new Product();
+	    product.setProductHeight(new BigDecimal(4));

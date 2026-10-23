@@ -1,0 +1,8 @@
+	
+	/**
+	 * Product attributes
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 * @param request
+	 * @param response

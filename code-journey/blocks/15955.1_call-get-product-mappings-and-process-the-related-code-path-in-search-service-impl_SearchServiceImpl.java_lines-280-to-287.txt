@@ -1,0 +1,8 @@
+
+
+		/**
+		 * The mapping
+		 */
+		/*
+		 * config.getProductMappings().put("variants", "nested");
+		 * config.getProductMappings().put("attributes", "nested");

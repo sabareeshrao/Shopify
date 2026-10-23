@@ -1,0 +1,4 @@
+  private String nodePath(String store) {
+    return new StringBuilder().append(ROOT_NAME).append(Constants.SLASH).append(store)
+        .append(Constants.SLASH).toString();
+  }

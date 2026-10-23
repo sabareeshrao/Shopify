@@ -1,0 +1,2 @@
+public class CustomWeightBasedShippingQuote implements ShippingQuoteModule {
+	

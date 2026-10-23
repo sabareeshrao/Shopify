@@ -1,0 +1,8 @@
+				// ## Creating service wrapper object
+				// Creating service wrapper object to make API call and loading
+				// configuration file for your credentials and endpoint
+				PayPalAPIInterfaceServiceService service = new PayPalAPIInterfaceServiceService(configurationMap);
+				
+				DoCaptureResponseType doCaptureResponse = null;
+
+					// ## Making API call

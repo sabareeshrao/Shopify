@@ -1,0 +1,4 @@
+        this.authorities = authorities;
+        this.enabled = enabled;
+        this.lastPasswordResetDate = lastPasswordResetDate;
+    }

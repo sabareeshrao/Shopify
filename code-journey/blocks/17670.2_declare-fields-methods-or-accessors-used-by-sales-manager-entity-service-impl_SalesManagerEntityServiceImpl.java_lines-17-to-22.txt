@@ -1,0 +1,6 @@
+	
+	/**
+	 * Classe de l'entité, déterminé à partir des paramètres generics.
+	 */
+	private Class<E> objectClass;
+

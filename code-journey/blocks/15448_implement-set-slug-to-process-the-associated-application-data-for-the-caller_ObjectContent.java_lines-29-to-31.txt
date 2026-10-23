@@ -1,0 +1,3 @@
+  public void setSlug(String slug) {
+    this.slug = slug;
+  }

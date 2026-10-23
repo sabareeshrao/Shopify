@@ -1,0 +1,3 @@
+	public void setCmsManager(CMSManager cmsManager) {
+		this.cmsManager = cmsManager;
+	}

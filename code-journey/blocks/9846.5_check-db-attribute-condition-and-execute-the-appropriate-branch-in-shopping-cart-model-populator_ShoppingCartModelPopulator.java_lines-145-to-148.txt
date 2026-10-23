@@ -1,0 +1,4 @@
+                                        if ( dbAttribute.getId().longValue() == attribute.getId() )
+                                        {
+                                            newAttributes.add( dbAttribute );
+                                        }

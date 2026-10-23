@@ -1,0 +1,2 @@
+public class MerchantLog extends SalesManagerEntity<Long, MerchantLog> implements Serializable {
+

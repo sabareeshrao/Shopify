@@ -1,0 +1,3 @@
+	public int getDownloadCount() {
+		return downloadCount;
+	}

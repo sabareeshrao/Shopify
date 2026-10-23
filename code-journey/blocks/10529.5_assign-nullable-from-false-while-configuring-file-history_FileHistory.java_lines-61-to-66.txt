@@ -1,0 +1,6 @@
+	@Column ( name="ACCOUNTED_DATE", length=0 )
+	private Date accountedDate;
+	
+	@Column ( name="DOWNLOAD_COUNT", nullable=false )
+	private Integer downloadCount;
+	

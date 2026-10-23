@@ -1,0 +1,8 @@
+public interface SecurityFacade {
+  
+  /**
+   * Get permissions by group
+   * @param groups
+   * @return
+   */
+  List<ReadablePermission> getPermissions(List<String> groups);

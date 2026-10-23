@@ -1,0 +1,8 @@
+	@Column(name="SKU", nullable=true) 
+	private String sku;
+
+	@JsonIgnore
+	@Transient
+	private boolean productVirtual;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "shoppingCartItem")

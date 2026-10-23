@@ -1,0 +1,6 @@
+			
+			if(source.getId() != null && source.getId().longValue()==0) {
+				destination.setId(null);
+			} else {
+				destination.setId(source.getId());
+			}

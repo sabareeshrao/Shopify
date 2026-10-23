@@ -1,0 +1,8 @@
+	public boolean isDefaultPackaging() {
+		return defaultPackaging;
+	}
+	public void setDefaultPackaging(boolean defaultPackaging) {
+		this.defaultPackaging = defaultPackaging;
+	}
+	public ShippingPackageType getShipPackageType() {
+		return shipPackageType;

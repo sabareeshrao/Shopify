@@ -1,0 +1,29 @@
+    private static final Logger LOGGER = LoggerFactory.getLogger(OrderServiceImpl.class);
+
+    @Inject
+    private InvoiceModule invoiceModule;
+
+    @Inject
+    private ShippingService shippingService;
+
+    @Inject
+    private PaymentService paymentService;
+
+    @Inject
+    private ProductService productService;
+
+    @Inject
+    private TaxService taxService;
+
+    @Inject
+    private CustomerService customerService;
+
+    @Inject
+    private ShoppingCartService shoppingCartService;
+
+    @Inject
+    private TransactionService transactionService;
+
+    @Inject
+    private OrderTotalService orderTotalService;
+

@@ -1,0 +1,11 @@
+					}
+
+				
+					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.LEAST.name())) {
+
+						if (option.getOptionPrice()
+								.longValue() < selectedOption
+								.getOptionPrice()
+								.longValue()) {
+							selectedOption = option;
+						}

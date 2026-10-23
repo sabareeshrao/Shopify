@@ -1,0 +1,8 @@
+
+	    //add product to shoes category
+	    summerShoes.getCategories().add(shoes);
+	    
+	    // -- end non variable informations
+	    
+	    // --- add attributes to the product (size)
+	    createOptions(summerShoes);

@@ -1,0 +1,8 @@
+	private void addChildToParent(ReadableCategory readableCategory, List<ReadableCategory> childrenCats) {
+		Map<Long, ReadableCategory> categoryMap = childrenCats.stream()
+				.collect(Collectors.toMap(ReadableCategory::getId, Function.identity()));
+		categoryMap.put(readableCategory.getId(), readableCategory);
+
+		// traverse map and add child to parent
+		for (ReadableCategory readable : childrenCats) {
+

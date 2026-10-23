@@ -1,0 +1,3 @@
+  public UnauthorizedException() {
+    super("Not authorized");
+  }

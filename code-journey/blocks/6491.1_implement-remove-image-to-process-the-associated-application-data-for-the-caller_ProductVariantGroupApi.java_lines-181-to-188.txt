@@ -1,0 +1,8 @@
+
+	// remove image
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = {
+			"/private/product/productVariantGroup/{id}/image/{imageId}" }, method = RequestMethod.DELETE)
+	public void removeImage(@PathVariable Long id, @PathVariable Long imageId, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+

@@ -1,0 +1,8 @@
+	 *     proxy_set_header X-Forwarded-Proto $scheme;
+	 *     proxy_set_header X-Forwarded-Host $scheme://$host;
+	 *     proxy_set_header X-Forwarded-Server $host;
+	 * </pre>
+	 * 
+	 * @param merchantStore
+	 * @param request
+	 * @return

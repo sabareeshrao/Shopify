@@ -1,0 +1,3 @@
+	public void setInvoiceTemplate(String invoiceTemplate) {
+		this.invoiceTemplate = invoiceTemplate;
+	}

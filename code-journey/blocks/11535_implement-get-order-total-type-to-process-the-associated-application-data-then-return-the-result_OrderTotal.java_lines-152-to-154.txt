@@ -1,0 +1,3 @@
+	public OrderTotalType getOrderTotalType() {
+		return orderTotalType;
+	}

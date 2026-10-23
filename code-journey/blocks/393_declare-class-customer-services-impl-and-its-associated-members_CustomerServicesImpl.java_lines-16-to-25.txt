@@ -1,0 +1,10 @@
+
+/**
+ * 
+ * @author casams1
+ *         http://stackoverflow.com/questions/5105776/spring-security-with
+ *         -custom-user-details
+ */
+@Service("customerDetailsService")
+public class CustomerServicesImpl extends AbstractCustomerServices{
+

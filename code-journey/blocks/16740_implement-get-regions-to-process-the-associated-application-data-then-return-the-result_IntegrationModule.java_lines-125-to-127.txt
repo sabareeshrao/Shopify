@@ -1,0 +1,3 @@
+	public String getRegions() {
+		return regions;
+	}

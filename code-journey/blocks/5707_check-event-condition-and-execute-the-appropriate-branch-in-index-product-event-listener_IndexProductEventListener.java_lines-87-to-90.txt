@@ -1,0 +1,4 @@
+	
+			if (event instanceof DeleteProductAttributeEvent) {
+				deleteProductAttribute((DeleteProductAttributeEvent) event);
+			}

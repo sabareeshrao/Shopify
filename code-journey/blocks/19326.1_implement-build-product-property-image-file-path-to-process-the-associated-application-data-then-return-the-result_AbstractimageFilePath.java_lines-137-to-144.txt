@@ -1,0 +1,8 @@
+	
+	/**
+	 * Builds product property image url path
+	 * @param store
+	 * @param imageName
+	 * @return
+	 */
+	public String buildProductPropertyImageFilePath(MerchantStore store, String imageName) {

@@ -1,0 +1,10 @@
+				
+			}
+			
+			if(tax!=null) {
+				BasicAmountType taxAmnt = new BasicAmountType();
+				taxAmnt.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(store.getCurrency().getCode()));
+				taxAmnt.setValue(pricingService.getStringAmount(tax, store));
+				//System.out.println(pricingService.getStringAmount(tax, store));
+				paymentDetails.setTaxTotal(taxAmnt);
+			}

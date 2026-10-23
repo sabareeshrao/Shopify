@@ -1,0 +1,8 @@
+	 * Takes care of String amount validation
+	 * @param amount
+	 * @return
+	 * @throws ServiceException
+	 */
+	BigDecimal getAmount(String amount) throws ServiceException;
+	
+	/**

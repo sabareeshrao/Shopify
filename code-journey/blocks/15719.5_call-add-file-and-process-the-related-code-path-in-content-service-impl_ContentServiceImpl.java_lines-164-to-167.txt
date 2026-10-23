@@ -1,0 +1,4 @@
+			addFile(merchantStoreCode, contentFile);
+		} else {
+			addImage(merchantStoreCode, contentFile);
+		}

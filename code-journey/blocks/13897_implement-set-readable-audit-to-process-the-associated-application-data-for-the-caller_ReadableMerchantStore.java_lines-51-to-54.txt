@@ -1,0 +1,4 @@
+	public void setReadableAudit(ReadableAudit audit) {
+		this.audit = audit;
+
+	}

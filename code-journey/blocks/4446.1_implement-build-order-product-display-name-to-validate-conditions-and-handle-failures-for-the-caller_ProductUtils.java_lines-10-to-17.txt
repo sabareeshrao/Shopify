@@ -1,0 +1,8 @@
+	public static String buildOrderProductDisplayName(OrderProduct orderProduct) {
+		
+		String pName = orderProduct.getProductName();
+		Set<OrderProductAttribute> oAttributes = orderProduct.getOrderAttributes();
+		StringBuilder attributeName = null;
+		for(OrderProductAttribute oProductAttribute : oAttributes) {
+			if(attributeName == null) {
+				attributeName = new StringBuilder();

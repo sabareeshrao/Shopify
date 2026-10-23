@@ -1,0 +1,8 @@
+
+        FileNameMap fileNameMap = URLConnection.getFileNameMap();
+
+        String contentType = fileNameMap.getContentTypeFor(contentImage.getFileName());
+        String extension = null;
+        if (contentType != null) {
+          extension = contentType.substring(contentType.indexOf('/') + 1, contentType.length());
+        }

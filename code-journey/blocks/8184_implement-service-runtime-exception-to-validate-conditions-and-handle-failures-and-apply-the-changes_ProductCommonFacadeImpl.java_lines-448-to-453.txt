@@ -1,0 +1,6 @@
+
+		try {
+			productService.saveProduct(modified);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot update product ", e);
+		}

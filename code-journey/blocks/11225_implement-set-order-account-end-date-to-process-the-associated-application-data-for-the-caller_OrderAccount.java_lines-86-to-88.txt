@@ -1,0 +1,3 @@
+	public void setOrderAccountEndDate(Date orderAccountEndDate) {
+		this.orderAccountEndDate = CloneUtils.clone(orderAccountEndDate);
+	}

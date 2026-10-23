@@ -1,0 +1,13 @@
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="OPTION_VALUE_ID", nullable=false)
+	private ProductOptionValue productOptionValue;
+	
+	
+	/**
+	 * This transient object property
+	 * is a utility used only to submit from a free text
+	 */
+	@Transient
+	private String attributePrice = "0";
+	

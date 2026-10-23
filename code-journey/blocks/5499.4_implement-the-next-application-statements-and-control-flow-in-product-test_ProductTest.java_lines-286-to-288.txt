@@ -1,0 +1,3 @@
+			for(Category c : categories) {
+				ids.add(c.getId());
+			}

@@ -1,0 +1,3 @@
+	public void setOptinType(OptinType optinType) {
+		this.optinType = optinType;
+	}

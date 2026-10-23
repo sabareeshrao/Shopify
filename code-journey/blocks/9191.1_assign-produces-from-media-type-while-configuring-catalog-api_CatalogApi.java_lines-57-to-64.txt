@@ -1,0 +1,8 @@
+
+
+  @ResponseStatus(HttpStatus.OK)
+  @GetMapping(value = {"/private/catalog/unique"}, produces = MediaType.APPLICATION_JSON_VALUE)
+  @ApiImplicitParams({
+    @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+    @ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en")
+  })

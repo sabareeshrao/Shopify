@@ -1,0 +1,3 @@
+	public void setDescriptions(Set<CustomerReviewDescription> descriptions) {
+		this.descriptions = descriptions;
+	}

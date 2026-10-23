@@ -1,0 +1,4 @@
+
+		if (!CollectionUtils.isEmpty(criteria.getProductIds())) {
+			countQ.setParameter("pId", criteria.getProductIds());
+		}

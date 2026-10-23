@@ -1,0 +1,8 @@
+	public final static int DEFAULT_DOWNLOAD_MAX_DAYS = 31;
+	
+	@Id
+	@Column (name="ORDER_PRODUCT_DOWNLOAD_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "ORDER_PRODUCT_DL_ID_NEXT_VALUE")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+

@@ -1,0 +1,8 @@
+
+			// Path path = Paths.get(nodePath.toString());
+
+			Files.copy(inputStaticContentData.getFile(), path, StandardCopyOption.REPLACE_EXISTING);
+
+			// String nodePath = this.getNodePath(merchantStoreCode,
+			// inputStaticContentData.getFileContentType());
+

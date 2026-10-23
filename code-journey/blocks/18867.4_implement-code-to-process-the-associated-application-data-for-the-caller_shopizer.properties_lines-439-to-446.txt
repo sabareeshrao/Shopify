@@ -1,0 +1,8 @@
+label.product.productoptionvalue.create.title=Create product option value
+label.product.productoptionvalue=Option value image
+
+label.product.customGroup.title=Product group
+label.product.customgroup.add=Add custom product group
+label.product.customgroup.code=Custom product group code (must be unique)
+
+label.product.rate=Rate product

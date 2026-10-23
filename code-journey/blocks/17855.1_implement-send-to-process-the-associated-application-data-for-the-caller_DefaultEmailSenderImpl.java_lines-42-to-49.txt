@@ -1,0 +1,8 @@
+  @Override
+  public void send(Email email) throws Exception {
+
+    final String eml = email.getFrom();
+    final String from = email.getFromEmail();
+    final String to = email.getTo();
+    final String subject = email.getSubject();
+    final String tmpl = email.getTemplateName();

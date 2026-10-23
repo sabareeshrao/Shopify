@@ -1,0 +1,3 @@
+	public void setOrderAccountProductStartDate(Date orderAccountProductStartDate) {
+		this.orderAccountProductStartDate = CloneUtils.clone(orderAccountProductStartDate);
+	}

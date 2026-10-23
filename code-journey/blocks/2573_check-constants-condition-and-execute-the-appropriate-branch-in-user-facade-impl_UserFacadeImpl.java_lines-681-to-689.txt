@@ -1,0 +1,9 @@
+
+				//Set<String> roles = authentication.getAuthorities().stream().map(r -> r.getAuthority())
+				//		.collect(Collectors.toSet());
+
+				// is superadmin
+				for (ReadableGroup group : readableUser.getGroups()) {
+					if (Constants.GROUP_SUPERADMIN.equals(group.getName())) {
+						return true;
+					}

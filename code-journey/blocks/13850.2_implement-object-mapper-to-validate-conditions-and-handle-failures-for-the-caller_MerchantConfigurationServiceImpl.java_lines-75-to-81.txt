@@ -1,0 +1,7 @@
+			
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+				config = mapper.readValue(value, MerchantConfig.class);
+			} catch(Exception e) {
+				throw new ServiceException("Cannot parse json string " + value);
+			}

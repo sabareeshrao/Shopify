@@ -1,0 +1,3 @@
+    					destination.setManufacturer(manufacturer);
+               }
+			}

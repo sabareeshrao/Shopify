@@ -1,0 +1,8 @@
+	 *
+	 * @param storeCode
+	 * @param name
+	 * @param request
+	 * @return
+	 */
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping({ "/private/users/{id}" })

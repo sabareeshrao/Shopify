@@ -1,0 +1,17 @@
+	    
+	    //option value 10
+	    ten = new ProductOptionValue();
+	    ten.setMerchantStore(store);
+	    ten.setCode("ten");
+	    
+	    ProductOptionValueDescription tenDescription = new ProductOptionValueDescription();
+	    tenDescription.setLanguage(en);
+	    tenDescription.setName("10");
+	    tenDescription.setDescription("Size 10");
+	    tenDescription.setProductOptionValue(ten);
+	    
+	    ten.getDescriptions().add(tenDescription);
+	    
+	    //create an option value
+	    productOptionValueService.saveOrUpdate(ten);
+	    

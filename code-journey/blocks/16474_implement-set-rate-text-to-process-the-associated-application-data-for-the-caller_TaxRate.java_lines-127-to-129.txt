@@ -1,0 +1,3 @@
+	public void setRateText(String rateText) {
+		this.rateText = rateText;
+	}

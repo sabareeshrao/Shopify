@@ -1,0 +1,3 @@
+Email.order.customerEmailAddress=Customer email address is invalid
+NotEmpty.order.customerEmailAddress=Customer email address should not be empty
+

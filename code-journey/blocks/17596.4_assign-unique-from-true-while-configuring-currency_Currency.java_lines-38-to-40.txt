@@ -1,0 +1,3 @@
+	@Column(name = "CURRENCY_NAME", unique = true)
+	private String name;
+	

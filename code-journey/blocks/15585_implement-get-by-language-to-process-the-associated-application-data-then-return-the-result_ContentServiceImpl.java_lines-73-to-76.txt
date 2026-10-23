@@ -1,0 +1,4 @@
+	@Override
+	public Content getByLanguage(Long id, Language language) throws ServiceException {
+		return contentRepository.findByIdAndLanguage(id, language.getId());
+	}

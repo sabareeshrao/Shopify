@@ -1,0 +1,8 @@
+public interface ProductCommonFacade {
+	
+
+	  /**
+	   * Create / Update product
+	   * @param store
+	   * @param product
+	   * @param language

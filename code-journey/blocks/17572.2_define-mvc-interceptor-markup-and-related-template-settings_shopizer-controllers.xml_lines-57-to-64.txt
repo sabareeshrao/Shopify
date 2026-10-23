@@ -1,0 +1,8 @@
+		
+		<!-- store web front filter -->
+		 <mvc:interceptor>
+  			<mvc:mapping path="/shop/**"/>
+  			<bean class="com.salesmanager.shop.filter.StoreFilter"/>
+ 		</mvc:interceptor>
+ 		
+ 		<!-- public services cors filter -->

@@ -1,0 +1,8 @@
+		defaultManufacturer.setCode("DEFAULT");
+		defaultManufacturer.setMerchantStore(store);
+		
+		ManufacturerDescription manufacturerDescription = new ManufacturerDescription();
+		manufacturerDescription.setLanguage(en);
+		manufacturerDescription.setName("DEFAULT");
+		manufacturerDescription.setManufacturer(defaultManufacturer);
+		manufacturerDescription.setDescription("DEFAULT");

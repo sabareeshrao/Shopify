@@ -1,0 +1,2 @@
+public interface CustomIntegrationConfiguration extends JSONAware{
+	

@@ -1,0 +1,8 @@
+		delivery.setCountry(country);
+		
+		Zone zone = new Zone();
+		zone.setCode("QC");
+		zone.setName("Quebec");
+		
+		//zone.setCode("NY");
+		//zone.setName("New York");

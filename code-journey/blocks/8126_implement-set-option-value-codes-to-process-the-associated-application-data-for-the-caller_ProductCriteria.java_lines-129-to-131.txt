@@ -1,0 +1,3 @@
+	public void setOptionValueCodes(List<String> optionValueCodes) {
+		this.optionValueCodes = optionValueCodes;
+	}

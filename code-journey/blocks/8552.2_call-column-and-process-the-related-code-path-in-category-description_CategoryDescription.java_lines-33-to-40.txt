@@ -1,0 +1,8 @@
+	private Category category;
+
+	@Column(name="SEF_URL", length=120)
+	private String seUrl;
+	
+	@Column(name = "CATEGORY_HIGHLIGHT")
+	private String categoryHighlight;
+

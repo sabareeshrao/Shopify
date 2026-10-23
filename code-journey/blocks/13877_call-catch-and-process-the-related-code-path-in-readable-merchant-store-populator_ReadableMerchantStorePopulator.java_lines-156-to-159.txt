@@ -1,0 +1,4 @@
+					
+				} catch (ServiceException e) {
+					logger.error("Cannot get Language [" + lang.getId() + "]");
+				}

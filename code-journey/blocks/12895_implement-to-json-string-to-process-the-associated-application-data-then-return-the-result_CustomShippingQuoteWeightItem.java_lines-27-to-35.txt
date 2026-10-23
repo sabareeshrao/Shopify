@@ -1,0 +1,9 @@
+
+	@SuppressWarnings("unchecked")
+	public String toJSONString() {
+		JSONObject data = new JSONObject();
+		data.put("price", super.getPrice());
+		data.put("maximumWeight", this.getMaximumWeight());
+		
+		return data.toJSONString();
+	}

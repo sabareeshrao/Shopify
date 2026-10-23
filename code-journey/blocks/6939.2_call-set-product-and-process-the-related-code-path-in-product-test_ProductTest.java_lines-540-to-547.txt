@@ -1,0 +1,8 @@
+        productImage.setProduct(product);
+        
+        //absolutely required otherwise the file is not created on disk
+        productImage.setImage(inputStream);
+        
+        product.getImages().add(productImage);
+        
+        productService.update(product);//saves the ProductImage entity and the file on disk

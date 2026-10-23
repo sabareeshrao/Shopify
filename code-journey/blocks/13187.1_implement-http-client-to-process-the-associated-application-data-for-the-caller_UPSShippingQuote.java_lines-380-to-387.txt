@@ -1,0 +1,8 @@
+
+			try(CloseableHttpClient httpclient = HttpClients.createDefault()) {
+			//HttpClient client = new HttpClient();
+			httppost = new HttpPost(protocol + "://" + host + ":" + port
+					+ url);
+			StringEntity entity = new StringEntity(xmlbuffer.toString(),ContentType.APPLICATION_ATOM_XML);
+			//RequestEntity entity = new StringRequestEntity(
+			//		xmlbuffer.toString(), "text/plain", "UTF-8");

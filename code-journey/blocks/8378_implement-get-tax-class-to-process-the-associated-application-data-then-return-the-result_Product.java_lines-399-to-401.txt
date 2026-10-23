@@ -1,0 +1,3 @@
+	public TaxClass getTaxClass() {
+		return taxClass;
+	}

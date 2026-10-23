@@ -1,0 +1,4 @@
+				shoppingCartDataPopulator.setimageUtils(imageUtils);
+				return shoppingCartDataPopulator.populate(cartModel, store, language);
+
+			}

@@ -1,0 +1,2 @@
+public class DownloadCacheManagerImpl extends CacheManagerImpl {
+

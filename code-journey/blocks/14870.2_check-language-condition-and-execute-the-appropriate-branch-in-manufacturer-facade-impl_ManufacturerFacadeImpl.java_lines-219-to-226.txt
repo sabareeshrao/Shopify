@@ -1,0 +1,8 @@
+         * Is this a pageable request
+         */
+
+        List<Manufacturer> manufacturers = null;
+
+        Page<Manufacturer> m = null;
+        if(language != null) {
+            m = manufacturerService.listByStore(store, language, criteria.getName(), page, count);

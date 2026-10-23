@@ -1,0 +1,6 @@
+	@Override
+	public List<ContentDescription> listNameByType(List<ContentType> contentType, MerchantStore store,
+			Language language) throws ServiceException {
+
+		return contentRepository.listNameByType(contentType, store, language);
+	}

@@ -1,0 +1,8 @@
+	@Column(name = "QUANTITY_ORD_MIN")
+	private Integer productQuantityOrderMin = 0;
+
+	@Column(name = "QUANTITY_ORD_MAX")
+	private Integer productQuantityOrderMax = 0;
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "productAvailability", cascade = CascadeType.ALL)
+	private Set<ProductPrice> prices = new HashSet<ProductPrice>();

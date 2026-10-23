@@ -1,0 +1,12 @@
+
+	@PatchMapping(value = "/private/category/{id}/visible", produces = { APPLICATION_JSON_VALUE })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void updateVisible(@PathVariable Long id, @Valid @RequestBody PersistableCategory category,
+			@ApiIgnore MerchantStore merchantStore
+			) {
+
+		// superadmin, admin and admin_catalogue
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

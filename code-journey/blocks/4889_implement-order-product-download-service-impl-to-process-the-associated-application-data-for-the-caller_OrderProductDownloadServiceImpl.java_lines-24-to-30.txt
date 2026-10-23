@@ -1,0 +1,7 @@
+    private final OrderProductDownloadRepository orderProductDownloadRepository;
+
+    @Inject
+    public OrderProductDownloadServiceImpl(OrderProductDownloadRepository orderProductDownloadRepository) {
+        super(orderProductDownloadRepository);
+        this.orderProductDownloadRepository = orderProductDownloadRepository;
+    }

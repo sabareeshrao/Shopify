@@ -1,0 +1,8 @@
+
+			if(source.getBilling()!=null) {
+				Address address = new Address();
+				address.setCity(source.getBilling().getCity());
+				address.setCompany(source.getBilling().getCompany());
+				address.setFirstName(source.getBilling().getFirstName());
+				address.setLastName(source.getBilling().getLastName());
+				address.setPostalCode(source.getBilling().getPostalCode());

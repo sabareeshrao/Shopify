@@ -1,0 +1,3 @@
+	public void setDatePurchased(Date datePurchased) {
+		this.datePurchased = CloneUtils.clone(datePurchased);
+	}

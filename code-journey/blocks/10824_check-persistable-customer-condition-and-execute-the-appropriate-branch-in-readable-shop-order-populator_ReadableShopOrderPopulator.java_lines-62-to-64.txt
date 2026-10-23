@@ -1,0 +1,3 @@
+				if(persistableCustomer.getDelivery().getZone()!=null) {
+					address.setZone(persistableCustomer.getDelivery().getZone());
+				}

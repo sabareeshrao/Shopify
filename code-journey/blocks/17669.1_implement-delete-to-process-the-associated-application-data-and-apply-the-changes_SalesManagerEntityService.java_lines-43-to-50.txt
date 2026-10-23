@@ -1,0 +1,8 @@
+
+	/**
+	 * Supprime l'entité de la base de données
+	 * 
+	 * @param entity entité
+	 */
+	void delete(E entity) throws ServiceException;
+	

@@ -1,0 +1,8 @@
+			String lineage = parent.getLineage();
+			int depth = parent.getDepth();
+
+			category.setDepth(depth + 1);
+			category.setLineage(new StringBuilder().append(lineage).toString());// service
+																										// will
+																										// adjust
+																										// lineage

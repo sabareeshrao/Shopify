@@ -1,0 +1,4 @@
+    public Entity() {}
+    public Entity(Long id) {
+    	this.id = id;
+    }

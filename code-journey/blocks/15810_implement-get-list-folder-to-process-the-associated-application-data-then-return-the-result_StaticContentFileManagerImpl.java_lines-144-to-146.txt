@@ -1,0 +1,3 @@
+	public FolderList getListFolder() {
+		return listFolder;
+	}

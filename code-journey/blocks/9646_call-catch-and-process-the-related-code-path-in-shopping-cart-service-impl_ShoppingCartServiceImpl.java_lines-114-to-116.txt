@@ -1,0 +1,3 @@
+		} catch (Exception s) {
+			LOGGER.error("Cannot add ip address to shopping cart ", s);
+		}

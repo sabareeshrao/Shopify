@@ -1,0 +1,3 @@
+     */
+    void addContentFiles(String merchantStoreCode,List<InputContentFile> contentFilesList) throws ServiceException;
+    

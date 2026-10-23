@@ -1,0 +1,8 @@
+	@Override
+	public void removeFolder(MerchantStore store, Optional<String> path, String folderName) throws ServiceException {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(folderName, "Folder name cannot be null");
+		
+		contentFileManager.removeFolder(store.getCode(), folderName, path);
+
+	}

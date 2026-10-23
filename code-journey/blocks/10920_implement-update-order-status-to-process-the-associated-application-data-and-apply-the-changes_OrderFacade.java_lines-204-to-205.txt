@@ -1,0 +1,2 @@
+	void updateOrderStatus(Order order, OrderStatus newStatus, MerchantStore store);
+}

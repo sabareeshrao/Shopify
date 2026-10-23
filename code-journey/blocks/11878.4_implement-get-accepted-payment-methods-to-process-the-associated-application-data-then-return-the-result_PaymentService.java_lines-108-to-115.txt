@@ -1,0 +1,8 @@
+
+	List<PaymentMethod> getAcceptedPaymentMethods(MerchantStore store)
+			throws ServiceException;
+
+	/**
+	 * Returns a PaymentModule based on the payment code
+	 * @param paymentModuleCode
+	 * @return PaymentModule

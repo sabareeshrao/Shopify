@@ -1,0 +1,6 @@
+		
+		try {
+			userService.save(user);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while saving user",e);
+		}

@@ -1,0 +1,7 @@
+	private ProductImageRepository productImageRepository;
+
+	@Inject
+	public ProductImageServiceImpl(ProductImageRepository productImageRepository) {
+		super(productImageRepository);
+		this.productImageRepository = productImageRepository;
+	}

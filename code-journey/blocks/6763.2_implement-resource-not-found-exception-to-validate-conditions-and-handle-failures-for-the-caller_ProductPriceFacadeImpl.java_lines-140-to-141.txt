@@ -1,0 +1,2 @@
+			throw new ResourceNotFoundException("ProductPrice with id [" + productPriceId + " not found for product sku [" + sku + "] and Store [" + store.getCode() + "]");
+		}

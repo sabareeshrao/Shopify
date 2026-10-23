@@ -1,0 +1,9 @@
+	private PersistableCustomer persistableCustomer(Customer customer, MerchantStore store, Language language)
+			throws Exception {
+
+		PersistableCustomerPopulator customerPopulator = new PersistableCustomerPopulator();
+		PersistableCustomer persistableCustomer = customerPopulator.populate(customer, new PersistableCustomer(), store,
+				language);
+		return persistableCustomer;
+
+	}

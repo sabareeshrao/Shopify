@@ -1,0 +1,6 @@
+			
+			model = new ModelAndView("error/generic_error");
+			model.addObject("stackError", ExceptionUtils.getStackTrace(ex));
+			model.addObject("errMsg", ex.getMessage());
+			
+		}

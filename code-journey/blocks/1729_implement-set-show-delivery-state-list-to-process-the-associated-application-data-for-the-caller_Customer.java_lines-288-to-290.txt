@@ -1,0 +1,3 @@
+	public void setShowDeliveryStateList(String showDeliveryStateList) {
+		this.showDeliveryStateList = showDeliveryStateList;
+	}

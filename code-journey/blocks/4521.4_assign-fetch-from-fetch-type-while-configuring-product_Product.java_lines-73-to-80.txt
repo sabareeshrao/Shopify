@@ -1,0 +1,8 @@
+	
+	/**
+	 * Inventory
+	 */
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="product")
+	private Set<ProductAvailability> availabilities = new HashSet<ProductAvailability>();
+
+	/**

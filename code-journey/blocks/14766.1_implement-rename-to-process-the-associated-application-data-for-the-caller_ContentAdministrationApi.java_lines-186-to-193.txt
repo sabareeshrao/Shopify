@@ -1,0 +1,8 @@
+	@PostMapping(value = "/private/content/images/rename", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ApiImplicitParams({
+			@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public FileStatus rename(
+			@RequestParam(value = "path", required = true) String path,
+			@RequestParam(value = "newName", required = true) String newName,

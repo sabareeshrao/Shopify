@@ -1,0 +1,3 @@
+	public void setLastAccess(String lastAccess) {
+		this.lastAccess = lastAccess;
+	}

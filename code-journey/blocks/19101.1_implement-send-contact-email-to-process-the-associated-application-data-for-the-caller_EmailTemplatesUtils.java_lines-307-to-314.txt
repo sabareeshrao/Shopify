@@ -1,0 +1,8 @@
+		
+	}
+	
+	@Async
+	public void sendContactEmail(
+			ContactForm contact, MerchantStore merchantStore,
+				Locale storeLocale, String contextPath) {
+			   /** issue with putting that elsewhere **/ 

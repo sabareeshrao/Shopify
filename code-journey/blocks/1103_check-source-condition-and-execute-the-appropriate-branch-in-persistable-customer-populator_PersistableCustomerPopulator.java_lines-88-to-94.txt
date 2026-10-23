@@ -1,0 +1,7 @@
+			target.setUserName(source.getNick());
+			target.setStoreCode(store.getCode());
+			if(source.getDefaultLanguage()!=null) {
+				target.setLanguage(source.getDefaultLanguage().getCode());
+			} else {
+				target.setLanguage(store.getDefaultLanguage().getCode());
+			}

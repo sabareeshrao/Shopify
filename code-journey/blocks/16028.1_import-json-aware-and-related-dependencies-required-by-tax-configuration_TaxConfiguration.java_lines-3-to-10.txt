@@ -1,0 +1,8 @@
+import org.json.simple.JSONAware;
+import org.json.simple.JSONObject;
+
+/**
+ * Set of various tax configuration settings saved in MerchantConfiguration
+ * @author carl samson
+ *
+ */

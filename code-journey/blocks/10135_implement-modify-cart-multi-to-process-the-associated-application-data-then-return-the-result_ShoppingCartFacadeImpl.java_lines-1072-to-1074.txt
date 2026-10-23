@@ -1,0 +1,3 @@
+
+		return modifyCartMulti(cartModel, items, store, language);
+	}

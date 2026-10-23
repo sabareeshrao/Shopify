@@ -1,0 +1,5 @@
+public enum MeasureUnit {
+	
+	KG, LB, CM, IN
+
+}

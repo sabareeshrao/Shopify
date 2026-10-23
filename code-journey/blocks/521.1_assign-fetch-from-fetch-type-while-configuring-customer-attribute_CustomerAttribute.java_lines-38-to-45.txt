@@ -1,0 +1,8 @@
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="OPTION_ID", nullable=false)
+	private CustomerOption customerOption;
+	
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="OPTION_VALUE_ID", nullable=false)

@@ -1,0 +1,14 @@
+	@Override
+	public Long saveContentPage(PersistableContentPage page, MerchantStore merchantStore, Language language) {
+		Validate.notNull(page);
+		Validate.notNull(page.getCode(), "Content code must not be null");
+		Validate.notNull(merchantStore);
+
+		try {
+			Content content = null;
+
+			content = contentService.getByCode(page.getCode(), merchantStore);
+			if (content != null) {
+				throw new ConstraintException("Page with code [" + page.getCode() + "] already exist for store ["
+						+ merchantStore.getCode() + "]");
+			}

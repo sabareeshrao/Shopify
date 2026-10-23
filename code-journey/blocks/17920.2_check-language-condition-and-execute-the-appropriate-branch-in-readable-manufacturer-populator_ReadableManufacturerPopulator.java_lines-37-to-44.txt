@@ -1,0 +1,8 @@
+      Set<ManufacturerDescription> descriptions = source.getDescriptions();
+      ManufacturerDescription description = null;
+      for (ManufacturerDescription desc : descriptions) {
+        if (language != null && desc.getLanguage().getCode().equals(language.getCode())) {
+          description = desc;
+          break;
+        } else {
+          fulldescriptions.add(populateDescription(desc));

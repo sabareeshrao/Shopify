@@ -1,0 +1,8 @@
+	private com.salesmanager.shop.model.order.v0.ReadableOrderList getReadableOrderList(OrderCriteria criteria,
+			MerchantStore store, Language language) throws Exception {
+
+		OrderList orderList = orderService.listByStore(store, criteria);
+
+		// ReadableOrderPopulator orderPopulator = new ReadableOrderPopulator();
+		Locale locale = LocaleUtils.getLocale(language);
+		readableOrderPopulator.setLocale(locale);

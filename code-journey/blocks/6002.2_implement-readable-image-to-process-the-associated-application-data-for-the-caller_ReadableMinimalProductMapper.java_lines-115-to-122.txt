@@ -1,0 +1,8 @@
+			String contextPath = imageUtils.getContextPath();
+			
+			for(ProductImage img : images) {
+				ReadableImage prdImage = new ReadableImage();
+				prdImage.setImageName(img.getProductImage());
+				prdImage.setDefaultImage(img.isDefaultImage());
+
+				StringBuilder imgPath = new StringBuilder();

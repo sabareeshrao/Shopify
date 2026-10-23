@@ -1,0 +1,5 @@
+	private ProductService productService;
+	private DigitalProductService digitalProductService;
+	private ProductAttributeService productAttributeService;
+
+

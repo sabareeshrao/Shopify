@@ -1,0 +1,6 @@
+		
+	    LocalImageFilePathUtils localImageFilePathUtils = new LocalImageFilePathUtils();
+	    localImageFilePathUtils.setBasePath(staticPath);
+	    localImageFilePathUtils.setContentUrlPath(contentUrl);
+	    return localImageFilePathUtils;
+	}

@@ -1,0 +1,3 @@
+	public void setDataMap(Map<String,String> dataMap) {
+		this.dataMap = dataMap;
+	}

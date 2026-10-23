@@ -1,0 +1,8 @@
+	public List<PersistableProductAttribute> getProperties() {
+		return properties;
+	}
+	public void setProperties(List<PersistableProductAttribute> properties) {
+		this.properties = properties;
+	}
+	public ProductDescription getDescription() {
+		return description;

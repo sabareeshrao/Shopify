@@ -1,0 +1,10 @@
+
+		PersistableCustomer persistableCustomer = persistableCustomer(customer, store, language);
+		order.setCustomer(persistableCustomer);
+
+		// keep list of shopping cart items for core price calculation
+		List<ShoppingCartItem> items = new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
+		order.setShoppingCartItems(items);
+
+		return order;
+	}

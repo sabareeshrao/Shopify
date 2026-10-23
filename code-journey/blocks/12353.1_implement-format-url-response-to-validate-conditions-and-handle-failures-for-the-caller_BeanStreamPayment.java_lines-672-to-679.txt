@@ -1,0 +1,8 @@
+	private Map<String,String> formatUrlResponse(String payload) throws Exception {
+		HashMap<String,String> nvp = new HashMap<String,String> ();
+		StringTokenizer stTok = new StringTokenizer(payload, "&");
+		while (stTok.hasMoreTokens()) {
+			StringTokenizer stInternalTokenizer = new StringTokenizer(stTok
+					.nextToken(), "=");
+			if (stInternalTokenizer.countTokens() == 2) {
+				String key = URLDecoder.decode(stInternalTokenizer.nextToken(),

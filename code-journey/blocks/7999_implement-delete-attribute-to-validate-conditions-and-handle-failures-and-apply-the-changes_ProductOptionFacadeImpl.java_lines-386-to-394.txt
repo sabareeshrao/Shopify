@@ -1,0 +1,9 @@
+	@Override
+	public void deleteAttribute(Long productId, Long attributeId, MerchantStore store) {
+		try {
+
+			ProductAttribute attr = productAttributeService.getById(attributeId);
+			if (attr == null) {
+				throw new ResourceNotFoundException(
+						"ProductAttribute not found for [" + attributeId + "] and store [" + store.getCode() + "]");
+			}

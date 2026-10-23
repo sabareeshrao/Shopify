@@ -1,0 +1,7 @@
+			List<ReadablePermission> permissions = findPermissionsByGroups(groupIds);
+			readableUser.setPermissions(permissions);
+
+			return readableUser;
+		} catch (ConversionException e) {
+			throw new ConversionRuntimeException(e);
+		}

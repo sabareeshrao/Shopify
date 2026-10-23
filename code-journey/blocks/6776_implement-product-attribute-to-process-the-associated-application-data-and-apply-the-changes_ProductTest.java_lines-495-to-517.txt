@@ -1,0 +1,23 @@
+
+	    ProductAttribute smallAttr = new ProductAttribute();
+	    smallAttr.setProduct(product);
+	    smallAttr.setProductOption(size);
+	    smallAttr.setAttributeDefault(true);
+	    smallAttr.setProductAttributePrice(new BigDecimal(0));//no price variation
+	    smallAttr.setProductAttributeWeight(new BigDecimal(1));//weight variation
+	    smallAttr.setProductOptionValue(small);
+	    
+	    productAttributeService.create(smallAttr);
+	    
+	    product.getAttributes().add(smallAttr);
+	    
+	    productService.update(product);
+	    
+	    /**
+	     * get options facets
+	     */
+	    
+	    List<ProductAttribute> attributes = productAttributeService.getProductAttributesByCategoryLineage(store, product.getCategories().iterator().next().getLineage(), en);
+	    Assert.assertTrue((long) attributes.size() > 0);
+
+	}

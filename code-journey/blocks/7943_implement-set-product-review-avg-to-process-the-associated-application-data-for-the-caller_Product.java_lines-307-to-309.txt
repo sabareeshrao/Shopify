@@ -1,0 +1,3 @@
+	public void setProductReviewAvg(BigDecimal productReviewAvg) {
+		this.productReviewAvg = productReviewAvg;
+	}

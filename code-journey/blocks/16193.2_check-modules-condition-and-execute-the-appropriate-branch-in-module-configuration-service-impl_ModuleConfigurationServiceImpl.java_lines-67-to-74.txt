@@ -1,0 +1,8 @@
+			/**
+			 * Modules are loaded using
+			 */
+			modules = (List<IntegrationModule>) cache.getFromCache("INTEGRATION_M" + module); // PAYMENT_MODULES
+																								// SHIPPING_MODULES
+			if (modules == null) {
+				modules = moduleConfigurationRepository.findByModule(module);
+				// set json objects

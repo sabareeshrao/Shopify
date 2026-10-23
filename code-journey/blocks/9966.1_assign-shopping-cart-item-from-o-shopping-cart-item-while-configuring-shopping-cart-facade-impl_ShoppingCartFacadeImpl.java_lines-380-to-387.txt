@@ -1,0 +1,8 @@
+			PersistableShoppingCartItem shoppingCartItem = oShoppingCartItem.get();
+			item.setQuantity(shoppingCartItem.getQuantity());
+			item.setShoppingCart(cartModel);
+
+			/**
+			 * Check if product is available Check if product quantity is 0 Check if date
+			 * available <= now
+			 */

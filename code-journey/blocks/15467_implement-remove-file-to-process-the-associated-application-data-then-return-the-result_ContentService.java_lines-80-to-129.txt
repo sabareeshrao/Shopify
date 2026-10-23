@@ -1,0 +1,50 @@
+    
+    /**
+     * Method to remove given content image.Images are stored in underlying system based on there name.
+     * Name will be used to search given image for removal
+     * @param imageContentType
+     * @param imageName
+     * @param merchantStoreCode merchant store code
+     * @throws ServiceException
+     */
+    void removeFile( String merchantStoreCode, FileContentType fileContentType, String fileName) throws ServiceException;
+    
+    /**
+     * Removes static file
+     * FileType is no more important
+     * @param storeCode
+     * @param filename
+     */
+    void removeFile(String storeCode, String filename) throws ServiceException;
+    
+    /**
+     * Method to remove all images for a given merchant.It will take merchant store as an input and will
+     * remove all images associated with given merchant store.
+     * 
+     * @param merchantStoreCode
+     * @throws ServiceException
+     */
+    void removeFiles( String merchantStoreCode ) throws ServiceException;
+    
+    /**
+     * Rename file
+     * @param merchantStoreCode
+     * @param path
+     * @param originalName
+     * @param newName
+     */
+    void renameFile( String merchantStoreCode, FileContentType fileContentType, Optional<String> path, String originalName, String newName) throws ServiceException;
+    
+    /**
+     * Method responsible for fetching particular content image for a given merchant store. Requested image will be
+     * search in Infinispan tree cache and OutputContentImage will be sent, in case no image is found null will
+     * returned.
+     * 
+     * @param merchantStoreCode
+     * @param imageName
+     * @return {@link OutputContentImage}
+     * @throws ServiceException
+     */
+    OutputContentFile getContentFile( String merchantStoreCode, FileContentType fileContentType, String fileName )
+        throws ServiceException;
+    

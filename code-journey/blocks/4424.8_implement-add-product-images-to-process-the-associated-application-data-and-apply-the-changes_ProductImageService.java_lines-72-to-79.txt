@@ -1,0 +1,8 @@
+			String fileName, final ProductImageSize size) throws ServiceException;
+
+	void addProductImages(Product product, List<ProductImage> productImages)
+			throws ServiceException;
+	
+	void updateProductImage(Product product, ProductImage productImage);
+	
+}

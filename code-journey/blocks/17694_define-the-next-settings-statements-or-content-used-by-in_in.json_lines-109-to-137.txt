@@ -1,0 +1,29 @@
+		"zoneCode": "Sikkim",
+		"zoneName": "Sikkim",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "TamilNadu",
+		"zoneName": "Tamil Nadu",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Telangana",
+		"zoneName": "Telangana",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Tripura",
+		"zoneName": "Tripura",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Uttarakhand",
+		"zoneName": "Uttarakhand",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "WestBengal",
+		"zoneName": "West Bengal",
+		"countryCode": "IN"
+	}

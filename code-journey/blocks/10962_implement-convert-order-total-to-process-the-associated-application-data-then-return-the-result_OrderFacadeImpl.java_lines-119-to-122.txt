@@ -1,0 +1,4 @@
+	private ReadableOrderTotal convertOrderTotal(OrderTotal total, MerchantStore store, Language language) {
+
+		return readableOrderTotalMapper.convert(total, store, language);
+	}

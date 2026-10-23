@@ -1,0 +1,6 @@
+
+		Set<ProductDescription> descriptions = product.getDescriptions();
+
+		for (ProductDescription description : descriptions) {
+			indexProduct(store, description, product, variants);
+		}

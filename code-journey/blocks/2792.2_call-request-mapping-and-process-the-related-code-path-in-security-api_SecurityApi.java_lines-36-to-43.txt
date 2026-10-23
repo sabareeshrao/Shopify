@@ -1,0 +1,8 @@
+ * @author carlsamson
+ *
+ */
+@RestController
+@RequestMapping(value = "/api/v1/sec")
+@Api(tags = { "Groups and permissions Api" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "List of supported groups and permissions", description = "List groups and attached permissions for reference") })

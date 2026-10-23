@@ -1,0 +1,7 @@
+	 * @throws ServiceException
+	 */
+	MarketPlace getByCode(MerchantStore store, String code) throws ServiceException;
+	
+	void delete(MarketPlace marketPlace) throws ServiceException;
+
+}

@@ -1,0 +1,8 @@
+
+	@Inject
+	private CoreConfiguration configuration;
+
+	@Autowired
+	private ApplicationSearchConfiguration applicationSearchConfiguration;
+	
+	@Autowired

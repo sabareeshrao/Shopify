@@ -1,0 +1,3 @@
+	public void setVariationValueCode(String variationValueCode) {
+		this.variationValueCode = variationValueCode;
+	}

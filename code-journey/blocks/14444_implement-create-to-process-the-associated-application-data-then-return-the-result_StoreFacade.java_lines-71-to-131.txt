@@ -1,0 +1,61 @@
+	 * Creates a brand new MerchantStore
+	 * 
+	 * @param store
+	 * @throws Exception
+	 */
+	//ReadableMerchantStore create(PersistableMerchantStore store);
+	void create(PersistableMerchantStore store);
+
+	/**
+	 * Updates an existing store
+	 * 
+	 * @param store
+	 * @throws Exception
+	 */
+	//ReadableMerchantStore update(PersistableMerchantStore store);
+	void update(PersistableMerchantStore store);
+
+	/**
+	 * Deletes a MerchantStore based on store code
+	 * 
+	 * @param code
+	 */
+	void delete(String code);
+
+	/**
+	 * Get Logo, social networks and other brand configurations
+	 * 
+	 * @param code
+	 * @return
+	 */
+	ReadableBrand getBrand(String code);
+
+	/**
+	 * Create store brand
+	 * 
+	 * @param merchantStoreCode
+	 * @param brand
+	 */
+	void createBrand(String merchantStoreCode, PersistableBrand brand);
+
+	/**
+	 * Delete store logo
+	 */
+	void deleteLogo(String code);
+
+	/**
+	 * Add MerchantStore logo
+	 * 
+	 * @param code
+	 * @param cmsContentImage
+	 */
+	void addStoreLogo(String code, InputContentFile cmsContentImage);
+
+	/**
+	 * Returns store id, code and name only
+	 * 
+	 * @return
+	 */
+	List<ReadableMerchantStore> getMerchantStoreNames(MerchantStoreCriteria criteria);
+
+}

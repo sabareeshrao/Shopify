@@ -1,0 +1,16 @@
+
+	/**
+	 * Returns a formatted amount using Shopizer Currency requires internal
+	 * java.util.Currency populated
+	 * 
+	 * @param currency
+	 * @param amount
+	 * @return
+	 * @throws Exception
+	 */
+	// Utility
+	public String getFormatedAmountWithCurrency(com.salesmanager.core.model.reference.currency.Currency currency,
+			BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}

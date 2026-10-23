@@ -1,0 +1,3 @@
+	public void setFacebook(String facebook) {
+		this.facebook = facebook;
+	}

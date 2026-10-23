@@ -1,0 +1,3 @@
+	  return productItemsFacade.createProductGroup(group, merchantStore);
+
+  }

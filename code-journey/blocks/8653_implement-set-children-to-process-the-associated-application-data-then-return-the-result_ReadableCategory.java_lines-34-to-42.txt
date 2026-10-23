@@ -1,0 +1,9 @@
+	public void setChildren(List<ReadableCategory> children) {
+		this.children = children;
+	}
+	public String getStore() {
+		return store;
+	}
+	public void setStore(String store) {
+		this.store = store;
+	}

@@ -1,0 +1,8 @@
+message.invalid.date=Format de la date invalide
+message.maximumWeight.null=Poids maximum ne peut être vide
+message.maximumWeight.invalid=Poids maximum doit être supérieur é 0
+message.unauthorized=Cette transaction ne peut être complétée
+message.code.available=Ce code est disponible
+message.image.height=Hauteur de l'image trop grande
+message.image.width=Largeur de l'image trop grande
+message.image.size=Image trop volumineuse

@@ -1,0 +1,11 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(UserRepositoryImpl.class);
+
+  @SuppressWarnings("unchecked")
+  @Override
+  public GenericEntityList<User> listByCriteria(Criteria criteria) throws ServiceException {
+	  
+	/**
+	 * Name like
+	 * email like  
+	 */
+	  

@@ -1,0 +1,8 @@
+      //create second manufacturer
+      PersistableManufacturer m2 = super.manufacturer("BRAND2");
+      json = writer.writeValueAsString(m2);
+      entity = new HttpEntity<>(json, getHeader());
+
+      response = testRestTemplate.postForEntity("/api/v1/private/manufacturer", entity, PersistableManufacturer.class);
+      assertThat(response.getStatusCode(), is(CREATED));
+      

@@ -1,0 +1,3 @@
+	public void setAvailabilities(List<String> availabilities) {
+		this.availabilities = availabilities;
+	}

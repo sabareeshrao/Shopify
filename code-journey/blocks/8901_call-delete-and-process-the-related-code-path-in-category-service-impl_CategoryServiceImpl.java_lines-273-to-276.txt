@@ -1,0 +1,4 @@
+
+				} else {
+					productService.delete(dbProduct);
+				}

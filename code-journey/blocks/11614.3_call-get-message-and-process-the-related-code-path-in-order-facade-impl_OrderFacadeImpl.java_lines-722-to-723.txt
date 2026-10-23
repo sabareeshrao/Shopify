@@ -1,0 +1,2 @@
+						messages.getMessage("NotEmpty.customer.firstName", locale));
+			}

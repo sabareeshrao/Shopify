@@ -1,0 +1,8 @@
+				// (Map)config.getConfiguration("service-global-usps");
+				// need to create a Map of LABEL - LABLEL
+				// Iterator servicesIterator =
+				// selectedintlservices.keySet().iterator();
+				// Map services = new HashMap();
+
+				// ResourceBundle bundle = ResourceBundle.getBundle("usps",
+				// locale);

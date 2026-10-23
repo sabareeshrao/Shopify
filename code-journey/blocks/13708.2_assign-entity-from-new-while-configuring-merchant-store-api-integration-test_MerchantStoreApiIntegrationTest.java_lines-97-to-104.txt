@@ -1,0 +1,8 @@
+      headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+      HttpEntity<LinkedMultiValueMap<String, Object>> entity = new HttpEntity<LinkedMultiValueMap<String, Object>>(parameters, headers);
+
+      ResponseEntity<Void> createResponse = testRestTemplate.exchange(String.format("/api/v1/private/store/" + MerchantStore.DEFAULT_STORE + "/marketing/logo"), HttpMethod.POST, entity, Void.class);
+
+      // Expect Created
+      assertThat(createResponse.getStatusCode(), is(HttpStatus.CREATED));

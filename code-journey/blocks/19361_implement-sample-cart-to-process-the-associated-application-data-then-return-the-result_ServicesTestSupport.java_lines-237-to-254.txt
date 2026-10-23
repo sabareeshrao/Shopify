@@ -1,0 +1,18 @@
+	protected ReadableShoppingCart sampleCart() {
+
+		ReadableProduct product = sampleProduct("sampleCart");
+		assertNotNull(product);
+
+		PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();
+		cartItem.setProduct(product.getSku());
+		cartItem.setQuantity(1);
+
+		final HttpEntity<PersistableShoppingCartItem> cartEntity = new HttpEntity<>(cartItem, getHeader());
+		final ResponseEntity<ReadableShoppingCart> response = testRestTemplate
+				.postForEntity(String.format("/api/v1/cart/"), cartEntity, ReadableShoppingCart.class);
+
+		assertNotNull(response);
+		assertThat(response.getStatusCode(), is(CREATED));
+
+		return response.getBody();
+	}

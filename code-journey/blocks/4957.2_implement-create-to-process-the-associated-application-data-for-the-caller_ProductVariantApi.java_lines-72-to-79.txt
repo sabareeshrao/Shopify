@@ -1,0 +1,8 @@
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/{productId}/variant" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	public @ResponseBody Entity create(
+			@Valid @RequestBody PersistableProductVariant variant, 
+			@PathVariable Long productId,
+			@ApiIgnore MerchantStore merchantStore, 

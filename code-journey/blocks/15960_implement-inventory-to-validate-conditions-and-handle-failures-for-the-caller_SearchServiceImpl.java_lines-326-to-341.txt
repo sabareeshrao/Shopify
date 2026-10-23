@@ -1,0 +1,16 @@
+	private Map<String, String> inventory(ProductVariant product) throws Exception {
+		
+		
+		/**
+		 * Default inventory
+		 */
+		
+		ProductInventory inventory = productInventoryService.inventory(product);
+		
+		Map<String, String> inventoryMap = new HashMap<String, String>();
+		inventoryMap.put(SKU, product.getSku());
+		inventoryMap.put(QTY, String.valueOf(inventory.getQuantity()));
+		inventoryMap.put(PRICE, String.valueOf(inventory.getPrice().getStringPrice()));
+		if(inventory.getPrice().isDiscounted()) {
+			inventoryMap.put(DISCOUNT_PRICE, String.valueOf(inventory.getPrice().getStringDiscountedPrice()));
+		}

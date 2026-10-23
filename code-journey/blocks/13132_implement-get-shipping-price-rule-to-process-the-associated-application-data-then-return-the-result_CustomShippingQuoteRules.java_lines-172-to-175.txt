@@ -1,0 +1,4 @@
+
+/*	public StatelessKnowledgeSession getShippingPriceRule() {
+		return shippingPriceRule;
+	}

@@ -1,0 +1,8 @@
+
+	@Test
+	@Ignore
+	public void getProducts() throws Exception {
+		restTemplate = new RestTemplate();
+
+		final HttpEntity<String> httpEntity = new HttpEntity<>(getHeader());
+

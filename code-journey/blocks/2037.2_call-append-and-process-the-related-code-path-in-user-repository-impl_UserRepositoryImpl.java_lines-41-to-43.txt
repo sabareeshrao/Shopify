@@ -1,0 +1,3 @@
+        req.append("  where um.code=:storeCode");
+        countBuilder.append(" where um.code=:storeCode");
+      }

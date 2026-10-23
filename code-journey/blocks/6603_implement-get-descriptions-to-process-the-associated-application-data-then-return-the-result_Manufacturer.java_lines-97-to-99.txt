@@ -1,0 +1,3 @@
+	public Set<ManufacturerDescription> getDescriptions() {
+		return descriptions;
+	}

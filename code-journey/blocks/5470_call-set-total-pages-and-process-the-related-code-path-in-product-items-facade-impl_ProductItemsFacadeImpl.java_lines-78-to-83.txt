@@ -1,0 +1,6 @@
+		
+		productList.setTotalPages(Math.toIntExact(products.getTotalCount()));
+		
+		
+		return productList;
+	}

@@ -1,0 +1,5 @@
+ * @author Carl Samson
+ *
+ */
+public class ShoppingCartTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	

@@ -1,0 +1,4 @@
+
+		if (!StringUtils.isBlank(name)) {
+			criteria.setProductName(name);
+		}

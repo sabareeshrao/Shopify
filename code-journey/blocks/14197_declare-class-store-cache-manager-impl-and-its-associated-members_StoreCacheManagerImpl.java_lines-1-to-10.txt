@@ -1,0 +1,10 @@
+package com.salesmanager.core.business.modules.cms.impl;
+
+/**
+ * Infinispan asset manager
+ * 
+ * @author casams1
+ *
+ */
+public class StoreCacheManagerImpl extends CacheManagerImpl {
+

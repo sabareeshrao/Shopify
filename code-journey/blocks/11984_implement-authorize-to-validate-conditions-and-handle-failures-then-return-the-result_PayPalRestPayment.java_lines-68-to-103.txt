@@ -1,0 +1,36 @@
+	@Override
+	public Transaction authorize(MerchantStore store, Customer customer,
+			List<ShoppingCartItem> items, BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		
+		return null;
+
+/*		
+		// ###AccessToken
+		// Retrieve the access token from
+		// OAuthTokenCredential by passing in
+		// ClientID and ClientSecret
+		APIContext apiContext = null;
+		String accessToken = null;
+		
+		try {
+			
+			String clientID = configuration.getIntegrationKeys().get("client");
+			String secret = configuration.getIntegrationKeys().get("secret");
+			
+			accessToken = getAccessToken(clientID, secret);
+
+			// ### Api Context
+			// Pass in a `ApiContext` object to authenticate
+			// the call and to send a unique request id
+			// (that ensures idempotency). The SDK generates
+			// a request id if you do not pass one explicitly.
+			apiContext = new APIContext(accessToken);
+			// Use this variant if you want to pass in a request id
+			// that is meaningful in your application, ideally
+			// a order id.
+			
+			 * String requestId = Long.toString(System.nanoTime(); APIContext
+			 * apiContext = new APIContext(accessToken, requestId ));
+			 

@@ -1,0 +1,8 @@
+					}
+					
+					IntegrationModule module = postProcessModule;
+					if(integrationConfiguration != null) {
+						postProcessor.prePostProcessShippingQuotes(shippingQuote, packages, orderTotal, delivery, shippingOrigin, store, integrationConfiguration, module, shippingConfiguration, shippingMethods, locale);
+					}
+				}
+			}

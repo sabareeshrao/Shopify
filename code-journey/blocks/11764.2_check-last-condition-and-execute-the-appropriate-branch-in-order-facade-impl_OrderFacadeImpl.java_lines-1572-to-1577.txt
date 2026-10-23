@@ -1,0 +1,6 @@
+				return TransactionType.REFUND;
+			} else if(last.getTransactionType().name().equals(TransactionType.REFUND.name())) {
+				return TransactionType.OK;
+			} else {
+				return TransactionType.OK;
+			}

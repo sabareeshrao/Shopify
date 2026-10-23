@@ -1,0 +1,8 @@
+	@Inject
+	protected LanguageService languageService;
+	
+	@Inject
+	protected CountryService countryService;
+	
+	@Inject
+	protected CurrencyService currencyService;

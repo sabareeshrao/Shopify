@@ -1,0 +1,7 @@
+		
+		destination.setVariation(variation.get());
+
+		
+		if(productVariationValue != null) {
+			destination.setVariationValue(variationValue.get());
+		}

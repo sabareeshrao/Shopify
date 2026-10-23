@@ -1,0 +1,3 @@
+	public String buildCategoryUrl(MerchantStore store, String contextPath, String url) {
+		return buildStoreUri(store, contextPath) + SHOP_URI + CATEGORY_URI + SLASH + url + URL_EXTENSION;
+	}

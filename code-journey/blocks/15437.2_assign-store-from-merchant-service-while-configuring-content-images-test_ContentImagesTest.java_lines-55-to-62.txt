@@ -1,0 +1,8 @@
+		// logo as a content
+		contentService.addLogo(store.getCode(), cmsContentImage);
+
+		store.setStoreLogo(file1.getName());
+		merchantService.update(store);
+
+		// query the store
+		store = merchantService.getByCode(MerchantStore.DEFAULT_STORE);

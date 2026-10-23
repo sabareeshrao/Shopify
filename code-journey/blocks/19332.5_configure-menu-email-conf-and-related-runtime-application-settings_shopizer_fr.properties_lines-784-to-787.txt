@@ -1,0 +1,4 @@
+menu.email-conf=Configuration du courriel
+menu.system-configurations=Configurations du système
+menu.manufacturer-list=Liste des fabricants
+menu.manufacturer-create=Créer un fabricant

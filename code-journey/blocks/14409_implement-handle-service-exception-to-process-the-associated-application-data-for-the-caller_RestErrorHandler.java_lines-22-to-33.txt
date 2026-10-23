@@ -1,0 +1,12 @@
+    private static final Logger log = LoggerFactory.getLogger(RestErrorHandler.class);
+
+    @RequestMapping(produces = "application/json")
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public @ResponseBody ErrorEntity handleServiceException(Exception exception) {
+        log.error(exception.getMessage(), exception);
+        Objects.requireNonNull(exception.getCause());
+        Throwable rootCause = exception.getCause();
+        while (rootCause.getCause() != null && rootCause.getCause() != rootCause) {
+            rootCause = rootCause.getCause();
+        }

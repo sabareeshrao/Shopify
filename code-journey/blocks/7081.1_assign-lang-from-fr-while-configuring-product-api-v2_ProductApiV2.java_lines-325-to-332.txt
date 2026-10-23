@@ -1,0 +1,8 @@
+
+	
+	/**
+	 * API for getting a product using sku in v2
+	 *
+	 * @param id
+	 * @param lang     ?lang=fr|en|...
+	 * @param response

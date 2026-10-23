@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.common.Criteria;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.core.model.user.UserCriteria;
+import com.salesmanager.shop.model.security.ReadablePermission;
+import com.salesmanager.shop.model.user.PersistableUser;
+import com.salesmanager.shop.model.user.ReadableUser;
+import com.salesmanager.shop.model.user.ReadableUserList;

@@ -1,0 +1,34 @@
+
+  /**
+   * Public api
+   * @param id
+   * @param quote
+   * @param merchantStore
+   * @param language
+   * @param response
+   * @return
+   */
+  @RequestMapping(
+      value = {"/cart/{code}/total"},
+      method = RequestMethod.GET)
+  @ResponseBody
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public ReadableOrderTotalSummary calculateTotal(
+      @PathVariable final String code,
+      @RequestParam(value = "quote", required = false) Long quote,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,//possible postal code, province and country
+      HttpServletResponse response) {
+
+    try {
+      ShoppingCart shoppingCart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);
+
+      if (shoppingCart == null) {
+
+        response.sendError(404, "Cart code " + code + " does not exist");
+
+        return null;
+      }

@@ -1,0 +1,7 @@
+	private ReadableUser findByUserName(String userName, Language lang) {
+		User user = getByUserName(userName);
+		if (user == null) {
+			throw new ResourceNotFoundException("User [" + userName + "] not found");
+		}
+		return convertUserToReadableUser(lang, user);
+	}

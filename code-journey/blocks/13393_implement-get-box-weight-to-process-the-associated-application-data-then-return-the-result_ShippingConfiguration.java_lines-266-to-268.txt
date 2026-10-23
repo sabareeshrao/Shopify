@@ -1,0 +1,3 @@
+	public double getBoxWeight() {
+		return boxWeight;
+	}

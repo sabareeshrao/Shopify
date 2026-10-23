@@ -1,0 +1,4 @@
+
+					if (product.getCategories() == null || product.getCategories().size() == 0) {
+						productService.delete(dbProduct);
+					}

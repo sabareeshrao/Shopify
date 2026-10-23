@@ -1,0 +1,3 @@
+    	if (store != null) {
+    		q.setParameter("mid", store.getId());
+    	}

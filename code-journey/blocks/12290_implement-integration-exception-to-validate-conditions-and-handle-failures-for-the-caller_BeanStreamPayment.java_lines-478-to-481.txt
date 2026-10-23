@@ -1,0 +1,4 @@
+		
+		if(configs==null) {
+			throw new IntegrationException("Module not configured for TEST or PROD");
+		}

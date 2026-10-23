@@ -1,0 +1,8 @@
+  
+  
+  @Test
+  public void testAddAndDeleteStoreLogo() {
+      LinkedMultiValueMap<String, Object> parameters = new LinkedMultiValueMap<String, Object>();
+      parameters.add("file", new org.springframework.core.io.ClassPathResource("image.jpg"));
+
+      HttpHeaders headers = getHeader();

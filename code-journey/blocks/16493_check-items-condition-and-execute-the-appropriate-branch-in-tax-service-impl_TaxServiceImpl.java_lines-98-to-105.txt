@@ -1,0 +1,8 @@
+
+		List<ShoppingCartItem> items = orderSummary.getProducts();
+		
+		List<TaxItem> taxLines = new ArrayList<TaxItem>();
+		
+		if(items==null) {
+			return taxLines;
+		}

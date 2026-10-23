@@ -1,0 +1,6 @@
+  @Override
+  public void deleteById(Long id) {
+    Customer customer = getCustomerById(id);
+    delete(customer);
+    
+  }

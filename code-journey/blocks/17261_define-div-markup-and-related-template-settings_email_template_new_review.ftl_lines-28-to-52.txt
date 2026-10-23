@@ -1,0 +1,25 @@
+
+  <!-- Content Section -->
+  <div class="content">
+    <div class="content-line">
+    	${EMAIL_STORE_NAME}<br /><br /><br/>
+        ${EMAIL_SUBJECT} - ${EMAIL_PRODUCT_NAME}<br/>
+	${EMAIL_CUSTOMER_REVIEW}<br/><br />
+    	${EMAIL_REVIEW_RATING}<br/><br/>
+	${EMAIL_REVIEW_TEXT}<br/>
+    </div>
+</div>
+
+</div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="copyright">${EMAIL_FOOTER_COPYRIGHT}</div>
+  </div>
+
+<div class="disclaimer">
+  <div class="disclaimer1">${EMAIL_DISCLAIMER}</div>
+  <div class="disclaimer2">${EMAIL_SPAM_DISCLAIMER}</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+	public Customer getReviewedCustomer() {
+		return reviewedCustomer;
+	}

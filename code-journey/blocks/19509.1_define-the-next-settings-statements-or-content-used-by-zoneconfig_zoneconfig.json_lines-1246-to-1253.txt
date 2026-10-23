@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "VT",
+		"zoneName": "Vermont",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "VI",
+		"zoneName": "Virgin Islands",

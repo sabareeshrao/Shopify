@@ -1,0 +1,3 @@
+	public void setStoreTemplate(String storeTemplate) {
+		this.storeTemplate = storeTemplate;
+	}

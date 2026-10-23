@@ -1,0 +1,13 @@
+	@Override
+	public ReadableProductPrice populate(ProductPrice source,
+			ReadableProductPrice target, MerchantStore store, Language language)
+			throws ConversionException {
+		Validate.notNull(pricingService,"pricingService must be set");
+		Validate.notNull(source.getProductAvailability(),"productPrice.availability cannot be null");
+		Validate.notNull(source.getProductAvailability().getProduct(),"productPrice.availability.product cannot be null");
+		
+		try {
+		  
+		    if(language == null) {
+		      target = new ReadableProductPriceFull();
+		    }

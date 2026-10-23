@@ -1,0 +1,8 @@
+	@JsonIgnore
+	@Column(name="CUSTOMER_PASSWORD", length=60)
+	private String password;
+
+	@Column(name="CUSTOMER_ANONYMOUS")
+	private boolean anonymous;
+	
+	@Column(name = "REVIEW_AVG")

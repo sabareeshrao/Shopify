@@ -1,0 +1,7 @@
+public class ReadableCatalogName extends CatalogEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

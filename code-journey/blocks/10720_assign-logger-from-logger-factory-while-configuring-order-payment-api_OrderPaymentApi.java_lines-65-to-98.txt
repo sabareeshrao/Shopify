@@ -1,0 +1,34 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrderPaymentApi.class);
+
+	@Inject
+	private CustomerService customerService;
+
+	@Inject
+	private OrderService orderService;
+
+	@Inject
+	private ShoppingCartService shoppingCartService;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject
+	private PaymentService paymentService;
+
+	@Inject
+	private OrderFacade orderFacade;
+	
+	@Inject
+	private AuthorizationUtils authorizationUtils;
+
+	@RequestMapping(value = { "/cart/{code}/payment/init" }, method = RequestMethod.POST)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableTransaction init(@Valid @RequestBody PersistablePayment payment, @PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) throws Exception {
+
+		ShoppingCart cart = shoppingCartService.getByCode(code, merchantStore);
+		if (cart == null) {
+			throw new ResourceNotFoundException("Cart code " + code + " does not exist");
+		}

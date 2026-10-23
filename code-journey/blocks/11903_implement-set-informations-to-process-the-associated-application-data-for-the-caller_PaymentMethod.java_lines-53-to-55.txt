@@ -1,0 +1,3 @@
+	public void setInformations(IntegrationConfiguration informations) {
+		this.informations = informations;
+	}

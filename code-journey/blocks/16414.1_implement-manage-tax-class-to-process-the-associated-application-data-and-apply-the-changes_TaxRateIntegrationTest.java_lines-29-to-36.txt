@@ -1,0 +1,8 @@
+	
+    @Test
+    public void manageTaxClass() throws Exception {
+    	
+    	//create tax class
+    	PersistableTaxClass taxClass = new PersistableTaxClass();
+    	taxClass.setCode("TESTTX");
+    	taxClass.setName("Test tax class");

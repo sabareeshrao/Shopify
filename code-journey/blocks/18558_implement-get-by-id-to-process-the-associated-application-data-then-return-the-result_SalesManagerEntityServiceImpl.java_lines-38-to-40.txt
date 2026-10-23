@@ -1,0 +1,3 @@
+	public E getById(K id) {
+		return repository.getOne(id);
+	}

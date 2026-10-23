@@ -1,0 +1,18 @@
+				//if (doCaptureResponse.getAck().getValue()
+				//		.equalsIgnoreCase("success")) {
+					
+					// Authorization identification number
+					//logger.info("Authorization ID:"
+					//		+ doCaptureResponse.getDoCaptureResponseDetails()
+					//				.getAuthorizationID());
+				//}
+				// ### Error Values
+				// Access error values from error list using getter methods
+				//else {
+				//	List<ErrorType> errorList = doCaptureResponse.getErrors();
+				//	logger.severe("API Error Message : "
+				//			+ errorList.get(0).getLongMessage());
+				//}
+
+				//String refundAck = refundTransactionResponse.getAck().getValue();
+			 

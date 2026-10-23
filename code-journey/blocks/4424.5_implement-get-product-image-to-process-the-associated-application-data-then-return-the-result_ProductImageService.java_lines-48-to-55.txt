@@ -1,0 +1,8 @@
+	/**
+	 * Get a product image by name for a given product id
+	 * @param imageName
+	 * @param productId
+	 * @param store
+	 * @return
+	 */
+	Optional<ProductImage> getProductImage(Long imageId, Long productId, MerchantStore store);

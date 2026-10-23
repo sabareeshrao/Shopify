@@ -1,0 +1,64 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.catalog.product.ProductService;
+import com.salesmanager.core.business.services.catalog.product.attribute.ProductAttributeService;
+import com.salesmanager.core.business.services.catalog.product.attribute.ProductOptionService;
+import com.salesmanager.core.business.services.catalog.product.attribute.ProductOptionValueService;
+import com.salesmanager.core.business.services.content.ContentService;
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOption;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValue;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.catalog.PersistableProductAttributeMapper;
+import com.salesmanager.shop.mapper.catalog.PersistableProductOptionMapper;
+import com.salesmanager.shop.mapper.catalog.PersistableProductOptionValueMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductAttributeMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductOptionMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductOptionValueMapper;
+import com.salesmanager.shop.model.catalog.product.attribute.PersistableProductAttribute;
+import com.salesmanager.shop.model.catalog.product.attribute.PersistableProductOptionValue;
+import com.salesmanager.shop.model.catalog.product.attribute.api.PersistableProductOptionEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductAttributeEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductAttributeList;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionList;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionValue;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionValueList;
+import com.salesmanager.shop.model.entity.CodeEntity;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.store.controller.product.facade.ProductOptionFacade;
+
+@Service
+public class ProductOptionFacadeImpl implements ProductOptionFacade {
+
+	@Autowired
+	private ProductOptionService productOptionService;
+
+	@Autowired
+	private ProductOptionValueService productOptionValueService;
+
+	@Autowired
+	private ReadableProductOptionMapper readableMapper;
+
+	@Autowired
+	private PersistableProductOptionMapper persistableeMapper;
+
+	@Autowired
+	private PersistableProductOptionValueMapper persistableOptionValueMapper;
+
+	@Autowired
+	private ReadableProductOptionValueMapper readableOptionValueMapper;
+
+	@Autowired
+	private ContentService contentService;
+
+	@Autowired
+	private ProductAttributeService productAttributeService;
+
+	@Autowired
+	private PersistableProductAttributeMapper persistableProductAttributeMapper;
+

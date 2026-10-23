@@ -1,0 +1,8 @@
+/**
+ * Availability -> Inventory
+ * 
+ * @author carlsamson
+ *
+ */
+
+@Service("productAvailabilityService")

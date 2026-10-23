@@ -1,0 +1,6 @@
+		
+		try {
+			productPriceService.delete(productPrice);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("An exception occured while deleting product price [" + priceId + "] for product sku [" + sku + "] and Store [" + store.getCode() + "]", e);
+		}

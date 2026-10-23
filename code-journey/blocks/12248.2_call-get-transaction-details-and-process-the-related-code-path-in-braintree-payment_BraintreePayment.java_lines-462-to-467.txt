@@ -1,0 +1,6 @@
+        trx.getTransactionDetails().put("TRNORDERNUMBER", trxId);
+        trx.getTransactionDetails().put("MESSAGETEXT", null);
+        
+        return trx;
+		
+	}

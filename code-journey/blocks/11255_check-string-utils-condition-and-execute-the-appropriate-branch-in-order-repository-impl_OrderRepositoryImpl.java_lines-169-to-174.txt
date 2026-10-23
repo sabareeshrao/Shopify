@@ -1,0 +1,6 @@
+		
+		if(!StringUtils.isEmpty(criteria.getEmail())) {
+			String nameQuery =  " and o.customerEmailAddress like:email";
+			objectBuilderWhere.append(nameQuery);
+			countBuilderSelect.append(nameQuery);
+		}

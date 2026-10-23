@@ -1,0 +1,8 @@
+	 */
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/stores/names" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get list of store names. Returns all retailers and stores", notes = "", response = ReadableMerchantStore.class)
+	public List<ReadableMerchantStore> list(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,

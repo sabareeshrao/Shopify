@@ -1,0 +1,3 @@
+	public void setRemoveFolder(FolderRemove removeFolder) {
+		this.removeFolder = removeFolder;
+	}

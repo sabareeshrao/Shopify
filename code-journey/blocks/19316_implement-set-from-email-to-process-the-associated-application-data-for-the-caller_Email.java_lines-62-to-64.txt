@@ -1,0 +1,3 @@
+	public void setFromEmail(String fromEmail) {
+		this.fromEmail = fromEmail;
+	}

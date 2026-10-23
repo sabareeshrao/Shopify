@@ -1,0 +1,4 @@
+NotEmpty.review.description=Your opinion is required
+NotEmpty.review.rating=Product rating is required
+NotEmpty.group.groupType=Group type is required
+NotEmpty.group.groupName=Group name is required

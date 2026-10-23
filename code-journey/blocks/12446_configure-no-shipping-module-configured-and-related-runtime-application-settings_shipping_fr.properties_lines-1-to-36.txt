@@ -1,0 +1,36 @@
+NO_SHIPPING_MODULE_CONFIGURED=Aucun module de livraison configuré
+
+module.shipping.canadapost=Postes Canada
+module.shipping.ups=UPS
+module.shipping.usps=United States Postal Service
+module.shipping.fedex=Fedex
+module.shipping.weightBased=Prix basé sur le poids
+module.shipping.customQuotesRules=Livraison par {0}
+module.shipping.storePickUp=Ramassage en magasin
+module.shipping.priceByDistance=Livraison par {0}
+
+module.shipping.storePickUp.note=Cette option vous permet de réserver votre commande via le système web et de ramasser par vous même l'item ou les items en magasin. Cette option est également offerte lorsque aucune autre option de livraison est disponible dans votre secteur.
+
+#custom
+module.shipping.customQuotesRules.title=Vous pouvez produire vos propre règles de coûts d'expédition
+module.shipping.customQuotesRules.text=Utilisez le système de règles d'affaires afin de créer votre propre table de décision des coûts d'expédition. Le fichier de règles d'affaires des coûts d'expédition peut être édité sous sm-core/src/main/resources/rules/shipping-custom-rules.xls
+
+#custom
+module.shipping.priceByDistance.title=Vous pouvez produire vos propre règles de coûts d'expédition basées sur la distance
+module.shipping.priceByDistance.text=Calcul du prix de livraison sur un prix fixe par kilomètre. Requiert le pré-processeur permettant de calculer la distance de livraison.
+
+module.shipping.canada=Canada
+module.shipping.usa=États-Unis
+module.shipping.international=International
+
+#Canada Post
+module.shipping.canadapost.identifier=Identifiant Postes Canada (numéro CPC)
+module.shipping.canadapost.username=Nom d'usager Postes Canada (première partie de la clé API avant les 2 points :)
+module.shipping.canadapost.password=Mot de passe Postes Canada (deuxième partie de la clé API après les 2 points :)
+module.shipping.canadapost.apikey=Clé API Postes Canada
+module.shipping.canadapost.services=Services de postage à calculer
+module.shipping.canadapost.packages=Type d'emballage
+module.shipping.canadapost.message.identifier=Identifiant Postes Canada requis
+module.shipping.canadapost.message.packages=Au moins un type d'emballage
+module.shipping.canadapost.message.apikey=Clé API requise
+

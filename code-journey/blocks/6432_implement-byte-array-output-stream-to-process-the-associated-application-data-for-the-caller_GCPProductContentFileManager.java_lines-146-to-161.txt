@@ -1,0 +1,16 @@
+      
+      Page<Blob> blobs =
+          storage.list(
+              bucketName, BlobListOption.currentDirectory(), BlobListOption.prefix(merchantStoreCode));
+
+      List<OutputContentFile> files = new ArrayList<OutputContentFile>();
+      for (Blob blob : blobs.iterateAll()) {
+        blob.getName();
+        ReadChannel reader = blob.reader();
+        inputStream = Channels.newInputStream(reader);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        IOUtils.copy(inputStream, outputStream);
+        OutputContentFile ct = new OutputContentFile();
+        ct.setFile(outputStream);
+        files.add(ct);
+      }

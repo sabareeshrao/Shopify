@@ -1,0 +1,9 @@
+	@Override
+	public void update(String sku, LightPersistableProduct product, MerchantStore merchant, Language language) {
+		// Get product
+		Product modified = null;
+		try {
+			modified = productService.getBySku(sku, merchant, language);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}

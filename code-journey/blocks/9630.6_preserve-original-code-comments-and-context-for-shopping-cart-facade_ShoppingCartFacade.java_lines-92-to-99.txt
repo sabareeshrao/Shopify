@@ -1,0 +1,8 @@
+			 Language language) throws Exception;
+
+	/**
+	 * Modify a list of items to an existing cart, quantity of line item will reflect item.getQuantity
+	 * @param cartCode
+	 * @param items
+	 * @param store
+	 * @param language

@@ -1,0 +1,6 @@
+	@Override
+	public ReadableUser findByUserName(String userName, String storeCode, Language lang) {
+		ReadableUser user = findByUserName(userName, lang);
+		if (user == null) {
+			throw new ResourceNotFoundException("User [" + userName + "] not found");
+		}

@@ -1,0 +1,8 @@
+	private final ContentRepository contentRepository;
+	
+	@Autowired
+	private PageContentRepository pageContentRepository;
+	
+
+	@Inject
+	StaticContentFileManager contentFileManager;

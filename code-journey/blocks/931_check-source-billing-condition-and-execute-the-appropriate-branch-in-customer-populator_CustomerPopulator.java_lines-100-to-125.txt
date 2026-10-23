@@ -1,0 +1,26 @@
+
+			Map<String,Country> countries = countryService.getCountriesMap(language);
+			Map<String,Zone> zones = zoneService.getZones(language);
+			
+			target.setMerchantStore( store );
+
+			Address sourceBilling = source.getBilling();
+			if(sourceBilling!=null) {
+				Billing billing = target.getBilling();
+				billing.setAddress(sourceBilling.getAddress());
+				billing.setCity(sourceBilling.getCity());
+				billing.setCompany(sourceBilling.getCompany());
+				//billing.setCountry(country);
+				if (!StringUtils.isEmpty(sourceBilling.getFirstName()))
+					billing.setFirstName(sourceBilling.getFirstName());
+				if (!StringUtils.isEmpty(sourceBilling.getLastName()))
+					billing.setLastName(sourceBilling.getLastName());
+				billing.setTelephone(sourceBilling.getPhone());
+				billing.setPostalCode(sourceBilling.getPostalCode());
+				billing.setState(sourceBilling.getStateProvince());
+				Country billingCountry = null;
+				if(!StringUtils.isBlank(sourceBilling.getCountry())) {
+					billingCountry = countries.get(sourceBilling.getCountry());
+					if(billingCountry==null) {
+						throw new ConversionException("Unsuported country code " + sourceBilling.getCountry());
+					}

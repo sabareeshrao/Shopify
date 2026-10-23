@@ -1,0 +1,8 @@
+			
+			destination.setId(source.getId());
+
+			/**
+			 * Get product availability and verify the existing br-pa-1.0.0
+			 * 
+			 * Cannot have multiple default price for the same product availability Default
+			 * price can be edited but cannot create new default price

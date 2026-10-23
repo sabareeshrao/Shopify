@@ -1,0 +1,8 @@
+	@Autowired
+	private CountryService countryService;
+	@Autowired
+	private ZoneService zoneService;
+	
+	@Autowired
+	@Qualifier("img")
+	private ImageFilePath filePath;

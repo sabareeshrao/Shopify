@@ -1,0 +1,8 @@
+			 
+			 List<PaymentDetailsType> paymentDetails = new ArrayList<PaymentDetailsType>();
+			 paymentDetails.add(paymentDetail);
+								
+			 DoExpressCheckoutPaymentRequestDetailsType doExpressCheckoutPaymentRequestDetails = new DoExpressCheckoutPaymentRequestDetailsType();
+			 doExpressCheckoutPaymentRequestDetails.setToken(token);
+			 doExpressCheckoutPaymentRequestDetails.setPayerID(payerId);
+			 doExpressCheckoutPaymentRequestDetails.setPaymentDetails(paymentDetails);

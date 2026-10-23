@@ -1,0 +1,5 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(Stripe3Payment.class);
+
+	@Inject
+	private ProductPriceUtils productPriceUtils;
+

@@ -1,0 +1,8 @@
+	@Override
+	public OrderList listOrders(MerchantStore store, OrderCriteria criteria) {
+		OrderList orderList = new OrderList();
+		StringBuilder countBuilderSelect = new StringBuilder();
+		StringBuilder objectBuilderSelect = new StringBuilder();
+
+		String orderByCriteria = " order by o.id desc";
+

@@ -1,0 +1,8 @@
+				</beans:list>
+			</beans:property>
+		</beans:bean>
+	</beans:beans>
+	
+	<beans:beans profile="cloud">
+		<beans:bean
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

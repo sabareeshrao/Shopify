@@ -1,0 +1,3 @@
+	public void setCustomer(Long customer) {
+		this.customer = customer;
+	}

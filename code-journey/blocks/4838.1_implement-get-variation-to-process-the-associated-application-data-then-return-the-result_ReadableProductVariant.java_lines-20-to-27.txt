@@ -1,0 +1,8 @@
+	public ReadableProductVariation getVariation() {
+		return variation;
+	}
+	public void setVariation(ReadableProductVariation variation) {
+		this.variation = variation;
+	}
+	public ReadableProductVariation getVariationValue() {
+		return variationValue;

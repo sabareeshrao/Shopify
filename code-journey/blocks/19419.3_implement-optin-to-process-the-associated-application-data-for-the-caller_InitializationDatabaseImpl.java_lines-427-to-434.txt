@@ -1,0 +1,8 @@
+		defaultManufacturer.getDescriptions().add(manufacturerDescription);
+		
+		manufacturerService.create(defaultManufacturer);
+		
+	   Optin newsletter = new Optin();
+	   newsletter.setCode(OptinType.NEWSLETTER.name());
+	   newsletter.setMerchant(store);
+	   newsletter.setOptinType(OptinType.NEWSLETTER);

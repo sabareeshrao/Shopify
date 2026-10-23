@@ -1,0 +1,4 @@
+      try {
+        response.sendError(503, "Error while removing product from category " + e.getMessage());
+      } catch (Exception ignore) {
+      }

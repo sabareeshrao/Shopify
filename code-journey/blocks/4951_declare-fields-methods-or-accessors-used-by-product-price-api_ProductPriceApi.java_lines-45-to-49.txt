@@ -1,0 +1,5 @@
+
+	@Autowired
+	private ProductPriceFacade productPriceFacade;;
+
+

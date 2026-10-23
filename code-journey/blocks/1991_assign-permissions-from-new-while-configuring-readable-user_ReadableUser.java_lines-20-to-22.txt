@@ -1,0 +1,3 @@
+	private List<ReadablePermission> permissions = new ArrayList<ReadablePermission>();
+	private List<ReadableGroup> groups = new ArrayList<ReadableGroup>();
+

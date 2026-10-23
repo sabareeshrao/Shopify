@@ -1,0 +1,4 @@
+import static com.salesmanager.shop.constants.Constants.SLASH;
+import static com.salesmanager.shop.constants.Constants.STATIC_URI;
+import static com.salesmanager.shop.constants.Constants.URL_EXTENSION;
+

@@ -1,0 +1,14 @@
+		OutputContentFile outputStaticContentData = new OutputContentFile();
+		InputStream input = null;
+		try {
+
+			String nodePath = this.getNodePath(merchantStoreCode, fileContentType);
+
+			final Node<String, Object> merchantNode = this.getNode(nodePath);
+
+			final byte[] fileBytes = (byte[]) merchantNode.get(contentFileName);
+
+			if (fileBytes == null) {
+				LOGGER.warn("file byte is null, no file found");
+				return null;
+			}

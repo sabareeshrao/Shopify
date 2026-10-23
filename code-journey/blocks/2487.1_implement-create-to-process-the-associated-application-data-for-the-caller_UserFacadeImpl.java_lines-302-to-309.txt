@@ -1,0 +1,8 @@
+	@Override
+	public ReadableUser create(PersistableUser user, MerchantStore store) {
+
+		Validate.notNull(store, "MerchantStore must not be null");
+		Validate.notNull(user, "User must not be null");
+		Validate.notNull(user.getUserName(), "Username must not be null");
+
+		try {

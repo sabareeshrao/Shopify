@@ -1,0 +1,4 @@
+			@PathVariable Long priceId,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+		

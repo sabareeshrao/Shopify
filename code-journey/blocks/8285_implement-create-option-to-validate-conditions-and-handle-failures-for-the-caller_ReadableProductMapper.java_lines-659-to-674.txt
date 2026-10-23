@@ -1,0 +1,16 @@
+	private ReadableProductOption createOption(ProductOption opt, Language language) {
+
+		ReadableProductOption option = new ReadableProductOption();
+		option.setId(opt.getId());// attribute of the option
+		option.setType(opt.getProductOptionType());
+		option.setCode(opt.getCode());
+		List<ProductOptionDescription> descriptions = opt.getDescriptionsSettoList();
+		ProductOptionDescription description = null;
+		if (descriptions != null && descriptions.size() > 0) {
+			description = descriptions.get(0);
+			if (descriptions.size() > 1) {
+				for (ProductOptionDescription optionDescription : descriptions) {
+					if (optionDescription.getLanguage().getCode().equals(language.getCode())) {
+						description = optionDescription;
+						break;
+					}

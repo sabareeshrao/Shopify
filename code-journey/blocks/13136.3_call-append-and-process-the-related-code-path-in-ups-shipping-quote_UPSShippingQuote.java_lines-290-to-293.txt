@@ -1,0 +1,4 @@
+				xmldatabuffer.append("<StateProvinceCode>");
+				xmldatabuffer.append(store.getZone().getCode());// zone code
+				xmldatabuffer.append("</StateProvinceCode>");
+			}

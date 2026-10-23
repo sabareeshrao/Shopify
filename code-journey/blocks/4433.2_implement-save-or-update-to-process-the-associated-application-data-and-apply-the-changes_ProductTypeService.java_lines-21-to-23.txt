@@ -1,0 +1,3 @@
+    ProductType saveOrUpdate(ProductType productType) throws ServiceException;
+    List<ProductType> listProductTypes(List<Long> ids, MerchantStore store, Language language) throws ServiceException;
+    

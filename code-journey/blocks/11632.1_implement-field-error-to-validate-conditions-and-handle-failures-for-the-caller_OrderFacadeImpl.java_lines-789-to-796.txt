@@ -1,0 +1,8 @@
+
+			if (!order.isShipToBillingAdress()) {
+
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getFirstName())) {
+					FieldError error = new FieldError("customer.delivery.firstName", "customer.delivery.firstName",
+							messages.getMessage("NotEmpty.customer.shipping.firstName", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.firstName",

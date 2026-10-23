@@ -1,0 +1,5 @@
+		
+		
+		if((height % specificationsHeight) == 0 && (width % specificationsWidth) == 0 ) {
+			setCropeable(false);
+		}

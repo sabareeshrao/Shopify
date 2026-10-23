@@ -1,0 +1,6 @@
+				// update of existing cartItem
+				com.salesmanager.core.model.shoppingcart.ShoppingCartItem oldCartItem = oOldItem.get();
+				if (oldCartItem.getQuantity().intValue() == newItemValue.getQuantity()) {
+					// this is unchanged
+					continue;
+				}

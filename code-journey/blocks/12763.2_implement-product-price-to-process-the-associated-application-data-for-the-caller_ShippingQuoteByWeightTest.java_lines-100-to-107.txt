@@ -1,0 +1,8 @@
+	    product.getAvailabilities().add(availability);
+
+	    productAvailabilityService.create(availability);
+
+	    ProductPrice dprice = new ProductPrice();
+	    dprice.setDefaultPrice(true);
+	    dprice.setProductPriceAmount(new BigDecimal(29.99));
+	    dprice.setProductAvailability(availability);

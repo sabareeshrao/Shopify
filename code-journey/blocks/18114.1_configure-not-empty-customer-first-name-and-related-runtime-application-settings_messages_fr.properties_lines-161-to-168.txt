@@ -1,0 +1,8 @@
+
+NotEmpty.customer.FirstName=Le prenom du client ne doit pas être vide
+NotEmpty.customer.LastName=Le nom de famille du client ne doit pas être vide
+NotEmpty.customer.StreetAddress=L'adresse du client ne doit pas être vide
+NotEmpty.customer.City=La ville du client ne doit pas être vide
+NotEmpty.customer.PostCode=Le code postal du client ne doit pas être vide
+NotEmpty.customer.Telephone=Le numero de telephone du client ne doit pas être vide
+Email.customer.EmailAddress=Le email du client est invalide

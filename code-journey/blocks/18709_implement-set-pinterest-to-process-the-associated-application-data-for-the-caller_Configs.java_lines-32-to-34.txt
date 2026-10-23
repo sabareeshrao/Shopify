@@ -1,0 +1,3 @@
+	public void setPinterest(String pinterest) {
+		this.pinterest = pinterest;
+	}

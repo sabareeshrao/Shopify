@@ -1,0 +1,8 @@
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/shipping/{code}")
+	@ApiOperation(httpMethod = "GET", value = "Shipping module by code", produces = "application/json", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public IntegrationConfiguration shippingModule(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {

@@ -1,0 +1,3 @@
+	public ReadableContentBox() {
+		super.setContentType(BOX);
+	}

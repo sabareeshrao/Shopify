@@ -1,0 +1,26 @@
+
+  <context:component-scan base-package="com.salesmanager.test" />
+
+  <!-- For testing utility classes -->
+  <util:properties id="shopizer-properties">
+    			<beans:prop key="MULTIPLE_PRICE_AVAILABILITY">false</beans:prop>
+    			<beans:prop key="INDEX_PRODUCTS">false</beans:prop>
+    			
+    			<beans:prop key="SHOP_SCHEME">http</beans:prop>
+				<beans:prop key="CONTEXT_PATH">sm-shop</beans:prop>
+				<!-- Images -->
+				<beans:prop key="PRODUCT_IMAGE_WIDTH_SIZE">350</beans:prop>
+				<beans:prop key="PRODUCT_IMAGE_HEIGHT_SIZE">375</beans:prop>
+				<beans:prop key="CROP_UPLOADED_IMAGES">false</beans:prop>
+				
+				<!-- upload image validations -->
+				<beans:prop key="PRODUCT_IMAGE_MAX_HEIGHT_SIZE">2000</beans:prop>
+				<beans:prop key="PRODUCT_IMAGE_MAX_WIDTH_SIZE">4000</beans:prop>
+				<beans:prop key="PRODUCT_IMAGE_MAX_SIZE">9000000</beans:prop>
+				<beans:prop key="IMAGE_FORMATS">jpg|png|gif</beans:prop>
+				
+				<beans:prop key="POPULATE_TEST_DATA">true</beans:prop>
+
+  </util:properties>
+
+</beans:beans>

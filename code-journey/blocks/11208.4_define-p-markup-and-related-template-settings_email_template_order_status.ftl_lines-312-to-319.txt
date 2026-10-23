@@ -1,0 +1,8 @@
+							${EMAIL_DISCLAIMER}
+						</p>
+						<p>
+							${EMAIL_SPAM_DISCLAIMER}
+						</p>
+						<p>
+							${EMAIL_FOOTER_COPYRIGHT}
+						</p>

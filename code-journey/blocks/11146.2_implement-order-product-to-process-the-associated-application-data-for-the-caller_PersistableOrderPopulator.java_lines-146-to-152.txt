@@ -1,0 +1,7 @@
+			orderProductPopulator.setDigitalProductService(digitalProductService);
+			
+			for(PersistableOrderProduct orderProduct : products) {
+				OrderProduct modelOrderProduct = new OrderProduct();
+				orderProductPopulator.populate(orderProduct, modelOrderProduct, store, language);
+				target.getOrderProducts().add(modelOrderProduct);
+			}

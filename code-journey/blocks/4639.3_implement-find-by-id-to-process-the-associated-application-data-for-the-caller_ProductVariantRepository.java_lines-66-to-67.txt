@@ -1,0 +1,2 @@
+	Optional<ProductVariant> findById(Long id, Long productId, Integer storeId);
+	

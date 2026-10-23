@@ -1,0 +1,8 @@
+
+		//Get first availability, which is the only one created
+		ProductAvailability updatableAvailability = updatableProduct.getAvailabilities().iterator().next();
+		
+		//Get first price, which is the only one created
+		ProductPrice updatablePrice = updatableAvailability.getPrices().iterator().next();
+		updatablePrice.setProductPriceAmount(new BigDecimal(19.99));
+		

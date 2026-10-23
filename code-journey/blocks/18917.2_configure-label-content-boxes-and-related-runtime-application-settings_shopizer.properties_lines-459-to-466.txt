@@ -1,0 +1,8 @@
+label.content.boxes=Content boxes
+label.content.boxes.position=Box position
+label.content.boxes.name=Box name
+label.content.sections=Content sections
+label.content.friendlyurl=Friendly url
+label.content.metatag.description=Description metatag
+label.content.page.displaymainmenu=Display this page in main menu
+

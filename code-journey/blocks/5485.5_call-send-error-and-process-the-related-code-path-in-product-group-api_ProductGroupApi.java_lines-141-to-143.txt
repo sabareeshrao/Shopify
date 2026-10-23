@@ -1,0 +1,3 @@
+        response.sendError(404, "Group not fount for code " + code);
+        return null;
+      }

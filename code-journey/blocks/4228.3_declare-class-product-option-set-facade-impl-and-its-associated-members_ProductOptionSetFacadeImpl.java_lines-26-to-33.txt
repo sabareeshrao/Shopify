@@ -1,0 +1,8 @@
+@Service
+public class ProductOptionSetFacadeImpl implements ProductOptionSetFacade {
+
+	@Autowired
+	private PersistableProductOptionSetMapper persistableProductOptionSetMapper;
+
+	@Autowired
+	private ReadableProductOptionSetMapper readableProductOptionSetMapper;

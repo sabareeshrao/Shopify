@@ -1,0 +1,3 @@
+	public SaveProductEvent(Object source, Product product) {
+		super(source, product);
+	}

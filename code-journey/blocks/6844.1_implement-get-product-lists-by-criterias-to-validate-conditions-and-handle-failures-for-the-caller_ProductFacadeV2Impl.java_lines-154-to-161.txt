@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductList getProductListsByCriterias(MerchantStore store, Language language,
+			ProductCriteria criterias) throws Exception {
+		Validate.notNull(criterias, "ProductCriteria must be set for this product");
+
+		/** This is for category **/
+		if (CollectionUtils.isNotEmpty(criterias.getCategoryIds())) {
+

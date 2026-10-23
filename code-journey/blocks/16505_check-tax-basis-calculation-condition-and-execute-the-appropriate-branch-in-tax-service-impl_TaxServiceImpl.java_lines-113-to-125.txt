@@ -1,0 +1,13 @@
+		
+		Country country = customer.getBilling().getCountry();
+		Zone zone = customer.getBilling().getZone();
+		String stateProvince = customer.getBilling().getState();
+		
+		TaxBasisCalculation taxBasisCalculation = taxConfiguration.getTaxBasisCalculation();
+		if(taxBasisCalculation.name().equals(TaxBasisCalculation.SHIPPINGADDRESS)){
+			Delivery shipping = customer.getDelivery();
+			if(shipping!=null) {
+				country = shipping.getCountry();
+				zone = shipping.getZone();
+				stateProvince = shipping.getState();
+			}

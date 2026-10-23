@@ -1,0 +1,8 @@
+
+		Number count = (Number) countQ.getSingleResult();
+		productList.setTotalCount(count.intValue());
+
+		if (count.intValue() == 0)
+			return productList;
+
+		StringBuilder qs = new StringBuilder();

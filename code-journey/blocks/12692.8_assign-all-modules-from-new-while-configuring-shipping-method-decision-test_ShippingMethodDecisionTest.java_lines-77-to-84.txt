@@ -1,0 +1,8 @@
+		
+		List<IntegrationModule> allModules = new ArrayList<IntegrationModule>();
+		allModules.add(canadapost);
+		allModules.add(ups);
+		allModules.add(inhouse);
+
+		shippingMethodDecisionProcess.prePostProcessShippingQuotes(quote, details, null, delivery, null, null, null, currentModule, null, allModules, Locale.CANADA);
+		

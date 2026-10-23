@@ -1,0 +1,18 @@
+          public String getName() {
+            return "main";
+          }
+        }));
+        htmlContent.addBodyPart(htmlPage);
+        BodyPart htmlPart = new MimeBodyPart();
+        htmlPart.setContent(htmlContent);
+        mp.addBodyPart(htmlPart);
+
+        mimeMessage.setContent(mp);
+
+        // if(attachment!=null) {
+        // MimeMessageHelper messageHelper = new
+        // MimeMessageHelper(mimeMessage, true);
+        // messageHelper.addAttachment(attachmentFileName, attachment);
+        // }
+
+      }

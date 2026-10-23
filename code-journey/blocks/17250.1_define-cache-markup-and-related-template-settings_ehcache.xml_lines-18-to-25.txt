@@ -1,0 +1,8 @@
+            
+     <cache name="com.shopizer.OBJECT_CACHE"
+           maxElementsInMemory="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="1200"
+           memoryStoreEvictionPolicy="LFU" />

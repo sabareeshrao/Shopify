@@ -1,0 +1,8 @@
+	@Override
+	public ProductPrice merge(PersistableProductPrice source, ProductPrice destination, MerchantStore store,
+			Language language) {
+
+		Validate.notNull(source, "PersistableProductPrice cannot be null");
+		Validate.notNull(source.getSku(), "Product sku cannot be null");
+
+		try {

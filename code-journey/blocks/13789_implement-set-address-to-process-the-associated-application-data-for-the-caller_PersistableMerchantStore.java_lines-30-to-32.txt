@@ -1,0 +1,3 @@
+	public void setAddress(PersistableAddress address) {
+		this.address = address;
+	}

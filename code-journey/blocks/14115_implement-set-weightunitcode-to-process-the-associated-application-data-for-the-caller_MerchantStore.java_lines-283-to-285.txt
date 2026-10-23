@@ -1,0 +1,3 @@
+	public void setWeightunitcode(String weightunitcode) {
+		this.weightunitcode = weightunitcode;
+	}

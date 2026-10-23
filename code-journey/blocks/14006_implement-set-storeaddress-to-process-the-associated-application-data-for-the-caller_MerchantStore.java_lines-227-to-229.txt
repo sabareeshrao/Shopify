@@ -1,0 +1,3 @@
+	public void setStoreaddress(String storeaddress) {
+		this.storeaddress = storeaddress;
+	}

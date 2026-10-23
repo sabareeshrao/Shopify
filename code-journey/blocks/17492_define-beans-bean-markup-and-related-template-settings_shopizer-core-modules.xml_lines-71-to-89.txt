@@ -1,0 +1,19 @@
+
+	<!--Default packaging -->
+	<beans:bean id="boxPackaging"
+		class="com.salesmanager.core.business.modules.integration.shipping.impl.DefaultPackagingImpl" />
+
+	<!-- Payment -->
+	<beans:bean id="beanstream"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.BeanStreamPayment" />
+	<beans:bean id="moneyorder"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.MoneyOrderPayment" />
+	<beans:bean id="paypal-ec"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.PayPalExpressCheckoutPayment" />
+	<beans:bean id="stripe"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.StripePayment" />
+	<beans:bean id="stripe3"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.Stripe3Payment" />
+	<beans:bean id="braintree"
+		class="com.salesmanager.core.business.modules.integration.payment.impl.BraintreePayment" />
+

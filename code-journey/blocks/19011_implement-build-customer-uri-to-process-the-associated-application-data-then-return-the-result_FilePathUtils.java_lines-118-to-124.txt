@@ -1,0 +1,7 @@
+
+	/**
+	 * Access to the customer section
+	 */
+	public String buildCustomerUri(MerchantStore store, String contextPath) {
+		return buildStoreUri(store, contextPath);
+	}

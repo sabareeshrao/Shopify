@@ -1,0 +1,4 @@
+						attributePrice = attributePrice.add(attribute.getProductAttributePrice());
+					}
+				}
+			}

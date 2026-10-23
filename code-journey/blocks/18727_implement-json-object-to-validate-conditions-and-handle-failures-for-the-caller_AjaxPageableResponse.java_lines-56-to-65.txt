@@ -1,0 +1,10 @@
+				JSONObject data = new JSONObject();
+				Set<String> keys = keyValue.keySet();
+				for(String key : keys) {
+					data.put(key, keyValue.get(key));
+				}
+				String dataField = data.toJSONString();
+				dataEntries.append(dataField);
+				if(count<super.getData().size()-1) {
+					dataEntries.append(",");
+				}

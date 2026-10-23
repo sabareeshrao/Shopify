@@ -1,0 +1,4 @@
+	public ServiceException(int exceptionType) {
+		super();
+		this.exceptionType = exceptionType;
+	}

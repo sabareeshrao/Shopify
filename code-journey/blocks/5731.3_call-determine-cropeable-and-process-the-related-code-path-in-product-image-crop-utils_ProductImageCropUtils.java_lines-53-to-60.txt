@@ -1,0 +1,8 @@
+				determineCropeable(width, largeImageWidth, height, largeImageHeight);
+		
+				/*** determine crop area calculation baseline ***/
+				//this.determineBaseline(width, height);
+		
+				determineCropArea(width, largeImageWidth, height, largeImageHeight);
+			
+			} catch (Exception e) {

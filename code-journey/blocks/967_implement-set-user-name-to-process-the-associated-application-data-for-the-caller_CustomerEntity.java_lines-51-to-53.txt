@@ -1,0 +1,3 @@
+	public void setUserName(final String userName) {
+		this.userName = userName;
+	}

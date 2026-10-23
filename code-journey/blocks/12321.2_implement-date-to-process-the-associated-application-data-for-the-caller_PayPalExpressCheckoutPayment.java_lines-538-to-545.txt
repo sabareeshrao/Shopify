@@ -1,0 +1,8 @@
+			 transaction.setTransactionDate(new Date());
+			 transaction.setTransactionType(payment.getTransactionType());
+			 transaction.setPaymentType(PaymentType.PAYPAL);
+			 transaction.getTransactionDetails().put("TOKEN", token);
+			 transaction.getTransactionDetails().put("PAYERID", payerId);
+			 transaction.getTransactionDetails().put("TRANSACTIONID", transactionId);
+			 transaction.getTransactionDetails().put("CORRELATION", correlationID);
+				

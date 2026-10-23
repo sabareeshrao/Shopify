@@ -1,0 +1,8 @@
+NotEmpty.customer.billingCountry=Le pays de facturation ne doit pas être vide
+NotEmpty.customer.billingPostCode=Le code postal de facturation ne doit pas être vide
+
+NotEmpty.customer.shippingCountry=Le pays de livraison ne doit pas être vide
+
+NotEmpty.taxClass.code=Le code de la classe de taxe est requis
+NotEmpty.taxClass.title=Le nom de la classe de taxe est requis
+message.taxclass.alreadyexist=Le code de classe existe déjà

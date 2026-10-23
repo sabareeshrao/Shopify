@@ -1,0 +1,8 @@
+	private ProductInventoryService productInventoryService;
+
+	@Autowired(required = false)
+	private SearchModule searchModule;
+
+	@PostConstruct
+	public void init() throws Exception {
+

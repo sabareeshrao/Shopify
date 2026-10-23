@@ -1,0 +1,3 @@
+        } else {
+        	throw new CustomAuthenticationException("No Bearer token found in the request");
+        }

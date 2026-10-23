@@ -1,0 +1,4 @@
+import modules.commons.search.request.Document;
+import modules.commons.search.request.SearchRequest;
+import modules.commons.search.request.SearchResponse;
+

@@ -1,0 +1,6 @@
+	private ProductVariant instance(ProductVariant instance, ProductVariantGroup group, MerchantStore store) {
+		
+		instance.setProductVariantGroup(group);
+		return instance;
+
+	}

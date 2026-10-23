@@ -1,0 +1,6 @@
+    returnString.append("\"defaultSelected\"").append(":").append(this.isDefaultSelected());
+    returnString.append(",");
+    returnString.append("\"environment\"").append(":\"").append(this.getEnvironment()).append("\"");
+    return returnString.toString();
+
+  }

@@ -1,0 +1,17 @@
+	@PostMapping(value = "/cart/{code}/promo/{promo}")
+	@ApiOperation(httpMethod = "POST", value = "Add promo / coupon to an existing cart", produces = "application/json", response = ReadableShoppingCart.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ResponseEntity<ReadableShoppingCart> modifyCart(
+			@PathVariable String code,//shopping cart code
+			@PathVariable String promo,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletResponse response) {
+
+		try {
+			ReadableShoppingCart cart = shoppingCartFacade.modifyCart(code, promo, merchantStore, language);
+
+			if (cart == null) {
+				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			}

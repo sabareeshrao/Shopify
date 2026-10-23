@@ -1,0 +1,3 @@
+	public void setLogo(ReadableImage logo) {
+		this.logo = logo;
+	}

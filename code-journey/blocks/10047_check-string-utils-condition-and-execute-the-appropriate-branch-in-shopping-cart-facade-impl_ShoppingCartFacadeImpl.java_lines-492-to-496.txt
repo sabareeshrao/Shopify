@@ -1,0 +1,5 @@
+
+			else {
+				if (StringUtils.isNotBlank(shoppingCartId) && cart == null) {
+					cart = shoppingCartService.getByCode(shoppingCartId, store);
+				}

@@ -1,0 +1,9 @@
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+	public String getCategoryCode() {
+		return categoryCode;
+	}
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}

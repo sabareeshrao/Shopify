@@ -1,0 +1,9 @@
+  @Override
+  @SuppressWarnings("unchecked")
+  public List<ProductRelationship> getByType(MerchantStore store, String type, Product product) {
+    return entityManager.createQuery(HQL_GET_BY_PRODUCT_ID_AND_CODE_AVAILABLE)
+        .setParameter("code", type)
+        .setParameter("available", true)
+        .setParameter("pId", product.getId())
+        .getResultList();
+  }

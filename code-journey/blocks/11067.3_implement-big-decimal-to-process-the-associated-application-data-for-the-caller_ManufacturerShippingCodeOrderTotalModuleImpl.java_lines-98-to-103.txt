@@ -1,0 +1,6 @@
+				Double discount = inputParameters.getDiscount();
+				BigDecimal reduction = productPrice.getFinalPrice().multiply(new BigDecimal(discount));
+				reduction = reduction.multiply(new BigDecimal(shoppingCartItem.getQuantity()));
+				
+				orderTotal.setValue(reduction);
+		}

@@ -1,0 +1,7 @@
+							duplicateFound = true;
+							break;
+						}
+					}
+				}
+			}
+		}

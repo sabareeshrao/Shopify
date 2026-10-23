@@ -1,0 +1,8 @@
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="productVariantGroup")
+	private List<ProductVariantImage> images = new ArrayList<ProductVariantImage>();
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH }, mappedBy = "productVariantGroup")
+	private Set<ProductVariant> productVariants = new HashSet<ProductVariant>();
+	
+	@ManyToOne(fetch = FetchType.LAZY)

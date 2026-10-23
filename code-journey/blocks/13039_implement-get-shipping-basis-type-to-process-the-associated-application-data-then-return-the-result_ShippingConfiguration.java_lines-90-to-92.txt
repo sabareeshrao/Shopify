@@ -1,0 +1,3 @@
+	public ShippingBasisType getShippingBasisType() {
+		return shippingBasisType;
+	}

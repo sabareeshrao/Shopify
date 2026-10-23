@@ -1,0 +1,8 @@
+	@Override
+    public ReadableDelivery populate( Delivery source, ReadableDelivery target, MerchantStore store, Language language )
+        throws ConversionException
+    {
+
+        
+		if(countryService==null) {
+			throw new ConversionException("countryService must be set");

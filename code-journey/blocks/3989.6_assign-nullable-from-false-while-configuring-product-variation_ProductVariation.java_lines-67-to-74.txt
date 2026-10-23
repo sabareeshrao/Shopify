@@ -1,0 +1,8 @@
+	@JoinColumn(name="OPTION_VALUE_ID", nullable=false)
+	private ProductOptionValue productOptionValue;
+	
+    @NotEmpty
+    @Column(name="CODE", length=100, nullable=false)
+    private String code;
+    
+	@Column(name="SORT_ORDER")

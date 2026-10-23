@@ -1,0 +1,3 @@
+	private Long variation;
+	private Long variationValue;
+	

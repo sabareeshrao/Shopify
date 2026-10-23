@@ -1,0 +1,4 @@
+
+			if (retailer.isRetailer() == null || !retailer.isRetailer().booleanValue()) {
+				throw new ResourceNotFoundException("Merchant [" + code + "] not a retailer");
+			}

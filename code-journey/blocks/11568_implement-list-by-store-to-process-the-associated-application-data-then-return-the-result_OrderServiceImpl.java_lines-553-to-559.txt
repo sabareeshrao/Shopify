@@ -1,0 +1,7 @@
+
+
+    /** legacy **/
+    @Override
+    public OrderList listByStore(final MerchantStore store, final OrderCriteria criteria) {
+        return orderRepository.listByStore(store, criteria);
+    }

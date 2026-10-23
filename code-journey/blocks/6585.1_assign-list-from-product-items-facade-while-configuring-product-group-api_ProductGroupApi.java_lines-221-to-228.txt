@@ -1,0 +1,8 @@
+
+      ReadableProductList list =
+          productItemsFacade.removeItemFromGroup(product, code, merchantStore, language);
+
+      return list;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while removing product from category", e);

@@ -1,0 +1,36 @@
+
+#Email configuration
+label.emailconfig.options=Email Configuration Options
+label.emailconfig.protocol=Protocol
+label.emailconfig.host=Host
+label.emailconfig.port=Port
+label.emailconfig.username=Username
+label.emailconfig.password=Password
+label.emailconfig.smtpauth=Requires authentication
+label.emailconfig.starttls=STARTTLS
+label.emailconfig.requiresauthentication=Email server requires authentication (should be true)
+label.emailconfig.requiresstarttls=Some email servers such as Google mail requires starttls encryption
+
+label.adminurl=Administration url
+
+email.link=Link
+email.link.reset.password.title=Reset password link
+email.reset.password.text=Somebody requested your account password to be reset at {0}. If you did'nt asked this, you just can ignore the email.
+email.username.label=Username : {0}
+email.password.label=Password : {0}
+email.administration.url=Administration url : {0}
+
+email.newuser.title=New user created
+email.newstore.title=New store created
+email.newstore.text=A new store has been created
+email.newuser.text=A new user has been created
+email.newstore.name=Store name : {0}
+email.newstore.info=User informations will be sent on a separate email.
+
+email.order.title={0} - Order confirmation: {1}
+email.order.confirmation=Order confirmation: {0}
+email.order.comments=Notes: {0} 
+email.order.ordered=Ordered on : {0}
+email.order.updated=Updated on : {0}
+email.order.status.title=Order {0} updated
+email.order.status=Last order status: {0}

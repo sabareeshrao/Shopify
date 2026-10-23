@@ -1,0 +1,3 @@
+	@Column(name="RENTAL_STATUS", nullable = true)
+	private RentalStatus rentalStatus;
+	

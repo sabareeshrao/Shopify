@@ -1,0 +1,4 @@
+        Throwable rootCause = exception.getCause();
+        while (rootCause.getCause() != null && rootCause.getCause() != rootCause) {
+            rootCause = rootCause.getCause();
+        }

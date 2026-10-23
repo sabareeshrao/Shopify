@@ -1,0 +1,4 @@
+
+	ReadableEntityList<ReadableTaxClass> taxClasses(MerchantStore store, Language language);
+	ReadableTaxClass taxClass(String code, MerchantStore store, Language language);
+	

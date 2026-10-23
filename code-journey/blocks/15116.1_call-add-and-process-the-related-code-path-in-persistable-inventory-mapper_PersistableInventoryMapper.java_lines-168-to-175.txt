@@ -1,0 +1,8 @@
+				
+				prices.add(price);
+
+				price.setProductAvailability(destination);
+				price.setDefaultPrice(priceEntity.isDefaultPrice());
+				price.setProductPriceAmount(priceEntity.getPrice());
+				price.setDefaultPrice(priceEntity.isDefaultPrice());
+				price.setCode(priceEntity.getCode());

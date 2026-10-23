@@ -1,0 +1,3 @@
+	public void setProductShipeable(Boolean productShipeable) {
+		this.productShipeable = productShipeable;
+	}

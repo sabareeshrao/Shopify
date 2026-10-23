@@ -1,0 +1,7 @@
+			if (attrs != null && attrs.size() > 0) {
+				for(ProductAttribute attribute : attrs) {
+					if(attribute.getProductAttributeWeight()!=null) {
+						w = w.add(attribute.getProductAttributeWeight());
+					}
+				}
+			}

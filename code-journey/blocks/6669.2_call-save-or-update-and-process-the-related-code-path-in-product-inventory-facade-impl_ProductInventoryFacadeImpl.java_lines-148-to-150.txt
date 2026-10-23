@@ -1,0 +1,3 @@
+		saveOrUpdate(availability);
+		return readableInventoryMapper.convert(availability, store, language);
+	}

@@ -1,0 +1,13 @@
+
+      review.setProductId(id);
+
+      productCommonFacade.saveOrUpdateReview(review, merchantStore, language);
+
+      return review;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while saving product review", e);
+      try {
+        response.sendError(503, "Error while saving product review" + e.getMessage());
+      } catch (Exception ignore) {
+      }

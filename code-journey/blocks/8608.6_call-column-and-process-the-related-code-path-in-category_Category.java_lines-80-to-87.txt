@@ -1,0 +1,8 @@
+    private Integer depth;
+
+    @Column(name = "LINEAGE")
+    private String lineage;
+    
+    @Column(name="FEATURED")
+    private boolean featured;
+    

@@ -1,0 +1,5 @@
+			Country country = countriesMap.get(list.get("countryCode"));
+			if (country == null) {
+				LOGGER.warn("Country is null for " + zoneCode + " and country code " + list.get("countryCode"));
+				return;
+			}

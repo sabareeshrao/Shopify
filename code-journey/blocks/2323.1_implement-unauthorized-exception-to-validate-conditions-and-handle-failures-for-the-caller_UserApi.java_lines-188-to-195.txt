@@ -1,0 +1,8 @@
+		
+		criteria.setStoreCode(merchantStore.getCode());
+
+		if (!userFacade.userInRoles(authenticatedUser, Arrays.asList(Constants.GROUP_SUPERADMIN))) {
+			if (!userFacade.authorizedStore(authenticatedUser, merchantStore.getCode())) {
+				throw new UnauthorizedException("Operation unauthorized for user [" + authenticatedUser
+						+ "] and store [" + merchantStore + "]");
+			}

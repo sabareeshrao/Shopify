@@ -1,0 +1,6 @@
+# gcp = Google Cloud Storage
+
+config.cms.method=default
+config.cms.contentUrl=http://localhost:8080
+config.cms.static.path=/static
+

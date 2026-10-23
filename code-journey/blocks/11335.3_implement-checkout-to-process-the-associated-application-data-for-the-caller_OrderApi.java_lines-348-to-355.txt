@@ -1,0 +1,8 @@
+	public ReadableOrderConfirmation checkout(
+			@PathVariable final String code, //shopping cart
+			@Valid @RequestBody PersistableOrder order, // order
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+			HttpServletRequest request,
+			HttpServletResponse response, Locale locale) throws Exception {
+

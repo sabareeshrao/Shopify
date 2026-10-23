@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.catalog.product.variation.PersistableProductVariation;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+
+@Component
+public class PersistableProductVariationMapper implements Mapper<PersistableProductVariation, ProductVariation> {
+
+	@Autowired
+	private ProductOptionService productOptionService;

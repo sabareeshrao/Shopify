@@ -1,0 +1,11 @@
+
+      // object for a given product containing all images
+      productNode.put(contentImage.getFileName(), output.toByteArray());
+
+
+
+    } catch (Exception e) {
+
+      throw new ServiceException(e);
+
+    }

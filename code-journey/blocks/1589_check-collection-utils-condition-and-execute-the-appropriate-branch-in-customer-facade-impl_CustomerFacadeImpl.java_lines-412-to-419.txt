@@ -1,0 +1,8 @@
+
+    if (CollectionUtils.isEmpty(customer.getGroups())) {
+      List<Group> groups = getListOfGroups(GroupType.CUSTOMER);
+      for (Group group : groups) {
+        if (group.getGroupName().equals(Constants.GROUP_CUSTOMER)) {
+          customer.getGroups().add(group);
+        }
+      }

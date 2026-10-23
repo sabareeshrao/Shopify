@@ -1,0 +1,3 @@
+	public boolean getAttributeDisplayOnly() {
+		return attributeDisplayOnly;
+	}

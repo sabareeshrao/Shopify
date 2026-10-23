@@ -1,0 +1,15 @@
+	private void createOptionsSet(MerchantStore store) throws Exception {
+		
+		//add a set of option / values for major sizes
+		possibleSizes = new ProductOptionSet();
+		possibleSizes.setCode("majorSizes");
+		possibleSizes.setStore(store);
+		possibleSizes.setOption(size);
+		
+		
+		List<ProductOptionValue> values = new ArrayList<ProductOptionValue>();
+		values.add(nine);
+		values.add(ten);
+		
+		possibleSizes.setValues(values);
+		

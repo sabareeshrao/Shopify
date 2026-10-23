@@ -1,0 +1,6 @@
+	public QueryFilterType getFilterType() {
+		return filterType;
+	}
+	public void setFilterType(QueryFilterType filterType) {
+		this.filterType = filterType;
+	}

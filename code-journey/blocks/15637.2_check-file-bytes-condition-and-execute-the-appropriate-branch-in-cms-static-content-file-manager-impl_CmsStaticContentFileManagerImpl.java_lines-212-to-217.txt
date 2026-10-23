@@ -1,0 +1,6 @@
+			final byte[] fileBytes = (byte[]) merchantNode.get(contentFileName);
+
+			if (fileBytes == null) {
+				LOGGER.warn("file byte is null, no file found");
+				return null;
+			}

@@ -1,0 +1,8 @@
+						readableProductPrice.setOriginalPrice(destination.getOriginalPrice());
+
+						Optional<ProductPrice> pr = prices.stream()
+								.filter(p -> p.getCode().equals(ProductPrice.DEFAULT_PRICE_CODE)).findFirst();
+
+						destination.setProductPrice(readableProductPrice);
+
+						if (pr.isPresent() && language !=null) {

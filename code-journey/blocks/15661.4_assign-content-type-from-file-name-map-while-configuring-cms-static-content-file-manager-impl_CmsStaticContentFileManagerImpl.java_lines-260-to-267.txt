@@ -1,0 +1,8 @@
+
+				String contentType = fileNameMap.getContentTypeFor(key);
+
+				contentImage.setFile(output);
+				contentImage.setMimeType(contentType);
+				contentImage.setFileName(key);
+
+				images.add(contentImage);

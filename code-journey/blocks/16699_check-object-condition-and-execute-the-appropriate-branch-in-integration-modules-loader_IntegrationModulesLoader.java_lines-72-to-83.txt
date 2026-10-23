@@ -1,0 +1,12 @@
+	    	
+	    	if(object.get("customModule")!=null) {
+	    		Object o = object.get("customModule");
+	    		Boolean b = false;
+	    		if(o instanceof Boolean) {
+	    			b = (Boolean)object.get("customModule");
+	    		} else {
+	    			try {
+	    				b = Boolean.valueOf((String) object.get("customModule"));
+	    			} catch(Exception e) {
+	    				LOGGER.error("Cannot cast " + o.getClass() + " tp a boolean value");
+	    			}

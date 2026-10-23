@@ -1,0 +1,8 @@
+		
+		/**
+		 * variants
+		 */
+		if(criteria.getOrigin().equals(ProductCriteria.ORIGIN_SHOP)) {
+			qs.append(" left join fetch p.variants pinst ");
+			qs.append(" left join fetch pinst.variation pv ");
+			qs.append( "left join fetch pv.productOption pvpo ");

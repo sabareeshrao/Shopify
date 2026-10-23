@@ -1,0 +1,7 @@
+    when
+        ShippingInputParameters(weight > 62 || size > 66)
+        ShippingInputParameters(country == "CA")
+        ShippingInputParameters(province == "QC")
+    then
+        decision.setModuleName("priceByDistance");
+end

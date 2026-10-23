@@ -1,0 +1,6 @@
+
+@Service("productReviewService")
+public class ProductReviewServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, ProductReview> implements
+		ProductReviewService {
+

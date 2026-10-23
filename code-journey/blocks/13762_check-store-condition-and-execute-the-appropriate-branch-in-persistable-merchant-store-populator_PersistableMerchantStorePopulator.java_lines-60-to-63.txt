@@ -1,0 +1,4 @@
+		
+		if(store.getStoreLogo()!=null) {
+			target.setStoreLogo(store.getStoreLogo());
+		}

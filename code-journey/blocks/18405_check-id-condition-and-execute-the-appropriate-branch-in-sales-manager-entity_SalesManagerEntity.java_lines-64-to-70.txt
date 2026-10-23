@@ -1,0 +1,7 @@
+
+		SalesManagerEntity<K, E> entity = (SalesManagerEntity<K, E>) object; // NOSONAR : traité au-dessus mais wrapper Hibernate 
+		K id = getId();
+
+		if (id == null) {
+			return false;
+		}

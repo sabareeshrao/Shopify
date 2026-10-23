@@ -1,0 +1,3 @@
+	public void setProductReviewCount(Integer productReviewCount) {
+		this.productReviewCount = productReviewCount;
+	}

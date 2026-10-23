@@ -1,0 +1,3 @@
+	public List<ShippingOption> getOptions() {
+		return options;
+	}

@@ -1,0 +1,7 @@
+@RestController
+@RequestMapping("/api/v1")
+@Api(tags = { "Merchant and store management resource (Merchant - Store Management Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Merchant and store management", description = "Edit merchants (retailers) and stores") })
+public class MerchantStoreApi {
+

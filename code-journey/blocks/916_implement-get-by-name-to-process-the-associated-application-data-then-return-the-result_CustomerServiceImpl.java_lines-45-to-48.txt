@@ -1,0 +1,4 @@
+	@Override
+	public List<Customer> getByName(String firstName) {
+		return customerRepository.findByName(firstName);
+	}

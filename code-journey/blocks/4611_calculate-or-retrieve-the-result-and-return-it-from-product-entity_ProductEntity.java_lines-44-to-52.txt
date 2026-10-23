@@ -1,0 +1,9 @@
+	private int rentalDuration;
+	private int rentalPeriod;
+
+	/**
+	 * End RENTAL fields
+	 * 
+	 * @return
+	 */
+

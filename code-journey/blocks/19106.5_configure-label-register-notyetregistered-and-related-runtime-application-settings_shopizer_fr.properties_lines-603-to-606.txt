@@ -1,0 +1,4 @@
+label.register.notyetregistered=Pas encore enregistré ?
+label.register.whyregister=Pourquoi s'enregistrer ?
+label.register.registerreasons=Simplifiez le processus d'achat en créant au préalables les informations de facturation et d'envoi des commandes. Vous aurez accès à une section vous permettant de faire le suivi de vos commandes et d'imprimer vos factures d'achats.
+label.register.confirmation=L'enregistrement a été complété avec succès ! Un couriel a été envoyé à {0} comprenant les informations permettant de se connecter. Allez à {1} afin de vous connecter au système.

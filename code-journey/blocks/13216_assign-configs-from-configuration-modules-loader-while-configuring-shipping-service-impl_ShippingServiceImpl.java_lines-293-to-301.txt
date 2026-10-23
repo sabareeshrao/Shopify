@@ -1,0 +1,9 @@
+				
+				modules.remove(moduleCode);
+				String configs =  ConfigurationModulesLoader.toJSONString(modules);
+				String encrypted = encryption.encrypt(configs);
+				merchantConfiguration.setValue(encrypted);
+				merchantConfigurationService.saveOrUpdate(merchantConfiguration);
+				
+				
+			} 

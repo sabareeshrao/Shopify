@@ -1,0 +1,5 @@
+public interface GeoLocation {
+	
+	Address getAddress(String ipAddress) throws Exception;
+
+}

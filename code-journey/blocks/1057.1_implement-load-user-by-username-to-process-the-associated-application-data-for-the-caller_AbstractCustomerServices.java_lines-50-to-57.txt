@@ -1,0 +1,8 @@
+	public UserDetails loadUserByUsername(String userName)
+			throws UsernameNotFoundException, DataAccessException {
+		Customer user = null;
+		Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+
+		try {
+			
+				LOGGER.debug("Loading user by user id: {}", userName);

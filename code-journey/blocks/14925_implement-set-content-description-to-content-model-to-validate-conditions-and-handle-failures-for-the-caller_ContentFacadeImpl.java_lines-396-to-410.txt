@@ -1,0 +1,15 @@
+	private void setContentDescriptionToContentModel(Content content, ContentDescription contentDescription,
+			Language language) {
+
+		Optional<ContentDescription> contentDescriptionModel = findAppropriateContentDescription(
+				content.getDescriptions(), language);
+
+		if (contentDescriptionModel.isPresent()) {
+			contentDescription.setMetatagDescription(contentDescriptionModel.get().getMetatagDescription());
+			contentDescription.setDescription(contentDescriptionModel.get().getDescription());
+			contentDescription.setId(contentDescriptionModel.get().getId());
+			contentDescription.setAuditSection(contentDescriptionModel.get().getAuditSection());
+			contentDescription.setLanguage(contentDescriptionModel.get().getLanguage());
+			contentDescription.setTitle(contentDescriptionModel.get().getTitle());
+			contentDescription.setName(contentDescriptionModel.get().getName());
+		} 

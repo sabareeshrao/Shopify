@@ -1,0 +1,8 @@
+		
+	
+		Query countQ = em.createQuery(
+				countBuilderSelect.toString() + countBuilderWhere.toString());
+
+		if(criteria.getGroupIds()!=null && criteria.getGroupIds().size()>0) {
+			countQ.setParameter("cid", criteria.getGroupIds());
+		}

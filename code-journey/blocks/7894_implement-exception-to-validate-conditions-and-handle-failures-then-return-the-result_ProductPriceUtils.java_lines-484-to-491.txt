@@ -1,0 +1,8 @@
+
+				BigDecimalValidator validator = CurrencyValidator.getInstance();
+
+				return validator.validate(amount, locale);
+			} else {
+				throw new Exception("Cannot parse " + amount);
+			}
+		}

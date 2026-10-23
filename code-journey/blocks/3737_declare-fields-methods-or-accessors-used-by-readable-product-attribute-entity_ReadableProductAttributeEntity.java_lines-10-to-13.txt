@@ -1,0 +1,4 @@
+	private String productAttributeWeight;
+	private String productAttributePrice;
+	private String productAttributeUnformattedPrice;
+	

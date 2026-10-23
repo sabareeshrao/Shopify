@@ -1,0 +1,36 @@
+label.generic.add=Ajouter
+label.generic.username=Nom d'usager
+label.generic.edit=Changer
+label.generic.print=Imprimer
+
+label.generic.environment=Environnement
+label.generic.providedby=Propulsé par
+
+label.generic.title=Titre
+label.generic.keywords=Mots clés
+label.generic.amount=Montant
+label.generic.changepassword=Change password
+
+label.generic.confirm=Veuillez confirmer!
+label.generic.firstname=Prénom
+label.generic.lastname=Nom
+label.generic.streetaddress=Adresse civique
+label.generic.postalcode=Code postal
+label.generic.city=Ville
+label.generic.country=Pays
+label.generic.hi=Bonjour
+label.generic.send=Envoyer
+label.generic.rebate=Rabais
+
+label.soldout=Non disponible
+
+#merchant store
+label.store.information.title=Informations
+label.store.title=Boutique
+label.store.information=Informations sur la boutique
+label.storeadministration=Administration de la boutique
+label.storeadministrator = Administrateur de la boutique
+label.storename = Nom de la boutique
+label.storecode=Code unique de la boutique
+label.currency = Devise
+label.bgcolorcode = Couleur de fond

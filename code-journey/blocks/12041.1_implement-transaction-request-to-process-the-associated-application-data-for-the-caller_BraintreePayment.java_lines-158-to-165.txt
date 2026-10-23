@@ -1,0 +1,8 @@
+
+        TransactionRequest request = new TransactionRequest()
+            .amount(amount)
+            .paymentMethodNonce(nonce);
+
+        Result<com.braintreegateway.Transaction> result = gateway.transaction().sale(request);
+
+        String authorizationId = null;

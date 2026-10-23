@@ -1,0 +1,8 @@
+#module.shipping.ups.method.69=UPS Worldwide Expedited
+#module.shipping.ups.method.70=UPS Standard
+#module.shipping.ups.method.71=UPS Worldwide Express Plus
+#module.shipping.ups.method.72=UPS Saver
+module.shipping.ups.method=UPS shipping methods
+module.shipping.ups.method.select=Select a specific UPS shipping method
+module.shipping.ups.method.unselect=Let UPS propose all available shipping methods
+

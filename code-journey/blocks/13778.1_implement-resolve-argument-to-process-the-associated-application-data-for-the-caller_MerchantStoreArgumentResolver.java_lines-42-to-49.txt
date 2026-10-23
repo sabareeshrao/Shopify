@@ -1,0 +1,8 @@
+	@Override
+	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+			NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+		String storeValue = Optional.ofNullable(webRequest.getParameter(REQUEST_PARAMATER_STORE))
+				.filter(StringUtils::isNotBlank).orElse(DEFAULT_STORE);
+		// todo get from cache
+		MerchantStore storeModel = storeFacade.get(storeValue);
+

@@ -1,0 +1,11 @@
+public class ReadableOrderProduct extends OrderProductEntity implements
+		Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String productName;
+	private String price;
+	private String subTotal;
+	

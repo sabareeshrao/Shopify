@@ -1,0 +1,5 @@
+				if (!StringUtils.isBlank(price.getDiscountEndDate())) {
+					Date endDate = DateUtil.getDate(price.getDiscountEndDate());
+					productPrice.setProductPriceSpecialEndDate(endDate);
+				}
+			}

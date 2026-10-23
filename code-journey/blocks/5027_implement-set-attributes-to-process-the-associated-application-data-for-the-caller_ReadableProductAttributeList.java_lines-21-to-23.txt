@@ -1,0 +1,3 @@
+	public void setAttributes(List<ReadableProductAttributeEntity> attributes) {
+		this.attributes = attributes;
+	}

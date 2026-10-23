@@ -1,0 +1,17 @@
+                    billing.setCountry(billingCountry);
+                    target.setBilling( billing );
+                }
+			}
+			Address sourceShipping = source.getDelivery();
+			if(sourceShipping!=null) {
+				Delivery delivery = new Delivery();
+				delivery.setAddress(sourceShipping.getAddress());
+				delivery.setCity(sourceShipping.getCity());
+				delivery.setCompany(sourceShipping.getCompany());
+				delivery.setFirstName(sourceShipping.getFirstName());
+				delivery.setLastName(sourceShipping.getLastName());
+				delivery.setTelephone(sourceShipping.getPhone());
+				delivery.setPostalCode(sourceShipping.getPostalCode());
+				delivery.setState(sourceShipping.getStateProvince());
+				Country deliveryCountry = null;
+				

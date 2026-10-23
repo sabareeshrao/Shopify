@@ -1,0 +1,8 @@
+	 * @throws ServiceException
+	 */
+	ShoppingCartItem populateShoppingCartItem(Product product, MerchantStore store) throws ServiceException;
+
+	void deleteCart(ShoppingCart cart) throws ServiceException;
+
+	void removeShoppingCart(ShoppingCart cart) throws ServiceException;
+

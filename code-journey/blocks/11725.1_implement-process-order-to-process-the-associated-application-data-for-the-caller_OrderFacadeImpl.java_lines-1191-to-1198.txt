@@ -1,0 +1,8 @@
+
+	/**
+	 * Process order from api
+	 */
+	@Override
+	public Order processOrder(com.salesmanager.shop.model.order.v1.PersistableOrder order, Customer customer,
+			MerchantStore store, Language language, Locale locale) throws ServiceException {
+

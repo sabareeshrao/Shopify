@@ -1,0 +1,4 @@
+
+label.storefront.storetext = Contenu de la page principale 
+label.storefront.metatags.keywords = (Meta tags) Mots-clés 
+label.storefront.metatags.description = (Meta tags) Description

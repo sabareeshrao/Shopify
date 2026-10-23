@@ -1,0 +1,3 @@
+          final ReadableUser user = response.getBody();
+          assertNotNull(user);
+      }

@@ -1,0 +1,5 @@
+		if(!StringUtils.isBlank(criteria.getName())) {
+			String nameQuery =" and c.billing.firstName like:nm or c.billing.lastName like:nm";
+			countBuilderWhere.append(nameQuery);
+			objectBuilderWhere.append(nameQuery);
+		}

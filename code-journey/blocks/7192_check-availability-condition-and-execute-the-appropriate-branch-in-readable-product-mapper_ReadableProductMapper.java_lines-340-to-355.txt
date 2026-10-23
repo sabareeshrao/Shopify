@@ -1,0 +1,16 @@
+		
+		// availability
+		ProductAvailability availability = null;
+		for (ProductAvailability a : source.getAvailabilities()) {
+			// TODO validate region
+			// if(availability.getRegion().equals(Constants.ALL_REGIONS)) {//TODO REL 3.X
+			// accept a region
+			
+			/**
+			 * Default availability
+			 * store
+			 * product
+			 * instance null
+			 * region variant null
+			 */
+			

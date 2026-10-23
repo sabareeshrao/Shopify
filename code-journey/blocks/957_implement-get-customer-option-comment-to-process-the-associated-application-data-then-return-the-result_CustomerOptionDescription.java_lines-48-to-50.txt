@@ -1,0 +1,3 @@
+	public String getCustomerOptionComment() {
+		return customerOptionComment;
+	}

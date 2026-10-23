@@ -1,0 +1,7 @@
+			throw new IntegrationException(e1);
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (Exception ignore) {
+				}

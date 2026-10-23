@@ -1,0 +1,26 @@
+
+	
+	/**
+	 * Builds a merchant store logo path
+	 * @param store
+	 * @return
+	 */
+	public String buildStoreLogoFilePath(MerchantStore store);
+	
+	/**
+	 * Builds product property image url path
+	 * @param store
+	 * @param imageName
+	 * @return
+	 */
+	public String buildProductPropertyImageUtils(MerchantStore store, String imageName);
+	
+	/**
+	 * A custom file type image handler
+	 * @param store
+	 * @param imageName
+	 * @param type
+	 * @return
+	 */
+	String buildCustomTypeImageUtils(MerchantStore store, String imageName, FileContentType type);
+	

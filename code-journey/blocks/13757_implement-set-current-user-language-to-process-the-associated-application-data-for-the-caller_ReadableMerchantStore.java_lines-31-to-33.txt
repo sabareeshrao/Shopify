@@ -1,0 +1,3 @@
+	public void setCurrentUserLanguage(String currentUserLanguage) {
+		this.currentUserLanguage = currentUserLanguage;
+	}

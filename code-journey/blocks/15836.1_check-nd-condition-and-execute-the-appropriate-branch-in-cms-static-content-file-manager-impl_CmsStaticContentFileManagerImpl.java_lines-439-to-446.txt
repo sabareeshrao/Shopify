@@ -1,0 +1,8 @@
+		
+		//Put logic in a method
+		
+		Fqn folderFqn = Fqn.fromString(appender.toString());
+
+		Node<String, Object> nd = cacheManager.getTreeCache().getRoot().getChild(folderFqn);
+
+		if (nd == null) {

@@ -1,0 +1,11 @@
+	private ReadableCategory createReadable(Category category, Language language) {
+
+		ReadableCategory current = new ReadableCategory();
+		this.fillReadableCategory(current, category, language);
+		Optional<com.salesmanager.shop.model.catalog.category.CategoryDescription> description = category
+				.getDescriptions().stream().filter(d -> language.getId().equals(d.getLanguage().getId()))
+				.map(this::convertDescription).findAny();
+
+		if (description.isPresent()) {
+			current.setDescription(description.get());
+		}

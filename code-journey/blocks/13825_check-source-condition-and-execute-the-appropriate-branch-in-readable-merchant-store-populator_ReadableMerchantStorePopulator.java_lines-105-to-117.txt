@@ -1,0 +1,13 @@
+		
+		
+		target.setDimension(MeasureUnit.valueOf(source.getSeizeunitcode()));
+		target.setWeight(WeightUnit.valueOf(source.getWeightunitcode()));
+		
+		if(source.getZone()!=null) {
+			address.setStateProvince(source.getZone().getCode());
+			try {
+				Zone z = zoneService.getZones(language).get(source.getZone().getCode());
+				address.setStateProvince(z.getCode());
+			} catch (ServiceException e) {
+				logger.error("Cannot get Zone", e);
+			}

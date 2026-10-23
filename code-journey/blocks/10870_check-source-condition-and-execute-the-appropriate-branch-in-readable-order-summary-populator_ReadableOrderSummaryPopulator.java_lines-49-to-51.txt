@@ -1,0 +1,3 @@
+			if(source.getTotal() != null) {
+				target.setTotal(pricingService.getDisplayAmount(source.getTotal(), store));
+			}

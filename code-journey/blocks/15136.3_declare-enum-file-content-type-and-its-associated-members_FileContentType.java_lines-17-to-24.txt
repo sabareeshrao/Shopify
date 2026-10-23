@@ -1,0 +1,8 @@
+ * 
+ * @author Umesh Awasthi
+ * @since 1.2
+ *
+ */
+public enum FileContentType
+{
+  STATIC_FILE, IMAGE, LOGO, PRODUCT, PRODUCTLG, PROPERTY, VARIANT, MANUFACTURER, PRODUCT_DIGITAL, API_IMAGE, API_FILE

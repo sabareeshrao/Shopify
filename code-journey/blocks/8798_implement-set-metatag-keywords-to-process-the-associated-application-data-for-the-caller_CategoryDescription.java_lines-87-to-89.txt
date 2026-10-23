@@ -1,0 +1,3 @@
+	public void setMetatagKeywords(String metatagKeywords) {
+		this.metatagKeywords = metatagKeywords;
+	}

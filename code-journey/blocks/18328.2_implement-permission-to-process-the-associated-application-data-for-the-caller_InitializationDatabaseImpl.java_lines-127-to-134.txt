@@ -1,0 +1,8 @@
+		  
+		  Permission SUPERADMIN = new Permission("SUPERADMIN");
+		  permissionService.create(SUPERADMIN);
+		  permissionKeys.put(SUPERADMIN.getPermissionName(), SUPERADMIN);
+		  
+		  Permission ADMIN = new Permission("ADMIN");
+		  permissionService.create(ADMIN);
+		  permissionKeys.put(ADMIN.getPermissionName(), ADMIN);

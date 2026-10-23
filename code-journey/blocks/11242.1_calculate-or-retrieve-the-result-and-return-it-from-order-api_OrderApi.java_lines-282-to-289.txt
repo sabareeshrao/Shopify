@@ -1,0 +1,8 @@
+
+	/**
+	 * Get a given order by id
+	 *
+	 * @param id
+	 * @param request
+	 * @param response
+	 * @return

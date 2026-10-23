@@ -1,0 +1,8 @@
+ * 
+ * The module can be configured to use miles by changing distance.inMeters
+ * 
+ * To use this pre-processor you will need a google api-key
+ * 
+ * Access google developers console
+ * https://console.developers.google.com/project
+ * 

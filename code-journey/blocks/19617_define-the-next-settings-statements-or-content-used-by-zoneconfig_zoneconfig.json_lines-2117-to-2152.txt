@@ -1,0 +1,36 @@
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "NC",
+			"zoneName": "North Carolina",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "ND",
+			"zoneName": "North Dakota",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "MP",
+			"zoneName": "Northern Mariana Islands",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "OH",
+			"zoneName": "Ohio",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "OK",
+			"zoneName": "Oklahoma",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "OR",
+			"zoneName": "Oregon",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "PA",
+			"zoneName": "Pennsylvania",
+			"countryCode": "US"

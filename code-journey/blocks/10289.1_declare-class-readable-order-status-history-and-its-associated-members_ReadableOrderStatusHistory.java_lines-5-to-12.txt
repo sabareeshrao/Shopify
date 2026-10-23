@@ -1,0 +1,8 @@
+public class ReadableOrderStatusHistory extends OrderStatusHistory {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	/**

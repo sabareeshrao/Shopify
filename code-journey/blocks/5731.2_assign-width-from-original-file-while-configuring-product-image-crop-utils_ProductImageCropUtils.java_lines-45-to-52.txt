@@ -1,0 +1,8 @@
+				
+				/** Original Image **/
+				// get original image size
+
+				int width = originalFile.getWidth();
+				int height = originalFile.getHeight();
+		
+				/*** determine if image can be cropped ***/

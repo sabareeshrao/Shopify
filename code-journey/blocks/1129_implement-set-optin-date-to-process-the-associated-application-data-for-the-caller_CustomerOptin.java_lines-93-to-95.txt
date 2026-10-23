@@ -1,0 +1,3 @@
+	public void setOptinDate(Date optinDate) {
+		this.optinDate = optinDate;
+	}

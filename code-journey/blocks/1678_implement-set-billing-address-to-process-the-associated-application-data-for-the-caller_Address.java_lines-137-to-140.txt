@@ -1,0 +1,4 @@
+    public void setBillingAddress( boolean billingAddress )
+    {
+        this.billingAddress = billingAddress;
+    }

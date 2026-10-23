@@ -1,0 +1,3 @@
+				propertyValue.getValues().add(productOptionValueDescription);
+
+			}

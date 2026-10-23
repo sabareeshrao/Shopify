@@ -1,0 +1,3 @@
+	public void setUseDefaultSearchConfig(Map<String,Boolean> useDefaultSearchConfig) {
+		this.useDefaultSearchConfig = useDefaultSearchConfig;
+	}

@@ -1,0 +1,3 @@
+    public ServiceRuntimeException(String errorCode, String message, Throwable exception) {
+        super(StringUtils.isBlank(errorCode)? "500": errorCode, message, exception);
+    }

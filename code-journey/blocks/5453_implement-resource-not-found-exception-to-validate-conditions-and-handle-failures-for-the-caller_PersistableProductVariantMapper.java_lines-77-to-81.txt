@@ -1,0 +1,5 @@
+				
+		
+		if(variation.isEmpty()) {
+			throw new ResourceNotFoundException("ProductVarition [" + productVariation + "] + not found for store [" + store.getCode() + "]");
+		}

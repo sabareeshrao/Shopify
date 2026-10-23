@@ -1,0 +1,8 @@
+	public final static String MODULE_CODE = "storePickUp";
+
+	@Inject
+	private MerchantConfigurationService merchantConfigurationService;
+	
+	@Inject
+	private ProductPriceUtils productPriceUtils;
+

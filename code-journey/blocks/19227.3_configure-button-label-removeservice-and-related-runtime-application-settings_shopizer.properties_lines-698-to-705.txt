@@ -1,0 +1,8 @@
+button.label.removeservice=Remove Service
+button.label.getcode=Get code
+button.label.logout=Logout
+button.label.logon=Logon
+button.label.login=Login
+button.label.signin=Sign in
+button.label.register=Register
+button.label.select=Select

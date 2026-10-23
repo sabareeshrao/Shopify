@@ -1,0 +1,8 @@
+			MerchantStore store) throws ServiceException;
+
+	/**
+	 * Adds a Shipping configuration
+	 * @param configuration
+	 * @param store
+	 * @throws ServiceException
+	 */

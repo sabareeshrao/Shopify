@@ -1,0 +1,21 @@
+import javax.inject.Inject;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Creates a request to reCaptcha 2
+ * https://www.google.com/recaptcha/api/siteverify
+ * Throws an exception if it can't connect to reCaptcha
+ * returns true or false if validation has passed
+ * @author carlsamson
+ *
+ */
+@Component
+public class CaptchaRequestUtils {
+	
+	@Inject
+	private CoreConfiguration configuration; //for reading public and secret key
+	

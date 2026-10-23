@@ -1,0 +1,8 @@
+
+		// product.setImages(images);
+
+		ProductSpecification specifications = new ProductSpecification();
+		specifications.setHeight(new BigDecimal(20));
+		specifications.setLength(new BigDecimal(21));
+		specifications.setWeight(new BigDecimal(22));
+		specifications.setWidth(new BigDecimal(23));

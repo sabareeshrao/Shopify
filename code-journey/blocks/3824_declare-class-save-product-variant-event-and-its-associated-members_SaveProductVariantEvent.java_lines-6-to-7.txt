@@ -1,0 +1,2 @@
+public class SaveProductVariantEvent extends ProductEvent {
+	

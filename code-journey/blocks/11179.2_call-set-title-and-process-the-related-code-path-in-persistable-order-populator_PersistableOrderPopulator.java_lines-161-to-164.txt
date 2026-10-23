@@ -1,0 +1,4 @@
+					totalModel.setTitle(total.getTitle());
+					totalModel.setValue(total.getValue());
+					target.getOrderTotal().add(totalModel);
+				}

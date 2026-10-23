@@ -1,0 +1,3 @@
+	public void setOrderValueType(OrderValueType orderValueType) {
+		this.orderValueType = orderValueType;
+	}

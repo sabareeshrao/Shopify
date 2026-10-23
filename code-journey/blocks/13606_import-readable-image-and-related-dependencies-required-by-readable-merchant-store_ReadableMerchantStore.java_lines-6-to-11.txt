@@ -1,0 +1,6 @@
+import com.salesmanager.shop.model.content.ReadableImage;
+import com.salesmanager.shop.model.entity.ReadableAudit;
+import com.salesmanager.shop.model.entity.ReadableAuditable;
+import com.salesmanager.shop.model.references.ReadableAddress;
+import com.salesmanager.shop.model.references.ReadableLanguage;
+

@@ -1,0 +1,5 @@
+	@Override
+	public User getById(Long id, MerchantStore store) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		return userRepository.findByUserId(id, store.getCode());
+	}

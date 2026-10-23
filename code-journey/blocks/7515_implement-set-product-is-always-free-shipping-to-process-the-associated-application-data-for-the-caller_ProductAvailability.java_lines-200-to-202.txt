@@ -1,0 +1,3 @@
+	public void setProductIsAlwaysFreeShipping(boolean productIsAlwaysFreeShipping) {
+		this.productIsAlwaysFreeShipping = productIsAlwaysFreeShipping;
+	}

@@ -1,0 +1,8 @@
+public class GeoZone extends SalesManagerEntity<Long, GeoZone> {
+	private static final long serialVersionUID = -5992008645857938825L;
+	
+	@Id
+	@Column(name = "GEOZONE_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "GEOZONE_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;

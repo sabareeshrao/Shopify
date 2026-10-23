@@ -1,0 +1,3 @@
+	public void setVariations(List<OrderTotal> variations) {
+		this.variations = variations;
+	}

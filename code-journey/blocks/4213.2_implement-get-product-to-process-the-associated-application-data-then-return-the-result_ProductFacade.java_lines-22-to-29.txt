@@ -1,0 +1,8 @@
+   * @param store
+   * @return
+   */
+  Product getProduct(Long id, MerchantStore store);
+
+  /**
+   * Reads a product by code
+   *

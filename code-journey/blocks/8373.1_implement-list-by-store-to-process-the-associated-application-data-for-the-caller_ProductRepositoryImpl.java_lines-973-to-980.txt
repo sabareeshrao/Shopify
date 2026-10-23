@@ -1,0 +1,8 @@
+	@Override
+	public List<Product> listByStore(MerchantStore store) {
+
+		/**
+		 * Testing in debug mode takes a long time with this query running in
+		 * normal mode is fine
+		 */
+

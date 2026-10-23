@@ -1,0 +1,5 @@
+    // we are creating or resetting a customer
+    if (StringUtils.isBlank(customerModel.getPassword())
+        && !StringUtils.isBlank(customer.getPassword())) {
+      customerModel.setPassword(customer.getPassword());
+    }

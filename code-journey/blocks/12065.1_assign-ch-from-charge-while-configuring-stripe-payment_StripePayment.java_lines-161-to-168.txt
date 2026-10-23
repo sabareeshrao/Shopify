@@ -1,0 +1,8 @@
+			
+			Charge ch = Charge.create(chargeParams);
+
+			//Map<String,String> metadata = ch.getMetadata();
+			
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);

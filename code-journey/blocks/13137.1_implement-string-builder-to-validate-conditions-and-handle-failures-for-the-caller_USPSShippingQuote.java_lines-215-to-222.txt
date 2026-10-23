@@ -1,0 +1,8 @@
+			}
+			
+
+			StringBuilder xmlheader = new StringBuilder();
+			if(store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+				xmlheader.append("<RateV3Request USERID=\"").append(keys.get("account")).append("\">");
+			} else {
+				xmlheader.append("<IntlRateRequest USERID=\"").append(keys.get("account")).append("\">");

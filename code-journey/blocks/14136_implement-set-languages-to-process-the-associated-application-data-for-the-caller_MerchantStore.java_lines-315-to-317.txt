@@ -1,0 +1,3 @@
+	public void setLanguages(List<Language> languages) {
+		this.languages = languages;
+	}

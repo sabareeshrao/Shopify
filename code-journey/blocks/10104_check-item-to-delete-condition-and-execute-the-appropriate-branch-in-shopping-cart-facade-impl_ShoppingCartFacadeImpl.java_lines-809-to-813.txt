@@ -1,0 +1,5 @@
+		}
+		// delete item
+		if (itemToDelete != null) {
+			shoppingCartService.deleteShoppingCartItem(itemToDelete.getId());
+		}

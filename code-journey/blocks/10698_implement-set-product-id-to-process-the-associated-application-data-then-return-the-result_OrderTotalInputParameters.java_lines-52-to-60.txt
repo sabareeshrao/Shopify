@@ -1,0 +1,9 @@
+	public void setProductId(long productId) {
+		this.productId = productId;
+	}
+	public String getShippingMethod() {
+		return shippingMethod;
+	}
+	public void setShippingMethod(String shippingMethod) {
+		this.shippingMethod = shippingMethod;
+	}

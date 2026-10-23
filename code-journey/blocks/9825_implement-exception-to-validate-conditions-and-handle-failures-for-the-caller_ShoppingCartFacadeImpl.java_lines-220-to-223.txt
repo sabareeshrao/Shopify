@@ -1,0 +1,4 @@
+
+		if (!product.isAvailable()) {
+			throw new Exception("Item with id " + product.getId() + " is not available");
+		}

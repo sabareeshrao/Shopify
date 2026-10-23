@@ -1,0 +1,3 @@
+		if (storeForCheck != null) {
+			throw new ServiceRuntimeException("MerhantStore " + store.getCode() + " already exists");
+		}

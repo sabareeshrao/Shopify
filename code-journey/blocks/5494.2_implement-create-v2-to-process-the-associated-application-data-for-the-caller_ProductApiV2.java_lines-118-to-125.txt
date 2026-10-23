@@ -1,0 +1,8 @@
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody Entity createV2(@Valid @RequestBody PersistableProductDefinition product,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		// make sure product id is null

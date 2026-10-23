@@ -1,0 +1,8 @@
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import springfox.documentation.annotations.ApiIgnore;
+
+@RestController
+@RequestMapping("/api/v1")
+public class CustomerReviewApi {
+

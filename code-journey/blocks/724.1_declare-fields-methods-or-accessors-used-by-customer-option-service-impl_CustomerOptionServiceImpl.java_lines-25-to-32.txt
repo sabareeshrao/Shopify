@@ -1,0 +1,8 @@
+	private CustomerOptionRepository customerOptionRepository;
+	
+	@Inject
+	private CustomerAttributeService customerAttributeService;
+	
+	@Inject
+	private CustomerOptionSetService customerOptionSetService;
+	

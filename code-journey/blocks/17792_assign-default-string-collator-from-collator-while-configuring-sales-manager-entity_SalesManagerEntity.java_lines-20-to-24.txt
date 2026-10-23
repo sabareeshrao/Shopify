@@ -1,0 +1,5 @@
+	public static final Collator DEFAULT_STRING_COLLATOR = Collator.getInstance(Locale.FRENCH);
+	
+	static {
+		DEFAULT_STRING_COLLATOR.setStrength(Collator.PRIMARY);
+	}

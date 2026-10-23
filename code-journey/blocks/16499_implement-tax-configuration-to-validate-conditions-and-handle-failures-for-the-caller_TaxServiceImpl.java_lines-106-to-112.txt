@@ -1,0 +1,7 @@
+		
+		//determine tax calculation basis
+		TaxConfiguration taxConfiguration = this.getTaxConfiguration(store);
+		if(taxConfiguration==null) {
+			taxConfiguration = new TaxConfiguration();
+			taxConfiguration.setTaxBasisCalculation(TaxBasisCalculation.SHIPPINGADDRESS);
+		}

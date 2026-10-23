@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@Transient
+	private Product product;
+
+	@JsonIgnore
+	@Transient
+	private boolean obsolete = false;

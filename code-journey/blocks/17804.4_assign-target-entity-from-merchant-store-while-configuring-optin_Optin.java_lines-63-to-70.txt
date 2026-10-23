@@ -1,0 +1,8 @@
+	
+	@ManyToOne(targetEntity = MerchantStore.class)
+	@JoinColumn(name="MERCHANT_ID")
+	private MerchantStore merchant;
+	
+	@Column(name="CODE", nullable=false)
+	private String code;
+	

@@ -1,0 +1,10 @@
+
+	@Transient
+	public ProductPrice defaultPrice() {
+		for (ProductPrice price : prices) {
+			if (price.isDefaultPrice()) {
+				return price;
+			}
+		}
+		return new ProductPrice();
+	}

@@ -1,0 +1,8 @@
+	 * Returns all Images for a given product
+	 * @param product
+	 * @return
+	 * @throws ServiceException
+	 */
+	List<OutputContentFile> getProductImages(Product product)
+			throws ServiceException;
+	

@@ -1,0 +1,9 @@
+	public BigDecimal getRate() {
+		return rate;
+	}
+	public void setRate(BigDecimal rate) {
+		this.rate = rate;
+	}
+	public String getStore() {
+		return store;
+	}

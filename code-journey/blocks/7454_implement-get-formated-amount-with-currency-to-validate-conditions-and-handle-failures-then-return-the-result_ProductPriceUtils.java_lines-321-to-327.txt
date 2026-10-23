@@ -1,0 +1,7 @@
+
+	// Utility
+	public String getFormatedAmountWithCurrency(Locale locale,
+			com.salesmanager.core.model.reference.currency.Currency currency, BigDecimal amount) throws Exception {
+		if (amount == null) {
+			return "";
+		}

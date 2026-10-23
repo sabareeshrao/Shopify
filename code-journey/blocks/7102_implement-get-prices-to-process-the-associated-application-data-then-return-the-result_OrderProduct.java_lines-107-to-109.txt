@@ -1,0 +1,3 @@
+	public Set<OrderProductPrice> getPrices() {
+		return prices;
+	}

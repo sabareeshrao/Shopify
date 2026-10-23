@@ -1,0 +1,22 @@
+	
+
+/*	@Override
+	public ByteArrayOutputStream createInvoice(MerchantStore store, Order order, Language language) throws Exception {
+		
+		
+
+			
+			List<Zone> zones = zoneService.getZones(store.getCountry(), language);
+			Map<String,Country> countries = countryService.getCountriesMap(language);
+			
+			//get default template
+			String template = new StringBuilder().append(INVOICE_TEMPLATE).append("_").append(language.getCode().toLowerCase()).append(INVOICE_TEMPLATE_EXTENSION).toString();
+			
+			//try by language
+			InputStream is = null;
+			try {
+				is = getClass().getClassLoader().getResourceAsStream(template);
+			} catch (Exception e) {
+				LOGGER.warn("Cannot open template " + template);
+				throw new Exception("Cannot open " + template);
+			}

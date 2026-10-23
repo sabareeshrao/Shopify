@@ -1,0 +1,4 @@
+@Import({CoreApplicationConfiguration.class}) // import sm-core configurations
+@EnableWebSecurity
+public class ShopApplicationConfiguration implements WebMvcConfigurer {
+

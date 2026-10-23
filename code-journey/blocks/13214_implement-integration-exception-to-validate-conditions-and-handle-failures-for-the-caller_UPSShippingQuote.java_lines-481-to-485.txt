@@ -1,0 +1,5 @@
+			if (!StringUtils.isBlank(parsed.getStatusCode())
+					&& !parsed.getStatusCode().equals("1")) {
+
+				throw new IntegrationException(parsed.getError());
+			}

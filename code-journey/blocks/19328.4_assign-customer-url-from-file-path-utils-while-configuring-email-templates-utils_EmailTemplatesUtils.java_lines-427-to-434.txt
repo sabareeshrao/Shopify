@@ -1,0 +1,8 @@
+	           templateTokens.put(EmailConstants.EMAIL_ORDER_DOWNLOAD, messages.getMessage("email.order.download.text", downloadMessage, customerLocale));
+	           templateTokens.put(EmailConstants.CUSTOMER_ACCESS_LABEL, messages.getMessage("label.customer.accessportal",customerLocale));
+	           templateTokens.put(EmailConstants.ACCESS_NOW_LABEL, messages.getMessage("label.customer.accessnow",customerLocale));
+
+	           //shop url
+	           String customerUrl = filePathUtils.buildStoreUri(merchantStore, contextPath);
+	           templateTokens.put(EmailConstants.CUSTOMER_ACCESS_URL, customerUrl);
+

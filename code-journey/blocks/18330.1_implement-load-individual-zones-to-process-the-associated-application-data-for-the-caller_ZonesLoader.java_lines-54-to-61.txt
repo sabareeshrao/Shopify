@@ -1,0 +1,8 @@
+	private static final String ALL_REGIONS = "*";
+
+	//
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List<Map<String, Zone>> loadIndividualZones() throws Exception {
+
+		List<Map<String, Zone>> loadedZones = new ArrayList<Map<String, Zone>>();
+		try {

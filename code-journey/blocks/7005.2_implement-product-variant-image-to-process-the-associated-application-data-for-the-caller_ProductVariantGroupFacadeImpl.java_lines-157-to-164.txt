@@ -1,0 +1,8 @@
+		//get option group
+		
+		ProductVariantGroup group = this.group(instanceGroupId, store);
+		ProductVariantImage instanceImage = new ProductVariantImage();
+		
+		try {
+			
+			String path = new StringBuilder().append("group").append(Constants.SLASH).append(instanceGroupId).toString();

@@ -1,0 +1,8 @@
+		"description": {
+			"type": "text"
+		},
+		"name": {
+			"type": "text",
+			"analyzer": "name_analyzer"
+		},
+		"category": {

@@ -1,0 +1,3 @@
+  public ConversionRuntimeException(String message, Throwable exception) {
+    super(message, exception);
+  }

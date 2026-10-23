@@ -1,0 +1,6 @@
+						}
+						q.setOptionName(option.getOptionName());
+						q.setOptionShippingDate(new Date());
+						q.setPrice(option.getOptionPrice());
+						
+					}

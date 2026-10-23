@@ -1,0 +1,8 @@
+
+
+				
+				 BasicAmountType amount = new BasicAmountType();
+				 amount.setValue(pricingService.getStringAmount(order.getTotal(), store));
+				 amount.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(order.getCurrency().getCode()));
+
+				// DoCaptureRequest which takes mandatory params:

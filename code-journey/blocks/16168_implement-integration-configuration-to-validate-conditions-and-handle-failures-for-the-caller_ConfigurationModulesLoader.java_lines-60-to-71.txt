@@ -1,0 +1,12 @@
+
+            Map[] objects = mapper.readValue(value, Map[].class);
+
+			for (Map object : objects) {
+
+
+				IntegrationConfiguration configuration = new IntegrationConfiguration();
+
+				String moduleCode = (String) object.get("moduleCode");
+				if (object.get("active") != null) {
+					configuration.setActive((Boolean) object.get("active"));
+				}

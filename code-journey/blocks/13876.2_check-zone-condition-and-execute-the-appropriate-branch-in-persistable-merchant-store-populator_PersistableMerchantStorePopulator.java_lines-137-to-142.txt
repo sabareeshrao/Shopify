@@ -1,0 +1,6 @@
+				Zone zone = zoneService.getByCode(address.getStateProvince());
+				if(zone != null) {
+					target.setZone(zone);
+				} else {
+					target.setStorestateprovince(address.getStateProvince());
+				}

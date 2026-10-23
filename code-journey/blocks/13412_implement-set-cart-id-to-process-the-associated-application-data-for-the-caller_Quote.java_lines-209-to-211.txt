@@ -1,0 +1,3 @@
+	public void setCartId(Long cartId) {
+		this.cartId = cartId;
+	}

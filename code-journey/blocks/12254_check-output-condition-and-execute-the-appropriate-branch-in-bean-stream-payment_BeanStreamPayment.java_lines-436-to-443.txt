@@ -1,0 +1,8 @@
+
+			if (output != null) {
+				try {
+					output.close();
+				} catch (Exception ignore) {
+					// TODO: handle exception
+				}
+			}

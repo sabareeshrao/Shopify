@@ -1,0 +1,8 @@
+  @Override
+  public Configs getMerchantConfig(MerchantStore merchantStore, Language language) {
+
+    MerchantConfig configs = getMerchantConfig(merchantStore);
+
+    Configs readableConfig = new Configs();
+    readableConfig.setAllowOnlinePurchase(configs.isAllowPurchaseItems());
+    readableConfig.setDisplaySearchBox(configs.isDisplaySearchBox());

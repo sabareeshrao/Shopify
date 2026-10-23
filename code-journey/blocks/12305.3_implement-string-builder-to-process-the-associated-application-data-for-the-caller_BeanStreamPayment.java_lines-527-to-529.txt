@@ -1,0 +1,3 @@
+		StringBuilder nm = new StringBuilder();
+		nm.append(customer.getBilling().getFirstName()).append(" ").append(customer.getBilling().getLastName());
+		

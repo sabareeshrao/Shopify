@@ -1,0 +1,8 @@
+
+		
+		//OrderTotal
+		OrderTotal subtotal = new OrderTotal();	
+		subtotal.setModule("summary" );		
+		subtotal.setSortOrder(0);
+		subtotal.setText("Summary" );
+		subtotal.setTitle("Summary" );

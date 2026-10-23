@@ -1,0 +1,6 @@
+    protected PaginationData createPaginaionData( final int pageNumber, final int pageSize )
+    {
+        final PaginationData paginaionData = new PaginationData(pageSize,pageNumber);
+       
+        return paginaionData;
+    }

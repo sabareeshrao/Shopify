@@ -1,0 +1,4 @@
+		
+		config.getSettings().put(language, settings);
+
+	}

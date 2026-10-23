@@ -1,0 +1,8 @@
+	@Override
+	public List<Category> listBySeUrl(MerchantStore store, String seUrl) throws ServiceException {
+
+		try {
+			return categoryRepository.listByFriendlyUrl(store.getId(), seUrl);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}

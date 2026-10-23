@@ -1,0 +1,3 @@
+	public String getShowBillingStateList() {
+		return showBillingStateList;
+	}

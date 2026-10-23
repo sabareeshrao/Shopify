@@ -1,0 +1,2 @@
+  private final static String ERROR_CODE = "401";
+

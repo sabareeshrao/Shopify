@@ -1,0 +1,4 @@
+
+		if (size == ProductImageSize.SMALL) {
+			imageName = "S-" + imageName;
+		}

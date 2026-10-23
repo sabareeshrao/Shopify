@@ -1,0 +1,8 @@
+ * - check if user can perform actions on marchant
+ * @author carlsamson
+ *
+ */
+@Component
+public class AuthorizationUtils {
+	
+	@Inject

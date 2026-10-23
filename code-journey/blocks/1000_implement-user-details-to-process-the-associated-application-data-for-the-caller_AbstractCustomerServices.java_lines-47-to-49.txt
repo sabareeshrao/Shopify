@@ -1,0 +1,3 @@
+	protected abstract UserDetails userDetails(String userName, Customer customer, Collection<GrantedAuthority> authorities);
+	
+

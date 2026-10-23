@@ -1,0 +1,7 @@
+					if(!StringUtils.isBlank(option.getEstimatedNumberOfDays())) {
+						try {
+							q.setEstimatedNumberOfDays(Integer.valueOf(option.getEstimatedNumberOfDays()));
+						} catch(Exception e) {
+							LOGGER.error("Cannot cast to integer " + option.getEstimatedNumberOfDays());
+						}
+					}

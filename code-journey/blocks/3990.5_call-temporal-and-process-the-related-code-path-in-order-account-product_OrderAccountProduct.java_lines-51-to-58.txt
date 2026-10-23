@@ -1,0 +1,8 @@
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="ORDER_ACCOUNT_PRODUCT_EOT"  , length=0 )
+	private Date orderAccountProductEot;
+
+	@Temporal(TemporalType.DATE)
+	@Column (name="ORDER_ACCOUNT_PRODUCT_ACCNT_DT"  , length=0 )
+	private Date orderAccountProductAccountedDate;
+

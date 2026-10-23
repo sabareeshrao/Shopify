@@ -1,0 +1,5 @@
+		
+		if(!CollectionUtils.isEmpty(source.getAvailabilities())) {
+			List<ReadableInventory> inventories = source.getAvailabilities().stream().map(i -> readableInventoryMapper.convert(i, store, language)).collect(Collectors.toList());
+			destination.setInventory(inventories);
+		}

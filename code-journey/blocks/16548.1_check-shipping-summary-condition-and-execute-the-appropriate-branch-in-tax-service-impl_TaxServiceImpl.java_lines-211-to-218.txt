@@ -1,0 +1,8 @@
+				ShippingSummary shippingSummary = orderSummary.getShippingSummary();
+				if(shippingSummary!=null && shippingSummary.getShipping()!=null && shippingSummary.getShipping().doubleValue()>0) {
+					amnt = amnt.add(shippingSummary.getShipping());
+					if(shippingSummary.getHandling()!=null && shippingSummary.getHandling().doubleValue()>0) {
+						amnt = amnt.add(shippingSummary.getHandling());
+					}
+				}
+				taxClassAmountMap.put(defaultTaxClass.getId(), amnt);

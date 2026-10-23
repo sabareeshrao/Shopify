@@ -1,0 +1,8 @@
+	@Override
+	public Product merge(PersistableProductDefinition source, Product destination, MerchantStore store,
+			Language language) {
+
+		
+		  
+	    Validate.notNull(destination,"Product must not be null");
+

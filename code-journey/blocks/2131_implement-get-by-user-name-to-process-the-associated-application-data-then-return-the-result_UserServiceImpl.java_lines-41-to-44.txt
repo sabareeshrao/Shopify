@@ -1,0 +1,4 @@
+	@Override
+	public User getByUserName(String userName) throws ServiceException {
+		return userRepository.findByUserName(userName);
+	}

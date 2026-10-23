@@ -1,0 +1,3 @@
+	public Double getRating() {
+		return rating;
+	}

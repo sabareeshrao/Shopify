@@ -1,0 +1,8 @@
+                    shoppingCartItem.setCode(cart.getCode());
+                    shoppingCartItem.setSku(item.getProduct().getSku());
+                    shoppingCartItem.setProductVirtual(item.isProductVirtual());
+
+                    shoppingCartItem.setId(item.getId());
+                    
+                    String itemName = item.getProduct().getProductDescription().getName();
+                    if(!CollectionUtils.isEmpty(item.getProduct().getDescriptions())) {

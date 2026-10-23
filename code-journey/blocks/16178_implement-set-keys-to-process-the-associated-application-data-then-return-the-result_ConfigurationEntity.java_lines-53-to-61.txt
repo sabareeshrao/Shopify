@@ -1,0 +1,9 @@
+	public void setKeys(Map<String, String> keys) {
+		this.keys = keys;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}

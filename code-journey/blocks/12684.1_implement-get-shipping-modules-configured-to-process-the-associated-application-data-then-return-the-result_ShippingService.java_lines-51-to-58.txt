@@ -1,0 +1,8 @@
+	
+	/**
+	 * Returns a list of configured shipping modules for a given merchant
+	 * @param store
+	 * @return
+	 * @throws ServiceException
+	 */
+	Map<String, IntegrationConfiguration> getShippingModulesConfigured(

@@ -1,0 +1,4 @@
+	  public CartModificationException(final String msg)
+	  {
+	      super(msg);
+	  }

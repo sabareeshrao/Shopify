@@ -1,0 +1,8 @@
+	 * @return
+	 * @throws ServiceException
+	 */
+	@Override
+	public List<String> getFileNames(final String merchantStoreCode, Optional<String> folderPath,
+			final FileContentType staticContentType) throws ServiceException {
+
+		try {

@@ -1,0 +1,6 @@
+			User user = userService.getByUserName(userName, store.getCode());
+
+			if (user == null) {
+				throw new ResourceNotFoundException(
+						"User [" + userName + "] not found for store [" + store.getCode() + "]");
+			}

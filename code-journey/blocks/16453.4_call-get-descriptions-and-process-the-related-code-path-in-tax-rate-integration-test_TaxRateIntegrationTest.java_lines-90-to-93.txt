@@ -1,0 +1,4 @@
+    	
+    	taxRate.getDescriptions().add(en);
+    	taxRate.getDescriptions().add(fr);
+

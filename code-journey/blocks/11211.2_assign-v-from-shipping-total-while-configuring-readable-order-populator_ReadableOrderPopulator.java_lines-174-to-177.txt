@@ -1,0 +1,4 @@
+					BigDecimal v = shippingTotal.getValue();
+					v = v.add(totalTotal.getValue());
+					shippingTotal.setValue(v);
+				}

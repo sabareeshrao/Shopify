@@ -1,0 +1,3 @@
+		
+		return readableProductVariationMapper.convert(variation.get(), store, language);
+	}

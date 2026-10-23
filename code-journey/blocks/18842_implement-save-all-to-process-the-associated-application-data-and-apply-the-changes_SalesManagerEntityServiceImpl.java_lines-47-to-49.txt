@@ -1,0 +1,3 @@
+	public void saveAll(Iterable<E> entities) throws ServiceException {
+		repository.saveAll(entities);
+	}

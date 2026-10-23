@@ -1,0 +1,8 @@
+	void updateAddress(String userName, PersistableCustomer customer, MerchantStore store);
+	
+	/**
+	 * Save or update a CustomerReview
+	 * @param review
+	 * @param store
+	 * @param language
+	 * @throws Exception

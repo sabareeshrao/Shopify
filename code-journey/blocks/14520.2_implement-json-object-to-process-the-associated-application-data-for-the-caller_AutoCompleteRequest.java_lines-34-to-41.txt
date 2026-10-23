@@ -1,0 +1,8 @@
+		
+		JSONObject keyword = new JSONObject();
+		JSONObject q = new JSONObject();
+		JSONObject mq = new JSONObject();
+		JSONObject match = new JSONObject();
+		
+		q.put(QUERY, query);
+		q.put(ANALYZER, STD_ANALYZER);

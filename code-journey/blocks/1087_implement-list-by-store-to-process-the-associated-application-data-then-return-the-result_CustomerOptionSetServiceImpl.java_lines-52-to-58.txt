@@ -1,0 +1,7 @@
+	@Override
+	public List<CustomerOptionSet> listByStore(MerchantStore store, Language language) throws ServiceException {
+		Validate.notNull(store,"merchant store cannot be null");
+
+		
+		return customerOptionSetRepository.findByStore(store.getId(),language.getId());
+	}

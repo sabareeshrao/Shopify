@@ -1,0 +1,9 @@
+								}
+							}
+						}
+					}
+					if (!duplicateFound) {
+						LOGGER.info("New item found..adding item to Shopping cart");
+						userShoppingModel.getLineItems().add(sessionShoppingCartItem);
+					}
+				}

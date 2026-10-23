@@ -1,0 +1,26 @@
+
+	/**
+	 * This amount will be displayed to the end user
+	 * 
+	 * @param store
+	 * @param amount
+	 * @param locale
+	 * @return
+	 * @throws Exception
+	 */
+	// Utility
+	public String getFormatedAmountWithCurrency(MerchantStore store, BigDecimal amount, Locale locale)
+			throws Exception {
+
+		NumberFormat nf = null;
+
+		Currency currency = store.getCurrency().getCurrency();
+
+		nf = NumberFormat.getInstance(locale);
+		nf.setCurrency(currency);
+		nf.setMaximumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+		nf.setMinimumFractionDigits(Integer.parseInt(Character.toString(DECIMALCOUNT)));
+
+		return nf.format(amount);
+
+	}

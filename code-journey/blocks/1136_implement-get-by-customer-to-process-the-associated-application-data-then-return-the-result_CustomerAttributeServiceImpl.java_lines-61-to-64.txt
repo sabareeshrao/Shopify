@@ -1,0 +1,4 @@
+	@Override
+	public List<CustomerAttribute> getByCustomer(MerchantStore store, Customer customer) {
+		return customerAttributeRepository.findByCustomerId(store.getId(), customer.getId());
+	}

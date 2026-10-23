@@ -1,0 +1,2 @@
+        overwriteField = mappingFields.get(columnName);
+      }

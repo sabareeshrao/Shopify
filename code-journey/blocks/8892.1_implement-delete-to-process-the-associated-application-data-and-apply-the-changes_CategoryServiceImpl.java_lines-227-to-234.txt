@@ -1,0 +1,8 @@
+
+	}
+
+	// @Override
+	public void delete(Category category) throws ServiceException {
+
+		// get category with lineage (subcategories)
+		StringBuilder lineage = new StringBuilder();

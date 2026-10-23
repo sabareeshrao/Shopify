@@ -1,0 +1,8 @@
+ *
+ *
+ */
+public interface CustomerFacade
+{
+
+    /**
+     * Method used to fetch customer based on the username and storecode.

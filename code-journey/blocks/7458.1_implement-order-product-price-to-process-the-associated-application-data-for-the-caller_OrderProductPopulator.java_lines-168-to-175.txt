@@ -1,0 +1,8 @@
+	private OrderProductPrice orderProductPrice(FinalPrice price) {
+		
+		OrderProductPrice orderProductPrice = new OrderProductPrice();
+		
+		ProductPrice productPrice = price.getProductPrice();
+		
+		orderProductPrice.setDefaultPrice(productPrice.isDefaultPrice());
+

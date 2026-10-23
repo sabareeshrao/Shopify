@@ -1,0 +1,7 @@
+
+		populator.setPricingService(pricingService);
+		populator.setimageUtils(imageUtils);
+		populator.populate(persistable, readableProduct, persistable.getMerchantStore(), language);
+
+		return readableProduct;
+	}

@@ -1,0 +1,3 @@
+	public void setLinkToMenu(boolean linkToMenu) {
+		this.linkToMenu = linkToMenu;
+	}

@@ -1,0 +1,3 @@
+	public void setApplicationHost(String applicationHost) {
+		this.applicationHost = applicationHost;
+	}

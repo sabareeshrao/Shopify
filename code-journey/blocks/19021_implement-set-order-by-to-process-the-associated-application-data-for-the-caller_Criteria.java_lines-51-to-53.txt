@@ -1,0 +1,3 @@
+	public void setOrderBy(CriteriaOrderBy orderBy) {
+		this.orderBy = orderBy;
+	}

@@ -1,0 +1,10 @@
+				
+				dataEntries.append("\"").append(key).append("\"");
+				dataEntries.append(":");
+				dataEntries.append("\"").append(this.getDataMap().get(key)).append("\"");
+
+				if(count<this.getDataMap().size()-1) {
+					dataEntries.append(",");
+				}
+				count ++;
+			}

@@ -1,0 +1,7 @@
+	private String normalizePath(String path) {
+		if (SLASH.equals(path)) {
+			return BLANK;
+		} else {
+			return path;
+		}
+	}

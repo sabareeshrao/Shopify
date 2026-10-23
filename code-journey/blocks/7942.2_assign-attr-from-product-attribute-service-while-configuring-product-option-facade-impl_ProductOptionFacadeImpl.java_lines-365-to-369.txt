@@ -1,0 +1,5 @@
+				attr = productAttributeService.getByProductId(store, product, page, count);
+				attrList.setRecordsTotal(attr.getTotalElements());
+				attrList.setNumber(attr.getNumberOfElements());
+				attrList.setTotalPages(attr.getTotalPages());
+			}

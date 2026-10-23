@@ -1,0 +1,8 @@
+	@Override
+	// KEEP ** ENTRY POINT **
+	public ReadableShoppingCart addToCart(PersistableShoppingCartItem item, MerchantStore store, Language language) {
+
+		Validate.notNull(item, "PersistableShoppingCartItem cannot be null");
+
+		// if cart does not exist create a new one
+

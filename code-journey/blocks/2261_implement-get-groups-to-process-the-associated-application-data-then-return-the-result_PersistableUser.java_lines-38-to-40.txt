@@ -1,0 +1,3 @@
+	public List<PersistableGroup> getGroups() {
+		return groups;
+	}

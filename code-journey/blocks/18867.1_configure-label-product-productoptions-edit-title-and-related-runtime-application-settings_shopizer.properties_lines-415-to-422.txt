@@ -1,0 +1,8 @@
+#options
+label.product.productoptions.edit.title=Edit product option
+label.product.productoptions.create.title=Create product option
+label.product.productoptions.title=Product option
+label.product.productoptions.name=Option name
+label.product.productoptions.price=Option price
+label.product.productoptions.comments=Option comments
+label.product.productoptions.type=Option type

@@ -1,0 +1,3 @@
+	public void setDiscounted(boolean discounted) {
+		this.discounted = discounted;
+	}

@@ -1,0 +1,2 @@
+    private List<ReadableProduct> products = new ArrayList<>();
+

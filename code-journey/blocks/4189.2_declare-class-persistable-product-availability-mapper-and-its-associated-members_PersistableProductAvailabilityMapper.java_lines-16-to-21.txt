@@ -1,0 +1,6 @@
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.utils.DateUtil;
+
+@Component
+public class PersistableProductAvailabilityMapper implements Mapper<PersistableProductInventory, ProductAvailability> {
+

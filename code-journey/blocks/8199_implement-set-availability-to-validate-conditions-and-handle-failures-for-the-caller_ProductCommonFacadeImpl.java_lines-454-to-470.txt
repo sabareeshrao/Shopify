@@ -1,0 +1,17 @@
+		
+	}
+	
+	/**
+	 * edit availability
+	 */
+	private void setAvailability(ProductAvailability availability, LightPersistableProduct product) {
+		availability.setProductQuantity(product.getQuantity());
+		if (!StringUtils.isBlank(product.getPrice())) {
+			// set default price
+			for (ProductPrice price : availability.getPrices()) {
+				if (price.isDefaultPrice()) {
+					try {
+						price.setProductPriceAmount(pricingService.getAmount(product.getPrice()));
+					} catch (ServiceException e) {
+						throw new ServiceRuntimeException("Invalid product price format");
+					}

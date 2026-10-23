@@ -1,0 +1,8 @@
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="ORDER_ACCOUNT_PRODUCT_L_ST_DT"  , length=0 )
+	private Date orderAccountProductLastStatusDate;
+
+	@Column (name="ORDER_ACCOUNT_PRODUCT_L_TRX_ST" , nullable=false )
+	private Integer orderAccountProductLastTransactionStatus;
+
+	@Column (name="ORDER_ACCOUNT_PRODUCT_PM_FR_TY" , nullable=false )

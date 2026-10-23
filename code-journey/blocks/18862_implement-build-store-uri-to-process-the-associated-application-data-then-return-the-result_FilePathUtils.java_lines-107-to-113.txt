@@ -1,0 +1,7 @@
+
+	/**
+	 * \/<contextPath>
+	 */
+	public String buildStoreUri(MerchantStore store, String contextPath) {
+		return normalizePath(contextPath);
+	}

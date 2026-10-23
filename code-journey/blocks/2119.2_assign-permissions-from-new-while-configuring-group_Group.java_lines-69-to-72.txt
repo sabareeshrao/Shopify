@@ -1,0 +1,4 @@
+            inverseJoinColumns = @JoinColumn(name = "PERMISSION_ID")
+        )
+	private Set<Permission> permissions = new HashSet<Permission>();
+

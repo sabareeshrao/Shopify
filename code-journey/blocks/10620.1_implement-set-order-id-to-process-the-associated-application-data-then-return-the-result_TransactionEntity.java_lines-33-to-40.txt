@@ -1,0 +1,8 @@
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+	public String getDetails() {
+		return details;
+	}
+	public void setDetails(String details) {
+		this.details = details;

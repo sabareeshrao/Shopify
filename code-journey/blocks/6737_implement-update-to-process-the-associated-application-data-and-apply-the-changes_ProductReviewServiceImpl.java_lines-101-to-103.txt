@@ -1,0 +1,3 @@
+	public void update(ProductReview review) throws ServiceException {
+		this.saveOrUpdate(review);
+	}

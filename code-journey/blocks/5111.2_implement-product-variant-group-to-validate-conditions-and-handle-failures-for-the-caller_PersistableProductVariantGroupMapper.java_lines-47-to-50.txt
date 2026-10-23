@@ -1,0 +1,4 @@
+		
+		if(destination == null) {
+			destination = new ProductVariantGroup();
+		}

@@ -1,0 +1,6 @@
+					if(c.isVisible()) {
+						isVisible = true;
+						break;
+					} else {
+						isVisible = false;
+					}

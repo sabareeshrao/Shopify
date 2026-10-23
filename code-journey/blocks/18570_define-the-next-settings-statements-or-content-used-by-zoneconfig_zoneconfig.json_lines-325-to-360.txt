@@ -1,0 +1,36 @@
+		"zoneName": "Alberta",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "BC",
+		"zoneName": "British Columbia",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "MB",
+		"zoneName": "Manitoba",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NF",
+		"zoneName": "Newfoundland - Labrador",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NB",
+		"zoneName": "New Brunswick",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NS",
+		"zoneName": "Nova Scotia",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NT",
+		"zoneName": "Northwest Territories",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NU",
+		"zoneName": "Nunavut",

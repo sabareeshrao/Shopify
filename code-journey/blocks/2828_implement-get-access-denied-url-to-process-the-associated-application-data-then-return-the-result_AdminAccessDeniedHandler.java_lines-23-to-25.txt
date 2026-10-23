@@ -1,0 +1,3 @@
+	public String getAccessDeniedUrl() {
+		return accessDeniedUrl;
+	}

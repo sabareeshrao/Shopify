@@ -1,0 +1,36 @@
+#options
+label.product.productoptions.edit.title=Edit product option
+label.product.productoptions.create.title=Create product option
+label.product.productoptions.title=Product option
+label.product.productoptions.name=Option name
+label.product.productoptions.price=Option price
+label.product.productoptions.comments=Option comments
+label.product.productoptions.type=Option type
+label.product.productoptions.list=Options list
+
+label.product.productoption.type.text=Text
+label.product.productoption.type.radio=Radio
+label.product.productoption.type.select=Select
+label.product.productoption.type.checkbox=Checkbox
+
+label.product.option.displayonly=Option for display only
+label.product.option.code=Option code
+label.product.option.codehelp=Option code is required for querying products by attributes
+
+#options values
+label.product.productoptionsvalues.title=Product option values
+label.product.productoptionsvalues.list=Product options values list
+label.product.productoptiosvalue.title=Product option value
+label.product.productoptionvalue.edit.title=Edit product option value
+label.product.productoptionvalue.create.title=Create product option value
+label.product.productoptionvalue=Option value image
+
+label.product.customGroup.title=Product group
+label.product.customgroup.add=Add custom product group
+label.product.customgroup.code=Custom product group code (must be unique)
+
+label.product.rate=Rate product
+label.product.clickrate=Product rating (click on the stars to activate rating)
+
+#content Images - Files
+label.page=Page

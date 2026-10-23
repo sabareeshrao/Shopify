@@ -1,0 +1,3 @@
+	public FolderPut getAddFolder() {
+		return addFolder;
+	}

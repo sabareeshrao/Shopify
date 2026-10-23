@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.catalog.product.variation.ProductVariationService;
+import com.salesmanager.core.model.catalog.product.variation.ProductVariation;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.catalog.PersistableProductVariationMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductVariationMapper;
+import com.salesmanager.shop.model.catalog.product.variation.PersistableProductVariation;

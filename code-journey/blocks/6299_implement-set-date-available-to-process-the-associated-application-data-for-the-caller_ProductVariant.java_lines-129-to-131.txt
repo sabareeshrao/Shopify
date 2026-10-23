@@ -1,0 +1,3 @@
+	public void setDateAvailable(Date dateAvailable) {
+		this.dateAvailable = dateAvailable;
+	}

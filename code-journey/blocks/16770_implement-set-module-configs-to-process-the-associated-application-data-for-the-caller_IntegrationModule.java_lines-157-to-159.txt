@@ -1,0 +1,3 @@
+	public void setModuleConfigs(Map<String, ModuleConfig> moduleConfigs) {
+		this.moduleConfigs = moduleConfigs;
+	}

@@ -1,0 +1,13 @@
+
+/**
+ * Store pick up shipping module
+ * 
+ * Requires a configuration of a message note to be printed to the client
+ * and a price for calculation (should be configured to 0)
+ * 
+ * Calculates a ShippingQuote with a price set to the price configured
+ * @author carlsamson
+ *
+ */
+public class StorePickupShippingQuote implements ShippingQuoteModule, ShippingQuotePrePostProcessModule {
+	

@@ -1,0 +1,8 @@
+	
+	@Inject
+	protected ShoppingCartService shoppingCartService;
+	
+	@Inject
+	protected EmailService emailService;
+	
+	@Before

@@ -1,0 +1,8 @@
+
+						for (Object arrayConfig : arrayConfigs) {
+
+							Map values = (Map) arrayConfig;
+							String env = (String) values.get("env");
+							ModuleConfig config = new ModuleConfig();
+							config.setScheme((String) values.get("scheme"));
+							config.setHost((String) values.get("host"));

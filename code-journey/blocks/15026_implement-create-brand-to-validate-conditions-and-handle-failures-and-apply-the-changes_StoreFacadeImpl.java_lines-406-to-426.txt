@@ -1,0 +1,21 @@
+	@Override
+	public void createBrand(String merchantStoreCode, PersistableBrand brand) {
+		MerchantStore mStore = getMerchantStoreByCode(merchantStoreCode);
+
+		List<MerchantConfigEntity> createdConfigs = brand.getSocialNetworks();
+
+		List<MerchantConfiguration> configurations = createdConfigs.stream()
+				.map(config -> convertToMerchantConfiguration(config, MerchantConfigurationType.SOCIAL))
+				.collect(Collectors.toList());
+		try {
+			for (MerchantConfiguration mConfigs : configurations) {
+				mConfigs.setMerchantStore(mStore);
+				if (!StringUtils.isEmpty(mConfigs.getValue())) {
+					mConfigs.setMerchantConfigurationType(MerchantConfigurationType.SOCIAL);
+					merchantConfigurationService.saveOrUpdate(mConfigs);
+				} else {// remove if submited blank and exists
+					MerchantConfiguration config = merchantConfigurationService
+							.getMerchantConfiguration(mConfigs.getKey(), mStore);
+					if (config != null) {
+						merchantConfigurationService.delete(config);
+					}

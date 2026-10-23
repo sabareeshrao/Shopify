@@ -1,0 +1,8 @@
+
+	// Pricer
+	public FinalPrice getFinalPrice(ProductVariant variant) throws ServiceException {
+
+		Validate.notNull(variant, "ProductVariant must not be null");
+		Validate.notNull(variant.getProduct(), "variant.product must not be null");
+		Validate.notNull(variant.getAuditSection(), "variant.availabilities must not be null or empty");
+

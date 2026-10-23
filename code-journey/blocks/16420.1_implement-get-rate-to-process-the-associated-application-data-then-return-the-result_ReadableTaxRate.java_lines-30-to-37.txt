@@ -1,0 +1,8 @@
+	public String getRate() {
+		return rate;
+	}
+	public void setRate(String rate) {
+		this.rate = rate;
+	}
+	public String getStore() {
+		return store;

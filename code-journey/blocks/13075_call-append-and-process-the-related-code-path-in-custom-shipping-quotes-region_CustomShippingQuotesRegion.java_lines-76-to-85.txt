@@ -1,0 +1,10 @@
+			}
+			quotesList.append("]");
+
+			returnString.append("\"quoteItems\"").append(":").append(quotesList.toString());
+		}
+		returnString.append("}");
+		return returnString.toString();
+		
+		
+	}

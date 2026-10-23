@@ -1,0 +1,3 @@
+	public void setInventory(PersistableProductInventory inventory) {
+		this.inventory = inventory;
+	}

@@ -1,0 +1,3 @@
+	public String getAttributePrice() {
+		return attributePrice;
+	}

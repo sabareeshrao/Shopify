@@ -1,0 +1,8 @@
+NotEmpty.order.creditcard.cvv=Credit card validation digit is required
+NotEmpty.contact.name=Contact name is required
+NotEmpty.contact.subject=Contact subject is required
+NotEmpty.contact.comment=Comment is required
+Email.contact.email=Email format is invalid
+NotEmpty.contact.captchaResponseField=Captcha answer is required
+NotEmpty.contact.captchaChallengeField=Captcha challenge question is required
+

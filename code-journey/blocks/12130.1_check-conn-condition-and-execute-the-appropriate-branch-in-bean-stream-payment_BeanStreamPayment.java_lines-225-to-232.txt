@@ -1,0 +1,8 @@
+			
+			if (conn != null) {
+				try {
+					conn.disconnect();
+				} catch (Exception ignore) {
+					// TODO: handle exception
+				}
+			}

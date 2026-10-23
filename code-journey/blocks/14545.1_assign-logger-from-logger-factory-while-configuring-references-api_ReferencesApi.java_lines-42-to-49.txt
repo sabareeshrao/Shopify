@@ -1,0 +1,8 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ReferencesApi.class);
+
+
+  @Inject private StoreFacade storeFacade;
+
+  @Inject private LanguageUtils languageUtils;
+
+  @Inject private LanguageFacade languageFacade;

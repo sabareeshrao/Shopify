@@ -1,0 +1,3 @@
+	public void setOrderTotal(Set<OrderTotal> orderTotal) {
+		this.orderTotal = orderTotal;
+	}

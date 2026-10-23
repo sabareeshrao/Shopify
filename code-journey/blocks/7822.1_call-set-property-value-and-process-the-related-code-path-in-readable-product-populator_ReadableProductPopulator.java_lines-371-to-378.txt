@@ -1,0 +1,8 @@
+									}
+								}
+
+								property.setPropertyValue(readableOptionValue);
+
+
+								//} else{
+								//	properties.put(attribute.getProductOption().getId(), property);

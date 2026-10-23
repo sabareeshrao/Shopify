@@ -1,0 +1,8 @@
+public interface DigitalProductService extends SalesManagerEntityService<Long, DigitalProduct> {
+
+	void saveOrUpdate(DigitalProduct digitalProduct) throws ServiceException;
+
+	void addProductFile(Product product, DigitalProduct digitalProduct,
+			InputContentFile inputFile) throws ServiceException;
+
+

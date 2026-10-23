@@ -1,0 +1,8 @@
+
+			ReadableEntityList<ReadableTaxClass> list = new ReadableEntityList<ReadableTaxClass>();
+			list.setItems(taxClasses);
+			list.setNumber(taxClasses.size());
+			list.setTotalPages(1);
+			list.setRecordsTotal(taxClasses.size());
+			
+			return list;

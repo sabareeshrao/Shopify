@@ -1,0 +1,8 @@
+		"regions": ["*"]
+	},
+	{
+		"module": "PAYMENT",
+		"code": "moneyorder",
+		"type":"moneyorder",
+		"version":"",
+		"regions": ["*"],

@@ -1,0 +1,8 @@
+import com.salesmanager.test.shop.common.ServicesTestSupport;
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+public class CategoryManagementAPIIntegrationTest extends ServicesTestSupport {
+
+    @Autowired
+    private TestRestTemplate testRestTemplate;

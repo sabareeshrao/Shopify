@@ -1,0 +1,8 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/private/product/{productId}/inventory/{id}" }, method = RequestMethod.PUT)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void update(
+			@PathVariable Long productId, 
+			@PathVariable Long id,

@@ -1,0 +1,4 @@
+	@Override
+	public ProductReview getByProductAndCustomer(Long productId, Long customerId) {
+		return productReviewRepository.findByProductAndCustomer(productId, customerId);
+	}

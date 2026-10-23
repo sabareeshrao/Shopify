@@ -1,0 +1,9 @@
+	public void setCreditCardNumber(String creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
+	public String getCredidCardValidationNumber() {
+		return credidCardValidationNumber;
+	}
+	public void setCredidCardValidationNumber(String credidCardValidationNumber) {
+		this.credidCardValidationNumber = credidCardValidationNumber;
+	}

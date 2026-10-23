@@ -1,0 +1,8 @@
+
+		
+
+		if(sTransactionType.equals(TransactionType.AUTHORIZE.name())) {
+			payment.setTransactionType(TransactionType.AUTHORIZE);
+		} else {
+			payment.setTransactionType(TransactionType.AUTHORIZECAPTURE);
+		} 

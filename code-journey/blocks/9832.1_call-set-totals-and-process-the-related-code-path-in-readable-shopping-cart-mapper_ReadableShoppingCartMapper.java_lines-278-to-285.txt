@@ -1,0 +1,8 @@
+				destination.setTotals(totals);
+			}
+
+			destination.setSubtotal(orderSummary.getSubTotal());
+			destination.setDisplaySubTotal(pricingService.getDisplayAmount(orderSummary.getSubTotal(), store));
+
+			destination.setTotal(orderSummary.getTotal());
+			destination.setDisplayTotal(pricingService.getDisplayAmount(orderSummary.getTotal(), store));

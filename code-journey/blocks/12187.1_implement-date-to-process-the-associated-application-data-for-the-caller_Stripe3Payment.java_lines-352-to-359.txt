@@ -1,0 +1,8 @@
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZECAPTURE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", token);
+			transaction.getTransactionDetails().put("TRNAPPROVED", paymentIntent.getStatus());

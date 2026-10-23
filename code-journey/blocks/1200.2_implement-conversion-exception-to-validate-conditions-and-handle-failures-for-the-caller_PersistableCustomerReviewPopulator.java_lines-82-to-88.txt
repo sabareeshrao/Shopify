@@ -1,0 +1,7 @@
+			descriptions.add(description);
+			
+			target.setDescriptions(descriptions);
+			
+		} catch (Exception e) {
+			throw new ConversionException("Cannot populate CustomerReview", e);
+		}

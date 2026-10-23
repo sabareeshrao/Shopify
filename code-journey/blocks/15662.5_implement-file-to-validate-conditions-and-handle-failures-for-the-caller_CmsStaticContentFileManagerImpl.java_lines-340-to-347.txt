@@ -1,0 +1,8 @@
+
+						if (staticContentType.name().equals(FileContentType.IMAGE.name())) {
+							// File f = new File(fileName);
+							String mimetype = URLConnection.guessContentTypeFromName(fileName);
+							// String mimetype= new
+							// MimetypesFileTypeMap().getContentType(f);
+							if (!StringUtils.isBlank(mimetype)) {
+								String type = mimetype.split("/")[0];

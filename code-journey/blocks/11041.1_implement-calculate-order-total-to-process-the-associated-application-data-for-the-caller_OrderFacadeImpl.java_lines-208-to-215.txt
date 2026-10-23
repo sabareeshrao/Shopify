@@ -1,0 +1,8 @@
+	@Override
+	public OrderTotalSummary calculateOrderTotal(MerchantStore store,
+			com.salesmanager.shop.model.order.v0.PersistableOrder order, Language language) throws Exception {
+
+		List<PersistableOrderProduct> orderProducts = order.getOrderProductItems();
+
+		ShoppingCartItemPopulator populator = new ShoppingCartItemPopulator();
+		populator.setProductAttributeService(productAttributeService);

@@ -1,0 +1,8 @@
+	
+	@Inject
+	private InitializationDatabase initializationDatabase;
+	
+	//@Inject
+	//private InitData initData;
+	
+	@Inject

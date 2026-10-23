@@ -1,0 +1,5 @@
+      Path path = Paths.get(nodePath.toString());
+      InputStream isFile = contentImage.getFile();
+
+      Files.copy(isFile, path, StandardCopyOption.REPLACE_EXISTING);
+

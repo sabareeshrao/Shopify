@@ -1,0 +1,7 @@
+
+
+@Service("customerOptionService")
+public class CustomerOptionServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, CustomerOption> implements CustomerOptionService {
+
+	

@@ -1,0 +1,8 @@
+	public void delete(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language,
+			HttpServletResponse response) {
+
+		try {
+			Manufacturer manufacturer = manufacturerService.getById(id);
+
+			if (manufacturer != null) {
+				manufacturerFacade.deleteManufacturer(manufacturer, merchantStore, language);

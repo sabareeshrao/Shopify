@@ -1,0 +1,4 @@
+    protected <T> T getSessionAttribute(final String key, HttpServletRequest request) {
+	          return (T) com.salesmanager.shop.utils.SessionUtil.getSessionAttribute(key, request);
+
+	}

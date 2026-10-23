@@ -1,0 +1,7 @@
+
+    }
+      } else {
+        // small will be the same as the original
+        contentImage.setFileContentType(FileContentType.PRODUCT);
+        uploadImage.addProductImage(productImage, contentImage);
+      }

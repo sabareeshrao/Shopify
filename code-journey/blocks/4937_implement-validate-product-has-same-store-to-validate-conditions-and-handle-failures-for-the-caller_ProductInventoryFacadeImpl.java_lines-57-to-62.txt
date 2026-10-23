@@ -1,0 +1,6 @@
+	private void validateProductHasSameStore(MerchantStore store, Product product) {
+		if (!product.getMerchantStore().getId().equals(store.getId())) {
+			throw new ResourceNotFoundException("Product with id [" + product.getId() + "] not found for store id ["
+					+ store.getInvoiceTemplate() + "]");
+		}
+	}

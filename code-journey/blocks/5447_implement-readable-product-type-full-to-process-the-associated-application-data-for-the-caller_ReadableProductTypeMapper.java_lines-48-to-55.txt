@@ -1,0 +1,8 @@
+			}
+		} else {
+			
+			readableType = new ReadableProductTypeFull();
+			List<ProductTypeDescription> descriptions = type.getDescriptions().stream().map(t -> this.typeDescription(t)).collect(Collectors.toList());
+			((ReadableProductTypeFull)readableType).setDescriptions(descriptions);
+			
+		}

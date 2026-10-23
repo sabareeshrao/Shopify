@@ -1,0 +1,3 @@
+	public String getStorecity() {
+		return storecity;
+	}

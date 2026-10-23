@@ -1,0 +1,4 @@
+
+@Service("jwtCustomerDetailsService")
+public class JWTCustomerServicesImpl extends AbstractCustomerServices {
+	

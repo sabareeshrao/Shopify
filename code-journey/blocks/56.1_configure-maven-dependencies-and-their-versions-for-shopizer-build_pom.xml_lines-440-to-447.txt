@@ -1,0 +1,8 @@
+
+		<!-- Elastic search TODO replace with starter-->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+

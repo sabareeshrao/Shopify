@@ -1,0 +1,8 @@
+
+/*
+ * Attributes, Options and Options values management independently from Product
+ */
+public interface ProductOptionFacade {
+  
+  ReadableProductOptionEntity getOption(Long optionId, MerchantStore store, Language language);
+

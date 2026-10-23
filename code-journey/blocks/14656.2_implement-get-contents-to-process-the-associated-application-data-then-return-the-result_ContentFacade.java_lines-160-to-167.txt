@@ -1,0 +1,8 @@
+	 * @param language
+	 * @return
+	 */
+	List<ReadableContentEntity> getContents(Optional<String> type, MerchantStore store, Language language);
+
+	/**
+	 * Rename file
+	 * @param store

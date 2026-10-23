@@ -1,0 +1,6 @@
+
+		shoppingCartCalculationService.calculate(cartModel, store, language);
+
+		return readableShoppingCartMapper.convert(cartModel, store, language);
+
+	}

@@ -1,0 +1,3 @@
+	public boolean isFreeShipping() {
+		return freeShipping;
+	}

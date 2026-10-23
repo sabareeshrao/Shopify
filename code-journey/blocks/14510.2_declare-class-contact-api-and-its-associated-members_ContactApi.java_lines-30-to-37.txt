@@ -1,0 +1,8 @@
+@RestController
+@RequestMapping("/api/v1")
+@Api(tags = {"Contact form api"})
+@SwaggerDefinition(tags = {
+    @Tag(name = "Contact store resource", description = "Contact form")
+})
+public class ContactApi {
+

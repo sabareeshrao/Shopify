@@ -1,0 +1,10 @@
+	private ProductVariantRepository productVariantRepository;
+
+	@Autowired
+	private PageableProductVariantRepositoty pageableProductVariantRepositoty;
+
+	@Inject
+	public ProductVariantServiceImpl(ProductVariantRepository productVariantRepository) {
+		super(productVariantRepository);
+		this.productVariantRepository = productVariantRepository;
+	}

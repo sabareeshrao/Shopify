@@ -1,0 +1,14 @@
+				}
+				
+			} else {
+				if(!StringUtils.isBlank(customer.getBilling().getState())) {
+					billToProvince = new StringBuilder();
+					billToProvince.append(customer.getBilling().getState());
+				}
+			}
+			if(customer.getBilling().getCountry()!=null) {
+				if(billToProvince==null) {
+					billToProvince = new StringBuilder();
+				} else {
+					billToProvince.append(", ");
+				}

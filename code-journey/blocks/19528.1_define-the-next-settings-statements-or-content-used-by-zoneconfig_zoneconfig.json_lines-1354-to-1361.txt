@@ -1,0 +1,8 @@
+		"countryCode": "DE"
+	},
+	{
+		"zoneCode": "BAY",
+		"zoneName": "Bayern",
+		"countryCode": "DE"
+	},
+	{

@@ -1,0 +1,3 @@
+	public void setDisplayStoreAddress(boolean displayStoreAddress) {
+		this.displayStoreAddress = displayStoreAddress;
+	}

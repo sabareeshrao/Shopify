@@ -1,0 +1,6 @@
+				} else {
+					finalTransactions.put(TransactionType.REFUND.name(),transaction);
+					continue;
+				}
+			}
+		}

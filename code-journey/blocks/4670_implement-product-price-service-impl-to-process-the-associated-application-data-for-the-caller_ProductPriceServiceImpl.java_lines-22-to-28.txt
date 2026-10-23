@@ -1,0 +1,7 @@
+	private ProductPriceRepository productPriceRepository;
+
+	@Inject
+	public ProductPriceServiceImpl(ProductPriceRepository productPriceRepository) {
+		super(productPriceRepository);
+		this.productPriceRepository = productPriceRepository;
+	}

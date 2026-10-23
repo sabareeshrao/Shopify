@@ -1,0 +1,3 @@
+	public void setDefaultPrice(Boolean defaultPrice) {
+		this.defaultPrice = defaultPrice;
+	}

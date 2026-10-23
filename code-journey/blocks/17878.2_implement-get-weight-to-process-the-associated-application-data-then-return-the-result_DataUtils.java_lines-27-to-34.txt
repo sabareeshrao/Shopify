@@ -1,0 +1,8 @@
+	 * @param store
+	 * @param base
+	 * @return
+	 */
+	public static double getWeight(double weight, MerchantStore store,
+			String base) {
+
+		double weightConstant = 2.2;

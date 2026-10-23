@@ -1,0 +1,8 @@
+              
+              target.setDelivery( delivery );
+          }
+          else{
+           target.getDelivery().setFirstName( source.getFirstName() );
+           target.getDelivery().setLastName( source.getLastName() );
+          
+            // lets fill optional data now

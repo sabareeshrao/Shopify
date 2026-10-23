@@ -1,0 +1,5 @@
+	private String shipping;
+	private String payment;
+	private ReadableTotal total;
+	private List<ReadableOrderProduct> products;
+

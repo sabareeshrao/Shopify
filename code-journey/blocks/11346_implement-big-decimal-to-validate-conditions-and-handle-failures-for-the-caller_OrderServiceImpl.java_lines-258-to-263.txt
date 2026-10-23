@@ -1,0 +1,6 @@
+
+                            BigDecimal orderTotalValue = itemSubTotal.getValue();
+                            if(orderTotalValue==null) {
+                                orderTotalValue = new BigDecimal(0);
+                                orderTotalValue.setScale(2, RoundingMode.HALF_UP);
+                            }

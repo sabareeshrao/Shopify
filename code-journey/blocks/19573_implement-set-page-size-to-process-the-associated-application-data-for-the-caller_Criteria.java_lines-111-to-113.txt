@@ -1,0 +1,3 @@
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}

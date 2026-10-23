@@ -1,0 +1,8 @@
+
+      return returnSummary;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while calculating order summary", e);
+      try {
+        response.sendError(503, "Error while calculating order summary " + e.getMessage());
+      } catch (Exception ignore) {

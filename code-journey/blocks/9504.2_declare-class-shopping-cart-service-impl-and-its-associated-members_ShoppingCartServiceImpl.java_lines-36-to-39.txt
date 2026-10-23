@@ -1,0 +1,4 @@
+@Service("shoppingCartService")
+public class ShoppingCartServiceImpl extends SalesManagerEntityServiceImpl<Long, ShoppingCart>
+		implements ShoppingCartService {
+

@@ -1,0 +1,3 @@
+	public void setDisplayShipping(boolean displayShipping) {
+		this.displayShipping = displayShipping;
+	}

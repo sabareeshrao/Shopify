@@ -1,0 +1,7 @@
+								attr = readOnlyAttributes.get(attribute.getProductOption().getId());
+								if(attr==null) {
+									attr = createAttribute(attribute, language);
+								}
+								if(attr!=null) {
+									readOnlyAttributes.put(attribute.getProductOption().getId(), attr);
+								}

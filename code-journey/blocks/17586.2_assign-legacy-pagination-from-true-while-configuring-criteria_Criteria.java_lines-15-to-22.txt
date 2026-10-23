@@ -1,0 +1,8 @@
+	private boolean legacyPagination = true;
+	private String code;
+	private String name;
+	private String language;
+	private String user;
+	private String storeCode;
+	private List<Integer> storeIds;
+

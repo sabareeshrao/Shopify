@@ -1,0 +1,6 @@
+		
+		if(source.getParent() != null) {
+		  ReadableMerchantStore parent = populate(source.getParent(),
+            new ReadableMerchantStore(), source, language);
+		  target.setParent(parent);
+		}

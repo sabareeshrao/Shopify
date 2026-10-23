@@ -1,0 +1,8 @@
+						<beans:ref bean="awsAssetsManager" />
+				</beans:property>
+	</beans:bean>
+	
+	<beans:bean id="awsDownloadsManager"
+				class="com.salesmanager.core.business.modules.cms.content.aws.S3StaticContentAssetsManagerImpl" factory-method="getInstance" >
+ 				<beans:property name="cmsManager">
+						<beans:ref bean="awsAssetsManager" />

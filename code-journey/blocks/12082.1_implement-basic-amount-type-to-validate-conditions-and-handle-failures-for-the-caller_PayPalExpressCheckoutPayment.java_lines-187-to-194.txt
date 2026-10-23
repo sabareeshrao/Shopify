@@ -1,0 +1,8 @@
+			
+			
+			List<OrderTotal> orderTotals = summary.getTotals();
+			BigDecimal tax = null;
+			for(OrderTotal total : orderTotals) {
+				
+				if(total.getModule().equals(Constants.OT_SHIPPING_MODULE_CODE)) {
+					BasicAmountType shipping = new BasicAmountType();

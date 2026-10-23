@@ -1,0 +1,3 @@
+	public void setProductStatus(boolean productStatus) {
+		this.productStatus = productStatus;
+	}

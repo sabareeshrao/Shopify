@@ -1,0 +1,8 @@
+		
+		
+
+
+		Number count = (Number) countQ.getSingleResult();
+
+		customerList.setTotalCount(count.intValue());
+		

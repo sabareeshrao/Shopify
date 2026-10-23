@@ -1,0 +1,3 @@
+	public CreditCardType getCardType() {
+		return cardType;
+	}

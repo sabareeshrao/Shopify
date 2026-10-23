@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserApi.class);
+
+
+	@Inject
+	private UserFacade userFacade;
+
+	/**
+	 * Get userName by merchant code and userName

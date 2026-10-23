@@ -1,0 +1,6 @@
+
+		} catch (Exception e) {
+			LOGGER.error("Error while creating ProductImage", e);
+			throw new ServiceRuntimeException("Error while creating image");
+		}
+	}

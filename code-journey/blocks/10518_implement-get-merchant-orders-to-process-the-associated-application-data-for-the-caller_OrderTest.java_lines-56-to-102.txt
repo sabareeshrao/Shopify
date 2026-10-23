@@ -1,0 +1,47 @@
+
+	
+
+	@Test
+	public void getMerchantOrders() throws ServiceException {
+		
+
+
+		Currency currency = currencyService.getByCode(USD_CURRENCY_CODE);
+		Country country = countryService.getByCode("US");
+		Zone zone = zoneService.getByCode("VT");
+		Language en = languageService.getByCode("en");
+		
+		MerchantStore merchant = merchantService.getByCode( MerchantStore.DEFAULT_STORE );	
+	
+		/** Create a customer **/
+		Customer customer = new Customer();	
+		customer.setMerchantStore(merchant);
+		customer.setDefaultLanguage(en);
+		customer.setEmailAddress("email@email.com");
+		customer.setPassword("-1999");
+		customer.setNick("My New nick");
+		customer.setCompany(" Apple");	
+		customer.setGender(CustomerGender.M);
+		customer.setDateOfBirth(new Date());		
+		
+		Billing billing = new Billing();
+	    billing.setAddress("Billing address");
+	    billing.setCity("Billing city");
+	    billing.setCompany("Billing company");
+	    billing.setCountry(country);
+	    billing.setFirstName("Carl");
+	    billing.setLastName("Samson");
+	    billing.setPostalCode("Billing postal code");
+	    billing.setState("Billing state");
+	    billing.setZone(zone);
+	    
+	    Delivery delivery = new Delivery();
+	    delivery.setAddress("Shipping address");
+	    delivery.setCountry(country);
+	    delivery.setZone(zone);	    
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);
+	    
+		customerService.create(customer);	
+		

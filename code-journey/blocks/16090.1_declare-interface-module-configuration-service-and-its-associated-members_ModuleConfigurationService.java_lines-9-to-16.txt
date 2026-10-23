@@ -1,0 +1,8 @@
+public interface ModuleConfigurationService extends
+		SalesManagerEntityService<Long, IntegrationModule> {
+
+	/**
+	 * List all integration modules ready to be used by integrations such as payment and shipping
+	 * @param module
+	 * @return
+	 */

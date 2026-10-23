@@ -1,0 +1,37 @@
+
+  /**
+   * Get shipping quote based on postal code
+   * @param code
+   * @param address
+   * @param merchantStore
+   * @param language
+   * @param request
+   * @param response
+   * @return
+   * @throws Exception
+   */
+  @RequestMapping(
+      value = {"/cart/{code}/shipping"},
+      method = RequestMethod.POST)
+  @ResponseBody
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public ReadableShippingSummary shipping(
+      @PathVariable final String code,
+      @RequestBody AddressLocation address,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language,
+      HttpServletRequest request,
+      HttpServletResponse response)
+      throws Exception {
+
+    try {
+      Locale locale = request.getLocale();
+
+      ShoppingCart cart = shoppingCartFacade.getShoppingCartModel(code, merchantStore);
+
+      if (cart == null) {
+        response.sendError(404, "Cart id " + code + " does not exist");
+      }

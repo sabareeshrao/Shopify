@@ -1,0 +1,3 @@
+	public Set<OrderStatusHistory> getOrderHistory() {
+		return orderHistory;
+	}

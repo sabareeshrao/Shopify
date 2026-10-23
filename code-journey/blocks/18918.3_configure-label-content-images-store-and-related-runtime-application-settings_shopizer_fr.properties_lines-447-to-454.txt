@@ -1,0 +1,8 @@
+label.contentImages.store=Boutique marchand
+label.content.images=Librairie d'images
+label.content.files=Librairie de fichiers
+label.content.pages=Pages de contenu
+label.content.pages.manage.content=Gestion du contenu des pages
+label.content.manage.content=Gestion du contenu
+label.content.pages.page.name=Nom de la page
+label.content.pages.page.content=Contenu de la page

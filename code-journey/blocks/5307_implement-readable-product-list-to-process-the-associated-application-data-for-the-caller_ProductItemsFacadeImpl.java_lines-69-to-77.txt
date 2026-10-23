@@ -1,0 +1,9 @@
+		
+		ReadableProductList productList = new ReadableProductList();
+		for(Product product : products.getProducts()) {
+
+			//create new proxy product
+			ReadableProduct readProduct = populator.populate(product, new ReadableProduct(), store, language);
+			productList.getProducts().add(readProduct);
+			
+		}

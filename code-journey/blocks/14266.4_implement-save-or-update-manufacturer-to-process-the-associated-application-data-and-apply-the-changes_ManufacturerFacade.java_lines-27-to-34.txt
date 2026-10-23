@@ -1,0 +1,8 @@
+   * @throws Exception
+   */
+  void saveOrUpdateManufacturer(PersistableManufacturer manufacturer, MerchantStore store,
+      Language language) throws Exception;
+
+  /**
+   * Deletes a manufacturer
+   * 

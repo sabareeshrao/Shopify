@@ -1,0 +1,3 @@
+	public List<String> getShipToCountry() {
+		return shipToCountry;
+	}

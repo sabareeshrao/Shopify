@@ -1,0 +1,14 @@
+	private ProductOptionRepository productOptionRepository;
+	
+	@Autowired
+	private PageableProductOptionRepository pageableProductOptionRepository;
+	
+	@Inject
+	private ProductAttributeService productAttributeService;
+	
+	@Inject
+	public ProductOptionServiceImpl(
+			ProductOptionRepository productOptionRepository) {
+			super(productOptionRepository);
+			this.productOptionRepository = productOptionRepository;
+	}

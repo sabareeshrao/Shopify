@@ -1,0 +1,6 @@
+	    optionDescription.setProductOption(option);
+	    
+	    option.getDescriptions().add(optionDescription);
+	    
+	    productOptionService.saveOrUpdate(option);
+	    

@@ -1,0 +1,5 @@
+					ZoneDescription description = zone.getDescriptions().get(0);
+					zone.setName(description.getName());
+					zones.put(zone.getCode(), zone);
+					
+				}

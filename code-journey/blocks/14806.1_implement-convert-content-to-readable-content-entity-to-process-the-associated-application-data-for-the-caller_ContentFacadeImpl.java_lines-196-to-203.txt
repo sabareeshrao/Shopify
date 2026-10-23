@@ -1,0 +1,8 @@
+	}
+
+	@Deprecated
+	private ReadableContentEntity convertContentToReadableContentEntity(MerchantStore store, Language language,
+			Content content) {
+
+		ReadableContentEntity contentEntity = new ReadableContentEntity();
+

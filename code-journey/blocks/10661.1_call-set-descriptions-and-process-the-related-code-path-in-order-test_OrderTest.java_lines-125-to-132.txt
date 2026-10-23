@@ -1,0 +1,8 @@
+
+	    shirts.setDescriptions(descriptions);
+	    categoryService.create(shirts);
+	    
+	    
+	    /**
+	     * Create a manufacturer
+	     */

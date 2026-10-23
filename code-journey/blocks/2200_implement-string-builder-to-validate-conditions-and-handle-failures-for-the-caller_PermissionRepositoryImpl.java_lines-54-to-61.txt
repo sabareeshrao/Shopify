@@ -1,0 +1,8 @@
+		
+		StringBuilder qs = new StringBuilder();
+		qs.append("select p from Permission as p ");
+		qs.append("join fetch p.groups grous ");
+		
+		if(criteria.getGroupIds()!=null && criteria.getGroupIds().size()>0) {
+			qs.append(" where grous.id in (:cid)");
+		}

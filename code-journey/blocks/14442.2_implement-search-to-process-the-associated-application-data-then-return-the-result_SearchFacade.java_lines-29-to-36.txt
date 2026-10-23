@@ -1,0 +1,8 @@
+	/**
+	 * Produces a search request against elastic search
+	 * @param searchRequest
+	 * @return
+	 * @throws Exception
+	 */
+	List<SearchItem> search(MerchantStore store, Language language, SearchProductRequest searchRequest);
+

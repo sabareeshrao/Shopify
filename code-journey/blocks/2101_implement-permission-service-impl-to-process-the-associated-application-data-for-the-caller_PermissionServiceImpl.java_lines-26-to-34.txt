@@ -1,0 +1,9 @@
+	private PermissionRepository permissionRepository;
+
+
+	@Inject
+	public PermissionServiceImpl(PermissionRepository permissionRepository) {
+		super(permissionRepository);
+		this.permissionRepository = permissionRepository;
+
+	}

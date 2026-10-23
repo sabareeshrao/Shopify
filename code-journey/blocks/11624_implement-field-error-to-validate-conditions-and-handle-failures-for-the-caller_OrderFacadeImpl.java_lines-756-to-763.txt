@@ -1,0 +1,8 @@
+
+			if (StringUtils.isBlank(order.getCustomer().getBilling().getCountry())) {
+				FieldError error = new FieldError("customer.billing.country", "customer.billing.country",
+						messages.getMessage("NotEmpty.customer.billing.country", locale));
+				bindingResult.addError(error);
+				messagesResult.put("customer.billing.country",
+						messages.getMessage("NotEmpty.customer.billing.country", locale));
+			}

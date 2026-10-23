@@ -1,0 +1,8 @@
+	    related.setSku("TB67891");
+	    related.setManufacturer(oreilley);
+	    related.setType(generalType);
+	    related.setMerchantStore(store);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Spring 4 in Action");

@@ -1,0 +1,11 @@
+	
+	@Autowired
+	private ReadableProductVariationMapper readableProductVariationMapper;
+	
+	@Autowired
+	private ReadableInventoryMapper readableInventoryMapper;
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imagUtils;
+

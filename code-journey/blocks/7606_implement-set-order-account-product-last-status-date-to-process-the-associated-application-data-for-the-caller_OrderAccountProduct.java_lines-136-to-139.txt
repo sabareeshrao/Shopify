@@ -1,0 +1,4 @@
+	public void setOrderAccountProductLastStatusDate(
+			Date orderAccountProductLastStatusDate) {
+		this.orderAccountProductLastStatusDate = CloneUtils.clone(orderAccountProductLastStatusDate);
+	}

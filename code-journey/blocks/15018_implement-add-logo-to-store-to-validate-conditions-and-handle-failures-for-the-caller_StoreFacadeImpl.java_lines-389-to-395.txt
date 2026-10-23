@@ -1,0 +1,7 @@
+	private void addLogoToStore(String code, InputContentFile cmsContentImage) {
+		try {
+			contentService.addLogo(code, cmsContentImage);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}

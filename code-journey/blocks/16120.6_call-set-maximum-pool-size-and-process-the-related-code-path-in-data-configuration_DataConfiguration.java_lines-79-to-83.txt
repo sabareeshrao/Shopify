@@ -1,0 +1,5 @@
+    	dataSource.setMaximumPoolSize(maxPoolSize);
+    	dataSource.setConnectionTestQuery(testQuery);
+    	
+    	return dataSource;
+    }

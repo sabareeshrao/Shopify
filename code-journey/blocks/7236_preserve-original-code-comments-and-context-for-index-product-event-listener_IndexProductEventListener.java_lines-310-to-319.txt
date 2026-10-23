@@ -1,0 +1,10 @@
+
+	}
+
+	/**
+	 * Get document by product id and document exist if event is Product delete
+	 * document create document if event is Variant get document get variants
+	 * replace variant
+	 */
+
+}

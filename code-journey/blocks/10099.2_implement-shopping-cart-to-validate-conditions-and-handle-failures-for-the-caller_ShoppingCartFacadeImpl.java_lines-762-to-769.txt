@@ -1,0 +1,8 @@
+		ShoppingCart cartModel = new ShoppingCart();
+		cartModel.setMerchantStore(store);
+		cartModel.setShoppingCartCode(uniqueShoppingCartCode());
+
+		if (!StringUtils.isBlank(item.getPromoCode())) {
+			cartModel.setPromoCode(item.getPromoCode());
+			cartModel.setPromoAdded(new Date());
+		}

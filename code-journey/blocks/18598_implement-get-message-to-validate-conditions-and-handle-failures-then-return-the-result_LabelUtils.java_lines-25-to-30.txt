@@ -1,0 +1,6 @@
+	public String getMessage(String key, Locale locale, String defaultValue) {
+		try {
+			return applicationContext.getMessage(key, null, locale);
+		} catch(Exception ignore) {}
+		return defaultValue;
+	}

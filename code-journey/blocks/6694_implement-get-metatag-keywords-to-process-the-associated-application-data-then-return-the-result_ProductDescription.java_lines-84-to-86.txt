@@ -1,0 +1,3 @@
+	public String getMetatagKeywords() {
+		return metatagKeywords;
+	}

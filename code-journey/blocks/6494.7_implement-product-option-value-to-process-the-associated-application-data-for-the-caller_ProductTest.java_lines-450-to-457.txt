@@ -1,0 +1,8 @@
+        
+        //another option value
+        ProductOptionValue medium = new ProductOptionValue();
+        medium.setMerchantStore(store);
+        medium.setCode("medium");
+        
+        ProductOptionValueDescription mediumDescription = new ProductOptionValueDescription();
+        mediumDescription.setLanguage(en);

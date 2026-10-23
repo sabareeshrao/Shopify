@@ -1,0 +1,9 @@
+	public void setCurrentShippingModule(IntegrationModule currentShippingModule) {
+		this.currentShippingModule = currentShippingModule;
+	}
+	public List<String> getWarnings() {
+		return warnings;
+	}
+	public void setWarnings(List<String> warnings) {
+		this.warnings = warnings;
+	}

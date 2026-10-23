@@ -1,0 +1,8 @@
+  ReadableUser findById(Long id, MerchantStore store, Language lang);
+
+  /**
+   * Creates a User
+   * @param user
+   * @param store
+   */
+  ReadableUser create(PersistableUser user, MerchantStore store);

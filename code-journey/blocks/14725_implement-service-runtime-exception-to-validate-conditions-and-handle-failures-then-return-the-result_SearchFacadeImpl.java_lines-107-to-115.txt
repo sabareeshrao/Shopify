@@ -1,0 +1,9 @@
+			
+			//aggregations
+			
+			//TODO add scroll
+			return searchService.search(store, languageCode, searchRequest, count, start);
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}

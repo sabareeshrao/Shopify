@@ -1,0 +1,8 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/stores" }, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(httpMethod = "GET", value = "Get list of stores. Returns all retailers and stores. If superadmin everything is returned, else only retailer and child stores.", notes = "", response = ReadableMerchantStore.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableMerchantStoreList get(
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,

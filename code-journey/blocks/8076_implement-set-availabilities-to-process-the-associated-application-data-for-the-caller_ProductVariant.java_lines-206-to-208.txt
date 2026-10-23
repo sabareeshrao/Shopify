@@ -1,0 +1,3 @@
+	public void setAvailabilities(Set<ProductAvailability> availabilities) {
+		this.availabilities = availabilities;
+	}

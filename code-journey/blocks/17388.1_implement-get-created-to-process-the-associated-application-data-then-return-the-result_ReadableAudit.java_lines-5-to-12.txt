@@ -1,0 +1,8 @@
+	private String created;
+	private String modified;
+	private String user;
+	public String getCreated() {
+		return created;
+	}
+	public void setCreated(String created) {
+		this.created = created;

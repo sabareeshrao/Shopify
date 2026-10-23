@@ -1,0 +1,4 @@
+	
+			if (event instanceof DeleteProductVariantEvent) {
+				deleteProductVariant((DeleteProductVariantEvent) event);
+			}

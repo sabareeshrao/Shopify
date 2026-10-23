@@ -1,0 +1,3 @@
+	public void setErrorString(String t) {
+		this.setStatusMessage(t);
+	}

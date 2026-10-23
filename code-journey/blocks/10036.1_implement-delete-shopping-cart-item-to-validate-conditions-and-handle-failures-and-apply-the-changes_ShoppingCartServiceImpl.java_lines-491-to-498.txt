@@ -1,0 +1,8 @@
+	@Override
+	@Transactional
+	public void deleteShoppingCartItem(Long id) {
+
+		ShoppingCartItem item = shoppingCartItemRepository.findOne(id);
+		if (item != null) {
+
+			if (item.getAttributes() != null) {

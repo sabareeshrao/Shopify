@@ -1,0 +1,3 @@
+	public void setProduct(String product) {
+		this.product = product;
+	}

@@ -1,0 +1,12 @@
+		    	   billing.append(order.getBilling().getAddress()).append(LINE_BREAK);
+		    	   billing.append(order.getBilling().getCity()).append(", ");
+		    	   
+		    	   if(order.getBilling().getZone()!=null) {
+		    		   Zone zone = zones.get(order.getBilling().getZone().getCode());
+		    		   if(zone!=null) {
+		    			   billing.append(zone.getName());
+		    		   }
+		    		   billing.append(LINE_BREAK);
+		    	   } else if(!StringUtils.isBlank(order.getBilling().getState())) {
+		    		   billing.append(order.getBilling().getState()).append(LINE_BREAK); 
+		    	   }

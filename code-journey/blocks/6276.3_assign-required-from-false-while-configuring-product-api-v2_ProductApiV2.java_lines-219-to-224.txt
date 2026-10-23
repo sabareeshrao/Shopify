@@ -1,0 +1,6 @@
+			@RequestParam(value = "lang", required = false) String lang,
+			@PathVariable String friendlyUrl, 
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page, // count
+			@RequestParam(value = "count", required = false, defaultValue = "25") Integer count, // count
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+		

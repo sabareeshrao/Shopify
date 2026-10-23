@@ -1,0 +1,8 @@
+	    
+	    customer.setBilling(billing);
+	    customer.setDelivery(delivery);
+		
+		customerService.create(customer);
+		
+		Long dummyCartId = 0L;//for correlation
+	    

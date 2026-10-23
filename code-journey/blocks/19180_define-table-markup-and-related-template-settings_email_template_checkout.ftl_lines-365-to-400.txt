@@ -1,0 +1,36 @@
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+			<div class="content">
+						<!-- Callout Panel -->
+						<p class="callout">
+							${ORDER_STATUS}
+						</p><!-- /Callout Panel -->
+			</div>
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				<!-- content -->
+				<div class="content">
+				<p>
+				<table>
+				<tr>
+					<td align="center">
+						<p>
+							${EMAIL_DISCLAIMER}
+						</p>
+						<p>
+							${EMAIL_SPAM_DISCLAIMER}
+						</p>
+						<p>
+							${EMAIL_FOOTER_COPYRIGHT}
+						</p>

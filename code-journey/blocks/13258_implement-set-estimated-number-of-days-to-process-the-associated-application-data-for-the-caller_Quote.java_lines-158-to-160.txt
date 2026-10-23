@@ -1,0 +1,3 @@
+	public void setEstimatedNumberOfDays(Integer estimatedNumberOfDays) {
+		this.estimatedNumberOfDays = estimatedNumberOfDays;
+	}

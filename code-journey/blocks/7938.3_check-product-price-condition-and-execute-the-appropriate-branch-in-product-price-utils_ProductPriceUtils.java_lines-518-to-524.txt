@@ -1,0 +1,7 @@
+
+			if (productPrice.getProductPriceSpecialStartDate() != null) {
+				if (productPrice.getProductPriceSpecialStartDate().before(today)) {
+					if (productPrice.getProductPriceSpecialEndDate() != null) {
+						if (productPrice.getProductPriceSpecialEndDate().after(today)) {
+							hasDiscount = true;
+						}

@@ -1,0 +1,3 @@
+					optionValue.setCode(attribute.getCustomerOptionValue().getCode());
+					optionValue.setDescription(vd);
+					

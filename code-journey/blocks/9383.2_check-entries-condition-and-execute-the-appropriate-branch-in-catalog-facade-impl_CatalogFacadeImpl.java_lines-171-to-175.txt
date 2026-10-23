@@ -1,0 +1,5 @@
+        Page<CatalogCategoryEntry> entries = catalogEntryService.list(catalog, store, language, productCode, page, count);
+
+        if (entries.isEmpty()) {
+            return new ReadableEntityList<>();
+        }

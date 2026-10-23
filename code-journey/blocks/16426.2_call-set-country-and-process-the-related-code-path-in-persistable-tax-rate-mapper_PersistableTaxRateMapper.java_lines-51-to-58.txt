@@ -1,0 +1,8 @@
+			
+			destination.setCountry(countryService.getByCode(source.getCountry()));
+			destination.setZone(zoneService.getByCode(source.getZone()));
+			destination.setStateProvince(source.getZone());
+			destination.setMerchantStore(store);
+			destination.setTaxClass(taxClassService.getByCode(source.getTaxClass(), store));
+			destination.setTaxRate(source.getRate());
+			this.taxRate(destination, source);

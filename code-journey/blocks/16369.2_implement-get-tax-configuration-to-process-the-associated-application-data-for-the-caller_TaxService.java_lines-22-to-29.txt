@@ -1,0 +1,8 @@
+	TaxConfiguration getTaxConfiguration(MerchantStore store)
+			throws ServiceException;
+
+	/**
+	 * Saves ShippingConfiguration to MerchantConfiguration table
+	 * @param shippingConfiguration
+	 * @param store
+	 * @throws ServiceException

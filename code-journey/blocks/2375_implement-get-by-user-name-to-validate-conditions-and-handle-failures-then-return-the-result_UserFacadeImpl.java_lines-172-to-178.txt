@@ -1,0 +1,7 @@
+	private User getByUserName(String userName) {
+		try {
+			return userService.getByUserName(userName);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}

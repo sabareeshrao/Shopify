@@ -1,0 +1,15 @@
+    //end user exists
+
+    Customer customerToPopulate = convertPersistableCustomerToCustomer(customer, store);
+    try {
+		setCustomerModelDefaultProperties(customerToPopulate, store);
+	} catch (Exception e) {
+		throw new ServiceRuntimeException("Cannot set default customer properties",e);
+	}
+    saveCustomer(customerToPopulate);
+    customer.setId(customerToPopulate.getId());
+
+    notifyNewCustomer(customer, store, customerToPopulate.getDefaultLanguage());
+    //convert to readable
+    return convertCustomerToReadableCustomer(customerToPopulate, store, language);
+    

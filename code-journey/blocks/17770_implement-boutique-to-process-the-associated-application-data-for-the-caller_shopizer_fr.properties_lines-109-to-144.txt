@@ -1,0 +1,36 @@
+label.storelogo = Logo de la boutique
+label.storebanner = Banniére de la boutique
+label.storephone = Téléphone de la boutique
+label.accepteddomains = Domaines acceptÈs
+label.storeaddress = Adresse de la boutique
+label.storecity = Ville de la boutique
+label.storepostalcode = Code postal de la boutique
+label.storecountry = Pays de la boutique
+label.storezone = État / Région / Province de la boutique
+label.supportedlanguages = Langues prises en charge
+label.storeemailaddress = Adresse e-mail de la boutique
+label.storesetup = Configuration de la boutique
+label.store.template=Thème
+label.store.baseurl=Url de base de la boutique (domaine)
+label.store.inbusinesssince=Boutique web en opération depuis
+label.changepasswordrequest = Demande de changement de mot de passe
+label.store.weightunit=Unités de poids
+label.store.sizeunits=Unités de grandeur
+label.store.list=Boutiques
+label.store.useCache=Utiliser la cache
+label.store.currency.format=Format de la monaie national
+label.store.currency.format.help=Format de la monaie national ex $1,345.79 ou Format de la monaie international ex USD1,345.79
+
+label.store.displaycontactussection=Afficher la page contactez-nous
+label.store.displaystoreaddress=Afficher l'adresse de la boutique
+label.store.displaysearchbox=Afficher la boîte de recheche
+label.store.displaypagesmenu=Afficher le menu des pages
+label.store.testmode=Mode tests (cache les catégories et le détail des produits)
+label.store.debugmode=Mode 'debug' (ajoute des traces additionnelles)
+label.store.allowPurchaseItems=Permettre l'achat d'items
+label.store.displayaddtocartfeatured=Permettre l'ajout au panier à partir des articles recommandés
+label.store.tofindus=Notre adresse
+
+label.storefront.storetext = Contenu de la page principale 
+label.storefront.metatags.keywords = (Meta tags) Mots-clés 
+label.storefront.metatags.description = (Meta tags) Description

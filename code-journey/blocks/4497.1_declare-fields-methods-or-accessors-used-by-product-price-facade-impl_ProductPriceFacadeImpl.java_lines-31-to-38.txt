@@ -1,0 +1,8 @@
+	
+	@Autowired
+	private ProductPriceService productPriceService;
+	
+	@Autowired
+	private PricingService pricingService;
+	
+	@Autowired

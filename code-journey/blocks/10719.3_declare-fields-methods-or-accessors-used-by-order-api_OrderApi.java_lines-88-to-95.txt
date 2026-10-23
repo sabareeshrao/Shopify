@@ -1,0 +1,8 @@
+
+	@Autowired
+	private CustomerFacade customerFacade;
+
+	@Autowired
+	private CustomerFacade customerFacadev1; //v1 version
+
+	@Inject

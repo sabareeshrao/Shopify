@@ -1,0 +1,9 @@
+	public void setBilling(Address billing) {
+		this.billing = billing;
+	}
+	public Address getDelivery() {
+		return delivery;
+	}
+	public void setDelivery(Address delivery) {
+		this.delivery = delivery;
+	}

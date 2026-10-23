@@ -1,0 +1,3 @@
+	public void setShippingDescription(ShippingDescription shippingDescription) {
+		this.shippingDescription = shippingDescription;
+	}

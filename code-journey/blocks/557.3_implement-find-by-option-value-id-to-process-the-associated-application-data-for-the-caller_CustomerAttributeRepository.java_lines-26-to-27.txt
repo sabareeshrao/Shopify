@@ -1,0 +1,2 @@
+	List<CustomerAttribute> findByOptionValueId(Integer merchantId,Long Id);
+}

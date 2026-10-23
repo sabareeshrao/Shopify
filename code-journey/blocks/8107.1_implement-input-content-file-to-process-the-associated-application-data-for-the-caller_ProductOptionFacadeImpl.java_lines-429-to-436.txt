@@ -1,0 +1,8 @@
+		
+		try {
+			String imageName = image.getOriginalFilename();
+			InputStream inputStream = image.getInputStream();
+			InputContentFile cmsContentImage = new InputContentFile();
+			cmsContentImage.setFileName(imageName);
+			cmsContentImage.setMimeType(image.getContentType());
+			cmsContentImage.setFile(inputStream);

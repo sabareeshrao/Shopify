@@ -1,0 +1,7 @@
+  @Override
+  public List<OutputContentFile> getImages(Product product) throws ServiceException {
+
+    if (cacheManager.getTreeCache() == null) {
+      throw new ServiceException(
+          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+    }

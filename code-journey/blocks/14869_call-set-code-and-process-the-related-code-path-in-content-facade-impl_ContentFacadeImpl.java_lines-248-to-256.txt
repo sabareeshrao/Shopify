@@ -1,0 +1,9 @@
+
+		contentModel.setCode(content.getCode());
+		contentModel.setContentType(ContentType.BOX);
+		contentModel.setMerchantStore(store);
+		contentModel.setVisible(content.isVisible());
+		contentModel.setDescriptions(descriptions);
+		contentModel.setId(content.getId());
+		return contentModel;
+	}

@@ -1,0 +1,4 @@
+	@Override
+	public Optional<Catalog> getById(Long catalogId, MerchantStore store) {
+		return catalogRepository.findById(catalogId, store.getId());
+	}

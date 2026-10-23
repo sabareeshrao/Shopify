@@ -1,0 +1,16 @@
+	    	    		  
+	    	    		  );
+	    
+		  
+	    
+		//get last transaction
+	    Entry<String,Transaction> last = map.lastEntry();
+	    
+	    String currentStep = last.getKey();
+	    
+	    System.out.println("Current step " + currentStep);
+	    
+	    //find next step
+	    
+	    return last.getValue();
+	    

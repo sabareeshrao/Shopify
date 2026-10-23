@@ -1,0 +1,8 @@
+			 * xmldatabuffer.append("</Height>");
+			 * xmldatabuffer.append("<POBoxFlag>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</POBoxFlag>");
+			 * xmldatabuffer.append("<GiftFlag>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</GiftFlag>");
+			 * xmldatabuffer.append("</CXG>");
+			 */
+		

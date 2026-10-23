@@ -1,0 +1,3 @@
+	public String getPriceText() {
+		return priceText;
+	}

@@ -1,0 +1,64 @@
+	public void authenticate(Customer customer, String userName, String password) throws Exception;
+
+	Customer getCustomerModel(PersistableCustomer customer,
+			MerchantStore merchantStore, Language language) throws Exception;
+	
+	Customer populateCustomerModel(Customer customerModel, PersistableCustomer customer,
+			MerchantStore merchantStore, Language language) throws Exception;
+	
+	/*
+	 * Creates a Customer from a PersistableCustomer received from REST API
+	 */
+	ReadableCustomer create(PersistableCustomer customer, MerchantStore store, Language language);
+	
+	/**
+	 * Reset customer password
+	 * @param customer
+	 * @param store
+	 * @param language
+	 * @throws Exception
+	 */
+	void resetPassword(Customer customer, MerchantStore store, Language language);
+	
+	/**
+	 * Updates a Customer
+	 * @param customer
+	 * @param store
+	 * @throws Exception
+	 */
+	PersistableCustomer update(PersistableCustomer customer, MerchantStore store);
+	
+	PersistableCustomer update(String userName, PersistableCustomer customer, MerchantStore store);
+	
+	/**
+	 * Updates only shipping and billing addresses
+	 * @param customer
+	 * @param store
+	 * @return
+	 */
+	void updateAddress(PersistableCustomer customer, MerchantStore store);
+	
+	void updateAddress(String userName, PersistableCustomer customer, MerchantStore store);
+	
+	/**
+	 * Save or update a CustomerReview
+	 * @param review
+	 * @param store
+	 * @param language
+	 * @throws Exception
+	 */
+	PersistableCustomerReview saveOrUpdateCustomerReview(PersistableCustomerReview review, MerchantStore store, Language language);
+	
+	/**
+	 * List all customer reviews by reviewed
+	 * @param customer
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	List<ReadableCustomerReview> getAllCustomerReviewsByReviewed(Long customerId, MerchantStore store, Language language);
+	
+	/**
+	 * Deletes a customer review
+	 * @param review
+	 * @param store

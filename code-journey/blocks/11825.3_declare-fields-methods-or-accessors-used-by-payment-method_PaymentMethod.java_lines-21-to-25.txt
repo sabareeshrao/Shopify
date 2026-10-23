@@ -1,0 +1,5 @@
+	private PaymentType paymentType;
+	private boolean defaultSelected;
+	private IntegrationModule module;
+	private IntegrationConfiguration informations;
+

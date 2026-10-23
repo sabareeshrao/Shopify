@@ -1,0 +1,4 @@
+	@Override
+	public Category getOneByLanguage(long categoryId, Language language) {
+		return categoryRepository.findByIdAndLanguage(categoryId, language.getId());
+	}

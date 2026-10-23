@@ -1,0 +1,8 @@
+
+  /**
+   * Currency
+   *
+   * @return
+   */
+  @GetMapping("/currency")
+  public List<Currency> getCurrency() {

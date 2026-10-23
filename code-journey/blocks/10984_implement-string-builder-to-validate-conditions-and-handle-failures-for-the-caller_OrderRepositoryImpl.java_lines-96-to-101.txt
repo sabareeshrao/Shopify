@@ -1,0 +1,6 @@
+		
+		if(!StringUtils.isBlank(criteria.getPaymentMethod())) {
+			String payementParam = new StringBuilder().append("%").append(criteria.getPaymentMethod()).append("%").toString();
+			countQ.setParameter("pm",payementParam);
+			objectQ.setParameter("pm",payementParam);
+		}

@@ -1,0 +1,4 @@
+    } catch (Exception e) {
+      LOGGER.error("Error while clearning cache {}", e.getCause());
+      throw new ServiceRuntimeException("Error while clearing cache");
+    }

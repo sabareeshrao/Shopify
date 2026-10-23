@@ -1,0 +1,3 @@
+	public String getPageImageUrl() {
+		return pageImageUrl;
+	}

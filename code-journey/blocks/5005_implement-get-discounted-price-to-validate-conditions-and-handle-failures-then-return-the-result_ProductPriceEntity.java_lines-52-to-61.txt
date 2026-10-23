@@ -1,0 +1,10 @@
+	public BigDecimal getDiscountedPrice() {
+		return discountedPrice;
+	}
+	public void setDiscountedPrice(BigDecimal discountedPrice) {
+		this.discountedPrice = discountedPrice;
+	}
+	public String getCode() {
+		if(StringUtils.isBlank(this.code)) {
+			code = DEFAULT_PRICE_CODE;
+		}

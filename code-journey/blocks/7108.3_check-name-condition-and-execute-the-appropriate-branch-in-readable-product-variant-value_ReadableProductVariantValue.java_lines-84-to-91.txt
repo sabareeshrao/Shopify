@@ -1,0 +1,8 @@
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (option == null) {
+			if (other.option != null)
+				return false;
+		} else if (!option.equals(other.option))
+			return false;

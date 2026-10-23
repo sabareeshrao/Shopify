@@ -1,0 +1,19 @@
+  @Override
+  public ReadableManufacturerList getAllManufacturers(MerchantStore store, Language language, ListCriteria criteria, int page, int count) {
+
+    ReadableManufacturerList readableList = new ReadableManufacturerList();
+    try {
+      /**
+       * Is this a pageable request
+       */
+
+      List<Manufacturer> manufacturers = null;
+      if(page == 0 && count == 0) {
+    	//need total count
+        int total = manufacturerService.count(store);
+
+        if(language != null) {
+          manufacturers = manufacturerService.listByStore(store, language);
+        } else {
+          manufacturers = manufacturerService.listByStore(store);
+        }

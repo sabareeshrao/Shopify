@@ -1,0 +1,3 @@
+	public void setCcExpires(String ccExpires) {
+		this.ccExpires = ccExpires;
+	}

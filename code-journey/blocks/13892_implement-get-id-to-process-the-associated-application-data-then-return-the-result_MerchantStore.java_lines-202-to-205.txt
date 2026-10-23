@@ -1,0 +1,4 @@
+	@Override
+	public Integer getId() {
+		return this.id;
+	}

@@ -1,0 +1,2 @@
+	public void setImageUrl(String imageUrl);
+

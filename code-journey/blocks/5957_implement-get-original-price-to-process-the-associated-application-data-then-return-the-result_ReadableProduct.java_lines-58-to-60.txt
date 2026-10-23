@@ -1,0 +1,3 @@
+	public String getOriginalPrice() {
+		return originalPrice;
+	}

@@ -1,0 +1,9 @@
+public interface ImageFilePath {
+	
+	/**
+	 * Context path configured in shopizer-properties.xml
+	 * @return
+	 */
+	public String getContextPath();
+	
+	

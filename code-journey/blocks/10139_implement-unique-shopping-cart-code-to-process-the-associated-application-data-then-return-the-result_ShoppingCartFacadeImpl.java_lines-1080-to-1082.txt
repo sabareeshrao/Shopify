@@ -1,0 +1,3 @@
+	private String uniqueShoppingCartCode() {
+		return UUID.randomUUID().toString().replaceAll("-", "");
+	}

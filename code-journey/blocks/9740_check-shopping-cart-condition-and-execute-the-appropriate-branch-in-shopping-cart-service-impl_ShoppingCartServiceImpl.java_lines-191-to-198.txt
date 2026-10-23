@@ -1,0 +1,8 @@
+			getPopulatedShoppingCart(shoppingCart, store);
+
+			if (shoppingCart.isObsolete()) {
+				delete(shoppingCart);
+				return null;
+			} else {
+				return shoppingCart;
+			}

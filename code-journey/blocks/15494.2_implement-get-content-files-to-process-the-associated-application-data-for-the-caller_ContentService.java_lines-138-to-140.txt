@@ -1,0 +1,3 @@
+    List<OutputContentFile> getContentFiles( String merchantStoreCode, FileContentType fileContentType )
+                    throws ServiceException;
+

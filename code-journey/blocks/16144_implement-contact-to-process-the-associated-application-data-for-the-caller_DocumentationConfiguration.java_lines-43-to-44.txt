@@ -1,0 +1,2 @@
+	public static final Contact DEFAULT_CONTACT = new Contact("Shopizer", "https://www.shopizer.com", "");
+	

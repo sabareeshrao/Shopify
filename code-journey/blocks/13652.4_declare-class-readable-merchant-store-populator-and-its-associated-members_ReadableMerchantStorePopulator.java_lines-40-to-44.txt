@@ -1,0 +1,5 @@
+ */
+@Component
+public class ReadableMerchantStorePopulator extends
+		AbstractDataPopulator<MerchantStore, ReadableMerchantStore> {
+	

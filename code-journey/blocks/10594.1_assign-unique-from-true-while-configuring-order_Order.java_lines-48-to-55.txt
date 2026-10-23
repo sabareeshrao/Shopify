@@ -1,0 +1,8 @@
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column (name ="ORDER_ID" , unique=true , nullable=false )

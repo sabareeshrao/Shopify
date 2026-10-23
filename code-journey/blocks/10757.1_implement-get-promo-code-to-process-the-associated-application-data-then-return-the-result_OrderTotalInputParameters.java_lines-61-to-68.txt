@@ -1,0 +1,8 @@
+	public String getPromoCode() {
+		return promoCode;
+	}
+	public void setPromoCode(String promoCode) {
+		this.promoCode = promoCode;
+	}
+	public Date getDate() {
+		return date;

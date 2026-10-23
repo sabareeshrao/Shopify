@@ -1,0 +1,8 @@
+
+		categoryService.saveOrUpdate(category);
+
+		if (!CollectionUtils.isEmpty(saveAfter)) {
+			parent = category;
+			for(Category c: saveAfter) {
+				if(c.getId() == null || c.getId().longValue()==0) {
+					for (Category sub : children) {

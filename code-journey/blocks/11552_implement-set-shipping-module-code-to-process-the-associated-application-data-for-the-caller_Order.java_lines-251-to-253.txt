@@ -1,0 +1,3 @@
+	public void setShippingModuleCode(String shippingModuleCode) {
+		this.shippingModuleCode = shippingModuleCode;
+	}

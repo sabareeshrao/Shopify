@@ -1,0 +1,8 @@
+  })
+  
+  //TODO use total, count and page
+  public @ResponseBody List<SearchItem> search(
+      @RequestBody SearchProductRequest searchRequest,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language) {
+

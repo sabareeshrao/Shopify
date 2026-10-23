@@ -1,0 +1,8 @@
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	@Embedded
+	private AuditSection audit = new AuditSection();
+	
+	@Column(name = "REVIEWS_RATING")
+	private Double reviewRating;

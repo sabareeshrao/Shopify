@@ -1,0 +1,8 @@
+	ReadableProductList listItemsByManufacturer(MerchantStore store, Language language, Long manufacturerId, int startCount, int maxCount) throws Exception;
+
+	ProductGroup createProductGroup(ProductGroup group, MerchantStore store);
+	
+	List<ProductGroup> listProductGroups(MerchantStore store, Language language);
+	
+	/**
+	 * Update product group visible flag

@@ -1,0 +1,4 @@
+	@Override
+	protected ReadableCustomer createTarget() {
+		return null;
+	}

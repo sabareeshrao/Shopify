@@ -1,0 +1,8 @@
+	} /*else if (ex instanceof APIConnectionException) {
+		LOGGER.error("API connection error with stripe", ex.getMessage());
+		APIConnectionException e = (APIConnectionException)ex;
+		  // Network communication with Stripe failed
+		IntegrationException te = new IntegrationException(
+				"Can't process Stripe, missing invalid payment parameters");
+		te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
+		te.setMessageCode("message.payment.error");

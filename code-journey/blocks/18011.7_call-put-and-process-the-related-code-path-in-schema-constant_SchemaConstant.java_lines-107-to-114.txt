@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("COP", "Colombian Peso");
+		//CURRENCY_MAP.put("COU", "Unidad de Valor Real");
+		CURRENCY_MAP.put("KMF", "Comoro Franc");
+		CURRENCY_MAP.put("XAF", "CFA Franc BEAC");
+		CURRENCY_MAP.put("CDF", "Congolese Franc");
+		CURRENCY_MAP.put("NZD", "New Zealand Dollar");
+		CURRENCY_MAP.put("CRC", "Costa Rican Colon");
+		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");

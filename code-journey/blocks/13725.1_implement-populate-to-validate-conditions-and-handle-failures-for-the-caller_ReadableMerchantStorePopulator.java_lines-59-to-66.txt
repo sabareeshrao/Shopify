@@ -1,0 +1,8 @@
+	@Override
+	public ReadableMerchantStore populate(MerchantStore source,
+			ReadableMerchantStore target, MerchantStore store, Language language)
+			throws ConversionException {
+		Validate.notNull(countryService,"Must use setter for countryService");
+		Validate.notNull(zoneService,"Must use setter for zoneService");
+		
+		if(target == null) {

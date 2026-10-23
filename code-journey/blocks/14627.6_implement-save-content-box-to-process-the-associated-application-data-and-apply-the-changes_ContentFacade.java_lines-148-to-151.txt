@@ -1,0 +1,4 @@
+	Long saveContentBox(PersistableContentBox box, MerchantStore merchantStore, Language language);
+	
+	void updateContentBox(Long id, PersistableContentBox box, MerchantStore merchantStore, Language language);
+

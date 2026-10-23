@@ -1,0 +1,6 @@
+    @Autowired
+    private UserDetailsService jwtAdminDetailsService;
+    
+    @Inject
+    private PasswordEncoder passwordEncoder;
+

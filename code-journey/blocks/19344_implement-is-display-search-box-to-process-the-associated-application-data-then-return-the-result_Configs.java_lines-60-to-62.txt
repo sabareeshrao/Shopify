@@ -1,0 +1,3 @@
+	public boolean isDisplaySearchBox() {
+		return displaySearchBox;
+	}

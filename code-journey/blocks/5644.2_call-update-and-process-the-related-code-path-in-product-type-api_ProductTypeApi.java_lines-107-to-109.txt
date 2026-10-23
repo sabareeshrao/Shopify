@@ -1,0 +1,3 @@
+		productTypeFacade.update(type, id, merchantStore, language);
+
+	}

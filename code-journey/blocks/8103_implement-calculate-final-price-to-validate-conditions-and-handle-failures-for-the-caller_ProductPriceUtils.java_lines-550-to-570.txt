@@ -1,0 +1,21 @@
+	private FinalPrice calculateFinalPrice(Product product) throws ServiceException {
+
+		FinalPrice finalPrice = null;
+		List<FinalPrice> otherPrices = null;
+
+		/**
+		 * Since 3.2.0 The rule is
+		 * 
+		 * If product.variants contains exactly one variant If Variant has availability
+		 * we use availability from variant Otherwise we use price
+		 */
+
+		Set<ProductAvailability> availabilities = null;
+		if (!CollectionUtils.isEmpty(product.getVariants())) {
+			Optional<ProductVariant> variants = product.getVariants().stream().filter(i -> i.isDefaultSelection())
+					.findFirst();
+			if (variants.isPresent()) {
+				availabilities = variants.get().getAvailabilities();
+				availabilities = this.applicableAvailabilities(availabilities);
+
+			}

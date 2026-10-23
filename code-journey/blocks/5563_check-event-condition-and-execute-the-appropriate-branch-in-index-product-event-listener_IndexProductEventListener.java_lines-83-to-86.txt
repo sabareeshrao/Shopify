@@ -1,0 +1,4 @@
+			
+			if (event instanceof SaveProductAttributeEvent) {
+				saveProductAttribute((SaveProductAttributeEvent) event);
+			}

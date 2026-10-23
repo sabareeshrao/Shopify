@@ -1,0 +1,13 @@
+	private boolean packageExists(ShippingConfiguration configuration, PackageDetails packageDetails) {
+		
+		Validate.notNull(configuration,"ShippingConfiguration cannot be null");
+		Validate.notNull(packageDetails, "PackageDetails cannot be null");
+		Validate.notEmpty(packageDetails.getCode(), "PackageDetails code cannot be empty");
+		
+		List<com.salesmanager.core.model.shipping.Package> packages = configuration.getPackages().stream().filter(p -> p.getCode().equalsIgnoreCase(packageDetails.getCode())).collect(Collectors.toList());
+		
+		if(packages.isEmpty()) {
+			return false;
+		} else {
+			return true;
+		}

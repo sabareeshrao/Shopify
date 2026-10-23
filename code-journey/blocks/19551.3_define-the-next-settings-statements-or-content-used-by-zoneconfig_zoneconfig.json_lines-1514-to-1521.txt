@@ -1,0 +1,8 @@
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "GR",
+		"zoneName": "Graubnden",
+		"countryCode": "CH"
+	},
+	{

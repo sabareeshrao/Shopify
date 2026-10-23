@@ -1,0 +1,8 @@
+import com.salesmanager.core.business.modules.order.total.PromoCodeCalculatorModule;
+import com.salesmanager.core.modules.order.total.OrderTotalPostProcessorModule;
+
+/**
+ * Pre and post processors triggered during certain actions such as
+ * order processing and shopping cart processing
+ * 
+ * 2 types of processors

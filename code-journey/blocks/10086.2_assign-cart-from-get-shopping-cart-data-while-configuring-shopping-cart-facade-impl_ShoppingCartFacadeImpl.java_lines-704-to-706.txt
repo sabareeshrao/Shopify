@@ -1,0 +1,3 @@
+				ShoppingCartData cart = getShoppingCartData(cartModel, language);
+				return cart;
+			}

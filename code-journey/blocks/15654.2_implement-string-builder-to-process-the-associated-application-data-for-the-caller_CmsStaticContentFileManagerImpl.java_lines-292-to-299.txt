@@ -1,0 +1,8 @@
+
+		LOGGER.debug("Removing all images for {} merchant ", merchantStoreCode);
+
+		try {
+
+			StringBuilder merchantPath = new StringBuilder();
+			merchantPath.append(buildRootPath()).append(Constants.SLASH).append(merchantStoreCode);
+

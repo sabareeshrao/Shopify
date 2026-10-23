@@ -1,0 +1,3 @@
+	public CategoryService getCategoryService() {
+		return categoryService;
+	}

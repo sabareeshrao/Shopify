@@ -1,0 +1,3 @@
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
+	}

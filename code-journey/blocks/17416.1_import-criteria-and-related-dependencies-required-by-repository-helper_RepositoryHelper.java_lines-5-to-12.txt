@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.common.Criteria;
+import com.salesmanager.core.model.common.GenericEntityList;
+
+/**
+ * Helper for Spring Data JPA
+ * 
+ * @author carlsamson
+ *

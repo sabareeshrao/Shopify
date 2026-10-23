@@ -1,0 +1,3 @@
+public class PersistableOrderPopulator extends
+		AbstractDataPopulator<PersistableOrder, Order> {
+	

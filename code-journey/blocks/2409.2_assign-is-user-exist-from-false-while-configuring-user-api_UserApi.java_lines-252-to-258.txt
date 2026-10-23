@@ -1,0 +1,7 @@
+		try {
+			// will throw an exception if not fount
+			userFacade.findByUserName(userName.getUnique(), userName.getMerchant(), language);
+
+		} catch (ResourceNotFoundException e) {
+			isUserExist = false;
+		}

@@ -1,0 +1,9 @@
+	@Override
+	public void addFiles(String merchantStoreCode, Optional<String> folderPath, List<InputContentFile> inputStaticContentDataList)
+			throws ServiceException {
+		if (CollectionUtils.isNotEmpty(inputStaticContentDataList)) {
+			for (InputContentFile inputFile : inputStaticContentDataList) {
+				this.addFile(merchantStoreCode, folderPath, inputFile);
+			}
+		}
+	}

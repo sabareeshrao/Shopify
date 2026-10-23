@@ -1,0 +1,6 @@
+	@Autowired
+	private ReadableProductVariantGroupMapper readableProductVariantGroupMapper;
+	
+	@Autowired
+	private ContentService contentService; //file management
+

@@ -1,0 +1,5 @@
+	private static final String SUCCESS_INDICATOR = "success";
+	
+	  @Value("${config.recaptcha.secretKey}")
+	  private String secretKey;
+	

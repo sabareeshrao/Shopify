@@ -1,0 +1,8 @@
+	private List<ProductDescription> descriptions = new ArrayList<ProductDescription>();
+	private List<PersistableProductAttribute> attributes = new ArrayList<PersistableProductAttribute>();//persist attribute and save reference
+	private List<PersistableImage> images;//persist images and save reference
+	private List<Category> categories = new ArrayList<Category>();
+	private PersistableProductInventory inventory;
+	private List<PersistableProductVariant> variants = new ArrayList<PersistableProductVariant>();
+	private String type;
+

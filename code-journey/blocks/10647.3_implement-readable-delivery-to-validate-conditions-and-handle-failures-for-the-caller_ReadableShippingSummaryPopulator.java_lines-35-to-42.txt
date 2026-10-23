@@ -1,0 +1,8 @@
+			target.setTaxOnShipping(source.isTaxOnShipping());
+			target.setHandlingText(pricingService.getDisplayAmount(source.getHandling(), store));
+			target.setShippingText(pricingService.getDisplayAmount(source.getShipping(), store));
+			
+			if(source.getDeliveryAddress()!=null) {
+			
+				ReadableDelivery deliveryAddress = new ReadableDelivery();
+				deliveryAddress.setAddress(source.getDeliveryAddress().getAddress());

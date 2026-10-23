@@ -1,0 +1,5 @@
+								(source.getVariant() == null && a.getProductVariant() == null) || (a.getProductVariant() != null && source.getVariant()!= null && a.getProductVariant().getId().longValue() == source.getVariant().longValue())
+								&&
+								(source.getRegionVariant() == null && a.getRegionVariant() == null) || (a.getRegionVariant() != null && source.getRegionVariant() != null &&  a.getRegionVariant().equals(source.getRegionVariant()))
+						)).findAny().orElse(null);
+			}

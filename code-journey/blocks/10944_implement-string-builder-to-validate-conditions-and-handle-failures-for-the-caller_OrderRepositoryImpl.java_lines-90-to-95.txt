@@ -1,0 +1,6 @@
+
+		if(!StringUtils.isBlank(criteria.getCustomerName())) {
+			String nameParam = new StringBuilder().append("%").append(criteria.getCustomerName()).append("%").toString();
+			countQ.setParameter("nm",nameParam);
+			objectQ.setParameter("nm",nameParam);
+		}

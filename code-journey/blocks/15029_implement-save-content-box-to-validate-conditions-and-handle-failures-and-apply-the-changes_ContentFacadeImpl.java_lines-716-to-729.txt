@@ -1,0 +1,14 @@
+	@Override
+	public Long saveContentBox(PersistableContentBox box, MerchantStore merchantStore, Language language) {
+		Validate.notNull(box);
+		Validate.notNull(box.getCode(), "Content box must not be null");
+		Validate.notNull(merchantStore);
+
+		try {
+			Content content = null;
+
+			content = contentService.getByCode(box.getCode(), merchantStore);
+			if (content != null) {
+				throw new ConstraintException("Content box with code [" + box.getCode() + "] already exist for store ["
+						+ merchantStore.getCode() + "]");
+			}

@@ -1,0 +1,3 @@
+	public ReadableAddress getAddress() {
+		return address;
+	}

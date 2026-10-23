@@ -1,0 +1,3 @@
+	public void setDescriptions(List<ContentDescriptionEntity> descriptions) {
+		this.descriptions = descriptions;
+	}

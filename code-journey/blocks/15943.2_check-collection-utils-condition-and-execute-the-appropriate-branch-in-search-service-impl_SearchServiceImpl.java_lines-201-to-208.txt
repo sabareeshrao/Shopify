@@ -1,0 +1,8 @@
+			
+			List<Map<String, String>> itemInventory = new ArrayList<Map<String, String>>();
+			
+			itemInventory.add(inventory(product));
+			
+			if (!CollectionUtils.isEmpty(product.getVariants())) {
+				for(ProductVariant variant : product.getVariants()) {
+					itemInventory.add(inventory(variant));

@@ -1,0 +1,10 @@
+
+      Query countQ = this.em.createQuery(countBuilder.toString());
+
+      String hql = req.toString();
+      Query q = this.em.createQuery(hql);
+
+      if (criteria.getCode() != null) {
+        countQ.setParameter("code", "%" + criteria.getCode().toLowerCase() + "%");
+        q.setParameter("code", "%" + criteria.getCode().toLowerCase() + "%");
+      }

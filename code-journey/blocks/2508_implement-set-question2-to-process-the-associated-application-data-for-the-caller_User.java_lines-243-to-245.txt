@@ -1,0 +1,3 @@
+	public void setQuestion2(String question2) {
+		this.question2 = question2;
+	}

@@ -1,0 +1,4 @@
+	@Override
+	public boolean codeExist(String code, String type, MerchantStore store) {
+		return contentService.exists(code, ContentType.valueOf(type), store);
+	}

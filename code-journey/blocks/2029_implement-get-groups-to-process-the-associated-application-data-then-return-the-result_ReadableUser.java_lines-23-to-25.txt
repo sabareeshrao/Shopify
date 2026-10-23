@@ -1,0 +1,3 @@
+	public List<ReadableGroup> getGroups() {
+		return groups;
+	}

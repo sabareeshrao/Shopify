@@ -1,0 +1,8 @@
+	private ProductVariantGroupFacade productVariantGroupFacade;
+
+	@Autowired
+	private UserFacade userFacade;
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping(value = { "/private/product/productVariantGroup" })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),

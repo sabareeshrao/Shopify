@@ -1,0 +1,4 @@
+			@ApiIgnore Language language) {
+		inventory.setProductId(productId);
+		return productInventoryFacade.add(inventory, merchantStore, language);
+	}

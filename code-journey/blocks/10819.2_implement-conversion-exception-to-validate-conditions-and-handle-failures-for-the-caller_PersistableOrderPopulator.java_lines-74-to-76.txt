@@ -1,0 +1,3 @@
+					if(modelCustomer==null) {
+						throw new ConversionException("Customer id " + customer.getId() + " does not exists");
+					}

@@ -1,0 +1,18 @@
+							}
+						}
+
+						property.setPropertyValue(readableOptionValue);
+						destination.getProperties().add(property);
+
+					} else {// selectable option
+
+						/**
+						 * Returns a list of ReadableProductOptions
+						 * 
+						 * name lang type code List ReadableProductOptionValueEntity name description
+						 * image order default
+						 */
+
+						if (selectableOptions == null) {
+							selectableOptions = new TreeMap<Long, ReadableProductOption>();
+						}

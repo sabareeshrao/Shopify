@@ -1,0 +1,8 @@
+menu.cache=Cache management
+menu.customer-list=List of customers
+menu.customer-create=Create customer
+menu.customer-options=Customer options
+menu.customer-options-list=List of customer options
+menu.customer-options-create=Create customer option
+menu.customer-options-values-list=List of customer option values
+menu.customer-options-values-create=Create customer option value

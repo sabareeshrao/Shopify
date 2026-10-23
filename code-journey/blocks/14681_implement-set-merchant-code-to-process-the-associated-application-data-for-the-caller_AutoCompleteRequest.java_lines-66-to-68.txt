@@ -1,0 +1,3 @@
+	public void setMerchantCode(String merchantCode) {
+		this.merchantCode = merchantCode;
+	}

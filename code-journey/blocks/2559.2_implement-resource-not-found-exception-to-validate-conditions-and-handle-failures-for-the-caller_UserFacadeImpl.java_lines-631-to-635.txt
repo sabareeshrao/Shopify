@@ -1,0 +1,5 @@
+
+			if (modelUser == null) {
+				throw new ResourceNotFoundException(
+						"User with id [" + user.getId() + "] not found for store [" + store.getCode() + "]");
+			}

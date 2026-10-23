@@ -1,0 +1,19 @@
+			
+			destination.setId(source.getId());
+
+			/**
+			 * Get product availability and verify the existing br-pa-1.0.0
+			 * 
+			 * Cannot have multiple default price for the same product availability Default
+			 * price can be edited but cannot create new default price
+			 */
+
+			ProductAvailability availability = null;
+
+			if (isPositive(source.getProductAvailabilityId())) {
+				Optional<ProductAvailability> avail = productAvailabilityService
+						.getById(source.getProductAvailabilityId(), store);
+				if (avail.isEmpty()) {
+					throw new ConversionRuntimeException(
+							"Product availability with id [" + source.getProductAvailabilityId() + "] was not found");
+				}

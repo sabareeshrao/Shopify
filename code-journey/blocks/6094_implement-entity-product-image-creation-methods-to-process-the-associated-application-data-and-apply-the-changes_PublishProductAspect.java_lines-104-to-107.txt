@@ -1,0 +1,4 @@
+	
+	@Pointcut("serviceMethods() && saveProductImageMethod()")
+	public void entityProductImageCreationMethods() {
+	}

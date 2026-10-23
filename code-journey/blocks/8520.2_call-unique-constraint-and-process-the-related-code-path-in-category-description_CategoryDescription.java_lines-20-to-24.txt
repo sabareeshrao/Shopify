@@ -1,0 +1,5 @@
+		@UniqueConstraint(columnNames={
+			"CATEGORY_ID",
+			"LANGUAGE_ID"
+		})
+	}

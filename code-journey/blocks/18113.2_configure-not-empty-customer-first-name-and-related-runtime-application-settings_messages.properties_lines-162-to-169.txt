@@ -1,0 +1,8 @@
+NotEmpty.customer.FirstName=Customer first name should not be empty
+NotEmpty.customer.LastName=Customer last name should not be empty
+NotEmpty.customer.StreetAddress=Customer street address should not be empty
+NotEmpty.customer.City=Customer city should not be empty
+NotEmpty.customer.Country=Customer country should not be empty
+NotEmpty.customer.PostCode=Customer postal code should not be empty
+NotEmpty.customer.Telephone=Customer phone should not be empty
+Email.customer.EmailAddress=Customer email address is invalid

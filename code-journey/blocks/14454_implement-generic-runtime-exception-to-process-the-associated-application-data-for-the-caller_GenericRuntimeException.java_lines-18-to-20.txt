@@ -1,0 +1,3 @@
+  public GenericRuntimeException(String errorMessage) {
+    this.setErrorMessage(errorMessage);
+  }

@@ -1,0 +1,5 @@
+	private String manufacturer(Manufacturer manufacturer, String language) {
+		ManufacturerDescription description = manufacturer.getDescriptions().stream()
+				.filter(d -> d.getLanguage().getCode().equals(language)).findFirst().get();
+		return description.getName();
+	}

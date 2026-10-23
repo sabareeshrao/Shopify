@@ -1,0 +1,5 @@
+	@Override
+	public Page<Catalog> getCatalogs(MerchantStore store, Language language, String name, int page, int count) {
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableCatalogRepository.listByStore(store.getId(), name, pageRequest);
+	}

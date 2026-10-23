@@ -1,0 +1,8 @@
+				xmldatabuffer.append("</UnitOfMeasurement>");
+				xmldatabuffer.append("<Weight>");
+				xmldatabuffer.append(new BigDecimal(packageDetail.getShippingWeight())
+						.setScale(1, BigDecimal.ROUND_HALF_UP));
+				xmldatabuffer.append("</Weight>");
+				xmldatabuffer.append("</PackageWeight>");
+
+				// dimension

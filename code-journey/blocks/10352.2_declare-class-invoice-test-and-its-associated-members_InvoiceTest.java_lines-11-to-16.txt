@@ -1,0 +1,6 @@
+@Ignore
+public class InvoiceTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+/*	
+	@Inject
+	ProductPriceUtils priceUtil;
+

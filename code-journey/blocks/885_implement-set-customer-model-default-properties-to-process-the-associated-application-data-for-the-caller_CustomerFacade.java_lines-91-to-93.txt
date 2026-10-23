@@ -1,0 +1,3 @@
+    public void setCustomerModelDefaultProperties(Customer customer, MerchantStore store) throws Exception; 
+
+	

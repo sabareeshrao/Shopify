@@ -1,0 +1,3 @@
+	public void setProviderUserId(String providerUserId) {
+		this.providerUserId = providerUserId;
+	}

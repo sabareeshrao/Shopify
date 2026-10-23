@@ -1,0 +1,5 @@
+	public ShoppingCartAttributeItem(ShoppingCartItem shoppingCartItem, ProductAttribute productAttribute) {
+		this.shoppingCartItem = shoppingCartItem;
+		this.productAttribute = productAttribute;
+		this.productAttributeId = productAttribute.getId();
+	}

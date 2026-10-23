@@ -1,0 +1,11 @@
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public BigDecimal getProductAttributeWeight() {
+		return productAttributeWeight;
+	}
+	public void setProductAttributeWeight(BigDecimal productAttributeWeight) {
+		this.productAttributeWeight = productAttributeWeight;
+	}

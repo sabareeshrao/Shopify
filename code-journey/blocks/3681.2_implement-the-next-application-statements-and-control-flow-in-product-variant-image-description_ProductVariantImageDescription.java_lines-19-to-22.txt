@@ -1,0 +1,4 @@
+			"PRODUCT_VAR_IMAGE_ID",
+			"LANGUAGE_ID"
+		})
+	}

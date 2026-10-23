@@ -1,0 +1,8 @@
+
+	/**
+	 * Retourne une entité à partir de son id.
+	 * 
+	 * @param id identifiant
+	 * @return entité
+	 */
+	E getById(K id);

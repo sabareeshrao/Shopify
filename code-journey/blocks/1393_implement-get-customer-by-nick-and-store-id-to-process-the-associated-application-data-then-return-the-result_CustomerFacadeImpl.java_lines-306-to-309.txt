@@ -1,0 +1,4 @@
+  private Customer getCustomerByNickAndStoreId(String userName, MerchantStore merchantStore) {
+    return Optional.ofNullable(customerService.getByNick(userName, merchantStore.getId()))
+        .orElseThrow(() -> new ResourceNotFoundException("No Customer found for ID : " + userName));
+  }

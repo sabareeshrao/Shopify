@@ -1,0 +1,10 @@
+
+  @Bean
+  public ByteArrayHttpMessageConverter byteArrayHttpMessageConverter() {
+    List<MediaType> supportedMediaTypes = Arrays.asList(IMAGE_JPEG, IMAGE_GIF, IMAGE_PNG, APPLICATION_OCTET_STREAM);
+
+    ByteArrayHttpMessageConverter byteArrayHttpMessageConverter =
+        new ByteArrayHttpMessageConverter();
+    byteArrayHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
+    return byteArrayHttpMessageConverter;
+  }

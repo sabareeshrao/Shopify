@@ -1,0 +1,8 @@
+module.shipping.canadapost.DOM.RP=Colis standard 
+module.shipping.canadapost.DOM.EP=Colis accélérés 
+module.shipping.canadapost.DOM.XP=Xpresspost
+module.shipping.canadapost.DOM.XP.CERT=Xpresspost certifié
+module.shipping.canadapost.DOM.PC=Priorité
+module.shipping.canadapost.DOM.DT=Service Livré ce soir
+module.shipping.canadapost.DOM.LIB=Livres de bibliothèque
+

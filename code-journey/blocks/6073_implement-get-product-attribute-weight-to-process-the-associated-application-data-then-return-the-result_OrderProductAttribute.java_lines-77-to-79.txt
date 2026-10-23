@@ -1,0 +1,3 @@
+	public java.math.BigDecimal getProductAttributeWeight() {
+		return productAttributeWeight;
+	}

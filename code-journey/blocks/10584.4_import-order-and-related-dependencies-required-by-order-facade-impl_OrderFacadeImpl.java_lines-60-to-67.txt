@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.order.Order;
+import com.salesmanager.core.model.order.OrderCriteria;
+import com.salesmanager.core.model.order.OrderList;
+import com.salesmanager.core.model.order.OrderSummary;
+import com.salesmanager.core.model.order.OrderTotalSummary;
+import com.salesmanager.core.model.order.attributes.OrderAttribute;
+import com.salesmanager.core.model.order.orderproduct.OrderProduct;
+import com.salesmanager.core.model.order.orderstatus.OrderStatus;

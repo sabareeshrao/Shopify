@@ -1,0 +1,8 @@
+			orderProductPopulator.setPricingService(pricingService);
+			orderProductPopulator.setimageUtils(imageUtils);
+			ReadableOrderProduct orderProduct = new ReadableOrderProduct();
+			orderProductPopulator.populate(p, orderProduct, store, language);
+
+			// image
+
+			// attributes

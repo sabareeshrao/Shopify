@@ -1,0 +1,7 @@
+    return customerReviewService.getByReviewedCustomer(customer)
+        .stream()
+        .map(
+            customerReview ->
+                convertCustomerReviewToReadableCustomerReview(customerReview, store, language))
+        .collect(Collectors.toList());
+  }

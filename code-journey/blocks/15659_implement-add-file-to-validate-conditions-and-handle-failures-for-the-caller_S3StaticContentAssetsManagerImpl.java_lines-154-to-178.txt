@@ -1,0 +1,25 @@
+	@Override
+	public void addFile(String merchantStoreCode, Optional<String> folderPath, InputContentFile inputStaticContentData) throws ServiceException {
+
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			String nodePath = nodePath(merchantStoreCode, inputStaticContentData.getFileContentType());
+
+			final AmazonS3 s3 = s3Client();
+
+			ObjectMetadata metadata = new ObjectMetadata();
+			metadata.setContentType(inputStaticContentData.getMimeType());
+			PutObjectRequest request = new PutObjectRequest(bucketName, nodePath + inputStaticContentData.getFileName(),
+					inputStaticContentData.getFile(), metadata);
+			request.setCannedAcl(CannedAccessControlList.PublicRead);
+
+			s3.putObject(request);
+
+			LOGGER.info("Content add file");
+		} catch (final Exception e) {
+			LOGGER.error("Error while adding file", e);
+			throw new ServiceException(e);
+
+		}

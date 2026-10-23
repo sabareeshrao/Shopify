@@ -1,0 +1,5 @@
+					
+					CustomerOptionValue customerOptionValue = customerOptionValueService.getById(attr.getCustomerOptionValue().getId());
+					if(customerOptionValue==null) {
+						throw new ConversionException("Customer option value id " + attr.getCustomerOptionValue().getId() + " does not exist");
+					}

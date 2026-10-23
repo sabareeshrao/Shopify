@@ -1,0 +1,8 @@
+   * @param language
+   * @return
+   * @throws Exception
+   */
+  ReadableProduct getProductBySeUrl(MerchantStore store, String friendlyUrl, Language language) throws Exception;
+
+  /**
+   * Filters a list of product based on criteria

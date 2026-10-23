@@ -1,0 +1,6 @@
+	@Override
+	public ProductImage saveOrUpdate(ProductImage productImage) throws ServiceException {
+
+		return productImageRepository.save(productImage);
+
+	}

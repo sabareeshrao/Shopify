@@ -1,0 +1,3 @@
+	public void setDisplayCustomerAgreement(boolean displayCustomerAgreement) {
+		this.displayCustomerAgreement = displayCustomerAgreement;
+	}

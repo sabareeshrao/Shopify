@@ -1,0 +1,14 @@
+			 
+			 refundTransactionRequest.setRefundType(refundType);
+			 
+			 BasicAmountType refundAmount = new BasicAmountType();
+			 refundAmount.setValue(pricingService.getStringAmount(amount, store));
+			 refundAmount.setCurrencyID(urn.ebay.apis.eBLBaseComponents.CurrencyCodeType.fromValue(order.getCurrency().getCode()));
+
+			 refundTransactionRequest.setAmount(refundAmount);
+			 refundTransactionRequest.setTransactionID(transaction.getTransactionDetails().get("TRANSACTIONID"));
+			 
+			 RefundTransactionResponseType refundTransactionResponse = service.refundTransaction(refundRequest);
+			 
+			 String refundAck = refundTransactionResponse.getAck().getValue();
+			 

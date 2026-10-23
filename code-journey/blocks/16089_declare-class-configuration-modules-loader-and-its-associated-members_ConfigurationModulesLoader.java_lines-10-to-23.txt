@@ -1,0 +1,14 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+
+/**
+ * Loads all modules in the database
+ * @author c.samson
+ *
+ */
+public class ConfigurationModulesLoader {
+	
+	@SuppressWarnings("unused")
+	private static final Logger LOGGER = LoggerFactory.getLogger(ConfigurationModulesLoader.class);
+	

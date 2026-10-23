@@ -1,0 +1,8 @@
+	private CoreConfiguration coreConfiguration;
+
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+	@Resource(name = "shopizer-properties")
+	public Properties properties = new Properties();

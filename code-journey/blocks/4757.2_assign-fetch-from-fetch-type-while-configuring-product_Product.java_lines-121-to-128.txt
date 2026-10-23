@@ -1,0 +1,8 @@
+	
+	/**
+	 * Product variants
+	 * Decorates the product with variants
+	 * 
+	 */
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "product")
+	private Set<ProductVariant> variants = new HashSet<ProductVariant>();

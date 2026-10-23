@@ -1,0 +1,12 @@
+
+        final HttpEntity<PersistableShoppingCartItem[]> cartEntity = new HttpEntity<>(productsQtyUpdates, getHeader());
+        final ResponseEntity<ReadableShoppingCart> response = testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() +
+                        "/multi"),
+                HttpMethod.POST,
+                cartEntity,
+                ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertEquals(2, response.getBody().getQuantity());
+    }

@@ -1,0 +1,8 @@
+	private static final Logger LOG = LoggerFactory.getLogger(ShoppingCartFacadeImpl.class);
+
+	@Inject
+	private ShoppingCartService shoppingCartService;
+
+	@Inject
+	private ShoppingCartCalculationService shoppingCartCalculationService;
+

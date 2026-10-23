@@ -1,0 +1,12 @@
+
+			taxClass.setStore(store.getCode());
+			TaxClass model = persistableTaxClassMapper.convert(taxClass, store, language);
+			model = taxClassService.saveOrUpdate(model);;
+			Entity id = new Entity();
+			id.setId(model.getId());
+			return id;
+
+		} catch (ServiceException e) {
+			LOGGER.error("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while saving taxClass [" +  taxClass.getCode() + "] for store [" + store.getCode() + "]", e);
+		}

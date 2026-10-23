@@ -1,0 +1,8 @@
+	
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper;
+	
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+	

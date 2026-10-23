@@ -1,0 +1,5 @@
+public class MerchantRepositoryImpl implements MerchantRepositoryCustom {
+
+  @PersistenceContext
+  private EntityManager em;
+

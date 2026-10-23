@@ -1,0 +1,3 @@
+        .map(zone -> convertToReadableZone(zone, language, merchantStore))
+        .collect(Collectors.toList());
+  }

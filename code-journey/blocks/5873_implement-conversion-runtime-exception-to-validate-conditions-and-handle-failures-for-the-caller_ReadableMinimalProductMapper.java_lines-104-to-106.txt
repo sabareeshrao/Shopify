@@ -1,0 +1,3 @@
+		} catch (ServiceException e) {
+			throw new ConversionRuntimeException("An error occured during price calculation", e);
+		}

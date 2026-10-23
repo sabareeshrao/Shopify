@@ -1,0 +1,8 @@
+	 * @param store
+	 * @param fileType
+	 * @param fileName
+	 * @return
+	 */
+	OutputContentFile download(MerchantStore store, FileContentType fileType, String fileName);
+
+}

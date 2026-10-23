@@ -1,0 +1,7 @@
+			
+			if(source.getGender()!=null && target.getGender()==null) {
+				target.setGender( com.salesmanager.core.model.customer.CustomerGender.valueOf( source.getGender() ) );
+			}
+			if(target.getGender()==null) {
+				target.setGender( com.salesmanager.core.model.customer.CustomerGender.M);
+			}

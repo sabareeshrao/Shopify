@@ -1,0 +1,3 @@
+      @ApiIgnore Language language) {
+    return searchFacade.autocompleteRequest(searchRequest.getQuery(), merchantStore, language);
+  }

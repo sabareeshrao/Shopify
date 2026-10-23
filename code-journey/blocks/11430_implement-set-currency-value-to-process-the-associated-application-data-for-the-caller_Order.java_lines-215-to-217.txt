@@ -1,0 +1,3 @@
+	public void setCurrencyValue(BigDecimal currencyValue) {
+		this.currencyValue = currencyValue;
+	}

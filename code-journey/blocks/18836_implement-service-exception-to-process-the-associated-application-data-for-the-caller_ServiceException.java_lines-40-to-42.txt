@@ -1,0 +1,3 @@
+	public ServiceException(Throwable cause) {
+		super(cause.getMessage(), cause);
+	}

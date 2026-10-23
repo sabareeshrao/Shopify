@@ -1,0 +1,3 @@
+	public String getOrderTotalFreeShippingText() {
+		return orderTotalFreeShippingText;
+	}

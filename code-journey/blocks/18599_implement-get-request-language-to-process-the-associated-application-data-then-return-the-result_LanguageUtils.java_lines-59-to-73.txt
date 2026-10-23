@@ -1,0 +1,15 @@
+
+  /**
+   * Determines request language based on store rules
+   * 
+   * @param request
+   * @return
+   */
+  public Language getRequestLanguage(HttpServletRequest request, HttpServletResponse response) {
+
+    Locale locale = null;
+
+    Language language = (Language) request.getSession().getAttribute(Constants.LANGUAGE);
+    MerchantStore store =
+        (MerchantStore) request.getSession().getAttribute(Constants.MERCHANT_STORE);
+    

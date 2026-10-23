@@ -1,0 +1,7 @@
+			@RequestParam(value = "code") String code,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		boolean isOptionExist = productVariationFacade.exists(code, merchantStore);
+		return new ResponseEntity<EntityExists>(new EntityExists(isOptionExist), HttpStatus.OK);
+	}

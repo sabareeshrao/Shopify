@@ -1,0 +1,3 @@
+	public ProductDimensions getDimensions() {
+		return dimensions;
+	}

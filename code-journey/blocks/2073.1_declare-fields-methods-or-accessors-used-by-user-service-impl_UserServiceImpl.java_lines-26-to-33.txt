@@ -1,0 +1,8 @@
+	private UserRepository userRepository;
+
+	@Autowired
+	private MerchantStoreService merchantStoreService;
+
+	@Autowired
+	private PageableUserRepository pageableUserRepository;
+

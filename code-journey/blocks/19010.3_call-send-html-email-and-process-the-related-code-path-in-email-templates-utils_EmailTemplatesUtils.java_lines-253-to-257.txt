@@ -1,0 +1,5 @@
+		           emailService.sendHtmlEmail(merchantStore, email);
+
+		       } catch (Exception e) {
+		           LOGGER.error("Error occured while sending order confirmation email ",e);
+		       }

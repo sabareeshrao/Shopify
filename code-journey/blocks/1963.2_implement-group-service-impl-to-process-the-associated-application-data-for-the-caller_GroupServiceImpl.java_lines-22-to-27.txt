@@ -1,0 +1,6 @@
+  @Inject
+  public GroupServiceImpl(GroupRepository groupRepository) {
+    super(groupRepository);
+    this.groupRepository = groupRepository;
+
+  }

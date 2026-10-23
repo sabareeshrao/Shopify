@@ -1,0 +1,33 @@
+
+			// if international & CXG
+			/*
+			 * xmldatabuffer.append("<CXG>"); xmldatabuffer.append("<Length>");
+			 * xmldatabuffer.append(""); xmldatabuffer.append("</Length>");
+			 * xmldatabuffer.append("<Width>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</Width>");
+			 * xmldatabuffer.append("<Height>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</Height>");
+			 * xmldatabuffer.append("<POBoxFlag>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</POBoxFlag>");
+			 * xmldatabuffer.append("<GiftFlag>"); xmldatabuffer.append("");
+			 * xmldatabuffer.append("</GiftFlag>");
+			 * xmldatabuffer.append("</CXG>");
+			 */
+		
+			/*
+			 * xmldatabuffer.append("<Width>"); xmldatabuffer.append(totalW);
+			 * xmldatabuffer.append("</Width>");
+			 * xmldatabuffer.append("<Length>"); xmldatabuffer.append(totalL);
+			 * xmldatabuffer.append("</Length>");
+			 * xmldatabuffer.append("<Height>"); xmldatabuffer.append(totalH);
+			 * xmldatabuffer.append("</Height>");
+			 * xmldatabuffer.append("<Girth>"); xmldatabuffer.append(totalG);
+			 * xmldatabuffer.append("</Girth>");
+			 */
+
+			xmldatabuffer.append("</Package>");
+
+			String xmlfooter = "</RateV3Request>";
+			if(!store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {
+				xmlfooter = "</IntlRateRequest>";
+			}

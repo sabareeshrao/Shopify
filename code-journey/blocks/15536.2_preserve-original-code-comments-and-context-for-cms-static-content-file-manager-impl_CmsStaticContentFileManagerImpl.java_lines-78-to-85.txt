@@ -1,0 +1,8 @@
+	 * 2. Digital Data like audio or video
+	 * </pre>
+	 * </p>
+	 * <p>
+	 * Merchant store code will be used to create cache node where merchant data
+	 * will be stored,input data will contain name, file as well type of data
+	 * being stored.
+	 * 

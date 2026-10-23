@@ -1,0 +1,6 @@
+	private CodeEntity codeEntity(ProductAttribute attr) {
+		CodeEntity entity = new CodeEntity();
+		entity.setId(attr.getId());
+		entity.setCode(attr.getProductOption().getCode());
+		return entity;
+	}

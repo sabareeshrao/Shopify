@@ -1,0 +1,4 @@
+	private CriteriaOrderBy orderBy = CriteriaOrderBy.DESC;
+	private String criteriaOrderByField;
+	private String search;
+

@@ -1,0 +1,3 @@
+	public void setVariation(Long variation) {
+		this.variation = variation;
+	}

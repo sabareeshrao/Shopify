@@ -1,0 +1,8 @@
+	
+	@Column(name="SORT_ORDER")
+	private Integer sortOrder = 0;
+	
+	@Column(name="CUSTOMER_OPTION_TYPE", length=10)
+	private String customerOptionType;
+	
+	@NotEmpty

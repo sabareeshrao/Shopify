@@ -1,0 +1,8 @@
+import com.salesmanager.core.modules.constants.Constants;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.shipping.model.ShippingQuotePrePostProcessModule;
+
+/**
+ * Uses google api to get lng, lat and distance in km for a given delivery address
+ * The route will be displayed on a map to the end user and available
+ * from the admin section

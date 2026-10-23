@@ -1,0 +1,8 @@
+		delivery.setZone(zone);
+		
+		ShippingOrigin origin = new ShippingOrigin();
+		origin.setAddress("7070, avenue Henri-Julien");
+		origin.setCity("Montreal");
+		origin.setPostalCode("H2S 3S3");
+		origin.setZone(zone);
+		origin.setCountry(country);

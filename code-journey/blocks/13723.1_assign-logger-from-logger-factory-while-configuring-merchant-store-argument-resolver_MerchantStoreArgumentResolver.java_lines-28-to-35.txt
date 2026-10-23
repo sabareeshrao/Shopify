@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(MerchantStoreArgumentResolver.class);
+	public static final String REQUEST_PARAMATER_STORE = "store";
+
+	@Autowired
+	private StoreFacade storeFacade;
+
+	@Autowired
+	private UserFacade userFacade;

@@ -1,0 +1,4 @@
+
+		if (!StringUtils.isBlank(criteria.getProductName())) {
+			qs.append(" and lower(pd.name) like :nm");
+		}

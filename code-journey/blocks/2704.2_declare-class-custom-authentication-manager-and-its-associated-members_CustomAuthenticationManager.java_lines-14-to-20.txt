@@ -1,0 +1,7 @@
+ * Abstract authentication manager to be used by various internal Authentication manager
+ * invoked from a SecurityFilter placed in the security filter chain of given http configuration.
+ * @author c.samson
+ *
+ */
+public abstract class CustomAuthenticationManager {
+	

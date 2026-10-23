@@ -1,0 +1,8 @@
+				}
+				req.setAttribute("response", Payment.getLastResponse());
+				map.put(guid, createdPayment.getId());
+			} catch (PayPalRESTException e) {
+				req.setAttribute("error", e.getMessage());
+			}
+		} catch (PayPalRESTException e) {
+			throw new IntegrationException(e);

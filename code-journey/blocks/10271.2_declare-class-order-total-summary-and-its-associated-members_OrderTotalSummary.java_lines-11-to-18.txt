@@ -1,0 +1,8 @@
+ */
+public class OrderTotalSummary implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private BigDecimal subTotal;//one time price for items

@@ -1,0 +1,8 @@
+
+			if (StringUtils.isBlank(order.getCustomer().getBilling().getPhone())) {
+				FieldError error = new FieldError("customer.billing.phone", "customer.billing.phone",
+						messages.getMessage("NotEmpty.customer.billing.phone", locale));
+				bindingResult.addError(error);
+				messagesResult.put("customer.billing.phone",
+						messages.getMessage("NotEmpty.customer.billing.phone", locale));
+			}

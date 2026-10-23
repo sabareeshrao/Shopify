@@ -1,0 +1,8 @@
+				
+			} else {
+				if(!StringUtils.isBlank(order.getBilling().getState())) {
+					billToProvince = new StringBuilder();
+					billToProvince.append(order.getBilling().getState());
+				}
+			}
+			if(order.getBilling().getCountry()!=null) {

@@ -1,0 +1,4 @@
+		destination.setVisible(source.isVisible());
+		
+		return destination;
+	}

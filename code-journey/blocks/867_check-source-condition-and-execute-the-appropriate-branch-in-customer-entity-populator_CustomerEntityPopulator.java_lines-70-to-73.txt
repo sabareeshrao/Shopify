@@ -1,0 +1,4 @@
+            
+    		if(source.getCustomerReviewAvg() != null) {
+    			target.setRating(source.getCustomerReviewAvg().doubleValue());
+    		}

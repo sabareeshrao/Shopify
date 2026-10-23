@@ -1,0 +1,8 @@
+          + "left join fetch m.descriptions md "
+          + "left join fetch pa.prices pap "
+          + "left join fetch pap.descriptions papd "
+          + "where pr.code=:code "
+          + "and pr.store.id=:storeId "
+          + "and rpd.language.id=:langId";
+  private static final String HQL_GET_GROUP_BY_CODE_AND_STORE_ID =
+      "select distinct pr from ProductRelationship as pr "

@@ -1,0 +1,3 @@
+	public boolean isCropeable() {
+		return cropeable;
+	}

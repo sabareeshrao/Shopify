@@ -1,0 +1,8 @@
+			&trnType=P
+			&username=carlito&password=shopizer001
+			&orderNumber=caa71106-7e3f-4975-a657-a35904dc32a0
+			&trnCardOwner=Carl Samson
+			&trnCardNumber=5100000020002000
+			&trnExpMonth=10
+			&trnExpYear=14
+			&trnCardCvd=123

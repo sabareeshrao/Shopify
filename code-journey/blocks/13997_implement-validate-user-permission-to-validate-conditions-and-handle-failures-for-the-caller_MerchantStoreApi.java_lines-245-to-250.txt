@@ -1,0 +1,6 @@
+	private void validateUserPermission(String userName, String code) {
+		// TODO reviewed Spring Security should be used
+		if (!userFacade.authorizedStore(userName, code)) {
+			throw new UnauthorizedException("User " + userName + " not authorized");
+		}
+	}

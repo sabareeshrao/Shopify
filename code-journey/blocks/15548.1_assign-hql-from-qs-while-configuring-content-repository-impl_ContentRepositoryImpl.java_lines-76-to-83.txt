@@ -1,0 +1,8 @@
+
+			String hql = qs.toString();
+			Query q = this.em.createQuery(hql);
+
+	    	q.setParameter("cm", store.getId());
+	    	q.setParameter("se", seUrl);
+	
+

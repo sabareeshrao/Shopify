@@ -1,0 +1,6 @@
+	public void authenticateRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		if (logger.isDebugEnabled()) {
+			logger.debug("Processing authentication");
+		}

@@ -1,0 +1,3 @@
+	public String getShipType() {
+		return shipType;
+	}

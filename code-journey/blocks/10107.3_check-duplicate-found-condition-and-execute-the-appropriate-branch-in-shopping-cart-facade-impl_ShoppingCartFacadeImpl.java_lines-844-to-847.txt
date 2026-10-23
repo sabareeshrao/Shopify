@@ -1,0 +1,4 @@
+						if (!duplicateFound) {
+							if (!itemModel.isProductVirtual()) {
+								cartItem.setQuantity(cartItem.getQuantity() + item.getQuantity());
+							}

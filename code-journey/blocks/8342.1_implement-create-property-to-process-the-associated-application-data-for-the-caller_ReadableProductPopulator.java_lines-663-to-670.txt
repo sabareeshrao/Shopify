@@ -1,0 +1,8 @@
+	private ReadableProductProperty createProperty(ProductAttribute productAttribute, Language language) {
+
+
+		ReadableProductProperty attr = new ReadableProductProperty();
+		attr.setId(productAttribute.getProductOption().getId());//attribute of the option
+		attr.setType(productAttribute.getProductOption().getProductOptionType());
+
+

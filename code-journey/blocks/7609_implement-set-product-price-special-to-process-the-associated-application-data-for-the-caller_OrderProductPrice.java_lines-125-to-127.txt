@@ -1,0 +1,3 @@
+	public void setProductPriceSpecial(BigDecimal productPriceSpecial) {
+		this.productPriceSpecial = productPriceSpecial;
+	}

@@ -1,0 +1,8 @@
+		} else if(taxBasisCalculation.name().equals(TaxBasisCalculation.BILLINGADDRESS)){
+			Billing billing = customer.getBilling();
+			if(billing!=null) {
+				country = billing.getCountry();
+				zone = billing.getZone();
+				stateProvince = billing.getState();
+			}
+		} else if(taxBasisCalculation.name().equals(TaxBasisCalculation.STOREADDRESS)){

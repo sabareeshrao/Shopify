@@ -1,0 +1,6 @@
+
+	@Transient
+	private InputStream image = null;
+	
+	//private MultiPartFile image
+

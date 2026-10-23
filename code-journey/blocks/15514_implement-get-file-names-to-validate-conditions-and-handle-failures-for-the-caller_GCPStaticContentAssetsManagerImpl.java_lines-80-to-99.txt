@@ -1,0 +1,20 @@
+	@Override
+	public List<String> getFileNames(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType)
+			throws ServiceException {
+		try {
+			String bucketName = bucketName();
+			Storage storage = StorageOptions.getDefaultInstance().getService();
+			long bucketMetaGeneration = 42;
+			Bucket bucket = storage.get(bucketName, BucketGetOption.metagenerationMatch(bucketMetaGeneration));
+			Page<Blob> blobs = bucket.list(Storage.BlobListOption.prefix(nodePath(merchantStoreCode, fileContentType)),
+				Storage.BlobListOption.fields(BlobField.NAME));
+	
+			List<String> fileNames = new ArrayList<String>();
+	
+			for (Blob blob : blobs.iterateAll()) {
+				if (isInsideSubFolder(blob.getName()))
+				continue;
+				String mimetype = URLConnection.guessContentTypeFromName(blob.getName());
+				if (!StringUtils.isBlank(mimetype)) {
+				fileNames.add(getName(blob.getName()));
+				}

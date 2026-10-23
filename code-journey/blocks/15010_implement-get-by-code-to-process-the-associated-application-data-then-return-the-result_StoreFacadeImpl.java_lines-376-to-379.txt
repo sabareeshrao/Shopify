@@ -1,0 +1,4 @@
+	@Override
+	public MerchantStore getByCode(String code) {
+		return getMerchantStoreByCode(code);
+	}

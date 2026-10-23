@@ -1,0 +1,6 @@
+	@Override
+	public void addCountryDescription(Country country, CountryDescription description) throws ServiceException {
+		country.getDescriptions().add(description);
+		description.setCountry(country);
+		update(country);
+	}

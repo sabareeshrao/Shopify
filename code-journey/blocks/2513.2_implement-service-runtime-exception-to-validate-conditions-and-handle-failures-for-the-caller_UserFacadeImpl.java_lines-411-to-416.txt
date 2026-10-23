@@ -1,0 +1,6 @@
+			User adminName = getByUserName(user.getUserName());
+			if (adminName != null) {
+				if (adminName.getId().longValue() != userModel.getId().longValue()) {
+					throw new ServiceRuntimeException(
+							"User id [" + userModel.getId() + "] does not match [" + user.getUserName() + "]");
+				}

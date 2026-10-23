@@ -1,0 +1,3 @@
+  public void setRetailerStore(String retailerStore) {
+    this.retailerStore = retailerStore;
+  }

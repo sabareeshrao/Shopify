@@ -1,0 +1,10 @@
+
+  /**
+   * Currency
+   *
+   * @return
+   */
+  @GetMapping("/currency")
+  public List<Currency> getCurrency() {
+    return currencyFacade.getList();
+  }

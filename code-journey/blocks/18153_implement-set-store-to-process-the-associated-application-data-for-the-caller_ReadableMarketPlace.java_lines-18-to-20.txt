@@ -1,0 +1,3 @@
+	public void setStore(ReadableMerchantStore store) {
+		this.store = store;
+	}

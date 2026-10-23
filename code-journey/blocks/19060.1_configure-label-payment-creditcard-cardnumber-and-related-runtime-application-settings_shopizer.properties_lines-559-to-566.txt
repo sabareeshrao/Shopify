@@ -1,0 +1,8 @@
+label.payment.creditcard.cardnumber=Card number
+label.payment.creditcard.cardexpiry=Card expiry date
+label.payment.creditcard.cardexpiry.month=Card expiry month
+label.payment.creditcard.cardexpiry.year=Card expiry year
+label.payment.creditcard.cardcvv=Card validation number
+label.payment.creditcard.whatiscvv=What is a credit card validation number?
+
+

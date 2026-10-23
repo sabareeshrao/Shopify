@@ -1,0 +1,4 @@
+			
+			for (ProductAvailability availability : instance.getAvailabilities()) {
+				this.setAvailability(availability, product);
+			}

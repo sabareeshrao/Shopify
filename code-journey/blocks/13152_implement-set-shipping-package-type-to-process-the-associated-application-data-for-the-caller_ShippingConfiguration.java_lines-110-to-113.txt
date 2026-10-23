@@ -1,0 +1,4 @@
+	public void setShippingPackageType(ShippingPackageType shippingPackageType) {
+		this.shippingPackageType = shippingPackageType;
+		this.shipPackageType = shippingPackageType.name();
+	}

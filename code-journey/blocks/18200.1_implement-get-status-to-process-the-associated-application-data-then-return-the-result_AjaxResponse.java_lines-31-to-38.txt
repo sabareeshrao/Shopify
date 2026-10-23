@@ -1,0 +1,8 @@
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	protected List<Map<String,String>> getData() {
+		return data;

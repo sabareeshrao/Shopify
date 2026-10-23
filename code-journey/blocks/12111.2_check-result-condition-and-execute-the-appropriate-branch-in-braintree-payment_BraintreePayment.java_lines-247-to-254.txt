@@ -1,0 +1,8 @@
+	   
+	    BigDecimal amount = order.getTotal();
+
+        Result<com.braintreegateway.Transaction> result = gateway.transaction().submitForSettlement(auth, amount);
+
+        String trxId = null;
+        
+        if (result.isSuccess()) {

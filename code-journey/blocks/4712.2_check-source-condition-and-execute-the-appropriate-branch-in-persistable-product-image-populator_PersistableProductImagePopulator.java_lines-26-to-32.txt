@@ -1,0 +1,7 @@
+		
+		target.setDefaultImage(source.isDefaultImage());
+		target.setImageType(source.getImageType());
+		target.setProductImage(source.getName());
+		if(source.getImageUrl() != null) {
+			target.setProductImageUrl(source.getImageUrl());
+		}

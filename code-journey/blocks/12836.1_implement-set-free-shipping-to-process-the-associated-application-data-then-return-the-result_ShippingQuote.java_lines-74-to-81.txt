@@ -1,0 +1,8 @@
+	public void setFreeShipping(boolean freeShipping) {
+		this.freeShipping = freeShipping;
+	}
+	public boolean isFreeShipping() {
+		return freeShipping;
+	}
+	public void setFreeShippingAmount(BigDecimal freeShippingAmount) {
+		this.freeShippingAmount = freeShippingAmount;

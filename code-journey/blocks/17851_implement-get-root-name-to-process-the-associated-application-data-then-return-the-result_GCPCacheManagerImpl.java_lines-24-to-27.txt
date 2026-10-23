@@ -1,0 +1,4 @@
+  @Override
+  public String getRootName() {
+    return bucketName;
+  }

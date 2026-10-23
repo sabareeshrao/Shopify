@@ -1,0 +1,8 @@
+		history.setDateAdded(new Date());
+		history.setStatus(OrderStatus.ORDERED);
+		history.setComments("We received your order");
+		
+		order.getOrderHistory().add(history);
+		
+		/** CREATE ORDER **/
+		

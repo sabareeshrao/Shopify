@@ -1,0 +1,3 @@
+    public ResourceNotFoundException(String errorCode, String message) {
+        super(StringUtils.isBlank(errorCode)? "404": errorCode, message);
+    }

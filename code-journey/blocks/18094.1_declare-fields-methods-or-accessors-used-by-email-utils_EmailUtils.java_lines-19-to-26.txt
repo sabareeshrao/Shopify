@@ -1,0 +1,8 @@
+	private final static String EMAIL_STORE_NAME = "EMAIL_STORE_NAME";
+	private final static String EMAIL_FOOTER_COPYRIGHT = "EMAIL_FOOTER_COPYRIGHT";
+	private final static String EMAIL_DISCLAIMER = "EMAIL_DISCLAIMER";
+	private final static String EMAIL_SPAM_DISCLAIMER = "EMAIL_SPAM_DISCLAIMER";
+	private final static String EMAIL_ADMIN_LABEL = "EMAIL_ADMIN_LABEL";
+	private final static String LOGOPATH = "LOGOPATH";
+	
+	@Inject

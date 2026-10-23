@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.shipping.ShippingQuote;
+import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.shipping.model.ShippingQuoteModule;
+import com.salesmanager.core.modules.integration.shipping.model.ShippingQuotePrePostProcessModule;
+

@@ -1,0 +1,3 @@
+    public void updateAddress( Long userId, MerchantStore merchantStore, Address address, final Language language )
+                    throws Exception;
+

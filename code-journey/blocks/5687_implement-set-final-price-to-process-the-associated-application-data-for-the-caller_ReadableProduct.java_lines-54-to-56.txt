@@ -1,0 +1,3 @@
+	public void setFinalPrice(String finalPrice) {
+		this.finalPrice = finalPrice;
+	}

@@ -1,0 +1,8 @@
+		//CURRENCY_MAP.put("XUA", "ADB Unit of Account");
+		CURRENCY_MAP.put("MXN", "Mexican Peso");
+		CURRENCY_MAP.put("MXV", "Mexican Unidad de Inversion (UDI)");
+		CURRENCY_MAP.put("MDL", "Moldovan Leu");
+		CURRENCY_MAP.put("MNT", "Tugrik");
+		CURRENCY_MAP.put("XCD", "East Caribbean Dollar");
+		CURRENCY_MAP.put("MAD", "Moroccan Dirham");
+		CURRENCY_MAP.put("MZN", "Mozambique Metical");

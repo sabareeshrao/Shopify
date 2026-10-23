@@ -1,0 +1,3 @@
+	public static void removeSessionAttribute(final String key, HttpServletRequest request) {
+        request.getSession().removeAttribute( key );
+    }

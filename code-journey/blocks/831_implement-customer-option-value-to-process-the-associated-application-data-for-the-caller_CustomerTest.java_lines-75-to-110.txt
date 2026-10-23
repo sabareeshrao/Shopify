@@ -1,0 +1,36 @@
+
+		//create an option value
+		CustomerOptionValue yes = new CustomerOptionValue();
+		yes.setCode("yes");
+		yes.setMerchantStore(store);
+		CustomerOptionValueDescription yesDescription = new CustomerOptionValueDescription();
+		yesDescription.setLanguage(en);
+		yesDescription.setCustomerOptionValue(yes);
+		
+		CustomerOptionValueDescription yes_sir = new CustomerOptionValueDescription();
+		yes_sir.setCustomerOptionValue(yes);
+		yes_sir.setDescription("Yes sir!");
+		yes_sir.setName("Yes sir!");
+		yes_sir.setLanguage(en);
+		yes.getDescriptions().add(yes_sir);
+		
+		//needs to be saved before using it
+		customerOptionValueService.create(yes);
+		
+		CustomerOptionValue no = new CustomerOptionValue();
+		no.setCode("no");
+		no.setMerchantStore(store);
+		CustomerOptionValueDescription noDescription = new CustomerOptionValueDescription();
+		noDescription.setLanguage(en);
+		noDescription.setCustomerOptionValue(no);
+		
+		CustomerOptionValueDescription no_sir = new CustomerOptionValueDescription();
+		no_sir.setCustomerOptionValue(no);
+		no_sir.setDescription("Nope!");
+		no_sir.setName("Nope!");
+		no_sir.setLanguage(en);
+		no.getDescriptions().add(no_sir);
+		
+		//needs to be saved before using it
+		customerOptionValueService.create(no);
+		

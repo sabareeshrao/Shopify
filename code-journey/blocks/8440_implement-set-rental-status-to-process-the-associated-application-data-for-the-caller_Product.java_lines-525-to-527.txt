@@ -1,0 +1,3 @@
+	public void setRentalStatus(RentalStatus rentalStatus) {
+		this.rentalStatus = rentalStatus;
+	}

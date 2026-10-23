@@ -1,0 +1,8 @@
+			 
+
+
+			 
+			 Transaction newTransaction = new Transaction();
+			 newTransaction.setAmount(order.getTotal());
+			 newTransaction.setTransactionDate(new Date());
+			 newTransaction.setTransactionType(TransactionType.CAPTURE);

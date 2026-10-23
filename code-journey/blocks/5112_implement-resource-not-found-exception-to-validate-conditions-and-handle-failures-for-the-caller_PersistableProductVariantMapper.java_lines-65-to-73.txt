@@ -1,0 +1,9 @@
+				
+			}
+		} else {
+			variation = productVariationService.getByCode(store, productVariationCode);
+			if(productVariationValueCode != null) {
+				variationValue = productVariationService.getByCode(store, productVariationValueCode);
+				if(variationValue.isEmpty()) {
+					throw new ResourceNotFoundException("ProductVaritionValue [" + productVariationValue + "] + not found for store [" + store.getCode() + "]");
+				}

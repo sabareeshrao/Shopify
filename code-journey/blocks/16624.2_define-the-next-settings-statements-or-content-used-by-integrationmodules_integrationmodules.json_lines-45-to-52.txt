@@ -1,0 +1,8 @@
+		"code": "priceByDistance",
+		"version":"1.0",
+		"regions": ["*"]
+	},
+	{
+		"module": "SHIPPING",
+		"code": "storePickUp",
+		"version":"1.0",

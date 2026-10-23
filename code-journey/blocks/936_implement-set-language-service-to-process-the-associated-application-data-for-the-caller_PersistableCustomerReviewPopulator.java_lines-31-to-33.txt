@@ -1,0 +1,3 @@
+	public void setLanguageService(LanguageService languageService) {
+		this.languageService = languageService;
+	}

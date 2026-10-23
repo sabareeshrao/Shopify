@@ -1,0 +1,4 @@
+  private ProductImagePut uploadImage;
+  private ProductImageGet getImage;
+  private ProductImageRemove removeImage;
+

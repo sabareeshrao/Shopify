@@ -1,0 +1,15 @@
+
+
+        totalSummary.setSubTotal(subTotal);
+        grandTotal=grandTotal.add(subTotal);
+
+        OrderTotal orderTotalSubTotal = new OrderTotal();
+        orderTotalSubTotal.setModule(Constants.OT_SUBTOTAL_MODULE_CODE);
+        orderTotalSubTotal.setOrderTotalType(OrderTotalType.SUBTOTAL);
+        orderTotalSubTotal.setOrderTotalCode("order.total.subtotal");
+        orderTotalSubTotal.setTitle(Constants.OT_SUBTOTAL_MODULE_CODE);
+        orderTotalSubTotal.setSortOrder(5);
+        orderTotalSubTotal.setValue(subTotal);
+
+        orderTotals.add(orderTotalSubTotal);
+

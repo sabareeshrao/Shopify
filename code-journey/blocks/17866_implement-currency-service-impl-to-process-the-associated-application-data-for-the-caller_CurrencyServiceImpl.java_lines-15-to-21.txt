@@ -1,0 +1,7 @@
+	private CurrencyRepository currencyRepository;
+	
+	@Inject
+	public CurrencyServiceImpl(CurrencyRepository currencyRepository) {
+		super(currencyRepository);
+		this.currencyRepository = currencyRepository;
+	}

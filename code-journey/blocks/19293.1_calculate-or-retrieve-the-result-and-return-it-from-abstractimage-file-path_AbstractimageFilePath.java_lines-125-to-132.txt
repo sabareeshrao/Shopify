@@ -1,0 +1,8 @@
+
+
+	
+	/**
+	 * Builds a merchant store logo path
+	 * @param store
+	 * @return
+	 */

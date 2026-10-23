@@ -1,0 +1,7 @@
+		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");
+		// return staticContentFileManager.getFiles(merchantStoreCode,
+		// fileContentType);
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+		return contentFileManager.getFiles(merchantStoreCode, path, fileContentType);
+	}

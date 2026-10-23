@@ -1,0 +1,25 @@
+
+	/**
+	 * This method calculates the final price taking into account all attributes
+	 * included having a specified default attribute with an attribute price gt 0 in
+	 * the product object. The calculation is based on the default price. Attributes
+	 * may be null
+	 * 
+	 * @param Product
+	 * @param List<ProductAttribute>
+	 * @return FinalPrice
+	 */
+	// Pricer
+	public FinalPrice getFinalPrice(Product product, List<ProductAttribute> attributes) throws ServiceException {
+
+		FinalPrice finalPrice = calculateFinalPrice(product);
+
+		// attributes
+		BigDecimal attributePrice = null;
+		if (attributes != null && attributes.size() > 0) {
+			for (ProductAttribute attribute : attributes) {
+				if (attribute.getProductAttributePrice() != null
+						&& attribute.getProductAttributePrice().doubleValue() > 0) {
+					if (attributePrice == null) {
+						attributePrice = new BigDecimal(0);
+					}

@@ -1,0 +1,8 @@
+    
+    /**
+     * All living modules exposed here
+     */
+    @Autowired
+    private List<PaymentModule> liveModules;
+
+    

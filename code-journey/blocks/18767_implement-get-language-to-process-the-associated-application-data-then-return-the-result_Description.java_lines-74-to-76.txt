@@ -1,0 +1,3 @@
+	public Language getLanguage() {
+		return language;
+	}

@@ -1,0 +1,3 @@
+	List<ShoppingCart> findByCustomer(Long customerId);
+	
+}

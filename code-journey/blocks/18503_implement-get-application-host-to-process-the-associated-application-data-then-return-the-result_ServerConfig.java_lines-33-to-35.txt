@@ -1,0 +1,3 @@
+	public String getApplicationHost() {
+		return applicationHost;
+	}

@@ -1,0 +1,2 @@
+			returnDestination = new ReadableProductDefinitionFull();
+		}

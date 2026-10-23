@@ -1,0 +1,13 @@
+	    public String refreshToken(String token) {
+	        final Date createdDate = DateUtil.getDate();
+	        final Date expirationDate = calculateExpirationDate(createdDate);
+
+	        final Claims claims = getAllClaimsFromToken(token);
+	        claims.setIssuedAt(createdDate);
+	        claims.setExpiration(expirationDate);
+
+	        return Jwts.builder()
+	                .setClaims(claims)
+	                .signWith(SignatureAlgorithm.HS512, secret)
+	                .compact();
+	    }

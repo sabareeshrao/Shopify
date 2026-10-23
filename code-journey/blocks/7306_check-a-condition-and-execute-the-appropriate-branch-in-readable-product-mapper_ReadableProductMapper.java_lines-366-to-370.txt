@@ -1,0 +1,5 @@
+			
+			if(a.getProductVariant()==null && StringUtils.isEmpty(a.getRegionVariant())) {
+				break;
+			}
+		}

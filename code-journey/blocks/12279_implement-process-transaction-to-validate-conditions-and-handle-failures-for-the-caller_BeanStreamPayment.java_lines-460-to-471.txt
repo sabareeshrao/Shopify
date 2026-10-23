@@ -1,0 +1,12 @@
+	private Transaction processTransaction(MerchantStore store, Customer customer, TransactionType type,
+			BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module) throws IntegrationException {
+		
+
+		
+		
+		
+		boolean bSandbox = false;
+		if (configuration.getEnvironment().equals("TEST")) {// sandbox
+			bSandbox = true;
+		}

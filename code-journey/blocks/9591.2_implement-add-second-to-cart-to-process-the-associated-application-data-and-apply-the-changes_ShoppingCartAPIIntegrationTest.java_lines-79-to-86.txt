@@ -1,0 +1,8 @@
+    public void addSecondToCart() throws Exception {
+
+        ReadableProduct product = sampleProduct("add2Cart2");
+        assertNotNull(product);
+        data.getProducts().add(product);
+
+        PersistableShoppingCartItem cartItem = new PersistableShoppingCartItem();
+        cartItem.setProduct(product.getSku());

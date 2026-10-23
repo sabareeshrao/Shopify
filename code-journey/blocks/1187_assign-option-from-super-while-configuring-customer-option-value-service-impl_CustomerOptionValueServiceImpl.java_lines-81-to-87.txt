@@ -1,0 +1,7 @@
+		
+		CustomerOptionValue option = super.getById(customerOptionValue.getId());
+		
+		//remove option
+		super.delete(option);
+		
+	}

@@ -1,0 +1,8 @@
+
+		try {
+			
+			if(StringUtils.isBlank(source.getCode())) {
+				if(!StringUtils.isBlank(destination.getCode())) {
+					source.setCode(destination.getCode());
+				}
+			}

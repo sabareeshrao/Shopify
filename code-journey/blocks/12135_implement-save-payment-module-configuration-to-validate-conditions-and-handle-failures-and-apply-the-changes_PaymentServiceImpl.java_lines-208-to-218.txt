@@ -1,0 +1,11 @@
+	@Override
+	public void savePaymentModuleConfiguration(IntegrationConfiguration configuration, MerchantStore store) throws ServiceException {
+		
+		//validate entries
+		try {
+			
+			String moduleCode = configuration.getModuleCode();
+			PaymentModule module = paymentModules.get(moduleCode);
+			if(module==null) {
+				throw new ServiceException("Payment module " + moduleCode + " does not exist");
+			}

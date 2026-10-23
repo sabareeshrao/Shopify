@@ -1,0 +1,3 @@
+	public boolean isDefaultImage() {
+		return defaultImage;
+	}

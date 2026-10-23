@@ -1,0 +1,8 @@
+  @Override
+  public Address getAddress(Long userId, final MerchantStore merchantStore,
+      boolean isBillingAddress) throws Exception {
+    LOG.info("Fetching customer for id {} ", userId);
+    Address address = null;
+    final Customer customerModel = customerService.getById(userId);
+
+    if (customerModel == null) {

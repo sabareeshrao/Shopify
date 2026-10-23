@@ -1,0 +1,8 @@
+		country.setIsoCode("CA");
+		country.setName("Canada");
+		delivery.setCountry(country);
+		
+		Zone zone = new Zone();
+		zone.setCode("QC");
+		zone.setName("Quebec");
+		

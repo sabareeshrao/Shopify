@@ -1,0 +1,3 @@
+	public BigDecimal getCurrencyValue() {
+		return currencyValue;
+	}

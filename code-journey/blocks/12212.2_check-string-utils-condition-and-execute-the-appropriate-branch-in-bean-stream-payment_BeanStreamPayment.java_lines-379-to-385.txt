@@ -1,0 +1,7 @@
+			String orderId = (String)nvp.get("TRNORDERNUMBER");
+			String authCode = (String)nvp.get("AUTHCODE");
+			String errorType = (String)nvp.get("ERRORTYPE");
+			String errorFields = (String)nvp.get("ERRORFIELDS");
+			if(!StringUtils.isBlank(orderNumber)) {
+				nvp.put("INTERNALORDERID", orderNumber);
+			}

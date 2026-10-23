@@ -1,0 +1,3 @@
+	protected final Class<E> getObjectClass() {
+		return objectClass;
+	}

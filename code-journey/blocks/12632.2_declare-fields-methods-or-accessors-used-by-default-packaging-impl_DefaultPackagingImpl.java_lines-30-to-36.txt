@@ -1,0 +1,7 @@
+	
+	/** default dimensions **/
+	private final static Double defaultWeight = 1D;
+	private final static Double defaultHeight = 4D;
+	private final static Double defaultLength = 4D;
+	private final static Double defaultWidth = 4D;
+	

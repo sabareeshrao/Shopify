@@ -1,0 +1,4 @@
+	@Override
+	public void delete(ProductVariant instance) throws ServiceException{
+		super.delete(instance);
+	}

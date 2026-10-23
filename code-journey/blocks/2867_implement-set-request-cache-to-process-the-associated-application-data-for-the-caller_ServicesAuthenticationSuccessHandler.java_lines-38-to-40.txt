@@ -1,0 +1,3 @@
+    public void setRequestCache(RequestCache requestCache) {
+        this.requestCache = requestCache;
+    }

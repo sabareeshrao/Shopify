@@ -1,0 +1,7 @@
+	@Override
+	public void delete(Content content) throws ServiceException {
+
+		Content c = this.getById(content.getId());
+		super.delete(c);
+
+	}

@@ -1,0 +1,8 @@
+			String value = configuration.getValue();
+			
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+				taxConfiguration = mapper.readValue(value, TaxConfiguration.class);
+			} catch(Exception e) {
+				throw new ServiceException("Cannot parse json string " + value);
+			}

@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+package com.salesmanager.shop.model.shoppingcart;
+
+/**
+ * @author Umesh A
+ *

@@ -1,0 +1,6 @@
+		
+		IntegrationConfiguration configuration = modules.get(module);
+		
+		if(configuration==null) {
+			throw new ServiceException("Payment module " + module + " is not configured");
+		}

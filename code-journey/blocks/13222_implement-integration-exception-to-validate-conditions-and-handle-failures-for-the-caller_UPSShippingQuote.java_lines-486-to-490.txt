@@ -1,0 +1,5 @@
+
+			if (parsed.getOptions() == null || parsed.getOptions().size() == 0) {
+
+				throw new IntegrationException("No shipping options available for the configuration");
+			}

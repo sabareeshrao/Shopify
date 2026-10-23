@@ -1,0 +1,8 @@
+	void deleteById(Long id);
+
+	void delete(Customer entity);
+
+	ReadableCustomerList getListByStore(MerchantStore store, CustomerCriteria criteria, Language language);
+
+	PersistableCustomerReview createCustomerReview(
+      Long customerId,

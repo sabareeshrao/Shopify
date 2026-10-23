@@ -1,0 +1,8 @@
+
+	ReadableMerchantStore getFullByCode(String code, Language language);
+
+	boolean existByCode(String code);
+
+	/**
+	 * List MerchantStore using various criterias
+	 * 

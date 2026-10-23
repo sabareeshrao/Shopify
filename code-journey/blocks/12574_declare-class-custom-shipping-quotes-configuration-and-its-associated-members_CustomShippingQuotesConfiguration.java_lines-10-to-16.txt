@@ -1,0 +1,7 @@
+public class CustomShippingQuotesConfiguration extends IntegrationConfiguration implements CustomIntegrationConfiguration, Serializable {
+	
+	/**
+	 * 
+	 */
+	private String moduleCode;
+	

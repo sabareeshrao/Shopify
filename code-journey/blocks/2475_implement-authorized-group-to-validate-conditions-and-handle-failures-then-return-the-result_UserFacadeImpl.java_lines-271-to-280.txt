@@ -1,0 +1,10 @@
+	@Override
+	public void authorizedGroup(String userName, List<String> groupName) {
+
+		ReadableUser readableUser = findByUserName(userName, languageService.defaultLanguage());
+
+		// unless superadmin
+		for (ReadableGroup group : readableUser.getGroups()) {
+			if (groupName.contains(group.getName())) {
+				return;
+			}

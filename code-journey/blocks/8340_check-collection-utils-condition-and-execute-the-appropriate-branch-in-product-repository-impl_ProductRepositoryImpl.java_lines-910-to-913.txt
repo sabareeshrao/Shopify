@@ -1,0 +1,4 @@
+
+		if (!CollectionUtils.isEmpty(criteria.getProductIds())) {
+			q.setParameter("pId", criteria.getProductIds());
+		}

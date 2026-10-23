@@ -1,0 +1,25 @@
+
+
+  /**
+   * <p>
+   * Method to check if given user exists for given username under given store. System treat
+   * username as unique for a given store, customer is not allowed to use same username twice for a
+   * given store, however it can be used for different stores.
+   * </p>
+   * 
+   * @param userName Customer slected userName
+   * @param store store for which customer want to register
+   * @return boolean flag indicating if user exists for given store or not
+   * @throws Exception
+   * 
+   */
+  @Override
+  public boolean checkIfUserExists(final String userName, final MerchantStore store)
+      throws Exception {
+    if (StringUtils.isNotBlank(userName) && store != null) {
+      Customer customer = customerService.getByNick(userName, store.getId());
+      if (customer != null) {
+        LOG.info("Customer with userName {} already exists for store {} ", userName,
+            store.getStorename());
+        return true;
+      }

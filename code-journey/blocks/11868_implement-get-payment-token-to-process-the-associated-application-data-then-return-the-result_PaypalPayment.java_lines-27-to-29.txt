@@ -1,0 +1,3 @@
+	public String getPaymentToken() {
+		return paymentToken;
+	}

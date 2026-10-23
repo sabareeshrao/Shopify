@@ -1,0 +1,8 @@
+
+	/**
+	 * Capture payment
+	 * 
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 * @return

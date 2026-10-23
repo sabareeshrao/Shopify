@@ -1,0 +1,4 @@
+		desc.setName(description.getName());
+		if(StringUtils.isBlank(desc.getName())) {
+			desc.setName(description.getDescription());
+		}

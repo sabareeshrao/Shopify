@@ -1,0 +1,3 @@
+	public void setAttributePrice(String attributePrice) {
+		this.attributePrice = attributePrice;
+	}

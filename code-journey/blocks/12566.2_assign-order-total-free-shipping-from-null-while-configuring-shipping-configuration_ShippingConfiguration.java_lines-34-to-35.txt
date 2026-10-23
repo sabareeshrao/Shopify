@@ -1,0 +1,2 @@
+	private BigDecimal orderTotalFreeShipping = null;
+	

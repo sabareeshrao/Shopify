@@ -1,0 +1,3 @@
+		if (criteria.getOwnerId() != null) {
+			countQ.setParameter("ownerid", criteria.getOwnerId());
+		}

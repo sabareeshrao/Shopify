@@ -1,0 +1,8 @@
+	@Override
+	public ReadableCategory getCategoryByFriendlyUrl(MerchantStore store, String friendlyUrl, Language language) throws Exception {
+		Validate.notNull(friendlyUrl, "Category search friendly URL must not be null");
+
+
+		Category category = categoryService.getBySeUrl(store, friendlyUrl, language);
+		
+		if(category == null) {

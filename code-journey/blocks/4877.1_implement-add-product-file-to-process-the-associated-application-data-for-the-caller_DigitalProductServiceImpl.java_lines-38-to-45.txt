@@ -1,0 +1,8 @@
+	@Override
+	public void addProductFile(Product product, DigitalProduct digitalProduct, InputContentFile inputFile) throws ServiceException {
+	
+		Assert.notNull(digitalProduct,"DigitalProduct cannot be null");
+		Assert.notNull(product,"Product cannot be null");
+		digitalProduct.setProduct(product);
+
+		try {

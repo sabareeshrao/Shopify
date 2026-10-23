@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(PaymentApi.class);
+
+	@Autowired
+	private PaymentService paymentService;
+
+	/**
+	 * Get available payment modules
+	 * 

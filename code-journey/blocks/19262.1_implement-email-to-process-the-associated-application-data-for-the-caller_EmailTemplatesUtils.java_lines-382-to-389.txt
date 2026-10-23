@@ -1,0 +1,8 @@
+		        
+				templateTokens.put(EmailConstants.EMAIL_ORDER_STATUS_TEXT, messages.getMessage("email.order.statustext", statusMessageText, customerLocale));
+				templateTokens.put(EmailConstants.EMAIL_ORDER_STATUS, messages.getMessage("email.order.status", statusMessage, customerLocale));
+				templateTokens.put(EmailConstants.EMAIL_TEXT_STATUS_COMMENTS, comments);
+				
+				
+				Email email = new Email();
+				email.setFrom(merchantStore.getStorename());

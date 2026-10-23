@@ -1,0 +1,4 @@
+					<beans:value>classpath:authentication.properties</beans:value>
+				</beans:list>
+			</beans:property>
+		</beans:bean>

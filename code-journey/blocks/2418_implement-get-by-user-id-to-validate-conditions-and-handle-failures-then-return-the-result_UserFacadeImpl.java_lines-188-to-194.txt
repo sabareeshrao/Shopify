@@ -1,0 +1,7 @@
+	private User getByUserId(Long id, String storeCode) {
+		try {
+			return userService.findByStore(id, storeCode);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException(e);
+		}
+	}

@@ -1,0 +1,3 @@
+	public void setLastAccess(Date lastAccess) {
+		this.lastAccess = lastAccess;
+	}

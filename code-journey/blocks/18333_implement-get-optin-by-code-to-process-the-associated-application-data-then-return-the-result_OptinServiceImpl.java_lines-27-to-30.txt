@@ -1,0 +1,4 @@
+	@Override
+	public Optin getOptinByCode(MerchantStore store, String code) throws ServiceException {
+		return optinRepository.findByMerchantAndCode(store.getId(), code);
+	}

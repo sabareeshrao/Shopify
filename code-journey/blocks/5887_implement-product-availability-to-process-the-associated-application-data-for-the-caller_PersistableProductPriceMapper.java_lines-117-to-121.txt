@@ -1,0 +1,5 @@
+
+				availability = new ProductAvailability();
+				availability.setProduct(product);
+				availability.setRegion(Constants.ALL_REGIONS);
+			}

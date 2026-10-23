@@ -1,0 +1,8 @@
+  @Override
+  public List<Currency> getList() {
+    List<Currency> currencyList = currencyService.list();
+    if (currencyList.isEmpty()){
+      throw new ResourceNotFoundException("No languages found");
+    }
+    Collections.sort(currencyList, new Comparator<Currency>(){
+

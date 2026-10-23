@@ -1,0 +1,5 @@
+		q.setParameter("mId", store.getId());
+
+		if (!CollectionUtils.isEmpty(criteria.getCategoryIds())) {
+			q.setParameter("cid", criteria.getCategoryIds());
+		}

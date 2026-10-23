@@ -1,0 +1,8 @@
+	private boolean visible;
+	
+	@Column(name = "LINK_TO_MENU")
+	private boolean linkToMenu;
+
+	@Column(name = "CONTENT_POSITION", length=10, nullable=true)
+	@Enumerated(value = EnumType.STRING)
+	private ContentPosition contentPosition;

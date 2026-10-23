@@ -1,0 +1,8 @@
+	 * @param file
+	 * @throws ServiceException
+	 */
+	void addProductImage(Product product, ProductImage productImage, ImageContentFile inputImage)
+			throws ServiceException;
+
+	/**
+	 * Get the image ByteArrayOutputStream and content description from CMS

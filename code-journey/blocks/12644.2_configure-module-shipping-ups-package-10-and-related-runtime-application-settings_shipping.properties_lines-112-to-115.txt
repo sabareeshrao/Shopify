@@ -1,0 +1,4 @@
+module.shipping.ups.package.10=UPS 10kg box
+module.shipping.ups.package.25=Unknown
+
+

@@ -1,0 +1,38 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerReviewApi.class);
+
+	@Inject
+	private CustomerFacade customerFacade;
+	
+	@Inject
+	private StoreFacade storeFacade;
+	
+	@Inject
+	private LanguageUtils languageUtils;
+
+	@Inject
+	private CustomerService customerService;
+	
+	@Inject
+	private CustomerReviewService customerReviewService;
+
+  /**
+   * Reviews made for a given customer
+   *
+   * @param id
+   * @param review
+   * @return
+   * @throws Exception
+   */
+  @PostMapping("/private/customers/{id}/reviews")
+  @ResponseStatus(HttpStatus.CREATED)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en")
+  })
+  public PersistableCustomerReview create(
+      @PathVariable final Long id,
+      @Valid @RequestBody PersistableCustomerReview review,
+      @ApiIgnore MerchantStore merchantStore,
+      @ApiIgnore Language language) {
+    return customerFacade.createCustomerReview(id, review, merchantStore, language);
+  }

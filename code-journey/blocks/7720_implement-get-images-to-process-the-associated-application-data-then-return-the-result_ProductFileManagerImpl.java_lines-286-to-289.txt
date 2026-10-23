@@ -1,0 +1,4 @@
+  @Override
+  public List<OutputContentFile> getImages(Product product) throws ServiceException {
+    return getImage.getImages(product);
+  }

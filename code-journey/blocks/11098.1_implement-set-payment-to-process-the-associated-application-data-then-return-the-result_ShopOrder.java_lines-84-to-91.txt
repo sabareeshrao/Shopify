@@ -1,0 +1,8 @@
+	public void setPayment(Map<String,String> payment) {
+		this.payment = payment;
+	}
+	public String getDefaultPaymentMethodCode() {
+		return defaultPaymentMethodCode;
+	}
+	public void setDefaultPaymentMethodCode(String defaultPaymentMethodCode) {
+		this.defaultPaymentMethodCode = defaultPaymentMethodCode;

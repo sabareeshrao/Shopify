@@ -1,0 +1,3 @@
+	public GroupType getGroupType() {
+		return groupType;
+	}

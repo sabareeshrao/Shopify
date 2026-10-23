@@ -1,0 +1,4 @@
+NotEmpty.taxRate.code=Tax Rate code must not be empty
+NotEmpty.taxRate.unique.code=Tax Rate code must be unique
+NotEmpty.taxRate.rateText=Tax Rate must not be empty
+NotEmpty.taxRateDescription.name=Tax Rate name must not be empty

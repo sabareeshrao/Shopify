@@ -1,0 +1,8 @@
+
+	@Deprecated
+	private String productQueryV1() {
+
+		StringBuilder qs = new StringBuilder();
+		qs.append("select distinct p from Product as p ");
+		qs.append("join fetch p.availabilities pa ");
+		qs.append("join fetch p.merchantStore merch ");

@@ -1,0 +1,5 @@
+
+		if (!StringUtils.isBlank(criteria.getCode())) {
+			countQ.setParameter("sku",
+					new StringBuilder().append("%").append(criteria.getCode().toLowerCase()).append("%").toString());
+		}

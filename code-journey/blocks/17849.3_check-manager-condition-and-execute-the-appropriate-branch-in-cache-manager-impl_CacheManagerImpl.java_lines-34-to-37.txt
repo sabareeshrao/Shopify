@@ -1,0 +1,4 @@
+      if (manager == null) {
+        LOGGER.error("CacheManager is null");
+        return;
+      }

@@ -1,0 +1,8 @@
+	
+	@Autowired
+	private ReadableProductVariantMapper readableProductVariantMapper; 
+	
+	@Autowired
+	private PersistableProductVariantMapper persistableProductVariantMapper; 
+	
+	@Autowired

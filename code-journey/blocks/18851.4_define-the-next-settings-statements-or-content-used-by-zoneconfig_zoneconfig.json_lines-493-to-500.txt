@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "ST",
+		"zoneName": "Steiermark",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "TIAT",
+		"zoneName": "Tirol",

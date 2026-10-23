@@ -1,0 +1,12 @@
+public class ModulesTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	
+	@Autowired
+	private ModuleConfigurationService moduleConfigurationService = null;
+	
+	
+	@Test
+	public void testModulesConfigurations() throws Exception {
+		List<IntegrationModule> modules = moduleConfigurationService.getIntegrationModules(Constants.PAYMENT_MODULES);
+		
+		Assert.assertNotNull(modules);
+	}

@@ -1,0 +1,4 @@
+		private boolean dir;
+		private String path;
+		private String id;
+	}

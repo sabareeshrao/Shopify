@@ -1,0 +1,3 @@
+	public void setProductOptionDisplayOnly(boolean productOptionDisplayOnly) {
+		this.productOptionDisplayOnly = productOptionDisplayOnly;
+	}

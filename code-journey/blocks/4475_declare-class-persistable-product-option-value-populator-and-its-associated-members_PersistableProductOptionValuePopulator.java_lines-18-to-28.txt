@@ -1,0 +1,11 @@
+
+
+/**
+ * Converts a PersistableProductOptionValue to
+ * a ProductOptionValue model object
+ * @author Carl Samson
+ *
+ */
+public class PersistableProductOptionValuePopulator extends
+		AbstractDataPopulator<PersistableProductOptionValue, ProductOptionValue> {
+

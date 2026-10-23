@@ -1,0 +1,7 @@
+  @Override
+  public Page<Manufacturer> listByStore(MerchantStore store, Language language, String name,
+      int page, int count) throws ServiceException {
+
+    Pageable pageRequest = PageRequest.of(page, count);
+    return pageableManufacturerRepository.findByStore(store.getId(), language.getId(), name, pageRequest);
+  }

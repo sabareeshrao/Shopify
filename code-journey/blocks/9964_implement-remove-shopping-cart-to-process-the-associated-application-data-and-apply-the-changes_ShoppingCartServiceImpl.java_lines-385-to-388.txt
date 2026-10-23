@@ -1,0 +1,4 @@
+	@Override
+	public void removeShoppingCart(final ShoppingCart cart) throws ServiceException {
+		shoppingCartRepository.delete(cart);
+	}

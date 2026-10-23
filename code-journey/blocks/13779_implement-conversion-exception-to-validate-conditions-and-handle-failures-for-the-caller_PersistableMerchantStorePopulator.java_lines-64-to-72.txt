@@ -1,0 +1,9 @@
+		
+		if(!StringUtils.isEmpty(source.getInBusinessSince())) {
+			try {
+				Date dt = DateUtil.getDate(source.getInBusinessSince());
+				target.setInBusinessSince(dt);
+			} catch(Exception e) {
+				throw new ConversionException("Cannot parse date [" + source.getInBusinessSince() + "]",e);
+			}
+		}

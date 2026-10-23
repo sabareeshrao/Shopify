@@ -1,0 +1,8 @@
+		String privateKey = configuration.getIntegrationKeys().get("private_key");
+		
+		Validate.notNull(merchantId,"merchant_id cannot be null");
+		Validate.notNull(publicKey,"public_key cannot be null");
+		Validate.notNull(privateKey,"private_key cannot be null");
+		
+		Environment environment= Environment.PRODUCTION;
+		if (configuration.getEnvironment().equals("TEST")) {// sandbox

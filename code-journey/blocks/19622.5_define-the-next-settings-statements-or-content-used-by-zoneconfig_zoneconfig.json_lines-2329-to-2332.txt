@@ -1,0 +1,4 @@
+		{
+			"zoneCode": "MEC",
+			"zoneName": "Mecklenburg-Vorpommern",
+			"countryCode": "DE"

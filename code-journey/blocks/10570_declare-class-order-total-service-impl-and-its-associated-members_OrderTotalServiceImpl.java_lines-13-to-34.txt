@@ -1,0 +1,22 @@
+import com.salesmanager.core.business.services.catalog.product.ProductService;
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.order.OrderSummary;
+import com.salesmanager.core.model.order.OrderTotal;
+import com.salesmanager.core.model.order.OrderTotalVariation;
+import com.salesmanager.core.model.order.RebatesOrderTotalVariation;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
+import com.salesmanager.core.modules.order.total.OrderTotalPostProcessorModule;
+
+@Service("OrderTotalService")
+public class OrderTotalServiceImpl implements OrderTotalService {
+	
+	@Autowired
+	@Resource(name="orderTotalsPostProcessors")
+	List<OrderTotalPostProcessorModule> orderTotalPostProcessors;
+	
+	@Inject
+	private ProductService productService;
+

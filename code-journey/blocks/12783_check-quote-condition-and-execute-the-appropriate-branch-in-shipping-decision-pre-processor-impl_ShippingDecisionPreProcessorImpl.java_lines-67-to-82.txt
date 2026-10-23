@@ -1,0 +1,16 @@
+		
+		Validate.notNull(delivery, "Delivery cannot be null");
+		Validate.notNull(currentModule, "IntegrationModule cannot be null");
+		Validate.notNull(delivery.getCountry(), "Delivery.country cannot be null");
+		Validate.notNull(allModules, "List<IntegrationModule> cannot be null");
+		Validate.notNull(packages, "packages cannot be null");
+		Validate.notEmpty(packages, "packages cannot be empty");
+		
+		Double distance = null;
+		
+		if(quote!=null) {
+			//look if distance has been calculated
+			if(quote.getQuoteInformations()!=null) {
+				if(quote.getQuoteInformations().containsKey(Constants.DISTANCE_KEY)) {
+					distance = (Double)quote.getQuoteInformations().get(Constants.DISTANCE_KEY);
+				}

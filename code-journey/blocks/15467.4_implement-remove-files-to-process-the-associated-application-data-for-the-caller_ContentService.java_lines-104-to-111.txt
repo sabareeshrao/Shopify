@@ -1,0 +1,8 @@
+     * @throws ServiceException
+     */
+    void removeFiles( String merchantStoreCode ) throws ServiceException;
+    
+    /**
+     * Rename file
+     * @param merchantStoreCode
+     * @param path

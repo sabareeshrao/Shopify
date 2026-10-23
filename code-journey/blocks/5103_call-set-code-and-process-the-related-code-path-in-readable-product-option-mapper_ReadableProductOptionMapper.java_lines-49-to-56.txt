@@ -1,0 +1,8 @@
+    
+    readableProductOption.setCode(source.getCode());
+    readableProductOption.setId(source.getId());
+    readableProductOption.setType(source.getProductOptionType());
+    
+    
+    return readableProductOption;
+  }

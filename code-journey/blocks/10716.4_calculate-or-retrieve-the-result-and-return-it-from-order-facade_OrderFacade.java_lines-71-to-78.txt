@@ -1,0 +1,8 @@
+
+	/**
+	 * Creates a ShippingSummary object for OrderTotal calculation based on a ShippingQuote
+	 * @param quote
+	 * @param store
+	 * @param language
+	 * @return
+	 */

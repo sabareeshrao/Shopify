@@ -1,0 +1,8 @@
+
+		qs.append("where p.id=:pid and pa.region in (:lid) ");
+		qs.append("and pd.language.id=:lang and papd.language.id=:lang ");
+		qs.append("and p.available=true and p.dateAvailable<=:dt ");
+		// this cannot be done on child elements from left join
+		// qs.append("and pod.languageId=:lang and povd.languageId=:lang");
+
+		String hql = qs.toString();

@@ -1,0 +1,4 @@
+				
+				if(order == null) {
+					throw new ConversionException("Order with id " + source.getOrderId() + "does not exist");
+				}

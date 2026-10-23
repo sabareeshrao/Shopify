@@ -1,0 +1,8 @@
+	public IntegrationModule getModule() {
+		return module;
+	}
+	public void setModule(IntegrationModule module) {
+		this.module = module;
+	}
+	public IntegrationConfiguration getInformations() {
+		return informations;

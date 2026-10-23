@@ -1,0 +1,8 @@
+	private ImageFile convertToFolder(String folder) {
+		ImageFile f = new ImageFile();
+		f.setDir(true);
+		f.setId(UUID.randomUUID().toString());
+		f.setName(DEFAULT_PATH + "images");
+		f.setUrl(DEFAULT_PATH + "images");
+		f.setPath(DEFAULT_PATH + "images");
+		return f;

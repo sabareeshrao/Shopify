@@ -1,0 +1,14 @@
+			page.setCode(content.getCode());
+			page.setId(content.getId());
+			page.setVisible(content.isVisible());
+			return page;
+		} else {
+			ReadableContentPageFull page = new ReadableContentPageFull();
+			List<com.salesmanager.shop.model.content.common.ContentDescription> descriptions = content.getDescriptions()
+					.stream().map(d -> this.contentDescription(d)).collect(Collectors.toList());
+			page.setDescriptions(descriptions);
+			page.setCode(content.getCode());
+			page.setId(content.getId());
+			page.setVisible(content.isVisible());
+			return page;
+		}

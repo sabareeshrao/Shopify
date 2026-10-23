@@ -1,0 +1,6 @@
+
+			}
+
+			if (!itemModified) {
+				newItems.add(itemModel);
+			}

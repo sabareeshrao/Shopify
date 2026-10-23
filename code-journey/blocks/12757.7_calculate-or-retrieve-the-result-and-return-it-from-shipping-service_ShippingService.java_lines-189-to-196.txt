@@ -1,0 +1,8 @@
+			throws ServiceException;
+	
+	/**
+	 * Determines if Shipping should be proposed to the customer
+	 * @param items
+	 * @param store
+	 * @return
+	 * @throws ServiceException

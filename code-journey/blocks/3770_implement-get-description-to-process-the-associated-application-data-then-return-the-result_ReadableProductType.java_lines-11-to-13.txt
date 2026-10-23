@@ -1,0 +1,3 @@
+	public ProductTypeDescription getDescription() {
+		return description;
+	}

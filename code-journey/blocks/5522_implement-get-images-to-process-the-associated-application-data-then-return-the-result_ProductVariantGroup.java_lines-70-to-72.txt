@@ -1,0 +1,3 @@
+	public List<ProductVariantImage> getImages() {
+		return images;
+	}

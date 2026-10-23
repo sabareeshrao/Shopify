@@ -1,0 +1,8 @@
+	
+	@Id
+	@Column(name = "CURRENCY_ID")
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "CURRENCY_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+	
+	@Column(name = "CURRENCY_CURRENCY_CODE" ,nullable = false, unique = true)

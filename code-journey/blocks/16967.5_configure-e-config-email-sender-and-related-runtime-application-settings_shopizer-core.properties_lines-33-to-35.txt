@@ -1,0 +1,3 @@
+# -e config.emailSender=ses \
+# -e config.emailSender.region=US_EAST_1 \
+

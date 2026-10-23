@@ -1,0 +1,9 @@
+
+      productCommonFacade.deleteReview(prodReview, merchantStore, language);
+
+    } catch (Exception e) {
+      LOGGER.error("Error while deleting product review", e);
+      try {
+        response.sendError(503, "Error while deleting product review" + e.getMessage());
+      } catch (Exception ignore) {
+      }

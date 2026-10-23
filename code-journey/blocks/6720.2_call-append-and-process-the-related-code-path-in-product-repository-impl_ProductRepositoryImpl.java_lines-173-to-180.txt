@@ -1,0 +1,8 @@
+			qs.append("join fetch p.merchantStore pm ");
+
+			qs.append("left join fetch p.categories categs ");
+			qs.append("left join fetch categs.descriptions categsd ");
+
+			// options
+			qs.append("left join fetch p.attributes pattr ");
+			qs.append("left join fetch pattr.productOption po ");

@@ -1,0 +1,5 @@
+	public CatalogDescription(String name, Language language) {
+		this.setName(name);
+		this.setLanguage(language);
+		super.setId(0L);
+	}

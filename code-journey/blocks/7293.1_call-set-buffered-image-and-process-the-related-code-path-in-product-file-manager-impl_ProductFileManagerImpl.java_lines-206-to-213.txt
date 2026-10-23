@@ -1,0 +1,8 @@
+
+        // largeContentImage.setBufferedImage(bufferedImage);
+
+        // largeContentImage.setFile(output);
+        // largeContentImage.setDefaultImage(false);
+        // largeContentImage.setImageName(new
+        // StringBuilder().append("L-").append(productImage.getProductImage()).toString());
+

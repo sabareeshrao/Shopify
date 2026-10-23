@@ -1,0 +1,5 @@
+	private ProductCommonFacade productCommonFacade;
+	
+	@Autowired
+	private CategoryFacade categoryFacade;
+

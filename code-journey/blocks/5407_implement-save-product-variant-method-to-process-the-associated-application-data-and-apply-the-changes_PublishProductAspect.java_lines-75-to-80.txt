@@ -1,0 +1,6 @@
+	
+	// save variant
+	
+	@Pointcut("execution(* com.salesmanager.core.business.services.catalog.product.variant.ProductVariantService.saveProductVariant(com.salesmanager.core.model.catalog.product.variant.ProductVariant))")
+	public void saveProductVariantMethod() {
+	}

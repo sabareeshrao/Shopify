@@ -1,0 +1,9 @@
+	public void setVariationValue(ReadableProductVariation variationValue) {
+		this.variationValue = variationValue;
+	}
+	public List<ReadableImage> getImages() {
+		return images;
+	}
+	public void setImages(List<ReadableImage> images) {
+		this.images = images;
+	}

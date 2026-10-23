@@ -1,0 +1,12 @@
+	private ReadableProductType type (ProductType type, Language language) {
+		ReadableProductType readableType = null;
+
+
+		if(language != null) {
+			readableType = new ReadableProductType();
+			if(!CollectionUtils.isEmpty(type.getDescriptions())) {
+				Optional<ProductTypeDescription> desc = type.getDescriptions().stream().filter(t -> t.getLanguage().getCode().equals(language.getCode()))
+				.map(d -> typeDescription(d)).findFirst();
+				if(desc.isPresent()) {
+					readableType.setDescription(desc.get());
+				}

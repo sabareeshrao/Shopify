@@ -1,0 +1,7 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ZoneServiceImpl.class);
+
+	@Inject
+	public ZoneServiceImpl(ZoneRepository zoneRepository) {
+		super(zoneRepository);
+		this.zoneRepository = zoneRepository;
+	}

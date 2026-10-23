@@ -1,0 +1,7 @@
+import com.salesmanager.shop.model.catalog.product.product.variant.ReadableProductVariant;
+import com.salesmanager.shop.model.catalog.product.product.variantGroup.ReadableProductVariantGroup;
+import com.salesmanager.shop.utils.ImageFilePath;
+
+@Component
+public class ReadableProductVariantGroupMapper implements Mapper<ProductVariantGroup, ReadableProductVariantGroup> {
+

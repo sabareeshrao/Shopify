@@ -1,0 +1,3 @@
+	public void setMeasures(List<MeasureUnit> measures) {
+		this.measures = measures;
+	}

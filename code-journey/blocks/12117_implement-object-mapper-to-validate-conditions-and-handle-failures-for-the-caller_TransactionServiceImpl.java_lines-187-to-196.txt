@@ -1,0 +1,10 @@
+
+		if(finalTransaction!=null && !StringUtils.isBlank(finalTransaction.getDetails())) {
+			try {
+				ObjectMapper mapper = new ObjectMapper();
+				@SuppressWarnings("unchecked")
+				Map<String,String> objects = mapper.readValue(finalTransaction.getDetails(), Map.class);
+				finalTransaction.setTransactionDetails(objects);
+			} catch (Exception e) {
+				throw new ServiceException(e);
+			}

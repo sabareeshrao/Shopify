@@ -1,0 +1,3 @@
+	public MultipartFile getImage() {
+		return image;
+	}

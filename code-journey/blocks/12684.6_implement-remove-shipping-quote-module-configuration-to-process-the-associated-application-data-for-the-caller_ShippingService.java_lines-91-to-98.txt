@@ -1,0 +1,8 @@
+
+	void removeShippingQuoteModuleConfiguration(String moduleCode,
+			MerchantStore store) throws ServiceException;
+
+	/**
+	 * Provides detailed information on boxes that will be used
+	 * when getting a ShippingQuote
+	 * @param products

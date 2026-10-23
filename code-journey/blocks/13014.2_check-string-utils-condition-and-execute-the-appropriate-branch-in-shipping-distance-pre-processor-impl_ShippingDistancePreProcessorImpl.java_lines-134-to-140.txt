@@ -1,0 +1,7 @@
+		originAddress.append(origin.getAddress()).append(BLANK)
+		.append(origin.getCity()).append(BLANK)
+		.append(origin.getPostalCode()).append(BLANK);
+		
+		if(!StringUtils.isBlank(origin.getState())) {
+			originAddress.append(origin.getState()).append(" ");
+		}

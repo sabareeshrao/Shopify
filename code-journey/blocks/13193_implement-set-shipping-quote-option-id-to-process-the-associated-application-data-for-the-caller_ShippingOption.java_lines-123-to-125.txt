@@ -1,0 +1,3 @@
+	public void setShippingQuoteOptionId(Long shippingQuoteOptionId) {
+		this.shippingQuoteOptionId = shippingQuoteOptionId;
+	}

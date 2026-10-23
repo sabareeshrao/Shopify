@@ -1,0 +1,4 @@
+	@Override
+	public void addFolder(String merchantStoreCode, String folderName, Optional<String> path) throws ServiceException {
+		addFolder.addFolder(merchantStoreCode, folderName, path);
+	}

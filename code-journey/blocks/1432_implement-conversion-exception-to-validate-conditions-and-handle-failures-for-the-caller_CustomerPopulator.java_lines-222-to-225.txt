@@ -1,0 +1,4 @@
+					
+					if(customerOption.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Invalid customer option id ");
+					}

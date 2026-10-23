@@ -1,0 +1,28 @@
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public ReadableEntityList<ReadableContentBox> getContentBoxes(ContentType type, MerchantStore store,
+			Language language, int page, int count) {
+
+		Validate.notNull(store, "MerchantStore cannot be null");
+
+		ReadableEntityList items = new ReadableEntityList();
+		Page<Content> contentBoxes;
+		try {
+			contentBoxes = contentService.listByType(type, store, page, count);
+
+			items.setTotalPages(contentBoxes.getTotalPages());
+			items.setNumber(contentBoxes.getContent().size());
+			items.setRecordsTotal(contentBoxes.getNumberOfElements());
+
+			List<ReadableContentBox> boxes = contentBoxes.getContent().stream()
+					.map(content -> convertContentToReadableContentBox(store, language, content))
+					.collect(Collectors.toList());
+
+			items.setItems(boxes);
+
+			return items;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while getting content ", e);
+		}

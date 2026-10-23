@@ -1,0 +1,8 @@
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "PRODUCT_VARIANT",
+indexes = @Index(columnList = "PRODUCT_ID"),
+uniqueConstraints = 
+        @UniqueConstraint(columnNames = { 
+        "PRODUCT_ID",

@@ -1,0 +1,6 @@
+			Zone zone = zoneService.getByCode(address.getStateProvince());
+			if(zone == null) {
+				o.setState(address.getStateProvince());
+			} else {
+				o.setZone(zone);
+			}

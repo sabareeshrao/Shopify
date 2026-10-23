@@ -1,0 +1,3 @@
+	public void setUrlClicked(Integer urlClicked) {
+		this.urlClicked = urlClicked;
+	}

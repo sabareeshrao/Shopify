@@ -1,0 +1,8 @@
+
+
+        /*
+         * //resize small BufferedImage smallResizedImage = ProductImageSizeUtils.resize(cropped,
+         * smallImageWidth, smallImageHeight); File tempSmall = File.createTempFile(new
+         * StringBuilder().append(productImage.getProduct().getId()).append("tmpSmall").toString(),
+         * "." + extension ); ImageIO.write(smallResizedImage, extension, tempSmall);
+         *

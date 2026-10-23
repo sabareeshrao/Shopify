@@ -1,0 +1,8 @@
+		"zoneName": "North Dakota",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "MP",
+		"zoneName": "Northern Mariana Islands",
+		"countryCode": "US"
+	},

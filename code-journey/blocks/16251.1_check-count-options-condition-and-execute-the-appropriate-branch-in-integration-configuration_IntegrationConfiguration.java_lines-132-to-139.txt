@@ -1,0 +1,8 @@
+          count++;
+        }
+
+        optionsEntries.append("[").append(dataEntries.toString()).append("]");
+
+        optionDataEntries.append("\"").append(key).append("\":").append(optionsEntries.toString());
+
+        if (countOptions < keySize - 1) {

@@ -1,0 +1,3 @@
+		
+		Validate.notNull(configuration, "IntegrationConfiguration must not be null for USPS shipping module");
+

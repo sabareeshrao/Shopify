@@ -1,0 +1,4 @@
+    @Tag(name = "Catalog management resource", description = "Manage catalogs and attached products")
+})
+public class CatalogApi {
+

@@ -1,0 +1,8 @@
+        if(property == null){
+            
+            throw new IllegalArgumentException("No name specified for bean class '" + bean.getClass() + "'");
+        }
+        Class<?> beanClass = bean.getClass();
+        PropertyDescriptor propertyDescriptor = getPropertyDescriptor( beanClass, property );
+        if ( propertyDescriptor == null )
+        {

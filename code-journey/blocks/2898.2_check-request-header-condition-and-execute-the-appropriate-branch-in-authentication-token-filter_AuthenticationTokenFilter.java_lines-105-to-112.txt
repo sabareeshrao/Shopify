@@ -1,0 +1,8 @@
+    			//LOGGER.debug(headers.nextElement());
+    		//}
+
+	    	final String requestHeader = request.getHeader(this.tokenHeader);//token
+	    	
+	    	try {
+		        if (requestHeader != null && requestHeader.startsWith(BEARER_TOKEN)) {//Bearer
+		        	

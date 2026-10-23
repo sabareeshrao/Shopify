@@ -1,0 +1,8 @@
+elasticsearch.server.port=9200
+elasticsearch.server.proxy.user=
+elasticsearch.server.proxy.password=
+elasticsearch.security.enabled=false
+elasticsearch.security.user=elastic
+elasticsearch.security.password=changeme
+
+# Which CMS method to use

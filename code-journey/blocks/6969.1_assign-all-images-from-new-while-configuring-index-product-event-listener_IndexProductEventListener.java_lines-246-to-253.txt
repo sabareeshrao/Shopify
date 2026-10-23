@@ -1,0 +1,8 @@
+
+		Set<ProductImage> allImages = new HashSet<ProductImage>(filteredImages);
+		product.setImages(allImages);
+
+		try {
+			
+
+			//searchService.index(store, product);

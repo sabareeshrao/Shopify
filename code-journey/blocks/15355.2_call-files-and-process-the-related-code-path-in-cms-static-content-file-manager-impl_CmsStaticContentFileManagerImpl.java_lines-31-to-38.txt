@@ -1,0 +1,8 @@
+
+/**
+ * Manages - Images - Files (js, pdf, css...) on infinispan
+ * 
+ * @author Umesh Awasthi
+ * @since 1.2
+ *
+ */

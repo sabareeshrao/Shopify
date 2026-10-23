@@ -1,0 +1,3 @@
+  public void setManufacturers(List<ReadableManufacturer> manufacturers) {
+    this.manufacturers = manufacturers;
+  }

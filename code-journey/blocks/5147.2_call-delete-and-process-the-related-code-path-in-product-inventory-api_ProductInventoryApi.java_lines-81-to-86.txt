@@ -1,0 +1,6 @@
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		productInventoryFacade.delete(productId, id, merchantStore);
+
+	}

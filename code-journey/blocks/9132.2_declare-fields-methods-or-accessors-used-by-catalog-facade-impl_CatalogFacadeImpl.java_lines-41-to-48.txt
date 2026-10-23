@@ -1,0 +1,8 @@
+
+    @Autowired
+    private CatalogEntryService catalogEntryService;
+
+    @Autowired
+    private PersistableCatalogMapper persistableCatalogMapper;
+
+    @Autowired

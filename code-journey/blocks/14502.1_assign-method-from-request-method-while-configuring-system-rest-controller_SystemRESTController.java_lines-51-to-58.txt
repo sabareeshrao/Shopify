@@ -1,0 +1,8 @@
+	 *
+	 * see : shopizer/sm-core/src/main/resources/reference/integrationmodules.json for more samples
+	 * @param json
+	 * @param request
+	 * @param response
+	 * @throws Exception
+	 */
+	@RequestMapping( value="/private/system/module", method=RequestMethod.POST, consumes = "text/plain;charset=UTF-8")

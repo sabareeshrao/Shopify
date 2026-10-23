@@ -1,0 +1,8 @@
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "productOption")
+	private Set<ProductOptionDescription> descriptions = new HashSet<ProductOptionDescription>();
+	
+	@Transient
+	private List<ProductOptionDescription> descriptionsList = new ArrayList<ProductOptionDescription>();
+
+	@ManyToOne(fetch = FetchType.LAZY)

@@ -1,0 +1,4 @@
+	 */
+	ReadableOptin findByMerchantAndType(MerchantStore store, OptinType type);
+
+}

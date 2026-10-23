@@ -1,0 +1,8 @@
+
+/**
+ * Test 
+ * 
+ * - static content files (.js, .pdf etc)
+ * - static content images (jpg, gig ...)
+ * @author Carl Samson
+ *

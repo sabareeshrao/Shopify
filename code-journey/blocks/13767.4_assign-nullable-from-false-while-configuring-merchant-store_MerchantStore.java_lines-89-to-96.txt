@@ -1,0 +1,8 @@
+	@NotEmpty
+	@Column(name = "STORE_NAME", nullable = false, length = 100)
+	private String storename;
+
+	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z0-9_]*$")
+	@Column(name = "STORE_CODE", nullable = false, unique = true, length = 100)
+	private String code;

@@ -1,0 +1,8 @@
+	private PackageDetails toPackageDetails(com.salesmanager.core.model.shipping.Package pack) {
+		PackageDetails details = new PackageDetails();
+		details.setCode(pack.getCode());
+		details.setShippingHeight(pack.getBoxHeight());
+		details.setShippingLength(pack.getBoxLength());
+		details.setShippingMaxWeight(pack.getMaxWeight());
+		//details.setShippingQuantity(pack.getShippingQuantity());
+		details.setShippingWeight(pack.getBoxWeight());

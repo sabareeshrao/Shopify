@@ -1,0 +1,8 @@
+	public void setTotalCode(String totalCode) {
+		this.totalCode = totalCode;
+	}
+	public String getItemManufacturerCode() {
+		return itemManufacturerCode;
+	}
+	public void setItemManufacturerCode(String itemManufacturerCode) {
+		this.itemManufacturerCode = itemManufacturerCode;

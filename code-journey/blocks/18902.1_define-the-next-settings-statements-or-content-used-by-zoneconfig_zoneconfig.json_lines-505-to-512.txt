@@ -1,0 +1,8 @@
+		"zoneName": "Burgenland",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "VB",
+		"zoneName": "Voralberg",
+		"countryCode": "AT"
+	},

@@ -1,0 +1,36 @@
+		"zoneName": "Burgenland",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "VB",
+		"zoneName": "Voralberg",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "AG",
+		"zoneName": "Aargau",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "AI",
+		"zoneName": "Appenzell Innerrhoden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "ARCH",
+		"zoneName": "Appenzell Ausserrhoden",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "BE",
+		"zoneName": "Bern",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "BL",
+		"zoneName": "Basel-Landschaft",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "BS",
+		"zoneName": "Basel-Stadt",

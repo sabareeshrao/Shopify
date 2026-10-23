@@ -1,0 +1,8 @@
+	@Override
+	public ShippingQuote getShippingQuote(Long shoppingCartId, MerchantStore store, Delivery delivery, List<ShippingProduct> products, Language language) throws ServiceException  {
+		
+		
+		//ShippingConfiguration -> Global configuration of a given store
+		//IntegrationConfiguration -> Configuration of a given module
+		//IntegrationModule -> The concrete module as defined in integrationmodules.properties
+		

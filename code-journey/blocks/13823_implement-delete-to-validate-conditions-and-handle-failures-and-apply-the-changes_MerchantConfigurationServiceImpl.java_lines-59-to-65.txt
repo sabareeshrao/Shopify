@@ -1,0 +1,7 @@
+	@Override
+	public void delete(MerchantConfiguration merchantConfiguration) throws ServiceException {
+		MerchantConfiguration config = merchantConfigurationRepository.getOne(merchantConfiguration.getId());
+		if(config!=null) {
+			super.delete(config);
+		}
+	}

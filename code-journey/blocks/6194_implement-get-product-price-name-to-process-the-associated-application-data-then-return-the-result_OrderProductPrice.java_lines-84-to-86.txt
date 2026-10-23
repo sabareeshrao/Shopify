@@ -1,0 +1,3 @@
+	public String getProductPriceName() {
+		return productPriceName;
+	}

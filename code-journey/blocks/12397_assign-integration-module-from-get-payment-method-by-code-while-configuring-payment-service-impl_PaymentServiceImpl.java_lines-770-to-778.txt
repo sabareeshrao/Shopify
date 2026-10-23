@@ -1,0 +1,9 @@
+		
+		IntegrationModule integrationModule = getPaymentMethodByCode(store,payment.getModuleName());
+		
+		Transaction transaction = module.initTransaction(store, customer, amount, payment, configuration, integrationModule);
+		
+		transactionService.save(transaction);
+
+		return transaction;
+	}

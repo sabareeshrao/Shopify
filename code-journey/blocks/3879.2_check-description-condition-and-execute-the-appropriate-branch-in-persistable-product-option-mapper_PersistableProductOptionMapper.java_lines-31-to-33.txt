@@ -1,0 +1,3 @@
+    if(description.getId() != null && description.getId().longValue()>0) {
+      desc.setId(description.getId());
+    }

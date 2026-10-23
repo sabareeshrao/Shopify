@@ -1,0 +1,8 @@
+	 * Creates a ReadableOrder object from an orderId
+	 * @param orderId
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	com.salesmanager.shop.model.order.v0.ReadableOrder getReadableOrder(Long orderId, MerchantStore store, Language language);

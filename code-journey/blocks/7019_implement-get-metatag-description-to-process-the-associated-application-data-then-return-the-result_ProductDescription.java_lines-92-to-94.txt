@@ -1,0 +1,3 @@
+	public String getMetatagDescription() {
+		return metatagDescription;
+	}

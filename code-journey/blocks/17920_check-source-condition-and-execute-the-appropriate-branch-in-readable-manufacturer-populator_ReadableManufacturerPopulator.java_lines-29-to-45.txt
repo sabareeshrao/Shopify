@@ -1,0 +1,17 @@
+    target.setOrder(source.getOrder());
+    target.setId(source.getId());
+    target.setCode(source.getCode());
+    if (source.getDescriptions() != null && source.getDescriptions().size() > 0) {
+
+      List<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription> fulldescriptions =
+          new ArrayList<com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription>();
+
+      Set<ManufacturerDescription> descriptions = source.getDescriptions();
+      ManufacturerDescription description = null;
+      for (ManufacturerDescription desc : descriptions) {
+        if (language != null && desc.getLanguage().getCode().equals(language.getCode())) {
+          description = desc;
+          break;
+        } else {
+          fulldescriptions.add(populateDescription(desc));
+        }

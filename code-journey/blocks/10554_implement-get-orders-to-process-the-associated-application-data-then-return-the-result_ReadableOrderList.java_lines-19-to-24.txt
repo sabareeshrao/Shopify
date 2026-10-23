@@ -1,0 +1,6 @@
+	public List<ReadableOrder> getOrders() {
+		return orders;
+	}
+	public void setOrders(List<ReadableOrder> orders) {
+		this.orders = orders;
+	}

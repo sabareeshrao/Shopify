@@ -1,0 +1,6 @@
+		    if(!fileNameUtils.validFileName(qqfilename)) {
+				FileStatus fs = new FileStatus();
+				fs.setError("Invalid filename");
+				fs.setSuccess(false);
+				return fs;
+		    }

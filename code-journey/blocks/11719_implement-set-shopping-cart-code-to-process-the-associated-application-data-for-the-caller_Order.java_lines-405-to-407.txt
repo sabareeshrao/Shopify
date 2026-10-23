@@ -1,0 +1,3 @@
+	public void setShoppingCartCode(String shoppingCartCode) {
+		this.shoppingCartCode = shoppingCartCode;
+	}

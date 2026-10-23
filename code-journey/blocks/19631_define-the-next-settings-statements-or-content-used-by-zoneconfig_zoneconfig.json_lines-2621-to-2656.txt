@@ -1,0 +1,36 @@
+			"zoneName": "Ceuta",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "CiudadReal",
+			"zoneName": "Ciudad Real",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Cordoba",
+			"zoneName": "Cordoba",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Cuenca",
+			"zoneName": "Cuenca",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Girona",
+			"zoneName": "Girona",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Granada",
+			"zoneName": "Granada",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Guadalajara",
+			"zoneName": "Guadalajara",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Guipuzcoa",
+			"zoneName": "Guipuzcoa",

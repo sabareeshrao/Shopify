@@ -1,0 +1,9 @@
+	public String getDescription() {
+		return description;
+	}
+	public void setEstimatedNumberOfDays(String estimatedNumberOfDays) {
+		this.estimatedNumberOfDays = estimatedNumberOfDays;
+	}
+	public String getEstimatedNumberOfDays() {
+		return estimatedNumberOfDays;
+	}

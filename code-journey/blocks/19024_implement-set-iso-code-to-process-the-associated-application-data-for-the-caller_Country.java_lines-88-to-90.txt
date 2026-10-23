@@ -1,0 +1,3 @@
+	public void setIsoCode(String isoCode) {
+		this.isoCode = isoCode;
+	}

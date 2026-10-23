@@ -1,0 +1,3 @@
+	public void setProductOptionValueId(Long productOptionValueId) {
+		this.productOptionValueId = productOptionValueId;
+	}

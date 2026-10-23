@@ -1,0 +1,8 @@
+
+/**
+ * <p>
+ * CustomerEntityPopulator will help to populate {@link CustomerEntity} from {@link Customer} CustomerEntity will be
+ * used to show data on the UI side.
+ * </p>
+ *
+ * @author Umesh Awasthi

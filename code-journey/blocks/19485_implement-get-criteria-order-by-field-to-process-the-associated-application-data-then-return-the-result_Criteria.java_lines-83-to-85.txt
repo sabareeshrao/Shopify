@@ -1,0 +1,3 @@
+	public String getCriteriaOrderByField() {
+		return criteriaOrderByField;
+	}

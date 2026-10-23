@@ -1,0 +1,4 @@
+
+		} catch (Exception e) {
+			throw new ConversionRuntimeException("An error occured while converting ReadableShoppingCart", e);
+		}

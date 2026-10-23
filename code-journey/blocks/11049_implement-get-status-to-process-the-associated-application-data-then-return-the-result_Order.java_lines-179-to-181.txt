@@ -1,0 +1,3 @@
+	public OrderStatus getStatus() {
+		return status;
+	}

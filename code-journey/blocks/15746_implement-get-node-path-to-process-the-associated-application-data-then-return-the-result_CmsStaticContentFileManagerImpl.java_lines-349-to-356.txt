@@ -1,0 +1,8 @@
+	private String getNodePath(final String storeCode, final FileContentType contentType) {
+
+		StringBuilder nodePath = new StringBuilder();
+		nodePath.append(storeCode).append("/").append(contentType.name());
+
+		return nodePath.toString();
+
+	}

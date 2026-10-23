@@ -1,0 +1,6 @@
+      Product product = productService.getById(id);
+
+      if (product == null) {
+        response.sendError(404, "Product id " + id + " does not exists");
+        return null;
+      }

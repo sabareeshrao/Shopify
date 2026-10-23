@@ -1,0 +1,5 @@
+	
+	boolean exists(String code, MerchantStore store) throws ServiceException;
+	
+	TaxClass saveOrUpdate(TaxClass taxClass) throws ServiceException;
+	

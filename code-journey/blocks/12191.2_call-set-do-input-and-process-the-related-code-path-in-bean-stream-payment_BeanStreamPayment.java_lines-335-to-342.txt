@@ -1,0 +1,8 @@
+			conn.setDoInput(true);
+			conn.setDoOutput(true);
+
+			// Set the content type we are POSTing. We impersonate it as
+			// encoded form data
+			conn.setRequestProperty("Content-Type",
+					"application/x-www-form-urlencoded");
+			conn.setRequestProperty("User-Agent", agent);

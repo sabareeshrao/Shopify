@@ -1,0 +1,8 @@
+	private FinalPrice finalPrice(ProductPrice price) {
+
+		FinalPrice finalPrice = new FinalPrice();
+		BigDecimal fPrice = price.getProductPriceAmount();
+		BigDecimal oPrice = price.getProductPriceAmount();
+
+		Date today = new Date();
+		// calculate discount price

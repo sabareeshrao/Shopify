@@ -1,0 +1,3 @@
+				"/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, PersistableProduct.class);
+		assertThat(response.getStatusCode(), is(CREATED));
+	}

@@ -1,0 +1,8 @@
+    		String ipAddress = GeoLocationUtils.getClientIpAddress(request);
+    		
+    		UserContext userContext = UserContext.create();
+    		userContext.setIpAddress(ipAddress);
+    		
+    	} catch(Exception s) {
+    		LOGGER.error("Error while getting ip address ", s);
+    	}

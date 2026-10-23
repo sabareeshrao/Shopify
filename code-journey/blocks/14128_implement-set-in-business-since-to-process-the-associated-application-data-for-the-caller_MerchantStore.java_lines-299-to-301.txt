@@ -1,0 +1,3 @@
+	public void setInBusinessSince(Date inBusinessSince) {
+		this.inBusinessSince = CloneUtils.clone(inBusinessSince);
+	}

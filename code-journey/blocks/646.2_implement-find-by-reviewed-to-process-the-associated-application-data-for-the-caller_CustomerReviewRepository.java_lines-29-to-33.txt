@@ -1,0 +1,5 @@
+	List<CustomerReview> findByReviewed(Long id);
+	
+	@Query( customerQuery + "where rc.id = ?1 and rr.id = ?2")
+	CustomerReview findByRevieweAndReviewed(Long reviewer, Long reviewed);
+

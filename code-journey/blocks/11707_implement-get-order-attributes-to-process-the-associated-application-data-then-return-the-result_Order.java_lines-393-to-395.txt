@@ -1,0 +1,3 @@
+	public Set<OrderAttribute> getOrderAttributes() {
+		return orderAttributes;
+	}

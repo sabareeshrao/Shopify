@@ -1,0 +1,8 @@
+			
+			//print totals
+			productCell++;
+			Set<OrderTotal> totals = order.getOrderTotal();
+			for(OrderTotal orderTotal : totals) {
+				
+				String totalName = orderTotal.getText();
+				String totalValue = priceUtil.getStoreFormatedAmountWithCurrency(store,orderTotal.getValue());

@@ -1,0 +1,3 @@
+			LOGGER.error("Error while saving taxRate [" +  taxRate.getCode() + "] for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while saving taxRate [" +  taxRate.getCode() + "] for store [" + store.getCode() + "]", e);
+		}

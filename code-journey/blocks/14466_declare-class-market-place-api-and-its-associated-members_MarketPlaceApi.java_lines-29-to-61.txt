@@ -1,0 +1,33 @@
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import springfox.documentation.annotations.ApiIgnore;
+
+@RestController
+@RequestMapping("/api/v1")
+public class MarketPlaceApi {
+
+	@Autowired
+	private MarketPlaceFacade marketPlaceFacade;
+
+	@Autowired
+	private UserFacade userFacade;
+
+	@Inject
+	private StoreFacade storeFacade;
+
+	@Inject
+	private LanguageUtils languageUtils;
+
+	/**
+	 * Get a marketplace from storeCode returns market place details and
+	 * merchant store
+	 */
+	@GetMapping("/private/marketplace/{store}")
+	@ApiOperation(httpMethod = "GET", value = "Get market place meta-data", notes = "", produces = "application/json", response = ReadableMarketPlace.class)
+	public ReadableMarketPlace marketPlace(@PathVariable String store,
+			@RequestParam(value = "lang", required = false) String lang) {
+
+		Language language = languageUtils.getServiceLanguage(lang);
+		return marketPlaceFacade.get(store, language);
+	}

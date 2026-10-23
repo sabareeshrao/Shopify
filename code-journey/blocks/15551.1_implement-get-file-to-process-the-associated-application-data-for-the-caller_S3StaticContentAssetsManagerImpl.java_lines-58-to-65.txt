@@ -1,0 +1,8 @@
+	@Override
+	public OutputContentFile getFile(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType, String contentName)
+			throws ServiceException {
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			final AmazonS3 s3 = s3Client();

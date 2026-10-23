@@ -1,0 +1,8 @@
+			if(originAdressResult.length>0 && destinationAdressResult.length>0) {
+				LatLng originLatLng = originAdressResult[0].geometry.location;
+				LatLng destinationLatLng = destinationAdressResult[0].geometry.location;
+				
+				delivery.setLatitude(String.valueOf(destinationLatLng.lat));
+				delivery.setLongitude(String.valueOf(destinationLatLng.lng));
+				
+				//keep latlng for further usage in order to display the map

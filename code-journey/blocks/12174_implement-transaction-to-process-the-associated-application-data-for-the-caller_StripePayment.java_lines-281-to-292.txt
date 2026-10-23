@@ -1,0 +1,12 @@
+		
+
+
+		Transaction transaction = new Transaction();
+		try {
+			
+			String amnt = productPriceUtils.getAdminFormatedAmount(store, amount);
+			
+			//stripe does not support floating point
+			//so amnt * 100 or remove floating point
+			//553.47 = 55347
+			

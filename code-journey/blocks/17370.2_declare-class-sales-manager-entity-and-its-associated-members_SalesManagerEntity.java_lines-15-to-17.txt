@@ -1,0 +1,3 @@
+public abstract class SalesManagerEntity<K extends Serializable & Comparable<K>, E extends SalesManagerEntity<K, ?>>
+		implements Serializable, Comparable<E> {
+

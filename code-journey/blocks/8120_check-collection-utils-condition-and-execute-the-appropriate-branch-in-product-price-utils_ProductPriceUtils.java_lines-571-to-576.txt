@@ -1,0 +1,6 @@
+		}
+
+		if (CollectionUtils.isEmpty(availabilities)) {
+			availabilities = product.getAvailabilities();
+			availabilities = this.applicableAvailabilities(availabilities);
+		}

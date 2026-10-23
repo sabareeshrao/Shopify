@@ -1,0 +1,8 @@
+		if(!StringUtils.isBlank(store.getWeightunitcode())) {
+			specifications.setWeightUnitOfMeasure(WeightUnitOfMeasure.valueOf(store.getWeightunitcode().toLowerCase()));
+		}
+		returnDestination.setProductSpecifications(specifications);
+
+		if (source.getType() != null) {
+			ReadableProductType readableType = readableProductTypeMapper.convert(source.getType(), store, language);
+			returnDestination.setType(readableType);

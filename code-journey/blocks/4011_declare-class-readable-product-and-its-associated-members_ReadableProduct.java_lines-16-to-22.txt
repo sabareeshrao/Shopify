@@ -1,0 +1,7 @@
+public class ReadableProduct extends ProductEntity implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

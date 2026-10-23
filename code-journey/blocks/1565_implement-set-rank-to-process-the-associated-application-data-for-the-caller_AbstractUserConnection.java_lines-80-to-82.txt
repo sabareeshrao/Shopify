@@ -1,0 +1,3 @@
+	public void setRank(int userRank) {
+		this.userRank = userRank;
+	}

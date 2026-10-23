@@ -1,0 +1,5 @@
+	@Override
+	public ReadableProductDefinition convert(Product source, MerchantStore store, Language language) {
+		ReadableProductDefinition target = new ReadableProductDefinition();
+		return this.merge(source, target, store, language);
+	}

@@ -1,0 +1,4 @@
+				address.setPhone(persistableCustomer.getDelivery().getPhone());
+				if(persistableCustomer.getDelivery().getCountry()!=null) {
+					address.setCountry(persistableCustomer.getDelivery().getCountry());
+				}

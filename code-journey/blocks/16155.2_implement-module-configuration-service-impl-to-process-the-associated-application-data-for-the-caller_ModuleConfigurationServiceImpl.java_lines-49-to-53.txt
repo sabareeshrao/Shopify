@@ -1,0 +1,5 @@
+	@Inject
+	public ModuleConfigurationServiceImpl(ModuleConfigurationRepository moduleConfigurationRepository) {
+		super(moduleConfigurationRepository);
+		this.moduleConfigurationRepository = moduleConfigurationRepository;
+	}

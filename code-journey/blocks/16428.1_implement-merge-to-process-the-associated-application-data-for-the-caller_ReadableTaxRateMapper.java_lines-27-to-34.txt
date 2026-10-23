@@ -1,0 +1,8 @@
+	@Override
+	public ReadableTaxRate merge(TaxRate source, ReadableTaxRate destination, MerchantStore store,
+								 Language language) {
+		Validate.notNull(destination, "destination TaxRate cannot be null");
+		Validate.notNull(source, "source TaxRate cannot be null");
+		destination.setId(source.getId());
+		destination.setCountry(source.getCountry().getIsoCode());
+		destination.setZone(source.getZone().getCode());

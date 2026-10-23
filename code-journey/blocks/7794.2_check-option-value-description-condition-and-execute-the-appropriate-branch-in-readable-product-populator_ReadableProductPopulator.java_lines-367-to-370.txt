@@ -1,0 +1,4 @@
+									for(ProductOptionValueDescription optionValueDescription : povdescriptions) {
+										if(optionValueDescription.getLanguage().getCode().equals(language.getCode())) {
+											readableOptionValue.setName(optionValueDescription.getName());
+										}

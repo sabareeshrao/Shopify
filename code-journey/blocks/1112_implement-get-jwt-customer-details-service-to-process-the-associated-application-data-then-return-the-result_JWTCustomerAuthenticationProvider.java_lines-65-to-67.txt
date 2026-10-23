@@ -1,0 +1,3 @@
+	public UserDetailsService getJwtCustomerDetailsService() {
+		return jwtCustomerDetailsService;
+	}

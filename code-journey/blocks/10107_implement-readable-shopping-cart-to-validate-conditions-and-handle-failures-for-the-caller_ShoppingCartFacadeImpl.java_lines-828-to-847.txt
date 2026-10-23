@@ -1,0 +1,20 @@
+
+	// KEEP
+	private ReadableShoppingCart readableShoppingCart(ShoppingCart cartModel, PersistableShoppingCartItem item,
+			MerchantStore store, Language language) throws Exception {
+
+		com.salesmanager.core.model.shoppingcart.ShoppingCartItem itemModel = createCartItem(cartModel, item, store);
+
+		// need to check if the item is already in the cart
+		boolean duplicateFound = false;
+		// only if item has no attributes
+		if (CollectionUtils.isEmpty(item.getAttributes())) {// increment quantity
+			// get duplicate item from the cart
+			Set<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> cartModelItems = cartModel.getLineItems();
+			for (com.salesmanager.core.model.shoppingcart.ShoppingCartItem cartItem : cartModelItems) {
+				if (cartItem.getProduct().getSku().equals(item.getProduct())) {
+					if (CollectionUtils.isEmpty(cartItem.getAttributes())) {
+						if (!duplicateFound) {
+							if (!itemModel.isProductVirtual()) {
+								cartItem.setQuantity(cartItem.getQuantity() + item.getQuantity());
+							}

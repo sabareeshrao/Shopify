@@ -1,0 +1,2 @@
+	private final static String ZONE_CACHE_PREFIX = "ZONES_";
+

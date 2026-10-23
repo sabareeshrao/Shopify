@@ -1,0 +1,3 @@
+	public BigDecimal getItemPrice() {
+		return itemPrice;
+	}

@@ -1,0 +1,26 @@
+
+	/**
+	 * Transformation of an amount of money submited by the admin user to be
+	 * inserted as a BigDecimal in the database
+	 * 
+	 * @param amount
+	 * @param locale
+	 * @return
+	 * @throws Exception
+	 */
+	// Utility
+	public BigDecimal getAmount(String amount) throws Exception {
+
+		// validations
+		/**
+		 * 1) remove decimal and thousand
+		 * 
+		 * String.replaceAll(decimalPoint, ""); String.replaceAll(thousandPoint, "");
+		 * 
+		 * Should be able to parse to Integer
+		 */
+		StringBuilder newAmount = new StringBuilder();
+		for (int i = 0; i < amount.length(); i++) {
+			if (amount.charAt(i) != DECIMALPOINT && amount.charAt(i) != THOUSANDPOINT) {
+				newAmount.append(amount.charAt(i));
+			}

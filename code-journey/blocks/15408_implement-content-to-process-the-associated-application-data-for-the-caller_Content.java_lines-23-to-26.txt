@@ -1,0 +1,4 @@
+  public Content(String name, String contentType) {
+    this.name = name;
+    this.contentType = contentType;
+  }

@@ -1,0 +1,8 @@
+# docker run -d -p 80:8080 shopizerecomm/shopizer:latest \
+# -e SPRING_PROFILES_ACTIVE=cloud \
+# -e JAVA_OPTS=-Xms1024m -Xmx1024m \
+# -e elasticsearch.server.host=x.x.x.x \
+# -e elasticsearch.server.port=9200 \
+# -e elasticsearch.server.protocole=http \
+# -e db.jdbcUrl=jdbc:mysql://x.x.x.x:3306/SALESMANAGER?autoReconnect=true&serverTimeZone=UTC&useUnicode=true&characterEncoding=UTF-8 \
+# -e db.user=shopizer_databaseb_user \

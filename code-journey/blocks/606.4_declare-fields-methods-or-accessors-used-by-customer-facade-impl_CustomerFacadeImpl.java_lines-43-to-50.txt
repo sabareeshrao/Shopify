@@ -1,0 +1,8 @@
+	@Autowired
+	private com.salesmanager.shop.store.controller.customer.facade.CustomerFacade customerFacade;
+
+	@Autowired
+	private CustomerService customerService;
+
+	@Autowired
+	private FilePathUtils filePathUtils;

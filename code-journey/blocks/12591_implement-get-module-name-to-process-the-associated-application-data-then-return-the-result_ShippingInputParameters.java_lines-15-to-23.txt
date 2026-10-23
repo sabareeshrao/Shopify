@@ -1,0 +1,9 @@
+	public String getModuleName() {
+		return moduleName;
+	}
+	public void setModuleName(String moduleName) {
+		this.moduleName = moduleName;
+	}
+	public long getWeight() {
+		return weight;
+	}

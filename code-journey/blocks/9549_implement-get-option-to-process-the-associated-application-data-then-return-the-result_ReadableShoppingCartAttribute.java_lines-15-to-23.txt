@@ -1,0 +1,9 @@
+	public ReadableShoppingCartAttributeOption getOption() {
+		return option;
+	}
+	public void setOption(ReadableShoppingCartAttributeOption option) {
+		this.option = option;
+	}
+	public ReadableShoppingCartAttributeOptionValue getOptionValue() {
+		return optionValue;
+	}

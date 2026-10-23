@@ -1,0 +1,8 @@
+	
+	com.salesmanager.shop.model.catalog.product.ProductPriceDescription populateDescription(
+	      ProductPriceDescription description) {
+	    if (description == null) {
+	      return null;
+	    }
+	    com.salesmanager.shop.model.catalog.product.ProductPriceDescription d =
+	        new com.salesmanager.shop.model.catalog.product.ProductPriceDescription();

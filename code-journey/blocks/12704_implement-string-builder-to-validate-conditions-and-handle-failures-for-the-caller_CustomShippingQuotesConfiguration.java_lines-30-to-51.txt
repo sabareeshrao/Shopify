@@ -1,0 +1,22 @@
+		
+		StringBuilder returnString = new StringBuilder();
+		returnString.append("{");
+		returnString.append("\"moduleCode\"").append(":\"").append(this.getModuleCode()).append("\"");
+		returnString.append(",");
+		returnString.append("\"active\"").append(":").append(this.isActive());
+		
+
+
+		if(regions!=null && regions.size()>0) {
+			
+			returnString.append(",");
+			//org.json.simple.JSONArray array=new org.json.simple.JSONArray();
+			StringBuilder regionsList = new StringBuilder();
+			int countRegion = 0;
+			regionsList.append("[");
+			for(CustomShippingQuotesRegion region : regions) {
+				regionsList.append(region.toJSONString());
+				countRegion ++;
+				if(countRegion<regions.size()) {
+					regionsList.append(",");
+				}

@@ -1,0 +1,8 @@
+				if (source.getPrice().getDiscountEndDate() != null) {
+					Date endDate = DateUtil.getDate(source.getPrice().getDiscountEndDate());
+					price.setProductPriceSpecialEndDate(endDate);
+				}
+				destination.getPrices().add(price);
+				for (Language lang : store.getLanguages()) {
+					ProductPriceDescription ppd = new ProductPriceDescription();
+					ppd.setProductPrice(price);

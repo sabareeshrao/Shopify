@@ -1,0 +1,8 @@
+	   */
+	  ReadableProduct addProductToCategory(Category category, Product product, Language language);
+
+	  /**
+	   * Removes item from a category
+	   *
+	   * @param category
+	   * @param product

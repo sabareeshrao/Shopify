@@ -1,0 +1,8 @@
+
+@Component
+public class PersistableCategoryPopulator extends
+		AbstractDataPopulator<PersistableCategory, Category> {
+
+	@Inject
+	private CategoryService categoryService;
+	@Inject

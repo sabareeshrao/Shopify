@@ -1,0 +1,8 @@
+
+			Set<ShoppingCartItem> shoppingCartItems = cart.getLineItems();
+
+			List<ShoppingCartItem> items = new ArrayList<ShoppingCartItem>(shoppingCartItems);
+
+			Set<OrderProduct> orderProducts = new LinkedHashSet<OrderProduct>();
+
+			OrderProductPopulator orderProductPopulator = new OrderProductPopulator();

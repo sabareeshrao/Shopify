@@ -1,0 +1,19 @@
+		
+		/** ORDER PRODUCT **/
+		
+		//OrderProduct
+		OrderProduct oproduct = new OrderProduct();
+		oproduct.setDownloads(null);
+		oproduct.setOneTimeCharge(dprice.getProductPriceAmount());
+		oproduct.setOrder(order);		
+		oproduct.setProductName( description.getName() );
+		oproduct.setProductQuantity(1);
+		oproduct.setSku(product.getSku());
+		
+		//set order product price
+		OrderProductPrice orderProductPrice = new OrderProductPrice();
+		orderProductPrice.setDefaultPrice(true);//default price (same as default product price)
+		orderProductPrice.setOrderProduct(oproduct);
+		orderProductPrice.setProductPrice(dprice.getProductPriceAmount());
+		orderProductPrice.setProductPriceCode(ProductPriceType.ONE_TIME.name());
+		

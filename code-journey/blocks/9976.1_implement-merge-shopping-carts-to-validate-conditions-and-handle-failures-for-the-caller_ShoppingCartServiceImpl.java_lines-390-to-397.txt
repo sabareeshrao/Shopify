@@ -1,0 +1,8 @@
+	@Override
+	public ShoppingCart mergeShoppingCarts(final ShoppingCart userShoppingModel, final ShoppingCart sessionCart,
+			final MerchantStore store) throws Exception {
+		if (sessionCart.getCustomerId() != null
+				&& sessionCart.getCustomerId().equals(userShoppingModel.getCustomerId())) {
+			LOGGER.info("Session Shopping cart belongs to same logged in user");
+			if (CollectionUtils.isNotEmpty(userShoppingModel.getLineItems())
+					&& CollectionUtils.isNotEmpty(sessionCart.getLineItems())) {

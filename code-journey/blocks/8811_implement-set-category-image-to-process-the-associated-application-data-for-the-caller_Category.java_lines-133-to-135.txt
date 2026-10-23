@@ -1,0 +1,3 @@
+    public void setCategoryImage(String categoryImage) {
+        this.categoryImage = categoryImage;
+    }

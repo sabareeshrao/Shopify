@@ -1,0 +1,8 @@
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+
+	@Inject
+	private LanguageUtils languageUtils;
+	
+	@Autowired
+	private ReadableMerchantStorePopulator readableMerchantStorePopulator;

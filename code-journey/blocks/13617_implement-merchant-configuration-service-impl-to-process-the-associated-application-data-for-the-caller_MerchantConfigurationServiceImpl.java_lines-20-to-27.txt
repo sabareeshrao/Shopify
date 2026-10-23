@@ -1,0 +1,8 @@
+	private MerchantConfigurationRepository merchantConfigurationRepository;
+	
+	@Inject
+	public MerchantConfigurationServiceImpl(
+			MerchantConfigurationRepository merchantConfigurationRepository) {
+			super(merchantConfigurationRepository);
+			this.merchantConfigurationRepository = merchantConfigurationRepository;
+	}

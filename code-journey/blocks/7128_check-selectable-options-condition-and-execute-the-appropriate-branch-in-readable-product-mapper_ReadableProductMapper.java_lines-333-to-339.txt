@@ -1,0 +1,7 @@
+
+		}
+
+		if (selectableOptions != null) {
+			List<ReadableProductOption> options = new ArrayList<ReadableProductOption>(selectableOptions.values());
+			destination.setOptions(options);
+		}

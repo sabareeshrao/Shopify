@@ -1,0 +1,8 @@
+			// payment - what is the payment for and who
+			// is fulfilling it. Transaction is created with
+			// a `Payee` and `Amount` types
+			com.paypal.api.payments.Transaction transaction = new com.paypal.api.payments.Transaction();
+			transaction.setAmount(amnt);
+			//TODO change description
+			transaction.setDescription("This is the payment transaction description.");
+

@@ -1,0 +1,10 @@
+
+	@Test
+	@Ignore
+	public void postProduct() throws Exception {
+		restTemplate = new RestTemplate();
+		
+		final String code = "abcdef";
+
+		final PersistableProduct product = super.product(code);
+

@@ -1,0 +1,3 @@
+  public MultipartFile[] getFiles() {
+    return files;
+  }

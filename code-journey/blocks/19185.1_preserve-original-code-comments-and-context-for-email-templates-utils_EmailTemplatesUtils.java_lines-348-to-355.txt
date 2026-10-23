@@ -1,0 +1,8 @@
+			
+		}
+	
+	/**
+	 * Send an email to the customer with last order status
+	 * @param request
+	 * @param customer
+	 * @param order

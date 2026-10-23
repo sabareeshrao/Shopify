@@ -1,0 +1,11 @@
+	@Override
+	public boolean exists(String code, MerchantStore store, Language language) {
+		ProductType t;
+		try {
+			t = productTypeService.getByCode(code, store, language);
+	    } catch (ServiceException e) {
+			throw new RuntimeException("An exception occured while getting product type [" + code + "] for merchant store [" + store.getCode() +"]",e);
+		}
+		if(t != null) {
+			return true;
+		}

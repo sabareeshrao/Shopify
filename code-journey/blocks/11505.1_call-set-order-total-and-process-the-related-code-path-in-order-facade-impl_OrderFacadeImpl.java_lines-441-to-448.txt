@@ -1,0 +1,8 @@
+
+			modelOrder.setOrderTotal(modelTotals);
+			modelOrder.setTotal(order.getOrderTotalSummary().getTotal());
+
+			// order misc objects
+			modelOrder.setCurrency(store.getCurrency());
+			modelOrder.setMerchant(store);
+

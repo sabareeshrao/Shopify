@@ -1,0 +1,3 @@
+    private static final String RULES_PATH = "com/salesmanager/drools/rules/";
+    private KieServices kieServices = KieServices.Factory.get();
+

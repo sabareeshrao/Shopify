@@ -1,0 +1,8 @@
+			"zoneCode": "Granada",
+			"zoneName": "Granada",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "Guadalajara",
+			"zoneName": "Guadalajara",
+			"countryCode": "ES"

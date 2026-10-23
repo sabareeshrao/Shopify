@@ -1,0 +1,3 @@
+	public void setCategory(ReadableCategory category) {
+		this.category = category;
+	}

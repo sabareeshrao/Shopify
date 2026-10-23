@@ -1,0 +1,4 @@
+        try {
+          inputStream.close();
+        } catch(Exception ignore) {}
+      }

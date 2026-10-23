@@ -1,0 +1,8 @@
+			        Set<ProductPrice> prices = avail.getPrices();
+			        for(ProductPrice p : prices) {
+			          if(p.isDefaultPrice()) {
+			            if(productAvailability == null) {
+			              productAvailability = avail;
+			              defaultPrice = p;
+			              productAvailability.setProductQuantity(source.getQuantity());
+			              productAvailability.setProductStatus(source.isCanBePurchased());

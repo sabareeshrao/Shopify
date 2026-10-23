@@ -1,0 +1,8 @@
+	void deleteContent(Long id, MerchantStore merchantStore);
+	
+	/**
+	 * Creates content box
+	 * @param box
+	 * @param merchantStore
+	 * @param language
+	 */

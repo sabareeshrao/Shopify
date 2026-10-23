@@ -1,0 +1,3 @@
+		if(trx==null) {
+			throw new ServiceException("No capturable transaction for order id " + order.getId());
+		}

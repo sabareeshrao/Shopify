@@ -1,0 +1,8 @@
+    }
+
+    /**
+     * Creates - POST a category for a given store
+     *
+     * @throws Exception
+     */
+

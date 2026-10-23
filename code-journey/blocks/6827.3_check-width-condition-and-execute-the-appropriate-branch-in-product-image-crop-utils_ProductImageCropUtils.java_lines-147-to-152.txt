@@ -1,0 +1,6 @@
+		 * specificationsHeight); //check if new size >= original image
+		 * if(width>=newWidth && height>=newHeight) { cropAreaWidth = newWidth;
+		 * cropAreaHeight = newHeight; break; } } }
+		 */
+
+	}

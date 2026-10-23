@@ -1,0 +1,8 @@
+	 * @param customerLocale
+	 * @param contextPath
+	 */
+	@Async
+	public void sendOrderDownloadEmail(
+			Customer customer, Order order, MerchantStore merchantStore,
+			Locale customerLocale, String contextPath) {
+		   /** issue with putting that elsewhere **/ 

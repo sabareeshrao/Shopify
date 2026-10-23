@@ -1,0 +1,8 @@
+
+			Transaction last = transactionService.lastTransaction(modelOrder, store);
+
+			if(last.getTransactionType().name().equals(TransactionType.AUTHORIZE.name())) {
+				return TransactionType.CAPTURE;
+			} else if(last.getTransactionType().name().equals(TransactionType.AUTHORIZECAPTURE.name())) {
+				return TransactionType.REFUND;
+			} else if(last.getTransactionType().name().equals(TransactionType.CAPTURE.name())) {

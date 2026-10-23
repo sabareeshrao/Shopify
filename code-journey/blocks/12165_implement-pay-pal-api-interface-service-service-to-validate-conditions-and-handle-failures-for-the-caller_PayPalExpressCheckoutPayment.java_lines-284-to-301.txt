@@ -1,0 +1,18 @@
+
+			Map<String,String> configurationMap = new HashMap<String,String>();
+			configurationMap.put("mode", mode);
+			configurationMap.put("acct1.UserName", configuration.getIntegrationKeys().get("username"));
+			configurationMap.put("acct1.Password", configuration.getIntegrationKeys().get("api"));
+			configurationMap.put("acct1.Signature", configuration.getIntegrationKeys().get("signature"));
+			
+			PayPalAPIInterfaceServiceService service = new PayPalAPIInterfaceServiceService(configurationMap);
+			SetExpressCheckoutResponseType setExpressCheckoutResponse = service.setExpressCheckout(setExpressCheckoutReq);
+			
+			String token = setExpressCheckoutResponse.getToken();
+			String correlationID = setExpressCheckoutResponse.getCorrelationID();
+			String ack = setExpressCheckoutResponse.getAck().getValue();
+			
+			if(!"Success".equals(ack)) {
+				LOGGER.error("Wrong value from init transaction " + ack);
+				throw new IntegrationException("Wrong paypal ack from init transaction " + ack);
+			}

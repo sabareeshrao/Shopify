@@ -1,0 +1,4 @@
+                if ( source.getBilling().getZone() != null )
+                {
+                    address.setZone( source.getBilling().getZone().getCode() );
+                }

@@ -1,0 +1,5 @@
+public interface OrderRepositoryCustom {
+
+	OrderList listByStore(MerchantStore store, OrderCriteria criteria);
+	OrderList listOrders(MerchantStore store, OrderCriteria criteria);
+}

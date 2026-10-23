@@ -1,0 +1,8 @@
+	/**
+	 * Get a product with only MerchantStore object
+	 * @param productId
+	 * @return
+	 */
+	Product getProductWithOnlyMerchantStoreById(Long productId);
+
+	ProductList listByStore(MerchantStore store, Language language,

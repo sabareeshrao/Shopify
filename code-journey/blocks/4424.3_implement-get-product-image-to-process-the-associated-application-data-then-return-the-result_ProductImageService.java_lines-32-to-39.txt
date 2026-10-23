@@ -1,0 +1,8 @@
+	 * @param productImage
+	 * @return
+	 * @throws ServiceException
+	 */
+	OutputContentFile getProductImage(ProductImage productImage, ProductImageSize size)
+			throws ServiceException;
+
+	/**

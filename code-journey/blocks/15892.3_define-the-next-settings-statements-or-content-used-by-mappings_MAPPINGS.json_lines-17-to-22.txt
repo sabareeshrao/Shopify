@@ -1,0 +1,6 @@
+			"type": "keyword",
+			"normalizer": "custom_normalizer",
+			"fields": {
+        		"raw": {
+            		"type": "text" 
+        		}

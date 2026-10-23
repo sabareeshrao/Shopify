@@ -1,0 +1,3 @@
+	public ReadableProductPrice getProductPrice() {
+		return productPrice;
+	}

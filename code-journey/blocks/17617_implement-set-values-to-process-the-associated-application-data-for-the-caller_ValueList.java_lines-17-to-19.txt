@@ -1,0 +1,3 @@
+	public void setValues(List<String> values) {
+		this.values = values;
+	}

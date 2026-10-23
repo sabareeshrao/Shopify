@@ -1,0 +1,4 @@
+						double weight = 0;
+						for(PackageDetails packageDetail : packages) {
+							weight = weight + packageDetail.getShippingWeight();
+						}

@@ -1,0 +1,3 @@
+    public MerchantStore getMerchantStore() {
+        return merchantStore;
+    }

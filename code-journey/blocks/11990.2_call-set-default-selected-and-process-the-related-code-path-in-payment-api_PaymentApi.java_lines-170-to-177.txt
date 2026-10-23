@@ -1,0 +1,8 @@
+			returnConfig.setDefaultSelected(config.isDefaultSelected());
+			returnConfig.setCode(code);
+			returnConfig.setIntegrationKeys(config.getIntegrationKeys());
+			returnConfig.setIntegrationOptions(config.getIntegrationOptions());
+
+			return returnConfig;
+
+		} catch (ServiceException e) {

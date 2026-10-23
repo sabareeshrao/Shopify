@@ -1,0 +1,3 @@
+ */
+public class MarketPlace extends SalesManagerEntity<Long, MarketPlace> implements Auditable {
+	

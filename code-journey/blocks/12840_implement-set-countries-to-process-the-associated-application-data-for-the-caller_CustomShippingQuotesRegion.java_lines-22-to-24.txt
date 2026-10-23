@@ -1,0 +1,3 @@
+	public void setCountries(List<String> countries) {
+		this.countries = countries;
+	}

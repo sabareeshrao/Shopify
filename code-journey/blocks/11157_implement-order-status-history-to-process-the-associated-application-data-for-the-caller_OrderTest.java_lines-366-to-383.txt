@@ -1,0 +1,18 @@
+		
+		
+		
+		/** ORDER HISTORY **/
+		
+		//create a log entry in order history
+		OrderStatusHistory history = new OrderStatusHistory();
+		history.setOrder(order);
+		history.setDateAdded(new Date());
+		history.setStatus(OrderStatus.ORDERED);
+		history.setComments("We received your order");
+		
+		order.getOrderHistory().add(history);
+		
+		/** CREATE ORDER **/
+		
+		orderService.create(order);
+		

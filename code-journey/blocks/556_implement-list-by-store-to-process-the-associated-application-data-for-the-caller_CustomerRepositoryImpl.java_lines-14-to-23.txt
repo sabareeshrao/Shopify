@@ -1,0 +1,10 @@
+public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
+
+	
+    @PersistenceContext
+    private EntityManager em;
+    
+	@SuppressWarnings("unchecked")
+	@Override
+	public CustomerList listByStore(MerchantStore store, CustomerCriteria criteria) {
+		

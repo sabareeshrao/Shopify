@@ -1,0 +1,8 @@
+  @GetMapping("/private/product/groups")
+  @ApiOperation(httpMethod = "GET", value = "Get products groups for a given merchant", notes = "", response = List.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })
+  public @ResponseBody java.util.List<ProductGroup> list(
+			@ApiIgnore MerchantStore merchantStore,

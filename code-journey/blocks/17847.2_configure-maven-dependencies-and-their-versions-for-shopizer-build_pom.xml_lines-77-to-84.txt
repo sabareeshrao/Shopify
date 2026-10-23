@@ -1,0 +1,8 @@
+        </dependency>
+        -->
+
+
+		<!-- Google Map API -->
+		<dependency>
+			<groupId>com.google.maps</groupId>
+			<artifactId>google-maps-services</artifactId>

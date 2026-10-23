@@ -1,0 +1,15 @@
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.common.audit.AuditListener;
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+
+@Entity
+@EntityListeners(value = AuditListener.class)
+@Table(name = "CUSTOMER_REVIEW", uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"CUSTOMERS_ID",
+				"REVIEWED_CUSTOMER_ID"
+			})
+		}

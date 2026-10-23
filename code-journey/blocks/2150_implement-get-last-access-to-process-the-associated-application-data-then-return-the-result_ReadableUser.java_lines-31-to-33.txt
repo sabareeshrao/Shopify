@@ -1,0 +1,3 @@
+	public String getLastAccess() {
+		return lastAccess;
+	}

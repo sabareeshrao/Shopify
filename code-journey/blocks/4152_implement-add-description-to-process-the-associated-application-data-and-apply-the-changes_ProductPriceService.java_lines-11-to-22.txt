@@ -1,0 +1,12 @@
+public interface ProductPriceService extends SalesManagerEntityService<Long, ProductPrice> {
+
+	void addDescription(ProductPrice price, ProductPriceDescription description) throws ServiceException;
+
+	ProductPrice saveOrUpdate(ProductPrice price) throws ServiceException;
+	
+	List<ProductPrice> findByProductSku(String sku, MerchantStore store);
+	
+	ProductPrice findById(Long priceId, String sku, MerchantStore store);
+	
+	List<ProductPrice> findByInventoryId(Long productInventoryId, String sku, MerchantStore store);
+	

@@ -1,0 +1,9 @@
+	public PersistableCustomer getCustomer() {
+		return customer;
+	}
+	public boolean isShipToBillingAdress() {
+		return shipToBillingAdress;
+	}
+	public void setShipToBillingAdress(boolean shipToBillingAdress) {
+		this.shipToBillingAdress = shipToBillingAdress;
+	}

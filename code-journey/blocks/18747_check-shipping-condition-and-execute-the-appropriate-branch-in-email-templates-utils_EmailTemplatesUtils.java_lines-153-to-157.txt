@@ -1,0 +1,5 @@
+		    	   
+		    	   if(shipping==null && StringUtils.isNotBlank(order.getShippingModuleCode())) {
+		    		   //TODO IF HAS NO SHIPPING
+		    		   shipping = billing;
+		    	   }

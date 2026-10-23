@@ -1,0 +1,20 @@
+
+    /**
+     * Delete cartitem from cart, should return 204 / no content
+     *
+     * @throws Exception
+     */
+    @Test
+    @Order(6)
+    public void deleteCartItem() throws Exception {
+
+        final ResponseEntity<ReadableShoppingCart> response =
+                testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() + "/product/" + String.valueOf(data.getProducts().get(1).getId())),
+                HttpMethod.DELETE,
+                null,
+                ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(NO_CONTENT));
+        assertNull(response.getBody());
+    }

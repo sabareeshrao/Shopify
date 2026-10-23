@@ -1,0 +1,16 @@
+
+		/** Update cart in database with line items **/
+		shoppingCartService.saveOrUpdate(cartModel);
+
+		// refresh cart
+		cartModel = shoppingCartService.getById(cartModel.getId(), store);
+
+		shoppingCartCalculationService.calculate(cartModel, store, language);
+
+		ShoppingCartDataPopulator shoppingCartDataPopulator = new ShoppingCartDataPopulator();
+		shoppingCartDataPopulator.setShoppingCartCalculationService(shoppingCartCalculationService);
+		shoppingCartDataPopulator.setPricingService(pricingService);
+		shoppingCartDataPopulator.setimageUtils(imageUtils);
+
+		return shoppingCartDataPopulator.populate(cartModel, store, language);
+	}

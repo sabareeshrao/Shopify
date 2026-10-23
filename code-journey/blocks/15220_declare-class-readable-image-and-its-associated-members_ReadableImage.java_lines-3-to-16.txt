@@ -1,0 +1,14 @@
+import java.io.Serializable;
+
+/**
+ * Used for defining an image name and its path
+ * @author carlsamson
+ *
+ */
+public class ReadableImage implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

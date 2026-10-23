@@ -1,0 +1,5 @@
+
+		UserCriteria criteria = new UserCriteria();
+		if(!StringUtils.isBlank(emailAddress)) {
+			criteria.setAdminEmail(emailAddress);
+		}

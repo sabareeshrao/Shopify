@@ -1,0 +1,8 @@
+		
+		ByteArrayOutputStream os = file.getFile();
+		InputStream is = new ByteArrayInputStream(os.toByteArray());
+		
+		//remove file
+		contentFileManager.removeFile(merchantStoreCode, fileContentType, originalName, path);
+		
+		//recreate file

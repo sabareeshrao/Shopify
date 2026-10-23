@@ -1,0 +1,13 @@
+	@Override
+	public void removeFolder(String merchantStoreCode, String folderName, Optional<String> folderPath)
+			throws ServiceException {
+
+		//String rootPath = this.buildRootPath();
+		try {
+			
+			Path merchantPath = this.buildMerchantPath(merchantStoreCode);
+			StringBuilder nodePath = new StringBuilder();
+			nodePath.append(merchantPath.toString()).append(Constants.SLASH);
+			if(folderPath.isPresent()) {
+				nodePath.append(folderPath.get()).append(Constants.SLASH);
+			}

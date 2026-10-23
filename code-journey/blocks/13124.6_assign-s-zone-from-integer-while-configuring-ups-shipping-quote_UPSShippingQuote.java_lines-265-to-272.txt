@@ -1,0 +1,8 @@
+			Country customerCountry = (Country) countriesMap.get(customer
+					.getCustomerCountryId());
+
+			int sZone = -1;
+			try {
+				sZone = Integer.parseInt(store.getZone());
+			} catch (Exception e) {
+				// TODO: handle exception

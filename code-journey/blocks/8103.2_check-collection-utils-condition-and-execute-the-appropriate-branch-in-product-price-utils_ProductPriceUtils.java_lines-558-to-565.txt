@@ -1,0 +1,8 @@
+		 * If product.variants contains exactly one variant If Variant has availability
+		 * we use availability from variant Otherwise we use price
+		 */
+
+		Set<ProductAvailability> availabilities = null;
+		if (!CollectionUtils.isEmpty(product.getVariants())) {
+			Optional<ProductVariant> variants = product.getVariants().stream().filter(i -> i.isDefaultSelection())
+					.findFirst();

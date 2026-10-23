@@ -1,0 +1,8 @@
+
+
+    /**
+     * <p>Method will be used to calculate Shopping cart total as well will update price for each
+     * line items.
+     * </p>
+     * @param shoppingCart
+     * @param customer

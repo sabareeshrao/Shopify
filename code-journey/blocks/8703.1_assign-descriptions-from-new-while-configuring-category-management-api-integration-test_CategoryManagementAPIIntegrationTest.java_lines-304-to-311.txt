@@ -1,0 +1,8 @@
+        frdescription.setName("Divan");
+        frdescription.setFriendlyUrl("divan");
+        frdescription.setTitle("Divan");
+
+        descriptions = new ArrayList<>();
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+

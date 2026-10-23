@@ -1,0 +1,8 @@
+		
+		//TODO use GenericEntityList
+
+		orderList.setTotalCount(entityList.getTotalCount());
+		orderList.setTotalPages(entityList.getTotalPages());
+
+		orderList.setOrders(objectQ.getResultList());
+

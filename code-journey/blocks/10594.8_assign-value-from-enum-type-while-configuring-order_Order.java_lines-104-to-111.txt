@@ -1,0 +1,8 @@
+	@Enumerated(value = EnumType.STRING)
+	private PaymentType paymentType;
+	
+	@Column (name ="PAYMENT_MODULE_CODE")
+	private String paymentModuleCode;
+	
+	@Column (name ="SHIPPING_MODULE_CODE")
+	private String shippingModuleCode;

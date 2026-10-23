@@ -1,0 +1,4 @@
+
+# schema initialization
+log4j.logger.org.hibernate.tool.hbm2ddl=WARN
+log4j.logger.org.springframework.transaction=WARN

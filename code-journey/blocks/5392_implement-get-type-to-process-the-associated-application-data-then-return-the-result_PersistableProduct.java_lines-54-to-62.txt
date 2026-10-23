@@ -1,0 +1,9 @@
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public PersistableProductInventory getInventory() {
+		return inventory;
+	}

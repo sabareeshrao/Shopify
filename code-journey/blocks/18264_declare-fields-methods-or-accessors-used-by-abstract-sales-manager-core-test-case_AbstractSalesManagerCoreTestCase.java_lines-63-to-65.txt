@@ -1,0 +1,3 @@
+	protected static String CAD_CURRENCY_CODE = "CAD";
+	protected static String USD_CURRENCY_CODE = "USD";
+	

@@ -1,0 +1,8 @@
+                            cartAttribute.setOptionValueId(attribute.getProductAttribute().getProductOptionValue().getId());
+                            List<ProductOptionDescription> optionDescriptions = attribute.getProductAttribute().getProductOption().getDescriptionsSettoList();
+                            List<ProductOptionValueDescription> optionValueDescriptions = attribute.getProductAttribute().getProductOptionValue().getDescriptionsSettoList();
+                            if(!CollectionUtils.isEmpty(optionDescriptions) && !CollectionUtils.isEmpty(optionValueDescriptions)) {
+                            	
+                            	String optionName = optionDescriptions.get(0).getName();
+                            	String optionValue = optionValueDescriptions.get(0).getName();
+                            	

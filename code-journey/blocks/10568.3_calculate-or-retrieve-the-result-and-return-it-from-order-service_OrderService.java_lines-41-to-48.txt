@@ -1,0 +1,8 @@
+                                                         throws ServiceException;
+
+    /**
+     * Can be used to calculates the final prices of all items contained in a ShoppingCart
+     * @param orderSummary
+     * @param store
+     * @param language
+     * @return

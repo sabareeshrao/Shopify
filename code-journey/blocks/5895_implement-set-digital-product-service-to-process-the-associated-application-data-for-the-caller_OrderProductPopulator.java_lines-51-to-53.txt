@@ -1,0 +1,3 @@
+	public void setDigitalProductService(DigitalProductService digitalProductService) {
+		this.digitalProductService = digitalProductService;
+	}

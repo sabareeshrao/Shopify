@@ -1,0 +1,8 @@
+
+	/**
+	 * This query is used for filtering products based on criterias
+	 * Main query for getting product list based on input criteria
+	 * ze method
+	 *
+	 * @param store
+	 * @param first

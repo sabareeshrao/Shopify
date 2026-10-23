@@ -1,0 +1,9 @@
+		
+		
+		try {
+			ReadableCategory category = categoryFacade.getCategoryByFriendlyUrl(merchantStore, friendlyUrl, language);
+			ProductCriteria  criterias = new ProductCriteria();
+			
+			List<Long> listOfIds = new ArrayList<Long>();
+			listOfIds.add(category.getId());
+			

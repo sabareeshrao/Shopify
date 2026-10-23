@@ -1,0 +1,8 @@
+
+				String currentPrincipalName = authentication.getName();
+
+				LOGGER.info("Principal " + currentPrincipalName);
+
+				ReadableUser readableUser = findByUserName(currentPrincipalName, languageService.defaultLanguage());
+				//ReadableUser readableUser =	  findByUserName(currentPrincipalName, store.getCode(), store.getDefaultLanguage());
+				if (readableUser == null) {

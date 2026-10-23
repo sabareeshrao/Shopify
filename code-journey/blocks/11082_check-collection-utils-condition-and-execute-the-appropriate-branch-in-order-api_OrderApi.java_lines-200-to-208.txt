@@ -1,0 +1,9 @@
+
+		List<ReadableOrder> orders = returnList.getOrders();
+		if (!CollectionUtils.isEmpty(orders)) {
+			for (ReadableOrder order : orders) {
+				order.setCustomer(readableCustomer);
+			}
+		}
+		return returnList;
+	}

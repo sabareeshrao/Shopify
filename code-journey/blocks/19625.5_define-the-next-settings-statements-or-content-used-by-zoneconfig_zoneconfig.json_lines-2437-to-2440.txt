@@ -1,0 +1,4 @@
+			"countryCode": "CH"
+		},
+		{
+			"zoneCode": "BS",

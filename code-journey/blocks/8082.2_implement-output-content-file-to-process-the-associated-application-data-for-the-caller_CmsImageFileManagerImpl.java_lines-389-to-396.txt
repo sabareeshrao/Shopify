@@ -1,0 +1,8 @@
+    OutputContentFile contentImage = new OutputContentFile();
+    try {
+
+      FileNameMap fileNameMap = URLConnection.getFileNameMap();
+
+      // SMALL by default
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(merchantStoreCode).append(Constants.SLASH).append(productCode)

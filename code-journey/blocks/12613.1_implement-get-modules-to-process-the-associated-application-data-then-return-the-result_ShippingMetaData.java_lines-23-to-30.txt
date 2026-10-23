@@ -1,0 +1,8 @@
+	public List<String> getModules() {
+		return modules;
+	}
+	public void setModules(List<String> modules) {
+		this.modules = modules;
+	}
+	public List<String> getPreProcessors() {
+		return preProcessors;

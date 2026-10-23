@@ -1,0 +1,8 @@
+	 * @return ReadableProduct
+	 * @throws Exception
+	 *                   <p>
+	 *                   /api/products/123
+	 */
+	@RequestMapping(value = "/product/{sku}", method = RequestMethod.GET)
+	@ApiOperation(httpMethod = "GET", value = "Get a product by sku", notes = "For Shop purpose. Specifying ?merchant is required otherwise it falls back to DEFAULT")
+	@ApiResponses(value = {

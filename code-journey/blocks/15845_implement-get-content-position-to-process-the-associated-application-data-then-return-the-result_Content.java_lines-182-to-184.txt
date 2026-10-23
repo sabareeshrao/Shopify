@@ -1,0 +1,3 @@
+	public ContentPosition getContentPosition() {
+		return contentPosition;
+	}

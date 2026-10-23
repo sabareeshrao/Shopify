@@ -1,0 +1,8 @@
+
+		if (instance.getVariationValue() != null) {
+			ReadableProductOption optionValue = this.option(selectableOptions, instance.getVariationValue().getProductOption(), language);
+
+			// take care of option value
+			Optional<ReadableProductOptionValue> optionValueOptionValue = this
+					.optionValue(instance.getVariationValue().getProductOptionValue(), store, language);
+

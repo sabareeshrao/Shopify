@@ -1,0 +1,5 @@
+	private Optional<ContentDescription> findAppropriateContentDescription(List<ContentDescription> contentDescriptions,
+			Language language) {
+		return contentDescriptions.stream()
+				.filter(description -> description.getLanguage().getCode().equals(language.getCode())).findFirst();
+	}

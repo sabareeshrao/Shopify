@@ -1,0 +1,8 @@
+
+      ShippingQuote quote = orderFacade.getShippingQuote(customer, cart, merchantStore, language);
+
+      ShippingSummary summary = orderFacade.getShippingSummary(quote, merchantStore, language);
+
+      ReadableShippingSummary shippingSummary = new ReadableShippingSummary();
+      ReadableShippingSummaryPopulator populator = new ReadableShippingSummaryPopulator();
+      populator.setPricingService(pricingService);

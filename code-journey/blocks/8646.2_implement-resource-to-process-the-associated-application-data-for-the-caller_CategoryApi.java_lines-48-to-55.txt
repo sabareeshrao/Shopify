@@ -1,0 +1,8 @@
+import springfox.documentation.annotations.ApiIgnore;
+
+@RestController
+@RequestMapping(value = "/api/v1")
+@Api(tags = { "Category management resource (Category Management Api)" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Category management resource", description = "Manage category and attached products") })
+public class CategoryApi {

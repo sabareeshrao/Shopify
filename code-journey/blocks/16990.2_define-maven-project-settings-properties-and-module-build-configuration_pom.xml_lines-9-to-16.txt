@@ -1,0 +1,8 @@
+  </parent>
+
+  <artifactId>sm-shop-model</artifactId>
+  <name>sm-shop-model</name>
+  <description>sm-shop-model contains Shopizer model objects for api</description>
+  <url>http://www.shopizer.com</url>
+
+  <distributionManagement>

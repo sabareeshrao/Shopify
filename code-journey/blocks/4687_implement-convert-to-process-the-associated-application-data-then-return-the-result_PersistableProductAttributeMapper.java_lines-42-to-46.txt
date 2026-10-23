@@ -1,0 +1,5 @@
+	@Override
+	public ProductAttribute convert(PersistableProductAttribute source, MerchantStore store, Language language) {
+		ProductAttribute attribute = new ProductAttribute();
+		return merge(source,attribute,store,language);
+	}

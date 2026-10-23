@@ -1,0 +1,17 @@
+		
+		ByteArrayOutputStream os = file.getFile();
+		InputStream is = new ByteArrayInputStream(os.toByteArray());
+		
+		//remove file
+		contentFileManager.removeFile(merchantStoreCode, fileContentType, originalName, path);
+		
+		//recreate file
+		InputContentFile inputFile = new InputContentFile();
+		inputFile.setFileContentType(fileContentType);
+		inputFile.setFileName(newName);
+		inputFile.setMimeType(file.getMimeType());
+		inputFile.setFile(is);
+		
+		contentFileManager.addFile(merchantStoreCode, path, inputFile);
+	
+	}

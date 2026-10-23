@@ -1,0 +1,8 @@
+		<!--java version -->
+		<java.version>11</java.version>
+
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<shopizer.search.version>2.11.1</shopizer.search.version>
+		<shopizer-canadapost.version>2.15.0</shopizer-canadapost.version>

@@ -1,0 +1,8 @@
+  public BigDecimal getWidth() {
+    return width;
+  }
+  public void setWidth(BigDecimal width) {
+    this.width = width;
+  }
+  public DimensionUnitOfMeasure getDimensionUnitOfMeasure() {
+    return dimensionUnitOfMeasure;

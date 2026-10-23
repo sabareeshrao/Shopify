@@ -1,0 +1,8 @@
+menu.myprofile=Mon profile
+menu.change-password=Changement de mot de passe
+menu.create-user=Créer un utilisateur
+menu.create-store=Créer une boutique
+menu.store-list=Liste des boutiques
+menu.security=Securité
+menu.security-permissions=Permissions
+menu.security-groups=Groupes

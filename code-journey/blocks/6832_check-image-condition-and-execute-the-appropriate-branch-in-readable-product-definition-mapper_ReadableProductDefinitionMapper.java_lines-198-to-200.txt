@@ -1,0 +1,3 @@
+		if(image.getImageType()==1 && image.getProductImageUrl()!=null) {//video
+			prdImage.setVideoUrl(image.getProductImageUrl());
+		}

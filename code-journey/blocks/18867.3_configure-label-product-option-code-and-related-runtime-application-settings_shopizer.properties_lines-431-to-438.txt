@@ -1,0 +1,8 @@
+label.product.option.code=Option code
+label.product.option.codehelp=Option code is required for querying products by attributes
+
+#options values
+label.product.productoptionsvalues.title=Product option values
+label.product.productoptionsvalues.list=Product options values list
+label.product.productoptiosvalue.title=Product option value
+label.product.productoptionvalue.edit.title=Edit product option value

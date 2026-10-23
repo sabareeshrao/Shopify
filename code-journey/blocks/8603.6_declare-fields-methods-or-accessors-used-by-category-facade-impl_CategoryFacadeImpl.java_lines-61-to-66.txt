@@ -1,0 +1,6 @@
+	@Inject
+	private ReadableCategoryMapper readableCategoryMapper;
+
+	@Inject
+	private ProductAttributeService productAttributeService;
+

@@ -1,0 +1,3 @@
+	public void setRegions(List<CustomShippingQuotesRegion> regions) {
+		this.regions = regions;
+	}

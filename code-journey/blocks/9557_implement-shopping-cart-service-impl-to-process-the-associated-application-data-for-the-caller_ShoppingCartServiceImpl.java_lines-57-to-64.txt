@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShoppingCartServiceImpl.class);
+
+	@Inject
+	public ShoppingCartServiceImpl(ShoppingCartRepository shoppingCartRepository) {
+		super(shoppingCartRepository);
+		this.shoppingCartRepository = shoppingCartRepository;
+
+	}

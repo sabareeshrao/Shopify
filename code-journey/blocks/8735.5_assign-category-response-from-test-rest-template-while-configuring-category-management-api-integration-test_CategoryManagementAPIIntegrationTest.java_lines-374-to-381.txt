@@ -1,0 +1,8 @@
+      @SuppressWarnings("rawtypes")
+      ResponseEntity categoryResponse = testRestTemplate.postForEntity("/api/v1/private/category", entity, PersistableCategory.class);
+      assertThat(categoryResponse.getStatusCode(), is(CREATED));
+      final PersistableCategory persistable = (PersistableCategory) categoryResponse.getBody();
+      
+      Long id = persistable.getId();
+      
+      //create first item

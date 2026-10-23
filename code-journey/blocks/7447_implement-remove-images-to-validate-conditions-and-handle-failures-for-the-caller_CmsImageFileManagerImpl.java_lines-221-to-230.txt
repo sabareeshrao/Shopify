@@ -1,0 +1,10 @@
+
+
+
+  @SuppressWarnings("unchecked")
+  @Override
+  public void removeImages(final String merchantStoreCode) throws ServiceException {
+    if (cacheManager.getTreeCache() == null) {
+      throw new ServiceException(
+          "CmsImageFileManagerInfinispan has a null cacheManager.getTreeCache()");
+    }

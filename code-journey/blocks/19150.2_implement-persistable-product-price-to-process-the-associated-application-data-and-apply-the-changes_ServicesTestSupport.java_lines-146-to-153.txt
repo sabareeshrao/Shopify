@@ -1,0 +1,8 @@
+		final PersistableProductPrice productPrice = new PersistableProductPrice();
+		productPrice.setDefaultPrice(true);
+
+		productPrice.setPrice(new BigDecimal(250));
+		productPrice.setDiscountedPrice(new BigDecimal(125));
+
+		final List<PersistableProductPrice> productPriceList = new ArrayList<>();
+		productPriceList.add(productPrice);

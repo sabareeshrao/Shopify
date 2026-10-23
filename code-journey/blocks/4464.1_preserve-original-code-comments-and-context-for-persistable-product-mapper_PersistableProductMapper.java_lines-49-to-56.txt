@@ -1,0 +1,8 @@
+
+/**
+ * Transforms a fully configured PersistableProduct
+ * to a Product with inventory and Variants if any
+ * @author carlsamson
+ *
+ */
+

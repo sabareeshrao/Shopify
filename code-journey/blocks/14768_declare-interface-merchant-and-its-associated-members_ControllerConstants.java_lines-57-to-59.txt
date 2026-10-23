@@ -1,0 +1,3 @@
+        interface Merchant{
+            final static String contactUs="contactus";
+        }

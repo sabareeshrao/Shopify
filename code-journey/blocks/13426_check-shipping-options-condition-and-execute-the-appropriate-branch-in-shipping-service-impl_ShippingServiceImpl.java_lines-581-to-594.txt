@@ -1,0 +1,14 @@
+			
+			
+			shippingQuote.setShippingModuleCode(moduleName);	
+			
+			//filter shipping options
+			ShippingOptionPriceType shippingOptionPriceType = shippingConfiguration.getShippingOptionPriceType();
+			ShippingOption selectedOption = null;
+			
+			if(shippingOptions!=null) {
+				
+				for(ShippingOption option : shippingOptions) {
+					if(selectedOption==null) {
+						selectedOption = option;
+					}

@@ -1,0 +1,8 @@
+					billing.setCountry(billingCountry);
+				}
+				
+				if(billingCountry!=null && !StringUtils.isBlank(sourceBilling.getZone())) {
+					Zone zone = zoneService.getByCode(sourceBilling.getZone());
+					if(zone==null) {
+						throw new ConversionException("Unsuported zone code " + sourceBilling.getZone());
+					}

@@ -1,0 +1,5 @@
+	public void putInCache(Object object, String keyName) throws Exception {
+
+		cache.put(keyName, object);
+		
+	}

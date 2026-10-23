@@ -1,0 +1,8 @@
+			
+			
+		@SuppressWarnings("rawtypes")
+		Collection<TaxItem> values = taxItemsMap.values();
+		
+		
+		@SuppressWarnings("unchecked")
+		List<TaxItem> list = new ArrayList<TaxItem>(values);

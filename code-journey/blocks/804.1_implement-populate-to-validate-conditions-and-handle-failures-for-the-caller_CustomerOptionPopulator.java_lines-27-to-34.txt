@@ -1,0 +1,8 @@
+	@Override
+	public CustomerOption populate(
+			com.salesmanager.core.model.customer.attribute.CustomerOption source,
+			CustomerOption target, MerchantStore store, Language language) throws ConversionException {
+		
+		
+		CustomerOption customerOption = target;
+		if(customerOption==null) {

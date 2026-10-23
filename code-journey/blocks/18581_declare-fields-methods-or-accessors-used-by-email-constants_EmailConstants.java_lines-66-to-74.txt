@@ -1,0 +1,9 @@
+	public static final String EMAIL_CUSTOMER_CONTACT ="EMAIL_CUSTOMER_CONTACT";
+	public static final String EMAIL_CONTACT_NAME_LABEL ="EMAIL_CONTACT_NAME_LABEL";
+	public static final String EMAIL_CONTACT_NAME ="EMAIL_CONTACT_NAME";
+	public static final String EMAIL_CONTACT_EMAIL_LABEL ="EMAIL_CONTACT_EMAIL_LABEL";
+	public static final String EMAIL_CONTACT_EMAIL ="EMAIL_CONTACT_EMAIL";
+	public static final String EMAIL_CONTACT_CONTENT ="EMAIL_CONTACT_CONTENT";
+	
+	
+	

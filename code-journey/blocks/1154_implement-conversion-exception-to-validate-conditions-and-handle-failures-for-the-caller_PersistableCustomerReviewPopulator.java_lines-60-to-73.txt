@@ -1,0 +1,14 @@
+			
+			
+			Customer reviewer = customerService.getById(source.getCustomerId());
+			Customer reviewed = customerService.getById(source.getReviewedCustomer());
+			
+			target.setReviewRating(source.getRating());
+			
+			target.setCustomer(reviewer);
+			target.setReviewedCustomer(reviewed);
+			
+			Language lang = languageService.getByCode(language.getCode());
+			if(lang ==null) {
+				throw new ConversionException("Invalid language code, use iso codes (en, fr ...)");
+			}

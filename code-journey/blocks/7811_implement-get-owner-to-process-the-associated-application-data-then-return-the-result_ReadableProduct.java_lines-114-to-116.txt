@@ -1,0 +1,3 @@
+	public RentalOwner getOwner() {
+		return owner;
+	}

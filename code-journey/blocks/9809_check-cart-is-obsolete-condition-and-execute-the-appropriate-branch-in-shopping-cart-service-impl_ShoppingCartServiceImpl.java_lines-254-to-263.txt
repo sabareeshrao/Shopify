@@ -1,0 +1,10 @@
+				}
+
+				Set<ShoppingCartItem> refreshedItems = new HashSet<>(items);
+
+				shoppingCart.setLineItems(refreshedItems);
+				update(shoppingCart);
+
+				if (cartIsObsolete) {
+					shoppingCart.setObsolete(true);
+				}

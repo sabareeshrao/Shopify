@@ -1,0 +1,12 @@
+  @PostMapping(value = "/private/catalog/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  @ApiOperation(httpMethod = "POST", value = "Add catalog entry to catalog", notes = "",
+      response = ReadableCatalogCategoryEntry.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")})
+  public ReadableCatalogCategoryEntry addCatalogEntry(
+      @PathVariable Long id,
+	  @RequestBody @Valid PersistableCatalogCategoryEntry catalogEntry,
+      @ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+

@@ -1,0 +1,8 @@
+public class Category extends SalesManagerEntity<Long, Category> implements Auditable {
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @Column(name = "CATEGORY_ID", unique=true, nullable=false)
+    @TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "CATEGORY_SEQ_NEXT_VAL")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+    private Long id;

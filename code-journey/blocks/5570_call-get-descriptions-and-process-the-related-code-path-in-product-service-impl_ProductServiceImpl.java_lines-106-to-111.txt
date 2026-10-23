@@ -1,0 +1,6 @@
+
+		product.getDescriptions().add(description);
+		description.setProduct(product);
+		update(product);
+
+	}

@@ -1,0 +1,26 @@
+
+			// for each reference set Option
+			Iterator<Entry<String, ProductOption>> it = references.entrySet().iterator();
+			while (it.hasNext()) {
+				@SuppressWarnings("rawtypes")
+				Map.Entry pair = (Map.Entry) it.next();
+				ProductOption option = (ProductOption) pair.getValue();
+				List<com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue> values = rawFacet.get(option.getCode());
+
+				ReadableProductVariant productVariant = new ReadableProductVariant();
+				Optional<ProductOptionDescription>  optionDescription = option.getDescriptions().stream().filter(o -> o.getLanguage().getId() == language.getId()).findFirst();
+				if(optionDescription.isPresent()) {
+					productVariant.setName(optionDescription.get().getName());
+					productVariant.setId(optionDescription.get().getId());
+					productVariant.setCode(optionDescription.get().getProductOption().getCode());
+					List<ReadableProductVariantValue> optionValues = new ArrayList<ReadableProductVariantValue>();
+					for (com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue value : values) {
+						ReadableProductVariantValue v = new ReadableProductVariantValue();
+						v.setCode(value.getCode());
+						v.setName(value.getName());
+						v.setDescription(value.getName());
+						v.setOption(option.getId());
+						v.setValue(value.getId());
+						v.setOrder(option.getProductOptionSortOrder());
+						optionValues.add(v);
+					}

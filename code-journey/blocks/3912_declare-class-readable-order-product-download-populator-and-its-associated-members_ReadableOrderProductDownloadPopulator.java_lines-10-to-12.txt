@@ -1,0 +1,3 @@
+public class ReadableOrderProductDownloadPopulator extends
+		AbstractDataPopulator<OrderProductDownload, ReadableOrderProductDownload> {
+

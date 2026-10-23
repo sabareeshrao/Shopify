@@ -1,0 +1,6 @@
+		}
+		
+		
+		if(!StringUtils.isBlank(source.getStorestateprovince())) {
+			address.setStateProvince(source.getStorestateprovince());
+		}

@@ -1,0 +1,4 @@
+				attributeName.append("[");
+			} else {
+				attributeName.append(", ");
+			}

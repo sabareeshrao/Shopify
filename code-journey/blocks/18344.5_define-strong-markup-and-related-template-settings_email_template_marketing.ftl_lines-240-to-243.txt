@@ -1,0 +1,4 @@
+			color: #000000;
+			font-family: sans-serif;" class="paragraph">
+				BAM Wood vous souhaite de <strong>Joyeuses fêtes</strong> à vous ainsi qu'a votre famille.
+		</td>

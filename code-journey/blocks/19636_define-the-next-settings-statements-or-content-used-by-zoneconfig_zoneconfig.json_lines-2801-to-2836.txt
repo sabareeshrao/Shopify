@@ -1,0 +1,36 @@
+			"zoneName": "Zaragoza",
+			"countryCode": "ES"
+		},
+		{
+			"zoneCode": "ACT",
+			"zoneName": "Australian Capital Territory",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "NSW",
+			"zoneName": "New South Wales",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "NTAU",
+			"zoneName": "Northern Territory",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "QLD",
+			"zoneName": "Queensland",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "SA",
+			"zoneName": "South Australia",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "TAS",
+			"zoneName": "Tasmania",
+			"countryCode": "AU"
+		},
+		{
+			"zoneCode": "VIC",
+			"zoneName": "Victoria",

@@ -1,0 +1,4 @@
+      
+      PersistableProduct product1 = super.product("PRODUCT1");
+      product1.getCategories().add(cat);
+      

@@ -1,0 +1,8 @@
+		
+		
+		/**
+		 * Confirmation may be formatted
+		 */
+		orderConfirmation.setId(order.getId());
+
+		

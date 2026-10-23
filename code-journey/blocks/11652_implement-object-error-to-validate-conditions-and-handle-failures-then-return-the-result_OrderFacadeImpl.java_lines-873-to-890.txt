@@ -1,0 +1,18 @@
+
+			// pre-validate credit card
+			if (PaymentType.CREDITCARD.name().equals(paymentType)
+					&& "true".equals(coreConfiguration.getProperty("VALIDATE_CREDIT_CARD"))) {
+				String cco = order.getPayment().get("creditcard_card_holder");
+				String cvv = order.getPayment().get("creditcard_card_cvv");
+				String ccn = order.getPayment().get("creditcard_card_number");
+				String ccm = order.getPayment().get("creditcard_card_expirationmonth");
+				String ccd = order.getPayment().get("creditcard_card_expirationyear");
+
+				if (StringUtils.isBlank(cco) || StringUtils.isBlank(cvv) || StringUtils.isBlank(ccn)
+						|| StringUtils.isBlank(ccm) || StringUtils.isBlank(ccd)) {
+					ObjectError error = new ObjectError("creditcard",
+							messages.getMessage("messages.error.creditcard", locale));
+					bindingResult.addError(error);
+					messagesResult.put("creditcard", messages.getMessage("messages.error.creditcard", locale));
+					return;
+				}

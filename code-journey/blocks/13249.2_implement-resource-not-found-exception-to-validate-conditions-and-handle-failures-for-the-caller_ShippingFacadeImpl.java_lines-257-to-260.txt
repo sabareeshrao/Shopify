@@ -1,0 +1,4 @@
+		
+		if(p == null) {
+			throw new ResourceNotFoundException("Package with unique code [" + code + "] not found");
+		}

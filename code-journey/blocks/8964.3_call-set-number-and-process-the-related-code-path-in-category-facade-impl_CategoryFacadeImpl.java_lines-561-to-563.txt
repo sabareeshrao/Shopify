@@ -1,0 +1,3 @@
+			readableList.setNumber(readableCategories.size());
+			readableList.setRecordsTotal(readableCategories.size());
+

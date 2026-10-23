@@ -1,0 +1,4 @@
+
+			if (newItems.isEmpty()) {
+				newItems = null;
+			}

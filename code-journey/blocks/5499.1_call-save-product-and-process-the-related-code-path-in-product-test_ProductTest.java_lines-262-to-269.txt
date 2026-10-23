@@ -1,0 +1,8 @@
+	    
+	    /**
+	     * Create product
+	     */
+	    productService.saveProduct(product);
+	    
+	    
+	    /**

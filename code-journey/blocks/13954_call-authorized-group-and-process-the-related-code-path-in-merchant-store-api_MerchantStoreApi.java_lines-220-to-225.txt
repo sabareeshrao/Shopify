@@ -1,0 +1,6 @@
+		
+		userFacade.authorizedGroup(authenticatedUser, Stream.of("SUPERADMIN", "ADMIN_RETAILER").collect(Collectors.toList()));
+
+		
+		storeFacade.create(store);
+	}

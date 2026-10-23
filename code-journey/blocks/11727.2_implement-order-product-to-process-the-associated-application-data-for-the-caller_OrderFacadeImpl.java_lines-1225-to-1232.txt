@@ -1,0 +1,8 @@
+			orderProductPopulator.setDigitalProductService(digitalProductService);
+			orderProductPopulator.setProductAttributeService(productAttributeService);
+			orderProductPopulator.setProductService(productService);
+
+			for (ShoppingCartItem item : shoppingCartItems) {
+				OrderProduct orderProduct = new OrderProduct();
+				orderProduct = orderProductPopulator.populate(item, orderProduct, store, language);
+				orderProduct.setOrder(modelOrder);

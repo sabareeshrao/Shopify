@@ -1,0 +1,8 @@
+
+		finalPrice.setProductPrice(price);
+		finalPrice.setFinalPrice(fPrice);
+		finalPrice.setOriginalPrice(oPrice);
+
+		if (price.isDefaultPrice()) {
+			finalPrice.setDefaultPrice(true);
+		}

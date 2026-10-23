@@ -1,0 +1,12 @@
+
+      List<ReadableProduct> relatedItems =
+          productFacade.relatedItems(merchantStore, product, language);
+
+      return relatedItems;
+
+    } catch (Exception e) {
+      LOGGER.error("Error while getting product reviews", e);
+      try {
+        response.sendError(503, "Error while getting product reviews" + e.getMessage());
+      } catch (Exception ignore) {
+      }

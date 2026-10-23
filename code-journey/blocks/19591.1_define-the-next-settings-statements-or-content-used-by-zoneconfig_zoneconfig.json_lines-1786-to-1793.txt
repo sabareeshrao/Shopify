@@ -1,0 +1,8 @@
+	{
+		"zoneCode": "Palencia",
+		"zoneName": "Palencia",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Pontevedra",
+		"zoneName": "Pontevedra",

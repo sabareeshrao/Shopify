@@ -1,0 +1,8 @@
+			}
+		}
+		destination.setId(source.getId());
+		destination.setAvailable(source.isAvailable());
+		destination.setProductShipeable(source.isProductShipeable());
+
+		destination.setPreOrder(source.isPreOrder());
+		destination.setRefSku(source.getRefSku());

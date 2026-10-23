@@ -1,0 +1,8 @@
+					detail.setShippingLength(l
+							.doubleValue());
+					detail.setShippingWeight(w.doubleValue());
+					detail.setShippingWidth(wd
+							.doubleValue());
+					detail.setShippingQuantity(1);//issue seperate shipping
+					String description = "item";
+					if(product.getDescriptions().size()>0) {

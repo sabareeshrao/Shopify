@@ -1,0 +1,8 @@
+            }
+        }
+
+        //tax
+        List<TaxItem> taxes = taxService.calculateTax(summary, customer, store, language);
+        if(taxes!=null && taxes.size()>0) {
+        	BigDecimal totalTaxes = new BigDecimal(0);
+        	totalTaxes.setScale(2, RoundingMode.HALF_UP);

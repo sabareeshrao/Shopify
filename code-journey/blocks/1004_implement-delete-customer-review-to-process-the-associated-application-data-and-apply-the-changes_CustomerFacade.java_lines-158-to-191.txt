@@ -1,0 +1,34 @@
+	 * @param language
+	 */
+	void deleteCustomerReview(Long customerId, Long reviewId, MerchantStore store, Language language);
+	
+	/**
+	 * Optin a customer to newsletter
+	 * @param optin
+	 * @param store
+	 * @throws Exception
+	 */
+	void optinCustomer(PersistableCustomerOptin optin, MerchantStore store);
+
+    ReadableCustomer getCustomerByNick(String userName, MerchantStore merchantStore, Language language);
+
+	void deleteByNick(String nick);
+	
+	void deleteById(Long id);
+
+	void delete(Customer entity);
+
+	ReadableCustomerList getListByStore(MerchantStore store, CustomerCriteria criteria, Language language);
+
+	PersistableCustomerReview createCustomerReview(
+      Long customerId,
+      PersistableCustomerReview review,
+      MerchantStore merchantStore,
+      Language language);
+
+	PersistableCustomerReview updateCustomerReview(Long id, Long reviewId, PersistableCustomerReview review, MerchantStore store, Language language);
+	
+	boolean passwordMatch(String rawPassword, Customer customer);
+	
+	void changePassword(Customer customer, String newPassword);
+}

@@ -1,0 +1,8 @@
+		
+	    Delivery delivery = new Delivery();
+	    delivery.setAddress("Shipping address");
+	    delivery.setCity("Boucherville");
+	    delivery.setCountry(country);
+	    delivery.setZone(zone);
+	    delivery.setPostalCode("J5C-6J4");
+	    

@@ -1,0 +1,8 @@
+	    productService.saveProduct(product);
+	    
+	    /** Create Shopping cart **/
+	    
+	    ShoppingCart shoppingCart = new ShoppingCart();
+	    shoppingCart.setMerchantStore(store);
+	    
+	    UUID cartCode = UUID.randomUUID();

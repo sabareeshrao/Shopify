@@ -1,0 +1,3 @@
+			if(!filePathUtils.isValidURL(baseUrl)) {
+				throw new ServiceRuntimeException("Request url [" + baseUrl + "] is invalid");
+			}

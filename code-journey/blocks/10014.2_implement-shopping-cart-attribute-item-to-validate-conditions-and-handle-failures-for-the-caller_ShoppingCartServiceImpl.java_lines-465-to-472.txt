@@ -1,0 +1,8 @@
+					if (CollectionUtils.isNotEmpty(cartAttributes)) {
+						for (ShoppingCartAttributeItem shoppingCartAttributeItem : cartAttributes) {
+							ProductAttribute productAttribute = productAttributeService
+									.getById(shoppingCartAttributeItem.getId());
+							if (productAttribute != null && productAttribute.getProduct().getId().longValue() == product
+									.getId().longValue()) {
+
+								ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,

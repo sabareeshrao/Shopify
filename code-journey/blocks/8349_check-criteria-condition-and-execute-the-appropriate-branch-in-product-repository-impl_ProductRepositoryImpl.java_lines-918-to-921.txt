@@ -1,0 +1,4 @@
+
+		if (criteria.getManufacturerId() != null) {
+			q.setParameter("manufid", criteria.getManufacturerId());
+		}

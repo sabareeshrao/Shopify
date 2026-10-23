@@ -1,0 +1,8 @@
+        //System.out.println(resp.getModuleName());
+        inputParameters.setModuleName(resp.getModuleName());
+
+		LOGGER.debug("Using shipping nodule " + inputParameters.getModuleName());
+		
+		if(!StringUtils.isBlank(inputParameters.getModuleName())) {
+			for(IntegrationModule toBeUsed : allModules) {
+				if(toBeUsed.getCode().equals(inputParameters.getModuleName())) {

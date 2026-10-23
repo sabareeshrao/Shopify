@@ -1,0 +1,49 @@
+	private void testAttributes(Product product) throws Exception {
+		
+		
+		/**
+		 * An attribute can be created dynamicaly but the attached Option and Option value need to exist
+		 */
+		
+		MerchantStore store = product.getMerchantStore();
+		
+		Language en = languageService.getByCode("en");
+		
+	    /**
+	     * Create size option
+	     */
+	    ProductOption color = new ProductOption();
+	    color.setMerchantStore(store);
+	    color.setCode("COLOR");
+	    color.setProductOptionType(ProductOptionType.Radio.name());
+	    
+	    ProductOptionDescription optionDescription = new ProductOptionDescription();
+	    optionDescription.setLanguage(en);
+	    optionDescription.setName("Color");
+	    optionDescription.setDescription("Color of an item");
+	    optionDescription.setProductOption(color);
+	    
+	    color.getDescriptions().add(optionDescription);
+	    
+	    //create option
+	    productOptionService.saveOrUpdate(color);
+	    
+	     /**
+         * Create size option
+         */
+        ProductOption size = new ProductOption();
+        size.setMerchantStore(store);
+        size.setCode("SIZE");
+        size.setProductOptionType(ProductOptionType.Radio.name());
+        
+        ProductOptionDescription sizeDescription = new ProductOptionDescription();
+        sizeDescription.setLanguage(en);
+        sizeDescription.setName("Size");
+        sizeDescription.setDescription("Size of an item");
+        sizeDescription.setProductOption(size);
+        
+        size.getDescriptions().add(sizeDescription);
+        
+        //create option
+        productOptionService.saveOrUpdate(size);
+	    

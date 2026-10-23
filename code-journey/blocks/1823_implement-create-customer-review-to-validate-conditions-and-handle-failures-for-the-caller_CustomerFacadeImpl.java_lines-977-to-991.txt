@@ -1,0 +1,15 @@
+  @Override
+  public PersistableCustomerReview createCustomerReview(
+      Long customerId,
+      PersistableCustomerReview review,
+      MerchantStore merchantStore,
+      Language language) {
+
+    // rating already exist
+    Optional<CustomerReview> customerReview =
+        Optional.ofNullable(
+            customerReviewService.getByReviewerAndReviewed(review.getCustomerId(), customerId));
+
+    if(customerReview.isPresent()) {
+      throw new ServiceRuntimeException("A review already exist for this customer and product");
+    }

@@ -1,0 +1,4 @@
+
+        if (entry.getCatalog().getId().longValue() != catalogId.longValue()) {
+            throw new ResourceNotFoundException("catalog entry [" + catalogEntryId + "] not found");
+        }

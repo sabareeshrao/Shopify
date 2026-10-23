@@ -1,0 +1,28 @@
+
+module.shipping.usps.package.01=Variable
+module.shipping.usps.package.02=Flat Rate Box
+module.shipping.usps.package.03=Flat Rate Envelope
+module.shipping.usps.package.04=Rectangular
+module.shipping.usps.package.05=Non Rectangular
+module.shipping.usps.package.06=LG Flat Rate Box
+
+module.shipping.usps.package.07=Envelope
+module.shipping.usps.package.08=Package
+
+module.shipping.usps.method.01=First-Class Mail
+module.shipping.usps.method.02=Priority Mail
+module.shipping.usps.method.03=Express Mail
+module.shipping.usps.method.04=Express SH
+module.shipping.usps.method.05=Express HFP
+module.shipping.usps.method.06=BPM
+module.shipping.usps.method.07=Parcel Post
+
+#UPS
+module.shipping.ups.identifier=UPS access key
+module.shipping.ups.userid=User ID
+module.shipping.ups.password=Password
+module.shipping.ups.packages=Package type
+module.shipping.ups.shippingmethods=Select a shipping method
+module.shipping.ups.message.identifier=UPS account identifier required
+module.shipping.ups.message.packages=You must select one package type
+

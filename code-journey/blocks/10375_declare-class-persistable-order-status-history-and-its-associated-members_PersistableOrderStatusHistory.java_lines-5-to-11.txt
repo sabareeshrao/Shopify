@@ -1,0 +1,7 @@
+public class PersistableOrderStatusHistory extends OrderStatusHistory {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

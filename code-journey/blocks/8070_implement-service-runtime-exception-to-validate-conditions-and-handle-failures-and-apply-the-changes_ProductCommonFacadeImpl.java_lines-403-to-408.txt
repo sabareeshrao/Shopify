@@ -1,0 +1,6 @@
+
+		try {
+			productService.delete(p);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while deleting ptoduct with id [" + id + "]", e);
+		}

@@ -1,0 +1,4 @@
+			<organizationUrl>http://www.shopizer.com</organizationUrl>
+		</developer>
+	</developers>
+

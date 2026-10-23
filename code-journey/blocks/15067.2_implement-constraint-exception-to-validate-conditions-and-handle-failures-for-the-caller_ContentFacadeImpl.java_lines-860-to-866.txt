@@ -1,0 +1,7 @@
+			Content content = null;
+
+			content = contentService.getById(id, merchantStore);
+			if (content == null) {
+				throw new ConstraintException("Page with id [" + id + "] does not exist for store ["
+						+ merchantStore.getCode() + "]");
+			}

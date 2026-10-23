@@ -1,0 +1,8 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="LAST_MODIFIED")
+	private Date lastModified;
+	
+	//the customer object can be detached. An order can exist and the customer deleted
+	@Column (name ="CUSTOMER_ID")
+	private Long customerId;

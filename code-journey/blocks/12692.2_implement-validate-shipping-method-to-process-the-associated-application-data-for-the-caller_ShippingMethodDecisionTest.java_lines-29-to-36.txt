@@ -1,0 +1,8 @@
+	@Ignore
+	public void validateShippingMethod() throws Exception {
+		
+		ShippingQuote quote = new ShippingQuote();
+		PackageDetails pDetail = new PackageDetails();
+		pDetail.setShippingHeight(20);
+		pDetail.setShippingLength(10);
+		pDetail.setShippingWeight(70);

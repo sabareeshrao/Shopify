@@ -1,0 +1,8 @@
+	/**
+	 *
+	 * @param userShoppingModel
+	 * @param sessionCart
+	 * @param store
+	 * @return {@link ShoppingCart} merged Shopping Cart
+	 * @throws Exception
+	 */

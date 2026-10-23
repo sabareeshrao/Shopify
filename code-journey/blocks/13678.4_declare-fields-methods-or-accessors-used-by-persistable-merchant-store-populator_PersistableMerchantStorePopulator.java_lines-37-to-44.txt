@@ -1,0 +1,8 @@
+	private ZoneService zoneService;
+	@Inject
+	private LanguageService languageService;
+	@Inject
+	private CurrencyService currencyService;
+	@Inject
+	private MerchantStoreService merchantStoreService;
+	

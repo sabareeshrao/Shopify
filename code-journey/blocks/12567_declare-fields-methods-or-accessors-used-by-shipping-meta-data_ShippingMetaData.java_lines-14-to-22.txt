@@ -1,0 +1,9 @@
+	private List<String> modules;
+	private List<String> preProcessors;
+	private List<String> postProcessors;
+	private List<Country> shipToCountry;
+	private boolean useDistanceModule;
+	private boolean useAddressAutoComplete;
+	
+	
+	

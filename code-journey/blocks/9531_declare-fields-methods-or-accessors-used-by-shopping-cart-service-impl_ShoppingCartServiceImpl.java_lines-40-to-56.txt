@@ -1,0 +1,17 @@
+	private ShoppingCartRepository shoppingCartRepository;
+
+	@Inject
+	private ProductService productService;
+
+	@Inject
+	private ShoppingCartItemRepository shoppingCartItemRepository;
+
+	@Inject
+	private ShoppingCartAttributeRepository shoppingCartAttributeItemRepository;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject
+	private ProductAttributeService productAttributeService;
+

@@ -1,0 +1,3 @@
+  public CoreConfiguration getConfiguration() {
+    return configuration;
+  }

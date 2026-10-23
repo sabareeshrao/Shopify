@@ -1,0 +1,10 @@
+	
+	/**
+	 * Returns Category with childs and descriptions
+	 * @param category
+	 * @return
+	 */
+	Category findById(Long category);
+	
+	int count(MerchantStore store);
+

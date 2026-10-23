@@ -1,0 +1,8 @@
+
+        final byte[] is = IOUtils.toByteArray( new FileInputStream( file1 ) );
+        final ByteArrayInputStream inputStream = new ByteArrayInputStream( is );
+        final InputContentFile cmsContentImage = new InputContentFile();
+        cmsContentImage.setFileName( file1.getName() );
+        cmsContentImage.setFile( inputStream );
+        cmsContentImage.setFileContentType(FileContentType.IMAGE);
+        

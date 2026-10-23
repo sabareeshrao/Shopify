@@ -1,0 +1,16 @@
+
+	/**
+	 * Process order from api
+	 */
+	@Override
+	public Order processOrder(com.salesmanager.shop.model.order.v1.PersistableOrder order, Customer customer,
+			MerchantStore store, Language language, Locale locale) throws ServiceException {
+
+		Validate.notNull(order, "Order cannot be null");
+		Validate.notNull(customer, "Customer cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(language, "Language cannot be null");
+		Validate.notNull(locale, "Locale cannot be null");
+
+		try {
+

@@ -1,0 +1,3 @@
+	public Integer getProductQuantityOrderMin() {
+		return productQuantityOrderMin;
+	}

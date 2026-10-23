@@ -1,0 +1,8 @@
+	      }
+      } else {
+    	  
+      }*/
+
+      List<User> users = q.getResultList();
+      entityList.setList(users);
+

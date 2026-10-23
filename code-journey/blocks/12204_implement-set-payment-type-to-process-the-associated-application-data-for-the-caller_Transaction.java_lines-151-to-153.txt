@@ -1,0 +1,3 @@
+	public void setPaymentType(PaymentType paymentType) {
+		this.paymentType = paymentType;
+	}

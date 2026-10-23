@@ -1,0 +1,12 @@
+	private PaymentType paymentType;
+	private String paymentModule;
+	private String shippingModule;
+	private List<OrderStatus> previousOrderStatus;
+	private OrderStatus orderStatus;
+	private CreditCard creditCard;
+	private Date datePurchased;
+	private String currency;
+	private boolean customerAgreed;
+	private boolean confirmedAddress;
+	private String comments;
+	

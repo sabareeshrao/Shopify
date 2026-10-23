@@ -1,0 +1,6 @@
+					Date previousDate = previousRefund.getTransactionDate();
+					Date currentDate = transaction.getTransactionDate();
+					if(previousDate.before(currentDate)) {
+						finalTransactions.put(TransactionType.REFUND.name(),transaction);
+						continue;
+					}

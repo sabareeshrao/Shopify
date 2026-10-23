@@ -1,0 +1,8 @@
+
+	    /** CATALOG CREATION **/
+	    
+	    ProductType generalType = productTypeService.getProductType(ProductType.GENERAL_TYPE);
+
+	    /**
+	     * Create the category
+	     */

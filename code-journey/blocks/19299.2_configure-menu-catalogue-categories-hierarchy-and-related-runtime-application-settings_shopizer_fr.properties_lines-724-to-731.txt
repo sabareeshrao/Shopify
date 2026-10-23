@@ -1,0 +1,8 @@
+menu.catalogue-categories-hierarchy=Structure des catégories
+menu.catalogue-products-categories=Produits - Catégories
+menu.catalogue-options=Options
+menu.catalogue-products-images=Images du produit
+menu.catalogue-products-images-url=Url de l'image du produit
+menu.catalogue-options-create=Créer une option
+menu.catalogue-options-list=Liste des options
+menu.catalogue-optionsvalues-create=Créer une valeur d'option

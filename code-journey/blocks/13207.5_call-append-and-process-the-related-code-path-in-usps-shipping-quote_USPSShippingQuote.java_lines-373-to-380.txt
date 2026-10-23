@@ -1,0 +1,8 @@
+				xmldatabuffer.append("<Pounds>");
+				xmldatabuffer.append(pounds);
+				xmldatabuffer.append("</Pounds>");
+				xmldatabuffer.append("<Ounces>");
+				xmldatabuffer.append(ounces);
+				xmldatabuffer.append("</Ounces>");
+				xmldatabuffer.append("<MailType>");
+				xmldatabuffer.append(pack);

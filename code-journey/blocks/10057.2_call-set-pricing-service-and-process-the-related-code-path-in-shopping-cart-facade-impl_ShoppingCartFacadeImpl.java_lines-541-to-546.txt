@@ -1,0 +1,6 @@
+		shoppingCartDataPopulator.setPricingService(pricingService);
+		shoppingCartDataPopulator.setimageUtils(imageUtils);
+		// Language language = (Language) getKeyValue( Constants.LANGUAGE );
+		MerchantStore merchantStore = (MerchantStore) getKeyValue(Constants.MERCHANT_STORE);
+		return shoppingCartDataPopulator.populate(shoppingCartModel, merchantStore, language);
+	}

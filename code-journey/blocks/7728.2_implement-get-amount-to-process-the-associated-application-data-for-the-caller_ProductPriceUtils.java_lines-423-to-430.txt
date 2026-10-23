@@ -1,0 +1,8 @@
+	 * @throws Exception
+	 */
+	// Utility
+	public BigDecimal getAmount(String amount) throws Exception {
+
+		// validations
+		/**
+		 * 1) remove decimal and thousand

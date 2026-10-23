@@ -1,0 +1,8 @@
+
+			Calendar c = Calendar.getInstance();
+			c.setTime(new Date());
+			c.add(Calendar.DATE, 3);
+			Date newDate = c.getTime();
+			
+			SimpleDateFormat format = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
+			String shipDate = format.format(newDate);

@@ -1,0 +1,7 @@
+	private MerchantStoreCriteria createMerchantStoreCriteria(HttpServletRequest request) {
+		try {
+			return (MerchantStoreCriteria)ServiceRequestCriteriaBuilderUtils.buildRequestCriterias(new MerchantStoreCriteria(), MAPPING_FIELDS,
+					request);
+		} catch (Exception e) {
+			throw new RestApiException("Error while binding request parameters");
+		}

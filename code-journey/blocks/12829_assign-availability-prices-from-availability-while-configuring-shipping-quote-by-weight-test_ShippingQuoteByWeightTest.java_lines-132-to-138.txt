@@ -1,0 +1,7 @@
+	    }
+	    
+	    //check availability
+	    Set<ProductPrice> availabilityPrices = availability.getPrices();
+	    for(ProductPrice ps : availabilityPrices) {
+	    	System.out.println(ps.getProductPriceAmount().toString());
+	    }

@@ -1,0 +1,8 @@
+	public void index(MerchantStore store, Product product) throws ServiceException {
+
+		Validate.notNull(product.getId(), "Product.id cannot be null");
+
+		if (configuration.getProperty(INDEX_PRODUCTS) == null
+				|| configuration.getProperty(INDEX_PRODUCTS).equals(Constants.FALSE) || searchModule == null) {
+			return;
+		}

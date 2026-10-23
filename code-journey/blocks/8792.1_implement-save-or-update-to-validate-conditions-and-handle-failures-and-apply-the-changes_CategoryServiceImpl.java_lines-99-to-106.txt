@@ -1,0 +1,8 @@
+	@Override
+	public void saveOrUpdate(Category category) throws ServiceException {
+
+		// save or update (persist and attach entities
+		if (category.getId() != null && category.getId() > 0) {
+			super.update(category);
+		} else {
+			this.create(category);

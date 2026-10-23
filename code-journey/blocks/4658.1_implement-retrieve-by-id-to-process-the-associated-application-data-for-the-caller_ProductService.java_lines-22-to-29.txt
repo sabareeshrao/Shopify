@@ -1,0 +1,8 @@
+public interface ProductService extends SalesManagerEntityService<Long, Product> {
+
+	Optional<Product> retrieveById(Long id, MerchantStore store);
+
+	void addProductDescription(Product product, ProductDescription description) throws ServiceException;
+
+	ProductDescription getProductDescription(Product product, Language language);
+

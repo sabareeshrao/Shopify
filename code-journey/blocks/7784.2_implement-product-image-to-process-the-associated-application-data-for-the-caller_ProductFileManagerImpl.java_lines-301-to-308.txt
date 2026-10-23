@@ -1,0 +1,8 @@
+     *
+     * this.removeImage.removeProductImage(large);
+     *
+     * ProductImage small = new ProductImage(); small.setProduct(productImage.getProduct());
+     * small.setProductImage("S" + productImage.getProductImage());
+     *
+     * this.removeImage.removeProductImage(small);
+     */

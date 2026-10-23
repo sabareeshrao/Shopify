@@ -1,0 +1,3 @@
+	public Set<ProductRelationship> getRelationships() {
+		return relationships;
+	}

@@ -1,0 +1,6 @@
+	public void setDescription(CategoryDescription description) {
+		this.description = description;
+	}
+	public CategoryDescription getDescription() {
+		return description;
+	}

@@ -1,0 +1,12 @@
+	private static SecretKey key = null;
+	
+	static {
+		
+		try {
+			
+			KeyGenerator keygen = KeyGenerator.getInstance("DES");
+		    key = keygen.generateKey();
+			
+		} catch (Exception e) {
+			LOGGER.error("Cannot generate key",e);
+		}

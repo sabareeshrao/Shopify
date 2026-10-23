@@ -1,0 +1,8 @@
+	List<Category> listByParent(Category category, Language language);
+
+	Category getOneByLanguage(long categoryId, Language language);
+
+	/**
+	 * Returns a list by category containing the category code and the number of products
+	 * 1->obj[0] = 1
+	 *    obj[1] = 150

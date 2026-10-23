@@ -1,0 +1,8 @@
+	@Override
+	public List<User> listUser() throws ServiceException {
+		try {
+			return userRepository.findAll();
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}
+	}

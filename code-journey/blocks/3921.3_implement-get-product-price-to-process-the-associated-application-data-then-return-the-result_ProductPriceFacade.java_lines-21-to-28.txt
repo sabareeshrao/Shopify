@@ -1,0 +1,8 @@
+	 * @param id
+	 * @param priceRequest
+	 * @param store
+	 * @param language
+	 * @return
+	 */
+	/**
+	 * ReadableProductPrice getProductPrice(Long id, ProductPriceRequest

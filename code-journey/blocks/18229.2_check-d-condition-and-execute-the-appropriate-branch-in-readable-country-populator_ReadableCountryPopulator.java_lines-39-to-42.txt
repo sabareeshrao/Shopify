@@ -1,0 +1,4 @@
+						if(d.getLanguage().getId() == language.getId()) {
+							readableZone.setName(d.getName());
+							continue;
+						}

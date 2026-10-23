@@ -1,0 +1,7 @@
+  private MerchantConfig getMerchantConfig(MerchantStore merchantStore) {
+    try{
+      return merchantConfigurationService.getMerchantConfig(merchantStore);
+    } catch (ServiceException e){
+      throw new ServiceRuntimeException(e);
+    }
+  }

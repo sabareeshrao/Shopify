@@ -1,0 +1,12 @@
+			
+			if(taxRates==null || taxRates.size()==0){
+				continue;
+			}
+			BigDecimal taxedItemValue = null;
+			BigDecimal totalTaxedItemValue = new BigDecimal(0);
+			totalTaxedItemValue.setScale(2, RoundingMode.HALF_UP);
+			BigDecimal beforeTaxeAmount = taxClassAmountMap.get(taxClassId);
+			for(TaxRate taxRate : taxRates) {
+				
+				double taxRateDouble = taxRate.getTaxRate().doubleValue();//5% ... 8% ...
+				

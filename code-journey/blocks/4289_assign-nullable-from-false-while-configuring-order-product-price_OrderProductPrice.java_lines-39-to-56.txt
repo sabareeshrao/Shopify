@@ -1,0 +1,18 @@
+
+	@Column(name = "PRODUCT_PRICE_CODE", nullable = false , length=64 )
+	private String productPriceCode;
+
+	@Column(name = "PRODUCT_PRICE", nullable = false)
+	private BigDecimal productPrice;
+	
+	@Column(name = "PRODUCT_PRICE_SPECIAL")
+	private BigDecimal productPriceSpecial;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="PRD_PRICE_SPECIAL_ST_DT" , length=0)
+	private Date productPriceSpecialStartDate;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="PRD_PRICE_SPECIAL_END_DT" , length=0)
+	private Date productPriceSpecialEndDate;
+

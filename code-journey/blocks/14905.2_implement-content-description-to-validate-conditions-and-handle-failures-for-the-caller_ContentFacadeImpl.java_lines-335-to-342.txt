@@ -1,0 +1,8 @@
+	 * content.getDescriptions()) { Language lang =
+	 * languageService.getByCode(objectContent.getLanguage());
+	 * ContentDescription contentDescription = new ContentDescription(); if
+	 * (contentModel != null) {
+	 * setContentDescriptionToContentModel(contentModel, contentDescription,
+	 * lang); } contentDescription.setLanguage(lang);
+	 * contentDescription.setMetatagDescription(objectContent.getMetaDescription
+	 * ()); contentDescription.setTitle(objectContent.getTitle());

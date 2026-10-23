@@ -1,0 +1,3 @@
+	public void setGender(CustomerGender gender) {
+		this.gender = gender;
+	}

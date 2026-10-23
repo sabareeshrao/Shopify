@@ -1,0 +1,8 @@
+
+	/**
+	 * Creates a new user
+	 *
+	 * @param store
+	 * @param user
+	 * @return
+	 */

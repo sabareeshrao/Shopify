@@ -1,0 +1,8 @@
+			
+				<!-- content -->
+				<div class="content">
+				<p>
+				<table>
+				<tr>
+					<td align="center">
+						<p>

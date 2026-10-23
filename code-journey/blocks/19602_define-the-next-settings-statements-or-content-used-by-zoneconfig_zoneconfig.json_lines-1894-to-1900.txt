@@ -1,0 +1,7 @@
+		"countryCode":"AU"
+	},
+	{
+		"zoneCode":"NSW",
+		"zoneName":"Nouvelle-Galles du Sud",
+		"countryCode":"AU"
+	}

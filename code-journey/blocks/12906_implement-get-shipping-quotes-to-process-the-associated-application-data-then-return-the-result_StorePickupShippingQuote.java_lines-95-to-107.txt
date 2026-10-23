@@ -1,0 +1,13 @@
+	@Override
+	public List<ShippingOption> getShippingQuotes(
+			ShippingQuote shippingQuote,
+			List<PackageDetails> packages, BigDecimal orderTotal,
+			Delivery delivery, ShippingOrigin origin, MerchantStore store,
+			IntegrationConfiguration configuration, IntegrationModule module,
+			ShippingConfiguration shippingConfiguration, Locale locale)
+			throws IntegrationException {
+
+		// TODO Auto-generated method stub
+		return null;
+
+	}

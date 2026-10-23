@@ -1,0 +1,5 @@
+        String resultMessage = exception.getLocalizedMessage() != null ? exception.getLocalizedMessage() : exception.getMessage();
+        Optional.ofNullable(resultMessage)
+                .ifPresent(errorEntity::setMessage);
+        return errorEntity;
+    }

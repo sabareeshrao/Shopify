@@ -1,0 +1,9 @@
+					if(modelCustomer.getMerchantStore().getId().intValue()!=store.getId().intValue()) {
+						throw new ConversionException("Customer id " + customer.getId() + " does not exists for store " + store.getCode());
+					}
+					target.setCustomerId(modelCustomer.getId());
+					target.setBilling(modelCustomer.getBilling());
+					target.setDelivery(modelCustomer.getDelivery());
+					target.setCustomerEmailAddress(source.getCustomer().getEmailAddress());
+
+

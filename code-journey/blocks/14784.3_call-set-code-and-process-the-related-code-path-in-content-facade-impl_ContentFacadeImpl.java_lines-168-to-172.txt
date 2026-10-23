@@ -1,0 +1,5 @@
+		page.setCode(content.getCode());
+		page.setPath(fileUtils.buildStaticFilePath(store.getCode(), contentDescription.getSeUrl()));
+		return page;
+
+	}

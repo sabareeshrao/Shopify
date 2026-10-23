@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductType get(MerchantStore store, Long id, Language language) {
+
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(id, "ProductType code cannot be empty");
+		try {
+
+			ProductType type = null;

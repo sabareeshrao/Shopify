@@ -1,0 +1,10 @@
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private OrderSummaryType orderSummaryType = OrderSummaryType.ORDERTOTAL;
+	private ShippingSummary shippingSummary;
+	private String promoCode;
+	private List<ShoppingCartItem> products = new ArrayList<ShoppingCartItem>();
+

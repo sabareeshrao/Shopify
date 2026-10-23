@@ -1,0 +1,8 @@
+	    try {
+	      // Execute the method.
+            HttpResponse httpResponse = client.execute(post);
+            int statusCode = httpResponse.getStatusLine().getStatusCode();
+
+	      if (statusCode != HttpStatus.SC_OK) {
+	    	throw new Exception("Got an invalid response from reCaptcha " + url + " [" + httpResponse.getStatusLine() + "]");
+	      }

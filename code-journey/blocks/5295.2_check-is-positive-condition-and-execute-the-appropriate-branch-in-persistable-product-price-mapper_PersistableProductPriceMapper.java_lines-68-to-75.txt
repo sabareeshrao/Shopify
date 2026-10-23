@@ -1,0 +1,8 @@
+			 */
+
+			ProductAvailability availability = null;
+
+			if (isPositive(source.getProductAvailabilityId())) {
+				Optional<ProductAvailability> avail = productAvailabilityService
+						.getById(source.getProductAvailabilityId(), store);
+				if (avail.isEmpty()) {

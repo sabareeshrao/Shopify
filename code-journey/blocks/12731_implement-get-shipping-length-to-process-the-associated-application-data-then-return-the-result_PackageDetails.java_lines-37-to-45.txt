@@ -1,0 +1,9 @@
+	public double getShippingLength() {
+		return shippingLength;
+	}
+	public void setShippingLength(double shippingLength) {
+		this.shippingLength = shippingLength;
+	}
+	public double getShippingHeight() {
+		return shippingHeight;
+	}

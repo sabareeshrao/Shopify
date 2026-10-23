@@ -1,0 +1,14 @@
+
+			modelOrder.setOrderProducts(orderProducts);
+
+			OrderTotalSummary summary = order.getOrderTotalSummary();
+			List<com.salesmanager.core.model.order.OrderTotal> totals = summary.getTotals();
+
+			// re-order totals
+			Collections.sort(totals, new Comparator<com.salesmanager.core.model.order.OrderTotal>() {
+				public int compare(com.salesmanager.core.model.order.OrderTotal x,
+						com.salesmanager.core.model.order.OrderTotal y) {
+					if (x.getSortOrder() == y.getSortOrder())
+						return 0;
+					return x.getSortOrder() < y.getSortOrder() ? -1 : 1;
+				}

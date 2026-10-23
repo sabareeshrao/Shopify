@@ -1,0 +1,8 @@
+label.customer.moredetails=Plus de détails !
+label.order.editcustomer=Éditer le client
+label.order.displayagreement=Afficher les termes et conditions dans la page d'achat
+label.order.notes=Notes
+label.order.notes.eg=Notes pour la commande ou pour la livraison
+
+label.customer.currentpassword=Mot de passe actuel
+label.customer.newpassword=Nouveau mot de passe

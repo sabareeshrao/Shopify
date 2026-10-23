@@ -1,0 +1,4 @@
+            return caculateOrder(orderSummary, customer, store, language);
+        } catch (Exception e) {
+            throw new ServiceException(e);
+        }

@@ -1,0 +1,3 @@
+  public void setMetaDetails(String metaDetails) {
+    this.metaDetails = metaDetails;
+  }

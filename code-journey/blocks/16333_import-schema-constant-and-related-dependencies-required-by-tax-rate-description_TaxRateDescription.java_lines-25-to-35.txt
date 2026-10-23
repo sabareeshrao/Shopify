@@ -1,0 +1,11 @@
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.common.description.Description;
+
+
+@Entity
+@Table(name = "TAX_RATE_DESCRIPTION"  ,uniqueConstraints={
+		@UniqueConstraint(columnNames={
+				"TAX_RATE_ID",
+				"LANGUAGE_ID"
+			})
+		}

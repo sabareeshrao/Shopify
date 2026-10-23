@@ -1,0 +1,5 @@
+@Override
+public ReadableProductOptionValue convert(ProductOptionValue source, MerchantStore store, Language language) {
+    ReadableProductOptionValue destination = new ReadableProductOptionValue();
+    return merge(source, destination, store, language);
+}

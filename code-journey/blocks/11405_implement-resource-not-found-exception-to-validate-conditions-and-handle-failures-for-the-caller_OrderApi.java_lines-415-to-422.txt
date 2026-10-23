@@ -1,0 +1,8 @@
+
+		ShoppingCart cart;
+		try {
+			cart = shoppingCartService.getByCode(code, merchantStore);
+
+			if (cart == null) {
+				throw new ResourceNotFoundException("Cart code " + code + " does not exist");
+			}

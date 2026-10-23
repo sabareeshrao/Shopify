@@ -1,0 +1,11 @@
+	private CountryRepository countryRepository;
+	
+	@Inject
+	private CacheUtils cache;
+
+	
+	@Inject
+	public CountryServiceImpl(CountryRepository countryRepository) {
+		super(countryRepository);
+		this.countryRepository = countryRepository;
+	}

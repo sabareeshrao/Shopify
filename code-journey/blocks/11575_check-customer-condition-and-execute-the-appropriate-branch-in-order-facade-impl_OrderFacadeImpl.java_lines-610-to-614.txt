@@ -1,0 +1,5 @@
+
+		if (customer != null) {
+			PersistableCustomer persistableCustomer = persistableCustomer(customer, store, language);
+			order.setCustomer(persistableCustomer);
+		}

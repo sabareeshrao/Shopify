@@ -1,0 +1,12 @@
+			
+		    if(productAvailability == null) { //create with default values
+		      productAvailability = new ProductAvailability(destination, store);
+		      destination.getAvailabilities().add(productAvailability);
+		      
+		      productAvailability.setProductQuantity(source.getQuantity());
+			  productAvailability.setProductQuantityOrderMin(1);
+			  productAvailability.setProductQuantityOrderMax(1);
+			  productAvailability.setRegion(Constants.ALL_REGIONS);
+			  productAvailability.setAvailable(Boolean.valueOf(destination.isAvailable()));
+			  productAvailability.setProductStatus(source.isCanBePurchased());
+		    }

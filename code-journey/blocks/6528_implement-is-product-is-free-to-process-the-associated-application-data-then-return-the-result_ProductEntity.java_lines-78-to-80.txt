@@ -1,0 +1,3 @@
+	public boolean isProductIsFree() {
+		return productIsFree;
+	}

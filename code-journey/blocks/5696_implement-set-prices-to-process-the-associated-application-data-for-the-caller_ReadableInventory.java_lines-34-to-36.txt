@@ -1,0 +1,3 @@
+	public void setPrices(List<ReadableProductPrice> prices) {
+		this.prices = prices;
+	}

@@ -1,0 +1,6 @@
+ */
+public class ConfigurationModulesLoader {
+	
+	@SuppressWarnings("unused")
+	private static final Logger LOGGER = LoggerFactory.getLogger(ConfigurationModulesLoader.class);
+	

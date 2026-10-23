@@ -1,0 +1,12 @@
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+
+/**
+ * Create audit section
+ * @author carlsamson
+ *
+ */
+@Aspect
+@Configuration
+public class PersistableAuditAspect {
+	

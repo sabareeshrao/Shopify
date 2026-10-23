@@ -1,0 +1,8 @@
+public interface CustomerOptionService extends SalesManagerEntityService<Long, CustomerOption> {
+
+	List<CustomerOption> listByStore(MerchantStore store, Language language)
+			throws ServiceException;
+
+
+
+	void saveOrUpdate(CustomerOption entity) throws ServiceException;

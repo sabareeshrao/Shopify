@@ -1,0 +1,8 @@
+		},
+		{
+			"zoneCode": "BRE",
+			"zoneName": "Bremen",
+			"countryCode": "DE"
+		},
+		{
+			"zoneCode": "HAM",

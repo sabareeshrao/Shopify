@@ -1,0 +1,7 @@
+	@Override
+	public Page<MerchantStore> listByGroup(Optional<String> storeName, String code, int page, int count) throws ServiceException {
+		
+		String name = null;
+		if (storeName != null && storeName.isPresent()) {
+			name = storeName.get();
+		}

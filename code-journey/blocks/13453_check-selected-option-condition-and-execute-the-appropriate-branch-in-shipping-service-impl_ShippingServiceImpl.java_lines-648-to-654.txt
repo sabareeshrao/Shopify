@@ -1,0 +1,7 @@
+				
+				shippingQuote.setSelectedShippingOption(selectedOption);
+				
+				if(selectedOption!=null && !shippingOptionPriceType.name().equals(ShippingOptionPriceType.ALL.name())) {
+					shippingOptions = new ArrayList<ShippingOption>();
+					shippingOptions.add(selectedOption);
+				}

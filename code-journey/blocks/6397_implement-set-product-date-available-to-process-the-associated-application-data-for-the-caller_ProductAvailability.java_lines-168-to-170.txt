@@ -1,0 +1,3 @@
+	public void setProductDateAvailable(Date productDateAvailable) {
+		this.productDateAvailable = CloneUtils.clone(productDateAvailable);
+	}

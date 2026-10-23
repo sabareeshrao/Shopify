@@ -1,0 +1,5 @@
+	@Override
+	public void add(CatalogCategoryEntry entry, Catalog catalog) {
+		entry.setCatalog(catalog);
+		catalogEntryRepository.save(entry);
+	}

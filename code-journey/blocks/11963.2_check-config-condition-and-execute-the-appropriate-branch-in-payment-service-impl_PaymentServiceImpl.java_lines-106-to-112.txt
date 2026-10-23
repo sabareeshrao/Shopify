@@ -1,0 +1,7 @@
+			IntegrationConfiguration config = modules.get(module);
+			if(config.isActive()) {
+				
+				IntegrationModule md = this.getPaymentMethodByCode(store, config.getModuleCode());
+				if(md==null) {
+					continue;
+				}

@@ -1,0 +1,8 @@
+ * application.
+ * @author Umesh A
+ *
+ */
+public interface ControllerConstants
+{
+
+    final static String REDIRECT="redirect:";

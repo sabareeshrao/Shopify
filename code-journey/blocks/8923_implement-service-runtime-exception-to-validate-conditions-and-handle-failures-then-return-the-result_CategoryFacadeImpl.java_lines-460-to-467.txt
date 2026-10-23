@@ -1,0 +1,8 @@
+			}
+
+
+			return variants;
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("An error occured while retrieving ProductAttributes", e);
+		}
+	}

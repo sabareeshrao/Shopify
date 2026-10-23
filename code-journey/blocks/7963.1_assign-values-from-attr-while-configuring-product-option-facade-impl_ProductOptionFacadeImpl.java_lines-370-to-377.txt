@@ -1,0 +1,8 @@
+
+
+			List<ReadableProductAttributeEntity> values = attr.getContent().stream()
+					.map(attribute -> readableProductAttributeMapper.convert(attribute, store, language))
+					.collect(Collectors.toList());
+
+			attrList.setAttributes(values);
+

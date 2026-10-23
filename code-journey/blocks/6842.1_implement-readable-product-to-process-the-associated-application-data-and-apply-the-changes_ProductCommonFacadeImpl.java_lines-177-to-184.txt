@@ -1,0 +1,8 @@
+
+		}
+
+		productService.update(persistable);
+
+		ReadableProduct readableProduct = new ReadableProduct();
+
+		ReadableProductPopulator populator = new ReadableProductPopulator();

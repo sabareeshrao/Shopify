@@ -1,0 +1,6 @@
+
+				readableUserList.setRecordsTotal(userList.getTotalElements());
+				readableUserList.setTotalPages(userList.getTotalPages());
+				readableUserList.setNumber(userList.getSize());
+				readableUserList.setRecordsFiltered(userList.getSize());
+			}

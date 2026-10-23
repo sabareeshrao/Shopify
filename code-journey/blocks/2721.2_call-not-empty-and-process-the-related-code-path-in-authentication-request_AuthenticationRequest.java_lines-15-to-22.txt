@@ -1,0 +1,8 @@
+	 * Username and password must be used when using normal system authentication
+	 * for a registered customer
+	 */
+	@NotEmpty(message="{NotEmpty.customer.userName}")
+    private String username;
+	@NotEmpty(message="{message.password.required}")
+    private String password;
+    

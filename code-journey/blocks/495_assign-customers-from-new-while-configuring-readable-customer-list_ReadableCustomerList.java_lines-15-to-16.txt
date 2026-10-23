@@ -1,0 +1,2 @@
+	private List<ReadableCustomer> customers = new ArrayList<ReadableCustomer>();
+

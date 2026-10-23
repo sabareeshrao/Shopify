@@ -1,0 +1,8 @@
+	    billing.setLastName("Samson");
+	    billing.setPostalCode("Billing postal code");
+	    billing.setState("Billing state");
+	    billing.setZone(zone);
+	    
+	    Delivery delivery = new Delivery();
+	    delivery.setAddress("Shipping address");
+	    delivery.setCountry(country);

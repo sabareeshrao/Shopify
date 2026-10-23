@@ -1,0 +1,17 @@
+
+
+			<!-- Payment dependencies -->
+
+			<!-- Paypal -->
+			<dependency>
+				<groupId>com.paypal.sdk</groupId>
+				<artifactId>merchantsdk</artifactId>
+				<version>2.6.109</version>
+			</dependency>
+
+			<!-- Stripe -->
+			<dependency>
+				<groupId>com.stripe</groupId>
+				<artifactId>stripe-java</artifactId>
+				<version>19.5.0</version>
+			</dependency>

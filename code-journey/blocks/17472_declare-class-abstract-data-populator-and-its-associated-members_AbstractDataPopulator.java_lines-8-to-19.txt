@@ -1,0 +1,12 @@
+import com.salesmanager.core.business.exception.ConversionException;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+
+
+/**
+ * @author Umesh A
+ *
+ */
+public abstract class AbstractDataPopulator<Source,Target> implements DataPopulator<Source, Target>
+{
+

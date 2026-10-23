@@ -1,0 +1,8 @@
+		class="com.salesmanager.core.business.utils.CoreConfiguration">
+		<beans:property name="properties" ref="shopizer-properties" />
+	</beans:bean>
+
+	<beans:bean id="secretKey" class="java.lang.String">
+		<beans:constructor-arg value="${secretKey}" />
+	</beans:bean>
+

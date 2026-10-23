@@ -1,0 +1,8 @@
+			
+			ProductReviewDescription description = new ProductReviewDescription();
+			description.setDescription(source.getDescription());
+			description.setLanguage(lang);
+			description.setName("-");
+			description.setProductReview(target);
+			
+			Set<ProductReviewDescription> descriptions = new HashSet<ProductReviewDescription>();

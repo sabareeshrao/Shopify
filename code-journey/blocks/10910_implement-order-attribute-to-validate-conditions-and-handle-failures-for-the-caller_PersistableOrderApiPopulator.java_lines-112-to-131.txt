@@ -1,0 +1,20 @@
+			}
+			
+			
+			target.setCustomerEmailAddress(customer.getEmailAddress());
+			
+			Delivery delivery = customer.getDelivery();
+			target.setDelivery(delivery);
+			
+			Billing billing = customer.getBilling();
+			target.setBilling(billing);
+			
+			if(source.getAttributes() != null && source.getAttributes().size() > 0) {
+				Set<OrderAttribute> attrs = new HashSet<OrderAttribute>();
+				for(com.salesmanager.shop.model.order.OrderAttribute attribute : source.getAttributes()) {
+					OrderAttribute attr = new OrderAttribute();
+					attr.setKey(attribute.getKey());
+					attr.setValue(attribute.getValue());
+					attr.setOrder(target);
+					attrs.add(attr);
+				}

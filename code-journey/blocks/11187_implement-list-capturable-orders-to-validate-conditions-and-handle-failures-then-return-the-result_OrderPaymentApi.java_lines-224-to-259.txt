@@ -1,0 +1,36 @@
+
+	/**
+	 * An order can be pre-authorized but un captured. This metho returns all
+	 * order subject to be capturable For a given time frame
+	 *
+	 * @param startDate
+	 * @param endDate
+	 * @param request
+	 * @param response
+	 * @return ReadableOrderList
+	 * @throws Exception
+	 */
+	@RequestMapping(value = { "/private/orders/payment/capturable" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableOrderList listCapturableOrders(
+			@RequestParam(value = "startDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
+			@RequestParam(value = "endDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletRequest request,
+			HttpServletResponse response) {
+
+		try {
+
+			// if startdate or enddate are null use default range (last 24
+			// hours) DD-1 to DD
+			Calendar cal = Calendar.getInstance();
+			Date sDate = null;
+
+			if (startDate != null) {
+				sDate = Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+			} else {
+				cal.add(Calendar.DATE, -1);
+				sDate = cal.getTime();
+			}

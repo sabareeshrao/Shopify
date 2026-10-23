@@ -1,0 +1,5 @@
+module.payment.paypal-express-checkout=PayPal express checkout
+module.payment.stripe=Stripe
+module.payment.stripe3=Stripe V3 (3DSecure support - requires Webhook)
+module.payment.braintree=Braintree
+

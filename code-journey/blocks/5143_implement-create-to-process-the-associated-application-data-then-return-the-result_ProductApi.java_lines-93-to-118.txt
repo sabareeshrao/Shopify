@@ -1,0 +1,26 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductApi.class);
+
+	/**
+	 * Create product
+	 * @param product
+	 * @param merchantStore
+	 * @param language
+	 * @return Entity
+	 */
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product", "/auth/products" }, // private
+																			// for
+			// adding
+			// products
+			method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody Entity create(@Valid @RequestBody PersistableProduct product,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+	
+		Long id = productCommonFacade.saveProduct(merchantStore, product, language);
+		Entity returnEntity = new Entity();
+		returnEntity.setId(id);
+		return returnEntity;
+
+	}

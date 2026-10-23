@@ -1,0 +1,22 @@
+	    
+	    /**
+	     * Create a complex product
+	     */
+	    Product product = new Product();
+	    product.setProductHeight(new BigDecimal(4));
+	    product.setProductLength(new BigDecimal(3));
+	    product.setProductWidth(new BigDecimal(1));
+	    product.setSku("TB12345");
+	    product.setManufacturer(addidas);
+	    product.setType(generalType);
+	    product.setMerchantStore(merchant);
+
+	    // Product description
+	    ProductDescription description = new ProductDescription();
+	    description.setName("Short sleeves shirt");
+	    description.setLanguage(en);
+	    description.setProduct(product);
+
+	    product.getDescriptions().add(description);
+	    product.getCategories().add(shirts);
+	    

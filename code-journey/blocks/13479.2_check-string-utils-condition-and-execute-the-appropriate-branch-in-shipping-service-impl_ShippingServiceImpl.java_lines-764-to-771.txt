@@ -1,0 +1,8 @@
+			String countries = configuration.getValue();
+			if(!StringUtils.isBlank(countries)) {
+
+				Object objRegions=JSONValue.parse(countries); 
+				JSONArray arrayRegions=(JSONArray)objRegions;
+				for (Object arrayRegion : arrayRegions) {
+					supportedCountries.add((String) arrayRegion);
+				}

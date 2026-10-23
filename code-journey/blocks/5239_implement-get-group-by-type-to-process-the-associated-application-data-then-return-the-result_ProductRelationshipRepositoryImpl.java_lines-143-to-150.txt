@@ -1,0 +1,8 @@
+  @Override
+  @SuppressWarnings("unchecked")
+  public List<ProductRelationship> getGroupByType(MerchantStore store, String type) {
+    return entityManager.createQuery(HQL_GET_PRODUCT_RELATIONSHIP_BY_CODE_AND_STORE_ID)
+        .setParameter("code", type)
+        .setParameter("storeId", store.getId())
+        .getResultList();
+  }

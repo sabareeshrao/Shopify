@@ -1,0 +1,3 @@
+	public void removeFromCache(String keyName) throws Exception {
+		cache.evict(keyName);
+	}

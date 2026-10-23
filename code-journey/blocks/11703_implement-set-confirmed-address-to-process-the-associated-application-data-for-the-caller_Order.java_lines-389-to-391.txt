@@ -1,0 +1,3 @@
+	public void setConfirmedAddress(Boolean confirmedAddress) {
+		this.confirmedAddress = confirmedAddress;
+	}

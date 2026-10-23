@@ -1,0 +1,5 @@
+
+		if (user != null) {
+			throw new OperationNotAllowedException(
+					"User [" + store.getEmail() + "] already exist and cannot be registered");
+		}

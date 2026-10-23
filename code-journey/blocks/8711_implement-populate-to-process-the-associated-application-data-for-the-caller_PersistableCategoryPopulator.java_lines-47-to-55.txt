@@ -1,0 +1,9 @@
+	@Override
+	public Category populate(PersistableCategory source, Category target,
+			MerchantStore store, Language language)
+			throws ConversionException {
+
+		try {
+
+		Validate.notNull(target, "Category target cannot be null");
+

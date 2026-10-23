@@ -1,0 +1,6 @@
+
+		List<ShoppingCartItem> items = new ArrayList<ShoppingCartItem>(shoppingCart.getLineItems());
+		order.setShoppingCartItems(items);
+
+		return;
+	}

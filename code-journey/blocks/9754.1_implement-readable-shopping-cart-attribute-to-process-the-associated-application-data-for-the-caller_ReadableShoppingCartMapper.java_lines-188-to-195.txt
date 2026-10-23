@@ -1,0 +1,8 @@
+
+							ReadableShoppingCartAttribute cartAttribute = new ReadableShoppingCartAttribute();
+
+							cartAttribute.setId(attribute.getId());
+
+							ProductOption option = productAttribute.getProductOption();
+							ProductOptionValue optionValue = productAttribute.getProductOptionValue();
+

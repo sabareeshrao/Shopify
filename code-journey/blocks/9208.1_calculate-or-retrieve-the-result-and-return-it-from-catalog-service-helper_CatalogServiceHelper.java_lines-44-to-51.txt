@@ -1,0 +1,8 @@
+
+	}
+
+	/**
+	 * Overwrites the availability in order to return 1 price / region
+	 *
+	 * @param product
+	 * @param locale

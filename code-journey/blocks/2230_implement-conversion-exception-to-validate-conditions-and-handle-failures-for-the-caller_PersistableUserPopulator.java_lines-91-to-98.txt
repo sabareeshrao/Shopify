@@ -1,0 +1,8 @@
+    try {
+      List<Group> groups = groupService.listGroupByNames(names);
+      for(Group g: groups) {
+        userGroups.add(g);
+      }
+    } catch (Exception e1) {
+      throw new ConversionException("Error while getting user groups",e1);
+    }

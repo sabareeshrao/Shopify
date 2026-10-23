@@ -1,0 +1,3 @@
+	private String paymentMethodType = null;//user selected payment type
+	private Map<String,String> payment;//user payment information
+	

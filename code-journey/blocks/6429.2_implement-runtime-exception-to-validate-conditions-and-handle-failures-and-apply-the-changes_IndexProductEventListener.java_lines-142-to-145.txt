@@ -1,0 +1,4 @@
+			searchService.deleteDocument(store, product);
+		} catch (ServiceException e) {
+			throw new RuntimeException(e);
+		}

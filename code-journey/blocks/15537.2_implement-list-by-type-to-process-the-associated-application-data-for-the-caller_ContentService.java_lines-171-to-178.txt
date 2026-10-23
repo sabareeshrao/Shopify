@@ -1,0 +1,8 @@
+	Page<Content> listByType(ContentType contentType, MerchantStore store, Language language, int page, int count)
+			throws ServiceException;
+
+	List<ContentDescription> listNameByType(List<ContentType> contentType,
+			MerchantStore store, Language language) throws ServiceException;
+
+	Content getByLanguage(Long id, Language language) throws ServiceException;
+

@@ -1,0 +1,15 @@
+
+		// TODO
+		// RENTAL add filter by owner
+		// REPOSITORY to use the new filters
+
+		try {
+			return productFacade.getProductListsByCriterias(merchantStore, language, criteria);
+
+		} catch (Exception e) {
+
+			LOGGER.error("Error while filtering products product", e);
+			try {
+				response.sendError(503, "Error while filtering products " + e.getMessage());
+			} catch (Exception ignore) {
+			}

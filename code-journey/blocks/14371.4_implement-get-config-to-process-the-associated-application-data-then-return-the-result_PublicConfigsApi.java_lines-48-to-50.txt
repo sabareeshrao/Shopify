@@ -1,0 +1,3 @@
+  public Configs getConfig(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+    return configurationFacade.getMerchantConfig(merchantStore, language);
+  }

@@ -1,0 +1,8 @@
+label.customer.email=Customer email address
+label.customer.streetaddress=Customer street address
+label.customer.suburb=Customer suburb
+label.customer.postalcode=Customer postal code
+label.customer.telephone=Customer phone
+label.customer.city=Customer city
+label.customer.zone=Customer state / province
+label.customer.country=Customer country

@@ -1,0 +1,8 @@
+     * @param language
+     * @return {@link OrderTotalSummary}
+     * @throws ServiceException
+     */
+    OrderTotalSummary calculateShoppingCartTotal(final ShoppingCart shoppingCart,final MerchantStore store, final Language language) throws ServiceException;
+
+    ByteArrayOutputStream generateInvoice(MerchantStore store, Order order,
+                                          Language language) throws ServiceException;

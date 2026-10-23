@@ -1,0 +1,3 @@
+	public String getMessage(String key, Locale locale) {
+		return applicationContext.getMessage(key, null, locale);
+	}

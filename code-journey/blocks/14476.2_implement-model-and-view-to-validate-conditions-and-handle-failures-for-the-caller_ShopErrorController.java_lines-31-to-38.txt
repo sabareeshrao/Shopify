@@ -1,0 +1,8 @@
+		LOGGER.error("Error page controller",ex);
+
+		ModelAndView model = null;
+		if(ex instanceof AccessDeniedException) {
+			
+			model = new ModelAndView("error/access_denied");
+			
+		} else {

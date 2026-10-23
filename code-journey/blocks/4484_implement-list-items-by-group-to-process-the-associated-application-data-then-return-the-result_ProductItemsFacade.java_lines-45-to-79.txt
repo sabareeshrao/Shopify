@@ -1,0 +1,35 @@
+	
+	/**
+	 * List products created in a group, for instance FEATURED group
+	 * @param group
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableProductList listItemsByGroup(String group, MerchantStore store, Language language) throws Exception;
+
+	/**
+	 * Add product to a group
+	 * @param product
+	 * @param group
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableProductList addItemToGroup(Product product, String group, MerchantStore store, Language language) ;
+	
+	/**
+	 * Removes a product from a group
+	 * @param product
+	 * @param group
+	 * @param store
+	 * @param language
+	 * @return
+	 * @throws Exception
+	 */
+	ReadableProductList removeItemFromGroup(Product product, String group, MerchantStore store, Language language) throws Exception;
+	
+	void deleteGroup(String group, MerchantStore store);
+	

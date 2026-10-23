@@ -1,0 +1,6 @@
+
+@Configuration
+@ConfigurationProperties(prefix = "search")
+@PropertySource("classpath:shopizer-core.properties")
+public class ApplicationSearchConfiguration {
+	

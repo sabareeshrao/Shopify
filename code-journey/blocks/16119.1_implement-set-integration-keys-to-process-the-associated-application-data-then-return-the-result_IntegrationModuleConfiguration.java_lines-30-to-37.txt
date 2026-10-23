@@ -1,0 +1,8 @@
+	public void setIntegrationKeys(Map<String, String> integrationKeys) {
+		this.integrationKeys = integrationKeys;
+	}
+	public Map<String, List<String>> getIntegrationOptions() {
+		return integrationOptions;
+	}
+	public void setIntegrationOptions(Map<String, List<String>> integrationOptions) {
+		this.integrationOptions = integrationOptions;

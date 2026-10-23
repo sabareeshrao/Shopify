@@ -1,0 +1,8 @@
+		ProductVariant variant = event.getVariant();// to be removed
+
+		/**
+		 * add new variant to be saved
+		 **/
+
+		List<ProductVariant> filteredVariants = product.getVariants().stream()
+				.filter(i -> variant.getId().longValue() != i.getId().longValue()).collect(Collectors.toList());

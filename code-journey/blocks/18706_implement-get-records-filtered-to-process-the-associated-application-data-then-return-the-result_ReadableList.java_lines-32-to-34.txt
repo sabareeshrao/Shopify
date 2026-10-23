@@ -1,0 +1,3 @@
+	public int getRecordsFiltered() {
+		return recordsFiltered;
+	}

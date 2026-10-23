@@ -1,0 +1,8 @@
+  @Override
+  public PersistableCustomerReview updateCustomerReview(Long id, Long reviewId, PersistableCustomerReview review,
+      MerchantStore store, Language language) {
+
+    CustomerReview customerReview = getCustomerReviewById(reviewId);
+
+    if(! customerReview.getReviewedCustomer().getId().equals(id)) {
+      throw new ResourceNotFoundException("Customer review with id " + reviewId + " does not exist for this customer");

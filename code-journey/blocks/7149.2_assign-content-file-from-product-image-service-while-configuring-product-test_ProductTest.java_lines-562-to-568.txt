@@ -1,0 +1,7 @@
+        Assert.assertNotNull(contentFile);
+
+   	 	//get physical original image
+        contentFile = productImageService.getProductImage(product.getMerchantStore().getCode(), product.getSku(), productImage.getProductImage(), ProductImageSize.LARGE);
+        
+        Assert.assertNotNull(contentFile);
+

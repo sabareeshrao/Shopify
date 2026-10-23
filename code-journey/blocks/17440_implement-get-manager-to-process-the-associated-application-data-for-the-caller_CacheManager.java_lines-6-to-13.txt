@@ -1,0 +1,8 @@
+public interface CacheManager extends CMSManager {
+
+  EmbeddedCacheManager getManager();
+
+  @SuppressWarnings("rawtypes")
+  TreeCache getTreeCache();
+
+}

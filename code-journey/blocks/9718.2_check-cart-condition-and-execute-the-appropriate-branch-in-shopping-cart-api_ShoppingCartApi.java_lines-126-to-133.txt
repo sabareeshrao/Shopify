@@ -1,0 +1,8 @@
+			@ApiIgnore Language language, 
+			HttpServletResponse response) {
+
+		try {
+			ReadableShoppingCart cart = shoppingCartFacade.modifyCart(code, promo, merchantStore, language);
+
+			if (cart == null) {
+				return new ResponseEntity<>(HttpStatus.NOT_FOUND);

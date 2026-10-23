@@ -1,0 +1,3 @@
+	public void setProductAttribute(ProductAttribute productAttribute) {
+		this.productAttribute = productAttribute;
+	}

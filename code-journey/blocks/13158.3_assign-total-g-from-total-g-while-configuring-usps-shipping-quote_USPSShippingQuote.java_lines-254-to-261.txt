@@ -1,0 +1,8 @@
+				totalG = totalG + girth;
+	
+				// need weight in pounds
+				double p = DataUtils.getWeight(detail.getShippingWeight(), store, MeasureUnit.LB.name());
+	
+				totalP = totalP + p;
+
+			}

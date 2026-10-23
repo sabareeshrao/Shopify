@@ -1,0 +1,13 @@
+
+	/**
+	 * Deletes a content from CMS
+	 *
+	 * @param name
+	 */
+	@Deprecated
+	@DeleteMapping(value = "/private/content/{id}")
+	@ApiOperation(httpMethod = "DELETE", value = "Deletes a content from CMS", notes = "Delete a content box or page", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT") })
+	public void deleteContent(Long id, @ApiIgnore MerchantStore merchantStore) {
+		contentFacade.delete(merchantStore, id);
+	}

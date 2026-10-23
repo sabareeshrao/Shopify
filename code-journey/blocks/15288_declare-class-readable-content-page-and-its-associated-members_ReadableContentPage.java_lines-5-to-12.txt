@@ -1,0 +1,8 @@
+public class ReadableContentPage extends ContentPage {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+

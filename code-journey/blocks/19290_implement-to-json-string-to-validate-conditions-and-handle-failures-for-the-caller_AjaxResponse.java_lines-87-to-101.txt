@@ -1,0 +1,15 @@
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public String toJSONString() {
+		StringBuilder returnString = new StringBuilder();
+		
+		returnString.append(getJsonInfo());
+
+		if(this.getData().size()>0) {
+			StringBuilder dataEntries = null;
+			int count = 0;
+			for(Map keyValue : this.getData()) {
+				if(dataEntries == null) {
+					dataEntries = new StringBuilder();
+				}

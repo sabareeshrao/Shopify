@@ -1,0 +1,8 @@
+*/target/*
+.idea/workspace.xml
+*.class
+/bin/
+/WebContent/
+sm-shop/SALESMANAGER.lock.db
+.DS_Store
+*/sm-shop/**

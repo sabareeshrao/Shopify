@@ -1,0 +1,5 @@
+        manufacturers = m.getContent();
+        readableList.setTotalPages(m.getTotalPages());
+        readableList.setRecordsTotal(m.getTotalElements());
+        readableList.setNumber(m.getNumber());
+      }

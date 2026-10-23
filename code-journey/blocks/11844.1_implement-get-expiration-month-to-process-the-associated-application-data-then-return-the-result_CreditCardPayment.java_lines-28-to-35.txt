@@ -1,0 +1,8 @@
+	public String getExpirationMonth() {
+		return expirationMonth;
+	}
+	public void setExpirationMonth(String expirationMonth) {
+		this.expirationMonth = expirationMonth;
+	}
+	public String getExpirationYear() {
+		return expirationYear;

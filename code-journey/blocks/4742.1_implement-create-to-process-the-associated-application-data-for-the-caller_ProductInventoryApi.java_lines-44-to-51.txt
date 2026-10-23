@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductInventoryApi.class);
+
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value = { "/private/product/{productId}/inventory" }, method = RequestMethod.POST)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public @ResponseBody ReadableInventory create(@PathVariable Long productId,
+			@Valid @RequestBody PersistableInventory inventory, @ApiIgnore MerchantStore merchantStore,

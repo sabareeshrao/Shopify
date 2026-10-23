@@ -1,0 +1,5 @@
+	@Inject
+	public DigitalProductServiceImpl(DigitalProductRepository digitalProductRepository) {
+		super(digitalProductRepository);
+		this.digitalProductRepository = digitalProductRepository;
+	}

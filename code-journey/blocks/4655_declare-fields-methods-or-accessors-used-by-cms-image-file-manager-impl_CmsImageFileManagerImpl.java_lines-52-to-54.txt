@@ -1,0 +1,3 @@
+  private final static String SMALL = "SMALL";
+  private final static String LARGE = "LARGE";
+

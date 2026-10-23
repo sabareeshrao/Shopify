@@ -1,0 +1,3 @@
+	public void setStartPage(int startPage) {
+		this.startPage = startPage;
+	}

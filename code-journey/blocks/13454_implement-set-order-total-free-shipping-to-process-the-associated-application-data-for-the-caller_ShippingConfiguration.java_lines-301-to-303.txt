@@ -1,0 +1,3 @@
+	public void setOrderTotalFreeShipping(BigDecimal orderTotalFreeShipping) {
+		this.orderTotalFreeShipping = orderTotalFreeShipping;
+	}

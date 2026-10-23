@@ -1,0 +1,8 @@
+					for (com.salesmanager.shop.model.catalog.product.attribute.ProductOptionValue value : values) {
+						ReadableProductVariantValue v = new ReadableProductVariantValue();
+						v.setCode(value.getCode());
+						v.setName(value.getName());
+						v.setDescription(value.getName());
+						v.setOption(option.getId());
+						v.setValue(value.getId());
+						v.setOrder(option.getProductOptionSortOrder());

@@ -1,0 +1,8 @@
+						this.mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
+
+						/**
+						 * String zoneCode = e.get("zoneCode"); ZoneDescription
+						 * zoneDescription = new ZoneDescription();
+						 * zoneDescription.setLanguage(l);
+						 * zoneDescription.setName(e.get("zoneName")); Zone zone
+						 * = null; List<ZoneDescription> descriptions = null; if

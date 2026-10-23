@@ -1,0 +1,3 @@
+
+        clearAuthenticationAttributes(request);
+    }

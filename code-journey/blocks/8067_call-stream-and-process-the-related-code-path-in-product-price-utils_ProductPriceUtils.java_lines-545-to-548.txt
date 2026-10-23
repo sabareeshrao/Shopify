@@ -1,0 +1,4 @@
+
+		return new HashSet<ProductAvailability>(availabilities.stream()
+				.filter(a -> !CollectionUtils.isEmpty(a.getPrices())).collect(Collectors.toList()));
+	}

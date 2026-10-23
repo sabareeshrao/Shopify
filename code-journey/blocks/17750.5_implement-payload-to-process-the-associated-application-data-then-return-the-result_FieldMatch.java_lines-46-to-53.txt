@@ -1,0 +1,8 @@
+    Class<? extends Payload>[] payload() default {};
+
+    /**
+     * @return The first field
+     */
+    String first();
+
+    /**

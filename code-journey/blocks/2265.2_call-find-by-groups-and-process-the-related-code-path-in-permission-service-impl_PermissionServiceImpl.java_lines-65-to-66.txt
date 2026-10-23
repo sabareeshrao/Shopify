@@ -1,0 +1,2 @@
+		return permissionRepository.findByGroups(ids);
+	}

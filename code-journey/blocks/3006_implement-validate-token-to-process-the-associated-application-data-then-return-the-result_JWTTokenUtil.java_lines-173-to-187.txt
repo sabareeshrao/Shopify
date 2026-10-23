@@ -1,0 +1,15 @@
+	    public Boolean validateToken(String token, UserDetails userDetails) {
+	        JWTUser user = (JWTUser) userDetails;
+	        final String username = getUsernameFromToken(token);
+	        final Date created = getIssuedAtDateFromToken(token);
+	        //final Date expiration = getExpirationDateFromToken(token);
+	        
+	        boolean usernameEquals = username.equals(user.getUsername());
+	        boolean isTokenExpired = isTokenExpired(token);
+	        boolean isTokenCreatedBeforeLastPasswordReset = isCreatedBeforeLastPasswordReset(created, user.getLastPasswordResetDate());
+	        
+	        return (
+
+	        		usernameEquals && !isTokenExpired && !isTokenCreatedBeforeLastPasswordReset
+	        );
+	    }

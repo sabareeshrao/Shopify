@@ -1,0 +1,8 @@
+import modules.commons.search.request.SearchItem;
+import modules.commons.search.request.SearchResponse;
+
+/**
+ * Different services for searching and indexing data
+ * @author c.samson
+ *
+ */

@@ -1,0 +1,3 @@
+		inventory.setSku(product.getSku());
+		return inventory;
+	}

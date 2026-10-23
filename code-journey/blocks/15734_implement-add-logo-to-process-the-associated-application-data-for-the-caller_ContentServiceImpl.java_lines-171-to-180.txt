@@ -1,0 +1,10 @@
+	@Override
+	public void addLogo(String merchantStoreCode, InputContentFile cmsContentImage) throws ServiceException {
+
+		Assert.notNull(merchantStoreCode, "Merchant store Id can not be null");
+		Assert.notNull(cmsContentImage, "CMSContent image can not be null");
+
+		cmsContentImage.setFileContentType(FileContentType.LOGO);
+		addImage(merchantStoreCode, cmsContentImage);
+
+	}

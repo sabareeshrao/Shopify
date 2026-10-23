@@ -1,0 +1,6 @@
+			//ProductOption value is text
+			productOptionValue = new ProductOptionValue();
+			productOptionValue.setProductOptionDisplayOnly(true);
+			productOptionValue.setCode(UUID.randomUUID().toString());
+			productOptionValue.setMerchantStore(store);
+		}

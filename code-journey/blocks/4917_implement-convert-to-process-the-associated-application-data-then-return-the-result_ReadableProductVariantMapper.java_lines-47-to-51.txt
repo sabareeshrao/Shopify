@@ -1,0 +1,5 @@
+	@Override
+	public ReadableProductVariant convert(ProductVariant source, MerchantStore store, Language language) {
+		ReadableProductVariant readableproductVariant = new ReadableProductVariant();
+		return this.merge(source, readableproductVariant, store, language);
+	}

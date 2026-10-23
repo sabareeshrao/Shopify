@@ -1,0 +1,6 @@
+	private Set<ProductAvailability> applicableAvailabilities(Set<ProductAvailability> availabilities)
+			throws ServiceException {
+		if (CollectionUtils.isEmpty(availabilities)) {
+			throw new ServiceException(ServiceException.EXCEPTION_ERROR,
+					"No applicable inventory to calculate the price.");
+		}

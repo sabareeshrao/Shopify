@@ -1,0 +1,7 @@
+	private CustomerAttributeRepository customerAttributeRepository;
+
+	@Inject
+	public CustomerAttributeServiceImpl(CustomerAttributeRepository customerAttributeRepository) {
+		super(customerAttributeRepository);
+		this.customerAttributeRepository = customerAttributeRepository;
+	}

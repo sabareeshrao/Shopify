@@ -1,0 +1,8 @@
+            	cart.setTotals(totals);
+            }
+            
+            cart.setSubTotal(pricingService.getDisplayAmount(orderSummary.getSubTotal(), store));
+            cart.setTotal(pricingService.getDisplayAmount(orderSummary.getTotal(), store));
+            cart.setQuantity(cartQuantity);
+            cart.setId(shoppingCart.getId());
+        }

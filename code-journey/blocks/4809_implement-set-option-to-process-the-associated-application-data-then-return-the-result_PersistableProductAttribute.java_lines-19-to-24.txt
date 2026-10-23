@@ -1,0 +1,6 @@
+	public void setOption(ProductPropertyOption option) {
+		this.option = option;
+	}
+	public ProductPropertyOption getOption() {
+		return option;
+	}

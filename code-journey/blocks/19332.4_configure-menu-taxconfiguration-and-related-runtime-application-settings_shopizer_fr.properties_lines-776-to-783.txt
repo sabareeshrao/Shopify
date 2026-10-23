@@ -1,0 +1,8 @@
+menu.taxconfiguration=Configuration des taxes
+menu.taxclass=Classes de taxes
+menu.taxrates=Taux des taxes
+menu.taxrates.rate=Taux
+menu.taxrates.code=Code du taux de taxe
+menu.taxrates.name=Nom de la taxe
+menu.product.category=Asscoier aux catégories
+menu.accounts-conf=Configuration des comptes

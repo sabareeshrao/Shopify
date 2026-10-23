@@ -1,0 +1,8 @@
+
+			p.getAuditSection().setModifiedBy("Api");
+			categoryService.addChild(p, c);
+		} catch (ResourceNotFoundException re) {
+			throw re;
+		} catch (OperationNotAllowedException oe) {
+			throw oe;
+		} catch (Exception e) {

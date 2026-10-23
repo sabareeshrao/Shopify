@@ -1,0 +1,4 @@
+				.append("XXXXXXXXXX")
+				.append(suffix)
+				.toString();
+	}

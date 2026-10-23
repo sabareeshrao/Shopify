@@ -1,0 +1,8 @@
+	private ProductSpecification productSpecifications;
+	private Double rating = 0D;
+	private int ratingCount;
+	private int sortOrder;
+	private String refSku;
+
+
+	/**

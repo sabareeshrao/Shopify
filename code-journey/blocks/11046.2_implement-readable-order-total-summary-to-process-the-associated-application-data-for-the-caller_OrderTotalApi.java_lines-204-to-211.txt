@@ -1,0 +1,8 @@
+
+      orderTotalSummary = orderService.caculateOrderTotal(orderSummary, merchantStore, language);
+
+      ReadableOrderTotalSummary returnSummary = new ReadableOrderTotalSummary();
+      ReadableOrderSummaryPopulator populator = new ReadableOrderSummaryPopulator();
+      populator.setMessages(messages);
+      populator.setPricingService(pricingService);
+      populator.populate(orderTotalSummary, returnSummary, merchantStore, language);

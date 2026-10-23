@@ -1,0 +1,3 @@
+	public void setAttributes(Set<ShoppingCartAttributeItem> attributes) {
+		this.attributes = attributes;
+	}

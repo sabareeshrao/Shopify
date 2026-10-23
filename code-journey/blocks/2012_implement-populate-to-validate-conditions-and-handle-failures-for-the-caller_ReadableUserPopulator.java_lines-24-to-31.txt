@@ -1,0 +1,8 @@
+  @Override
+  public ReadableUser populate(User source, ReadableUser target, MerchantStore store,
+      Language language) throws ConversionException {
+    Validate.notNull(source, "User cannot be null");
+
+    if (target == null) {
+      target = new ReadableUser();
+    }

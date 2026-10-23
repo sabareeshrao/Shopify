@@ -1,0 +1,3 @@
+	public String getProductImage() {
+		return productImage;
+	}

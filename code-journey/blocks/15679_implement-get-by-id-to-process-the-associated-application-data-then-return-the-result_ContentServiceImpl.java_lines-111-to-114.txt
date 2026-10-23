@@ -1,0 +1,4 @@
+	@Override
+	public Content getById(Long id) {
+		return contentRepository.findOne(id);
+	}

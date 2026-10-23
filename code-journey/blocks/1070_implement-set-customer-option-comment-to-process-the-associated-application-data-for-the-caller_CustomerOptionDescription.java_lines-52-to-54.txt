@@ -1,0 +1,3 @@
+	public void setCustomerOptionComment(String customerOptionComment) {
+		this.customerOptionComment = customerOptionComment;
+	}

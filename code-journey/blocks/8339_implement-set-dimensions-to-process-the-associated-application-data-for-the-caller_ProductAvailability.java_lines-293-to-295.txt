@@ -1,0 +1,3 @@
+	public void setDimensions(ProductDimensions dimensions) {
+		this.dimensions = dimensions;
+	}

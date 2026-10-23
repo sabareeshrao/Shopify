@@ -1,0 +1,8 @@
+     * Customer username is unique to each store.
+     *
+     * @param userName
+     * @param store
+     * @param store
+     * @param language
+     * @throws Exception
+     *

@@ -1,0 +1,3 @@
+	public String getStorename() {
+		return storename;
+	}

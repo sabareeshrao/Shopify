@@ -1,0 +1,4 @@
+	@Override
+	public List<ProductRelationship> getGroups(MerchantStore store) {
+		return productRelationshipRepository.getGroups(store);
+	}

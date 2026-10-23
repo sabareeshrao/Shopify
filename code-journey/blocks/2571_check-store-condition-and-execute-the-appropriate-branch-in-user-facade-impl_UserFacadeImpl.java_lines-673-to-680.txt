@@ -1,0 +1,8 @@
+
+				// current user match;
+				String merchant = readableUser.getMerchant();
+
+				//user store is store request param
+				if (store.getCode().equalsIgnoreCase(merchant)) {
+					return true;
+				}

@@ -1,0 +1,14 @@
+	@Override
+	public ReadableEntityList<ReadableInventory> get(Long productId, MerchantStore store, Language language, int page, int count) {
+		
+		Validate.notNull(productId, "Product id cannot be null");
+		Validate.notNull(store, "MerchantStore code cannot be null");
+		
+		Page<ProductAvailability> availabilities = productAvailabilityService.listByProduct(productId, store, page, count);
+		
+		List<ReadableInventory> returnList = availabilities.getContent().stream().map(i -> this.readableInventoryMapper.convert(i, store, language))
+				.collect(Collectors.toList());
+
+		return createReadableList(availabilities, returnList);
+
+	}

@@ -1,0 +1,3 @@
+	public void setDefaultSearchConfigPath(Map<String,String> defaultSearchConfigPath) {
+		this.defaultSearchConfigPath = defaultSearchConfigPath;
+	}

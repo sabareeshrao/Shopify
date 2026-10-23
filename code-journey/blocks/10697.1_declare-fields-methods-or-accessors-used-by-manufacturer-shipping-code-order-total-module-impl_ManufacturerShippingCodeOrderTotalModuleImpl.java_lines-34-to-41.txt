@@ -1,0 +1,8 @@
+	private String name;
+	private String code;
+	
+	//private StatelessKnowledgeSession orderTotalMethodDecision;//injected from xml file
+	
+	//private KnowledgeBase kbase;//injected from xml file
+	
+	//@Inject

@@ -1,0 +1,8 @@
+    
+    @Test
+    public void manageTaxRates() throws Exception {
+    	
+    	//create tax class
+    	PersistableTaxRate taxRate = new PersistableTaxRate();
+    	taxRate.setCode("taxcode1");
+    	taxRate.setCountry("US");

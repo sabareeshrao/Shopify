@@ -1,0 +1,3 @@
+	public void setDefaultCatalog(boolean defaultCatalog) {
+		this.defaultCatalog = defaultCatalog;
+	}

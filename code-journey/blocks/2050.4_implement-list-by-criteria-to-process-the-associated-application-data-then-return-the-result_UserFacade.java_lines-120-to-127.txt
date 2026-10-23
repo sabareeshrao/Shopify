@@ -1,0 +1,8 @@
+   * List users
+   * @param criteria
+   * @param page
+   * @param count
+   * @param language
+   * @return
+   */
+  ReadableUserList listByCriteria (UserCriteria criteria, int page, int count, Language language);

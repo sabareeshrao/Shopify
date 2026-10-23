@@ -1,0 +1,8 @@
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void addvariantImage(
+			@PathVariable Long id,
+			@RequestParam(name = "file", required = true) MultipartFile file, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletRequest request, 

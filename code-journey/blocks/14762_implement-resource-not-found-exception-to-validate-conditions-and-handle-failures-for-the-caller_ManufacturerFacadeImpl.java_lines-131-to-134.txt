@@ -1,0 +1,4 @@
+    
+    if(manufacturer.getMerchantStore().getId() != store.getId()) {
+      throw new ResourceNotFoundException("Manufacturer [" + id + "] not found for store [" + store.getId() + "]");
+    }

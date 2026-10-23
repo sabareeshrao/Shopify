@@ -1,0 +1,10 @@
+    
+    try {
+      List<Manufacturer> manufacturers = manufacturerService.listByProductsInCategory(store, category, language);
+      
+      List<ReadableManufacturer> manufacturersList = manufacturers.stream()
+    	.sorted(new Comparator<Manufacturer>() {
+    	            @Override
+    	            public int compare(final Manufacturer object1, final Manufacturer object2) {
+    	                return object1.getCode().compareTo(object2.getCode());
+    	            }

@@ -1,0 +1,9 @@
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public PersistableProductPrice getPrice() {
+		return price;
+	}

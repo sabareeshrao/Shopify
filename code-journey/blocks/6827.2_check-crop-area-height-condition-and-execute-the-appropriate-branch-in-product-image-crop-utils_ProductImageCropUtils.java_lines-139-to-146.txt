@@ -1,0 +1,8 @@
+		
+		if(cropAreaHeight > height)
+			cropAreaHeight = height;
+
+		/*
+		 * if(factor>1) { //determine croping section for(double
+		 * i=factor;i>1;i--) { //multiply specifications by factor int newWidth
+		 * = (int)(i * specificationsWidth); int newHeight = (int)(i *

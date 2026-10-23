@@ -1,0 +1,7 @@
+	@Inject
+	private PaymentService paymentService;
+	@Inject
+	private CountryService countryService;
+	@Inject
+	private ZoneService zoneService;
+

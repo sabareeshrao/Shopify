@@ -1,0 +1,8 @@
+import urn.ebay.apis.CoreComponentTypes.BasicAmountType;
+import urn.ebay.apis.eBLBaseComponents.CompleteCodeType;
+import urn.ebay.apis.eBLBaseComponents.DoExpressCheckoutPaymentRequestDetailsType;
+import urn.ebay.apis.eBLBaseComponents.PaymentDetailsItemType;
+import urn.ebay.apis.eBLBaseComponents.PaymentDetailsType;
+import urn.ebay.apis.eBLBaseComponents.PaymentInfoType;
+import urn.ebay.apis.eBLBaseComponents.RefundType;
+import urn.ebay.apis.eBLBaseComponents.SetExpressCheckoutRequestDetailsType;

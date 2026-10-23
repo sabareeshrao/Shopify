@@ -1,0 +1,8 @@
+	@Override
+	@Transactional
+	public ShoppingCart getById(final Long id, final MerchantStore store) throws ServiceException {
+
+		try {
+			ShoppingCart shoppingCart = shoppingCartRepository.findById(store.getId(), id);
+			if (shoppingCart == null) {
+				return null;

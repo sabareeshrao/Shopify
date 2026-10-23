@@ -1,0 +1,9 @@
+	public List<Country> getShipToCountry() {
+		return shipToCountry;
+	}
+	public void setShipToCountry(List<Country> shipToCountry) {
+		this.shipToCountry = shipToCountry;
+	}
+	public boolean isUseDistanceModule() {
+		return useDistanceModule;
+	}

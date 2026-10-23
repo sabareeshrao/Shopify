@@ -1,0 +1,8 @@
+
+	<!-- Content images manager -->
+	<beans:bean id="contentFileManager"
+		class="com.salesmanager.core.business.modules.cms.content.StaticContentFileManagerImpl">
+		<beans:property name="uploadFile">
+				<beans:ref bean="${config.cms.method}ContentAssetsManager" />
+		</beans:property>
+		<beans:property name="getFile">

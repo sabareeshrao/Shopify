@@ -1,0 +1,8 @@
+   */
+  @Override
+  public ShoppingCart mergeCart(final Customer customerModel, final String sessionShoppingCartId,
+      final MerchantStore store, final Language language) throws Exception {
+
+    LOG.debug("Starting merge cart process");
+    if (customerModel != null) {
+      ShoppingCart customerCart = shoppingCartService.getShoppingCart(customerModel, store);

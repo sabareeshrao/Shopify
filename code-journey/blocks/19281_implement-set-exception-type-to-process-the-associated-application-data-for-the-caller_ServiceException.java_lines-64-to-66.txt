@@ -1,0 +1,3 @@
+	public void setExceptionType(int exceptionType) {
+		this.exceptionType = exceptionType;
+	}

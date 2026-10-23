@@ -1,0 +1,8 @@
+			
+			//if (contentModel != null) {
+			//	setContentDescriptionToContentModel(contentModel, contentDescription, lang);
+			//}
+			contentDescription.setMetatagDescription(objectContent.getMetaDescription());
+			contentDescription.setTitle(objectContent.getTitle());
+			contentDescription.setName(objectContent.getName());
+			contentDescription.setSeUrl(objectContent.getFriendlyUrl());

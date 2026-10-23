@@ -1,0 +1,4 @@
+					return this.readablePrice(p, store, language);
+				} catch (ConversionException e) {
+					throw new ServiceRuntimeException("An exception occured while getting product price for sku [" + sku + "] and Store [" + store.getCode() + "]", e);
+				}

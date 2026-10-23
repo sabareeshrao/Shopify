@@ -1,0 +1,4 @@
+	@ManyToOne(targetEntity = CustomerOptionValue.class)
+	@JoinColumn(name = "CUSTOMER_OPT_VAL_ID")
+	private CustomerOptionValue customerOptionValue;
+	

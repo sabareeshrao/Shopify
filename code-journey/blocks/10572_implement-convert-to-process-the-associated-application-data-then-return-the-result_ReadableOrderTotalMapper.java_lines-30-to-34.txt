@@ -1,0 +1,5 @@
+	@Override
+	public ReadableOrderTotal convert(OrderTotal source, MerchantStore store, Language language) {
+		ReadableOrderTotal destination = new ReadableOrderTotal();
+		return this.merge(source, destination, store, language);
+	}

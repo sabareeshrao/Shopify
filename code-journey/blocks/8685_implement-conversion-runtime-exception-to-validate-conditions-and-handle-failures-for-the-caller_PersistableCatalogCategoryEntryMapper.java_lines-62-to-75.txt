@@ -1,0 +1,14 @@
+			
+			destination.setCatalog(catalogModel);
+
+/*			Product productModel = productFacade.getProduct(source.getProductCode(), store);
+			if(productModel == null) {
+				throw new ConversionRuntimeException("Error while converting CatalogEntry product [" + source.getProductCode() + "] not found");
+			}*/
+
+			//destination.setProduct(productModel);
+			
+			Category categoryModel = categoryFacade.getByCode(source.getCategoryCode(), store);
+			if(categoryModel == null) {
+				throw new ConversionRuntimeException("Error while converting CatalogEntry category [" + source.getCategoryCode() + "] not found");
+			}

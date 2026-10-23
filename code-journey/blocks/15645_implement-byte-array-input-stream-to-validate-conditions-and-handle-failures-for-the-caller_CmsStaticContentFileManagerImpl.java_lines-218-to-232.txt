@@ -1,0 +1,15 @@
+
+			input = new ByteArrayInputStream(fileBytes);
+
+			final ByteArrayOutputStream output = new ByteArrayOutputStream();
+			IOUtils.copy(input, output);
+
+			outputStaticContentData.setFile(output);
+			outputStaticContentData.setMimeType(URLConnection.getFileNameMap().getContentTypeFor(contentFileName));
+			outputStaticContentData.setFileName(contentFileName);
+			outputStaticContentData.setFileContentType(fileContentType);
+
+		} catch (final Exception e) {
+			LOGGER.error("Error while fetching file for {} merchant ", merchantStoreCode);
+			throw new ServiceException(e);
+		}

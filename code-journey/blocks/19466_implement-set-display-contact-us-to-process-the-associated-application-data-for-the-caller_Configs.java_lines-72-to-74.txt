@@ -1,0 +1,3 @@
+	public void setDisplayContactUs(boolean displayContactUs) {
+		this.displayContactUs = displayContactUs;
+	}

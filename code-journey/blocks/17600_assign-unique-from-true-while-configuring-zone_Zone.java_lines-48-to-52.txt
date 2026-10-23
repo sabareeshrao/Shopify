@@ -1,0 +1,5 @@
+
+
+  @Column(name = "ZONE_CODE", unique = true, nullable = false)
+  private String code;
+

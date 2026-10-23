@@ -1,0 +1,4 @@
+	public XssHttpServletRequestWrapper(HttpServletRequest request) {
+		super(request);	
+		
+	}

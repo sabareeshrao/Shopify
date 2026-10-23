@@ -1,0 +1,5 @@
+	@Override
+	protected ReadableOrderTotalSummary createTarget() {
+		// TODO Auto-generated method stub
+		return null;
+	}

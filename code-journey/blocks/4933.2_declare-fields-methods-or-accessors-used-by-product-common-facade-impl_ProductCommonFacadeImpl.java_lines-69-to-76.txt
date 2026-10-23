@@ -1,0 +1,8 @@
+	private PricingService pricingService;
+
+	@Inject
+	private CustomerService customerService;
+
+	@Inject
+	private ProductReviewService productReviewService;
+	

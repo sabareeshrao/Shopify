@@ -1,0 +1,3 @@
+			if (!StringUtils.isEmpty(image)) {
+				contentService.removeFile(store.getCode(), image);
+			}

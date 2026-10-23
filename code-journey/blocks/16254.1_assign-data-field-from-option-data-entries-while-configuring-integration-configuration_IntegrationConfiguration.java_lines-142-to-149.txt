@@ -1,0 +1,8 @@
+        countOptions++;
+
+      }
+      String dataField = optionDataEntries.toString();
+
+      returnString.append(",").append("\"integrationOptions\"").append(":{");
+      returnString.append(dataField.toString());
+      returnString.append("}");

@@ -1,0 +1,8 @@
+
+	     /**
+         * Create size option
+         */
+        size = new ProductOption();
+        size.setMerchantStore(store);
+        size.setCode("SHOESIZE");
+        size.setProductOptionType(ProductOptionType.Radio.name());

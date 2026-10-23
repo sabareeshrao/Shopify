@@ -1,0 +1,5 @@
+		ReadableUser user = userFacade.findByUserName(userName, null, language);
+
+		if (!user.isActive()) {
+			throw new UnauthorizedException("User " + userName + " not not active");
+		}

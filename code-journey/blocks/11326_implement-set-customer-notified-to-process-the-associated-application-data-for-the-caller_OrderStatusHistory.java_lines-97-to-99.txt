@@ -1,0 +1,3 @@
+	public void setCustomerNotified(java.lang.Integer customerNotified) {
+		this.customerNotified = customerNotified;
+	}

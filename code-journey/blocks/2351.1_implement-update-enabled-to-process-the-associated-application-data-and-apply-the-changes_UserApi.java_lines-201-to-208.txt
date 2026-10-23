@@ -1,0 +1,8 @@
+	
+	@PatchMapping(value = "/private/user/{id}/enabled", produces = { APPLICATION_JSON_VALUE })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public void updateEnabled(
+			@PathVariable Long id, 
+			@Valid @RequestBody PersistableUser user,
+			@ApiIgnore MerchantStore merchantStore
+			) {

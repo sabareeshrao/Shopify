@@ -1,0 +1,4 @@
+
+		boolean isOptionExist = productOptionFacade.optionExists(code, merchantStore);
+		return new ResponseEntity<EntityExists>(new EntityExists(isOptionExist), HttpStatus.OK);
+	}

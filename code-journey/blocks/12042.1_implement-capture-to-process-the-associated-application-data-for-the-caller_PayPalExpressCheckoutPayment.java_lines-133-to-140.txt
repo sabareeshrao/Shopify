@@ -1,0 +1,8 @@
+		
+	}
+
+/*	@Override
+	public Transaction capture(MerchantStore store, Customer customer,
+			List<ShoppingCartItem> items, BigDecimal amount, Payment payment, Transaction transaction,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {

@@ -1,0 +1,8 @@
+
+
+		inventory.setProductId(product.getId());
+
+		avail = productInventoryMapper.merge(inventory, avail, store, language);
+		avail.setProduct(product);
+		avail.setMerchantStore(store);
+		saveOrUpdate(avail);

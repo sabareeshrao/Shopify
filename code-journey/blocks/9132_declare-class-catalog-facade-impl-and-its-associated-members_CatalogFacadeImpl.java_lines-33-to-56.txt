@@ -1,0 +1,24 @@
+import static com.salesmanager.shop.util.ReadableEntityUtil.createReadableList;
+
+@Service("catalogFacade")
+public class CatalogFacadeImpl implements CatalogFacade {
+
+
+    @Autowired
+    private CatalogService catalogService;
+
+    @Autowired
+    private CatalogEntryService catalogEntryService;
+
+    @Autowired
+    private PersistableCatalogMapper persistableCatalogMapper;
+
+    @Autowired
+    private ReadableCatalogMapper readableCatalogMapper;
+
+    @Autowired
+    private Mapper<PersistableCatalogCategoryEntry, CatalogCategoryEntry> persistableCatalogEntryMapper;
+
+    @Autowired
+    private ReadableCatalogCategoryEntryMapper readableCatalogEntryMapper;
+

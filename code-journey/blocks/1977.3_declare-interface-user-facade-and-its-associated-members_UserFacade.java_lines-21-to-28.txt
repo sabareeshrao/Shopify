@@ -1,0 +1,8 @@
+public interface UserFacade {
+
+  /**
+   * Finds a User by userName
+   * 
+   * @return
+   * @throws Exception
+   */

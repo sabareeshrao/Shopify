@@ -1,0 +1,8 @@
+				
+			} 
+			
+			MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(moduleCode, store);
+			
+			if(configuration!=null) {//custom module
+
+				merchantConfigurationService.delete(configuration);

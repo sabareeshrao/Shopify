@@ -1,0 +1,9 @@
+	private void setDescription(Content content, ReadableContentBox box, Language lang) {
+		
+		Optional<ContentDescription> contentDescription = findAppropriateContentDescription(
+				content.getDescriptions(), lang);
+		if (contentDescription.isPresent()) {
+			com.salesmanager.shop.model.content.common.ContentDescription desc = this
+					.contentDescription(contentDescription.get());
+			box.setDescription(desc);
+		}

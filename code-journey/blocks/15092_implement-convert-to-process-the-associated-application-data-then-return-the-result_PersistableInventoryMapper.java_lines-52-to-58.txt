@@ -1,0 +1,7 @@
+	@Override
+	public ProductAvailability convert(PersistableInventory source, MerchantStore store, Language language) {
+		ProductAvailability availability = new ProductAvailability();
+		availability.setMerchantStore(store);
+		return merge(source, availability, store, language);
+
+	}

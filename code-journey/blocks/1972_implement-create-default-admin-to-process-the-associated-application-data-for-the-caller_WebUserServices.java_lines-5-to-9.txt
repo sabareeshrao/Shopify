@@ -1,0 +1,5 @@
+public interface WebUserServices extends UserDetailsService{
+	
+	void createDefaultAdmin() throws Exception;
+
+}

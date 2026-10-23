@@ -1,0 +1,4 @@
+        
+        if(StringUtils.isNotBlank( source.getAddress() )){
+            target.setAddress(source.getAddress());
+        }

@@ -1,0 +1,3 @@
+  public void setWidth(BigDecimal width) {
+    this.width = width;
+  }

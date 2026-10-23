@@ -1,0 +1,3 @@
+	private ReadableShoppingCartAttributeOption option;
+	private ReadableShoppingCartAttributeOptionValue optionValue;
+	

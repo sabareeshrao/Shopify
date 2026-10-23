@@ -1,0 +1,5 @@
+      registrationBean.addUrlPatterns("/api/**");
+      registrationBean.addUrlPatterns("/customer/**");
+          
+      return registrationBean;    
+  }

@@ -1,0 +1,3 @@
+	public void setStoreLogo(String storeLogo) {
+		this.storeLogo = storeLogo;
+	}

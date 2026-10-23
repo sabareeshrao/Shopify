@@ -1,0 +1,8 @@
+				"/api/v1/private/product/option?store=" + Constants.DEFAULT_STORE, whiteEntity, PersistableProductOptionValue.class);
+		assertTrue(whiteResponse.getStatusCode()== CREATED);
+		System.out.println(whiteResponse.getBody().getId());
+		
+		PersistableProductOptionValue medium = new PersistableProductOptionValue();
+		medium.setCode("medium");
+		ProductOptionValueDescription mediumEn = new ProductOptionValueDescription();
+		mediumEn.setName("Medium");

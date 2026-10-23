@@ -1,0 +1,8 @@
+	
+	void deleteRelationship(ProductRelationship relationship) throws ServiceException;
+
+	void activateGroup(MerchantStore store, String groupName)
+			throws ServiceException;
+
+	List<ProductRelationship> getByGroup(MerchantStore store, String groupName,
+			Language language) throws ServiceException;

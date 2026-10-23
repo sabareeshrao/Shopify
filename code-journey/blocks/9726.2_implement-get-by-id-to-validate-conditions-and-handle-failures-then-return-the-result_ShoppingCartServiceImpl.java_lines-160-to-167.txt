@@ -1,0 +1,8 @@
+	/*
+	 * @Override
+	 * 
+	 * @Transactional public ShoppingCart getById(final Long id, MerchantStore
+	 * store) throws {
+	 * 
+	 * try { ShoppingCart shoppingCart = shoppingCartRepository.findOne(id); if
+	 * (shoppingCart == null) { return null; }

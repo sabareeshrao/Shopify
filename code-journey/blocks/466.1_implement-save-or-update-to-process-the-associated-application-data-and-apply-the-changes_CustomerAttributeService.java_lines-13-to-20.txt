@@ -1,0 +1,8 @@
+public interface CustomerAttributeService extends
+		SalesManagerEntityService<Long, CustomerAttribute> {
+
+	void saveOrUpdate(CustomerAttribute customerAttribute)
+			throws ServiceException;
+
+	CustomerAttribute getByCustomerOptionId(MerchantStore store,
+			Long customerId, Long id);

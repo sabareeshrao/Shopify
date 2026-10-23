@@ -1,0 +1,36 @@
+
+#configuration
+label.configuration.options=Options de configuration
+label.configuration.configurations=Configurations
+label.configuration.google_analytics_url=URL Google Analytics (UC-XXXXXX)
+label.configuration.google_api_key=Clée Google pour API (pour les cartes)
+label.configuration.facebook_page_url=URL de la page FaceBook
+label.configuration.twitter_handle=Compte Twitter
+label.configuration.pinterest=Pinterest
+label.configuration.instagram=Instagram
+label.social.connect=Restons en contact
+label.social.facebook=FaceBook
+label.social.twitter=Twitter
+label.configuration.useglobalsearch_suggestions=Utiliser un fichier global de recherches pré-défini
+label.configuration.globalsearch_suggestions_path=Chemin d'accès du fichier global de recherches pré-défini
+
+#cart
+label.emptycart=Aucun item dans le panier d'achat
+label.cart=Panier d'achat
+label.mycart=Mes achats
+label.cart.revieworder=Revoir votre commande
+label.cart.placeorder=Passez votre commande
+
+#checkout
+label.checkout=Paiement
+label.proceed.checkout=Effectuer le paiement
+label.subtotal=Sous-total
+label.checkout.confirmation=La commande a été complétée
+
+label.shipping.nopostalcode=Les frais de livraison seront ajustés après avoir inscrit votre code postal.
+
+#register
+label.register.notyetregistered=Pas encore enregistré ?
+label.register.whyregister=Pourquoi s'enregistrer ?
+label.register.registerreasons=Simplifiez le processus d'achat en créant au préalables les informations de facturation et d'envoi des commandes. Vous aurez accès à une section vous permettant de faire le suivi de vos commandes et d'imprimer vos factures d'achats.
+label.register.confirmation=L'enregistrement a été complété avec succès ! Un couriel a été envoyé à {0} comprenant les informations permettant de se connecter. Allez à {1} afin de vous connecter au système.

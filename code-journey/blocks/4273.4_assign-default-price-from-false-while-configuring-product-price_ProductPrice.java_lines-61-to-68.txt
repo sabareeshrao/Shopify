@@ -1,0 +1,8 @@
+	private boolean defaultPrice = false;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "PRODUCT_PRICE_SPECIAL_ST_DATE")
+	private Date productPriceSpecialStartDate;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "PRODUCT_PRICE_SPECIAL_END_DATE")

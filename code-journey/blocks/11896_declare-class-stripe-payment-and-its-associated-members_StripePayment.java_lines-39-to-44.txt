@@ -1,0 +1,6 @@
+public class StripePayment implements PaymentModule {
+	
+	@Inject
+	private ProductPriceUtils productPriceUtils;
+
+	

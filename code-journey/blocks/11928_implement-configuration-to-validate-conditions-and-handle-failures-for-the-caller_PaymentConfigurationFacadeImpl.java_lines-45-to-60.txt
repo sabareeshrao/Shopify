@@ -1,0 +1,16 @@
+	@Override
+	public ReadableConfiguration configuration(String module, MerchantStore store) {
+		
+		try {
+			
+			ReadableConfiguration config = null;
+			List<PaymentMethod> methods = paymentService.getAcceptedPaymentMethods(store);
+			Optional<ReadableConfiguration> configuration = 
+					methods.stream()
+					.filter(m -> module.equals(m.getModule().getCode()))
+					.map(m -> this.configuration(m.getInformations(), store))
+					.findFirst();
+			
+			if(configuration.isPresent()) {
+				config = configuration.get();
+			}

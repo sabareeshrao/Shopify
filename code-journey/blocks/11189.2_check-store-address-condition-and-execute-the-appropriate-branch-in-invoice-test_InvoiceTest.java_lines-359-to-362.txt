@@ -1,0 +1,4 @@
+			if(storeAddress!=null) {
+				sheet.setValueAt(storeAddress.toString(), 0, storeAddressCell);
+				storeAddressCell ++;
+			}

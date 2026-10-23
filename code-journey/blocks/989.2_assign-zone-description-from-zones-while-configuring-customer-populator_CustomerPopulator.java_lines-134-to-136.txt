@@ -1,0 +1,3 @@
+					Zone zoneDescription = zones.get(zone.getCode());
+					billing.setZone(zoneDescription);
+				}

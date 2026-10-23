@@ -1,0 +1,5 @@
+	@Override
+	public Page<MerchantStore> listChildren(String code, int page, int count) throws ServiceException {
+		Pageable pageRequest = PageRequest.of(page, count);
+		return pageableMerchantRepository.listByStore(code, pageRequest);
+	}

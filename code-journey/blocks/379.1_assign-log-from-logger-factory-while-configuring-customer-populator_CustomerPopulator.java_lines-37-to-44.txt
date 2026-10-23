@@ -1,0 +1,8 @@
+	protected static final Logger LOG=LoggerFactory.getLogger( CustomerPopulator.class );
+    @Autowired
+	private CountryService countryService;
+    @Autowired
+    private ZoneService zoneService;
+    @Autowired
+    private LanguageService languageService;
+    @Autowired

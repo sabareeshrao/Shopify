@@ -1,0 +1,8 @@
+   */
+  void addFile(final String merchantStoreCode, Optional<String> path, InputContentFile inputStaticContentData)
+      throws ServiceException;
+
+  /**
+   * Add files to folder
+   * @param merchantStoreCode
+   * @param path

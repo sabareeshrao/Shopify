@@ -1,0 +1,3 @@
+	public ReadableManufacturer getManufacturer() {
+		return manufacturer;
+	}

@@ -1,0 +1,14 @@
+							}
+						}
+					}
+				} else {
+					List langList = (List) data.get(ALL_REGIONS);
+					if (langList != null) {
+						/**
+						 * submethod
+						 */
+						for (Language l : languages) {
+							for (Object z : langList) {
+								Map<String, String> e = (Map<String, String>) z;
+								mapZone(l, zonesDescriptionsMap, countriesMap, zonesMap, zonesMark, e);
+							}

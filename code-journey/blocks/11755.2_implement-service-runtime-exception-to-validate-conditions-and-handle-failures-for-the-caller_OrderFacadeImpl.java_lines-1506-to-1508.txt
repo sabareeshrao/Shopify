@@ -1,0 +1,3 @@
+		} catch(Exception e) {
+			throw new ServiceRuntimeException("An error occured while updating order customer", e);
+		}

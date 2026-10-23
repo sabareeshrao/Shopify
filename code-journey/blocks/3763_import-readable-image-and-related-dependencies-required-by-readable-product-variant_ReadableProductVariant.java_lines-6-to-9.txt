@@ -1,0 +1,4 @@
+import com.salesmanager.shop.model.catalog.product.ReadableImage;
+import com.salesmanager.shop.model.catalog.product.inventory.ReadableInventory;
+import com.salesmanager.shop.model.catalog.product.variation.ReadableProductVariation;
+

@@ -1,0 +1,3 @@
+	       LOGGER.info( "Sending order status email to customer" );
+	       try {
+

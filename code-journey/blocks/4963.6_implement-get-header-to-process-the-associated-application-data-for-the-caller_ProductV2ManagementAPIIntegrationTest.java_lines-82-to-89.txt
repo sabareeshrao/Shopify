@@ -1,0 +1,8 @@
+		product.setProductSpecifications(specifications);
+		product.setPrice(BigDecimal.TEN);
+		
+		final HttpEntity<PersistableProduct> productEntity = new HttpEntity<>(product, getHeader());
+		final ResponseEntity<PersistableProduct> response = testRestTemplate.postForEntity(
+				"/api/v2/private/product?store=" + Constants.DEFAULT_STORE, productEntity, PersistableProduct.class);
+		assertTrue(response.getStatusCode()== CREATED);
+		

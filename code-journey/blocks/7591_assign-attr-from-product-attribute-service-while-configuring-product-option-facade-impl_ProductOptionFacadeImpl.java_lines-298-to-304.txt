@@ -1,0 +1,7 @@
+
+		// refresh
+		attr = productAttributeService.getById(attr.getId());
+		ReadableProductAttributeEntity readable = readableProductAttributeMapper.convert(attr, store, language);
+
+		return readable;
+	}

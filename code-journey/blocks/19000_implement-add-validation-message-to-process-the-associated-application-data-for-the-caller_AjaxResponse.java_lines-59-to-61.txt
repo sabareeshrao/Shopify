@@ -1,0 +1,3 @@
+	public void addValidationMessage(String fieldName, String message) {
+		this.validationMessages.put(fieldName, message);
+	}

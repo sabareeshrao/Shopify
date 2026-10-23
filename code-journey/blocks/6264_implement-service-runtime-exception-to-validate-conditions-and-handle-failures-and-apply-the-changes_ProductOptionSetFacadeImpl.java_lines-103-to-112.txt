@@ -1,0 +1,10 @@
+
+		optionSet.setId(id);
+		optionSet.setCode(opt.getCode());
+		ProductOptionSet model = persistableProductOptionSetMapper.convert(optionSet, store, language);
+		try {
+			model.setStore(store);
+			productOptionSetService.save(model);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductOptionSet", e);
+		}

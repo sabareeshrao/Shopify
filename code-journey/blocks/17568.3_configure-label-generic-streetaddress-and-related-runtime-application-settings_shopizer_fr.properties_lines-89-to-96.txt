@@ -1,0 +1,8 @@
+label.generic.streetaddress=Adresse civique
+label.generic.postalcode=Code postal
+label.generic.city=Ville
+label.generic.country=Pays
+label.generic.hi=Bonjour
+label.generic.send=Envoyer
+label.generic.rebate=Rabais
+

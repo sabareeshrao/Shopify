@@ -1,0 +1,8 @@
+	
+	@Column(name = "REVIEWS_READ")
+	private Long reviewRead;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "REVIEW_DATE")
+	private Date reviewDate;
+	

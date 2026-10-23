@@ -1,0 +1,8 @@
+
+			Stripe.apiKey = apiKey;
+			
+			PaymentIntent paymentIntent = PaymentIntent.retrieve(
+					token
+			);
+			
+			transaction.setAmount(amount);

@@ -1,0 +1,8 @@
+	private final static String KEYWORDS_MAPPING_DEFAULT = "{\"properties\":"
+			+ "      {\n\"id\": {\n"
+			+ "        \"type\": \"long\"\n"
+			+ "      }\n"
+			+ "     }\n"
+			+ "    }";	
+	
+

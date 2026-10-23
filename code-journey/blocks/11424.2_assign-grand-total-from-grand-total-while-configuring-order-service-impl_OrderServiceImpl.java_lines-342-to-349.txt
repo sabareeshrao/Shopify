@@ -1,0 +1,8 @@
+                    handlingubTotal.setOrderTotalCode("order.total.handling");
+                    handlingubTotal.setTitle(Constants.OT_HANDLING_MODULE_CODE);
+                    //handlingubTotal.setText("order.total.handling");
+                    handlingubTotal.setSortOrder(120);
+                    handlingubTotal.setValue(summary.getShippingSummary().getHandling());
+                    orderTotals.add(handlingubTotal);
+                    grandTotal=grandTotal.add(summary.getShippingSummary().getHandling());
+                }

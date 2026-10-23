@@ -1,0 +1,6 @@
+	public Address getDelivery() {
+		return delivery;
+	}
+	public void setDelivery(ReadableDelivery delivery) {
+		this.delivery = delivery;
+	}

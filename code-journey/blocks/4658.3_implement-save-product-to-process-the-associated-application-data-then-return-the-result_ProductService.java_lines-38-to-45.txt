@@ -1,0 +1,8 @@
+	/**
+	 * The method to be used
+	 * @param product
+	 * @return
+	 * @throws ServiceException
+	 */
+	Product saveProduct(Product product) throws ServiceException;
+

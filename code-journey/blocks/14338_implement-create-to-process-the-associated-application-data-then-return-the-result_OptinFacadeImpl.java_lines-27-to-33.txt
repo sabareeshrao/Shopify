@@ -1,0 +1,7 @@
+  @Override
+  public ReadableOptin create(
+      PersistableOptin persistableOptin, MerchantStore merchantStore, Language language) {
+    Optin optinEntity = persistableOptinConverter.convert(persistableOptin, merchantStore, language);
+    Optin savedOptinEntity = createOptin(optinEntity);
+    return readableOptinConverter.convert(savedOptinEntity, merchantStore, language);
+  }

@@ -1,0 +1,3 @@
+	protected HttpHeaders getHeader() {
+		return getHeader("admin@shopizer.com", "password");
+	}

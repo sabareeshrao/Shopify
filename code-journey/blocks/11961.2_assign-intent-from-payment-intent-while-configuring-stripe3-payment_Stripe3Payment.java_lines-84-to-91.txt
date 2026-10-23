@@ -1,0 +1,8 @@
+
+			// Create a PaymentIntent with the order amount and currency
+			PaymentIntent intent = PaymentIntent.create(createParams);
+
+			intent.getClientSecret();
+
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);

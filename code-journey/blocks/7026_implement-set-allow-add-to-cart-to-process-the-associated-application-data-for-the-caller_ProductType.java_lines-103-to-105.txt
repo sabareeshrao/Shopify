@@ -1,0 +1,3 @@
+  public void setAllowAddToCart(Boolean allowAddToCart) {
+    this.allowAddToCart = allowAddToCart;
+  }

@@ -1,0 +1,8 @@
+
+		if (!CollectionUtils.isEmpty(source.getAttributes())) {
+
+			Set<ProductAttribute> attributes = source.getAttributes();
+
+			if (!CollectionUtils.isEmpty(attributes)) {
+
+				for (ProductAttribute attribute : attributes) {

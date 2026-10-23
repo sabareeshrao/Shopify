@@ -1,0 +1,9 @@
+      tragetDescription.setMetaDescription(description.getMetatagDescription());
+      tragetDescription.setDescription(description.getDescription());
+      tragetDescription.setHighlights(description.getProductHighlight());
+      tragetDescription.setLanguage(description.getLanguage().getCode());
+      tragetDescription.setKeyWords(description.getMetatagKeywords());
+
+      if(description.getLanguage() != null) {
+        tragetDescription.setLanguage(description.getLanguage().getCode());
+      }

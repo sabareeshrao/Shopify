@@ -1,0 +1,8 @@
+	/**
+	 * Serves static files (css, js ...) the repository is a single node by merchant
+	 * @param storeCode
+	 * @param extension
+	 * @return
+	 * @throws IOException
+	 * @throws ServiceException
+	 */

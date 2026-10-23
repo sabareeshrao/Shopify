@@ -1,0 +1,8 @@
+	public void prePostProcessShippingQuotes(
+			ShippingQuote quote, 
+			List<PackageDetails> packages, 
+			BigDecimal orderTotal, 
+			Delivery delivery, 
+			ShippingOrigin origin, 
+			MerchantStore store, 
+			IntegrationConfiguration globalShippingConfiguration, 

@@ -1,0 +1,4 @@
+	@Override
+	public ProductType getById(Long id, MerchantStore store) throws ServiceException {
+		return productTypeRepository.findById(id, store.getId());
+	}

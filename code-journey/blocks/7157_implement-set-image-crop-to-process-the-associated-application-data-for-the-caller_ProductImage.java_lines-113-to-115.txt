@@ -1,0 +1,3 @@
+	public void setImageCrop(boolean imageCrop) {
+		this.imageCrop = imageCrop;
+	}

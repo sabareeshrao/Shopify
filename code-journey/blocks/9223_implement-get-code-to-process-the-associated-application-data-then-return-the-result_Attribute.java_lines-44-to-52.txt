@@ -1,0 +1,9 @@
+	public String getCode() {
+		return code;
+	}
+	public void setReadOnlyValue(AttributeValue readOnlyValue) {
+		this.readOnlyValue = readOnlyValue;
+	}
+	public AttributeValue getReadOnlyValue() {
+		return readOnlyValue;
+	}

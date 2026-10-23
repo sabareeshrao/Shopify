@@ -1,0 +1,18 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SearchFacadeImpl.class);
+
+	@Inject
+	private SearchService searchService;
+
+	@Inject
+	private ProductService productService;
+
+	@Inject
+	private CategoryService categoryService;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject
+	@Qualifier("img")
+	private ImageFilePath imageUtils;
+

@@ -1,0 +1,8 @@
+	/**
+	 * Calculates the FinalPrice of a Product taking into account
+	 * all defined prices and possible rebates
+	 * @param product
+	 * @return
+	 * @throws ServiceException
+	 */
+	FinalPrice calculateProductPrice(Product product) throws ServiceException;

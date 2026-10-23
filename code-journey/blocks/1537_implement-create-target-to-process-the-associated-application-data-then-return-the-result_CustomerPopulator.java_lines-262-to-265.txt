@@ -1,0 +1,4 @@
+	@Override
+	protected Customer createTarget() {
+		return new Customer();
+	}

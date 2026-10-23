@@ -1,0 +1,4 @@
+
+		if (cartModel == null) {
+			return null;
+		}

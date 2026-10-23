@@ -1,0 +1,8 @@
+
+	@NotEmpty
+	@Column (name ="CITY", length=100)
+	private String city;
+	
+	@NotEmpty
+	@Column (name ="POSTCODE", length=20)
+	private String postalCode;

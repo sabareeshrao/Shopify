@@ -1,0 +1,4 @@
+	@Override
+	public TaxClass getByCode(String code) throws ServiceException {
+		return taxClassRepository.findByCode(code);
+	}

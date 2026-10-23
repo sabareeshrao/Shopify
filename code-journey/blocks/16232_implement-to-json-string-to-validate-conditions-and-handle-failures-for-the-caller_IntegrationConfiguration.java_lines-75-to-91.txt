@@ -1,0 +1,17 @@
+
+
+  @SuppressWarnings("unchecked")
+  @Override
+  public String toJSONString() {
+
+
+    StringBuilder returnString = new StringBuilder();
+    returnString.append(getJsonInfo());
+
+    if (this.getIntegrationKeys().size() > 0) {
+
+      JSONObject data = new JSONObject();
+      Set<String> keys = this.getIntegrationKeys().keySet();
+      for (String key : keys) {
+        data.put(key, this.getIntegrationKeys().get(key));
+      }

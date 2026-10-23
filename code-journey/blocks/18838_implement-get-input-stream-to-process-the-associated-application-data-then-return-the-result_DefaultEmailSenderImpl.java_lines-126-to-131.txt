@@ -1,0 +1,6 @@
+        htmlPage.setDataHandler(new javax.activation.DataHandler(new javax.activation.DataSource() {
+          public InputStream getInputStream() throws IOException {
+            // return new StringBufferInputStream(htmlWriter
+            // .toString());
+            return new ByteArrayInputStream(textWriter.toString().getBytes(CHARSET));
+          }

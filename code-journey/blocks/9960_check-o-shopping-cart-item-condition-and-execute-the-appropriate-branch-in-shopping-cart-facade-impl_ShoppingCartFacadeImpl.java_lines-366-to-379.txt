@@ -1,0 +1,14 @@
+
+		List<com.salesmanager.core.model.shoppingcart.ShoppingCartItem> items = new ArrayList<>();
+
+		for (Product p : products) {
+			com.salesmanager.core.model.shoppingcart.ShoppingCartItem item = shoppingCartService
+					.populateShoppingCartItem(p, store);
+			Optional<PersistableShoppingCartItem> oShoppingCartItem = shoppingCartItems.stream()
+					.filter(i -> i.getProduct().equals(p.getSku())).findFirst();
+			if (!oShoppingCartItem.isPresent()) {
+				// Should never happen if not something is updated in realtime or user has item
+				// in local storage and add it long time after to cart!
+				LOG.warn("Missing shoppingCartItem for product " + p.getSku() + " ( " + p.getId() + " )");
+				continue;
+			}

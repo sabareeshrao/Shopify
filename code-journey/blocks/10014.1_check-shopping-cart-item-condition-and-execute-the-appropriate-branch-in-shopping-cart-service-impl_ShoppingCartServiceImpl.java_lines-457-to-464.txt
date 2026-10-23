@@ -1,0 +1,8 @@
+
+				ShoppingCartItem item = populateShoppingCartItem(product, store);
+				item.setQuantity(shoppingCartItem.getQuantity());
+				item.setShoppingCart(cartModel);
+
+				List<ShoppingCartAttributeItem> cartAttributes = new ArrayList<ShoppingCartAttributeItem>();
+				if (shoppingCartItem != null && !CollectionUtils.isEmpty(shoppingCartItem.getAttributes())) {
+					cartAttributes.addAll(shoppingCartItem.getAttributes());

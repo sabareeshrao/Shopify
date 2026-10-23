@@ -1,0 +1,16 @@
+	@Override
+	public ReadableProductAttributeEntity saveAttribute(Long productId, PersistableProductAttribute attribute,
+			MerchantStore store, Language language) {
+		Validate.notNull(productId, "Product id cannot be null");
+		Validate.notNull(attribute, "ProductAttribute cannot be null");
+		Validate.notNull(attribute.getOption(), "ProductAttribute option cannot be null");
+		Validate.notNull(attribute.getOptionValue(), "ProductAttribute option value cannot be null");
+		Validate.notNull(store, "Store cannot be null");
+
+		attribute.setProductId(productId);
+		ProductAttribute attr = new ProductAttribute();
+		if (attribute.getId() != null && attribute.getId().longValue() > 0) {
+			attr = productAttributeService.getById(attribute.getId());
+			if (attr == null) {
+				throw new ResourceNotFoundException("Product attribute [" + attribute.getId() + "] not found");
+			}

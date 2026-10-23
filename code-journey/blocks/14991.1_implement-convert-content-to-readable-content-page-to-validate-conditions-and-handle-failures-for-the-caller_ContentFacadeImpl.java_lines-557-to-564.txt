@@ -1,0 +1,8 @@
+	private ReadableContentPage convertContentToReadableContentPage(MerchantStore store, Language language,
+			Content content) {
+		if (language != null) {
+			ReadableContentPage page = new ReadableContentPage();
+			Optional<ContentDescription> contentDescription = findAppropriateContentDescription(
+					content.getDescriptions(), language);
+			if (contentDescription.isPresent()) {
+				com.salesmanager.shop.model.content.common.ContentDescription desc = this

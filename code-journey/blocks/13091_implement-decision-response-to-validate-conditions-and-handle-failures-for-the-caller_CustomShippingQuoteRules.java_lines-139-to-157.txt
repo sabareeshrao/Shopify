@@ -1,0 +1,19 @@
+		
+		
+		
+		LOGGER.debug("Setting input parameters " + inputParameters.toString());
+		
+		
+		KieSession kieSession=droolsBeanFactory.getKieSession(ResourceFactory.newClassPathResource("com/salesmanager/drools/rules/PriceByDistance.drl"));
+		
+		DecisionResponse resp = new DecisionResponse();
+		
+        kieSession.insert(inputParameters);
+        kieSession.setGlobal("decision",resp);
+        kieSession.fireAllRules();
+        //System.out.println(resp.getCustomPrice());
+
+		if(resp.getCustomPrice() != null) {
+
+			ShippingOption shippingOption = new ShippingOption();
+			

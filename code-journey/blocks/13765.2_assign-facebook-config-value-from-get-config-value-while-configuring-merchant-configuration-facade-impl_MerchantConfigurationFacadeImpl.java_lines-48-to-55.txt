@@ -1,0 +1,8 @@
+    readableConfig.setDisplayContactUs(configs.isDisplayContactUs());
+
+    readableConfig.setDisplayCustomerSection(configs.isDisplayCustomerSection());
+    readableConfig.setDisplayAddToCartOnFeaturedItems(configs.isDisplayAddToCartOnFeaturedItems());
+    readableConfig.setDisplayCustomerAgreement(configs.isDisplayCustomerAgreement());
+    readableConfig.setDisplayPagesMenu(configs.isDisplayPagesMenu());
+
+    Optional<String> facebookConfigValue = getConfigValue(KEY_FACEBOOK_PAGE_URL, merchantStore);

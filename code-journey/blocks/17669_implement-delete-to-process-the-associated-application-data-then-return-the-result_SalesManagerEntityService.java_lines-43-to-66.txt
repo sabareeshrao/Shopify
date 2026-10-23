@@ -1,0 +1,24 @@
+
+	/**
+	 * Supprime l'entité de la base de données
+	 * 
+	 * @param entity entité
+	 */
+	void delete(E entity) throws ServiceException;
+	
+
+	/**
+	 * Retourne une entité à partir de son id.
+	 * 
+	 * @param id identifiant
+	 * @return entité
+	 */
+	E getById(K id);
+	
+	/**
+	 * Renvoie la liste de l'ensemble des entités de ce type.
+	 * 
+	 * @return liste d'entités
+	 */
+	List<E> list();
+	

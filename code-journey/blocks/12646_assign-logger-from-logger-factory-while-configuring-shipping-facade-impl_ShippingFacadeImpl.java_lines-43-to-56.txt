@@ -1,0 +1,14 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingFacadeImpl.class);
+
+	@Autowired
+	ShippingOriginService shippingOriginService;
+	
+	@Autowired
+	ShippingService shippingService;
+	
+	@Autowired
+	CountryService countryService;
+	
+	@Autowired
+	ZoneService zoneService;
+	

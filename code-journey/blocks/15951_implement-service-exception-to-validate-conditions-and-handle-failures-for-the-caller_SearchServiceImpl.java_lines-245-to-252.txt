@@ -1,0 +1,8 @@
+
+			item.setLanguage(description.getLanguage().getCode());
+			item.setLink(description.getSeUrl());
+
+			searchModule.index(item);
+		} catch (Exception e) {
+			throw new ServiceException(e);
+		}

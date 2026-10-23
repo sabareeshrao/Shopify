@@ -1,0 +1,3 @@
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertNotNull(cat.getId());
+

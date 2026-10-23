@@ -1,0 +1,16 @@
+      
+      ProductSpecification specifications = new ProductSpecification();
+      specifications.setManufacturer("BRAND1");
+      product1.setProductSpecifications(specifications);
+      
+      json = writer.writeValueAsString(product1);
+      entity = new HttpEntity<>(json, getHeader());
+
+      response = testRestTemplate.postForEntity("/api/v1/private/product?store=" + Constants.DEFAULT_STORE, entity, PersistableProduct.class);
+      assertThat(response.getStatusCode(), is(CREATED));
+            
+      //create second item      
+      
+      PersistableProduct product2 = super.product("PRODUCT2");
+      product2.getCategories().add(cat);
+      

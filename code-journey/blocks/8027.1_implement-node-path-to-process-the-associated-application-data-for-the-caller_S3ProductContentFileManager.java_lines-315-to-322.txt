@@ -1,0 +1,8 @@
+  private String nodePath(String store, String product, ImageContentFile contentImage) {
+
+    StringBuilder sb = new StringBuilder();
+    // node path
+    String nodePath = nodePath(store, product);
+    sb.append(nodePath);
+
+    // small large

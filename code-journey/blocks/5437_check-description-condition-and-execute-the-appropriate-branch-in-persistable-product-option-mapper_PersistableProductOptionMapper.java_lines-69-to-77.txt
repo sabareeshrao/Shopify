@@ -1,0 +1,9 @@
+            }
+          } 
+          if(description == null) {
+	          description = description(desc);
+	          description.setProductOption(destination);
+	          destination.getDescriptions().add(description);
+          }
+        }
+      }

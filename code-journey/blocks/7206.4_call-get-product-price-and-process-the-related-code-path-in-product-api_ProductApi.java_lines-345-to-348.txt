@@ -1,0 +1,4 @@
+
+		return productFacade.getProductPrice(id, variants, merchantStore, language);
+
+	}

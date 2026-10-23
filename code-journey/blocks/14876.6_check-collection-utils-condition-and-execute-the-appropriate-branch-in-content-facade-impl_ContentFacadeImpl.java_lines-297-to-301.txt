@@ -1,0 +1,5 @@
+		if (!CollectionUtils.isEmpty(contentModel.getDescriptions())) {
+			for (ContentDescription description : contentModel.getDescriptions()) {
+				if (language != null && !language.getId().equals(description.getLanguage().getId())) {
+					continue;
+				}

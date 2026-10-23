@@ -1,0 +1,3 @@
+	public void setProductImage(ProductImage productImage) {
+		this.productImage = productImage;
+	}

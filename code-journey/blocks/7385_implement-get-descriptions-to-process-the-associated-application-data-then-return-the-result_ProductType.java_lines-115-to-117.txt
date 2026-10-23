@@ -1,0 +1,3 @@
+public Set<ProductTypeDescription> getDescriptions() {
+	return descriptions;
+}

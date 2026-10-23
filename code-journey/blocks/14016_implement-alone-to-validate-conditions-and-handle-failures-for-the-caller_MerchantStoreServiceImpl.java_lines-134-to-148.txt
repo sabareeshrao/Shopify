@@ -1,0 +1,15 @@
+
+	/**
+	 * Store might be alone (known as retailer)
+	 * A retailer can have multiple child attached
+	 * 
+	 * This method from a store code is able to retrieve parent and childs.
+	 * Method can also filter on storeName
+	 */
+	@Override
+	public Page<MerchantStore> listByGroup(Optional<String> storeName, String code, int page, int count) throws ServiceException {
+		
+		String name = null;
+		if (storeName != null && storeName.isPresent()) {
+			name = storeName.get();
+		}

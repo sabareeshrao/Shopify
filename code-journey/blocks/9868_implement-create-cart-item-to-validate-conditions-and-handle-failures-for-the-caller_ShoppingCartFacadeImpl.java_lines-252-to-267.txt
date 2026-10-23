@@ -1,0 +1,16 @@
+
+	// KEEP -- ENTRY
+	private com.salesmanager.core.model.shoppingcart.ShoppingCartItem createCartItem(ShoppingCart cartModel,
+			PersistableShoppingCartItem shoppingCartItem, MerchantStore store) throws Exception {
+
+		// USE Product sku
+		Product product = null;
+
+		product = productService.getBySku(shoppingCartItem.getProduct(), store, store.getDefaultLanguage());// todo use
+																											// language
+																											// from api
+																											// request
+		if (product == null) {
+			throw new ResourceNotFoundException(
+					"Product with sku " + shoppingCartItem.getProduct() + " does not exist");
+		}

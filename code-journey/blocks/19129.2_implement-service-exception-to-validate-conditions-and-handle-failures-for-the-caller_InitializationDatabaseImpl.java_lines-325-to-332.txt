@@ -1,0 +1,8 @@
+              //will load es zones and use a specific file for french es zones
+      		  List<Map<String, Zone>> loadIndividualZones = zonesLoader.loadIndividualZones();
+      		  
+      		loadIndividualZones.forEach(this::addZonesToDb);
+
+  		} catch (Exception e) {
+  		    
+  			throw new ServiceException(e);

@@ -1,0 +1,7 @@
+                cartEntity,
+                ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(CREATED));
+        assertEquals(4, response.getBody().getQuantity());
+    }

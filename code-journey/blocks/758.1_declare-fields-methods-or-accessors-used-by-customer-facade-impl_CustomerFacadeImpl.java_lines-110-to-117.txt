@@ -1,0 +1,8 @@
+  public final static String ROLE_PREFIX = "ROLE_";// Spring Security 4
+
+
+  @Inject
+  private CustomerService customerService;
+
+  @Inject
+  private OptinService optinService;

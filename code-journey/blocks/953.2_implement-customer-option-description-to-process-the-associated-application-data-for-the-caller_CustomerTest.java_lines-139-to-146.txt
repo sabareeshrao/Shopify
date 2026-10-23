@@ -1,0 +1,8 @@
+		CustomerOptionDescription hasReturnedItemsDesciption= new CustomerOptionDescription();
+		hasReturnedItemsDesciption.setName("Has returned items");
+		hasReturnedItemsDesciption.setDescription("Has returned items");
+		hasReturnedItemsDesciption.setLanguage(en);
+		hasReturnedItemsDesciption.setCustomerOption(hasReturnedItems);
+		
+		Set<CustomerOptionDescription> hasReturnedItemsList = new HashSet<CustomerOptionDescription>();
+		hasReturnedItemsList.add(hasReturnedItemsDesciption);

@@ -1,0 +1,8 @@
+			int displayQuoteDeliveryTime = ShippingConstants.NO_DISPLAY_RT_QUOTE_TIME;
+			if (rtdetails != null) {
+
+				if (!StringUtils.isBlank(rtdetails.getConfigurationValue1())) {// display
+																				// or
+																				// not
+																				// quotes
+					try {

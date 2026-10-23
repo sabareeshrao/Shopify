@@ -1,0 +1,3 @@
+            if (destinationHeight == 0) {
+            	destinationHeight = image.getHeight();
+            }

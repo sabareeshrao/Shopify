@@ -1,0 +1,7 @@
+			
+			//must have a shipping module configured
+			Map<String, IntegrationConfiguration> modules = this.getShippingModulesConfigured(store);
+			if(modules == null){
+				shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_MODULE_CONFIGURED);
+				return shippingQuote;
+			}

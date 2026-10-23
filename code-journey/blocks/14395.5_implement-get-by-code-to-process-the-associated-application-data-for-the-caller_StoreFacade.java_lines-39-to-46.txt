@@ -1,0 +1,8 @@
+
+	ReadableMerchantStore getByCode(String code, String lang);
+
+	ReadableMerchantStore getFullByCode(String code, String lang);
+
+	ReadableMerchantStoreList findAll(MerchantStoreCriteria criteria, Language language, int page, int count);
+
+	/**

@@ -1,0 +1,8 @@
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public List<ImageFile> list(@RequestParam(value = "parentPath", required = false) String path,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) throws Exception {
+
+		String decodedPath = decodeContentPath(path);
+
+		ContentFolder folder = contentFacade.getContentFolder(decodedPath, merchantStore);
+		List<ImageFile> files = folder.getContent().stream().map(x -> convertToImageFile(merchantStore, x))

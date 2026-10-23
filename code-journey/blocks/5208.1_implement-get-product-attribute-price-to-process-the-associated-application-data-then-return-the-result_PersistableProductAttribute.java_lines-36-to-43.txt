@@ -1,0 +1,8 @@
+	public BigDecimal getProductAttributePrice() {
+		return productAttributePrice;
+	}
+	public void setProductAttributePrice(BigDecimal productAttributePrice) {
+		this.productAttributePrice = productAttributePrice;
+	}
+	public Long getProductId() {
+		return productId;

@@ -1,0 +1,5 @@
+
+		/**
+		if (criteria.getOwnerId() != null) {
+			q.setParameter("ownerid", criteria.getOwnerId());
+		}

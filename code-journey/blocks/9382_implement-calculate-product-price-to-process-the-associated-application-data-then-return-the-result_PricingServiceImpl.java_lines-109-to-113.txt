@@ -1,0 +1,5 @@
+	@Override
+	public FinalPrice calculateProductPrice(ProductAvailability availability) throws ServiceException {
+
+		return priceUtil.getFinalPrice(availability);
+	}

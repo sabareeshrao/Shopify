@@ -1,0 +1,4 @@
+  @Override
+  public Manufacturer getById(Long id) {
+    return manufacturerRepository.findOne(id);
+  }

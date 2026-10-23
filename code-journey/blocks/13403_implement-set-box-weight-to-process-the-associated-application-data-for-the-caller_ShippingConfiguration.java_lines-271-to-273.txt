@@ -1,0 +1,3 @@
+	public void setBoxWeight(double boxWeight) {
+		this.boxWeight = boxWeight;
+	}

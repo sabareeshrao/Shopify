@@ -1,0 +1,2 @@
+		contentFileManager.removeFiles(merchantStoreCode, path);
+	}

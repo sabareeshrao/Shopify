@@ -1,0 +1,6 @@
+	
+				if (!CollectionUtils.isEmpty(documents)) {
+					if (documents.iterator().next() != null) {
+						searchModule.delete(languages, product.getId());
+					}
+				}

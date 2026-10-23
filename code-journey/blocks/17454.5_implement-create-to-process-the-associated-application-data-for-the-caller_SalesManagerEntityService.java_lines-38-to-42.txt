@@ -1,0 +1,5 @@
+	 * 
+	 * @param entity entité
+	 */
+	void create(E entity) throws ServiceException;
+

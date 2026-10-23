@@ -1,0 +1,8 @@
+			            
+			 // Scale the renderer to fit width
+			 renderer.setResizeFactor(renderer.getPrintWidth() / w);
+			 // Render
+			 renderer.paintComponent(g2);
+			 g2.dispose();
+
+			 // Add our spreadsheet in the middle of the page

@@ -1,0 +1,8 @@
+	@ManyToOne
+	@JoinColumn(name = "ORDER_ID", nullable = false)
+	private Order order;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "ORDER_ACCOUNT_START_DATE", nullable = false, length = 0)
+	private Date orderAccountStartDate;
+	

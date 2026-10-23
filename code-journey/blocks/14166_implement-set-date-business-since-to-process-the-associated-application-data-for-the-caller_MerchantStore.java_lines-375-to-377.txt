@@ -1,0 +1,3 @@
+	public void setDateBusinessSince(String dateBusinessSince) {
+		this.dateBusinessSince = dateBusinessSince;
+	}

@@ -1,0 +1,6 @@
+						} else {//international all
+							freeShipping = true;
+							shippingQuote.setFreeShipping(true);
+							shippingQuote.setFreeShippingAmount(freeShippingAmount);
+							return shippingQuote;
+						}

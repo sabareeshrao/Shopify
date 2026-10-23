@@ -1,0 +1,8 @@
+			Billing billing = customer.getBilling();
+
+			String postalCode = billing.getPostalCode();
+			postalCode = validatePostalCode(postalCode);
+
+			delivery.setAddress(billing.getAddress());
+			delivery.setCompany(billing.getCompany());
+			delivery.setCity(billing.getCity());

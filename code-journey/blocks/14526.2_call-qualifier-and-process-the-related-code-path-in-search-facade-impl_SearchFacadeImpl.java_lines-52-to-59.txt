@@ -1,0 +1,8 @@
+	@Inject
+	private CategoryService categoryService;
+
+	@Inject
+	private PricingService pricingService;
+
+	@Inject
+	@Qualifier("img")

@@ -1,0 +1,4 @@
+
+		return convertUserToReadableUser(lang, user);
+
+	}

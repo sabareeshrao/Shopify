@@ -1,0 +1,19 @@
+	private static final String ALL_REGIONS = "*";
+
+	//
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List<Map<String, Zone>> loadIndividualZones() throws Exception {
+
+		List<Map<String, Zone>> loadedZones = new ArrayList<Map<String, Zone>>();
+		try {
+
+			List<Resource> files = geZoneFiles(PATH);
+			List<Language> languages = languageService.list();
+
+			ObjectMapper mapper = new ObjectMapper();
+
+			List<Country> countries = countryService.list();
+			Map<String, Country> countriesMap = new HashMap<String, Country>();
+			for (Country country : countries) {
+				countriesMap.put(country.getIsoCode(), country);
+			}

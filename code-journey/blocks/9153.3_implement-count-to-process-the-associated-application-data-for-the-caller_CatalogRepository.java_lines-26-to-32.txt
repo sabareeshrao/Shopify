@@ -1,0 +1,7 @@
+	
+	@Query("SELECT COUNT(c) > 0 FROM Catalog c "
+			+ "join c.merchantStore cm  "
+			+ "WHERE c.code = ?1 and cm.id = ?2")
+	boolean existsByCode(String code, Integer merchantId);
+
+}

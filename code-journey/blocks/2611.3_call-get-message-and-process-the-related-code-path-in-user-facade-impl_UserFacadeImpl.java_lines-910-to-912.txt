@@ -1,0 +1,3 @@
+					messages.getMessage("email.link.reset.password.title", locale));
+			templateTokens.put(EmailConstants.LABEL_LINK, messages.getMessage("email.link", locale));
+

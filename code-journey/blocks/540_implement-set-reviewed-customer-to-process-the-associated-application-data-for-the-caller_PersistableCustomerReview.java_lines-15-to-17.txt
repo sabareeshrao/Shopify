@@ -1,0 +1,3 @@
+	public void setReviewedCustomer(Long reviewedCustomer) {
+		this.reviewedCustomer = reviewedCustomer;
+	}

@@ -1,0 +1,4 @@
+			    		   shipping.append(LINE_BREAK);
+			    	   } else if(!StringUtils.isBlank(order.getDelivery().getState())) {
+			    		   shipping.append(order.getDelivery().getState()).append(LINE_BREAK); 
+			    	   }

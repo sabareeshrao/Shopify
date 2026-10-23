@@ -1,0 +1,8 @@
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+
+@Component
+public class PersistableProductOptionValueMapper
+		implements Mapper<PersistableProductOptionValue, ProductOptionValue> {
+
+	@Autowired
+	private LanguageService languageService;

@@ -1,0 +1,2 @@
+        returnList.add(readableManufacturer);
+      }

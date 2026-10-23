@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.order.total.OrderTotal;
+import com.salesmanager.shop.model.order.transaction.ReadableTransaction;
+import com.salesmanager.shop.populator.customer.CustomerPopulator;
+import com.salesmanager.shop.populator.customer.PersistableCustomerPopulator;
+import com.salesmanager.shop.populator.order.OrderProductPopulator;
+import com.salesmanager.shop.populator.order.PersistableOrderApiPopulator;
+import com.salesmanager.shop.populator.order.ReadableOrderPopulator;
+import com.salesmanager.shop.populator.order.ReadableOrderProductPopulator;

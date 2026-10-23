@@ -1,0 +1,11 @@
+	@Override
+	public List<ShippingOption> getShippingQuotes(
+			ShippingQuote shippingQuote,
+			List<PackageDetails> packages, BigDecimal orderTotal,
+			Delivery delivery, ShippingOrigin origin, MerchantStore store,
+			IntegrationConfiguration configuration, IntegrationModule module,
+			ShippingConfiguration shippingConfiguration, Locale locale)
+			throws IntegrationException {
+		
+		Validate.notNull(configuration, "IntegrationConfiguration must not be null for USPS shipping module");
+

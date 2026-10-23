@@ -1,0 +1,2 @@
+			throw new ServiceRuntimeException("Error getting shipping modules", e);
+		}

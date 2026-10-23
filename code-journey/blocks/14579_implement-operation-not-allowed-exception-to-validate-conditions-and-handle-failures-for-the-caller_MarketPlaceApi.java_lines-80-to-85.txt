@@ -1,0 +1,6 @@
+
+		// check if store exists
+		if (storeFacade.existByCode(store.getCode())) {
+			throw new OperationNotAllowedException(
+					"Store [" + store.getCode() + "] already exist and cannot be registered");
+		}

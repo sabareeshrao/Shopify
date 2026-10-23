@@ -1,0 +1,8 @@
+		
+		/** SEARCH ORDERS **/
+
+		OrderCriteria criteria = new OrderCriteria();
+		criteria.setStartIndex(0);
+		criteria.setMaxCount(10);
+	
+		OrderList ordserList = orderService.listByStore(merchant, criteria);

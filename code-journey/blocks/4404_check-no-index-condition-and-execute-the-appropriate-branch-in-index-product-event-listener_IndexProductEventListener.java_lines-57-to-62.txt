@@ -1,0 +1,6 @@
+		
+		if(!noIndex) {
+
+			if (event instanceof SaveProductEvent) {
+				saveProduct((SaveProductEvent) event);
+			}

@@ -1,0 +1,2 @@
+				throw new ResourceNotFoundException("Product with id [" + product.getId() + "] not found for store [" + store.getCode() + "]");
+			}

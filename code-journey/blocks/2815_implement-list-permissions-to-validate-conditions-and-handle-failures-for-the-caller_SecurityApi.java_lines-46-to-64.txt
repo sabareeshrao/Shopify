@@ -1,0 +1,19 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityApi.class);
+
+	@Inject
+	private PermissionService permissionService;
+
+	@Inject
+	private GroupService groupService;
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping({ "/private/{group}/permissions" })
+	@ApiOperation(httpMethod = "GET", value = "Get permissions by group", notes = "", produces = MediaType.APPLICATION_JSON_VALUE, response = List.class)
+	public List<ReadablePermission> listPermissions(@PathVariable String group) {
+
+		Group g = null;
+		try {
+			g = groupService.findByName(group);
+			if(g == null) {
+				throw new ResourceNotFoundException("Group [" + group + "] does not exist");
+			}

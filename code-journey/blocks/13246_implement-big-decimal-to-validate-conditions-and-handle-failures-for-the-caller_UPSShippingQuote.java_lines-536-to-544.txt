@@ -1,0 +1,9 @@
+						try {
+							BigDecimal price = new BigDecimal(priceText);
+							option.setOptionPrice(price);
+						} catch(Exception e) {
+							throw new IntegrationException("Can't convert to numeric price " + priceText);
+						}
+					}
+				}
+			}

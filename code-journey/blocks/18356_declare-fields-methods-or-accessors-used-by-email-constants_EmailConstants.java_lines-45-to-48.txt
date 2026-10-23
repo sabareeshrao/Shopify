@@ -1,0 +1,4 @@
+	public static final String EMAIL_CONTACT_OWNER = "EMAIL_CONTACT_OWNER";
+	public static final String EMAIL_ADMIN_URL_LABEL = "EMAIL_ADMIN_URL_LABEL";
+	public static final String EMAIL_ADMIN_URL = "EMAIL_ADMIN_URL";
+	

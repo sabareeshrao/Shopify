@@ -1,0 +1,3 @@
+    public Set<CategoryDescription> getDescriptions() {
+      return descriptions;
+    }

@@ -1,0 +1,8 @@
+
+	@Inject
+	private PricingService pricingService;
+	
+	@Inject
+	private ModuleConfigurationService moduleConfigurationService;
+	
+	@Inject

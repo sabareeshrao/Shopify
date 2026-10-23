@@ -1,0 +1,8 @@
+
+			List<ReadableProductPrice> prices = prices(source, store, language);
+			destination.setPrices(prices);
+
+			if(!StringUtils.isEmpty(source.getSku())) {
+				destination.setSku(source.getSku());
+			} else {
+				destination.setSku(source.getProduct().getSku());

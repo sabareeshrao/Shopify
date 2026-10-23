@@ -1,0 +1,22 @@
+package com.salesmanager.shop.store.model.filter;
+
+/**
+ * Used in Category and Search to filter display based on other
+ * entities such as Manufacturer
+ * @author Carl Samson
+ *
+ */
+public class QueryFilter {
+	
+	/**
+	 * used when filtering on an entity code (example property)
+	 */
+	private String filterCode;
+	/**
+	 * used when filtering on an entity id
+	 */
+	private Long filterId;
+	private QueryFilterType filterType;
+	public String getFilterCode() {
+		return filterCode;
+	}

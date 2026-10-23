@@ -1,0 +1,9 @@
+	public long getSize() {
+		return size;
+	}
+	public void setSize(long size) {
+		this.size = size;
+	}
+	public int getPrice() {
+		return price;
+	}

@@ -1,0 +1,8 @@
+import com.salesmanager.shop.mapper.catalog.PersistableProductOptionValueMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductAttributeMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductOptionMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableProductOptionValueMapper;
+import com.salesmanager.shop.model.catalog.product.attribute.PersistableProductAttribute;
+import com.salesmanager.shop.model.catalog.product.attribute.PersistableProductOptionValue;
+import com.salesmanager.shop.model.catalog.product.attribute.api.PersistableProductOptionEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductAttributeEntity;

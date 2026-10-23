@@ -1,0 +1,5 @@
+	private ProductVariant variant(Product product, PersistableProductVariant variant, MerchantStore store, Language language) {
+		ProductVariant var = persistableProductVariantMapper.convert(variant, store, language);
+		var.setProduct(product);
+		return var;
+	}

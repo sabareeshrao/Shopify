@@ -1,0 +1,8 @@
+	@Override
+	public String getBasePath(MerchantStore store) {
+		if(StringUtils.isBlank(contentUrl)) {
+			String host = new StringBuilder().append(SCHEME).append(serverConfig.getApplicationHost()).toString();
+			return new StringBuilder().append(this.getScheme(store, host)).append(basePath).toString();
+		} else {
+			return new StringBuilder().append(contentUrl).append(basePath).toString();
+		}

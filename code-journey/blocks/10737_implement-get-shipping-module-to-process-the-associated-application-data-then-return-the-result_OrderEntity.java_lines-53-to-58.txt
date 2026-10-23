@@ -1,0 +1,6 @@
+	public String getShippingModule() {
+		return shippingModule;
+	}
+	public void setShippingModule(String shippingModule) {
+		this.shippingModule = shippingModule;
+	}

@@ -1,0 +1,3 @@
+	public void setStoreEmailAddress(String storeEmailAddress) {
+		this.storeEmailAddress = storeEmailAddress;
+	}

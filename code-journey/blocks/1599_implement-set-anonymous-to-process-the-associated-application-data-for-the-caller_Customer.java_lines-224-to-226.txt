@@ -1,0 +1,3 @@
+	public void setAnonymous(boolean anonymous) {
+		this.anonymous = anonymous;
+	}

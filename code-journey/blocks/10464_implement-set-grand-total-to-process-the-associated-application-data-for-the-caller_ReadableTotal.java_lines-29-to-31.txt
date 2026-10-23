@@ -1,0 +1,3 @@
+	public void setGrandTotal(String grandTotal) {
+		this.grandTotal = grandTotal;
+	}

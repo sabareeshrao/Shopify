@@ -1,0 +1,3 @@
+	    private String generateAudience() {
+	        return AUDIENCE_API;
+	    }

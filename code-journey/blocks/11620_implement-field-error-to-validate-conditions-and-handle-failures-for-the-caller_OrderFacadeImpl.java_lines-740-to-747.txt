@@ -1,0 +1,8 @@
+
+			if (StringUtils.isBlank(order.getCustomer().getBilling().getAddress())) {
+				FieldError error = new FieldError("customer.billing.address", "customer.billing.address",
+						messages.getMessage("NotEmpty.customer.billing.address", locale));
+				bindingResult.addError(error);
+				messagesResult.put("customer.billing.address",
+						messages.getMessage("NotEmpty.customer.billing.address", locale));
+			}

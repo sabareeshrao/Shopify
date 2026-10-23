@@ -1,0 +1,4 @@
+	@Override
+	public Category getById(Long categoryid, int merchantId, int language) {
+		return categoryRepository.findById(merchantId, categoryid, language);
+	}

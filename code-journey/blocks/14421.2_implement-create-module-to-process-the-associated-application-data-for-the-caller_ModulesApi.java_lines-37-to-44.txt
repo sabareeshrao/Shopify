@@ -1,0 +1,8 @@
+  @ApiOperation(
+      httpMethod = "POST",
+      value = "Creates a new module",
+      notes = "",
+      produces = "application/json")
+  public ReadableEntity createModule(@RequestBody String json, HttpServletRequest request) {
+
+      LOGGER.debug("Creating an integration module : " + json);

@@ -1,0 +1,5 @@
+			user = userService.getByUserName(userName);
+
+			if(user==null) {
+				return null;
+			}

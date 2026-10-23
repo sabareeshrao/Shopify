@@ -1,0 +1,9 @@
+
+		/**
+		 * List of possible imageType
+		 * 
+		 */
+		
+
+		ProductImageSize size = ProductImageSize.LARGE;
+		

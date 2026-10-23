@@ -1,0 +1,6 @@
+	@Override
+	public ProductVariant saveProductVariant(ProductVariant variant) throws ServiceException {
+
+		variant = productVariantRepository.save(variant);
+		return variant;
+	}

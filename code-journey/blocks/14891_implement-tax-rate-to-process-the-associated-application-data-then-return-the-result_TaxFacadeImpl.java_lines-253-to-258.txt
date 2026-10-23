@@ -1,0 +1,6 @@
+	@Override
+	public ReadableTaxRate taxRate(Long id, MerchantStore store, Language language) {
+		
+		TaxRate model = taxRateById(id, store, language);
+		return readableTaxRateMapper.convert(model, store, language);
+	}

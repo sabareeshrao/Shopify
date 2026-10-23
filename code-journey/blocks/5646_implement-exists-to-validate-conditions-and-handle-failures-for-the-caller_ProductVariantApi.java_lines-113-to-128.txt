@@ -1,0 +1,16 @@
+
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping(value = { "/private/product/{id}/variant/{sku}/unique" }, produces = "application/json")
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
+	@ApiOperation(httpMethod = "GET", value = "Check if option set code already exists", notes = "", response = EntityExists.class)
+	public @ResponseBody ResponseEntity<EntityExists> exists(
+			@PathVariable Long id, 
+			@PathVariable String sku,
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

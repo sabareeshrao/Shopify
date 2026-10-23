@@ -1,0 +1,8 @@
+      // exists update
+      customerOptin.setEmail(optin.getEmail());
+      customerOptin.setFirstName(optin.getFirstName());
+      customerOptin.setLastName(optin.getLastName());
+    } else {
+      customerOptin = new com.salesmanager.core.model.system.optin.CustomerOptin();
+      customerOptin.setEmail(optin.getEmail());
+      customerOptin.setFirstName(optin.getFirstName());

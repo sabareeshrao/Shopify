@@ -1,0 +1,8 @@
+  public void setDimensionUnitOfMeasure(DimensionUnitOfMeasure dimensionUnitOfMeasure) {
+    this.dimensionUnitOfMeasure = dimensionUnitOfMeasure;
+  }
+  public WeightUnitOfMeasure getWeightUnitOfMeasure() {
+    return weightUnitOfMeasure;
+  }
+  public void setWeightUnitOfMeasure(WeightUnitOfMeasure weightUnitOfMeasure) {
+    this.weightUnitOfMeasure = weightUnitOfMeasure;

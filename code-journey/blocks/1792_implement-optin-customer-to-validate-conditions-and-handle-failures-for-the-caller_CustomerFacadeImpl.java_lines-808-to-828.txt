@@ -1,0 +1,21 @@
+  @Override
+  public void optinCustomer(PersistableCustomerOptin optin, MerchantStore store) {
+    // check if customer optin exists
+    Optin optinDef = getOptinByCode(store);
+
+    CustomerOptin customerOptin = getCustomerOptinByEmailAddress(optin.getEmail(), store, OptinType.NEWSLETTER);
+
+    if (customerOptin != null) {
+      // exists update
+      customerOptin.setEmail(optin.getEmail());
+      customerOptin.setFirstName(optin.getFirstName());
+      customerOptin.setLastName(optin.getLastName());
+    } else {
+      customerOptin = new com.salesmanager.core.model.system.optin.CustomerOptin();
+      customerOptin.setEmail(optin.getEmail());
+      customerOptin.setFirstName(optin.getFirstName());
+      customerOptin.setLastName(optin.getLastName());
+      customerOptin.setOptinDate(new Date());
+      customerOptin.setOptin(optinDef);
+      customerOptin.setMerchantStore(store);
+    }

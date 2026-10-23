@@ -1,0 +1,6 @@
+		}
+		
+		target.setTotals(totals);
+		
+		return target;
+	}

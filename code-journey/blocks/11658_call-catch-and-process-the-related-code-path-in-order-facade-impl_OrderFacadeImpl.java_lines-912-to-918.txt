@@ -1,0 +1,7 @@
+
+			}
+
+		} catch (ServiceException se) {
+			LOGGER.error("Error while commiting order", se);
+			throw se;
+		}

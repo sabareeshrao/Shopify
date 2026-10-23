@@ -1,0 +1,18 @@
+	@Override
+	public Transaction initTransaction(MerchantStore store, Customer customer,
+			BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+      Validate.notNull(configuration,"Configuration cannot be null");
+      String publicKey = configuration.getIntegrationKeys().get("publishableKey");
+      Validate.notNull(publicKey,"Publishable key not found in configuration");
+
+      Transaction transaction = new Transaction();
+      transaction.setAmount(amount);
+      transaction.setDetails(publicKey);
+      transaction.setPaymentType(payment.getPaymentType());
+      transaction.setTransactionDate(new Date());
+      transaction.setTransactionType(payment.getTransactionType());
+      
+      return transaction;
+	}

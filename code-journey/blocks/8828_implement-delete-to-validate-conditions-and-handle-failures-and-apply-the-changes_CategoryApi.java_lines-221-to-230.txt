@@ -1,0 +1,10 @@
+
+	@DeleteMapping(value = "/private/category/{id}", produces = { APPLICATION_JSON_VALUE })
+	@ResponseStatus(OK)
+	public void delete(@PathVariable("id") Long categoryId, @ApiIgnore MerchantStore merchantStore) {
+
+		// superadmin, admin and admin_catalogue
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}

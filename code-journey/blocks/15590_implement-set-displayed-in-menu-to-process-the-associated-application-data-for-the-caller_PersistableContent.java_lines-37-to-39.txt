@@ -1,0 +1,3 @@
+  public void setDisplayedInMenu(boolean isDisplayedInMenu) {
+    this.isDisplayedInMenu = isDisplayedInMenu;
+  }

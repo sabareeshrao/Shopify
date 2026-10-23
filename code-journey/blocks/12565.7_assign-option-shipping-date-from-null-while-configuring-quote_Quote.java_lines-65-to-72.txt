@@ -1,0 +1,8 @@
+	@Column (name ="OPTION_SHIPPING_DATE")
+	private Date optionShippingDate = null;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="QUOTE_DATE")
+	private Date quoteDate;
+	
+	@Column(name = "SHIPPING_NUMBER_DAYS")

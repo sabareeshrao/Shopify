@@ -1,0 +1,8 @@
+	public void setInventory(PersistableProductInventory inventory) {
+		this.inventory = inventory;
+	}
+	public List<PersistableProductVariant> getVariants() {
+		return variants;
+	}
+	public void setVariants(List<PersistableProductVariant> variants) {
+		this.variants = variants;

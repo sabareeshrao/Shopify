@@ -1,0 +1,23 @@
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
+import springfox.documentation.annotations.ApiIgnore;
+
+
+/**
+ * Optin a customer to newsletter
+ * @author carlsamson
+ *
+ */
+@RestController
+@RequestMapping(value = "/api/v1", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(tags = { "Optin Customer to newsletter" })
+@SwaggerDefinition(tags = { @Tag(name = "Manage customer subscription to newsletter", description = "Manage customer subscription to newsletter") })
+public class CustomerNewsletterApi {
+
+	@Inject
+	private CustomerFacade customerFacade;
+

@@ -1,0 +1,8 @@
+	@Column(name = "WEIGHTUNITCODE", length = 5)
+	private String weightunitcode = MeasureUnit.LB.name();
+
+	@Column(name = "SEIZEUNITCODE", length = 5)
+	private String seizeunitcode = MeasureUnit.IN.name();
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "IN_BUSINESS_SINCE")

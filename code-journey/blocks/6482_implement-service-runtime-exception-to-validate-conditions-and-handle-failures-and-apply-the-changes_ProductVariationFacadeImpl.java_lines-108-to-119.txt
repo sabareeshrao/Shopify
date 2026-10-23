@@ -1,0 +1,12 @@
+		
+		ProductVariation productVariant = p.get();
+		
+		productVariant.setId(variationId);
+		productVariant.setCode(var.getCode());
+		ProductVariation model = persistableProductVariationMapper.merge(var, productVariant, store, language);
+		try {
+			model.setMerchantStore(store);
+			productVariationService.save(model);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductVariation", e);
+		}

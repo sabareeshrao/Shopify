@@ -1,0 +1,7 @@
+management.endpoint.health.show-details=always
+management.endpoint.health.show-components=always
+
+management.health.elasticsearch.enabled=false
+management.health.mail.enabled=false
+management.health.ping.enabled=true
+

@@ -1,0 +1,8 @@
+	    description.setLanguage(en);
+	    description.setProduct(related);
+
+	    product.getDescriptions().add(description);
+
+	    //add category
+	    product.getCategories().add(tech);
+

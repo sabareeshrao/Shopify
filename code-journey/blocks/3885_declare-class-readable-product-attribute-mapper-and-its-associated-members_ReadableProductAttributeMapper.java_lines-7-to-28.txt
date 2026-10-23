@@ -1,0 +1,22 @@
+import com.salesmanager.core.business.services.catalog.pricing.PricingService;
+import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductAttributeEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionEntity;
+import com.salesmanager.shop.model.catalog.product.attribute.api.ReadableProductOptionValue;
+import com.salesmanager.shop.store.api.exception.ConversionRuntimeException;
+
+@Component
+public class ReadableProductAttributeMapper implements Mapper<ProductAttribute, ReadableProductAttributeEntity> {
+
+	@Autowired
+	private ReadableProductOptionMapper readableProductOptionMapper;
+	
+	@Autowired
+	private ReadableProductOptionValueMapper readableProductOptionValueMapper;
+
+	@Autowired
+	private PricingService pricingService;
+	

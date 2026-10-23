@@ -1,0 +1,8 @@
+
+  @Inject
+  private CustomerOptinService customerOptinService;
+
+  @Inject
+  private ShoppingCartService shoppingCartService;
+
+  @Inject

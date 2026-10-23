@@ -1,0 +1,8 @@
+
+		boolean productAssigned = false;
+
+		for(Product p : individualProducts) {
+
+			//Set<ProductAttribute> attributes = p.getAttributes();
+			productAssigned = false;
+

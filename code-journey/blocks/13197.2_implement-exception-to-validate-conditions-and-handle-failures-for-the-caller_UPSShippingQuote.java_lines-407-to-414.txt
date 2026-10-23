@@ -1,0 +1,8 @@
+				throw new Exception("UPS quote communication error " + result);
+			}*/
+
+			LOGGER.debug("ups quote response " + data);
+
+			UPSParsedElements parsed = new UPSParsedElements();
+
+			Digester digester = new Digester();

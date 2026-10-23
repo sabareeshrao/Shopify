@@ -1,0 +1,10 @@
+	private ProductPriceDescription getDescription(
+			com.salesmanager.shop.model.catalog.product.ProductPriceDescription desc) throws ConversionException {
+		ProductPriceDescription target = new ProductPriceDescription();
+		target.setDescription(desc.getDescription());
+		target.setName(desc.getName());
+		target.setTitle(desc.getTitle());
+		target.setId(null);
+		if (isPositive(desc.getId())) {
+			target.setId(desc.getId());
+		}

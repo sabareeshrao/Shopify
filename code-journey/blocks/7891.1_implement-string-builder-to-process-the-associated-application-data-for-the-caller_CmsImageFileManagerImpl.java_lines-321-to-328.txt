@@ -1,0 +1,8 @@
+
+      StringBuilder nodePath = new StringBuilder();
+      nodePath.append(merchantStoreCode);
+
+
+      Node<String, Object> merchantNode = this.getNode(nodePath.toString());
+
+      Set<Node<String, Object>> childs = merchantNode.getChildren();

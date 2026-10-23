@@ -1,0 +1,5 @@
+public enum ProductPriceType {
+	
+	ONE_TIME, MONTHLY
+
+}

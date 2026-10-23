@@ -1,0 +1,25 @@
+NO_SHIPPING_MODULE_CONFIGURED=No shipping module configured
+
+module.shipping.canadapost=Canada Post
+module.shipping.ups=UPS
+module.shipping.usps=United States Postal Service
+module.shipping.fedex=Fedex
+module.shipping.weightBased=Weight based shipping price
+module.shipping.customQuotesRules=Shipping by {0}
+module.shipping.storePickUp=Store pick up
+module.shipping.priceByDistance=Shipping by {0}
+
+module.shipping.storePickUp.note=This option lets you reserve your order items through the online system and pick up your order by yourself at the store. This option is also offered when no other shipping option is available for your region.
+
+#custom
+module.shipping.customQuotesRules.title=Create your own shipping quotes rules
+module.shipping.customQuotesRules.text=Use the rule system to create your own shipping rate decision table. The custom shipping rate decision table can be edited in sm-core/src/main/resources/rules/shipping-custom-rules.xls 
+
+#custom
+module.shipping.priceByDistance.title=Create your own shipping quote based on distance
+module.shipping.priceByDistance.text=Set your shipping price (by kilometer). Requires the pre-processor distance calculator.
+
+module.shipping.canada=Canada
+module.shipping.usa=United states
+module.shipping.international=International
+

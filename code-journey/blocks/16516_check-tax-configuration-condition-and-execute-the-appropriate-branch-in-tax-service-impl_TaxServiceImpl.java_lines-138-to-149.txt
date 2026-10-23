@@ -1,0 +1,12 @@
+		
+		//check other conditions
+		//do not collect tax on other provinces of same country
+		if(!taxConfiguration.isCollectTaxIfDifferentProvinceOfStoreCountry()) {
+			if((zone!=null && store.getZone()!=null) && (zone.getId().longValue() != store.getZone().getId().longValue())) {
+				return null;
+			}
+			if(!StringUtils.isBlank(stateProvince)) {
+				if(store.getZone()!=null) {
+					if(!store.getZone().getName().equals(stateProvince)) {
+						return null;
+					}

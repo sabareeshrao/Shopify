@@ -1,0 +1,8 @@
+			cmsContentImage.setMimeType(image.getContentType());
+			cmsContentImage.setFile(inputStream);
+			cmsContentImage.setPath(path);
+			cmsContentImage.setFileContentType(FileContentType.VARIANT);
+
+			contentService.addContentFile(store.getCode(), cmsContentImage);
+
+			group.getImages().add(instanceImage);

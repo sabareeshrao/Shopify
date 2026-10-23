@@ -1,0 +1,8 @@
+public interface ProductOptionSetService extends SalesManagerEntityService<Long, ProductOptionSet> {
+
+	List<ProductOptionSet> listByStore(MerchantStore store, Language language)
+			throws ServiceException;
+
+
+	ProductOptionSet getById(MerchantStore store, Long optionId, Language lang);
+	ProductOptionSet getCode(MerchantStore store, String code);

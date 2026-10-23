@@ -1,0 +1,6 @@
+	
+	@After("execution(* com.salesmanager.core.business.services.catalog.product.attribute.ProductAttributeService.delete(com.salesmanager.core.model.catalog.product.attribute.ProductAttribute))")
+	public void logBeforeDeleteProductAttribute(JoinPoint joinPoint) {
+	   Object[] signatureArgs = joinPoint.getArgs();
+	   eventPublisher.publishEvent(new DeleteProductAttributeEvent(eventPublisher, (ProductAttribute)signatureArgs[0], ((ProductAttribute)signatureArgs[0]).getProduct()));
+	}	

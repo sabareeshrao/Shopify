@@ -1,0 +1,4 @@
+		
+		if(store!=null) {
+			return store.getLanguages();
+		}

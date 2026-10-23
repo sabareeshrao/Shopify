@@ -1,0 +1,11 @@
+
+        order.setCustomerId(customer.getId());
+        this.create(order);
+
+    	if(transaction!=null) {
+    		transaction.setOrder(order);
+    		if(transaction.getId()==null || transaction.getId()==0) {
+    			transactionService.create(transaction);
+    		} else {
+    			transactionService.update(transaction);
+    		}

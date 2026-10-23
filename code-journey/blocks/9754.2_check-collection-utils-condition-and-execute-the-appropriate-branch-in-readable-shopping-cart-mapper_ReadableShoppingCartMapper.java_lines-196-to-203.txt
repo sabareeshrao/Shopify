@@ -1,0 +1,8 @@
+							List<ProductOptionDescription> optionDescriptions = option.getDescriptionsSettoList();
+							List<ProductOptionValueDescription> optionValueDescriptions = optionValue
+									.getDescriptionsSettoList();
+
+							String optName = null;
+							String optValue = null;
+							if (!CollectionUtils.isEmpty(optionDescriptions)
+									&& !CollectionUtils.isEmpty(optionValueDescriptions)) {

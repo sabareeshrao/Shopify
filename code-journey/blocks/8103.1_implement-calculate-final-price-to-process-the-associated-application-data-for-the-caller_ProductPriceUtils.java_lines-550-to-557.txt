@@ -1,0 +1,8 @@
+	private FinalPrice calculateFinalPrice(Product product) throws ServiceException {
+
+		FinalPrice finalPrice = null;
+		List<FinalPrice> otherPrices = null;
+
+		/**
+		 * Since 3.2.0 The rule is
+		 * 

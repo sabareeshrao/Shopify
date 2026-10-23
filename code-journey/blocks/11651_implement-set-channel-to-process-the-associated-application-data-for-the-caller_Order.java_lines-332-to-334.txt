@@ -1,0 +1,3 @@
+	public void setChannel(OrderChannel channel) {
+		this.channel = channel;
+	}

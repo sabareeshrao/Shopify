@@ -1,0 +1,8 @@
+
+label.order.promocode.title=Promotion code
+label.order.promocode.text=Enter your promotion code if you have one.
+
+#payment
+label.payment.title=Payment methods
+label.payment.module.title=Payment method
+

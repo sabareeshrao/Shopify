@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.order.Order;
+import com.salesmanager.core.model.order.OrderChannel;
+import com.salesmanager.core.model.order.attributes.OrderAttribute;
+import com.salesmanager.core.model.order.orderstatus.OrderStatus;
+import com.salesmanager.core.model.order.orderstatus.OrderStatusHistory;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.reference.currency.Currency;
+import com.salesmanager.core.model.reference.language.Language;

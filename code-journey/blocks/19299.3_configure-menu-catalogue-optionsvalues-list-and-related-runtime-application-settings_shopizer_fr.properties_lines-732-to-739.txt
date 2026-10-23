@@ -1,0 +1,8 @@
+menu.catalogue-optionsvalues-list=Liste des valeurs d'options
+menu.catalogue-products-group=Groupes de produits
+menu.catalogue-featured=Articles vedettes
+menu.catalogue-products-custom-group=Autres groupes de produits
+menu.customer=Clients
+menu.profile=Profile
+menu.users=Utilisateurs
+menu.user=Utilisateur

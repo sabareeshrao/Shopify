@@ -1,0 +1,3 @@
+	public String buildStaticFilePath(MerchantStore store) {
+		return STATIC_URI + FILES_URI + SLASH + store.getCode() + SLASH;
+	}

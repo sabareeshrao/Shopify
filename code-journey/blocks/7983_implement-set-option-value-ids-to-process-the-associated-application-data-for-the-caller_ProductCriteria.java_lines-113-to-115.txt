@@ -1,0 +1,3 @@
+	public void setOptionValueIds(List<Long> optionValueIds) {
+		this.optionValueIds = optionValueIds;
+	}

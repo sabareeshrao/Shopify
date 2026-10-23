@@ -1,0 +1,3 @@
+	public void setOptin(Optin optin) {
+		this.optin = optin;
+	}

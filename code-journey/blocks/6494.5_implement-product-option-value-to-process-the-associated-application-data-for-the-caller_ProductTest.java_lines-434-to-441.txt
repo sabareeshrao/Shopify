@@ -1,0 +1,8 @@
+	    
+	    //option value
+        ProductOptionValue small = new ProductOptionValue();
+        small.setMerchantStore(store);
+        small.setCode("small");
+        
+        ProductOptionValueDescription smallDescription = new ProductOptionValueDescription();
+        smallDescription.setLanguage(en);

@@ -1,0 +1,3 @@
+	public WeightUnit getWeight() {
+		return weight;
+	}

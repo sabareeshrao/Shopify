@@ -1,0 +1,6 @@
+			Query q = this.em.createQuery(hql);
+
+	    	q.setParameter("ct", contentType);
+	    	q.setParameter("cm", store.getId());
+	    	q.setParameter("cl", language.getId());
+	

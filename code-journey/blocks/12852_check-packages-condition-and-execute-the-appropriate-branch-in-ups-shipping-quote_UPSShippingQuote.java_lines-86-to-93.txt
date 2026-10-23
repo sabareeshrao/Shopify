@@ -1,0 +1,8 @@
+		
+		List<String> packages = options.get("packages");
+		if(packages==null || packages.size()==0) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("packages");
+		}

@@ -1,0 +1,16 @@
+			}*/
+			
+			target.setPrices(prices);
+			
+			//OrderProductAttribute
+			List<ProductAttribute> attributeItems = source.getAttributes();
+			if(!CollectionUtils.isEmpty(attributeItems)) {
+				Set<OrderProductAttribute> attributes = new HashSet<OrderProductAttribute>();
+				for(ProductAttribute attribute : attributeItems) {
+					OrderProductAttribute orderProductAttribute = new OrderProductAttribute();
+					orderProductAttribute.setOrderProduct(target);
+					Long id = attribute.getId();
+					com.salesmanager.core.model.catalog.product.attribute.ProductAttribute attr = productAttributeService.getById(id);
+					if(attr==null) {
+						throw new ConversionException("Attribute id " + id + " does not exists");
+					}

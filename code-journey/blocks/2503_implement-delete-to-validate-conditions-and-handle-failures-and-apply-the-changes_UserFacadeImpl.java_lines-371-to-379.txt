@@ -1,0 +1,9 @@
+	@Override
+	public void delete(Long id, String merchant) {
+		Validate.notNull(id, "User id cannot be null");
+
+		try {
+			User user = userService.findByStore(id, merchant);
+			if (user == null) {
+				throw new ServiceRuntimeException("Cannot find user [" + id + "]");
+			}

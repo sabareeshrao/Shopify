@@ -1,0 +1,8 @@
+	 * Met à jour l'entité dans la base de données.
+	 * 
+	 * @param entity entité
+	 */
+	void update(E entity) throws ServiceException;
+	
+	/**
+	 * Crée l'entité dans la base de données.

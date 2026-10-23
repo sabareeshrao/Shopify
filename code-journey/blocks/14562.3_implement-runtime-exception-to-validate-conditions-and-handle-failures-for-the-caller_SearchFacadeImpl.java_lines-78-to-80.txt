@@ -1,0 +1,3 @@
+			} catch (ServiceException e) {
+				throw new RuntimeException("Exception while indexing products", e);
+			}

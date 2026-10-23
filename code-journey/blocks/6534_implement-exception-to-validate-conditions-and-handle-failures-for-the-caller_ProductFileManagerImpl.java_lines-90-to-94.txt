@@ -1,0 +1,5 @@
+
+      if (bufferedImage == null) {
+        LOGGER.error("Cannot read image format for " + productImage.getProductImage());
+        throw new Exception("Cannot read image format " + productImage.getProductImage());
+      }

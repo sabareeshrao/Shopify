@@ -1,0 +1,7 @@
+			
+			target.setProduct(product);
+			
+			Language lang = languageService.getByCode(language.getCode());
+			if(lang ==null) {
+				throw new ConversionException("Invalid language code, use iso codes (en, fr ...)");
+			}

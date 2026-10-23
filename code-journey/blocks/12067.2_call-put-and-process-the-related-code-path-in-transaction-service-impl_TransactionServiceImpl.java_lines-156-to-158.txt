@@ -1,0 +1,3 @@
+				finalTransactions.put(TransactionType.AUTHORIZECAPTURE.name(),transaction);
+				continue;
+			}

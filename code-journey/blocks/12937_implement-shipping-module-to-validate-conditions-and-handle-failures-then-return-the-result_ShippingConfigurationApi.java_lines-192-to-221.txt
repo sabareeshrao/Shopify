@@ -1,0 +1,30 @@
+
+	}
+
+	/**
+	 * Get merchant shipping module details
+	 * 
+	 * @param code
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@GetMapping("/private/modules/shipping/{code}")
+	@ApiOperation(httpMethod = "GET", value = "Shipping module by code", produces = "application/json", response = List.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })
+	public IntegrationConfiguration shippingModule(@PathVariable String code,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		try {
+
+			// configured modules
+			List<IntegrationModule> modules = 
+					shippingService
+					.getShippingMethods(merchantStore);
+			
+			//check if exist
+			Optional<IntegrationModule> checkIfExist = modules.stream().filter(m -> m.getCode().equals(code)).findAny();
+			
+			if(!checkIfExist.isPresent()) {
+				throw new ResourceNotFoundException("Shipping module [" + code + "] not found");
+			}

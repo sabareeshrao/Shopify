@@ -1,0 +1,8 @@
+ *
+ */
+@Component("gcpAssetsManager")
+public class GCPCacheManagerImpl implements CMSManager {
+
+  @Value("${config.cms.gcp.bucket}")
+  private String bucketName;
+

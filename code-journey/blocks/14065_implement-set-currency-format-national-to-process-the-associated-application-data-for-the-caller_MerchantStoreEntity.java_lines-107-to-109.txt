@@ -1,0 +1,3 @@
+	public void setCurrencyFormatNational(boolean currencyFormatNational) {
+		this.currencyFormatNational = currencyFormatNational;
+	}

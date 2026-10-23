@@ -1,0 +1,4 @@
+		"zoneName": "Thringen",
+		"countryCode": "DE"
+	},
+	{

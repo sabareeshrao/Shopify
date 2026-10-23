@@ -1,0 +1,4 @@
+		ProductOptionDescription desc = this.optionDescription(option.getDescriptions(), lang);
+		if(desc != null) {
+			opt.setName(desc.getName());
+		}

@@ -1,0 +1,3 @@
+	public String getShowDeliveryStateList() {
+		return showDeliveryStateList;
+	}

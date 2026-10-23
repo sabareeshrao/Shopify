@@ -1,0 +1,8 @@
+                        }
+                        shoppingCartItem.setShoppingCartAttributes(cartAttributes);
+                    }
+                    shoppingCartItemsList.add(shoppingCartItem);
+                }
+            }
+            if(CollectionUtils.isNotEmpty(shoppingCartItemsList)){
+                cart.setShoppingCartItems(shoppingCartItemsList);

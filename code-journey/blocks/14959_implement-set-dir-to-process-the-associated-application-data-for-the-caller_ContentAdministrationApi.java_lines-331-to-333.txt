@@ -1,0 +1,3 @@
+		public void setDir(boolean dir) {
+			this.dir = dir;
+		}

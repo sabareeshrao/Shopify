@@ -1,0 +1,5 @@
+public interface ImageRemove {
+
+  void removeImages(final String merchantStoreCode) throws ServiceException;
+
+}

@@ -1,0 +1,14 @@
+
+      List<MerchantStore> stores = q.getResultList();
+      entityList.setList(stores);
+
+
+      return entityList;
+
+
+
+    } catch (javax.persistence.NoResultException ers) {
+    } catch (Exception e) {
+      LOGGER.error(e.getMessage());
+      throw new ServiceException(e);
+    }

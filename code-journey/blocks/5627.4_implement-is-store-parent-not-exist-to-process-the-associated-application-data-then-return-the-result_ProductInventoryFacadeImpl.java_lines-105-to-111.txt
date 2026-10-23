@@ -1,0 +1,7 @@
+		 */
+	//}
+
+	/**
+	private boolean isStoreParentNotExist(MerchantStore store) {
+		return Objects.isNull(store.getParent());
+	}

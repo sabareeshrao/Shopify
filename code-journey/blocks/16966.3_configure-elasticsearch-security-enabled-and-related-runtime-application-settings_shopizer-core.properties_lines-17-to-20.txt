@@ -1,0 +1,4 @@
+elasticsearch.security.enabled=false
+elasticsearch.security.user=elastic
+elasticsearch.security.password=changeme
+

@@ -1,0 +1,8 @@
+public interface ProductVariantGroupRepository extends JpaRepository<ProductVariantGroup, Long> {
+
+	
+	@Query("select distinct p from ProductVariantGroup p"
+			+ " left join fetch p.productVariants pp"
+			+ " left join fetch p.images ppi"
+			+ " left join fetch ppi.descriptions ppid "
+			+ " where p.id = ?1 and p.merchantStore.code = ?2")

@@ -1,0 +1,4 @@
+	@Override
+	public boolean existByCode(String code) {
+		return merchantRepository.existsByCode(code);
+	}

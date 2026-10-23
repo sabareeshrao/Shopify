@@ -1,0 +1,3 @@
+    if(!StringUtils.isBlank(source.getProductOptionValueImage())) {
+    	readableProductOptionValue.setImage(imageUtils.buildProductPropertyImageUtils(store, source.getProductOptionValueImage()));
+    }

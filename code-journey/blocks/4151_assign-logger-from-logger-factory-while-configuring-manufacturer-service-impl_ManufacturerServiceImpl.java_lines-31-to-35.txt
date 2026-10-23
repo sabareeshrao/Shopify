@@ -1,0 +1,5 @@
+  private static final Logger LOGGER = LoggerFactory.getLogger(ManufacturerServiceImpl.class);
+
+  @Inject
+  private PageableManufacturerRepository pageableManufacturerRepository;
+  

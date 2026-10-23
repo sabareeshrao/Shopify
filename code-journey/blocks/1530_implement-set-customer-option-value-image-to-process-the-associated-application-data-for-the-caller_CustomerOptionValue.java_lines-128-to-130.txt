@@ -1,0 +1,3 @@
+	public void setCustomerOptionValueImage(String customerOptionValueImage) {
+		this.customerOptionValueImage = customerOptionValueImage;
+	}

@@ -1,0 +1,4 @@
+	public ProductImage getById(Long id) {
+
+		return productImageRepository.findOne(id);
+	}

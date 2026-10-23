@@ -1,0 +1,12 @@
+			if(!StringUtils.isBlank(store.getStorecity())) {
+				if(storeAddress==null) {
+					storeAddress = new StringBuilder();
+				} else {
+					storeAddress.append(", ");
+				}
+				storeAddress.append(store.getStorecity());
+			}
+			if(storeAddress!=null) {
+				sheet.setValueAt(storeAddress.toString(), 0, storeAddressCell);
+				storeAddressCell ++;
+			}

@@ -1,0 +1,6 @@
+		
+		target.setId(source.getId());
+		target.setCode(source.getCode());
+		if(source.getDefaultLanguage() != null) {
+			target.setDefaultLanguage(source.getDefaultLanguage().getCode());
+		}

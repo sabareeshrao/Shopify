@@ -1,0 +1,3 @@
+	public void addOption(ShippingOption option) {
+		options.add(option);
+	}

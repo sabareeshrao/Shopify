@@ -1,0 +1,3 @@
+	public String getAttributeAdditionalWeight() {
+		return attributeAdditionalWeight;
+	}

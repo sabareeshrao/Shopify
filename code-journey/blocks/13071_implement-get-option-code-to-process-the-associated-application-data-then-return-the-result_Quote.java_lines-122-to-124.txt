@@ -1,0 +1,3 @@
+	public String getOptionCode() {
+		return optionCode;
+	}

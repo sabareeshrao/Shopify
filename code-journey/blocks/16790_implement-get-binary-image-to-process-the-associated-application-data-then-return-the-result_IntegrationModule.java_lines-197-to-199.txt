@@ -1,0 +1,3 @@
+	public String getBinaryImage() {
+		return binaryImage;
+	}

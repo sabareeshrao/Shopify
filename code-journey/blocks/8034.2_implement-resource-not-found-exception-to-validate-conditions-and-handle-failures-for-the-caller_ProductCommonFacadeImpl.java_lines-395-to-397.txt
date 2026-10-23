@@ -1,0 +1,3 @@
+		if (p == null) {
+			throw new ResourceNotFoundException("Product with id [" + id + " not found");
+		}

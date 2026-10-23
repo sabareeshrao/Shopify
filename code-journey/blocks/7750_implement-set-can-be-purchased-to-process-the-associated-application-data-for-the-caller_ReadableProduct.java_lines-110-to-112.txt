@@ -1,0 +1,3 @@
+	public void setCanBePurchased(boolean canBePurchased) {
+		this.canBePurchased = canBePurchased;
+	}

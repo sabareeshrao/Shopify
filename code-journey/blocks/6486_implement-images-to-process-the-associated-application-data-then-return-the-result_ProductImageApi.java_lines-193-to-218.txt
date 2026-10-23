@@ -1,0 +1,26 @@
+
+	}
+	
+	
+	/**
+	 * Get product images
+	 * @param id
+	 * @param imageId
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = { "/product/{productId}/images" }, method = RequestMethod.GET)
+	@ApiOperation(httpMethod = "GET", value = "Get images for a given product")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "List of ProductImage found", response = List.class) })
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public List<ReadableImage> images(
+			@PathVariable Long productId, 
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+

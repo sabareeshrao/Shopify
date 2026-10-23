@@ -1,0 +1,3 @@
+		} catch (Exception e) {
+			throw new Exception("Cannot send email to customer", e);
+		}

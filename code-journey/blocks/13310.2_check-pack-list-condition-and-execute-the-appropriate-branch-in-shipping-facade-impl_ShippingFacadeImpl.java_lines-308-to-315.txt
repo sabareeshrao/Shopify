@@ -1,0 +1,8 @@
+		List<com.salesmanager.core.model.shipping.Package> packages = config.getPackages();
+		
+		List<com.salesmanager.core.model.shipping.Package> packList = config.getPackages().stream().filter(p -> p.getCode().equalsIgnoreCase(code)).collect(Collectors.toList());
+		
+		if(!packList.isEmpty()) {
+			packages.removeAll(packList);
+			config.setPackages(packages);
+			this.saveShippingConfiguration(config, store);

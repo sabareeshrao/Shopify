@@ -1,0 +1,3 @@
+	public List<ManufacturerDescription> getDescriptions() {
+		return descriptions;
+	}

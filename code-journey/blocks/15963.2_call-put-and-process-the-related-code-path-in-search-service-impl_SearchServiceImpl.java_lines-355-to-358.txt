@@ -1,0 +1,4 @@
+
+			variantMap.put(variantCode, variantValueCode);
+
+		}

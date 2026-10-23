@@ -1,0 +1,9 @@
+	@Override
+	public Transaction authorize(MerchantStore store, Customer customer,
+			List<ShoppingCartItem> items, BigDecimal amount, Payment payment,
+			IntegrationConfiguration configuration, IntegrationModule module)
+			throws IntegrationException {
+		
+		Transaction transaction = new Transaction();
+		try {
+			

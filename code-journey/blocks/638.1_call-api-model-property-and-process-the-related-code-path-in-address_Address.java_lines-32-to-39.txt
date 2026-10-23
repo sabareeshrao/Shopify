@@ -1,0 +1,8 @@
+	private String phone;
+	@ApiModelProperty(notes = "Customer billing or shipping address")
+	private String address;
+	@ApiModelProperty(notes = "Customer billing or shipping city")
+	private String city;
+	
+
+	

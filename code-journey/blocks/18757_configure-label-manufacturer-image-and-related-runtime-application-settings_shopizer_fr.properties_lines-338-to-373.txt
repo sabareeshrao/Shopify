@@ -1,0 +1,36 @@
+label.manufacturer.image=Image
+label.manufactureredit.manufacturerorder=Sequence
+
+#product
+label.sefurl=Lien convivial
+label.metatags.description = (Meta tags) Description
+label.metatags.keywords = (Meta tags) Mots-clés
+label.product.sku=Sku
+label.product.refsku=Identifiant de l'item dans le système de référence
+label.product.available=Disponible
+label.product.create=Créer a produit
+label.product.edit=éditer le produit
+label.productedit.productname=Nom du produit
+label.productedit.producthl=Description éclair
+label.productedit.productdesc=Description du produit
+label.product.title=Titre du produit
+label.product.price=Prix du produit
+label.product.price.code=Code de prix du produit
+label.product.preorder=Pré-commande
+label.product.price.name=Nom du prix
+label.product.price.priceAppender=Suffix de prix
+label.product.price.default=Prix par défaut
+label.product.price.special=Prix rabais
+label.product.price.special.startdate=Date de début du rabais
+label.product.price.special.enddate=Date de fin du rabais
+label.taxclass = Classe de taxe
+label.product.ordermax=Quantitée maximum permise
+label.product.ordermin=Quantity minimum permise
+label.product.weight =Poids 
+label.product.height =Hauteur 
+label.product.length =Profondeur 
+label.product.width =Largeur 
+label.product.image =Image 
+label.product.uploadfile = Importer un fichier
+label.product.details=Détails du produit
+label.product.prices=Prix du produit

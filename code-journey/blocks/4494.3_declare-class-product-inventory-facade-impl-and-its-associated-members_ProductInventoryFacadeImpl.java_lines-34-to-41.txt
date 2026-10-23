@@ -1,0 +1,8 @@
+import com.salesmanager.shop.store.controller.product.facade.ProductInventoryFacade;
+
+@Service("productInventoryFacade")
+@Profile({ "default", "cloud", "gcp", "aws", "mysql", "local" })
+public class ProductInventoryFacadeImpl implements ProductInventoryFacade {
+
+	@Autowired
+	private ProductAvailabilityService productAvailabilityService;

@@ -1,0 +1,3 @@
+	public String getAdminEmail() {
+		return adminEmail;
+	}

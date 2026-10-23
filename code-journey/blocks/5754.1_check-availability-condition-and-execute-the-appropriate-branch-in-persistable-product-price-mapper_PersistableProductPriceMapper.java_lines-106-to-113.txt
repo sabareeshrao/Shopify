@@ -1,0 +1,8 @@
+
+			}
+
+			if (availability == null) {
+
+				com.salesmanager.core.model.catalog.product.Product product = productService.getBySku(source.getSku(),
+						store, language);
+				if (product == null) {

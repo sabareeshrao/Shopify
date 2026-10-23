@@ -1,0 +1,8 @@
+
+@Service("paymentConfigurationFacade")
+public class PaymentConfigurationFacadeImpl implements ConfigurationsFacade {
+	
+	
+	@Autowired
+	private PaymentService paymentService;
+

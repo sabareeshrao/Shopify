@@ -1,0 +1,57 @@
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "SHP_CART_ITEM_ID", unique=true, nullable=false)
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "SHP_CRT_ITM_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = ShoppingCart.class)
+	@JoinColumn(name = "SHP_CART_ID", nullable = false)
+	private ShoppingCart shoppingCart;
+
+	@Column(name="QUANTITY")
+	private Integer quantity = 1;
+
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+
+	@Deprecated //Use sku
+	@Column(name="PRODUCT_ID", nullable=false) 
+    private Long productId;
+	
+	//SKU
+	@Column(name="SKU", nullable=true) 
+	private String sku;
+
+	@JsonIgnore
+	@Transient
+	private boolean productVirtual;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "shoppingCartItem")
+	private Set<ShoppingCartAttributeItem> attributes = new HashSet<ShoppingCartAttributeItem>();
+	
+	@Column(name="PRODUCT_VARIANT", nullable=true)
+	private Long variant;
+
+	@JsonIgnore
+	@Transient
+	private BigDecimal itemPrice;//item final price including all rebates
+
+	@JsonIgnore
+	@Transient
+	private BigDecimal subTotal;//item final price * quantity
+
+	@JsonIgnore
+	@Transient
+	private FinalPrice finalPrice;//contains price details (raw prices)
+
+	@JsonIgnore
+	@Transient
+	private Product product;
+
+	@JsonIgnore
+	@Transient
+	private boolean obsolete = false;
+

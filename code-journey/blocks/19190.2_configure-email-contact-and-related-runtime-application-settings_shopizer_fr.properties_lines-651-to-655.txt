@@ -1,0 +1,5 @@
+
+email.contact=Nouveau contact - {0}
+email.contact.title=Formulaire de contact
+label.checkout.logon=Vous pouvez vous authentifier ou vous abonner afin de simplifier le processus d'achats !
+

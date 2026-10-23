@@ -1,0 +1,15 @@
+public interface ProductAvailabilityService extends
+		SalesManagerEntityService<Long, ProductAvailability> {
+
+	ProductAvailability saveOrUpdate(ProductAvailability availability) throws ServiceException;
+	
+	Page<ProductAvailability> listByProduct(Long productId, MerchantStore store, int page, int count);
+	
+	/**
+	 * Get by product sku and store
+	 * @param sku
+	 * @param store
+	 * @return
+	 */
+	Page<ProductAvailability> getBySku(String sku, MerchantStore store, int page, int count);
+	

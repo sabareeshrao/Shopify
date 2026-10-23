@@ -1,0 +1,20 @@
+
+		PersistablePaymentPopulator populator = new PersistablePaymentPopulator();
+		populator.setPricingService(pricingService);
+
+		Payment paymentModel = new Payment();
+
+		populator.populate(payment, paymentModel, merchantStore, language);
+
+		Transaction transactionModel = paymentService.initTransaction(null, paymentModel, merchantStore);
+
+		ReadableTransaction transaction = new ReadableTransaction();
+		ReadableTransactionPopulator trxPopulator = new ReadableTransactionPopulator();
+		trxPopulator.setOrderService(orderService);
+		trxPopulator.setPricingService(pricingService);
+
+		trxPopulator.populate(transactionModel, transaction, merchantStore, language);
+
+		return transaction;
+
+	}

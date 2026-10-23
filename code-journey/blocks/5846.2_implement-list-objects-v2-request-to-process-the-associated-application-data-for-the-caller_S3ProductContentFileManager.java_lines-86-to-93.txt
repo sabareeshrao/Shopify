@@ -1,0 +1,8 @@
+
+      ListObjectsV2Request listObjectsRequest = new ListObjectsV2Request()
+          .withBucketName(bucketName).withPrefix(nodePath(merchantStoreCode));
+
+      List<OutputContentFile> files = null;
+      final AmazonS3 s3 = s3Client();
+      ListObjectsV2Result results = s3.listObjectsV2(listObjectsRequest);
+      List<S3ObjectSummary> objects = results.getObjectSummaries();

@@ -1,0 +1,8 @@
+#Must be 16 digits (replace with your own creation !)
+secretKey=7070200000000007
+
+# commented out properties need to be set from an environment variable
+# when using this profile when running docker based application
+#
+# example of environment variables when running docker image using aws
+#

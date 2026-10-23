@@ -1,0 +1,8 @@
+
+		ProductVariant variant = event.getVariant();// to be removed
+
+		/**
+		 * remove variant to be saved
+		 **/
+
+		List<ProductVariant> filteredVariants = product.getVariants().stream()

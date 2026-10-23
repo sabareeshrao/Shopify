@@ -1,0 +1,4 @@
+		if(criteria.getOrderBy()!=null) {
+			if(CriteriaOrderBy.ASC.name().equals(criteria.getOrderBy().name())) {
+				orderByCriteria = " order by o.id asc";
+			}

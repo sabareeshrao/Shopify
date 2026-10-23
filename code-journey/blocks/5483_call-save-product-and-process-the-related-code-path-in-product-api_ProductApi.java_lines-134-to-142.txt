@@ -1,0 +1,9 @@
+
+			productCommonFacade.saveProduct(merchantStore, product,
+					merchantStore.getDefaultLanguage());
+		} catch (Exception e) {
+			LOGGER.error("Error while updating product", e);
+			try {
+				response.sendError(503, "Error while updating product " + e.getMessage());
+			} catch (Exception ignore) {
+			}

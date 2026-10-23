@@ -1,0 +1,5 @@
+ * @author carlsamson
+ *
+ */
+public class Constants {
+

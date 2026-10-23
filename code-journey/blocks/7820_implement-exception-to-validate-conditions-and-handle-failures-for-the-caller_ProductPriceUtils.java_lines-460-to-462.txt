@@ -1,0 +1,3 @@
+			} else {
+				throw new Exception("Not a positive integer " + amount);
+			}

@@ -1,0 +1,3 @@
+@SwaggerDefinition(tags = { @Tag(name = "Product price management", description = "Edit price and discount") })
+public class ProductPriceApi {
+

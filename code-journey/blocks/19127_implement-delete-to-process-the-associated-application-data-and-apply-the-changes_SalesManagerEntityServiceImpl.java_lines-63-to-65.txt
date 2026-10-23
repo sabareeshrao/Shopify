@@ -1,0 +1,3 @@
+	public void delete(E entity) throws ServiceException {
+		repository.delete(entity);
+	}

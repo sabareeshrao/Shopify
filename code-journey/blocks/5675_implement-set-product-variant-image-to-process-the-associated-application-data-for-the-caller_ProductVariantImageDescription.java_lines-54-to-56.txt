@@ -1,0 +1,3 @@
+	public void setProductVariantImage(ProductVariantImage productVariantImage) {
+		this.productVariantImage = productVariantImage;
+	}

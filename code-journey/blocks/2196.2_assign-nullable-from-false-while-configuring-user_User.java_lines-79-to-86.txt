@@ -1,0 +1,8 @@
+			, 
+			inverseJoinColumns = { @JoinColumn(name = "GROUP_ID", 
+					nullable = false, updatable = false) }
+	)
+	@Cascade({
+		org.hibernate.annotations.CascadeType.DETACH,
+		org.hibernate.annotations.CascadeType.LOCK,
+		org.hibernate.annotations.CascadeType.REFRESH,

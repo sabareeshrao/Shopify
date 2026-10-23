@@ -1,0 +1,8 @@
+	
+	<!-- Product download files -->
+	<beans:bean id="defaultDownloadsManager" class="com.salesmanager.core.business.modules.cms.content.infinispan.CmsStaticContentFileManagerImpl" factory-method="getInstance">
+		<beans:property name="cacheManager">
+			<beans:ref bean="downloadsManager" />
+		</beans:property>
+	</beans:bean>
+	

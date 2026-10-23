@@ -1,0 +1,8 @@
+			HttpServletResponse response) throws Exception {
+
+		ProductCriteria criteria = new ProductCriteria();
+
+		criteria.setOrigin(origin);
+
+		// do not use legacy pagination anymore
+		if (lang != null) {

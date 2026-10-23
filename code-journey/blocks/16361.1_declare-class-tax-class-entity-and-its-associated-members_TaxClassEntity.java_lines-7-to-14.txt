@@ -1,0 +1,8 @@
+public class TaxClassEntity extends Entity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Size(min = 1, max = 10)
+	private String code;

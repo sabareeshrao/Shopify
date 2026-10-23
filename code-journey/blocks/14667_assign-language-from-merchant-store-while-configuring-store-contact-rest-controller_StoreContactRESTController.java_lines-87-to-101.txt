@@ -1,0 +1,15 @@
+			
+			Language language = merchantStore.getDefaultLanguage();
+			
+			Map<String,Language> langs = languageService.getLanguagesMap();
+
+			
+			return null;
+
+		
+		} catch (Exception e) {
+			LOGGER.error("Error while saving category",e);
+			try {
+				response.sendError(503, "Error while saving category " + e.getMessage());
+			} catch (Exception ignore) {
+			}

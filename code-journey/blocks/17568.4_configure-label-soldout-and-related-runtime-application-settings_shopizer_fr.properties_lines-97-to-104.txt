@@ -1,0 +1,8 @@
+label.soldout=Non disponible
+
+#merchant store
+label.store.information.title=Informations
+label.store.title=Boutique
+label.store.information=Informations sur la boutique
+label.storeadministration=Administration de la boutique
+label.storeadministrator = Administrateur de la boutique

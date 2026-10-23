@@ -1,0 +1,15 @@
+	@Override
+	public ContentFolder getContentFolder(String folder, MerchantStore store) throws Exception {
+		try {
+			List<String> imageNames = Optional
+					.ofNullable(contentService.getContentFilesNames(store.getCode(), FileContentType.IMAGE))
+					.orElseThrow(() -> new ResourceNotFoundException("No Folder found for path : " + folder));
+
+			// images from CMS
+			List<ContentImage> contentImages = imageNames.stream().map(name -> convertToContentImage(name, store))
+					.collect(Collectors.toList());
+
+			ContentFolder contentFolder = new ContentFolder();
+			if (!StringUtils.isBlank(folder)) {
+				contentFolder.setPath(URLEncoder.encode(folder, "UTF-8"));
+			}

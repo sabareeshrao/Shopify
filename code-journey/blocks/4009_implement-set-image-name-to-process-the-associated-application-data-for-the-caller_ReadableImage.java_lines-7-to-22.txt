@@ -1,0 +1,16 @@
+public class ReadableImage extends Entity implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String imageName;
+	private String imageUrl;
+	private String externalUrl;
+	private String videoUrl;
+	private int imageType;
+	private int order;
+	private boolean defaultImage;
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}

@@ -1,0 +1,2 @@
+	private static final String PATH = "classpath:/reference/zones/*.json";
+

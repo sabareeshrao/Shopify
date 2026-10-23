@@ -1,0 +1,4 @@
+	@Override
+	public ReadableProduct getProduct(MerchantStore store, String sku, Language language) throws Exception {
+		return this.getProductByCode(store, sku, language);
+	}

@@ -1,0 +1,12 @@
+		
+		ProductVariant instance = modified.getVariants().stream()
+				  .filter(inst -> sku.equals(inst.getSku()))
+				  .findAny()
+				  .orElse(null);
+		
+		if(instance!=null) {
+			instance.setAvailable(product.isAvailable());
+			
+			for (ProductAvailability availability : instance.getAvailabilities()) {
+				this.setAvailability(availability, product);
+			}

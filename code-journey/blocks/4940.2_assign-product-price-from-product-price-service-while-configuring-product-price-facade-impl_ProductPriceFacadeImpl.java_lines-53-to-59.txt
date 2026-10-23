@@ -1,0 +1,7 @@
+				productPrice.getProductAvailability().setPrices(null);
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			} else {
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			}

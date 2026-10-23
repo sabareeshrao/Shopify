@@ -1,0 +1,8 @@
+		   
+  /** deprecated **/
+  public static Criteria buildRequest(Map<String, String> mappingFields, HttpServletRequest request) {
+    
+    /**
+     * Works assuming datatable sends query data
+     */
+    MerchantStoreCriteria criteria = new MerchantStoreCriteria();

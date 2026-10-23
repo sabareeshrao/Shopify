@@ -1,0 +1,8 @@
+      PersistableCustomerReview review,
+      MerchantStore merchantStore,
+      Language language);
+
+	PersistableCustomerReview updateCustomerReview(Long id, Long reviewId, PersistableCustomerReview review, MerchantStore store, Language language);
+	
+	boolean passwordMatch(String rawPassword, Customer customer);
+	

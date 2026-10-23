@@ -1,0 +1,8 @@
+	    Category shirts = new Category();
+	    shirts.setMerchantStore(store);
+	    shirts.setCode("shirts");
+
+	    CategoryDescription shirtsEnglishDescription = new CategoryDescription();
+	    shirtsEnglishDescription.setName("Shirts");
+	    shirtsEnglishDescription.setCategory(shirts);
+	    shirtsEnglishDescription.setLanguage(en);

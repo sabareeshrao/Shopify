@@ -1,0 +1,8 @@
+	@Override
+	public void removeFiles(String merchantStoreCode, Optional<String> folderPath) throws ServiceException {
+
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			final AmazonS3 s3 = s3Client();

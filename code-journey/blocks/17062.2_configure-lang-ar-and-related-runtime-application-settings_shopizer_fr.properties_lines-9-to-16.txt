@@ -1,0 +1,8 @@
+lang.ar=Arabe
+lang.pt-BR=Portugais
+label.shop=Magasiner
+label.entity.id=Identifiant
+label.entity.name=Nom
+label.entity.code=Code
+label.entity.visible=Visible
+label.entity.featured=Vedette

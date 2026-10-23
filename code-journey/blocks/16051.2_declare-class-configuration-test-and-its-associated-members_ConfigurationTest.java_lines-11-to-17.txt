@@ -1,0 +1,7 @@
+@EnableAutoConfiguration
+@ComponentScan({"com.salesmanager.core.business"})
+@ImportResource("spring/test-shopizer-context.xml")
+@EnableJpaRepositories(basePackages = "com.salesmanager.core.business.repositories")
+@EntityScan(basePackages = "com.salesmanager.core.model")
+public class ConfigurationTest {
+	

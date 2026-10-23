@@ -1,0 +1,8 @@
+
+	@Column(name = "PRODUCT_PRICE_CODE", nullable = false , length=64 )
+	private String productPriceCode;
+
+	@Column(name = "PRODUCT_PRICE", nullable = false)
+	private BigDecimal productPrice;
+	
+	@Column(name = "PRODUCT_PRICE_SPECIAL")

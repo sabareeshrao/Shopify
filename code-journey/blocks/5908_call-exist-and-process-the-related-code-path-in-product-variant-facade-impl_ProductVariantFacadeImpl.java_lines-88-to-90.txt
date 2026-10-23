@@ -1,0 +1,3 @@
+
+		return productVariantService.exist(sku,product.getId());
+	}

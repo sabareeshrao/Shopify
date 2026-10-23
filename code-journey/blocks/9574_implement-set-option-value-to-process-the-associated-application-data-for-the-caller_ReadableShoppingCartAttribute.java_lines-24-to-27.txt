@@ -1,0 +1,4 @@
+	public void setOptionValue(ReadableShoppingCartAttributeOptionValue optionValue) {
+		this.optionValue = optionValue;
+	}
+}

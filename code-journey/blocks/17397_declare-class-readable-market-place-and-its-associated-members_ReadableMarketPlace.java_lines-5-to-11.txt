@@ -1,0 +1,7 @@
+public class ReadableMarketPlace extends MarketPlaceEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	

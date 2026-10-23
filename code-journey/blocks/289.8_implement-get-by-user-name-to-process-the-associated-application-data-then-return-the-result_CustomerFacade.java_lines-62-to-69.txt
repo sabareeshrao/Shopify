@@ -1,0 +1,8 @@
+     * @param language
+     * @return
+     * @throws Exception
+     */
+    ReadableCustomer getByUserName(String userName, MerchantStore merchantStore, Language language);
+    /**
+     * <p>Method responsible for merging cart during authentication, 
+     *     Method will perform following operations

@@ -1,0 +1,3 @@
+	public void setProductOption(ProductOption productOption) {
+		this.productOption = productOption;
+	}

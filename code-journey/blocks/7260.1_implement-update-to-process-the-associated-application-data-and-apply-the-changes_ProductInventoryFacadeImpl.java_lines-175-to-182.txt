@@ -1,0 +1,8 @@
+	@Override
+	public void update(PersistableInventory inventory, MerchantStore store, Language language) {
+
+		Validate.notNull(inventory, "Inventory cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+
+		Set<ProductAvailability> originAvailability = null;
+		Product product = null;

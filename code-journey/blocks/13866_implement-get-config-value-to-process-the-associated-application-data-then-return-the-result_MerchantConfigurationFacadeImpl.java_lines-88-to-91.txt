@@ -1,0 +1,4 @@
+  private Optional<String> getConfigValue(String keyContant, MerchantStore merchantStore) {
+    return getMerchantConfiguration(keyContant, merchantStore)
+        .map(MerchantConfiguration::getValue);
+  }

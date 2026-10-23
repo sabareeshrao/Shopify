@@ -1,0 +1,3 @@
+	public void setGetFile(FileGet getFile) {
+		this.getFile = getFile;
+	}

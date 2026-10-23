@@ -1,0 +1,26 @@
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
+import springfox.documentation.annotations.ApiIgnore;
+
+/**
+ * Api to manage productVariant
+ * 
+ * Product variant allows to specify product
+ * size, sku and options related to this product variant
+ * 
+ * @author carlsamson
+ *
+ */
+@Controller
+@RequestMapping("/api/v2")
+@Api(tags = { "Product variants api" })
+@SwaggerDefinition(tags = {
+		@Tag(name = "Product variants resource", description = "Manage inventory for a given product") })
+public class ProductVariantApi {
+

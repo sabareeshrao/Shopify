@@ -1,0 +1,14 @@
+	private OrderTotalSummary calculateOrderTotal(MerchantStore store, Customer customer,
+			com.salesmanager.shop.model.order.v0.PersistableOrder order, Language language) throws Exception {
+
+		OrderTotalSummary orderTotalSummary = null;
+
+		OrderSummary summary = new OrderSummary();
+
+		if (order instanceof ShopOrder) {
+			ShopOrder o = (ShopOrder) order;
+			summary.setProducts(o.getShoppingCartItems());
+
+			if (o.getShippingSummary() != null) {
+				summary.setShippingSummary(o.getShippingSummary());
+			}

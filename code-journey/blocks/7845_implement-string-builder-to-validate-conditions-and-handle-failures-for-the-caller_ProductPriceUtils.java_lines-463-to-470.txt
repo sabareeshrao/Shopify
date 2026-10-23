@@ -1,0 +1,8 @@
+
+		} else {
+			// TODO should not go this path in this current release
+			StringBuilder pat = new StringBuilder();
+
+			if (!StringUtils.isBlank(Character.toString(THOUSANDPOINT))) {
+				pat.append("\\d{1,3}(" + THOUSANDPOINT + "?\\d{3})*");
+			}

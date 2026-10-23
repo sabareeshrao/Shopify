@@ -1,0 +1,5 @@
+	private boolean matchPositiveInteger(String amount) {
+		Pattern pattern = Pattern.compile("^[+]?\\d*$");
+		Matcher matcher = pattern.matcher(amount);
+		return matcher.matches();
+	}

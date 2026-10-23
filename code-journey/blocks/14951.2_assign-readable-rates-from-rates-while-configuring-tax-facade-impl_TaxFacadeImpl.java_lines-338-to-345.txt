@@ -1,0 +1,8 @@
+			List<ReadableTaxRate> readableRates = rates.stream().map(r -> readableTaxRateMapper.convert(r, store, language)).collect(Collectors.toList());
+			
+			ReadableEntityList<ReadableTaxRate> returnRates = new ReadableEntityList<ReadableTaxRate>();
+			returnRates.setItems(readableRates);
+			returnRates.setTotalPages(1);
+			returnRates.setNumber(readableRates.size());
+			returnRates.setRecordsTotal(readableRates.size());
+			

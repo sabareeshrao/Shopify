@@ -1,0 +1,8 @@
+
+		saveShoppingCart(cartModel);
+
+		// refresh cart
+		cartModel = shoppingCartService.getById(cartModel.getId(), store);
+
+		if (cartModel == null) {
+			return null;

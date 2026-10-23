@@ -1,0 +1,6 @@
+public interface SystemConfigurationService extends
+		SalesManagerEntityService<Long, SystemConfiguration> {
+	
+	SystemConfiguration getByKey(String key) throws ServiceException;
+
+}

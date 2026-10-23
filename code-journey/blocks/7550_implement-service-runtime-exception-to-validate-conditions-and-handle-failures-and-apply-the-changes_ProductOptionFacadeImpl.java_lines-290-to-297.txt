@@ -1,0 +1,8 @@
+
+		attr = persistableProductAttributeMapper.merge(attribute, attr, store, language);
+
+		try {
+			productAttributeService.saveOrUpdate(attr);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while saving ProductAttribute", e);
+		}

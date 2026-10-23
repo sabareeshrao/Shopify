@@ -1,0 +1,3 @@
+	public void setCustomers(List<ReadableCustomer> customers) {
+		this.customers = customers;
+	}

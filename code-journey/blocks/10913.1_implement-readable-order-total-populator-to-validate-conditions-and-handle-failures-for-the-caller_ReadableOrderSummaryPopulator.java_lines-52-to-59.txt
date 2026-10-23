@@ -1,0 +1,8 @@
+			
+			if(!CollectionUtils.isEmpty(source.getTotals())) {
+				ReadableOrderTotalPopulator orderTotalPopulator = new ReadableOrderTotalPopulator();
+				orderTotalPopulator.setMessages(messages);
+				orderTotalPopulator.setPricingService(pricingService);
+				for(OrderTotal orderTotal : source.getTotals()) {
+					ReadableOrderTotal t = new ReadableOrderTotal();
+					orderTotalPopulator.populate(orderTotal, t, store, language);

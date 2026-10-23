@@ -1,0 +1,8 @@
+
+
+      Number count = (Number) countQ.getSingleResult();
+
+      GenericEntityList entityList = new GenericEntityList();
+      entityList.setTotalCount(count.intValue());
+      
+      q = RepositoryHelper.paginateQuery(q, count, entityList, criteria);

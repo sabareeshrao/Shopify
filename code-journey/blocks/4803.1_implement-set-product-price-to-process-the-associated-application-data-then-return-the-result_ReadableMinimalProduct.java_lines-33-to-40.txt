@@ -1,0 +1,8 @@
+	public void setProductPrice(ReadableProductPrice productPrice) {
+		this.productPrice = productPrice;
+	}
+	public String getFinalPrice() {
+		return finalPrice;
+	}
+	public void setFinalPrice(String finalPrice) {
+		this.finalPrice = finalPrice;

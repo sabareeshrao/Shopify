@@ -1,0 +1,3 @@
+	public void setStringDiscountedPrice(String stringDiscountedPrice) {
+		this.stringDiscountedPrice = stringDiscountedPrice;
+	}

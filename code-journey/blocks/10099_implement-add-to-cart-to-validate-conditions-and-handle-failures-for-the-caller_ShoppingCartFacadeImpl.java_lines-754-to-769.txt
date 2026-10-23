@@ -1,0 +1,16 @@
+	@Override
+	// KEEP ** ENTRY POINT **
+	public ReadableShoppingCart addToCart(PersistableShoppingCartItem item, MerchantStore store, Language language) {
+
+		Validate.notNull(item, "PersistableShoppingCartItem cannot be null");
+
+		// if cart does not exist create a new one
+
+		ShoppingCart cartModel = new ShoppingCart();
+		cartModel.setMerchantStore(store);
+		cartModel.setShoppingCartCode(uniqueShoppingCartCode());
+
+		if (!StringUtils.isBlank(item.getPromoCode())) {
+			cartModel.setPromoCode(item.getPromoCode());
+			cartModel.setPromoAdded(new Date());
+		}

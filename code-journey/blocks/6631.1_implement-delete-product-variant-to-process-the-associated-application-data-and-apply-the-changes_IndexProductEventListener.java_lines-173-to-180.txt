@@ -1,0 +1,8 @@
+
+	}
+
+	void deleteProductVariant(DeleteProductVariantEvent event) {
+
+		Product product = productOfEvent(event);
+
+		MerchantStore store = product.getMerchantStore();

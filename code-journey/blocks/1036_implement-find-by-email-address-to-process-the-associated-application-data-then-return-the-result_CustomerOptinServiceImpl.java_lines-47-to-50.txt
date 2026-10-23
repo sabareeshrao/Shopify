@@ -1,0 +1,4 @@
+	@Override
+	public CustomerOptin findByEmailAddress(MerchantStore store, String emailAddress, String code) throws ServiceException {
+		return customerOptinRepository.findByMerchantAndCodeAndEmail(store.getId(), code, emailAddress);
+	}

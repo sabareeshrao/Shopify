@@ -1,0 +1,6 @@
+	@Override
+	public List<ProductRelationship> listByProduct(Product product) throws ServiceException {
+
+		return productRelationshipRepository.listByProducts(product);
+
+	}

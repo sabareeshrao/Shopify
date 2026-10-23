@@ -1,0 +1,8 @@
+			// xmldatabuffer.append("<Description>Daily Pickup</Description>");
+			xmldatabuffer.append("<Shipment><Shipper>");
+			xmldatabuffer.append("<Address>");
+			xmldatabuffer.append("<City>");
+			xmldatabuffer.append(store.getStorecity());
+			xmldatabuffer.append("</City>");
+			// if(!StringUtils.isBlank(store.getStorestateprovince())) {
+			if (store.getZone() != null) {

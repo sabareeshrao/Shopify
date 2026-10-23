@@ -1,0 +1,4 @@
+	@Override
+	public List<Category> listByCodes(MerchantStore store, List<String> codes, Language language) {
+		return categoryRepository.findByCodes(store.getId(), codes, language.getId());
+	}

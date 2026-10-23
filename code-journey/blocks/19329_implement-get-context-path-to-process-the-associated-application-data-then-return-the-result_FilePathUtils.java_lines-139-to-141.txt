@@ -1,0 +1,3 @@
+	public String getContextPath() {
+		return properties.getProperty(CONTEXT_PATH);
+	}

@@ -1,0 +1,5 @@
+	private String buildBaseUrl(HttpServletRequest request, MerchantStore store) {
+		String contextPath = normalizePath(request.getContextPath());
+		String scheme = getScheme(store);
+		return scheme + DOUBLE_SLASH + contextPath;
+	}

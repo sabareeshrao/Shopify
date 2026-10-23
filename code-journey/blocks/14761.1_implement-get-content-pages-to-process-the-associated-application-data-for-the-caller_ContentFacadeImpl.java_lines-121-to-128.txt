@@ -1,0 +1,8 @@
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public ReadableEntityList<ReadableContentPage> getContentPages(MerchantStore store, Language language, int page,
+			int count) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+

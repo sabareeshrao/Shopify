@@ -1,0 +1,4 @@
+	@Override
+	public void setBasePath(String context) {
+		this.basePath = context;
+	}

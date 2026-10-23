@@ -1,0 +1,8 @@
+		"zoneName": "Californie",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "CO",
+		"zoneName": "Colorado",
+		"countryCode": "US"
+	},

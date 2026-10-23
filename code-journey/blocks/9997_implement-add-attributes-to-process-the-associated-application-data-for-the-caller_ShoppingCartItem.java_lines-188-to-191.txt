@@ -1,0 +1,4 @@
+	public void addAttributes(ShoppingCartAttributeItem shoppingCartAttributeItem)
+	{
+	    this.attributes.add(shoppingCartAttributeItem);
+	}

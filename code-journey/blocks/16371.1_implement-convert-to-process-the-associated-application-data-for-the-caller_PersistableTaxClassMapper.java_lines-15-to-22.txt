@@ -1,0 +1,8 @@
+	@Override
+	public TaxClass convert(PersistableTaxClass source, MerchantStore store, Language language) {
+		Validate.notNull(source, "PersistableTaxClass cannot be null");
+		Validate.notNull(store, "MerchantStore cannot be null");
+		TaxClass taxClass = new TaxClass();
+		taxClass.setMerchantStore(store);
+		taxClass.setTitle(source.getName());
+		taxClass.setId(source.getId());

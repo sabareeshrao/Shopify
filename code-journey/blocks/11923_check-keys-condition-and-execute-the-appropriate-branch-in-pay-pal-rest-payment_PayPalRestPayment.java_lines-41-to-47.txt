@@ -1,0 +1,7 @@
+		
+		if(keys==null || StringUtils.isBlank(keys.get("secret"))) {
+			if(errorFields==null) {
+				errorFields = new ArrayList<String>();
+			}
+			errorFields.add("secret");
+		}

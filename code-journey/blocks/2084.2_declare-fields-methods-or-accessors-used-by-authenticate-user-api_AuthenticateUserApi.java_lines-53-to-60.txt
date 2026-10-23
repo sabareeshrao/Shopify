@@ -1,0 +1,8 @@
+    @Inject
+    private UserDetailsService jwtAdminDetailsService;
+
+    @Inject
+    private JWTTokenUtil jwtTokenUtil;
+
+	/**
+	 * Authenticate a user using username & password

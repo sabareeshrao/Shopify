@@ -1,0 +1,4 @@
+	public TaxClass(String code) {
+		this.code = code;
+		this.title = code;
+	}

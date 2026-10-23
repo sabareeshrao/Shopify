@@ -1,0 +1,8 @@
+	private static final Logger log = LoggerFactory.getLogger(FileUploadExceptionAdvice.class);
+    
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    @ResponseStatus(HttpStatus.PAYLOAD_TOO_LARGE)
+    public @ResponseBody ErrorEntity handleFileException(Exception exception) {
+        log.error(exception.getMessage(), exception);
+        ErrorEntity errorEntity = new ErrorEntity();
+

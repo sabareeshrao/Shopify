@@ -1,0 +1,22 @@
+*/
+
+
+								//if(properties==null) {
+								//	properties = new TreeMap<Long,ReadableProductProperty>();
+								//}
+								//property = properties.get(attribute.getProductOption().getId());
+								//if(property==null) {
+								property = createProperty(attribute, language);
+
+								ReadableProductOption readableOption = new ReadableProductOption(); //that is the property
+								ReadableProductPropertyValue readableOptionValue = new ReadableProductPropertyValue();
+
+								readableOption.setCode(attribute.getProductOption().getCode());
+								readableOption.setId(attribute.getProductOption().getId());
+
+								Set<ProductOptionDescription> podescriptions = attribute.getProductOption().getDescriptions();
+								if(podescriptions!=null && podescriptions.size()>0) {
+									for(ProductOptionDescription optionDescription : podescriptions) {
+										if(optionDescription.getLanguage().getCode().equals(language.getCode())) {
+											readableOption.setName(optionDescription.getName());
+										}

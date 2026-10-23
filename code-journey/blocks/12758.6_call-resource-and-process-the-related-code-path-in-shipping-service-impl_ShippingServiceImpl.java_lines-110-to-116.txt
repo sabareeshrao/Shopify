@@ -1,0 +1,7 @@
+	private List<ShippingQuotePrePostProcessModule> shippingModulePreProcessors;
+	
+	//shipping post-processors
+	@Inject
+	@Resource(name="shippingModulePostProcessors")
+	private List<ShippingQuotePrePostProcessModule> shippingModulePostProcessors;
+	

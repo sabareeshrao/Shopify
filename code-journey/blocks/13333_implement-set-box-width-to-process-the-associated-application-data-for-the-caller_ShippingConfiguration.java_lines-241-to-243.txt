@@ -1,0 +1,3 @@
+	public void setBoxWidth(int boxWidth) {
+		this.boxWidth = boxWidth;
+	}

@@ -1,0 +1,3 @@
+	public Integer getProductOptionValueSortOrder() {
+		return productOptionValueSortOrder;
+	}

@@ -1,0 +1,3 @@
+	public void setOrderAccountProductId(Long orderAccountProductId) {
+		this.orderAccountProductId = orderAccountProductId;
+	}

@@ -1,0 +1,8 @@
+import com.salesmanager.shop.model.customer.ReadableCustomer;
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.order.OrderEntity;
+import com.salesmanager.shop.model.order.PersistableOrderProduct;
+import com.salesmanager.shop.model.order.ReadableOrderProduct;
+import com.salesmanager.shop.model.order.ShopOrder;
+import com.salesmanager.shop.model.order.history.PersistableOrderStatusHistory;
+import com.salesmanager.shop.model.order.history.ReadableOrderStatusHistory;

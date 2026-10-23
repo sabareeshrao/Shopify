@@ -1,0 +1,2 @@
+	public abstract Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, Exception;
+	

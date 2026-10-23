@@ -1,0 +1,2 @@
+			returnDestination.setCategories(categoryList);
+		}

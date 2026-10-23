@@ -1,0 +1,8 @@
+label.cart.revieworder=Review your order
+label.cart.placeorder=Place your order
+
+label.shipping.nopostalcode=A shipping quote will be available after filling the postal code
+
+#checkout
+label.checkout=Checkout
+label.proceed.checkout=Proceed to checkout

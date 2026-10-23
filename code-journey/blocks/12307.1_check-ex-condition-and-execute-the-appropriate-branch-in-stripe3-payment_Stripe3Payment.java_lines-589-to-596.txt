@@ -1,0 +1,8 @@
+		
+
+	} else if (ex instanceof Exception) {
+		LOGGER.error("Stripe module error", ex.getMessage());
+		if(ex instanceof IntegrationException) {
+			return (IntegrationException)ex;
+		} else {
+			IntegrationException te = new IntegrationException(

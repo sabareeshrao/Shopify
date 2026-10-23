@@ -1,0 +1,3 @@
+	public Set<ProductOptionValueDescription> getDescriptions() {
+		return descriptions;
+	}

@@ -1,0 +1,18 @@
+      }
+
+      for (String key : keys) {
+
+        List<String> values = this.getIntegrationOptions().get(key);
+        if (values == null) {
+          continue;
+        }
+        StringBuilder optionsEntries = new StringBuilder();
+        StringBuilder dataEntries = new StringBuilder();
+
+        int count = 0;
+        for (String value : values) {
+
+          dataEntries.append("\"").append(value).append("\"");
+          if (count < values.size() - 1) {
+            dataEntries.append(",");
+          }

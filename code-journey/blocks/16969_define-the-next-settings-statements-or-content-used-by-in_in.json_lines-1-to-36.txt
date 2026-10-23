@@ -1,0 +1,36 @@
+{
+  "*":[
+	{
+		"zoneCode": "AndhraPradesh",
+		"zoneName": "Andhra Pradesh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "ArunachalPradesh",
+		"zoneName": "Arunachal Pradesh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Assam",
+		"zoneName": "Assam",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Bihar",
+		"zoneName": "Bihar",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Chhattisgarh",
+		"zoneName": "Chhattisgarh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Goa",
+		"zoneName": "Goa",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Gujarat",
+		"zoneName": "Gujarat",
+		"countryCode": "IN"

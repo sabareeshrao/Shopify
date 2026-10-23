@@ -1,0 +1,4 @@
+	public ProductVariantImageServiceImpl(ProductVariantImageRepository productVariantImageRepository) {
+		super(productVariantImageRepository);
+		this.productVariantImageRepository = productVariantImageRepository;
+	}

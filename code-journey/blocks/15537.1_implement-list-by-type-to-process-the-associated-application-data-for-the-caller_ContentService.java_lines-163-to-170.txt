@@ -1,0 +1,8 @@
+
+
+	List<Content> listByType(List<ContentType> contentType, MerchantStore store)
+			throws ServiceException;
+	
+	Page<Content> listByType(ContentType contentType, MerchantStore store, int page, int count)
+			throws ServiceException;
+	

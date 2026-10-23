@@ -1,0 +1,33 @@
+
+		if (!CollectionUtils.isEmpty(source.getAttributes())) {
+
+			Set<ProductAttribute> attributes = source.getAttributes();
+
+			if (!CollectionUtils.isEmpty(attributes)) {
+
+				for (ProductAttribute attribute : attributes) {
+					ReadableProductOption opt = null;
+					ReadableProductAttribute attr = null;
+					ReadableProductProperty property = null;
+					ReadableProductPropertyValue propertyValue = null;
+					ReadableProductAttributeValue attrValue = new ReadableProductAttributeValue();
+
+					ProductOptionValue optionValue = attribute.getProductOptionValue();
+
+					// we need to set readonly attributes only
+					if (attribute.getAttributeDisplayOnly()) {// read only attribute = property
+
+						property = createProperty(attribute, language);
+
+						ReadableProductOption readableOption = new ReadableProductOption(); // that is the property
+						ReadableProductPropertyValue readableOptionValue = new ReadableProductPropertyValue();
+
+						readableOption.setCode(attribute.getProductOption().getCode());
+						readableOption.setId(attribute.getProductOption().getId());
+
+						Set<ProductOptionDescription> podescriptions = attribute.getProductOption().getDescriptions();
+						if (podescriptions != null && podescriptions.size() > 0) {
+							for (ProductOptionDescription optionDescription : podescriptions) {
+								if (optionDescription.getLanguage().getCode().equals(language.getCode())) {
+									readableOption.setName(optionDescription.getName());
+								}

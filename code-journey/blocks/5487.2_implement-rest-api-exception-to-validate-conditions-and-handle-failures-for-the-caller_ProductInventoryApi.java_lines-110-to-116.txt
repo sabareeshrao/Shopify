@@ -1,0 +1,7 @@
+			@ApiIgnore Language language,
+			@RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+			@RequestParam(value = "count", required = false, defaultValue = "10") Integer count) {
+		
+		if(productId == null) {
+			throw new RestApiException("Requires request parameter product id [/product/inventoty?productId");
+		}

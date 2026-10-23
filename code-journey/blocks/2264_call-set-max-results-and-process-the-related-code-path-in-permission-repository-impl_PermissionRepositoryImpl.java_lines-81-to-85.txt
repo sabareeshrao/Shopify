@@ -1,0 +1,5 @@
+	    	else {
+	    		q.setMaxResults(count.intValue());
+	    		permissionList.setTotalCount(count.intValue());
+	    	}
+    	}

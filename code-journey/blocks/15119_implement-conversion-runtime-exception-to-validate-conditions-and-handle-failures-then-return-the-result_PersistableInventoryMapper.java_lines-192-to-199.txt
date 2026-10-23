@@ -1,0 +1,8 @@
+
+			return destination;
+			
+		} catch (ResourceNotFoundException rne) {
+			throw new ConversionRuntimeException(rne.getErrorCode(), rne.getErrorMessage(), rne);
+		} catch (Exception e) {
+			throw new ConversionRuntimeException(e);
+		}

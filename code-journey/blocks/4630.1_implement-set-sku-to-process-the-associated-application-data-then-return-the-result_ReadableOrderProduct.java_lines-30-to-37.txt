@@ -1,0 +1,8 @@
+	public void setSku(String sku) {
+		this.sku = sku;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;

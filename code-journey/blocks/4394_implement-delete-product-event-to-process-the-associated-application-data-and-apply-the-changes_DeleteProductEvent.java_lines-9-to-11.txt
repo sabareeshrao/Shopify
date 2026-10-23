@@ -1,0 +1,3 @@
+	public DeleteProductEvent(Object source, Product product) {
+		super(source, product);
+	}

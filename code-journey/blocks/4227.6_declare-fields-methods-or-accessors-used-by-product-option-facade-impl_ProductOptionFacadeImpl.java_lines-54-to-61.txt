@@ -1,0 +1,8 @@
+	@Autowired
+	private ProductOptionValueService productOptionValueService;
+
+	@Autowired
+	private ReadableProductOptionMapper readableMapper;
+
+	@Autowired
+	private PersistableProductOptionMapper persistableeMapper;

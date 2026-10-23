@@ -1,0 +1,9 @@
+			} else if(shippingType.name().equals(ShippingType.INTERNATIONAL.name())){
+				
+				//customer shipping country code must be in accepted list
+				List<String> supportedCountries = this.getSupportedCountries(store);
+				if(!supportedCountries.contains(shipCountry.getIsoCode())) {
+					shippingQuote.setShippingReturnCode(ShippingQuote.NO_SHIPPING_TO_SELECTED_COUNTRY + " " + shipCountry.getIsoCode());
+					return shippingQuote;
+				}
+			}

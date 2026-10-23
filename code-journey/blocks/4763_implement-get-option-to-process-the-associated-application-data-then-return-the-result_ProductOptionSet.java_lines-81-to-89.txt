@@ -1,0 +1,9 @@
+	public ProductOption getOption() {
+		return option;
+	}
+	public void setOption(ProductOption option) {
+		this.option = option;
+	}
+	public List<ProductOptionValue> getValues() {
+		return values;
+	}

@@ -1,0 +1,8 @@
+  private final static String TEMPLATE_PATH = "templates/email";
+
+  // The configuration set to use for this email. If you do not want to use a
+  // configuration set, comment the following variable and the
+  // .withConfigurationSetName(CONFIGSET); argument below.
+  //static final String CONFIGSET = "ConfigSet";
+
+

@@ -1,0 +1,6 @@
+  @Override
+  public ReadableOptin merge(Optin source, ReadableOptin destination, MerchantStore store,
+                             Language language) {
+    return destination;
+  }
+}

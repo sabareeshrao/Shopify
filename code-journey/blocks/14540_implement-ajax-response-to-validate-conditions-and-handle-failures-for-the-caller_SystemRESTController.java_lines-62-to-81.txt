@@ -1,0 +1,20 @@
+		
+		AjaxResponse resp = new AjaxResponse();
+		
+		try {
+			
+			
+			
+			LOGGER.debug("Creating or updating an integration module : " + json);
+			
+			moduleConfigurationService.createOrUpdateModule(json);
+			
+			response.setStatus(200);
+			
+			resp.setStatus(200);
+			
+		} catch(Exception e) {
+			resp.setStatus(500);
+			resp.setErrorMessage(e);
+			response.sendError(503, "Exception while creating or updating the module " + e.getMessage());
+		}

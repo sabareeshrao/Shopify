@@ -1,0 +1,3 @@
+	public String getCustomPrice() {
+		return customPrice;
+	}

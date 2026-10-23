@@ -1,0 +1,4 @@
+	@Override
+	public PaymentModule getPaymentModule(String paymentModuleCode) throws ServiceException {
+		return paymentModules.get(paymentModuleCode);
+	}

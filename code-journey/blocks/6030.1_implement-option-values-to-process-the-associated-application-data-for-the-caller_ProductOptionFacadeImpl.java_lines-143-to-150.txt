@@ -1,0 +1,8 @@
+	@Override
+	public ReadableProductOptionValueList optionValues(MerchantStore store, Language language, String name, int page,
+			int count) {
+		Validate.notNull(store, "MerchantStore should not be null");
+
+		Page<ProductOptionValue> options = productOptionValueService.getByMerchant(store, null, name, page, count);
+		ReadableProductOptionValueList valueList = new ReadableProductOptionValueList();
+		valueList.setTotalPages(options.getTotalPages());

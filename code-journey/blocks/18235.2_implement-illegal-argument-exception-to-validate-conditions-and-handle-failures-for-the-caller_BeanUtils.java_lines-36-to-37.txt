@@ -1,0 +1,2 @@
+            throw new IllegalArgumentException( "No such property " + property + " for " + beanClass + " exists" );
+        }

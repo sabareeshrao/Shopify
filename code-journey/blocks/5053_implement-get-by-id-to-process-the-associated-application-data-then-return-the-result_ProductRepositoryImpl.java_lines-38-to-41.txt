@@ -1,0 +1,4 @@
+	@Override
+	public Product getById(Long productId, MerchantStore store) {
+		return get(productId, store);
+	}

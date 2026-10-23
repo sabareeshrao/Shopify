@@ -1,0 +1,8 @@
+	private String question3;
+	
+	@Column(name="ADMIN_A1")
+	private String answer1;
+	
+	@Column(name="ADMIN_A2")
+	private String answer2;
+	

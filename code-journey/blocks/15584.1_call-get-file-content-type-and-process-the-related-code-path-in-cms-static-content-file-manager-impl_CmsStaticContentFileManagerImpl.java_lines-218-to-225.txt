@@ -1,0 +1,8 @@
+				// inputStaticContentData.getFileContentType());
+
+				// final Node<String, Object> merchantNode =
+				// this.getNode(nodePath);
+				// merchantNode.put(inputStaticContentData.getFileName(),
+				// IOUtils.toByteArray(
+				// inputStaticContentData.getFile() ));
+

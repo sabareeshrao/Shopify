@@ -1,0 +1,5 @@
+	@Override
+	public void delete(CustomerOptionSet customerOptionSet) throws ServiceException {
+		customerOptionSet = customerOptionSetRepository.findOne(customerOptionSet.getId());
+		super.delete(customerOptionSet);
+	}

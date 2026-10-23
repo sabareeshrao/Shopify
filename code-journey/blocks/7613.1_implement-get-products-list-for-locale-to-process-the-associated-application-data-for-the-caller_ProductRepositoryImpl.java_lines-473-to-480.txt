@@ -1,0 +1,8 @@
+
+	/**
+	 * This query is used for category listings. All collections are not fully
+	 * loaded, only the required objects so the listing page can display
+	 * everything related to all products
+	 */
+	@SuppressWarnings({ "rawtypes", "unchecked", "unused" })
+	private ProductList getProductsListForLocale(MerchantStore store, Set categoryIds, Language language, Locale locale,

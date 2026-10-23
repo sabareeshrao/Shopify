@@ -1,0 +1,8 @@
+
+		Currency currency = Constants.DEFAULT_CURRENCY;
+		Locale locale = Constants.DEFAULT_LOCALE;
+
+		try {
+			currency = store.getCurrency().getCurrency();
+			locale = new Locale(store.getDefaultLanguage().getCode(), store.getCountry().getIsoCode());
+		} catch (Exception e) {

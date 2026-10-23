@@ -1,0 +1,8 @@
+		
+		//Add a second price
+	    ProductPrice anotherPrice = new ProductPrice();
+	    anotherPrice.setCode("eco");
+	    anotherPrice.setProductPriceAmount(new BigDecimal(1.99));
+	    anotherPrice.setProductAvailability(updatableAvailability);
+
+	    ProductPriceDescription anotherPriceD = new ProductPriceDescription();

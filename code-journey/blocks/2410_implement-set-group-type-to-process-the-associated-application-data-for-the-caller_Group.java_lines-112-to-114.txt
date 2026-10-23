@@ -1,0 +1,3 @@
+	public void setGroupType(GroupType groupType) {
+		this.groupType = groupType;
+	}

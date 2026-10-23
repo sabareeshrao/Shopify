@@ -1,0 +1,6 @@
+		
+			
+			Map<String,String> keys = configuration.getIntegrationKeys();
+			if(keys==null || StringUtils.isBlank(keys.get("account"))) {
+				return null;//TODO can we return null
+			}

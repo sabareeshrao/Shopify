@@ -1,0 +1,11 @@
+public class ContactForm {
+	
+	@NotEmpty
+	private String name;
+	@NotEmpty
+	private String subject;
+	@Email
+	private String email;
+	@NotEmpty
+	private String comment;
+

@@ -1,0 +1,8 @@
+	}
+
+	void saveProductVariant(SaveProductVariantEvent event) {
+
+		Product product = productOfEvent(event);
+
+		MerchantStore store = product.getMerchantStore();
+

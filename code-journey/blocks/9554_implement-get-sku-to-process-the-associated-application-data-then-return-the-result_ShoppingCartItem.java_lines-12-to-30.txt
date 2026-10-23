@@ -1,0 +1,19 @@
+	public String getSku() {
+		return sku;
+	}
+	public void setSku(String sku) {
+		this.sku = sku;
+	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String name;
+	private String price;
+	private String image;
+	private BigDecimal productPrice;
+	private int quantity;
+	private String sku;//sku
+	private String code;//shopping cart code
+	private boolean productVirtual;
+	

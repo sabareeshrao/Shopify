@@ -1,0 +1,8 @@
+	    
+	    related.getAvailabilities().add(availability);
+	    
+	    productService.save(related);
+	    
+	    ProductRelationship relationship = new ProductRelationship();
+	    
+	    relationship.setActive(true);

@@ -1,0 +1,8 @@
+	 * default to 0 for images managed by the system
+	 */
+	@Column(name = "IMAGE_TYPE")
+	private int imageType;
+	
+	/**
+	 * Refers to images not accessible through the system. It may also be a video.
+	 */

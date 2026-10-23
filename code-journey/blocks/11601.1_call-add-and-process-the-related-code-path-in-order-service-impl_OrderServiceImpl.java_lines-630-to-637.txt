@@ -1,0 +1,8 @@
+				listTransactions.add(trx);
+			}
+
+			//should have when captured
+			/**
+			 * Order id  Transaction type
+			 * 1          AUTHORIZE
+			 * 1          CAPTURE

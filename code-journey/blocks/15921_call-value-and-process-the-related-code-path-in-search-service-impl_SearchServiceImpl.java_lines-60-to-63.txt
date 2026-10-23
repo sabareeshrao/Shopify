@@ -1,0 +1,4 @@
+	
+    @Value("${search.noindex:false}")//skip indexing process
+    private boolean noIndex;
+

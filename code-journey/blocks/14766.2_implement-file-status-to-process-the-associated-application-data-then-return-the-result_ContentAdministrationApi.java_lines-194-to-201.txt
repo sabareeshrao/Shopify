@@ -1,0 +1,8 @@
+			@ApiIgnore MerchantStore merchantStore, 
+			@ApiIgnore Language language) {
+
+		try {
+			
+			String fileName = path.substring(path.lastIndexOf("/")+1, path.length());
+			contentFacade.renameFile(merchantStore, FileContentType.IMAGE, fileName, newName);
+			return new FileStatus();

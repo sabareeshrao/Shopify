@@ -1,0 +1,3 @@
+	public String getAnswer3() {
+		return answer3;
+	}

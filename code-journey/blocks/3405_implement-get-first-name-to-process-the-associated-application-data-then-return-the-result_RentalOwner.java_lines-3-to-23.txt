@@ -1,0 +1,21 @@
+import com.salesmanager.shop.model.customer.address.Address;
+import com.salesmanager.shop.model.entity.Entity;
+
+/**
+ * RENTAL customer
+ * @author c.samson
+ *
+ */
+public class RentalOwner extends Entity {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String firstName;
+	private String lastName;
+	private Address address;
+	private String emailAddress;
+	public String getFirstName() {
+		return firstName;
+	}

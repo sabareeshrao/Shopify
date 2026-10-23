@@ -1,0 +1,8 @@
+		req.setStore(store.getCode().toLowerCase());
+		req.setSearchString(word);
+		req.setLanguage(language.getCode());
+		
+		SearchResponse response;
+		try {
+			response = searchService.searchKeywords(store, language.getCode(), req, AUTOCOMPLETE_ENTRIES_COUNT);
+		} catch (ServiceException e) {

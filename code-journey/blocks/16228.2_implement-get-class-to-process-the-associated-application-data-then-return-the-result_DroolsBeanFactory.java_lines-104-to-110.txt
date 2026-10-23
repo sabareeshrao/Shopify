@@ -1,0 +1,7 @@
+
+        Resource dt = ResourceFactory.newClassPathResource(excelFile, getClass());
+
+        DecisionTableProviderImpl decisionTableProvider = new DecisionTableProviderImpl();
+
+        return decisionTableProvider.loadFromResource(dt, null);
+    }

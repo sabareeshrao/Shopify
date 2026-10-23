@@ -1,0 +1,3 @@
+            final Object secondObj = this.beanUtils.getPropertyValue(value, this.secondFieldName);
+            return firstObj == null && secondObj == null || firstObj != null && firstObj.equals(secondObj);
+        }

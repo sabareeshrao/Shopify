@@ -1,0 +1,10 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.repositories.system.SystemConfigurationRepository;
+import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
+import com.salesmanager.core.model.system.SystemConfiguration;
+
+@Service("systemConfigurationService")
+public class SystemConfigurationServiceImpl extends
+		SalesManagerEntityServiceImpl<Long, SystemConfiguration> implements
+		SystemConfigurationService {
+

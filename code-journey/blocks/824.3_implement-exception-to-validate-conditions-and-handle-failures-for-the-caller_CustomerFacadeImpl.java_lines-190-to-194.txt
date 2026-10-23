@@ -1,0 +1,5 @@
+
+      } catch (ConversionException ex) {
+        LOG.error("Error while converting Customer to CustomerEntity", ex);
+        throw new Exception(ex);
+      }

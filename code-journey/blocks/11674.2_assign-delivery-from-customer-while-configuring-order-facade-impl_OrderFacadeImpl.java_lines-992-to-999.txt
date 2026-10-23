@@ -1,0 +1,8 @@
+			delivery.setCompany(billing.getCompany());
+			delivery.setPostalCode(billing.getPostalCode());
+			delivery.setState(billing.getState());
+			delivery.setCountry(billing.getCountry());
+			delivery.setZone(billing.getZone());
+		} else {
+			delivery = customer.getDelivery();
+		}

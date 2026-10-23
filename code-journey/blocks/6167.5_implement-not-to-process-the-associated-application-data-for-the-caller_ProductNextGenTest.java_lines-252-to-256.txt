@@ -1,0 +1,5 @@
+	    productCriteria.setOptionValueIds(Stream.of(nineHalf.getId())
+	    	      .collect(Collectors.toList()));
+	    List<Product> productsByOption = listByOptionValue.getContent();
+	    assertThat(productsByOption,  not(empty()));
+	    

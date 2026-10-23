@@ -1,0 +1,10 @@
+  @Override
+  public void removeImages(String merchantStoreCode) throws ServiceException {
+    Storage storage = StorageOptions.getDefaultInstance().getService();
+    
+    String bucketName = bucketName();
+
+    Page<Blob> blobs =
+        storage.list(
+            bucketName, BlobListOption.currentDirectory(), BlobListOption.prefix(merchantStoreCode));
+

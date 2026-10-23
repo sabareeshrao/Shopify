@@ -1,0 +1,34 @@
+module.shipping.canadapost.DOM.RP=Colis standard 
+module.shipping.canadapost.DOM.EP=Colis accélérés 
+module.shipping.canadapost.DOM.XP=Xpresspost
+module.shipping.canadapost.DOM.XP.CERT=Xpresspost certifié
+module.shipping.canadapost.DOM.PC=Priorité
+module.shipping.canadapost.DOM.DT=Service Livré ce soir
+module.shipping.canadapost.DOM.LIB=Livres de bibliothèque
+
+module.shipping.canadapost.USA.EP=Colis accélérés É.-U.
+module.shipping.canadapost.USA.PW.ENV=Enveloppe Priorité Mondial – É.-U. 
+module.shipping.canadapost.USA.PW.PAK=Paquet Priorité Mondial – É.-U.
+module.shipping.canadapost.USA.PW.PARCEL=Colis Priorité Mondial – É.-U.
+module.shipping.canadapost.USA.SP.AIR=Petits paquets-avion à destination des É.-U. 
+module.shipping.canadapost.USA.TP=Paquet repérable – É.-U.
+module.shipping.canadapost.USA.TP.LVM=Paquet repérable – É.-U. (GEC - gros expéditeur de courrier)
+module.shipping.canadapost.USA.XP=Xpresspost É.-U.
+
+module.shipping.canadapost.INT.XP=Xpresspost International
+module.shipping.canadapost.INT.IP.AIR=Colis-avion du régime international
+module.shipping.canadapost.INT.IP.SURF=Colis de surface du régime international
+module.shipping.canadapost.INT.PW.ENV=Enveloppe Priorité Mondial – International
+module.shipping.canadapost.INT.PW.PAK=Paquet Priorité Mondial – International 
+module.shipping.canadapost.INT.PW.PARCEL=Colis Prioritié Mondial – International
+module.shipping.canadapost.INT.SP.AIR=Petits paquets-avion du régime international
+module.shipping.canadapost.INT.SP.SURF=Petits paquets de surface du régime international
+module.shipping.canadapost.INT.TP=Paquet repérable – International
+
+#USPS
+module.shipping.usps.identifier=Numéro de compte USPS
+module.shipping.usps.packages=Type d'emballage
+module.shipping.usps.shippingmethods=Choisir jusqu'a 3 méthodes d'expédition
+module.shipping.usps.message.identifier=Identifiant USPS requis
+module.shipping.usps.message.packages=Vous devez choisir un type d'emballage
+

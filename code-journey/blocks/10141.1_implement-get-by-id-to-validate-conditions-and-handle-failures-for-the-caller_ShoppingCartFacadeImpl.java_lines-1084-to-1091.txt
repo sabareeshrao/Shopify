@@ -1,0 +1,8 @@
+	@Override
+	public ReadableShoppingCart getById(Long shoppingCartId, MerchantStore store, Language language) throws Exception {
+
+		ShoppingCart cart = shoppingCartService.getById(shoppingCartId);
+
+		ReadableShoppingCart readableCart = null;
+
+		if (cart != null) {

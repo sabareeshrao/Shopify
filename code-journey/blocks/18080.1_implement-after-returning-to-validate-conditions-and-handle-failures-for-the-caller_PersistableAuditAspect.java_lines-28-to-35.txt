@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(PersistableAuditAspect.class);
+
+    @AfterReturning(value = "execution(* populate(..))",
+            returning = "result")
+        public void afterReturning(JoinPoint joinPoint, Object result) {
+    	
+			try {
+				if(result instanceof Auditable) {

@@ -1,0 +1,8 @@
+
+	/**
+	 * Sends an email to the customer after a completed order
+	 * @param customer
+	 * @param order
+	 * @param customerLocale
+	 * @param language
+	 * @param merchantStore

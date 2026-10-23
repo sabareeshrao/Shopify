@@ -1,0 +1,8 @@
+	private static final String DEFAULT_INITIAL_PASSWORD = "password";
+
+	@Inject
+	private UserService userService;
+	
+
+	@Inject
+	private MerchantStoreService merchantStoreService;

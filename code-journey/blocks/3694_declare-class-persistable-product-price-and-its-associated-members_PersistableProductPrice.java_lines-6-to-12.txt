@@ -1,0 +1,7 @@
+public class PersistableProductPrice extends ProductPriceEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+

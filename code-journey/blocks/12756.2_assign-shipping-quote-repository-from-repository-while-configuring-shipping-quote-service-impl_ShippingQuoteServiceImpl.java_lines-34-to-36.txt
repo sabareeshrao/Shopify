@@ -1,0 +1,3 @@
+		this.shippingQuoteRepository = repository;
+		// TODO Auto-generated constructor stub
+	}

@@ -1,0 +1,21 @@
+	@Override
+	public List<Order> getCapturableOrders(MerchantStore store, Date startDate, Date endDate) throws ServiceException {
+
+		List<Transaction> transactions = transactionService.listTransactions(startDate, endDate);
+
+		List<Order> returnOrders = null;
+
+		if(!CollectionUtils.isEmpty(transactions)) {
+
+			returnOrders = new ArrayList<Order>();
+
+			//order id
+			Map<Long,Order> preAuthOrders = new HashMap<Long,Order> ();
+			//order id
+			Map<Long,List<Transaction>> processingTransactions = new HashMap<Long,List<Transaction>> ();
+
+			for(Transaction trx : transactions) {
+				Order order = trx.getOrder();
+				if(TransactionType.AUTHORIZE.name().equals(trx.getTransactionType().name())) {
+					preAuthOrders.put(order.getId(), order);
+				}

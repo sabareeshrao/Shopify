@@ -1,0 +1,8 @@
+label.product.preorder=Pre-order
+label.product.price.name=Product price name
+label.product.price.priceAppender=Product price appender
+label.product.price.default=Default product price
+label.product.price.special=Special price
+label.product.price.special.startdate=Special start date
+label.product.price.special.enddate=Special end date
+label.taxclass =Tax class

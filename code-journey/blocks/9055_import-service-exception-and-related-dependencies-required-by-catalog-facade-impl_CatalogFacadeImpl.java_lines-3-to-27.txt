@@ -1,0 +1,25 @@
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.catalog.catalog.CatalogEntryService;
+import com.salesmanager.core.business.services.catalog.catalog.CatalogService;
+import com.salesmanager.core.model.catalog.catalog.Catalog;
+import com.salesmanager.core.model.catalog.catalog.CatalogCategoryEntry;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.mapper.catalog.PersistableCatalogMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableCatalogCategoryEntryMapper;
+import com.salesmanager.shop.mapper.catalog.ReadableCatalogMapper;
+import com.salesmanager.shop.model.catalog.catalog.PersistableCatalog;
+import com.salesmanager.shop.model.catalog.catalog.PersistableCatalogCategoryEntry;
+import com.salesmanager.shop.model.catalog.catalog.ReadableCatalog;
+import com.salesmanager.shop.model.catalog.catalog.ReadableCatalogCategoryEntry;
+import com.salesmanager.shop.model.entity.ReadableEntityList;
+import com.salesmanager.shop.store.api.exception.OperationNotAllowedException;
+import com.salesmanager.shop.store.api.exception.ResourceNotFoundException;
+import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
+import com.salesmanager.shop.store.controller.catalog.facade.CatalogFacade;
+import org.jsoup.helper.Validate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+

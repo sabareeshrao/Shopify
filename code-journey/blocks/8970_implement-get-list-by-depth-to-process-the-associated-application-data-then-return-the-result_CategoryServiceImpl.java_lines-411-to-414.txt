@@ -1,0 +1,4 @@
+	@Override
+	public List<Category> getListByDepth(MerchantStore store, int depth, Language language) {
+		return categoryRepository.find(store.getId(), depth, language.getId(), null);
+	}

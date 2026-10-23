@@ -1,0 +1,3 @@
+	
+	void deletePackage(String code, MerchantStore store);
+	

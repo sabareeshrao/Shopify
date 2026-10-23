@@ -1,0 +1,8 @@
+	 */
+	ReadableContentPage getContentPage(String code, MerchantStore store, Language language);
+	
+	/**
+	 * Returns page by name
+	 * @param name
+	 * @param store
+	 * @param language

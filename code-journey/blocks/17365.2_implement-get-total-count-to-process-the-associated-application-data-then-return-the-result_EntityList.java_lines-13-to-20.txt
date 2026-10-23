@@ -1,0 +1,8 @@
+	private long totalCount;
+	private int totalPages;
+	
+/*	public int getTotalCount() {
+		return totalCount;
+	}*/
+/*	public void setTotalCount(int totalCount) {
+		this.totalCount = totalCount;

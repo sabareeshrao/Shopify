@@ -1,0 +1,8 @@
+	public void setDefaultAttribute(boolean defaultAttribute) {
+		this.defaultAttribute = defaultAttribute;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;

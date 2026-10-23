@@ -1,0 +1,7 @@
+	
+	@Column(name="PRODUCT_OPTION_SORT_ORD")
+	private Integer productOptionSortOrder;
+	
+	@Column(name="PRODUCT_OPTION_TYPE", length=10)
+	private String productOptionType;
+	

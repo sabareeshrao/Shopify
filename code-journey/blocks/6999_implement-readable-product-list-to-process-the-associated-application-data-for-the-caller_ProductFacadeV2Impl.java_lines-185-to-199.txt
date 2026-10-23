@@ -1,0 +1,15 @@
+
+		
+		Page<Product> modelProductList = productService.listByStore(store, language, criterias, criterias.getStartPage(), criterias.getMaxCount());
+		
+		List<Product> products = modelProductList.getContent();
+		ReadableProductList productList = new ReadableProductList();
+
+		
+		/**
+		 * ReadableProductMapper
+		 */
+		
+		List<ReadableProduct> readableProducts = products.stream().map(p -> readableProductMapper.convert(p, store, language))
+				.sorted(Comparator.comparing(ReadableProduct::getSortOrder)).collect(Collectors.toList());
+

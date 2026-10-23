@@ -1,0 +1,8 @@
+        descriptions.add(endescription);
+        descriptions.add(frdescription);
+
+        dining.setDescriptions(descriptions);
+
+        final Category diningParent = new Category();
+        diningParent.setCode(dining.getCode());
+

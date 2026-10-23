@@ -1,0 +1,5 @@
+import com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem;
+public interface ShoppingCartAttributeRepository extends JpaRepository<ShoppingCartAttributeItem, Long> {
+
+
+}

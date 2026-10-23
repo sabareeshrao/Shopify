@@ -1,0 +1,7 @@
+
+		rc = toReadableCategory(c, store, language, processed);
+		if(Objects.nonNull(rp)) {
+			rp.getChildren().add(rc);
+		} else {
+			hierarchy.put(c.getId(), rc);
+		}

@@ -1,0 +1,8 @@
+	
+	@Inject
+	protected ManufacturerService manufacturerService;
+	
+	@Inject
+	protected ZoneService zoneService;
+	
+	@Inject

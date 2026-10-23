@@ -1,0 +1,2 @@
+				newAmount.append(amount.charAt(i));
+			}

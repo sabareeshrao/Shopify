@@ -1,0 +1,3 @@
+	public void setSupportedLanguages(List<ReadableLanguage> supportedLanguages) {
+		this.supportedLanguages = supportedLanguages;
+	}

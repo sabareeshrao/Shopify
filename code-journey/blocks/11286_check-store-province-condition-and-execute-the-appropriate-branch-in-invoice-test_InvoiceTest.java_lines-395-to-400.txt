@@ -1,0 +1,6 @@
+				
+			}
+			if(storeProvince!=null) {
+				sheet.setValueAt(storeProvince.toString(), 0, storeAddressCell);
+				storeAddressCell ++;
+			}

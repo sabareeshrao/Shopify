@@ -1,0 +1,8 @@
+  public List<OutputContentFile> getImages(MerchantStore store, FileContentType imageContentType)
+      throws ServiceException {
+
+    // the web server takes care of the images
+
+    return null;
+
+  }

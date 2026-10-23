@@ -1,0 +1,8 @@
+				detail.setItemName(description);
+	
+				packages.add(detail);
+			} else if (shippingProduct.getQuantity() > 1) {
+				for (int i = 0; i < shippingProduct.getQuantity(); i++) {
+					PackageDetails detail = new PackageDetails();
+					detail.setShippingHeight(h
+							.doubleValue());

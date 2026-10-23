@@ -1,0 +1,11 @@
+import com.salesmanager.shop.application.ShopApplication;
+
+
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+public class ActuatorTest {
+	
+	  @Inject
+	  private TestRestTemplate testRestTemplate;
+	

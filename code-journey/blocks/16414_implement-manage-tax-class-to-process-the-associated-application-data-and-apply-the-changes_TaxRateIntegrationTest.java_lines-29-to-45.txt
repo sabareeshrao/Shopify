@@ -1,0 +1,17 @@
+	
+    @Test
+    public void manageTaxClass() throws Exception {
+    	
+    	//create tax class
+    	PersistableTaxClass taxClass = new PersistableTaxClass();
+    	taxClass.setCode("TESTTX");
+    	taxClass.setName("Test tax class");
+    	
+        final HttpEntity<PersistableTaxClass> taxClassEntity = new HttpEntity<>(taxClass, getHeader());
+        final ResponseEntity<Entity> response = testRestTemplate.postForEntity(String.format("/api/v1/private/tax/class/"), taxClassEntity, Entity.class);
+        
+        Entity e = response.getBody();
+        
+        assertNotNull(e.getId());
+        assertTrue(e.getId() > 0);
+        

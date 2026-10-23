@@ -1,0 +1,18 @@
+		
+		
+		// crop factor
+/*		double factor = 1;
+		if (this.getCropeBaseline() == 0) {// width
+			factor = new Integer(width).doubleValue()
+					/ new Integer(specificationsWidth).doubleValue();
+		} else {// height
+			factor = new Integer(height).doubleValue()
+					/ new Integer(specificationsHeight).doubleValue();
+		}*/
+
+		double w = factor * specificationsWidth;
+		double h = factor * specificationsHeight;
+		
+		if(w==h) {
+			setCropeable(false);
+		}

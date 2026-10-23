@@ -1,0 +1,16 @@
+	private BigDecimal handlingFees = null;
+	private boolean taxOnShipping = false;
+	
+	
+	//JSON bindings
+	private String shipType;
+	private String shipBaseType;
+	private String shipOptionPriceType = ShippingOptionPriceType.ALL.name();
+	private String shipPackageType;
+	private String shipDescription;
+	private String shipFreeType;
+	
+	//Transient
+	private String orderTotalFreeShippingText = null;
+	private String handlingFeesText = null;
+	

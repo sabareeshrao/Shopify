@@ -1,0 +1,8 @@
+			templateTokens.put(EmailConstants.LABEL_LINK_TITLE,
+					messages.getMessage("email.link.reset.password.title", locale));
+			templateTokens.put(EmailConstants.LABEL_LINK, messages.getMessage("email.link", locale));
+			templateTokens.put(EmailConstants.EMAIL_CONTACT_OWNER,
+					messages.getMessage("email.contactowner", storeEmail, locale));
+
+			Email email = new Email();
+			email.setFrom(store.getStorename());

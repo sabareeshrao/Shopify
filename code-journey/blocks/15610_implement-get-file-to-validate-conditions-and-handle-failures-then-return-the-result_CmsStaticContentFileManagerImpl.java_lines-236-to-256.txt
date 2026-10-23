@@ -1,0 +1,21 @@
+
+	/**
+	 * Method to return static data for given Merchant store based on the file
+	 * name. Content data will be searched in underlying Infinispan cache tree
+	 * and {@link OutputStaticContentData} will be returned on finding an
+	 * associated file. In case of no file, null be returned.
+	 * 
+	 * @param store
+	 *            Merchant store
+	 * @param contentFileName
+	 *            name of file being requested
+	 * @return {@link OutputStaticContentData}
+	 * @throws ServiceException
+	 */
+	@Override
+	public OutputContentFile getFile(final String merchantStoreCode, Optional<String> folderPath,
+			final FileContentType fileContentType, final String contentFileName) throws ServiceException {
+
+		throw new ServiceException("Not implemented for httpd image manager");
+
+	}

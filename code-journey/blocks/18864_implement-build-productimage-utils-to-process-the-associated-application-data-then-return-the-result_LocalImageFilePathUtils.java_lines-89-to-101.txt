@@ -1,0 +1,13 @@
+	
+	/**
+	 * Builds a product image file path that can be used by image servlet
+	 * utility for getting the physical image
+	 * @param store
+	 * @param product
+	 * @param imageName
+	 * @return
+	 */
+	public String buildProductimageUtils(MerchantStore store, Product product, String imageName) {
+		return new StringBuilder().append(getBasePath(store)).append("/products/").append(store.getCode()).append("/")
+				.append(product.getSku()).append("/").append("LARGE").append("/").append(imageName).toString();
+	}

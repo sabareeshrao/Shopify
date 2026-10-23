@@ -1,0 +1,8 @@
+			// final Node<String, Object> merchantNode = this.getNode(nodePath);
+
+			// merchantNode.put(inputStaticContentData.getFileName(),
+			// IOUtils.toByteArray(
+			// inputStaticContentData.getFile() ));
+
+			LOGGER.info("Content data added successfully.");
+		} catch (final Exception e) {

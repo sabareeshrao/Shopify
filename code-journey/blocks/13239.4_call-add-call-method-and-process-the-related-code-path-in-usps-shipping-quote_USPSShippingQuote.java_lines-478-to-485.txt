@@ -1,0 +1,8 @@
+
+				digester.addCallMethod("Error/Description",
+						"setError", 0);
+				digester.addCallMethod("RateV3Response/Package/Error/Description",
+						"setError", 0);
+				digester
+						.addObjectCreate(
+								"RateV3Response/Package/Postage",

@@ -1,0 +1,5 @@
+  @Override
+  public OutputContentFile getProductImage(ProductImage productImage) throws ServiceException {
+    // TODO Auto-generated method stub
+    return null;
+  }

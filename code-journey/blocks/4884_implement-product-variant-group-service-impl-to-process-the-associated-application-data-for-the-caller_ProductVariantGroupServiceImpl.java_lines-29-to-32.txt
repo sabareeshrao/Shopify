@@ -1,0 +1,4 @@
+	public ProductVariantGroupServiceImpl(ProductVariantGroupRepository repository) {
+		super(repository);
+		this.productVariantGroupRepository = repository;
+	}

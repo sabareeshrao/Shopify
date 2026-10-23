@@ -1,0 +1,2 @@
+  private List<MerchantConfigEntity> socialNetworks = new ArrayList<MerchantConfigEntity>();
+

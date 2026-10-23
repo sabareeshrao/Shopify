@@ -1,0 +1,3 @@
+	public void setParent(TaxRate parent) {
+		this.parent = parent;
+	}

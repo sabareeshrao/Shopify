@@ -1,0 +1,64 @@
+)
+
+/**
+ * Default availability
+ * 
+ * store
+ * product id
+ * 
+ * variant null
+ * regionVariant null
+ * 
+ * @author carlsamson
+ *
+ */
+public class ProductAvailability extends SalesManagerEntity<Long, ProductAvailability> implements Auditable {
+
+	/**
+	* 
+	*/
+	private static final long serialVersionUID = 1L;
+
+	@Embedded
+	private AuditSection auditSection = new AuditSection();
+
+	@Id
+	@Column(name = "PRODUCT_AVAIL_ID", unique = true, nullable = false)
+	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "PRODUCT_AVAIL_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+
+	@JsonIgnore
+	@ManyToOne(targetEntity = Product.class)
+	@JoinColumn(name = "PRODUCT_ID", nullable = false)
+	private Product product;
+
+	/** Specific retailer store **/
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "MERCHANT_ID", nullable = true)
+	private MerchantStore merchantStore;
+	
+	/**
+	 * This describes the availability of a product variant
+	 */
+	@ManyToOne(targetEntity = ProductVariant.class)
+	@JoinColumn(name = "PRODUCT_VARIANT", nullable = true)
+	private ProductVariant productVariant;
+	
+	@Pattern(regexp="^[a-zA-Z0-9_]*$")
+	@Column(name = "SKU", nullable = true)
+	private String sku;
+
+	@Embedded
+	private ProductDimensions dimensions;
+
+	@NotNull
+	@Column(name = "QUANTITY")
+	private Integer productQuantity = 0;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "DATE_AVAILABLE")
+	private Date productDateAvailable;
+
+	@Column(name = "REGION")
+	private String region = SchemaConstant.ALL_REGIONS;

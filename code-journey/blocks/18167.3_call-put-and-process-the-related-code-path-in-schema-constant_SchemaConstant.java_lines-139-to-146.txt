@@ -1,0 +1,8 @@
+		CURRENCY_MAP.put("XCD", "East Caribbean Dollar");
+		CURRENCY_MAP.put("GTQ", "Quetzal");
+		CURRENCY_MAP.put("GBP", "Pound Sterling");
+		CURRENCY_MAP.put("GNF", "Guinea Franc");
+		CURRENCY_MAP.put("XOF", "CFA Franc BCEAO");
+		CURRENCY_MAP.put("GYD", "Guyana Dollar");
+		CURRENCY_MAP.put("HTG", "Gourde");
+		CURRENCY_MAP.put("HNL", "Lempira");

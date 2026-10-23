@@ -1,0 +1,8 @@
+
+	    Set<CategoryDescription> descriptions3 = new HashSet<CategoryDescription>();
+	    descriptions3.add(novellEnglishDescription);
+	    descriptions3.add(novellFrenchDescription);
+
+	    novell.setDescriptions(descriptions3);
+	    
+	    novell.setParent(book);

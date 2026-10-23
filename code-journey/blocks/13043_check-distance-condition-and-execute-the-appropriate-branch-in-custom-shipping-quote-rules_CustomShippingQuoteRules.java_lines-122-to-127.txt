@@ -1,0 +1,6 @@
+		
+		if(distance!=null) {
+			double ddistance = distance;
+			long ldistance = (long)ddistance;
+			inputParameters.setDistance(ldistance);
+		}

@@ -1,0 +1,8 @@
+	},
+	{
+		"zoneCode": "AZ",
+		"zoneName": "Arizona",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "AR",

@@ -1,0 +1,5 @@
+	private ReadableMerchantStore store;
+	private String sku;
+	private List<ReadableProductPrice> prices = new ArrayList<ReadableProductPrice>();
+	private String price;
+

@@ -1,0 +1,10 @@
+		
+		qs.append(" order by p.id asc ");
+		
+    	String hql = qs.toString();
+		Query q = em.createQuery(hql);
+
+
+    	if(criteria.getGroupIds()!=null && criteria.getGroupIds().size()>0) {
+    		q.setParameter("cid", criteria.getGroupIds());
+    	}

@@ -1,0 +1,23 @@
+
+	@Deprecated
+	private ReadableContentFull convertContentToReadableContentFull(MerchantStore store, Language language,
+			Content content) {
+		ReadableContentFull contentFull = new ReadableContentFull();
+
+		try {
+			List<ContentDescriptionEntity> descriptions = this.createContentDescriptionEntitys(store, content,
+					language);
+
+			contentFull.setDescriptions(descriptions);
+			contentFull.setId(content.getId());
+			contentFull.setDisplayedInMenu(content.isLinkToMenu());
+			contentFull.setContentType(content.getContentType().name());
+			contentFull.setCode(content.getCode());
+			contentFull.setId(content.getId());
+			contentFull.setVisible(content.isVisible());
+
+			return contentFull;
+
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Error while creating ReadableContentFull", e);
+		}

@@ -1,0 +1,2 @@
+  private List<ReadableUser> data = new ArrayList<ReadableUser>();
+

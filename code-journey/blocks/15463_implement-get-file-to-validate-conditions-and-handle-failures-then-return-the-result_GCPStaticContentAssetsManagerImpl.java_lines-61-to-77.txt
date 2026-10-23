@@ -1,0 +1,17 @@
+  @Override
+	public OutputContentFile getFile(String merchantStoreCode, Optional<String> folderPath, FileContentType fileContentType, String contentName)
+			throws ServiceException {
+    try {
+      String bucketName = bucketName();
+      // Instantiates a client
+      Storage storage = StorageOptions.getDefaultInstance().getService();
+
+      Blob blob = storage.get(BlobId.of(bucketName, nodePath(merchantStoreCode, fileContentType) + contentName));
+      LOGGER.info("Content getFile");
+
+      return getOutputContentFile(blob.getContent(BlobSourceOption.generationMatch()));
+
+    } catch (Exception e) {
+      LOGGER.error("Error while getting file", e);
+      throw new ServiceException(e);
+    }

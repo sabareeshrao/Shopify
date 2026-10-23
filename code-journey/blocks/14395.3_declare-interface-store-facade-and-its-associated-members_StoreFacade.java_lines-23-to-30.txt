@@ -1,0 +1,8 @@
+public interface StoreFacade {
+
+	/**
+	 * Find MerchantStore model from store code
+	 * 
+	 * @param code
+	 * @return
+	 * @throws Exception

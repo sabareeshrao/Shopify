@@ -1,0 +1,8 @@
+
+	/**
+	 * Creates a new ProductOption
+	 *
+	 * @throws Exception
+	 */
+	@Test
+	@Ignore

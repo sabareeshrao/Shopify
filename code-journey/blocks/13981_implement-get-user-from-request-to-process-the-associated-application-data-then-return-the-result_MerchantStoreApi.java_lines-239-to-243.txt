@@ -1,0 +1,5 @@
+	private String getUserFromRequest(HttpServletRequest request) {
+		// user doing action must be attached to the store being modified
+		Principal principal = request.getUserPrincipal();
+		return principal.getName();
+	}

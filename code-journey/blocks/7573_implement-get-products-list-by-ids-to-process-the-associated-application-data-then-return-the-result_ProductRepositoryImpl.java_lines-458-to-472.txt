@@ -1,0 +1,15 @@
+	@Override
+	public List<Product> getProductsListByIds(Set<Long> productds) {
+		StringBuilder qs = new StringBuilder();
+		qs.append(productQueryV2());
+		qs.append("where p.id in (:pid) ");
+		qs.append("and p.available=true and p.dateAvailable<=:dt ");
+
+		String hql = qs.toString();
+		Query q = this.em.createQuery(hql);
+
+		q.setParameter("pid", productds);
+		q.setParameter("dt", new Date());
+
+		return q.getResultList();
+	}

@@ -1,0 +1,8 @@
+#options
+label.product.productoptions.edit.title=Modifier une option de produit
+label.product.productoptions.create.title=Créer une option de produit
+label.product.productoptions.title=Option du produit
+label.product.productoptions.name =Nom de l'option
+label.product.productoptions.price=Prix de l'option
+label.product.productoptions.comments=Commentaires
+label.product.productoptions.type=Type d'option

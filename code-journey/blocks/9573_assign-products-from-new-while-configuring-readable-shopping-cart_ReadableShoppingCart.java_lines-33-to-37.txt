@@ -1,0 +1,5 @@
+	private ReadableProductVariant variant;
+	
+	List<ReadableShoppingCartItem> products = new ArrayList<ReadableShoppingCartItem>();
+	List<ReadableOrderTotal> totals;
+	

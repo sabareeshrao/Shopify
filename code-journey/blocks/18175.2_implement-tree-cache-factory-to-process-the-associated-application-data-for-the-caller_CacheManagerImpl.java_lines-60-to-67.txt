@@ -1,0 +1,8 @@
+    		   .build();
+      
+      manager.getManager().defineConfiguration(namedCache, config);
+
+      final Cache<String, String> cache = manager.getManager().getCache(namedCache);
+      
+      f = new TreeCacheFactory();
+      treeCache = f.createTreeCache(cache);

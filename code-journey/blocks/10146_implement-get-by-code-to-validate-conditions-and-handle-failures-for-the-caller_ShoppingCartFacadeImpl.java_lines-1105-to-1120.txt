@@ -1,0 +1,16 @@
+	@Override
+	// KEEP
+	public ReadableShoppingCart getByCode(String code, MerchantStore store, Language language) throws Exception {
+
+		ShoppingCart cart = shoppingCartService.getByCode(code, store);
+		ReadableShoppingCart readableCart = null;
+
+		if (cart != null) {
+
+			readableCart = readableShoppingCartMapper.convert(cart, store, language);
+
+			if (!StringUtils.isBlank(cart.getPromoCode())) {
+				Date promoDateAdded = cart.getPromoAdded();// promo valid 1 day
+				if (promoDateAdded == null) {
+					promoDateAdded = new Date();
+				}

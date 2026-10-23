@@ -1,0 +1,9 @@
+
+			
+			Page<MerchantStore> children = merchantStoreService.listChildren(code, page, count);
+			List<ReadableMerchantStore> readableStores = new ArrayList<ReadableMerchantStore>();
+			ReadableMerchantStoreList readableList = new ReadableMerchantStoreList();
+			if (!CollectionUtils.isEmpty(children.getContent())) {
+				for (MerchantStore store : children)
+					readableStores.add(convertMerchantStoreToReadableMerchantStore(language, store));
+			}

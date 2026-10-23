@@ -1,0 +1,3 @@
+    public void setProducts(List<ReadableProduct> products) {
+        this.products = products;
+    }

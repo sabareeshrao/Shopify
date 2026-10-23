@@ -1,0 +1,11 @@
+
+  @DeleteMapping("/newsletter/{email}")
+  @ApiOperation(
+      httpMethod = "DELETE",
+      value = "Deletes a customer",
+      notes = "Requires administration access",
+      response = Void.class)
+  public ResponseEntity<Void> delete(
+      @PathVariable String email, HttpServletRequest request, HttpServletResponse response) {
+    throw new UnsupportedOperationException();
+  }

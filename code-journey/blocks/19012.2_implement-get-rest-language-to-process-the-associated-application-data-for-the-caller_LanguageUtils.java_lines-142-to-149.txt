@@ -1,0 +1,8 @@
+   */
+  public Language getRESTLanguage(HttpServletRequest request, NativeWebRequest webRequest) {
+
+    Validate.notNull(request, "HttpServletRequest must not be null");
+
+    try {
+      Language language = null;
+

@@ -1,0 +1,5 @@
+					str = str + "0"
+							+ Integer.toHexString(datum & 0xFF);
+				} else {
+					str = str + Integer.toHexString(datum & 0xFF);
+				}

@@ -1,0 +1,9 @@
+	@Override
+	public List<Language> supportedLanguages(MerchantStore store) {
+		
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notNull(store.getClass(), "MerchantStore code cannot be null");
+		
+		if(!CollectionUtils.isEmpty(store.getLanguages())) {
+			return store.getLanguages();
+		}

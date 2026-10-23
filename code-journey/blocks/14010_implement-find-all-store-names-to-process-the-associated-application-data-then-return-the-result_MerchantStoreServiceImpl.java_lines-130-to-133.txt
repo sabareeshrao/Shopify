@@ -1,0 +1,4 @@
+	@Override
+	public List<MerchantStore> findAllStoreNames(String code) throws ServiceException {
+		return merchantRepository.findAllStoreNames(code);
+	}

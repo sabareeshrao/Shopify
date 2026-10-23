@@ -1,0 +1,8 @@
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Currency.class)
+	@JoinColumn(name = "CURRENCY_ID", nullable = false)
+	private Currency currency;
+
+	@Column(name = "CURRENCY_FORMAT_NATIONAL")
+	private boolean currencyFormatNational;

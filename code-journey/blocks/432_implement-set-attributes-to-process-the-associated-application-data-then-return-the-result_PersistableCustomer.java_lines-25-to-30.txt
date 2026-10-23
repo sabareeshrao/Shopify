@@ -1,0 +1,6 @@
+	public void setAttributes(List<PersistableCustomerAttribute> attributes) {
+		this.attributes = attributes;
+	}
+	public List<PersistableCustomerAttribute> getAttributes() {
+		return attributes;
+	}

@@ -1,0 +1,14 @@
+				
+				prices.add(price);
+
+				price.setProductAvailability(destination);
+				price.setDefaultPrice(priceEntity.isDefaultPrice());
+				price.setProductPriceAmount(priceEntity.getPrice());
+				price.setDefaultPrice(priceEntity.isDefaultPrice());
+				price.setCode(priceEntity.getCode());
+				price.setProductPriceSpecialAmount(priceEntity.getDiscountedPrice());
+
+				if (Objects.nonNull(priceEntity.getDiscountStartDate())) {
+					Date startDate = DateUtil.getDate(priceEntity.getDiscountStartDate());
+					price.setProductPriceSpecialStartDate(startDate);
+				}

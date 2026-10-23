@@ -1,0 +1,7 @@
+    	
+    	@SuppressWarnings("unchecked")
+		List<Permission> permissions =  q.getResultList();
+    	permissionList.setPermissions(permissions);
+    	
+    	return permissionList;
+	}   

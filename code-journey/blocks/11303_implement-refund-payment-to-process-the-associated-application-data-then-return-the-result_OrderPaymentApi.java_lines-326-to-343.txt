@@ -1,0 +1,18 @@
+
+	/**
+	 * Refund payment
+	 * 
+	 * @param id
+	 * @param merchantStore
+	 * @param language
+	 * @return
+	 */
+	@RequestMapping(value = { "/private/orders/{id}/refund" }, method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public ReadableTransaction refundPayment(@PathVariable Long id, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+		return null;
+	}

@@ -1,0 +1,3 @@
+			} else {
+				response.sendError(404, "No Manufacturer found for ID : " + id);
+			}

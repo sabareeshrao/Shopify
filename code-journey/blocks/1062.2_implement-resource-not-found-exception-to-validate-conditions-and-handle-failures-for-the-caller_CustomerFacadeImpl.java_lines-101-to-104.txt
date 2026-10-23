@@ -1,0 +1,4 @@
+			if (customer == null) {
+				throw new ResourceNotFoundException(
+						"Customer [" + customerName + "] not found for store [" + store.getCode() + "]");
+			}

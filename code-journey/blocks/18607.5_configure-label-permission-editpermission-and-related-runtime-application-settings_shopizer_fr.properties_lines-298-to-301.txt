@@ -1,0 +1,4 @@
+label.permission.editpermission=Éditer les permissions
+label.permission.createpermission=Créer une permission
+label.permission.name=Nom de la permission
+

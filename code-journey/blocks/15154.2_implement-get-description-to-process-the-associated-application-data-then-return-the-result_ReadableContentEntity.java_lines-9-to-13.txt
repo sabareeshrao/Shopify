@@ -1,0 +1,5 @@
+	private static final long serialVersionUID = 1L;
+	private ContentDescriptionEntity description = null;
+	public ContentDescriptionEntity getDescription() {
+		return description;
+	}

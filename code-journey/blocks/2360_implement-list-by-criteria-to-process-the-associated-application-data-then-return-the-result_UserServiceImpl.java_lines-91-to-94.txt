@@ -1,0 +1,4 @@
+	@Override
+	public GenericEntityList<User> listByCriteria(Criteria criteria) throws ServiceException {
+		return userRepository.listByCriteria(criteria);
+	}

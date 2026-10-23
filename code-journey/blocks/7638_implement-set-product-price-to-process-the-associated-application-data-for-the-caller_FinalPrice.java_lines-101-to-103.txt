@@ -1,0 +1,3 @@
+	public void setProductPrice(ProductPrice productPrice) {
+		this.productPrice = productPrice;
+	}

@@ -1,0 +1,8 @@
+			Query q = this.em.createQuery(hql);
+
+			q.setParameter("code", productCode);
+			q.setParameter("lang", language.getId());
+
+			return (Product) q.getSingleResult();
+
+		} catch (javax.persistence.NoResultException ers) {

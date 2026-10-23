@@ -1,0 +1,11 @@
+
+		Set<ProductAttribute> attributes = p.getAttributes();
+		if (attributes != null) {
+
+			for (ProductAttribute attribute : attributes) {
+
+				ProductOption po = attribute.getProductOption();
+				if (po.getDescriptions() != null) {
+					Set<ProductOptionDescription> podDescriptions = po.getDescriptions().stream().filter(pod -> pod.getLanguage().getId() == language).collect(Collectors.toSet());
+					po.setDescriptions(podDescriptions);
+				}

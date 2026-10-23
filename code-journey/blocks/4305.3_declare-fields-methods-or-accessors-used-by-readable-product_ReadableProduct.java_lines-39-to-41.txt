@@ -1,0 +1,3 @@
+	// RENTAL
+	private RentalOwner owner;
+

@@ -1,0 +1,8 @@
+	pkColumnValue = "PRD_VAR_IMG_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	private Long id;
+
+	@Column(name = "PRODUCT_IMAGE")
+	private String productImage;
+	
+	@Column(name = "DEFAULT_IMAGE")

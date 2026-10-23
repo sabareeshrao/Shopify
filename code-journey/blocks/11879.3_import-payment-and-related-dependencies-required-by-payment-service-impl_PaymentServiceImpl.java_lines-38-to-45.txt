@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.payments.Payment;
+import com.salesmanager.core.model.payments.PaymentMethod;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.payments.Transaction;
+import com.salesmanager.core.model.payments.TransactionType;
+import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;

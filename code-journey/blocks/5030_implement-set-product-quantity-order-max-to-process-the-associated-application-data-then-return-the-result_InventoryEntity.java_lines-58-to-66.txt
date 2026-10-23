@@ -1,0 +1,9 @@
+  public void setProductQuantityOrderMax(int productQuantityOrderMax) {
+    this.productQuantityOrderMax = productQuantityOrderMax;
+  }
+  public String getDateAvailable() {
+    return dateAvailable;
+  }
+  public void setDateAvailable(String dateAvailable) {
+    this.dateAvailable = dateAvailable;
+  }

@@ -1,0 +1,8 @@
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name ="END_DATE")
+	private Date endDate;
+	
+	@Column(name="TYPE", nullable=false)
+	@Enumerated(value = EnumType.STRING)
+	private OptinType optinType;

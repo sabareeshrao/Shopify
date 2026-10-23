@@ -1,0 +1,4 @@
+      try {
+        response.sendError(503, "Error while getting product reviews" + e.getMessage());
+      } catch (Exception ignore) {
+      }

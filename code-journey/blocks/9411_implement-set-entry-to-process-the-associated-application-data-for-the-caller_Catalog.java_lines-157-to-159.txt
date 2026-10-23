@@ -1,0 +1,3 @@
+	public void setEntry(Set<CatalogCategoryEntry> entry) {
+		this.entry = entry;
+	}

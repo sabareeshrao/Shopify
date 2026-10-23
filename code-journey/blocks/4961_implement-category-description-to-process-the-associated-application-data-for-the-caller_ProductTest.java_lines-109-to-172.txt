@@ -1,0 +1,64 @@
+	    novellEnglishDescription.setName("Novell");
+	    novellEnglishDescription.setCategory(novell);
+	    novellEnglishDescription.setLanguage(en);
+
+	    CategoryDescription novellFrenchDescription = new CategoryDescription();
+	    novellFrenchDescription.setName("Roman");
+	    novellFrenchDescription.setCategory(novell);
+	    novellFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> descriptions3 = new HashSet<CategoryDescription>();
+	    descriptions3.add(novellEnglishDescription);
+	    descriptions3.add(novellFrenchDescription);
+
+	    novell.setDescriptions(descriptions3);
+	    
+	    novell.setParent(book);
+
+	    categoryService.create(novell);
+	    categoryService.addChild(book, novell);
+
+	    Category tech = new Category();
+	    tech.setMerchantStore(store);
+	    tech.setCode("tech");
+
+	    CategoryDescription techEnglishDescription = new CategoryDescription();
+	    techEnglishDescription.setName("Technology");
+	    techEnglishDescription.setCategory(tech);
+	    techEnglishDescription.setLanguage(en);
+
+	    CategoryDescription techFrenchDescription = new CategoryDescription();
+	    techFrenchDescription.setName("Technologie");
+	    techFrenchDescription.setCategory(tech);
+	    techFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> descriptions4 = new HashSet<CategoryDescription>();
+	    descriptions4.add(techFrenchDescription);
+	    descriptions4.add(techFrenchDescription);
+
+	    tech.setDescriptions(descriptions4);
+	    
+	    tech.setParent(book);
+
+	    categoryService.create(tech);
+	    categoryService.addChild(book, tech);
+
+	    Category fiction = new Category();
+	    fiction.setMerchantStore(store);
+	    fiction.setCode("fiction");
+
+	    CategoryDescription fictionEnglishDescription = new CategoryDescription();
+	    fictionEnglishDescription.setName("Fiction");
+	    fictionEnglishDescription.setCategory(fiction);
+	    fictionEnglishDescription.setLanguage(en);
+
+	    CategoryDescription fictionFrenchDescription = new CategoryDescription();
+	    fictionFrenchDescription.setName("Sc Fiction");
+	    fictionFrenchDescription.setCategory(fiction);
+	    fictionFrenchDescription.setLanguage(fr);
+
+	    Set<CategoryDescription> fictiondescriptions = new HashSet<CategoryDescription>();
+	    fictiondescriptions.add(fictionEnglishDescription);
+	    fictiondescriptions.add(fictionFrenchDescription);
+
+	    fiction.setDescriptions(fictiondescriptions);

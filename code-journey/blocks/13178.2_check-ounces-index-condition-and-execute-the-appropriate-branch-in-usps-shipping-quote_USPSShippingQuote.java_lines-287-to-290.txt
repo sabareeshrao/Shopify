@@ -1,0 +1,4 @@
+			String ounces = "00";
+			if (ouncesIndex > -1) {
+				ounces = ouncesString.substring(ouncesIndex + 1);
+			}

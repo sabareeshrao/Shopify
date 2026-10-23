@@ -1,0 +1,4 @@
+			target = p.get();
+		} else {
+			target = new Product();
+		}

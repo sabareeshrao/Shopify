@@ -1,0 +1,8 @@
+  
+  @ResponseStatus(HttpStatus.OK)
+  @PatchMapping("/private/products/group/{code}")
+  @ApiOperation(httpMethod = "PATCH", value = "Update product group visible flag", notes = "", response = ProductGroup.class)
+  @ApiImplicitParams({
+      @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+      @ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en")
+  })

@@ -1,0 +1,5 @@
+import com.salesmanager.shop.utils.LabelUtils;
+
+@Service("userFacade")
+public class UserFacadeImpl implements UserFacade {
+

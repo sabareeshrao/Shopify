@@ -1,0 +1,4 @@
+	public void setPageImageUrl(String pageImageUrl) {
+		this.pageImageUrl = pageImageUrl;
+	}
+}

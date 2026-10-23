@@ -1,0 +1,8 @@
+			&trnAmount=77.01
+			&ordName=Carl S
+			&ordAddress1=378 Du Languedoc
+			&ordCity=Boucherville
+			&ordProvince=QC
+			&ordPostalCode=J3B8J1
+			&ordCountry=CA
+			&ordPhoneNumber=(444) 555-6666

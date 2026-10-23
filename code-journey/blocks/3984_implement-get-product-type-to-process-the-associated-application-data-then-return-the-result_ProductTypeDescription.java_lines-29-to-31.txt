@@ -1,0 +1,3 @@
+  public ProductType getProductType() {
+    return productType;
+  }

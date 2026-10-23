@@ -1,0 +1,8 @@
+label.generic.default=Default
+label.generic.name=Name
+label.generic.next=Next
+label.generic.genre=Genre
+label.generic.male=Male
+label.generic.female=Female
+label.generic.register=Register
+label.generic.youropinion=Your opinion

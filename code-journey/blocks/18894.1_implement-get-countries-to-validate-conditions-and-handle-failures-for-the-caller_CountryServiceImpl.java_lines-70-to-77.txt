@@ -1,0 +1,8 @@
+	@Override
+	public List<Country> getCountries(final List<String> isoCodes, final Language language) throws ServiceException {
+		List<Country> countryList = getCountries(language);
+		List<Country> requestedCountryList = new ArrayList<Country>();
+		if(!CollectionUtils.isEmpty(countryList)) {
+			for(Country c : countryList) {
+				if(isoCodes.contains(c.getIsoCode())) {
+					requestedCountryList.add(c);

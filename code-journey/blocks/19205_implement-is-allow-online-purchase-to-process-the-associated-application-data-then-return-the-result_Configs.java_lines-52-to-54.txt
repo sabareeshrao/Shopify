@@ -1,0 +1,3 @@
+	public boolean isAllowOnlinePurchase() {
+		return allowOnlinePurchase;
+	}

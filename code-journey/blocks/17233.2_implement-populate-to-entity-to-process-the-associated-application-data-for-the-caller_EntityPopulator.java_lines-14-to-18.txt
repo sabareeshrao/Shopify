@@ -1,0 +1,5 @@
+{
+
+    Target populateToEntity(Source source, Target target, MerchantStore store)  throws ConversionException;
+    Target populateToEntity(Source source) throws ConversionException;
+}

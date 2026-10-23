@@ -1,0 +1,8 @@
+
+		ProductOptionSet opt = persistableProductOptionSetMapper.convert(optionSet, store, language);
+		try {
+			opt.setStore(store);
+			productOptionSetService.create(opt);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductOptionSet", e);
+		}

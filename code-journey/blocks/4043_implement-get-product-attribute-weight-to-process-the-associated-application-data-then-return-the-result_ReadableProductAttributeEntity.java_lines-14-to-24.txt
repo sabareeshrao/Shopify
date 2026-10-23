@@ -1,0 +1,11 @@
+	private ReadableProductOptionEntity option;
+	private ReadableProductOptionValue optionValue;
+	public String getProductAttributeWeight() {
+		return productAttributeWeight;
+	}
+	public void setProductAttributeWeight(String productAttributeWeight) {
+		this.productAttributeWeight = productAttributeWeight;
+	}
+	public String getProductAttributePrice() {
+		return productAttributePrice;
+	}

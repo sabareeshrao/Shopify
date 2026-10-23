@@ -1,0 +1,8 @@
+        final PersistableCategory lounge = new PersistableCategory();
+        lounge.setCode("lounge");
+        lounge.setSortOrder(3);
+        lounge.setVisible(true);
+
+        final Category livingParent = living;
+        lounge.setParent(livingParent);
+

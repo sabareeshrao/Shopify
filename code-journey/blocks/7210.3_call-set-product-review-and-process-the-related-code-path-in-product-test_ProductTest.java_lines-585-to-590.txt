@@ -1,0 +1,6 @@
+	     reviewDescription.setProductReview(review);
+	     review.getDescriptions().add(reviewDescription);
+	        
+	     productReviewService.create(review);
+	  
+	}

@@ -1,0 +1,4 @@
+
+	List<CustomerOptionSet> listByStore(MerchantStore store,
+			Language language) throws ServiceException;
+

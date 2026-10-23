@@ -1,0 +1,8 @@
+  @Override
+  public void removeProductImages(Product product) throws ServiceException {
+    try {
+      // get buckets
+      String bucketName = bucketName();
+
+      final AmazonS3 s3 = s3Client();
+      s3.deleteObject(bucketName, nodePath(product.getMerchantStore().getCode(), product.getSku()));

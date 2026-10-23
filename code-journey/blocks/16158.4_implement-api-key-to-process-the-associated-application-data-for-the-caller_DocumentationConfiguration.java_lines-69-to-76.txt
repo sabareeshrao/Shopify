@@ -1,0 +1,8 @@
+				.apis(requestHandlers()).build()
+				.securitySchemes(Collections.singletonList(new ApiKey("JWT", AUTHORIZATION, HEADER.name())))
+		        .securityContexts(singletonList(
+		            SecurityContext.builder()
+		                .securityReferences(
+		                    singletonList(SecurityReference.builder()
+		                        .reference("JWT")
+		                        .scopes(new AuthorizationScope[0])

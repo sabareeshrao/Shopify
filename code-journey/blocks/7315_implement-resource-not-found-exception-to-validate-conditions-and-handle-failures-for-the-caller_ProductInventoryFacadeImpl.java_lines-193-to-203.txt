@@ -1,0 +1,11 @@
+		}
+
+		ProductAvailability avail = originAvailability.stream()
+		  .filter(a -> a.getId().longValue() == inventory.getId())
+		  .findAny()
+		  .orElse(null);
+		
+		if (avail == null) {
+			throw new ResourceNotFoundException(
+					"Inventory with id [" + inventory.getId() + "] not found");
+		}

@@ -1,0 +1,7 @@
+					}
+					
+					defaultAvailability.setProduct(destination);
+					destination.getAvailabilities().add(defaultAvailability);
+					
+				}
+			}

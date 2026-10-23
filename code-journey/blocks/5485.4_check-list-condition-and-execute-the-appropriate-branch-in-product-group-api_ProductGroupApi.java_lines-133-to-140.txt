@@ -1,0 +1,8 @@
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language,
+      HttpServletResponse response)
+      throws Exception {
+    try {
+      ReadableProductList list = productItemsFacade.listItemsByGroup(code, merchantStore, language);
+
+      if (list == null) {

@@ -1,0 +1,8 @@
+
+			 Graphics2D g2 = tp.createPrinterGraphics(w, h, null);
+			 // If you want to prevent copy/paste, you can use
+			 // g2 = tp.createGraphicsShapes(w, h, true, 0.9f);
+			            
+			 tp.setWidth(w);
+			 tp.setHeight(h);
+

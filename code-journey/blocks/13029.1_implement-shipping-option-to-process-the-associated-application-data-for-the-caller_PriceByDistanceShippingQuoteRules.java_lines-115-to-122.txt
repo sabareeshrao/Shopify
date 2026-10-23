@@ -1,0 +1,8 @@
+
+
+		ShippingOption shippingOption = new ShippingOption();
+			
+			
+		shippingOption.setOptionPrice(total);
+		shippingOption.setShippingModuleCode(MODULE_CODE);
+		shippingOption.setOptionCode(MODULE_CODE);

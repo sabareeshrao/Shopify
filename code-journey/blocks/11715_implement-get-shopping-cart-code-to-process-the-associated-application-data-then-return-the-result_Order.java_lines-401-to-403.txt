@@ -1,0 +1,3 @@
+	public String getShoppingCartCode() {
+		return shoppingCartCode;
+	}

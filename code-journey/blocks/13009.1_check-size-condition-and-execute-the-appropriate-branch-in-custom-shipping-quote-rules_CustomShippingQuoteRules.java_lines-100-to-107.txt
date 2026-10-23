@@ -1,0 +1,8 @@
+			//largest size
+			List<Double> sizeList = new ArrayList<Double>();
+			sizeList.add(pack.getShippingHeight());
+			sizeList.add(pack.getShippingWidth());
+			sizeList.add(pack.getShippingLength());
+			Double maxSize = Collections.max(sizeList);
+			if(size==null || maxSize > size) {
+				size = maxSize;

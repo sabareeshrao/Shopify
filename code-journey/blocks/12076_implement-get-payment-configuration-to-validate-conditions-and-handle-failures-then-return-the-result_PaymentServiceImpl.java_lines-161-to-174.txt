@@ -1,0 +1,14 @@
+	@Override
+	public IntegrationConfiguration getPaymentConfiguration(String moduleCode, MerchantStore store) throws ServiceException {
+
+		Validate.notNull(moduleCode,"Module code must not be null");
+		Validate.notNull(store,"Store must not be null");
+		
+		String mod = moduleCode.toLowerCase();
+		
+		Map<String,IntegrationConfiguration> configuredModules = getPaymentModulesConfigured(store);
+		if(configuredModules!=null) {
+			for(String key : configuredModules.keySet()) {
+				if(key.equals(mod)) {
+					return configuredModules.get(key);	
+				}

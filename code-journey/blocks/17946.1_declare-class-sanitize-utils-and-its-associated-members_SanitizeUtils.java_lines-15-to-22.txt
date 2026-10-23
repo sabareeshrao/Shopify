@@ -1,0 +1,8 @@
+public class SanitizeUtils {
+
+	/**
+	 * should not contain /
+	 */
+    private static List<Character> blackList = Arrays.asList(';','%', '&', '=', '|', '*', '+', '_',
+            '^', '%','$','(', ')', '{', '}', '<', '>', '[',
+            ']', '`', '\'', '~','\\', '?','\'');

@@ -1,0 +1,3 @@
+	public List<ProductAttribute> getOptions() {
+		return options;
+	}

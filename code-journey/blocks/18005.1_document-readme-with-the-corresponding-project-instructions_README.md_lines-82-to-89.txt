@@ -1,0 +1,8 @@
+
+From the command line:
+
+	$ cd shopizer
+	$ mvnw clean install
+	$ cd sm-shop
+	$ mvnw spring-boot:run
+

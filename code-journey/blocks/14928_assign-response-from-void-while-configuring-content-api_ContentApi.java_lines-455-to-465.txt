@@ -1,0 +1,11 @@
+
+	
+	@Deprecated
+	@PutMapping(value = "/private/content/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(httpMethod = "PUT", value = "Update content page", notes = "Updates a content page",
+
+			response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+

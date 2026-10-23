@@ -1,0 +1,8 @@
+		
+		ProductVariation p = persistableProductVariationMapper.convert(var, store, language);
+		p.setMerchantStore(store);
+		try {
+			productVariationService.saveOrUpdate(p);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while creating ProductOptionSet", e);
+		}

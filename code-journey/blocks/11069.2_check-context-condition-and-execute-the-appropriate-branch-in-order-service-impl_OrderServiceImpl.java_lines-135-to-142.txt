@@ -1,0 +1,8 @@
+    	Validate.notNull(summary, "Order total Summary cannot be null");
+
+    	UserContext context = UserContext.getCurrentInstance();
+    	if(context != null) {
+    		String ipAddress = context.getIpAddress();
+    		if(!StringUtils.isBlank(ipAddress)) {
+    			order.setIpAddress(ipAddress);
+    		}

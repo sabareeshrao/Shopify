@@ -1,0 +1,4 @@
+					target.setProduct(productProxy);
+				} catch (ConversionException e) {
+					throw new ConversionRuntimeException("Cannot convert product", e);
+				}

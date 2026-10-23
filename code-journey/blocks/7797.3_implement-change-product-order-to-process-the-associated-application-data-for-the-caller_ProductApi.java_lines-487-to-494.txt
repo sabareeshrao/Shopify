@@ -1,0 +1,8 @@
+	public void changeProductOrder(@PathVariable Long id,
+			@RequestParam(value = "order", required = false, defaultValue = "0") Integer position,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) throws IOException {
+
+		try {
+
+			Product p = productService.getById(id);
+

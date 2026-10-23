@@ -1,0 +1,5 @@
+	private boolean displayCustomerSection =false;
+	private boolean displayAddToCartOnFeaturedItems = false;
+	private boolean displayCustomerAgreement = false;
+	private boolean displayPagesMenu = true;
+

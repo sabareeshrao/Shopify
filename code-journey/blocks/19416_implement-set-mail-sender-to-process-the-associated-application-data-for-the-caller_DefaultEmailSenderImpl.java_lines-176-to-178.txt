@@ -1,0 +1,3 @@
+  public void setMailSender(JavaMailSender mailSender) {
+    this.mailSender = mailSender;
+  }

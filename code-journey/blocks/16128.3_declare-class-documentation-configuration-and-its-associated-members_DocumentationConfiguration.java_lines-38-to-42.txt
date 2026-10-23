@@ -1,0 +1,5 @@
+
+@Configuration
+@EnableSwagger2
+public class DocumentationConfiguration {
+

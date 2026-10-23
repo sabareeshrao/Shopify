@@ -1,0 +1,4 @@
+		shippingSummary.setShippingOption(selectedShippingOption.getDescription());
+		
+		return shippingSummary;
+	}

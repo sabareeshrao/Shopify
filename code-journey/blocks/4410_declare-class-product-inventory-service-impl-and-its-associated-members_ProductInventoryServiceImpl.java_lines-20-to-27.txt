@@ -1,0 +1,8 @@
+
+@Service("inventoryService")
+public class ProductInventoryServiceImpl implements ProductInventoryService {
+	
+	
+	@Autowired
+	private PricingService pricingService;
+

@@ -1,0 +1,8 @@
+
+			returnOrders = new ArrayList<Order>();
+
+			//order id
+			Map<Long,Order> preAuthOrders = new HashMap<Long,Order> ();
+			//order id
+			Map<Long,List<Transaction>> processingTransactions = new HashMap<Long,List<Transaction>> ();
+

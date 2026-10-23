@@ -1,0 +1,3 @@
+	public String getCcOwner() {
+		return ccOwner;
+	}

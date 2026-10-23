@@ -1,0 +1,3 @@
+	public void setTotalRow(int totalRow) {
+		this.totalRow = totalRow;
+	}

@@ -1,0 +1,5 @@
+	public MerchantLog(MerchantStore store, String module, String log) {
+		this.store = store;
+		this.module = module;
+		this.log = log;
+	}

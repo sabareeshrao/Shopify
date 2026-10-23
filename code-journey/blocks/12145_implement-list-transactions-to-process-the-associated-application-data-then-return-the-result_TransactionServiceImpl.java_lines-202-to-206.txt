@@ -1,0 +1,5 @@
+	@Override
+	public List<Transaction> listTransactions(Date startDate, Date endDate) throws ServiceException {
+		
+		return transactionRepository.findByDates(startDate, endDate);
+	}

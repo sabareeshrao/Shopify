@@ -1,0 +1,8 @@
+	 * Creates a brand new MerchantStore
+	 * 
+	 * @param store
+	 * @throws Exception
+	 */
+	//ReadableMerchantStore create(PersistableMerchantStore store);
+	void create(PersistableMerchantStore store);
+

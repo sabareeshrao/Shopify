@@ -1,0 +1,8 @@
+	private CustomerReviewRepository customerReviewRepository;
+	
+	@Inject
+	private CustomerService customerService;
+	
+	@Inject
+	public CustomerReviewServiceImpl(
+			CustomerReviewRepository customerReviewRepository) {

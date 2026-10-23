@@ -1,0 +1,8 @@
+			// Create a payment by posting to the APIService
+			// using a valid AccessToken
+			// The return object contains the status;
+			try {
+				Payment createdPayment = payment.create(apiContext);
+				LOGGER.info("Created payment with id = "
+						+ createdPayment.getId() + " and status = "
+						+ createdPayment.getState());

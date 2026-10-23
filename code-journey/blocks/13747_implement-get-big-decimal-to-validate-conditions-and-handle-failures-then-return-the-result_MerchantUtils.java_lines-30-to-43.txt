@@ -1,0 +1,14 @@
+
+	/**
+	 * Locale based bigdecimal parser
+	 * @return
+	 */
+	public static BigDecimal getBigDecimal(String bigDecimal) throws ParseException {
+		NumberFormat decimalFormat = NumberFormat.getInstance(Locale.getDefault());
+		BigDecimal value;
+		if(decimalFormat instanceof DecimalFormat) {
+			((DecimalFormat) decimalFormat).setParseBigDecimal(true);
+			value = (BigDecimal) decimalFormat.parse(bigDecimal);
+		} else {
+			value = new BigDecimal(bigDecimal);
+		}

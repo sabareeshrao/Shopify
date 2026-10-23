@@ -1,0 +1,5 @@
+	@Override
+	public void deleteProduct(Product product) throws Exception {
+		productService.delete(product);
+
+	}

@@ -1,0 +1,19 @@
+
+    /**
+     * Delete cartitem from cart with body set to true which gives remaining cart content, should return 200 / ok
+     *
+     * @throws Exception
+     */
+    @Test
+    @Order(7)
+    public void deleteCartItemWithBody() throws Exception {
+
+        final ResponseEntity<ReadableShoppingCart> response =
+                testRestTemplate.exchange(String.format("/api/v1/cart/" + data.getCartId() + "/product/" + String.valueOf(data.getProducts().get(1).getSku()) + "?body=true"),
+                        HttpMethod.DELETE,
+                        null,
+                        ReadableShoppingCart.class);
+
+        assertNotNull(response);
+        assertThat(response.getStatusCode(), is(OK));
+    }

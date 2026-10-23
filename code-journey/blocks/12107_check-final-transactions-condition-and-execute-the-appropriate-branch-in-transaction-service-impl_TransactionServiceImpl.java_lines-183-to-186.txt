@@ -1,0 +1,4 @@
+		
+		if(finalTransactions.containsKey(TransactionType.CAPTURE.name())) {
+			finalTransaction = finalTransactions.get(TransactionType.CAPTURE.name());
+		}

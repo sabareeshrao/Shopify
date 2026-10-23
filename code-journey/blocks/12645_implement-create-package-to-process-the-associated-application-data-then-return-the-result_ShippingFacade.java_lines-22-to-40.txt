@@ -1,0 +1,19 @@
+
+	void createPackage(PackageDetails packaging, MerchantStore store);
+	
+	PackageDetails getPackage(String code, MerchantStore store);
+	
+	/**
+	 * List of configured ShippingCountry for a given store
+	 * @param store
+	 * @param lanuage
+	 * @return
+	 */
+	List<ReadableCountry> shipToCountry(MerchantStore store, Language lanuage);
+	
+	List<PackageDetails> listPackages(MerchantStore store);
+	
+	void updatePackage(String code, PackageDetails packaging, MerchantStore store);
+	
+	void deletePackage(String code, MerchantStore store);
+	

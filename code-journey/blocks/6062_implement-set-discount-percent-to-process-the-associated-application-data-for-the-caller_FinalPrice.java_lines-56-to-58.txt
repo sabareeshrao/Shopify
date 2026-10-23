@@ -1,0 +1,3 @@
+	public void setDiscountPercent(int discountPercent) {
+		this.discountPercent = discountPercent;
+	}

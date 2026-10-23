@@ -1,0 +1,20 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.reference.country.CountryService;
+import com.salesmanager.core.business.services.reference.language.LanguageService;
+import com.salesmanager.core.model.reference.country.Country;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.core.model.reference.zone.Zone;
+import com.salesmanager.core.model.reference.zone.ZoneDescription;
+
+/**
+ * Drop files in reference/zones with following format
+ * 
+ * <country code>_<language code>.json All lower cases
+ * 
+ * @author carlsamson
+ *
+ */
+@Component
+public class ZonesLoader {
+

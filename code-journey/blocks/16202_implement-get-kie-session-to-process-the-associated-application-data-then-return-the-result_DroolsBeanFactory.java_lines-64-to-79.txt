@@ -1,0 +1,16 @@
+    public KieSession getKieSession(){
+        getKieRepository();
+        KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
+
+        kieFileSystem.write(ResourceFactory.newClassPathResource(RULES_PATH + priceByDistance));
+        kieFileSystem.write(ResourceFactory.newClassPathResource(RULES_PATH + shippingDecision));
+        
+        KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
+        kb.buildAll();
+        KieModule kieModule = kb.getKieModule();
+
+        KieContainer kContainer = kieServices.newKieContainer(kieModule.getReleaseId());
+
+        return kContainer.newKieSession();
+
+    }

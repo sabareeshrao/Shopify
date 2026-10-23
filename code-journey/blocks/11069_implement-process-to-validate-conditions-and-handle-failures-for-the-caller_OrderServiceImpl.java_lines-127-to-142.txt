@@ -1,0 +1,16 @@
+	private Order process(Order order, Customer customer, List<ShoppingCartItem> items, OrderTotalSummary summary, Payment payment, Transaction transaction, MerchantStore store) throws ServiceException {
+
+
+    	Validate.notNull(order, "Order cannot be null");
+    	Validate.notNull(customer, "Customer cannot be null (even if anonymous order)");
+    	Validate.notEmpty(items, "ShoppingCart items cannot be null");
+    	Validate.notNull(payment, "Payment cannot be null");
+    	Validate.notNull(store, "MerchantStore cannot be null");
+    	Validate.notNull(summary, "Order total Summary cannot be null");
+
+    	UserContext context = UserContext.getCurrentInstance();
+    	if(context != null) {
+    		String ipAddress = context.getIpAddress();
+    		if(!StringUtils.isBlank(ipAddress)) {
+    			order.setIpAddress(ipAddress);
+    		}

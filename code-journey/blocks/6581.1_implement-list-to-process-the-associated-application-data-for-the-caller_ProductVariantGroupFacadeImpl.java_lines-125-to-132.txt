@@ -1,0 +1,8 @@
+	@Override
+	public ReadableEntityList<ReadableProductVariantGroup> list(Long productId, MerchantStore store, Language language,
+			int page, int count) {
+		
+		
+		Page<ProductVariantGroup> groups = productVariantGroupService.getByProductId(store, productId, language, page, count);
+		
+		List<ReadableProductVariantGroup> readableInstances = groups.stream()

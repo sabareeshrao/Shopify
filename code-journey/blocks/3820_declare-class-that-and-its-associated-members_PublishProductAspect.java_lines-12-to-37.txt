@@ -1,0 +1,26 @@
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.core.model.catalog.product.image.ProductImage;
+import com.salesmanager.core.model.catalog.product.variant.ProductVariant;
+
+/**
+ * Aspect class that will trigger an event once a product is created Code
+ * inspired from http://www.discoversdk.com/blog/spring-event-handling-and-aop
+ * 
+ * create product
+ * update product
+ * delete product
+ * 
+ * decorate
+ * 	product variant
+ * 	product attribute
+ *  product image
+ * 
+ * @author carlsamson
+ *
+ */
+
+@Component
+@Aspect
+public class PublishProductAspect {
+

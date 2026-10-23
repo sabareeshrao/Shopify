@@ -1,0 +1,15 @@
+	private SearchConfiguration config() throws Exception {
+
+		SearchConfiguration config = new SearchConfiguration();
+		config.setClusterName(applicationSearchConfiguration.getClusterName());
+		config.setHosts(applicationSearchConfiguration.getHost());
+		config.setCredentials(applicationSearchConfiguration.getCredentials());
+
+		config.setLanguages(applicationSearchConfiguration.getSearchLanguages());
+		
+		config.getLanguages().stream().forEach(l -> {
+			try {
+				this.mappings(config,l);
+			} catch (Exception e) {
+				throw new IllegalStateException(e);
+			}

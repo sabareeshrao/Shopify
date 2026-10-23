@@ -1,0 +1,8 @@
+
+		try {
+
+			final StringBuilder merchantPath = new StringBuilder();
+			merchantPath.append(getRootName()).append(merchantStoreCode);
+			cacheManager.getTreeCache().getRoot().remove(merchantPath.toString());
+
+		} catch (final Exception e) {

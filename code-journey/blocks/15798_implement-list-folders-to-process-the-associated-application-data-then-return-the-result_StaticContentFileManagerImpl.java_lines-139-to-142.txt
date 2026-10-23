@@ -1,0 +1,4 @@
+	@Override
+	public List<String> listFolders(String merchantStoreCode, Optional<String> path) throws ServiceException {
+		return this.listFolder.listFolders(merchantStoreCode, path);
+	}

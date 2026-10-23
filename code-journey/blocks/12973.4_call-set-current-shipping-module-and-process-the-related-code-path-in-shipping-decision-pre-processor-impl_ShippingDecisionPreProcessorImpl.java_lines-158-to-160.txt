@@ -1,0 +1,3 @@
+					quote.setCurrentShippingModule(toBeUsed);
+					break;
+				}

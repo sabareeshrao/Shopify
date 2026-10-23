@@ -1,0 +1,5 @@
+  @Override
+  public void setEmailConfig(EmailConfig emailConfig) {
+    // TODO Auto-generated method stub
+
+  }

@@ -1,0 +1,4 @@
+				.map(d -> typeDescription(d)).findFirst();
+				if(desc.isPresent()) {
+					readableType.setDescription(desc.get());
+				}

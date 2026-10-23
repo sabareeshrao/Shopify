@@ -1,0 +1,9 @@
+
+	@Column(name = "PIGGYBACK")
+	private boolean piggyback;
+	
+	@ManyToOne
+	@JoinColumn(name = "TAX_CLASS_ID" , nullable=false)
+	private TaxClass taxClass;
+	
+

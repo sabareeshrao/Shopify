@@ -1,0 +1,3 @@
+					Date startDate = DateUtil.getDate(price.getDiscountStartDate());
+					productPrice.setProductPriceSpecialStartDate(startDate);
+				}

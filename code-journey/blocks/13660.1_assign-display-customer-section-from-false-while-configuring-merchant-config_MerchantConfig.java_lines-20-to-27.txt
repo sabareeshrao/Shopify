@@ -1,0 +1,8 @@
+	private static final long serialVersionUID = 1L;
+	private boolean displayCustomerSection =false;
+	private boolean displayContactUs =false;
+	private boolean displayStoreAddress = false;
+	private boolean displayAddToCartOnFeaturedItems = false;
+	private boolean displayCustomerAgreement = false;
+	private boolean displayPagesMenu = true;
+	private boolean allowPurchaseItems = true;

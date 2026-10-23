@@ -1,0 +1,8 @@
+		// take care of option value
+		Optional<ReadableProductOptionValue> optionOptionValue = this
+				.optionValue(instance.getVariation().getProductOptionValue(), store, language);
+
+		if (optionOptionValue.isPresent()) {
+			optionOptionValue.get().setId(instance.getId());
+			if (instance.isDefaultSelection()) {
+				optionOptionValue.get().setDefaultValue(true);

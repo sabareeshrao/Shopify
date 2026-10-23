@@ -1,0 +1,8 @@
+		
+		CustomerOption option = this.getById(customerOption.getId());
+		
+		List<CustomerOptionSet> optionSets = customerOptionSetService.listByOption(customerOption, customerOption.getMerchantStore());
+		
+		for(CustomerOptionSet optionSet : optionSets) {
+			customerOptionSetService.delete(optionSet);
+		}

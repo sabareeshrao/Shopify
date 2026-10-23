@@ -1,0 +1,4 @@
+	private List<Group> groups = new ArrayList<Group>();
+	private Group lastGroup = null;
+	
+	

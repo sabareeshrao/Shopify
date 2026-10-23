@@ -1,0 +1,3 @@
+	public void setStoreCode(final String storeCode) {
+		this.storeCode = storeCode;
+	}

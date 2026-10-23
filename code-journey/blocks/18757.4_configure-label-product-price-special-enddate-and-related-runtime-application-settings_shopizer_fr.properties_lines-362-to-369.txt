@@ -1,0 +1,8 @@
+label.product.price.special.enddate=Date de fin du rabais
+label.taxclass = Classe de taxe
+label.product.ordermax=Quantitée maximum permise
+label.product.ordermin=Quantity minimum permise
+label.product.weight =Poids 
+label.product.height =Hauteur 
+label.product.length =Profondeur 
+label.product.width =Largeur 

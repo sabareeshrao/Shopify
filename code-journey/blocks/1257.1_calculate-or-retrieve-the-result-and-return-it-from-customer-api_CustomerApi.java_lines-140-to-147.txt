@@ -1,0 +1,8 @@
+
+	/**
+	 * Get logged in customer profile
+	 * 
+	 * @param merchantStore
+	 * @param language
+	 * @param request
+	 * @return

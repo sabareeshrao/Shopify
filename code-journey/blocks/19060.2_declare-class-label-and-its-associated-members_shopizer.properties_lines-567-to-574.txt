@@ -1,0 +1,8 @@
+#tax
+label.tax.taxclass.title=Tax classes
+label.tax.taxclass=Tax class
+label.tax.taxclass.name=Tax class name
+label.tax.taxconfiguration=Tax basis calculation
+label.tax.storeaddress=Store address
+label.tax.piggyback=Piggy back
+label.tax.compound=Compound

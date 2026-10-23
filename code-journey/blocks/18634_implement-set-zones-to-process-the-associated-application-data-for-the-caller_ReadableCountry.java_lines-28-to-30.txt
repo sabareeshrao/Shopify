@@ -1,0 +1,3 @@
+	public void setZones(List<ReadableZone> zones) {
+		this.zones = zones;
+	}

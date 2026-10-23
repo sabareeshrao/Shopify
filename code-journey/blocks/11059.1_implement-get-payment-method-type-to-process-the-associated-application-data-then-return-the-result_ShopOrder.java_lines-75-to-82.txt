@@ -1,0 +1,8 @@
+	public String getPaymentMethodType() {
+		return paymentMethodType;
+	}
+	public void setPaymentMethodType(String paymentMethodType) {
+		this.paymentMethodType = paymentMethodType;
+	}
+	public Map<String,String> getPayment() {
+		return payment;

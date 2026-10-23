@@ -1,0 +1,12 @@
+import com.salesmanager.shop.application.ShopApplication;
+import com.salesmanager.shop.model.entity.Entity;
+import com.salesmanager.shop.model.entity.EntityExists;
+import com.salesmanager.shop.model.tax.PersistableTaxClass;
+import com.salesmanager.shop.model.tax.PersistableTaxRate;
+import com.salesmanager.shop.model.tax.TaxRateDescription;
+import com.salesmanager.test.shop.common.ServicesTestSupport;
+
+@SpringBootTest(classes = ShopApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+public class TaxRateIntegrationTest extends ServicesTestSupport {
+	

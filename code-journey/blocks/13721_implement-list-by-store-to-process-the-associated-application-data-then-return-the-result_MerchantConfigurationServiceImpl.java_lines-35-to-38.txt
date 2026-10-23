@@ -1,0 +1,4 @@
+	@Override
+	public List<MerchantConfiguration> listByStore(MerchantStore store) throws ServiceException {
+		return merchantConfigurationRepository.findByMerchantStore(store.getId());
+	}

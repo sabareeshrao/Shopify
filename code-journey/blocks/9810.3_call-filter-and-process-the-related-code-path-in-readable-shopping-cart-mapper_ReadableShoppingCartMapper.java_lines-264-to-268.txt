@@ -1,0 +1,5 @@
+						.filter(t -> Constants.OT_DISCOUNT_TITLE.equals(t.getOrderTotalCode())).count() == 0) {
+					// no promo coupon applied
+					destination.setPromoCode(null);
+
+				}

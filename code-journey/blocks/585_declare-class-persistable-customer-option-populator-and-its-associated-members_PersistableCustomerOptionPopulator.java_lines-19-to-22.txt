@@ -1,0 +1,4 @@
+public class PersistableCustomerOptionPopulator extends
+		AbstractDataPopulator<PersistableCustomerOption, CustomerOption> {
+
+	

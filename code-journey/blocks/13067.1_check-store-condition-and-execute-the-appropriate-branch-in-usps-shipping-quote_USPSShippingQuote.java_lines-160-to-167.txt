@@ -1,0 +1,8 @@
+		
+
+		// if store is not CAD /** maintained in the currency **/
+/*		if (!store.getCurrency().equals(Constants.CURRENCY_CODE_CAD)) {
+			total = CurrencyUtil.convertToCurrency(total, store.getCurrency(),
+					Constants.CURRENCY_CODE_CAD);
+		}*/
+		

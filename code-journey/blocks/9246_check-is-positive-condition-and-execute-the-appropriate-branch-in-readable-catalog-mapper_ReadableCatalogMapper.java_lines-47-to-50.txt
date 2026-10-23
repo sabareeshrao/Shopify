@@ -1,0 +1,4 @@
+		
+		if(isPositive(source.getId())) {
+			destination.setId(source.getId());
+		}

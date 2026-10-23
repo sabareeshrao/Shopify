@@ -1,0 +1,8 @@
+		//needs to be saved before using it
+		customerOptionValueService.create(yes);
+		
+		CustomerOptionValue no = new CustomerOptionValue();
+		no.setCode("no");
+		no.setMerchantStore(store);
+		CustomerOptionValueDescription noDescription = new CustomerOptionValueDescription();
+		noDescription.setLanguage(en);

@@ -1,0 +1,8 @@
+			}
+			boolean isActive = userModel.isActive();
+			List<Group> originalGroups = userModel.getGroups();
+			Group superadmin = originalGroups.stream()
+					.filter(group -> Constants.GROUP_SUPERADMIN.equals(group.getGroupName())).findAny().orElse(null);
+
+			// changing store ?
+			/**

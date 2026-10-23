@@ -1,0 +1,3 @@
+			total.setValue(t.getValue());
+			totals.add(total);
+		}

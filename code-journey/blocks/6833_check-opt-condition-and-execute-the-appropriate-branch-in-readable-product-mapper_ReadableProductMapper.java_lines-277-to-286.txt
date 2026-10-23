@@ -1,0 +1,10 @@
+								}
+							}
+						}
+						valueDescription.setName(podescription.getName());
+						valueDescription.setDescription(podescription.getDescription());
+						optValue.setDescription(valueDescription);
+
+						if (opt != null) {
+							opt.getOptionValues().add(optValue);
+						}

@@ -1,0 +1,8 @@
+	private Long id;
+	
+	@Column(name="PRODUCT_OPT_VAL_SORT_ORD")
+	private Integer productOptionValueSortOrder;
+	
+	@Column(name="PRODUCT_OPT_VAL_IMAGE")
+	private String productOptionValueImage;
+	

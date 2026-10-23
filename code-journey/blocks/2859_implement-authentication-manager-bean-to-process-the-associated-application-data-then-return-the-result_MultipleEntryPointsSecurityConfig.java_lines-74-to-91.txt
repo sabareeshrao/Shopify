@@ -1,0 +1,18 @@
+
+	
+	
+	/**
+	 * shop / customer
+	 * 
+	 * @author dur9213
+	 *
+	 */
+	@Configuration
+	@Order(1)
+	public static class CustomerConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Bean("customerAuthenticationManager")
+		@Override
+		public AuthenticationManager authenticationManagerBean() throws Exception {
+			return super.authenticationManagerBean();
+		}

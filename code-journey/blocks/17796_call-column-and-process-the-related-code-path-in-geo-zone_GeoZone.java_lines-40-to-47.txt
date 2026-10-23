@@ -1,0 +1,8 @@
+
+	
+	@Column(name = "GEOZONE_NAME")
+	private String name;
+	
+	@Column(name = "GEOZONE_CODE")
+	private String code;
+	

@@ -1,0 +1,21 @@
+import com.salesmanager.core.constants.SchemaConstant;
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;
+
+/**
+ * Allows grouping products and category
+ * Catalog
+ *      - category 1
+ *      - category 2
+ *      
+ *      - product 1
+ *      - product 2
+ *      - product 3
+ *      - product 4
+ *      
+ * @author carlsamson
+ *
+ */
+

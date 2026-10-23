@@ -1,0 +1,4 @@
+			//stripe does not support floating point
+			//so amnt * 100 or remove floating point
+			//553.47 = 55347
+			

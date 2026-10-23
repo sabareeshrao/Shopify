@@ -1,0 +1,4 @@
+ */
+@Ignore
+public class StaticContentTest extends com.salesmanager.test.common.AbstractSalesManagerCoreTestCase {
+	

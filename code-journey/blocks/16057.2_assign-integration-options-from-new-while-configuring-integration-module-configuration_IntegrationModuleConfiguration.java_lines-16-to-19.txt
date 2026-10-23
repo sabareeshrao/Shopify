@@ -1,0 +1,4 @@
+	private Map<String, List<String>> integrationOptions = new HashMap<String, List<String>>();
+	private List<String> requiredKeys = new ArrayList<String>();
+	private String configurable = null;
+	

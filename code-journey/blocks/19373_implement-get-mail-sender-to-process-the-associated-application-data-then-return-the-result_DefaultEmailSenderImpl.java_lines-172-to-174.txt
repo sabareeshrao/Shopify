@@ -1,0 +1,3 @@
+  public JavaMailSender getMailSender() {
+    return mailSender;
+  }

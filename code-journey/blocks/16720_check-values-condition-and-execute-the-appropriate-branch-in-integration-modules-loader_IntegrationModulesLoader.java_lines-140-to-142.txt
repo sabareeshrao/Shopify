@@ -1,0 +1,3 @@
+	        		if(values.get("config2") !=null) {
+	        			config.setConfig2((String)values.get("config2"));
+	        		}

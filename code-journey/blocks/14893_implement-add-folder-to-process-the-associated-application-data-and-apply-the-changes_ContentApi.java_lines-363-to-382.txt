@@ -1,0 +1,20 @@
+
+
+
+
+
+	/**
+	 * 
+	 * @param parent
+	 * @param folder
+	 * @param merchantStore
+	 * @param language
+	 */
+	@DeleteMapping(value = "/content/folder", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public void addFolder(@RequestParam String parent, @RequestParam String folder,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+	}

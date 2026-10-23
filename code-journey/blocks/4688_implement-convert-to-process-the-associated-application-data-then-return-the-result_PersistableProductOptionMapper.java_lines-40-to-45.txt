@@ -1,0 +1,6 @@
+  @Override
+  public ProductOption convert(PersistableProductOptionEntity source, MerchantStore store,
+      Language language) {
+    ProductOption destination = new ProductOption();
+    return merge(source, destination, store, language);
+  }

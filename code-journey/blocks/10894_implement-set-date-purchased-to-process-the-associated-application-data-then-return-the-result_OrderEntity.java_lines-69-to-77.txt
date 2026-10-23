@@ -1,0 +1,9 @@
+	public void setDatePurchased(Date datePurchased) {
+		this.datePurchased = datePurchased;
+	}
+	public void setPreviousOrderStatus(List<OrderStatus> previousOrderStatus) {
+		this.previousOrderStatus = previousOrderStatus;
+	}
+	public List<OrderStatus> getPreviousOrderStatus() {
+		return previousOrderStatus;
+	}

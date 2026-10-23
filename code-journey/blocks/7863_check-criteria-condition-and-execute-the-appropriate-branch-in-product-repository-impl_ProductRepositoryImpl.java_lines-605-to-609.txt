@@ -1,0 +1,5 @@
+
+		if (criteria.getManufacturerId() != null) {
+			countBuilderSelect.append(" INNER JOIN p.manufacturer manuf");
+			countBuilderWhere.append(" and manuf.id = :manufid");
+		}

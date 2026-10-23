@@ -1,0 +1,17 @@
+			
+			//products
+			Set<OrderProduct> orderProducts = order.getOrderProducts();
+			int productCell = 16;
+			for(OrderProduct orderProduct : orderProducts) {
+				
+				//product name
+				String pName = orderProduct.getProductName();
+				Set<OrderProductAttribute> oAttributes = orderProduct.getOrderAttributes();
+				StringBuilder attributeName = null;
+				for(OrderProductAttribute oProductAttribute : oAttributes) {
+					if(attributeName == null) {
+						attributeName = new StringBuilder();
+						attributeName.append("[");
+					} else {
+						attributeName.append(", ");
+					}

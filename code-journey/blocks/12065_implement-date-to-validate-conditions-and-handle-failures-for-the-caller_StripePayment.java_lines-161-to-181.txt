@@ -1,0 +1,21 @@
+			
+			Charge ch = Charge.create(chargeParams);
+
+			//Map<String,String> metadata = ch.getMetadata();
+			
+			
+			transaction.setAmount(amount);
+			//transaction.setOrder(order);
+			transaction.setTransactionDate(new Date());
+			transaction.setTransactionType(TransactionType.AUTHORIZE);
+			transaction.setPaymentType(PaymentType.CREDITCARD);
+			transaction.getTransactionDetails().put("TRANSACTIONID", token);
+			transaction.getTransactionDetails().put("TRNAPPROVED", ch.getStatus());
+			transaction.getTransactionDetails().put("TRNORDERNUMBER", ch.getId());
+			transaction.getTransactionDetails().put("MESSAGETEXT", null);
+			
+		} catch (Exception e) {
+			
+			throw buildException(e);
+
+		} 

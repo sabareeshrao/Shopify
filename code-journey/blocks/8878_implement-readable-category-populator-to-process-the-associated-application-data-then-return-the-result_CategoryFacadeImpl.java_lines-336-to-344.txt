@@ -1,0 +1,9 @@
+		
+		ReadableCategoryPopulator categoryPopulator = new ReadableCategoryPopulator();
+		ReadableCategory readableCategory = new ReadableCategory();
+		
+		
+		categoryPopulator.populate(category, readableCategory, store, language);
+
+		return readableCategory;
+	}

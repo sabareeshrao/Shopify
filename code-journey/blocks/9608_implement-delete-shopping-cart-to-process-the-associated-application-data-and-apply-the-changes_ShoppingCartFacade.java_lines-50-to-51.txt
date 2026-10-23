@@ -1,0 +1,2 @@
+    public void deleteShoppingCart(final Long id, final MerchantStore store) throws Exception;
+

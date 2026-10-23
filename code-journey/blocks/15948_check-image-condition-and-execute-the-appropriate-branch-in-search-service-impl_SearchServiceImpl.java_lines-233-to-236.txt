@@ -1,0 +1,4 @@
+
+			if (image != null) {
+				item.setImage(image.getProductImage());
+			}

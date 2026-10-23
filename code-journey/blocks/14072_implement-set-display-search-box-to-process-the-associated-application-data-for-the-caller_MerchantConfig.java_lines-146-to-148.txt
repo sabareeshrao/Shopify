@@ -1,0 +1,3 @@
+	public void setDisplaySearchBox(boolean displaySearchBox) {
+		this.displaySearchBox = displaySearchBox;
+	}

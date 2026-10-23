@@ -1,0 +1,38 @@
+
+	    shirts.setDescriptions(descriptions);
+	    categoryService.create(shirts);
+	    
+	    
+	    /**
+	     * Create a manufacturer
+	     */
+	    Manufacturer addidas = new Manufacturer();
+	    addidas.setMerchantStore(merchant);
+	    addidas.setCode("addidas");
+
+	    ManufacturerDescription addidasDesc = new ManufacturerDescription();
+	    addidasDesc.setLanguage(en);
+	    addidasDesc.setManufacturer(addidas);
+	    addidasDesc.setName("Addidas");
+	    addidas.getDescriptions().add(addidasDesc);
+
+	    manufacturerService.create(addidas);
+	    
+	    /**
+	     * Create an option
+	     */
+	    ProductOption option = new ProductOption();
+	    option.setMerchantStore(merchant);
+	    option.setCode("color");
+	    option.setProductOptionType(ProductOptionType.Radio.name());
+	    
+	    ProductOptionDescription optionDescription = new ProductOptionDescription();
+	    optionDescription.setLanguage(en);
+	    optionDescription.setName("Color");
+	    optionDescription.setDescription("Item color");
+	    optionDescription.setProductOption(option);
+	    
+	    option.getDescriptions().add(optionDescription);
+	    
+	    productOptionService.saveOrUpdate(option);
+	    

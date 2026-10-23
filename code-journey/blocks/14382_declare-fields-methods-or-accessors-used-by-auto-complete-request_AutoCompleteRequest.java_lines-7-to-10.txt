@@ -1,0 +1,4 @@
+	private String merchantCode;
+	private String languageCode;
+	
+	

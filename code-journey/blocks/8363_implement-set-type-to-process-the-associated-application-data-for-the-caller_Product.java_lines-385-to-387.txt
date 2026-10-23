@@ -1,0 +1,3 @@
+	public void setType(ProductType type) {
+		this.type = type;
+	}

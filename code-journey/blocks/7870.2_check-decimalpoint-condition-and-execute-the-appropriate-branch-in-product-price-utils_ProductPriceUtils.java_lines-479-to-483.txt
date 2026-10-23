@@ -1,0 +1,5 @@
+				Locale locale = Constants.DEFAULT_LOCALE;
+				// TODO validate amount using old test case
+				if (DECIMALPOINT == ',') {
+					locale = Locale.GERMAN;
+				}

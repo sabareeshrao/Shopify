@@ -1,0 +1,11 @@
+
+    /**
+     * This methods tests {@link DataUtils#getWeight(double, MerchantStore, String)}
+     */
+    @Test
+    public void testGetWeight_When_StoreUnit_KG_MeasurementUnit_LB(){
+        MerchantStore store = mock(MerchantStore.class);
+        when(store.getWeightunitcode()).thenReturn(MeasureUnit.KG.name());
+        double result = DataUtils.getWeight(100.789, store, MeasureUnit.LB.name());
+        assertEquals(221.74, result, 0);
+    }

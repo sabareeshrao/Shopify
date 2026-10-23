@@ -1,0 +1,28 @@
+
+	/*
+	 * @Override
+	 * 
+	 * @Transactional public ShoppingCart getByCustomer(final Customer customer)
+	 * throws ServiceException {
+	 * 
+	 * try { List<ShoppingCart> shoppingCart =
+	 * shoppingCartRepository.findByCustomer(customer.getId()); if (shoppingCart ==
+	 * null) { return null; } return getPopulatedShoppingCart(shoppingCart);
+	 * 
+	 * } catch (Exception e) { throw new ServiceException(e); } }
+	 */
+
+	@Transactional(noRollbackFor = { org.springframework.dao.EmptyResultDataAccessException.class })
+	private ShoppingCart getPopulatedShoppingCart(final ShoppingCart shoppingCart, MerchantStore store) throws Exception {
+
+		try {
+
+			boolean cartIsObsolete = false;
+			if (shoppingCart != null) {
+
+				Set<ShoppingCartItem> items = shoppingCart.getLineItems();
+				if (items == null || items.size() == 0) {
+					shoppingCart.setObsolete(true);
+					return shoppingCart;
+
+				}

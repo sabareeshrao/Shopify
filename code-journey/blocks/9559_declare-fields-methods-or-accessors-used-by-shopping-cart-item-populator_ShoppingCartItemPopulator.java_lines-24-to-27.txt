@@ -1,0 +1,4 @@
+	private ProductService productService;
+	private ProductAttributeService productAttributeService;
+	private ShoppingCartService shoppingCartService;
+

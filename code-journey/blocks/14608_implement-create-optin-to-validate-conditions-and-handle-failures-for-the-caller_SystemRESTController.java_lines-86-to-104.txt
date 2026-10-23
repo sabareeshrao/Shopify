@@ -1,0 +1,19 @@
+	
+	@RequestMapping( value="/private/system/optin", method=RequestMethod.POST)
+	@ResponseBody
+	public AjaxResponse createOptin(@RequestBody final String json, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		AjaxResponse resp = new AjaxResponse();
+		
+		try {
+			LOGGER.debug("Creating an optin : " + json);
+			//moduleConfigurationService.createOrUpdateModule(json);
+			response.setStatus(200);
+			resp.setStatus(200);
+			
+		} catch(Exception e) {
+			resp.setStatus(500);
+			resp.setErrorMessage(e);
+			response.sendError(503, "Exception while creating optin " + e.getMessage());
+		}

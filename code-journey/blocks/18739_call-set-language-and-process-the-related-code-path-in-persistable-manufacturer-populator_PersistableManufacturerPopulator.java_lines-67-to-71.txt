@@ -1,0 +1,5 @@
+					desc.setLanguage(lang);
+					descriptions.add(desc);
+				}
+				target.setDescriptions(descriptions);
+			}

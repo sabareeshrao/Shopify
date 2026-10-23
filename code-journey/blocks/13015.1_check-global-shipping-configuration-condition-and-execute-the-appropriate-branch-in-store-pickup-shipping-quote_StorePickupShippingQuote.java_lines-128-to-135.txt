@@ -1,0 +1,8 @@
+		
+		try {
+			
+			if(!globalShippingConfiguration.isActive())
+				return;
+
+			String region = null;
+			

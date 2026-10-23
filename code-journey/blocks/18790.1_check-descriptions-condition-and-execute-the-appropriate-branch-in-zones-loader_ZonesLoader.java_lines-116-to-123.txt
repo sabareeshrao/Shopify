@@ -1,0 +1,8 @@
+				
+				for (Map.Entry<String, Zone> entry : zonesMap.entrySet()) {
+					String key = entry.getKey();
+					Zone value = entry.getValue();
+
+					// get descriptions
+					List<ZoneDescription> descriptions = zonesDescriptionsMap.get(key);
+					if (descriptions != null) {

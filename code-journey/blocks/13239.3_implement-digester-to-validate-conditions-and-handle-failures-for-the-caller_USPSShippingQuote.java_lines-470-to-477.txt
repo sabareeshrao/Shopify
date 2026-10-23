@@ -1,0 +1,8 @@
+			 * <ZipOrigination>44106</ZipOrigination>
+			 * <ZipDestination>20770</ZipDestination>
+			 */
+
+			Digester digester = new Digester();
+			digester.push(parsed);
+
+			if(store.getCountry().getIsoCode().equals(delivery.getCountry().getIsoCode())) {

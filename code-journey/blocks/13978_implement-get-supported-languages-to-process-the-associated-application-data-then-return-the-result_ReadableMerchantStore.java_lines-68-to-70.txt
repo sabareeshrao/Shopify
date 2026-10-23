@@ -1,0 +1,3 @@
+	public List<ReadableLanguage> getSupportedLanguages() {
+		return supportedLanguages;
+	}

@@ -1,0 +1,10 @@
+	private ImageFile convertToImageFile(MerchantStore store, Content content) {
+		ImageFile f = new ImageFile();
+		f.setDir(false);
+		f.setId(imageUtils.buildStaticImageUtils(store, content.getName()));
+		f.setName(content.getName());
+		f.setUrl(imageUtils.buildStaticImageUtils(store, content.getName()));
+		f.setPath("image.png");
+		f.setSize(null);
+		return f;
+	}

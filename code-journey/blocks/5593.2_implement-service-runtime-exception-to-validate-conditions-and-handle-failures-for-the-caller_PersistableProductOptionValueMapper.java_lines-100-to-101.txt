@@ -1,0 +1,2 @@
+			throw new ServiceRuntimeException("Error while converting product option", e);
+		}

@@ -1,0 +1,8 @@
+	@Override
+	public ProductAvailability merge(PersistableInventory source, ProductAvailability destination, MerchantStore store,
+			Language language) {
+		Validate.notNull(destination, "Product availability cannot be null");
+
+		try {
+			Product product = null;
+			if(source.getProductId()!= null && source.getProductId().longValue() > 0) {

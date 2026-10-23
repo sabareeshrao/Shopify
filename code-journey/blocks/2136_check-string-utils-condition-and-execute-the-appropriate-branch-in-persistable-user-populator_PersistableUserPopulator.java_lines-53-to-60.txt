@@ -1,0 +1,8 @@
+
+    target.setFirstName(source.getFirstName());
+    target.setLastName(source.getLastName());
+    target.setAdminEmail(source.getEmailAddress());
+    target.setAdminName(source.getUserName());
+    if(!StringUtils.isBlank(source.getPassword())) {
+      target.setAdminPassword(passwordEncoder.encode(source.getPassword()));
+    }

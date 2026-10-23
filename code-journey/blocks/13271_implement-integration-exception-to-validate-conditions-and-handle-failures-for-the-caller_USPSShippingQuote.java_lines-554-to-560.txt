@@ -1,0 +1,7 @@
+			if (!StringUtils.isBlank(parsed.getStatusCode())
+					&& !parsed.getStatusCode().equals("1")) {
+				LOGGER.error("Can't process USPS statusCode="
+						+ parsed.getStatusCode() + " message= "
+						+ parsed.getError());
+				throw new IntegrationException(parsed.getError());
+			}

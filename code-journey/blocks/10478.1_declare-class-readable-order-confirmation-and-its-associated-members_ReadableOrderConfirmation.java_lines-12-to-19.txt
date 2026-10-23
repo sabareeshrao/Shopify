@@ -1,0 +1,8 @@
+public class ReadableOrderConfirmation extends Entity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Address billing;
+	private Address delivery;

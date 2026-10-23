@@ -1,0 +1,8 @@
+		"zoneCode": "YT",
+		"zoneName": "Yukon",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "NDS",
+		"zoneName": "Niedersachsen",
+		"countryCode": "DE"

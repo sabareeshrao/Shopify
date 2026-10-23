@@ -1,0 +1,4 @@
+			country = store.getCountry();
+			zone = store.getZone();
+			stateProvince = store.getStorestateprovince();
+		}

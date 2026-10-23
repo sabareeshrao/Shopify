@@ -1,0 +1,7 @@
+			@RequestBody @Valid PersistableContentPage page,
+			@PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		contentFacade.updateContentPage(id, page, merchantStore, language);
+	}

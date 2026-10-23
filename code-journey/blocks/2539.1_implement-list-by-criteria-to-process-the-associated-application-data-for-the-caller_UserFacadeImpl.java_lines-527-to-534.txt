@@ -1,0 +1,8 @@
+	@Override
+	public ReadableUserList listByCriteria(UserCriteria criteria, int page, int count, Language language) {
+		try {
+			ReadableUserList readableUserList = new ReadableUserList();
+			// filtering by userName is not in this implementation
+
+			Page<User> userList = null;
+

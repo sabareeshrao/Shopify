@@ -1,0 +1,8 @@
+	@Temporal(TemporalType.DATE)
+	@Column(name = "ORDER_ACCOUNT_END_DATE", length = 0)
+	private Date orderAccountEndDate;
+
+	@Column(name = "ORDER_ACCOUNT_BILL_DAY", nullable = false)
+	private Integer orderAccountBillDay;
+
+	@OneToMany(mappedBy = "orderAccount", cascade = CascadeType.ALL)

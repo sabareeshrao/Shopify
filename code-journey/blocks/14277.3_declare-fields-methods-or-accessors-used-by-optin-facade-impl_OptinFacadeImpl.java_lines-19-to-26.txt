@@ -1,0 +1,8 @@
+  @Inject
+  private OptinService optinService;
+
+  @Inject
+  private ReadableOptinMapper readableOptinConverter;
+  @Inject
+  private PersistableOptinMapper persistableOptinConverter;
+

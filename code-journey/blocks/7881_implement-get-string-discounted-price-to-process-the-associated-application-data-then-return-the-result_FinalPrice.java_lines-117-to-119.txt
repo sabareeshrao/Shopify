@@ -1,0 +1,3 @@
+	public String getStringDiscountedPrice() {
+		return stringDiscountedPrice;
+	}

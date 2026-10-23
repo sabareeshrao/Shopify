@@ -1,0 +1,6 @@
+	        }
+        
+		}catch(Exception e) {
+			LOGGER.error("An error occured while loading zones",e);
+			
+		}

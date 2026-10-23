@@ -1,0 +1,8 @@
+			
+			String declineCode = e.getDeclineCode();
+			
+			if("card_declined".equals(declineCode)) {
+				IntegrationException te = new IntegrationException(
+						"Can't process stripe message " + e.getMessage());
+				te.setExceptionType(IntegrationException.EXCEPTION_PAYMENT_DECLINED);
+				te.setMessageCode("message.payment.declined");

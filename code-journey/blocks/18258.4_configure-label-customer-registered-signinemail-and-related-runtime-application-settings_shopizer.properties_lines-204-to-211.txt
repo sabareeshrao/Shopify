@@ -1,0 +1,8 @@
+label.customer.registered.signinemail=If you have an account, sign in with your email address
+label.customer.signin.social=Make it easier and sign in with your {0} account!
+label.customer.signin.social.system=Sign in with {0}
+label.customer.faster=Creating an account has many benefits: check out faster, keep more than one address, track orders and more.
+label.customer.myaccount=My Account
+label.customer.contactus=Contact us
+label.customer.list=Customer list
+label.customer.name=Customer name

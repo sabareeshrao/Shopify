@@ -1,0 +1,2 @@
+            return firstObj == null && secondObj == null || firstObj != null && firstObj.equals(secondObj);
+        }

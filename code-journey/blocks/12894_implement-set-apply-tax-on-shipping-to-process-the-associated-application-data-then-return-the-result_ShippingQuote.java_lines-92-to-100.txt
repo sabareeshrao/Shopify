@@ -1,0 +1,9 @@
+	public void setApplyTaxOnShipping(boolean applyTaxOnShipping) {
+		this.applyTaxOnShipping = applyTaxOnShipping;
+	}
+	public boolean isApplyTaxOnShipping() {
+		return applyTaxOnShipping;
+	}
+	public void setSelectedShippingOption(ShippingOption selectedShippingOption) {
+		this.selectedShippingOption = selectedShippingOption;
+	}

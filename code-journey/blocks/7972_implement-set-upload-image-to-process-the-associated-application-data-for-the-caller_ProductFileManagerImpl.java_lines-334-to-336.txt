@@ -1,0 +1,3 @@
+  public void setUploadImage(ProductImagePut uploadImage) {
+    this.uploadImage = uploadImage;
+  }

@@ -1,0 +1,8 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(SearchFacadeImpl.class);
+
+	@Inject
+	private SearchService searchService;
+
+	@Inject
+	private ProductService productService;
+

@@ -1,0 +1,6 @@
+
+	  catalogEntry.setCatalog(c.getCode());
+	  return catalogFacade.addCatalogEntry(catalogEntry, merchantStore, language);
+
+
+  }

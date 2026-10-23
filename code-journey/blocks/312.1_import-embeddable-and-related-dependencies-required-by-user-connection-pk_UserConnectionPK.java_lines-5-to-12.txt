@@ -1,0 +1,8 @@
+import javax.persistence.Embeddable;
+
+/**
+ * Identity key for storing spring social objects
+ * @author carlsamson
+ *
+ */
+@Deprecated

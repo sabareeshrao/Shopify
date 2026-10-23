@@ -1,0 +1,3 @@
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Exception while getting contents", e);
+		}

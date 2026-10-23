@@ -1,0 +1,8 @@
+		Customer customer = new Customer();	
+		customer.setMerchantStore(merchant);
+		customer.setDefaultLanguage(en);
+		customer.setEmailAddress("email@email.com");
+		customer.setPassword("-1999");
+		customer.setNick("My New nick");
+		customer.setCompany(" Apple");	
+		customer.setGender(CustomerGender.M);

@@ -1,0 +1,8 @@
+
+		<dependency>
+			<groupId>com.shopizer</groupId>
+			<artifactId>shopizer-commons</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+
+		<!-- open search client -->

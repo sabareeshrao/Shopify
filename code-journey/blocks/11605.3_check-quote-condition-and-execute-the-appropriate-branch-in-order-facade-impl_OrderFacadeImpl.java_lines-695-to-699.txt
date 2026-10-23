@@ -1,0 +1,5 @@
+			summary.setShippingOptionCode(quote.getSelectedShippingOption().getOptionCode());
+
+			if (quote.getDeliveryAddress() != null) {
+				summary.setDeliveryAddress(quote.getDeliveryAddress());
+			}

@@ -1,0 +1,8 @@
+			
+			/**
+			 * This is the PaymentIntent ID created on the Frontend, that we will now store.
+			 */
+			String token = payment.getPaymentMetaData().get("stripe_token");
+			
+			if(StringUtils.isBlank(token)) {
+				IntegrationException te = new IntegrationException(

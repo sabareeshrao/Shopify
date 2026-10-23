@@ -1,0 +1,8 @@
+
+@Component
+public class PersistableUserPopulator extends AbstractDataPopulator<PersistableUser, User> {
+
+  @Inject
+  private LanguageService languageService;
+  
+  @Inject

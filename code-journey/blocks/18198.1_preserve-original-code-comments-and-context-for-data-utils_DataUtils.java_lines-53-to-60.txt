@@ -1,0 +1,8 @@
+		}
+	}
+	
+	/**
+	 * Get the measure according to the appropriate measure base. If the measure
+	 * configured in store is IN and it needs CM or vise versa then the
+	 * appropriate calculation is done
+	 * 

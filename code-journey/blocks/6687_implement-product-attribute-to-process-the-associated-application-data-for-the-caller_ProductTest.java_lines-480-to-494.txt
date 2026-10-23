@@ -1,0 +1,15 @@
+	    
+	    /** create attributes **/
+	    //attributes
+	    ProductAttribute color_red = new ProductAttribute();
+	    color_red.setProduct(product);
+	    color_red.setProductOption(color);
+	    color_red.setAttributeDefault(true);
+	    color_red.setProductAttributePrice(new BigDecimal(0));//no price variation
+	    color_red.setProductAttributeWeight(new BigDecimal(1));//weight variation
+	    color_red.setProductOptionValue(red);
+	    
+	    productAttributeService.create(color_red);
+	    
+	    product.getAttributes().add(color_red);
+

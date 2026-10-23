@@ -1,0 +1,3 @@
+public class InputContentFile extends StaticContentFile implements Serializable 
+{
+

@@ -1,0 +1,8 @@
+      }
+
+
+
+      if (description != null) {
+        com.salesmanager.shop.model.catalog.manufacturer.ManufacturerDescription d =
+            populateDescription(description);
+        target.setDescription(d);

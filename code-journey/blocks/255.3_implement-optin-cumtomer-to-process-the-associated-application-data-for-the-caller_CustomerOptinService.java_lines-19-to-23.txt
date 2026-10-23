@@ -1,0 +1,5 @@
+	 * @param optin
+	 * @throws ServiceException
+	 */
+	void optinCumtomer(CustomerOptin optin) throws ServiceException;
+	

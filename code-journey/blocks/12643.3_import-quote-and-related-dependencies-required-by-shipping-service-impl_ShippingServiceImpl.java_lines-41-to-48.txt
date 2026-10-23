@@ -1,0 +1,8 @@
+import com.salesmanager.core.model.shipping.Quote;
+import com.salesmanager.core.model.shipping.ShippingConfiguration;
+import com.salesmanager.core.model.shipping.ShippingMetaData;
+import com.salesmanager.core.model.shipping.ShippingOption;
+import com.salesmanager.core.model.shipping.ShippingOptionPriceType;
+import com.salesmanager.core.model.shipping.ShippingOrigin;
+import com.salesmanager.core.model.shipping.ShippingPackageType;
+import com.salesmanager.core.model.shipping.ShippingProduct;

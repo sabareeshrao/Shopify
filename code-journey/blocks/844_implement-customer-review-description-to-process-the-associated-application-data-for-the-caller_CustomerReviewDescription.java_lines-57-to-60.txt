@@ -1,0 +1,4 @@
+	public CustomerReviewDescription(Language language, String name) {
+		this.setLanguage(language);
+		this.setName(name);
+	}

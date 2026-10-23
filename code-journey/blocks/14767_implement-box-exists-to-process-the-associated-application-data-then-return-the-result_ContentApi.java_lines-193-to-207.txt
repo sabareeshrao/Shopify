@@ -1,0 +1,15 @@
+	@GetMapping(value = "/private/content/box/{code}/exists")
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(httpMethod = "GET", value = "Check unique content box", notes = "", response = EntityExists.class)
+	@ApiImplicitParams({ 
+		@ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+		@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public EntityExists boxExists(
+			@PathVariable String code, 
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		boolean exists = contentFacade.codeExist(code, BOX, merchantStore);
+		EntityExists entity = new EntityExists(exists);
+		return entity;
+	}

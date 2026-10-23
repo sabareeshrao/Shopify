@@ -1,0 +1,3 @@
+public class ReadableShippingSummaryPopulator extends
+		AbstractDataPopulator<ShippingSummary, ReadableShippingSummary> {
+	

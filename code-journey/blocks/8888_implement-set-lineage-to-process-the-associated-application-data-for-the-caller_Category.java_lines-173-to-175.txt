@@ -1,0 +1,3 @@
+    public void setLineage(String lineage) {
+        this.lineage = lineage;
+    }

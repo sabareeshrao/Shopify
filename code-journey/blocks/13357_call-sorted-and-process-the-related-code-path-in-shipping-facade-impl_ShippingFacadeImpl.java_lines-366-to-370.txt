@@ -1,0 +1,5 @@
+						})
+						.sorted(Comparator.comparing(ReadableCountry::getName))
+						.collect(Collectors.toList());
+
+			}

@@ -1,0 +1,5 @@
+	private ReadableInventoryMapper readableInventoryMapper;
+
+	@Autowired
+	private PersistableInventoryMapper productInventoryMapper;
+

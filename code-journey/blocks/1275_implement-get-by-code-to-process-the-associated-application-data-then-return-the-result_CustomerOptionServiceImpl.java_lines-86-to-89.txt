@@ -1,0 +1,4 @@
+	@Override
+	public CustomerOption getByCode(MerchantStore store, String optionCode) {
+		return customerOptionRepository.findByCode(store.getId(), optionCode);
+	}

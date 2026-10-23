@@ -1,0 +1,9 @@
+      
+      templateTokens.put("EMAIL_CONTACT_NAME", "Test");
+      templateTokens.put("EMAIL_CONTACT_EMAIL", "test@gmail.com");
+      templateTokens.put("EMAIL_CONTACT_CONTENT", "Hello");
+
+      templateTokens.put("EMAIL_CUSTOMER_CONTACT", "Contact");
+      templateTokens.put("EMAIL_CONTACT_NAME_LABEL", "Name");
+      templateTokens.put("EMAIL_CONTACT_EMAIL_LABEL", "Email");
+

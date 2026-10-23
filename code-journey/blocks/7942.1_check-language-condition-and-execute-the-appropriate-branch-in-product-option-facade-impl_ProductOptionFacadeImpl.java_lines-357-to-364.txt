@@ -1,0 +1,8 @@
+			
+			if(language != null) { //all entry
+				//attributes = productAttributeService.getByProductId(store, product, language);
+				attr = productAttributeService.getByProductId(store, product, language, page, count);
+				attrList.setRecordsTotal(attr.getTotalElements());
+				attrList.setNumber(attr.getNumberOfElements());
+				attrList.setTotalPages(attr.getTotalPages());
+			} else {

@@ -1,0 +1,5 @@
+					productImage.setSortOrder(sortOrder);
+					position++;
+					contentImagesList.add(productImage);
+				}
+			}

@@ -1,0 +1,8 @@
+
+  /**
+   * List permissions by group
+   * 
+   * @param ids
+   * @return
+   * @throws Exception
+   */

@@ -1,0 +1,8 @@
+label.shipping.packaging.box.maxitems=Maximum items in a box
+label.shipping.addregion=Add region
+label.shipping.region=Region
+label.shipping.allquotes=Display all shipping quotes
+label.shipping.leastexpensivequotes=Display least expensive shipping quotes
+label.shipping.moreexpensivequotes=Display highest expensive shipping quotes
+label.message.region.available=Region available
+label.message.region.exist=Region already exists

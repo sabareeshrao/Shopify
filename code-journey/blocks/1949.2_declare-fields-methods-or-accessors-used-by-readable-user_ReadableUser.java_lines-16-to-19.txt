@@ -1,0 +1,4 @@
+	private String merchant;
+	private String userName;
+	private boolean active;
+

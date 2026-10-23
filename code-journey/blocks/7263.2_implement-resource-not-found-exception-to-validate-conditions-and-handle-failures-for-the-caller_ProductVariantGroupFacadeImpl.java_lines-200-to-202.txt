@@ -1,0 +1,3 @@
+		if(image == null) {
+			throw new ResourceNotFoundException("productVariantImage [" + imageId + "] was not found");
+		}

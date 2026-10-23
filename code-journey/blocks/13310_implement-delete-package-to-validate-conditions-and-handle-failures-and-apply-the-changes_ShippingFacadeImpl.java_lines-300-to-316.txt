@@ -1,0 +1,17 @@
+	@Override
+	public void deletePackage(String code, MerchantStore store) {
+		
+		Validate.notNull(store, "MerchantStore cannot be null");
+		Validate.notEmpty(code,"Packaging unique code cannot be empty");
+		
+		ShippingConfiguration config = getDbConfig(store);
+		
+		List<com.salesmanager.core.model.shipping.Package> packages = config.getPackages();
+		
+		List<com.salesmanager.core.model.shipping.Package> packList = config.getPackages().stream().filter(p -> p.getCode().equalsIgnoreCase(code)).collect(Collectors.toList());
+		
+		if(!packList.isEmpty()) {
+			packages.removeAll(packList);
+			config.setPackages(packages);
+			this.saveShippingConfiguration(config, store);
+		} 

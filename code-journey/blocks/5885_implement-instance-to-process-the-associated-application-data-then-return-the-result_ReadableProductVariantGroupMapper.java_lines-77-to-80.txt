@@ -1,0 +1,4 @@
+	private ReadableProductVariant instance(ProductVariant instance, MerchantStore store, Language language) {
+		
+		return readableProductVariantMapper.convert(instance, store, language);
+	}

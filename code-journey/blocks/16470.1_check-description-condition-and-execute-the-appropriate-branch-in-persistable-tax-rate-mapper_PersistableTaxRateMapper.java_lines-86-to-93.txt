@@ -1,0 +1,8 @@
+	              }
+	            } 
+	            if(description == null) {
+	  	          description = description(desc);
+	  	          description.setTaxRate(destination);
+	  	          destination.getDescriptions().add(description);
+	            }
+	          }

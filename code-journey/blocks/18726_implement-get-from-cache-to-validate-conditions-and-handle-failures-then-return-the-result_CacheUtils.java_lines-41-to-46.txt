@@ -1,0 +1,6 @@
+	public Object getFromCache(String keyName) throws Exception {
+
+		ValueWrapper vw = cache.get(keyName);
+		if(vw!=null) {
+			return vw.get();
+		}

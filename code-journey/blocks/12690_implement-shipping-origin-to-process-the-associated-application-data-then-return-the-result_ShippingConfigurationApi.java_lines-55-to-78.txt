@@ -1,0 +1,24 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShippingConfigurationApi.class);
+
+	@Autowired
+	private AuthorizationUtils authorizationUtils;
+
+	@Autowired
+	private ShippingFacade shippingFacade;
+
+	@Autowired
+	private ShippingService shippingService;
+
+	@ApiOperation(httpMethod = "GET", value = "Get shipping origin for a specific merchant store", notes = "", produces = "application/json", response = ReadableAddress.class)
+	@RequestMapping(value = { "/private/shipping/origin" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public ReadableAddress shippingOrigin(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		String user = authorizationUtils.authenticatedUser();
+		authorizationUtils.authorizeUser(user, Stream.of(Constants.GROUP_SUPERADMIN, Constants.GROUP_ADMIN,
+				Constants.GROUP_SHIPPING, Constants.GROUP_ADMIN_RETAIL).collect(Collectors.toList()), merchantStore);
+
+		return shippingFacade.getShippingOrigin(merchantStore);
+
+	}

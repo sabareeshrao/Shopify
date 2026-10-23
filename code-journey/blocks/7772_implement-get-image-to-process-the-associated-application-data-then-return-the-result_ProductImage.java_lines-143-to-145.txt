@@ -1,0 +1,3 @@
+	public InputStream getImage() {
+		return image;
+	}

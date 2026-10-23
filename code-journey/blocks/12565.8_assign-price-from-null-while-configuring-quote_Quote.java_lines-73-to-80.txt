@@ -1,0 +1,8 @@
+	private Integer estimatedNumberOfDays;
+	
+	@Column (name ="QUOTE_PRICE")
+	private BigDecimal price = null;
+	
+	@Column (name ="QUOTE_HANDLING")
+	private BigDecimal handling = null;
+	

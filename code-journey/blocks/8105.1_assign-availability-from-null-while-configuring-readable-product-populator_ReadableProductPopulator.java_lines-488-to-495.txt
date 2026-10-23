@@ -1,0 +1,8 @@
+				}
+			}*/
+
+			//target.setVisible(isVisible);
+
+			//availability
+			ProductAvailability availability = null;
+			for(ProductAvailability a : source.getAvailabilities()) {

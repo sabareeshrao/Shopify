@@ -1,0 +1,8 @@
+			 renderer.paintComponent(g2);
+			 g2.dispose();
+
+			 // Add our spreadsheet in the middle of the page
+			 float offsetX = (pageSize.getWidth() - w) / 2;
+			 float offsetY = (pageSize.getHeight() - h) / 2;
+			 cb.addTemplate(tp, offsetX, offsetY);
+			 // Close the PDF document

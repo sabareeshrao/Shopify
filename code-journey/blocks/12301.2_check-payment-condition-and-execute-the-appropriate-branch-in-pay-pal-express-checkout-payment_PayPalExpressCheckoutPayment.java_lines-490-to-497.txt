@@ -1,0 +1,8 @@
+			 paymentDetail.setOrderTotal(orderTotal);
+			 paymentDetail.setButtonSource("Shopizer_Cart_AP");
+			 /** sale or pre-auth **/
+			 if(payment.getTransactionType().name().equals(TransactionType.AUTHORIZE.name())) {
+				 paymentDetail.setPaymentAction(urn.ebay.apis.eBLBaseComponents.PaymentActionCodeType.AUTHORIZATION);
+			 } else {
+				 paymentDetail.setPaymentAction(urn.ebay.apis.eBLBaseComponents.PaymentActionCodeType.SALE);
+			 }

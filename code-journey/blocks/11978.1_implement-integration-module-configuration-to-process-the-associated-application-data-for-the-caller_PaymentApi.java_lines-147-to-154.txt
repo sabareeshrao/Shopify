@@ -1,0 +1,8 @@
+			
+			IntegrationModuleConfiguration returnConfig = new IntegrationModuleConfiguration();
+			returnConfig.setConfigurable(integrationModule.getConfigurable());
+			returnConfig.setActive(false);
+			returnConfig.setDefaultSelected(false);
+			returnConfig.setCode(code);
+			
+			

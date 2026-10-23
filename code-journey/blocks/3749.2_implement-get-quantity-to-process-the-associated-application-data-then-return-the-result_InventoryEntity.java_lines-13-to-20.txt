@@ -1,0 +1,8 @@
+  private String regionVariant;
+  private String owner;
+  private String dateAvailable;
+  private boolean available;
+  private int productQuantityOrderMin = 0;
+  private int productQuantityOrderMax = 0;
+  public int getQuantity() {
+    return quantity;

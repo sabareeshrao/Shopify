@@ -1,0 +1,3 @@
+	public void setPaymentModuleCode(String paymentModuleCode) {
+		this.paymentModuleCode = paymentModuleCode;
+	}

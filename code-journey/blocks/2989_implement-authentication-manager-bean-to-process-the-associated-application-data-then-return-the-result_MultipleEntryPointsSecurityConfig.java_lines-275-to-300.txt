@@ -1,0 +1,26 @@
+
+	}
+	**/
+
+	/**
+	 * api - private
+	 * 
+	 * @author dur9213
+	 *
+	 */
+	@Configuration
+	@Order(5)
+	public static class UserApiConfigurationAdapter extends WebSecurityConfigurerAdapter {
+
+		@Autowired
+		private AuthenticationTokenFilter authenticationTokenFilter;
+
+		@Autowired
+		JWTAdminServicesImpl jwtUserDetailsService;
+
+		@Bean("jwtAdminAuthenticationManager")
+		@Override
+		public AuthenticationManager authenticationManagerBean() throws Exception {
+			AuthenticationManager mgr = super.authenticationManagerBean();
+			return mgr;
+		}

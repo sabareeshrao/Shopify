@@ -1,0 +1,10 @@
+import com.salesmanager.core.model.catalog.product.image.ProductImage;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.mapper.Mapper;
+import com.salesmanager.shop.model.catalog.product.ReadableImage;
+import com.salesmanager.shop.utils.ImageFilePath;
+
+@Component
+public class ReadableProductImageMapper implements Mapper<ProductImage, ReadableImage> {
+

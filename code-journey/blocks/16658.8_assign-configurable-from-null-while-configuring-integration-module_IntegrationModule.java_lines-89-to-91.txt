@@ -1,0 +1,3 @@
+	@Transient
+	private String configurable = null;
+

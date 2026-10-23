@@ -1,0 +1,3 @@
+							fPrice = price.getProductPriceSpecialAmount();
+							finalPrice.setDiscountEndDate(price.getProductPriceSpecialEndDate());
+						}

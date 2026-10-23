@@ -1,0 +1,8 @@
+
+  @Inject
+  private PasswordEncoder passwordEncoder;
+
+  @Inject
+  private EmailService emailService;
+
+  @Inject

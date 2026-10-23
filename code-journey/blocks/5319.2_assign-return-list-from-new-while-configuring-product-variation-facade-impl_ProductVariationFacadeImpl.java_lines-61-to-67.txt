@@ -1,0 +1,7 @@
+			ReadableEntityList<ReadableProductVariation> returnList = new ReadableEntityList<ReadableProductVariation>();
+			returnList.setItems(variations);
+			returnList.setNumber(variations.size());
+			returnList.setRecordsTotal(vars.getTotalElements());
+			returnList.setTotalPages(vars.getTotalPages());
+			return returnList;
+		

@@ -1,0 +1,20 @@
+
+			Zone storeZone = (Zone) zonesMap.get(sZone);
+			Zone customerZone = (Zone) zonesMap.get(customer
+					.getCustomerZoneId());**/
+					
+				
+
+			xmldatabuffer.append("<PickupType><Code>03</Code></PickupType>");
+			// xmldatabuffer.append("<Description>Daily Pickup</Description>");
+			xmldatabuffer.append("<Shipment><Shipper>");
+			xmldatabuffer.append("<Address>");
+			xmldatabuffer.append("<City>");
+			xmldatabuffer.append(store.getStorecity());
+			xmldatabuffer.append("</City>");
+			// if(!StringUtils.isBlank(store.getStorestateprovince())) {
+			if (store.getZone() != null) {
+				xmldatabuffer.append("<StateProvinceCode>");
+				xmldatabuffer.append(store.getZone().getCode());// zone code
+				xmldatabuffer.append("</StateProvinceCode>");
+			}

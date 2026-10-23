@@ -1,0 +1,4 @@
+	@Override
+	public List<Customer> getListByStore(MerchantStore store) {
+		return customerRepository.findByStore(store.getId());
+	}

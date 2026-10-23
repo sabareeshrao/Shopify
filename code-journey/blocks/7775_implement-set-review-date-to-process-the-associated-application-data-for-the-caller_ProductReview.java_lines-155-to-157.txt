@@ -1,0 +1,3 @@
+	public void setReviewDate(Date reviewDate) {
+		this.reviewDate = reviewDate;
+	}
