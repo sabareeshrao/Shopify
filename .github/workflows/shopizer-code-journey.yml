@@ -1,0 +1,86 @@
+name: Build and audit complete Shopizer TXT code journey
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_shopizer_code_journey.py'
+      - 'scripts/rebuild_shopizer_code_journey.py'
+      - '.github/workflows/shopizer-code-journey.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: full-shopizer-code-journey
+  cancel-in-progress: false
+
+jobs:
+  generate-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Check out the learning repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Retrieve the exact original Shopizer commit
+        uses: actions/checkout@v4
+        with:
+          repository: shopizer-ecommerce/shopizer
+          ref: 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+          path: .shopizer-source
+          persist-credentials: false
+          lfs: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Stage offline source-tree reconstruction tool
+        shell: bash
+        run: |
+          mkdir -p code-journey
+          cp scripts/rebuild_shopizer_code_journey.py code-journey/rebuild.py
+
+      - name: Generate all numbered parent and child TXT files
+        shell: bash
+        run: |
+          python scripts/build_shopizer_code_journey.py \
+            --checkout .shopizer-source \
+            --output code-journey \
+            --zip code-journey/Shopizer-Code-Journey.zip
+          cat code-journey/AUDIT.json
+
+      - name: Verify that the archive recreates all original files
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/shopizer-extracted"
+          unzip -q code-journey/Shopizer-Code-Journey.zip -d "$RUNNER_TEMP/shopizer-extracted"
+          python scripts/rebuild_shopizer_code_journey.py \
+            --journey "$RUNNER_TEMP/shopizer-extracted/code-journey" \
+            --output "$RUNNER_TEMP/shopizer-rebuilt"
+          git -C .shopizer-source diff --exit-code --quiet HEAD
+          test "$(find code-journey/blocks -type f -name '*.txt' | wc -l)" -gt 1000
+
+      - name: Also store ZIP as a downloadable workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shopizer-Code-Journey
+          path: code-journey/Shopizer-Code-Journey.zip
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 0
+
+      - name: Commit only generated code-journey outputs to Shopify
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- code-journey
+          if ! git diff --cached --quiet; then
+            git commit -m "data(journey): add audited full Shopizer numbered TXT code journey and ZIP"
+            git push origin HEAD:main
+          fi
