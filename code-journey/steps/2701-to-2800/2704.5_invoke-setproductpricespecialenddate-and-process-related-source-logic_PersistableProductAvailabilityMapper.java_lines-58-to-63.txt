@@ -1,0 +1,6 @@
+				destination.getPrices().add(price);
+				for (Language lang : store.getLanguages()) {
+					ProductPriceDescription ppd = new ProductPriceDescription();
+					ppd.setProductPrice(price);
+					ppd.setLanguage(lang);
+					ppd.setName(ProductPriceDescription.DEFAULT_PRICE_DESCRIPTION);

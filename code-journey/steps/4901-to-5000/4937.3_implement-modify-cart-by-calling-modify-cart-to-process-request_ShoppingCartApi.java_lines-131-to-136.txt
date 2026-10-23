@@ -1,6 +1,0 @@
-
-			if (cart == null) {
-				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-			}
-
-			return new ResponseEntity<>(cart, HttpStatus.CREATED);

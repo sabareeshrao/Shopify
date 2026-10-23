@@ -1,0 +1,5 @@
+		{
+			"zoneCode": "SG",
+			"zoneName": "St. Gallen",
+			"countryCode": "CH"
+		},

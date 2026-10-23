@@ -1,7 +1,0 @@
-        int lastWindowsPos = filename.lastIndexOf(WINDOWS_SEPARATOR);
-        return Math.max(lastUnixPos, lastWindowsPos);
-      }
-    
-    
-
-}

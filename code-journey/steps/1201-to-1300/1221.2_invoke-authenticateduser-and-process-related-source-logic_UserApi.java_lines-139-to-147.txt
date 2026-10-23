@@ -1,0 +1,9 @@
+	public ReadableUser update(@Valid @RequestBody PersistableUser user, @PathVariable Long id,
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language
+
+	) {
+
+		String authenticatedUser = userFacade.authenticatedUser();// requires
+																	// user
+																	// doing
+																	// action

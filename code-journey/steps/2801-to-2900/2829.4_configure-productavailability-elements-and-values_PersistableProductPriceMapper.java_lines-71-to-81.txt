@@ -1,0 +1,11 @@
+
+			if (isPositive(source.getProductAvailabilityId())) {
+				Optional<ProductAvailability> avail = productAvailabilityService
+						.getById(source.getProductAvailabilityId(), store);
+				if (avail.isEmpty()) {
+					throw new ConversionRuntimeException(
+							"Product availability with id [" + source.getProductAvailabilityId() + "] was not found");
+				}
+				availability = avail.get();
+
+			} else {

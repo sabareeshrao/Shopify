@@ -1,6 +1,0 @@
-			IntegrationModule module = integrationModulesLoader.loadModule(object);
-			if (module != null) {
-				IntegrationModule m = this.getByCode(module.getCode());
-				if (m != null) {
-					this.delete(m);
-				}

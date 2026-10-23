@@ -1,0 +1,11 @@
+{
+	"properties": {
+		"id": {
+			"type": "long"
+		},
+		"inventory": {
+			"type": "nested"
+		},
+		"description": {
+			"type": "text"
+		},

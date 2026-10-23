@@ -1,8 +1,0 @@
-		
-		
-		inputParameters.setShippingMethod(summary.getShippingSummary().getShippingOptionCode());
-		
-		LOGGER.debug("Setting input parameters " + inputParameters.toString());
-		
-/*        KieSession kieSession = kieManufacturerBasedPricingContainer.newKieSession();
-        kieSession.insert(inputParameters);

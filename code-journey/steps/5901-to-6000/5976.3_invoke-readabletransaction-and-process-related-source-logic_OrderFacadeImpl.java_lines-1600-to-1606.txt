@@ -1,7 +1,0 @@
-
-			ReadableTransaction transaction = null;
-			ReadableTransactionPopulator trxPopulator = null;
-
-			for(Transaction tr : transactions) {
-				transaction = new ReadableTransaction();
-				trxPopulator = new ReadableTransactionPopulator();

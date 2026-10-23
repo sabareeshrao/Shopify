@@ -1,0 +1,4 @@
+
+		ShoppingCart cartModel = shoppingCartService.getShoppingCart(customer, store);
+
+		// if cart does not exist create a new one

@@ -1,5 +1,0 @@
-		String userName = principal.getName();
-
-		customerFacade.updateAddress(userName, customer, merchantStore);
-
-	}

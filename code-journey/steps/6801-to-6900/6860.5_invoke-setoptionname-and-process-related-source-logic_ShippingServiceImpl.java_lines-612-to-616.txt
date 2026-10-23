@@ -1,5 +1,0 @@
-							option.setOptionName(countryName);		
-					}
-				
-					if(shippingOptionPriceType.name().equals(ShippingOptionPriceType.HIGHEST.name())) {
-

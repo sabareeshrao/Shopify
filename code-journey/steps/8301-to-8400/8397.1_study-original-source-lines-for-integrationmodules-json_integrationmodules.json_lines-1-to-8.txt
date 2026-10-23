@@ -1,8 +1,0 @@
-[
-	{
-		"module": "SHIPPING",
-		"code": "usps",
-		"version":"",
-		"regions": ["US"],
-		"image":"usps.jpg",
-		"configuration":[{"env":"TEST","scheme":"http","host":"testing.shippingapis.com","port":"80","uri":"/ShippingAPI.dll"},{"env":"PROD","scheme":"http","host":"production.shippingapis.com","port":"80","uri":"/ShippingAPI.dll"}]

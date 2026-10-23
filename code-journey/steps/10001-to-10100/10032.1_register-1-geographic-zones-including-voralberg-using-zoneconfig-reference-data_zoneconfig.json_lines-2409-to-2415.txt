@@ -1,7 +1,0 @@
-		{
-			"zoneCode": "VB",
-			"zoneName": "Voralberg",
-			"countryCode": "AT"
-		},
-		{
-			"zoneCode": "AG",

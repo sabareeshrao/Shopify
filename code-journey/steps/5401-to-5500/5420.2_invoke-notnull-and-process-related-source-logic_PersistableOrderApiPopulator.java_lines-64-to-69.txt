@@ -1,6 +1,0 @@
-		Validate.notNull(customerService,"customerService must be set");
-		Validate.notNull(shoppingCartService,"shoppingCartService must be set");
-		Validate.notNull(productService,"productService must be set");
-		Validate.notNull(productAttributeService,"productAttributeService must be set");
-		Validate.notNull(digitalProductService,"digitalProductService must be set");*/
-		Validate.notNull(source.getPayment(),"Payment cannot be null");

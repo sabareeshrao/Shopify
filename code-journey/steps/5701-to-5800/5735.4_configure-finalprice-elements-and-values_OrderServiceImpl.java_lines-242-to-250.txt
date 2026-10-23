@@ -1,9 +1,0 @@
-            if(finalPrice!=null) {
-                List<FinalPrice> otherPrices = finalPrice.getAdditionalPrices();
-                if(otherPrices!=null) {
-                    for(FinalPrice price : otherPrices) {
-                        if(!price.isDefaultPrice()) {
-                            OrderTotal itemSubTotal = otherPricesTotals.get(price.getProductPrice().getCode());
-
-                            if(itemSubTotal==null) {
-                                itemSubTotal = new OrderTotal();

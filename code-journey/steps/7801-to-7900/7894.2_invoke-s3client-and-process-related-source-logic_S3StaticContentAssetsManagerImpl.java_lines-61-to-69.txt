@@ -1,0 +1,9 @@
+		try {
+			// get buckets
+			String bucketName = bucketName();
+
+			final AmazonS3 s3 = s3Client();
+
+			S3Object o = s3.getObject(bucketName, nodePath(merchantStoreCode, fileContentType) + contentName);
+
+			LOGGER.info("Content getFile");

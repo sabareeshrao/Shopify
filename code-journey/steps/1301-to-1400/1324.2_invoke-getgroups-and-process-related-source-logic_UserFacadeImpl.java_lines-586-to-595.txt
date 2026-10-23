@@ -1,0 +1,10 @@
+
+			boolean isSuperAdmin = false;
+
+			for (Group g : currentUser.getGroups()) {
+				if (g.getGroupName().equals("SUPERADMIN")) {
+					isSuperAdmin = true;
+					break;
+				}
+
+			}

@@ -1,6 +1,0 @@
-						if (parentCategory != null) {
-							parentCategory.getChildren().add(readableCategory);
-						}
-					});
-			
-			List<ReadableCategory> filteredList = readableCategoryMap.values().stream().collect(Collectors.toList());

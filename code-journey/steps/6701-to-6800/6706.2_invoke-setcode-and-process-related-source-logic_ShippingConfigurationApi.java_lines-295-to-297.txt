@@ -1,0 +1,3 @@
+
+		readable.setCode(module.getCode());
+		readable.setImage(module.getImage());

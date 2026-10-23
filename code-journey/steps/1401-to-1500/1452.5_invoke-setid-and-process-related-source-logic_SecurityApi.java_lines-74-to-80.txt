@@ -1,7 +1,0 @@
-			readablePermission.setId(permission.getId());
-			readablePermissions.add(readablePermission);
-		}
-		return readablePermissions;
-
-		
-	}

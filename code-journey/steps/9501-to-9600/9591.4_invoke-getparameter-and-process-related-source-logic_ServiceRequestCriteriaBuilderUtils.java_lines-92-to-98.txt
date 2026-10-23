@@ -1,0 +1,7 @@
+    
+    String storeName = request.getParameter("storeName");
+    criteria.setName(storeName);
+    
+    String retailers = request.getParameter("retailers");
+    String stores = request.getParameter("stores");
+    

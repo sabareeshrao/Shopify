@@ -1,0 +1,8 @@
+					
+					modules = ConfigurationModulesLoader.loadIntegrationConfigurations(decrypted);
+				}
+			} else {
+				merchantConfiguration = new MerchantConfiguration();
+				merchantConfiguration.setMerchantStore(store);
+				merchantConfiguration.setKey(Constants.PAYMENT_MODULES);
+			}

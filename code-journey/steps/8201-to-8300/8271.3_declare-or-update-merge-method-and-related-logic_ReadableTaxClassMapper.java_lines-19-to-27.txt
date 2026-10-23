@@ -1,9 +1,0 @@
-		taxClass.setName(source.getTitle());
-		taxClass.setStore(store.getCode());
-		return taxClass;
-	}
-
-	@Override
-	public ReadableTaxClass merge(TaxClass source, ReadableTaxClass destination, MerchantStore store,
-								  Language language) {
-		destination.setId(source.getId());

@@ -1,0 +1,8 @@
+    public DbCredentials dbCredentials() {
+    	DbCredentials dbCredentials = new DbCredentials();
+    	dbCredentials.setUserName(env.getProperty("user"));
+    	dbCredentials.setPassword(env.getProperty("password"));
+        return dbCredentials;
+    }
+
+}

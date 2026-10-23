@@ -1,8 +1,0 @@
-    return listZones.stream()
-        .map(zone -> convertToReadableZone(zone, language, merchantStore))
-        .collect(Collectors.toList());
-  }
-
-  private ReadableZone convertToReadableZone(Zone zone, Language language, MerchantStore merchantStore) {
-    try{
-      ReadableZonePopulator populator = new ReadableZonePopulator();

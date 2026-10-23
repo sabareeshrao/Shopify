@@ -1,0 +1,8 @@
+
+	@PostConstruct
+	public void init() throws Exception {
+
+		/**
+		 * Configure search module
+		 */
+

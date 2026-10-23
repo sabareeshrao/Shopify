@@ -1,0 +1,4 @@
+	@Override
+	public void removeFile(final String merchantStoreCode, final FileContentType staticContentType,
+			final String fileName, Optional<String> folderPath) throws ServiceException {
+

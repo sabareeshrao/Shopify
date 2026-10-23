@@ -1,0 +1,9 @@
+			if(source.getPreviousOrderStatus()!=null) {
+				List<OrderStatus> orderStatusList = source.getPreviousOrderStatus();
+				for(OrderStatus status : orderStatusList) {
+					OrderStatusHistory statusHistory = new OrderStatusHistory();
+					statusHistory.setStatus(status);
+					statusHistory.setOrder(target);
+					target.getOrderHistory().add(statusHistory);
+				}
+			}

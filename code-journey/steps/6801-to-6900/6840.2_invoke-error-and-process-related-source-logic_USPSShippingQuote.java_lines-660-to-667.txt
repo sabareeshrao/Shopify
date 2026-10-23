@@ -1,8 +1,0 @@
-
-			}*/
-
-			return shippingOptions;
-			}
-
-		} catch (Exception e1) {
-			LOGGER.error("Error in USPS shipping quote ",e1);

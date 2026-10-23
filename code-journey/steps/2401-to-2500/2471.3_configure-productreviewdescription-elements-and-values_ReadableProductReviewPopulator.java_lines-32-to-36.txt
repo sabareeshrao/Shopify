@@ -1,0 +1,5 @@
+			target.setCustomer(customer);
+			target.setRating(source.getReviewRating());
+			target.setProductId(source.getProduct().getId());
+			
+			Set<ProductReviewDescription> descriptions = source.getDescriptions();

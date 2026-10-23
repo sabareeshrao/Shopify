@@ -1,7 +1,0 @@
-					readableAttribute.setAttributePrice(price);
-				} catch (ServiceException e) {
-					throw new ConversionException("Cannot format price",e);
-				}
-				
-				readableAttribute.setAttributeName(attr.getProductAttributeName());
-				readableAttribute.setAttributeValue(attr.getProductAttributeValueName());

@@ -1,7 +1,0 @@
-			if(conf.isActive()) {
-				readable.setActive(true);
-			}
-		}
-		return readable;
-
-	}

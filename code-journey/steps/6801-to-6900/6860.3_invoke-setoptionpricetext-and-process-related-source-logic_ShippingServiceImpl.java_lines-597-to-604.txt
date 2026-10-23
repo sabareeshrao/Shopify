@@ -1,8 +1,0 @@
-					option.setOptionPriceText(priceText);
-					option.setShippingModuleCode(moduleName);
-				
-					if(StringUtils.isBlank(option.getOptionName())) {
-						
-						String countryName = delivery.getCountry().getName();
-						if(countryName == null) {
-							Map<String,Country> deliveryCountries = countryService.getCountriesMap(language);

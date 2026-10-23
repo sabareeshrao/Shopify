@@ -1,0 +1,9 @@
+	@Override
+	public List<Content> listByType(List<ContentType> contentType, MerchantStore store, Language language)
+			throws ServiceException {
+
+		/*
+		 * List<String> contentTypes = new ArrayList<String>(); for (int i = 0;
+		 * i < contentType.size(); i++) {
+		 * contentTypes.add(contentType.get(i).name()); }
+		 */

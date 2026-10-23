@@ -1,8 +1,0 @@
-          if (language == null) {
-            language = languageService.defaultLanguage();
-          }
-        }
-      }
-      
-      //if language is null then underlying facade must load all languages
-      return language;

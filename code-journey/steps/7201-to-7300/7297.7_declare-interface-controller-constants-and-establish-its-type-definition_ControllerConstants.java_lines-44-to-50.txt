@@ -1,7 +1,0 @@
-            final static String EditAddress="editCustomerAddress";
-        }
-        
-        interface Content{
-            final static String content="content";
-            final static String contactus="contactus";
-        }

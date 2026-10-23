@@ -1,0 +1,5 @@
+public class AuthorizationUtils {
+	
+	@Inject
+	private UserFacade userFacade;
+	

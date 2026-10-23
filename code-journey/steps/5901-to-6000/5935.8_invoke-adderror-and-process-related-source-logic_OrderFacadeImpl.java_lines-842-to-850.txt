@@ -1,0 +1,9 @@
+				if (StringUtils.isBlank(order.getCustomer().getDelivery().getPostalCode())) {
+					FieldError error = new FieldError("customer.delivery.postalCode", "customer.delivery.postalCode",
+							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));
+					bindingResult.addError(error);
+					messagesResult.put("customer.delivery.postalCode",
+							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));
+				}
+
+			}

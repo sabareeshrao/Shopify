@@ -1,7 +1,0 @@
-    this.location = location;
-    this.root = root;
-  }
-
-  public String getLocation() {
-    return location;
-  }

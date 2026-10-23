@@ -1,7 +1,0 @@
-      throw new ServiceRuntimeException("Error while clearing cache");
-    }
-
-    return new ResponseEntity<>(HttpStatus.OK);
-  }
-
-}

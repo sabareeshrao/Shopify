@@ -1,7 +1,0 @@
-					messagesResult.put("customer.delivery.stateProvince",
-							messages.getMessage("NotEmpty.customer.shipping.stateProvince", locale));
-				}
-
-				if (StringUtils.isBlank(order.getCustomer().getDelivery().getPostalCode())) {
-					FieldError error = new FieldError("customer.delivery.postalCode", "customer.delivery.postalCode",
-							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));

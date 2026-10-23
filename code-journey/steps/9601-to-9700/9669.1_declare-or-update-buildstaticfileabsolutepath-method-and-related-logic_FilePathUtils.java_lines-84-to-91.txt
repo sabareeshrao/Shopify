@@ -1,8 +1,0 @@
-
-	/**
-	 * Example: /<baseImagePath>/files/<storeCode>/STATIC_FILE/<fileName> Or
-	 * example: /<shopScheme>://<domainName>/<contextPath>/files/<storeCode>/
-	 */
-	public String buildStaticFileAbsolutePath(MerchantStore store, String fileName) {
-		if (StringUtils.isNotBlank(imageUtils.getBasePath(store))
-				&& imageUtils.getBasePath(store).startsWith(HTTP_SCHEME)) {

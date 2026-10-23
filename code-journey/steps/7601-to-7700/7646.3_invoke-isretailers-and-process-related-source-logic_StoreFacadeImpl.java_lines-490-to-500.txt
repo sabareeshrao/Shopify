@@ -1,0 +1,11 @@
+			if(code.isPresent()) {
+				
+				stores = merchantStoreService.listByGroup(name, code.get(), page, count);
+
+			} else {
+				if(criteria.isRetailers()) {
+					stores = merchantStoreService.listAllRetailers(name, page, count);
+				} else {
+					stores = merchantStoreService.listAll(name, page, count);
+				}
+			}

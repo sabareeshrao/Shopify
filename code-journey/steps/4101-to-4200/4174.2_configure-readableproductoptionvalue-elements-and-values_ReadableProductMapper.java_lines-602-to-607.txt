@@ -1,0 +1,6 @@
+
+
+		// take care of option value
+		Optional<ReadableProductOptionValue> optionOptionValue = this
+				.optionValue(instance.getVariation().getProductOptionValue(), store, language);
+

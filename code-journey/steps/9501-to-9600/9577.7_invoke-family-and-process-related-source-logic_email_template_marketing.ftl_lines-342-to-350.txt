@@ -1,9 +1,0 @@
-
-			</tr>
-			</table>
-		</td>
-	</tr>
-    -->
-
-	<!-- FOOTER -->
-	<!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->

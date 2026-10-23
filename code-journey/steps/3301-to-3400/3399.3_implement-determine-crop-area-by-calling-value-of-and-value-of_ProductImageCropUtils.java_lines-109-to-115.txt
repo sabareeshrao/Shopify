@@ -1,0 +1,7 @@
+		
+		if(factorWidth>factorHeight) {
+			factor = factorHeight;
+		}
+		
+		
+		// crop factor

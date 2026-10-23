@@ -1,7 +1,0 @@
-		
-		String value = config.toJSONString();
-		configuration.setValue(value);
-		if(configuration.getId()!=null && configuration.getId()>0) {
-			super.update(configuration);
-		} else {
-			super.create(configuration);

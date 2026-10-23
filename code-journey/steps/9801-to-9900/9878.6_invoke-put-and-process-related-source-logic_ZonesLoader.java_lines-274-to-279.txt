@@ -1,6 +1,0 @@
-			zonesDescriptionsMap.put(zoneCode, descriptions);
-		}
-
-		descriptions.add(zoneDescription);
-
-	}

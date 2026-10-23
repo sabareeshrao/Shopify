@@ -1,0 +1,6 @@
+		
+		//get parent store
+		if(!StringUtils.isBlank(source.getRetailerStore())) {
+		  if(source.getRetailerStore().equals(source.getCode())) {
+		    throw new ConversionException("Parent store [" + source.getRetailerStore() + "] cannot be parent of current store");
+		  }

@@ -1,0 +1,6 @@
+	<!-- Product images manager -->
+	<beans:bean id="productFileManager"
+		class="com.salesmanager.core.business.modules.cms.product.ProductFileManagerImpl">
+		<beans:property name="uploadImage">
+				<beans:ref bean="${config.cms.method}ProductAssetsManager" />
+		</beans:property>

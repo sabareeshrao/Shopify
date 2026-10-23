@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Karnataka",
+		"zoneName": "Karnataka",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Kerala",
+		"zoneName": "Kerala",
+		"countryCode": "IN"
+	},

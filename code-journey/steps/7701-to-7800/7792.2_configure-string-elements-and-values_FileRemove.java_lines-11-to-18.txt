@@ -1,8 +1,0 @@
-
-/**
- * @author Umesh Awasthi
- *
- */
-public interface FileRemove {
-  void removeFile(String merchantStoreCode, FileContentType staticContentType,
-      String fileName, Optional<String> path) throws ServiceException;

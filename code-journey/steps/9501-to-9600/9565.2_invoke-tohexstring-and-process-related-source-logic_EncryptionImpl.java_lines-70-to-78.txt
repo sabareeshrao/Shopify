@@ -1,0 +1,9 @@
+			for (byte datum : data) {
+				if ((datum & 0xFF) < 16) {
+					str = str + "0"
+							+ Integer.toHexString(datum & 0xFF);
+				} else {
+					str = str + Integer.toHexString(datum & 0xFF);
+				}
+
+			}

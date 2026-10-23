@@ -1,0 +1,11 @@
+    public @ResponseBody ErrorEntity handleFileException(Exception exception) {
+        log.error(exception.getMessage(), exception);
+        ErrorEntity errorEntity = new ErrorEntity();
+
+        String resultMessage = exception.getLocalizedMessage() != null ? exception.getLocalizedMessage() : exception.getMessage();
+        Optional.ofNullable(resultMessage)
+                .ifPresent(errorEntity::setMessage);
+        return errorEntity;
+    }
+
+}

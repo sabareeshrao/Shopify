@@ -1,4 +1,0 @@
-
-	@Override
-	public List<Category> listByParent(Category category) throws ServiceException {
-

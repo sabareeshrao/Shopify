@@ -1,7 +1,0 @@
-
-        
-    }
-
-    interface Views
-    {
-        interface Controllers

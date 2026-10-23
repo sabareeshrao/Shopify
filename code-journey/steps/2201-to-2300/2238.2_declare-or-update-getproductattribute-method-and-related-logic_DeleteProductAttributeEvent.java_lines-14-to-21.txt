@@ -1,8 +1,0 @@
-		this.productAttribute=productAttribute;
-	}
-
-	public ProductAttribute getProductAttribute() {
-		return productAttribute;
-	}
-
-}

@@ -1,0 +1,4 @@
+
+	@Override
+	public ReadableMerchantStore populate(MerchantStore source,
+			ReadableMerchantStore target, MerchantStore store, Language language)

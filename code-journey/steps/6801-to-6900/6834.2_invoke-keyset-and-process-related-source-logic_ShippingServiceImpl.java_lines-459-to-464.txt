@@ -1,6 +1,0 @@
-			for(String module : modules.keySet()) {
-				moduleName = module;
-				configuration = modules.get(module);
-				//use the first active module
-				if(configuration.isActive()) {
-					shippingQuoteModule = shippingModules.get(module);

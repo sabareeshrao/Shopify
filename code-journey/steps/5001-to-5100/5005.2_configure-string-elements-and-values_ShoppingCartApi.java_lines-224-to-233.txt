@@ -1,0 +1,10 @@
+	public @ResponseBody ReadableShoppingCart getByCustomer(@PathVariable Long id, // customer
+																					// id
+			@RequestParam Optional<String> cart, // cart code
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletRequest request,
+			HttpServletResponse response) {
+
+		Principal principal = request.getUserPrincipal();
+
+		// lookup customer
+		Customer customer = customerService.getById(id);

@@ -1,0 +1,6 @@
+	@Override
+	public void deleteLogo(String code) {
+		MerchantStore store = getByCode(code);
+		String image = store.getStoreLogo();
+		store.setStoreLogo(null);
+

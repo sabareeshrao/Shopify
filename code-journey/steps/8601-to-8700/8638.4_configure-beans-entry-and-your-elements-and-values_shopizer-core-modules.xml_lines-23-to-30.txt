@@ -1,0 +1,8 @@
+		<beans:entry key="canadapost" value-ref="canadapost" />
+		<beans:entry key="usps" value-ref="usps" />
+		<beans:entry key="ups" value-ref="ups" />
+		<beans:entry key="weightBased" value-ref="weightBased" />
+		<beans:entry key="storePickUp" value-ref="storePickUp" />
+		<!-- Requires google maps shippingDistancePreProcessor.apiKey=<YOUR KEY> 
+			in configs.properties -->
+		<beans:entry key="priceByDistance" value-ref="priceByDistance" />

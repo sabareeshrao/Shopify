@@ -1,7 +1,0 @@
-
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-		</dependency>
-
-		<!-- Swagger 2 documentation -->

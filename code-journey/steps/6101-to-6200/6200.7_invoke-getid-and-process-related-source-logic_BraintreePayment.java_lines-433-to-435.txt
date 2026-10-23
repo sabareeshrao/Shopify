@@ -1,0 +1,3 @@
+            for (ValidationError error : result.getErrors().getAllDeepValidationErrors()) {
+               errorString += "Error: " + error.getCode() + ": " + error.getMessage() + "\n";
+            }

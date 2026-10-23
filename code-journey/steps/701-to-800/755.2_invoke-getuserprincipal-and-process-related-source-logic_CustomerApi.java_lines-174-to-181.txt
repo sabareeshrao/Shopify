@@ -1,0 +1,8 @@
+	public PersistableCustomer update(@ApiIgnore MerchantStore merchantStore,
+			@Valid @RequestBody PersistableCustomer customer, HttpServletRequest request) {
+
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+
+		return customerFacade.update(userName, customer, merchantStore);
+	}

@@ -1,0 +1,7 @@
+
+			Map<Long, ReadableCategory> readableCategoryMap = readableCategories.stream()
+					.collect(Collectors.toMap(ReadableCategory::getId, Function.identity()));
+
+			readableCategories.stream()
+					// .filter(ReadableCategory::isVisible)
+					.filter(cat -> Objects.nonNull(cat.getParent()))

@@ -1,7 +1,0 @@
- 		<mvc:interceptor>
-  			<mvc:mapping path="/admin/**"/>
-  			<bean class="com.salesmanager.shop.filter.AdminFilter" />
- 		</mvc:interceptor>
-	</mvc:interceptors>
- 
-</beans>

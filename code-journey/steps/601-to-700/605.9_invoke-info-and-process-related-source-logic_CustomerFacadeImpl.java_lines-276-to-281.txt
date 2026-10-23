@@ -1,0 +1,6 @@
+    }
+    LOG.info(
+        "Seems some issue with system, unable to find any customer after successful authentication");
+    return null;
+
+  }

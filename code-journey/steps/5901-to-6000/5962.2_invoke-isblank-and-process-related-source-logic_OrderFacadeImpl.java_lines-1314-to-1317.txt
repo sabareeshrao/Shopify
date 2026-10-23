@@ -1,0 +1,4 @@
+
+			//lookup existing customer
+			//if customer exist then do not set authentication for this customer and send an instructions email
+			/** **/

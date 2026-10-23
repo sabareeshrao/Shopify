@@ -1,0 +1,10 @@
+	public boolean equals(Object o) {
+		if (o instanceof UserConnectionPK) {
+			UserConnectionPK other = (UserConnectionPK) o;
+			return other.getProviderId().equals(getProviderId())
+					&& other.getProviderUserId().equals(getProviderUserId())
+					&& other.getUserId().equals(getUserId());
+		} else {
+			return false;
+		}
+	}

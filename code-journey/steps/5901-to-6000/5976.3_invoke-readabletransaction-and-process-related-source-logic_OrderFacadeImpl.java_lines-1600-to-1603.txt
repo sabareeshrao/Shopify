@@ -1,0 +1,4 @@
+
+			ReadableTransaction transaction = null;
+			ReadableTransactionPopulator trxPopulator = null;
+

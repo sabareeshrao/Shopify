@@ -1,0 +1,8 @@
+		if (optionOptionValue.isPresent()) {
+			optionOptionValue.get().setId(instance.getId());
+			if (instance.isDefaultSelection()) {
+				optionOptionValue.get().setDefaultValue(true);
+			}
+			addOptionValue(option, optionOptionValue.get());
+
+		}

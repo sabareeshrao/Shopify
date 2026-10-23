@@ -1,8 +1,0 @@
-        req.append(" lower(m.storename) like:name");
-        countBuilder.append(" lower(m.storename) like:name");
-      }
-
-      if (!StringUtils.isBlank(criteria.getCriteriaOrderByField())) {
-        req.append(" order by m.").append(criteria.getCriteriaOrderByField()).append(" ")
-                .append(criteria.getOrderBy().name().toLowerCase());
-      }

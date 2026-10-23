@@ -1,7 +1,0 @@
-      populator.setPricingService(pricingService);
-      populator.populate(orderTotalSummary, returnSummary, merchantStore, language);
-
-      return returnSummary;
-
-    } catch (Exception e) {
-      LOGGER.error("Error while calculating order summary", e);

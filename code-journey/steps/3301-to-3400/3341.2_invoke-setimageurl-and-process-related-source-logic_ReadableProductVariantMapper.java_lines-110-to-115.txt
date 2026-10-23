@@ -1,6 +1,0 @@
-		img.setImageUrl(imagUtils.buildCustomTypeImageUtils(store, img.getImageName(), FileContentType.VARIANT));
-		return img;
-	}
-
-
-}

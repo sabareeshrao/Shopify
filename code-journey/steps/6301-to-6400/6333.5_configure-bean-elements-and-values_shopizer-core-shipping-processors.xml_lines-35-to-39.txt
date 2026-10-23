@@ -1,0 +1,5 @@
+		<!-- Decides dynamicaly which method is used based on a decision table-->
+		<bean id="shippingMethodDecisionProcess"
+			class="com.salesmanager.core.business.modules.integration.shipping.impl.ShippingDecisionPreProcessorImpl">
+		</bean>
+		

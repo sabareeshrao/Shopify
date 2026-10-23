@@ -1,8 +1,0 @@
-
-	public void setProviderUserId(String providerUserId) {
-		this.providerUserId = providerUserId;
-	}
-
-	public boolean equals(Object o) {
-		if (o instanceof UserConnectionPK) {
-			UserConnectionPK other = (UserConnectionPK) o;

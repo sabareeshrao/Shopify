@@ -1,0 +1,5 @@
+			} else {
+				Product temp = new Product();
+				temp.setProductHeight(h);
+				temp.setProductLength(l);
+				temp.setProductWidth(wd);

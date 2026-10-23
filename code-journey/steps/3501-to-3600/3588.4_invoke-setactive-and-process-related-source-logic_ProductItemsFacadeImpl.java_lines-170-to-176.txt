@@ -1,7 +1,0 @@
-		relationship.setActive(true);
-		relationship.setCode(group);
-		relationship.setStore(store);
-		relationship.setRelatedProduct(product);
-
-		try {
-			productRelationshipService.saveOrUpdate(relationship);

@@ -1,8 +1,0 @@
-					cc.setCcOwner(((CreditCardPayment) payment).getCardOwner());
-					cc.setCcExpires(((CreditCardPayment) payment).getExpirationMonth() + "-"
-							+ ((CreditCardPayment) payment).getExpirationYear());
-
-					// hash credit card number
-					if (!StringUtils.isBlank(cc.getCcNumber())) {
-						String maskedNumber = CreditCardUtils
-								.maskCardNumber(order.getPayment().get("creditcard_card_number"));

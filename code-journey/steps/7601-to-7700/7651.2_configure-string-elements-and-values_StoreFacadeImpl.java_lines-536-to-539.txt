@@ -1,0 +1,4 @@
+			Optional<String> code = Optional.ofNullable(criteria.getStoreCode());
+			
+			
+			//TODO Pageable

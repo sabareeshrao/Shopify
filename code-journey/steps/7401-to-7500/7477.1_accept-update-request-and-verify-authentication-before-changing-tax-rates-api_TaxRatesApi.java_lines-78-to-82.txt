@@ -1,0 +1,5 @@
+
+	/** Update tax rate for a given MerchantStore */
+	@PutMapping("/private/tax/rate/{id}")
+	@ApiOperation(httpMethod = "PUT", value = "Updates a taxRate", notes = "Requires administration access", produces = "application/json", response = Void.class)
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT") })

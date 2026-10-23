@@ -1,0 +1,10 @@
+    {
+        interface Controllers
+        {
+            interface Registration
+            {
+                String RegistrationPage = "shop/customer/registration.html";
+            }
+        }
+    }
+}

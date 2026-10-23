@@ -1,0 +1,10 @@
+    Collections.sort(currencyList, new Comparator<Currency>(){
+
+    	  public int compare(Currency o1, Currency o2)
+    	  {
+    	     return o1.getCode().compareTo(o2.getCode());
+    	  }
+    	});
+    return currencyList;
+  }
+}

@@ -1,7 +1,0 @@
-
-	private InputContentFile createInputContentFile(MultipartFile image) {
-
-		InputContentFile cmsContentImage = null;
-
-		try {
-

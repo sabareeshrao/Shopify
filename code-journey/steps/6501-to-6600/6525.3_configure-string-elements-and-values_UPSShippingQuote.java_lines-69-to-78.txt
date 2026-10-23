@@ -1,0 +1,10 @@
+		
+		if(keys==null || StringUtils.isBlank(keys.get("userId"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("userId");
+		}
+		
+		if(keys==null || StringUtils.isBlank(keys.get("password"))) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("password");
+		}

@@ -1,0 +1,10 @@
+			for(Transaction tr : transactions) {
+				transaction = new ReadableTransaction();
+				trxPopulator = new ReadableTransactionPopulator();
+
+				trxPopulator.setOrderService(orderService);
+				trxPopulator.setPricingService(pricingService);
+
+				trxPopulator.populate(tr, transaction, store, store.getDefaultLanguage());
+				trx.add(transaction);
+			}

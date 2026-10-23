@@ -1,0 +1,5 @@
+
+	private com.salesmanager.shop.model.order.v0.ReadableOrderList populateOrderList(final OrderList orderList,
+			final MerchantStore store, final Language language) {
+		List<Order> orders = orderList.getOrders();
+		com.salesmanager.shop.model.order.v0.ReadableOrderList returnList = new com.salesmanager.shop.model.order.v0.ReadableOrderList();

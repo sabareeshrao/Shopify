@@ -1,5 +1,0 @@
-		    	   billing.append(order.getBilling().getAddress()).append(LINE_BREAK);
-		    	   billing.append(order.getBilling().getCity()).append(", ");
-		    	   
-		    	   if(order.getBilling().getZone()!=null) {
-		    		   Zone zone = zones.get(order.getBilling().getZone().getCode());

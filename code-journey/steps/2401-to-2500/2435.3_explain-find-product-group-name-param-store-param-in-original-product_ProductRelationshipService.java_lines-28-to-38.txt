@@ -1,0 +1,11 @@
+	List<ProductRelationship> getByType(MerchantStore store, Product product,
+			ProductRelationshipType type, Language language) throws ServiceException;
+	
+	/**
+	 * Find by product and group name
+	 * @param store
+	 * @param product
+	 * @param name
+	 * @return
+	 * @throws ServiceException
+	 */

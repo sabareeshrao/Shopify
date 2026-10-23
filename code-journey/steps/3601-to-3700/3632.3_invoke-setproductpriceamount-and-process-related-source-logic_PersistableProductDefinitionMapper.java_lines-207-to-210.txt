@@ -1,0 +1,4 @@
+			    defaultPrice.setProductPriceAmount(defaultPriceAmount);
+			    defaultPrice.setCode(ProductPriceEntity.DEFAULT_PRICE_CODE);
+			    defaultPrice.setProductAvailability(productAvailability);
+                productAvailability.getPrices().add(defaultPrice);

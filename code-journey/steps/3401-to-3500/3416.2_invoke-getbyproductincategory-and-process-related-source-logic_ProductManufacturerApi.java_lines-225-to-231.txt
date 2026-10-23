@@ -1,0 +1,7 @@
+			throws Exception {
+
+		return manufacturerFacade.getByProductInCategory(merchantStore, language, id);
+
+	}
+
+}

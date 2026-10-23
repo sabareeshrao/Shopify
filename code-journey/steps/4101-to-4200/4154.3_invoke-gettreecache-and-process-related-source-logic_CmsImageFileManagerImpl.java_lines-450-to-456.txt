@@ -1,7 +1,0 @@
-      nd = cacheManager.getTreeCache().getRoot().getChild(contentFilesFqn);
-
-    }
-
-    return nd;
-
-  }

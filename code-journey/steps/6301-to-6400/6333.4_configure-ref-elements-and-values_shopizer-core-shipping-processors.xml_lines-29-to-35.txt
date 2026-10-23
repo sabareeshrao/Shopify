@@ -1,7 +1,0 @@
-			 -->
-			<ref bean="shippingMethodDecisionProcess"/>
-		</util:list>
-
-		
-		
-		<!-- Decides dynamicaly which method is used based on a decision table-->

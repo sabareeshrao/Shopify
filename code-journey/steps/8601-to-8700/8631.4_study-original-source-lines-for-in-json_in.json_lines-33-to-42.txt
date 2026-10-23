@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Gujarat",
+		"zoneName": "Gujarat",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Haryana",
+		"zoneName": "Haryana",
+		"countryCode": "IN"
+	},

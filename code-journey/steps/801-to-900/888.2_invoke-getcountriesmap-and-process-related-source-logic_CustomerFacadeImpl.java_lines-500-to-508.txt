@@ -1,0 +1,9 @@
+    Map<String, Country> countriesMap = countryService.getCountriesMap(language);
+    Country country = countriesMap.get(address.getCountry());
+
+    if (customerModel == null) {
+      LOG.error("Customer with ID {} does not exists..", userId);
+      // throw new CustomerNotFoundException( "customer with given id does not exists" );
+      throw new Exception("customer with given id does not exists");
+
+    }

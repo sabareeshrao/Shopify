@@ -1,0 +1,8 @@
+			max-width: 560px;
+			color: #000000; font-size: 13px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;"/></a>
+		</td>
+	</tr>
+
+	<!-- PARAGRAPH -->
+	<!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
+	<tr>

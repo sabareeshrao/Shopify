@@ -1,0 +1,4 @@
+        
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        JWTUser user = (JWTUser) jwtAdminDetailsService.loadUserByUsername(username);
+

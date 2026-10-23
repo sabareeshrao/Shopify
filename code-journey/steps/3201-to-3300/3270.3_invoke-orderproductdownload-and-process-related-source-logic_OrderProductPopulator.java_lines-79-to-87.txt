@@ -1,0 +1,9 @@
+			
+			if(digitalProduct!=null) {
+				OrderProductDownload orderProductDownload = new OrderProductDownload();	
+				orderProductDownload.setOrderProductFilename(digitalProduct.getProductFileName());
+				orderProductDownload.setOrderProduct(target);
+				orderProductDownload.setDownloadCount(0);
+				orderProductDownload.setMaxdays(ApplicationConstants.MAX_DOWNLOAD_DAYS);
+				target.getDownloads().add(orderProductDownload);
+			}

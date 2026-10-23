@@ -1,6 +1,0 @@
-	        
-	       eventMulticaster.setTaskExecutor(new SimpleAsyncTaskExecutor());
-	       return eventMulticaster;
-	   }
-
-}

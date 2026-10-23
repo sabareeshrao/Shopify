@@ -1,7 +1,0 @@
-   * @param path
-   * @throws ServiceException
-   */
-  void addFolder(final String merchantStoreCode, String folderName, Optional<String> path)
-      throws ServiceException;
-
-}

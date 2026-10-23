@@ -1,8 +1,0 @@
-      try {
-        response.sendError(503, "Error while getting shipping quote" + e.getMessage());
-      } catch (Exception ignore) {
-      }
-      return null;
-    }
-  }
-}

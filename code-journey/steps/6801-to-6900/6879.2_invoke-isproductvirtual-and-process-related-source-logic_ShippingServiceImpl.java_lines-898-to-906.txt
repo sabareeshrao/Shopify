@@ -1,0 +1,9 @@
+		for(ShoppingCartItem item : items) {
+			Product product = item.getProduct();
+			if(!product.isProductVirtual() && product.isProductShipeable()) {
+				requiresShipping = true;
+			}
+		}
+
+		return requiresShipping;		
+	}

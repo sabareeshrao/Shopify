@@ -1,0 +1,6 @@
+
+	private ReadableProductType type (ProductType type, Language language) {
+		ReadableProductType readableType = new ReadableProductType();
+		readableType.setCode(type.getCode());
+		readableType.setId(type.getId());
+

@@ -1,7 +1,0 @@
-			destination.setRegion(source.getRegion());
-			destination.setRegionVariant(source.getRegionVariant());
-			destination.setStore(store(store, language));
-			if (source.getAvailable() != null) {
-				if (source.getProductDateAvailable() != null) {
-					boolean isAfter = LocalDate.parse(DateUtil.getPresentDate())
-							.isAfter(LocalDate.parse(DateUtil.formatDate(source.getProductDateAvailable())));

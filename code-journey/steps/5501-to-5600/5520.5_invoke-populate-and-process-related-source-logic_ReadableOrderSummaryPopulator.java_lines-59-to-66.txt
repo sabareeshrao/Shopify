@@ -1,8 +1,0 @@
-					orderTotalPopulator.populate(orderTotal, t, store, language);
-					target.getTotals().add(t);
-				}
-			}
-			
-		
-		} catch(Exception e) {
-			LOGGER.error("Error during amount formatting " + e.getMessage());

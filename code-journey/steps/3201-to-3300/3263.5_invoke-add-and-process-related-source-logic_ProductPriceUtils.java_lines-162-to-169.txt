@@ -1,8 +1,0 @@
-				fp = fp.add(attributePrice);
-				finalPrice.setFinalPrice(fp);
-
-				BigDecimal op = finalPrice.getOriginalPrice();
-				op = op.add(attributePrice);
-				finalPrice.setOriginalPrice(op);
-			}
-		}

@@ -1,5 +1,0 @@
-  String getRootName();
-
-  String getLocation();
-
-}

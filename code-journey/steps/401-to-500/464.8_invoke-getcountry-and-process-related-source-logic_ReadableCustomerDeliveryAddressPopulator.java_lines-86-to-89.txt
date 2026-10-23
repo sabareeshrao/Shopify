@@ -1,0 +1,4 @@
+        if(source.getCountry()!=null) {
+            target.setCountry(source.getCountry().getIsoCode());
+            
+            //resolve country name

@@ -1,0 +1,5 @@
+  public void create(Category category) throws ServiceException {
+
+    super.create(category);
+    StringBuilder lineage = new StringBuilder();
+    Category parent = category.getParent();

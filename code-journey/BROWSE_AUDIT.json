@@ -10,5 +10,7 @@
   "child_over_eleven": 0,
   "zip_only_txt": true,
   "files_match_zip": true,
-  "parent_child_content_exact": "PASS"
+  "avoided_splits_corrected": 861,
+  "adjusted_parent_tasks": 654,
+  "no_bytes_changed": "PASS"
 }

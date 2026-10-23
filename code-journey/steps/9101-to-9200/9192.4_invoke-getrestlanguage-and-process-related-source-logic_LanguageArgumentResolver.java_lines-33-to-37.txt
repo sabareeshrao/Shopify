@@ -1,5 +1,0 @@
-
-    return languageUtils.getRESTLanguage(request, webRequest);
-  }
-
-}

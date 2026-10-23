@@ -1,8 +1,0 @@
-	<tr>
-	<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 400; line-height: 160%;
-		padding-top: 25px; 
-		color: #000000;
-		font-family: sans-serif;" class="paragraph">
-			We feel blessed to have had the opportunity to work with you in 2020 and can't wait to share with you what we have prepared for <strong>2021!</strong>
-		</td>
-	</tr>

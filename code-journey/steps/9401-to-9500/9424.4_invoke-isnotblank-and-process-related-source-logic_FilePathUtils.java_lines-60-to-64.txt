@@ -1,5 +1,0 @@
-		if (StringUtils.isNotBlank(fileName)) {
-			return path + fileName;
-		}
-		return path;
-	}

@@ -1,0 +1,8 @@
+	public List<ReadableContentEntity> contents(@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
+
+		Optional<String> op = Optional.empty();
+		return contentFacade.getContents(op, merchantStore, language);
+
+	}
+	
+	

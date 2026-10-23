@@ -1,0 +1,4 @@
+			//data = httpget.getResponseBodyAsString();
+			LOGGER.debug("usps quote response " + data);
+
+			USPSParsedElements parsed = new USPSParsedElements();

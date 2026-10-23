@@ -1,0 +1,9 @@
+	
+	@Autowired
+	private PageableCatalogRepository pageableCatalogRepository;
+
+	@Inject
+	public CatalogServiceImpl(CatalogRepository repository) {
+		super(repository);
+		this.catalogRepository = repository;
+	}

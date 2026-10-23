@@ -1,7 +1,0 @@
-		desc.setName(description.getName());
-		desc.setDescription(description.getDescription());
-		desc.setLanguage(description.getLanguage().getCode());
-		return desc;
-	}
-
-}

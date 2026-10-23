@@ -1,6 +1,0 @@
-label.subtotal=Sub-total
-label.checkout.confirmation=Order completed
-
-#register
-label.register.notyetregistered=Not yet registered?
-label.register.whyregister=Why register?

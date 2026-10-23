@@ -1,0 +1,10 @@
+			throws ServiceException {
+		Assert.notNull(merchantStoreCode, "Merchant store ID can not be null");
+		Assert.notNull(fileName, "File name can not be null");
+
+		String p = null;
+		Optional<String> path = Optional.ofNullable(p);
+
+		return contentFileManager.getFile(merchantStoreCode, path, fileContentType, fileName);
+
+	}

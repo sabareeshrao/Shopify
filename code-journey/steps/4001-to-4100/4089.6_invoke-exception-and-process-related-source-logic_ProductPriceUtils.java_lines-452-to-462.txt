@@ -1,0 +1,11 @@
+			if (matchPositiveInteger(amount)) {
+				BigDecimalValidator validator = CurrencyValidator.getInstance();
+				BigDecimal bdamount = validator.validate(amount, Locale.US);
+				if (bdamount == null) {
+					throw new Exception("Cannot parse " + amount);
+				} else {
+					return bdamount;
+				}
+			} else {
+				throw new Exception("Not a positive integer " + amount);
+			}

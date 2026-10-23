@@ -1,8 +1,0 @@
-				this.optionPrice = new BigDecimal(this.getOptionPriceText());
-			} catch(Exception e) {
-				LOGGER.error("Can't convert price text " + this.getOptionPriceText() + " to big decimal");
-			}
-		}
-		
-		return optionPrice;
-	}

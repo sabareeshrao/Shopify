@@ -1,7 +1,0 @@
-		
-	}
-
-	@Override
-	public Page<ProductVariantGroup> getByProductId(MerchantStore store, Long productId, Language language, int page,
-			int count) {
-		

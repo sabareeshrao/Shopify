@@ -1,0 +1,11 @@
+			if(source.getCustomerId() != null && source.getCustomerId().longValue() >0) {
+			  Long customerId = source.getCustomerId();
+			  customer = customerService.getById(customerId);
+
+			  if(customer == null) {
+				throw new ConversionException("Curstomer with id " + source.getCustomerId() + " does not exist");
+			  }
+			  target.setCustomerId(customerId);
+			
+			} else {
+			  if(source instanceof PersistableAnonymousOrder) {

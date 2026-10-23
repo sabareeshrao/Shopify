@@ -1,7 +1,0 @@
-			if(p.isEmpty()) {
-				throw new ResourceNotFoundException("Product with id [" + product.getId() + "] not found for store [" + store.getCode() + "]");
-			}
-			target = p.get();
-		} else {
-			target = new Product();
-		}

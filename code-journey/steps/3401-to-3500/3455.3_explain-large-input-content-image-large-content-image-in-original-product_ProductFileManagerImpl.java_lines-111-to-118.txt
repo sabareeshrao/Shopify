@@ -1,8 +1,0 @@
-       *
-       *
-       * uploadImage.uploadProductImage(configuration, productImage, largeContentImage);
-       */
-
-      /*
-       * //default small InputContentImage smallContentImage = new
-       * InputContentImage(ImageContentType.PRODUCT);

@@ -1,0 +1,8 @@
+			if(configuration==null) {
+				configuration = new MerchantConfiguration();
+				configuration.
+				setKey(SUPPORTED_COUNTRIES);
+				configuration.setMerchantStore(store);
+			} 
+			
+			configuration.setValue(value);

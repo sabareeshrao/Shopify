@@ -1,7 +1,0 @@
-      setCustomerModelDefaultProperties(customerModel, merchantStore);
-    }
-
-
-    return customerModel;
-
-  }

@@ -1,7 +1,0 @@
-				if(countRegion<regions.size()) {
-					regionsList.append(",");
-				}
-			}
-			regionsList.append("]");
-			returnString.append("\"regions\"").append(":").append(regionsList.toString());
-		}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "TamilNadu",
+		"zoneName": "Tamil Nadu",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Telangana",
+		"zoneName": "Telangana",
+		"countryCode": "IN"
+	},

@@ -1,0 +1,10 @@
+		if(!CollectionUtils.isEmpty(type.getDescriptions())) {
+			Optional<ProductTypeDescription> desc = type.getDescriptions().stream().filter(t -> t.getLanguage().getCode().equals(language.getCode()))
+			.map(d -> typeDescription(d)).findFirst();
+			if(desc.isPresent()) {
+				readableType.setDescription(desc.get());
+			}
+		}
+
+		return readableType;
+	}

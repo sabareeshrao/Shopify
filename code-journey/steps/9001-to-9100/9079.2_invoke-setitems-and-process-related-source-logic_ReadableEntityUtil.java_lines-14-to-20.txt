@@ -1,7 +1,0 @@
-        readableList.setItems(items);
-        readableList.setTotalPages(entityList.getTotalPages());
-        readableList.setRecordsTotal(entityList.getTotalElements());
-        readableList.setNumber(items.size());
-        return readableList;
-    }
-}

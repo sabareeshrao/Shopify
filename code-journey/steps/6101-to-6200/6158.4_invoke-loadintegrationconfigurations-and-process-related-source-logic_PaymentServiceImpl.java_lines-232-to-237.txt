@@ -1,6 +1,0 @@
-					
-					modules = ConfigurationModulesLoader.loadIntegrationConfigurations(decrypted);
-				}
-			} else {
-				merchantConfiguration = new MerchantConfiguration();
-				merchantConfiguration.setMerchantStore(store);

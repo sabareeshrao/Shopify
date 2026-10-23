@@ -1,8 +1,0 @@
-			imgPath.append(contextPath).append(imageUtils.buildProductImageUtils(store, source.getProduct().getSku(), source.getProductImage()));
-			destination.setImageUrl(imgPath.toString());
-		}
-		destination.setId(source.getId());
-		destination.setImageType(source.getImageType());
-		if(source.getProductImageUrl()!=null){
-			destination.setExternalUrl(source.getProductImageUrl());
-		}

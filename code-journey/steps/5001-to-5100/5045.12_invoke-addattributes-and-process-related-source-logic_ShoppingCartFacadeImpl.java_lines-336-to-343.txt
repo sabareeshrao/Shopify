@@ -1,8 +1,0 @@
-
-					item.addAttributes(attributeItem);
-				}
-			}
-		}
-
-		return item;
-	}

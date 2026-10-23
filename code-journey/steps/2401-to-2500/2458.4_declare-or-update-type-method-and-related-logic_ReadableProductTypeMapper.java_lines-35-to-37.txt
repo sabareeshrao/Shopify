@@ -1,0 +1,3 @@
+	
+	private ReadableProductType type (ProductType type, Language language) {
+		ReadableProductType readableType = null;

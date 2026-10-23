@@ -1,0 +1,8 @@
+	<task:executor id="threadPoolTaskExecutor" pool-size="5" />
+	<task:annotation-driven executor="executorService" />
+	<!--  End ASYNCH -->
+	
+	<!-- Enables the Spring MVC @Controller programming model, matrix variables are parameters containing
+	     multiple values color=red,green,blue
+	 -->
+	<mvc:annotation-driven enable-matrix-variables="true">

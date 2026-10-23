@@ -1,7 +1,0 @@
-			
-			for (ProductAvailability availability : instance.getAvailabilities()) {
-				this.setAvailability(availability, product);
-			}
-		} else {
-			// Update product with minimal set
-			modified.setAvailable(product.isAvailable());

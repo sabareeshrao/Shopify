@@ -1,0 +1,11 @@
+		try {
+			LOGGER.debug("Creating an optin : " + json);
+			//moduleConfigurationService.createOrUpdateModule(json);
+			response.setStatus(200);
+			resp.setStatus(200);
+			
+		} catch(Exception e) {
+			resp.setStatus(500);
+			resp.setErrorMessage(e);
+			response.sendError(503, "Exception while creating optin " + e.getMessage());
+		}

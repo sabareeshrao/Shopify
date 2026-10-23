@@ -1,9 +1,0 @@
-	@Override
-	public Long save(PersistableProductPrice price, MerchantStore store) {
-		
-		
-		ProductPrice productPrice = persistableProductPriceMapper.convert(price, store, store.getDefaultLanguage());
-		try {
-			if(!isPositive(productPrice.getId())) {
-				//avoid detached entity failed to persist
-				productPrice.getProductAvailability().setPrices(null);

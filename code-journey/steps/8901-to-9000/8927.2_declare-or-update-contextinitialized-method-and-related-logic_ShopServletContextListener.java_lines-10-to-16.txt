@@ -1,7 +1,0 @@
-
-@WebListener
-public class ShopServletContextListener implements ServletContextListener {
-	private static final Logger logger = LoggerFactory.getLogger(ShopServletContextListener.class);
-	@Override
-	public void contextInitialized(ServletContextEvent servletContextEvent) {
-		logger.info("===context init===");

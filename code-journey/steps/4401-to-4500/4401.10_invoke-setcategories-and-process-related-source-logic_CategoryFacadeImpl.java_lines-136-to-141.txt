@@ -1,0 +1,6 @@
+			
+			returnList.setCategories(filteredList);
+
+			
+			
+			return returnList;

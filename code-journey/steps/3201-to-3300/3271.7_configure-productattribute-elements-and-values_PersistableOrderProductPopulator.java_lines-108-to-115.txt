@@ -1,8 +1,0 @@
-					prices.add(other);
-				}
-			}*/
-			
-			target.setPrices(prices);
-			
-			//OrderProductAttribute
-			List<ProductAttribute> attributeItems = source.getAttributes();

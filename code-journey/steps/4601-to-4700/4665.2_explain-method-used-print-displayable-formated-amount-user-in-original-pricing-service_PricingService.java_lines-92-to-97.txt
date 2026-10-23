@@ -1,6 +1,0 @@
-	 * @param store
-	 * @return
-	 * @throws ServiceException
-	 */
-	String getDisplayAmount(BigDecimal amount, MerchantStore store)
-			throws ServiceException;

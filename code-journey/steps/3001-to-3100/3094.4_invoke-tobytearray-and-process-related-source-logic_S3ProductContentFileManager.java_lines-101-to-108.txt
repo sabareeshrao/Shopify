@@ -1,8 +1,0 @@
-          byte[] byteArray = IOUtils.toByteArray(o.getObjectContent());
-          ByteArrayOutputStream baos = new ByteArrayOutputStream(byteArray.length);
-          baos.write(byteArray, 0, byteArray.length);
-          OutputContentFile ct = new OutputContentFile();
-          ct.setFile(baos);
-          files.add(ct);
-        }
-      }

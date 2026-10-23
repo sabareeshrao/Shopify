@@ -1,0 +1,4 @@
+	private void setOrderTotals(OrderEntity order, OrderTotalSummary summary) {
+
+		List<OrderTotal> totals = new ArrayList<OrderTotal>();
+		List<com.salesmanager.core.model.order.OrderTotal> orderTotals = summary.getTotals();

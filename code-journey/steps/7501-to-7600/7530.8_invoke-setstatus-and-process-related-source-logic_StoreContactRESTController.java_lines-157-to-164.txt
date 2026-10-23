@@ -1,8 +1,0 @@
-			
-			ajaxResponse.setStatus(AjaxResponse.RESPONSE_STATUS_SUCCESS);
-			
-			return ajaxResponse;
-
-		
-		} catch (Exception e) {
-			LOGGER.error("Error while saving category",e);

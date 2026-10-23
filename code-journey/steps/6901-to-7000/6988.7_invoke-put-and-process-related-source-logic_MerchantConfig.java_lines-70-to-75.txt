@@ -1,6 +1,0 @@
-			data.put("defaultSearchConfigPath", obj);
-		}
-		
-		
-		return data.toJSONString();
-	}

@@ -1,0 +1,8 @@
+		try {
+			ProductImage productImage = productImageService.getById(id);
+
+			if (productImage != null) {
+				productImageService.delete(productImage);
+			} else {
+				response.sendError(404, "No ProductImage found for ID : " + id);
+			}

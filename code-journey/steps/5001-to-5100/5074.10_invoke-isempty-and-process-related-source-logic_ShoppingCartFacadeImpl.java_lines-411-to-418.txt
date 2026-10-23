@@ -1,8 +1,0 @@
-			if (!CollectionUtils.isEmpty(attributes)) {
-				for (com.salesmanager.shop.model.catalog.product.attribute.ProductAttribute attribute : attributes) {
-
-					ProductAttribute productAttribute = productAttributeService.getById(attribute.getId());
-
-					if (productAttribute != null
-							&& productAttribute.getProduct().getId().longValue() == p.getId().longValue()) {
-

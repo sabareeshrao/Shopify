@@ -1,0 +1,4 @@
+		
+		// pre processors
+		List<ShippingQuotePrePostProcessModule> preProcessors = this.shippingModulePreProcessors;
+		List<String> preProcessorKeys = new ArrayList<String>();

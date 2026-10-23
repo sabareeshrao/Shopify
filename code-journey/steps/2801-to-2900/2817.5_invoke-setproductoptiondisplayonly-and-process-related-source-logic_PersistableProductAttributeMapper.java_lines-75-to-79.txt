@@ -1,0 +1,5 @@
+			productOptionValue.setProductOptionDisplayOnly(true);
+			productOptionValue.setCode(UUID.randomUUID().toString());
+			productOptionValue.setMerchantStore(store);
+		}
+		

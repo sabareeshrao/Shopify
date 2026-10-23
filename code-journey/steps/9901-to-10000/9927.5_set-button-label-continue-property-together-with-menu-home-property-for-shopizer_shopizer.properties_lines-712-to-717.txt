@@ -1,6 +1,0 @@
-button.label.view=Details
-button.label.addToCart=Add to cart
-button.label.continue=Continue shopping
-
-#menus
-menu.home=Home

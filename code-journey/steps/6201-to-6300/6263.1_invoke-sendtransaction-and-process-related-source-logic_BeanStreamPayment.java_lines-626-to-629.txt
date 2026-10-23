@@ -1,0 +1,4 @@
+
+
+			return sendTransaction(orderNumber, store, messageString.toString(), transactionType, type, payment.getPaymentType(), amount, configuration, module);
+			

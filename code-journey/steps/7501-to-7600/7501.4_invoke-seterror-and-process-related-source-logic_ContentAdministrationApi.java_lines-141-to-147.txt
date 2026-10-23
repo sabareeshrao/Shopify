@@ -1,7 +1,0 @@
-				fs.setError("Invalid filename");
-				fs.setSuccess(false);
-				return fs;
-		    }
-
-			ContentFile cf = new ContentFile();
-			cf.setContentType(qqfile.getContentType());

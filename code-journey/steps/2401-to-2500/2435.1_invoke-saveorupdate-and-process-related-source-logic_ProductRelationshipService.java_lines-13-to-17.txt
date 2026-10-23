@@ -1,0 +1,5 @@
+public interface ProductRelationshipService extends
+		SalesManagerEntityService<Long, ProductRelationship> {
+
+	void saveOrUpdate(ProductRelationship relationship) throws ServiceException;
+

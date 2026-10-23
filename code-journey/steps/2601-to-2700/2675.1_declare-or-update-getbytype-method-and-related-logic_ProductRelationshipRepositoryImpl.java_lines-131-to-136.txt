@@ -1,6 +1,0 @@
-  @Override
-  @SuppressWarnings("unchecked")
-  public List<ProductRelationship> getByType(MerchantStore store, String type, Product product,
-      Language language) {
-    return entityManager.createQuery(HQL_GET_BY_CODE_AND_STORE_ID_AND_PRODUCT_ID)
-        .setParameter("code", type)

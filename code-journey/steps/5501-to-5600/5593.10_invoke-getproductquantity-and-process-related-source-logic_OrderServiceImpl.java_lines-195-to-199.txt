@@ -1,0 +1,5 @@
+        for(OrderProduct orderProduct : products) {
+            orderProduct.getProductQuantity();
+            Product p = productService.getById(orderProduct.getId());
+            if(p == null)
+                throw new ServiceException(ServiceException.EXCEPTION_INVENTORY_MISMATCH);

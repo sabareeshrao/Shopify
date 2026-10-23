@@ -1,0 +1,10 @@
+        for (String value : values) {
+
+          dataEntries.append("\"").append(value).append("\"");
+          if (count < values.size() - 1) {
+            dataEntries.append(",");
+          }
+          count++;
+        }
+
+        optionsEntries.append("[").append(dataEntries.toString()).append("]");

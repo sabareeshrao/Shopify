@@ -1,8 +1,0 @@
-	public void addFile(final String merchantStoreCode, Optional<String> folderPath,
-			final InputContentFile inputStaticContentData) throws ServiceException {
-		/*
-		 * if ( cacheManager.getTreeCache() == null ) { LOGGER.error(
-		 * "Unable to find cacheManager.getTreeCache() in Infinispan.." ); throw
-		 * new ServiceException(
-		 * "CmsStaticContentFileManagerInfinispanImpl has a null cacheManager.getTreeCache()"
-		 * ); }

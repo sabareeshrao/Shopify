@@ -1,8 +1,0 @@
-			for(Long orderId : processingTransactions.keySet()) {
-
-				List<Transaction> trx = processingTransactions.get(orderId);
-				if(CollectionUtils.isNotEmpty(trx)) {
-
-					boolean capturable = true;
-					for(Transaction t : trx) {
-

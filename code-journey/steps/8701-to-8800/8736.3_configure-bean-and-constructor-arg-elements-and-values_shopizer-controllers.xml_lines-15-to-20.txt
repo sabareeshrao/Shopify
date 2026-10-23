@@ -1,6 +1,0 @@
-	<bean id="executorService" class="java.util.concurrent.Executors"
-    	factory-method="newFixedThreadPool">
-    	<constructor-arg value="5" />
-	</bean>
-	
-	

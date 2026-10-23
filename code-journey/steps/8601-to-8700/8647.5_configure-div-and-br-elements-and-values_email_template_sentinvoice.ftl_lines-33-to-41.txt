@@ -1,9 +1,0 @@
-  <div class="content">
-    <div class="content-line">
-    	${EMAIL_STORE_NAME}<br /><br />
-	${EMAIL_GREETING} ${EMAIL_CUSTOMER_NAME}<br/><br/>
-    	${EMAIL_INVOICE_MESSAGE}<br /><br />
-    	${EMAIL_INVOICE_PAYMENT_URL}<br /><br />
-    	${EMAIL_CONTACT_OWNER}
-    </div>
-</div>

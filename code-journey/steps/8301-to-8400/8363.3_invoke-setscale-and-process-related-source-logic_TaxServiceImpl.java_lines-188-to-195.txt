@@ -1,8 +1,0 @@
-					subTotal.setScale(2, RoundingMode.HALF_UP);
-				}
-					
-				subTotal = subTotal.add(itemPrice);
-				taxClassAmountMap.put(taxClass.getId(), subTotal);
-				taxClasses.put(taxClass.getId(), taxClass);
-				
-		}

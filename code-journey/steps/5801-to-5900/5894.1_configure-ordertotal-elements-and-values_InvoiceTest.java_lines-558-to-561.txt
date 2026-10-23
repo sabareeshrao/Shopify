@@ -1,0 +1,4 @@
+			
+			//print totals
+			productCell++;
+			Set<OrderTotal> totals = order.getOrderTotal();

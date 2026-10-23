@@ -1,0 +1,7 @@
+
+
+	/**
+	 * Calculate processors
+	 * @return
+	 */
+	@Bean

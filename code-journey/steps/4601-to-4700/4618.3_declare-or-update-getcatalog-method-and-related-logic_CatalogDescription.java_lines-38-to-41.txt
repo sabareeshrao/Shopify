@@ -1,0 +1,4 @@
+
+	public Catalog getCatalog() {
+		return catalog;
+	}

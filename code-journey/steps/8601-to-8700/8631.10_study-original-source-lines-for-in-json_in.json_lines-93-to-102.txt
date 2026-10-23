@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Odisha",
+		"zoneName": "Odisha",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Punjab",
+		"zoneName": "Punjab",
+		"countryCode": "IN"
+	},

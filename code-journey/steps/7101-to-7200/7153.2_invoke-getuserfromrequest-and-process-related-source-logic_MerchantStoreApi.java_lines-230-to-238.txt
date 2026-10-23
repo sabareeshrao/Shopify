@@ -1,0 +1,9 @@
+	public void update(@PathVariable String code, @Valid @RequestBody PersistableMerchantStore store,
+			HttpServletRequest request) {
+
+		String userName = getUserFromRequest(request);
+		validateUserPermission(userName, code);
+		store.setCode(code);
+		storeFacade.update(store);
+	}
+

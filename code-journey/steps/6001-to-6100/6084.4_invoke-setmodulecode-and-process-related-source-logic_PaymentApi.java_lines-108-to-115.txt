@@ -1,8 +1,0 @@
-				integrationConfiguration.setModuleCode(configuration.getCode());
-			}
-
-
-			integrationConfiguration.setActive(configuration.isActive());
-			integrationConfiguration.setDefaultSelected(configuration.isDefaultSelected());
-			integrationConfiguration.setIntegrationKeys(configuration.getIntegrationKeys());
-			integrationConfiguration.setIntegrationOptions(configuration.getIntegrationOptions());

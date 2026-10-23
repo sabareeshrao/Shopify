@@ -1,0 +1,6 @@
+
+      List<ReadableProductReview> reviews =
+    		  productCommonFacade.getProductReviews(product, merchantStore, language);
+
+      return reviews;
+

@@ -1,6 +1,0 @@
-		
-		productVariant.setId(variationId);
-		productVariant.setCode(var.getCode());
-		ProductVariation model = persistableProductVariationMapper.merge(var, productVariant, store, language);
-		try {
-			model.setMerchantStore(store);

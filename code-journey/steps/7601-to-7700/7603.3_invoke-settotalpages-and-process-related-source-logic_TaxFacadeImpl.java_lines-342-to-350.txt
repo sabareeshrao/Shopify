@@ -1,0 +1,9 @@
+			returnRates.setTotalPages(1);
+			returnRates.setNumber(readableRates.size());
+			returnRates.setRecordsTotal(readableRates.size());
+			
+			return returnRates;
+		} catch (ServiceException e) {
+			LOGGER.error("Error while getting taxRates for store [" + store.getCode() + "]", e);
+			throw new ServiceRuntimeException("Error while getting taxRates for store [" + store.getCode() + "]", e);
+		}

@@ -1,0 +1,4 @@
+				if (oldCartItem.getQuantity().intValue() == newItemValue.getQuantity()) {
+					// this is unchanged
+					continue;
+				}

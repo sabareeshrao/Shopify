@@ -1,7 +1,0 @@
-    
-    
-    private void postFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-    	
-    	try {
-    		
-    		UserContext userContext = UserContext.getCurrentInstance();

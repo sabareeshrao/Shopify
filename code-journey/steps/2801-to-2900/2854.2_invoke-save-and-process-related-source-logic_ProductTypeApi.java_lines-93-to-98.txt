@@ -1,6 +1,0 @@
-		Long id = productTypeFacade.save(type, merchantStore, language);
-		Entity entity = new Entity();
-		entity.setId(id);
-		return entity;
-
-	}

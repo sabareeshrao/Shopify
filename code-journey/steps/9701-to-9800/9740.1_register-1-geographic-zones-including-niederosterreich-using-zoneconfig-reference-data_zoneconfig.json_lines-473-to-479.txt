@@ -1,7 +1,0 @@
-	{
-		"zoneCode": "NO",
-		"zoneName": "Niederosterreich",
-		"countryCode": "AT"
-	},
-	{
-		"zoneCode": "OO",

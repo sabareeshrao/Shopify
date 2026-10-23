@@ -1,8 +1,0 @@
-
-			if(c == null) {
-				throw new ResourceNotFoundException("Category with id [" + child + "] for store [" + store.getCode() + "]");
-			}
-
-			if(parent.longValue()==-1) {
-				categoryService.addChild(null, c);
-				return;

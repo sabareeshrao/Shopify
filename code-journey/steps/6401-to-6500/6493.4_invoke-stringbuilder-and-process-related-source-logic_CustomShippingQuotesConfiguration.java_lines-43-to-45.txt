@@ -1,0 +1,3 @@
+			StringBuilder regionsList = new StringBuilder();
+			int countRegion = 0;
+			regionsList.append("[");

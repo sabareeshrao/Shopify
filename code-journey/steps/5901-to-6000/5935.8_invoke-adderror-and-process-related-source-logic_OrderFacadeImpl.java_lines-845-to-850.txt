@@ -1,6 +1,0 @@
-					bindingResult.addError(error);
-					messagesResult.put("customer.delivery.postalCode",
-							messages.getMessage("NotEmpty.customer.shipping.postalCode", locale));
-				}
-
-			}

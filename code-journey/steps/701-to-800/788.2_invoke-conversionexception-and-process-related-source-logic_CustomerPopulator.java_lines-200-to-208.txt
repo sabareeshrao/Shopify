@@ -1,0 +1,9 @@
+                if(StringUtils.isNotBlank( source.getDelivery().getCountry() )) {
+                    deliveryCountry = countries.get(source.getDelivery().getCountry());
+                    if(deliveryCountry==null) {
+                        throw new ConversionException("Unsuported country code " + sourceShipping.getCountry());
+                    }
+                    delivery.setCountry(deliveryCountry);
+                    target.setDelivery( delivery );
+                }
+			}

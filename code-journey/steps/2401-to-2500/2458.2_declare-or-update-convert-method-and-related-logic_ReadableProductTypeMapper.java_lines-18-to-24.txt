@@ -1,7 +1,0 @@
-
-@Component
-public class ReadableProductTypeMapper implements Mapper<ProductType, ReadableProductType> {
-
-	@Override
-	public ReadableProductType convert(ProductType source, MerchantStore store, Language language) {
-		ReadableProductType type = new ReadableProductType();

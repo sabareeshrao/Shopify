@@ -1,8 +1,0 @@
-			
-		    String path = null;
-		    
-			
-			productDownloadsFileManager.addFile(product.getMerchantStore().getCode(), Optional.of(path), inputFile);
-			
-			product.setProductVirtual(true);
-			productService.update(product);

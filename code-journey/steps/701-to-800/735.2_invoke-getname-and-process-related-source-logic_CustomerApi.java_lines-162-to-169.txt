@@ -1,0 +1,8 @@
+	public void updateAuthUserAddress(@ApiIgnore MerchantStore merchantStore, @RequestBody PersistableCustomer customer,
+			HttpServletRequest request) {
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+
+		customerFacade.updateAddress(userName, customer, merchantStore);
+
+	}

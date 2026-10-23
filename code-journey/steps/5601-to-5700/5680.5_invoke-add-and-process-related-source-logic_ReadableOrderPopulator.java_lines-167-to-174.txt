@@ -1,8 +1,0 @@
-				totals.add(totalTotal);
-			}
-			else if(t.getOrderTotalType().name().equals(OrderTotalType.HANDLING.name())) {
-				com.salesmanager.shop.model.order.total.OrderTotal totalTotal = createTotal(t);
-				if(shippingTotal==null) {
-					shippingTotal = totalTotal;
-				} else {
-					BigDecimal v = shippingTotal.getValue();

@@ -1,0 +1,5 @@
+		
+		
+		target.setDimension(MeasureUnit.valueOf(source.getSeizeunitcode()));
+		target.setWeight(WeightUnit.valueOf(source.getWeightunitcode()));
+		

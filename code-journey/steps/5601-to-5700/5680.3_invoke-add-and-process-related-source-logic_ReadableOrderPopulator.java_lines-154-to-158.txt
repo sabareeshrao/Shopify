@@ -1,0 +1,5 @@
+				target.setTax(totalTotal);
+				totals.add(totalTotal);
+			}
+			else if(t.getOrderTotalType().name().equals(OrderTotalType.SHIPPING.name())) {
+				com.salesmanager.shop.model.order.total.OrderTotal totalTotal = createTotal(t);

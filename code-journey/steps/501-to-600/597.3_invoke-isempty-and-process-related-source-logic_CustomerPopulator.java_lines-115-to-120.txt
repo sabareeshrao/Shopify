@@ -1,0 +1,6 @@
+				if (!StringUtils.isEmpty(sourceBilling.getLastName()))
+					billing.setLastName(sourceBilling.getLastName());
+				billing.setTelephone(sourceBilling.getPhone());
+				billing.setPostalCode(sourceBilling.getPostalCode());
+				billing.setState(sourceBilling.getStateProvince());
+				Country billingCountry = null;

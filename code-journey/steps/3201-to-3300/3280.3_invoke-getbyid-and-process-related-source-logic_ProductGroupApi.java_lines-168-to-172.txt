@@ -1,5 +1,0 @@
-	  
-	Product product = null;
-    try {
-      // get the product
-    	product = productService.getById(productId);

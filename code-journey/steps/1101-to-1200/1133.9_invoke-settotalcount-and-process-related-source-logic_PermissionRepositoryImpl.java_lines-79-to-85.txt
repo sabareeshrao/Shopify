@@ -1,7 +1,0 @@
-	    		permissionList.setTotalCount(criteria.getMaxCount());
-	    	}
-	    	else {
-	    		q.setMaxResults(count.intValue());
-	    		permissionList.setTotalCount(count.intValue());
-	    	}
-    	}

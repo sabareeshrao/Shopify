@@ -1,0 +1,8 @@
+	
+	@RequestMapping( value="/private/system/optin", method=RequestMethod.POST)
+	@ResponseBody
+	public AjaxResponse createOptin(@RequestBody final String json, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		AjaxResponse resp = new AjaxResponse();
+		

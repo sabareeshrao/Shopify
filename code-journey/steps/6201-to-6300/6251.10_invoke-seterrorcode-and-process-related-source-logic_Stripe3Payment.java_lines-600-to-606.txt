@@ -1,7 +1,0 @@
-			te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-			return te;
-		}
-
-
-	} else {
-		LOGGER.error("Stripe module error", ex.getMessage());

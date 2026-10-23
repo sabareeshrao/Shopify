@@ -1,0 +1,4 @@
+  @Override
+  public ReadableProductOptionValue merge(ProductOptionValue source, ReadableProductOptionValue destination,
+                                                MerchantStore store, Language language) {
+    ReadableProductOptionValue readableProductOptionValue = new ReadableProductOptionValue();

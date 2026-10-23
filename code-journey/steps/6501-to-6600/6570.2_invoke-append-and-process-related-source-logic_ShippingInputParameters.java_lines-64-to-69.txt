@@ -1,6 +1,0 @@
-		.append(" province : ").append(this.getProvince())
-		.append(" price : ").append(this.getPrice())
-		.append(" country : ").append(this.getCountry());
-		return sb.toString();	
-	}
-	

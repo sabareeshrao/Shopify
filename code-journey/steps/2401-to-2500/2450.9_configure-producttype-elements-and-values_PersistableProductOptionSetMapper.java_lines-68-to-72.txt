@@ -1,0 +1,5 @@
+		
+		if(!CollectionUtils.isEmpty(source.getProductTypes())) {
+			try {
+				List<ProductType> types = productTypeService.listProductTypes(source.getProductTypes(), store, language);
+				Set<ProductType> typesSet = new HashSet<ProductType>(types);

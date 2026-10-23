@@ -1,0 +1,8 @@
+				if(!StringUtils.isBlank(sourceBilling.getCountry())) {
+					billingCountry = countries.get(sourceBilling.getCountry());
+					if(billingCountry==null) {
+						throw new ConversionException("Unsuported country code " + sourceBilling.getCountry());
+					}
+					billing.setCountry(billingCountry);
+				}
+				

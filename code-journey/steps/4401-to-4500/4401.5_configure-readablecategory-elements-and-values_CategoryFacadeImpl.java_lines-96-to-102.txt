@@ -1,7 +1,0 @@
-				returnList.setTotalPages(pageable.getTotalPages());
-				returnList.setNumber(categories.size());
-			}
-
-
-
-			List<ReadableCategory> readableCategories = null;

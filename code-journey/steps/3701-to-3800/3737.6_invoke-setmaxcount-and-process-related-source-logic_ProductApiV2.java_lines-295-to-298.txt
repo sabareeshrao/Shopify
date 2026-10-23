@@ -1,0 +1,4 @@
+		
+		searchCriterias.setMaxCount(count);
+		searchCriterias.setLanguage(language.getCode());
+

@@ -1,0 +1,11 @@
+			for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
+				qs.append(" and po.code =:").append(attributeCriteria.getAttributeCode());
+				qs.append(" and povd.description like :").append("val").append(cnt)
+						.append(attributeCriteria.getAttributeCode());
+				cnt++;
+			}
+			if (criteria.getLanguage() != null && !criteria.getLanguage().equals("_all")) {
+				qs.append(" and povd.language.code=:lang");
+			}
+
+		}

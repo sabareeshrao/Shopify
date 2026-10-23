@@ -1,7 +1,0 @@
-	 * @return PaymentModule
-	 * @throws ServiceException
-	 */
-	PaymentModule getPaymentModule(String paymentModuleCode)
-			throws ServiceException;
-
-}

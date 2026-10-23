@@ -1,0 +1,6 @@
+		
+		//if(keys==null || StringUtils.isBlank(keys.get("note"))) {
+		if(keys==null) {
+			errorFields = new ArrayList<String>();
+			errorFields.add("note");
+		}

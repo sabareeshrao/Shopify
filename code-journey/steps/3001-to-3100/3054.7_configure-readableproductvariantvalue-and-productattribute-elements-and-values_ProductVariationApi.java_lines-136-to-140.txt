@@ -1,0 +1,5 @@
+    
+    List<ReadableProductVariantValue> variants = options.getOptions();
+    List<ProductAttribute> attributes = new ArrayList<ProductAttribute>();
+    
+    Set<ProductAttribute> productAttributes = product.getAttributes();

@@ -1,0 +1,4 @@
+
+    String searchParam = request.getParameter("search[value]");
+    String orderColums = request.getParameter("order[0][column]");
+

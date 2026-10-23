@@ -1,6 +1,0 @@
-
-	<beans:bean id="messages" class="com.salesmanager.shop.utils.LabelUtils"/>
-
-	<!-- 
-	local image handler
-	-->

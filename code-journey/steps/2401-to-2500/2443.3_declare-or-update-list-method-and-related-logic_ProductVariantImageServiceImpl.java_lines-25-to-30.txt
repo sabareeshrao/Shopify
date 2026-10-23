@@ -1,0 +1,6 @@
+
+	@Override
+	public List<ProductVariantImage> list(Long productVariantId, MerchantStore store) {
+		Validate.notNull(store, "MerchantStore cannot be null");
+		return productVariantImageRepository.finByProductVariant(productVariantId, store.getCode());
+	}

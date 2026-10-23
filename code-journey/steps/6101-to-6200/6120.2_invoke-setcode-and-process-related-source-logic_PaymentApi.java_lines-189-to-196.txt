@@ -1,8 +1,0 @@
-
-		readable.setCode(module.getCode());
-		readable.setImage(module.getImage());
-		readable.setBinaryImage(module.getBinaryImage());
-		//readable.setRequiredKeys(module.getConfigurables());
-		readable.setConfigurable(module.getConfigurable());
-		if (configuredModules.containsKey(module.getCode())) {
-			readable.setConfigured(true);

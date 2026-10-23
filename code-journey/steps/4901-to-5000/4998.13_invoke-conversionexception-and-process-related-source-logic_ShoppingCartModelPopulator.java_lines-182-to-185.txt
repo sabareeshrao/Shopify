@@ -1,0 +1,4 @@
+       catch (Exception ex){
+           LOG.error( "Error while converting cart data to cart model.."+ex );
+           throw new ConversionException( "Unable to create cart model", ex );  
+       }

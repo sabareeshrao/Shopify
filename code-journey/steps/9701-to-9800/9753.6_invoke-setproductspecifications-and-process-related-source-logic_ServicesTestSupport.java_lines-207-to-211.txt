@@ -1,0 +1,5 @@
+		product.setProductSpecifications(specifications);
+		product.setAvailable(true);
+		product.setPrice(BigDecimal.TEN);
+		product.setSku(code);
+		product.setQuantity(100);

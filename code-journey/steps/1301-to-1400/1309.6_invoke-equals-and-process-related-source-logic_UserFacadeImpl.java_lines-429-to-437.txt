@@ -1,0 +1,9 @@
+			// i'm i editing my own profile ?
+			if (authenticatedUser.equals(adminName)) {
+
+				if (!userModel.getMerchantStore().getCode().equals(store.getCode())) {
+					throw new OperationNotAllowedException("User [" + adminName + "] cannot change owning store");
+				}
+
+			} else {
+				// i am an admin or super admin

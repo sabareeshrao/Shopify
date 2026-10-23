@@ -1,8 +1,0 @@
-
-	/**
-	 * This method has to be used to format store front amounts It will display
-	 * national format amount ex: $1,345.99 Rs.1.345.99 or international format
-	 * USD1,345.79 INR1,345.79
-	 * 
-	 * @param store
-	 * @param amount

@@ -1,7 +1,0 @@
-
-					startDate = DateUtil.getDate(source.getPrice().getDiscountStartDate());
-
-					price.setProductPriceSpecialStartDate(startDate);
-				}
-				if (source.getPrice().getDiscountEndDate() != null) {
-					Date endDate = DateUtil.getDate(source.getPrice().getDiscountEndDate());

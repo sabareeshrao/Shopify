@@ -1,0 +1,6 @@
+	private static final Logger LOGGER = LoggerFactory.getLogger( GeoLocationImpl.class );
+
+
+	@Override
+	public Address getAddress(String ipAddress) throws Exception {
+		

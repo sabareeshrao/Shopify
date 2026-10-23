@@ -1,0 +1,11 @@
+						<ul class="sidebar">
+							<li>
+								<a>
+								<strong>${SHIPPING_METHOD_TITLE}</strong><br>
+								${SHIPPING_METHOD_DETAILS}
+								</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				</table>

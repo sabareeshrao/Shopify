@@ -1,8 +1,0 @@
-
-      if (StringUtils.isBlank(lang)) {
-        if (language == null) {
-    	    String storeValue = Optional.ofNullable(webRequest.getParameter(REQUEST_PARAMATER_STORE))
-    				.filter(StringUtils::isNotBlank).orElse(DEFAULT_STORE);
-    	    if(!StringUtils.isBlank(storeValue)) {
-    	      try {
-    	    	  MerchantStore storeModel = storeFacade.get(storeValue);

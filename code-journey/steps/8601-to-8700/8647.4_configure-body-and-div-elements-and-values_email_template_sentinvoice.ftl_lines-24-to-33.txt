@@ -1,0 +1,10 @@
+
+<body>
+<div class="holder">
+
+  <!-- Header Section -->
+  ${LOGOPATH}
+
+
+  <!-- Content Section -->
+  <div class="content">

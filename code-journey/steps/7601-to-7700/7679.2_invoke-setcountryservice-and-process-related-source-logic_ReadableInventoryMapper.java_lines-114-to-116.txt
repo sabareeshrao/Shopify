@@ -1,0 +1,3 @@
+		return readableMerchantStorePopulator.populate(store, new ReadableMerchantStore(), store, language);
+	}
+

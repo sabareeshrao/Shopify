@@ -1,0 +1,6 @@
+		taxClass.setName(source.getTitle());
+		taxClass.setStore(store.getCode());
+		return taxClass;
+	}
+
+	@Override

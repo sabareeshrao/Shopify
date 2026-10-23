@@ -1,0 +1,6 @@
+import java.util.List;
+
+public final class ReadableEntityUtil {
+
+    private ReadableEntityUtil() {}
+

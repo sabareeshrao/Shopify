@@ -1,6 +1,0 @@
-		
-			//save to a product
-			Product product = this.product(productId, store);
-			product.getAttributes().addAll(modelAttributes);
-		
-		

@@ -1,0 +1,3 @@
+			StringBuilder quotesList = new StringBuilder();
+			int countQuotes = 0;
+			quotesList.append("[");

@@ -1,5 +1,0 @@
-		taxFacade.deleteTaxRate(id, merchantStore, language);
-
-	}
-
-}

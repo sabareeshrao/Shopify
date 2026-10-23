@@ -1,7 +1,0 @@
-public interface FolderPut {
-	
-	
-  /**
-   * Create folder on root or on specific path
-   * @param merchantStoreCode
-   * @param folderName

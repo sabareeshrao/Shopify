@@ -1,0 +1,9 @@
+	public void setCreationDate(String creationDate) {
+		this.creationDate = creationDate;
+	}
+/*	public ReadableProduct getProduct() {
+		return product;
+	}
+	public void setProduct(ReadableProduct product) {
+		this.product = product;
+	}*/

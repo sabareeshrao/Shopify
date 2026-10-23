@@ -1,7 +1,0 @@
-
-			StringBuilder qs = new StringBuilder();
-			qs.append(productQueryV2());
-
-			qs.append("where p.id=:pid");
-			if (merchant != null) {
-				merchantId = merchant.getId();

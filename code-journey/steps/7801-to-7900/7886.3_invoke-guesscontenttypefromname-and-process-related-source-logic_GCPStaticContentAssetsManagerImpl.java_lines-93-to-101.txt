@@ -1,0 +1,9 @@
+			for (Blob blob : blobs.iterateAll()) {
+				if (isInsideSubFolder(blob.getName()))
+				continue;
+				String mimetype = URLConnection.guessContentTypeFromName(blob.getName());
+				if (!StringUtils.isBlank(mimetype)) {
+				fileNames.add(getName(blob.getName()));
+				}
+	
+			}

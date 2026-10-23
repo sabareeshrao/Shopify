@@ -1,0 +1,5 @@
+		destination.setId(source.getId());
+		destination.setImageType(source.getImageType());
+		if(source.getProductImageUrl()!=null){
+			destination.setExternalUrl(source.getProductImageUrl());
+		}

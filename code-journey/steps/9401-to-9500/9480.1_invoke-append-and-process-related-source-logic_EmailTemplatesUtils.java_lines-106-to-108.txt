@@ -1,0 +1,3 @@
+		    	   billing.append(order.getBilling().getAddress()).append(LINE_BREAK);
+		    	   billing.append(order.getBilling().getCity()).append(", ");
+		    	   

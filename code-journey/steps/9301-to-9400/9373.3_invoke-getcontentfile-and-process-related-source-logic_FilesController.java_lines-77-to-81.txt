@@ -1,0 +1,5 @@
+		
+		// needs to query the new API
+		OutputContentFile file = contentService.getContentFile(storeCode, fileType, fileNameAndExtension);
+		
+		

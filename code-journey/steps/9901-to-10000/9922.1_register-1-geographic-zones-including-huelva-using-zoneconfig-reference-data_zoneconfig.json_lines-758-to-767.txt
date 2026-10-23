@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Huelva",
+		"zoneName": "Huelva",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Huesca",
+		"zoneName": "Huesca",
+		"countryCode": "ES"
+	},

@@ -1,8 +1,0 @@
-		if (content.getId() != null && content.getId() > 0) {
-			super.update(content);
-		} else {
-			super.save(content);
-		}
-
-	}
-

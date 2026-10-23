@@ -1,0 +1,4 @@
+			target.setPaymentType(source.getPaymentType());
+			target.setShippingModuleCode(source.getShippingModule());
+			target.setCustomerAgreement(source.isCustomerAgreed());
+			target.setConfirmedAddress(source.isConfirmedAddress());

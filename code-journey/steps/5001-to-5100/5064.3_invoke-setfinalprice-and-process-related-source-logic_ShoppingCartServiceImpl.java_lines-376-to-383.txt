@@ -1,8 +1,0 @@
-				shippingProduct.setFinalPrice(item.getFinalPrice());
-				shippingProducts.add(shippingProduct);
-			}
-		}
-
-		return shippingProducts;
-
-	}

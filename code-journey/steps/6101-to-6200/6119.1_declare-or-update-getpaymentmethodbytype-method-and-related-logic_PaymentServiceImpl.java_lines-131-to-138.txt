@@ -1,8 +1,0 @@
-	
-	@Override
-	public IntegrationModule getPaymentMethodByType(MerchantStore store, String type) throws ServiceException {
-		List<IntegrationModule> modules =  getPaymentMethods(store);
-
-		for(IntegrationModule module : modules) {
-			if(module.getModule().equals(type)) {
-				

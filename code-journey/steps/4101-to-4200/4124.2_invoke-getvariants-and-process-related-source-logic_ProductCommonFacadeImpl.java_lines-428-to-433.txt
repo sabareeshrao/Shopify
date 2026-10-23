@@ -1,0 +1,6 @@
+		
+		ProductVariant instance = modified.getVariants().stream()
+				  .filter(inst -> sku.equals(inst.getSku()))
+				  .findAny()
+				  .orElse(null);
+		

@@ -1,0 +1,4 @@
+			
+			if(configuration!=null) {
+				
+				String countries = configuration.getValue();

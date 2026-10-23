@@ -1,9 +1,0 @@
-
-    
-    /**
-    * The current page number this pagination object represents
-    *
-    * @return the page number
-    */
-    public int getPageNumber() {
-        if (offset < pageSize || pageSize == 0)

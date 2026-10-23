@@ -1,7 +1,0 @@
-					CountryDescription description = new CountryDescription(language, name);
-					countryService.addCountryDescription(country, description);
-				}
-			}
-		}
-	}
-	

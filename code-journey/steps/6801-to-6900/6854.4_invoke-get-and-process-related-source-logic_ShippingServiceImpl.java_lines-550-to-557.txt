@@ -1,8 +1,0 @@
-								shippingQuoteModule = this.shippingModules.get(shippingModule.getCode());
-								configuration = modules.get(shippingModule.getCode());
-							} //TODO use default
-						}
-						
-					}
-				}
-			}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "BC",
+		"zoneName": "British Columbia",
+		"countryCode": "CA"
+	},
+	{
+		"zoneCode": "MB",
+		"zoneName": "Manitoba",
+		"countryCode": "CA"
+	},

@@ -1,0 +1,5 @@
+       *
+       *
+       * uploadImage.uploadProductImage(configuration, productImage, largeContentImage);
+       */
+

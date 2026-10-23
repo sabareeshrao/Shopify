@@ -1,6 +1,0 @@
-			merchantPath.append(buildRootPath()).append(Constants.SLASH).append(merchantStoreCode)
-					.append(Constants.SLASH).append(staticContentType).append(Constants.SLASH).append(fileName);
-
-			Path path = Paths.get(merchantPath.toString());
-
-			Files.deleteIfExists(path);

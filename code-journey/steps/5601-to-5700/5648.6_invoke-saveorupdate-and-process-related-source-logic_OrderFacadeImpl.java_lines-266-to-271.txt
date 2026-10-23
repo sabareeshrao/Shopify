@@ -1,6 +1,0 @@
-						shoppingCartService.saveOrUpdate(shoppingCart);
-					}
-				}
-
-			}
-

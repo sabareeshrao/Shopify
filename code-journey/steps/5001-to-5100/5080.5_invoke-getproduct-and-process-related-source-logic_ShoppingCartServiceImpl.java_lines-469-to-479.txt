@@ -1,0 +1,11 @@
+							if (productAttribute != null && productAttribute.getProduct().getId().longValue() == product
+									.getId().longValue()) {
+
+								ShoppingCartAttributeItem attributeItem = new ShoppingCartAttributeItem(item,
+										productAttribute);
+								if (shoppingCartAttributeItem.getId() > 0) {
+									attributeItem.setId(shoppingCartAttributeItem.getId());
+								}
+								item.addAttributes(attributeItem);
+
+							}

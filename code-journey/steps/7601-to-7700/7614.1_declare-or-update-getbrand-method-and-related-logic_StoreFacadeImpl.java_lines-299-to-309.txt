@@ -1,0 +1,11 @@
+
+	@Override
+	public ReadableBrand getBrand(String code) {
+		MerchantStore mStore = getMerchantStoreByCode(code);
+
+		ReadableBrand readableBrand = new ReadableBrand();
+		if (!StringUtils.isEmpty(mStore.getStoreLogo())) {
+			String imagePath = imageUtils.buildStoreLogoFilePath(mStore);
+			ReadableImage image = createReadableImage(mStore.getStoreLogo(), imagePath);
+			readableBrand.setLogo(image);
+		}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "FR",
+		"zoneName": "Freiburg",
+		"countryCode": "CH"
+	},
+	{
+		"zoneCode": "GE",
+		"zoneName": "Genf",
+		"countryCode": "CH"
+	},

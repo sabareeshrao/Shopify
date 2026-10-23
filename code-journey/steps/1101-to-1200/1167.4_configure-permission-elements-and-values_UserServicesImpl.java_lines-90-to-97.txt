@@ -1,8 +1,0 @@
-				
-			}
-			
-	
-	    	
-	    	List<Permission> permissions = permissionService.getPermissions(groupsId);
-	    	for(Permission permission : permissions) {
-	    		GrantedAuthority auth = new SimpleGrantedAuthority(ROLE_PREFIX + permission.getPermissionName());

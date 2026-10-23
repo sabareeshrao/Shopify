@@ -1,8 +1,0 @@
-		return te;
-	} */else if (ex instanceof StripeException) {
-		LOGGER.error("Error with stripe", ex.getMessage());
-		StripeException e = (StripeException)ex;
-		  // Display a very generic error to the user, and maybe send
-		  // yourself an email
-		IntegrationException te = new IntegrationException(
-				"Can't process Stripe authorize, missing invalid payment parameters");

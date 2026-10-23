@@ -1,0 +1,6 @@
+	
+	public String getMessage(String key, String[] args, Locale locale) {
+		return applicationContext.getMessage(key, args, locale);
+	}
+
+}

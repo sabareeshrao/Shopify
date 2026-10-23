@@ -1,8 +1,0 @@
-								attributeOptionValue.setId(optionValue.getId());
-								attributeOptionValue.setName(optValue);
-								cartAttribute.setOptionValue(attributeOptionValue);
-							}
-							shoppingCartItem.getCartItemattributes().add(cartAttribute);
-						}
-
-					}

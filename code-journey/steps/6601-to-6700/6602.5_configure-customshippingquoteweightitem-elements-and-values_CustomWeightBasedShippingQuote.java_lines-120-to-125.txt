@@ -1,0 +1,6 @@
+						for(PackageDetails packageDetail : packages) {
+							weight = weight + packageDetail.getShippingWeight();
+						}
+						
+						//see the price associated with the width
+						List<CustomShippingQuoteWeightItem> quoteItems = region.getQuoteItems();

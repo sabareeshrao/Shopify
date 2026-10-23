@@ -1,8 +1,0 @@
-
-	// edit packaging
-	@ApiOperation(httpMethod = "PUT", value = "Edit package specification", notes = "", produces = "application/json", response = Void.class)
-	@RequestMapping(value = { "/private/shipping/package/{code}" }, method = RequestMethod.PUT)
-	@ResponseStatus(HttpStatus.OK)
-	public void updatePackage(@PathVariable String code, @RequestBody PackageDetails details,
-			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language) {
-

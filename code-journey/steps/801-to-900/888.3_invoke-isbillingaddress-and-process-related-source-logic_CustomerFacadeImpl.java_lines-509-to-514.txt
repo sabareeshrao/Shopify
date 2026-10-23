@@ -1,0 +1,6 @@
+    if (address.isBillingAddress()) {
+      LOG.info("updating customer billing address..");
+      PersistableCustomerBillingAddressPopulator billingAddressPopulator =
+          new PersistableCustomerBillingAddressPopulator();
+      customerModel = billingAddressPopulator.populate(address, customerModel, merchantStore,
+          merchantStore.getDefaultLanguage());

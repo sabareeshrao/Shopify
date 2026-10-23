@@ -1,7 +1,0 @@
-				if(e instanceof IntegrationException)
-					throw (IntegrationException)e;
-				throw new IntegrationException("Error while processing BeanStream transaction",e);
-	
-			} 
-
-	}

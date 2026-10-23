@@ -1,6 +1,0 @@
-	
-	/**
-	 * List all orders that have been pre-authorized but not captured
-	 * @param store
-	 * @param startDate
-	 * @param endDate

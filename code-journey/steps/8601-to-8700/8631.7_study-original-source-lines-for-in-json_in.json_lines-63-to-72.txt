@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "MadhyaPradesh",
+		"zoneName": "Madhya Pradesh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Maharashtra",
+		"zoneName": "Maharashtra",
+		"countryCode": "IN"
+	},

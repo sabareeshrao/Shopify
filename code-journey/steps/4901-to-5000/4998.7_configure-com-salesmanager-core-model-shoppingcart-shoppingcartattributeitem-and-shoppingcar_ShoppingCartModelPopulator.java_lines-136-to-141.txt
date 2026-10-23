@@ -1,0 +1,6 @@
+                            Set<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem> newAttributes =
+                                new HashSet<com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem>();
+                            List<ShoppingCartAttribute> cartAttributes = item.getShoppingCartAttributes();
+                            if ( !CollectionUtils.isEmpty( cartAttributes ) )
+                            {
+                                for ( ShoppingCartAttribute attribute : cartAttributes )

@@ -1,0 +1,9 @@
+
+			s3.putObject(request);
+
+			LOGGER.info("Content add file");
+		} catch (final Exception e) {
+			LOGGER.error("Error while adding file", e);
+			throw new ServiceException(e);
+
+		}

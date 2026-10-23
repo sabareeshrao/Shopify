@@ -1,9 +1,0 @@
-
-
-@Service("jwtCustomerDetailsService")
-public class JWTCustomerServicesImpl extends AbstractCustomerServices {
-	
-	
-	@Inject
-	public JWTCustomerServicesImpl(CustomerService customerService, PermissionService permissionService, GroupService groupService) {
-		super(customerService, permissionService, groupService);

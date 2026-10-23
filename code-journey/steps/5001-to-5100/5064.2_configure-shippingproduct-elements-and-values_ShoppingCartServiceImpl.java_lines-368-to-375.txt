@@ -1,8 +1,0 @@
-		for (ShoppingCartItem item : items) {
-			Product product = item.getProduct();
-			if (!product.isProductVirtual() && product.isProductShipeable()) {
-				if (shippingProducts == null) {
-					shippingProducts = new ArrayList<ShippingProduct>();
-				}
-				ShippingProduct shippingProduct = new ShippingProduct(product);
-				shippingProduct.setQuantity(item.getQuantity());

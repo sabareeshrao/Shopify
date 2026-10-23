@@ -1,7 +1,0 @@
-
-			//execute only if not admin filtered
-			if(filter == null || (filter!=null && !filter.contains(ADMIN_CATEGORY))) {
-					filteredList = readableCategoryMap.values().stream().filter(cat -> cat.getDepth() == 0)
-						.sorted(Comparator.comparing(ReadableCategory::getSortOrder)).collect(Collectors.toList());
-				
-					returnList.setNumber(filteredList.size());

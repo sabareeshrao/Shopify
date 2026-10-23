@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "ACT",
+		"zoneName": "Australian Capital Territory",
+		"countryCode": "AU"
+	},
+	{
+		"zoneCode": "NSW",
+		"zoneName": "New South Wales",
+		"countryCode": "AU"
+	},

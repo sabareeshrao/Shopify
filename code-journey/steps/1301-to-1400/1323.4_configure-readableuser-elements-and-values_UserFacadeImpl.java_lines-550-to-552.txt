@@ -1,0 +1,3 @@
+
+			userList = userService.listByCriteria(criteria, page, count);
+			List<ReadableUser> readableUsers = new ArrayList<ReadableUser>();

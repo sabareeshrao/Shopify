@@ -1,7 +1,0 @@
-	private void setOrderTotals(OrderEntity order, OrderTotalSummary summary) {
-
-		List<OrderTotal> totals = new ArrayList<OrderTotal>();
-		List<com.salesmanager.core.model.order.OrderTotal> orderTotals = summary.getTotals();
-		for (com.salesmanager.core.model.order.OrderTotal t : orderTotals) {
-			OrderTotal total = new OrderTotal();
-			total.setCode(t.getOrderTotalCode());

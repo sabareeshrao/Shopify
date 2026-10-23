@@ -1,6 +1,0 @@
-        .setParameter("id", product.getId())
-        .setParameter("storeId", store.getId())
-        .setParameter("langId", language.getId())
-        .getResultList();
-  }
-

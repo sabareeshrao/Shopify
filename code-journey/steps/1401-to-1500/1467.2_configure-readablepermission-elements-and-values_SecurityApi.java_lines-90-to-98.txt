@@ -1,9 +1,0 @@
-		List<ReadablePermission> readablePermissions = new ArrayList<ReadablePermission>();
-		for (Permission permission : permissions) {
-			ReadablePermission readablePermission = new ReadablePermission();
-			readablePermission.setName(permission.getPermissionName());
-			readablePermission.setId(permission.getId());
-			readablePermissions.add(readablePermission);
-		}
-		return readablePermissions;
-	}

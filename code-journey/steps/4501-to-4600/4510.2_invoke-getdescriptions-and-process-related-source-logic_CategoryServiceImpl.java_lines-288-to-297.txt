@@ -1,0 +1,10 @@
+	public CategoryDescription getDescription(Category category, Language language) {
+
+		for (CategoryDescription description : category.getDescriptions()) {
+			if (description.getLanguage().equals(language)) {
+				return description;
+			}
+		}
+		return null;
+	}
+

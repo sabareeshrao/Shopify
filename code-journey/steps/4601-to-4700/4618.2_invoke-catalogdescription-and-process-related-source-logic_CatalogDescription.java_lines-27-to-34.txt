@@ -1,8 +1,0 @@
-
-
-	
-	public CatalogDescription() {
-	}
-	
-	public CatalogDescription(String name, Language language) {
-		this.setName(name);

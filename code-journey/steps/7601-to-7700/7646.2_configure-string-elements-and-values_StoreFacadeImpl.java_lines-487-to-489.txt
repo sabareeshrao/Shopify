@@ -1,0 +1,3 @@
+			
+			Optional<String> code = Optional.ofNullable(criteria.getStoreCode());
+			Optional<String> name = Optional.ofNullable(criteria.getName());

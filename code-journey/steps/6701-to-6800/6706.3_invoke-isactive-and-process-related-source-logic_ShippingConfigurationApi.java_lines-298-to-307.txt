@@ -1,0 +1,10 @@
+		if (configuredModules.containsKey(module.getCode())) {
+			IntegrationConfiguration conf = configuredModules.get(module.getCode());
+			readable.setConfigured(true);
+			if(conf.isActive()) {
+				readable.setActive(true);
+			}
+		}
+		return readable;
+
+	}

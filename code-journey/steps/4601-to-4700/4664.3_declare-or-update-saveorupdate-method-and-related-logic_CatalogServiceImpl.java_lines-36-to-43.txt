@@ -1,8 +1,0 @@
-		this.catalogRepository = repository;
-	}
-
-	@Override
-	public Catalog saveOrUpdate(Catalog catalog, MerchantStore store) {
-		catalogRepository.save(catalog);
-		return catalog;
-	}

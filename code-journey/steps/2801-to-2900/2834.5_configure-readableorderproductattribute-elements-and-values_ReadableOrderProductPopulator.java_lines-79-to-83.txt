@@ -1,0 +1,5 @@
+		
+		if(source.getOrderAttributes()!=null) {
+			List<ReadableOrderProductAttribute> attributes = new ArrayList<ReadableOrderProductAttribute>();
+			for(OrderProductAttribute attr : source.getOrderAttributes()) {
+				ReadableOrderProductAttribute readableAttribute = new ReadableOrderProductAttribute();

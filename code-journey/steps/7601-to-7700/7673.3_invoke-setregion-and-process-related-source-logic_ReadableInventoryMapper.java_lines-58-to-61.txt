@@ -1,0 +1,4 @@
+			destination.setRegion(source.getRegion());
+			destination.setRegionVariant(source.getRegionVariant());
+			destination.setStore(store(store, language));
+			if (source.getAvailable() != null) {

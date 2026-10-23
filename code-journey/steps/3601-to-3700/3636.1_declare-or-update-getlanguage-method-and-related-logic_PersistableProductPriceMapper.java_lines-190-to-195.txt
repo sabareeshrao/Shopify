@@ -1,0 +1,6 @@
+
+	private Language getLanguage(com.salesmanager.shop.model.catalog.product.ProductPriceDescription desc) {
+		try {
+			return Optional.ofNullable(languageService.getByCode(desc.getLanguage()))
+					.orElseThrow(() -> new ConversionRuntimeException(
+							"Language is null for code " + desc.getLanguage() + " use language ISO code [en, fr ...]"));

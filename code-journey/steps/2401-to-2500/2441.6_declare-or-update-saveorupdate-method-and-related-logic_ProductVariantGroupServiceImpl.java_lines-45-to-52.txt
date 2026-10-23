@@ -1,0 +1,8 @@
+
+	@Override
+	public ProductVariantGroup saveOrUpdate(ProductVariantGroup entity) throws ServiceException {
+		
+		entity = productVariantGroupRepository.save(entity);
+		return entity;
+		
+	}

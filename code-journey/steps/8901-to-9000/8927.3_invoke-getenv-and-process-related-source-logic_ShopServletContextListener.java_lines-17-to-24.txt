@@ -1,8 +1,0 @@
-		System.getenv().forEach((k, v) -> {
-		  logger.debug(k + ":" + v);
-		});
-		Properties props = System.getProperties();
-		props.forEach((k, v) -> {
-		  logger.debug(k + ":" + v);
-		});
-	}

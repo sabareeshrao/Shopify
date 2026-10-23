@@ -1,8 +1,0 @@
-
-		}
-
-		returnList.setRecordsTotal(orders.size());
-		returnList.setOrders(readableOrders);
-
-		return returnList;
-	}

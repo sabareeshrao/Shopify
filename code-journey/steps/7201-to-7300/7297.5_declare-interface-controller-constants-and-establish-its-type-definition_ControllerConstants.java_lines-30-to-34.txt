@@ -1,0 +1,5 @@
+        
+        interface Items{
+            final static String items_manufacturer="items.manufacturer";
+        }
+        

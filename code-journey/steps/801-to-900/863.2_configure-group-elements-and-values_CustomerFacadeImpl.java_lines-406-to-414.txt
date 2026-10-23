@@ -1,9 +1,0 @@
-      if (StringUtils.isBlank(customer.getPassword())) {
-        String password = new String(UUID.generateRandomBytes());
-        String encodedPassword = passwordEncoder.encode(password);
-        customer.setPassword(encodedPassword);
-      }
-    }
-
-    if (CollectionUtils.isEmpty(customer.getGroups())) {
-      List<Group> groups = getListOfGroups(GroupType.CUSTOMER);

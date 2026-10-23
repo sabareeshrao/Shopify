@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "VI",
+		"zoneName": "Virgin Islands",
+		"countryCode": "US"
+	},
+	{
+		"zoneCode": "VA",
+		"zoneName": "Virginia",
+		"countryCode": "US"
+	},

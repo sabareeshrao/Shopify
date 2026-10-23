@@ -1,0 +1,8 @@
+			From rules
+			<ref bean="manufacturerShippingCodeOrderTotalModule"/>
+		</util:list> -->
+	
+
+
+	
+</beans>

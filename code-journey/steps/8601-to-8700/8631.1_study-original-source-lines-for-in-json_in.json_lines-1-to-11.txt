@@ -1,0 +1,11 @@
+{
+  "*":[
+	{
+		"zoneCode": "AndhraPradesh",
+		"zoneName": "Andhra Pradesh",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "ArunachalPradesh",
+		"zoneName": "Arunachal Pradesh",
+		"countryCode": "IN"

@@ -1,0 +1,6 @@
+	{
+		"module": "SHIPPING",
+		"code": "storePickUp",
+		"version":"1.0",
+		"regions": ["*"]
+	},

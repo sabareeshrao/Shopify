@@ -1,8 +1,0 @@
-			total.setTitle(t.getTitle());
-			total.setValue(t.getValue());
-			totals.add(total);
-		}
-
-		order.setTotals(totals);
-
-	}

@@ -1,7 +1,0 @@
-
-@Component
-public class PersistableTaxClassMapper implements Mapper<PersistableTaxClass, TaxClass> {
-
-	@Override
-	public TaxClass convert(PersistableTaxClass source, MerchantStore store, Language language) {
-		Validate.notNull(source, "PersistableTaxClass cannot be null");

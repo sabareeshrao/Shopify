@@ -1,0 +1,4 @@
+		destination.setMerchantStore(store);
+		destination.setProductVariants(new HashSet<ProductVariant>(productVariants));
+		return destination;
+	}

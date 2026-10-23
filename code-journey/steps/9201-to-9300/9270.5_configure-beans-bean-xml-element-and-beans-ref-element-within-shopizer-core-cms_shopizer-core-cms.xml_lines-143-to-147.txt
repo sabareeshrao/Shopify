@@ -1,0 +1,5 @@
+				<!-- internal implementation -->
+ 				<beans:property name="cmsManager">
+						<beans:ref bean="awsAssetsManager" />
+				</beans:property>
+	</beans:bean>

@@ -1,8 +1,0 @@
-					price.setProductPriceSpecialEndDate(endDate);
-				}
-
-				Set<ProductPriceDescription> descs = getProductPriceDescriptions(price, priceEntity.getDescriptions());
-				price.setDescriptions(descs);
-
-				destination.setPrices(new HashSet<ProductPrice>(prices));
-			}

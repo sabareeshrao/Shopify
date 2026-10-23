@@ -1,0 +1,6 @@
+
+@Component
+public class ReadableOptinMapper implements Mapper<Optin, ReadableOptin> {
+
+
+  @Override

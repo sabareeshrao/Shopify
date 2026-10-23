@@ -1,0 +1,10 @@
+
+	@RequestMapping(value = "/category/{id}/manufacturer", method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(httpMethod = "GET", value = "Get all manufacturers for all items in a given category", notes = "", produces = "application/json", response = List.class)
+	@ResponseBody
+	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "String", defaultValue = "DEFAULT"),
+			@ApiImplicitParam(name = "lang", dataType = "String", defaultValue = "en") })
+	public List<ReadableManufacturer> list(@PathVariable final Long id, // category
+																					// id
+			@ApiIgnore MerchantStore merchantStore, @ApiIgnore Language language, HttpServletResponse response)

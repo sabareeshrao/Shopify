@@ -1,0 +1,8 @@
+		if (customerId != null) {
+			ReadableCustomer readableCustomer = customerFacade.getCustomerById(customerId, store, language);
+			if (readableCustomer == null) {
+				LOGGER.warn("Customer id " + customerId + " not found in order " + orderId);
+			} else {
+				readableOrder.setCustomer(readableCustomer);
+			}
+		}

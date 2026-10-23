@@ -1,7 +1,0 @@
-			return optionSets.stream().map(opt -> this.convert(opt, store, language)).collect(Collectors.toList());
-		} catch (ServiceException e) {
-			throw new ServiceRuntimeException("Exception while listing ProductOptionSet", e);
-		}
-
-	}
-

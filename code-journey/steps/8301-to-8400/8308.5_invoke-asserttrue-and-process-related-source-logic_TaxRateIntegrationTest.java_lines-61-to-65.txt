@@ -1,5 +1,0 @@
-        
-        assertTrue(listOfTaxClasses.getBody().getRecordsTotal() == 1);
-        **/
-	
-    }

@@ -1,0 +1,9 @@
+	{
+		"module": "SHIPPING",
+		"code": "canadapost",
+		"version":"",
+		"regions": ["CA"],
+		"image":"canadapost.jpg",
+		"configuration":[{"env":"TEST","scheme":"https","host":"ct.soa-gw.canadapost.ca","port":"443","uri":"/rs/ship/price"},{"env":"PROD","scheme":"https","host":"soa-gw.canadapost.ca","port":"443","uri":"/rs/ship/price"}]
+
+	},

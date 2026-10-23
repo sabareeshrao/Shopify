@@ -1,0 +1,10 @@
+	/**
+	 * Weight based configuration
+	 * @param moduleCode
+	 * @param shippingConfiguration
+	 * @param store
+	 * @throws ServiceException
+	 */
+	void saveCustomShippingConfiguration(String moduleCode,
+			CustomIntegrationConfiguration shippingConfiguration,
+			MerchantStore store) throws ServiceException;

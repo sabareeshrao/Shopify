@@ -1,7 +1,0 @@
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache -->

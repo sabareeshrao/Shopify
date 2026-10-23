@@ -1,0 +1,4 @@
+		if(value == null) {
+			throw new ResourceNotFoundException("Product option value [" + optionValueId + "] not found");
+		}
+		

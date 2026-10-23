@@ -1,8 +1,0 @@
-	  try {
-		 return customerService.getByNick(userName, store.getId());
-	 } catch(Exception e) {
-		 throw new ServiceRuntimeException(e);
-	 }
-
-  }
-  

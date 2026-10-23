@@ -1,0 +1,9 @@
+                            if(itemSubTotal==null) {
+                                itemSubTotal = new OrderTotal();
+                                itemSubTotal.setModule(Constants.OT_ITEM_PRICE_MODULE_CODE);
+                                itemSubTotal.setTitle(Constants.OT_ITEM_PRICE_MODULE_CODE);
+                                itemSubTotal.setOrderTotalCode(price.getProductPrice().getCode());
+                                itemSubTotal.setOrderTotalType(OrderTotalType.PRODUCT);
+                                itemSubTotal.setSortOrder(0);
+                                otherPricesTotals.put(price.getProductPrice().getCode(), itemSubTotal);
+                            }

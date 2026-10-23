@@ -1,7 +1,0 @@
-	{
-		"zoneCode": "Lugo",
-		"zoneName": "Lugo",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Madrid",

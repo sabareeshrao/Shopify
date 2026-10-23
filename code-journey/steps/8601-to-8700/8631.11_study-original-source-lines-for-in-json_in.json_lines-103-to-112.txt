@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Rajasthan",
+		"zoneName": "Rajasthan",
+		"countryCode": "IN"
+	},
+	{
+		"zoneCode": "Sikkim",
+		"zoneName": "Sikkim",
+		"countryCode": "IN"
+	},

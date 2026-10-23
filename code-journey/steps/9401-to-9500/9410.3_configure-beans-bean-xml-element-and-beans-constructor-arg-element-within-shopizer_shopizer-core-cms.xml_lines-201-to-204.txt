@@ -1,0 +1,4 @@
+		<beans:constructor-arg value="${config.cms.aws.bucket}"/>
+		<beans:constructor-arg value="${config.cms.aws.region}"/>
+	</beans:bean>
+

@@ -1,6 +1,0 @@
-			    customer = new Customer();
-			    customer = customerPopulator.populate(persistableCustomer, customer, store, language);
-			  } else {
-			    throw new ConversionException("Curstomer details or id not set in request");
-			  } 
-			}

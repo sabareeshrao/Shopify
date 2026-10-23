@@ -1,0 +1,11 @@
+	        if (criteria.getMaxCount() < count.intValue()) {
+	          q.setMaxResults(criteria.getMaxCount());
+	        } else {
+	          q.setMaxResults(count.intValue());
+	        }
+	      }
+      } else {
+    	  
+      }*/
+
+      List<User> users = q.getResultList();

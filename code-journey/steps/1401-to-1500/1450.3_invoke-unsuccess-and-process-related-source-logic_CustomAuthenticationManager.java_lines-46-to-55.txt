@@ -1,0 +1,10 @@
+			if (authResult == null) {
+				// return immediately as subclass has indicated that it hasn't completed
+				// authentication
+				return;
+			}
+		} catch (AuthenticationException failed) {
+			// Authentication failed
+			unsuccess(request, response);
+			return;
+		}

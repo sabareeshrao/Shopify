@@ -1,0 +1,7 @@
+
+    
+    /**
+    * The current page number this pagination object represents
+    *
+    * @return the page number
+    */

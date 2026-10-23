@@ -1,0 +1,10 @@
+		{
+			"zoneCode": "BAY",
+			"zoneName": "Bayern",
+			"countryCode": "DE"
+		},
+		{
+			"zoneCode": "BER",
+			"zoneName": "Berlin",
+			"countryCode": "DE"
+		},

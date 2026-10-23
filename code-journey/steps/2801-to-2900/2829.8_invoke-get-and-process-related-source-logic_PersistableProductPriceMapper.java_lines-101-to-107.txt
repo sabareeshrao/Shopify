@@ -1,7 +1,0 @@
-								destination = defaultPrice.get();
-							}
-						}
-					}
-				}
-
-			}

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "Barcelona",
+		"zoneName": "Barcelona",
+		"countryCode": "ES"
+	},
+	{
+		"zoneCode": "Burgos",
+		"zoneName": "Burgos",
+		"countryCode": "ES"
+	},

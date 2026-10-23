@@ -1,0 +1,4 @@
+
+		if (!amount.contains(Character.toString(DECIMALPOINT)) && !amount.contains(Character.toString(THOUSANDPOINT))
+				&& !amount.contains(" ")) {
+

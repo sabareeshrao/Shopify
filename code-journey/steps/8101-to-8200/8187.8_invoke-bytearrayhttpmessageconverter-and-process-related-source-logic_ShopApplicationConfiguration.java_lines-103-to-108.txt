@@ -1,6 +1,0 @@
-
-    ByteArrayHttpMessageConverter byteArrayHttpMessageConverter =
-        new ByteArrayHttpMessageConverter();
-    byteArrayHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
-    return byteArrayHttpMessageConverter;
-  }

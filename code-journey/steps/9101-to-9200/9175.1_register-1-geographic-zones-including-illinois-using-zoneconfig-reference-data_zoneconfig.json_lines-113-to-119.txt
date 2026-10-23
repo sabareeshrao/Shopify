@@ -1,7 +1,0 @@
-	{
-		"zoneCode": "IL",
-		"zoneName": "Illinois",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "IN",

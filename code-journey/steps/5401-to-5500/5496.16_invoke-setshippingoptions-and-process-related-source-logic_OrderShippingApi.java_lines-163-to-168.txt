@@ -1,0 +1,6 @@
+
+        shippingSummary.setShippingOptions(options);
+      }
+
+      return shippingSummary;
+

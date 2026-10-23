@@ -1,7 +1,0 @@
-		return this.merge(source, type, store, language);
-	}
-
-	@Override
-	public ReadableProductType merge(ProductType source, ReadableProductType destination, MerchantStore store,
-									 Language language) {
-		Validate.notNull(source, "ProductType cannot be null");

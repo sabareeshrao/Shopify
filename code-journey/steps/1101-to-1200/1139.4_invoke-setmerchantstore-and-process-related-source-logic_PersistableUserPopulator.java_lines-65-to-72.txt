@@ -1,8 +1,0 @@
-			target.setMerchantStore(userStore);
-		} catch (ServiceException e) {
-			throw new ConversionException("Error while reading MerchantStore store [" + source.getStore() + "]",e);
-		}
-    } else {
-    	target.setMerchantStore(store);
-    }
-    

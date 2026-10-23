@@ -1,7 +1,0 @@
-				if(moduleConfig.getEnv().equals(env)) {
-					host = moduleConfig.getHost();
-					protocol = moduleConfig.getScheme();
-					port = moduleConfig.getPort();
-					url = moduleConfig.getUri();
-				}
-			}

@@ -1,7 +1,0 @@
-  <beans:import resource="classpath:/spring/processors/shopizer-core-shipping-processors.xml" />
-  <!-- order total pre processors -->
-  <beans:import resource="classpath:/spring/processors/shopizer-core-ordertotal-processors.xml" />
-  
-  
-
-</beans:beans>

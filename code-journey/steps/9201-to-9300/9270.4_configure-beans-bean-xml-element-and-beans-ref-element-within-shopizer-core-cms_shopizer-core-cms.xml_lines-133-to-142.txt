@@ -1,0 +1,10 @@
+	<beans:bean id="httpdDownloadsManager"
+				class="com.salesmanager.core.business.modules.cms.content.local.CmsStaticContentFileManagerImpl" factory-method="getInstance" >
+				<beans:property name="cacheManager">
+						<beans:ref bean="httpdAssetsManager" />
+				</beans:property>
+	</beans:bean>
+
+	<!-- AWS-->
+	<beans:bean id="awsProductAssetsManager"
+				class="com.salesmanager.core.business.modules.cms.product.aws.S3ProductContentFileManager" factory-method="getInstance" >

@@ -1,6 +1,0 @@
-					if(!store.getStorestateprovince().equals(stateProvince)) {
-						return null;
-					}
-				}
-			}
-		}

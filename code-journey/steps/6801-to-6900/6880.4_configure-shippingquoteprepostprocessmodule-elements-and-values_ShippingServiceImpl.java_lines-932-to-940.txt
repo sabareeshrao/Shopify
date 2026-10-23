@@ -1,9 +1,0 @@
-				if(SHIPPING_DISTANCE.equals(processor.getModuleCode())) {
-					metaData.setUseDistanceModule(true);
-				}
-			}
-		}
-		metaData.setPreProcessors(preProcessorKeys);
-		
-		//post processors
-		List<ShippingQuotePrePostProcessModule> postProcessors = this.shippingModulePostProcessors;

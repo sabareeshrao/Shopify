@@ -1,0 +1,7 @@
+
+  <context:component-scan base-package="com.salesmanager.test" />
+
+  <!-- For testing utility classes -->
+  <util:properties id="shopizer-properties">
+    			<beans:prop key="MULTIPLE_PRICE_AVAILABILITY">false</beans:prop>
+    			<beans:prop key="INDEX_PRODUCTS">false</beans:prop>

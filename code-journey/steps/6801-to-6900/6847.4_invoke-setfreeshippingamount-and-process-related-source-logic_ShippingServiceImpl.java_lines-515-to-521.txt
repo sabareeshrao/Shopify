@@ -1,7 +1,0 @@
-							shippingQuote.setFreeShippingAmount(freeShippingAmount);
-							return shippingQuote;
-						}
-	
-					}
-				}
-			}

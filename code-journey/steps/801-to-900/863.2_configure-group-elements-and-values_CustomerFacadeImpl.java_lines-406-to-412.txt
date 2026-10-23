@@ -1,0 +1,7 @@
+      if (StringUtils.isBlank(customer.getPassword())) {
+        String password = new String(UUID.generateRandomBytes());
+        String encodedPassword = passwordEncoder.encode(password);
+        customer.setPassword(encodedPassword);
+      }
+    }
+

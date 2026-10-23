@@ -1,0 +1,8 @@
+					.filter(cat -> readableCategoryMap.containsKey(cat.getParent().getId())).forEach(readableCategory -> {
+						ReadableCategory parentCategory = readableCategoryMap.get(readableCategory.getParent().getId());
+						if (parentCategory != null) {
+							parentCategory.getChildren().add(readableCategory);
+						}
+					});
+			
+			List<ReadableCategory> filteredList = readableCategoryMap.values().stream().collect(Collectors.toList());

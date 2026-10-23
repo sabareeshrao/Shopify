@@ -1,7 +1,0 @@
-	 * 
-	 * @param merchantStore
-	 * @param request
-	 * @return
-	 */
-	public String buildStoreForwardedUri(MerchantStore merchantStore, HttpServletRequest request) {
-		String uri;

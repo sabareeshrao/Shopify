@@ -1,9 +1,0 @@
-		data.put("price", super.getPrice());
-		data.put("maximumWeight", this.getMaximumWeight());
-		
-		return data.toJSONString();
-	}
-
-
-
-}

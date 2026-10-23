@@ -1,0 +1,8 @@
+	 *            Merchant merchantStoreCode
+	 * @param imageName
+	 *            name of requested image
+	 * @return {@link OutputContentImage}
+	 * @throws ServiceException
+	 */
+	@Override
+	public OutputContentFile getContentFile(String merchantStoreCode, FileContentType fileContentType, String fileName)

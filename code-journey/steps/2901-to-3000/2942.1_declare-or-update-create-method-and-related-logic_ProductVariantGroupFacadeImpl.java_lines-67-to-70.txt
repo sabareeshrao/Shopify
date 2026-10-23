@@ -1,4 +1,0 @@
-	@Override
-	public Long create(PersistableProductVariantGroup productVariantGroup, MerchantStore store, Language language) {
-		
-		ProductVariantGroup group = persistableProductIntanceGroupMapper.convert(productVariantGroup, store, language);

@@ -1,0 +1,10 @@
+	{
+		"zoneCode": "VB",
+		"zoneName": "Voralberg",
+		"countryCode": "AT"
+	},
+	{
+		"zoneCode": "AG",
+		"zoneName": "Aargau",
+		"countryCode": "CH"
+	},

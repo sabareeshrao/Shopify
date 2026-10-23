@@ -1,0 +1,10 @@
+    
+    @Autowired
+    private LanguageArgumentResolver languageArgumentResolver;
+
+	
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+        argumentResolvers.add(merchantStoreArgumentResolver);
+        argumentResolvers.add(languageArgumentResolver);
+    }

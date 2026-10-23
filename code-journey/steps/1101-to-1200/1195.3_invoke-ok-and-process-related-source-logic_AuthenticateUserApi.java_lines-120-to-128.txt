@@ -1,9 +1,0 @@
-            return ResponseEntity.ok(new AuthenticationResponse(user.getId(),refreshedToken));
-        } else {
-            return ResponseEntity.badRequest().body(null);
-        }
-    }
-    
-
-
-}

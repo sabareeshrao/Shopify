@@ -1,8 +1,0 @@
-
-						// if default price exist for sku exit
-						if (source.isDefaultPrice()) {
-							Optional<ProductPrice> defaultPrice = availability.getPrices().stream()
-									.filter(p -> p.isDefaultPrice()).findAny();
-							if (defaultPrice.isPresent()) {
-								//throw new ConversionRuntimeException(
-								//		"Default Price already exist for product with sku [" + source.getSku() + "]");

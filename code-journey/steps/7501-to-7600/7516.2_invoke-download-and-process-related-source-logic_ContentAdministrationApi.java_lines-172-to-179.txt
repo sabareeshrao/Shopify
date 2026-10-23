@@ -1,8 +1,0 @@
-		try {
-	    
-			//OutputContentFile file = contentFacade.download(merchantStore, FileContentType.IMAGE, fileName);
-			//return file.getFile().toByteArray();
-			//return "https://s3.ca-central-1.amazonaws.com/shopizer-carl/files/DEFAULT/85.jpg";
-			return null;
-		} catch (Exception e) {
-			//throw new ServiceRuntimeException("Error while getting file bytes");

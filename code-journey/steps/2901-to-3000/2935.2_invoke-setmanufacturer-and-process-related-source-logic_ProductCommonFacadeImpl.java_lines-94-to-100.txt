@@ -1,0 +1,7 @@
+
+		Product target = null;
+		if (product.getId() != null && product.getId().longValue() > 0) {
+			target = productService.getById(product.getId());
+		} else {
+			target = new Product();
+		}

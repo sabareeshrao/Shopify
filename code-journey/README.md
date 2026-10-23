@@ -1,3 +1,3 @@
-# Shopizer Code Journey — maximum 11 lines per child
+# Shopizer code journey — refined child boundaries
 
-Read the **steps/** folders in numerical task order. Every parent ends in .0 and contains the original full source block. Children .1, .2, .3 and so on contain its original contiguous line slices. Children normally contain 1–8 lines and **never exceed 11 lines**. For long methods, follow multiple children: method code may cross child boundaries. Never paste both parent and children. The ZIP contains ONLY TXT files. MASTER_INDEX.csv records original paths and exact positions. The numbering approximates a plausible learning sequence, not historical developer commits.
+Browse steps/ in ascending task order. Each parent 1.0 contains the complete original block; children 1.1 etc. reconstruct the parent when concatenated. Use children instead of the parent, not both. Each child is 1–11 lines. Some long statements must span children to obey the limit. ZIP contains only 24,055 TXT files. See BOUNDARY_AUDIT.json for changed edges.

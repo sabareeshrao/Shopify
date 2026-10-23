@@ -1,7 +1,0 @@
-				if(productImage.isDefaultImage()) {
-					break;
-				}
-			}
-		}
-		return productImage;
-	}

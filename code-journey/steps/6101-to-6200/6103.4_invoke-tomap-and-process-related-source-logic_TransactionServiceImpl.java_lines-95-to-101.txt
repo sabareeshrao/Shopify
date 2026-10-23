@@ -1,7 +1,0 @@
-	    	    		  Collectors.toMap(
-	    	    				  Transaction::getTransactionTypeName, transaction -> transaction,(o1, o2) -> o1, TreeMap::new)
-	    	    		  
-	    	    		  
-	    	    		  );
-	    
-		  

@@ -1,6 +1,0 @@
-	List<ProductVariantImage> finByProduct(Long productId, String storeCode, String lang);
-	**/
-	
-	@Query("select p from ProductVariantImage p "
-			+ "left join fetch p.descriptions pd "
-			+ "join fetch p.productVariantGroup pg "

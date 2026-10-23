@@ -1,5 +1,0 @@
-        argumentResolvers.add(languageArgumentResolver);
-    }
-    
-
-}

@@ -1,0 +1,9 @@
+    if (manufacturer.getId() != null && manufacturer.getId() > 0) {
+      super.update(manufacturer);
+
+    } else {
+      super.create(manufacturer);
+
+    }
+  }
+

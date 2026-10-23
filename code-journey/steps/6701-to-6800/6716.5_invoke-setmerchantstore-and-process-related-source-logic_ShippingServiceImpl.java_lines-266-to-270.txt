@@ -1,0 +1,5 @@
+				modules.put(configuration.getModuleCode(), configuration);
+				
+				String configs =  ConfigurationModulesLoader.toJSONString(modules);
+				
+				String encrypted = encryption.encrypt(configs);

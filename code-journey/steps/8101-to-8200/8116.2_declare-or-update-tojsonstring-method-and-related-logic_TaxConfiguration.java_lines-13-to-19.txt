@@ -1,0 +1,7 @@
+	private TaxBasisCalculation taxBasisCalculation = TaxBasisCalculation.SHIPPINGADDRESS;
+	
+	private boolean collectTaxIfDifferentProvinceOfStoreCountry = true;
+	private boolean collectTaxIfDifferentCountryOfStoreCountry = false;
+
+	@SuppressWarnings("unchecked")
+	@Override

@@ -1,0 +1,9 @@
+			if(descriptions!=null) {
+				for(ProductReviewDescription description : descriptions) {
+					target.setDescription(description.getDescription());
+					target.setLanguage(description.getLanguage().getCode());
+					break;
+				}
+			}
+
+			return target;

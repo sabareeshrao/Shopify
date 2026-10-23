@@ -1,0 +1,7 @@
+	public ResponseEntity<ReadableShoppingCart> modifyCart(
+			@PathVariable String code,//shopping cart code
+			@PathVariable String promo,
+			@ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language, 
+			HttpServletResponse response) {
+

@@ -1,7 +1,0 @@
-				queryBuilder.append(" join fetch c.parent cp where cp.id =:cid ");
-					//.where(qCategory.parent.eq(category))
-					//.orderBy(qCategory.sortOrder.asc(),qCategory.id.desc());
-			}
-		} else {
-			if (category == null) {
-				//query.from(qCategory)

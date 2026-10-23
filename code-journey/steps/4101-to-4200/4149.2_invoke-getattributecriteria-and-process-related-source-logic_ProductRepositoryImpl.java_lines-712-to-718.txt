@@ -1,7 +1,0 @@
-			for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
-				countQ.setParameter(attributeCriteria.getAttributeCode(), attributeCriteria.getAttributeCode());
-				countQ.setParameter("val" + count + attributeCriteria.getAttributeCode(),
-						"%" + attributeCriteria.getAttributeValue() + "%");
-				count++;
-			}
-		}

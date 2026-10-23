@@ -1,7 +1,0 @@
-          if (count < values.size() - 1) {
-            dataEntries.append(",");
-          }
-          count++;
-        }
-
-        optionsEntries.append("[").append(dataEntries.toString()).append("]");

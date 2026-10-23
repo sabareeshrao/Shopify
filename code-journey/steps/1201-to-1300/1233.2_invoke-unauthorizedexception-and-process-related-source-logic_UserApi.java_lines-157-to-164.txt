@@ -1,0 +1,8 @@
+	public void password(@Valid @RequestBody UserPassword password, @PathVariable Long id) {
+
+		String authenticatedUser = userFacade.authenticatedUser();
+		if (authenticatedUser == null) {
+			throw new UnauthorizedException();
+		}
+		userFacade.changePassword(id, authenticatedUser, password);
+	}

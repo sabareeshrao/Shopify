@@ -1,8 +1,0 @@
-	        InputStream configStream = loader.getResourceAsStream(POLICY_FILE);
-			policy = Policy.getInstance(configStream);
-	        
-		} catch (Exception e) {
-			throw new ServiceRuntimeException(e);
-		}
-    } 
-

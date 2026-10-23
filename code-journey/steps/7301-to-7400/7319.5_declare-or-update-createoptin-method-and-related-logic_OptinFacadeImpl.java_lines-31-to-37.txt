@@ -1,7 +1,0 @@
-    Optin savedOptinEntity = createOptin(optinEntity);
-    return readableOptinConverter.convert(savedOptinEntity, merchantStore, language);
-  }
-
-  private Optin createOptin(Optin optinEntity) {
-    try{
-      optinService.create(optinEntity);

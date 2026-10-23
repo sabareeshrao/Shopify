@@ -1,8 +1,0 @@
-		if (authenticatedUser == null) {
-			throw new UnauthorizedException();
-		}
-		return authenticatedUser;
-	}
-	
-	public void authorizeUser(String authenticatedUser, List<String> roles, MerchantStore store) {
-		userFacade.authorizedGroup(authenticatedUser, roles);

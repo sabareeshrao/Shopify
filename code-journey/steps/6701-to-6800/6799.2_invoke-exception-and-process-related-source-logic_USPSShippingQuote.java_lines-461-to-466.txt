@@ -1,6 +1,0 @@
-				throw new Exception("USPS quote communication error " + result);
-			}*/
-			//data = httpget.getResponseBodyAsString();
-			LOGGER.debug("usps quote response " + data);
-
-			USPSParsedElements parsed = new USPSParsedElements();

@@ -1,0 +1,5 @@
+
+	// get packaging
+	@ApiOperation(httpMethod = "GET", value = "Get package details", notes = "", produces = "application/json", response = PackageDetails.class)
+	@RequestMapping(value = { "/private/shipping/package/{code}" }, method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)

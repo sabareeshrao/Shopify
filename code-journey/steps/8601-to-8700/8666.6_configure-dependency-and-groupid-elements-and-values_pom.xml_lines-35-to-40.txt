@@ -1,0 +1,6 @@
+
+		<dependency>
+			<groupId>com.shopizer</groupId>
+			<artifactId>sm-shop-model</artifactId>
+		</dependency>
+

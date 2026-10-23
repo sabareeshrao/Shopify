@@ -1,7 +1,0 @@
-
-	private List<Resource> geZoneFiles(String path) throws IOException {
-		Resource[] resources =resourceResolver.getResources(PATH);
-
-		List<Resource> files = new ArrayList<>();
-		Collections.addAll(files, resources);
-		return files;

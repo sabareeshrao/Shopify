@@ -1,6 +1,0 @@
-        target.setDescription(d);
-      }
-
-      if (target instanceof ReadableManufacturerFull) {
-        ((ReadableManufacturerFull) target).setDescriptions(fulldescriptions);
-      }

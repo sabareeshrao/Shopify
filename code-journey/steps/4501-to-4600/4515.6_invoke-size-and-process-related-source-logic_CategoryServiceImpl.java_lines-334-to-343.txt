@@ -1,0 +1,10 @@
+
+			// ajust all sub categories lineages
+			if (subCategories != null && subCategories.size() > 0) {
+				for (Category subCategory : subCategories) {
+					if (!child.getId().equals(subCategory.getId())) {
+						addChild(child, subCategory);
+					}
+				}
+
+			}

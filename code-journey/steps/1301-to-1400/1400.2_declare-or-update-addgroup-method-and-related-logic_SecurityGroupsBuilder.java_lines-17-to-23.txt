@@ -1,7 +1,0 @@
-	private List<Group> groups = new ArrayList<Group>();
-	private Group lastGroup = null;
-	
-	
-	public SecurityGroupsBuilder addGroup(String name, GroupType type) {
-		
-		Group g = new Group();

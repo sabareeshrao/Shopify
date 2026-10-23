@@ -1,0 +1,10 @@
+		if (CollectionUtils.isEmpty(orders)) {
+			LOGGER.info("Order list if empty..Returning empty list");
+			returnList.setRecordsTotal(0);
+			// returnList.setMessage("No results for store code " + store);
+			return returnList;
+		}
+
+		// ReadableOrderPopulator orderPopulator = new ReadableOrderPopulator();
+		Locale locale = LocaleUtils.getLocale(language);
+		readableOrderPopulator.setLocale(locale);

@@ -1,6 +1,0 @@
-	public void setCreationDate(String creationDate) {
-		this.creationDate = creationDate;
-	}
-/*	public ReadableProduct getProduct() {
-		return product;
-	}

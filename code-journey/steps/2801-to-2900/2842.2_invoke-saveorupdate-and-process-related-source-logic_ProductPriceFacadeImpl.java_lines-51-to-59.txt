@@ -1,0 +1,9 @@
+			if(!isPositive(productPrice.getId())) {
+				//avoid detached entity failed to persist
+				productPrice.getProductAvailability().setPrices(null);
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			} else {
+				productPrice = productPriceService
+						.saveOrUpdate(productPrice);
+			}

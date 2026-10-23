@@ -1,7 +1,0 @@
-		this.setLanguage(language);
-		super.setId(0L);
-	}
-
-	public Catalog getCatalog() {
-		return catalog;
-	}

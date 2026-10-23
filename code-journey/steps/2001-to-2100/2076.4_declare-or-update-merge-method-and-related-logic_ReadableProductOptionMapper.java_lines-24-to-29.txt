@@ -1,0 +1,6 @@
+
+
+  @Override
+  public ReadableProductOptionEntity merge(ProductOption source,
+                                           ReadableProductOptionEntity destination, MerchantStore store, Language language) {
+    ReadableProductOptionEntity readableProductOption = new ReadableProductOptionEntity();

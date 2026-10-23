@@ -1,7 +1,0 @@
-		try {
-			g = groupService.findByName(group);
-			if(g == null) {
-				throw new ResourceNotFoundException("Group [" + group + "] does not exist");
-			}
-		} catch (Exception e) {
-			LOGGER.error("An error occured while getting group [" + group + "]",e);

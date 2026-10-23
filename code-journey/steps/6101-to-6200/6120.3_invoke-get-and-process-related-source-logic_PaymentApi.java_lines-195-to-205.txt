@@ -1,0 +1,11 @@
+		if (configuredModules.containsKey(module.getCode())) {
+			readable.setConfigured(true);
+			if(configuredModules.get(module.getCode()).isActive()) {
+				readable.setActive(true);
+			}
+		}
+		return readable;
+
+	}
+
+}

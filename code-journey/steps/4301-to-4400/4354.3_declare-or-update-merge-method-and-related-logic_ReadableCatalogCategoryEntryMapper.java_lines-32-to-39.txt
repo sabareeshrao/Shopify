@@ -1,8 +1,0 @@
-		return merge(source, destination, store, language);
-	}
-
-	@Override
-	public ReadableCatalogCategoryEntry merge(CatalogCategoryEntry source, ReadableCatalogCategoryEntry destination, MerchantStore store,
-											  Language language) {
-		ReadableCatalogCategoryEntry convertedDestination = Optional.ofNullable(destination)
-				.orElse(new ReadableCatalogCategoryEntry());

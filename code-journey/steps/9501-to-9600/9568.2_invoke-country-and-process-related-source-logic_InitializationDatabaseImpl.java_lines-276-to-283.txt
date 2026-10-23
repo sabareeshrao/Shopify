@@ -1,8 +1,0 @@
-			if (locale != null) {
-				Country country = new Country(code);
-				countryService.create(country);
-				
-				for (Language language : languages) {
-					String name = locale.getDisplayCountry(new Locale(language.getCode()));
-					//byte[] ptext = value.getBytes(Constants.ISO_8859_1); 
-					//String name = new String(ptext, Constants.UTF_8); 

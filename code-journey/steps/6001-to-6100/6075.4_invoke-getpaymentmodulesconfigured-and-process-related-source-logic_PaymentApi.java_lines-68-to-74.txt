@@ -1,0 +1,7 @@
+		try {
+			List<IntegrationModule> modules = paymentService.getPaymentMethods(merchantStore);
+
+			// configured modules
+			Map<String, IntegrationConfiguration> configuredModules = paymentService
+					.getPaymentModulesConfigured(merchantStore);
+			return modules.stream().map(m -> integrationModule(m, configuredModules)).collect(Collectors.toList());

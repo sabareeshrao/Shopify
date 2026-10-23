@@ -1,6 +1,0 @@
-							if (langList != null) {
-								/**
-								 * submethod
-								 */
-								for (Object z : langList) {
-									Map<String, String> e = (Map<String, String>) z;

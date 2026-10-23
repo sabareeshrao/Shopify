@@ -1,0 +1,11 @@
+				TaxClass taxClass = item.getProduct().getTaxClass();
+				int quantity = item.getQuantity();
+				itemPrice = itemPrice.multiply(new BigDecimal(quantity));
+				if(taxClass==null) {
+					taxClass = taxClassService.getByCode(DEFAULT_TAX_CLASS);
+				}
+				BigDecimal subTotal = taxClassAmountMap.get(taxClass.getId());
+				if(subTotal==null) {
+					subTotal = new BigDecimal(0);
+					subTotal.setScale(2, RoundingMode.HALF_UP);
+				}

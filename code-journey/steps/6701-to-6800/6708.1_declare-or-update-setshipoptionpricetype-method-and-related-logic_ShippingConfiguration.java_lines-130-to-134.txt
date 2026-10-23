@@ -1,5 +1,0 @@
-
-
-	public void setShipOptionPriceType(String shipOptionPriceType) {
-		this.shipOptionPriceType = shipOptionPriceType;
-		ShippingOptionPriceType sType = ShippingOptionPriceType.ALL;

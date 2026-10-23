@@ -1,7 +1,0 @@
-	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	@ApiImplicitParams({ @ApiImplicitParam(name = "store", dataType = "string", defaultValue = "DEFAULT"),
-			@ApiImplicitParam(name = "lang", dataType = "string", defaultValue = "en") })
-	public ReadableOrderConfirmation checkout(
-			@PathVariable final String code,//shopping cart
-			@Valid @RequestBody PersistableAnonymousOrder order,//order

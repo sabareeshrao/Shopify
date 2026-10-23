@@ -1,0 +1,3 @@
+		<beans:constructor-arg value="${config.cms.files.location}"/><!-- location -->
+		<beans:constructor-arg value="store-merchant"/><!-- root -->
+	</beans:bean>

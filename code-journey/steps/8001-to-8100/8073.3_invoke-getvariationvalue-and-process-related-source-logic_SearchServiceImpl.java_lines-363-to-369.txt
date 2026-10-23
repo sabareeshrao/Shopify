@@ -1,7 +1,0 @@
-			String variantValueCode = variant.getVariationValue().getProductOptionValue().getCode();
-			variantMap.put(variantCode, variantValueCode);
-		}
-		
-		if(!StringUtils.isBlank(variant.getSku())) {
-			variantMap.put(VSKU, variant.getSku());
-		}

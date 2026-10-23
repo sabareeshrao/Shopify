@@ -1,8 +1,0 @@
-            - ./sm-shop
-  deploy:
-    machine: true
-    steps:
-       - attach_workspace:
-          at: .
-       # start proprietary DB using private Docker image
-       # with credentials stored in the UI

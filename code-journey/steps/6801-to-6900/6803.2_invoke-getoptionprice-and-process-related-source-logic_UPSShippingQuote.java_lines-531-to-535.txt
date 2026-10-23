@@ -1,0 +1,5 @@
+					if(option.getOptionPrice()==null) {
+						String priceText = option.getOptionPriceText();
+						if(StringUtils.isBlank(priceText)) {
+							throw new IntegrationException("Price text is null for option " + name);
+						}

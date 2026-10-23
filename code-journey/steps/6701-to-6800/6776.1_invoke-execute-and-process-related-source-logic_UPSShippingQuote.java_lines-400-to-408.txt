@@ -1,0 +1,9 @@
+			String data = httpclient.execute(httppost, responseHandler);
+
+			//int result = response.getStatusLine().getStatusCode();
+			//int result = client.executeMethod(httppost);
+/*			if (result != 200) {
+				LOGGER.error("Communication Error with ups quote " + result + " "
+						+ protocol + "://" + host + ":" + port + url);
+				throw new Exception("UPS quote communication error " + result);
+			}*/

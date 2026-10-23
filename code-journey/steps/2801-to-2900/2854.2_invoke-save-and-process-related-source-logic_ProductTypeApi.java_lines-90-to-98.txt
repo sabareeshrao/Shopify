@@ -1,0 +1,9 @@
+	public Entity create(@RequestBody PersistableProductType type, @ApiIgnore MerchantStore merchantStore,
+			@ApiIgnore Language language) {
+
+		Long id = productTypeFacade.save(type, merchantStore, language);
+		Entity entity = new Entity();
+		entity.setId(id);
+		return entity;
+
+	}

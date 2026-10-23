@@ -1,7 +1,0 @@
-		
-		// needs to query the new API
-		OutputContentFile file = contentService.getContentFile(storeCode, fileType, fileNameAndExtension);
-		
-		
-		if(file!=null) {
-			response.setHeader("Content-Disposition", "attachment; filename=\"" + fileNameAndExtension + "\"");

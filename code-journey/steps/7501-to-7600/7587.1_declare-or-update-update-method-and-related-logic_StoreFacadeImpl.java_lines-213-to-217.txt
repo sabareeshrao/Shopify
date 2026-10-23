@@ -1,5 +1,0 @@
-
-	@Override
-	public void update(PersistableMerchantStore store) {
-
-		Validate.notNull(store);

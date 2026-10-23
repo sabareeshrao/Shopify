@@ -1,0 +1,4 @@
+
+			paymentIntent = paymentIntent.capture(params);
+
+			transaction.setAmount(order.getTotal());

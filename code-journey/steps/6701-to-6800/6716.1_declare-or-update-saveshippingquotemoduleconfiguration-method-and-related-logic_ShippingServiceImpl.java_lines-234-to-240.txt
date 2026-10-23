@@ -1,7 +1,0 @@
-	
-	@Override
-	public void saveShippingQuoteModuleConfiguration(IntegrationConfiguration configuration, MerchantStore store) throws ServiceException {
-		
-			//validate entries
-			try {
-				

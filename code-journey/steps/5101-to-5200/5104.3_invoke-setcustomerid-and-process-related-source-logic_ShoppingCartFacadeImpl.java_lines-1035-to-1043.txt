@@ -1,0 +1,9 @@
+		if (cartModel == null) {
+			cartModel = new ShoppingCart();
+			cartModel.setCustomerId(customer.getId());
+			cartModel.setMerchantStore(store);
+			cartModel.setShoppingCartCode(uniqueShoppingCartCode());
+		}
+
+		return readableShoppingCart(cartModel, item, store, language);
+	}

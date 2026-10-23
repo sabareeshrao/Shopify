@@ -1,0 +1,10 @@
+				for (ShoppingCartItem item : items) {
+					LOGGER.debug("Populate item " + item.getId());
+					getPopulatedItem(item, store);
+					LOGGER.debug("Obsolete item ? " + item.isObsolete());
+					if (item.isObsolete()) {
+						cartIsObsolete = true;
+					}
+				}
+
+				Set<ShoppingCartItem> refreshedItems = new HashSet<>(items);

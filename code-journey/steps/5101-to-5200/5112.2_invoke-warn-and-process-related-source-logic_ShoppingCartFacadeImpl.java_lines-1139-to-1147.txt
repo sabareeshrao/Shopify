@@ -1,9 +1,0 @@
-		if (cart == null) {
-			LOG.warn("Shopping cart with code [" + code + "] not found, expected to find a cart to set order id ["
-					+ orderId + "]");
-		} else {
-			cart.setOrderId(orderId);
-		}
-		saveOrUpdateShoppingCart(cart);
-
-	}

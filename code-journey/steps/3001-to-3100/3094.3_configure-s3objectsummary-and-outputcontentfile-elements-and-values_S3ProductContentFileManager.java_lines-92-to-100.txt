@@ -1,9 +1,0 @@
-      ListObjectsV2Result results = s3.listObjectsV2(listObjectsRequest);
-      List<S3ObjectSummary> objects = results.getObjectSummaries();
-      for (S3ObjectSummary os : objects) {
-        if (files == null) {
-          files = new ArrayList<OutputContentFile>();
-        }
-        String mimetype = URLConnection.guessContentTypeFromName(os.getKey());
-        if (!StringUtils.isBlank(mimetype)) {
-          S3Object o = s3.getObject(bucketName, os.getKey());

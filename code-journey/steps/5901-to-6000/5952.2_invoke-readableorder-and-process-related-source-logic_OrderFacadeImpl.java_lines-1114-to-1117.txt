@@ -1,0 +1,4 @@
+
+		com.salesmanager.shop.model.order.v0.ReadableOrder readableOrder = new com.salesmanager.shop.model.order.v0.ReadableOrder();
+
+		Long customerId = modelOrder.getCustomerId();

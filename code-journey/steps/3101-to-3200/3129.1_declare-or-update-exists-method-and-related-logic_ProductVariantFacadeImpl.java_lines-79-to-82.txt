@@ -1,4 +1,0 @@
-
-	@Override
-	public boolean exists(String sku, MerchantStore store, Long productId, Language language) {
-		ReadableProduct product = null;

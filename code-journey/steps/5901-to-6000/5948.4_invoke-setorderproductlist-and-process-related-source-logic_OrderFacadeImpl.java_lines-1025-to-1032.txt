@@ -1,0 +1,8 @@
+			try {
+				readableOrderPopulator.populate(order, readableOrder, store, language);
+				setOrderProductList(order, locale, store, language, readableOrder);
+			} catch (ConversionException ex) {
+				LOGGER.error("Error while converting order to order data", ex);
+
+			}
+			readableOrders.add(readableOrder);

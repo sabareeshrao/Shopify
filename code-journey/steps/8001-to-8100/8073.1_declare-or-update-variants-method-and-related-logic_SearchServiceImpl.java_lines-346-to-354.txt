@@ -1,9 +1,0 @@
-
-	private Map<String, String> variants(ProductVariant variant) {
-		if (variant == null)
-			return null;
-
-		Map<String, String> variantMap = new HashMap<String, String>();
-		if (variant.getVariation() != null) {
-			String variantCode = variant.getVariation().getProductOption().getCode();
-			String variantValueCode = variant.getVariation().getProductOptionValue().getCode();

@@ -1,8 +1,0 @@
-			if(g == null) {
-				g = new Group();
-				g.setGroupName("UNDEFINED");
-				g.setGroupType(GroupType.ADMIN);
-				groups.add(g);
-				this.lastGroup = g;
-			}
-		}

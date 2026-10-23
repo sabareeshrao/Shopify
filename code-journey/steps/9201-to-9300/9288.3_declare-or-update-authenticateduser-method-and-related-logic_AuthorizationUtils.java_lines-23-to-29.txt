@@ -1,7 +1,0 @@
-public class AuthorizationUtils {
-	
-	@Inject
-	private UserFacade userFacade;
-	
-	public String authenticatedUser() {
-		String authenticatedUser = userFacade.authenticatedUser();

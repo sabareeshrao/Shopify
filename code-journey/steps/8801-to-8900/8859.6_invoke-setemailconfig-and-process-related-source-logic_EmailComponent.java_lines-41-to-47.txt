@@ -1,7 +1,0 @@
-            break; 
-        case "ses": 
-          sesEmailSender.setEmailConfig(emailConfig);
-            break; 
-        default: 
- 
-    }

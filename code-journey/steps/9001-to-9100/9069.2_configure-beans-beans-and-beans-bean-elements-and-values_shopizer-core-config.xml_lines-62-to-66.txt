@@ -1,5 +1,0 @@
-	<beans:beans profile="firebase">
-		<beans:bean
-			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-			<beans:property name="ignoreUnresolvablePlaceholders"
-				value="false" />

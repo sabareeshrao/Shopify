@@ -1,0 +1,5 @@
+	{
+		"zoneCode": "AI",
+		"zoneName": "Appenzell Innerrhoden",
+		"countryCode": "CH"
+	},

@@ -1,7 +1,0 @@
-			resp.setErrorMessage(e);
-			response.sendError(503, "Exception while deleting optin " + e.getMessage());
-		}
-
-		return resp;
-
-	}

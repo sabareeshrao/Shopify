@@ -1,7 +1,0 @@
-			cartModel.setPromoAdded(new Date());
-		}
-
-		cartModel.setLineItems(cartItems);
-		shoppingCartService.saveOrUpdate(cartModel);
-
-		LOG.info("Cart entry updated with desired quantity");

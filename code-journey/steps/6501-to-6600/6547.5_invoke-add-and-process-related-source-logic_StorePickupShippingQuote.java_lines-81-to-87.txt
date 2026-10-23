@@ -1,7 +1,0 @@
-			errorFields.add("note");
-		}
-
-
-		
-		if(errorFields!=null) {
-			IntegrationException ex = new IntegrationException(IntegrationException.ERROR_VALIDATION_SAVE);

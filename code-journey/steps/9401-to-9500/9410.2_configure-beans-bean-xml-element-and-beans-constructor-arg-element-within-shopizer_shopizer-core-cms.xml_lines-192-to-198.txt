@@ -1,7 +1,0 @@
-	<!-- httpd -->
-	<beans:bean id="httpdAssetsManager" 
-		class="com.salesmanager.core.business.modules.cms.impl.LocalCacheManagerImpl">
-		<beans:constructor-arg value="${config.cms.http.path.location}"/><!-- where files are copied on disk -->
-	</beans:bean>
-
-    <!-- aws -->

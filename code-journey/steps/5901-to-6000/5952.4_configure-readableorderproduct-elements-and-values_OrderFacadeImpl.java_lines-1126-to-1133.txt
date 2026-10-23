@@ -1,8 +1,0 @@
-
-		try {
-			readableOrderPopulator.populate(modelOrder, readableOrder, store, language);
-
-			// order products
-			List<ReadableOrderProduct> orderProducts = new ArrayList<ReadableOrderProduct>();
-			for (OrderProduct p : modelOrder.getOrderProducts()) {
-				ReadableOrderProductPopulator orderProductPopulator = new ReadableOrderProductPopulator();

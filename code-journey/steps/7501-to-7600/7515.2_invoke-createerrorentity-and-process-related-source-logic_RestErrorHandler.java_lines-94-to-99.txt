@@ -1,6 +1,0 @@
-
-        ErrorEntity errorEntity = createErrorEntity(exception.getErrorCode(), exception.getErrorMessage(),
-                exception.getLocalizedMessage());
-        return errorEntity;
-    }
-

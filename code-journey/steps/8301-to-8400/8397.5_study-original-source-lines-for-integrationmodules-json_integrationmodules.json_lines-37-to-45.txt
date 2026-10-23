@@ -1,9 +1,0 @@
-	{
-		"module": "SHIPPING",
-		"code": "customQuotesRules",
-		"version":"1.0",
-		"regions": ["*"]
-	},
-	{
-		"module": "SHIPPING",
-		"code": "priceByDistance",

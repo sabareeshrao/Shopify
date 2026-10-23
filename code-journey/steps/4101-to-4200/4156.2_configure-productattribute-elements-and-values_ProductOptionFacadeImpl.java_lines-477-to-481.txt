@@ -1,0 +1,5 @@
+
+		//convert to model
+		
+		List<ProductAttribute> modelAttributes = attributes.stream().map(attr -> persistableProductAttributeMapper.convert(attr, store, null)).collect(Collectors.toList());
+		

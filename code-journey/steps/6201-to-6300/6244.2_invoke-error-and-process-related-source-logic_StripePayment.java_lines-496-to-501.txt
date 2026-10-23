@@ -1,6 +1,0 @@
-			return te;
-		
-
-		  
-	} else if (ex instanceof InvalidRequestException) {
-		LOGGER.error("InvalidRequest error with stripe", ex.getMessage());

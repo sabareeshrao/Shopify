@@ -1,0 +1,5 @@
+      populator.setPricingService(pricingService);
+      populator.populate(orderTotalSummary, returnSummary, merchantStore, language);
+
+      return returnSummary;
+

@@ -1,6 +1,0 @@
-import java.util.List;
-
-@Service
-public class OrderStatusHistoryServiceImpl implements OrderStatusHistoryService{
-    @Autowired
-    private OrderStatusHistoryRepository orderStatusHistoryRepository;

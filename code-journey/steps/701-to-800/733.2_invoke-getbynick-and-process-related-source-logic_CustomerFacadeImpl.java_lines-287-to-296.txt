@@ -1,0 +1,10 @@
+  public Customer getCustomerByUserName(String userName, MerchantStore store){
+	 
+	  try {
+		 return customerService.getByNick(userName, store.getId());
+	 } catch(Exception e) {
+		 throw new ServiceRuntimeException(e);
+	 }
+
+  }
+  

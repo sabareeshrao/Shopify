@@ -1,8 +1,0 @@
-
-	public int getMaximumWeight() {
-		return maximumWeight;
-	}
-
-	@SuppressWarnings("unchecked")
-	public String toJSONString() {
-		JSONObject data = new JSONObject();

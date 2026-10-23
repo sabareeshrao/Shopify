@@ -1,9 +1,0 @@
-      try {
-        response.sendError(503, "Error while deleting product review" + e.getMessage());
-      } catch (Exception ignore) {
-      }
-
-      return;
-    }
-  }
-}

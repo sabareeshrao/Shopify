@@ -1,7 +1,0 @@
-		{
-			"zoneCode": "ON",
-			"zoneName": "Ontario",
-			"countryCode": "CA"
-		},
-		{
-			"zoneCode": "PE",

@@ -1,0 +1,6 @@
+
+	private Map<String, String> variants(ProductVariant variant) {
+		if (variant == null)
+			return null;
+
+		Map<String, String> variantMap = new HashMap<String, String>();

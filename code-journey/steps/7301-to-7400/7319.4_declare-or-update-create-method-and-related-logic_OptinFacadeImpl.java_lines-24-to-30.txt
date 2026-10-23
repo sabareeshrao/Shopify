@@ -1,7 +1,0 @@
-  @Inject
-  private PersistableOptinMapper persistableOptinConverter;
-
-  @Override
-  public ReadableOptin create(
-      PersistableOptin persistableOptin, MerchantStore merchantStore, Language language) {
-    Optin optinEntity = persistableOptinConverter.convert(persistableOptin, merchantStore, language);

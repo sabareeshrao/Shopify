@@ -1,9 +1,0 @@
-			
-			Map<String,Language> langs = languageService.getLanguagesMap();
-
-			
-			return null;
-
-		
-		} catch (Exception e) {
-			LOGGER.error("Error while saving category",e);

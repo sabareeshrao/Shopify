@@ -1,0 +1,8 @@
+		"name": {
+			"type": "text",
+			"analyzer": "name_analyzer"
+		},
+		"category": {
+			"type": "keyword",
+			"normalizer": "custom_normalizer",
+			"fields": {

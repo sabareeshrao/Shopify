@@ -1,0 +1,5 @@
+      throws Exception {
+    
+    return categoryFacade.categoryProductVariants(id, merchantStore, language);
+    
+  }

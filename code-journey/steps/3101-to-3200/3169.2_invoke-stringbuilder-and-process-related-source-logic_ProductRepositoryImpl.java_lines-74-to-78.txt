@@ -1,0 +1,5 @@
+
+			StringBuilder qs = new StringBuilder();
+			qs.append(productQueryV2());
+
+			qs.append("where p.id=:pid");

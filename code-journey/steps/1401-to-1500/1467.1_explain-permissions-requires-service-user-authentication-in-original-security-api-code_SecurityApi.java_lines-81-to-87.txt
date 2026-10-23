@@ -1,0 +1,7 @@
+
+	/**
+	 * Permissions Requires service user authentication
+	 * 
+	 * @return
+	 */
+	@GetMapping("/private/permissions")

@@ -1,0 +1,5 @@
+
+      List<ReadableProduct> relatedItems =
+          productFacade.relatedItems(merchantStore, product, language);
+
+      return relatedItems;

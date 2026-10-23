@@ -1,7 +1,0 @@
-
-				if (Objects.nonNull(priceEntity.getDiscountStartDate())) {
-					Date startDate = DateUtil.getDate(priceEntity.getDiscountStartDate());
-					price.setProductPriceSpecialStartDate(startDate);
-				}
-				if (Objects.nonNull(priceEntity.getDiscountEndDate())) {
-					Date endDate = DateUtil.getDate(priceEntity.getDiscountEndDate());

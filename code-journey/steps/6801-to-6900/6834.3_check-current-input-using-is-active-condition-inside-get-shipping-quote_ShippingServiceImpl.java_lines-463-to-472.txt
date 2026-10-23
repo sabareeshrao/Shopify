@@ -1,0 +1,10 @@
+				if(configuration.isActive()) {
+					shippingQuoteModule = shippingModules.get(module);
+					if(shippingQuoteModule instanceof ShippingQuotePrePostProcessModule) {
+						shippingQuoteModule = null;
+						continue;
+					} else {
+						break;
+					}
+				}
+			}

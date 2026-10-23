@@ -1,8 +1,0 @@
-					if (isAfter && source.getAvailable().booleanValue()) {
-						destination.setAvailable(true);
-					}
-					destination.setDateAvailable(DateUtil.formatDate(source.getProductDateAvailable()));
-				} else {
-					destination.setAvailable(source.getAvailable().booleanValue());
-				}
-			}

@@ -1,0 +1,11 @@
+  public boolean equals(Object obj) {
+    if (null == obj)
+      return false;
+    if (!(obj instanceof Language)) {
+      return false;
+    } else {
+      Language language = (Language) obj;
+      return (this.id == language.getId());
+    }
+  }
+}

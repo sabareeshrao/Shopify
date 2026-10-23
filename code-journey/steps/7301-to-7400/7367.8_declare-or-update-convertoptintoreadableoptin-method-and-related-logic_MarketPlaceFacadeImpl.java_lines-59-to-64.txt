@@ -1,6 +1,0 @@
-
-  }
-
-  private ReadableOptin convertOptinToReadableOptin(MerchantStore store, Optin optin) {
-	  try{
-      ReadableOptinPopulator populator = new ReadableOptinPopulator();

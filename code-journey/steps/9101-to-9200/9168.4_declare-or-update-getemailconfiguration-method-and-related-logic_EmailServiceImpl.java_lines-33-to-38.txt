@@ -1,0 +1,6 @@
+
+	@Override
+	public EmailConfig getEmailConfiguration(MerchantStore store) throws ServiceException {
+		
+		MerchantConfiguration configuration = merchantConfigurationService.getMerchantConfiguration(Constants.EMAIL_CONFIG, store);
+		EmailConfig emailConfig = null;

@@ -1,9 +1,0 @@
-		if(type!=null && !FileContentType.IMAGE.name().equals(type)) {
-			imgName.append(type).append(Constants.SLASH);
-		}
-		if(!StringUtils.isBlank(imageName)) {
-			imgName.append(imageName);
-		}
-		return imgName.toString();
-
-	}

@@ -1,8 +1,0 @@
-			
-			if(configs==null) {
-				throw new IntegrationException("Module not configured for TEST or PROD");
-			}
-
-
-			String server = new StringBuffer().append(
-					

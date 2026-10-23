@@ -1,0 +1,4 @@
+	PaymentModule getPaymentModule(String paymentModuleCode)
+			throws ServiceException;
+
+}

@@ -1,0 +1,9 @@
+
+		if (!StringUtils.isBlank(item.getCode())) {
+			// get it from the db
+			cartModel = getShoppingCartModel(item.getCode(), store);
+			if (cartModel == null) {
+				cartModel = createCartModel(shoppingCartData.getCode(), store, customer);
+			}
+
+		}

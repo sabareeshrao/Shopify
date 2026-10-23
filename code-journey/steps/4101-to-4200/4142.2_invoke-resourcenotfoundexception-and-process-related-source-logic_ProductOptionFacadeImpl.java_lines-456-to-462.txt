@@ -1,7 +1,0 @@
-		if(value == null) {
-			throw new ResourceNotFoundException("Product option value [" + optionValueId + "] not found");
-		}
-		
-		try {
-
-			contentService.removeFile(store.getCode(), FileContentType.PROPERTY, value.getProductOptionValueImage());

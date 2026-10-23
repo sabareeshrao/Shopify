@@ -1,9 +1,0 @@
-			return;
-		}
-
-		item.setProduct(product);
-		item.setSku(product.getSku());
-
-		if (product.isProductVirtual()) {
-			item.setProductVirtual(true);
-		}

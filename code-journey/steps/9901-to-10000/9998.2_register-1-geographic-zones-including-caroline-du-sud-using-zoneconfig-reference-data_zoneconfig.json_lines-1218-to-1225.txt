@@ -1,8 +1,0 @@
-		"zoneName": "Rhode Island",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "SC",
-		"zoneName": "Caroline du Sud",
-		"countryCode": "US"
-	},

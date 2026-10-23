@@ -1,0 +1,10 @@
+							${EMAIL_ORDER_THANKS}
+						</p>
+					</td>
+				</tr>
+			</table>
+			</div><!-- /content -->
+		</td>
+	</tr>
+	<tr>
+		<td></td>

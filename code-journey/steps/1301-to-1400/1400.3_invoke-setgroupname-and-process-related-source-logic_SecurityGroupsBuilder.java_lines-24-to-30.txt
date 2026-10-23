@@ -1,7 +1,0 @@
-		g.setGroupName(name);
-		g.setGroupType(type);
-		groups.add(g);
-		this.lastGroup = g;
-		
-		return this;
-	}

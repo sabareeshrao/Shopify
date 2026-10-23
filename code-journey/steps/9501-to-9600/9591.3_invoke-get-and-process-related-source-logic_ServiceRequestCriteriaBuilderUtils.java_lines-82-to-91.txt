@@ -1,0 +1,10 @@
+    if (!StringUtils.isBlank(orderColums)) {
+      String columnName = request.getParameter("columns[" + orderColums + "][data]");
+      String overwriteField = columnName;
+      if (mappingFields != null && mappingFields.get(columnName) != null) {
+        overwriteField = mappingFields.get(columnName);
+      }
+      criteria.setCriteriaOrderByField(overwriteField);
+      criteria.setOrderBy(
+          CriteriaOrderBy.valueOf(request.getParameter("order[0][dir]").toUpperCase()));
+    }

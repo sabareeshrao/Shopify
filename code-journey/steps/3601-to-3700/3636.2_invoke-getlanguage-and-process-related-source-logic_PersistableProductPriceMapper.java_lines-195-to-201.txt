@@ -1,7 +1,0 @@
-							"Language is null for code " + desc.getLanguage() + " use language ISO code [en, fr ...]"));
-		} catch (ServiceException e) {
-			throw new ConversionRuntimeException(e);
-		}
-	}
-
-}

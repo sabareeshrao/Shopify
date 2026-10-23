@@ -1,4 +1,0 @@
-					customer.setNick(null);
-					//send email instructions
-				}
-			}

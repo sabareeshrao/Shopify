@@ -1,0 +1,9 @@
+							${EMAIL_FOOTER_COPYRIGHT}
+						</p>
+					</td>
+				</tr>
+				</table>
+				</p>
+				</div><!-- /content -->
+				
+		</td>

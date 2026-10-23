@@ -1,0 +1,6 @@
+
+	public ProductAttribute getProductAttribute() {
+		return productAttribute;
+	}
+
+}

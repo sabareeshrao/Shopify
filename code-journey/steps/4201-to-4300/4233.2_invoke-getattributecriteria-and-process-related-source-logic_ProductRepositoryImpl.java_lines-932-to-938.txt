@@ -1,7 +1,0 @@
-			for (AttributeCriteria attributeCriteria : criteria.getAttributeCriteria()) {
-				q.setParameter(attributeCriteria.getAttributeCode(), attributeCriteria.getAttributeCode());
-				q.setParameter("val" + cnt + attributeCriteria.getAttributeCode(),
-						"%" + attributeCriteria.getAttributeValue() + "%");
-				cnt++;
-			}
-		}

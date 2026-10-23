@@ -1,9 +1,0 @@
-
-		}
-
-		if (cartModel == null) {
-
-			final String shoppingCartCode = StringUtils.isNotBlank(shoppingCartData.getCode())
-					? shoppingCartData.getCode()
-					: null;
-			cartModel = createCartModel(shoppingCartCode, store, customer);

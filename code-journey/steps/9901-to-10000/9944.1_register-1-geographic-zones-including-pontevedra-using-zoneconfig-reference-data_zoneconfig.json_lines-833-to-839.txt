@@ -1,7 +1,0 @@
-	{
-		"zoneCode": "Pontevedra",
-		"zoneName": "Pontevedra",
-		"countryCode": "ES"
-	},
-	{
-		"zoneCode": "Salamanca",

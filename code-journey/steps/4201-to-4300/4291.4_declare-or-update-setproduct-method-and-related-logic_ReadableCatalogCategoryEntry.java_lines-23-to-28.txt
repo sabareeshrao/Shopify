@@ -1,6 +1,0 @@
-	public void setProduct(ReadableProduct product) {
-		this.product = product;
-	}*/
-	public ReadableCategory getCategory() {
-		return category;
-	}

@@ -1,8 +1,0 @@
-	            shippingSubTotal.setOrderTotalCode("order.total.shipping");
-	            shippingSubTotal.setTitle(Constants.OT_SHIPPING_MODULE_CODE);
-	            shippingSubTotal.setSortOrder(100);
-
-	            orderTotals.add(shippingSubTotal);
-
-            if(!summary.getShippingSummary().isFreeShipping()) {
-                shippingSubTotal.setValue(summary.getShippingSummary().getShipping());

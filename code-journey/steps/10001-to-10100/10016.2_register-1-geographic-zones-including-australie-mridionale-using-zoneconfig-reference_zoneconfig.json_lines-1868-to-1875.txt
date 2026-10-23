@@ -1,8 +1,0 @@
-		"zoneName":"Australie-Occidentale",
-		"countryCode":"AU"
-	},
-	{
-		"zoneCode":"SA",
-		"zoneName":"Australie-Mridionale",
-		"countryCode":"AU"
-	},

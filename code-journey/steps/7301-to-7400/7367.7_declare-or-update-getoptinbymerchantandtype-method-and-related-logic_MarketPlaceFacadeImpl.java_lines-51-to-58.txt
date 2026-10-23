@@ -1,8 +1,0 @@
-
-  private Optin getOptinByMerchantAndType(MerchantStore store, OptinType type) {
-	  try{
-      return Optional.ofNullable(optinService.getOptinByMerchantAndType(store, type))
-          .orElseThrow(() -> new ResourceNotFoundException("Option not found"));
-    } catch (ServiceException e) {
-	    throw new ServiceRuntimeException(e);
-    }

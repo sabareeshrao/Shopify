@@ -1,0 +1,8 @@
+	
+	@RequestMapping( value="/private/system/optin/{code}", method=RequestMethod.DELETE)
+	@ResponseBody
+	public AjaxResponse deleteOptin(@RequestBody final String code, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		
+		AjaxResponse resp = new AjaxResponse();
+		

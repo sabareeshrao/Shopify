@@ -1,0 +1,11 @@
+	public Long create(PersistableProductVariantGroup productVariantGroup, MerchantStore store, Language language) {
+		
+		ProductVariantGroup group = persistableProductIntanceGroupMapper.convert(productVariantGroup, store, language);
+		try {
+			group = productVariantGroupService.saveOrUpdate(group);
+		} catch (ServiceException e) {
+			throw new ServiceRuntimeException("Cannot save product instance group [" + productVariantGroup + "] for store [" + store.getCode() + "]"); 
+		}
+		
+		return group.getId();
+	}

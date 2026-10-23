@@ -1,0 +1,5 @@
+
+			PersistablePaymentPopulator populator = new PersistablePaymentPopulator();
+			populator.setPricingService(pricingService);
+
+			Payment paymentModel = new Payment();

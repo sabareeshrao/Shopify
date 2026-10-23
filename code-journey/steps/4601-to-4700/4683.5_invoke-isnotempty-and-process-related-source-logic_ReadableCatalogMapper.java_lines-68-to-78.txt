@@ -1,0 +1,11 @@
+		if(CollectionUtils.isNotEmpty(source.getEntry())) {
+			
+			//hierarchy temp object
+			Map<Long, ReadableCategory> hierarchy = new HashMap<Long, ReadableCategory>();
+
+			source.getEntry().forEach(entry -> {
+				processCategory(entry.getCategory(), store, language, hierarchy, new HashMap<>());
+			});
+			
+			destination.setCategory(new ArrayList<>(hierarchy.values()));
+		}

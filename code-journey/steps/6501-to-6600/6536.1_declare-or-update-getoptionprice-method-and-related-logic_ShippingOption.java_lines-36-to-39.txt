@@ -1,4 +1,0 @@
-	public BigDecimal getOptionPrice() {
-		
-		if(optionPrice == null && !StringUtils.isBlank(this.getOptionPriceText())) {//if price text only is available, try to parse it
-			try {

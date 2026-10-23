@@ -1,5 +1,0 @@
-
-/*			if(source.getType() != null) {
-			  ReadableProductType type = new ReadableProductType();
-			  type.setId(source.getType().getId());
-			  type.setCode(source.getType().getCode());

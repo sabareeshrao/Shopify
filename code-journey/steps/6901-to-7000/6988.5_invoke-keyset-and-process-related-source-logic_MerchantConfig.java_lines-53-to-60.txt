@@ -1,8 +1,0 @@
-			for(String key : useDefaultSearchConfig.keySet()) {
-				Boolean val = (Boolean)useDefaultSearchConfig.get(key);
-				if(val!=null) {
-					obj.put(key,val);
-				}
-			}
-			data.put("useDefaultSearchConfig", obj);
-		}

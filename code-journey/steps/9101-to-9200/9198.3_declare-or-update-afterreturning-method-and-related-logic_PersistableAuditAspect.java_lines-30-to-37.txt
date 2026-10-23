@@ -1,8 +1,0 @@
-    @AfterReturning(value = "execution(* populate(..))",
-            returning = "result")
-        public void afterReturning(JoinPoint joinPoint, Object result) {
-    	
-			try {
-				if(result instanceof Auditable) {
-					Auditable entity = (Auditable)result;
-					AuditSection audit = entity.getAuditSection();

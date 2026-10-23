@@ -1,8 +1,0 @@
-		"zoneName": "Virginia",
-		"countryCode": "US"
-	},
-	{
-		"zoneCode": "WA",
-		"zoneName": "Washington",
-		"countryCode": "US"
-	},

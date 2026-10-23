@@ -1,0 +1,6 @@
+
+	public int getMaximumWeight() {
+		return maximumWeight;
+	}
+
+	@SuppressWarnings("unchecked")

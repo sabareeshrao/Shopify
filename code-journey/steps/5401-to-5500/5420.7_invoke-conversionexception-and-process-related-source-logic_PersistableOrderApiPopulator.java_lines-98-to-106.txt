@@ -1,9 +1,0 @@
-
-			  if(customer == null) {
-				throw new ConversionException("Curstomer with id " + source.getCustomerId() + " does not exist");
-			  }
-			  target.setCustomerId(customerId);
-			
-			} else {
-			  if(source instanceof PersistableAnonymousOrder) {
-			    PersistableCustomer persistableCustomer = ((PersistableAnonymousOrder)source).getCustomer();

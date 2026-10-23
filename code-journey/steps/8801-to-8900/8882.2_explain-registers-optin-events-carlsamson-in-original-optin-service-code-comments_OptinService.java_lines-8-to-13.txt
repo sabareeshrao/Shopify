@@ -1,0 +1,6 @@
+
+/**
+ * Registers Optin events
+ * @author carlsamson
+ *
+ */

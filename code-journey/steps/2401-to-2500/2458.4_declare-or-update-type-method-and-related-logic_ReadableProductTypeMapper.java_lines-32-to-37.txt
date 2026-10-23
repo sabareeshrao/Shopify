@@ -1,6 +1,0 @@
-		Validate.notNull(destination, "ReadableProductType cannot be null");
-		return type(source, language);
-	}
-	
-	private ReadableProductType type (ProductType type, Language language) {
-		ReadableProductType readableType = null;

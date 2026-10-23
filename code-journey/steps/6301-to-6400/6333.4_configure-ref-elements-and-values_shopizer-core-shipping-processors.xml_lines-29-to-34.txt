@@ -1,0 +1,6 @@
+			 -->
+			<ref bean="shippingMethodDecisionProcess"/>
+		</util:list>
+
+		
+		

@@ -1,0 +1,11 @@
+		for (com.salesmanager.core.model.order.OrderTotal t : orderTotals) {
+			OrderTotal total = new OrderTotal();
+			total.setCode(t.getOrderTotalCode());
+			total.setTitle(t.getTitle());
+			total.setValue(t.getValue());
+			totals.add(total);
+		}
+
+		order.setTotals(totals);
+
+	}

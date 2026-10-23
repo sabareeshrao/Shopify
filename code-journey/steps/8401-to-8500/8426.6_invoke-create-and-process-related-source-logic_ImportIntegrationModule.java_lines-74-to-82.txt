@@ -1,9 +1,0 @@
-
-				moduleCongigurationService.create(module);
-			}
-
-		} catch (Exception e) {
-			throw new ServiceException(e);
-		}
-	
-	}

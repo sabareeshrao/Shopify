@@ -1,7 +1,0 @@
-				productFileManager.addProductImage(productImage, inputImage);
-			}
-
-			// insert ProductImage
-			ProductImage img = saveOrUpdate(productImage);
-			//manual workaround since aspect is not working
-			eventPublisher.publishEvent(new SaveProductImageEvent(eventPublisher, img, product));

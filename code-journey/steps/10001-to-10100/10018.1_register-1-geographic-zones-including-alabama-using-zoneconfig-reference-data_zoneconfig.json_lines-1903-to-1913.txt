@@ -1,0 +1,11 @@
+	"es":[
+		{
+			"zoneCode": "AL",
+			"zoneName": "Alabama",
+			"countryCode": "US"
+		},
+		{
+			"zoneCode": "AK",
+			"zoneName": "Alaska",
+			"countryCode": "US"
+		},

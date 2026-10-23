@@ -1,9 +1,0 @@
-			errorFields.add("password");
-		}
-
-		//validate at least one integrationOptions['packages']
-		Map<String,List<String>> options = integrationConfiguration.getIntegrationOptions();
-		if(options==null) {
-			errorFields = new ArrayList<String>();
-			errorFields.add("packages");
-		}

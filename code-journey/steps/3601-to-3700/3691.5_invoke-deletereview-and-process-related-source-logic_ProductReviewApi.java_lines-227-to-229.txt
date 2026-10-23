@@ -1,0 +1,3 @@
+
+      productCommonFacade.deleteReview(prodReview, merchantStore, language);
+

@@ -1,9 +1,0 @@
-			try {
-				Product singleProduct = productService.getBySku(sku, store);
-				if(singleProduct!=null) {
-					availabilities = new PageImpl<ProductAvailability>(new ArrayList<ProductAvailability>(singleProduct.getAvailabilities()));
-				}
-			} catch (ServiceException e) {
-				throw new ServiceRuntimeException("An error occured while getting product with sku " + sku,e);
-			}
-		}

@@ -1,0 +1,4 @@
+public class AuditListener {
+
+  @PrePersist
+  public void onSave(Object o) {

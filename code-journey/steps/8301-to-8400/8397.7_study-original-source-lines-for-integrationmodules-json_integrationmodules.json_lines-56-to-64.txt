@@ -1,9 +1,0 @@
-		"module": "PAYMENT",
-		"code": "moneyorder",
-		"type":"moneyorder",
-		"version":"",
-		"regions": ["*"],
-		"image":"moneyorder.gif"
-	},
-	{
-		"module": "PAYMENT",

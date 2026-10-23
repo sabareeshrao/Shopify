@@ -1,7 +1,0 @@
-		if (dt == null)
-			return null;
-		SimpleDateFormat format = new SimpleDateFormat(Constants.DEFAULT_DATE_FORMAT);
-		return format.format(dt);
-
-	}
-

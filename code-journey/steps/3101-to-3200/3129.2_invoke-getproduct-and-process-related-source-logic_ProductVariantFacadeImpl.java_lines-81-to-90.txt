@@ -1,0 +1,10 @@
+	public boolean exists(String sku, MerchantStore store, Long productId, Language language) {
+		ReadableProduct product = null;
+		try {
+			product = productCommonFacade.getProduct(store, productId, language);
+		} catch (Exception e) {
+			throw new ServiceRuntimeException("Error while getting product [" + productId + "]",e);
+		}
+
+		return productVariantService.exist(sku,product.getId());
+	}

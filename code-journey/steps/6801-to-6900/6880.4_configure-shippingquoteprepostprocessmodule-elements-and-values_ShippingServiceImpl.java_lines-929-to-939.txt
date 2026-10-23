@@ -1,0 +1,11 @@
+		if(preProcessors!=null) {
+			for(ShippingQuotePrePostProcessModule processor : preProcessors) {
+				preProcessorKeys.add(processor.getModuleCode());
+				if(SHIPPING_DISTANCE.equals(processor.getModuleCode())) {
+					metaData.setUseDistanceModule(true);
+				}
+			}
+		}
+		metaData.setPreProcessors(preProcessorKeys);
+		
+		//post processors

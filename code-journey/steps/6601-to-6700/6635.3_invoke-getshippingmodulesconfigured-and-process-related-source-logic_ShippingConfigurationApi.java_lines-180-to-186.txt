@@ -1,0 +1,7 @@
+		try {
+			List<IntegrationModule> modules = shippingService.getShippingMethods(merchantStore);
+
+			// configured modules
+			Map<String, IntegrationConfiguration> configuredModules = shippingService
+					.getShippingModulesConfigured(merchantStore);
+			return modules.stream().map(m -> integrationModule(m, configuredModules)).collect(Collectors.toList());

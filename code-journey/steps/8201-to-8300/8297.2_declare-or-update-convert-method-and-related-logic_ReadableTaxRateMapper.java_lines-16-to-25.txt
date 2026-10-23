@@ -1,0 +1,10 @@
+
+@Component
+public class ReadableTaxRateMapper implements Mapper<TaxRate, ReadableTaxRate> {
+
+	@Override
+	public ReadableTaxRate convert(TaxRate source, MerchantStore store, Language language) {
+		ReadableTaxRate taxRate = new ReadableTaxRate();
+		return this.merge(source, taxRate, store, language);
+
+	}

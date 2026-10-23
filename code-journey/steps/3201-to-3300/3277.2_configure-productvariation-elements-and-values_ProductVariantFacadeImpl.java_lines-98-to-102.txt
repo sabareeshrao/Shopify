@@ -1,0 +1,5 @@
+
+		//variation and variation value should not be of same product option code
+		if(
+			productVariant.getVariation() != null && productVariant.getVariation().longValue() > 0 &&
+			productVariant.getVariationValue() != null &&  productVariant.getVariationValue().longValue() > 0) 

@@ -1,0 +1,9 @@
+                                {
+                                    for ( com.salesmanager.core.model.shoppingcart.ShoppingCartAttributeItem dbAttribute : attributes )
+                                    {
+                                        if ( dbAttribute.getId().longValue() == attribute.getId() )
+                                        {
+                                            newAttributes.add( dbAttribute );
+                                        }
+                                    }
+                                }

@@ -1,8 +1,0 @@
-		if (category.getId() != null && category.getId() > 0) {
-			super.update(category);
-		} else {
-			this.create(category);
-		}
-
-	}
-

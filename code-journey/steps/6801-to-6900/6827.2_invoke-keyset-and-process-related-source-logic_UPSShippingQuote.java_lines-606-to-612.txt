@@ -1,7 +1,0 @@
-													.keySet()
-													.toArray(
-															new String[selectedintlservices
-																	.size()])
-											+ "] for this shipping is in your selection list");
-				}
-			}*/

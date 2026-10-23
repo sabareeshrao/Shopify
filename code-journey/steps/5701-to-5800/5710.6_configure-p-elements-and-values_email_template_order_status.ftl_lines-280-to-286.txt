@@ -1,7 +1,0 @@
-						<p>
-							${EMAIL_ORDER_STATUS}
-						</p>
-						<!-- Callout Panel -->
-						<p class="callout">
-							${EMAIL_TEXT_STATUS_COMMENTS}
-						</p><!-- /Callout Panel -->					

@@ -1,0 +1,10 @@
+	@Override
+	public String getContextPath() {
+		return super.getProperties().getProperty(CONTEXT_PATH);
+	}
+
+	@Override
+	public void setContentUrlPath(String contentUrl) {
+		this.contentUrl = contentUrl;
+		
+	}

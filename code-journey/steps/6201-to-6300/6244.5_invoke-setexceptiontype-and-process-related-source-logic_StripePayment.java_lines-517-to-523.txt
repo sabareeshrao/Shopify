@@ -1,7 +1,0 @@
-		te.setExceptionType(IntegrationException.TRANSACTION_EXCEPTION);
-		te.setMessageCode("message.payment.error");
-		te.setErrorCode(IntegrationException.TRANSACTION_EXCEPTION);
-		return te;
-		
-	} /*else if (ex instanceof APIConnectionException) { // DEPRECATED THIS EXCEPTION TYPE
-		LOGGER.error("API connection error with stripe", ex.getMessage());

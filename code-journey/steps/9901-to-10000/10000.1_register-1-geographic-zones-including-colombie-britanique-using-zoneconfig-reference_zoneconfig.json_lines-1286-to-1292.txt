@@ -1,7 +1,0 @@
-	{
-		"zoneCode": "BC",
-		"zoneName": "Colombie Britanique",
-		"countryCode": "CA"
-	},
-	{
-		"zoneCode": "MB",

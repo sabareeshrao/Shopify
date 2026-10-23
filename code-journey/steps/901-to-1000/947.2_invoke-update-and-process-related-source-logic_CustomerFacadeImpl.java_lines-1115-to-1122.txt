@@ -1,8 +1,0 @@
-    try {
-      customerService.update(customer);
-    } catch (ServiceException e) {
-      throw new ServiceRuntimeException("Exception while changing password", e);
-    }
-    
-  }
-}

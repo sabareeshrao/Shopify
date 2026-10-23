@@ -1,7 +1,0 @@
-				if (oldCartItem.getQuantity().intValue() == newItemValue.getQuantity()) {
-					// this is unchanged
-					continue;
-				}
-				if (newItemValue.getQuantity() == 0) {
-					// remove from cart
-					shoppingCartService.deleteShoppingCartItem(oldCartItem.getId());

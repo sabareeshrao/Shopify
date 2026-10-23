@@ -1,9 +1,0 @@
-						if (option.getOptionPrice()
-								.longValue() < selectedOption
-								.getOptionPrice()
-								.longValue()) {
-							selectedOption = option;
-						}
-					}
-
-				}

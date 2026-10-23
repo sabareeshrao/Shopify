@@ -1,0 +1,8 @@
+	public void update(@ApiIgnore MerchantStore merchantStore, @PathVariable Long id, @ApiIgnore Language language,
+			@Valid @RequestBody PersistableTaxRate taxRate) {
+
+		taxRate.setId(id);
+		taxFacade.updateTaxRate(id, taxRate, merchantStore, language);
+
+	}
+

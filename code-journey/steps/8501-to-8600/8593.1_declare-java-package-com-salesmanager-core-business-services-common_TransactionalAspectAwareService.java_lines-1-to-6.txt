@@ -1,6 +1,0 @@
-package com.salesmanager.core.business.services.common.generic;
-
-/**
- * Indique que le service doit être rendu transactionnel via un aspect.
- * 
- * Cela permet de simplifier la configuration Spring de la partie transactionnelle car

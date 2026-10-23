@@ -1,8 +1,0 @@
-
-      if (StringUtils.isNotEmpty(cacheKey)) {
-        cache.removeFromCache(key.toString());
-      } else {
-        cache.removeAllFromCache(merchantStore);
-      }
-    } catch (Exception e) {
-      LOGGER.error("Error while clearning cache {}", e.getCause());

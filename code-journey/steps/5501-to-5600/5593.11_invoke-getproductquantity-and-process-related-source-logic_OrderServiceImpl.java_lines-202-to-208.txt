@@ -1,7 +1,0 @@
-                if(qty < orderProduct.getProductQuantity()) {
-                    //throw new ServiceException(ServiceException.EXCEPTION_INVENTORY_MISMATCH);
-                	LOGGER.error("APP-BACKEND [" + ServiceException.EXCEPTION_INVENTORY_MISMATCH + "]");
-                }
-                qty = qty - orderProduct.getProductQuantity();
-                availability.setProductQuantity(qty);
-            }

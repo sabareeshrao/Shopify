@@ -1,0 +1,5 @@
+  OutputContentFile getProductImage(final String merchantStoreCode, final String productCode,
+      final String imageName) throws ServiceException;
+
+  OutputContentFile getProductImage(final String merchantStoreCode, final String productCode,
+      final String imageName, final ProductImageSize size) throws ServiceException;

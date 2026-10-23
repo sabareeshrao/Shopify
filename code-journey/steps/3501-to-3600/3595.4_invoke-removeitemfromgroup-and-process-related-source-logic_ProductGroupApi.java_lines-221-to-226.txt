@@ -1,0 +1,6 @@
+
+      ReadableProductList list =
+          productItemsFacade.removeItemFromGroup(product, code, merchantStore, language);
+
+      return list;
+
